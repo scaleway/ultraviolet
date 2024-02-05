@@ -731,29 +731,6 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
   text-align: right;
 }
 
-.cache-1civgmb {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-16otux {
   display: -webkit-box;
   display: -webkit-flex;
@@ -777,61 +754,140 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fi2qif {
-  background-color: #ffffff;
+.cache-1l08jzy {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-fxvpe6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-ztn6dz {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 32px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-fi2qif[data-error='true'] {
-  border: 1px solid #b3144d;
+.cache-ztn6dz:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-fi2qif[aria-disabled='true'] {
+.cache-ztn6dz[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-ztn6dz[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-ztn6dz:hover {
+  border-color: #792dd4;
+}
+
+.cache-ztn6dz[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+}
+
+.cache-ztn6dz[data-disabled='true'] {
+  border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:hover,
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:focus {
-  border: 1px solid #792dd4;
+.cache-jyl6y4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 2px 8px;
 }
 
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
+.cache-jyl6y4[data-size='small'] {
+  height: 30px;
 }
 
-.cache-5k8zny {
+.cache-jyl6y4[data-size='medium'] {
+  height: 38px;
+}
+
+.cache-jyl6y4[data-size='large'] {
+  height: 46px;
+  padding: 4px 8px;
+}
+
+.cache-19ghf3i {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 24px;
+  padding: 0 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
+  gap: 4px;
   border-radius: 4px;
   box-sizing: border-box;
-  width: auto;
+  width: 24px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -854,110 +910,118 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
   text-case: none;
   background: none;
   border: none;
-  color: #641cb3;
-  margin: 0 8px;
-  width: 32px;
-  height: 32px;
+  color: #3f4250;
 }
 
-.cache-5k8zny:hover {
+.cache-19ghf3i:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-5k8zny:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-19ghf3i:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-5k8zny:hover,
-.cache-5k8zny:active {
-  background: #e5dbfd;
-  color: #521094;
+.cache-19ghf3i:hover,
+.cache-19ghf3i:active {
+  background: #e9eaeb;
+  color: #222638;
 }
 
-.cache-rycp5w-sizeStyles {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 22px;
-  width: 22px;
-  min-width: 22px;
-  min-height: 22px;
-}
-
-.cache-gcqale {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 24px;
+.cache-1mvom0f {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  max-width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+  width: 100%;
 }
 
-.cache-14kc19i {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 16px;
+.cache-jeg2os {
+  outline: none;
   border: none;
-  outline: none;
-  position: relative;
-  margin-right: 4px;
-  max-width: 100%;
-  font-weight: 500;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: Regular;
+  line-height: 24px;
   text-align: center;
-  -moz-appearance: textfield;
+  padding: 8px;
+  background: none;
 }
 
-.cache-14kc19i::-webkit-outer-spin-button,
-.cache-14kc19i::-webkit-inner-spin-button {
+.cache-jeg2os[data-has-unit='true'] {
+  text-align: left;
+  padding: 8px 0 8px 8px;
+}
+
+.cache-jeg2os::-webkit-outer-spin-button,
+.cache-jeg2os::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-14kc19i::-webkit-input-placeholder {
-  color: #727683;
+.cache-jeg2os {
+  -moz-appearance: textfield;
 }
 
-.cache-14kc19i::-moz-placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='small'] {
+  height: 30px;
 }
 
-.cache-14kc19i:-ms-input-placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='medium'] {
+  height: 38px;
 }
 
-.cache-14kc19i::placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='large'] {
+  height: 46px;
 }
 
-.cache-14kc19i[disabled] {
+.cache-jeg2os:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:-moz-read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:disabled {
   color: #b5b7bd;
+  background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-rw624t {
-  color: #3f4250;
+.cache-jeg2os:disabled~.e1b9qdjy2 {
+  background: #f3f3f4;
+  cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-right: 8px;
+}
+
+.cache-jeg2os:placeholder-shown~.e1b9qdjy2 {
+  color: #727683;
 }
 
 .cache-np418x-Cell-StyledPriceCell-PriceCell {
@@ -1295,66 +1359,81 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
                   class="cache-12tubxd-StyledResourceName e1kzy2rr7"
                 >
                   <div
-                    class="cache-1civgmb ehpbis70"
+                    class="cache-16otux ehpbis70"
                   >
                     <div
-                      class="cache-16otux ehpbis70"
+                      class="cache-9bqyx6 ehpbis70"
                     >
                       <div
-                        aria-disabled="false"
-                        class="cache-fi2qif exvap480"
-                        data-error="false"
+                        class="cache-1l08jzy ehpbis70"
                       >
-                        <button
-                          aria-label="Minus"
-                          class="exvap484 cache-5k8zny e112qvla0"
-                          type="button"
+                        <label
+                          class="cache-fxvpe6 e13y3mga0"
+                          for=":r6:"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        class="cache-ztn6dz e1b9qdjy0"
+                        data-disabled="false"
+                        data-error="false"
+                        data-success="false"
+                        data-unit="false"
+                      >
+                        <div
+                          class="cache-jyl6y4 e1b9qdjy4"
+                          data-size="small"
                         >
-                          <div>
+                          <button
+                            aria-label="minus"
+                            class="cache-19ghf3i e112qvla0"
+                            type="button"
+                          >
                             <svg
-                              class="cache-rycp5w-sizeStyles e1gt4cfo0"
+                              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
                               viewBox="0 0 24 24"
                             >
                               <path
                                 d="M19,13H5V11H19V13Z"
                               />
                             </svg>
-                          </div>
-                        </button>
+                          </button>
+                        </div>
                         <div
-                          aria-live="assertive"
-                          class="cache-gcqale exvap483"
-                          role="status"
+                          class="e1b9qdjy3 cache-1mvom0f e3f5lzv0"
                         >
                           <input
-                            aria-label="Number Input"
-                            class="cache-14kc19i exvap482"
+                            class="cache-jeg2os e1b9qdjy1"
+                            data-has-unit="false"
+                            data-size="small"
                             id=":r6:"
-                            name="numberinput"
-                            style="width: 16px;"
+                            max="100"
+                            min="0"
+                            placeholder=""
                             type="number"
                             value="1"
                           />
-                          <span
-                            class="cache-rw624t exvap481"
-                          />
                         </div>
-                        <button
-                          aria-label="Plus"
-                          class="exvap484 cache-5k8zny e112qvla0"
-                          type="button"
+                        <div
+                          class="cache-jyl6y4 e1b9qdjy4"
+                          data-size="small"
                         >
-                          <div>
+                          <button
+                            aria-label="plus"
+                            class="cache-19ghf3i e112qvla0"
+                            type="button"
+                          >
                             <svg
-                              class="cache-rycp5w-sizeStyles e1gt4cfo0"
+                              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
                               viewBox="0 0 24 24"
                             >
                               <path
                                 d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
                               />
                             </svg>
-                          </div>
-                        </button>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2142,29 +2221,6 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
   text-align: right;
 }
 
-.cache-1civgmb {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-16otux {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2188,61 +2244,140 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fi2qif {
-  background-color: #ffffff;
+.cache-1l08jzy {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-fxvpe6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-ztn6dz {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 32px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-fi2qif[data-error='true'] {
-  border: 1px solid #b3144d;
+.cache-ztn6dz:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-fi2qif[aria-disabled='true'] {
+.cache-ztn6dz[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-ztn6dz[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-ztn6dz:hover {
+  border-color: #792dd4;
+}
+
+.cache-ztn6dz[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+}
+
+.cache-ztn6dz[data-disabled='true'] {
+  border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:hover,
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:focus {
-  border: 1px solid #792dd4;
+.cache-jyl6y4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 2px 8px;
 }
 
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
+.cache-jyl6y4[data-size='small'] {
+  height: 30px;
 }
 
-.cache-5k8zny {
+.cache-jyl6y4[data-size='medium'] {
+  height: 38px;
+}
+
+.cache-jyl6y4[data-size='large'] {
+  height: 46px;
+  padding: 4px 8px;
+}
+
+.cache-19ghf3i {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 24px;
+  padding: 0 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
+  gap: 4px;
   border-radius: 4px;
   box-sizing: border-box;
-  width: auto;
+  width: 24px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2265,110 +2400,118 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
   text-case: none;
   background: none;
   border: none;
-  color: #641cb3;
-  margin: 0 8px;
-  width: 32px;
-  height: 32px;
+  color: #3f4250;
 }
 
-.cache-5k8zny:hover {
+.cache-19ghf3i:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-5k8zny:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-19ghf3i:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-5k8zny:hover,
-.cache-5k8zny:active {
-  background: #e5dbfd;
-  color: #521094;
+.cache-19ghf3i:hover,
+.cache-19ghf3i:active {
+  background: #e9eaeb;
+  color: #222638;
 }
 
-.cache-rycp5w-sizeStyles {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 22px;
-  width: 22px;
-  min-width: 22px;
-  min-height: 22px;
-}
-
-.cache-gcqale {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 24px;
+.cache-1mvom0f {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  max-width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+  width: 100%;
 }
 
-.cache-14kc19i {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 16px;
+.cache-jeg2os {
+  outline: none;
   border: none;
-  outline: none;
-  position: relative;
-  margin-right: 4px;
-  max-width: 100%;
-  font-weight: 500;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: Regular;
+  line-height: 24px;
   text-align: center;
-  -moz-appearance: textfield;
+  padding: 8px;
+  background: none;
 }
 
-.cache-14kc19i::-webkit-outer-spin-button,
-.cache-14kc19i::-webkit-inner-spin-button {
+.cache-jeg2os[data-has-unit='true'] {
+  text-align: left;
+  padding: 8px 0 8px 8px;
+}
+
+.cache-jeg2os::-webkit-outer-spin-button,
+.cache-jeg2os::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-14kc19i::-webkit-input-placeholder {
-  color: #727683;
+.cache-jeg2os {
+  -moz-appearance: textfield;
 }
 
-.cache-14kc19i::-moz-placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='small'] {
+  height: 30px;
 }
 
-.cache-14kc19i:-ms-input-placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='medium'] {
+  height: 38px;
 }
 
-.cache-14kc19i::placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='large'] {
+  height: 46px;
 }
 
-.cache-14kc19i[disabled] {
+.cache-jeg2os:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:-moz-read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:disabled {
   color: #b5b7bd;
+  background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-rw624t {
-  color: #3f4250;
+.cache-jeg2os:disabled~.e1b9qdjy2 {
+  background: #f3f3f4;
+  cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-right: 8px;
+}
+
+.cache-jeg2os:placeholder-shown~.e1b9qdjy2 {
+  color: #727683;
 }
 
 .cache-np418x-Cell-StyledPriceCell-PriceCell {
@@ -2706,66 +2849,81 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
                   class="cache-12tubxd-StyledResourceName e1kzy2rr7"
                 >
                   <div
-                    class="cache-1civgmb ehpbis70"
+                    class="cache-16otux ehpbis70"
                   >
                     <div
-                      class="cache-16otux ehpbis70"
+                      class="cache-9bqyx6 ehpbis70"
                     >
                       <div
-                        aria-disabled="false"
-                        class="cache-fi2qif exvap480"
-                        data-error="false"
+                        class="cache-1l08jzy ehpbis70"
                       >
-                        <button
-                          aria-label="Minus"
-                          class="exvap484 cache-5k8zny e112qvla0"
-                          type="button"
+                        <label
+                          class="cache-fxvpe6 e13y3mga0"
+                          for=":rm:"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        class="cache-ztn6dz e1b9qdjy0"
+                        data-disabled="false"
+                        data-error="false"
+                        data-success="false"
+                        data-unit="false"
+                      >
+                        <div
+                          class="cache-jyl6y4 e1b9qdjy4"
+                          data-size="small"
                         >
-                          <div>
+                          <button
+                            aria-label="minus"
+                            class="cache-19ghf3i e112qvla0"
+                            type="button"
+                          >
                             <svg
-                              class="cache-rycp5w-sizeStyles e1gt4cfo0"
+                              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
                               viewBox="0 0 24 24"
                             >
                               <path
                                 d="M19,13H5V11H19V13Z"
                               />
                             </svg>
-                          </div>
-                        </button>
+                          </button>
+                        </div>
                         <div
-                          aria-live="assertive"
-                          class="cache-gcqale exvap483"
-                          role="status"
+                          class="e1b9qdjy3 cache-1mvom0f e3f5lzv0"
                         >
                           <input
-                            aria-label="Number Input"
-                            class="cache-14kc19i exvap482"
+                            class="cache-jeg2os e1b9qdjy1"
+                            data-has-unit="false"
+                            data-size="small"
                             id=":rm:"
-                            name="numberinput"
-                            style="width: 16px;"
+                            max="100"
+                            min="0"
+                            placeholder=""
                             type="number"
                             value="1"
                           />
-                          <span
-                            class="cache-rw624t exvap481"
-                          />
                         </div>
-                        <button
-                          aria-label="Plus"
-                          class="exvap484 cache-5k8zny e112qvla0"
-                          type="button"
+                        <div
+                          class="cache-jyl6y4 e1b9qdjy4"
+                          data-size="small"
                         >
-                          <div>
+                          <button
+                            aria-label="plus"
+                            class="cache-19ghf3i e112qvla0"
+                            type="button"
+                          >
                             <svg
-                              class="cache-rycp5w-sizeStyles e1gt4cfo0"
+                              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
                               viewBox="0 0 24 24"
                             >
                               <path
                                 d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
                               />
                             </svg>
-                          </div>
-                        </button>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3553,29 +3711,6 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
   text-align: right;
 }
 
-.cache-1civgmb {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-16otux {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3599,61 +3734,140 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fi2qif {
-  background-color: #ffffff;
+.cache-1l08jzy {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-fxvpe6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-ztn6dz {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 32px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-fi2qif[data-error='true'] {
-  border: 1px solid #b3144d;
+.cache-ztn6dz:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-fi2qif[aria-disabled='true'] {
+.cache-ztn6dz[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-ztn6dz[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-ztn6dz:hover {
+  border-color: #792dd4;
+}
+
+.cache-ztn6dz[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+}
+
+.cache-ztn6dz[data-disabled='true'] {
+  border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:hover,
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:focus {
-  border: 1px solid #792dd4;
+.cache-jyl6y4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 2px 8px;
 }
 
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
+.cache-jyl6y4[data-size='small'] {
+  height: 30px;
 }
 
-.cache-5k8zny {
+.cache-jyl6y4[data-size='medium'] {
+  height: 38px;
+}
+
+.cache-jyl6y4[data-size='large'] {
+  height: 46px;
+  padding: 4px 8px;
+}
+
+.cache-19ghf3i {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 24px;
+  padding: 0 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
+  gap: 4px;
   border-radius: 4px;
   box-sizing: border-box;
-  width: auto;
+  width: 24px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3676,110 +3890,118 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
   text-case: none;
   background: none;
   border: none;
-  color: #641cb3;
-  margin: 0 8px;
-  width: 32px;
-  height: 32px;
+  color: #3f4250;
 }
 
-.cache-5k8zny:hover {
+.cache-19ghf3i:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-5k8zny:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-19ghf3i:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-5k8zny:hover,
-.cache-5k8zny:active {
-  background: #e5dbfd;
-  color: #521094;
+.cache-19ghf3i:hover,
+.cache-19ghf3i:active {
+  background: #e9eaeb;
+  color: #222638;
 }
 
-.cache-rycp5w-sizeStyles {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 22px;
-  width: 22px;
-  min-width: 22px;
-  min-height: 22px;
-}
-
-.cache-gcqale {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 24px;
+.cache-1mvom0f {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  max-width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+  width: 100%;
 }
 
-.cache-14kc19i {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 16px;
+.cache-jeg2os {
+  outline: none;
   border: none;
-  outline: none;
-  position: relative;
-  margin-right: 4px;
-  max-width: 100%;
-  font-weight: 500;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: Regular;
+  line-height: 24px;
   text-align: center;
-  -moz-appearance: textfield;
+  padding: 8px;
+  background: none;
 }
 
-.cache-14kc19i::-webkit-outer-spin-button,
-.cache-14kc19i::-webkit-inner-spin-button {
+.cache-jeg2os[data-has-unit='true'] {
+  text-align: left;
+  padding: 8px 0 8px 8px;
+}
+
+.cache-jeg2os::-webkit-outer-spin-button,
+.cache-jeg2os::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-14kc19i::-webkit-input-placeholder {
-  color: #727683;
+.cache-jeg2os {
+  -moz-appearance: textfield;
 }
 
-.cache-14kc19i::-moz-placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='small'] {
+  height: 30px;
 }
 
-.cache-14kc19i:-ms-input-placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='medium'] {
+  height: 38px;
 }
 
-.cache-14kc19i::placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='large'] {
+  height: 46px;
 }
 
-.cache-14kc19i[disabled] {
+.cache-jeg2os:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:-moz-read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:disabled {
   color: #b5b7bd;
+  background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-rw624t {
-  color: #3f4250;
+.cache-jeg2os:disabled~.e1b9qdjy2 {
+  background: #f3f3f4;
+  cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-right: 8px;
+}
+
+.cache-jeg2os:placeholder-shown~.e1b9qdjy2 {
+  color: #727683;
 }
 
 .cache-np418x-Cell-StyledPriceCell-PriceCell {
@@ -4117,66 +4339,81 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
                   class="cache-12tubxd-StyledResourceName e1kzy2rr7"
                 >
                   <div
-                    class="cache-1civgmb ehpbis70"
+                    class="cache-16otux ehpbis70"
                   >
                     <div
-                      class="cache-16otux ehpbis70"
+                      class="cache-9bqyx6 ehpbis70"
                     >
                       <div
-                        aria-disabled="false"
-                        class="cache-fi2qif exvap480"
-                        data-error="false"
+                        class="cache-1l08jzy ehpbis70"
                       >
-                        <button
-                          aria-label="Minus"
-                          class="exvap484 cache-5k8zny e112qvla0"
-                          type="button"
+                        <label
+                          class="cache-fxvpe6 e13y3mga0"
+                          for=":r1o:"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        class="cache-ztn6dz e1b9qdjy0"
+                        data-disabled="false"
+                        data-error="false"
+                        data-success="false"
+                        data-unit="false"
+                      >
+                        <div
+                          class="cache-jyl6y4 e1b9qdjy4"
+                          data-size="small"
                         >
-                          <div>
+                          <button
+                            aria-label="minus"
+                            class="cache-19ghf3i e112qvla0"
+                            type="button"
+                          >
                             <svg
-                              class="cache-rycp5w-sizeStyles e1gt4cfo0"
+                              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
                               viewBox="0 0 24 24"
                             >
                               <path
                                 d="M19,13H5V11H19V13Z"
                               />
                             </svg>
-                          </div>
-                        </button>
+                          </button>
+                        </div>
                         <div
-                          aria-live="assertive"
-                          class="cache-gcqale exvap483"
-                          role="status"
+                          class="e1b9qdjy3 cache-1mvom0f e3f5lzv0"
                         >
                           <input
-                            aria-label="Number Input"
-                            class="cache-14kc19i exvap482"
+                            class="cache-jeg2os e1b9qdjy1"
+                            data-has-unit="false"
+                            data-size="small"
                             id=":r1o:"
-                            name="numberinput"
-                            style="width: 16px;"
+                            max="100"
+                            min="0"
+                            placeholder=""
                             type="number"
                             value="1"
                           />
-                          <span
-                            class="cache-rw624t exvap481"
-                          />
                         </div>
-                        <button
-                          aria-label="Plus"
-                          class="exvap484 cache-5k8zny e112qvla0"
-                          type="button"
+                        <div
+                          class="cache-jyl6y4 e1b9qdjy4"
+                          data-size="small"
                         >
-                          <div>
+                          <button
+                            aria-label="plus"
+                            class="cache-19ghf3i e112qvla0"
+                            type="button"
+                          >
                             <svg
-                              class="cache-rycp5w-sizeStyles e1gt4cfo0"
+                              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
                               viewBox="0 0 24 24"
                             >
                               <path
                                 d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
                               />
                             </svg>
-                          </div>
-                        </button>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -4978,29 +5215,6 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
   text-align: right;
 }
 
-.cache-1civgmb {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-16otux {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5024,61 +5238,140 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fi2qif {
-  background-color: #ffffff;
+.cache-1l08jzy {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-fxvpe6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-ztn6dz {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 32px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-fi2qif[data-error='true'] {
-  border: 1px solid #b3144d;
+.cache-ztn6dz:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-fi2qif[aria-disabled='true'] {
+.cache-ztn6dz[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-ztn6dz[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-ztn6dz:hover {
+  border-color: #792dd4;
+}
+
+.cache-ztn6dz[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+}
+
+.cache-ztn6dz[data-disabled='true'] {
+  border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:hover,
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:focus {
-  border: 1px solid #792dd4;
+.cache-jyl6y4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 2px 8px;
 }
 
-.cache-fi2qif:not([aria-disabled='true']) .exvap483:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
+.cache-jyl6y4[data-size='small'] {
+  height: 30px;
 }
 
-.cache-5k8zny {
+.cache-jyl6y4[data-size='medium'] {
+  height: 38px;
+}
+
+.cache-jyl6y4[data-size='large'] {
+  height: 46px;
+  padding: 4px 8px;
+}
+
+.cache-19ghf3i {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 24px;
+  padding: 0 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
+  gap: 4px;
   border-radius: 4px;
   box-sizing: border-box;
-  width: auto;
+  width: 24px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5101,110 +5394,118 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
   text-case: none;
   background: none;
   border: none;
-  color: #641cb3;
-  margin: 0 8px;
-  width: 32px;
-  height: 32px;
+  color: #3f4250;
 }
 
-.cache-5k8zny:hover {
+.cache-19ghf3i:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-5k8zny:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-19ghf3i:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-5k8zny:hover,
-.cache-5k8zny:active {
-  background: #e5dbfd;
-  color: #521094;
+.cache-19ghf3i:hover,
+.cache-19ghf3i:active {
+  background: #e9eaeb;
+  color: #222638;
 }
 
-.cache-rycp5w-sizeStyles {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 22px;
-  width: 22px;
-  min-width: 22px;
-  min-height: 22px;
-}
-
-.cache-gcqale {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 24px;
+.cache-1mvom0f {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  max-width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+  width: 100%;
 }
 
-.cache-14kc19i {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 16px;
+.cache-jeg2os {
+  outline: none;
   border: none;
-  outline: none;
-  position: relative;
-  margin-right: 4px;
-  max-width: 100%;
-  font-weight: 500;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: Regular;
+  line-height: 24px;
   text-align: center;
-  -moz-appearance: textfield;
+  padding: 8px;
+  background: none;
 }
 
-.cache-14kc19i::-webkit-outer-spin-button,
-.cache-14kc19i::-webkit-inner-spin-button {
+.cache-jeg2os[data-has-unit='true'] {
+  text-align: left;
+  padding: 8px 0 8px 8px;
+}
+
+.cache-jeg2os::-webkit-outer-spin-button,
+.cache-jeg2os::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-14kc19i::-webkit-input-placeholder {
-  color: #727683;
+.cache-jeg2os {
+  -moz-appearance: textfield;
 }
 
-.cache-14kc19i::-moz-placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='small'] {
+  height: 30px;
 }
 
-.cache-14kc19i:-ms-input-placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='medium'] {
+  height: 38px;
 }
 
-.cache-14kc19i::placeholder {
-  color: #727683;
+.cache-jeg2os[data-size='large'] {
+  height: 46px;
 }
 
-.cache-14kc19i[disabled] {
+.cache-jeg2os:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:-moz-read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-jeg2os:disabled {
   color: #b5b7bd;
+  background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-rw624t {
-  color: #3f4250;
+.cache-jeg2os:disabled~.e1b9qdjy2 {
+  background: #f3f3f4;
+  cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-right: 8px;
+}
+
+.cache-jeg2os:placeholder-shown~.e1b9qdjy2 {
+  color: #727683;
 }
 
 .cache-np418x-Cell-StyledPriceCell-PriceCell {
@@ -5559,66 +5860,81 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
                   class="cache-12tubxd-StyledResourceName e1kzy2rr7"
                 >
                   <div
-                    class="cache-1civgmb ehpbis70"
+                    class="cache-16otux ehpbis70"
                   >
                     <div
-                      class="cache-16otux ehpbis70"
+                      class="cache-9bqyx6 ehpbis70"
                     >
                       <div
-                        aria-disabled="false"
-                        class="cache-fi2qif exvap480"
-                        data-error="false"
+                        class="cache-1l08jzy ehpbis70"
                       >
-                        <button
-                          aria-label="Minus"
-                          class="exvap484 cache-5k8zny e112qvla0"
-                          type="button"
+                        <label
+                          class="cache-fxvpe6 e13y3mga0"
+                          for=":r17:"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div
+                        class="cache-ztn6dz e1b9qdjy0"
+                        data-disabled="false"
+                        data-error="false"
+                        data-success="false"
+                        data-unit="false"
+                      >
+                        <div
+                          class="cache-jyl6y4 e1b9qdjy4"
+                          data-size="small"
                         >
-                          <div>
+                          <button
+                            aria-label="minus"
+                            class="cache-19ghf3i e112qvla0"
+                            type="button"
+                          >
                             <svg
-                              class="cache-rycp5w-sizeStyles e1gt4cfo0"
+                              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
                               viewBox="0 0 24 24"
                             >
                               <path
                                 d="M19,13H5V11H19V13Z"
                               />
                             </svg>
-                          </div>
-                        </button>
+                          </button>
+                        </div>
                         <div
-                          aria-live="assertive"
-                          class="cache-gcqale exvap483"
-                          role="status"
+                          class="e1b9qdjy3 cache-1mvom0f e3f5lzv0"
                         >
                           <input
-                            aria-label="Number Input"
-                            class="cache-14kc19i exvap482"
+                            class="cache-jeg2os e1b9qdjy1"
+                            data-has-unit="false"
+                            data-size="small"
                             id=":r17:"
-                            name="numberinput"
-                            style="width: 32px;"
+                            max="51"
+                            min="0"
+                            placeholder=""
                             type="number"
                             value="50"
                           />
-                          <span
-                            class="cache-rw624t exvap481"
-                          />
                         </div>
-                        <button
-                          aria-label="Plus"
-                          class="exvap484 cache-5k8zny e112qvla0"
-                          type="button"
+                        <div
+                          class="cache-jyl6y4 e1b9qdjy4"
+                          data-size="small"
                         >
-                          <div>
+                          <button
+                            aria-label="plus"
+                            class="cache-19ghf3i e112qvla0"
+                            type="button"
+                          >
                             <svg
-                              class="cache-rycp5w-sizeStyles e1gt4cfo0"
+                              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
                               viewBox="0 0 24 24"
                             >
                               <path
                                 d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
                               />
                             </svg>
-                          </div>
-                        </button>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
