@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
-import { TextInput } from '..'
+import { TextInputV2 } from '..'
 
-export const Template: StoryFn<typeof TextInput> = ({ ...args }) => {
+export const Template: StoryFn<typeof TextInputV2> = ({ ...args }) => {
   const [value, setValue] = useState<string | undefined>(args.value)
 
-  return <TextInput {...args} value={value} onChange={setValue} />
+  return <TextInputV2 {...args} value={value} onChange={setValue} />
 }
 
 Template.args = {

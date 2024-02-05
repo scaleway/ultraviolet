@@ -5,3 +5,8 @@ import { DateInput } from '..'
 export const Template: StoryFn<ComponentProps<typeof DateInput>> = props => (
   <DateInput {...props} />
 )
+
+Template.args = {
+  label: 'Date Input',
+  required: true,
+}

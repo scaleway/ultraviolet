@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ComponentProps, DOMAttributes, ReactNode } from 'react'
+import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId, useMemo, useState } from 'react'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
@@ -72,6 +72,7 @@ const StyledInputWrapper = styled('div', {
 
   & > ${StyledInput} {
     color: ${({ theme }) => theme.colors.neutral.text};
+
     &::placeholder {
       color: ${({ theme }) => theme.colors.neutral.textWeak};
     }
@@ -96,6 +97,7 @@ const StyledInputWrapper = styled('div', {
 
     & > ${StyledInput} {
       color: ${({ theme }) => theme.colors.neutral.textDisabled};
+
       &::placeholder {
         color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
       }
@@ -116,42 +118,45 @@ const StyledInputWrapper = styled('div', {
 `
 
 type TextInputProps = {
-  autoFocus?: boolean
   className?: string
   clearable?: boolean
   'data-testid'?: string
-  disabled?: boolean
   error?: string
   helper?: ReactNode
   iconName?: ComponentProps<typeof Icon>['name']
-  id?: string
-  label: string
+  label?: string
   labelDescription?: ReactNode
   loading?: boolean
   minLength?: number
   maxLength?: number
-  name?: string
-  onBlur?: DOMAttributes<HTMLInputElement>['onBlur']
-  onChange: (newValue: string) => void
-  onFocus?: DOMAttributes<HTMLInputElement>['onFocus']
   onRandomize?: () => void
-  placeholder?: string
-  prefix?: string
-  readOnly?: boolean
-  required?: boolean
+  onChange?: (newValue: string) => void
+  prefix?: ReactNode
   size?: TextInputSize
   success?: string
-  suffix?: string
+  suffix?: ReactNode
   tabIndex?: number
   tooltip?: string
   type?: 'text' | 'password' | 'url' | 'email'
   value?: string
-}
+} & Pick<
+  InputHTMLAttributes<HTMLInputElement>,
+  | 'onFocus'
+  | 'onBlur'
+  | 'name'
+  | 'id'
+  | 'placeholder'
+  | 'aria-label'
+  | 'disabled'
+  | 'readOnly'
+  | 'required'
+  | 'autoFocus'
+>
 
 /**
  * This component offers an extended input HTML
  */
-export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
+export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
   (
     {
       id,
@@ -224,136 +229,146 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           </Stack>
           {labelDescription ?? null}
         </Stack>
-        <Tooltip text={tooltip}>
-          <StyledInputWrapper
-            hasFocus={hasFocus}
-            data-disabled={disabled}
-            data-readOnly={readOnly}
-            data-success={!!success}
-            data-error={!!error}
-            size={size}
-          >
-            {prefix ? (
-              <BasicPrefixStack direction="row" alignItems="center">
-                <Text
-                  as="span"
-                  sentiment="neutral"
-                  variant="bodySmall"
-                  disabled={disabled}
-                >
-                  {prefix}
-                </Text>
-              </BasicPrefixStack>
-            ) : null}
-            {iconName ? <Icon name={iconName} size={16} /> : null}
-            <StyledInput
-              type={computedType}
-              aria-invalid={!!error}
-              id={id ?? localId}
-              tabIndex={tabIndex}
-              autoFocus={autoFocus}
-              disabled={disabled}
-              ref={ref}
-              value={value === null ? '' : value}
-              onChange={event => {
-                onChange(event.currentTarget.value)
-              }}
-              isSuccess={!!success}
-              isError={!!error}
-              isClearable={!!computedClearable}
-              placeholder={placeholder}
-              data-testid={dataTestId}
-              name={name}
-              onFocus={event => {
-                setHasFocus(true)
-                onFocus?.(event)
-              }}
-              onBlur={event => {
-                setHasFocus(false)
-                onBlur?.(event)
-              }}
-              readOnly={readOnly}
-              minLength={minLength}
-              maxLength={maxLength}
-            />
-            {success || error || loading || computedClearable ? (
-              <StateStack direction="row" gap={1} alignItems="center">
-                {computedClearable ? (
+        <div>
+          <Tooltip text={tooltip}>
+            <StyledInputWrapper
+              hasFocus={hasFocus}
+              data-disabled={disabled}
+              data-readOnly={readOnly}
+              data-success={!!success}
+              data-error={!!error}
+              size={size}
+            >
+              {prefix ? (
+                <BasicPrefixStack direction="row" alignItems="center">
+                  {typeof prefix === 'string' ? (
+                    <Text
+                      as="span"
+                      sentiment="neutral"
+                      variant="bodySmall"
+                      disabled={disabled}
+                    >
+                      {prefix}
+                    </Text>
+                  ) : (
+                    prefix
+                  )}
+                </BasicPrefixStack>
+              ) : null}
+              {iconName ? <Icon name={iconName} size={16} /> : null}
+              <StyledInput
+                type={computedType}
+                aria-invalid={!!error}
+                id={id ?? localId}
+                tabIndex={tabIndex}
+                autoFocus={autoFocus}
+                disabled={disabled}
+                ref={ref}
+                value={value === null || value === undefined ? '' : value}
+                onChange={event => {
+                  onChange?.(event.currentTarget.value)
+                }}
+                isSuccess={!!success}
+                isError={!!error}
+                isClearable={!!computedClearable}
+                placeholder={placeholder}
+                data-testid={dataTestId}
+                name={name}
+                onFocus={event => {
+                  setHasFocus(true)
+                  onFocus?.(event)
+                }}
+                onBlur={event => {
+                  setHasFocus(false)
+                  onBlur?.(event)
+                }}
+                readOnly={readOnly}
+                minLength={minLength}
+                maxLength={maxLength}
+              />
+              {success || error || loading || computedClearable ? (
+                <StateStack direction="row" gap={1} alignItems="center">
+                  {computedClearable ? (
+                    <Button
+                      aria-label="clear value"
+                      disabled={disabled || !value}
+                      variant="ghost"
+                      size={size === 'small' ? 'xsmall' : 'small'}
+                      icon="close"
+                      onClick={() => {
+                        onChange?.('')
+                      }}
+                      sentiment="neutral"
+                    />
+                  ) : null}
+                  {success ? (
+                    <Icon
+                      name="checkbox-circle-outline"
+                      color="success"
+                      size={16}
+                      disabled={disabled}
+                    />
+                  ) : null}
+                  {error ? (
+                    <Icon
+                      name="alert"
+                      color="danger"
+                      size={16}
+                      disabled={disabled}
+                    />
+                  ) : null}
+                  {loading && !disabled ? <Loader active size={16} /> : null}
+                </StateStack>
+              ) : null}
+              {suffix ? (
+                <BasicSuffixStack direction="row" alignItems="center">
+                  {typeof suffix === 'string' ? (
+                    <Text
+                      as="span"
+                      sentiment="neutral"
+                      variant="bodySmall"
+                      disabled={disabled}
+                    >
+                      {suffix}
+                    </Text>
+                  ) : (
+                    suffix
+                  )}
+                </BasicSuffixStack>
+              ) : null}
+              {type === 'password' ? (
+                <CTASuffixStack direction="row" alignItems="center">
                   <Button
-                    aria-label="clear value"
-                    disabled={disabled || !value}
-                    variant="ghost"
-                    size={size === 'small' ? 'xsmall' : 'small'}
-                    icon="close"
+                    disabled={disabled}
+                    data-testid={
+                      dataTestId ? `${dataTestId}-visibility-button` : undefined
+                    }
+                    aria-label={isPasswordVisible ? 'hide' : 'show'}
                     onClick={() => {
-                      onChange('')
+                      setIsPasswordVisible(!isPasswordVisible)
                     }}
+                    variant="ghost"
                     sentiment="neutral"
+                    icon={isPasswordVisible ? 'eye-off' : 'eye'}
+                    size={size === 'small' ? 'xsmall' : 'small'}
                   />
-                ) : null}
-                {success ? (
-                  <Icon
-                    name="checkbox-circle-outline"
-                    color="success"
-                    size={16}
+                </CTASuffixStack>
+              ) : null}
+              {onRandomize ? (
+                <CTASuffixStack direction="row" alignItems="center">
+                  <Button
                     disabled={disabled}
+                    icon="auto-fix"
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                    variant="ghost"
+                    sentiment="neutral"
+                    onClick={onRandomize}
                   />
-                ) : null}
-                {error ? (
-                  <Icon
-                    name="alert"
-                    color="danger"
-                    size={16}
-                    disabled={disabled}
-                  />
-                ) : null}
-                {loading && !disabled ? <Loader active size={16} /> : null}
-              </StateStack>
-            ) : null}
-            {suffix ? (
-              <BasicSuffixStack direction="row" alignItems="center">
-                <Text
-                  as="span"
-                  sentiment="neutral"
-                  variant="bodySmall"
-                  disabled={disabled}
-                >
-                  {suffix}
-                </Text>
-              </BasicSuffixStack>
-            ) : null}
-            {type === 'password' ? (
-              <CTASuffixStack direction="row" alignItems="center">
-                <Button
-                  disabled={disabled}
-                  data-testid={
-                    dataTestId ? `${dataTestId}-visibility-button` : undefined
-                  }
-                  aria-label={isPasswordVisible ? 'hide' : 'show'}
-                  onClick={() => {
-                    setIsPasswordVisible(!isPasswordVisible)
-                  }}
-                  variant="ghost"
-                  sentiment="neutral"
-                  icon={isPasswordVisible ? 'eye-off' : 'eye'}
-                  size={size === 'small' ? 'xsmall' : 'small'}
-                />
-              </CTASuffixStack>
-            ) : null}
-            {onRandomize ? (
-              <CTASuffixStack direction="row" alignItems="center">
-                <Button
-                  disabled={disabled}
-                  icon="auto-fix"
-                  size={size === 'small' ? 'xsmall' : 'small'}
-                  variant="ghost"
-                  sentiment="neutral"
-                  onClick={onRandomize}
-                />
-              </CTASuffixStack>
-            ) : null}
-          </StyledInputWrapper>
-        </Tooltip>
+                </CTASuffixStack>
+              ) : null}
+            </StyledInputWrapper>
+          </Tooltip>
+        </div>
         {error || success || typeof helper === 'string' ? (
           <Text
             as="p"

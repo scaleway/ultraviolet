@@ -1,24 +1,24 @@
 import randomName from '@scaleway/random-name'
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
-import { TextInput } from '..'
+import { TextInputV2 } from '..'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
-export const Examples: StoryFn<typeof TextInput> = args => {
+export const Examples: StoryFn<typeof TextInputV2> = args => {
   const [value, setValue] = useState<string>('Text')
 
   return (
     <Stack gap="2">
-      <TextInput
+      <TextInputV2
         {...args}
         label="With prefix"
         prefix="https://"
         value={value}
         onChange={setValue}
       />
-      <TextInput
+      <TextInputV2
         {...args}
         label="Text input with random hook"
         prefix="https://"
@@ -26,7 +26,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         onChange={setValue}
         onRandomize={() => setValue(randomName())}
       />
-      <TextInput
+      <TextInputV2
         {...args}
         label="Password input with random hook"
         prefix="https://"
@@ -35,7 +35,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         onRandomize={() => setValue(randomName())}
         type="password"
       />
-      <TextInput
+      <TextInputV2
         {...args}
         label="All at once"
         prefix="https://"
@@ -47,7 +47,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         loading
         clearable
       />
-      <TextInput
+      <TextInputV2
         {...args}
         label="With an helper but disabled"
         disabled
@@ -57,7 +57,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         onRandomize={() => setValue(randomName())}
         loading
       />
-      <TextInput
+      <TextInputV2
         {...args}
         label="Complex helper"
         helper={

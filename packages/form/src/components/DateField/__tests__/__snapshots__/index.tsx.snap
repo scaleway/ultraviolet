@@ -2,37 +2,37 @@
 
 exports[`DateField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-8drsly {
+  .cache-1wkb09n {
   width: 100%;
 }
 
-.cache-8drsly div.react-datepicker-wrapper {
+.cache-1wkb09n div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-8drsly div.react-datepicker__input-container {
+.cache-1wkb09n div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-8drsly div.react-datepicker__triangle {
+.cache-1wkb09n div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-8drsly div.react-datepicker__month-container {
+.cache-1wkb09n div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-8drsly .react-datepicker-popper {
+.cache-1wkb09n .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-8drsly .calendar {
+.cache-1wkb09n .calendar {
   font-family: Inter,Asap;
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-8drsly .calendar .react-datepicker__header {
+.cache-1wkb09n .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -42,19 +42,19 @@ exports[`DateField should render correctly 1`] = `
   position: inherit;
 }
 
-.cache-8drsly .calendar .react-datepicker__triangle {
+.cache-1wkb09n .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-8drsly .calendar .react-datepicker__month {
+.cache-1wkb09n .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-8drsly .calendar .react-datepicker__day-names {
+.cache-1wkb09n .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-8drsly .calendar .react-datepicker__day-name {
+.cache-1wkb09n .calendar .react-datepicker__day-name {
   font-family: Inter,Asap;
   color: #3f4250;
   font-weight: 500;
@@ -65,223 +65,302 @@ exports[`DateField should render correctly 1`] = `
   text-transform: capitalize;
 }
 
-.cache-8drsly .calendar .react-datepicker__day {
+.cache-1wkb09n .calendar .react-datepicker__day {
   color: #727683;
+  font-weight: 500;
   font-size: 16px;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 26px;
+  height: 26px;
   margin-left: 3px;
   margin-right: 3px;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--selected {
+.cache-1wkb09n .calendar .react-datepicker__day--outside-month {
+  color: #b5b7bd;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cache-1wkb09n .calendar .react-datepicker__day--selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--selected:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--selected[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--selected:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range {
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-range {
+.cache-1wkb09n .calendar .react-datepicker__day--in-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--in-range:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--in-range[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--in-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-start {
+.cache-1wkb09n .calendar .react-datepicker__day--range-start {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--range-start:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--range-start[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--range-start:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-end {
+.cache-1wkb09n .calendar .react-datepicker__day--range-end {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--range-end:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--range-end[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--range-end:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--keyboard-selected {
+.cache-1wkb09n .calendar .react-datepicker__day--keyboard-selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day:hover {
+.cache-1wkb09n .calendar .react-datepicker__day:hover {
   color: #222638;
   background-color: #e9eaeb;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--disabled {
   color: #b5b7bd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--disabled:hover {
+.cache-1wkb09n .calendar .react-datepicker__day--disabled:hover {
   color: #b5b7bd;
   background-color: transparent;
 }
 
-.cache-bjn8wh {
-  position: relative;
-}
-
-.cache-1ehejze {
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  color: #3f4250;
-  display: block;
-  max-width: 100%;
-  outline: none;
-  position: relative;
-  width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 14px;
-  font-size: 16px;
-  line-height: 24px;
-  height: 48px;
-  padding-left: 8px;
-  padding-right: 20px;
-  padding-top: 14px;
-  padding: 8px;
-}
-
-.cache-1ehejze::-webkit-input-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-1ehejze::-moz-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-1ehejze:-ms-input-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-1ehejze::placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-1ehejze:hover,
-.cache-1ehejze:focus {
-  border-color: #792dd4;
-}
-
-.cache-1ehejze:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.cache-1ehejze::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-.cache-1ehejze::-moz-placeholder {
-  opacity: 1;
-}
-
-.cache-1ehejze:-ms-input-placeholder {
-  opacity: 1;
-}
-
-.cache-1ehejze::placeholder {
-  opacity: 1;
-}
-
-.cache-1lt3r2p {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  overflow: hidden;
-  height: auto;
-  max-height: 0px;
-}
-
-.cache-xbtm7g {
-  font-size: 12px;
-  color: #b3144d;
-  padding-top: 2px;
-}
-
-.cache-1y7q7le {
-  padding: 8px;
-  position: absolute;
+.cache-16otux {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-9bqyx6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  right: 0;
-  top: 0;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l08jzy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-fxvpe6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1fbmuwp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
 }
 
-.cache-xqpu2t {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #d9dadd;
-  margin: 0 8px;
+.cache-1fbmuwp>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-1fbmuwp>.e7tir8v1::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-1fbmuwp>.e7tir8v1::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-1fbmuwp>.e7tir8v1:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-1fbmuwp>.e7tir8v1::placeholder {
+  color: #727683;
+}
+
+.cache-1fbmuwp[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-1fbmuwp[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-1fbmuwp[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-1fbmuwp[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1 {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp:not([data-disabled='true']):not([data-readOnly]):hover {
+  border-color: #8c40ef;
+}
+
+.cache-2aies0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
   height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
-.cache-lj7kap-sizeStyles {
+.cache-14gyx2a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.cache-7ie8u6-sizeStyles {
   vertical-align: middle;
   fill: #3f4250;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
 }
 
 <form>
     <div
-      class="cache-8drsly e1bm75lk2"
+      class="cache-1wkb09n e1bm75lk1"
     >
       <div
         class="react-datepicker-wrapper"
@@ -290,46 +369,49 @@ exports[`DateField should render correctly 1`] = `
           class="react-datepicker__input-container"
         >
           <div
-            class=""
-            name="test"
-            value=""
+            class=" cache-16otux ehpbis70"
           >
-            <div>
+            <div
+              class="cache-9bqyx6 ehpbis70"
+            >
               <div
-                class="cache-bjn8wh el3h3g95"
+                class="cache-1l08jzy ehpbis70"
               >
-                <input
-                  autocomplete="on"
-                  class="cache-1ehejze el3h3g92"
-                  id="date-input-test"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <div
-                class="cache-1lt3r2p e5hc7t70"
-              >
-                <div
-                  class="cache-xbtm7g el3h3g94"
+                <label
+                  class="cache-fxvpe6 e13y3mga0"
+                  for=":r1:"
                 />
               </div>
             </div>
-            <div
-              class="cache-1y7q7le e1bm75lk1"
-            >
-              <hr
-                aria-orientation="vertical"
-                class="e1bm75lk3 cache-xqpu2t e1d1zom90"
-                role="separator"
-              />
-              <svg
-                class="cache-lj7kap-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+            <div>
+              <div
+                class="cache-1fbmuwp e7tir8v0"
+                data-disabled="false"
+                data-error="false"
+                data-readonly="false"
+                data-success="false"
               >
-                <path
-                  d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+                <input
+                  aria-invalid="false"
+                  class="cache-2aies0 e7tir8v1"
+                  id=":r1:"
+                  name="test"
+                  type="text"
+                  value=""
                 />
-              </svg>
+                <div
+                  class="cache-14gyx2a e7tir8v3"
+                >
+                  <svg
+                    class="cache-7ie8u6-sizeStyles e1gt4cfo0"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -341,37 +423,37 @@ exports[`DateField should render correctly 1`] = `
 
 exports[`DateField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-8drsly {
+  .cache-1wkb09n {
   width: 100%;
 }
 
-.cache-8drsly div.react-datepicker-wrapper {
+.cache-1wkb09n div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-8drsly div.react-datepicker__input-container {
+.cache-1wkb09n div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-8drsly div.react-datepicker__triangle {
+.cache-1wkb09n div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-8drsly div.react-datepicker__month-container {
+.cache-1wkb09n div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-8drsly .react-datepicker-popper {
+.cache-1wkb09n .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-8drsly .calendar {
+.cache-1wkb09n .calendar {
   font-family: Inter,Asap;
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-8drsly .calendar .react-datepicker__header {
+.cache-1wkb09n .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -381,19 +463,19 @@ exports[`DateField should render correctly disabled 1`] = `
   position: inherit;
 }
 
-.cache-8drsly .calendar .react-datepicker__triangle {
+.cache-1wkb09n .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-8drsly .calendar .react-datepicker__month {
+.cache-1wkb09n .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-8drsly .calendar .react-datepicker__day-names {
+.cache-1wkb09n .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-8drsly .calendar .react-datepicker__day-name {
+.cache-1wkb09n .calendar .react-datepicker__day-name {
   font-family: Inter,Asap;
   color: #3f4250;
   font-weight: 500;
@@ -404,228 +486,302 @@ exports[`DateField should render correctly disabled 1`] = `
   text-transform: capitalize;
 }
 
-.cache-8drsly .calendar .react-datepicker__day {
+.cache-1wkb09n .calendar .react-datepicker__day {
   color: #727683;
+  font-weight: 500;
   font-size: 16px;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 26px;
+  height: 26px;
   margin-left: 3px;
   margin-right: 3px;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--selected {
+.cache-1wkb09n .calendar .react-datepicker__day--outside-month {
+  color: #b5b7bd;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cache-1wkb09n .calendar .react-datepicker__day--selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--selected:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--selected[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--selected:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range {
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-range {
+.cache-1wkb09n .calendar .react-datepicker__day--in-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--in-range:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--in-range[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--in-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-start {
+.cache-1wkb09n .calendar .react-datepicker__day--range-start {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--range-start:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--range-start[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--range-start:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-end {
+.cache-1wkb09n .calendar .react-datepicker__day--range-end {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--range-end:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--range-end[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--range-end:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--keyboard-selected {
+.cache-1wkb09n .calendar .react-datepicker__day--keyboard-selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day:hover {
+.cache-1wkb09n .calendar .react-datepicker__day:hover {
   color: #222638;
   background-color: #e9eaeb;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--disabled {
   color: #b5b7bd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--disabled:hover {
+.cache-1wkb09n .calendar .react-datepicker__day--disabled:hover {
   color: #b5b7bd;
   background-color: transparent;
 }
 
-.cache-bjn8wh {
-  position: relative;
-}
-
-.cache-m8eos7 {
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  color: #3f4250;
-  display: block;
-  max-width: 100%;
-  outline: none;
-  position: relative;
-  width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 14px;
-  font-size: 16px;
-  line-height: 24px;
-  cursor: default;
-  pointer-events: none;
-  background-color: #f3f3f4;
-  border-color: #e9eaeb;
-  color: #b5b7bd;
-  height: 48px;
-  padding-left: 8px;
-  padding-right: 20px;
-  padding-top: 14px;
-  padding: 8px;
-}
-
-.cache-m8eos7::-webkit-input-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-m8eos7::-moz-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-m8eos7:-ms-input-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-m8eos7::placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-m8eos7:hover,
-.cache-m8eos7:focus {
-  border-color: #792dd4;
-}
-
-.cache-m8eos7:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.cache-m8eos7::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-.cache-m8eos7::-moz-placeholder {
-  opacity: 1;
-}
-
-.cache-m8eos7:-ms-input-placeholder {
-  opacity: 1;
-}
-
-.cache-m8eos7::placeholder {
-  opacity: 1;
-}
-
-.cache-1lt3r2p {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  overflow: hidden;
-  height: auto;
-  max-height: 0px;
-}
-
-.cache-xbtm7g {
-  font-size: 12px;
-  color: #b3144d;
-  padding-top: 2px;
-}
-
-.cache-1y7q7le {
-  padding: 8px;
-  position: absolute;
+.cache-16otux {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-9bqyx6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  right: 0;
-  top: 0;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l08jzy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-fxvpe6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1fbmuwp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
 }
 
-.cache-xqpu2t {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #d9dadd;
-  margin: 0 8px;
+.cache-1fbmuwp>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-1fbmuwp>.e7tir8v1::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-1fbmuwp>.e7tir8v1::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-1fbmuwp>.e7tir8v1:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-1fbmuwp>.e7tir8v1::placeholder {
+  color: #727683;
+}
+
+.cache-1fbmuwp[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-1fbmuwp[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-1fbmuwp[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-1fbmuwp[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1 {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp:not([data-disabled='true']):not([data-readOnly]):hover {
+  border-color: #8c40ef;
+}
+
+.cache-2aies0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
   height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
-.cache-lj7kap-sizeStyles {
+.cache-14gyx2a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.cache-1bkp7gp-sizeStyles {
   vertical-align: middle;
-  fill: #3f4250;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: #b5b7bd;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
 }
 
 <form>
     <div
-      class="cache-8drsly e1bm75lk2"
+      class="cache-1wkb09n e1bm75lk1"
     >
       <div
         class="react-datepicker-wrapper"
@@ -634,48 +790,50 @@ exports[`DateField should render correctly disabled 1`] = `
           class="react-datepicker__input-container"
         >
           <div
-            class=""
-            disabled=""
-            name="test"
-            value=""
+            class=" cache-16otux ehpbis70"
           >
-            <div>
+            <div
+              class="cache-9bqyx6 ehpbis70"
+            >
               <div
-                class="cache-bjn8wh el3h3g95"
+                class="cache-1l08jzy ehpbis70"
               >
-                <input
-                  autocomplete="on"
-                  class="cache-m8eos7 el3h3g92"
-                  disabled=""
-                  id="date-input-test"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <div
-                class="cache-1lt3r2p e5hc7t70"
-              >
-                <div
-                  class="cache-xbtm7g el3h3g94"
+                <label
+                  class="cache-fxvpe6 e13y3mga0"
+                  for=":r5:"
                 />
               </div>
             </div>
-            <div
-              class="cache-1y7q7le e1bm75lk1"
-            >
-              <hr
-                aria-orientation="vertical"
-                class="e1bm75lk3 cache-xqpu2t e1d1zom90"
-                role="separator"
-              />
-              <svg
-                class="cache-lj7kap-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+            <div>
+              <div
+                class="cache-1fbmuwp e7tir8v0"
+                data-disabled="true"
+                data-error="false"
+                data-readonly="false"
+                data-success="false"
               >
-                <path
-                  d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+                <input
+                  aria-invalid="false"
+                  class="cache-2aies0 e7tir8v1"
+                  disabled=""
+                  id=":r5:"
+                  name="test"
+                  type="text"
+                  value=""
                 />
-              </svg>
+                <div
+                  class="cache-14gyx2a e7tir8v3"
+                >
+                  <svg
+                    class="cache-1bkp7gp-sizeStyles e1gt4cfo0"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -687,37 +845,37 @@ exports[`DateField should render correctly disabled 1`] = `
 
 exports[`DateField should trigger events 1`] = `
 <DocumentFragment>
-  .cache-8drsly {
+  .cache-1wkb09n {
   width: 100%;
 }
 
-.cache-8drsly div.react-datepicker-wrapper {
+.cache-1wkb09n div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-8drsly div.react-datepicker__input-container {
+.cache-1wkb09n div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-8drsly div.react-datepicker__triangle {
+.cache-1wkb09n div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-8drsly div.react-datepicker__month-container {
+.cache-1wkb09n div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-8drsly .react-datepicker-popper {
+.cache-1wkb09n .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-8drsly .calendar {
+.cache-1wkb09n .calendar {
   font-family: Inter,Asap;
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-8drsly .calendar .react-datepicker__header {
+.cache-1wkb09n .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -727,19 +885,19 @@ exports[`DateField should trigger events 1`] = `
   position: inherit;
 }
 
-.cache-8drsly .calendar .react-datepicker__triangle {
+.cache-1wkb09n .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-8drsly .calendar .react-datepicker__month {
+.cache-1wkb09n .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-8drsly .calendar .react-datepicker__day-names {
+.cache-1wkb09n .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-8drsly .calendar .react-datepicker__day-name {
+.cache-1wkb09n .calendar .react-datepicker__day-name {
   font-family: Inter,Asap;
   color: #3f4250;
   font-weight: 500;
@@ -750,223 +908,304 @@ exports[`DateField should trigger events 1`] = `
   text-transform: capitalize;
 }
 
-.cache-8drsly .calendar .react-datepicker__day {
+.cache-1wkb09n .calendar .react-datepicker__day {
   color: #727683;
+  font-weight: 500;
   font-size: 16px;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 26px;
+  height: 26px;
   margin-left: 3px;
   margin-right: 3px;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--selected {
+.cache-1wkb09n .calendar .react-datepicker__day--outside-month {
+  color: #b5b7bd;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cache-1wkb09n .calendar .react-datepicker__day--selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--selected:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--selected[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--selected:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range {
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--in-selecting-range:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--in-selecting-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-range {
+.cache-1wkb09n .calendar .react-datepicker__day--in-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--in-range:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--in-range[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--in-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-start {
+.cache-1wkb09n .calendar .react-datepicker__day--range-start {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--range-start:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--range-start[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--range-start:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-end {
+.cache-1wkb09n .calendar .react-datepicker__day--range-end {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-8drsly .calendar .react-datepicker__day--range-end:disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--range-end[aria-disabled='true'],
+.cache-1wkb09n .calendar .react-datepicker__day--range-end:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--keyboard-selected {
+.cache-1wkb09n .calendar .react-datepicker__day--keyboard-selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-8drsly .calendar .react-datepicker__day:hover {
+.cache-1wkb09n .calendar .react-datepicker__day:hover {
   color: #222638;
   background-color: #e9eaeb;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--disabled {
+.cache-1wkb09n .calendar .react-datepicker__day--disabled {
   color: #b5b7bd;
 }
 
-.cache-8drsly .calendar .react-datepicker__day--disabled:hover {
+.cache-1wkb09n .calendar .react-datepicker__day--disabled:hover {
   color: #b5b7bd;
   background-color: transparent;
 }
 
-.cache-bjn8wh {
-  position: relative;
-}
-
-.cache-1ehejze {
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  color: #3f4250;
-  display: block;
-  max-width: 100%;
-  outline: none;
-  position: relative;
-  width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 14px;
-  font-size: 16px;
-  line-height: 24px;
-  height: 48px;
-  padding-left: 8px;
-  padding-right: 20px;
-  padding-top: 14px;
-  padding: 8px;
-}
-
-.cache-1ehejze::-webkit-input-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-1ehejze::-moz-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-1ehejze:-ms-input-placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-1ehejze::placeholder {
-  color: #727683;
-  opacity: 0;
-}
-
-.cache-1ehejze:hover,
-.cache-1ehejze:focus {
-  border-color: #792dd4;
-}
-
-.cache-1ehejze:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.cache-1ehejze::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-.cache-1ehejze::-moz-placeholder {
-  opacity: 1;
-}
-
-.cache-1ehejze:-ms-input-placeholder {
-  opacity: 1;
-}
-
-.cache-1ehejze::placeholder {
-  opacity: 1;
-}
-
-.cache-1lt3r2p {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  overflow: hidden;
-  height: auto;
-  max-height: 0px;
-}
-
-.cache-xbtm7g {
-  font-size: 12px;
-  color: #b3144d;
-  padding-top: 2px;
-}
-
-.cache-1y7q7le {
-  padding: 8px;
-  position: absolute;
+.cache-16otux {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-9bqyx6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  right: 0;
-  top: 0;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l08jzy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-fxvpe6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-i5307t {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-xqpu2t {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #d9dadd;
-  margin: 0 8px;
+.cache-i5307t>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-i5307t>.e7tir8v1::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-i5307t>.e7tir8v1::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-i5307t>.e7tir8v1:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-i5307t>.e7tir8v1::placeholder {
+  color: #727683;
+}
+
+.cache-i5307t[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-i5307t[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-i5307t[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-i5307t[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.cache-i5307t[data-disabled='true']>.e7tir8v1 {
+  color: #b5b7bd;
+}
+
+.cache-i5307t[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-i5307t[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-i5307t[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-i5307t[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-i5307t:not([data-disabled='true']):not([data-readOnly]):hover {
+  border-color: #8c40ef;
+}
+
+.cache-2aies0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
   height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
-.cache-lj7kap-sizeStyles {
+.cache-14gyx2a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.cache-7ie8u6-sizeStyles {
   vertical-align: middle;
   fill: #3f4250;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
 }
 
 <form>
     <div
-      class="cache-8drsly e1bm75lk2"
+      class="cache-1wkb09n e1bm75lk1"
     >
       <div
         class="react-datepicker-wrapper"
@@ -975,46 +1214,49 @@ exports[`DateField should trigger events 1`] = `
           class="react-datepicker__input-container"
         >
           <div
-            class=""
-            name="test"
-            value="08/28/2022"
+            class=" cache-16otux ehpbis70"
           >
-            <div>
+            <div
+              class="cache-9bqyx6 ehpbis70"
+            >
               <div
-                class="cache-bjn8wh el3h3g95"
+                class="cache-1l08jzy ehpbis70"
               >
-                <input
-                  autocomplete="on"
-                  class="cache-1ehejze el3h3g92"
-                  id="date-input-test"
-                  type="text"
-                  value="8/28/2022"
-                />
-              </div>
-              <div
-                class="cache-1lt3r2p e5hc7t70"
-              >
-                <div
-                  class="cache-xbtm7g el3h3g94"
+                <label
+                  class="cache-fxvpe6 e13y3mga0"
+                  for=":r9:"
                 />
               </div>
             </div>
-            <div
-              class="cache-1y7q7le e1bm75lk1"
-            >
-              <hr
-                aria-orientation="vertical"
-                class="e1bm75lk3 cache-xqpu2t e1d1zom90"
-                role="separator"
-              />
-              <svg
-                class="cache-lj7kap-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+            <div>
+              <div
+                class="cache-i5307t e7tir8v0"
+                data-disabled="false"
+                data-error="false"
+                data-readonly="false"
+                data-success="false"
               >
-                <path
-                  d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+                <input
+                  aria-invalid="false"
+                  class="cache-2aies0 e7tir8v1"
+                  id=":r9:"
+                  name="test"
+                  type="text"
+                  value="08/28/2022"
                 />
-              </svg>
+                <div
+                  class="cache-14gyx2a e7tir8v3"
+                >
+                  <svg
+                    class="cache-7ie8u6-sizeStyles e1gt4cfo0"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
