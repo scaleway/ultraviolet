@@ -38,8 +38,9 @@ const styles = {
       background-color: ${theme.colors.success.background};
       color: ${theme.colors.success.text};
 
-      ${PREFIX}__progress-bar {
+      ${PREFIX}__progress-bar--success {
         background-color: ${theme.colors.success.backgroundStrong};
+        height: 4px;
       }
     }
 
@@ -47,8 +48,9 @@ const styles = {
       background-color: ${theme.colors.info.background};
       color: ${theme.colors.info.text};
 
-      ${PREFIX}__progress-bar {
+      ${PREFIX}__progress-bar--info {
         background-color: ${theme.colors.info.backgroundStrong};
+        height: 4px;
       }
     }
 
@@ -56,8 +58,9 @@ const styles = {
       background-color: ${theme.colors.danger.background};
       color: ${theme.colors.danger.text};
 
-      ${PREFIX}__progress-bar {
+      ${PREFIX}__progress-bar--danger {
         background-color: ${theme.colors.danger.backgroundStrong};
+        height: 4px;
       }
     }
   `,
@@ -142,7 +145,7 @@ type ToastContainerProps = {
 export const ToastContainer = ({
   newestOnTop,
   limit,
-  position,
+  position = 'top-right',
   'data-testid': dataTestId,
 }: ToastContainerProps) => {
   const theme = useTheme()
