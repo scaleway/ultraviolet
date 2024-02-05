@@ -50,6 +50,7 @@ export const TimeField = <
   options,
   'data-testid': dataTestId,
   shouldUnregister = false,
+  noTopLabel,
 }: TimeFieldProps<TFieldValues, TName>) => {
   const {
     field,
@@ -101,6 +102,7 @@ export const TimeField = <
       id={id}
       options={options}
       data-testid={dataTestId}
+      noTopLabel={noTopLabel}
     />
   )
 }
