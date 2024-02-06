@@ -606,6 +606,7 @@ export const TextInput = forwardRef<
             wrap={wrap}
             min={min}
             max={max}
+            required={required}
             {...inputProps}
           />
           {hasLabel && (
