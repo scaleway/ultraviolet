@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.6.9
+
+### Patch Changes
+
+- [#3402](https://github.com/scaleway/ultraviolet/pull/3402) [`6d6e5e4`](https://github.com/scaleway/ultraviolet/commit/6d6e5e4629b15a2e1a0d547541ba3ef17aa5b0d3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.52`.
+
+- [#3418](https://github.com/scaleway/ultraviolet/pull/3418) [`e311042`](https://github.com/scaleway/ultraviolet/commit/e311042e0af9849c12ff0440617f681308245d9a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.6.0`.
+
+- [#3400](https://github.com/scaleway/ultraviolet/pull/3400) [`7cf9be7`](https://github.com/scaleway/ultraviolet/commit/7cf9be78c513b221f188e8c8d5bb7ca50b0eeb6f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.5.4`.
+
+- Updated dependencies [[`ee2f4a5`](https://github.com/scaleway/ultraviolet/commit/ee2f4a593b4cb97de3a00170b8d129c0721f3fc7), [`80f6ed6`](https://github.com/scaleway/ultraviolet/commit/80f6ed6890504faa28885552b677bb13e0295da8), [`75cfcfa`](https://github.com/scaleway/ultraviolet/commit/75cfcfa42c3d1ce662fa67552e59f01f6f944969), [`6d6e5e4`](https://github.com/scaleway/ultraviolet/commit/6d6e5e4629b15a2e1a0d547541ba3ef17aa5b0d3), [`70fda53`](https://github.com/scaleway/ultraviolet/commit/70fda5326c64340ff6db11670bac8f10358ef3a6), [`6c134b4`](https://github.com/scaleway/ultraviolet/commit/6c134b4e213edcd53cf40f043096a04419f09212)]:
+  - @ultraviolet/ui@1.32.0
+
 ## 0.6.8
 
 ### Patch Changes

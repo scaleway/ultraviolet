@@ -1,5 +1,22 @@
 # Change Log
 
+## 2.4.0
+
+### Minor Changes
+
+- [#3391](https://github.com/scaleway/ultraviolet/pull/3391) [`ee2f4a5`](https://github.com/scaleway/ultraviolet/commit/ee2f4a593b4cb97de3a00170b8d129c0721f3fc7) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring of `DateInput`
+
+### Patch Changes
+
+- [#3413](https://github.com/scaleway/ultraviolet/pull/3413) [`75cfcfa`](https://github.com/scaleway/ultraviolet/commit/75cfcfa42c3d1ce662fa67552e59f01f6f944969) Thanks [@matthprost](https://github.com/matthprost)! - Fix `Radio` and `Checkbox` helper to have correct sentiment and variant
+
+- [#3402](https://github.com/scaleway/ultraviolet/pull/3402) [`6d6e5e4`](https://github.com/scaleway/ultraviolet/commit/6d6e5e4629b15a2e1a0d547541ba3ef17aa5b0d3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.52`.
+
+- [#3419](https://github.com/scaleway/ultraviolet/pull/3419) [`6c134b4`](https://github.com/scaleway/ultraviolet/commit/6c134b4e213edcd53cf40f043096a04419f09212) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextInput />` component to spread required in the DOM
+
+- Updated dependencies [[`ee2f4a5`](https://github.com/scaleway/ultraviolet/commit/ee2f4a593b4cb97de3a00170b8d129c0721f3fc7), [`80f6ed6`](https://github.com/scaleway/ultraviolet/commit/80f6ed6890504faa28885552b677bb13e0295da8), [`75cfcfa`](https://github.com/scaleway/ultraviolet/commit/75cfcfa42c3d1ce662fa67552e59f01f6f944969), [`6d6e5e4`](https://github.com/scaleway/ultraviolet/commit/6d6e5e4629b15a2e1a0d547541ba3ef17aa5b0d3), [`70fda53`](https://github.com/scaleway/ultraviolet/commit/70fda5326c64340ff6db11670bac8f10358ef3a6), [`6c134b4`](https://github.com/scaleway/ultraviolet/commit/6c134b4e213edcd53cf40f043096a04419f09212)]:
+  - @ultraviolet/ui@1.32.0
+
 ## 2.3.7
 
 ### Patch Changes
