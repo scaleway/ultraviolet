@@ -29,13 +29,15 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
   fill: #222638;
 }
 
-<button
-    class="cache-1dn316x-StyledItem ei26g5y1"
-    role="menuitem"
-    type="button"
-  >
-    Borderless Props
-  </button>
+<div>
+    <button
+      class="cache-1dn316x-StyledItem ei26g5y1"
+      role="menuitem"
+      type="button"
+    >
+      Borderless Props
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
@@ -69,13 +71,15 @@ exports[`Menu Menu.Item render with default props 1`] = `
   fill: #222638;
 }
 
-<button
-    class="cache-1g2q9ft-StyledItem ei26g5y1"
-    role="menuitem"
-    type="button"
-  >
-    Default Props
-  </button>
+<div>
+    <button
+      class="cache-1g2q9ft-StyledItem ei26g5y1"
+      role="menuitem"
+      type="button"
+    >
+      Default Props
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
@@ -100,14 +104,16 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
   fill: #b5b7bd;
 }
 
-<button
-    class="cache-mgnrz8-StyledItem ei26g5y1"
-    disabled=""
-    role="menuitem"
-    type="button"
-  >
-    Disabled Props
-  </button>
+<div>
+    <button
+      class="cache-mgnrz8-StyledItem ei26g5y1"
+      disabled=""
+      role="menuitem"
+      type="button"
+    >
+      Disabled Props
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
@@ -141,13 +147,15 @@ exports[`Menu Menu.Item render with sentiment danger 1`] = `
   fill: #92103f;
 }
 
-<button
-    class="cache-1goa4p3-StyledItem ei26g5y1"
-    role="menuitem"
-    type="button"
-  >
-    Danger
-  </button>
+<div>
+    <button
+      class="cache-1goa4p3-StyledItem ei26g5y1"
+      role="menuitem"
+      type="button"
+    >
+      Danger
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
@@ -321,13 +329,15 @@ exports[`Menu placement renders bottom 1`] = `
         class="cache-7sm35h-Stack-MenuList e1jn11gg0"
         role="menu"
       >
-        <button
-          class="cache-1g2q9ft-StyledItem ei26g5y1"
-          role="menuitem"
-          type="button"
-        >
-          bottom
-        </button>
+        <div>
+          <button
+            class="cache-1g2q9ft-StyledItem ei26g5y1"
+            role="menuitem"
+            type="button"
+          >
+            bottom
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -504,13 +514,15 @@ exports[`Menu placement renders left 1`] = `
         class="cache-7sm35h-Stack-MenuList e1jn11gg0"
         role="menu"
       >
-        <button
-          class="cache-1g2q9ft-StyledItem ei26g5y1"
-          role="menuitem"
-          type="button"
-        >
-          left
-        </button>
+        <div>
+          <button
+            class="cache-1g2q9ft-StyledItem ei26g5y1"
+            role="menuitem"
+            type="button"
+          >
+            left
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -687,13 +699,15 @@ exports[`Menu placement renders right 1`] = `
         class="cache-7sm35h-Stack-MenuList e1jn11gg0"
         role="menu"
       >
-        <button
-          class="cache-1g2q9ft-StyledItem ei26g5y1"
-          role="menuitem"
-          type="button"
-        >
-          right
-        </button>
+        <div>
+          <button
+            class="cache-1g2q9ft-StyledItem ei26g5y1"
+            role="menuitem"
+            type="button"
+          >
+            right
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -870,13 +884,15 @@ exports[`Menu placement renders top 1`] = `
         class="cache-7sm35h-Stack-MenuList e1jn11gg0"
         role="menu"
       >
-        <button
-          class="cache-1g2q9ft-StyledItem ei26g5y1"
-          role="menuitem"
-          type="button"
-        >
-          top
-        </button>
+        <div>
+          <button
+            class="cache-1g2q9ft-StyledItem ei26g5y1"
+            role="menuitem"
+            type="button"
+          >
+            top
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -1053,13 +1069,15 @@ exports[`Menu renders with Menu.Item 1`] = `
         class="cache-7sm35h-Stack-MenuList e1jn11gg0"
         role="menu"
       >
-        <button
-          class="cache-1g2q9ft-StyledItem ei26g5y1"
-          role="menuitem"
-          type="button"
-        >
-          Menu.Item
-        </button>
+        <div>
+          <button
+            class="cache-1g2q9ft-StyledItem ei26g5y1"
+            role="menuitem"
+            type="button"
+          >
+            Menu.Item
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -1227,22 +1245,26 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
         class="cache-7sm35h-Stack-MenuList e1jn11gg0"
         role="menu"
       >
-        <button
-          class="cache-mgnrz8-StyledItem ei26g5y1"
-          disabled=""
-          role="menuitem"
-          type="button"
-        >
-          Menu.Item disabled
-        </button>
-        <button
-          class="cache-mgnrz8-StyledItem ei26g5y1"
-          disabled=""
-          role="menuitem"
-          type="button"
-        >
-          Menu.Item Link disabled
-        </button>
+        <div>
+          <button
+            class="cache-mgnrz8-StyledItem ei26g5y1"
+            disabled=""
+            role="menuitem"
+            type="button"
+          >
+            Menu.Item disabled
+          </button>
+        </div>
+        <div>
+          <button
+            class="cache-mgnrz8-StyledItem ei26g5y1"
+            disabled=""
+            role="menuitem"
+            type="button"
+          >
+            Menu.Item Link disabled
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -1424,13 +1446,15 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
         class="cache-7sm35h-Stack-MenuList e1jn11gg0"
         role="menu"
       >
-        <a
-          class="cache-s7n5ht-StyledLinkItem ei26g5y0"
-          href="/link"
-          role="menuitem"
-        >
-          Menu.Item as Link
-        </a>
+        <div>
+          <a
+            class="cache-s7n5ht-StyledLinkItem ei26g5y0"
+            href="/link"
+            role="menuitem"
+          >
+            Menu.Item as Link
+          </a>
+        </div>
       </div>
     </div>
   </div>
