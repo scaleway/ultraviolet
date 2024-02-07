@@ -412,8 +412,8 @@ export const Checkbox = forwardRef(
 
             {helper ? (
               <Text
-                variant="bodySmall"
-                as="p"
+                variant="caption"
+                as="span"
                 prominence="weak"
                 sentiment="neutral"
               >
@@ -422,7 +422,7 @@ export const Checkbox = forwardRef(
             ) : null}
 
             {error ? (
-              <ErrorText variant="bodySmall" as="p" sentiment="danger">
+              <ErrorText variant="caption" as="span" sentiment="danger">
                 {error}
               </ErrorText>
             ) : null}
