@@ -16,6 +16,7 @@ const StyledOl = styled.ol`
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
 `
 
 const ItemContainer = styled.li`
