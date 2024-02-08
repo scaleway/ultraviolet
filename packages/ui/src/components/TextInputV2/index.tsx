@@ -371,7 +371,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
             </StyledInputWrapper>
           </Tooltip>
         </div>
-        {error || success || typeof helper === 'string' ? (
+        {error || typeof success === 'string' || typeof helper === 'string' ? (
           <Text
             as="p"
             variant="caption"
