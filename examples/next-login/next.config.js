@@ -26,18 +26,6 @@ const nextConfig = () => {
     eslint: {
       ignoreDuringBuilds: true,
     },
-    transpilePackages: [
-      'shire/form',
-      '@scaleway/jest-helpers',
-      '@scaleway/random-name',
-      '@scaleway/use-i18n',
-      '@scaleway/regex',
-      '@ultraviolet/ui',
-      '@ultraviolet/form',
-      '@ultraviolet/themes',
-      '@ultraviolet/icons',
-      '@ultraviolet/plus',
-    ],
   }
 
   return plugins.reduce((acc, next) => next(acc), config)
