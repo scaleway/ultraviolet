@@ -20,21 +20,8 @@ type FormValues = {
   lastname: string
   birthdate: string
 }
-const FORM_ERROR = 'FINAL_FORM/form-error'
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
-const mockErrors = {
-  maxDate: ({ maxDate }) => `Date must be lower than ${maxDate?.toString()}`,
-  maxLength: ({ maxLength }) =>
-    `This field should have a length lower than ${maxLength}`,
-  minDate: ({ minDate }) => `Date must be greater than ${minDate?.toString()}`,
-  minLength: ({ minLength }) =>
-    `This field should have a length greater than ${minLength}`,
-  pattern: () => `This field should match the regex`,
-  required: () => 'This field is required',
-  max: ({ max }) => `This field is too high (maximum is : ${max})`,
-  min: ({ min }) => `This field is too low (minimum is: ${min})`,
-}
 const bodyStyle = (theme: Theme) => css`
   .form-box {
     margin: 5% 30% 5% 30%;
@@ -56,10 +43,6 @@ const bodyStyle = (theme: Theme) => css`
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .alert {
-    width: 100%;
-    position: absolute;
   }
 `
 
@@ -87,7 +70,6 @@ const SignIn = () => {
     let timeDiff = Math.abs(Date.now() - val.birthdate.getTime())
     let age = Math.floor(timeDiff / (1000 * 3600 * 24) / 365.25)
     if (age < 1) {
-      ;({ [FORM_ERROR]: 'Must be 18+' })
       setTooYoung(true)
       setAlertSubmit(
         <Alert sentiment="danger" closable>
@@ -115,18 +97,15 @@ const SignIn = () => {
           </Text>,
         )
       }, 5000)
-      console.log('values', val.birthdate)
+
+      console.log('Too young ? ', tooYoung)
     }
   }
 
   return (
     <div css={bodyStyle(theme)}>
       <div className="form-box">
-        <Form<FormValues>
-          methods={methods}
-          errors={mockErrors}
-          onRawSubmit={handleSubmit}
-        >
+        <Form<FormValues> methods={methods} onRawSubmit={handleSubmit}>
           <Stack gap={1}>
             <div className="icon">
               <Icon name="profile" size="1.7em" />

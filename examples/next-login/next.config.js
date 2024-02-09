@@ -3,6 +3,8 @@ const nextConfig = () => {
     // eslint-disable-next-line global-require
     require('next-transpile-modules')([
       '@ultraviolet/ui',
+      '@ultraviolet/form',
+      '@ultraviolet/icons',
       'react-syntax-highlighter',
     ]),
   ]
@@ -24,6 +26,18 @@ const nextConfig = () => {
     eslint: {
       ignoreDuringBuilds: true,
     },
+    transpilePackages: [
+      'shire/form',
+      '@scaleway/jest-helpers',
+      '@scaleway/random-name',
+      '@scaleway/use-i18n',
+      '@scaleway/regex',
+      '@ultraviolet/ui',
+      '@ultraviolet/form',
+      '@ultraviolet/themes',
+      '@ultraviolet/icons',
+      '@ultraviolet/plus',
+    ],
   }
 
   return plugins.reduce((acc, next) => next(acc), config)

@@ -1,4 +1,4 @@
-import { Text, Link, Stack, Modal } from '@ultraviolet/ui'
+import { Text, Link, Stack } from '@ultraviolet/ui'
 import { Icon } from '@ultraviolet/icons'
 import {
   Form,
@@ -17,18 +17,7 @@ type FormValues = {
 }
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-const mockErrors = {
-  maxDate: ({ maxDate }) => `Date must be lower than ${maxDate?.toString()}`,
-  maxLength: ({ maxLength }) =>
-    `This field should have a length lower than ${maxLength}`,
-  minDate: ({ minDate }) => `Date must be greater than ${minDate?.toString()}`,
-  minLength: ({ minLength }) =>
-    `This field should have a length greater than ${minLength}`,
-  pattern: () => `This field should match the regex`,
-  required: () => 'This field is required',
-  max: ({ max }) => `This field is too high (maximum is : ${max})`,
-  min: ({ min }) => `This field is too low (minimum is: ${min})`,
-}
+
 const bodyStyle = (theme: Theme) => css`
   .form-box {
     margin: 5% 30% 5% 30%;
@@ -65,7 +54,6 @@ const LogIn = () => {
   const [loginText, setLoginText] = useState(<></>)
   const handleSubmit = () => {
     const val = methods.getValues()
-    console.log(val)
     setValues(val)
     setLoginText(
       <ul>
@@ -73,16 +61,13 @@ const LogIn = () => {
       </ul>,
     )
     setTimeout(() => setLoginText(<></>), 3000)
+    console.log('Values :', values)
   }
 
   return (
     <div css={bodyStyle(theme)}>
       <div className="form-box">
-        <Form<FormValues>
-          methods={methods}
-          errors={mockErrors}
-          onRawSubmit={handleSubmit}
-        >
+        <Form<FormValues> methods={methods} onRawSubmit={handleSubmit}>
           <Stack gap={1}>
             <div className="icon">
               <Icon name="id" size="1.7em" />
@@ -128,21 +113,9 @@ const LogIn = () => {
               <Submit classname="submit-button">Log in</Submit>
             </div>
             <div className="info-text">
-              <Modal
-                disclosure={
-                  <Link sentiment="primary" size="small" prominence="weak">
-                    Forgot password?
-                  </Link>
-                }
-              >
-                <div>
-                  Inputs:{' '}
-                  <ul>
-                    <li>Email: {values.email}</li>
-                    <li>Password: {methods.getValues().password}</li>
-                  </ul>{' '}
-                </div>
-              </Modal>
+              <Link sentiment="primary" size="small" prominence="weak" href="/">
+                Forgot password?
+              </Link>
             </div>
           </Stack>
         </Form>

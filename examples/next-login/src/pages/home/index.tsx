@@ -12,6 +12,7 @@ const Home = () => {
     <>
       <div className="switch-button" css={swichButtonStyle}>
         <SwitchButton
+          name="switch button"
           leftButton={{
             label: 'Log In',
             value: 'login',
@@ -21,7 +22,7 @@ const Home = () => {
             value: 'signin',
           }}
           value="login"
-          onChange={e => setTab(e.target.value)}
+          onChange={e => setTab((e.currentTarget as HTMLInputElement).value)}
         />
       </div>
       {tab === 'login' ? <LogIn /> : <SignIn />}
