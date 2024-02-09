@@ -1,14 +1,4 @@
 const nextConfig = () => {
-  const plugins = [
-    // eslint-disable-next-line global-require
-    require('next-transpile-modules')([
-      '@ultraviolet/ui',
-      '@ultraviolet/form',
-      '@ultraviolet/icons',
-      'react-syntax-highlighter',
-    ]),
-  ]
-
   /** @type {import('next/dist/server/config').NextConfig} */
   const config = {
     compress: true,
@@ -26,9 +16,13 @@ const nextConfig = () => {
     eslint: {
       ignoreDuringBuilds: true,
     },
+    transpilePackages: [
+      '@ultraviolet/ui',
+      '@ultraviolet/form',
+      '@ultraviolet/icons',
+    ],
   }
-
-  return plugins.reduce((acc, next) => next(acc), config)
+  return config
 }
 
 module.exports = nextConfig()

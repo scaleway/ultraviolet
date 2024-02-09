@@ -6,6 +6,7 @@ import {
   Submit,
   CheckboxField,
   useForm,
+  FormErrors,
 } from '@ultraviolet/form'
 import { Theme, css, useTheme } from '@emotion/react'
 import { useState } from 'react'
@@ -17,6 +18,18 @@ type FormValues = {
 }
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+const mockErrors: FormErrors = {
+  maxDate: ({ maxDate }) => `Date must be lower than ${maxDate?.toString()}`,
+  maxLength: ({ maxLength }) =>
+    `This field should have a length lower than ${maxLength}`,
+  minDate: ({ minDate }) => `Date must be greater than ${minDate?.toString()}`,
+  minLength: ({ minLength }) =>
+    `This field should have a length greater than ${minLength}`,
+  pattern: () => `This field should match the regex`,
+  required: () => 'This field is required',
+  max: ({ max }) => `This field is too high (maximum is : ${max})`,
+  min: ({ min }) => `This field is too low (minimum is: ${min})`,
+}
 
 const bodyStyle = (theme: Theme) => css`
   .form-box {
@@ -67,7 +80,11 @@ const LogIn = () => {
   return (
     <div css={bodyStyle(theme)}>
       <div className="form-box">
-        <Form<FormValues> methods={methods} onRawSubmit={handleSubmit}>
+        <Form<FormValues>
+          methods={methods}
+          errors={mockErrors}
+          onRawSubmit={handleSubmit}
+        >
           <Stack gap={1}>
             <div className="icon">
               <Icon name="id" size="1.7em" />
@@ -110,7 +127,7 @@ const LogIn = () => {
             </div>
 
             <div className="info-text">
-              <Submit classname="submit-button">Log in</Submit>
+              <Submit>Log in</Submit>
             </div>
             <div className="info-text">
               <Link sentiment="primary" size="small" prominence="weak" href="/">

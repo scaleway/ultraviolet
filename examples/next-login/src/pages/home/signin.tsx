@@ -8,6 +8,7 @@ import {
   useForm,
   RadioField,
   DateField,
+  FormErrors,
 } from '@ultraviolet/form'
 import { Theme, css, useTheme } from '@emotion/react'
 import { useState } from 'react'
@@ -18,9 +19,22 @@ type FormValues = {
   gender: string
   firstname: string
   lastname: string
-  birthdate: string
+  birthdate: Date
 }
+
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+const mockErrors: FormErrors = {
+  maxDate: ({ maxDate }) => `Date must be lower than ${maxDate?.toString()}`,
+  maxLength: ({ maxLength }) =>
+    `This field should have a length lower than ${maxLength}`,
+  minDate: ({ minDate }) => `Date must be greater than ${minDate?.toString()}`,
+  minLength: ({ minLength }) =>
+    `This field should have a length greater than ${minLength}`,
+  pattern: () => `This field should match the regex`,
+  required: () => 'This field is required',
+  max: ({ max }) => `This field is too high (maximum is : ${max})`,
+  min: ({ min }) => `This field is too low (minimum is: ${min})`,
+}
 
 const bodyStyle = (theme: Theme) => css`
   .form-box {
@@ -53,7 +67,10 @@ const SignIn = () => {
     defaultValues: {
       email: '',
       password: '',
-      remember: false,
+      gender: 'mr',
+      firstname: '',
+      lastname: '',
+      birthdate: new Date(),
     },
   })
   const [values, setValues] = useState(methods.watch())
@@ -66,7 +83,6 @@ const SignIn = () => {
 
   const handleSubmit = () => {
     const val = methods.getValues()
-    console.log('click', values)
     let timeDiff = Math.abs(Date.now() - val.birthdate.getTime())
     let age = Math.floor(timeDiff / (1000 * 3600 * 24) / 365.25)
     if (age < 1) {
@@ -99,13 +115,18 @@ const SignIn = () => {
       }, 5000)
 
       console.log('Too young ? ', tooYoung)
+      console.log('Values', values)
     }
   }
 
   return (
     <div css={bodyStyle(theme)}>
       <div className="form-box">
-        <Form<FormValues> methods={methods} onRawSubmit={handleSubmit}>
+        <Form<FormValues>
+          methods={methods}
+          errors={mockErrors}
+          onRawSubmit={handleSubmit}
+        >
           <Stack gap={1}>
             <div className="icon">
               <Icon name="profile" size="1.7em" />
@@ -173,7 +194,7 @@ const SignIn = () => {
             </div>
 
             <div className="info-text">
-              <Submit classname="submit-button">Create an account</Submit>
+              <Submit>Create an account</Submit>
             </div>
           </Stack>
         </Form>
