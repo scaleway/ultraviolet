@@ -194,8 +194,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2
       chromatic:
-        specifier: 10.6.1
-        version: 10.6.1
+        specifier: 10.8.0
+        version: 10.8.0
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -8180,16 +8180,16 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@10.6.1:
-    resolution: {integrity: sha512-bd4C5sEEtN83uUmbc4Fu+x7+lJIPdMUdu4D6HRDQEIDl/Tatc8+By4bZluH1pzg/MbP9vllkL6Ua9vF4EEA7VA==}
+  /chromatic@10.8.0:
+    resolution: {integrity: sha512-DdgUSJJ5u+Czf+KZI+1NRz4RP/PbpcytWSUtpgqEBolGDw65VYwjI489yis+jfwKMev1VWEhj1xMYGITbD6XIA==}
     hasBin: true
     peerDependencies:
-      chromatic-cypress: ^0.4.0 || ^1.0.0
-      chromatic-playwright: ^0.4.0 || ^1.0.0
+      '@chromatic-com/cypress': ^0.5.2 || ^1.0.0
+      '@chromatic-com/playwright': ^0.5.2 || ^1.0.0
     peerDependenciesMeta:
-      chromatic-cypress:
+      '@chromatic-com/cypress':
         optional: true
-      chromatic-playwright:
+      '@chromatic-com/playwright':
         optional: true
     dev: true
 
