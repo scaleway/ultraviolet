@@ -15,19 +15,13 @@ import { Text } from '../Text'
 const PREFIX = '.Toastify'
 const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
 
-const TOAST_ICONS = {
-  warning: 'alert',
-  info: 'information-outline',
-  success: 'checkbox-circle-outline',
-  danger: 'alert',
-} as const
-
 const styles = {
   toast: (theme: Theme) => css`
     border-radius: ${theme.radii.default};
-    box-shadow: ${theme.shadows.dropdown};
-    min-height: 44px;
-    margin-bottom: ${theme.space['2']};
+    min-height: 52px;
+    width: 344px;
+    padding: 16px 16px 16px 16px;
+    gap: 16px;
 
     ${PREFIX}__toast-body {
       margin: 0;
@@ -63,7 +57,6 @@ const CloseButtonWrapper = styled.button`
   color: inherit;
   padding: 0;
   margin: 0;
-  margin-bottom: ${({ theme }) => theme.space['2']};
 `
 
 type CloseButtonProps = {
@@ -82,16 +75,10 @@ const CloseButton = ({ closeToast }: CloseButtonProps) => (
 
 type ContentProps = {
   children?: ReactNode
-  sentiment:
-    | 'danger'
-    | 'success'
-    | 'warning'
-    | 'info' /** @deprecated Info is deprecated and will be removed in the next major update. */
 }
 
-const Content = ({ sentiment, children }: ContentProps) => (
+const Content = ({ children }: ContentProps) => (
   <Stack gap={2} direction="row">
-    <Icon name={TOAST_ICONS[sentiment]} size={24} />
     <Text variant="body" as="span">
       {children}
     </Text>
@@ -100,16 +87,13 @@ const Content = ({ sentiment, children }: ContentProps) => (
 
 export const toast = {
   error: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.error(<Content sentiment="danger">{children}</Content>, options),
+    baseToast.error(<Content>{children}</Content>, options),
   info: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.info(<Content sentiment="info">{children}</Content>, options),
+    baseToast.info(<Content>{children}</Content>, options),
   success: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.success(
-      <Content sentiment="success">{children}</Content>,
-      options,
-    ),
+    baseToast.success(<Content>{children}</Content>, options),
   warning: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.warn(<Content sentiment="warning">{children}</Content>, options),
+    baseToast.warn(<Content>{children}</Content>, options),
 }
 
 type ToastContainerProps = {
