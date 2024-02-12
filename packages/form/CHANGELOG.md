@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.4.1
+
+### Patch Changes
+
+- [#3440](https://github.com/scaleway/ultraviolet/pull/3440) [`ed327de`](https://github.com/scaleway/ultraviolet/commit/ed327debd879bfaab9103e309a5846f0d6b33762) Thanks [@matthprost](https://github.com/matthprost)! - Export all component and missing `TextAreaField`
+
+- Updated dependencies [[`14f6440`](https://github.com/scaleway/ultraviolet/commit/14f6440cb5c633dc36977faa131b74490f584f49)]:
+  - @ultraviolet/ui@1.32.1
+
 ## 2.4.0
 
 ### Minor Changes
