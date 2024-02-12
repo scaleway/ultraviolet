@@ -1,5 +1,5 @@
 ---
-"@ultraviolet/form": patch
+'@ultraviolet/form': patch
 ---
 
-CheckboxField now support only key/value
+Remove `value` prop from `CheckboxField`, remove support of array value.
