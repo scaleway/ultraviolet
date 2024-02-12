@@ -6,7 +6,7 @@ export const Sentiments: StoryFn<typeof ToastContainer> = args => (
   <>
     <ToastContainer {...args} />
     <Button
-      sentiment="success"
+      sentiment="neutral"
       onClick={() => toast.success('This is success')}
     >
       Success
@@ -17,6 +17,12 @@ export const Sentiments: StoryFn<typeof ToastContainer> = args => (
     <Button sentiment="danger" onClick={() => toast.error('This is error')}>
       Error
     </Button>
+    <Button
+      sentiment="warning"
+      onClick={() => toast.warning('This is warning')}
+    >
+      Warning
+    </Button>
   </>
 )
 
@@ -24,7 +30,7 @@ Sentiments.parameters = {
   docs: {
     description: {
       story:
-        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.info()` or `toast.error()` will automatically set the correct sentiment',
+        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.error()`, `toast.warning()` or `toast.info()` will automatically set the correct sentiment. **⚠️ Info is deprecated ⚠️**',
     },
   },
 }

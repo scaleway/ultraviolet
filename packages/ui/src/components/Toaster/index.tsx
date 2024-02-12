@@ -35,33 +35,23 @@ const styles = {
     }
 
     &${PREFIX}__toast--success {
-      background-color: ${theme.colors.success.background};
-      color: ${theme.colors.success.text};
-
-      ${PREFIX}__progress-bar--success {
-        background-color: ${theme.colors.success.backgroundStrong};
-        height: 4px;
-      }
+      background-color: ${theme.colors.neutral.backgroundStronger};
+      color: ${theme.colors.neutral.textStronger};
     }
 
     &${PREFIX}__toast--info {
-      background-color: ${theme.colors.info.background};
-      color: ${theme.colors.info.text};
-
-      ${PREFIX}__progress-bar--info {
-        background-color: ${theme.colors.info.backgroundStrong};
-        height: 4px;
-      }
+      background-color: ${theme.colors.info.backgroundStrong};
+      color: ${theme.colors.neutral.textStronger};
     }
 
     &${PREFIX}__toast--error {
-      background-color: ${theme.colors.danger.background};
-      color: ${theme.colors.danger.text};
+      background-color: ${theme.colors.danger.backgroundStrong};
+      color: ${theme.colors.neutral.textStronger};
+    }
 
-      ${PREFIX}__progress-bar--danger {
-        background-color: ${theme.colors.danger.backgroundStrong};
-        height: 4px;
-      }
+    &${PREFIX}__toast--warning {
+      background-color: ${theme.colors.warning.backgroundStrong};
+      color: ${theme.colors.warning.textStrong};
     }
   `,
 }
@@ -92,13 +82,17 @@ const CloseButton = ({ closeToast }: CloseButtonProps) => (
 
 type ContentProps = {
   children?: ReactNode
-  sentiment: 'danger' | 'info' | 'success'
+  sentiment:
+    | 'danger'
+    | 'success'
+    | 'warning'
+    | 'info' /** @deprecated Info is deprecated and will be removed in the next major update. */
 }
 
 const Content = ({ sentiment, children }: ContentProps) => (
   <Stack gap={2} direction="row">
     <Icon name={TOAST_ICONS[sentiment]} size={24} />
-    <Text variant="body" as="span" sentiment={sentiment}>
+    <Text variant="body" as="span">
       {children}
     </Text>
   </Stack>
@@ -114,6 +108,8 @@ export const toast = {
       <Content sentiment="success">{children}</Content>,
       options,
     ),
+  warning: (children: ReactNode, options?: ToastOptions): number | string =>
+    baseToast.warn(<Content sentiment="warning">{children}</Content>, options),
 }
 
 type ToastContainerProps = {
@@ -168,6 +164,8 @@ export const ToastContainer = ({
               top: 100px;
               right: calc(0% + ${theme.space['2']});
             `}
+            stacked
+            hideProgressBar
           />
         )}
       </ClassNames>
