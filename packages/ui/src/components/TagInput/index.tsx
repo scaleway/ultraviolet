@@ -14,20 +14,13 @@ import { Tag } from '../Tag'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
-// SIZE
-export const TAGINPUT_SIZE_HEIGHT = {
-  large: 48,
-  medium: 40,
-  small: 32,
-} as const
-type TagInputSize = keyof typeof TAGINPUT_SIZE_HEIGHT
-
-// padding
+// Size & Padding
 export const TAGINPUT_SIZE_PADDING = {
   large: '1.5',
   medium: '1',
   small: '0.5',
 } as const
+type TagInputSize = keyof typeof TAGINPUT_SIZE_PADDING
 
 const STATUS = {
   IDLE: 'idle',
@@ -46,10 +39,9 @@ const TagInputContainer = styled('div', {
   display: flex;
   gap: ${({ theme }) => theme.space['1']};
   background-color: ${({ theme: { colors } }) => colors.neutral.background};
-  min-height: ${({ size }) => TAGINPUT_SIZE_HEIGHT[size]}px;
 
   padding: ${({ theme, size }) =>
-    `${theme.space[TAGINPUT_SIZE_PADDING[size]]} ${theme.space['2']}`};
+    `calc(${theme.space[TAGINPUT_SIZE_PADDING[size]]} - 1px) ${theme.space['2']}`};
   cursor: text;
 
   background: ${({ theme }) => theme.colors.neutral.background};
@@ -76,7 +68,6 @@ const TagInputContainer = styled('div', {
   &[data-readonly='true'] {
     border-color: ${({ theme }) => theme.colors.neutral.border};
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    cursor: not-allowed;
   }
 
   &[data-disabled='true'] {
@@ -142,7 +133,7 @@ type TagInputProps = {
   placeholder?: string
   tags?: TagInputProp
   /**
-   * @deprecated there is only one variant now, thhis prop has no more effect
+   * @deprecated there is only one variant now, this prop has no more effect
    */
   // eslint-disable-next-line react/no-unused-prop-types
   variant?: string
@@ -156,7 +147,7 @@ type TagInputProps = {
   required?: boolean
   size?: TagInputSize
   error?: string
-  success?: string
+  success?: string | boolean
   helper?: ReactNode
   readOnly?: boolean
   tooltip?: string
@@ -179,7 +170,7 @@ export const TagInput = ({
   label,
   labelDescription,
   required = false,
-  size = 'large',
+  size = 'medium',
   error,
   success,
   helper,
@@ -317,88 +308,89 @@ export const TagInput = ({
         </Stack>
         {labelDescription ?? null}
       </Stack>
-
-      <Tooltip text={tooltip}>
-        <TagInputContainer
-          onClick={handleContainerClick}
-          className={className}
-          data-testid={dataTestId}
-          size={size}
-          data-disabled={disabled}
-          data-readonly={readOnly}
-          data-error={!!error}
-          data-success={!!success}
-        >
-          <DataContainer>
-            {tagInputState.map(tag => (
-              <Tag
-                sentiment="neutral"
-                disabled={disabled}
-                key={tag.index}
-                isLoading={status[tag.index] === STATUS.LOADING}
-                onClose={
-                  !readOnly
-                    ? e => {
-                        e.stopPropagation()
-                        deleteTag(tag.index)
-                      }
-                    : undefined
-                }
-              >
-                {tag.label}
-              </Tag>
-            ))}
-            {!disabled ? (
-              <StyledInput
-                id={id}
-                name={name}
-                aria-label={name}
-                type="text"
-                placeholder={!tagInputState.length ? placeholder : ''}
-                value={input}
-                onBlur={addTag}
-                onChange={onInputChange}
-                onKeyDown={handleInputKeydown}
-                onPaste={handlePaste}
-                ref={inputRef}
-                readOnly={readOnly}
-              />
-            ) : null}
-          </DataContainer>
-          {computedClearable || success || error ? (
-            <StateContainer>
-              {computedClearable ? (
-                <Button
-                  aria-label="clear value"
-                  disabled={disabled}
-                  variant="ghost"
-                  size="xsmall"
-                  icon="close"
-                  onClick={clearAll}
+      <div>
+        <Tooltip text={tooltip}>
+          <TagInputContainer
+            onClick={handleContainerClick}
+            className={className}
+            data-testid={dataTestId}
+            size={size}
+            data-disabled={disabled}
+            data-readonly={readOnly}
+            data-error={!!error}
+            data-success={!!success}
+          >
+            <DataContainer>
+              {tagInputState.map(tag => (
+                <Tag
                   sentiment="neutral"
-                />
-              ) : null}
-              {success ? (
-                <Icon
-                  name="checkbox-circle-outline"
-                  color="success"
-                  size={16}
                   disabled={disabled}
+                  key={tag.index}
+                  isLoading={status[tag.index] === STATUS.LOADING}
+                  onClose={
+                    !readOnly
+                      ? e => {
+                          e.stopPropagation()
+                          deleteTag(tag.index)
+                        }
+                      : undefined
+                  }
+                >
+                  {tag.label}
+                </Tag>
+              ))}
+              {!disabled ? (
+                <StyledInput
+                  id={id}
+                  name={name}
+                  aria-label={name}
+                  type="text"
+                  placeholder={!tagInputState.length ? placeholder : ''}
+                  value={input}
+                  onBlur={addTag}
+                  onChange={onInputChange}
+                  onKeyDown={handleInputKeydown}
+                  onPaste={handlePaste}
+                  ref={inputRef}
+                  readOnly={readOnly}
                 />
               ) : null}
-              {error ? (
-                <Icon
-                  name="alert"
-                  color="danger"
-                  size={16}
-                  disabled={disabled}
-                />
-              ) : null}
-            </StateContainer>
-          ) : null}
-        </TagInputContainer>
-      </Tooltip>
-      {error || success || helper ? (
+            </DataContainer>
+            {computedClearable || success || error ? (
+              <StateContainer>
+                {computedClearable ? (
+                  <Button
+                    aria-label="clear value"
+                    disabled={disabled}
+                    variant="ghost"
+                    size="xsmall"
+                    icon="close"
+                    onClick={clearAll}
+                    sentiment="neutral"
+                  />
+                ) : null}
+                {success ? (
+                  <Icon
+                    name="checkbox-circle-outline"
+                    color="success"
+                    size={16}
+                    disabled={disabled}
+                  />
+                ) : null}
+                {error ? (
+                  <Icon
+                    name="alert"
+                    color="danger"
+                    size={16}
+                    disabled={disabled}
+                  />
+                ) : null}
+              </StateContainer>
+            ) : null}
+          </TagInputContainer>
+        </Tooltip>
+      </div>
+      {error || typeof success === 'string' || helper ? (
         <Text
           variant="caption"
           as="span"

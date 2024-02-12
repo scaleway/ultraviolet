@@ -83,45 +83,43 @@ exports[`TagInputField should render correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-1io0278 {
+.cache-hbvyfh {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1io0278:focus-within {
+.cache-hbvyfh:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1io0278[data-success='true'] {
+.cache-hbvyfh[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1io0278[data-error='true'] {
+.cache-hbvyfh[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1io0278:hover {
+.cache-hbvyfh:hover {
   border-color: #792dd4;
 }
 
-.cache-1io0278[data-readonly='true'] {
+.cache-hbvyfh[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1io0278[data-disabled='true'] {
+.cache-hbvyfh[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -195,24 +193,26 @@ exports[`TagInputField should render correctly 1`] = `
           />
         </div>
       </div>
-      <div
-        class="cache-1io0278 ea7vc6o3"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
-      >
+      <div>
         <div
-          class="cache-wmhyic ea7vc6o2"
+          class="cache-hbvyfh ea7vc6o3"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
         >
-          <input
-            aria-label="test"
-            class="cache-1livdsf ea7vc6o0"
-            name="test"
-            placeholder="placeholder"
-            type="text"
-            value=""
-          />
+          <div
+            class="cache-wmhyic ea7vc6o2"
+          >
+            <input
+              aria-label="test"
+              class="cache-1livdsf ea7vc6o0"
+              name="test"
+              placeholder="placeholder"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>

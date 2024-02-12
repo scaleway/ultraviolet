@@ -3,9 +3,6 @@ import { TagInput } from '..'
 
 export default {
   component: TagInput,
-  parameters: {
-    experimental: true,
-  },
   title: 'Components/Data Entry/TagInput',
 } as Meta
 
@@ -18,3 +15,4 @@ export { ReadOnly } from './ReadOnly.stories'
 export { Success } from './Success.stories'
 export { Error } from './Error.stories'
 export { LabelDescription } from './LabelDescription.stories'
+export { Tooltip } from './Tooltip.stories'

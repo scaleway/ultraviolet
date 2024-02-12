@@ -83,45 +83,43 @@ exports[`TagInput should renders correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-1q143vd-TagInputContainer {
+.cache-uex2j9-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1q143vd-TagInputContainer:focus-within {
+.cache-uex2j9-TagInputContainer:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q143vd-TagInputContainer[data-success='true'] {
+.cache-uex2j9-TagInputContainer[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1q143vd-TagInputContainer[data-error='true'] {
+.cache-uex2j9-TagInputContainer[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1q143vd-TagInputContainer:hover {
+.cache-uex2j9-TagInputContainer:hover {
   border-color: #792dd4;
 }
 
-.cache-1q143vd-TagInputContainer[data-readonly='true'] {
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1q143vd-TagInputContainer[data-disabled='true'] {
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -194,21 +192,23 @@ exports[`TagInput should renders correctly 1`] = `
         />
       </div>
     </div>
-    <div
-      class="cache-1q143vd-TagInputContainer ea7vc6o3"
-      data-disabled="false"
-      data-error="false"
-      data-readonly="false"
-      data-success="false"
-    >
+    <div>
       <div
-        class="cache-bi6n77-DataContainer ea7vc6o2"
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
       >
-        <input
-          class="cache-45doph-StyledInput ea7vc6o0"
-          type="text"
-          value=""
-        />
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
+        >
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            type="text"
+            value=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -298,45 +298,43 @@ exports[`TagInput should renders correctly disabled 1`] = `
   text-decoration: none;
 }
 
-.cache-1q143vd-TagInputContainer {
+.cache-uex2j9-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1q143vd-TagInputContainer:focus-within {
+.cache-uex2j9-TagInputContainer:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q143vd-TagInputContainer[data-success='true'] {
+.cache-uex2j9-TagInputContainer[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1q143vd-TagInputContainer[data-error='true'] {
+.cache-uex2j9-TagInputContainer[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1q143vd-TagInputContainer:hover {
+.cache-uex2j9-TagInputContainer:hover {
   border-color: #792dd4;
 }
 
-.cache-1q143vd-TagInputContainer[data-readonly='true'] {
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1q143vd-TagInputContainer[data-disabled='true'] {
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -377,16 +375,18 @@ exports[`TagInput should renders correctly disabled 1`] = `
         />
       </div>
     </div>
-    <div
-      class="cache-1q143vd-TagInputContainer ea7vc6o3"
-      data-disabled="true"
-      data-error="false"
-      data-readonly="false"
-      data-success="false"
-    >
+    <div>
       <div
-        class="cache-bi6n77-DataContainer ea7vc6o2"
-      />
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="true"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
+      >
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -475,45 +475,43 @@ exports[`TagInput should renders correctly readOnly 1`] = `
   text-decoration: none;
 }
 
-.cache-1q143vd-TagInputContainer {
+.cache-uex2j9-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1q143vd-TagInputContainer:focus-within {
+.cache-uex2j9-TagInputContainer:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q143vd-TagInputContainer[data-success='true'] {
+.cache-uex2j9-TagInputContainer[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1q143vd-TagInputContainer[data-error='true'] {
+.cache-uex2j9-TagInputContainer[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1q143vd-TagInputContainer:hover {
+.cache-uex2j9-TagInputContainer:hover {
   border-color: #792dd4;
 }
 
-.cache-1q143vd-TagInputContainer[data-readonly='true'] {
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1q143vd-TagInputContainer[data-disabled='true'] {
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -586,22 +584,24 @@ exports[`TagInput should renders correctly readOnly 1`] = `
         />
       </div>
     </div>
-    <div
-      class="cache-1q143vd-TagInputContainer ea7vc6o3"
-      data-disabled="false"
-      data-error="false"
-      data-readonly="true"
-      data-success="false"
-    >
+    <div>
       <div
-        class="cache-bi6n77-DataContainer ea7vc6o2"
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="true"
+        data-success="false"
       >
-        <input
-          class="cache-45doph-StyledInput ea7vc6o0"
-          readonly=""
-          type="text"
-          value=""
-        />
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
+        >
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            readonly=""
+            type="text"
+            value=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -691,45 +691,43 @@ exports[`TagInput should renders correctly with error 1`] = `
   text-decoration: none;
 }
 
-.cache-1q143vd-TagInputContainer {
+.cache-uex2j9-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1q143vd-TagInputContainer:focus-within {
+.cache-uex2j9-TagInputContainer:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q143vd-TagInputContainer[data-success='true'] {
+.cache-uex2j9-TagInputContainer[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1q143vd-TagInputContainer[data-error='true'] {
+.cache-uex2j9-TagInputContainer[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1q143vd-TagInputContainer:hover {
+.cache-uex2j9-TagInputContainer:hover {
   border-color: #792dd4;
 }
 
-.cache-1q143vd-TagInputContainer[data-readonly='true'] {
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1q143vd-TagInputContainer[data-disabled='true'] {
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -835,33 +833,35 @@ exports[`TagInput should renders correctly with error 1`] = `
         />
       </div>
     </div>
-    <div
-      class="cache-1q143vd-TagInputContainer ea7vc6o3"
-      data-disabled="false"
-      data-error="true"
-      data-readonly="false"
-      data-success="false"
-    >
+    <div>
       <div
-        class="cache-bi6n77-DataContainer ea7vc6o2"
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="true"
+        data-readonly="false"
+        data-success="false"
       >
-        <input
-          class="cache-45doph-StyledInput ea7vc6o0"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        class="cache-16a972i-StateContainer ea7vc6o1"
-      >
-        <svg
-          class="cache-1vzt1iy-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
         >
-          <path
-            d="M11 15H13V17H11V15ZM11 7H13V13H11V7ZM12 2C6.47 2 2 6.5 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12C20 14.1217 19.1571 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            type="text"
+            value=""
           />
-        </svg>
+        </div>
+        <div
+          class="cache-16a972i-StateContainer ea7vc6o1"
+        >
+          <svg
+            class="cache-1vzt1iy-sizeStyles e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11 15H13V17H11V15ZM11 7H13V13H11V7ZM12 2C6.47 2 2 6.5 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12C20 14.1217 19.1571 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span
@@ -956,45 +956,43 @@ exports[`TagInput should renders correctly with placeholder 1`] = `
   text-decoration: none;
 }
 
-.cache-1q143vd-TagInputContainer {
+.cache-uex2j9-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1q143vd-TagInputContainer:focus-within {
+.cache-uex2j9-TagInputContainer:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q143vd-TagInputContainer[data-success='true'] {
+.cache-uex2j9-TagInputContainer[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1q143vd-TagInputContainer[data-error='true'] {
+.cache-uex2j9-TagInputContainer[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1q143vd-TagInputContainer:hover {
+.cache-uex2j9-TagInputContainer:hover {
   border-color: #792dd4;
 }
 
-.cache-1q143vd-TagInputContainer[data-readonly='true'] {
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1q143vd-TagInputContainer[data-disabled='true'] {
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -1067,22 +1065,24 @@ exports[`TagInput should renders correctly with placeholder 1`] = `
         />
       </div>
     </div>
-    <div
-      class="cache-1q143vd-TagInputContainer ea7vc6o3"
-      data-disabled="false"
-      data-error="false"
-      data-readonly="false"
-      data-success="false"
-    >
+    <div>
       <div
-        class="cache-bi6n77-DataContainer ea7vc6o2"
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
       >
-        <input
-          class="cache-45doph-StyledInput ea7vc6o0"
-          placeholder="Enter a value here"
-          type="text"
-          value=""
-        />
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
+        >
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            placeholder="Enter a value here"
+            type="text"
+            value=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -1172,45 +1172,43 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   text-decoration: none;
 }
 
-.cache-1q143vd-TagInputContainer {
+.cache-uex2j9-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1q143vd-TagInputContainer:focus-within {
+.cache-uex2j9-TagInputContainer:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q143vd-TagInputContainer[data-success='true'] {
+.cache-uex2j9-TagInputContainer[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1q143vd-TagInputContainer[data-error='true'] {
+.cache-uex2j9-TagInputContainer[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1q143vd-TagInputContainer:hover {
+.cache-uex2j9-TagInputContainer:hover {
   border-color: #792dd4;
 }
 
-.cache-1q143vd-TagInputContainer[data-readonly='true'] {
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1q143vd-TagInputContainer[data-disabled='true'] {
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -1394,72 +1392,74 @@ exports[`TagInput should renders correctly with some tags 1`] = `
         />
       </div>
     </div>
-    <div
-      class="cache-1q143vd-TagInputContainer ea7vc6o3"
-      data-disabled="false"
-      data-error="false"
-      data-readonly="false"
-      data-success="false"
-    >
+    <div>
       <div
-        class="cache-bi6n77-DataContainer ea7vc6o2"
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
       >
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="cache-1anauza-StyledContainer el6733p2"
           >
-            hello
-          </span>
-          <button
-            aria-label="Close tag"
-            class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-            data-testid="close-tag"
-            type="button"
-          >
-            <svg
-              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+            <span
+              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
             >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </button>
-        </span>
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
-        >
+              hello
+            </span>
+            <button
+              aria-label="Close tag"
+              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
+              data-testid="close-tag"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+          </span>
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="cache-1anauza-StyledContainer el6733p2"
           >
-            world
-          </span>
-          <button
-            aria-label="Close tag"
-            class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-            data-testid="close-tag"
-            type="button"
-          >
-            <svg
-              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+            <span
+              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
             >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </button>
-        </span>
-        <input
-          aria-label="radio"
-          class="cache-45doph-StyledInput ea7vc6o0"
-          name="radio"
-          placeholder=""
-          type="text"
-          value=""
-        />
+              world
+            </span>
+            <button
+              aria-label="Close tag"
+              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
+              data-testid="close-tag"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+          </span>
+          <input
+            aria-label="radio"
+            class="cache-45doph-StyledInput ea7vc6o0"
+            name="radio"
+            placeholder=""
+            type="text"
+            value=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -1549,45 +1549,43 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   text-decoration: none;
 }
 
-.cache-1q143vd-TagInputContainer {
+.cache-uex2j9-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1q143vd-TagInputContainer:focus-within {
+.cache-uex2j9-TagInputContainer:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q143vd-TagInputContainer[data-success='true'] {
+.cache-uex2j9-TagInputContainer[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1q143vd-TagInputContainer[data-error='true'] {
+.cache-uex2j9-TagInputContainer[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1q143vd-TagInputContainer:hover {
+.cache-uex2j9-TagInputContainer:hover {
   border-color: #792dd4;
 }
 
-.cache-1q143vd-TagInputContainer[data-readonly='true'] {
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1q143vd-TagInputContainer[data-disabled='true'] {
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -1771,72 +1769,74 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
         />
       </div>
     </div>
-    <div
-      class="cache-1q143vd-TagInputContainer ea7vc6o3"
-      data-disabled="false"
-      data-error="false"
-      data-readonly="false"
-      data-success="false"
-    >
+    <div>
       <div
-        class="cache-bi6n77-DataContainer ea7vc6o2"
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
       >
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="cache-1anauza-StyledContainer el6733p2"
           >
-            hello
-          </span>
-          <button
-            aria-label="Close tag"
-            class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-            data-testid="close-tag"
-            type="button"
-          >
-            <svg
-              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+            <span
+              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
             >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </button>
-        </span>
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
-        >
+              hello
+            </span>
+            <button
+              aria-label="Close tag"
+              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
+              data-testid="close-tag"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+          </span>
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="cache-1anauza-StyledContainer el6733p2"
           >
-            world
-          </span>
-          <button
-            aria-label="Close tag"
-            class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-            data-testid="close-tag"
-            type="button"
-          >
-            <svg
-              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+            <span
+              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
             >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </button>
-        </span>
-        <input
-          aria-label="radio"
-          class="cache-45doph-StyledInput ea7vc6o0"
-          name="radio"
-          placeholder=""
-          type="text"
-          value=""
-        />
+              world
+            </span>
+            <button
+              aria-label="Close tag"
+              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
+              data-testid="close-tag"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+          </span>
+          <input
+            aria-label="radio"
+            class="cache-45doph-StyledInput ea7vc6o0"
+            name="radio"
+            placeholder=""
+            type="text"
+            value=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -1926,45 +1926,43 @@ exports[`TagInput should renders correctly with success 1`] = `
   text-decoration: none;
 }
 
-.cache-1q143vd-TagInputContainer {
+.cache-uex2j9-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
   background-color: #ffffff;
-  min-height: 48px;
-  padding: 12px 16px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1q143vd-TagInputContainer:focus-within {
+.cache-uex2j9-TagInputContainer:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q143vd-TagInputContainer[data-success='true'] {
+.cache-uex2j9-TagInputContainer[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1q143vd-TagInputContainer[data-error='true'] {
+.cache-uex2j9-TagInputContainer[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1q143vd-TagInputContainer:hover {
+.cache-uex2j9-TagInputContainer:hover {
   border-color: #792dd4;
 }
 
-.cache-1q143vd-TagInputContainer[data-readonly='true'] {
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
-  cursor: not-allowed;
 }
 
-.cache-1q143vd-TagInputContainer[data-disabled='true'] {
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -2070,33 +2068,35 @@ exports[`TagInput should renders correctly with success 1`] = `
         />
       </div>
     </div>
-    <div
-      class="cache-1q143vd-TagInputContainer ea7vc6o3"
-      data-disabled="false"
-      data-error="false"
-      data-readonly="false"
-      data-success="true"
-    >
+    <div>
       <div
-        class="cache-bi6n77-DataContainer ea7vc6o2"
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="true"
       >
-        <input
-          class="cache-45doph-StyledInput ea7vc6o0"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        class="cache-16a972i-StateContainer ea7vc6o1"
-      >
-        <svg
-          class="cache-1gu5rzu-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
         >
-          <path
-            d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            type="text"
+            value=""
           />
-        </svg>
+        </div>
+        <div
+          class="cache-16a972i-StateContainer ea7vc6o1"
+        >
+          <svg
+            class="cache-1gu5rzu-sizeStyles e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <span
