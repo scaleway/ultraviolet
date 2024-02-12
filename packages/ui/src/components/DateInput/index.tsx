@@ -202,7 +202,7 @@ type DateInputProps = Pick<
   excludeDates?: Date[]
   id?: string
   labelDescription?: ReactNode
-  success?: string
+  success?: string | boolean
   helper?: string
   size?: 'small' | 'medium' | 'large'
   readOnly?: boolean
