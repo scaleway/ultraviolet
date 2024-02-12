@@ -6,54 +6,28 @@ import {
   Submit,
   CheckboxField,
   useForm,
-  FormErrors,
 } from '@ultraviolet/form'
-import { Theme, css, useTheme } from '@emotion/react'
 import { useState } from 'react'
-
+import styled from '@emotion/styled'
+import { EMAIL_REGEX, mockErrors } from '../../constants'
 type FormValues = {
   email: string
   password: string
   remember: boolean
 }
 
-const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-const mockErrors: FormErrors = {
-  maxDate: ({ maxDate }) => `Date must be lower than ${maxDate?.toString()}`,
-  maxLength: ({ maxLength }) =>
-    `This field should have a length lower than ${maxLength}`,
-  minDate: ({ minDate }) => `Date must be greater than ${minDate?.toString()}`,
-  minLength: ({ minLength }) =>
-    `This field should have a length greater than ${minLength}`,
-  pattern: () => `This field should match the regex`,
-  required: () => 'This field is required',
-  max: ({ max }) => `This field is too high (maximum is : ${max})`,
-  min: ({ min }) => `This field is too low (minimum is: ${min})`,
-}
-
-const bodyStyle = (theme: Theme) => css`
-  .form-box {
-    margin: 5% 30% 5% 30%;
-    background: ${theme.colors.primary.background};
-    padding: 2%;
-  }
-
-  .inputs {
-    padding: 10px 30px 10px 30px;
-  }
-
-  .icon {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .info-text {
-    margin-left: auto;
-    margin-right: auto;
-  }
+const StyledLoginContainer = styled(Stack)`
+  margin: 3% 30% 3% 30%;
+  background: ${({ theme }) => theme.colors.primary.background};
+  padding: 2%;
 `
+
+const StyledInput = styled(TextInputField)`
+  padding: 10px 30px 10px 30px;
+  width: 100%;
+`
+
 const LogIn = () => {
-  const theme = useTheme()
   const methods = useForm({
     mode: 'onChange',
     defaultValues: {
@@ -78,67 +52,49 @@ const LogIn = () => {
   }
 
   return (
-    <div css={bodyStyle(theme)}>
-      <div className="form-box">
-        <Form<FormValues>
-          methods={methods}
-          errors={mockErrors}
-          onRawSubmit={handleSubmit}
-        >
-          <Stack gap={1}>
-            <div className="icon">
-              <Icon name="id" size="1.7em" />
-            </div>
-            <div>
-              <Text as="div" placement="center" variant="heading">
-                Login form
-              </Text>
-            </div>
-            <div>
-              <TextInputField
-                label="Email"
-                name="email"
-                required
-                placeholder="example@email.com"
-                rules={{
-                  pattern: { value: emailRegex, message: 'Invalid format' },
-                }}
-                className="inputs"
-              />
-            </div>
-
-            <div>
-              <TextInputField
-                label="Password"
-                name="password"
-                type="password"
-                required
-                minLength={8}
-                notice="Min 8 characters"
-                className="inputs"
-              />
-            </div>
-            <div className="info-text">
-              <CheckboxField name="remember">
-                <Text as="div" variant="body">
-                  Remember me
-                </Text>
-              </CheckboxField>
-            </div>
-
-            <div className="info-text">
-              <Submit>Log in</Submit>
-            </div>
-            <div className="info-text">
-              <Link sentiment="primary" size="small" prominence="weak" href="/">
-                Forgot password?
-              </Link>
-            </div>
-          </Stack>
-        </Form>
-        {loginText}
-      </div>
-    </div>
+    <StyledLoginContainer>
+      <Form<FormValues>
+        methods={methods}
+        errors={mockErrors}
+        onRawSubmit={handleSubmit}
+      >
+        <Stack gap={1} alignItems="center">
+          <Icon name="id" size="1.7em" />
+          <Text as="div" variant="heading">
+            Login form
+          </Text>
+          <StyledInput
+            label="Email"
+            name="email"
+            required
+            placeholder="example@email.com"
+            rules={{
+              pattern: { value: EMAIL_REGEX, message: 'Invalid format' },
+            }}
+          />
+          <StyledInput
+            label="Password"
+            name="password"
+            type="password"
+            required
+            minLength={8}
+            notice="Min 8 characters"
+          />
+          <CheckboxField name="remember">
+            <Text as="div" variant="body" placement="center">
+              Remember me
+            </Text>
+          </CheckboxField>
+          <Submit>Log in</Submit>
+          <Link sentiment="primary" size="small" prominence="weak" href="/">
+            <Text as="div" variant="bodySmall">
+              Forgot password?
+            </Text>
+          </Link>
+        </Stack>
+      </Form>
+      {loginText}
+    </StyledLoginContainer>
   )
 }
 

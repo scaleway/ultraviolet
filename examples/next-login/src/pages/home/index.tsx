@@ -1,32 +1,37 @@
 import { useState } from 'react'
 import LogIn from './login'
-import SignIn from './signin'
-import { SwitchButton } from '@ultraviolet/ui'
-import { css } from '@emotion/react'
-const swichButtonStyle = css`
-  margin-left: 43%;
+import SignIn from './signup'
+import { SwitchButton, Stack } from '@ultraviolet/ui'
+import styled from '@emotion/styled'
+
+const StyledSwitchButton = styled(SwitchButton)`
+  margin: auto;
+`
+const StyledPage = styled(Stack)`
+  height: 100%;
+  width: 100%;
 `
 const Home = () => {
   const [tab, setTab] = useState('login')
   return (
-    <>
-      <div className="switch-button" css={swichButtonStyle}>
-        <SwitchButton
-          name="switch button"
-          leftButton={{
-            label: 'Log In',
-            value: 'login',
-          }}
-          rightButton={{
-            label: 'Sign In',
-            value: 'signin',
-          }}
-          value="login"
-          onChange={e => setTab((e.currentTarget as HTMLInputElement).value)}
-        />
-      </div>
+    <StyledPage>
+      <StyledSwitchButton
+        name="switch button"
+        leftButton={{
+          label: 'Log In',
+          value: 'login',
+        }}
+        rightButton={{
+          label: 'Sign Up',
+          value: 'signup',
+        }}
+        value="login"
+        onChange={event =>
+          setTab((event.currentTarget as HTMLInputElement).value)
+        }
+      />
       {tab === 'login' ? <LogIn /> : <SignIn />}
-    </>
+    </StyledPage>
   )
 }
 export default Home
