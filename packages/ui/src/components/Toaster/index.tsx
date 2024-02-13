@@ -91,8 +91,9 @@ const Content = ({ children }: ContentProps) => (
 )
 
 export const toast = {
-  error: (children: ReactNode): number | string =>
+  error: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.error(<Content>{children}</Content>, {
+      ...options,
       closeButton: <CloseButton sentiment="danger" />,
     }),
 
@@ -100,7 +101,6 @@ export const toast = {
     baseToast.info(<Content>{children}</Content>, {
       ...options,
       closeButton: <CloseButton sentiment="info" />,
-      ...options,
     }),
 
   success: (children: ReactNode, options?: ToastOptions): number | string =>
