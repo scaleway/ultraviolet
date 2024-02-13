@@ -124,7 +124,7 @@ export type SelectInputFieldProps<
       | 'required'
       | 'value'
       | 'noTopLabel'
-      | 'noOptionsMessage'
+      | 'emptyState'
       | 'customStyle'
       | 'data-testid'
     >
@@ -173,7 +173,7 @@ export const SelectInputField = <
   required,
   rules,
   noTopLabel,
-  noOptionsMessage,
+  emptyState,
   customStyle,
   shouldUnregister = false,
   'data-testid': dataTestId,
@@ -291,7 +291,7 @@ export const SelectInputField = <
       noTopLabel={noTopLabel}
       required={required}
       value={format(field.value)}
-      noOptionsMessage={noOptionsMessage}
+      emptyState={emptyState}
       data-testid={dataTestId}
     >
       {children}
