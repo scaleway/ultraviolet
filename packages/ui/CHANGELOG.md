@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.32.2
+
+### Patch Changes
+
+- [#3428](https://github.com/scaleway/ultraviolet/pull/3428) [`fbd0141`](https://github.com/scaleway/ultraviolet/commit/fbd014187a47bd2bfe8e22ad58af34bc70a0deb5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `4.19.6`.
+
 ## 1.32.1
 
 ### Patch Changes

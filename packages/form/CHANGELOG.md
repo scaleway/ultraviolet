@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.4.2
+
+### Patch Changes
+
+- [#3444](https://github.com/scaleway/ultraviolet/pull/3444) [`da7f854`](https://github.com/scaleway/ultraviolet/commit/da7f854230bcb7bdf8ce77a09070bb2b6f931a78) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputField />` component to have `emptyState` prop instead of `noOptionsMessage`
+
+- Updated dependencies [[`fbd0141`](https://github.com/scaleway/ultraviolet/commit/fbd014187a47bd2bfe8e22ad58af34bc70a0deb5)]:
+  - @ultraviolet/ui@1.32.2
+
 ## 2.4.1
 
 ### Patch Changes
