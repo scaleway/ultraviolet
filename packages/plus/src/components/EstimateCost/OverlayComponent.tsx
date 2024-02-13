@@ -144,6 +144,7 @@ export const OverlayComponent = ({
               </Strong>
               {isBeta ? (
                 <StyledBadge prominence="strong" sentiment="warning">
+                  {discount > 0 ? discount * 100 : ''}
                   {
                     locales[
                       `estimate.cost.beta.${discount > 0 ? 'discount' : 'free'}`
