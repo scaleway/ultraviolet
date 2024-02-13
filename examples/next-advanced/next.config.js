@@ -20,6 +20,7 @@ const nextConfig = () => {
       '@ultraviolet/ui',
       '@ultraviolet/form',
       '@ultraviolet/icons',
+      'react-syntax-highlighter',
     ],
   }
 
