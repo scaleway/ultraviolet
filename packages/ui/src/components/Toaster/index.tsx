@@ -1,7 +1,6 @@
 import type { Theme } from '@emotion/react'
 import { ClassNames, Global, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
@@ -9,11 +8,14 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
+import type { SENTIMENTS } from '../../theme'
+import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const PREFIX = '.Toastify'
 const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
+type SENTIMENT = (typeof SENTIMENTS)[number]
 
 const styles = {
   toast: (theme: Theme) => css`
@@ -50,27 +52,30 @@ const styles = {
   `,
 }
 
-const CloseButtonWrapper = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  padding: 0;
-  margin: 0;
-`
-
 type CloseButtonProps = {
   closeToast?: () => void
+  sentiment: SENTIMENT
 }
 
-const IconWithLeftMargin = styled(Icon)`
-  margin-left: ${({ theme }) => theme.space['1']};
+const StyledButton = styled(Button)`
+  background: none;
+
+  &:hover,
+  &:active {
+    background: none;
+  }
 `
 
-const CloseButton = ({ closeToast }: CloseButtonProps) => (
-  <CloseButtonWrapper type="button" onClick={closeToast}>
-    <IconWithLeftMargin name="close" size={18} />
-  </CloseButtonWrapper>
+const CloseButton = ({
+  closeToast,
+  sentiment = 'success',
+}: CloseButtonProps) => (
+  <StyledButton
+    aria-label="close"
+    icon="close"
+    onClick={closeToast}
+    sentiment={sentiment}
+  />
 )
 
 type ContentProps = {
@@ -86,14 +91,29 @@ const Content = ({ children }: ContentProps) => (
 )
 
 export const toast = {
-  error: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.error(<Content>{children}</Content>, options),
+  error: (children: ReactNode): number | string =>
+    baseToast.error(<Content>{children}</Content>, {
+      closeButton: <CloseButton sentiment="danger" />,
+    }),
+
   info: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.info(<Content>{children}</Content>, options),
+    baseToast.info(<Content>{children}</Content>, {
+      ...options,
+      closeButton: <CloseButton sentiment="info" />,
+      ...options,
+    }),
+
   success: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.success(<Content>{children}</Content>, options),
+    baseToast.success(<Content>{children}</Content>, {
+      ...options,
+      closeButton: <CloseButton sentiment="success" />,
+    }),
+
   warning: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.warn(<Content>{children}</Content>, options),
+    baseToast.warn(<Content>{children}</Content>, {
+      ...options,
+      closeButton: <CloseButton sentiment="warning" />,
+    }),
 }
 
 type ToastContainerProps = {
@@ -137,7 +157,6 @@ export const ToastContainer = ({
         {({ css: localCss }) => (
           <BaseToastContainer
             data-testid={dataTestId}
-            closeButton={<CloseButton />}
             toastClassName={localCss(styles.toast(theme))}
             autoClose={AUTOCLOSE_DELAY}
             icon={false}
