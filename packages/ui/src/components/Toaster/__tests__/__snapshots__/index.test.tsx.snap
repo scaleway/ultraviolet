@@ -152,6 +152,56 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
       </div>
     </div>
   </div>,
+  .cache-4lkpn5-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1e8qouo-StyledText {
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="Toastify__toast-body"
+    role="alert"
+  >
+    <div>
+      <div
+        class="cache-4lkpn5-Stack ehpbis70"
+      >
+        <span
+          class="cache-1e8qouo-StyledText e13y3mga0"
+        >
+          This is a warning
+        </span>
+      </div>
+    </div>
+  </div>,
 ]
 `;
 
@@ -162,35 +212,35 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   right: calc(0% + 16px);
 }
 
-.cache-1c61bas-toast {
+.cache-144n10m-toast {
   border-radius: 4px;
   min-height: 52px;
   width: 344px;
-  padding: 16px 16px 16px 16px;
-  gap: 16px;
+  padding: 16px;
+  text-size: 14px;
 }
 
-.cache-1c61bas-toast .Toastify__toast-body {
+.cache-144n10m-toast .Toastify__toast-body {
   margin: 0;
   padding: 0;
 }
 
-.cache-1c61bas-toast.Toastify__toast--success {
+.cache-144n10m-toast.Toastify__toast--success {
   background-color: #151a2d;
   color: #ffffff;
 }
 
-.cache-1c61bas-toast.Toastify__toast--info {
+.cache-144n10m-toast.Toastify__toast--info {
   background-color: #0078d2;
   color: #ffffff;
 }
 
-.cache-1c61bas-toast.Toastify__toast--error {
+.cache-144n10m-toast.Toastify__toast--error {
   background-color: #e51963;
   color: #ffffff;
 }
 
-.cache-1c61bas-toast.Toastify__toast--warning {
+.cache-144n10m-toast.Toastify__toast--warning {
   background-color: #fbc600;
   color: #222638;
 }
@@ -255,12 +305,12 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
       class="Toastify__toast-container Toastify__toast-container--top-right cache-se1d56-ToastContainer"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info cache-1c61bas-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info cache-144n10m-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
         data-collapsed="true"
         data-in="true"
         data-pos="top"
         id="info"
-        style="--y: 0px; --g: 12; --s: 0.95;"
+        style="--y: 0px; --g: 12; --s: 0.925;"
       >
         <div
           class="Toastify__toast-body"
@@ -308,12 +358,12 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success cache-1c61bas-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success cache-144n10m-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
         data-collapsed="true"
         data-in="true"
         data-pos="top"
         id="success"
-        style="--y: 0px; --g: 12; --s: 0.975;"
+        style="--y: 0px; --g: 12; --s: 0.95;"
       >
         <div
           class="Toastify__toast-body"
@@ -361,11 +411,12 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error cache-1c61bas-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error cache-144n10m-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        data-collapsed="true"
         data-in="true"
         data-pos="top"
         id="error"
-        style="--y: 0px; --g: 12; --s: 1;"
+        style="--y: 0px; --g: 12; --s: 0.975;"
       >
         <div
           class="Toastify__toast-body"
@@ -407,6 +458,58 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
             aria-hidden="true"
             aria-label="notification timer"
             class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--error"
+            role="progressbar"
+            style="animation-duration: 6000ms; animation-play-state: paused;"
+          />
+        </div>
+      </div>
+      <div
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--warning cache-144n10m-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        data-in="true"
+        data-pos="top"
+        id="warning"
+        style="--y: 0px; --g: 12; --s: 1;"
+      >
+        <div
+          class="Toastify__toast-body"
+          role="alert"
+        >
+          <div>
+            <div
+              class="cache-4lkpn5-Stack ehpbis70"
+            >
+              <span
+                class="cache-1e8qouo-StyledText e13y3mga0"
+              >
+                This is a warning
+              </span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="cache-1mblg8u-CloseButtonWrapper e1eb63991"
+          type="button"
+        >
+          <svg
+            class="e1eb63990 cache-1spmtm0-sizeStyles-IconWithLeftMargin e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
+        </button>
+        <div
+          class="Toastify__progress-bar--wrp"
+          data-hidden="true"
+        >
+          <div
+            class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--warning"
+          />
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--warning"
             role="progressbar"
             style="animation-duration: 6000ms; animation-play-state: paused;"
           />

@@ -20,8 +20,8 @@ const styles = {
     border-radius: ${theme.radii.default};
     min-height: 52px;
     width: 344px;
-    padding: 16px 16px 16px 16px;
-    gap: 16px;
+    padding: ${theme.space['2']};
+    text-size: ${theme.typography.bodySmallStrong.fontSize};
 
     ${PREFIX}__toast-body {
       margin: 0;

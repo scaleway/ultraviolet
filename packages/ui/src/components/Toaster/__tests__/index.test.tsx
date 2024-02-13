@@ -31,6 +31,9 @@ describe('Toaster', () => {
         toast.error('This is an error', {
           toastId: 'error',
         })
+        toast.warning('This is a warning', {
+          toastId: 'warning',
+        })
 
         act(() => jest.runAllTimers())
 
