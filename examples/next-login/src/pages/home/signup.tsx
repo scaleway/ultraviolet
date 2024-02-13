@@ -22,17 +22,14 @@ type FormValues = {
 }
 
 const StyledSigninContainer = styled(Stack)`
-  margin: 3% 30% 3% 30%;
+  margin: 5vh 25vw;
   background: ${({ theme }) => theme.colors.secondary.background};
-  padding: 2%;
+  padding: ${({ theme }) => theme.space['4']};
 `
 
 const StyledInput = styled(TextInputFieldV2)`
-  padding: 10px 0px;
-  width: 100%;
-`
-
-const InputsContainer = styled(Stack)`
+  padding: ${({ theme }) => theme.space['1.5']}
+    ${({ theme }) => theme.space['0']};
   width: 100%;
 `
 
@@ -103,7 +100,7 @@ const SignIn = () => {
           <Text as="div" placement="center" variant="heading">
             Sign up form
           </Text>
-          <InputsContainer>
+          <Stack width="100%">
             <RadioGroupField name="gender" direction="row">
               <RadioGroupField.Radio name="mr" value="mr" label="Mr" />
               <RadioGroupField.Radio name="mrs" value="mrs" label="Mrs" />
@@ -148,7 +145,7 @@ const SignIn = () => {
               minLength={8}
               helper="Min 8 characters"
             />
-          </InputsContainer>
+          </Stack>
           <Submit>Create an account</Submit>
         </Stack>
       </Form>

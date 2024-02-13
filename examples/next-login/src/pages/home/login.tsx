@@ -17,13 +17,14 @@ type FormValues = {
 }
 
 const StyledLoginContainer = styled(Stack)`
-  margin: 3% 30% 3% 30%;
+  margin: 5vh 30vw;
   background: ${({ theme }) => theme.colors.primary.background};
-  padding: 2%;
+  padding: ${({ theme }) => theme.space['4']};
 `
 
 const StyledInput = styled(TextInputField)`
-  padding: 10px 30px 10px 30px;
+  padding: ${({ theme }) => theme.space['1.5']}
+    ${({ theme }) => theme.space['5']};
   width: 100%;
 `
 
@@ -37,17 +38,17 @@ const LogIn = () => {
     },
   })
 
-  const [values, setValues] = useState(methods.watch())
-  const [loginText, setLoginText] = useState(<></>)
+  const [values, setValues] = useState(methods.getValues())
+  const [loginText, setLoginText] = useState('')
   const handleSubmit = () => {
     const val = methods.getValues()
     setValues(val)
     setLoginText(
-      <ul>
-        Welcome {val.email}. <li>Rember me checked : {String(val.remember)}</li>
-      </ul>,
+      `
+        Welcome ${val.email}. Remember me checked: ${String(val.remember)}
+      `,
     )
-    setTimeout(() => setLoginText(<></>), 3000)
+    setTimeout(() => setLoginText(''), 3000)
     console.log('Values :', values)
   }
 
@@ -60,7 +61,7 @@ const LogIn = () => {
       >
         <Stack gap={1} alignItems="center">
           <Icon name="id" size="1.7em" />
-          <Text as="div" variant="heading">
+          <Text as="h1" variant="heading">
             Login form
           </Text>
           <StyledInput
@@ -80,16 +81,10 @@ const LogIn = () => {
             minLength={8}
             notice="Min 8 characters"
           />
-          <CheckboxField name="remember">
-            <Text as="div" variant="body" placement="center">
-              Remember me
-            </Text>
-          </CheckboxField>
+          <CheckboxField name="remember">Remember me</CheckboxField>
           <Submit>Log in</Submit>
           <Link sentiment="primary" size="small" prominence="weak" href="/">
-            <Text as="div" variant="bodySmall">
-              Forgot password?
-            </Text>
+            Forgot password?
           </Link>
         </Stack>
       </Form>
