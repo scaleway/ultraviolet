@@ -2,4 +2,4 @@
 "@ultraviolet/plus": patch
 ---
 
-fix(estimatecost): discount value was missing
+Fix `<EstimateCost />` component, discount value was missing in the overlay
