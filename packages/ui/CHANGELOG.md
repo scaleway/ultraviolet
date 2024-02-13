@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.32.1
+
+### Patch Changes
+
+- [#3415](https://github.com/scaleway/ultraviolet/pull/3415) [`14f6440`](https://github.com/scaleway/ultraviolet/commit/14f6440cb5c633dc36977faa131b74490f584f49) Thanks [@matthprost](https://github.com/matthprost)! - Fix `TextInputV2` to implement more props and remove `iconName`
+
 ## 1.32.0
 
 ### Minor Changes

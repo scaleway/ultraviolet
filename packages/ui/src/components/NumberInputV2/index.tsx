@@ -185,7 +185,7 @@ type NumberInputProps = {
    */
   labelDescription?: ReactNode
   error?: string
-  success?: string
+  success?: string | boolean
   helper?: ReactNode
   value?: string | number
 } & Pick<
@@ -438,7 +438,7 @@ export const NumberInputV2 = forwardRef(
             </Container>
           </Tooltip>
         </div>
-        {error || success || helper ? (
+        {error || typeof success === 'string' || typeof helper === 'string' ? (
           <Text
             variant="caption"
             as="span"
@@ -449,6 +449,9 @@ export const NumberInputV2 = forwardRef(
             {error || success || helper}
           </Text>
         ) : null}
+        {!error && !success && typeof helper !== 'string' && helper
+          ? helper
+          : null}
       </Stack>
     )
   },

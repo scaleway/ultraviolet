@@ -5,7 +5,7 @@ import { TextInputV2 } from '..'
 export const Template: StoryFn<typeof TextInputV2> = ({ ...args }) => {
   const [value, setValue] = useState<string | undefined>(args.value)
 
-  return <TextInputV2 {...args} value={value} onChange={setValue} />
+  return <TextInputV2 {...args} value={value} onChange={setValue} success />
 }
 
 Template.args = {
