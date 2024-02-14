@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.6.13
+
+### Patch Changes
+
+- [#3447](https://github.com/scaleway/ultraviolet/pull/3447) [`119b913`](https://github.com/scaleway/ultraviolet/commit/119b9139bcf75e542017f76c5349cb01c853e0b9) Thanks [@vincentaudebert](https://github.com/vincentaudebert)! - Fix `<EstimateCost />` component, alertTitle prop was not forwarded
+
 ## 0.6.12
 
 ### Patch Changes
