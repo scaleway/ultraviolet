@@ -2,4 +2,4 @@
 "@ultraviolet/ui": patch
 ---
 
-add flex-wrap to breadcrumb list
+Add `flex-wrap` on component `<Breadcrumbs />`
