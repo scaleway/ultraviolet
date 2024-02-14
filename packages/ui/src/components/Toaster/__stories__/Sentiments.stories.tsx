@@ -30,7 +30,7 @@ Sentiments.parameters = {
   docs: {
     description: {
       story:
-        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.error()`, `toast.warning()` or `toast.info()` will automatically set the correct sentiment. **⚠️ Info is deprecated ⚠️**',
+        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.error()`, `toast.warning()` or `toast.info()` will automatically set the correct sentiment. **⚠️ `toast.info()` is deprecated ⚠️**',
     },
   },
 }

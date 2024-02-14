@@ -27,7 +27,6 @@ const styles = {
 
     ${PREFIX}__toast-body {
       margin: 0;
-      padding: 0;
     }
 
     &${PREFIX}__toast--success {
@@ -59,7 +58,7 @@ type CloseButtonProps = {
 
 const StyledButton = styled(Button)`
   background: none;
-
+  margin: auto;
   &:hover,
   &:active {
     background: none;
@@ -75,6 +74,7 @@ const CloseButton = ({
     icon="close"
     onClick={closeToast}
     sentiment={sentiment}
+    size="xsmall"
   />
 )
 
@@ -96,7 +96,10 @@ export const toast = {
       ...options,
       closeButton: <CloseButton sentiment="danger" />,
     }),
-
+  /**
+   * @deprecated "Deprecated, please use another variant instead"
+   */
+  // eslint-disable-next-line deprecation/deprecation
   info: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.info(<Content>{children}</Content>, {
       ...options,

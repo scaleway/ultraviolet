@@ -2,4 +2,4 @@
 "@ultraviolet/ui": minor
 ---
 
-Refactor Toaster component
+Refactor `<Toaster>` component to change sentiments colors
