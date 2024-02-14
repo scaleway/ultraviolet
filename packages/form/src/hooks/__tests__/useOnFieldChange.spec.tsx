@@ -2,7 +2,7 @@ import { ThemeProvider } from '@emotion/react'
 import { describe, expect, jest, test } from '@jest/globals'
 import { renderHook } from '@testing-library/react'
 import { theme as lightTheme } from '@ultraviolet/ui'
-import type { ReactElement } from 'react'
+import type { ReactNode } from 'react'
 import type { FieldValues } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
 import { CheckboxField, Form, TextInputField } from '../../components'
@@ -16,7 +16,7 @@ type FormValues = {
 }
 
 type Wrapers = {
-  children: ReactElement
+  children: ReactNode
   initialValues: FormValues
 }
 
