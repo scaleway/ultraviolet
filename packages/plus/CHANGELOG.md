@@ -1,5 +1,13 @@
 # @ultraviolet/plus
 
+## 0.6.12
+
+### Patch Changes
+
+- [#3446](https://github.com/scaleway/ultraviolet/pull/3446) [`e6edfa6`](https://github.com/scaleway/ultraviolet/commit/e6edfa6acf5c06d27d5576a22c571cbaaa2afc16) Thanks [@vincentaudebert](https://github.com/vincentaudebert)! - Fix `<EstimateCost />` component, discount value was missing in the overlay
+
+- [#3437](https://github.com/scaleway/ultraviolet/pull/3437) [`6eae25a`](https://github.com/scaleway/ultraviolet/commit/6eae25a6a5780bb1d4f2420dcfea2ebc9a18843b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.7.0`.
+
 ## 0.6.11
 
 ### Patch Changes
