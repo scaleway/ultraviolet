@@ -6,21 +6,27 @@ import type { ReactNode } from 'react'
 const Conversation = ({ children }: { children: ReactNode }) => (
   <Stack>{children}</Stack>
 )
-
-const MessageInfos = styled.div<{ align: 'left' | 'right' }>`
+const StyledInfos = styled.div<{ align: 'left' | 'right' }>`
   display: flex;
   align-items: center;
   justify-content: ${({ align }) =>
     align === 'left' ? 'flex-start' : 'flex-end'};
   margin: 0 ${({ theme }) => theme.space['7']};
 `
+export const MessageInfos = ({
+  children,
+  align,
+}: {
+  children: ReactNode
+  align: 'left' | 'right'
+}) => <StyledInfos align={align}>{children}</StyledInfos>
 
 const StyledText = styled(Text)`
   margin-top: ${({ theme }) => theme.space['3']};
   text-align: center;
 `
 
-const Date = ({ children }: { children: ReactNode }) => (
+export const Date = ({ children }: { children: ReactNode }) => (
   <StyledText as="p" variant="bodySmall" prominence="weak">
     {children}
   </StyledText>
@@ -54,7 +60,7 @@ type MessageProps = {
   avatar: ReactNode
 }
 
-const Message = ({
+export const Message = ({
   bubbleStyle,
   className,
   children,
@@ -74,7 +80,7 @@ const StyledTag = styled(Tag)`
   margin-right: ${({ theme }) => theme.space['1']};
 `
 
-const MessageTag = ({ children }: { children: ReactNode }) => (
+export const MessageTag = ({ children }: { children: ReactNode }) => (
   <StyledTag>{children}</StyledTag>
 )
 
