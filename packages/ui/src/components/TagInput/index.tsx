@@ -300,7 +300,7 @@ export const TagInput = ({
             as="label"
             variant="bodyStrong"
             sentiment="neutral"
-            htmlFor={id ?? localId}
+            htmlFor={localId}
           >
             {label}
           </Text>
@@ -341,7 +341,7 @@ export const TagInput = ({
               ))}
               {!disabled ? (
                 <StyledInput
-                  id={id}
+                  id={localId}
                   name={name}
                   aria-label={name}
                   type="text"

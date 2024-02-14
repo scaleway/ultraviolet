@@ -30,8 +30,7 @@ export const LabelDescription: StoryFn = (
 )
 
 LabelDescription.args = {
-  id: 'number-input',
-  name: 'number-input',
+  name: 'label-description',
   onChange: () => {},
 }
 
