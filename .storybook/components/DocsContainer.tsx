@@ -6,7 +6,8 @@ import {
 import { useDarkMode } from 'storybook-dark-mode'
 import { light, dark } from '../storybookThemes'
 import lightTheme, { darkTheme } from '../../packages/ui/src/theme'
-import { ThemeProvider } from '@emotion/react'
+import { Global, ThemeProvider } from '@emotion/react'
+import { globalStyles } from '../preview'
 
 type ExtraProps = {
   /**
@@ -39,10 +40,14 @@ type DocsContainerProps = BaseContainerProps & {
 
 const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const isDarkTheme = useDarkMode()
+  const mode = useDarkMode() ? 'dark' : 'light'
+
   const isPlusLibrary = context.attachedCSFFile.meta.title.includes('Plus/')
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <Global styles={[globalStyles(mode)]} />
+
       <BaseContainer theme={isDarkTheme ? dark : light} context={context}>
         {isValidElement<ExtraProps>(children)
           ? cloneElement(children, {
