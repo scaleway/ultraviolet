@@ -1,5 +1,18 @@
 # Change Log
 
+## 2.5.0
+
+### Minor Changes
+
+- [#3425](https://github.com/scaleway/ultraviolet/pull/3425) [`5c9df3e`](https://github.com/scaleway/ultraviolet/commit/5c9df3e3687395909b2183619a2e3314b2dcb13b) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Update `TagInput` and `TagInputField`
+
+### Patch Changes
+
+- [#3416](https://github.com/scaleway/ultraviolet/pull/3416) [`52c3aee`](https://github.com/scaleway/ultraviolet/commit/52c3aee10abebe515494caab8b2ff557c92eca5d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.50.1`.
+
+- Updated dependencies [[`5c9df3e`](https://github.com/scaleway/ultraviolet/commit/5c9df3e3687395909b2183619a2e3314b2dcb13b)]:
+  - @ultraviolet/ui@1.33.0
+
 ## 2.4.2
 
 ### Patch Changes
