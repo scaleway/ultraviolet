@@ -178,7 +178,10 @@ describe('EstimateCost - Regular Item', () => {
 
   test('render with alert', () =>
     shouldMatchEmotionSnapshot(
-      <EstimateCost alert="this is an alert">
+      <EstimateCost
+        alert="this is an alert"
+        alertTitle="this is an alert title"
+      >
         <EstimateCost.Item label="Regular">
           <EstimateCost.Regular>This is a regular Item</EstimateCost.Regular>
         </EstimateCost.Item>

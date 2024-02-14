@@ -25,6 +25,7 @@ const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 const EstimateCost = ({
   description,
   alert,
+  alertTitle,
   alertVariant = 'warning',
   defaultTimeUnit = 'hours',
   timeUnits = DEFAULT_UNIT_LIST,
@@ -56,6 +57,7 @@ const EstimateCost = ({
     <EstimateCostContent
       description={description}
       alert={alert}
+      alertTitle={alertTitle}
       alertVariant={alertVariant}
       defaultTimeUnit={defaultTimeUnit}
       timeUnits={timeUnits}

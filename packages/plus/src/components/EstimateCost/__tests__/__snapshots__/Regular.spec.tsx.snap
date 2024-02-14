@@ -12158,6 +12158,18 @@ exports[`EstimateCost - Regular Item render with alert 1`] = `
   flex-wrap: wrap;
 }
 
+.cache-1mlatzi {
+  color: #7c5400;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .cache-l49cjj-StyledTable-spacedChildren {
   width: 100%;
   border: 1px solid #d9dadd;
@@ -12804,6 +12816,11 @@ exports[`EstimateCost - Regular Item render with alert 1`] = `
           <div
             class="cache-hvmk6w e17p0ih03"
           >
+            <span
+              class="cache-1mlatzi e13y3mga0"
+            >
+              this is an alert title
+            </span>
             <p
               class="cache-1odwddd e13y3mga0"
             >
@@ -12903,7 +12920,7 @@ exports[`EstimateCost - Regular Item render with alert 1`] = `
                           aria-live="assertive"
                           as="label"
                           class="cache-110bzf5 e11gt5pw2"
-                          for=":r4q:"
+                          for=":r4r:"
                         >
                           Select...
                         </label>
@@ -12925,7 +12942,7 @@ exports[`EstimateCost - Regular Item render with alert 1`] = `
                             autocomplete="off"
                             autocorrect="off"
                             class=""
-                            id=":r4q:"
+                            id=":r4r:"
                             role="combobox"
                             spellcheck="false"
                             style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
