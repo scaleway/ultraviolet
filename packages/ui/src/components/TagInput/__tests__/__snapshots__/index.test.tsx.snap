@@ -1,1885 +1,348 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagInput add tag from input 1`] = `
+exports[`TagInput should renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
+  .cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
+.cache-135dzb3-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        test
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      id="test"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput add tag from input with error 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  gap: 4px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-4gfeok-StyledText {
+  color: #3f4250;
+  font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      id="test"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput add tag on paste 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
+  line-height: 24px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-uex2j9-TagInputContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
   background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        test
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      id="test"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput add tag on paste with error 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
   background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      id="test"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput delete tag 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
   border: 1px solid #d9dadd;
+  border-radius: 4px;
 }
 
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer:focus-within {
+  border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer[data-success='true'] {
+  border-color: #22674e;
 }
 
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
+.cache-uex2j9-TagInputContainer[data-error='true'] {
+  border-color: #b3144d;
 }
 
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
+.cache-uex2j9-TagInputContainer:hover {
+  border-color: #792dd4;
 }
 
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      id="test"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput delete tag with backspace 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      id="test"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput delete tag with error 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-cmn72i-StyledSvg {
-  -webkit-animation: spin 0.75s linear infinite;
-  animation: spin 0.75s linear infinite;
-}
-
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        throw
-      </span>
-      <svg
-        aria-label="Loading"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="20"
-        aria-valuetext="20%"
-        class="cache-cmn72i-StyledSvg e1y1n78x1"
-        role="progressbar"
-        style="height: 16px; width: 16px;"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="#d9dadd"
-          stroke-width="16"
-        />
-        <circle
-          class="cache-11f05l0-Loader"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="#8c40ef"
-          stroke-dasharray="263.89378290154264"
-          stroke-dashoffset="211.11502632123413"
-          stroke-linecap="round"
-          stroke-width="16"
-        />
-      </svg>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        error
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      id="test"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput renders correctly when disabled 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-4ijz8s-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #b5b7bd;
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
+  border-color: #e9eaeb;
   background: #f3f3f4;
-  border: solid 1px #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-1itpb4h-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
+.cache-bi6n77-DataContainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-45doph-StyledInput {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 16px;
+  background: inherit;
+  color: #3f4250;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+.cache-45doph-StyledInput::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput::placeholder {
+  color: #727683;
+}
+
+<div
+    class="cache-ymc80m-Stack ehpbis70"
+  >
+    <div
+      class="cache-irytw7-Stack ehpbis70"
+    >
+      <div
+        class="cache-135dzb3-Stack ehpbis70"
+      >
+        <label
+          class="cache-4gfeok-StyledText e13y3mga0"
+          for=":r0:"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
+      >
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
+        >
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            id=":r0:"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TagInput should renders correctly disabled 1`] = `
+<DocumentFragment>
+  .cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-135dzb3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-4gfeok-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-uex2j9-TagInputContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  background-color: #ffffff;
+  padding: calc(8px - 1px) 16px;
+  cursor: text;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.cache-uex2j9-TagInputContainer:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-uex2j9-TagInputContainer[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-uex2j9-TagInputContainer[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-uex2j9-TagInputContainer:hover {
+  border-color: #792dd4;
+}
+
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+}
+
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
   cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  color: #b5b7bd;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
 }
 
-.cache-1itpb4h-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-4ijz8s-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-1itpb4h-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-4ijz8s-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-1itpb4h-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput renders correctly when manualInput is disabled 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
+.cache-bi6n77-DataContainer {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1888,195 +351,175 @@ exports[`TagInput renders correctly when manualInput is disabled 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    class="cache-ymc80m-Stack ehpbis70"
+  >
+    <div
+      class="cache-irytw7-Stack ehpbis70"
+    >
+      <div
+        class="cache-135dzb3-Stack ehpbis70"
+      >
+        <label
+          class="cache-4gfeok-StyledText e13y3mga0"
+          for=":r3:"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="true"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
+      >
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TagInput should renders correctly readOnly 1`] = `
+<DocumentFragment>
+  .cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-135dzb3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-4gfeok-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-uex2j9-TagInputContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   background-color: #ffffff;
-  padding: 8px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
-  border-radius: 4px;
+  background: #ffffff;
   border: 1px solid #d9dadd;
+  border-radius: 4px;
 }
 
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer:focus-within {
+  border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer[data-success='true'] {
+  border-color: #22674e;
 }
 
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
+.cache-uex2j9-TagInputContainer[data-error='true'] {
+  border-color: #b3144d;
 }
 
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
+.cache-uex2j9-TagInputContainer:hover {
+  border-color: #792dd4;
 }
 
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput renders correctly when variant = base 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
+.cache-bi6n77-DataContainer {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2085,234 +528,215 @@ exports[`TagInput renders correctly when variant = base 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-45doph-StyledInput {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 16px;
+  background: inherit;
+  color: #3f4250;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+.cache-45doph-StyledInput::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput::placeholder {
+  color: #727683;
+}
+
+<div
+    class="cache-ymc80m-Stack ehpbis70"
+  >
+    <div
+      class="cache-irytw7-Stack ehpbis70"
+    >
+      <div
+        class="cache-135dzb3-Stack ehpbis70"
+      >
+        <label
+          class="cache-4gfeok-StyledText e13y3mga0"
+          for=":r6:"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="true"
+        data-success="false"
+      >
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
+        >
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            id=":r6:"
+            readonly=""
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TagInput should renders correctly with error 1`] = `
+<DocumentFragment>
+  .cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-135dzb3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-4gfeok-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-uex2j9-TagInputContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   background-color: #ffffff;
-  padding: 8px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
-  border-radius: 4px;
+  background: #ffffff;
   border: 1px solid #d9dadd;
+  border-radius: 4px;
 }
 
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer:focus-within {
+  border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer[data-success='true'] {
+  border-color: #22674e;
 }
 
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
+.cache-uex2j9-TagInputContainer[data-error='true'] {
+  border-color: #b3144d;
 }
 
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
+.cache-uex2j9-TagInputContainer:hover {
+  border-color: #792dd4;
 }
 
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput renders correctly when variant = bordered 1`] = `
-<DocumentFragment>
-  .cache-a2pyhf-TagInputContainer {
+.cache-bi6n77-DataContainer {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2321,135 +745,17 @@ exports[`TagInput renders correctly when variant = bordered 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-color: #ffffff;
-  margin-top: 0;
-  padding: 8px 0;
-}
-
-.cache-a2pyhf-TagInputContainer>input:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-a2pyhf-TagInputContainer>* {
-  margin-bottom: 6px;
-}
-
-.cache-a2pyhf-TagInputContainer>*:not(:last-child) {
-  margin-right: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
   gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
+.cache-45doph-StyledInput {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2458,141 +764,52 @@ exports[`TagInput renders correctly when variant = bordered 1`] = `
   -ms-flex: 1;
   flex: 1;
   font-size: 16px;
+  background: inherit;
   color: #3f4250;
   border: none;
   outline: none;
-  background-color: #ffffff;
+  height: 100%;
 }
 
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
+.cache-45doph-StyledInput::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput::-moz-placeholder {
+.cache-45doph-StyledInput::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
+.cache-45doph-StyledInput:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput::placeholder {
+.cache-45doph-StyledInput::placeholder {
   color: #727683;
 }
 
-<div
-    class="cache-a2pyhf-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput renders correctly when variant = no-border 1`] = `
-<DocumentFragment>
-  .cache-wqj0bq-TagInputContainer {
+.cache-16a972i-StateContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-}
-
-.cache-wqj0bq-TagInputContainer:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-wqj0bq-TagInputContainer>* {
-  margin-right: 6px;
-  margin-bottom: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
   gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.cache-1vzt1iy-sizeStyles {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-vdlwt8-StyledText {
+  color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -2601,256 +818,191 @@ exports[`TagInput renders correctly when variant = no-border 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
 }
 
 <div
-    class="cache-wqj0bq-TagInputContainer ea7vc6o1"
+    class="cache-ymc80m-Stack ehpbis70"
   >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
+    <div
+      class="cache-irytw7-Stack ehpbis70"
     >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      <div
+        class="cache-135dzb3-Stack ehpbis70"
       >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
+        <label
+          class="cache-4gfeok-StyledText e13y3mga0"
+          for=":r9:"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="true"
+        data-readonly="false"
+        data-success="false"
       >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            id=":r9:"
+            type="text"
+            value=""
           />
-        </svg>
-      </button>
-    </span>
+        </div>
+        <div
+          class="cache-16a972i-StateContainer ea7vc6o1"
+        >
+          <svg
+            class="cache-1vzt1iy-sizeStyles e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11 15H13V17H11V15ZM11 7H13V13H11V7ZM12 2C6.47 2 2 6.5 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2ZM12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12C20 14.1217 19.1571 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
     <span
-      class="cache-1anauza-StyledContainer el6733p2"
+      class="cache-vdlwt8-StyledText e13y3mga0"
     >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
+      This is an error
     </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
   </div>
 </DocumentFragment>
 `;
 
-exports[`TagInput renders correctly with base props 1`] = `
+exports[`TagInput should renders correctly with placeholder 1`] = `
 <DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
+  .cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-135dzb3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-4gfeok-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-uex2j9-TagInputContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   background-color: #ffffff;
-  padding: 8px;
+  padding: calc(8px - 1px) 16px;
   cursor: text;
-  border-radius: 4px;
+  background: #ffffff;
   border: 1px solid #d9dadd;
+  border-radius: 4px;
 }
 
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer:focus-within {
+  border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer[data-success='true'] {
+  border-color: #22674e;
 }
 
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
+.cache-uex2j9-TagInputContainer[data-error='true'] {
+  border-color: #b3144d;
 }
 
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
+.cache-uex2j9-TagInputContainer:hover {
+  border-color: #792dd4;
 }
 
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
 }
 
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
 }
 
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
-}
-
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      name="radio"
-      placeholder="TagInput..."
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput renders correctly with some tags 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
+.cache-bi6n77-DataContainer {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2859,24 +1011,231 @@ exports[`TagInput renders correctly with some tags 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
+.cache-45doph-StyledInput {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 16px;
+  background: inherit;
+  color: #3f4250;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+.cache-45doph-StyledInput::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-45doph-StyledInput::placeholder {
+  color: #727683;
+}
+
+<div
+    class="cache-ymc80m-Stack ehpbis70"
+  >
+    <div
+      class="cache-irytw7-Stack ehpbis70"
+    >
+      <div
+        class="cache-135dzb3-Stack ehpbis70"
+      >
+        <label
+          class="cache-4gfeok-StyledText e13y3mga0"
+          for=":rh:"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
+      >
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
+        >
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            id=":rh:"
+            placeholder="Enter a value here"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TagInput should renders correctly with some tags 1`] = `
+<DocumentFragment>
+  .cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-135dzb3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-4gfeok-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-uex2j9-TagInputContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  background-color: #ffffff;
+  padding: calc(8px - 1px) 16px;
+  cursor: text;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.cache-uex2j9-TagInputContainer:focus-within {
+  border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
+.cache-uex2j9-TagInputContainer[data-success='true'] {
+  border-color: #22674e;
 }
 
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
+.cache-uex2j9-TagInputContainer[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-uex2j9-TagInputContainer:hover {
+  border-color: #792dd4;
+}
+
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+}
+
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.cache-bi6n77-DataContainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-1anauza-StyledContainer {
@@ -2990,7 +1349,7 @@ exports[`TagInput renders correctly with some tags 1`] = `
   min-height: 16px;
 }
 
-.cache-1fexr8u-StyledInput {
+.cache-45doph-StyledInput {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2999,94 +1358,246 @@ exports[`TagInput renders correctly with some tags 1`] = `
   -ms-flex: 1;
   flex: 1;
   font-size: 16px;
+  background: inherit;
   color: #3f4250;
   border: none;
   outline: none;
-  background-color: #ffffff;
+  height: 100%;
 }
 
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
+.cache-45doph-StyledInput::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput::-moz-placeholder {
+.cache-45doph-StyledInput::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
+.cache-45doph-StyledInput:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput::placeholder {
+.cache-45doph-StyledInput::placeholder {
   color: #727683;
 }
 
 <div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
+    class="cache-ymc80m-Stack ehpbis70"
   >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
+    <div
+      class="cache-irytw7-Stack ehpbis70"
     >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      <div
+        class="cache-135dzb3-Stack ehpbis70"
       >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
+        <label
+          class="cache-4gfeok-StyledText e13y3mga0"
+          for=":rk:"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
       >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          <span
+            class="cache-1anauza-StyledContainer el6733p2"
+          >
+            <span
+              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            >
+              hello
+            </span>
+            <button
+              aria-label="Close tag"
+              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
+              data-testid="close-tag"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+          </span>
+          <span
+            class="cache-1anauza-StyledContainer el6733p2"
+          >
+            <span
+              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            >
+              world
+            </span>
+            <button
+              aria-label="Close tag"
+              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
+              data-testid="close-tag"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+          </span>
+          <input
+            aria-label="radio"
+            class="cache-45doph-StyledInput ea7vc6o0"
+            id=":rk:"
+            name="radio"
+            placeholder=""
+            type="text"
+            value=""
           />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TagInput renders correctly with some tags 2`] = `
+exports[`TagInput should renders correctly with some tags objects 1`] = `
 <DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
+  .cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-135dzb3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-4gfeok-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-uex2j9-TagInputContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  background-color: #ffffff;
+  padding: calc(8px - 1px) 16px;
+  cursor: text;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.cache-uex2j9-TagInputContainer:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-uex2j9-TagInputContainer[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-uex2j9-TagInputContainer[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-uex2j9-TagInputContainer:hover {
+  border-color: #792dd4;
+}
+
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+}
+
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.cache-bi6n77-DataContainer {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3095,24 +1606,14 @@ exports[`TagInput renders correctly with some tags 2`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-1anauza-StyledContainer {
@@ -3226,7 +1727,7 @@ exports[`TagInput renders correctly with some tags 2`] = `
   min-height: 16px;
 }
 
-.cache-1fexr8u-StyledInput {
+.cache-45doph-StyledInput {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3235,94 +1736,246 @@ exports[`TagInput renders correctly with some tags 2`] = `
   -ms-flex: 1;
   flex: 1;
   font-size: 16px;
+  background: inherit;
   color: #3f4250;
   border: none;
   outline: none;
-  background-color: #ffffff;
+  height: 100%;
 }
 
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
+.cache-45doph-StyledInput::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput::-moz-placeholder {
+.cache-45doph-StyledInput::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
+.cache-45doph-StyledInput:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput::placeholder {
+.cache-45doph-StyledInput::placeholder {
   color: #727683;
 }
 
 <div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
+    class="cache-ymc80m-Stack ehpbis70"
   >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
+    <div
+      class="cache-irytw7-Stack ehpbis70"
     >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      <div
+        class="cache-135dzb3-Stack ehpbis70"
       >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
+        <label
+          class="cache-4gfeok-StyledText e13y3mga0"
+          for=":rr:"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
       >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          <span
+            class="cache-1anauza-StyledContainer el6733p2"
+          >
+            <span
+              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            >
+              hello
+            </span>
+            <button
+              aria-label="Close tag"
+              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
+              data-testid="close-tag"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+          </span>
+          <span
+            class="cache-1anauza-StyledContainer el6733p2"
+          >
+            <span
+              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            >
+              world
+            </span>
+            <button
+              aria-label="Close tag"
+              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
+              data-testid="close-tag"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+          </span>
+          <input
+            aria-label="radio"
+            class="cache-45doph-StyledInput ea7vc6o0"
+            id=":rr:"
+            name="radio"
+            placeholder=""
+            type="text"
+            value=""
           />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TagInput renders correctly with some tags as objects 1`] = `
+exports[`TagInput should renders correctly with success 1`] = `
 <DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
+  .cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-135dzb3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-4gfeok-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-uex2j9-TagInputContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  background-color: #ffffff;
+  padding: calc(8px - 1px) 16px;
+  cursor: text;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.cache-uex2j9-TagInputContainer:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-uex2j9-TagInputContainer[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-uex2j9-TagInputContainer[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-uex2j9-TagInputContainer:hover {
+  border-color: #792dd4;
+}
+
+.cache-uex2j9-TagInputContainer[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+}
+
+.cache-uex2j9-TagInputContainer[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.cache-bi6n77-DataContainer {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3331,138 +1984,17 @@ exports[`TagInput renders correctly with some tags as objects 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
   gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
+.cache-45doph-StyledInput {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3471,149 +2003,52 @@ exports[`TagInput renders correctly with some tags as objects 1`] = `
   -ms-flex: 1;
   flex: 1;
   font-size: 16px;
+  background: inherit;
   color: #3f4250;
   border: none;
   outline: none;
-  background-color: #ffffff;
+  height: 100%;
 }
 
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
+.cache-45doph-StyledInput::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput::-moz-placeholder {
+.cache-45doph-StyledInput::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
+.cache-45doph-StyledInput:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1fexr8u-StyledInput::placeholder {
+.cache-45doph-StyledInput::placeholder {
   color: #727683;
 }
 
-<div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
-  >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
-    >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
-    </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput renders correctly with some tags objects 1`] = `
-<DocumentFragment>
-  .cache-1mur0jo-TagInputContainer {
+.cache-16a972i-StateContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 8px;
-  cursor: text;
-  border-radius: 4px;
-  border: 1px solid #d9dadd;
-}
-
-.cache-1mur0jo-TagInputContainer:focus-within {
-  border: 1px solid #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1mur0jo-TagInputContainer:hover {
-  border: 1px solid #8c40ef;
-}
-
-.cache-1mur0jo-TagInputContainer>* {
-  margin: 6px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
   gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.cache-1gu5rzu-sizeStyles {
+  vertical-align: middle;
+  fill: #22674e;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1n7fwv3-StyledText {
+  color: #22674e;
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -3622,172 +2057,60 @@ exports[`TagInput renders correctly with some tags objects 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1fexr8u-StyledInput {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-size: 16px;
-  color: #3f4250;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-}
-
-.cache-1fexr8u-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1fexr8u-StyledInput::placeholder {
-  color: #727683;
 }
 
 <div
-    class="cache-1mur0jo-TagInputContainer ea7vc6o1"
+    class="cache-ymc80m-Stack ehpbis70"
   >
-    <span
-      class="cache-1anauza-StyledContainer el6733p2"
+    <div
+      class="cache-irytw7-Stack ehpbis70"
     >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      <div
+        class="cache-135dzb3-Stack ehpbis70"
       >
-        hello
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
+        <label
+          class="cache-4gfeok-StyledText e13y3mga0"
+          for=":rd:"
+        />
+      </div>
+    </div>
+    <div>
+      <div
+        class="cache-uex2j9-TagInputContainer ea7vc6o3"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="true"
       >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-bi6n77-DataContainer ea7vc6o2"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          <input
+            class="cache-45doph-StyledInput ea7vc6o0"
+            id=":rd:"
+            type="text"
+            value=""
           />
-        </svg>
-      </button>
-    </span>
+        </div>
+        <div
+          class="cache-16a972i-StateContainer ea7vc6o1"
+        >
+          <svg
+            class="cache-1gu5rzu-sizeStyles e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
     <span
-      class="cache-1anauza-StyledContainer el6733p2"
+      class="cache-1n7fwv3-StyledText e13y3mga0"
     >
-      <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-      >
-        world
-      </span>
-      <button
-        aria-label="Close tag"
-        class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-        data-testid="close-tag"
-        type="button"
-      >
-        <svg
-          class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
-      </button>
+      This is a success
     </span>
-    <input
-      aria-label="radio"
-      class="cache-1fexr8u-StyledInput ea7vc6o0"
-      name="radio"
-      placeholder=""
-      type="text"
-      value=""
-    />
   </div>
 </DocumentFragment>
 `;
