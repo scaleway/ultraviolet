@@ -6,8 +6,7 @@ export const MessageInfos = Template.bind({})
 MessageInfos.args = {
   children: (
     <Conversation.MessageInfos align="left">
-      {' '}
-      Message info{' '}
+      Message info
     </Conversation.MessageInfos>
   ),
 }
