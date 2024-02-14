@@ -12,7 +12,6 @@ export type TagInputFieldProps<
   Partial<
     Pick<
       ComponentProps<typeof TagInput>,
-      | 'tags' // doubt
       | 'variant'
       | 'placeholder'
       | 'disabled'
@@ -77,7 +76,7 @@ export const TagInputField = <
       }}
       placeholder={placeholder}
       variant={variant}
-      tags={field.value}
+      value={field.value}
       data-testid={dataTestId}
       clearable={clearable}
       label={label}

@@ -131,7 +131,11 @@ type TagInputProps = {
   // eslint-disable-next-line react/no-unused-prop-types
   onChangeError?: (error: Error | string) => void
   placeholder?: string
+  /**
+   * @deprecated use `value` property instead, both properties work the same way
+   */
   tags?: TagInputProp
+  value?: TagInputProp
   /**
    * @deprecated there is only one variant now, this prop has no more effect
    */
@@ -156,7 +160,6 @@ type TagInputProps = {
 
 /**
  * TagInput is a component that allows users to input tags.
- * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const TagInput = ({
   disabled = false,
@@ -165,6 +168,7 @@ export const TagInput = ({
   onChange,
   placeholder,
   tags,
+  value,
   className,
   'data-testid': dataTestId,
   label,
@@ -178,8 +182,10 @@ export const TagInput = ({
   tooltip,
   clearable = false,
 }: TagInputProps) => {
+  const tagsProp = value ?? tags
+
   const [tagInputState, setTagInput] = useState(
-    convertTagArrayToTagStateArray(tags ?? []),
+    convertTagArrayToTagStateArray(tagsProp ?? []),
   )
   const [input, setInput] = useState<string>('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
@@ -188,8 +194,8 @@ export const TagInput = ({
   const localId = id ?? uniqueId
 
   useEffect(() => {
-    setTagInput(convertTagArrayToTagStateArray(tags))
-  }, [tags, setTagInput])
+    setTagInput(convertTagArrayToTagStateArray(tagsProp))
+  }, [tagsProp, setTagInput])
 
   const inputRef = useRef<HTMLInputElement>(null)
 

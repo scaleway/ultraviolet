@@ -28,7 +28,7 @@ describe('TagInput', () => {
 
   it('should renders correctly with some tags', () =>
     shouldMatchEmotionSnapshot(
-      <TagInput onChange={() => {}} name="radio" tags={['hello', 'world']} />,
+      <TagInput onChange={() => {}} name="radio" value={['hello', 'world']} />,
     ))
 
   it('should renders correctly with some tags objects', () =>
@@ -36,7 +36,7 @@ describe('TagInput', () => {
       <TagInput
         onChange={() => {}}
         name="radio"
-        tags={[
+        value={[
           { index: 'index', label: 'hello' },
           { index: 'secondIndex', label: 'world' },
         ]}
@@ -46,7 +46,7 @@ describe('TagInput', () => {
   it('should be able to be controlled', async () => {
     const mockOnChange = jest.fn()
 
-    renderWithTheme(<TagInput tags={['first']} onChange={mockOnChange} />)
+    renderWithTheme(<TagInput value={['first']} onChange={mockOnChange} />)
     const input = screen.getByRole<HTMLInputElement>('textbox')
     await userEvent.type(input, 'new ')
     expect(mockOnChange).toHaveBeenCalledWith(['first', 'new'])
@@ -56,7 +56,7 @@ describe('TagInput', () => {
     const mockOnChange = jest.fn()
 
     renderWithTheme(
-      <TagInput tags={['first']} onChange={mockOnChange} clearable />,
+      <TagInput value={['first']} onChange={mockOnChange} clearable />,
     )
     const clearableButton = screen.getByLabelText('clear value')
     await userEvent.click(clearableButton)
@@ -67,7 +67,7 @@ describe('TagInput', () => {
     const mockOnChange = jest.fn()
 
     renderWithTheme(
-      <TagInput tags={['first', 'second']} onChange={mockOnChange} />,
+      <TagInput value={['first', 'second']} onChange={mockOnChange} />,
     )
 
     const firstTag = screen.queryByText(/first/)
@@ -88,7 +88,7 @@ describe('TagInput', () => {
         id="test"
         onChange={mockOnChange}
         name="radio"
-        tags={['hello', 'world']}
+        value={['hello', 'world']}
       />,
     )
     const input = screen.getByRole<HTMLInputElement>('textbox')
@@ -108,7 +108,7 @@ describe('TagInput', () => {
         id="test"
         onChange={mockOnChange}
         name="radio"
-        tags={['hello', 'world']}
+        value={['hello', 'world']}
       />,
     )
     const input = screen.getByRole<HTMLInputElement>('textbox')
