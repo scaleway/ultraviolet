@@ -33,7 +33,7 @@
     "test:unit:watch": "pnpm run test:unit --watch",
     "test:unit:update": "pnpm run test:unit --updateSnapshot",
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
-    "prepare": "husky install",
+    "prepare": "husky",
     "size": "pnpm run build && size-limit",
     "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm prettier --write packages/themes/src/themes/console",
     "chromatic": "chromatic --exit-zero-on-changes",
