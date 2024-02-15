@@ -13,3 +13,7 @@ export const Template: StoryFn<typeof ToastContainer> = args => (
     </Button>
   </>
 )
+
+Template.args = {
+  position: 'bottom-right',
+}
