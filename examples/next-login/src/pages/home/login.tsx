@@ -6,10 +6,12 @@ import {
   Submit,
   CheckboxField,
   useForm,
+  useWatch,
 } from '@ultraviolet/form'
 import { useState } from 'react'
 import styled from '@emotion/styled'
 import { EMAIL_REGEX, mockErrors } from '../../constants'
+
 type FormValues = {
   email: string
   password: string
@@ -38,11 +40,9 @@ const LogIn = () => {
     },
   })
 
-  const [values, setValues] = useState(methods.getValues())
+  const values = useWatch(methods)
   const [loginText, setLoginText] = useState('')
-  const handleSubmit = () => {
-    const val = methods.getValues()
-    setValues(val)
+  const handleSubmit = (val: FormValues) => {
     setLoginText(
       `
         Welcome ${val.email}. Remember me checked: ${String(val.remember)}

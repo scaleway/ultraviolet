@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import LogIn from './login'
-import SignIn from './signup'
+import SignUp from './signup'
 import { SwitchButton, Stack } from '@ultraviolet/ui'
 import styled from '@emotion/styled'
 
@@ -11,8 +11,21 @@ const StyledPage = styled(Stack)`
   height: 100%;
   width: 100%;
 `
+const Content = (props: { tab: string }) => {
+  let tabLoaded = undefined
+  switch (props.tab) {
+    case 'login':
+      tabLoaded = <LogIn />
+      break
+    default:
+      tabLoaded = <SignUp />
+  }
+  return tabLoaded
+}
+
 const Home = () => {
   const [tab, setTab] = useState('login')
+
   return (
     <StyledPage>
       <StyledSwitchButton
@@ -30,7 +43,7 @@ const Home = () => {
           setTab((event.currentTarget as HTMLInputElement).value)
         }
       />
-      {tab === 'login' ? <LogIn /> : <SignIn />}
+      <Content tab={tab} />
     </StyledPage>
   )
 }
