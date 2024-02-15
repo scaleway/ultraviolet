@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.33.0
+
+### Minor Changes
+
+- [#3425](https://github.com/scaleway/ultraviolet/pull/3425) [`5c9df3e`](https://github.com/scaleway/ultraviolet/commit/5c9df3e3687395909b2183619a2e3314b2dcb13b) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Update `TagInput` and `TagInputField`
+
 ## 1.32.2
 
 ### Patch Changes

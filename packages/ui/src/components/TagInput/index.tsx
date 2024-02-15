@@ -1,13 +1,26 @@
-import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
   KeyboardEventHandler,
+  ReactNode,
 } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { getUUID } from '../../utils'
+import { Button } from '../Button'
+import { Stack } from '../Stack'
 import { Tag } from '../Tag'
+import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
+
+// Size & Padding
+export const TAGINPUT_SIZE_PADDING = {
+  large: '1.5',
+  medium: '1',
+  small: '0.5',
+} as const
+type TagInputSize = keyof typeof TAGINPUT_SIZE_PADDING
 
 const STATUS = {
   IDLE: 'idle',
@@ -17,79 +30,80 @@ const STATUS = {
 type Keys = keyof typeof STATUS
 type StatusValue = (typeof STATUS)[Keys]
 
-const variants = {
-  base: ({ theme: { colors, shadows, radii } }: { theme: Theme }) => `
-    padding: 8px;
-    cursor: text;
-    border-radius: ${radii.default};
-    border: 1px solid ${colors.neutral.border};
-    &:focus-within {
-      border: 1px solid ${colors.primary.border};
-      box-shadow: ${shadows.focusPrimary};
-    }
-
-    &:hover {
-      border: 1px solid ${colors.primary.border};
-    }
-
-    & > * {
-      margin: 6px;
-    }
-  `,
-  bordered: ({ theme: { shadows } }: { theme: Theme }) => `
-    margin-top: 0;
-    padding: 8px 0;
-
-    > input:focus {
-      box-shadow: ${shadows.focusPrimary};
-    }
-
-    > * {
-      margin-bottom: 6px;
-      &:not(:last-child) {
-        margin-right: 6px;
-      }
-    }
-  `,
-  'no-border': ({ theme: { shadows } }: { theme: Theme }) => `
-    &:focus-within {
-      box-shadow: ${shadows.focusPrimary};
-    }
-
-    > * {
-      margin-right: 6px;
-      margin-bottom: 6px;
-    }
-  `,
-} as const
-
-type Variant = keyof typeof variants
-
 type TagInputContainersProps = {
-  variant: Variant
+  size: TagInputSize
 }
-
 const TagInputContainer = styled('div', {
-  shouldForwardProp: prop => !['variant'].includes(prop),
+  shouldForwardProp: prop => !['size'].includes(prop),
 })<TagInputContainersProps>`
   display: flex;
-  flex-wrap: wrap;
+  gap: ${({ theme }) => theme.space['1']};
   background-color: ${({ theme: { colors } }) => colors.neutral.background};
-  ${({ variant, theme }) =>
-    variants[variant] ? variants[variant]({ theme }) : variants.base({ theme })}
+
+  padding: ${({ theme, size }) =>
+    `calc(${theme.space[TAGINPUT_SIZE_PADDING[size]]} - 1px) ${theme.space['2']}`};
+  cursor: text;
+
+  background: ${({ theme }) => theme.colors.neutral.background};
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  border-radius: ${({ theme }) => theme.radii.default};
+
+  &:focus-within {
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+  }
+
+  &[data-success='true'] {
+    border-color: ${({ theme }) => theme.colors.success.border};
+  }
+
+  &[data-error='true'] {
+    border-color: ${({ theme }) => theme.colors.danger.border};
+  }
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+  }
+
+  &[data-readonly='true'] {
+    border-color: ${({ theme }) => theme.colors.neutral.border};
+    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  }
+
+  &[data-disabled='true'] {
+    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    cursor: not-allowed;
+  }
+`
+
+const DataContainer = styled('div')`
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: ${({ theme }) => theme.space['1']};
+  flex: 1;
+`
+
+const StateContainer = styled('div')`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.space['1']};
 `
 
 const StyledInput = styled.input`
   display: flex;
   flex: 1;
   font-size: ${({ theme }) => theme.typography.body.fontSize};
+  background: inherit;
   color: ${({ theme: { colors } }) => colors.neutral.text};
   border: none;
   outline: none;
-  background-color: ${({ theme: { colors } }) => colors.neutral.background};
   &::placeholder {
     color: ${({ theme: { colors } }) => colors.neutral.textWeak};
   }
+  height: 100%;
 `
 
 const convertTagArrayToTagStateArray = (tags?: TagInputProp) =>
@@ -104,43 +118,84 @@ type TagInputProp = (string | { label: string; index: string })[]
 type TagInputProps = {
   disabled?: boolean
   id?: string
+  /**
+   * @deprecated this prop has no more effect
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
   manualInput?: boolean
   name?: string
   onChange?: (tags: string[]) => void
+  /**
+   * @deprecated this prop has no more effect
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
   onChangeError?: (error: Error | string) => void
   placeholder?: string
+  /**
+   * @deprecated use `value` property instead, both properties work the same way
+   */
   tags?: TagInputProp
-  variant?: Variant
+  value?: TagInputProp
+  /**
+   * @deprecated there is only one variant now, this prop has no more effect
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  variant?: string
   className?: string
   'data-testid'?: string
+  label?: string
+  /**
+   * Label description displayed right next to the label. It allows you to customize the label content.
+   */
+  labelDescription?: ReactNode
+  required?: boolean
+  size?: TagInputSize
+  error?: string
+  success?: string | boolean
+  helper?: ReactNode
+  readOnly?: boolean
+  tooltip?: string
+  clearable?: boolean
 }
 
 /**
  * TagInput is a component that allows users to input tags.
- * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const TagInput = ({
   disabled = false,
   id,
-  manualInput = true,
   name,
   onChange,
-  onChangeError,
   placeholder,
   tags,
-  variant = 'base',
+  value,
   className,
   'data-testid': dataTestId,
+  label,
+  labelDescription,
+  required = false,
+  size = 'medium',
+  error,
+  success,
+  helper,
+  readOnly = false,
+  tooltip,
+  clearable = false,
 }: TagInputProps) => {
+  const tagsProp = value ?? tags
+
   const [tagInputState, setTagInput] = useState(
-    convertTagArrayToTagStateArray(tags ?? []),
+    convertTagArrayToTagStateArray(tagsProp ?? []),
   )
   const [input, setInput] = useState<string>('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
 
+  const uniqueId = useId()
+  const localId = id ?? uniqueId
+
   useEffect(() => {
-    setTagInput(convertTagArrayToTagStateArray(tags))
-  }, [tags, setTagInput])
+    setTagInput(convertTagArrayToTagStateArray(tagsProp))
+  }, [tagsProp, setTagInput])
 
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -173,8 +228,7 @@ export const TagInput = ({
     try {
       dispatchOnChange(newTagInput)
       setStatus({ [newTagInput[newTagInput.length - 1].index]: STATUS.IDLE })
-    } catch (error) {
-      onChangeError?.(error as Error)
+    } catch (e) {
       setTagInput(tagInputState)
     }
   }
@@ -188,8 +242,7 @@ export const TagInput = ({
       dispatchOnChange(newTagInput)
       setTagInput(newTagInput)
       setStatus({ [tagIndex]: STATUS.IDLE })
-    } catch (error) {
-      onChangeError?.(error as Error)
+    } catch (e) {
       setTagInput(tagInputState)
     }
   }
@@ -220,48 +273,140 @@ export const TagInput = ({
     try {
       dispatchOnChange(newTagInput)
       setStatus({ [newTagInput.length - 1]: STATUS.IDLE })
-    } catch (error) {
-      onChangeError?.(error as Error)
+    } catch (err) {
       setTagInput(tagInputState)
     }
   }
 
+  const clearAll = () => {
+    setInput('')
+    setTagInput([])
+    dispatchOnChange([])
+  }
+
+  const helperSentiment = useMemo(() => {
+    if (error) {
+      return 'danger'
+    }
+
+    if (success) {
+      return 'success'
+    }
+
+    return 'neutral'
+  }, [error, success])
+
+  const computedClearable = clearable && !!tagInputState.length
+
   return (
-    <TagInputContainer
-      onClick={handleContainerClick}
-      variant={variant}
-      className={className}
-      data-testid={dataTestId}
-    >
-      {tagInputState.map(tag => (
-        <Tag
-          sentiment="neutral"
-          disabled={disabled}
-          key={tag.index}
-          isLoading={status[tag.index] === STATUS.LOADING}
-          onClose={e => {
-            e.stopPropagation()
-            deleteTag(tag.index)
-          }}
+    <Stack gap="0.5" className={className}>
+      <Stack direction="row" gap="1" alignItems="center">
+        <Stack direction="row" gap="0.5" alignItems="start">
+          <Text
+            as="label"
+            variant="bodyStrong"
+            sentiment="neutral"
+            htmlFor={localId}
+          >
+            {label}
+          </Text>
+          {required ? <Icon name="asterisk" color="danger" size={8} /> : null}
+        </Stack>
+        {labelDescription ?? null}
+      </Stack>
+      <div>
+        <Tooltip text={tooltip}>
+          <TagInputContainer
+            onClick={handleContainerClick}
+            className={className}
+            data-testid={dataTestId}
+            size={size}
+            data-disabled={disabled}
+            data-readonly={readOnly}
+            data-error={!!error}
+            data-success={!!success}
+          >
+            <DataContainer>
+              {tagInputState.map(tag => (
+                <Tag
+                  sentiment="neutral"
+                  disabled={disabled}
+                  key={tag.index}
+                  isLoading={status[tag.index] === STATUS.LOADING}
+                  onClose={
+                    !readOnly
+                      ? e => {
+                          e.stopPropagation()
+                          deleteTag(tag.index)
+                        }
+                      : undefined
+                  }
+                >
+                  {tag.label}
+                </Tag>
+              ))}
+              {!disabled ? (
+                <StyledInput
+                  id={localId}
+                  name={name}
+                  aria-label={name}
+                  type="text"
+                  placeholder={!tagInputState.length ? placeholder : ''}
+                  value={input}
+                  onBlur={addTag}
+                  onChange={onInputChange}
+                  onKeyDown={handleInputKeydown}
+                  onPaste={handlePaste}
+                  ref={inputRef}
+                  readOnly={readOnly}
+                />
+              ) : null}
+            </DataContainer>
+            {computedClearable || success || error ? (
+              <StateContainer>
+                {computedClearable ? (
+                  <Button
+                    aria-label="clear value"
+                    disabled={disabled}
+                    variant="ghost"
+                    size="xsmall"
+                    icon="close"
+                    onClick={clearAll}
+                    sentiment="neutral"
+                  />
+                ) : null}
+                {success ? (
+                  <Icon
+                    name="checkbox-circle-outline"
+                    color="success"
+                    size={16}
+                    disabled={disabled}
+                  />
+                ) : null}
+                {error ? (
+                  <Icon
+                    name="alert"
+                    color="danger"
+                    size={16}
+                    disabled={disabled}
+                  />
+                ) : null}
+              </StateContainer>
+            ) : null}
+          </TagInputContainer>
+        </Tooltip>
+      </div>
+      {error || typeof success === 'string' || helper ? (
+        <Text
+          variant="caption"
+          as="span"
+          prominence={!error && !success ? 'weak' : undefined}
+          sentiment={helperSentiment}
+          disabled={disabled || readOnly}
         >
-          {tag.label}
-        </Tag>
-      ))}
-      {!disabled && manualInput ? (
-        <StyledInput
-          id={id}
-          name={name}
-          aria-label={name}
-          type="text"
-          placeholder={!tagInputState.length ? placeholder : ''}
-          value={input}
-          onBlur={addTag}
-          onChange={onInputChange}
-          onKeyDown={handleInputKeydown}
-          onPaste={handlePaste}
-          ref={inputRef}
-        />
+          {error || success || helper}
+        </Text>
       ) : null}
-    </TagInputContainer>
+    </Stack>
   )
 }
