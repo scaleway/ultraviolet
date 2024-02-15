@@ -1,4 +1,3 @@
-import type { SerializedStyles } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Stack, Tag, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
@@ -32,16 +31,25 @@ export const Date = ({ children }: { children: ReactNode }) => (
   </StyledText>
 )
 
-const MessageContainer = styled.div`
+const MessageContainer = styled('div', {
+  shouldForwardProp: prop => !['align'].includes(prop),
+})<{ align: 'left' | 'right' }>`
   display: flex;
+  flex-direction: ${({ align }) => (align === 'left' ? 'row-reverse' : 'row')};
   margin-bottom: ${({ theme }) => theme.space['2']};
 `
 
-const RawMessageContainer = styled.div`
+const RawMessageContainer = styled('div', {
+  shouldForwardProp: prop => !['align'].includes(prop),
+})<{ align: 'left' | 'right' }>`
   margin: 0 ${({ theme }) => theme.space['3']};
   margin-top: ${({ theme }) => theme.space['3']};
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['3']};
+  background-color: ${({ theme, align }) =>
+    align === 'left'
+      ? theme.colors.neutral.backgroundStrong
+      : theme.colors.primary.background};
 `
 
 const AvatarContainer = styled.div`
@@ -54,21 +62,21 @@ const BubbleContainer = styled.div`
 `
 
 type MessageProps = {
-  bubbleStyle?: string | SerializedStyles
   className?: string
   children: ReactNode
   avatar: ReactNode
+  align?: 'left' | 'right'
 }
 
 export const Message = ({
-  bubbleStyle,
   className,
   children,
   avatar,
+  align = 'right',
 }: MessageProps) => (
-  <MessageContainer className={className}>
+  <MessageContainer align={align} className={className}>
     <BubbleContainer>
-      <RawMessageContainer css={bubbleStyle}>{children}</RawMessageContainer>
+      <RawMessageContainer align={align}>{children}</RawMessageContainer>
     </BubbleContainer>
     <AvatarContainer>{avatar}</AvatarContainer>
   </MessageContainer>

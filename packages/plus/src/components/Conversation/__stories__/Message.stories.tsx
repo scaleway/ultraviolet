@@ -1,35 +1,17 @@
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
 import { ProductIcon } from '@ultraviolet/icons'
 import { Avatar, Text } from '@ultraviolet/ui'
 import { Conversation } from '..'
 
-const StyledMessageLeft = styled(Conversation.Message)`
-  flex-direction: row-reverse;
-`
-
-const StyledMessageRight = styled(Conversation.Message)`
-  flex-direction: row;
-`
-
-const StyledText = styled(Text)`
-  white-space: pre-wrap;
-`
-
 export const Message = () => (
   <>
-    <StyledMessageLeft
+    <Conversation.Message
       avatar={<ProductIcon name="support" size="medium" />}
-      bubbleStyle={css`
-        margin-right: 20%;
-        border-bottom-left-radius: 0;
-        background-color: '#0078d2';
-      `}
+      align="left"
     >
       <Text variant="body" sentiment="neutral" as="div">
         Message left
       </Text>
-    </StyledMessageLeft>
+    </Conversation.Message>
     <Conversation.MessageInfos align="left">
       {' '}
       <Conversation.Tag>tag</Conversation.Tag>
@@ -38,21 +20,19 @@ export const Message = () => (
       </Text>
     </Conversation.MessageInfos>
 
-    <StyledMessageRight
+    <Conversation.Message
       avatar={
         <Avatar
           size={40}
           image="static/media/packages/ui/src/components/Avatar/__stories__/avatar.svg"
         />
       }
-      bubbleStyle={css`
-        background: green;
-      `}
+      align="right"
     >
-      <StyledText variant="body" sentiment="neutral" as="div" placement="right">
+      <Text variant="body" sentiment="neutral" as="div" placement="right">
         message right
-      </StyledText>
-    </StyledMessageRight>
+      </Text>
+    </Conversation.Message>
     <Conversation.MessageInfos align="right">
       <Conversation.Tag>tag</Conversation.Tag>
       <Text as="p" variant="bodySmall" prominence="weak">
