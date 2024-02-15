@@ -32,6 +32,7 @@ export const TextInputField = <
   helper,
   label,
   labelDescription,
+  loading,
   onChange,
   minLength,
   maxLength,
@@ -95,6 +96,7 @@ export const TextInputField = <
       )}
       helper={helper}
       label={label}
+      loading={loading}
       labelDescription={labelDescription}
       minLength={minLength}
       maxLength={maxLength}
