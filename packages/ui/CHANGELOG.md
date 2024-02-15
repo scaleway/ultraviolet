@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.34.0
+
+### Minor Changes
+
+- [#3441](https://github.com/scaleway/ultraviolet/pull/3441) [`e78475a`](https://github.com/scaleway/ultraviolet/commit/e78475a6f944c46701f4ffcbaceead1e54eff8e0) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor `<Toaster>` component to change sentiments colors
+
 ## 1.33.0
 
 ### Minor Changes
