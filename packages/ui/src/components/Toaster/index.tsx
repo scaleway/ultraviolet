@@ -1,7 +1,6 @@
 import type { Theme } from '@emotion/react'
 import { ClassNames, Global, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
@@ -9,96 +8,83 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
+import type { SENTIMENTS } from '../../theme'
+import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const PREFIX = '.Toastify'
 const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
-
-const TOAST_ICONS = {
-  warning: 'alert',
-  info: 'information-outline',
-  success: 'checkbox-circle-outline',
-  danger: 'alert',
-} as const
+type SENTIMENT = (typeof SENTIMENTS)[number]
 
 const styles = {
   toast: (theme: Theme) => css`
     border-radius: ${theme.radii.default};
-    box-shadow: ${theme.shadows.dropdown};
-    min-height: 44px;
-    margin-bottom: ${theme.space['2']};
+    min-height: 52px;
+    width: 344px;
+    padding: ${theme.space['2']};
+    text-size: ${theme.typography.bodySmallStrong.fontSize};
 
     ${PREFIX}__toast-body {
       margin: 0;
-      padding: 0;
     }
 
     &${PREFIX}__toast--success {
-      background-color: ${theme.colors.success.background};
-      color: ${theme.colors.success.text};
-
-      ${PREFIX}__progress-bar--success {
-        background-color: ${theme.colors.success.backgroundStrong};
-        height: 4px;
-      }
+      background-color: ${theme.colors.neutral.backgroundStronger};
+      color: ${theme.colors.neutral.textStronger};
     }
 
     &${PREFIX}__toast--info {
-      background-color: ${theme.colors.info.background};
-      color: ${theme.colors.info.text};
-
-      ${PREFIX}__progress-bar--info {
-        background-color: ${theme.colors.info.backgroundStrong};
-        height: 4px;
-      }
+      background-color: ${theme.colors.info.backgroundStrong};
+      color: ${theme.colors.neutral.textStronger};
     }
 
     &${PREFIX}__toast--error {
-      background-color: ${theme.colors.danger.background};
-      color: ${theme.colors.danger.text};
+      background-color: ${theme.colors.danger.backgroundStrong};
+      color: ${theme.colors.neutral.textStronger};
+    }
 
-      ${PREFIX}__progress-bar--danger {
-        background-color: ${theme.colors.danger.backgroundStrong};
-        height: 4px;
-      }
+    &${PREFIX}__toast--warning {
+      background-color: ${theme.colors.warning.backgroundStrong};
+      color: ${theme.colors.warning.textStrong};
     }
   `,
 }
 
-const CloseButtonWrapper = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  padding: 0;
-  margin: 0;
-  margin-bottom: ${({ theme }) => theme.space['2']};
-`
-
 type CloseButtonProps = {
   closeToast?: () => void
+  sentiment: SENTIMENT
 }
 
-const IconWithLeftMargin = styled(Icon)`
-  margin-left: ${({ theme }) => theme.space['1']};
+const StyledButton = styled(Button)`
+  background: none;
+  margin: auto;
+  &:hover,
+  &:active {
+    background: none;
+  }
 `
 
-const CloseButton = ({ closeToast }: CloseButtonProps) => (
-  <CloseButtonWrapper type="button" onClick={closeToast}>
-    <IconWithLeftMargin name="close" size={18} />
-  </CloseButtonWrapper>
+const CloseButton = ({
+  closeToast,
+  sentiment = 'success',
+}: CloseButtonProps) => (
+  <StyledButton
+    aria-label="close"
+    icon="close"
+    onClick={closeToast}
+    sentiment={sentiment}
+    size="xsmall"
+  />
 )
 
 type ContentProps = {
   children?: ReactNode
-  sentiment: 'danger' | 'info' | 'success'
 }
 
-const Content = ({ sentiment, children }: ContentProps) => (
+const Content = ({ children }: ContentProps) => (
   <Stack gap={2} direction="row">
-    <Icon name={TOAST_ICONS[sentiment]} size={24} />
-    <Text variant="body" as="span" sentiment={sentiment}>
+    <Text variant="body" as="span">
       {children}
     </Text>
   </Stack>
@@ -106,14 +92,31 @@ const Content = ({ sentiment, children }: ContentProps) => (
 
 export const toast = {
   error: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.error(<Content sentiment="danger">{children}</Content>, options),
+    baseToast.error(<Content>{children}</Content>, {
+      ...options,
+      closeButton: <CloseButton sentiment="danger" />,
+    }),
+  /**
+   * @deprecated "Deprecated, please use another variant instead"
+   */
+  // eslint-disable-next-line deprecation/deprecation
   info: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.info(<Content sentiment="info">{children}</Content>, options),
+    baseToast.info(<Content>{children}</Content>, {
+      ...options,
+      closeButton: <CloseButton sentiment="info" />,
+    }),
+
   success: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.success(
-      <Content sentiment="success">{children}</Content>,
-      options,
-    ),
+    baseToast.success(<Content>{children}</Content>, {
+      ...options,
+      closeButton: <CloseButton sentiment="success" />,
+    }),
+
+  warning: (children: ReactNode, options?: ToastOptions): number | string =>
+    baseToast.warn(<Content>{children}</Content>, {
+      ...options,
+      closeButton: <CloseButton sentiment="warning" />,
+    }),
 }
 
 type ToastContainerProps = {
@@ -157,7 +160,6 @@ export const ToastContainer = ({
         {({ css: localCss }) => (
           <BaseToastContainer
             data-testid={dataTestId}
-            closeButton={<CloseButton />}
             toastClassName={localCss(styles.toast(theme))}
             autoClose={AUTOCLOSE_DELAY}
             icon={false}
@@ -168,6 +170,8 @@ export const ToastContainer = ({
               top: 100px;
               right: calc(0% + ${theme.space['2']});
             `}
+            stacked
+            hideProgressBar
           />
         )}
       </ClassNames>
