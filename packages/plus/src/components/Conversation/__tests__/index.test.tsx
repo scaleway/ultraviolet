@@ -7,7 +7,7 @@ describe('Conversation', () => {
     shouldMatchEmotionSnapshot(
       <Conversation>
         <Conversation.Date>2022-03-02</Conversation.Date>
-        <Conversation.Message avatar={<div>Hello</div>}>
+        <Conversation.Message align="left" avatar={<div>Hello</div>}>
           <Conversation.MessageInfos align="left">
             Hello
           </Conversation.MessageInfos>

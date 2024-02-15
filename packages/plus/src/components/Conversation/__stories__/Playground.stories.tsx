@@ -14,20 +14,22 @@ Playground.args = {
         }
         align="left"
       >
-        Info message 1
+        Message 1
       </Conversation.Message>
       <Conversation.MessageInfos align="left">
         <Conversation.Tag>tag</Conversation.Tag>
+        info message
       </Conversation.MessageInfos>
       <Conversation.Message
         avatar={
           <Avatar image="static/media/packages/ui/src/components/Avatar/__stories__/avatar.svg" />
         }
       >
-        Info message 2
+        Message 2
       </Conversation.Message>
       <Conversation.MessageInfos align="right">
         <Conversation.Tag>tag</Conversation.Tag>
+        info message
       </Conversation.MessageInfos>
     </>,
   ],

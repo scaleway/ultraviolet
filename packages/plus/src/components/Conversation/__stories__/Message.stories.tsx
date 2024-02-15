@@ -13,10 +13,9 @@ export const Message = () => (
       </Text>
     </Conversation.Message>
     <Conversation.MessageInfos align="left">
-      {' '}
       <Conversation.Tag>tag</Conversation.Tag>
       <Text as="p" variant="bodySmall" prominence="weak">
-        infos
+        info
       </Text>
     </Conversation.MessageInfos>
 
@@ -29,8 +28,8 @@ export const Message = () => (
       }
       align="right"
     >
-      <Text variant="body" sentiment="neutral" as="div" placement="right">
-        message right
+      <Text variant="body" sentiment="neutral" as="div">
+        Message right
       </Text>
     </Conversation.Message>
     <Conversation.MessageInfos align="right">

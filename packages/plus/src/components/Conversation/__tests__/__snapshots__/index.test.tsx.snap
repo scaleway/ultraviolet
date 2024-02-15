@@ -38,11 +38,14 @@ exports[`Conversation should work with Default 1`] = `
   text-align: center;
 }
 
-.cache-1lxme9i-MessageContainer {
+.cache-16csmf0-MessageContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   margin-bottom: 16px;
 }
 
@@ -50,11 +53,12 @@ exports[`Conversation should work with Default 1`] = `
   width: 100%;
 }
 
-.cache-18xcqeh-RawMessageContainer {
+.cache-1bukfx5-RawMessageContainer {
   margin: 0 24px;
   margin-top: 24px;
   border-radius: 4px;
   padding: 24px;
+  background-color: #e9eaeb;
 }
 
 .cache-1mr20qk-StyledInfos {
@@ -127,6 +131,25 @@ exports[`Conversation should work with Default 1`] = `
   align-self: flex-end;
 }
 
+.cache-sm8t6k-MessageContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+
+.cache-91fo8-RawMessageContainer {
+  margin: 0 24px;
+  margin-top: 24px;
+  border-radius: 4px;
+  padding: 24px;
+  background-color: #f1eefc;
+}
+
 .cache-16qjf8p-StyledInfos {
   display: -webkit-box;
   display: -webkit-flex;
@@ -152,13 +175,13 @@ exports[`Conversation should work with Default 1`] = `
       2022-03-02
     </p>
     <div
-      class="cache-1lxme9i-MessageContainer e7oenbq4"
+      class="cache-16csmf0-MessageContainer e7oenbq4"
     >
       <div
         class="cache-ger860-BubbleContainer e7oenbq1"
       >
         <div
-          class="cache-18xcqeh-RawMessageContainer e7oenbq3"
+          class="cache-1bukfx5-RawMessageContainer e7oenbq3"
         >
           <div
             class="cache-1mr20qk-StyledInfos e7oenbq6"
@@ -185,13 +208,13 @@ exports[`Conversation should work with Default 1`] = `
       </div>
     </div>
     <div
-      class="cache-1lxme9i-MessageContainer e7oenbq4"
+      class="cache-sm8t6k-MessageContainer e7oenbq4"
     >
       <div
         class="cache-ger860-BubbleContainer e7oenbq1"
       >
         <div
-          class="cache-18xcqeh-RawMessageContainer e7oenbq3"
+          class="cache-91fo8-RawMessageContainer e7oenbq3"
         >
           <div
             class="cache-16qjf8p-StyledInfos e7oenbq6"
