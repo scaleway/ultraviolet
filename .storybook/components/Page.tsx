@@ -21,7 +21,6 @@ const StyledHeaderContainer = styled.div`
 const StyledTitle = styled.div`
   &[data-state='deprecated'] h1 {
     text-decoration: line-through;
-    text-decoration-color: ${({ theme }) => theme.colors.danger.text};
   }
 `
 
