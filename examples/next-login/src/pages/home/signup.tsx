@@ -84,15 +84,7 @@ const SignUp = () => {
     let timeDiff = Math.abs(Date.now() - val.birthdate.getTime())
     const computedAge = Math.floor(timeDiff / (1000 * 3600 * 24) / 365.25)
     setAge(computedAge)
-    if (computedAge < 1) {
-      setAlertSubmit('too young')
-    } else {
-      setAlertSubmit('success')
-      setTimeout(() => {
-        setAlertSubmit('default')
-      }, 5000)
-      console.log('Values', values)
-    }
+    setAlertSubmit(computedAge < 1 ? 'too young' : 'success')
   }
   return (
     <StyledSignUpContainer>
