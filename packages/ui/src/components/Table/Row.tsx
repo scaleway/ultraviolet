@@ -1,3 +1,5 @@
+import type { Theme } from '@emotion/react'
+import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { useEffect } from 'react'
@@ -8,7 +10,25 @@ import { useTableContext } from './TableContext'
 
 const StyledCheckboxContainer = styled.div`
   display: flex;
-  background: ${({ theme }) => theme.colors.neutral.background};
+`
+
+// We start at 5% and finish at 80% to leave the original background color
+// as we can't know if the table will be stripped or not
+const colorChange = (theme: Theme) => keyframes`
+  5% {
+    background-color: ${theme.colors.primary.background};
+  }
+  80% {
+    background-color: ${theme.colors.primary.background};
+  }
+`
+
+const StyledTr = styled('tr', {
+  shouldForwardProp: prop => !['highlightAnimation'].includes(prop),
+})<{ highlightAnimation?: boolean }>`
+  animation: ${({ highlightAnimation, theme }) =>
+      highlightAnimation ? colorChange(theme) : undefined}
+    3s linear;
 `
 
 type RowProps = {
@@ -20,6 +40,7 @@ type RowProps = {
    * Row cannot be selected if this prop is provided. boolean true disabled selection, a string disable selection and a tooltip will be displayed on checkbox hover.
    * */
   selectDisabled?: boolean | string
+  highlightAnimation?: boolean
 }
 
 export const Row = ({
@@ -27,6 +48,7 @@ export const Row = ({
   className,
   id,
   selectDisabled,
+  highlightAnimation,
   'data-testid': dataTestid,
 }: RowProps) => {
   const {
@@ -49,7 +71,11 @@ export const Row = ({
   }, [id, registerSelectableRow, selectDisabled])
 
   return (
-    <tr className={className} data-testid={dataTestid}>
+    <StyledTr
+      className={className}
+      data-testid={dataTestid}
+      highlightAnimation={highlightAnimation}
+    >
       {selectable ? (
         <Cell>
           <StyledCheckboxContainer
@@ -79,6 +105,6 @@ export const Row = ({
         </Cell>
       ) : null}
       {children}
-    </tr>
+    </StyledTr>
   )
 }
