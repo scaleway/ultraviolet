@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.35.0
+
+### Minor Changes
+
+- [#3467](https://github.com/scaleway/ultraviolet/pull/3467) [`c483fff`](https://github.com/scaleway/ultraviolet/commit/c483fffbbfefc55eb7c59ad4f863b7132674d006) Thanks [@matthprost](https://github.com/matthprost)! - Some fixes and new props on `<ToastContainer />` component:
+  - added `className` and `autoClose` props
+  - remove custom css in ToastContainer
+  - fix ToastContainer width
+
 ## 1.34.0
 
 ### Minor Changes
