@@ -76,7 +76,7 @@ const SignUp = () => {
       birthdate: new Date(),
     },
   })
-  const values = useWatch(methods)
+  const values = useWatch({ control: methods.control })
   const [alertSubmit, setAlertSubmit] = useState('default')
   const [age, setAge] = useState(0)
 
