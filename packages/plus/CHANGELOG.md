@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 0.7.0
+
+### Minor Changes
+
+- [#3452](https://github.com/scaleway/ultraviolet/pull/3452) [`be011be`](https://github.com/scaleway/ultraviolet/commit/be011be7e20d18202083012c1bbe4fc77bff736c) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `Conversation`
+
+### Patch Changes
+
+- [#3454](https://github.com/scaleway/ultraviolet/pull/3454) [`f3bfaa5`](https://github.com/scaleway/ultraviolet/commit/f3bfaa599db39fa1aa884d061d4290ae59aaa5cd) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix(ContentCard): fix role when onClick and href is provided
+
 ## 0.6.15
 
 ### Patch Changes
