@@ -162,7 +162,7 @@ export const ContentCard = forwardRef<
         target={target}
         onClick={onClick}
         href={href}
-        role={onClick ? 'button' : undefined}
+        role={onClick && !href ? 'button' : undefined}
         ref={ref}
         className={className}
       >
