@@ -38,7 +38,7 @@
     "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm prettier --write packages/themes/src/themes/console",
     "chromatic": "chromatic --exit-zero-on-changes",
     "release": "pnpm build && pnpm changeset publish",
-    "svg": "svgo --pretty --multipass",
+    "svg": "npx svgo --pretty --multipass",
     "svg:all": "pnpm run svg -r -f .",
     "typecheck": "pnpm --filter '@ultraviolet/*' recursive run typecheck"
   },

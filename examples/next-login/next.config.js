@@ -22,7 +22,6 @@ const nextConfig = () => {
       '@ultraviolet/icons',
     ],
   }
-
   return config
 }
 
