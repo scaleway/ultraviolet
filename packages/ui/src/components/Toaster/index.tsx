@@ -22,7 +22,6 @@ const styles = {
     border-radius: ${theme.radii.default};
     min-height: 52px;
     padding: ${theme.space['2']};
-    text-size: ${theme.typography.bodySmallStrong.fontSize};
 
     ${PREFIX}__toast-container {
       width: 344px;
@@ -87,7 +86,7 @@ type ContentProps = {
 
 const Content = ({ children }: ContentProps) => (
   <Stack gap={2} direction="row">
-    <Text variant="body" as="span">
+    <Text variant="bodySmallStrong" as="span">
       {children}
     </Text>
   </Stack>
