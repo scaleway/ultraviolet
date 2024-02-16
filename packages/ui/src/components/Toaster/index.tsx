@@ -21,9 +21,12 @@ const styles = {
   toast: (theme: Theme) => css`
     border-radius: ${theme.radii.default};
     min-height: 52px;
-    width: 344px;
     padding: ${theme.space['2']};
     text-size: ${theme.typography.bodySmallStrong.fontSize};
+
+    ${PREFIX}__toast-container {
+      width: 344px;
+    }
 
     ${PREFIX}__toast-body {
       margin: 0;
@@ -133,8 +136,12 @@ type ToastContainerProps = {
    * Position of the toast container
    */
   position?: ToastOptions['position']
-
   'data-testid'?: string
+  className?: string
+  /**
+   * Delay before the toast is automatically closed, if not set the default value is 6000ms
+   */
+  autoClose?: number
 }
 
 /**
@@ -150,6 +157,8 @@ export const ToastContainer = ({
   limit,
   position = 'top-right',
   'data-testid': dataTestId,
+  className,
+  autoClose,
 }: ToastContainerProps) => {
   const theme = useTheme()
 
@@ -161,17 +170,14 @@ export const ToastContainer = ({
           <BaseToastContainer
             data-testid={dataTestId}
             toastClassName={localCss(styles.toast(theme))}
-            autoClose={AUTOCLOSE_DELAY}
+            autoClose={autoClose ?? AUTOCLOSE_DELAY}
             icon={false}
             newestOnTop={newestOnTop}
             limit={limit}
             position={position}
-            css={css`
-              top: 100px;
-              right: calc(0% + ${theme.space['2']});
-            `}
             stacked
             hideProgressBar
+            className={className}
           />
         )}
       </ClassNames>

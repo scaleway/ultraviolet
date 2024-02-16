@@ -207,39 +207,37 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
 
 exports[`Toaster renders correctly with all kind of toast 2`] = `
 <DocumentFragment>
-  .cache-se1d56-ToastContainer {
-  top: 100px;
-  right: calc(0% + 16px);
-}
-
-.cache-j81fqs-toast {
+  .cache-jbwfvi-toast {
   border-radius: 4px;
   min-height: 52px;
-  width: 344px;
   padding: 16px;
   text-size: 14px;
 }
 
-.cache-j81fqs-toast .Toastify__toast-body {
+.cache-jbwfvi-toast .Toastify__toast-container {
+  width: 344px;
+}
+
+.cache-jbwfvi-toast .Toastify__toast-body {
   margin: 0;
 }
 
-.cache-j81fqs-toast.Toastify__toast--success {
+.cache-jbwfvi-toast.Toastify__toast--success {
   background-color: #151a2d;
   color: #ffffff;
 }
 
-.cache-j81fqs-toast.Toastify__toast--info {
+.cache-jbwfvi-toast.Toastify__toast--info {
   background-color: #0078d2;
   color: #ffffff;
 }
 
-.cache-j81fqs-toast.Toastify__toast--error {
+.cache-jbwfvi-toast.Toastify__toast--error {
   background-color: #e51963;
   color: #ffffff;
 }
 
-.cache-j81fqs-toast.Toastify__toast--warning {
+.cache-jbwfvi-toast.Toastify__toast--warning {
   background-color: #fbc600;
   color: #222638;
 }
@@ -535,10 +533,10 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
     class="Toastify"
   >
     <div
-      class="Toastify__toast-container Toastify__toast-container--top-right cache-se1d56-ToastContainer"
+      class="Toastify__toast-container Toastify__toast-container--top-right"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info cache-j81fqs-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info cache-jbwfvi-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
         data-collapsed="true"
         data-in="true"
         data-pos="top"
@@ -592,7 +590,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success cache-j81fqs-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success cache-jbwfvi-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
         data-collapsed="true"
         data-in="true"
         data-pos="top"
@@ -646,7 +644,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error cache-j81fqs-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error cache-jbwfvi-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
         data-collapsed="true"
         data-in="true"
         data-pos="top"
@@ -700,7 +698,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--warning cache-j81fqs-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--warning cache-jbwfvi-toast Toastify--animate Toastify__bounce-enter--top-right Toastify__toast--stacked"
         data-in="true"
         data-pos="top"
         id="warning"
