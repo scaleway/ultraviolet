@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.6.0
+
+### Minor Changes
+
+- [#3459](https://github.com/scaleway/ultraviolet/pull/3459) [`2d8631a`](https://github.com/scaleway/ultraviolet/commit/2d8631ab60d845815789c3d4346e51e5c7fe612c) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix prop `type` on component `<TextInputFieldV2 />` that wasn't working properly
+
 ## 2.5.1
 
 ### Patch Changes
