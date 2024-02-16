@@ -43,6 +43,7 @@ export const TextInputField = <
   required,
   success,
   tooltip,
+  type,
   validate,
   regex: regexes,
 }: TextInputFieldProps<TFieldValues, TName>) => {
@@ -116,6 +117,7 @@ export const TextInputField = <
       success={success}
       tabIndex={tabIndex}
       tooltip={tooltip}
+      type={type}
       value={field.value}
     />
   )
