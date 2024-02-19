@@ -5,15 +5,13 @@ import type {
   ForwardedRef,
   ReactNode,
 } from 'react'
-import { forwardRef, useRef } from 'react'
+import { forwardRef, useCallback, useRef } from 'react'
 import { Checkbox } from '../Checkbox'
 import { Radio } from '../Radio'
+import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
-const Container = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  align-items: start;
+const Container = styled(Stack)`
   padding: ${({ theme }) => theme.space['2']};
   border-radius: ${({ theme }) => theme.radii.default};
   transition:
@@ -45,6 +43,7 @@ const Container = styled.div`
   &:active {
     &:not([data-error='true']):not([data-disabled='true']) {
       border: 1px solid ${({ theme }) => theme.colors.primary.border};
+
       &[data-cheked='false'] {
         box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
       }
@@ -142,8 +141,23 @@ export const SelectableCard = forwardRef(
   ) => {
     const innerRef = useRef<HTMLInputElement>(null)
 
+    const ParentContainer = useCallback(
+      ({ children: subChildren }: { children: ReactNode }) => {
+        if (tooltip) {
+          return (
+            <Stack flex={1}>
+              <Tooltip text={tooltip}>{subChildren}</Tooltip>
+            </Stack>
+          )
+        }
+
+        return <Tooltip>{subChildren}</Tooltip>
+      },
+      [tooltip],
+    )
+
     return (
-      <Tooltip text={tooltip}>
+      <ParentContainer>
         <Container
           onClick={() => {
             if (innerRef?.current) {
@@ -157,6 +171,10 @@ export const SelectableCard = forwardRef(
           data-testid={dataTestId}
           data-type={type}
           ref={ref}
+          alignItems="start"
+          direction="column"
+          gap={0.5}
+          flex={1}
         >
           {type === 'radio' ? (
             <StyledRadio
@@ -198,7 +216,7 @@ export const SelectableCard = forwardRef(
             ? children({ checked, disabled })
             : children}
         </Container>
-      </Tooltip>
+      </ParentContainer>
     )
   },
 )
