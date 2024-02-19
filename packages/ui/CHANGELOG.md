@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.36.0
+
+### Minor Changes
+
+- [#3455](https://github.com/scaleway/ultraviolet/pull/3455) [`0e2ad05`](https://github.com/scaleway/ultraviolet/commit/0e2ad053edcb8c9eed094543f2415e292525590d) Thanks [@matthprost](https://github.com/matthprost)! - Add new prop `highlightAnimation` on `<Table.Row />` for `<Table />` component
+
+### Patch Changes
+
+- [#3451](https://github.com/scaleway/ultraviolet/pull/3451) [`8be31ae`](https://github.com/scaleway/ultraviolet/commit/8be31ae84810bd2f8dd95ffc441c123c95a44b51) Thanks [@rachidBensaid](https://github.com/rachidBensaid)! - Add `flex-wrap` on component `<Breadcrumbs />`
+
 ## 1.35.0
 
 ### Minor Changes
