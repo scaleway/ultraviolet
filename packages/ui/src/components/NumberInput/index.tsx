@@ -164,8 +164,7 @@ type NumberInputProps = {
 >
 
 /**
- * NumberInput component is used to increment / decrement a number value by clicking on + / - buttons or
- * by typing into input.
+ * @deprecated This component is deprecated. Please use `NumberInputV2` instead.
  */
 export const NumberInput = ({
   disabled = false,

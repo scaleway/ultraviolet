@@ -27,6 +27,9 @@ type NumberInputValueFieldProps<
     onFocus?: FocusEventHandler<HTMLInputElement>
   }
 
+/**
+ * @deprecated This component is deprecated, use `NumberInputFieldV2` instead.
+ */
 export const NumberInputField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,

@@ -6,6 +6,7 @@ import { mockErrors } from '../../../mocks'
 
 export default {
   component: RadioGroupField,
+  subcomponents: { 'RadioGroupField.Radio': RadioGroupField.Radio },
   decorators: [
     ChildStory => {
       const methods = useForm()
@@ -24,7 +25,7 @@ export default {
       } = methods.formState
 
       return (
-        <Form onRawSubmit={() => {}} errors={mockErrors}>
+        <Form onRawSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
             {ChildStory()}
             <Stack gap={1}>
