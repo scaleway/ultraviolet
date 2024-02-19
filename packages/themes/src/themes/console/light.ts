@@ -172,6 +172,14 @@ export const lightTheme = {
             fillWeak: '#e51963',
             fillWeakDisabled: '#f3f3f4',
           },
+          original: {
+            fill: '#ffffff',
+            fillDisabled: '#d9dadd',
+            fillStrong: '#bf95f9',
+            fillStrongDisabled: '#d9dadd',
+            fillWeak: '#521094',
+            fillWeakDisabled: '#f3f3f4',
+          },
           primary: {
             fill: '#521094',
             fillDisabled: '#d9dadd',
