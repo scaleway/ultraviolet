@@ -220,7 +220,7 @@ export const NumberInputV2 = forwardRef(
       onChange,
       onFocus,
       onBlur,
-      size = 'medium',
+      size = 'large',
       step,
       unit,
       value,
