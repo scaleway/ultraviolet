@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
   ToastContainer as BaseToastContainer,
+  Slide,
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
@@ -181,6 +182,7 @@ export const ToastContainer = ({
             stacked
             hideProgressBar
             className={className}
+            transition={Slide}
           />
         )}
       </ClassNames>
