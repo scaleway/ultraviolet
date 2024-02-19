@@ -4,6 +4,6 @@ import { FAQ } from '..'
 export default {
   component: FAQ,
   title: 'Plus/Compositions/FAQ',
-} as Meta
+} satisfies Meta
 
 export { Playground } from './Playground.stories'
