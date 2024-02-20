@@ -88,7 +88,7 @@ type NotificationContainerProps = {
   /**
    * Delay (in ms) before the notification autocloses. To disable autoclose, set to false
    */
-  autoClose: false | number
+  autoClose?: false | number
   /**
    * Whether to display the newest toast on top.
    * `Default: false`
