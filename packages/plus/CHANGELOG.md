@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.8.0
+
+### Minor Changes
+
+- [#3466](https://github.com/scaleway/ultraviolet/pull/3466) [`9cac538`](https://github.com/scaleway/ultraviolet/commit/9cac5381230f134841ca298fd53f624140f07fde) Thanks [@lisalupi](https://github.com/lisalupi)! - Add component `FAQ` to ultraviolet plus
+
+## 0.7.2
+
+### Patch Changes
+
+- Updated dependencies [[`0e2ad05`](https://github.com/scaleway/ultraviolet/commit/0e2ad053edcb8c9eed094543f2415e292525590d), [`8be31ae`](https://github.com/scaleway/ultraviolet/commit/8be31ae84810bd2f8dd95ffc441c123c95a44b51)]:
+  - @ultraviolet/ui@1.36.0
+
 ## 0.7.1
 
 ### Patch Changes

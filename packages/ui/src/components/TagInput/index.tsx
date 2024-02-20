@@ -174,7 +174,7 @@ export const TagInput = ({
   label,
   labelDescription,
   required = false,
-  size = 'medium',
+  size = 'large',
   error,
   success,
   helper,

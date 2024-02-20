@@ -5,6 +5,7 @@ import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
   ToastContainer as BaseToastContainer,
+  Slide,
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
@@ -21,8 +22,6 @@ const styles = {
   toast: (theme: Theme) => css`
     border-radius: ${theme.radii.default};
     min-height: 52px;
-    padding: ${theme.space['2']};
-    text-size: ${theme.typography.bodySmallStrong.fontSize};
 
     ${PREFIX}__toast-container {
       width: 344px;
@@ -30,26 +29,31 @@ const styles = {
 
     ${PREFIX}__toast-body {
       margin: 0;
+      padding: 0;
     }
 
     &${PREFIX}__toast--success {
       background-color: ${theme.colors.neutral.backgroundStronger};
       color: ${theme.colors.neutral.textStronger};
+      padding: ${theme.space['2']};
     }
 
     &${PREFIX}__toast--info {
       background-color: ${theme.colors.info.backgroundStrong};
       color: ${theme.colors.neutral.textStronger};
+      padding: ${theme.space['2']};
     }
 
     &${PREFIX}__toast--error {
       background-color: ${theme.colors.danger.backgroundStrong};
       color: ${theme.colors.neutral.textStronger};
+      padding: ${theme.space['2']};
     }
 
     &${PREFIX}__toast--warning {
       background-color: ${theme.colors.warning.backgroundStrong};
       color: ${theme.colors.warning.textStrong};
+      padding: ${theme.space['2']};
     }
   `,
 }
@@ -87,7 +91,7 @@ type ContentProps = {
 
 const Content = ({ children }: ContentProps) => (
   <Stack gap={2} direction="row">
-    <Text variant="body" as="span">
+    <Text variant="bodySmallStrong" as="span">
       {children}
     </Text>
   </Stack>
@@ -178,6 +182,7 @@ export const ToastContainer = ({
             stacked
             hideProgressBar
             className={className}
+            transition={Slide}
           />
         )}
       </ClassNames>
