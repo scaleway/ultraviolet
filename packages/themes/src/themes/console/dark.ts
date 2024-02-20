@@ -172,6 +172,14 @@ export const darkTheme = {
             fillWeak: '#e71964',
             fillWeakDisabled: '#191f33',
           },
+          original: {
+            fill: '#ffffff',
+            fillDisabled: '#252a3b',
+            fillStrong: '#bf96f8',
+            fillStrongDisabled: '#252a3b',
+            fillWeak: '#4f1c89',
+            fillWeakDisabled: '#191f33',
+          },
           primary: {
             fill: '#a061f4',
             fillDisabled: '#484b5a',

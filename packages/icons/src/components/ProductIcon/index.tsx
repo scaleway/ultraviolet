@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import type { FunctionComponent, SVGProps } from 'react'
 import { PRODUCT_ICONS } from './Icons'
 
-type Variants = 'primary' | 'danger' | 'warning'
+type Variants = 'primary' | 'danger' | 'warning' | 'original'
 
 const SIZES = {
   small: 32,
