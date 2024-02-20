@@ -4,6 +4,12 @@ import { TextInput } from '..'
 export default {
   component: TextInput,
   title: 'Components/Data Entry/TextInput',
+  parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated. Please use the TextInputV2 component instead.',
+    migrationLink: 'Migrations/TextInput to TextInputV2',
+  },
 } as Meta<typeof TextInput>
 
 export { Playground } from './Playground.stories'

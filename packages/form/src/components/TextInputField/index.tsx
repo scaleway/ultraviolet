@@ -56,6 +56,9 @@ type TextInputFieldProps<
     innerRef?: Ref<HTMLInputElement>
   }
 
+/**
+ * @deprecated This component is deprecated, please use `TextInputFieldV2` instead
+ */
 export const TextInputField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,

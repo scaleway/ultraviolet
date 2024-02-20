@@ -70,6 +70,10 @@ export default {
         component: 'A switch field that act like a checkbox',
       },
     },
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated, please use TextInputFieldV2 instead',
+    migrationLink: 'Migrations/TextInput to TextInputV2',
   },
   title: 'Form/Components/Fields/TextInputField',
 } as Meta

@@ -15,6 +15,12 @@ export default {
       </div>
     ),
   ],
+  parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated. Please use NumberInputV2 instead.',
+    migrationLink: 'Migrations/NumberInput to NumberInputV2',
+  },
   title: 'Components/Data Entry/NumberInput',
 } as Meta<typeof NumberInput>
 
