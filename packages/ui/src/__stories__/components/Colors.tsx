@@ -156,28 +156,27 @@ const Colors = () => {
           Data
         </Text>
         <Row templateColumns="repeat(3, 1fr)" gap={2}>
-          {Object.keys(dataColors).map(data => (
-            <Stack key={dataColors[data as keyof typeof dataColors]}>
-              <Stack
-                direction="row"
-                alignItems="center"
-                justifyContent="space-between"
-              >
-                <Text variant="body" as="p">
-                  {data}
-                </Text>
-                <Text variant="caption" as="small">
-                  {dataColors[data as keyof typeof dataColors]}
-                </Text>
+          {(Object.keys(dataColors) as (keyof typeof dataColors)[]).map(
+            data => (
+              <Stack key={dataColors[data]}>
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                >
+                  <Text variant="body" as="p">
+                    {data}
+                  </Text>
+                  <Text variant="caption" as="small">
+                    {dataColors[data]}
+                  </Text>
+                </Stack>
+                <StyledCard color={dataColors[data]} context="background">
+                  {' '}
+                </StyledCard>
               </Stack>
-              <StyledCard
-                color={dataColors[data as keyof typeof dataColors]}
-                context="background"
-              >
-                {' '}
-              </StyledCard>
-            </Stack>
-          ))}
+            ),
+          )}
         </Row>
         <Text variant="headingSmall" as="h3">
           Gradients
