@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.9.0
+
+### Minor Changes
+
+- [#3480](https://github.com/scaleway/ultraviolet/pull/3480) [`5615de4`](https://github.com/scaleway/ultraviolet/commit/5615de48ef162b32c3a43836bbad11c942afe55a) Thanks [@matthprost](https://github.com/matthprost)! - New `<ProductIcon />` variant available: `original`
+
+### Patch Changes
+
+- Updated dependencies [[`5615de4`](https://github.com/scaleway/ultraviolet/commit/5615de48ef162b32c3a43836bbad11c942afe55a)]:
+  - @ultraviolet/themes@1.9.0
+
 ## 2.8.4
 
 ### Patch Changes
