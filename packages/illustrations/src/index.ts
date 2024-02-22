@@ -5,3 +5,5 @@ export default {
   products,
   various,
 }
+
+export { DynamicIllustration } from './components'
