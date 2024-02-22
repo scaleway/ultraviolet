@@ -16,7 +16,7 @@ const Container = styled(Stack)`
   // will be an empty space above the children due to the invisible input
   // if you find a better way to do this feel free to do it
   &[data-has-label='false'] > :first-child {
-    margin-bottom: -${({ theme }) => theme.space['1']};
+    margin-bottom: -${({ theme }) => theme.space['0.5']};
   }
 
   padding: ${({ theme }) => theme.space['2']};
