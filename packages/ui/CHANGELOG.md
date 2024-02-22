@@ -1,5 +1,54 @@
 # Change Log
 
+## 1.37.0
+
+### Minor Changes
+
+- [#3470](https://github.com/scaleway/ultraviolet/pull/3470) [`656e0bb`](https://github.com/scaleway/ultraviolet/commit/656e0bb9a6eaeafae844a3fa2c13e242219161e9) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix: correct font size in `Toaster`
+
+- [#3482](https://github.com/scaleway/ultraviolet/pull/3482) [`6042654`](https://github.com/scaleway/ultraviolet/commit/60426545837829008f5b0550fc1f22fa14e8e678) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<RadioGroup.Radio />` by setting name optional as the parent will git it
+
+- [#3483](https://github.com/scaleway/ultraviolet/pull/3483) [`8d64a1a`](https://github.com/scaleway/ultraviolet/commit/8d64a1a66ecbc131a191ddf883884b86d368f42c) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<SelectableCard />` to take full width and have better spacings
+
+### Patch Changes
+
+- [#3479](https://github.com/scaleway/ultraviolet/pull/3479) [`398822d`](https://github.com/scaleway/ultraviolet/commit/398822d39f20a502d59e17f8ca375f3ad13a5e07) Thanks [@matthprost](https://github.com/matthprost)! - Fix default size to `large` for `TageInput` and `NumberInput`
+
+- Updated dependencies [[`5615de4`](https://github.com/scaleway/ultraviolet/commit/5615de48ef162b32c3a43836bbad11c942afe55a), [`5615de4`](https://github.com/scaleway/ultraviolet/commit/5615de48ef162b32c3a43836bbad11c942afe55a)]:
+  - @ultraviolet/themes@1.9.0
+  - @ultraviolet/icons@2.9.0
+
+## 1.36.0
+
+### Minor Changes
+
+- [#3455](https://github.com/scaleway/ultraviolet/pull/3455) [`0e2ad05`](https://github.com/scaleway/ultraviolet/commit/0e2ad053edcb8c9eed094543f2415e292525590d) Thanks [@matthprost](https://github.com/matthprost)! - Add new prop `highlightAnimation` on `<Table.Row />` for `<Table />` component
+
+### Patch Changes
+
+- [#3451](https://github.com/scaleway/ultraviolet/pull/3451) [`8be31ae`](https://github.com/scaleway/ultraviolet/commit/8be31ae84810bd2f8dd95ffc441c123c95a44b51) Thanks [@rachidBensaid](https://github.com/rachidBensaid)! - Add `flex-wrap` on component `<Breadcrumbs />`
+
+## 1.35.0
+
+### Minor Changes
+
+- [#3467](https://github.com/scaleway/ultraviolet/pull/3467) [`c483fff`](https://github.com/scaleway/ultraviolet/commit/c483fffbbfefc55eb7c59ad4f863b7132674d006) Thanks [@matthprost](https://github.com/matthprost)! - Some fixes and new props on `<ToastContainer />` component:
+  - added `className` and `autoClose` props
+  - remove custom css in ToastContainer
+  - fix ToastContainer width
+
+## 1.34.0
+
+### Minor Changes
+
+- [#3441](https://github.com/scaleway/ultraviolet/pull/3441) [`e78475a`](https://github.com/scaleway/ultraviolet/commit/e78475a6f944c46701f4ffcbaceead1e54eff8e0) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor `<Toaster>` component to change sentiments colors
+
+## 1.33.0
+
+### Minor Changes
+
+- [#3425](https://github.com/scaleway/ultraviolet/pull/3425) [`5c9df3e`](https://github.com/scaleway/ultraviolet/commit/5c9df3e3687395909b2183619a2e3314b2dcb13b) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Update `TagInput` and `TagInputField`
+
 ## 1.32.2
 
 ### Patch Changes

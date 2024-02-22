@@ -1,5 +1,62 @@
 # @ultraviolet/plus
 
+## 0.8.1
+
+### Patch Changes
+
+- [#3478](https://github.com/scaleway/ultraviolet/pull/3478) [`54b97c6`](https://github.com/scaleway/ultraviolet/commit/54b97c6bdd80a97aa7038fabbaf65d9cfc336532) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.21.22`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.21.22`.
+  Updated dependency `@uiw/react-codemirror` to `4.21.22`.
+- Updated dependencies [[`656e0bb`](https://github.com/scaleway/ultraviolet/commit/656e0bb9a6eaeafae844a3fa2c13e242219161e9), [`6042654`](https://github.com/scaleway/ultraviolet/commit/60426545837829008f5b0550fc1f22fa14e8e678), [`5615de4`](https://github.com/scaleway/ultraviolet/commit/5615de48ef162b32c3a43836bbad11c942afe55a), [`8d64a1a`](https://github.com/scaleway/ultraviolet/commit/8d64a1a66ecbc131a191ddf883884b86d368f42c), [`398822d`](https://github.com/scaleway/ultraviolet/commit/398822d39f20a502d59e17f8ca375f3ad13a5e07)]:
+  - @ultraviolet/ui@1.37.0
+  - @ultraviolet/themes@1.9.0
+
+## 0.8.0
+
+### Minor Changes
+
+- [#3466](https://github.com/scaleway/ultraviolet/pull/3466) [`9cac538`](https://github.com/scaleway/ultraviolet/commit/9cac5381230f134841ca298fd53f624140f07fde) Thanks [@lisalupi](https://github.com/lisalupi)! - Add component `FAQ` to ultraviolet plus
+
+## 0.7.2
+
+### Patch Changes
+
+- Updated dependencies [[`0e2ad05`](https://github.com/scaleway/ultraviolet/commit/0e2ad053edcb8c9eed094543f2415e292525590d), [`8be31ae`](https://github.com/scaleway/ultraviolet/commit/8be31ae84810bd2f8dd95ffc441c123c95a44b51)]:
+  - @ultraviolet/ui@1.36.0
+
+## 0.7.1
+
+### Patch Changes
+
+- Updated dependencies [[`c483fff`](https://github.com/scaleway/ultraviolet/commit/c483fffbbfefc55eb7c59ad4f863b7132674d006)]:
+  - @ultraviolet/ui@1.35.0
+
+## 0.7.0
+
+### Minor Changes
+
+- [#3452](https://github.com/scaleway/ultraviolet/pull/3452) [`be011be`](https://github.com/scaleway/ultraviolet/commit/be011be7e20d18202083012c1bbe4fc77bff736c) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `Conversation`
+
+### Patch Changes
+
+- [#3454](https://github.com/scaleway/ultraviolet/pull/3454) [`f3bfaa5`](https://github.com/scaleway/ultraviolet/commit/f3bfaa599db39fa1aa884d061d4290ae59aaa5cd) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix(ContentCard): fix role when onClick and href is provided
+
+## 0.6.15
+
+### Patch Changes
+
+- [#3450](https://github.com/scaleway/ultraviolet/pull/3450) [`63d20e7`](https://github.com/scaleway/ultraviolet/commit/63d20e7e66752a2b8f147ccb47f635af513010e1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.8.0`.
+
+- Updated dependencies [[`e78475a`](https://github.com/scaleway/ultraviolet/commit/e78475a6f944c46701f4ffcbaceead1e54eff8e0)]:
+  - @ultraviolet/ui@1.34.0
+
+## 0.6.14
+
+### Patch Changes
+
+- Updated dependencies [[`5c9df3e`](https://github.com/scaleway/ultraviolet/commit/5c9df3e3687395909b2183619a2e3314b2dcb13b)]:
+  - @ultraviolet/ui@1.33.0
+
 ## 0.6.13
 
 ### Patch Changes

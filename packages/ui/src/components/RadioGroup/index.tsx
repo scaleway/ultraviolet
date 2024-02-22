@@ -25,7 +25,12 @@ const RadioGroupContext = createContext<RadioGroupContextType | undefined>(
 type RadioGroupRadioProps = Omit<
   ComponentProps<typeof Radio>,
   'onChange' | 'checked' | 'required'
->
+> & {
+  /**
+   * @deprecated you don't need to use `name` anymore, the name will be passed from the parent `RadioGroup`.
+   */
+  name?: string
+}
 
 const RadioGroupRadio = ({
   onFocus,
@@ -48,17 +53,16 @@ const RadioGroupRadio = ({
   }
 
   const { groupName, onChange, groupValue } = context
-  const radioName = `${groupName}-${name ?? ''}`
 
   return (
     <Radio
       onChange={onChange}
-      checked={`${groupName}-${groupValue}` === radioName}
+      checked={groupValue === value}
       onFocus={onFocus}
       onBlur={onBlur}
       disabled={disabled}
       error={error}
-      name={radioName}
+      name={groupName ?? name}
       value={value}
       label={label}
       helper={helper}

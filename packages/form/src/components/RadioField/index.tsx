@@ -24,6 +24,9 @@ type RadioFieldProps<
     className?: string
   }
 
+/**
+ * @deprecated This component is deprecated, use `RadioGroupField` instead.
+ */
 export const RadioField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,

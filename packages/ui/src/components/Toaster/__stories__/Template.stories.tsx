@@ -6,10 +6,14 @@ export const Template: StoryFn<typeof ToastContainer> = args => (
   <>
     <ToastContainer {...args} />
     <Button
-      sentiment="success"
+      sentiment="neutral"
       onClick={() => toast.success('This is success')}
     >
       Success
     </Button>
   </>
 )
+
+Template.args = {
+  position: 'bottom-right',
+}

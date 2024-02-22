@@ -1,5 +1,60 @@
 # Change Log
 
+## 2.7.0
+
+### Minor Changes
+
+- [#3482](https://github.com/scaleway/ultraviolet/pull/3482) [`6042654`](https://github.com/scaleway/ultraviolet/commit/60426545837829008f5b0550fc1f22fa14e8e678) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<RadioGroup.Radio />` by setting name optional as the parent will git it
+
+- [#3483](https://github.com/scaleway/ultraviolet/pull/3483) [`8d64a1a`](https://github.com/scaleway/ultraviolet/commit/8d64a1a66ecbc131a191ddf883884b86d368f42c) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<SelectableCard />` to take full width and have better spacings
+
+### Patch Changes
+
+- [#3456](https://github.com/scaleway/ultraviolet/pull/3456) [`9838fd0`](https://github.com/scaleway/ultraviolet/commit/9838fd0f71aafd5b0746e5e3347389cf8c618f90) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Add missing `loading` props in `TextInputFieldV2`
+
+- Updated dependencies [[`656e0bb`](https://github.com/scaleway/ultraviolet/commit/656e0bb9a6eaeafae844a3fa2c13e242219161e9), [`6042654`](https://github.com/scaleway/ultraviolet/commit/60426545837829008f5b0550fc1f22fa14e8e678), [`8d64a1a`](https://github.com/scaleway/ultraviolet/commit/8d64a1a66ecbc131a191ddf883884b86d368f42c), [`398822d`](https://github.com/scaleway/ultraviolet/commit/398822d39f20a502d59e17f8ca375f3ad13a5e07)]:
+  - @ultraviolet/ui@1.37.0
+
+## 2.6.2
+
+### Patch Changes
+
+- Updated dependencies [[`0e2ad05`](https://github.com/scaleway/ultraviolet/commit/0e2ad053edcb8c9eed094543f2415e292525590d), [`8be31ae`](https://github.com/scaleway/ultraviolet/commit/8be31ae84810bd2f8dd95ffc441c123c95a44b51)]:
+  - @ultraviolet/ui@1.36.0
+
+## 2.6.1
+
+### Patch Changes
+
+- Updated dependencies [[`c483fff`](https://github.com/scaleway/ultraviolet/commit/c483fffbbfefc55eb7c59ad4f863b7132674d006)]:
+  - @ultraviolet/ui@1.35.0
+
+## 2.6.0
+
+### Minor Changes
+
+- [#3459](https://github.com/scaleway/ultraviolet/pull/3459) [`2d8631a`](https://github.com/scaleway/ultraviolet/commit/2d8631ab60d845815789c3d4346e51e5c7fe612c) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix prop `type` on component `<TextInputFieldV2 />` that wasn't working properly
+
+## 2.5.1
+
+### Patch Changes
+
+- Updated dependencies [[`e78475a`](https://github.com/scaleway/ultraviolet/commit/e78475a6f944c46701f4ffcbaceead1e54eff8e0)]:
+  - @ultraviolet/ui@1.34.0
+
+## 2.5.0
+
+### Minor Changes
+
+- [#3425](https://github.com/scaleway/ultraviolet/pull/3425) [`5c9df3e`](https://github.com/scaleway/ultraviolet/commit/5c9df3e3687395909b2183619a2e3314b2dcb13b) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Update `TagInput` and `TagInputField`
+
+### Patch Changes
+
+- [#3416](https://github.com/scaleway/ultraviolet/pull/3416) [`52c3aee`](https://github.com/scaleway/ultraviolet/commit/52c3aee10abebe515494caab8b2ff557c92eca5d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.50.1`.
+
+- Updated dependencies [[`5c9df3e`](https://github.com/scaleway/ultraviolet/commit/5c9df3e3687395909b2183619a2e3314b2dcb13b)]:
+  - @ultraviolet/ui@1.33.0
+
 ## 2.4.2
 
 ### Patch Changes

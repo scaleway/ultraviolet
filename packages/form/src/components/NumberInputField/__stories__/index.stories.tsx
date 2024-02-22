@@ -74,6 +74,10 @@ export default {
         component: 'A NumberInput field',
       },
     },
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated, use NumberInputFieldV2 instead.',
+    migrationLink: 'Migrations/NumberInput to NumberInputV2',
   },
   title: 'Form/Components/Fields/NumberInputField',
 } as Meta

@@ -56,7 +56,7 @@ jobs:
       - run: pnpm run build
       - run: pnpm install
       - run: pnpm run test:unit:coverage
-      - uses: codecov/codecov-action@v3.1.6
+      - uses: codecov/codecov-action@v4.0.1
   accessibility:
     runs-on: ubuntu-22.04
     steps:

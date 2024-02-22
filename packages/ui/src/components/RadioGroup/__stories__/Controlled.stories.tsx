@@ -15,8 +15,8 @@ export const Controlled: StoryFn = args => {
         onChange(e.currentTarget.value)
       }
     >
-      <RadioGroup.Radio name="label-1" value="label-1" label="Label 1" />
-      <RadioGroup.Radio name="label-2" value="label-2" label="Label 2" />
+      <RadioGroup.Radio value="label-1" label="Label 1" />
+      <RadioGroup.Radio value="label-2" label="Label 2" />
     </RadioGroup>
   )
 }

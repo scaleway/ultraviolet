@@ -1,14 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
   },
   "include": [
     "src",
     "../../global.d.ts",
     "../../expect.d.ts",
     "../../jest-axe.d.ts",
-    "src/emotion.d.ts"
+    "src/emotion.d.ts",
   ],
-  "exclude": ["node_modules", "coverage", "dist"]
+  "exclude": ["node_modules", "coverage", "dist"],
 }

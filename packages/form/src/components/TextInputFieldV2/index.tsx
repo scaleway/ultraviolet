@@ -32,6 +32,7 @@ export const TextInputField = <
   helper,
   label,
   labelDescription,
+  loading,
   onChange,
   minLength,
   maxLength,
@@ -43,6 +44,7 @@ export const TextInputField = <
   required,
   success,
   tooltip,
+  type,
   validate,
   regex: regexes,
 }: TextInputFieldProps<TFieldValues, TName>) => {
@@ -95,6 +97,7 @@ export const TextInputField = <
       )}
       helper={helper}
       label={label}
+      loading={loading}
       labelDescription={labelDescription}
       minLength={minLength}
       maxLength={maxLength}
@@ -116,6 +119,7 @@ export const TextInputField = <
       success={success}
       tabIndex={tabIndex}
       tooltip={tooltip}
+      type={type}
       value={field.value}
     />
   )

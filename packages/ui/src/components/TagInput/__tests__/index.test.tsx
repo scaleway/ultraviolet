@@ -1,254 +1,121 @@
-import { describe, expect, jest, test } from '@jest/globals'
+import { describe, expect, it, jest } from '@jest/globals'
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { TagInput } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
-
-const mockOnClick = jest.fn()
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../../.jest/helpers'
 
 describe('TagInput', () => {
-  test('renders correctly with base props', () =>
+  it('should renders correctly', () =>
+    shouldMatchEmotionSnapshot(<TagInput onChange={() => {}} />))
+
+  it('should renders correctly disabled', () =>
+    shouldMatchEmotionSnapshot(<TagInput disabled />))
+
+  it('should renders correctly readOnly', () =>
+    shouldMatchEmotionSnapshot(<TagInput readOnly />))
+
+  it('should renders correctly with error', () =>
+    shouldMatchEmotionSnapshot(<TagInput error="This is an error" />))
+
+  it('should renders correctly with success', () =>
+    shouldMatchEmotionSnapshot(<TagInput success="This is a success" />))
+
+  it('should renders correctly with placeholder', () =>
+    shouldMatchEmotionSnapshot(<TagInput placeholder="Enter a value here" />))
+
+  it('should renders correctly with some tags', () =>
     shouldMatchEmotionSnapshot(
-      <TagInput
-        name="radio"
-        onChangeError={() => {}}
-        placeholder="TagInput..."
-      />,
+      <TagInput onChange={() => {}} name="radio" value={['hello', 'world']} />,
     ))
 
-  test('renders correctly with some tags', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput onChange={() => {}} name="radio" tags={['hello', 'world']} />,
-    ))
-
-  test('renders correctly with some tags objects', () =>
+  it('should renders correctly with some tags objects', () =>
     shouldMatchEmotionSnapshot(
       <TagInput
         onChange={() => {}}
         name="radio"
-        tags={[
+        value={[
           { index: 'index', label: 'hello' },
           { index: 'secondIndex', label: 'world' },
         ]}
       />,
     ))
 
-  test('renders correctly with some tags', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput onChange={() => {}} name="radio" tags={['hello', 'world']} />,
-    ))
+  it('should be able to be controlled', async () => {
+    const mockOnChange = jest.fn()
 
-  test('renders correctly with some tags as objects', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        onChange={() => {}}
-        name="radio"
-        tags={[
-          { index: 'index', label: 'hello' },
-          { index: 'secondIndex', label: 'world' },
-        ]}
-      />,
-    ))
+    renderWithTheme(<TagInput value={['first']} onChange={mockOnChange} />)
+    const input = screen.getByRole<HTMLInputElement>('textbox')
+    await userEvent.type(input, 'new ')
+    expect(mockOnChange).toHaveBeenCalledWith(['first', 'new'])
+  })
 
-  test('renders correctly when variant = bordered', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        onChange={() => {}}
-        name="radio"
-        tags={['hello', 'world']}
-        variant="bordered"
-      />,
-    ))
+  it('should be clearable', async () => {
+    const mockOnChange = jest.fn()
 
-  test('renders correctly when variant = base', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        onChange={() => {}}
-        name="radio"
-        tags={['hello', 'world']}
-        variant="base"
-      />,
-    ))
+    renderWithTheme(
+      <TagInput value={['first']} onChange={mockOnChange} clearable />,
+    )
+    const clearableButton = screen.getByLabelText('clear value')
+    await userEvent.click(clearableButton)
+    expect(mockOnChange).toHaveBeenCalledWith([])
+  })
 
-  test('renders correctly when variant = no-border', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        onChange={() => {}}
-        name="radio"
-        tags={['hello', 'world']}
-        variant="no-border"
-      />,
-    ))
+  it('should delete tag', async () => {
+    const mockOnChange = jest.fn()
 
-  test('renders correctly when manualInput is disabled', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        onChange={() => {}}
-        name="radio"
-        tags={['hello', 'world']}
-        manualInput={false}
-      />,
-    ))
+    renderWithTheme(
+      <TagInput value={['first', 'second']} onChange={mockOnChange} />,
+    )
 
-  test('renders correctly when disabled', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        onChange={() => {}}
-        name="radio"
-        tags={['hello', 'world']}
-        disabled
-      />,
-    ))
+    const firstTag = screen.queryByText(/first/)
+    expect(firstTag).toBeInTheDocument()
+    // remove Tag
+    const tagsClose = screen.getAllByTestId('close-tag')
+    const firstCloseTag = tagsClose[0]
+    await userEvent.click(firstCloseTag)
+    // check Tag was removed
+    expect(firstTag).not.toBeInTheDocument()
+    expect(mockOnChange).toHaveBeenCalledWith(['second'])
+  })
 
-  test('delete tag', () =>
-    shouldMatchEmotionSnapshot(
+  it('should delete tag with backspace', async () => {
+    const mockOnChange = jest.fn()
+    renderWithTheme(
       <TagInput
         id="test"
-        onChange={() => {}}
+        onChange={mockOnChange}
         name="radio"
-        tags={['hello', 'world']}
+        value={['hello', 'world']}
       />,
-      {
-        transform: async () => {
-          const input = screen.getByDisplayValue('')
-          expect(input).toBeInTheDocument()
-          const HelloTag = screen.queryByText(/hello/)
-          expect(HelloTag).toBeInTheDocument()
+    )
+    const input = screen.getByRole<HTMLInputElement>('textbox')
+    const lastTag = screen.queryByText(/world/)
+    expect(lastTag).toBeInTheDocument()
+    await userEvent.click(input)
+    expect(input).toHaveFocus()
+    await userEvent.keyboard('{backspace}')
+    expect(lastTag).not.toBeInTheDocument()
+    expect(mockOnChange).toHaveBeenCalledWith(['hello'])
+  })
 
-          // remove Tag
-          const tagsClose = screen.getAllByTestId('close-tag')
-          const helloCloseTags = tagsClose[0]
-          await userEvent.click(helloCloseTags)
-          // check Tag was removed
-          expect(HelloTag).not.toBeInTheDocument()
-        },
-      },
-    ))
-  test('delete tag with error', () =>
-    shouldMatchEmotionSnapshot(
+  it('should add tag on paste', async () => {
+    const mockOnChange = jest.fn()
+    renderWithTheme(
       <TagInput
         id="test"
-        onChange={() => {
-          throw new Error('Not Working')
-        }}
-        onChangeError={e => e}
+        onChange={mockOnChange}
         name="radio"
-        tags={['throw', 'error']}
+        value={['hello', 'world']}
       />,
-      {
-        transform: async () => {
-          const input = screen.getByDisplayValue('')
-          expect(input).toBeInTheDocument()
-          const ErrorTag = screen.queryByText(/error/)
-          expect(ErrorTag).toBeInTheDocument()
-
-          // remove Tag
-          const tagsClose = screen.getAllByTestId('close-tag')
-          const firstTag = tagsClose[0]
-          if (firstTag) {
-            await userEvent.click(firstTag)
-          }
-        },
-      },
-    ))
-
-  test('add tag from input', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        id="test"
-        onChange={mockOnClick}
-        name="radio"
-        tags={['hello', 'world']}
-      />,
-      {
-        transform: async () => {
-          const input = screen.getByDisplayValue<HTMLInputElement>('')
-          await userEvent.type(input, 'test{enter}')
-          await waitFor(() => expect(input.value).toBe(''))
-          expect(screen.getByText('test')).toBeInTheDocument()
-        },
-      },
-    ))
-
-  test('add tag from input with error', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        id="test"
-        onChange={() => {
-          throw new Error('Not Working')
-        }}
-        onChangeError={e => e}
-        name="radio"
-        tags={['hello', 'world']}
-      />,
-      {
-        transform: async () => {
-          const input = screen.getByDisplayValue<HTMLInputElement>('')
-          await userEvent.type(input, 'test{enter}')
-          await waitFor(() => expect(input.value).toBe(''))
-        },
-      },
-    ))
-
-  test('delete tag with backspace', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        id="test"
-        onChange={() => {}}
-        name="radio"
-        tags={['hello', 'world']}
-      />,
-      {
-        transform: async () => {
-          const input = screen.getByDisplayValue('')
-          const LastTag = screen.queryByText(/world/)
-          expect(LastTag).toBeInTheDocument()
-          await userEvent.click(input)
-          expect(input).toHaveFocus()
-          await userEvent.keyboard('{backspace}')
-          expect(LastTag).not.toBeInTheDocument()
-        },
-      },
-    ))
-
-  test('add tag on paste', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        id="test"
-        onChange={() => {}}
-        name="radio"
-        tags={['hello', 'world']}
-      />,
-      {
-        transform: async () => {
-          const input = screen.getByDisplayValue<HTMLInputElement>('')
-          fireEvent.paste(input, {
-            clipboardData: { getData: () => 'test' },
-          })
-          await waitFor(() => expect(input.value).toBe(''))
-
-          await screen.findByText('test')
-        },
-      },
-    ))
-  test('add tag on paste with error', () =>
-    shouldMatchEmotionSnapshot(
-      <TagInput
-        id="test"
-        onChange={() => {
-          throw new Error('Not Working')
-        }}
-        onChangeError={e => e}
-        name="radio"
-        tags={['hello', 'world']}
-      />,
-      {
-        transform: () => {
-          const input = screen.getByDisplayValue<HTMLInputElement>('')
-          fireEvent.paste(input, {
-            clipboardData: { getData: () => 'test' },
-          })
-        },
-      },
-    ))
+    )
+    const input = screen.getByRole<HTMLInputElement>('textbox')
+    fireEvent.paste(input, {
+      clipboardData: { getData: () => 'test' },
+    })
+    await waitFor(() => expect(input.value).toBe(''))
+    expect(mockOnChange).toHaveBeenCalledWith(['hello', 'world', 'test'])
+  })
 })
