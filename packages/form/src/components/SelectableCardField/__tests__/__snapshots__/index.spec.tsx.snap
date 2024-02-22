@@ -2,7 +2,7 @@
 
 exports[`SelectableCardField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-qq6nro {
+  .cache-51ezv2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -36,30 +36,34 @@ exports[`SelectableCardField should render correctly 1`] = `
   color: #3f4250;
 }
 
-.cache-qq6nro[data-checked='true'] {
+.cache-51ezv2[data-has-label='false']:first-child {
+  gap: 0;
+}
+
+.cache-51ezv2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro[data-error='true'] {
+.cache-51ezv2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-qq6nro[data-disabled='true'] {
+.cache-51ezv2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true']) {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
@@ -245,10 +249,11 @@ exports[`SelectableCardField should render correctly 1`] = `
 
 <form>
     <div
-      class="cache-qq6nro e1s5n3hj2"
+      class="cache-51ezv2 e1s5n3hj2"
       data-checked="false"
       data-disabled="false"
       data-error="false"
+      data-has-label="false"
       data-type="radio"
     >
       <div
@@ -304,7 +309,7 @@ exports[`SelectableCardField should render correctly 1`] = `
 
 exports[`SelectableCardField should render correctly checked 1`] = `
 <DocumentFragment>
-  .cache-qq6nro {
+  .cache-51ezv2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -338,30 +343,34 @@ exports[`SelectableCardField should render correctly checked 1`] = `
   color: #3f4250;
 }
 
-.cache-qq6nro[data-checked='true'] {
+.cache-51ezv2[data-has-label='false']:first-child {
+  gap: 0;
+}
+
+.cache-51ezv2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro[data-error='true'] {
+.cache-51ezv2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-qq6nro[data-disabled='true'] {
+.cache-51ezv2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true']) {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
@@ -547,10 +556,11 @@ exports[`SelectableCardField should render correctly checked 1`] = `
 
 <form>
     <div
-      class="cache-qq6nro e1s5n3hj2"
+      class="cache-51ezv2 e1s5n3hj2"
       data-checked="true"
       data-disabled="false"
       data-error="false"
+      data-has-label="false"
       data-type="radio"
     >
       <div
@@ -607,7 +617,7 @@ exports[`SelectableCardField should render correctly checked 1`] = `
 
 exports[`SelectableCardField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-qq6nro {
+  .cache-51ezv2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -641,30 +651,34 @@ exports[`SelectableCardField should render correctly disabled 1`] = `
   color: #3f4250;
 }
 
-.cache-qq6nro[data-checked='true'] {
+.cache-51ezv2[data-has-label='false']:first-child {
+  gap: 0;
+}
+
+.cache-51ezv2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro[data-error='true'] {
+.cache-51ezv2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-qq6nro[data-disabled='true'] {
+.cache-51ezv2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true']) {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
@@ -850,10 +864,11 @@ exports[`SelectableCardField should render correctly disabled 1`] = `
 
 <form>
     <div
-      class="cache-qq6nro e1s5n3hj2"
+      class="cache-51ezv2 e1s5n3hj2"
       data-checked="false"
       data-disabled="true"
       data-error="false"
+      data-has-label="false"
       data-type="radio"
     >
       <div
@@ -910,7 +925,7 @@ exports[`SelectableCardField should render correctly disabled 1`] = `
 
 exports[`SelectableCardField should render correctly with errors 1`] = `
 <DocumentFragment>
-  .cache-qq6nro {
+  .cache-51ezv2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -944,30 +959,34 @@ exports[`SelectableCardField should render correctly with errors 1`] = `
   color: #3f4250;
 }
 
-.cache-qq6nro[data-checked='true'] {
+.cache-51ezv2[data-has-label='false']:first-child {
+  gap: 0;
+}
+
+.cache-51ezv2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro[data-error='true'] {
+.cache-51ezv2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-qq6nro[data-disabled='true'] {
+.cache-51ezv2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true']) {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
@@ -1153,10 +1172,11 @@ exports[`SelectableCardField should render correctly with errors 1`] = `
 
 <form>
     <div
-      class="cache-qq6nro e1s5n3hj2"
+      class="cache-51ezv2 e1s5n3hj2"
       data-checked="false"
       data-disabled="false"
       data-error="true"
+      data-has-label="false"
       data-type="radio"
     >
       <div
@@ -1217,7 +1237,7 @@ exports[`SelectableCardField should render correctly with errors 1`] = `
 
 exports[`SelectableCardField should trigger events correctly 1`] = `
 <DocumentFragment>
-  .cache-qq6nro {
+  .cache-51ezv2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1251,30 +1271,34 @@ exports[`SelectableCardField should trigger events correctly 1`] = `
   color: #3f4250;
 }
 
-.cache-qq6nro[data-checked='true'] {
+.cache-51ezv2[data-has-label='false']:first-child {
+  gap: 0;
+}
+
+.cache-51ezv2[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro[data-error='true'] {
+.cache-51ezv2[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-qq6nro[data-disabled='true'] {
+.cache-51ezv2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true']) {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.cache-qq6nro:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qq6nro:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.cache-51ezv2:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-51ezv2:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
@@ -1460,10 +1484,11 @@ exports[`SelectableCardField should trigger events correctly 1`] = `
 
 <form>
     <div
-      class="cache-qq6nro e1s5n3hj2"
+      class="cache-51ezv2 e1s5n3hj2"
       data-checked="true"
       data-disabled="false"
       data-error="false"
+      data-has-label="false"
       data-type="radio"
     >
       <div

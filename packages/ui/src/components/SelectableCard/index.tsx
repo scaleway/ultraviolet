@@ -12,6 +12,13 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
 const Container = styled(Stack)`
+  // This is to remove the gap when there is no label because if we do not there
+  // will be an empty space above the children due to the invisible input
+  // if you find a better way to do this feel free to do it
+  &[data-has-label='false'] > :first-child {
+    margin-bottom: -${({ theme }) => theme.space['1']};
+  }
+
   padding: ${({ theme }) => theme.space['2']};
   border-radius: ${({ theme }) => theme.radii.default};
   transition:
@@ -170,6 +177,7 @@ export const SelectableCard = forwardRef(
           data-error={isError}
           data-testid={dataTestId}
           data-type={type}
+          data-has-label={!!label}
           ref={ref}
           alignItems="start"
           direction="column"
