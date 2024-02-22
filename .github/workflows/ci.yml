@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.2
         with:
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.2
         with:
@@ -46,7 +46,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: '0'
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.2
         with:
@@ -63,7 +63,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: '0'
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.2
         with:
@@ -81,7 +81,7 @@ jobs:
     needs: [lint, typecheck]
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.2
         with:
@@ -96,7 +96,7 @@ jobs:
     needs: [lint, test]
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.2
         with:
@@ -130,7 +130,7 @@ jobs:
           env: ${{ env.BRANCH_SLUG }}
           ref: ${{ github.head_ref }}
 
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: pnpm/action-setup@v3.0.0
       - name: Install dependencies
         run: pnpm install
       - name: Publish to Chromatic
