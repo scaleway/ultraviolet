@@ -13,12 +13,7 @@ exports[`Toaster renders correctly with close button 1`] = `
 
 exports[`Toaster renders correctly with close button 2`] = `
 <DocumentFragment>
-  .cache-1ee5hou-NotificationContainer {
-  top: 100px;
-  right: calc(0% + 16px);
-}
-
-.cache-ivzpm-toast {
+  .cache-ivzpm-toast {
   border-radius: 4px;
 }
 
@@ -162,14 +157,12 @@ exports[`Toaster renders correctly with close button 2`] = `
     class="Toastify"
   >
     <div
-      class="Toastify__toast-container Toastify__toast-container--top-right cache-1ee5hou-NotificationContainer"
+      class="Toastify__toast-container Toastify__toast-container--top-right"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default cache-ivzpm-toast Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default cache-ivzpm-toast Toastify--animate Toastify__slide-enter--top-right"
         data-in="true"
-        data-pos="top"
         id="1"
-        style="--y: 0px; --g: 12; --s: 1;"
       >
         <div
           class="Toastify__toast-body"
@@ -181,7 +174,7 @@ exports[`Toaster renders correctly with close button 2`] = `
           class="cache-4lkpn5-Stack ehpbis70"
         >
           <div>
-             icon
+            icon
           </div>
           <div
             class="cache-1guc91g-Stack ehpbis70"
@@ -242,12 +235,7 @@ exports[`Toaster renders correctly with custom close button 1`] = `
 
 exports[`Toaster renders correctly with custom close button 2`] = `
 <DocumentFragment>
-  .cache-1ee5hou-NotificationContainer {
-  top: 100px;
-  right: calc(0% + 16px);
-}
-
-.cache-ivzpm-toast {
+  .cache-ivzpm-toast {
   border-radius: 4px;
 }
 
@@ -328,14 +316,12 @@ exports[`Toaster renders correctly with custom close button 2`] = `
     class="Toastify"
   >
     <div
-      class="Toastify__toast-container Toastify__toast-container--top-right cache-1ee5hou-NotificationContainer"
+      class="Toastify__toast-container Toastify__toast-container--top-right"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default cache-ivzpm-toast Toastify--animate Toastify__slide-enter--top-right Toastify__toast--stacked"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default cache-ivzpm-toast Toastify--animate Toastify__slide-enter--top-right"
         data-in="true"
-        data-pos="top"
         id="2"
-        style="--y: 0px; --g: 12; --s: 1;"
       >
         <div
           class="Toastify__toast-body"
@@ -347,7 +333,7 @@ exports[`Toaster renders correctly with custom close button 2`] = `
           class="cache-4lkpn5-Stack ehpbis70"
         >
           <div>
-             Avatar
+            Avatar
           </div>
           <div
             class="cache-1guc91g-Stack ehpbis70"

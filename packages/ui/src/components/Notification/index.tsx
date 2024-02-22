@@ -17,12 +17,13 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const PREFIX = '.Toastify'
+
 type StylesProps = {
   theme: Theme
 }
 
 type CloseButtonProps = {
-  closeToast: (e: React.MouseEvent<HTMLElement>) => void
+  closeToast: (event: React.MouseEvent<HTMLElement>) => void
   type: TypeOptions
   ariaLabel?: string
   theme: ThemeToastify
@@ -72,7 +73,7 @@ export const notification = (
     ...options,
     closeButton: props => (
       <Stack direction="row" gap={2}>
-        <div> {icon}</div>
+        <div>{icon}</div>
         <Stack direction="column">
           <Text as="div" variant="bodySmallStronger">
             {title}
@@ -98,12 +99,12 @@ type NotificationContainerProps = {
    * Limit the number of toast displayed at the same time
    */
   limit?: number
-
   /**
    * Position on the notification container
    */
   position?: ToastOptions['position']
   'data-testid'?: string
+  className?: string
 }
 
 export const NotificationContainer = ({
@@ -112,6 +113,7 @@ export const NotificationContainer = ({
   autoClose = false,
   position = 'top-right',
   'data-testid': dataTestId,
+  className,
 }: NotificationContainerProps) => {
   const theme = useTheme()
 
@@ -128,14 +130,10 @@ export const NotificationContainer = ({
             newestOnTop={newestOnTop}
             limit={limit}
             position={position}
-            css={css`
-              top: 100px;
-              right: calc(0% + ${theme.space['2']});
-            `}
-            stacked
             hideProgressBar
             draggable={false}
             transition={Slide}
+            className={className}
           />
         )}
       </ClassNames>
