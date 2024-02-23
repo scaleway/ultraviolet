@@ -194,8 +194,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2
       chromatic:
-        specifier: 10.9.4
-        version: 10.9.4
+        specifier: 10.9.6
+        version: 10.9.6
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -2669,6 +2669,7 @@ packages:
   /@commitlint/config-validator@18.6.1:
     resolution: {integrity: sha512-05uiToBVfPhepcQWE1ZQBR/Io3+tb3gEotZjnI4tTzzPk16NffN6YABgwFQCLmzZefbDcmwWqJWc2XT47q7Znw==}
     engines: {node: '>=v18'}
+    requiresBuild: true
     dependencies:
       '@commitlint/types': 18.6.1
       ajv: 8.12.0
@@ -2689,6 +2690,7 @@ packages:
   /@commitlint/execute-rule@18.6.1:
     resolution: {integrity: sha512-7s37a+iWyJiGUeMFF6qBlyZciUkF8odSAnHijbD36YDctLhGKoYltdvuJ/AFfRm6cBLRtRk9cCVPdsEFtt/2rg==}
     engines: {node: '>=v18'}
+    requiresBuild: true
     dev: true
 
   /@commitlint/format@18.6.1:
@@ -2764,6 +2766,7 @@ packages:
   /@commitlint/resolve-extends@18.6.1:
     resolution: {integrity: sha512-ifRAQtHwK+Gj3Bxj/5chhc4L2LIc3s30lpsyW67yyjsETR6ctHAHRu1FSpt0KqahK5xESqoJ92v6XxoDRtjwEQ==}
     engines: {node: '>=v18'}
+    requiresBuild: true
     dependencies:
       '@commitlint/config-validator': 18.6.1
       '@commitlint/types': 18.6.1
@@ -8251,8 +8254,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@10.9.4:
-    resolution: {integrity: sha512-etDUGE0vN2T/q5oNqXnsve9LtDCVl+7zHXKIuVtK+BT3k4XbAo8qaD/tnIozZHfrKGtepd8f9AjBq02CjfCYFQ==}
+  /chromatic@10.9.6:
+    resolution: {integrity: sha512-1MoT+/U+vQwEiq2GuehPyStbqhxqHmM1B9pdpVU1dKh26userQg1FyOFYifkTgy+9reo2w2p7sAbc0JRd2kzlA==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.5.2 || ^1.0.0
