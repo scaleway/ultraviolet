@@ -75,7 +75,7 @@ export const notification = (
       <Stack direction="row" gap={2}>
         <div>{icon}</div>
         <Stack direction="column">
-          <Text as="div" variant="bodySmallStronger">
+          <Text as="h3" variant="bodySmallStronger">
             {title}
           </Text>
           {typeof children === 'function' ? children(props) : children}
