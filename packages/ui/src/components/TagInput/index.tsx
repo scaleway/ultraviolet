@@ -300,20 +300,26 @@ export const TagInput = ({
 
   return (
     <Stack gap="0.5" className={className}>
-      <Stack direction="row" gap="1" alignItems="center">
-        <Stack direction="row" gap="0.5" alignItems="start">
-          <Text
-            as="label"
-            variant="bodyStrong"
-            sentiment="neutral"
-            htmlFor={localId}
-          >
-            {label}
-          </Text>
-          {required ? <Icon name="asterisk" color="danger" size={8} /> : null}
+      {label || labelDescription ? (
+        <Stack direction="row" gap="1" alignItems="center">
+          {label ? (
+            <Stack direction="row" gap="0.5" alignItems="start">
+              <Text
+                as="label"
+                variant="bodyStrong"
+                sentiment="neutral"
+                htmlFor={id ?? localId}
+              >
+                {label}
+              </Text>
+              {required ? (
+                <Icon name="asterisk" color="danger" size={8} />
+              ) : null}
+            </Stack>
+          ) : null}
+          {labelDescription ?? null}
         </Stack>
-        {labelDescription ?? null}
-      </Stack>
+      ) : null}
       <div>
         <Tooltip text={tooltip}>
           <TagInputContainer

@@ -10,7 +10,7 @@ export default {
 } as Meta<typeof TextInputV2>
 
 export { Playground } from './Playground.stories'
-export { Size } from './Size.stories'
+/* export { Size } from './Size.stories'
 export { Password } from './Password.stories'
 export { OnRandomize } from './OnRandomize.stories'
 export { Clearable } from './Clearable.stories'
@@ -19,4 +19,4 @@ export { ReadOnly } from './ReadOnly.stories'
 export { Loading } from './Loading.stories'
 export { Success } from './Success.stories'
 export { Error } from './Error.stories'
-export { Examples } from './Examples.stories'
+export { Examples } from './Examples.stories' */
