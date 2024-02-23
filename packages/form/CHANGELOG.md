@@ -1,5 +1,22 @@
 # Change Log
 
+## 2.7.1
+
+### Patch Changes
+
+- [#3409](https://github.com/scaleway/ultraviolet/pull/3409) [`8bb67a3`](https://github.com/scaleway/ultraviolet/commit/8bb67a3bb4fd1e00cbe9be23b2fd638a53bc4415) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Remove `value` prop from `CheckboxField`, remove support of array value.
+
+- [#3490](https://github.com/scaleway/ultraviolet/pull/3490) [`4a3f3f4`](https://github.com/scaleway/ultraviolet/commit/4a3f3f4dd698a8b00baff37288b297907f568bdd) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` to remove gap when no label is set
+
+- [#3487](https://github.com/scaleway/ultraviolet/pull/3487) [`1afcd50`](https://github.com/scaleway/ultraviolet/commit/1afcd50d7c39001572998fac1d36f86afcf1d1f9) Thanks [@matthprost](https://github.com/matthprost)! - Fix multiple inputs that has bug when required and not label set the required icon was staying:
+  - `<NumberInputV2 />`
+  - `<TagInput />`
+  - `<TextArea />`
+  - `<TextInputV2 />`
+  - `<DateInput />`
+- Updated dependencies [[`2fbc604`](https://github.com/scaleway/ultraviolet/commit/2fbc604581b72377210daae29c1c9985a548dcad), [`4a3f3f4`](https://github.com/scaleway/ultraviolet/commit/4a3f3f4dd698a8b00baff37288b297907f568bdd), [`1afcd50`](https://github.com/scaleway/ultraviolet/commit/1afcd50d7c39001572998fac1d36f86afcf1d1f9)]:
+  - @ultraviolet/ui@1.37.1
+
 ## 2.7.0
 
 ### Minor Changes
