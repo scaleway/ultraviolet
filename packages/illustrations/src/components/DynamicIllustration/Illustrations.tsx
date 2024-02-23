@@ -21,6 +21,20 @@ import successLight from '../../various/feedback/success-light.webp'
 import warningDark from '../../various/feedback/warning-dark.webp'
 import warningLight from '../../various/feedback/warning-light.webp'
 
+export type IllustrationsKeys = {
+  danger: string
+  success: string
+  warning: string
+  empty: string
+  failed: string
+  generic: string
+  loading: string
+  lock: string
+  plus: string
+  resources: string
+  search: string
+}
+
 export const ILLUSTRATIONS = {
   light: {
     danger: dangerLight,
@@ -34,7 +48,7 @@ export const ILLUSTRATIONS = {
     plus: plusLight,
     resources: resourcesLight,
     search: searchLight,
-  },
+  } satisfies IllustrationsKeys,
 
   dark: {
     danger: dangerDark,
@@ -48,5 +62,5 @@ export const ILLUSTRATIONS = {
     plus: plusDark,
     resources: resourcesDark,
     search: searchDark,
-  },
+  } satisfies IllustrationsKeys,
 }

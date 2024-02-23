@@ -5,5 +5,5 @@ export default {
   products,
   various,
 }
-
-export { DynamicIllustration } from './components'
+// eslint-disable-next-line no-restricted-syntax
+export * from './components'

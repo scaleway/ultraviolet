@@ -1,19 +1,15 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { Stack, Text } from '@ultraviolet/ui'
 import { DynamicIllustration } from '..'
 import { ILLUSTRATIONS } from '../Illustrations'
 
-const StyledDynamicIllustration = styled(DynamicIllustration)`
-  width: 100px;
-`
-
 export const List: StoryFn = props => (
   <Stack gap={1}>
     {Object.keys(ILLUSTRATIONS.light).map(iconName => (
       <Stack direction="row" gap={1} alignItems="center">
-        <StyledDynamicIllustration
+        <DynamicIllustration
           name={iconName as keyof typeof ILLUSTRATIONS.light}
+          width={100}
           {...props}
         />
         <Text as="span" variant="bodyStrong">
