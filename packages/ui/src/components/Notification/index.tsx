@@ -11,7 +11,7 @@ import type {
   ToastOptions,
   TypeOptions,
 } from 'react-toastify'
-import style from 'react-toastify/dist/ReactToastify.min.css'
+import * as style from 'react-toastify/dist/ReactToastify.min.css'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'

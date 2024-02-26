@@ -1,4 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite'
+import { mergeConfig } from 'vite'
+import svgr from 'vite-plugin-svgr'
 
 export default {
   stories: [
@@ -18,5 +20,11 @@ export default {
   },
   docs: {
     autodocs: true,
+  },
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      assetsInclude: ['**/*.md'],
+      plugins: [svgr()],
+    })
   },
 } satisfies StorybookConfig

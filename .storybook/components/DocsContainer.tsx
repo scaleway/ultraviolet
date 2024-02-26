@@ -42,7 +42,8 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const isDarkTheme = useDarkMode()
   const mode = useDarkMode() ? 'dark' : 'light'
 
-  const isPlusLibrary = context.attachedCSFFile.meta.title.includes('Plus/')
+  const isPlusLibrary =
+    context?.attachedCSFFile?.meta.title.includes('Plus/') ?? false
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
