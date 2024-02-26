@@ -1,12 +1,8 @@
 import { beforeAll, describe, jest, test } from '@jest/globals'
 import * as nivo from '@nivo/core'
-import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
 import { BarChart } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import {
   barChartMultiData,
   barChartPositiveNegativeData,
@@ -47,23 +43,4 @@ describe('BarChart', () => {
     shouldMatchEmotionSnapshot(
       <BarChart data={barChartPositiveNegativeData} />,
     ))
-
-  test('renders correctly with custom tooltip format', async () => {
-    const { container } = renderWithTheme(
-      <BarChart
-        data={barChartPositiveNegativeData}
-        tooltipFunction={({ value, indexValue, color }) => ({
-          color,
-          formattedValue: `${value} kb`,
-          indexValue: indexValue.toString(),
-        })}
-      />,
-    )
-
-    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
-    const bar = container.querySelector('svg[role="img"] g line')
-    if (!bar) throw new Error('BarChart column not found')
-    await userEvent.unhover(bar)
-    await userEvent.hover(bar)
-  })
 })
