@@ -70,3 +70,4 @@ export {
 } from '@ultraviolet/icons'
 export { MenuV2 } from './MenuV2'
 export { GlobalAlert } from './GlobalAlert'
+export { NotificationContainer, notification } from './Notification'

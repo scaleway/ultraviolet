@@ -1,0 +1,372 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toaster renders correctly with close button 1`] = `
+[
+  <div
+    class="Toastify__toast-body"
+    role="alert"
+  >
+    <div />
+  </div>,
+]
+`;
+
+exports[`Toaster renders correctly with close button 2`] = `
+<DocumentFragment>
+  .cache-ivzpm-toast {
+  border-radius: 4px;
+}
+
+.cache-ivzpm-toast.Toastify__toast {
+  background-color: #ffffff;
+  color: #3f4250;
+  padding: 16px;
+  box-shadow: 0px 0px 8px 2px #d9dadd66;
+}
+
+.cache-ivzpm-toast.Toastify__toast-container {
+  width: 312px;
+}
+
+.cache-ivzpm-toast .Toastify__toast-body {
+  margin: 0;
+  padding: 0;
+}
+
+.cache-4lkpn5-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1guc91g-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1oov0zf-StyledText {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-dyxj60-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 24px;
+  padding: 0 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-dyxj60-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-dyxj60-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-dyxj60-StyledGhostButton:hover,
+.cache-dyxj60-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="Toastify"
+  >
+    <div
+      class="Toastify__toast-container Toastify__toast-container--top-right"
+    >
+      <div
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default cache-ivzpm-toast Toastify--animate Toastify__slide-enter--top-right"
+        data-in="true"
+        id="1"
+      >
+        <div
+          class="Toastify__toast-body"
+          role="alert"
+        >
+          <div />
+        </div>
+        <div
+          class="cache-4lkpn5-Stack ehpbis70"
+        >
+          <div>
+            icon
+          </div>
+          <div
+            class="cache-1guc91g-Stack ehpbis70"
+          >
+            <h3
+              class="cache-1oov0zf-StyledText e13y3mga0"
+            >
+              Title
+            </h3>
+            Description
+          </div>
+          <button
+            aria-label="close"
+            class="cache-dyxj60-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="Toastify__progress-bar--wrp"
+          data-hidden="true"
+        >
+          <div
+            class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+          />
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--controlled Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: falsems; animation-play-state: paused; transform: scaleX(0);"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toaster renders correctly with custom close button 1`] = `
+[
+  <div
+    class="Toastify__toast-body"
+    role="alert"
+  >
+    <div />
+  </div>,
+]
+`;
+
+exports[`Toaster renders correctly with custom close button 2`] = `
+<DocumentFragment>
+  .cache-ivzpm-toast {
+  border-radius: 4px;
+}
+
+.cache-ivzpm-toast.Toastify__toast {
+  background-color: #ffffff;
+  color: #3f4250;
+  padding: 16px;
+  box-shadow: 0px 0px 8px 2px #d9dadd66;
+}
+
+.cache-ivzpm-toast.Toastify__toast-container {
+  width: 312px;
+}
+
+.cache-ivzpm-toast .Toastify__toast-body {
+  margin: 0;
+  padding: 0;
+}
+
+.cache-4lkpn5-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1guc91g-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1oov0zf-StyledText {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="Toastify"
+  >
+    <div
+      class="Toastify__toast-container Toastify__toast-container--top-right"
+    >
+      <div
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default cache-ivzpm-toast Toastify--animate Toastify__slide-enter--top-right"
+        data-in="true"
+        id="2"
+      >
+        <div
+          class="Toastify__toast-body"
+          role="alert"
+        >
+          <div />
+        </div>
+        <div
+          class="cache-4lkpn5-Stack ehpbis70"
+        >
+          <div>
+            Avatar
+          </div>
+          <div
+            class="cache-1guc91g-Stack ehpbis70"
+          >
+            <h3
+              class="cache-1oov0zf-StyledText e13y3mga0"
+            >
+              Invitation
+            </h3>
+            <button
+              type="button"
+            >
+              Decline
+            </button>
+          </div>
+        </div>
+        <div
+          class="Toastify__progress-bar--wrp"
+          data-hidden="true"
+        >
+          <div
+            class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+          />
+          <div
+            aria-hidden="true"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--controlled Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            role="progressbar"
+            style="animation-duration: falsems; animation-play-state: paused; transform: scaleX(0);"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
