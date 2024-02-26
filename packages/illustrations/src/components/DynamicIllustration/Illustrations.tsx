@@ -21,6 +21,7 @@ import successLight from '../../various/feedback/success-light.webp'
 import warningDark from '../../various/feedback/warning-dark.webp'
 import warningLight from '../../various/feedback/warning-light.webp'
 
+// To be sure that every illustration has both a light and a dark version
 export type IllustrationsKeys = {
   danger: string
   success: string

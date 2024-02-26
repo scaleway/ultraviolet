@@ -23,8 +23,8 @@ type DynamicIllustrationProps = {
  */
 export const DynamicIllustration = ({
   name,
-  width = 'auto',
-  height = 'auto',
+  width,
+  height,
   'data-testid': dataTestId,
   className,
 }: DynamicIllustrationProps) => {
