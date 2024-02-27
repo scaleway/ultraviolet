@@ -1,5 +1,33 @@
 # Change Log
 
+## 1.38.0
+
+### Minor Changes
+
+- [#3486](https://github.com/scaleway/ultraviolet/pull/3486) [`3303a8a`](https://github.com/scaleway/ultraviolet/commit/3303a8a8999ab0f022d7df4ede4e964e9bc36f7a) Thanks [@lisalupi](https://github.com/lisalupi)! - feat: new component `Notification`
+
+### Patch Changes
+
+- [#3434](https://github.com/scaleway/ultraviolet/pull/3434) [`3400941`](https://github.com/scaleway/ultraviolet/commit/3400941dceaf45bdf477a4010da0c2c3cc70a06a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.55`.
+  Updated dependency `@types/react-dom` to `18.2.19`.
+- Updated dependencies [[`3400941`](https://github.com/scaleway/ultraviolet/commit/3400941dceaf45bdf477a4010da0c2c3cc70a06a), [`7c2b62e`](https://github.com/scaleway/ultraviolet/commit/7c2b62e51000893792db78602d0e72c7d500f413)]:
+  - @ultraviolet/icons@2.9.1
+
+## 1.37.1
+
+### Patch Changes
+
+- [#3493](https://github.com/scaleway/ultraviolet/pull/3493) [`2fbc604`](https://github.com/scaleway/ultraviolet/commit/2fbc604581b72377210daae29c1c9985a548dcad) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Skeleton />` component to have `aria-busy`
+
+- [#3490](https://github.com/scaleway/ultraviolet/pull/3490) [`4a3f3f4`](https://github.com/scaleway/ultraviolet/commit/4a3f3f4dd698a8b00baff37288b297907f568bdd) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` to remove gap when no label is set
+
+- [#3487](https://github.com/scaleway/ultraviolet/pull/3487) [`1afcd50`](https://github.com/scaleway/ultraviolet/commit/1afcd50d7c39001572998fac1d36f86afcf1d1f9) Thanks [@matthprost](https://github.com/matthprost)! - Fix multiple inputs that has bug when required and not label set the required icon was staying:
+  - `<NumberInputV2 />`
+  - `<TagInput />`
+  - `<TextArea />`
+  - `<TextInputV2 />`
+  - `<DateInput />`
+
 ## 1.37.0
 
 ### Minor Changes

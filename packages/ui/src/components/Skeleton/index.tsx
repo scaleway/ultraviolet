@@ -84,7 +84,7 @@ export const Skeleton = ({
   const Component = variants[variant]
 
   return (
-    <StyledContainer className={className}>
+    <StyledContainer className={className} aria-busy aria-live="polite">
       <Component length={length} col={col} />
 
       <StyledDiv />

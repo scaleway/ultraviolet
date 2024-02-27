@@ -8,10 +8,11 @@ import type { BaseFieldProps } from '../../types'
 type CheckboxFieldProps<
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'value'> &
   Partial<
     Pick<
       ComponentProps<typeof Checkbox>,
+      | 'id'
       | 'disabled'
       | 'onBlur'
       | 'onFocus'
@@ -30,6 +31,7 @@ export const CheckboxField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
+  id,
   name,
   label,
   size,
@@ -45,7 +47,6 @@ export const CheckboxField = <
   helper,
   tooltip,
   'data-testid': dataTestId,
-  value,
   shouldUnregister = false,
 }: CheckboxFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
@@ -64,11 +65,10 @@ export const CheckboxField = <
 
   return (
     <Checkbox
+      id={id}
       name={field.name}
       onChange={event => {
-        field.onChange(
-          value ? [...(field.value ?? []), value] : event.target.checked,
-        )
+        field.onChange(event.target.checked)
         onChange?.(
           event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
         )
@@ -81,11 +81,7 @@ export const CheckboxField = <
       size={size}
       progress={progress}
       disabled={field.disabled}
-      checked={
-        Array.isArray(field.value)
-          ? (field.value as (typeof value)[]).includes(value)
-          : !!field.value
-      }
+      checked={!!field.value}
       error={getError({ label: label ?? '' }, error)}
       ref={field.ref}
       className={className}
@@ -93,7 +89,6 @@ export const CheckboxField = <
       data-testid={dataTestId}
       helper={helper}
       tooltip={tooltip}
-      value={value}
     >
       {children}
     </Checkbox>

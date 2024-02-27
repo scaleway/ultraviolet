@@ -1,5 +1,29 @@
 # @ultraviolet/plus
 
+## 0.8.3
+
+### Patch Changes
+
+- [#3502](https://github.com/scaleway/ultraviolet/pull/3502) [`3a2c771`](https://github.com/scaleway/ultraviolet/commit/3a2c7713528c388c508af6f9e85f0dee6eeb269a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.8.1`.
+
+- [#3434](https://github.com/scaleway/ultraviolet/pull/3434) [`3400941`](https://github.com/scaleway/ultraviolet/commit/3400941dceaf45bdf477a4010da0c2c3cc70a06a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.55`.
+  Updated dependency `@types/react-dom` to `18.2.19`.
+- Updated dependencies [[`3303a8a`](https://github.com/scaleway/ultraviolet/commit/3303a8a8999ab0f022d7df4ede4e964e9bc36f7a), [`3400941`](https://github.com/scaleway/ultraviolet/commit/3400941dceaf45bdf477a4010da0c2c3cc70a06a)]:
+  - @ultraviolet/ui@1.38.0
+
+## 0.8.2
+
+### Patch Changes
+
+- [#3487](https://github.com/scaleway/ultraviolet/pull/3487) [`1afcd50`](https://github.com/scaleway/ultraviolet/commit/1afcd50d7c39001572998fac1d36f86afcf1d1f9) Thanks [@matthprost](https://github.com/matthprost)! - Fix multiple inputs that has bug when required and not label set the required icon was staying:
+  - `<NumberInputV2 />`
+  - `<TagInput />`
+  - `<TextArea />`
+  - `<TextInputV2 />`
+  - `<DateInput />`
+- Updated dependencies [[`2fbc604`](https://github.com/scaleway/ultraviolet/commit/2fbc604581b72377210daae29c1c9985a548dcad), [`4a3f3f4`](https://github.com/scaleway/ultraviolet/commit/4a3f3f4dd698a8b00baff37288b297907f568bdd), [`1afcd50`](https://github.com/scaleway/ultraviolet/commit/1afcd50d7c39001572998fac1d36f86afcf1d1f9)]:
+  - @ultraviolet/ui@1.37.1
+
 ## 0.8.1
 
 ### Patch Changes
