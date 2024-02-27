@@ -1,0 +1,1 @@
+export { DynamicIllustration } from './DynamicIllustration'
