@@ -247,9 +247,41 @@ exports[`SelectableCardField should render correctly 1`] = `
   fill: #ffffff;
 }
 
+.cache-1ualfon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.cache-1ualfon[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.cache-1ualfon[data-has-label='false'] {
+  display: contents;
+}
+
 <form>
     <div
-      class="cache-1wln6wd e1s5n3hj2"
+      class="cache-1wln6wd e1s5n3hj3"
       data-checked="false"
       data-disabled="false"
       data-error="false"
@@ -261,7 +293,7 @@ exports[`SelectableCardField should render correctly 1`] = `
       >
         <div
           aria-disabled="false"
-          class="e1s5n3hj3 cache-1rouikf-StyledRadio ehkrmld2"
+          class="e1s5n3hj4 cache-1rouikf-StyledRadio ehkrmld2"
           data-checked="false"
           data-error="false"
         >
@@ -301,7 +333,12 @@ exports[`SelectableCardField should render correctly 1`] = `
           </svg>
         </div>
       </div>
-      Radio field
+      <div
+        class="cache-1ualfon e1s5n3hj2"
+        data-has-label="false"
+      >
+        Radio field
+      </div>
     </div>
   </form>
 </DocumentFragment>
@@ -554,9 +591,41 @@ exports[`SelectableCardField should render correctly checked 1`] = `
   fill: #ffffff;
 }
 
+.cache-1ualfon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.cache-1ualfon[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.cache-1ualfon[data-has-label='false'] {
+  display: contents;
+}
+
 <form>
     <div
-      class="cache-1wln6wd e1s5n3hj2"
+      class="cache-1wln6wd e1s5n3hj3"
       data-checked="true"
       data-disabled="false"
       data-error="false"
@@ -568,7 +637,7 @@ exports[`SelectableCardField should render correctly checked 1`] = `
       >
         <div
           aria-disabled="false"
-          class="e1s5n3hj3 cache-1rouikf-StyledRadio ehkrmld2"
+          class="e1s5n3hj4 cache-1rouikf-StyledRadio ehkrmld2"
           data-checked="true"
           data-error="false"
         >
@@ -609,7 +678,12 @@ exports[`SelectableCardField should render correctly checked 1`] = `
           </svg>
         </div>
       </div>
-      Radio field checked
+      <div
+        class="cache-1ualfon e1s5n3hj2"
+        data-has-label="false"
+      >
+        Radio field checked
+      </div>
     </div>
   </form>
 </DocumentFragment>
@@ -862,9 +936,41 @@ exports[`SelectableCardField should render correctly disabled 1`] = `
   fill: #ffffff;
 }
 
+.cache-1ualfon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.cache-1ualfon[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.cache-1ualfon[data-has-label='false'] {
+  display: contents;
+}
+
 <form>
     <div
-      class="cache-1wln6wd e1s5n3hj2"
+      class="cache-1wln6wd e1s5n3hj3"
       data-checked="false"
       data-disabled="true"
       data-error="false"
@@ -876,7 +982,7 @@ exports[`SelectableCardField should render correctly disabled 1`] = `
       >
         <div
           aria-disabled="true"
-          class="e1s5n3hj3 cache-1rouikf-StyledRadio ehkrmld2"
+          class="e1s5n3hj4 cache-1rouikf-StyledRadio ehkrmld2"
           data-checked="false"
           data-error="false"
         >
@@ -917,7 +1023,12 @@ exports[`SelectableCardField should render correctly disabled 1`] = `
           </svg>
         </div>
       </div>
-      Radio field disabled
+      <div
+        class="cache-1ualfon e1s5n3hj2"
+        data-has-label="false"
+      >
+        Radio field disabled
+      </div>
     </div>
   </form>
 </DocumentFragment>
@@ -1170,9 +1281,41 @@ exports[`SelectableCardField should render correctly with errors 1`] = `
   fill: #ffffff;
 }
 
+.cache-1ualfon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.cache-1ualfon[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.cache-1ualfon[data-has-label='false'] {
+  display: contents;
+}
+
 <form>
     <div
-      class="cache-1wln6wd e1s5n3hj2"
+      class="cache-1wln6wd e1s5n3hj3"
       data-checked="false"
       data-disabled="false"
       data-error="true"
@@ -1184,7 +1327,7 @@ exports[`SelectableCardField should render correctly with errors 1`] = `
       >
         <div
           aria-disabled="false"
-          class="e1s5n3hj3 cache-1rouikf-StyledRadio ehkrmld2"
+          class="e1s5n3hj4 cache-1rouikf-StyledRadio ehkrmld2"
           data-checked="false"
           data-error="true"
         >
@@ -1224,7 +1367,12 @@ exports[`SelectableCardField should render correctly with errors 1`] = `
           </svg>
         </div>
       </div>
-      Radio field error
+      <div
+        class="cache-1ualfon e1s5n3hj2"
+        data-has-label="false"
+      >
+        Radio field error
+      </div>
     </div>
     <button
       type="submit"
@@ -1482,9 +1630,41 @@ exports[`SelectableCardField should trigger events correctly 1`] = `
   fill: #ffffff;
 }
 
+.cache-1ualfon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.cache-1ualfon[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.cache-1ualfon[data-has-label='false'] {
+  display: contents;
+}
+
 <form>
     <div
-      class="cache-1wln6wd e1s5n3hj2"
+      class="cache-1wln6wd e1s5n3hj3"
       data-checked="true"
       data-disabled="false"
       data-error="false"
@@ -1496,7 +1676,7 @@ exports[`SelectableCardField should trigger events correctly 1`] = `
       >
         <div
           aria-disabled="false"
-          class="e1s5n3hj3 cache-1rouikf-StyledRadio ehkrmld2"
+          class="e1s5n3hj4 cache-1rouikf-StyledRadio ehkrmld2"
           data-checked="true"
           data-error="false"
         >
@@ -1536,7 +1716,12 @@ exports[`SelectableCardField should trigger events correctly 1`] = `
           </svg>
         </div>
       </div>
-      Radio field events
+      <div
+        class="cache-1ualfon e1s5n3hj2"
+        data-has-label="false"
+      >
+        Radio field events
+      </div>
     </div>
   </form>
 </DocumentFragment>

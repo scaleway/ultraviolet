@@ -58,6 +58,16 @@ const Container = styled(Stack)`
   }
 `
 
+const StyledStack = styled(Stack)`
+  &[data-has-label='true'] {
+    padding-left: ${({ theme }) => theme.space['4']};
+  }
+
+  &[data-has-label='false'] {
+    display: contents;
+  }
+`
+
 const StyledElement = styled('div', {
   shouldForwardProp: prop => !['showTick', 'hasLabel'].includes(prop),
 })<{ showTick?: boolean; hasLabel?: boolean }>`
@@ -220,9 +230,13 @@ export const SelectableCard = forwardRef(
               {label}
             </StyledCheckbox>
           )}
-          {typeof children === 'function'
-            ? children({ checked, disabled })
-            : children}
+          {children ? (
+            <StyledStack data-has-label={!!label && showTick} width="100%">
+              {typeof children === 'function'
+                ? children({ checked, disabled })
+                : children}
+            </StyledStack>
+          ) : null}
         </Container>
       </ParentContainer>
     )
