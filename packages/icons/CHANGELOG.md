@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.9.1
+
+### Patch Changes
+
+- [#3434](https://github.com/scaleway/ultraviolet/pull/3434) [`3400941`](https://github.com/scaleway/ultraviolet/commit/3400941dceaf45bdf477a4010da0c2c3cc70a06a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.55`.
+  Updated dependency `@types/react-dom` to `18.2.19`.
+
+- [#3488](https://github.com/scaleway/ultraviolet/pull/3488) [`7c2b62e`](https://github.com/scaleway/ultraviolet/commit/7c2b62e51000893792db78602d0e72c7d500f413) Thanks [@lisalupi](https://github.com/lisalupi)! - 37 new icons in `ProductIcon`
+
 ## 2.9.0
 
 ### Minor Changes
