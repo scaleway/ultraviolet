@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.38.0
+
+### Minor Changes
+
+- [#3486](https://github.com/scaleway/ultraviolet/pull/3486) [`3303a8a`](https://github.com/scaleway/ultraviolet/commit/3303a8a8999ab0f022d7df4ede4e964e9bc36f7a) Thanks [@lisalupi](https://github.com/lisalupi)! - feat: new component `Notification`
+
+### Patch Changes
+
+- [#3434](https://github.com/scaleway/ultraviolet/pull/3434) [`3400941`](https://github.com/scaleway/ultraviolet/commit/3400941dceaf45bdf477a4010da0c2c3cc70a06a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.55`.
+  Updated dependency `@types/react-dom` to `18.2.19`.
+- Updated dependencies [[`3400941`](https://github.com/scaleway/ultraviolet/commit/3400941dceaf45bdf477a4010da0c2c3cc70a06a), [`7c2b62e`](https://github.com/scaleway/ultraviolet/commit/7c2b62e51000893792db78602d0e72c7d500f413)]:
+  - @ultraviolet/icons@2.9.1
+
 ## 1.37.1
 
 ### Patch Changes
