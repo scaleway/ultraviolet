@@ -42,9 +42,11 @@ type ContentProps =
 
 type ItemProps = {
   sentiment?: ComponentProps<typeof Bullet>['sentiment']
+  prominence?: ComponentProps<typeof Bullet>['prominence']
   size?: Sizes
   disabled?: boolean
   children: ReactNode
+  onClick?: () => void
   className?: string
 } & ContentProps
 
@@ -52,17 +54,20 @@ const Item = ({
   bulletText,
   bulletIcon,
   sentiment,
+  prominence,
   children,
+  onClick,
   size = 'medium',
   disabled = false,
   className,
 }: ItemProps) => (
-  <Step disabled={disabled} className={className}>
+  <Step disabled={disabled} className={className} onClick={onClick}>
     {bulletIcon ? (
       <Bullet
         icon={bulletIcon}
         size={size}
         sentiment={disabled ? 'disabled' : sentiment}
+        prominence={prominence}
       />
     ) : null}
     {bulletText ? (
@@ -70,6 +75,7 @@ const Item = ({
         text={bulletText}
         size={size}
         sentiment={disabled ? 'disabled' : sentiment}
+        prominence={prominence}
       />
     ) : null}
     <StyledDiv size={size}>{children}</StyledDiv>
