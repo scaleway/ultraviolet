@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.39.0
+
+### Minor Changes
+
+- [#3503](https://github.com/scaleway/ultraviolet/pull/3503) [`71e24c7`](https://github.com/scaleway/ultraviolet/commit/71e24c7cc505bd1bcc2ed91478890aef5f8d6be8) Thanks [@matthprost](https://github.com/matthprost)! - `<SelectableCard />` component now implement natively indentation for childrens and spacing between label and childrens
+
 ## 1.38.0
 
 ### Minor Changes
