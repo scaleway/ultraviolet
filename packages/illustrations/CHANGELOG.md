@@ -1,5 +1,12 @@
 # @ultraviolet/illustrations
 
+## 1.6.0
+
+### Minor Changes
+
+- [#3491](https://github.com/scaleway/ultraviolet/pull/3491) [`fe8de9d`](https://github.com/scaleway/ultraviolet/commit/fe8de9debed852a4f4c234e86413c2cd02ccdc6d) Thanks [@lisalupi](https://github.com/lisalupi)! - - 11 new illustrations (danger, success, warning, empty, failed, generic, loading, lock, plus, resources, search)
+  - New component `DynamicIllustration` to swap automatically to the appropriate version of the illustration
+
 ## 1.5.0
 
 ### Minor Changes
