@@ -11,11 +11,6 @@ describe('FAQ', () => {
         hideTooltipText="hide"
         hideButtonText="hide button"
         steps={['step1', 'step2']}
-        showComponent={setHidden => (
-          <button onClick={() => setHidden(false)} type="button">
-            button
-          </button>
-        )}
       >
         <SteppedListContainer.Step
           stepNumber={1}
