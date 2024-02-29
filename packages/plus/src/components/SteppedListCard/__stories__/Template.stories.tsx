@@ -25,12 +25,7 @@ export const Template: StoryFn<
     )
 
   return (
-    <SteppedListContainer
-      {...props}
-      showComponent={setHidden => (
-        <Button onClick={() => setHidden(false)}>Show</Button>
-      )}
-    >
+    <SteppedListContainer {...props}>
       <SteppedListContainer.Step
         stepNumber={1}
         subHeader={
@@ -95,7 +90,7 @@ export const Template: StoryFn<
 
 Template.args = {
   header: 'Header',
-  hideTooltipText: 'To show again, click on the "show" button',
+  hideTooltipText: 'To show, click on the "hide" button again',
   hideButtonText: 'Hide',
   steps: ['Start', 'First step', 'Second step'],
 }

@@ -1,18 +1,13 @@
 import styled from '@emotion/styled'
-import { Button, Row, Stack, StepList, Text } from '@ultraviolet/ui'
+import { Button, Card, Row, Stack, StepList, Text } from '@ultraviolet/ui'
 import { Children, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import { SteppedList } from './Step'
 import { SteppedListContent } from './SteppedListContent'
 import { Data } from './helper'
 
-const StyledHeader = styled(Row)`
-  padding-bottom: ${({ theme }) => theme.space['3']};
-`
-
-const Content = styled(Row)`
-  border: solid ${({ theme }) => theme.colors.neutral.border};
-  width: 100%;
+const StyledCard = styled(Card)`
+  padding: 0;
 `
 const ContentStack = styled(Stack)`
   padding: ${({ theme }) => theme.space['3']};
@@ -33,10 +28,6 @@ type SteppedListContainerProps = {
    */
   hideButtonText: string
   /**
-   * Define a button to show the component. ReactComponent that will receive a function "setHidden" as a prop
-   */
-  showComponent: (setHidden: (hidden: boolean) => void) => ReactNode
-  /**
    * List of steps
    */
   steps: string[]
@@ -55,7 +46,6 @@ const SteppedListContainer = ({
   hideTooltipText,
   hideButtonText,
   children,
-  showComponent,
   steps,
 }: SteppedListContainerProps) => {
   const numberOfSteps = Children.count(children)
@@ -76,47 +66,47 @@ const SteppedListContainer = ({
   )
 
   return (
-    <>
-      {hidden ? (
-        showComponent(setHidden)
-      ) : (
-        <Data.Provider value={values}>
-          <StyledHeader templateColumns="9fr 1fr">
-            {typeof header === 'string' ? (
-              <Text as="h3" variant="heading">
-                {header}
-              </Text>
-            ) : (
-              header
-            )}
-            <Button
-              onClick={() => setHidden(!hidden)}
-              variant="ghost"
-              sentiment="neutral"
-              size="small"
-              tooltip={hideTooltipText}
-            >
-              {hideButtonText}
-            </Button>
-          </StyledHeader>
-          <Content templateColumns="1fr 3fr">
-            <ContentStack direction="column" gap={4}>
-              <StepList>
-                {steps.map((step, index) => (
-                  <SteppedList
-                    key={step}
-                    stepNumber={index + 1}
-                    stepTitle={step}
-                    completed={done[index]}
-                  />
-                ))}
-              </StepList>
-            </ContentStack>
-            {children}
-          </Content>
-        </Data.Provider>
-      )}
-    </>
+    <Data.Provider value={values}>
+      <Stack gap={3}>
+        <Row templateColumns="9fr 1fr">
+          {typeof header === 'string' ? (
+            <Text as="h3" variant="heading">
+              {header}
+            </Text>
+          ) : (
+            header
+          )}
+          <Button
+            onClick={() => setHidden(!hidden)}
+            variant="ghost"
+            sentiment="neutral"
+            size="small"
+            tooltip={hideTooltipText}
+          >
+            {hideButtonText}
+          </Button>
+        </Row>
+        {hidden ? null : (
+          <StyledCard>
+            <Row templateColumns="1fr 3fr">
+              <ContentStack direction="column" gap={4}>
+                <StepList>
+                  {steps.map((step, index) => (
+                    <SteppedList
+                      key={step}
+                      stepNumber={index + 1}
+                      stepTitle={step}
+                      completed={done[index]}
+                    />
+                  ))}
+                </StepList>
+              </ContentStack>
+              {children}
+            </Row>
+          </StyledCard>
+        )}
+      </Stack>
+    </Data.Provider>
   )
 }
 

@@ -41,8 +41,9 @@ export const nextStep = ({
   setHidden,
   done,
 }: NextStepProps) => {
-  const tempDone = done
-  tempDone[stepNumber - 1] = completed
+  const tempDone = done.map((item, index) =>
+    index === stepNumber - 1 ? completed : item,
+  )
   setCompleted(tempDone)
   if (numberOfSteps > stepNumber) {
     setCurrentStep(stepNumber + 1)
