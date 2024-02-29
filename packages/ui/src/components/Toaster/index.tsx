@@ -8,7 +8,7 @@ import {
   Slide,
   toast as baseToast,
 } from 'react-toastify'
-import style from 'react-toastify/dist/ReactToastify.min.css'
+import * as style from 'react-toastify/dist/ReactToastify.min.css'
 import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
