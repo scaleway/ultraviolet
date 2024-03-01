@@ -104,6 +104,87 @@ const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
   return document.body
 }
 
+/**
+ * This function will check if there is an overflow of the popup compared to the parent it is set in.
+ * Depending on the position, for top and bottom the overflow will be on X axis and for left and right
+ * the overflow will be Y axis. The function return the number of pixels the popup is overflowing.
+ * @param position the position of the popup
+ * @param offsetParentRect the rect of the parent element where the children is located in
+ * @param childrenRect the rect of the children element, the children element is the one that will trigger the popup
+ * @param popupStructuredRef the rect of the popup, the popup itself
+ */
+const getPopupOverflowFromParent = (
+  position: 'top' | 'right' | 'bottom' | 'left',
+  offsetParentRect: DOMRect,
+  childrenRect: DOMRect,
+  popupStructuredRef: DOMRect,
+) => {
+  const {
+    top: parentTop,
+    left: parentLeft,
+    right: parentRight,
+  } = offsetParentRect
+
+  const {
+    top: childrenTop,
+    bottom: childrenBottom,
+    left: childrenLeft,
+    right: childrenRight,
+    width: childrenWidth,
+  } = childrenRect
+
+  const { width: popupWidth, height: popupHeight } = popupStructuredRef
+  const popupHalfWidthWithArrow = popupWidth / 2 - ARROW_WIDTH
+  const popupHalfHeightWithArrow = popupHeight / 2 - ARROW_WIDTH
+
+  if (position === 'top' || position === 'bottom') {
+    const popupOverflowRight =
+      childrenRight - childrenWidth / 2 + popupWidth / 2
+
+    const popupOverflowLeft =
+      childrenLeft + childrenWidth / 2 - parentLeft - popupWidth / 2
+
+    if (popupOverflowRight > parentRight) {
+      if (
+        Math.abs(popupOverflowRight - parentRight) > popupHalfWidthWithArrow
+      ) {
+        return -popupHalfWidthWithArrow
+      }
+
+      return parentRight - popupOverflowRight
+    }
+
+    if (popupOverflowLeft < 0) {
+      if (Math.abs(popupOverflowLeft) > popupHalfWidthWithArrow) {
+        return popupHalfWidthWithArrow
+      }
+
+      return Math.abs(popupOverflowLeft)
+    }
+  }
+
+  if (position === 'left' || position === 'right') {
+    const popupOverflowTop = childrenTop - parentTop - popupHeight / 2
+
+    if (popupOverflowTop < 0) {
+      if (
+        Math.abs(childrenTop - parentTop - popupHalfHeightWithArrow) >
+        popupHalfHeightWithArrow
+      ) {
+        return popupHalfHeightWithArrow
+      }
+
+      return Math.abs(popupOverflowTop)
+    }
+
+    if (childrenBottom + popupHeight > window.innerHeight) {
+      return -popupHalfHeightWithArrow
+    }
+  }
+
+  return 0
+}
+
 type ComputePositionsTypes = {
   placement: PopupPlacement
   childrenRef: RefObject<HTMLDivElement>
@@ -176,6 +257,13 @@ export const computePositions = ({
     ? childrenRight
     : childrenLeft - parentLeft + childrenWidth
 
+  const popupOverflow = getPopupOverflowFromParent(
+    placementBasedOnWindowSize,
+    offsetParentRect,
+    childrenRect,
+    popupStructuredRef,
+  )
+
   switch (placementBasedOnWindowSize) {
     case 'bottom': {
       const positionX =
@@ -188,15 +276,15 @@ export const computePositions = ({
         SPACE
 
       return {
-        arrowLeft: popupWidth / 2,
+        arrowLeft: popupWidth / 2 + popupOverflow * -1,
         arrowTop: -ARROW_WIDTH - 5,
         arrowTransform: '',
         placement: 'bottom',
         rotate: 180,
-        popupInitialPosition: `translate3d(${positionX}px, ${
+        popupInitialPosition: `translate3d(${positionX + popupOverflow}px, ${
           positionY - TOTAL_USED_SPACE
         }px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${positionX + popupOverflow}px, ${positionY}px, 0)`,
       }
     }
     case 'left': {
@@ -210,14 +298,14 @@ export const computePositions = ({
 
       return {
         arrowLeft: popupWidth + ARROW_WIDTH + 5,
-        arrowTop: popupHeight / 2,
+        arrowTop: popupHeight / 2 + popupOverflow * -1,
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
         rotate: -90,
         popupInitialPosition: `translate3d(${
           positionX + TOTAL_USED_SPACE
-        }px, ${positionY}px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
+        }px, ${positionY + popupOverflow}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
       }
     }
     case 'right': {
@@ -230,14 +318,14 @@ export const computePositions = ({
 
       return {
         arrowLeft: -ARROW_WIDTH - 5,
-        arrowTop: popupHeight / 2,
+        arrowTop: popupHeight / 2 + popupOverflow * -1,
         arrowTransform: 'translate(50%, -50%)',
         placement: 'right',
         rotate: 90,
         popupInitialPosition: `translate3d(${
           positionX - TOTAL_USED_SPACE
-        }px, ${positionY}px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
+        }px, ${positionY + popupOverflow}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
       }
     }
     default: {
@@ -252,15 +340,15 @@ export const computePositions = ({
         SPACE
 
       return {
-        arrowLeft: popupWidth / 2,
+        arrowLeft: popupWidth / 2 + popupOverflow * -1,
         arrowTop: popupHeight - 1,
         arrowTransform: '',
         placement: 'top',
         rotate: 0,
-        popupInitialPosition: `translate3d(${positionX}px, ${
+        popupInitialPosition: `translate3d(${positionX + popupOverflow}px, ${
           positionY + TOTAL_USED_SPACE
         }px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${positionX + popupOverflow}px, ${positionY}px, 0)`,
       }
     }
   }
