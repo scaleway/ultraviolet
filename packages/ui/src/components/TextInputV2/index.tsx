@@ -296,6 +296,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 aria-labelledby={ariaLabelledBy}
                 aria-label={ariaLabel}
                 autoComplete={autoComplete}
+                required={required}
               />
               {success || error || loading || computedClearable ? (
                 <StateStack direction="row" gap={1} alignItems="center">
