@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.9.2
+
+### Patch Changes
+
+- [#3507](https://github.com/scaleway/ultraviolet/pull/3507) [`085ed55`](https://github.com/scaleway/ultraviolet/commit/085ed550df75506b658fa52240e9e3fa4f951a91) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.11.4`.
+
 ## 2.9.1
 
 ### Patch Changes
