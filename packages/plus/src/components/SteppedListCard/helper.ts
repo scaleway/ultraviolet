@@ -7,6 +7,7 @@ type ContextType = {
   done: boolean[]
   setDone: React.Dispatch<React.SetStateAction<boolean[]>>
   setHidden: React.Dispatch<React.SetStateAction<boolean>>
+  onClickHide?: () => void
 }
 
 export const Data = createContext<ContextType>({
@@ -16,6 +17,7 @@ export const Data = createContext<ContextType>({
   done: [false, false, false, false, false],
   setDone: () => {},
   setHidden: () => {},
+  onClickHide: () => {},
 })
 
 type NextStepProps = {
@@ -26,6 +28,7 @@ type NextStepProps = {
   numberOfSteps: number
   setHidden: React.Dispatch<React.SetStateAction<boolean>>
   done: boolean[]
+  onClickHide?: () => void
 }
 
 /**
@@ -40,14 +43,13 @@ export const nextStep = ({
   numberOfSteps,
   setHidden,
   done,
+  onClickHide,
 }: NextStepProps) => {
   const tempDone = done.map((item, index) =>
     index === stepNumber - 1 ? completed : item,
   )
   setCompleted(tempDone)
-  if (numberOfSteps > stepNumber) {
-    setCurrentStep(stepNumber + 1)
-  } else {
-    setHidden(true)
-  }
+  if (numberOfSteps > stepNumber) setCurrentStep(stepNumber + 1)
+  else if (onClickHide) onClickHide()
+  else setHidden(true)
 }

@@ -32,12 +32,14 @@ type StepProps = {
    * State of the step
    */
   completed: boolean
+  'data-testid'?: string
 }
 
 export const SteppedList = ({
   stepNumber,
   stepTitle,
   completed,
+  'data-testid': dataTestId,
 }: StepProps) => {
   const containerData = useContext(Data)
   const active = containerData.currentStep === stepNumber
@@ -50,6 +52,7 @@ export const SteppedList = ({
           prominence={active ? 'strong' : 'default'}
           sentiment="primary"
           onClick={() => containerData.setCurrentStep(stepNumber)}
+          data-testid={dataTestId}
         >
           <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
             {stepTitle}
@@ -61,6 +64,7 @@ export const SteppedList = ({
           prominence={active ? 'strong' : undefined}
           sentiment={active ? 'primary' : undefined}
           onClick={() => containerData.setCurrentStep(stepNumber)}
+          data-testid={dataTestId}
         >
           <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
             {stepTitle}

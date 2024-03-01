@@ -7,3 +7,4 @@ export default {
 } satisfies Meta
 
 export { Playground } from './Playground.stories'
+export { OnClickHide } from './OnClickHide.stories'

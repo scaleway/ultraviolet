@@ -11,22 +11,30 @@ const StyledCard = styled(Card)`
 `
 const ContentStack = styled(Stack)`
   padding: ${({ theme }) => theme.space['3']};
-  border-right: solid ${({ theme }) => theme.colors.neutral.border};
+  border-right: solid ${({ theme }) => theme.colors.neutral.border} 1px;
 `
 
 type SteppedListContainerProps = {
   /**
    * Title of the section, introduces the feature.
    */
-  header: string
+  header: ReactNode
   /**
    * Text of the tooltip on the hide button
    */
-  hideTooltipText: string
+  hideTooltipText?: string
   /**
    * Text of the "hide" button
    */
-  hideButtonText: string
+  hideText?: string
+  /**
+   * Text of the "show" button
+   */
+  showText?: string
+  /**
+   * Text of tooltip on the "show" button
+   */
+  showTooltipText?: string
   /**
    * List of steps
    */
@@ -35,8 +43,11 @@ type SteppedListContainerProps = {
    * Define here the content of each step
    */
   children: ReactNode
+  /**
+   * Function called when the component is closed. This function will overload the default behavior.
+   */
+  onClickHide?: () => void
 }
-
 /**
  * SteppedListContainer is a component created for guiding users through steps in a structured and linear manner.
  * It can pass prop "nextStep" to its children.
@@ -44,9 +55,12 @@ type SteppedListContainerProps = {
 const SteppedListContainer = ({
   header,
   hideTooltipText,
-  hideButtonText,
+  hideText = 'Hide',
+  showText = 'Show',
+  showTooltipText,
   children,
   steps,
+  onClickHide,
 }: SteppedListContainerProps) => {
   const numberOfSteps = Children.count(children)
   const [currentStep, setCurrentStep] = useState(1)
@@ -61,9 +75,23 @@ const SteppedListContainer = ({
       done,
       setDone,
       setHidden,
+      onClickHide,
     }),
-    [currentStep, setCurrentStep, numberOfSteps, done, setDone, setHidden],
+    [
+      currentStep,
+      setCurrentStep,
+      numberOfSteps,
+      done,
+      setDone,
+      setHidden,
+      onClickHide,
+    ],
   )
+
+  const onClickHideButton = () => {
+    if (onClickHide) onClickHide()
+    else setHidden(!hidden)
+  }
 
   return (
     <Data.Provider value={values}>
@@ -77,13 +105,13 @@ const SteppedListContainer = ({
             header
           )}
           <Button
-            onClick={() => setHidden(!hidden)}
+            onClick={onClickHideButton}
             variant="ghost"
             sentiment="neutral"
             size="small"
-            tooltip={hideTooltipText}
+            tooltip={hidden ? showTooltipText : hideTooltipText}
           >
-            {hideButtonText}
+            {hidden ? showText : hideText}
           </Button>
         </Row>
         {hidden ? null : (

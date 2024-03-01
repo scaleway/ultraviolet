@@ -54,6 +54,7 @@ export const SteppedListContent = ({
                   setCurrentStep: containerData.setCurrentStep,
                   numberOfSteps: containerData.numberOfSteps,
                   setHidden: containerData.setHidden,
+                  onClickHide: containerData.onClickHide,
                 }),
               )
             : children}
