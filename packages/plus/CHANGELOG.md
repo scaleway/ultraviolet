@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.8.5
+
+### Patch Changes
+
+- [#3507](https://github.com/scaleway/ultraviolet/pull/3507) [`085ed55`](https://github.com/scaleway/ultraviolet/commit/085ed550df75506b658fa52240e9e3fa4f951a91) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.11.4`.
+
+- Updated dependencies [[`116ec01`](https://github.com/scaleway/ultraviolet/commit/116ec01d909cb0851ed5aad571723aae1e83f0df), [`085ed55`](https://github.com/scaleway/ultraviolet/commit/085ed550df75506b658fa52240e9e3fa4f951a91)]:
+  - @ultraviolet/ui@1.40.0
+
 ## 0.8.4
 
 ### Patch Changes

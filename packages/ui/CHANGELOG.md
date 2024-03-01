@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.40.0
+
+### Minor Changes
+
+- [#3508](https://github.com/scaleway/ultraviolet/pull/3508) [`116ec01`](https://github.com/scaleway/ultraviolet/commit/116ec01d909cb0851ed5aad571723aae1e83f0df) Thanks [@matthprost](https://github.com/matthprost)! - `Popup` becomes more reponsive the the screen size. It is now capable to re-adapt it's position in case of overflow.
+
+### Patch Changes
+
+- [#3507](https://github.com/scaleway/ultraviolet/pull/3507) [`085ed55`](https://github.com/scaleway/ultraviolet/commit/085ed550df75506b658fa52240e9e3fa4f951a91) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.11.4`.
+
+- Updated dependencies [[`085ed55`](https://github.com/scaleway/ultraviolet/commit/085ed550df75506b658fa52240e9e3fa4f951a91)]:
+  - @ultraviolet/icons@2.9.2
+
 ## 1.39.0
 
 ### Minor Changes
