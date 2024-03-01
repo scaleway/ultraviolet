@@ -151,6 +151,7 @@ type TextInputProps = {
   | 'required'
   | 'autoFocus'
   | 'tabIndex'
+  | 'autoComplete'
 >
 
 /**
@@ -190,6 +191,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       maxLength,
       'aria-labelledby': ariaLabelledBy,
       'aria-label': ariaLabel,
+      autoComplete,
     },
     ref,
   ) => {
@@ -293,6 +295,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 maxLength={maxLength}
                 aria-labelledby={ariaLabelledBy}
                 aria-label={ariaLabel}
+                autoComplete={autoComplete}
               />
               {success || error || loading || computedClearable ? (
                 <StateStack direction="row" gap={1} alignItems="center">
