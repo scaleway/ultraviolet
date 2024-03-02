@@ -22,6 +22,7 @@ const StyledSelectableCard = styled(SelectableCard)`
   justify-content: center;
   align-items: center;
   transition: all 200ms ease-in-out;
+  white-space: nowrap;
 
   &:hover,
   &:focus-within,
