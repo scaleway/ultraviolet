@@ -3,11 +3,11 @@ import { Template } from './Template.stories'
 export const Playground = Template.bind({})
 Playground.args = {
   leftButton: {
-    label: 'Left',
+    label: 'Left Button Label',
     value: 'left',
   },
   rightButton: {
-    label: 'Right',
+    label: 'Right Button Label',
     value: 'right',
   },
   value: 'left',
