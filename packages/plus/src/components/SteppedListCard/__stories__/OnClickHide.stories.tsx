@@ -21,20 +21,20 @@ export const OnClickHide: StoryFn<
     ) : (
       <img src={blockStorageWire} width={200} alt="blockStorage" />
     )
-  const [visible, setVisibile] = useState(true)
+  const [visible, setVisible] = useState(true)
 
   return (
     <>
       <Button
         icon={visible ? 'minus' : 'plus'}
-        onClick={() => setVisibile(!visible)}
+        onClick={() => setVisible(!visible)}
       >
         Click to {visible ? 'completely hide' : 'show'} the component.
       </Button>
       <Expandable opened={visible}>
         <SteppedListContainer
           {...props}
-          onClickHide={() => setVisibile(!visible)}
+          onClickHide={() => setVisible(!visible)}
         >
           <SteppedListContainer.Step
             stepNumber={1}
