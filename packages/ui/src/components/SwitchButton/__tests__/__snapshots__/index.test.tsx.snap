@@ -110,7 +110,7 @@ exports[`SwitchButton renders correctly 1`] = `
   position: relative;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard {
+.css-ebhkqu-Stack-Container-StyledSelectableCard {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,61 +156,62 @@ exports[`SwitchButton renders correctly 1`] = `
   align-items: center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  white-space: nowrap;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
   margin-bottom: -4px;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-error='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-disabled='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover,
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within,
-.css-fo7o17-Stack-Container-StyledSelectableCard:active {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover,
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within,
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] label {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
@@ -403,7 +404,7 @@ exports[`SwitchButton renders correctly 1`] = `
       class="css-tib6m2-StyledBorderedBox e4ryteh1"
     >
       <div
-        class="e4ryteh0 css-fo7o17-Stack-Container-StyledSelectableCard e1s5n3hj3"
+        class="e4ryteh0 css-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
         data-checked="false"
         data-disabled="false"
         data-has-label="true"
@@ -461,7 +462,7 @@ exports[`SwitchButton renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="e4ryteh0 css-fo7o17-Stack-Container-StyledSelectableCard e1s5n3hj3"
+        class="e4ryteh0 css-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
         data-checked="true"
         data-disabled="false"
         data-has-label="true"
@@ -538,7 +539,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   position: relative;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard {
+.css-ebhkqu-Stack-Container-StyledSelectableCard {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -584,61 +585,62 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   align-items: center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  white-space: nowrap;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
   margin-bottom: -4px;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-error='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-disabled='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover,
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within,
-.css-fo7o17-Stack-Container-StyledSelectableCard:active {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover,
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within,
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] label {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
@@ -831,7 +833,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
       class="css-tib6m2-StyledBorderedBox e4ryteh1"
     >
       <div
-        class="e4ryteh0 css-fo7o17-Stack-Container-StyledSelectableCard e1s5n3hj3"
+        class="e4ryteh0 css-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
         data-checked="false"
         data-disabled="false"
         data-has-label="true"
@@ -889,7 +891,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
         </div>
       </div>
       <div
-        class="e4ryteh0 css-fo7o17-Stack-Container-StyledSelectableCard e1s5n3hj3"
+        class="e4ryteh0 css-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
         data-checked="true"
         data-disabled="false"
         data-has-label="true"
@@ -974,7 +976,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   position: relative;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard {
+.css-ebhkqu-Stack-Container-StyledSelectableCard {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1020,61 +1022,62 @@ exports[`SwitchButton renders with tooltip 1`] = `
   align-items: center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
+  white-space: nowrap;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
   margin-bottom: -4px;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-error='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-disabled='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover,
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within,
-.css-fo7o17-Stack-Container-StyledSelectableCard:active {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover,
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within,
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.css-fo7o17-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.css-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard[data-checked='true'] label {
+.css-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.css-fo7o17-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+.css-ebhkqu-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
@@ -1273,7 +1276,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
         class="css-tib6m2-StyledBorderedBox e4ryteh1"
       >
         <div
-          class="e4ryteh0 css-fo7o17-Stack-Container-StyledSelectableCard e1s5n3hj3"
+          class="e4ryteh0 css-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
           data-checked="false"
           data-disabled="false"
           data-has-label="true"
@@ -1331,7 +1334,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
           </div>
         </div>
         <div
-          class="e4ryteh0 css-fo7o17-Stack-Container-StyledSelectableCard e1s5n3hj3"
+          class="e4ryteh0 css-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
           data-checked="true"
           data-disabled="false"
           data-has-label="true"
