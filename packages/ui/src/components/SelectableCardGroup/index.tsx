@@ -91,7 +91,7 @@ const StyledRequiredIcon = styled(Icon)`
 `
 
 type SelectableCardGroupProps = {
-  legend: string
+  legend?: string
   value: string | number | (string | number)[]
   className?: string
   helper?: ReactNode
@@ -138,7 +138,7 @@ export const SelectableCardGroup = ({
         <FieldSet className={className}>
           <Stack gap={1.5}>
             <Text as="legend" variant="bodyStrong">
-              {legend}&nbsp;
+              {legend && <>{legend} &nbsp;</>}
               {required ? (
                 <StyledRequiredIcon name="asterisk" color="danger" size={8} />
               ) : null}

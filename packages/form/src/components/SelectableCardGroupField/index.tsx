@@ -14,7 +14,6 @@ type SelectableCardGroupFieldProps<
     Pick<
       ComponentProps<typeof SelectableCardGroup>,
       | 'helper'
-      | 'legend'
       | 'error'
       | 'columns'
       | 'children'
@@ -24,7 +23,7 @@ type SelectableCardGroupFieldProps<
       | 'onChange'
     >
   > &
-  Required<Pick<ComponentProps<typeof SelectableCardGroup>, 'legend'>>
+  Pick<ComponentProps<typeof SelectableCardGroup>, 'legend'>
 
 export const SelectableCardGroupField = <
   TFieldValues extends FieldValues,
