@@ -38,7 +38,7 @@ type ColumnProps = Pick<
 }
 
 type ListProps = {
-  expandCTA?: boolean
+  expandButton?: boolean
   selectable?: boolean
   columns: ColumnProps[]
   children: ReactNode
@@ -55,7 +55,7 @@ type ListProps = {
 const BaseList = forwardRef(
   (
     {
-      expandCTA = false,
+      expandButton = false,
       selectable = false,
       columns,
       children,
@@ -67,13 +67,13 @@ const BaseList = forwardRef(
     const computeTemplate = `${
       selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
     }${
-      expandCTA ? `${EXPAND_CTA_SIZE}px ` : ''
+      expandButton ? `${EXPAND_CTA_SIZE}px ` : ''
     }${columns.map(({ width }) => width ?? 'minmax(0, 1fr)').join(' ')}`
 
     return (
       <ListProvider
         selectable={selectable}
-        expandCTA={expandCTA}
+        expandButton={expandButton}
         autoCollapse={autoCollapse}
       >
         <StyledList ref={ref} role="grid" template={computeTemplate}>

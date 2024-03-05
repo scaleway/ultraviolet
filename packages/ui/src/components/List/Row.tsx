@@ -123,7 +123,7 @@ export const Row = forwardRef(
       selectedRowIds,
       selectRow,
       unselectRow,
-      expandCTA,
+      expandButton,
     } = useListContext()
 
     const isSelectDisabled =
@@ -213,7 +213,7 @@ export const Row = forwardRef(
             </StyledCheckboxContainer>
           </Cell>
         ) : null}
-        {expandCTA ? (
+        {expandButton ? (
           <Cell preventClick>
             <Button
               disabled={disabled || !expandable}
@@ -221,6 +221,7 @@ export const Row = forwardRef(
               onClick={toggleRowExpand}
               size="xsmall"
               sentiment="neutral"
+              variant="ghost"
             />
           </Cell>
         ) : null}

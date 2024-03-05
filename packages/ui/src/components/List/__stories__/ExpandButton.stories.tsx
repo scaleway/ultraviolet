@@ -2,15 +2,15 @@ import { List } from '..'
 import { Template } from './Template.stories'
 import { data } from './resources'
 
-export const ExpandCTA = Template.bind({})
+export const ExpandButton = Template.bind({})
 
 /**
- * # expandCTA
- * Providing the prop `expandCTA` add a dedicated column and a button to each row to make the expandable feature more visibile for user, we really advice to activate it if you use expandable content in rows.
+ * # expandButton
+ * Providing the prop `expandButton` add a dedicated column and a button to each row to make the expandable feature more visibile for user, we really advice to activate it if you use expandable content in rows.
  */
-ExpandCTA.args = {
+ExpandButton.args = {
   ...Template.args,
-  expandCTA: true,
+  expandButton: true,
   children: data.map(planet => (
     <List.Row
       key={planet.id}
