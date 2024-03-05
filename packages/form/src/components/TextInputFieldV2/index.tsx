@@ -47,6 +47,11 @@ export const TextInputField = <
   type,
   validate,
   regex: regexes,
+  onRandomize,
+  prefix,
+  size,
+  suffix,
+  id,
 }: TextInputFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
 
@@ -121,6 +126,11 @@ export const TextInputField = <
       tooltip={tooltip}
       type={type}
       value={field.value}
+      onRandomize={onRandomize}
+      prefix={prefix}
+      suffix={suffix}
+      size={size}
+      id={id}
     />
   )
 }
