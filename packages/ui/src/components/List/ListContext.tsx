@@ -19,6 +19,7 @@ type ListContextValue = {
   expandedRowIds: RowState
   expandRow: (rowId: string) => void
   collapseRow: (rowId: string) => void
+  expandCTA: boolean // Indicate if list has dedicated column for a CTA which expand row (in addition of expandable behavior)
   // ============ Selectable logic ============
   /**
    * @returns an unregister function
@@ -39,12 +40,14 @@ type ListProviderProps = {
   children: ReactNode
   autoCollapse: boolean
   selectable: boolean
+  expandCTA: boolean
 }
 
 export const ListProvider = ({
   children,
   autoCollapse,
   selectable,
+  expandCTA,
 }: ListProviderProps) => {
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
@@ -158,6 +161,7 @@ export const ListProvider = ({
       selectAll,
       unselectAll,
       allRowSelectValue,
+      expandCTA,
     }),
     [
       registerExpandableRow,
@@ -172,6 +176,7 @@ export const ListProvider = ({
       selectAll,
       unselectAll,
       allRowSelectValue,
+      expandCTA,
     ],
   )
 

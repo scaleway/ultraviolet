@@ -16,8 +16,13 @@ type RowProps = {
 }
 
 export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
-  const { allRowSelectValue, selectAll, unselectAll, selectedRowIds } =
-    useListContext()
+  const {
+    allRowSelectValue,
+    selectAll,
+    unselectAll,
+    selectedRowIds,
+    expandCTA,
+  } = useListContext()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
 
@@ -35,6 +40,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
           />
         </HeaderCell>
       ) : null}
+      {expandCTA ? <HeaderCell>{null}</HeaderCell> : null}
       {children}
     </StyledHeaderRow>
   )
