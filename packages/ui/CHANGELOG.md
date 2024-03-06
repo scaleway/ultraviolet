@@ -1,5 +1,23 @@
 # Change Log
 
+## 1.40.1
+
+### Patch Changes
+
+- [#3520](https://github.com/scaleway/ultraviolet/pull/3520) [`2ea29a7`](https://github.com/scaleway/ultraviolet/commit/2ea29a7e5903402655ab05cc5279701e5760e9cb) Thanks [@philibea](https://github.com/philibea)! - update text wrap on SwitchButton component
+
+- [#3517](https://github.com/scaleway/ultraviolet/pull/3517) [`0012b7d`](https://github.com/scaleway/ultraviolet/commit/0012b7d2c46d2a3fdad0afd308ea4e5e96e71875) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.61`.
+
+- [#3522](https://github.com/scaleway/ultraviolet/pull/3522) [`2914ba9`](https://github.com/scaleway/ultraviolet/commit/2914ba9db8eb3058b17a3105dae31a0312dbfde5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.0`.
+  Updated dependency `@babel/runtime` to `7.24.0`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.24.0`.
+  Updated dependency `@babel/preset-env` to `7.24.0`.
+
+- [#3514](https://github.com/scaleway/ultraviolet/pull/3514) [`ebe4f91`](https://github.com/scaleway/ultraviolet/commit/ebe4f918405236317ac765fb886ca36fe1553b95) Thanks [@matthprost](https://github.com/matthprost)! - - Add prop `autoComplete` on `<TextInputV2 />` component
+  - Fix spread prop `required` on input in `<TextInputV2 />` component
+- Updated dependencies [[`0012b7d`](https://github.com/scaleway/ultraviolet/commit/0012b7d2c46d2a3fdad0afd308ea4e5e96e71875), [`2914ba9`](https://github.com/scaleway/ultraviolet/commit/2914ba9db8eb3058b17a3105dae31a0312dbfde5)]:
+  - @ultraviolet/icons@2.9.3
+
 ## 1.40.0
 
 ### Minor Changes

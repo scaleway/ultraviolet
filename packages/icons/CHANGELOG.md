@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.9.3
+
+### Patch Changes
+
+- [#3517](https://github.com/scaleway/ultraviolet/pull/3517) [`0012b7d`](https://github.com/scaleway/ultraviolet/commit/0012b7d2c46d2a3fdad0afd308ea4e5e96e71875) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.61`.
+
+- [#3522](https://github.com/scaleway/ultraviolet/pull/3522) [`2914ba9`](https://github.com/scaleway/ultraviolet/commit/2914ba9db8eb3058b17a3105dae31a0312dbfde5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.0`.
+  Updated dependency `@babel/runtime` to `7.24.0`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.24.0`.
+  Updated dependency `@babel/preset-env` to `7.24.0`.
+
 ## 2.9.2
 
 ### Patch Changes
