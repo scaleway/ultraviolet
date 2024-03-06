@@ -23,30 +23,38 @@ export const TextInputField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  autoFocus,
-  clearable,
+  validate,
+  regex: regexes,
+  id,
   className,
   tabIndex,
-  'data-testid': dataTestId,
-  disabled,
-  helper,
-  label,
-  labelDescription,
-  loading,
   onChange,
-  minLength,
-  maxLength,
+  placeholder,
+  disabled = false,
+  readOnly = false,
+  success,
+  helper,
+  tooltip,
+  label,
+  autoFocus,
+  required = false,
+  'data-testid': dataTestId,
   name,
   onFocus,
   onBlur,
-  placeholder,
-  readOnly,
-  required,
-  success,
-  tooltip,
-  type,
-  validate,
-  regex: regexes,
+  clearable = false,
+  labelDescription,
+  type = 'text',
+  prefix,
+  suffix,
+  size = 'large',
+  loading,
+  onRandomize,
+  minLength,
+  maxLength,
+  'aria-labelledby': ariaLabelledBy,
+  'aria-label': ariaLabel,
+  autoComplete,
 }: TextInputFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
 
@@ -121,6 +129,14 @@ export const TextInputField = <
       tooltip={tooltip}
       type={type}
       value={field.value}
+      id={id}
+      prefix={prefix}
+      suffix={suffix}
+      size={size}
+      onRandomize={onRandomize}
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledBy}
+      autoComplete={autoComplete}
     />
   )
 }
