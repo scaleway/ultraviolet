@@ -1157,7 +1157,7 @@ exports[`SelectableCardGroup renders correctly required and showTick 1`] = `
   text-decoration: none;
 }
 
-.css-1f47cnh-sizeStyles-StyledRequiredIcon {
+.css-kmv3js-sizeStyles-StyledRequiredIcon {
   vertical-align: middle;
   fill: #b3144d;
   height: 8px;
@@ -1165,6 +1165,11 @@ exports[`SelectableCardGroup renders correctly required and showTick 1`] = `
   min-width: 8px;
   min-height: 8px;
   vertical-align: super;
+}
+
+.css-kmv3js-sizeStyles-StyledRequiredIcon .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-t79hcp-StyledRow {
@@ -1563,11 +1568,12 @@ exports[`SelectableCardGroup renders correctly required and showTick 1`] = `
         >
           Label  
           <svg
-            class="e1cxe6lb0 css-1f47cnh-sizeStyles-StyledRequiredIcon e1gt4cfo0"
-            viewBox="0 0 24 24"
+            class="e1cxe6lb0 css-kmv3js-sizeStyles-StyledRequiredIcon e1gt4cfo0"
+            viewBox=" 0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+              d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
             />
           </svg>
         </legend>
