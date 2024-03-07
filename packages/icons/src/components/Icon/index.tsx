@@ -115,7 +115,7 @@ type IconProps = {
   name?: IconName
   prominence?: ProminenceProps
   color?: Color
-  outline?: boolean
+  variant?: 'outlined' | 'filled'
   'data-testid'?: string
   disabled?: boolean
 } & Pick<
@@ -136,7 +136,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       className,
       'data-testid': dataTestId,
       stroke,
-      outline = true,
+      variant = 'outlined',
       cursor,
       strokeWidth,
       disabled,
@@ -144,14 +144,17 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     ref,
   ) => {
     let SystemIcon = StyledIcon(
-      ICONS[outline && name in ICONS.default ? 'outline' : 'default'][name] ||
-        ICONS.default.alert,
+      ICONS[
+        variant === 'outlined' && name in ICONS.default ? 'outline' : 'default'
+      ][name] || ICONS.default.alert,
     )
 
     if (size === 'small' || size === 16) {
       SystemIcon = StyledIcon(
         SMALL_ICONS[
-          outline && name in SMALL_ICONS.default ? 'outline' : 'default'
+          variant === 'outlined' && name in SMALL_ICONS.default
+            ? 'outline'
+            : 'default'
         ][name] || SMALL_ICONS.default.alert,
       )
     }

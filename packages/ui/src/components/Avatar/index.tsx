@@ -113,7 +113,12 @@ export const Avatar = ({
         textSize={textSize}
       >
         {lock ? (
-          <Icon name="lock" color="neutral" prominence="weak" outline={false} />
+          <Icon
+            name="lock"
+            color="neutral"
+            prominence="weak"
+            variant="filled"
+          />
         ) : (
           formatTextToAvatar(text)
         )}

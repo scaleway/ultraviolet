@@ -349,7 +349,7 @@ export const Button = forwardRef<Element, FinalProps>(
     const content = (
       <>
         {!isLoading && icon ? (
-          <Icon name={icon} size={16} outline={false} />
+          <Icon name={icon} size={16} variant="filled" />
         ) : null}
         {isLoading ? (
           <Loader

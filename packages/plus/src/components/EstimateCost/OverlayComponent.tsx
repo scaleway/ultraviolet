@@ -129,7 +129,7 @@ export const OverlayComponent = ({
                 name="calculator"
                 color="primary"
                 size={20}
-                outline={false}
+                variant="filled"
               />
               {locales['estimate.cost.label']}
             </Stack>
