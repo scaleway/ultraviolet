@@ -898,13 +898,18 @@ exports[`Table Should render correctly with highlight animation on Table.Row 1`]
   width: 100%;
 }
 
-.css-k1vg20-sizeStyles {
+.css-hll5gg-sizeStyles {
   vertical-align: middle;
   fill: #727683;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-hll5gg-sizeStyles .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 .css-147y6no-StyledHeaderCell {
@@ -954,11 +959,14 @@ exports[`Table Should render correctly with highlight animation on Table.Row 1`]
               tabindex="0"
             >
               <svg
-                class="css-k1vg20-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-hll5gg-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+                  clip-rule="evenodd"
+                  d="M10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 13.5899 6.41015 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10ZM9.25 6.97917C9.25 6.56495 9.58579 6.22917 10 6.22917H10.006C10.4203 6.22917 10.756 6.56495 10.756 6.97917V6.98521C10.756 7.39942 10.4203 7.73521 10.006 7.73521H10C9.58579 7.73521 9.25 7.39942 9.25 6.98521V6.97917ZM9.49411 10.1396C9.18572 10.1803 8.87194 10.0251 8.72501 9.73124C8.53977 9.36076 8.68994 8.91025 9.06042 8.72501L9.09385 8.7083C10.1286 8.1909 11.2938 9.12555 11.0132 10.2479L10.5059 12.2771C10.8143 12.2363 11.1281 12.3916 11.275 12.6854C11.4602 13.0559 11.3101 13.5064 10.9396 13.6916L10.9062 13.7084L10.9062 13.7084C9.87136 14.2258 8.70622 13.2911 8.98682 12.1687L9.49411 10.1396Z"
+                  fill-rule="evenodd"
                 />
               </svg>
             </div>
@@ -1346,13 +1354,18 @@ exports[`Table Should render correctly with info 1`] = `
   width: 100%;
 }
 
-.css-k1vg20-sizeStyles {
+.css-hll5gg-sizeStyles {
   vertical-align: middle;
   fill: #727683;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-hll5gg-sizeStyles .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 .css-147y6no-StyledHeaderCell {
@@ -1402,11 +1415,14 @@ exports[`Table Should render correctly with info 1`] = `
               tabindex="0"
             >
               <svg
-                class="css-k1vg20-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-hll5gg-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+                  clip-rule="evenodd"
+                  d="M10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 13.5899 6.41015 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10ZM9.25 6.97917C9.25 6.56495 9.58579 6.22917 10 6.22917H10.006C10.4203 6.22917 10.756 6.56495 10.756 6.97917V6.98521C10.756 7.39942 10.4203 7.73521 10.006 7.73521H10C9.58579 7.73521 9.25 7.39942 9.25 6.98521V6.97917ZM9.49411 10.1396C9.18572 10.1803 8.87194 10.0251 8.72501 9.73124C8.53977 9.36076 8.68994 8.91025 9.06042 8.72501L9.09385 8.7083C10.1286 8.1909 11.2938 9.12555 11.0132 10.2479L10.5059 12.2771C10.8143 12.2363 11.1281 12.3916 11.275 12.6854C11.4602 13.0559 11.3101 13.5064 10.9396 13.6916L10.9062 13.7084L10.9062 13.7084C9.87136 14.2258 8.70622 13.2911 8.98682 12.1687L9.49411 10.1396Z"
+                  fill-rule="evenodd"
                 />
               </svg>
             </div>
@@ -4222,13 +4238,18 @@ exports[`Table Should render correctly with sort then click 1`] = `
   user-select: none;
 }
 
-.css-61dw6k-sizeStyles {
+.css-1yz35gw-sizeStyles {
   vertical-align: middle;
   fill: #727683;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.css-1yz35gw-sizeStyles .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 .css-d3mb3x-StyledText-StyledText {
@@ -4255,13 +4276,18 @@ exports[`Table Should render correctly with sort then click 1`] = `
   gap: 8px;
 }
 
-.css-10gwzu7-sizeStyles {
+.css-1uf6u1s-sizeStyles {
   vertical-align: middle;
   fill: #521094;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.css-1uf6u1s-sizeStyles .fillStroke {
+  stroke: #521094;
+  fill: none;
 }
 
 .css-1vcv501-StyledTr {
@@ -4295,19 +4321,25 @@ exports[`Table Should render correctly with sort then click 1`] = `
                 class="css-p1qzel-Stack-StyledIconContainer ev6jkq82"
               >
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 5c.27 0 .54.1.74.3l3.95 3.92a1.04 1.04 0 0 1-.74 1.78 1.1 1.1 0 0 1-.75-.3L8 7.51l-3.2 3.17a1.06 1.06 0 0 1-1.72-.33 1.04 1.04 0 0 1 .23-1.14L7.26 5.3c.2-.2.46-.31.74-.31"
+                    clip-rule="evenodd"
+                    d="M9.71967 7.46967C10.0126 7.17678 10.4874 7.17678 10.7803 7.46967L15.0303 11.7197C15.3232 12.0126 15.3232 12.4874 15.0303 12.7803C14.7374 13.0732 14.2626 13.0732 13.9697 12.7803L10.25 9.06066L6.53033 12.7803C6.23744 13.0732 5.76256 13.0732 5.46967 12.7803C5.17678 12.4874 5.17678 12.0126 5.46967 11.7197L9.71967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                    clip-rule="evenodd"
+                    d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
               </div>
@@ -4327,19 +4359,25 @@ exports[`Table Should render correctly with sort then click 1`] = `
                 class="css-p1qzel-Stack-StyledIconContainer ev6jkq82"
               >
                 <svg
-                  class="css-10gwzu7-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1uf6u1s-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 5c.27 0 .54.1.74.3l3.95 3.92a1.04 1.04 0 0 1-.74 1.78 1.1 1.1 0 0 1-.75-.3L8 7.51l-3.2 3.17a1.06 1.06 0 0 1-1.72-.33 1.04 1.04 0 0 1 .23-1.14L7.26 5.3c.2-.2.46-.31.74-.31"
+                    clip-rule="evenodd"
+                    d="M9.71967 7.46967C10.0126 7.17678 10.4874 7.17678 10.7803 7.46967L15.0303 11.7197C15.3232 12.0126 15.3232 12.4874 15.0303 12.7803C14.7374 13.0732 14.2626 13.0732 13.9697 12.7803L10.25 9.06066L6.53033 12.7803C6.23744 13.0732 5.76256 13.0732 5.46967 12.7803C5.17678 12.4874 5.17678 12.0126 5.46967 11.7197L9.71967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                    clip-rule="evenodd"
+                    d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
               </div>
@@ -4358,19 +4396,25 @@ exports[`Table Should render correctly with sort then click 1`] = `
                 class="css-p1qzel-Stack-StyledIconContainer ev6jkq82"
               >
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 5c.27 0 .54.1.74.3l3.95 3.92a1.04 1.04 0 0 1-.74 1.78 1.1 1.1 0 0 1-.75-.3L8 7.51l-3.2 3.17a1.06 1.06 0 0 1-1.72-.33 1.04 1.04 0 0 1 .23-1.14L7.26 5.3c.2-.2.46-.31.74-.31"
+                    clip-rule="evenodd"
+                    d="M9.71967 7.46967C10.0126 7.17678 10.4874 7.17678 10.7803 7.46967L15.0303 11.7197C15.3232 12.0126 15.3232 12.4874 15.0303 12.7803C14.7374 13.0732 14.2626 13.0732 13.9697 12.7803L10.25 9.06066L6.53033 12.7803C6.23744 13.0732 5.76256 13.0732 5.46967 12.7803C5.17678 12.4874 5.17678 12.0126 5.46967 11.7197L9.71967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                    clip-rule="evenodd"
+                    d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
               </div>
@@ -4389,19 +4433,25 @@ exports[`Table Should render correctly with sort then click 1`] = `
                 class="css-p1qzel-Stack-StyledIconContainer ev6jkq82"
               >
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 5c.27 0 .54.1.74.3l3.95 3.92a1.04 1.04 0 0 1-.74 1.78 1.1 1.1 0 0 1-.75-.3L8 7.51l-3.2 3.17a1.06 1.06 0 0 1-1.72-.33 1.04 1.04 0 0 1 .23-1.14L7.26 5.3c.2-.2.46-.31.74-.31"
+                    clip-rule="evenodd"
+                    d="M9.71967 7.46967C10.0126 7.17678 10.4874 7.17678 10.7803 7.46967L15.0303 11.7197C15.3232 12.0126 15.3232 12.4874 15.0303 12.7803C14.7374 13.0732 14.2626 13.0732 13.9697 12.7803L10.25 9.06066L6.53033 12.7803C6.23744 13.0732 5.76256 13.0732 5.46967 12.7803C5.17678 12.4874 5.17678 12.0126 5.46967 11.7197L9.71967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                    clip-rule="evenodd"
+                    d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
               </div>
@@ -4420,19 +4470,25 @@ exports[`Table Should render correctly with sort then click 1`] = `
                 class="css-p1qzel-Stack-StyledIconContainer ev6jkq82"
               >
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 5c.27 0 .54.1.74.3l3.95 3.92a1.04 1.04 0 0 1-.74 1.78 1.1 1.1 0 0 1-.75-.3L8 7.51l-3.2 3.17a1.06 1.06 0 0 1-1.72-.33 1.04 1.04 0 0 1 .23-1.14L7.26 5.3c.2-.2.46-.31.74-.31"
+                    clip-rule="evenodd"
+                    d="M9.71967 7.46967C10.0126 7.17678 10.4874 7.17678 10.7803 7.46967L15.0303 11.7197C15.3232 12.0126 15.3232 12.4874 15.0303 12.7803C14.7374 13.0732 14.2626 13.0732 13.9697 12.7803L10.25 9.06066L6.53033 12.7803C6.23744 13.0732 5.76256 13.0732 5.46967 12.7803C5.17678 12.4874 5.17678 12.0126 5.46967 11.7197L9.71967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 <svg
-                  class="css-61dw6k-sizeStyles e1gt4cfo0"
-                  viewBox="0 0 16 16"
+                  class="css-1yz35gw-sizeStyles e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                    clip-rule="evenodd"
+                    d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                    fill-rule="evenodd"
                   />
                 </svg>
               </div>

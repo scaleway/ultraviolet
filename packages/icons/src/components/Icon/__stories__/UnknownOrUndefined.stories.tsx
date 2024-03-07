@@ -7,6 +7,7 @@ export const UnknownOrUndefined = (args: ComponentProps<typeof Icon>) => [
   <Icon name={undefined} color="danger" {...args} />,
   /* @ts-expect-error we test an unknown icon name */
   <Icon name="unknown" color="warning" {...args} />,
+  <Icon />,
 ]
 
 UnknownOrUndefined.parameters = {

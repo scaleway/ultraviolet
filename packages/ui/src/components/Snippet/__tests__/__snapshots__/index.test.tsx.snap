@@ -142,13 +142,18 @@ exports[`Snippet renders correctly 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -182,11 +187,19 @@ exports[`Snippet renders correctly 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -346,13 +359,18 @@ exports[`Snippet renders correctly in multiline  1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-98uomi-ShowMoreContainer {
@@ -392,7 +410,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
   align-items: center;
 }
 
-.css-1mt4b5l-sizeStyles-AnimatedArrowIcon {
+.css-urfwl0-sizeStyles-AnimatedArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -406,6 +424,11 @@ exports[`Snippet renders correctly in multiline  1`] = `
   transform-origin: center;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+}
+
+.css-urfwl0-sizeStyles-AnimatedArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -468,11 +491,19 @@ exports[`Snippet renders correctly in multiline  1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -491,11 +522,14 @@ exports[`Snippet renders correctly in multiline  1`] = `
           >
             Show 
             <svg
-              class="e1q0gj900 css-1mt4b5l-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 16 16"
+              class="e1q0gj900 css-urfwl0-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </span>
@@ -670,13 +704,18 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-98uomi-ShowMoreContainer {
@@ -716,7 +755,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   align-items: center;
 }
 
-.css-1mt4b5l-sizeStyles-AnimatedArrowIcon {
+.css-urfwl0-sizeStyles-AnimatedArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -730,6 +769,11 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   transform-origin: center;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+}
+
+.css-urfwl0-sizeStyles-AnimatedArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -792,11 +836,19 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -815,11 +867,14 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
           >
             Show 
             <svg
-              class="e1q0gj900 css-1mt4b5l-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 16 16"
+              class="e1q0gj900 css-urfwl0-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </span>
@@ -995,13 +1050,18 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-98uomi-ShowMoreContainer {
@@ -1041,7 +1101,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   align-items: center;
 }
 
-.css-1mt4b5l-sizeStyles-AnimatedArrowIcon {
+.css-urfwl0-sizeStyles-AnimatedArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -1055,6 +1115,11 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   transform-origin: center;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+}
+
+.css-urfwl0-sizeStyles-AnimatedArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -1117,11 +1182,19 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -1140,11 +1213,14 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
           >
             Show 
             <svg
-              class="e1q0gj900 css-1mt4b5l-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 16 16"
+              class="e1q0gj900 css-urfwl0-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </span>
@@ -1297,13 +1373,18 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -1337,11 +1418,19 @@ exports[`Snippet renders correctly with copiedText 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -1494,13 +1583,18 @@ exports[`Snippet renders correctly with copyText 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -1534,11 +1628,19 @@ exports[`Snippet renders correctly with copyText 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -1698,13 +1800,18 @@ exports[`Snippet renders correctly with hideText 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-98uomi-ShowMoreContainer {
@@ -1744,7 +1851,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
   align-items: center;
 }
 
-.css-1mt4b5l-sizeStyles-AnimatedArrowIcon {
+.css-urfwl0-sizeStyles-AnimatedArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -1758,6 +1865,11 @@ exports[`Snippet renders correctly with hideText 1`] = `
   transform-origin: center;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+}
+
+.css-urfwl0-sizeStyles-AnimatedArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -1820,11 +1932,19 @@ exports[`Snippet renders correctly with hideText 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -1843,11 +1963,14 @@ exports[`Snippet renders correctly with hideText 1`] = `
           >
             Show 
             <svg
-              class="e1q0gj900 css-1mt4b5l-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 16 16"
+              class="e1q0gj900 css-urfwl0-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </span>
@@ -2007,13 +2130,18 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1ucxira-ShowMoreContainer {
@@ -2053,7 +2181,7 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   align-items: center;
 }
 
-.css-1tm5i1b-sizeStyles-AnimatedArrowIcon {
+.css-1cbh5yi-sizeStyles-AnimatedArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -2067,6 +2195,11 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   transform-origin: center;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+}
+
+.css-1cbh5yi-sizeStyles-AnimatedArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -2129,11 +2262,19 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -2152,11 +2293,14 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
           >
             Hide 
             <svg
-              class="e1q0gj900 css-1tm5i1b-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 16 16"
+              class="e1q0gj900 css-1cbh5yi-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </span>
@@ -2316,13 +2460,18 @@ exports[`Snippet renders correctly with showText 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-98uomi-ShowMoreContainer {
@@ -2362,7 +2511,7 @@ exports[`Snippet renders correctly with showText 1`] = `
   align-items: center;
 }
 
-.css-1mt4b5l-sizeStyles-AnimatedArrowIcon {
+.css-urfwl0-sizeStyles-AnimatedArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -2376,6 +2525,11 @@ exports[`Snippet renders correctly with showText 1`] = `
   transform-origin: center;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+}
+
+.css-urfwl0-sizeStyles-AnimatedArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -2438,11 +2592,19 @@ exports[`Snippet renders correctly with showText 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -2461,11 +2623,14 @@ exports[`Snippet renders correctly with showText 1`] = `
           >
             Test 
             <svg
-              class="e1q0gj900 css-1mt4b5l-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 16 16"
+              class="e1q0gj900 css-urfwl0-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </span>
@@ -2633,13 +2798,18 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -2673,11 +2843,19 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -2846,13 +3024,18 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -2886,11 +3069,19 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -3050,13 +3241,18 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1ucxira-ShowMoreContainer {
@@ -3096,7 +3292,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   align-items: center;
 }
 
-.css-1tm5i1b-sizeStyles-AnimatedArrowIcon {
+.css-1cbh5yi-sizeStyles-AnimatedArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -3110,6 +3306,11 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   transform-origin: center;
   -webkit-transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+}
+
+.css-1cbh5yi-sizeStyles-AnimatedArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -3172,11 +3373,19 @@ exports[`Snippet should click on extend button to display full content on  1`] =
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+                clip-rule="evenodd"
+                d="M6.02579 5.00735C6.01404 5.01987 5.99982 5.04507 5.99982 5.08363V13.4167C5.99982 13.4553 6.01404 13.4805 6.02579 13.493C6.02939 13.4968 6.03388 13.5 6.03388 13.5H12.7988C12.7988 13.5 12.8033 13.4968 12.8069 13.493C12.8187 13.4805 12.8329 13.4553 12.8329 13.4167V5.08363C12.8329 5.04507 12.8187 5.01987 12.8069 5.00735C12.8033 5.00351 12.7988 5.00033 12.7988 5.00033H6.03388C6.03388 5.00033 6.02939 5.00351 6.02579 5.00735ZM4.49982 5.08363C4.49982 4.25553 5.14051 3.50033 6.03104 3.50033H12.8017C13.6922 3.50033 14.3329 4.25553 14.3329 5.08363V13.4167C14.3329 14.2448 13.6922 15 12.8017 15H6.03104C5.14051 15 4.49982 14.2448 4.49982 13.4167V5.08363Z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M3.52597 2.50703C3.51423 2.51955 3.5 2.54474 3.5 2.58331V10.9164C3.5 11.3306 3.16421 11.6664 2.75 11.6664C2.33579 11.6664 2 11.3306 2 10.9164V2.58331C2 1.7552 2.64069 1 3.53122 1H10.3018C11.1924 1 11.8331 1.7552 11.8331 2.58331C11.8331 2.99752 11.4973 3.33331 11.0831 3.33331C10.6688 3.33331 10.3331 2.99752 10.3331 2.58331C10.3331 2.54474 10.3188 2.51955 10.3071 2.50703C10.3035 2.50318 10.299 2.5 10.299 2.5H3.53406C3.53406 2.5 3.52957 2.50318 3.52597 2.50703Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -3195,11 +3404,14 @@ exports[`Snippet should click on extend button to display full content on  1`] =
           >
             Hide 
             <svg
-              class="e1q0gj900 css-1tm5i1b-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 16 16"
+              class="e1q0gj900 css-1cbh5yi-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </span>

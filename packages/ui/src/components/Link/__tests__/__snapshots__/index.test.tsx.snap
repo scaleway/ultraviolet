@@ -638,7 +638,7 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-thickness: 2px;
 }
 
-.css-1axq5yx-sizeStyles-StyledIcon {
+.css-ur49ul-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -647,17 +647,25 @@ exports[`Link render correctly with href props 2`] = `
   min-height: 16px;
 }
 
+.css-ur49ul-sizeStyles-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
 <a
     class="css-1y94hd0-StyledLink e1afnb7a0"
     data-variant="standalone"
     href="/"
   >
     <svg
-      class="e1afnb7a2 css-1axq5yx-sizeStyles-StyledIcon e1gt4cfo0"
+      class="e1afnb7a2 css-ur49ul-sizeStyles-StyledIcon e1gt4cfo0"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+        clip-rule="evenodd"
+        d="M10.5303 4.21967C10.8232 4.51256 10.8232 4.98744 10.5303 5.28033L7.81066 8L10.5303 10.7197C10.8232 11.0126 10.8232 11.4874 10.5303 11.7803C10.2374 12.0732 9.76256 12.0732 9.46967 11.7803L6.21967 8.53033C5.92678 8.23744 5.92678 7.76256 6.21967 7.46967L9.46967 4.21967C9.76256 3.92678 10.2374 3.92678 10.5303 4.21967Z"
+        fill-rule="evenodd"
       />
     </svg>
     Hello
@@ -742,13 +750,18 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-thickness: 2px;
 }
 
-.css-1axq5yx-sizeStyles-StyledIcon {
+.css-ur49ul-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-ur49ul-sizeStyles-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <a
@@ -758,11 +771,14 @@ exports[`Link render correctly with href props 2`] = `
   >
     Hello
     <svg
-      class="e1afnb7a2 css-1axq5yx-sizeStyles-StyledIcon e1gt4cfo0"
+      class="e1afnb7a2 css-ur49ul-sizeStyles-StyledIcon e1gt4cfo0"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+        clip-rule="evenodd"
+        d="M6.21967 4.21967C6.51256 3.92678 6.98744 3.92678 7.28033 4.21967L10.5303 7.46967C10.8232 7.76256 10.8232 8.23744 10.5303 8.53033L7.28033 11.7803C6.98744 12.0732 6.51256 12.0732 6.21967 11.7803C5.92678 11.4874 5.92678 11.0126 6.21967 10.7197L8.93934 8L6.21967 5.28033C5.92678 4.98744 5.92678 4.51256 6.21967 4.21967Z"
+        fill-rule="evenodd"
       />
     </svg>
   </a>
@@ -854,13 +870,18 @@ exports[`Link render correctly with href props 2`] = `
   padding-bottom: 4px;
 }
 
-.css-1rr0th9-sizeStyles-StyledIcon {
+.css-kfn912-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
   width: 14px;
   min-width: 14px;
   min-height: 14px;
+}
+
+.css-kfn912-sizeStyles-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <a
@@ -875,11 +896,19 @@ exports[`Link render correctly with href props 2`] = `
       class="css-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 css-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="e1afnb7a2 css-kfn912-sizeStyles-StyledIcon e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+          clip-rule="evenodd"
+          d="M4.25 6.5C3.83579 6.5 3.5 6.83579 3.5 7.25V15.75C3.5 16.1642 3.83579 16.5 4.25 16.5H12.75C13.1642 16.5 13.5 16.1642 13.5 15.75V11.75C13.5 11.3358 13.8358 11 14.25 11C14.6642 11 15 11.3358 15 11.75V15.75C15 16.9926 13.9926 18 12.75 18H4.25C3.00736 18 2 16.9926 2 15.75V7.25C2 6.00736 3.00736 5 4.25 5H9.25C9.66421 5 10 5.33579 10 5.75C10 6.16421 9.66421 6.5 9.25 6.5H4.25Z"
+          fill-rule="evenodd"
+        />
+        <path
+          clip-rule="evenodd"
+          d="M6.19385 13.7532C6.47175 14.0603 6.94603 14.0841 7.25319 13.8062L16.5 5.43999V8.25C16.5 8.66421 16.8358 9 17.25 9C17.6642 9 18 8.66421 18 8.25V3.75C18 3.33579 17.6642 3 17.25 3H12.75C12.3358 3 12 3.33579 12 3.75C12 4.16421 12.3358 4.5 12.75 4.5H15.3032L6.24682 12.6938C5.93966 12.9717 5.91595 13.446 6.19385 13.7532Z"
+          fill-rule="evenodd"
         />
       </svg>
     </span>
@@ -972,13 +1001,18 @@ exports[`Link render correctly with href props 2`] = `
   padding-bottom: 4px;
 }
 
-.css-1rr0th9-sizeStyles-StyledIcon {
+.css-kfn912-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
   width: 14px;
   min-width: 14px;
   min-height: 14px;
+}
+
+.css-kfn912-sizeStyles-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <a
@@ -993,11 +1027,19 @@ exports[`Link render correctly with href props 2`] = `
       class="css-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 css-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="e1afnb7a2 css-kfn912-sizeStyles-StyledIcon e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+          clip-rule="evenodd"
+          d="M4.25 6.5C3.83579 6.5 3.5 6.83579 3.5 7.25V15.75C3.5 16.1642 3.83579 16.5 4.25 16.5H12.75C13.1642 16.5 13.5 16.1642 13.5 15.75V11.75C13.5 11.3358 13.8358 11 14.25 11C14.6642 11 15 11.3358 15 11.75V15.75C15 16.9926 13.9926 18 12.75 18H4.25C3.00736 18 2 16.9926 2 15.75V7.25C2 6.00736 3.00736 5 4.25 5H9.25C9.66421 5 10 5.33579 10 5.75C10 6.16421 9.66421 6.5 9.25 6.5H4.25Z"
+          fill-rule="evenodd"
+        />
+        <path
+          clip-rule="evenodd"
+          d="M6.19385 13.7532C6.47175 14.0603 6.94603 14.0841 7.25319 13.8062L16.5 5.43999V8.25C16.5 8.66421 16.8358 9 17.25 9C17.6642 9 18 8.66421 18 8.25V3.75C18 3.33579 17.6642 3 17.25 3H12.75C12.3358 3 12 3.33579 12 3.75C12 4.16421 12.3358 4.5 12.75 4.5H15.3032L6.24682 12.6938C5.93966 12.9717 5.91595 13.446 6.19385 13.7532Z"
+          fill-rule="evenodd"
         />
       </svg>
     </span>
@@ -1465,13 +1507,18 @@ exports[`Link render correctly with target blank 1`] = `
   padding-bottom: 4px;
 }
 
-.css-1rr0th9-sizeStyles-StyledIcon {
+.css-kfn912-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
   width: 14px;
   min-width: 14px;
   min-height: 14px;
+}
+
+.css-kfn912-sizeStyles-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <a
@@ -1486,11 +1533,19 @@ exports[`Link render correctly with target blank 1`] = `
       class="css-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 css-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="e1afnb7a2 css-kfn912-sizeStyles-StyledIcon e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+          clip-rule="evenodd"
+          d="M4.25 6.5C3.83579 6.5 3.5 6.83579 3.5 7.25V15.75C3.5 16.1642 3.83579 16.5 4.25 16.5H12.75C13.1642 16.5 13.5 16.1642 13.5 15.75V11.75C13.5 11.3358 13.8358 11 14.25 11C14.6642 11 15 11.3358 15 11.75V15.75C15 16.9926 13.9926 18 12.75 18H4.25C3.00736 18 2 16.9926 2 15.75V7.25C2 6.00736 3.00736 5 4.25 5H9.25C9.66421 5 10 5.33579 10 5.75C10 6.16421 9.66421 6.5 9.25 6.5H4.25Z"
+          fill-rule="evenodd"
+        />
+        <path
+          clip-rule="evenodd"
+          d="M6.19385 13.7532C6.47175 14.0603 6.94603 14.0841 7.25319 13.8062L16.5 5.43999V8.25C16.5 8.66421 16.8358 9 17.25 9C17.6642 9 18 8.66421 18 8.25V3.75C18 3.33579 17.6642 3 17.25 3H12.75C12.3358 3 12 3.33579 12 3.75C12 4.16421 12.3358 4.5 12.75 4.5H15.3032L6.24682 12.6938C5.93966 12.9717 5.91595 13.446 6.19385 13.7532Z"
+          fill-rule="evenodd"
         />
       </svg>
     </span>

@@ -137,13 +137,18 @@ exports[`NumberInputField should render correctly 1`] = `
   text-decoration: none;
 }
 
-.css-wnp022-sizeStyles {
+.css-1fy0w11-sizeStyles {
   vertical-align: middle;
   fill: #d8c5fc;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
+}
+
+.css-1fy0w11-sizeStyles .fillStroke {
+  stroke: #d8c5fc;
+  fill: none;
 }
 
 .css-192mx7g {
@@ -279,13 +284,18 @@ exports[`NumberInputField should render correctly 1`] = `
   color: #521094;
 }
 
-.css-1gh3v0m-sizeStyles {
+.css-svgia8-sizeStyles {
   vertical-align: middle;
   fill: #641cb3;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
+}
+
+.css-svgia8-sizeStyles .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 <form>
@@ -308,11 +318,14 @@ exports[`NumberInputField should render correctly 1`] = `
           >
             <div>
               <svg
-                class="css-wnp022-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-1fy0w11-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19,13H5V11H19V13Z"
+                  clip-rule="evenodd"
+                  d="M4 9.75C4 9.33579 4.33579 9 4.75 9L15.25 9C15.6642 9 16 9.33579 16 9.75C16 10.1642 15.6642 10.5 15.25 10.5L4.75 10.5C4.33579 10.5 4 10.1642 4 9.75Z"
+                  fill-rule="evenodd"
                 />
               </svg>
             </div>
@@ -342,11 +355,12 @@ exports[`NumberInputField should render correctly 1`] = `
           >
             <div>
               <svg
-                class="css-1gh3v0m-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-svgia8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                  d="M10.75 4.75C10.75 4.33579 10.4142 4 10 4C9.58579 4 9.25 4.33579 9.25 4.75V9.25H4.75C4.33579 9.25 4 9.58579 4 10C4 10.4142 4.33579 10.75 4.75 10.75L9.25 10.75V15.25C9.25 15.6642 9.58579 16 10 16C10.4142 16 10.75 15.6642 10.75 15.25V10.75L15.25 10.75C15.6642 10.75 16 10.4142 16 10C16 9.58579 15.6642 9.25 15.25 9.25H10.75V4.75Z"
                 />
               </svg>
             </div>
@@ -495,13 +509,18 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   text-decoration: none;
 }
 
-.css-wnp022-sizeStyles {
+.css-1fy0w11-sizeStyles {
   vertical-align: middle;
   fill: #d8c5fc;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
+}
+
+.css-1fy0w11-sizeStyles .fillStroke {
+  stroke: #d8c5fc;
+  fill: none;
 }
 
 .css-192mx7g {
@@ -600,11 +619,14 @@ exports[`NumberInputField should render correctly disabled 1`] = `
           >
             <div>
               <svg
-                class="css-wnp022-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-1fy0w11-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19,13H5V11H19V13Z"
+                  clip-rule="evenodd"
+                  d="M4 9.75C4 9.33579 4.33579 9 4.75 9L15.25 9C15.6642 9 16 9.33579 16 9.75C16 10.1642 15.6642 10.5 15.25 10.5L4.75 10.5C4.33579 10.5 4 10.1642 4 9.75Z"
+                  fill-rule="evenodd"
                 />
               </svg>
             </div>
@@ -636,11 +658,12 @@ exports[`NumberInputField should render correctly disabled 1`] = `
           >
             <div>
               <svg
-                class="css-wnp022-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-1fy0w11-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                  d="M10.75 4.75C10.75 4.33579 10.4142 4 10 4C9.58579 4 9.25 4.33579 9.25 4.75V9.25H4.75C4.33579 9.25 4 9.58579 4 10C4 10.4142 4.33579 10.75 4.75 10.75L9.25 10.75V15.25C9.25 15.6642 9.58579 16 10 16C10.4142 16 10.75 15.6642 10.75 15.25V10.75L15.25 10.75C15.6642 10.75 16 10.4142 16 10C16 9.58579 15.6642 9.25 15.25 9.25H10.75V4.75Z"
                 />
               </svg>
             </div>
@@ -798,13 +821,18 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   color: #521094;
 }
 
-.css-1gh3v0m-sizeStyles {
+.css-svgia8-sizeStyles {
   vertical-align: middle;
   fill: #641cb3;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
+}
+
+.css-svgia8-sizeStyles .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-192mx7g {
@@ -931,13 +959,18 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   text-decoration: none;
 }
 
-.css-wnp022-sizeStyles {
+.css-1fy0w11-sizeStyles {
   vertical-align: middle;
   fill: #d8c5fc;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
+}
+
+.css-1fy0w11-sizeStyles .fillStroke {
+  stroke: #d8c5fc;
+  fill: none;
 }
 
 <form>
@@ -959,11 +992,14 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
           >
             <div>
               <svg
-                class="css-1gh3v0m-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-svgia8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19,13H5V11H19V13Z"
+                  clip-rule="evenodd"
+                  d="M4 9.75C4 9.33579 4.33579 9 4.75 9L15.25 9C15.6642 9 16 9.33579 16 9.75C16 10.1642 15.6642 10.5 15.25 10.5L4.75 10.5C4.33579 10.5 4 10.1642 4 9.75Z"
+                  fill-rule="evenodd"
                 />
               </svg>
             </div>
@@ -994,11 +1030,12 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
           >
             <div>
               <svg
-                class="css-wnp022-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-1fy0w11-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                  d="M10.75 4.75C10.75 4.33579 10.4142 4 10 4C9.58579 4 9.25 4.33579 9.25 4.75V9.25H4.75C4.33579 9.25 4 9.58579 4 10C4 10.4142 4.33579 10.75 4.75 10.75L9.25 10.75V15.25C9.25 15.6642 9.58579 16 10 16C10.4142 16 10.75 15.6642 10.75 15.25V10.75L15.25 10.75C15.6642 10.75 16 10.4142 16 10C16 9.58579 15.6642 9.25 15.25 9.25H10.75V4.75Z"
                 />
               </svg>
             </div>
@@ -1156,13 +1193,18 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   color: #521094;
 }
 
-.css-1gh3v0m-sizeStyles {
+.css-svgia8-sizeStyles {
   vertical-align: middle;
   fill: #641cb3;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
+}
+
+.css-svgia8-sizeStyles .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-192mx7g {
@@ -1260,11 +1302,14 @@ exports[`NumberInputField should trigger events correctly 1`] = `
           >
             <div>
               <svg
-                class="css-1gh3v0m-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-svgia8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19,13H5V11H19V13Z"
+                  clip-rule="evenodd"
+                  d="M4 9.75C4 9.33579 4.33579 9 4.75 9L15.25 9C15.6642 9 16 9.33579 16 9.75C16 10.1642 15.6642 10.5 15.25 10.5L4.75 10.5C4.33579 10.5 4 10.1642 4 9.75Z"
+                  fill-rule="evenodd"
                 />
               </svg>
             </div>
@@ -1294,11 +1339,12 @@ exports[`NumberInputField should trigger events correctly 1`] = `
           >
             <div>
               <svg
-                class="css-1gh3v0m-sizeStyles e1gt4cfo0"
-                viewBox="0 0 24 24"
+                class="css-svgia8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                  d="M10.75 4.75C10.75 4.33579 10.4142 4 10 4C9.58579 4 9.25 4.33579 9.25 4.75V9.25H4.75C4.33579 9.25 4 9.58579 4 10C4 10.4142 4.33579 10.75 4.75 10.75L9.25 10.75V15.25C9.25 15.6642 9.58579 16 10 16C10.4142 16 10.75 15.6642 10.75 15.25V10.75L15.25 10.75C15.6642 10.75 16 10.4142 16 10C16 9.58579 15.6642 9.25 15.25 9.25H10.75V4.75Z"
                 />
               </svg>
             </div>

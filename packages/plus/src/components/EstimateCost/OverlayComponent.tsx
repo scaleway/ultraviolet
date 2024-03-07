@@ -125,7 +125,12 @@ export const OverlayComponent = ({
           )}
           <OverlayRow>
             <Stack direction="row" alignItems="center" gap={1}>
-              <Icon name="calculator" color="primary" size={20} />
+              <Icon
+                name="calculator"
+                color="primary"
+                size={20}
+                outline={false}
+              />
               {locales['estimate.cost.label']}
             </Stack>
             <ItemResourceName animated={false}>

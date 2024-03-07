@@ -31,13 +31,18 @@ exports[`PasswordCheck render with custom values 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-k1vg20-sizeStyles {
+.css-hll5gg-sizeStyles {
   vertical-align: middle;
   fill: #727683;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-hll5gg-sizeStyles .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 .css-3l2mjz-StyledText {
@@ -51,13 +56,18 @@ exports[`PasswordCheck render with custom values 1`] = `
   text-decoration: none;
 }
 
-.css-ksecsa-sizeStyles {
+.css-5riqfe-sizeStyles {
   vertical-align: middle;
   fill: #22674e;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-5riqfe-sizeStyles .fillStroke {
+  stroke: #22674e;
+  fill: none;
 }
 
 <div
@@ -67,8 +77,9 @@ exports[`PasswordCheck render with custom values 1`] = `
       class="css-irytw7-Stack ehpbis70"
     >
       <svg
-        class="css-k1vg20-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="css-hll5gg-sizeStyles e1gt4cfo0"
+        viewBox=" 0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"
@@ -84,11 +95,14 @@ exports[`PasswordCheck render with custom values 1`] = `
       class="css-irytw7-Stack ehpbis70"
     >
       <svg
-        class="css-ksecsa-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="css-5riqfe-sizeStyles e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+          clip-rule="evenodd"
+          d="M10 3.45455C6.38505 3.45455 3.45455 6.38505 3.45455 10C3.45455 13.615 6.38505 16.5455 10 16.5455C13.615 16.5455 16.5455 13.615 16.5455 10C16.5455 6.38505 13.615 3.45455 10 3.45455ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10ZM12.847 7.59001C13.1738 7.82347 13.2495 8.27769 13.016 8.60454L9.98575 12.847C9.86149 13.0209 9.66698 13.1314 9.45393 13.149C9.24087 13.1667 9.03085 13.0897 8.87968 12.9385L7.0615 11.1203C6.77748 10.8363 6.77748 10.3758 7.0615 10.0918C7.34552 9.80778 7.806 9.80778 8.09002 10.0918L9.30114 11.3029L11.8324 7.7591C12.0659 7.43225 12.5201 7.35655 12.847 7.59001Z"
+          fill-rule="evenodd"
         />
       </svg>
       <p

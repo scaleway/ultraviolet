@@ -131,13 +131,18 @@ exports[`Avatar renders correctly with lock 1`] = `
   width: 100%;
 }
 
-.css-1nalfg0-sizeStyles {
+.css-n8p420-sizeStyles {
   vertical-align: middle;
   fill: #727683;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.css-n8p420-sizeStyles .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 <div
@@ -148,11 +153,14 @@ exports[`Avatar renders correctly with lock 1`] = `
       class="css-1lc61rv-StyledTextAvatar ec0473m1"
     >
       <svg
-        class="css-1nalfg0-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="css-n8p420-sizeStyles e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
+          clip-rule="evenodd"
+          d="M10.0001 2.5C7.92901 2.5 6.25008 4.17893 6.25008 6.25V9.16667H5.83341C4.91294 9.16667 4.16675 9.91286 4.16675 10.8333V15.8333C4.16675 16.7538 4.91294 17.5 5.83341 17.5H14.1667C15.0872 17.5 15.8334 16.7538 15.8334 15.8333V10.8333C15.8334 9.91286 15.0872 9.16667 14.1667 9.16667H13.7501V6.25C13.7501 4.17893 12.0711 2.5 10.0001 2.5ZM12.5001 9.16667V6.25C12.5001 4.86929 11.3808 3.75 10.0001 3.75C8.61937 3.75 7.50008 4.86929 7.50008 6.25V9.16667H12.5001Z"
+          fill-rule="evenodd"
         />
       </svg>
     </span>

@@ -348,7 +348,9 @@ export const Button = forwardRef<Element, FinalProps>(
     const computeIsDisabled = disabled || isLoading
     const content = (
       <>
-        {!isLoading && icon ? <Icon name={icon} size={16} /> : null}
+        {!isLoading && icon ? (
+          <Icon name={icon} size={16} outline={false} />
+        ) : null}
         {isLoading ? (
           <Loader
             active

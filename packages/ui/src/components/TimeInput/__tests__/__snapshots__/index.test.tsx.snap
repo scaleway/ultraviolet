@@ -252,13 +252,18 @@ exports[`TimeInput renders correctly with base props 1`] = `
   height: 100%;
 }
 
-.css-bqy7up-sizeStyles {
+.css-1ji4m6z-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+}
+
+.css-1ji4m6z-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -351,11 +356,14 @@ exports[`TimeInput renders correctly with base props 1`] = `
               role="separator"
             />
             <svg
-              class="css-bqy7up-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1ji4m6z-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                clip-rule="evenodd"
+                d="M10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 13.5899 6.41015 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10ZM10 4.41667C10.4142 4.41667 10.75 4.75245 10.75 5.16667V9.25H13.625C14.0392 9.25 14.375 9.58579 14.375 10C14.375 10.4142 14.0392 10.75 13.625 10.75H10C9.58579 10.75 9.25 10.4142 9.25 10V5.16667C9.25 4.75245 9.58579 4.41667 10 4.41667Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>

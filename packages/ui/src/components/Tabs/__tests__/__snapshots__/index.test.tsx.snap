@@ -573,13 +573,18 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   transform: rotate(-180deg);
 }
 
-.css-qd0yov-sizeStyles-ArrowIcon {
+.css-s445lf-sizeStyles-ArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.css-s445lf-sizeStyles-ArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -660,11 +665,14 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         >
           More
           <svg
-            class="edb1sh92 css-qd0yov-sizeStyles-ArrowIcon e1gt4cfo0"
-            viewBox="0 0 16 16"
+            class="edb1sh92 css-s445lf-sizeStyles-ArrowIcon e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+              clip-rule="evenodd"
+              d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+              fill-rule="evenodd"
             />
           </svg>
         </button>
@@ -689,11 +697,14 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         >
           More again
           <svg
-            class="edb1sh92 css-qd0yov-sizeStyles-ArrowIcon e1gt4cfo0"
-            viewBox="0 0 16 16"
+            class="edb1sh92 css-s445lf-sizeStyles-ArrowIcon e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+              clip-rule="evenodd"
+              d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+              fill-rule="evenodd"
             />
           </svg>
         </button>
@@ -1545,13 +1556,18 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   transform: rotate(-180deg);
 }
 
-.css-qd0yov-sizeStyles-ArrowIcon {
+.css-s445lf-sizeStyles-ArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.css-s445lf-sizeStyles-ArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-si4ns4-StyledTabButton-StyledMenu-StyledTabMenu {
@@ -2045,11 +2061,14 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
         >
           Blabla
           <svg
-            class="edb1sh92 css-qd0yov-sizeStyles-ArrowIcon e1gt4cfo0"
-            viewBox="0 0 16 16"
+            class="edb1sh92 css-s445lf-sizeStyles-ArrowIcon e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+              clip-rule="evenodd"
+              d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+              fill-rule="evenodd"
             />
           </svg>
         </button>
@@ -2073,11 +2092,14 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
         >
           More
           <svg
-            class="edb1sh92 css-qd0yov-sizeStyles-ArrowIcon e1gt4cfo0"
-            viewBox="0 0 16 16"
+            class="edb1sh92 css-s445lf-sizeStyles-ArrowIcon e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+              clip-rule="evenodd"
+              d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+              fill-rule="evenodd"
             />
           </svg>
         </button>
@@ -2744,13 +2766,18 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   transform: rotate(-180deg);
 }
 
-.css-qd0yov-sizeStyles-ArrowIcon {
+.css-s445lf-sizeStyles-ArrowIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.css-s445lf-sizeStyles-ArrowIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -3141,11 +3168,14 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
             >
               Blabla
               <svg
-                class="edb1sh92 css-qd0yov-sizeStyles-ArrowIcon e1gt4cfo0"
-                viewBox="0 0 16 16"
+                class="edb1sh92 css-s445lf-sizeStyles-ArrowIcon e1gt4cfo0"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                  clip-rule="evenodd"
+                  d="M5.46967 7.46967C5.76256 7.17678 6.23744 7.17678 6.53033 7.46967L10.25 11.1893L13.9697 7.46967C14.2626 7.17678 14.7374 7.17678 15.0303 7.46967C15.3232 7.76256 15.3232 8.23744 15.0303 8.53033L10.7803 12.7803C10.6397 12.921 10.4489 13 10.25 13C10.0511 13 9.86032 12.921 9.71967 12.7803L5.46967 8.53033C5.17678 8.23744 5.17678 7.76256 5.46967 7.46967Z"
+                  fill-rule="evenodd"
                 />
               </svg>
             </button>

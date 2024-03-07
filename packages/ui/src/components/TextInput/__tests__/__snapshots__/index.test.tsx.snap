@@ -190,13 +190,18 @@ exports[`TextInput should handle events on random button 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -238,11 +243,21 @@ exports[`TextInput should handle events on random button 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                d="M13.7292 3.96253L14.0672 3.23096L14.7984 2.89278C15.0674 2.76855 15.0674 2.38896 14.7984 2.26473L14.0672 1.92655L13.7292 1.20187C13.605 0.932709 13.2256 0.932709 13.1014 1.20187L12.7634 1.93345L12.0391 2.27163C11.7701 2.39586 11.7701 2.77545 12.0391 2.89968L12.7703 3.23786L13.1083 3.96253C13.2256 4.2317 13.6119 4.2317 13.7292 3.96253Z"
+              />
+              <path
+                d="M5.79617 3.96253L6.13418 3.23096L6.8654 2.89278C7.13443 2.76855 7.13443 2.38896 6.8654 2.26473L6.13418 1.93345L5.79617 1.20187C5.6789 0.932709 5.2926 0.932709 5.17533 1.20187L4.83731 1.93345L4.1061 2.27163C3.83707 2.39586 3.83707 2.77545 4.1061 2.89968L4.83731 3.23786L5.17533 3.96253C5.2926 4.2317 5.6789 4.2317 5.79617 3.96253Z"
+              />
+              <path
+                d="M13.1083 9.13813L12.7703 9.8697L12.0391 10.2079C11.7701 10.3321 11.7701 10.7117 12.0391 10.8359L12.7703 11.1741L13.1083 11.9057C13.2325 12.1749 13.6119 12.1749 13.7361 11.9057L14.0741 11.1741L14.7984 10.829C15.0674 10.7048 15.0674 10.3252 14.7984 10.201L14.0672 9.8628L13.7292 9.13122C13.6119 8.86896 13.2256 8.86896 13.1083 9.13813Z"
+              />
+              <path
+                d="M11.8389 6.115L9.88667 4.16183C9.61763 3.89267 9.18305 3.89267 8.91401 4.16183L1.20177 11.871C0.932742 12.1401 0.932742 12.5749 1.20177 12.8441L3.15398 14.7973C3.42301 15.0664 3.8576 15.0664 4.12663 14.7973L11.832 7.08813C12.1079 6.82587 12.1079 6.38417 11.8389 6.115ZM9.42448 7.55745L8.45183 6.58431L9.40379 5.63189L10.3764 6.60502L9.42448 7.55745Z"
               />
             </svg>
           </button>
@@ -450,13 +465,18 @@ exports[`TextInput should handle events on toggleable password 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -498,11 +518,17 @@ exports[`TextInput should handle events on toggleable password 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                d="M7.66797 9.5C8.4964 9.5 9.16797 8.82843 9.16797 8C9.16797 7.17157 8.4964 6.5 7.66797 6.5C6.83954 6.5 6.16797 7.17157 6.16797 8C6.16797 8.82843 6.83954 9.5 7.66797 9.5Z"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M1.04737 8.28049C0.984126 8.09687 0.984214 7.89727 1.04762 7.71371C1.99516 4.97038 4.60035 3 7.66574 3C10.7333 3 13.34 4.97316 14.2859 7.71951C14.3491 7.90313 14.349 8.10274 14.2856 8.2863C13.3381 11.0296 10.7329 13 7.66749 13C4.59994 13 1.99324 11.0268 1.04737 8.28049ZM10.668 8C10.668 9.65685 9.32482 11 7.66797 11C6.01111 11 4.66797 9.65685 4.66797 8C4.66797 6.34315 6.01111 5 7.66797 5C9.32482 5 10.668 6.34315 10.668 8Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -1633,13 +1659,18 @@ exports[`TextInput should render correctly required true 1`] = `
   color: #3f4250;
 }
 
-.css-8ikytl-sizeStyles {
+.css-11hy3ah-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.css-11hy3ah-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -1678,8 +1709,9 @@ exports[`TextInput should render correctly required true 1`] = `
         class="css-1539on3-StyledRightElement-StyledRightElement el3h3g97"
       >
         <svg
-          class="css-8ikytl-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+          class="css-11hy3ah-sizeStyles e1gt4cfo0"
+          viewBox=" 0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
@@ -2891,13 +2923,18 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
   box-shadow: none!important;
 }
 
-.css-8ikytl-sizeStyles {
+.css-11hy3ah-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.css-11hy3ah-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-1skub9h-StyledHr-StyledSeparator {
@@ -2992,7 +3029,7 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -3001,13 +3038,23 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
   min-height: 16px;
 }
 
-.css-ksecsa-sizeStyles {
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.css-5riqfe-sizeStyles {
   vertical-align: middle;
   fill: #22674e;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-5riqfe-sizeStyles .fillStroke {
+  stroke: #22674e;
+  fill: none;
 }
 
 .css-1irbon5-StyledText-UnitLabel {
@@ -3059,8 +3106,9 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
         class="css-i0z4cq-StyledRightElement-StyledRightElement-StyledRightElement el3h3g97"
       >
         <svg
-          class="css-8ikytl-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+          class="css-11hy3ah-sizeStyles e1gt4cfo0"
+          viewBox=" 0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
@@ -3080,11 +3128,17 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                d="M7.66797 9.5C8.4964 9.5 9.16797 8.82843 9.16797 8C9.16797 7.17157 8.4964 6.5 7.66797 6.5C6.83954 6.5 6.16797 7.17157 6.16797 8C6.16797 8.82843 6.83954 9.5 7.66797 9.5Z"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M1.04737 8.28049C0.984126 8.09687 0.984214 7.89727 1.04762 7.71371C1.99516 4.97038 4.60035 3 7.66574 3C10.7333 3 13.34 4.97316 14.2859 7.71951C14.3491 7.90313 14.349 8.10274 14.2856 8.2863C13.3381 11.0296 10.7329 13 7.66749 13C4.59994 13 1.99324 11.0268 1.04737 8.28049ZM10.668 8C10.668 9.65685 9.32482 11 7.66797 11C6.01111 11 4.66797 9.65685 4.66797 8C4.66797 6.34315 6.01111 5 7.66797 5C9.32482 5 10.668 6.34315 10.668 8Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -3094,20 +3148,33 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                d="M13.7292 3.96253L14.0672 3.23096L14.7984 2.89278C15.0674 2.76855 15.0674 2.38896 14.7984 2.26473L14.0672 1.92655L13.7292 1.20187C13.605 0.932709 13.2256 0.932709 13.1014 1.20187L12.7634 1.93345L12.0391 2.27163C11.7701 2.39586 11.7701 2.77545 12.0391 2.89968L12.7703 3.23786L13.1083 3.96253C13.2256 4.2317 13.6119 4.2317 13.7292 3.96253Z"
+              />
+              <path
+                d="M5.79617 3.96253L6.13418 3.23096L6.8654 2.89278C7.13443 2.76855 7.13443 2.38896 6.8654 2.26473L6.13418 1.93345L5.79617 1.20187C5.6789 0.932709 5.2926 0.932709 5.17533 1.20187L4.83731 1.93345L4.1061 2.27163C3.83707 2.39586 3.83707 2.77545 4.1061 2.89968L4.83731 3.23786L5.17533 3.96253C5.2926 4.2317 5.6789 4.2317 5.79617 3.96253Z"
+              />
+              <path
+                d="M13.1083 9.13813L12.7703 9.8697L12.0391 10.2079C11.7701 10.3321 11.7701 10.7117 12.0391 10.8359L12.7703 11.1741L13.1083 11.9057C13.2325 12.1749 13.6119 12.1749 13.7361 11.9057L14.0741 11.1741L14.7984 10.829C15.0674 10.7048 15.0674 10.3252 14.7984 10.201L14.0672 9.8628L13.7292 9.13122C13.6119 8.86896 13.2256 8.86896 13.1083 9.13813Z"
+              />
+              <path
+                d="M11.8389 6.115L9.88667 4.16183C9.61763 3.89267 9.18305 3.89267 8.91401 4.16183L1.20177 11.871C0.932742 12.1401 0.932742 12.5749 1.20177 12.8441L3.15398 14.7973C3.42301 15.0664 3.8576 15.0664 4.12663 14.7973L11.832 7.08813C12.1079 6.82587 12.1079 6.38417 11.8389 6.115ZM9.42448 7.55745L8.45183 6.58431L9.40379 5.63189L10.3764 6.60502L9.42448 7.55745Z"
               />
             </svg>
           </button>
           <svg
-            class="css-ksecsa-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
+            class="css-5riqfe-sizeStyles e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+              clip-rule="evenodd"
+              d="M16.7045 4.15347C17.034 4.4045 17.0976 4.87509 16.8466 5.20457L8.84657 15.7046C8.71541 15.8767 8.51627 15.9838 8.30033 15.9983C8.08439 16.0129 7.87271 15.9334 7.71967 15.7804L3.21967 11.2804C2.92678 10.9875 2.92678 10.5126 3.21967 10.2197C3.51256 9.92682 3.98744 9.92682 4.28033 10.2197L8.17351 14.1129L15.6534 4.29551C15.9045 3.96603 16.3751 3.90243 16.7045 4.15347Z"
+              fill-rule="evenodd"
             />
           </svg>
           <p
@@ -3281,13 +3348,18 @@ exports[`TextInput should render correctly with notice 1`] = `
   margin-top: 4px;
 }
 
-.css-1eowv3p-sizeStyles {
+.css-49hdbo-sizeStyles {
   vertical-align: middle;
   fill: #727683;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-49hdbo-sizeStyles .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 <div>
@@ -3319,11 +3391,14 @@ exports[`TextInput should render correctly with notice 1`] = `
       class="el3h3g93 e19pqvs30 css-jfxruw-StyledText-StyledSpan-StyledNotice e13y3mga0"
     >
       <svg
-        class="css-1eowv3p-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="css-49hdbo-sizeStyles e1gt4cfo0"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+          clip-rule="evenodd"
+          d="M8.0001 2.8001C5.12822 2.8001 2.8001 5.12822 2.8001 8.0001C2.8001 10.872 5.12822 13.2001 8.0001 13.2001C10.872 13.2001 13.2001 10.872 13.2001 8.0001C13.2001 5.12822 10.872 2.8001 8.0001 2.8001ZM1.6001 8.0001C1.6001 4.46548 4.46548 1.6001 8.0001 1.6001C11.5347 1.6001 14.4001 4.46548 14.4001 8.0001C14.4001 11.5347 11.5347 14.4001 8.0001 14.4001C4.46548 14.4001 1.6001 11.5347 1.6001 8.0001ZM7.4001 5.58343C7.4001 5.25206 7.66873 4.98343 8.0001 4.98343H8.00493C8.3363 4.98343 8.60493 5.25206 8.60493 5.58343V5.58826C8.60493 5.91964 8.3363 6.18826 8.00493 6.18826H8.0001C7.66873 6.18826 7.4001 5.91964 7.4001 5.58826V5.58343ZM7.59538 8.11176C7.34868 8.14437 7.09765 8.02017 6.98011 7.78509C6.83191 7.48871 6.95205 7.1283 7.24844 6.98011L7.27517 6.96674C8.10301 6.55282 9.03512 7.30054 8.81064 8.19845L8.40481 9.82177C8.65152 9.78916 8.90254 9.91336 9.02008 10.1484C9.16828 10.4448 9.04815 10.8052 8.75177 10.9534L8.72503 10.9668L8.72502 10.9668C7.89719 11.3807 6.96507 10.633 7.18955 9.73508L7.59538 8.11176Z"
+          fill-rule="evenodd"
         />
       </svg>
       Test notice
@@ -4031,13 +4106,18 @@ exports[`TextInput should render correctly with unit is px and required 1`] = `
   color: #3f4250;
 }
 
-.css-8ikytl-sizeStyles {
+.css-11hy3ah-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.css-11hy3ah-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-1skub9h-StyledHr-StyledSeparator {
@@ -4128,8 +4208,9 @@ exports[`TextInput should render correctly with unit is px and required 1`] = `
         class="css-1539on3-StyledRightElement-StyledRightElement el3h3g97"
       >
         <svg
-          class="css-8ikytl-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+          class="css-11hy3ah-sizeStyles e1gt4cfo0"
+          viewBox=" 0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
@@ -4308,13 +4389,18 @@ exports[`TextInput should render correctly with valid false 1`] = `
   min-width: 24px;
 }
 
-.css-4q9g5e-sizeStyles {
+.css-1aifyie-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-1aifyie-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -4356,11 +4442,12 @@ exports[`TextInput should render correctly with valid false 1`] = `
           class="css-1128fcb-Stack-RightComponent el3h3g91"
         >
           <svg
-            class="css-4q9g5e-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
+            class="css-1aifyie-sizeStyles e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              d="M6.28033 5.21967C5.98744 4.92678 5.51256 4.92678 5.21967 5.21967C4.92678 5.51256 4.92678 5.98744 5.21967 6.28033L8.93934 10L5.21967 13.7197C4.92678 14.0126 4.92678 14.4874 5.21967 14.7803C5.51256 15.0732 5.98744 15.0732 6.28033 14.7803L10 11.0607L13.7197 14.7803C14.0126 15.0732 14.4874 15.0732 14.7803 14.7803C15.0732 14.4874 15.0732 14.0126 14.7803 13.7197L11.0607 10L14.7803 6.28033C15.0732 5.98744 15.0732 5.51256 14.7803 5.21967C14.4874 4.92678 14.0126 4.92678 13.7197 5.21967L10 8.93934L6.28033 5.21967Z"
             />
           </svg>
         </div>
@@ -4523,13 +4610,18 @@ exports[`TextInput should render correctly with valid false 2`] = `
   min-width: 24px;
 }
 
-.css-4q9g5e-sizeStyles {
+.css-1aifyie-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-1aifyie-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -4571,11 +4663,12 @@ exports[`TextInput should render correctly with valid false 2`] = `
           class="css-1128fcb-Stack-RightComponent el3h3g91"
         >
           <svg
-            class="css-4q9g5e-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
+            class="css-1aifyie-sizeStyles e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              d="M6.28033 5.21967C5.98744 4.92678 5.51256 4.92678 5.21967 5.21967C4.92678 5.51256 4.92678 5.98744 5.21967 6.28033L8.93934 10L5.21967 13.7197C4.92678 14.0126 4.92678 14.4874 5.21967 14.7803C5.51256 15.0732 5.98744 15.0732 6.28033 14.7803L10 11.0607L13.7197 14.7803C14.0126 15.0732 14.4874 15.0732 14.7803 14.7803C15.0732 14.4874 15.0732 14.0126 14.7803 13.7197L11.0607 10L14.7803 6.28033C15.0732 5.98744 15.0732 5.51256 14.7803 5.21967C14.4874 4.92678 14.0126 4.92678 13.7197 5.21967L10 8.93934L6.28033 5.21967Z"
             />
           </svg>
         </div>
@@ -4738,13 +4831,18 @@ exports[`TextInput should render correctly with valid true 1`] = `
   min-width: 24px;
 }
 
-.css-ksecsa-sizeStyles {
+.css-5riqfe-sizeStyles {
   vertical-align: middle;
   fill: #22674e;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-5riqfe-sizeStyles .fillStroke {
+  stroke: #22674e;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -4786,11 +4884,14 @@ exports[`TextInput should render correctly with valid true 1`] = `
           class="css-1128fcb-Stack-RightComponent el3h3g91"
         >
           <svg
-            class="css-ksecsa-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
+            class="css-5riqfe-sizeStyles e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+              clip-rule="evenodd"
+              d="M16.7045 4.15347C17.034 4.4045 17.0976 4.87509 16.8466 5.20457L8.84657 15.7046C8.71541 15.8767 8.51627 15.9838 8.30033 15.9983C8.08439 16.0129 7.87271 15.9334 7.71967 15.7804L3.21967 11.2804C2.92678 10.9875 2.92678 10.5126 3.21967 10.2197C3.51256 9.92682 3.98744 9.92682 4.28033 10.2197L8.17351 14.1129L15.6534 4.29551C15.9045 3.96603 16.3751 3.90243 16.7045 4.15347Z"
+              fill-rule="evenodd"
             />
           </svg>
         </div>
@@ -4953,13 +5054,18 @@ exports[`TextInput should render correctly with valid true 2`] = `
   min-width: 24px;
 }
 
-.css-ksecsa-sizeStyles {
+.css-5riqfe-sizeStyles {
   vertical-align: middle;
   fill: #22674e;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-5riqfe-sizeStyles .fillStroke {
+  stroke: #22674e;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -5001,11 +5107,14 @@ exports[`TextInput should render correctly with valid true 2`] = `
           class="css-1128fcb-Stack-RightComponent el3h3g91"
         >
           <svg
-            class="css-ksecsa-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
+            class="css-5riqfe-sizeStyles e1gt4cfo0"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+              clip-rule="evenodd"
+              d="M16.7045 4.15347C17.034 4.4045 17.0976 4.87509 16.8466 5.20457L8.84657 15.7046C8.71541 15.8767 8.51627 15.9838 8.30033 15.9983C8.08439 16.0129 7.87271 15.9334 7.71967 15.7804L3.21967 11.2804C2.92678 10.9875 2.92678 10.5126 3.21967 10.2197C3.51256 9.92682 3.98744 9.92682 4.28033 10.2197L8.17351 14.1129L15.6534 4.29551C15.9045 3.96603 16.3751 3.90243 16.7045 4.15347Z"
+              fill-rule="evenodd"
             />
           </svg>
         </div>
@@ -5497,13 +5606,18 @@ exports[`TextInput should render random 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -5543,11 +5657,21 @@ exports[`TextInput should render random 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                d="M13.7292 3.96253L14.0672 3.23096L14.7984 2.89278C15.0674 2.76855 15.0674 2.38896 14.7984 2.26473L14.0672 1.92655L13.7292 1.20187C13.605 0.932709 13.2256 0.932709 13.1014 1.20187L12.7634 1.93345L12.0391 2.27163C11.7701 2.39586 11.7701 2.77545 12.0391 2.89968L12.7703 3.23786L13.1083 3.96253C13.2256 4.2317 13.6119 4.2317 13.7292 3.96253Z"
+              />
+              <path
+                d="M5.79617 3.96253L6.13418 3.23096L6.8654 2.89278C7.13443 2.76855 7.13443 2.38896 6.8654 2.26473L6.13418 1.93345L5.79617 1.20187C5.6789 0.932709 5.2926 0.932709 5.17533 1.20187L4.83731 1.93345L4.1061 2.27163C3.83707 2.39586 3.83707 2.77545 4.1061 2.89968L4.83731 3.23786L5.17533 3.96253C5.2926 4.2317 5.6789 4.2317 5.79617 3.96253Z"
+              />
+              <path
+                d="M13.1083 9.13813L12.7703 9.8697L12.0391 10.2079C11.7701 10.3321 11.7701 10.7117 12.0391 10.8359L12.7703 11.1741L13.1083 11.9057C13.2325 12.1749 13.6119 12.1749 13.7361 11.9057L14.0741 11.1741L14.7984 10.829C15.0674 10.7048 15.0674 10.3252 14.7984 10.201L14.0672 9.8628L13.7292 9.13122C13.6119 8.86896 13.2256 8.86896 13.1083 9.13813Z"
+              />
+              <path
+                d="M11.8389 6.115L9.88667 4.16183C9.61763 3.89267 9.18305 3.89267 8.91401 4.16183L1.20177 11.871C0.932742 12.1401 0.932742 12.5749 1.20177 12.8441L3.15398 14.7973C3.42301 15.0664 3.8576 15.0664 4.12663 14.7973L11.832 7.08813C12.1079 6.82587 12.1079 6.38417 11.8389 6.115ZM9.42448 7.55745L8.45183 6.58431L9.40379 5.63189L10.3764 6.60502L9.42448 7.55745Z"
               />
             </svg>
           </button>
@@ -5767,13 +5891,18 @@ exports[`TextInput should render random 2`] = `
   text-decoration: none;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -5823,11 +5952,21 @@ exports[`TextInput should render random 2`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                d="M13.7292 3.96253L14.0672 3.23096L14.7984 2.89278C15.0674 2.76855 15.0674 2.38896 14.7984 2.26473L14.0672 1.92655L13.7292 1.20187C13.605 0.932709 13.2256 0.932709 13.1014 1.20187L12.7634 1.93345L12.0391 2.27163C11.7701 2.39586 11.7701 2.77545 12.0391 2.89968L12.7703 3.23786L13.1083 3.96253C13.2256 4.2317 13.6119 4.2317 13.7292 3.96253Z"
+              />
+              <path
+                d="M5.79617 3.96253L6.13418 3.23096L6.8654 2.89278C7.13443 2.76855 7.13443 2.38896 6.8654 2.26473L6.13418 1.93345L5.79617 1.20187C5.6789 0.932709 5.2926 0.932709 5.17533 1.20187L4.83731 1.93345L4.1061 2.27163C3.83707 2.39586 3.83707 2.77545 4.1061 2.89968L4.83731 3.23786L5.17533 3.96253C5.2926 4.2317 5.6789 4.2317 5.79617 3.96253Z"
+              />
+              <path
+                d="M13.1083 9.13813L12.7703 9.8697L12.0391 10.2079C11.7701 10.3321 11.7701 10.7117 12.0391 10.8359L12.7703 11.1741L13.1083 11.9057C13.2325 12.1749 13.6119 12.1749 13.7361 11.9057L14.0741 11.1741L14.7984 10.829C15.0674 10.7048 15.0674 10.3252 14.7984 10.201L14.0672 9.8628L13.7292 9.13122C13.6119 8.86896 13.2256 8.86896 13.1083 9.13813Z"
+              />
+              <path
+                d="M11.8389 6.115L9.88667 4.16183C9.61763 3.89267 9.18305 3.89267 8.91401 4.16183L1.20177 11.871C0.932742 12.1401 0.932742 12.5749 1.20177 12.8441L3.15398 14.7973C3.42301 15.0664 3.8576 15.0664 4.12663 14.7973L11.832 7.08813C12.1079 6.82587 12.1079 6.38417 11.8389 6.115ZM9.42448 7.55745L8.45183 6.58431L9.40379 5.63189L10.3764 6.60502L9.42448 7.55745Z"
               />
             </svg>
           </button>
@@ -5958,13 +6097,18 @@ exports[`TextInput should render random with required 1`] = `
   box-shadow: none!important;
 }
 
-.css-8ikytl-sizeStyles {
+.css-11hy3ah-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.css-11hy3ah-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-1skub9h-StyledHr-StyledSeparator {
@@ -6059,13 +6203,18 @@ exports[`TextInput should render random with required 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -6098,8 +6247,9 @@ exports[`TextInput should render random with required 1`] = `
         class="css-i0z4cq-StyledRightElement-StyledRightElement-StyledRightElement el3h3g97"
       >
         <svg
-          class="css-8ikytl-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+          class="css-11hy3ah-sizeStyles e1gt4cfo0"
+          viewBox=" 0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
@@ -6119,11 +6269,21 @@ exports[`TextInput should render random with required 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                d="M13.7292 3.96253L14.0672 3.23096L14.7984 2.89278C15.0674 2.76855 15.0674 2.38896 14.7984 2.26473L14.0672 1.92655L13.7292 1.20187C13.605 0.932709 13.2256 0.932709 13.1014 1.20187L12.7634 1.93345L12.0391 2.27163C11.7701 2.39586 11.7701 2.77545 12.0391 2.89968L12.7703 3.23786L13.1083 3.96253C13.2256 4.2317 13.6119 4.2317 13.7292 3.96253Z"
+              />
+              <path
+                d="M5.79617 3.96253L6.13418 3.23096L6.8654 2.89278C7.13443 2.76855 7.13443 2.38896 6.8654 2.26473L6.13418 1.93345L5.79617 1.20187C5.6789 0.932709 5.2926 0.932709 5.17533 1.20187L4.83731 1.93345L4.1061 2.27163C3.83707 2.39586 3.83707 2.77545 4.1061 2.89968L4.83731 3.23786L5.17533 3.96253C5.2926 4.2317 5.6789 4.2317 5.79617 3.96253Z"
+              />
+              <path
+                d="M13.1083 9.13813L12.7703 9.8697L12.0391 10.2079C11.7701 10.3321 11.7701 10.7117 12.0391 10.8359L12.7703 11.1741L13.1083 11.9057C13.2325 12.1749 13.6119 12.1749 13.7361 11.9057L14.0741 11.1741L14.7984 10.829C15.0674 10.7048 15.0674 10.3252 14.7984 10.201L14.0672 9.8628L13.7292 9.13122C13.6119 8.86896 13.2256 8.86896 13.1083 9.13813Z"
+              />
+              <path
+                d="M11.8389 6.115L9.88667 4.16183C9.61763 3.89267 9.18305 3.89267 8.91401 4.16183L1.20177 11.871C0.932742 12.1401 0.932742 12.5749 1.20177 12.8441L3.15398 14.7973C3.42301 15.0664 3.8576 15.0664 4.12663 14.7973L11.832 7.08813C12.1079 6.82587 12.1079 6.38417 11.8389 6.115ZM9.42448 7.55745L8.45183 6.58431L9.40379 5.63189L10.3764 6.60502L9.42448 7.55745Z"
               />
             </svg>
           </button>
@@ -6331,13 +6491,18 @@ exports[`TextInput should render toggleable password 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -6377,11 +6542,17 @@ exports[`TextInput should render toggleable password 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                d="M7.66797 9.5C8.4964 9.5 9.16797 8.82843 9.16797 8C9.16797 7.17157 8.4964 6.5 7.66797 6.5C6.83954 6.5 6.16797 7.17157 6.16797 8C6.16797 8.82843 6.83954 9.5 7.66797 9.5Z"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M1.04737 8.28049C0.984126 8.09687 0.984214 7.89727 1.04762 7.71371C1.99516 4.97038 4.60035 3 7.66574 3C10.7333 3 13.34 4.97316 14.2859 7.71951C14.3491 7.90313 14.349 8.10274 14.2856 8.2863C13.3381 11.0296 10.7329 13 7.66749 13C4.59994 13 1.99324 11.0268 1.04737 8.28049ZM10.668 8C10.668 9.65685 9.32482 11 7.66797 11C6.01111 11 4.66797 9.65685 4.66797 8C4.66797 6.34315 6.01111 5 7.66797 5C9.32482 5 10.668 6.34315 10.668 8Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -6512,13 +6683,18 @@ exports[`TextInput should render toggleable password with required 1`] = `
   box-shadow: none!important;
 }
 
-.css-8ikytl-sizeStyles {
+.css-11hy3ah-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.css-11hy3ah-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-1skub9h-StyledHr-StyledSeparator {
@@ -6613,13 +6789,18 @@ exports[`TextInput should render toggleable password with required 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -6652,8 +6833,9 @@ exports[`TextInput should render toggleable password with required 1`] = `
         class="css-i0z4cq-StyledRightElement-StyledRightElement-StyledRightElement el3h3g97"
       >
         <svg
-          class="css-8ikytl-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+          class="css-11hy3ah-sizeStyles e1gt4cfo0"
+          viewBox=" 0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
@@ -6673,11 +6855,17 @@ exports[`TextInput should render toggleable password with required 1`] = `
             type="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                d="M7.66797 9.5C8.4964 9.5 9.16797 8.82843 9.16797 8C9.16797 7.17157 8.4964 6.5 7.66797 6.5C6.83954 6.5 6.16797 7.17157 6.16797 8C6.16797 8.82843 6.83954 9.5 7.66797 9.5Z"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M1.04737 8.28049C0.984126 8.09687 0.984214 7.89727 1.04762 7.71371C1.99516 4.97038 4.60035 3 7.66574 3C10.7333 3 13.34 4.97316 14.2859 7.71951C14.3491 7.90313 14.349 8.10274 14.2856 8.2863C13.3381 11.0296 10.7329 13 7.66749 13C4.59994 13 1.99324 11.0268 1.04737 8.28049ZM10.668 8C10.668 9.65685 9.32482 11 7.66797 11C6.01111 11 4.66797 9.65685 4.66797 8C4.66797 6.34315 6.01111 5 7.66797 5C9.32482 5 10.668 6.34315 10.668 8Z"
+                fill-rule="evenodd"
               />
             </svg>
           </button>
@@ -6818,13 +7006,18 @@ exports[`TextInput should render unit with required 1`] = `
   color: #3f4250;
 }
 
-.css-8ikytl-sizeStyles {
+.css-11hy3ah-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.css-11hy3ah-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
 }
 
 .css-1skub9h-StyledHr-StyledSeparator {
@@ -6915,8 +7108,9 @@ exports[`TextInput should render unit with required 1`] = `
         class="css-1539on3-StyledRightElement-StyledRightElement el3h3g97"
       >
         <svg
-          class="css-8ikytl-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+          class="css-11hy3ah-sizeStyles e1gt4cfo0"
+          viewBox=" 0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"

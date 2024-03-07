@@ -250,13 +250,18 @@ exports[`SelectInput renders correctly animated 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -346,11 +351,14 @@ exports[`SelectInput renders correctly animated 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -597,13 +605,18 @@ exports[`SelectInput renders correctly controlled 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -693,11 +706,14 @@ exports[`SelectInput renders correctly controlled 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -944,13 +960,18 @@ exports[`SelectInput renders correctly default values with click 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1xqg3ns-menu {
@@ -1133,11 +1154,14 @@ exports[`SelectInput renders correctly default values with click 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -1417,13 +1441,18 @@ exports[`SelectInput renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -1515,11 +1544,14 @@ exports[`SelectInput renders correctly disabled 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -1755,13 +1787,18 @@ exports[`SelectInput renders correctly disabled with click 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -1853,11 +1890,14 @@ exports[`SelectInput renders correctly disabled with click 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -2098,13 +2138,18 @@ exports[`SelectInput renders correctly multi 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -2194,11 +2239,14 @@ exports[`SelectInput renders correctly multi 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -2405,13 +2453,18 @@ exports[`SelectInput renders correctly multi disabled 1`] = `
   pointer-events: none;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-18tgdrt-inputStyles {
@@ -2576,11 +2629,12 @@ exports[`SelectInput renders correctly multi disabled 1`] = `
             role="button"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                d="M5.28033 4.21967C4.98744 3.92678 4.51256 3.92678 4.21967 4.21967C3.92678 4.51256 3.92678 4.98744 4.21967 5.28033L6.93934 8L4.21967 10.7197C3.92678 11.0126 3.92678 11.4874 4.21967 11.7803C4.51256 12.0732 4.98744 12.0732 5.28033 11.7803L8 9.06066L10.7197 11.7803C11.0126 12.0732 11.4874 12.0732 11.7803 11.7803C12.0732 11.4874 12.0732 11.0126 11.7803 10.7197L9.06066 8L11.7803 5.28033C12.0732 4.98744 12.0732 4.51256 11.7803 4.21967C11.4874 3.92678 11.0126 3.92678 10.7197 4.21967L8 6.93934L5.28033 4.21967Z"
               />
             </svg>
           </div>
@@ -2623,11 +2677,14 @@ exports[`SelectInput renders correctly multi disabled 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -2869,7 +2926,7 @@ exports[`SelectInput renders correctly required 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-8ikytl-sizeStyles {
+.css-11hy3ah-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
@@ -2878,13 +2935,23 @@ exports[`SelectInput renders correctly required 1`] = `
   min-height: 10px;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-11hy3ah-sizeStyles .fillStroke {
+  stroke: #b3144d;
+  fill: none;
+}
+
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-5kkxb2-requiredInput-RequiredInput {
@@ -2985,19 +3052,23 @@ exports[`SelectInput renders correctly required 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-8ikytl-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-11hy3ah-sizeStyles e1gt4cfo0"
+              viewBox=" 0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
               />
             </svg>
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -3260,13 +3331,18 @@ exports[`SelectInput renders correctly timed 1`] = `
   height: 100%;
 }
 
-.css-bqy7up-sizeStyles {
+.css-1ji4m6z-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+}
+
+.css-1ji4m6z-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -3361,11 +3437,14 @@ exports[`SelectInput renders correctly timed 1`] = `
               role="separator"
             />
             <svg
-              class="css-bqy7up-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1ji4m6z-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                clip-rule="evenodd"
+                d="M10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 13.5899 6.41015 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10ZM10 4.41667C10.4142 4.41667 10.75 4.75245 10.75 5.16667V9.25H13.625C14.0392 9.25 14.375 9.58579 14.375 10C14.375 10.4142 14.0392 10.75 13.625 10.75H10C9.58579 10.75 9.25 10.4142 9.25 10V5.16667C9.25 4.75245 9.58579 4.41667 10 4.41667Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -3625,13 +3704,18 @@ exports[`SelectInput renders correctly timed with error 1`] = `
   height: 100%;
 }
 
-.css-bqy7up-sizeStyles {
+.css-1ji4m6z-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
+}
+
+.css-1ji4m6z-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -3726,11 +3810,14 @@ exports[`SelectInput renders correctly timed with error 1`] = `
               role="separator"
             />
             <svg
-              class="css-bqy7up-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-1ji4m6z-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                clip-rule="evenodd"
+                d="M10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 13.5899 6.41015 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10ZM10 4.41667C10.4142 4.41667 10.75 4.75245 10.75 5.16667V9.25H13.625C14.0392 9.25 14.375 9.58579 14.375 10C14.375 10.4142 14.0392 10.75 13.625 10.75H10C9.58579 10.75 9.25 10.4142 9.25 10V5.16667C9.25 4.75245 9.58579 4.41667 10 4.41667Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -3977,13 +4064,18 @@ exports[`SelectInput renders correctly uncontrolled 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1xqg3ns-menu {
@@ -4166,11 +4258,14 @@ exports[`SelectInput renders correctly uncontrolled 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -4456,13 +4551,18 @@ exports[`SelectInput renders correctly with click 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1xqg3ns-menu {
@@ -4645,11 +4745,14 @@ exports[`SelectInput renders correctly with click 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -4935,13 +5038,18 @@ exports[`SelectInput renders correctly with click and option disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1xqg3ns-menu {
@@ -5150,11 +5258,14 @@ exports[`SelectInput renders correctly with click and option disabled 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -5454,13 +5565,18 @@ exports[`SelectInput renders correctly with click and options 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1xqg3ns-menu {
@@ -5669,11 +5785,14 @@ exports[`SelectInput renders correctly with click and options 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -5973,13 +6092,18 @@ exports[`SelectInput renders correctly with custom styles 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -6069,11 +6193,14 @@ exports[`SelectInput renders correctly with custom styles 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -6320,13 +6447,18 @@ exports[`SelectInput renders correctly with emptyState 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1xqg3ns-menu {
@@ -6462,11 +6594,14 @@ exports[`SelectInput renders correctly with emptyState 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -6729,13 +6864,18 @@ exports[`SelectInput should render correctly custom isLoading 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -6828,11 +6968,14 @@ exports[`SelectInput should render correctly custom isLoading 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -7079,13 +7222,18 @@ exports[`SelectInput should render correctly description and inlineDescription 1
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -7175,11 +7323,14 @@ exports[`SelectInput should render correctly description and inlineDescription 1
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -7511,13 +7662,18 @@ exports[`SelectInput should render correctly isLoading 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -7621,11 +7777,14 @@ exports[`SelectInput should render correctly isLoading 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -7852,13 +8011,18 @@ exports[`SelectInput should render correctly multi isClearable 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.css-7ie8u6-sizeStyles {
+.css-8db7ky-sizeStyles {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
+}
+
+.css-8db7ky-sizeStyles .fillStroke {
+  stroke: #3f4250;
+  fill: none;
 }
 
 .css-dh2bvv-indicatorSeparator {
@@ -7896,13 +8060,18 @@ exports[`SelectInput should render correctly multi isClearable 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -7984,12 +8153,13 @@ exports[`SelectInput should render correctly multi isClearable 1`] = `
           class=" css-1xc3v61-indicatorContainer"
         >
           <svg
-            class="css-7ie8u6-sizeStyles e1gt4cfo0"
+            class="css-8db7ky-sizeStyles e1gt4cfo0"
             cursor="pointer"
-            viewBox="0 0 24 24"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              d="M6.28033 5.21967C5.98744 4.92678 5.51256 4.92678 5.21967 5.21967C4.92678 5.51256 4.92678 5.98744 5.21967 6.28033L8.93934 10L5.21967 13.7197C4.92678 14.0126 4.92678 14.4874 5.21967 14.7803C5.51256 15.0732 5.98744 15.0732 6.28033 14.7803L10 11.0607L13.7197 14.7803C14.0126 15.0732 14.4874 15.0732 14.7803 14.7803C15.0732 14.4874 15.0732 14.0126 14.7803 13.7197L11.0607 10L14.7803 6.28033C15.0732 5.98744 15.0732 5.51256 14.7803 5.21967C14.4874 4.92678 14.0126 4.92678 13.7197 5.21967L10 8.93934L6.28033 5.21967Z"
             />
           </svg>
         </div>
@@ -8004,11 +8174,14 @@ exports[`SelectInput should render correctly multi isClearable 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -8265,13 +8438,18 @@ exports[`SelectInput should render correctly multi isClearable disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -8361,11 +8539,14 @@ exports[`SelectInput should render correctly multi isClearable disabled 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -8622,13 +8803,18 @@ exports[`SelectInput should render correctly multi isSearchable 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -8716,11 +8902,14 @@ exports[`SelectInput should render correctly multi isSearchable 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -8977,13 +9166,18 @@ exports[`SelectInput should render correctly multi isSearchable disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -9073,11 +9267,14 @@ exports[`SelectInput should render correctly multi isSearchable disabled 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -9319,13 +9516,18 @@ exports[`SelectInput should render correctly with portal 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -9415,11 +9617,14 @@ exports[`SelectInput should render correctly with portal 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
@@ -9669,13 +9874,18 @@ exports[`SelectInput should render correctly without children 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-1d5u3w3-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-1d5u3w3-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-lzuy3q-StyledExpandable {
@@ -9765,11 +9975,14 @@ exports[`SelectInput should render correctly without children 1`] = `
             class="css-irytw7-Stack ehpbis70"
           >
             <svg
-              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+              class="css-1d5u3w3-sizeStyles e1gt4cfo0"
               viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                clip-rule="evenodd"
+                d="M4.21967 6.21967C4.51256 5.92678 4.98744 5.92678 5.28033 6.21967L8 8.93934L10.7197 6.21967C11.0126 5.92678 11.4874 5.92678 11.7803 6.21967C12.0732 6.51256 12.0732 6.98744 11.7803 7.28033L8.53033 10.5303C8.23744 10.8232 7.76256 10.8232 7.46967 10.5303L4.21967 7.28033C3.92678 6.98744 3.92678 6.51256 4.21967 6.21967Z"
+                fill-rule="evenodd"
               />
             </svg>
           </div>
