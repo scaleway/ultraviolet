@@ -19,11 +19,18 @@ const StyledButton = styled(Button)`
   text-align: left;
 `
 
-const StyledImage = styled.img`
+const StyledImageProduct = styled.img`
   border-radius: ${({ theme }) => theme.radii.large} 0 0
     ${({ theme }) => theme.radii.large};
   background: ${({ theme }) =>
     theme.theme === 'light' ? theme.colors.neutral.backgroundStronger : null};
+`
+
+const StyledImageVarious = styled.img`
+  border-radius: ${({ theme }) => theme.radii.large} 0 0
+    ${({ theme }) => theme.radii.large};
+  background: ${({ theme }) =>
+    theme.theme === 'light' ? null : theme.colors.neutral.backgroundStronger};
 `
 
 const MargedStack = styled(Stack)`
@@ -67,15 +74,27 @@ const SubListElement = ({
 
           return (
             <Card direction="row" gap={2} flex={1} alignItems="center">
-              <StyledImage
-                width={200}
-                src={
-                  (assets.default as AssetsModule)[category][productName][
-                    productImg
-                  ]
-                }
-                alt={productName}
-              />
+              {category === 'products' ? (
+                <StyledImageProduct
+                  width={200}
+                  src={
+                    (assets.default as AssetsModule)[category][productName][
+                      productImg
+                    ]
+                  }
+                  alt={productName}
+                />
+              ) : (
+                <StyledImageVarious
+                  width={200}
+                  src={
+                    (assets.default as AssetsModule)[category][productName][
+                      productImg
+                    ]
+                  }
+                  alt={productName}
+                />
+              )}
               <Stack direction="column">
                 <Text as="h3" variant="bodyStrong">
                   {productImg}.{imgSrc.split('.').pop()}
