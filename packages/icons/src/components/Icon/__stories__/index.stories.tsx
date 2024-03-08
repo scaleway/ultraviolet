@@ -17,5 +17,5 @@ export default {
 export { Playground } from './Playground.stories'
 export { Name } from './Name.stories'
 export { Size } from './Size.stories'
-export { Color } from './Color.stories'
+export { Sentiment } from './Sentiment.stories'
 export { UnknownOrUndefined } from './UnknownOrUndefined.stories'

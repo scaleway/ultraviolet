@@ -5,16 +5,18 @@ import { Icon } from '..'
 
 const COLORS = ['primary', 'success', 'warning'] as const
 
-export const Color = (args: ComponentProps<typeof Icon>) =>
-  COLORS.map(color => <Icon key={color} name="eye" color={color} {...args} />)
+export const Sentiment = (args: ComponentProps<typeof Icon>) =>
+  COLORS.map(sentiment => (
+    <Icon key={sentiment} name="eye" sentiment={sentiment} {...args} />
+  ))
 
-Color.parameters = {
+Sentiment.parameters = {
   docs: {
-    description: { story: 'Set size using `size` property.' },
+    description: { story: 'Set sentiment using `sentiment` property.' },
   },
 }
 
-Color.decorators = [
+Sentiment.decorators = [
   Story => (
     <Stack gap={2} alignItems="center" direction="row">
       <Story />

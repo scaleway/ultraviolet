@@ -18,14 +18,14 @@ type Color = Extract<
   | 'info'
 >
 
-export const icons = Object.keys(ICONS.default) as IconName[]
+export const icons = Object.keys(ICONS.filled) as IconName[]
 
 const sizeStyles = ({
   size,
 }: {
   size: number | string | 'small' | 'large'
 }) => {
-  if (size === 'small') {
+  if (size === 'small' || size === 16) {
     return css`
       height: 16px;
       width: 16px;
@@ -65,56 +65,60 @@ const StyledIcon = (
   component: FunctionComponent<SVGProps<SVGSVGElement>>,
 ) => styled(component, {
   shouldForwardProp: prop =>
-    !['size', 'color', 'prominence', 'disabled'].includes(prop),
+    !['size', 'sentiment', 'prominence', 'disabled'].includes(prop),
 })<{
-  color: Color | string
+  sentiment: Color | string
   size: number | string
   prominence: ProminenceProps
   disabled?: boolean
 }>`
   vertical-align: middle;
-  fill: ${({ theme, color, prominence, disabled }) => {
-    // stronger is available only for neutral color
+  fill: ${({ theme, sentiment, prominence, disabled }) => {
+    // stronger is available only for neutral sentiment
     const definedProminence =
-      color !== 'neutral' && prominence === 'stronger'
+      sentiment !== 'neutral' && prominence === 'stronger'
         ? capitalize(PROMINENCES.default)
         : capitalize(PROMINENCES[prominence])
 
-    const themeColor = theme.colors[color as Color]
+    const themeColor = theme.colors[sentiment as Color]
     const icon = `icon${definedProminence}${
       disabled ? 'Disabled' : ''
     }` as keyof typeof themeColor
 
-    return theme.colors?.[color as Color]?.[icon] || color
+    return theme.colors?.[sentiment as Color]?.[icon] || sentiment
   }};
 
   .fillStroke {
-    stroke: ${({ theme, color, prominence, disabled }) => {
+    stroke: ${({ theme, sentiment, prominence, disabled }) => {
       // stronger is available only for neutral color
       const definedProminence =
-        color !== 'neutral' && prominence === 'stronger'
+        sentiment !== 'neutral' && prominence === 'stronger'
           ? capitalize(PROMINENCES.default)
           : capitalize(PROMINENCES[prominence])
 
-      const themeColor = theme.colors[color as Color]
+      const themeColor = theme.colors[sentiment as Color]
       const icon = `icon${definedProminence}${
         disabled ? 'Disabled' : ''
       }` as keyof typeof themeColor
 
-      return theme.colors?.[color as Color]?.[icon] || color
+      return theme.colors?.[sentiment as Color]?.[icon] || sentiment
     }};
     fill: none;
   }
   ${sizeStyles}
 `
 
-export type IconName = keyof typeof ICONS.default
+export type IconName = keyof typeof ICONS.filled
 
 type IconProps = {
-  size?: number | string
+  size?: number | string | 'small' | 'large'
   name?: IconName
   prominence?: ProminenceProps
+  /**
+   * @deprecated use `sentiment` property instead
+   */
   color?: Color
+  sentiment?: Color
   variant?: 'outlined' | 'filled'
   'data-testid'?: string
   disabled?: boolean
@@ -131,6 +135,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     {
       name = 'alert',
       color = 'currentColor',
+      sentiment,
       size = '1em',
       prominence = 'default',
       className,
@@ -143,27 +148,21 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     },
     ref,
   ) => {
-    let SystemIcon = StyledIcon(
-      ICONS[
-        variant === 'outlined' && name in ICONS.default ? 'outline' : 'default'
-      ][name] || ICONS.default.alert,
-    )
+    const computedSentiment = sentiment ?? color
+    const SystemIcon = useMemo(() => {
+      if (size === 'small' || size === 16) {
+        return StyledIcon(
+          SMALL_ICONS[variant][name] || SMALL_ICONS.filled.alert,
+        )
+      }
 
-    if (size === 'small' || size === 16) {
-      SystemIcon = StyledIcon(
-        SMALL_ICONS[
-          variant === 'outlined' && name in SMALL_ICONS.default
-            ? 'outline'
-            : 'default'
-        ][name] || SMALL_ICONS.default.alert,
-      )
-    }
+      return StyledIcon(ICONS[variant][name] || ICONS.filled.alert)
+    }, [name, size, variant])
 
     /**
-     * @deprecated remove next major
+     * @deprecated to be removed in next major
      */
     const defaultViewBox = useMemo(() => {
-      if (size === 'small' || size === 16) return '0 0 16 16'
       if (
         [
           'asterisk',
@@ -172,11 +171,11 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
           'expand-more',
           'send',
           'switch_orga',
-          'delete',
         ].includes(name)
       ) {
-        return ' 0 0 24 24'
+        return '0 0 24 24'
       }
+      if (size === 'small' || size === 16) return '0 0 16 16'
 
       return '0 0 20 20'
     }, [name, size])
@@ -184,7 +183,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     return (
       <SystemIcon
         ref={ref}
-        color={color}
+        sentiment={computedSentiment}
         prominence={prominence}
         size={size}
         viewBox={defaultViewBox}

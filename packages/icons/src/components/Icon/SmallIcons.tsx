@@ -138,7 +138,7 @@ import { ReactComponent as unlock } from './assets/small-solid/unlock.svg'
 import { ReactComponent as weatherNight } from './assets/small-solid/weather-night.svg'
 
 export const SMALL_ICONS = {
-  default: {
+  filled: {
     anchor,
     'arrow-down': arrowDown,
     'arrow-left-bottom': arrowLeftBottom,
@@ -238,7 +238,7 @@ export const SMALL_ICONS = {
     unlock,
     'weather-night': weatherNight,
   },
-  outline: {
+  outlined: {
     anchor,
     'arrow-down': arrowDown,
     'arrow-left-bottom': arrowLeftBottom,
