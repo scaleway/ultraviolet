@@ -37,7 +37,10 @@ describe('Toaster', () => {
 
         act(() => jest.runAllTimers())
 
-        expect(await screen.findAllByRole('alert')).toMatchSnapshot()
+        expect(await screen.findByText('This is an info')).toMatchSnapshot()
+        expect(await screen.findByText('This is a success')).toMatchSnapshot()
+        expect(await screen.findByText('This is an error')).toMatchSnapshot()
+        expect(await screen.findByText('This is a warning')).toMatchSnapshot()
       },
     })
   })

@@ -1,30 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Toaster renders correctly with all kind of toast 1`] = `
-[
-  .css-4lkpn5-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .css-10an7cj-StyledText {
   font-size: 14px;
   font-family: Inter,Asap;
@@ -36,176 +12,71 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   text-decoration: none;
 }
 
-<div
-    class="Toastify__toast-body"
-    role="alert"
-  >
-    <div>
-      <div
-        class="css-4lkpn5-Stack ehpbis70"
-      >
-        <span
-          class="css-10an7cj-StyledText e13y3mga0"
-        >
-          This is an info
-        </span>
-      </div>
-    </div>
-  </div>,
-  .css-4lkpn5-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-10an7cj-StyledText {
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    class="Toastify__toast-body"
-    role="alert"
-  >
-    <div>
-      <div
-        class="css-4lkpn5-Stack ehpbis70"
-      >
-        <span
-          class="css-10an7cj-StyledText e13y3mga0"
-        >
-          This is a success
-        </span>
-      </div>
-    </div>
-  </div>,
-  .css-4lkpn5-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-10an7cj-StyledText {
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    class="Toastify__toast-body"
-    role="alert"
-  >
-    <div>
-      <div
-        class="css-4lkpn5-Stack ehpbis70"
-      >
-        <span
-          class="css-10an7cj-StyledText e13y3mga0"
-        >
-          This is an error
-        </span>
-      </div>
-    </div>
-  </div>,
-  .css-4lkpn5-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-10an7cj-StyledText {
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    class="Toastify__toast-body"
-    role="alert"
-  >
-    <div>
-      <div
-        class="css-4lkpn5-Stack ehpbis70"
-      >
-        <span
-          class="css-10an7cj-StyledText e13y3mga0"
-        >
-          This is a warning
-        </span>
-      </div>
-    </div>
-  </div>,
-]
+<span
+  class="css-10an7cj-StyledText e13y3mga0"
+>
+  This is an info
+</span>
 `;
 
 exports[`Toaster renders correctly with all kind of toast 2`] = `
+.css-10an7cj-StyledText {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<span
+  class="css-10an7cj-StyledText e13y3mga0"
+>
+  This is a success
+</span>
+`;
+
+exports[`Toaster renders correctly with all kind of toast 3`] = `
+.css-10an7cj-StyledText {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<span
+  class="css-10an7cj-StyledText e13y3mga0"
+>
+  This is an error
+</span>
+`;
+
+exports[`Toaster renders correctly with all kind of toast 4`] = `
+.css-10an7cj-StyledText {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<span
+  class="css-10an7cj-StyledText e13y3mga0"
+>
+  This is a warning
+</span>
+`;
+
+exports[`Toaster renders correctly with all kind of toast 5`] = `
 <DocumentFragment>
   .css-tb58o0-toast {
   border-radius: 4px;
@@ -534,6 +405,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
 
 <div
     class="Toastify"
+    id="toaster"
   >
     <div
       class="Toastify__toast-container Toastify__toast-container--top-right"

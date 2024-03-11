@@ -8,3 +8,4 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Children } from './Children'
+export { ContainerId } from './ContainerId'

@@ -47,6 +47,7 @@ const styles = {
     ${PREFIX}__toast-body {
       margin: 0;
       padding: 0;
+      display: none;
     }
   `,
 }
@@ -67,6 +68,7 @@ export const notification = (
   title: string,
   icon?: ReactNode,
   isClosable?: boolean,
+  containerId?: string,
   options?: ToastOptions,
 ) =>
   baseToast('', {
@@ -83,6 +85,7 @@ export const notification = (
         {isClosable ? closeButton(props) : null}
       </Stack>
     ),
+    containerId: containerId ?? 'notification',
   })
 
 type NotificationContainerProps = {
@@ -105,6 +108,10 @@ type NotificationContainerProps = {
   position?: ToastOptions['position']
   'data-testid'?: string
   className?: string
+  /**
+   * Give a personalized containerId in case there are multiple notifications with different styled to display
+   */
+  containerId?: string
 }
 
 export const NotificationContainer = ({
@@ -114,6 +121,7 @@ export const NotificationContainer = ({
   position = 'top-right',
   'data-testid': dataTestId,
   className,
+  containerId = 'notification',
 }: NotificationContainerProps) => {
   const theme = useTheme()
 
@@ -134,6 +142,7 @@ export const NotificationContainer = ({
             draggable={false}
             transition={Slide}
             className={className}
+            containerId={containerId}
           />
         )}
       </ClassNames>

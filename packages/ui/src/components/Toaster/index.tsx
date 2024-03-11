@@ -98,31 +98,51 @@ const Content = ({ children }: ContentProps) => (
 )
 
 export const toast = {
-  error: (children: ReactNode, options?: ToastOptions): number | string =>
+  error: (
+    children: ReactNode,
+    options?: ToastOptions,
+    containerId?: string,
+  ): number | string =>
     baseToast.error(<Content>{children}</Content>, {
       ...options,
       closeButton: <CloseButton sentiment="danger" />,
+      containerId: containerId ?? 'toaster',
     }),
   /**
    * @deprecated "Deprecated, please use another variant instead"
    */
   // eslint-disable-next-line deprecation/deprecation
-  info: (children: ReactNode, options?: ToastOptions): number | string =>
+  info: (
+    children: ReactNode,
+    options?: ToastOptions,
+    containerId?: string,
+  ): number | string =>
     baseToast.info(<Content>{children}</Content>, {
       ...options,
       closeButton: <CloseButton sentiment="info" />,
+      containerId: containerId ?? 'toaster',
     }),
 
-  success: (children: ReactNode, options?: ToastOptions): number | string =>
+  success: (
+    children: ReactNode,
+    options?: ToastOptions,
+    containerId?: string,
+  ): number | string =>
     baseToast.success(<Content>{children}</Content>, {
       ...options,
       closeButton: <CloseButton sentiment="success" />,
+      containerId: containerId ?? 'toaster',
     }),
 
-  warning: (children: ReactNode, options?: ToastOptions): number | string =>
+  warning: (
+    children: ReactNode,
+    options?: ToastOptions,
+    containerId?: string,
+  ): number | string =>
     baseToast.warn(<Content>{children}</Content>, {
       ...options,
       closeButton: <CloseButton sentiment="warning" />,
+      containerId: containerId ?? 'toaster',
     }),
 }
 
@@ -146,6 +166,11 @@ type ToastContainerProps = {
    * Delay before the toast is automatically closed, if not set the default value is 6000ms
    */
   autoClose?: number
+
+  /**
+   * Set a custom containerId to be able to define multiple ToastContainers
+   */
+  containerId?: string
 }
 
 /**
@@ -163,6 +188,7 @@ export const ToastContainer = ({
   'data-testid': dataTestId,
   className,
   autoClose,
+  containerId = 'toaster',
 }: ToastContainerProps) => {
   const theme = useTheme()
 
@@ -183,6 +209,7 @@ export const ToastContainer = ({
             hideProgressBar
             className={className}
             transition={Slide}
+            containerId={containerId}
           />
         )}
       </ClassNames>
