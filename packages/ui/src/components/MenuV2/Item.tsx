@@ -28,6 +28,7 @@ const itemCoreStyle = ({
   }
   cursor: pointer;
   min-width: 110px;
+  width: 100%;
 
   color: ${theme.colors[sentiment][disabled ? 'textDisabled' : 'text']};
   svg {
