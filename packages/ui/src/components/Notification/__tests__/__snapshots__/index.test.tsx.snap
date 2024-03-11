@@ -2,35 +2,46 @@
 
 exports[`Toaster renders correctly with close button 1`] = `
 [
-  <div
-    class="Toastify__toast-body"
-    role="alert"
+  .css-1oov0zf-StyledText {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<h3
+    class="css-1oov0zf-StyledText e13y3mga0"
   >
-    <div />
-  </div>,
+    Title
+  </h3>,
 ]
 `;
 
 exports[`Toaster renders correctly with close button 2`] = `
 <DocumentFragment>
-  .css-ivzpm-toast {
+  .css-lkoz5w-toast {
   border-radius: 4px;
 }
 
-.css-ivzpm-toast.Toastify__toast {
+.css-lkoz5w-toast.Toastify__toast {
   background-color: #ffffff;
   color: #3f4250;
   padding: 16px;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
 }
 
-.css-ivzpm-toast.Toastify__toast-container {
+.css-lkoz5w-toast.Toastify__toast-container {
   width: 312px;
 }
 
-.css-ivzpm-toast .Toastify__toast-body {
+.css-lkoz5w-toast .Toastify__toast-body {
   margin: 0;
   padding: 0;
+  display: none;
 }
 
 .css-4lkpn5-Stack {
@@ -155,12 +166,13 @@ exports[`Toaster renders correctly with close button 2`] = `
 
 <div
     class="Toastify"
+    id="notification"
   >
     <div
       class="Toastify__toast-container Toastify__toast-container--top-right"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default css-ivzpm-toast Toastify--animate Toastify__slide-enter--top-right"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default css-lkoz5w-toast Toastify--animate Toastify__slide-enter--top-right"
         data-in="true"
         id="1"
       >
@@ -224,35 +236,35 @@ exports[`Toaster renders correctly with close button 2`] = `
 
 exports[`Toaster renders correctly with custom close button 1`] = `
 [
-  <div
-    class="Toastify__toast-body"
-    role="alert"
+  <button
+    type="button"
   >
-    <div />
-  </div>,
+    Decline
+  </button>,
 ]
 `;
 
 exports[`Toaster renders correctly with custom close button 2`] = `
 <DocumentFragment>
-  .css-ivzpm-toast {
+  .css-lkoz5w-toast {
   border-radius: 4px;
 }
 
-.css-ivzpm-toast.Toastify__toast {
+.css-lkoz5w-toast.Toastify__toast {
   background-color: #ffffff;
   color: #3f4250;
   padding: 16px;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
 }
 
-.css-ivzpm-toast.Toastify__toast-container {
+.css-lkoz5w-toast.Toastify__toast-container {
   width: 312px;
 }
 
-.css-ivzpm-toast .Toastify__toast-body {
+.css-lkoz5w-toast .Toastify__toast-body {
   margin: 0;
   padding: 0;
+  display: none;
 }
 
 .css-4lkpn5-Stack {
@@ -314,12 +326,13 @@ exports[`Toaster renders correctly with custom close button 2`] = `
 
 <div
     class="Toastify"
+    id="notification"
   >
     <div
       class="Toastify__toast-container Toastify__toast-container--top-right"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default css-ivzpm-toast Toastify--animate Toastify__slide-enter--top-right"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default css-lkoz5w-toast Toastify--animate Toastify__slide-enter--top-right"
         data-in="true"
         id="2"
       >
