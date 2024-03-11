@@ -9,7 +9,7 @@ import { ListProvider, useListContext } from './ListContext'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
-import { EXPAND_CTA_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
+import { EXPAND_BUTTON_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
 
 const StyledList = styled('div', {
   shouldForwardProp: prop => !['template'].includes(prop),
@@ -67,7 +67,7 @@ const BaseList = forwardRef(
     const computeTemplate = `${
       selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
     }${
-      expandButton ? `${EXPAND_CTA_SIZE}px ` : ''
+      expandButton ? `${EXPAND_BUTTON_SIZE}px ` : ''
     }${columns.map(({ width }) => width ?? 'minmax(0, 1fr)').join(' ')}`
 
     return (
