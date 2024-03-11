@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Stack, Text } from '@ultraviolet/ui'
+import { Separator, Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useNavigation } from './NavigationProvider'
 
@@ -16,6 +16,10 @@ const StyledStack = styled(Stack)`
   padding-top: ${({ theme }) => theme.space['2']};
 `
 
+const StyledSeparator = styled(Separator)`
+  margin: ${({ theme }) => `${theme.space['2']} -${theme.space['2']}`};
+`
+
 export const Group = ({ children, label }: GroupProps) => {
   const context = useNavigation()
 
@@ -23,17 +27,24 @@ export const Group = ({ children, label }: GroupProps) => {
     throw new Error('Navigation.Group can only be used inside a Navigation')
   }
 
+  const { expanded } = context
+
   return (
-    <StyledStack direction="column">
-      <StyledText
-        as="span"
-        variant="bodySmallStrong"
-        sentiment="neutral"
-        prominence="weak"
-      >
-        {label}
-      </StyledText>
-      {children}
-    </StyledStack>
+    <>
+      <StyledSeparator />
+      <StyledStack direction="column">
+        {expanded ? (
+          <StyledText
+            as="span"
+            variant="bodySmallStrong"
+            sentiment="neutral"
+            prominence="weak"
+          >
+            {label}
+          </StyledText>
+        ) : null}
+        {children}
+      </StyledStack>
+    </>
   )
 }

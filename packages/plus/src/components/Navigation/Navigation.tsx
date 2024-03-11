@@ -1,9 +1,12 @@
 import styled from '@emotion/styled'
 import { Button, Stack } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
+import { useState } from 'react'
 import { Group } from './Group'
 import { Item } from './Item'
 import { NavigationProvider, useNavigation } from './NavigationProvider'
+
+const ANIMATION_DURATION = 300
 
 type NavigationProps = {
   children: ReactNode
@@ -11,7 +14,7 @@ type NavigationProps = {
 }
 
 const StyledNav = styled.nav`
-  transition: width 0.3s ease-in-out;
+  transition: width ${ANIMATION_DURATION}ms ease-in-out;
   width: 280px;
 
   &[data-expanded='false'] {
@@ -25,7 +28,7 @@ const StyledNav = styled.nav`
   bottom: 0;
 `
 
-const Footer = styled.div`
+const StickyFooter = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -39,8 +42,8 @@ const Header = styled.div`
 `
 
 const LogoContainer = styled(Stack)`
-  padding-top: ${({ theme }) => theme.space['3']};
-  padding-bottom: ${({ theme }) => theme.space['2']};
+  padding: ${({ theme }) =>
+    `${theme.space['3']} ${theme.space['2']} ${theme.space['2']} ${theme.space['2']}`};
 `
 
 const Container = styled.div`
@@ -48,37 +51,59 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  transition: opacity ${ANIMATION_DURATION - 150}ms ease-in-out;
+
+  &[data-animation='true'] {
+    opacity: 0;
+  }
 `
 
 const Content = styled(Stack)`
   overflow: auto;
   flex-grow: 1;
+  padding: ${({ theme }) => theme.space['2']};
 `
 
 const NavigationContent = ({ children, logo }: NavigationProps) => {
   const { expanded, setExpanded } = useNavigation()
+  const [isAnimationPlaying, setIsAnimationPlaying] = useState(false)
+
+  // This function will be triggered when expand/collapse button is clicked
+  // It will also trigger a fade out animation when expanding the navigation
+  const triggerExpand = () => {
+    if (!expanded) {
+      setIsAnimationPlaying(true)
+      setTimeout(() => {
+        setIsAnimationPlaying(false)
+        setExpanded()
+      }, ANIMATION_DURATION)
+    } else {
+      setExpanded()
+    }
+  }
 
   return (
-    <StyledNav data-expanded={expanded}>
+    <StyledNav data-expanded={expanded || isAnimationPlaying}>
       <Header>
         <LogoContainer
           justifyContent={!expanded ? 'center' : undefined}
           alignItems={!expanded ? 'center' : undefined}
+          data-animation={isAnimationPlaying}
         >
           {typeof logo === 'function' ? logo(expanded) : logo}
         </LogoContainer>
       </Header>
-      <Container>
+      <Container data-animation={isAnimationPlaying}>
         <Content gap={0.25}>{children}</Content>
-        <Footer>
+        <StickyFooter>
           <Button
             variant="ghost"
             sentiment="neutral"
             size="small"
             icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-            onClick={() => setExpanded()}
+            onClick={triggerExpand}
           />
-        </Footer>
+        </StickyFooter>
       </Container>
     </StyledNav>
   )
