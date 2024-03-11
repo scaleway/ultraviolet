@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import type { ForwardedRef, ReactNode } from 'react'
 import { forwardRef, useEffect } from 'react'
 import type { SENTIMENTS } from '../../theme'
+import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
@@ -122,6 +123,7 @@ export const Row = forwardRef(
       selectedRowIds,
       selectRow,
       unselectRow,
+      expandButton,
     } = useListContext()
 
     const isSelectDisabled =
@@ -209,6 +211,18 @@ export const Row = forwardRef(
                 />
               </Tooltip>
             </StyledCheckboxContainer>
+          </Cell>
+        ) : null}
+        {expandButton ? (
+          <Cell preventClick>
+            <Button
+              disabled={disabled || !expandable}
+              icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
+              onClick={toggleRowExpand}
+              size="xsmall"
+              sentiment="neutral"
+              variant="ghost"
+            />
           </Cell>
         ) : null}
         {children}
