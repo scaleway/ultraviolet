@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.8.3
+
+### Patch Changes
+
+- [#3524](https://github.com/scaleway/ultraviolet/pull/3524) [`3e9da5c`](https://github.com/scaleway/ultraviolet/commit/3e9da5c844e15cffbdd1f5958b732b15a88f1c41) Thanks [@lisalupi](https://github.com/lisalupi)! - New component ultraviolet/ui and `SelectableCardGroupField`
+
+- [#3529](https://github.com/scaleway/ultraviolet/pull/3529) [`d7fd2ce`](https://github.com/scaleway/ultraviolet/commit/d7fd2ce10252a1766a7b72924729bff0d2c67f32) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.51.0`.
+
+- Updated dependencies [[`3e9da5c`](https://github.com/scaleway/ultraviolet/commit/3e9da5c844e15cffbdd1f5958b732b15a88f1c41), [`14e2121`](https://github.com/scaleway/ultraviolet/commit/14e212107630fc72ffee819a898554ea16cc6aaf), [`71fa38d`](https://github.com/scaleway/ultraviolet/commit/71fa38d83bc230d18384ef5a14f8c5edba956a55), [`a8f1e7b`](https://github.com/scaleway/ultraviolet/commit/a8f1e7b84299dd9929e7c6529eef07db1ea47957)]:
+  - @ultraviolet/ui@1.41.0
+
 ## 2.8.2
 
 ### Patch Changes

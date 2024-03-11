@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 0.9.0
+
+### Minor Changes
+
+- [#3510](https://github.com/scaleway/ultraviolet/pull/3510) [`1a44900`](https://github.com/scaleway/ultraviolet/commit/1a44900c00277a63d9419bbef1a8ea82e8d405ad) Thanks [@lisalupi](https://github.com/lisalupi)! - - New component `<SteppedListContainer>`
+  - New props `prominence` and `onClick` to `<StepList>`
+
+### Patch Changes
+
+- Updated dependencies [[`3e9da5c`](https://github.com/scaleway/ultraviolet/commit/3e9da5c844e15cffbdd1f5958b732b15a88f1c41), [`14e2121`](https://github.com/scaleway/ultraviolet/commit/14e212107630fc72ffee819a898554ea16cc6aaf), [`71fa38d`](https://github.com/scaleway/ultraviolet/commit/71fa38d83bc230d18384ef5a14f8c5edba956a55), [`a8f1e7b`](https://github.com/scaleway/ultraviolet/commit/a8f1e7b84299dd9929e7c6529eef07db1ea47957)]:
+  - @ultraviolet/ui@1.41.0
+
 ## 0.8.6
 
 ### Patch Changes

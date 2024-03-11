@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.6.1
+
+### Patch Changes
+
+- [#3535](https://github.com/scaleway/ultraviolet/pull/3535) [`5e9cfb4`](https://github.com/scaleway/ultraviolet/commit/5e9cfb4b05fe488d67e3027b602856fb595e7b86) Thanks [@lisalupi](https://github.com/lisalupi)! - New various illustrations
+
 ## 1.6.0
 
 ### Minor Changes

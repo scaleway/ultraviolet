@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.41.0
+
+### Minor Changes
+
+- [#3526](https://github.com/scaleway/ultraviolet/pull/3526) [`14e2121`](https://github.com/scaleway/ultraviolet/commit/14e212107630fc72ffee819a898554ea16cc6aaf) Thanks [@fabienhebert](https://github.com/fabienhebert)! - add `expandButton` prop `List` to enable dedicated column/cta to expand a row in addition of supporting click
+
+### Patch Changes
+
+- [#3524](https://github.com/scaleway/ultraviolet/pull/3524) [`3e9da5c`](https://github.com/scaleway/ultraviolet/commit/3e9da5c844e15cffbdd1f5958b732b15a88f1c41) Thanks [@lisalupi](https://github.com/lisalupi)! - New components `SelectableCardGroup`
+
+- [#3533](https://github.com/scaleway/ultraviolet/pull/3533) [`71fa38d`](https://github.com/scaleway/ultraviolet/commit/71fa38d83bc230d18384ef5a14f8c5edba956a55) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix `MenuV2.Item` border to be fullwidth
+
+- [#3542](https://github.com/scaleway/ultraviolet/pull/3542) [`a8f1e7b`](https://github.com/scaleway/ultraviolet/commit/a8f1e7b84299dd9929e7c6529eef07db1ea47957) Thanks [@lisalupi](https://github.com/lisalupi)! - `Toaster` and `Notification` : new prop `containerId`
+
 ## 1.40.1
 
 ### Patch Changes
