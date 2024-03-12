@@ -33,7 +33,8 @@ const input = [
   'src/products/index.ts',
   './src/various/*/index.ts',
   'src/various/index.ts',
-  'src/index.ts',
+  'src/components/index.ts',
+  './src/components/*/index.ts',
 ]
 
 export default [

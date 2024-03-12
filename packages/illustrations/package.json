@@ -47,9 +47,13 @@
       "types": "./dist/various/index.d.ts",
       "default": "./dist/various/index.js"
     },
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/src/index.js"
+    "./components/*": {
+      "types": "./dist/components/index.d.ts",
+      "default": "./dist/components/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/*/index.d.ts",
+      "default": "./dist/components/*/index.js"
     }
   },
   "devDependencies": {
