@@ -70,6 +70,7 @@ import { ReactComponent as credentialsOutline } from './assets/default-outline/c
 import { ReactComponent as creditCardOutline } from './assets/default-outline/credit-card.svg'
 import { ReactComponent as databaseOutline } from './assets/default-outline/database.svg'
 import { ReactComponent as deleteOutline } from './assets/default-outline/delete.svg'
+import { ReactComponent as docOutline } from './assets/default-outline/doc.svg'
 import { ReactComponent as earthOutline } from './assets/default-outline/earth.svg'
 import { ReactComponent as emailRemoveOutline } from './assets/default-outline/email-remove.svg'
 import { ReactComponent as emailOutline } from './assets/default-outline/email.svg'
@@ -311,7 +312,7 @@ export const ICONS = {
     'credit-card': creditCardOutline,
     database: databaseOutline,
     delete: deleteOutline,
-    doc,
+    doc: docOutline,
     earth: earthOutline,
     'email-remove-outline': emailRemoveOutline,
     'email-outline': emailOutline,

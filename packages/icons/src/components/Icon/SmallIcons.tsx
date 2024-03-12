@@ -70,6 +70,7 @@ import { ReactComponent as credentialsOutline } from './assets/small-outline/cre
 import { ReactComponent as creditCardOutline } from './assets/small-outline/credit-card.svg'
 import { ReactComponent as databaseOutline } from './assets/small-outline/database.svg'
 import { ReactComponent as deleteOutline } from './assets/small-outline/delete.svg'
+import { ReactComponent as docOutline } from './assets/small-outline/doc.svg'
 import { ReactComponent as earthOutline } from './assets/small-outline/earth.svg'
 import { ReactComponent as emailRemoveOutline } from './assets/small-outline/email-remove.svg'
 import { ReactComponent as emailOutline } from './assets/small-outline/email.svg'
@@ -311,7 +312,7 @@ export const SMALL_ICONS = {
     'credit-card': creditCardOutline,
     database: databaseOutline,
     delete: deleteOutline,
-    doc,
+    doc: docOutline,
     earth: earthOutline,
     'email-remove-outline': emailRemoveOutline,
     'email-outline': emailOutline,
