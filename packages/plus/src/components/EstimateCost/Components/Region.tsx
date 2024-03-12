@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
 import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
@@ -26,7 +26,7 @@ type RegionProps = {
   image: string
   noBorder?: boolean
   noPrice?: boolean
-}
+} & Pick<ComponentProps<typeof Item>, 'hideFromOverlay'>
 
 export const Region = ({
   label,
@@ -41,6 +41,7 @@ export const Region = ({
   discount,
   noBorder,
   noPrice,
+  hideFromOverlay,
 }: RegionProps) => {
   const { locales } = useEstimateCost()
 
@@ -57,6 +58,7 @@ export const Region = ({
       discount={discount}
       noBorder={noBorder}
       noPrice={noPrice}
+      hideFromOverlay={hideFromOverlay}
     >
       <Strong>
         <StyledImage alt={label} src={image} />
