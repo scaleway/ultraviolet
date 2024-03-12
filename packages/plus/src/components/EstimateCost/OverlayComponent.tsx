@@ -13,7 +13,6 @@ import type { Units } from './types'
 
 const OverlayContainer = styled.div<{ inView?: boolean }>`
   position: fixed;
-  z-index: 999;
   left: 0;
   right: 0;
   bottom: ${({ inView }) => (inView ? -120 : 0)}px;
