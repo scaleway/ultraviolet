@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.10.0
+
+### Minor Changes
+
+- [#3549](https://github.com/scaleway/ultraviolet/pull/3549) [`4c8d467`](https://github.com/scaleway/ultraviolet/commit/4c8d46799452c9afbe5fc3a537ae27f32ced37c1) Thanks [@fabienhebert](https://github.com/fabienhebert)! - `EstimateCost.Region`: forward `hideFromOverlay` prop
+
 ## 0.9.0
 
 ### Minor Changes
