@@ -250,7 +250,9 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   size={STATE_ICON_SIZE}
                 />
               ) : null}
-              {error ? <Icon name="alert" color="danger" /> : null}
+              {error ? (
+                <Icon name="alert" color="danger" variant="outlined" />
+              ) : null}
             </StyledTextAreaAbsoluteStack>
           </StyledTextAreaWrapper>
         </Tooltip>

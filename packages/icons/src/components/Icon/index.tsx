@@ -141,7 +141,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       className,
       'data-testid': dataTestId,
       stroke,
-      variant = 'outlined',
+      variant = 'filled',
       cursor,
       strokeWidth,
       disabled,

@@ -14,7 +14,7 @@ ComplexLabel.args = {
         marginLeft: '8px',
       }}
     >
-      <Icon name="lock" size={18} variant="filled" />
+      <Icon name="lock" size={18} />
       <Text as="span" variant="body">
         Lock functionality
       </Text>

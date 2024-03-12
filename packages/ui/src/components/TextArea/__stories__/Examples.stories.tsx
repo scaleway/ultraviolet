@@ -40,7 +40,7 @@ export const Examples: StoryFn<typeof TextArea> = () => {
         label="Label"
         labelDescription={
           <Tooltip text="Tooltip message">
-            <Icon name="alert" color="neutral" />
+            <Icon name="alert" color="neutral" variant="outlined" />
           </Tooltip>
         }
         required

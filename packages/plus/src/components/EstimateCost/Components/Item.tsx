@@ -404,7 +404,11 @@ export const Item = ({
               {tooltipInfo ? (
                 <StyledDiv>
                   <StyledTooltip text={tooltipInfo}>
-                    <Icon name="help-circle-outline" size={20} />
+                    <Icon
+                      name="help-circle-outline"
+                      size={20}
+                      variant="outlined"
+                    />
                   </StyledTooltip>
                 </StyledDiv>
               ) : null}
