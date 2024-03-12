@@ -46,6 +46,10 @@
     "./various": {
       "types": "./dist/various/index.d.ts",
       "default": "./dist/various/index.js"
+    },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/src/index.js"
     }
   },
   "devDependencies": {
