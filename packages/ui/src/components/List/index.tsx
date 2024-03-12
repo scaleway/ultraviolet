@@ -9,7 +9,7 @@ import { ListProvider, useListContext } from './ListContext'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
-import { EXPAND_BUTTON_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
+import { EXPANDABLE_COLUMN_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
 
 const StyledList = styled('div', {
   shouldForwardProp: prop => !['template'].includes(prop),
@@ -38,7 +38,7 @@ type ColumnProps = Pick<
 }
 
 type ListProps = {
-  expandButton?: boolean
+  expandable?: boolean
   selectable?: boolean
   columns: ColumnProps[]
   children: ReactNode
@@ -55,7 +55,7 @@ type ListProps = {
 const BaseList = forwardRef(
   (
     {
-      expandButton = false,
+      expandable = false,
       selectable = false,
       columns,
       children,
@@ -67,13 +67,13 @@ const BaseList = forwardRef(
     const computeTemplate = `${
       selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
     }${
-      expandButton ? `${EXPAND_BUTTON_SIZE}px ` : ''
+      expandable ? `${EXPANDABLE_COLUMN_SIZE}px ` : ''
     }${columns.map(({ width }) => width ?? 'minmax(0, 1fr)').join(' ')}`
 
     return (
       <ListProvider
         selectable={selectable}
-        expandButton={expandButton}
+        expandButton={expandable}
         autoCollapse={autoCollapse}
       >
         <StyledList ref={ref} role="grid" template={computeTemplate}>

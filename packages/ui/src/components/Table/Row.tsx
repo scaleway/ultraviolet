@@ -52,7 +52,6 @@ export const Row = ({
   'data-testid': dataTestid,
 }: RowProps) => {
   const {
-    allRowSelectValue,
     selectable,
     registerSelectableRow,
     selectedRowIds,
@@ -78,9 +77,7 @@ export const Row = ({
     >
       {selectable ? (
         <Cell>
-          <StyledCheckboxContainer
-            data-visibility={allRowSelectValue === false ? 'hover' : undefined}
-          >
+          <StyledCheckboxContainer>
             <Tooltip
               text={
                 typeof selectDisabled === 'string' ? selectDisabled : undefined

@@ -33,6 +33,7 @@ export const Example: StoryFn = args => {
     <List
       {...args}
       selectable
+      expandable
       columns={[
         {
           label: 'Solar system Planet',

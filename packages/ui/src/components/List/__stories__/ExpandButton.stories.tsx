@@ -10,7 +10,7 @@ export const ExpandButton = Template.bind({})
  */
 ExpandButton.args = {
   ...Template.args,
-  expandButton: true,
+  expandable: true,
   children: data.map(planet => (
     <List.Row
       key={planet.id}
