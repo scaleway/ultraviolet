@@ -5,13 +5,10 @@ import { useState } from 'react'
 import { Group } from './Group'
 import { Item } from './Item'
 import { NavigationProvider, useNavigation } from './NavigationProvider'
+import { PinnedItems } from './PinnedItems'
+import NavigationLocales from './locales/en'
 
 const ANIMATION_DURATION = 300
-
-type NavigationProps = {
-  children: ReactNode
-  logo?: ReactNode | ((expanded: boolean) => ReactNode)
-}
 
 const StyledNav = styled.nav`
   transition: width ${ANIMATION_DURATION}ms ease-in-out;
@@ -20,6 +17,7 @@ const StyledNav = styled.nav`
   &[data-expanded='false'] {
     width: 64px;
   }
+
   background: ${({ theme }) => theme.colors.neutral.background};
   display: flex;
   flex-direction: column;
@@ -64,7 +62,12 @@ const Content = styled(Stack)`
   padding: ${({ theme }) => theme.space['2']};
 `
 
-const NavigationContent = ({ children, logo }: NavigationProps) => {
+type NavigationContentProps = {
+  children: ReactNode
+  logo?: ReactNode | ((expanded: boolean) => ReactNode)
+}
+
+const NavigationContent = ({ children, logo }: NavigationContentProps) => {
   const { expanded, setExpanded } = useNavigation()
   const [isAnimationPlaying, setIsAnimationPlaying] = useState(false)
 
@@ -109,11 +112,33 @@ const NavigationContent = ({ children, logo }: NavigationProps) => {
   )
 }
 
-export const Navigation = ({ children, logo }: NavigationProps) => (
-  <NavigationProvider>
+type NavigationProps = {
+  children: ReactNode
+  logo?: ReactNode | ((expanded: boolean) => ReactNode)
+  pinnedFunctionality?: boolean
+  initialPinned?: string[]
+  onClickPinUnpin?: (pinned: string[]) => void
+  locales?: typeof NavigationLocales
+}
+
+export const Navigation = ({
+  children,
+  logo,
+  pinnedFunctionality,
+  onClickPinUnpin,
+  initialPinned,
+  locales = NavigationLocales,
+}: NavigationProps) => (
+  <NavigationProvider
+    onClickPinUnpin={onClickPinUnpin}
+    pinnedFunctionality={pinnedFunctionality}
+    locales={locales}
+    initialPinned={initialPinned}
+  >
     <NavigationContent logo={logo}>{children}</NavigationContent>
   </NavigationProvider>
 )
 
 Navigation.Group = Group
 Navigation.Item = Item
+Navigation.PinnedItems = PinnedItems

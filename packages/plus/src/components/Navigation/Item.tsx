@@ -14,6 +14,10 @@ const NeutralButtonLink = css`
   text-align: left;
 `
 
+const PinnedButton = styled(Button)`
+  opacity: 0;
+`
+
 const StyledContainer = styled(Stack)`
   ${NeutralButtonLink};
   border-radius: ${({ theme }) => theme.radii.default};
@@ -29,6 +33,10 @@ const StyledContainer = styled(Stack)`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+
+    ${PinnedButton} {
+      opacity: 1;
+    }
   }
 
   &:active {
@@ -50,7 +58,7 @@ const MenuStack = styled(Stack)`
 type ItemProps = {
   children?: ReactNode
   categoryIcon?: ComponentProps<typeof CategoryIcon>['name']
-  label?: string
+  label: string
   subLabel?: string
   badgeText?: string
   badgeSentiment?: ComponentProps<typeof Badge>['sentiment']
@@ -64,12 +72,11 @@ type ItemProps = {
    * This prop is used to control the toggle state of the item.
    */
   toggle?: boolean
+  active?: boolean
   /**
-   * When setting this prop you will add a button at the end of the item.
-   * If you set this prop as a `string` it will be added automatically into a button.
-   * If needed you can pass to this prop your own component for advanced use cases.
+   * If you want to remove pin button on your item use this prop
    */
-  button?: ReactNode
+  noPinButton?: boolean
 }
 
 export const Item = ({
@@ -82,7 +89,8 @@ export const Item = ({
   href,
   onClickToggle,
   toggle = true,
-  button,
+  active,
+  noPinButton,
 }: ItemProps) => {
   const context = useNavigation()
   const [internalToggle, setToggle] = useReducer(state => {
@@ -95,9 +103,11 @@ export const Item = ({
     throw new Error('Navigation.Item can only be used inside a Navigation')
   }
 
-  const { expanded } = context
+  const { expanded, locales, pinnedFunctionality, pinItem } = context
 
   const hasHrefAndNoChildren = href && !children
+  const hasPinnedFunctionalityAndNoChildren =
+    pinnedFunctionality && !children && !noPinButton
 
   const Container = StyledContainer.withComponent(
     hasHrefAndNoChildren ? 'a' : 'button',
@@ -152,14 +162,28 @@ export const Item = ({
             </Stack>
           </Stack>
           <Stack gap={1} direction="row" alignItems="center">
-            {badgeText ? (
-              <Badge
-                sentiment={badgeSentiment}
-                size="small"
-                prominence="strong"
-              >
-                {badgeText}
-              </Badge>
+            {badgeText || hasPinnedFunctionalityAndNoChildren ? (
+              <>
+                {badgeText ? (
+                  <Badge
+                    sentiment={badgeSentiment}
+                    size="small"
+                    prominence="strong"
+                  >
+                    {badgeText}
+                  </Badge>
+                ) : null}
+                {hasPinnedFunctionalityAndNoChildren ? (
+                  <PinnedButton
+                    size="xsmall"
+                    variant="ghost"
+                    sentiment={active ? 'primary' : 'neutral'}
+                    onClick={() => pinItem(label)}
+                    tooltip={locales['navigation.pin.tooltip']}
+                    icon="auto-fix"
+                  />
+                ) : null}
+              </>
             ) : null}
             {hasHrefAndNoChildren ? (
               <Icon name="open-in-new" color="neutral" prominence="weak" />
@@ -171,12 +195,6 @@ export const Item = ({
                 prominence="weak"
               />
             ) : null}
-            {button && typeof button === 'string' ? (
-              <Button sentiment="neutral" variant="ghost" size="small">
-                {button}
-              </Button>
-            ) : null}
-            {button && typeof button !== 'string' ? button : null}
           </Stack>
         </Container>
         {children ? (

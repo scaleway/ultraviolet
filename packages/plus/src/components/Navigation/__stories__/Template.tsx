@@ -16,4 +16,5 @@ Template.args = {
       width={expanded ? '150px' : '26px'}
     />
   ),
+  pinnedFunctionality: true,
 }

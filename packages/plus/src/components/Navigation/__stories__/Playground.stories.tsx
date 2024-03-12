@@ -7,8 +7,17 @@ Playground.args = {
   ...Template.args,
   children: [
     <>
-      <Navigation.Item label="Organization Dashboard" categoryIcon="console" />
-      <Navigation.Item label="Project Dashboard" categoryIcon="useCase" />
+      <Navigation.Item
+        label="Organization Dashboard"
+        categoryIcon="console"
+        noPinButton
+      />
+      <Navigation.Item
+        label="Project Dashboard"
+        categoryIcon="useCase"
+        noPinButton
+      />
+      <Navigation.PinnedItems />
       <Navigation.Group label="Products">
         <Navigation.Item
           label="Compute"
