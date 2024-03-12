@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.6.3
+
+### Patch Changes
+
+- [#3546](https://github.com/scaleway/ultraviolet/pull/3546) [`8069851`](https://github.com/scaleway/ultraviolet/commit/8069851c577c5e4201e2151af6817256c3c4c896) Thanks [@matthprost](https://github.com/matthprost)! - Hotfix missing export in `package.json`
+
 ## 1.6.2
 
 ### Patch Changes
