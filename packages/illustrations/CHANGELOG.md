@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.6.2
+
+### Patch Changes
+
+- [#3543](https://github.com/scaleway/ultraviolet/pull/3543) [`a699691`](https://github.com/scaleway/ultraviolet/commit/a6996915f15be58a4716417f5f46c5243f376e00) Thanks [@matthprost](https://github.com/matthprost)! - Fix export all components in build
+
 ## 1.6.1
 
 ### Patch Changes
