@@ -31,13 +31,18 @@ exports[`PasswordCheck render with custom values 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-k1vg20-sizeStyles {
+.css-hll5gg-sizeStyles {
   vertical-align: middle;
   fill: #727683;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-hll5gg-sizeStyles .fillStroke {
+  stroke: #727683;
+  fill: none;
 }
 
 .css-3l2mjz-StyledText {
@@ -51,13 +56,18 @@ exports[`PasswordCheck render with custom values 1`] = `
   text-decoration: none;
 }
 
-.css-ksecsa-sizeStyles {
+.css-5riqfe-sizeStyles {
   vertical-align: middle;
   fill: #22674e;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-5riqfe-sizeStyles .fillStroke {
+  stroke: #22674e;
+  fill: none;
 }
 
 <div
@@ -67,11 +77,12 @@ exports[`PasswordCheck render with custom values 1`] = `
       class="css-irytw7-Stack ehpbis70"
     >
       <svg
-        class="css-k1vg20-sizeStyles e1gt4cfo0"
+        class="css-hll5gg-sizeStyles e1gt4cfo0"
         viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"
+          d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m2.59 6L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41z"
         />
       </svg>
       <p
@@ -84,11 +95,14 @@ exports[`PasswordCheck render with custom values 1`] = `
       class="css-irytw7-Stack ehpbis70"
     >
       <svg
-        class="css-ksecsa-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="css-5riqfe-sizeStyles e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+          clip-rule="evenodd"
+          d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089z"
+          fill-rule="evenodd"
         />
       </svg>
       <p

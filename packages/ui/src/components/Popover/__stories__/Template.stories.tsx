@@ -9,6 +9,6 @@ export const Template: StoryFn<typeof Popover> = props => (
     title="Popover Title"
     content="This is a simple text content inside the popover. You can customize it by passing text into content property."
   >
-    <Icon name="help-circle-outline" size={24} />
+    <Icon name="help-circle-outline" size={24} variant="outlined" />
   </Popover>
 )

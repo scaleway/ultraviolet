@@ -221,13 +221,18 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1bhnh9o-sizeStyles {
+.css-6qg2f3-sizeStyles {
   vertical-align: middle;
   fill: #641cb3;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-6qg2f3-sizeStyles .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-12uv9zd-StyledRegular-StyledStrong {
@@ -292,7 +297,7 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
   padding: 16px;
 }
 
-.css-xlwmt8-sizeStyles-StyledIcon {
+.css-1c6bnf8-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: #641cb3;
   height: 20px;
@@ -300,6 +305,11 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
   min-width: 20px;
   min-height: 20px;
   margin-right: 8px;
+}
+
+.css-1c6bnf8-sizeStyles-StyledIcon .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-x833v6-StyledPriceCell-Cell-StyledPriceCell-PriceCell {
@@ -689,13 +699,18 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-znppnv {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-19b723i-Cell {
@@ -1100,11 +1115,14 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
             class="css-9bqyx6 ehpbis70"
           >
             <svg
-              class="css-1bhnh9o-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-6qg2f3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                clip-rule="evenodd"
+                d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                fill-rule="evenodd"
               />
             </svg>
             Estimated cost
@@ -1150,11 +1168,14 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
                 class="css-gy9ug9-Title e1xb5k8j8"
               >
                 <svg
-                  class="excc3v71 css-xlwmt8-sizeStyles-StyledIcon e1gt4cfo0"
-                  viewBox="0 0 24 24"
+                  class="excc3v71 css-1c6bnf8-sizeStyles-StyledIcon e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                    clip-rule="evenodd"
+                    d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 Estimated cost
@@ -1266,11 +1287,14 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
                             class="css-9bqyx6 ehpbis70"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+                              class="css-znppnv e1gt4cfo0"
                               viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                                clip-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                fill-rule="evenodd"
                               />
                             </svg>
                           </div>
@@ -1343,11 +1367,12 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
                             type="button"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-                              viewBox="0 0 24 24"
+                              class="css-znppnv e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M19,13H5V11H19V13Z"
+                                d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
                               />
                             </svg>
                           </button>
@@ -1377,11 +1402,12 @@ exports[`EstimateCost - NumberInput Item render basic props 1`] = `
                             type="button"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-                              viewBox="0 0 24 24"
+                              class="css-znppnv e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
                               />
                             </svg>
                           </button>
@@ -1663,13 +1689,18 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1bhnh9o-sizeStyles {
+.css-6qg2f3-sizeStyles {
   vertical-align: middle;
   fill: #641cb3;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-6qg2f3-sizeStyles .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-12uv9zd-StyledRegular-StyledStrong {
@@ -1734,7 +1765,7 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
   padding: 16px;
 }
 
-.css-xlwmt8-sizeStyles-StyledIcon {
+.css-1c6bnf8-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: #641cb3;
   height: 20px;
@@ -1742,6 +1773,11 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
   min-width: 20px;
   min-height: 20px;
   margin-right: 8px;
+}
+
+.css-1c6bnf8-sizeStyles-StyledIcon .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-x833v6-StyledPriceCell-Cell-StyledPriceCell-PriceCell {
@@ -2131,13 +2167,18 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-znppnv {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-19b723i-Cell {
@@ -2542,11 +2583,14 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
             class="css-9bqyx6 ehpbis70"
           >
             <svg
-              class="css-1bhnh9o-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-6qg2f3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                clip-rule="evenodd"
+                d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                fill-rule="evenodd"
               />
             </svg>
             Estimated cost
@@ -2592,11 +2636,14 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
                 class="css-gy9ug9-Title e1xb5k8j8"
               >
                 <svg
-                  class="excc3v71 css-xlwmt8-sizeStyles-StyledIcon e1gt4cfo0"
-                  viewBox="0 0 24 24"
+                  class="excc3v71 css-1c6bnf8-sizeStyles-StyledIcon e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                    clip-rule="evenodd"
+                    d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 Estimated cost
@@ -2708,11 +2755,14 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
                             class="css-9bqyx6 ehpbis70"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+                              class="css-znppnv e1gt4cfo0"
                               viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                                clip-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                fill-rule="evenodd"
                               />
                             </svg>
                           </div>
@@ -2785,11 +2835,12 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
                             type="button"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-                              viewBox="0 0 24 24"
+                              class="css-znppnv e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M19,13H5V11H19V13Z"
+                                d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
                               />
                             </svg>
                           </button>
@@ -2819,11 +2870,12 @@ exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
                             type="button"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-                              viewBox="0 0 24 24"
+                              class="css-znppnv e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
                               />
                             </svg>
                           </button>
@@ -3105,13 +3157,18 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1bhnh9o-sizeStyles {
+.css-6qg2f3-sizeStyles {
   vertical-align: middle;
   fill: #641cb3;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-6qg2f3-sizeStyles .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-12uv9zd-StyledRegular-StyledStrong {
@@ -3176,7 +3233,7 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
   padding: 16px;
 }
 
-.css-xlwmt8-sizeStyles-StyledIcon {
+.css-1c6bnf8-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: #641cb3;
   height: 20px;
@@ -3184,6 +3241,11 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
   min-width: 20px;
   min-height: 20px;
   margin-right: 8px;
+}
+
+.css-1c6bnf8-sizeStyles-StyledIcon .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-x833v6-StyledPriceCell-Cell-StyledPriceCell-PriceCell {
@@ -3573,13 +3635,18 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-znppnv {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-19b723i-Cell {
@@ -3984,11 +4051,14 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
             class="css-9bqyx6 ehpbis70"
           >
             <svg
-              class="css-1bhnh9o-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-6qg2f3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                clip-rule="evenodd"
+                d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                fill-rule="evenodd"
               />
             </svg>
             Estimated cost
@@ -4034,11 +4104,14 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
                 class="css-gy9ug9-Title e1xb5k8j8"
               >
                 <svg
-                  class="excc3v71 css-xlwmt8-sizeStyles-StyledIcon e1gt4cfo0"
-                  viewBox="0 0 24 24"
+                  class="excc3v71 css-1c6bnf8-sizeStyles-StyledIcon e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                    clip-rule="evenodd"
+                    d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 Estimated cost
@@ -4150,11 +4223,14 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
                             class="css-9bqyx6 ehpbis70"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+                              class="css-znppnv e1gt4cfo0"
                               viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                                clip-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                fill-rule="evenodd"
                               />
                             </svg>
                           </div>
@@ -4227,11 +4303,12 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
                             type="button"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-                              viewBox="0 0 24 24"
+                              class="css-znppnv e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M19,13H5V11H19V13Z"
+                                d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
                               />
                             </svg>
                           </button>
@@ -4261,11 +4338,12 @@ exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
                             type="button"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-                              viewBox="0 0 24 24"
+                              class="css-znppnv e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
                               />
                             </svg>
                           </button>
@@ -4547,13 +4625,18 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1bhnh9o-sizeStyles {
+.css-6qg2f3-sizeStyles {
   vertical-align: middle;
   fill: #641cb3;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.css-6qg2f3-sizeStyles .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-12uv9zd-StyledRegular-StyledStrong {
@@ -4618,7 +4701,7 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
   padding: 16px;
 }
 
-.css-xlwmt8-sizeStyles-StyledIcon {
+.css-1c6bnf8-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: #641cb3;
   height: 20px;
@@ -4626,6 +4709,11 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
   min-width: 20px;
   min-height: 20px;
   margin-right: 8px;
+}
+
+.css-1c6bnf8-sizeStyles-StyledIcon .fillStroke {
+  stroke: #641cb3;
+  fill: none;
 }
 
 .css-x833v6-StyledPriceCell-Cell-StyledPriceCell-PriceCell {
@@ -5015,13 +5103,18 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-znppnv {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-19b723i-Cell {
@@ -5452,11 +5545,14 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
             class="css-9bqyx6 ehpbis70"
           >
             <svg
-              class="css-1bhnh9o-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
+              class="css-6qg2f3-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                clip-rule="evenodd"
+                d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                fill-rule="evenodd"
               />
             </svg>
             Estimated cost
@@ -5502,11 +5598,14 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
                 class="css-gy9ug9-Title e1xb5k8j8"
               >
                 <svg
-                  class="excc3v71 css-xlwmt8-sizeStyles-StyledIcon e1gt4cfo0"
-                  viewBox="0 0 24 24"
+                  class="excc3v71 css-1c6bnf8-sizeStyles-StyledIcon e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                    clip-rule="evenodd"
+                    d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                    fill-rule="evenodd"
                   />
                 </svg>
                 Estimated cost
@@ -5618,11 +5717,14 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
                             class="css-9bqyx6 ehpbis70"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+                              class="css-znppnv e1gt4cfo0"
                               viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                                clip-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                fill-rule="evenodd"
                               />
                             </svg>
                           </div>
@@ -5700,11 +5802,12 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
                             type="button"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-                              viewBox="0 0 24 24"
+                              class="css-znppnv e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M19,13H5V11H19V13Z"
+                                d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
                               />
                             </svg>
                           </button>
@@ -5734,11 +5837,12 @@ exports[`EstimateCost - NumberInput Item render with values 1`] = `
                             type="button"
                           >
                             <svg
-                              class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-                              viewBox="0 0 24 24"
+                              class="css-znppnv e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
                               />
                             </svg>
                           </button>

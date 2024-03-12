@@ -330,13 +330,18 @@ exports[`Tag renders correctly with icon 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-znppnv {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 .css-1olt749-StyledText-StyledText {
@@ -358,11 +363,14 @@ exports[`Tag renders correctly with icon 1`] = `
     class="css-1anauza-StyledContainer el6733p2"
   >
     <svg
-      class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-      viewBox="0 0 24 24"
+      class="css-znppnv e1gt4cfo0"
+      viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
+        clip-rule="evenodd"
+        d="M8 1a3.5 3.5 0 0 0-3.5 3.5V7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7V4.5A3.5 3.5 0 0 0 8 1m2 6V4.5a2 2 0 1 0-4 0V7z"
+        fill-rule="evenodd"
       />
     </svg>
     <span
@@ -575,13 +583,18 @@ exports[`Tag renders correctly with onClose 1`] = `
   color: #222638;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-znppnv {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <span
@@ -599,11 +612,12 @@ exports[`Tag renders correctly with onClose 1`] = `
       type="button"
     >
       <svg
-        class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="css-znppnv e1gt4cfo0"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
         />
       </svg>
     </button>

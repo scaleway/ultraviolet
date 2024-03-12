@@ -638,7 +638,7 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-thickness: 2px;
 }
 
-.css-1axq5yx-sizeStyles-StyledIcon {
+.css-kblcvk-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -647,17 +647,25 @@ exports[`Link render correctly with href props 2`] = `
   min-height: 16px;
 }
 
+.css-kblcvk-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
 <a
     class="css-1y94hd0-StyledLink e1afnb7a0"
     data-variant="standalone"
     href="/"
   >
     <svg
-      class="e1afnb7a2 css-1axq5yx-sizeStyles-StyledIcon e1gt4cfo0"
+      class="e1afnb7a2 css-kblcvk-StyledIcon e1gt4cfo0"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+        clip-rule="evenodd"
+        d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+        fill-rule="evenodd"
       />
     </svg>
     Hello
@@ -742,13 +750,18 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-thickness: 2px;
 }
 
-.css-1axq5yx-sizeStyles-StyledIcon {
+.css-kblcvk-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-kblcvk-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <a
@@ -758,11 +771,14 @@ exports[`Link render correctly with href props 2`] = `
   >
     Hello
     <svg
-      class="e1afnb7a2 css-1axq5yx-sizeStyles-StyledIcon e1gt4cfo0"
+      class="e1afnb7a2 css-kblcvk-StyledIcon e1gt4cfo0"
       viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+        clip-rule="evenodd"
+        d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+        fill-rule="evenodd"
       />
     </svg>
   </a>
@@ -854,13 +870,18 @@ exports[`Link render correctly with href props 2`] = `
   padding-bottom: 4px;
 }
 
-.css-1rr0th9-sizeStyles-StyledIcon {
+.css-kfn912-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
   width: 14px;
   min-width: 14px;
   min-height: 14px;
+}
+
+.css-kfn912-sizeStyles-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <a
@@ -875,11 +896,19 @@ exports[`Link render correctly with href props 2`] = `
       class="css-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 css-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="e1afnb7a2 css-kfn912-sizeStyles-StyledIcon e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+          clip-rule="evenodd"
+          d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+          fill-rule="evenodd"
+        />
+        <path
+          clip-rule="evenodd"
+          d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+          fill-rule="evenodd"
         />
       </svg>
     </span>
@@ -972,13 +1001,18 @@ exports[`Link render correctly with href props 2`] = `
   padding-bottom: 4px;
 }
 
-.css-1rr0th9-sizeStyles-StyledIcon {
+.css-kfn912-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
   width: 14px;
   min-width: 14px;
   min-height: 14px;
+}
+
+.css-kfn912-sizeStyles-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <a
@@ -993,11 +1027,19 @@ exports[`Link render correctly with href props 2`] = `
       class="css-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 css-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="e1afnb7a2 css-kfn912-sizeStyles-StyledIcon e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+          clip-rule="evenodd"
+          d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+          fill-rule="evenodd"
+        />
+        <path
+          clip-rule="evenodd"
+          d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+          fill-rule="evenodd"
         />
       </svg>
     </span>
@@ -1465,13 +1507,18 @@ exports[`Link render correctly with target blank 1`] = `
   padding-bottom: 4px;
 }
 
-.css-1rr0th9-sizeStyles-StyledIcon {
+.css-kfn912-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
   width: 14px;
   min-width: 14px;
   min-height: 14px;
+}
+
+.css-kfn912-sizeStyles-StyledIcon .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <a
@@ -1486,11 +1533,19 @@ exports[`Link render correctly with target blank 1`] = `
       class="css-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 css-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="e1afnb7a2 css-kfn912-sizeStyles-StyledIcon e1gt4cfo0"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+          clip-rule="evenodd"
+          d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+          fill-rule="evenodd"
+        />
+        <path
+          clip-rule="evenodd"
+          d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+          fill-rule="evenodd"
         />
       </svg>
     </span>

@@ -391,13 +391,18 @@ exports[`EstimateCost - CustomUnitInput render default values 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-znppnv {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <div
@@ -500,11 +505,14 @@ exports[`EstimateCost - CustomUnitInput render default values 1`] = `
               class="css-9bqyx6 ehpbis70"
             >
               <svg
-                class="css-1ah7xw8-sizeStyles e1gt4cfo0"
+                class="css-znppnv e1gt4cfo0"
                 viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                  clip-rule="evenodd"
+                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                  fill-rule="evenodd"
                 />
               </svg>
             </div>

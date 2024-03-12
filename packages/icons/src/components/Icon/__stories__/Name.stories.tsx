@@ -6,7 +6,7 @@ import { Icon, icons } from '..'
 export const Name = (args: ComponentProps<typeof Icon>) =>
   icons.map(name => (
     <div>
-      <Icon name={name} {...args} />
+      <Icon {...args} name={name} key={name} />
       &nbsp;{name}
     </div>
   ))

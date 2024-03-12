@@ -383,13 +383,18 @@ exports[`Submit renders correctly with icon and iconPosition  1`] = `
   text-decoration: none;
 }
 
-.css-1ah7xw8-sizeStyles {
+.css-znppnv {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
   width: 16px;
   min-width: 16px;
   min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
 <form>
@@ -399,11 +404,14 @@ exports[`Submit renders correctly with icon and iconPosition  1`] = `
       type="submit"
     >
       <svg
-        class="css-1ah7xw8-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+        class="css-znppnv e1gt4cfo0"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M15 5l-1.41 1.41L18.17 11H2v2h16.17l-4.59 4.59L15 19l7-7-7-7z"
+          clip-rule="evenodd"
+          d="M2 8.25c0 .414.336.75.75.75h8.69l-1.22 1.22a.75.75 0 1 0 1.06 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5a.75.75 0 1 0-1.06 1.06l1.22 1.22H2.75a.75.75 0 0 0-.75.75"
+          fill-rule="evenodd"
         />
       </svg>
       Test
