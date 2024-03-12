@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.10.1
+
+### Patch Changes
+
+- [#3532](https://github.com/scaleway/ultraviolet/pull/3532) [`c3ed184`](https://github.com/scaleway/ultraviolet/commit/c3ed184233eee36d4f5717f8a14bd14eb5955d3d) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor of `Icon` with new icons and variant and update of every component accordingly
+
+- [#3544](https://github.com/scaleway/ultraviolet/pull/3544) [`04f46d8`](https://github.com/scaleway/ultraviolet/commit/04f46d81467a7da8d7d6a6a5399560444c14a049) Thanks [@philibea](https://github.com/philibea)! - remove z-index from EstimateCost Overlay component
+
+- Updated dependencies [[`c3ed184`](https://github.com/scaleway/ultraviolet/commit/c3ed184233eee36d4f5717f8a14bd14eb5955d3d)]:
+  - @ultraviolet/ui@1.41.1
+
 ## 0.10.0
 
 ### Minor Changes

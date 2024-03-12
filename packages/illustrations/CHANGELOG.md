@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.6.4
+
+### Patch Changes
+
+- [#3552](https://github.com/scaleway/ultraviolet/pull/3552) [`9a82199`](https://github.com/scaleway/ultraviolet/commit/9a8219965356c1255636a48c18367a07a31a20b8) Thanks [@matthprost](https://github.com/matthprost)! - Fix export of DynamicIllustration
+
 ## 1.6.3
 
 ### Patch Changes

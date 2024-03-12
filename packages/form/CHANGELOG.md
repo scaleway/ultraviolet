@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.8.4
+
+### Patch Changes
+
+- [#3532](https://github.com/scaleway/ultraviolet/pull/3532) [`c3ed184`](https://github.com/scaleway/ultraviolet/commit/c3ed184233eee36d4f5717f8a14bd14eb5955d3d) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor of `Icon` with new icons and variant and update of every component accordingly
+
+- Updated dependencies [[`c3ed184`](https://github.com/scaleway/ultraviolet/commit/c3ed184233eee36d4f5717f8a14bd14eb5955d3d)]:
+  - @ultraviolet/ui@1.41.1
+
 ## 2.8.3
 
 ### Patch Changes
