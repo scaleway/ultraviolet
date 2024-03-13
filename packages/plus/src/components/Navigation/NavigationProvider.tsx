@@ -18,6 +18,7 @@ type ContextProps = {
   pinnedItems: string[]
   unpinItem: (item: string) => void
   locales: typeof NavigationLocales
+  pinLimit: number
 }
 
 export const NavigationContext = createContext<ContextProps>({
@@ -27,6 +28,7 @@ export const NavigationContext = createContext<ContextProps>({
   pinItem: () => {},
   unpinItem: () => {},
   pinnedItems: [],
+  pinLimit: 7,
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -37,6 +39,7 @@ type NavigationProviderProps = {
   onClickPinUnpin?: (pinned: string[]) => void
   initialPinned?: string[]
   locales: typeof NavigationLocales
+  pinLimit: number
 }
 
 export const NavigationProvider = ({
@@ -45,6 +48,7 @@ export const NavigationProvider = ({
   onClickPinUnpin,
   initialPinned,
   locales,
+  pinLimit,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useReducer(state => !state, true)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
@@ -76,8 +80,17 @@ export const NavigationProvider = ({
       unpinItem,
       pinnedFunctionality,
       locales,
+      pinLimit,
     }),
-    [expanded, locales, pinItem, pinnedItems, pinnedFunctionality, unpinItem],
+    [
+      expanded,
+      pinnedItems,
+      pinItem,
+      unpinItem,
+      pinnedFunctionality,
+      locales,
+      pinLimit,
+    ],
   )
 
   return (

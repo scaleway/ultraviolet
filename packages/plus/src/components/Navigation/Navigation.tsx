@@ -119,6 +119,7 @@ type NavigationProps = {
   initialPinned?: string[]
   onClickPinUnpin?: (pinned: string[]) => void
   locales?: typeof NavigationLocales
+  pinLimit?: number
 }
 
 export const Navigation = ({
@@ -128,12 +129,14 @@ export const Navigation = ({
   onClickPinUnpin,
   initialPinned,
   locales = NavigationLocales,
+  pinLimit = 7,
 }: NavigationProps) => (
   <NavigationProvider
     onClickPinUnpin={onClickPinUnpin}
     pinnedFunctionality={pinnedFunctionality}
     locales={locales}
     initialPinned={initialPinned}
+    pinLimit={pinLimit}
   >
     <NavigationContent logo={logo}>{children}</NavigationContent>
   </NavigationProvider>

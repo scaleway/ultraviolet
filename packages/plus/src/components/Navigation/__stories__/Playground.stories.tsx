@@ -23,12 +23,24 @@ Playground.args = {
           label="Compute"
           subLabel="All compute ressources"
           categoryIcon="baremetal"
-          badgeText="New"
           badgeSentiment="success"
-          href="#"
         >
-          <Navigation.Item label="Instance" />
+          <Navigation.Item
+            label="Instance"
+            badgeText="new"
+            badgeSentiment="success"
+          />
           <Navigation.Item label="Elastic Metal" />
+          <Navigation.Item
+            label="Very long product name with spaces"
+            badgeText="internal"
+            badgeSentiment="danger"
+          />
+          <Navigation.Item
+            label="Verylongproductnamewithoutspace"
+            badgeText="internal"
+            badgeSentiment="danger"
+          />
           <Navigation.Item label="Advanced">
             <Navigation.Item label="Kubernetes" />
             <Navigation.Item label="OpenStack" />
@@ -41,7 +53,6 @@ Playground.args = {
             badgeText="beta"
             badgeSentiment="warning"
           />
-          <Navigation.Item label="File Storage" href="#" />
         </Navigation.Item>
         <Navigation.Item label="Network" categoryIcon="network">
           <Navigation.Item label="Load Balancer" />
@@ -63,6 +74,17 @@ Playground.args = {
           <Navigation.Item label="Certificate" />
           <Navigation.Item label="VPN" />
         </Navigation.Item>
+      </Navigation.Group>
+      <Navigation.Group label="Quick Links">
+        <Navigation.Item label="Support" />
+        <Navigation.Item label="Abuse" />
+        <Navigation.Item
+          label="Documentation"
+          badgeText="new"
+          badgeSentiment="success"
+          href="http://scaleway.com"
+        />
+        <Navigation.Item label="Feature Request" href="http://scaleway.com" />
       </Navigation.Group>
     </>,
   ],

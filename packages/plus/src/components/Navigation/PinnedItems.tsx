@@ -1,4 +1,3 @@
-import { Group } from './Group'
 import { Item } from './Item'
 import { useNavigation } from './NavigationProvider'
 
@@ -15,11 +14,16 @@ export const PinnedItems = () => {
 
   if (pinnedItems.length > 0) {
     return (
-      <Group label={locales['navigation.pinned.item.group.label']}>
+      <Item
+        label={locales['navigation.pinned.item.group.label']}
+        categoryIcon="webHosting"
+        toggle={false}
+        type="pinnedGroup"
+      >
         {pinnedItems.map(item => (
-          <Item key={item} label={item} />
+          <Item key={item} label={item} type="pinned" />
         ))}
-      </Group>
+      </Item>
     )
   }
 
