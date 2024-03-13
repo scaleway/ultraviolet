@@ -8,7 +8,7 @@ ReadOnly.args = {
   label: 'Number Input',
   name: 'number-input',
   onChange: () => {},
-  value: '50',
+  value: 50,
 }
 
 ReadOnly.parameters = {

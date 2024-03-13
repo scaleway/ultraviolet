@@ -1,11 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type {
-  ChangeEvent,
-  ForwardedRef,
-  InputHTMLAttributes,
-  ReactNode,
-} from 'react'
+import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import {
   forwardRef,
   useCallback,
@@ -19,6 +14,8 @@ import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+
+const NUMBER_INPUT_MAX_STR_LENGTH = Number.MAX_SAFE_INTEGER.toString().length
 
 const SIZES = {
   small: '30px',
@@ -187,18 +184,18 @@ type NumberInputProps = {
   error?: string
   success?: string | boolean
   helper?: ReactNode
-  value?: string | number
+  value?: number
+  onChange?: (newValue: number) => void
+  min?: number
+  max?: number
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
-  | 'onChange'
   | 'onFocus'
   | 'onBlur'
   | 'name'
   | 'id'
   | 'placeholder'
   | 'aria-label'
-  | 'min'
-  | 'max'
   | 'disabled'
   | 'step'
   | 'readOnly'
@@ -214,7 +211,7 @@ export const NumberInputV2 = forwardRef(
   (
     {
       disabled = false,
-      max = Infinity,
+      max = Number.MAX_SAFE_INTEGER,
       min = 0,
       name,
       onChange,
@@ -247,29 +244,39 @@ export const NumberInputV2 = forwardRef(
     const uniqueId = useId()
     const localId = id ?? uniqueId
 
-    const createChangeEvent = (
-      newValue: string | number,
-    ): ChangeEvent<HTMLInputElement> =>
-      ({
-        target: {
-          value: newValue,
-        },
-      }) as ChangeEvent<HTMLInputElement>
-
     const onClickSideButton = useCallback(
       (direction: 'up' | 'down') => () => {
         if (direction === 'up') {
           localRef.current?.stepUp()
-          onChange?.(createChangeEvent(localRef.current?.value ?? min))
-        }
-
-        if (direction === 'down') {
+        } else if (direction === 'down') {
           localRef.current?.stepDown()
-          onChange?.(createChangeEvent(localRef.current?.value ?? min))
         }
+        onChange?.(parseInt(localRef.current?.value ?? '', 10) ?? min)
       },
       [localRef, min, onChange],
     )
+
+    const onChangeValue = (inputStr: string) => {
+      if (onChange) {
+        let numericValue = parseInt(inputStr, 10)
+        if (
+          (inputStr.length > NUMBER_INPUT_MAX_STR_LENGTH &&
+            inputStr.startsWith('-')) ||
+          numericValue < min
+        ) {
+          numericValue = min
+        } else if (
+          inputStr.length > NUMBER_INPUT_MAX_STR_LENGTH ||
+          numericValue > max
+        ) {
+          numericValue = max
+        }
+        onChange(numericValue)
+        if (localRef.current) {
+          localRef.current.value = numericValue.toString()
+        }
+      }
+    }
 
     const isMinusDisabled = useMemo(
       () => {
@@ -372,6 +379,11 @@ export const NumberInputV2 = forwardRef(
                   name={name}
                   id={localId}
                   placeholder={placeholder}
+                  onKeyDown={event => {
+                    if (event.key === 'Enter') {
+                      onChangeValue(localRef.current?.value ?? '')
+                    }
+                  }}
                   onBlur={event => {
                     if (event.target.value === '') {
                       onBlur?.(event)
@@ -379,29 +391,14 @@ export const NumberInputV2 = forwardRef(
                       return
                     }
 
-                    const numericValue = Number(event.target.value)
-                    const maxValue = typeof max === 'number' ? max : Number(max)
-                    const minValue = typeof min === 'number' ? min : Number(min)
-
-                    if (
-                      Number.isNaN(numericValue) ||
-                      (!Number.isNaN(minValue) && numericValue < minValue)
-                    ) {
-                      onChange?.(createChangeEvent(min.toString()))
-                    }
-
-                    if (
-                      Number.isNaN(numericValue) ||
-                      (!Number.isNaN(maxValue) && numericValue > maxValue)
-                    ) {
-                      onChange?.(createChangeEvent(max.toString()))
+                    if (onChange) {
+                      onChangeValue(event.target.value)
                     }
 
                     onBlur?.(event)
                   }}
+                  defaultValue={value}
                   onFocus={onFocus}
-                  onChange={onChange}
-                  value={value}
                   data-size={size}
                   step={step}
                   disabled={disabled}
