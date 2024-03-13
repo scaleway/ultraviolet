@@ -20,7 +20,7 @@ export const NumberInput = ({
   itemCallback,
 }: NumberInputProps) => {
   const { isOverlay } = useOverlay()
-  const [value, setValue] = useState<number | string | undefined>(amount)
+  const [value, setValue] = useState<number | undefined>(amount)
 
   useEffect(() => {
     getAmountValue?.(amount)
@@ -35,10 +35,8 @@ export const NumberInput = ({
       min={minValue}
       max={maxValue}
       size="small"
-      onChange={event => {
-        setValue(event.target.value)
-        const newValue =
-          event.target.value !== '' ? Number(event.target.value) : 0
+      onChange={newValue => {
+        setValue(newValue)
         itemCallback?.(newValue, true)
         getAmountValue?.(newValue)
       }}

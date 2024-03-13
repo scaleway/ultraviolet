@@ -258,18 +258,22 @@ export const NumberInputV2 = forwardRef(
 
     const onChangeValue = (inputStr: string) => {
       if (onChange) {
-        let numericValue = parseInt(inputStr, 10)
+        let numericValue: number
         if (
-          (inputStr.length > NUMBER_INPUT_MAX_STR_LENGTH &&
-            inputStr.startsWith('-')) ||
-          numericValue < min
+          inputStr.length > NUMBER_INPUT_MAX_STR_LENGTH &&
+          inputStr.startsWith('-')
         ) {
           numericValue = min
-        } else if (
-          inputStr.length > NUMBER_INPUT_MAX_STR_LENGTH ||
-          numericValue > max
-        ) {
+        } else if (inputStr.length > NUMBER_INPUT_MAX_STR_LENGTH) {
           numericValue = max
+        } else {
+          numericValue = parseInt(inputStr, 10)
+
+          if (Number.isNaN(numericValue) || numericValue < min) {
+            numericValue = min
+          } else if (numericValue > max) {
+            numericValue = max
+          }
         }
         onChange(numericValue)
         if (localRef.current) {
