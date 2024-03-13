@@ -15,6 +15,9 @@ const ExpandableWrapper = styled.div`
   margin: 0 -${({ theme }) => theme.space['2']};
   padding: ${({ theme }) => theme.space['2']};
   cursor: auto;
+  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  border-radius: 0 0 ${({ theme }) => theme.radii.default}
+    ${({ theme }) => theme.radii.default};
 `
 
 export const StyledRow = styled('div', {
@@ -71,13 +74,6 @@ export const StyledRow = styled('div', {
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
     cursor: not-allowed;
   }
-
-  & [data-visibility='hover'] {
-    opacity: 0;
-  }
-  &:hover:not([aria-disabled='true']) [data-visibility='hover'] {
-    opacity: 1;
-  }
 `
 
 const StyledCheckboxContainer = styled.div`
@@ -113,7 +109,6 @@ export const Row = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const {
-      allRowSelectValue,
       selectable,
       registerExpandableRow,
       expandedRowIds,
@@ -158,14 +153,16 @@ export const Row = forwardRef(
       }
     }
 
+    const canClickRowToExpand = !disabled && !!expandable && !expandButton
+
     return (
       <StyledRow
         className={className}
         ref={ref}
-        role={!disabled && expandable ? 'button row' : 'row'}
-        onClick={!disabled && expandable ? toggleRowExpand : undefined}
+        role={canClickRowToExpand ? 'button row' : 'row'}
+        onClick={canClickRowToExpand ? toggleRowExpand : undefined}
         onKeyDown={
-          !disabled && expandable
+          canClickRowToExpand
             ? event => {
                 if (event.key === ' ') {
                   toggleRowExpand()
@@ -174,7 +171,7 @@ export const Row = forwardRef(
               }
             : undefined
         }
-        tabIndex={!disabled && expandable ? 0 : -1}
+        tabIndex={canClickRowToExpand ? 0 : -1}
         sentiment={sentiment}
         aria-disabled={disabled}
         aria-expanded={expandable ? expandedRowIds[id] : undefined}
@@ -182,12 +179,8 @@ export const Row = forwardRef(
         data-testid={dataTestid}
       >
         {selectable ? (
-          <Cell preventClick>
-            <StyledCheckboxContainer
-              data-visibility={
-                allRowSelectValue === false ? 'hover' : undefined
-              }
-            >
+          <Cell preventClick={canClickRowToExpand}>
+            <StyledCheckboxContainer>
               <Tooltip
                 text={
                   typeof selectDisabled === 'string'
@@ -219,7 +212,7 @@ export const Row = forwardRef(
               disabled={disabled || !expandable}
               icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
               onClick={toggleRowExpand}
-              size="xsmall"
+              size="small"
               sentiment="neutral"
               variant="ghost"
             />
@@ -229,12 +222,20 @@ export const Row = forwardRef(
         {expandable && expandedRowIds[id] ? (
           <ExpandableWrapper
             data-expandable-content
-            onClick={e => {
-              e.stopPropagation()
-            }}
-            onKeyDown={e => {
-              e.stopPropagation()
-            }}
+            onClick={
+              canClickRowToExpand
+                ? e => {
+                    e.stopPropagation()
+                  }
+                : undefined
+            }
+            onKeyDown={
+              canClickRowToExpand
+                ? e => {
+                    e.stopPropagation()
+                  }
+                : undefined
+            }
           >
             {expandable}
           </ExpandableWrapper>

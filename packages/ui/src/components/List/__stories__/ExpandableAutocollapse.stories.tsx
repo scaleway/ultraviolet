@@ -6,6 +6,7 @@ export const ExpandableAutocollapse = Template.bind({})
 
 ExpandableAutocollapse.args = {
   ...Template.args,
+  expandable: true,
   autoCollapse: true,
   children: data.map(planet => (
     <List.Row key={planet.id} id={planet.id} expandable="Planet description">

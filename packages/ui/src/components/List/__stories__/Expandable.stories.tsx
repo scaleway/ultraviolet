@@ -6,6 +6,7 @@ export const Expandable = Template.bind({})
 
 Expandable.args = {
   ...Template.args,
+  expandable: true,
   children: data.map(planet => (
     <List.Row
       key={planet.id}
