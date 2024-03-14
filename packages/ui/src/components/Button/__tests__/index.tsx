@@ -89,6 +89,13 @@ describe('Button', () => {
       </Button>,
     ))
 
+  test(`render with isLoading with icon variant`, () =>
+    shouldMatchEmotionSnapshot(
+      <Button onClick={MockOnClick} icon="pencil" variant="outlined">
+        Hello
+      </Button>,
+    ))
+
   test(`render as an anchor with href prop`, () =>
     shouldMatchEmotionSnapshot(
       <Button onClick={MockOnClick} href="http://scaleway.com">

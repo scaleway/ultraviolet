@@ -326,8 +326,8 @@ exports[`Button render with a tooltip 1`] = `
 }
 
 <div
-    aria-controls=":r1l:"
-    aria-describedby=":r1l:"
+    aria-controls=":r1m:"
+    aria-describedby=":r1m:"
     class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
     data-container-full-width="false"
     tabindex="0"
@@ -751,6 +751,98 @@ exports[`Button render with isLoading with icon 1`] = `
         stroke-dashoffset="211.11502632123413"
         stroke-linecap="round"
         stroke-width="16"
+      />
+    </svg>
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button render with isLoading with icon variant 1`] = `
+<DocumentFragment>
+  .css-tyvr0z-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+}
+
+.css-tyvr0z-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.css-tyvr0z-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.css-tyvr0z-StyledOutlinedButton:hover,
+.css-tyvr0z-StyledOutlinedButton:active {
+  background: #e5dbfd;
+  color: #521094;
+  border: 1px solid #792dd4;
+}
+
+.css-znppnv {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.css-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<button
+    class="css-tyvr0z-StyledOutlinedButton e112qvla1"
+    type="button"
+  >
+    <svg
+      class="css-znppnv e1gt4cfo0"
+      viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
+      />
+      <path
+        d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
       />
     </svg>
     Hello

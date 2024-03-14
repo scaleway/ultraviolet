@@ -103,6 +103,7 @@ type ContentProps = XOR<
   [
     {
       icon: ComponentProps<typeof Icon>['name']
+      iconVariant?: ComponentProps<typeof Icon>['variant']
     },
     {
       text: string
@@ -127,6 +128,7 @@ export const Bullet = ({
   sentiment = 'neutral',
   size = 'medium',
   icon,
+  iconVariant,
   text,
   tooltip,
   tooltipBaseId,
@@ -141,7 +143,7 @@ export const Bullet = ({
       data-testid={dataTestId}
       prominence={prominence}
     >
-      {icon ? <Icon name={icon} size="50%" /> : text}
+      {icon ? <Icon name={icon} size="50%" variant={iconVariant} /> : text}
     </StyledContainer>
   </Tooltip>
 )
