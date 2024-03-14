@@ -88,6 +88,62 @@ exports[`Bullet renders correctly with an icon 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Bullet renders correctly with an icon and icon variant 1`] = `
+<DocumentFragment>
+  .css-1k74lo7-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+}
+
+.css-32ydu7-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 50%;
+  width: 50%;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.css-32ydu7-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div
+    class="css-1k74lo7-StyledContainer e11loam60"
+  >
+    <svg
+      class="css-32ydu7-sizeStyles e1gt4cfo0"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M7.866 2.205a.7.7 0 0 1 .15.765 6.89 6.89 0 0 0 9.013 9.013.701.701 0 0 1 .917.917A8.293 8.293 0 0 1 2 9.709a8.29 8.29 0 0 1 5.1-7.655.7.7 0 0 1 .766.151M6.217 4.152a6.89 6.89 0 1 0 9.631 9.631q-.716.129-1.47.13a8.29 8.29 0 0 1-8.16-9.761"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Bullet sentiment render danger 1`] = `
 <DocumentFragment>
   .css-oil5vi-StyledContainer {
