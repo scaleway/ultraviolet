@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.43.0
+
+### Minor Changes
+
+- [#3559](https://github.com/scaleway/ultraviolet/pull/3559) [`3fd16ed`](https://github.com/scaleway/ultraviolet/commit/3fd16edd65e34ac3e131b6bd88b01461900a90a8) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `iconVariant` to `<Button />` and `<Bullet />` component
+
 ## 1.42.0
 
 ### Minor Changes
