@@ -111,6 +111,9 @@ const StyledIcon = (
 export type IconName = keyof typeof ICONS.filled
 
 type IconProps = {
+  /**
+   * ⚠️`string` and `number` are deprecated. Use `small` and `large` only.
+   */
   size?: number | string | 'small' | 'large'
   name?: IconName
   prominence?: ProminenceProps
