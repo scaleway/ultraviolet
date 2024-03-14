@@ -52,6 +52,11 @@ type TagListProps = {
    * This property define the title of the Popover, when some tags are hidden because of the threshold.
    */
   popoverTitle: string
+  /**
+   * The popover will be placed automatically by default. You can also specify the placement of the popover through
+   * this property.
+   */
+  popoverPlacement?: ComponentProps<typeof Popover>['placement']
   className?: string
   'data-testid'?: string
 } & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
@@ -70,6 +75,7 @@ export const TagList = ({
   threshold = 1,
   multiline = false,
   popoverTitle,
+  popoverPlacement,
   copiable,
   copyText,
   copiedText,
@@ -120,6 +126,7 @@ export const TagList = ({
           visible={isVisible}
           size="small"
           onClose={() => setIsVisible(false)}
+          placement={popoverPlacement}
           content={
             <StyledTagContainer multiline>
               {tags.slice(visibleTagsCount).map((tag, index) => (
