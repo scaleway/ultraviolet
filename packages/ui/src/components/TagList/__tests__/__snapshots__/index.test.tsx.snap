@@ -213,8 +213,8 @@ exports[`TagList renders correctly with copiable 1`] = `
         class="css-1alpvce-StyledTagContainer eb6op480"
       >
         <div
-          aria-controls=":rc:"
-          aria-describedby=":rc:"
+          aria-controls=":re:"
+          aria-describedby=":re:"
           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
           tabindex="0"
         >
@@ -229,8 +229,8 @@ exports[`TagList renders correctly with copiable 1`] = `
           </button>
         </div>
         <div
-          aria-controls=":re:"
-          aria-describedby=":re:"
+          aria-controls=":rg:"
+          aria-describedby=":rg:"
           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
           tabindex="0"
         >
@@ -459,8 +459,8 @@ exports[`TagList renders correctly with custom threshold and extra tags 1`] = `
         </span>
       </div>
       <div
-        aria-controls=":r6:"
-        aria-describedby=":r6:"
+        aria-controls=":r8:"
+        aria-describedby=":r8:"
         class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
         tabindex="-1"
       >
@@ -582,8 +582,8 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
         </span>
       </div>
       <div
-        aria-controls=":r8:"
-        aria-describedby=":r8:"
+        aria-controls=":ra:"
+        aria-describedby=":ra:"
         class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
         tabindex="-1"
       >
@@ -689,8 +689,8 @@ exports[`TagList renders correctly with icons 1`] = `
         class="css-1alpvce-StyledTagContainer eb6op480"
       >
         <div
-          aria-controls=":rg:"
-          aria-describedby=":rg:"
+          aria-controls=":ri:"
+          aria-describedby=":ri:"
           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
           tabindex="0"
         >
@@ -705,8 +705,8 @@ exports[`TagList renders correctly with icons 1`] = `
           </button>
         </div>
         <div
-          aria-controls=":ri:"
-          aria-describedby=":ri:"
+          aria-controls=":rk:"
+          aria-describedby=":rk:"
           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
           tabindex="0"
         >
@@ -845,8 +845,8 @@ exports[`TagList renders correctly with multiline 1`] = `
         </span>
       </div>
       <div
-        aria-controls=":rb:"
-        aria-describedby=":rb:"
+        aria-controls=":rd:"
+        aria-describedby=":rd:"
         class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
         tabindex="-1"
       >
@@ -865,5 +865,128 @@ exports[`TagList renders correctly with multiline 1`] = `
 exports[`TagList renders correctly with not tags 1`] = `
 <DocumentFragment>
   <div />
+</DocumentFragment>
+`;
+
+exports[`TagList renders correctly with placement 1`] = `
+<DocumentFragment>
+  .css-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.css-1alpvce-StyledTagContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #3f4250;
+  gap: 8px;
+}
+
+.css-1anauza-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #3f4250;
+  background: #ffffff;
+  border: solid 1px #d9dadd;
+}
+
+.css-1olt749-StyledText-StyledText {
+  font-size: 12px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 232px;
+}
+
+.css-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.css-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.css-1c8psug-TagsWrapper {
+  cursor: pointer;
+  color: #641cb3;
+  border: none;
+  font-size: 14px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  max-width: 350px;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+<div>
+    <div
+      class="css-a1981g-StyledContainer eb6op482"
+    >
+      <div
+        class="css-1alpvce-StyledTagContainer eb6op480"
+      >
+        <span
+          class="css-1anauza-StyledContainer el6733p2"
+        >
+          <span
+            class="el6733p1 css-1olt749-StyledText-StyledText e13y3mga0"
+          >
+            scaleway
+          </span>
+        </span>
+      </div>
+      <div
+        aria-controls=":r3:"
+        aria-describedby=":r3:"
+        class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
+        tabindex="-1"
+      >
+        <span
+          class="css-1c8psug-TagsWrapper eb6op481"
+          data-testid="taglist-open"
+        >
+          +1
+        </span>
+      </div>
+    </div>
+  </div>
 </DocumentFragment>
 `;

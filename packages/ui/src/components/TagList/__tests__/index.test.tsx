@@ -22,6 +22,17 @@ describe('TagList', () => {
       </div>,
     ))
 
+  test('renders correctly with placement', () =>
+    shouldMatchEmotionSnapshot(
+      <div>
+        <TagList
+          popoverTitle="Additional"
+          tags={['scaleway', 'cloud']}
+          popoverPlacement="top"
+        />
+      </div>,
+    ))
+
   test('renders correctly with custom threshold', () =>
     shouldMatchEmotionSnapshot(
       <div>
