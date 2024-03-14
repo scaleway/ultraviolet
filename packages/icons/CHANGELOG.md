@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.10.1
+
+### Patch Changes
+
+- [#3557](https://github.com/scaleway/ultraviolet/pull/3557) [`d17262c`](https://github.com/scaleway/ultraviolet/commit/d17262c919f16420cbdb439de0e23b72a3c0877b) Thanks [@lisalupi](https://github.com/lisalupi)! - New product icon inference
+
 ## 2.10.0
 
 ### Minor Changes

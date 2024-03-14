@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.42.0
+
+### Minor Changes
+
+- [#3558](https://github.com/scaleway/ultraviolet/pull/3558) [`e20299c`](https://github.com/scaleway/ultraviolet/commit/e20299c35aa7f9ef0c083b1c1769ee38ff82c9c9) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `popoverPlacement` on `<TagList />` component
+
+- [#3553](https://github.com/scaleway/ultraviolet/pull/3553) [`3dce91d`](https://github.com/scaleway/ultraviolet/commit/3dce91d56f3707e0a93c07ca4ba7762ab7dbaf09) Thanks [@fabienhebert](https://github.com/fabienhebert)! - List: update expandable behavior
+
+### Patch Changes
+
+- Updated dependencies [[`d17262c`](https://github.com/scaleway/ultraviolet/commit/d17262c919f16420cbdb439de0e23b72a3c0877b)]:
+  - @ultraviolet/icons@2.10.1
+
 ## 1.41.1
 
 ### Patch Changes
