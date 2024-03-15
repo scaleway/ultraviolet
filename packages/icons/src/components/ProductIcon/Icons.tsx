@@ -58,6 +58,7 @@ import { ReactComponent as iconElasticMetal } from './assets/icon-elastic-metal.
 import { ReactComponent as iconSdkJs } from './assets/icon-sdk-js.svg'
 import { ReactComponent as iconSdk } from './assets/icon-sdk.svg'
 import { ReactComponent as images } from './assets/images.svg'
+import { ReactComponent as inference } from './assets/inference.svg'
 import { ReactComponent as instanceCostOptimized } from './assets/instance-cost-optimized.svg'
 import { ReactComponent as instanceEnterprise } from './assets/instance-enterprise.svg'
 import { ReactComponent as instanceGpu } from './assets/instance-gpu.svg'
@@ -268,4 +269,5 @@ export const PRODUCT_ICONS = {
   router,
   jero,
   nabu,
+  inference,
 } as const
