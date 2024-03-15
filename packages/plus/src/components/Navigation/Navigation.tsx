@@ -1,30 +1,28 @@
 import styled from '@emotion/styled'
 import { Button, Stack } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Group } from './Group'
 import { Item } from './Item'
 import { NavigationProvider, useNavigation } from './NavigationProvider'
 import { PinnedItems } from './PinnedItems'
 import NavigationLocales from './locales/en'
 
-const ANIMATION_DURATION = 300
+const ANIMATION_DURATION = 0
+
+const NAVIGATION_MIN_WIDTH = 220
+const NAVIGATION_COLLASPED_WIDTH = 90
 
 const StyledNav = styled.nav`
-  transition: width ${ANIMATION_DURATION}ms ease-in-out;
-  &[data-disabled-width-animation='true'] {
-    transition: none;
-  }
-
   width: 280px;
 
   &[data-expanded='true'] {
     max-width: 320px;
-    min-width: 220px;
+    min-width: ${NAVIGATION_MIN_WIDTH}px;
   }
 
   &[data-expanded='false'] {
-    width: 64px;
+    width: fit-content;
   }
 
   display: flex;
@@ -38,10 +36,7 @@ const Container = styled.div`
   flex-direction: column;
 `
 
-const StickyFooter = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
+const StickyFooter = styled(Stack)`
   background: ${({ theme }) => theme.colors.neutral.background};
   border-top: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
@@ -62,16 +57,16 @@ const ContentContainer = styled.div`
   flex-direction: column;
   flex-grow: 1;
   transition: opacity ${ANIMATION_DURATION - 150}ms ease-in-out;
-
-  &[data-animation='true'] {
-    opacity: 0;
-  }
 `
 
 const Content = styled(Stack)`
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   flex-grow: 1;
-  padding: ${({ theme }) => theme.space['2']};
+
+  &[data-is-expanded='true'] {
+    padding: ${({ theme }) => theme.space['2']};
+  }
 `
 
 const Slider = styled.div`
@@ -100,15 +95,13 @@ const NavigationContent = ({
   const sliderRef = useRef<HTMLDivElement>(null)
   const navigationRef = useRef<HTMLDivElement>(null)
 
-  const [disabledWidthAnimation, setDisabledWidthAnimation] = useState(false)
-
   const { expanded, setExpanded } = useNavigation()
-  const [isAnimationPlaying, setIsAnimationPlaying] = useState(false)
 
   useEffect(() => {
     let prevX: number
     let navRect: DOMRect | undefined
     let shouldCollapseOnMouseUp = false
+    let shouldExpandOnMouseUp = false
 
     const mouseMove = (event: MouseEvent) => {
       if (prevX !== undefined) {
@@ -119,18 +112,21 @@ const NavigationContent = ({
           navigationRef.current.style.width = `${newWidth}px`
         }
 
-        console.log(newWidth)
-        if (newWidth <= 220) {
+        if (newWidth <= NAVIGATION_MIN_WIDTH) {
           shouldCollapseOnMouseUp = true
         } else {
           shouldCollapseOnMouseUp = false
+        }
+
+        if (newWidth >= NAVIGATION_COLLASPED_WIDTH && !expanded) {
+          shouldExpandOnMouseUp = true
+        } else {
+          shouldExpandOnMouseUp = false
         }
       }
     }
 
     const mousedown = (event: MouseEvent) => {
-      setDisabledWidthAnimation(true)
-
       document.body.style.pointerEvents = 'none'
       document.body.style.userSelect = 'none'
 
@@ -138,8 +134,10 @@ const NavigationContent = ({
       navRect = navigationRef.current?.getBoundingClientRect()
 
       const mouseup = () => {
-        setDisabledWidthAnimation(false)
-        if (shouldCollapseOnMouseUp) {
+        if (shouldCollapseOnMouseUp || shouldExpandOnMouseUp) {
+          if (navigationRef.current) {
+            navigationRef.current.style.width = ``
+          }
           setExpanded()
         }
 
@@ -164,15 +162,17 @@ const NavigationContent = ({
       // eslint-disable-next-line react-hooks/exhaustive-deps
       sliderRef.current?.removeEventListener('mousedown', mousedown)
     }
-  }, [])
+  }, [expanded, setExpanded])
 
   // This function will be triggered when expand/collapse button is clicked
   // It will also trigger a fade out animation when expanding the navigation
   const triggerExpand = () => {
+    if (navigationRef.current) {
+      navigationRef.current.style.width = ''
+    }
+
     if (!expanded) {
-      setIsAnimationPlaying(true)
       setTimeout(() => {
-        setIsAnimationPlaying(false)
         setExpanded()
       }, ANIMATION_DURATION)
     } else {
@@ -182,24 +182,27 @@ const NavigationContent = ({
 
   return (
     <StyledNav
-      data-expanded={expanded || isAnimationPlaying}
+      data-expanded={expanded}
       className={className}
       ref={navigationRef}
-      data-disabled-width-animation={disabledWidthAnimation}
     >
       <Container>
         <Header>
           <LogoContainer
             justifyContent={!expanded ? 'center' : undefined}
             alignItems={!expanded ? 'center' : undefined}
-            data-animation={isAnimationPlaying}
           >
             {typeof logo === 'function' ? logo(expanded) : logo}
           </LogoContainer>
         </Header>
-        <ContentContainer data-animation={isAnimationPlaying}>
-          <Content gap={0.25}>{children}</Content>
-          <StickyFooter>
+        <ContentContainer>
+          <Content gap={0.25} data-is-expanded={expanded}>
+            {children}
+          </Content>
+          <StickyFooter
+            alignItems={expanded ? 'flex-end' : 'center'}
+            width="100%"
+          >
             <Button
               variant="ghost"
               sentiment="neutral"

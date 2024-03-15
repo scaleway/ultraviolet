@@ -10,13 +10,17 @@ import {
   Text,
   Tooltip,
 } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
-import { Children, useMemo, useReducer } from 'react'
+import type { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import {
+  Children,
+  cloneElement,
+  isValidElement,
+  useMemo,
+  useReducer,
+} from 'react'
 import { useNavigation } from './NavigationProvider'
 
 const OPACITY_TRANSITION = '150ms ease-in-out'
-
-type ItemType = 'default' | 'pinned' | 'pinnedGroup'
 
 const NeutralButtonLink = css`
   color: inherit;
@@ -100,7 +104,8 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &:active {
+  &:active,
+  &[data-is-active='true'] {
     background-color: ${({ theme }) => theme.colors.primary.background};
   }
 `
@@ -119,6 +124,8 @@ const MenuStack = styled(Stack)`
 const WrapText = styled(Text)`
   overflow-wrap: anywhere;
 `
+
+type ItemType = 'default' | 'pinned' | 'pinnedGroup'
 
 type ItemProps = {
   children?: ReactNode
@@ -146,6 +153,10 @@ type ItemProps = {
    * You don't need to use this prop it's used internally to control the type of the item
    */
   type?: ItemType
+  /**
+   * You don't need to use this prop it's used internally to control if the item has a parent
+   */
+  hasParents?: boolean
 }
 
 export const Item = ({
@@ -161,6 +172,7 @@ export const Item = ({
   active,
   noPinButton,
   type = 'default',
+  hasParents,
 }: ItemProps) => {
   const context = useNavigation()
   const [internalToggle, setToggle] = useReducer(state => {
@@ -241,6 +253,7 @@ export const Item = ({
           href={href}
           target={href ? '_blank' : undefined}
           data-is-pinnable={shouldShowPinnedButton}
+          data-is-active={active}
         >
           <Stack direction="row" gap={1} alignItems="center">
             {categoryIcon ? <CategoryIcon name={categoryIcon} /> : null}
@@ -248,8 +261,8 @@ export const Item = ({
               <WrapText
                 as="span"
                 variant="bodySmallStrong"
-                sentiment="neutral"
-                prominence={!href && !categoryIcon ? 'weak' : undefined}
+                sentiment={active ? 'primary' : 'neutral'}
+                prominence={categoryIcon || !hasParents ? undefined : 'weak'}
               >
                 {label}
               </WrapText>
@@ -265,7 +278,7 @@ export const Item = ({
               ) : null}
             </Stack>
           </Stack>
-          <Stack direction="row" alignItems="center">
+          <Stack direction="row" alignItems="center" gap={href ? 1 : undefined}>
             {badgeText || hasPinnedFunctionalityAndNoChildren ? (
               <>
                 {badgeText ? (
@@ -327,7 +340,13 @@ export const Item = ({
         </Container>
         {children ? (
           <CustomExpandable opened={internalToggle}>
-            {children}
+            {Children.map(children, child =>
+              isValidElement(child)
+                ? cloneElement<ItemProps>(child, {
+                    hasParents: true,
+                  })
+                : child,
+            )}
           </CustomExpandable>
         ) : null}
       </>
@@ -362,7 +381,11 @@ export const Item = ({
                   alignItems="center"
                   justifyContent="space-between"
                 >
-                  {child}
+                  {isValidElement(child)
+                    ? cloneElement<ItemProps>(child, {
+                        hasParents: true,
+                      })
+                    : child}
                 </Stack>
               </StyledMenuItem>
             ))}
@@ -384,35 +407,39 @@ export const Item = ({
   }
 
   // This content is what is inside a menu item the navigation is collapsed
-  return (
-    <>
-      <WrapText as="span" variant="bodySmall">
-        {label}
-      </WrapText>
-      {shouldShowPinnedButton ? (
-        <Tooltip
-          text={
-            isItemPinned
-              ? locales['navigation.unpin.tooltip']
-              : locales['navigation.pin.tooltip']
-          }
-          placement="right"
-        >
-          <CollapsedPinnedButton
-            size="xsmall"
-            variant="ghost"
-            sentiment={active ? 'primary' : 'neutral'}
-            onClick={() => {
-              if (isItemPinned) {
-                unpinItem(label)
-              } else {
-                pinItem(label)
-              }
-            }}
-            icon="auto-fix"
-          />
-        </Tooltip>
-      ) : null}
-    </>
-  )
+  if (hasParents) {
+    return (
+      <>
+        <WrapText as="span" variant="bodySmall">
+          {label}
+        </WrapText>
+        {shouldShowPinnedButton ? (
+          <Tooltip
+            text={
+              isItemPinned
+                ? locales['navigation.unpin.tooltip']
+                : locales['navigation.pin.tooltip']
+            }
+            placement="right"
+          >
+            <CollapsedPinnedButton
+              size="xsmall"
+              variant="ghost"
+              sentiment={active ? 'primary' : 'neutral'}
+              onClick={() => {
+                if (isItemPinned) {
+                  unpinItem(label)
+                } else {
+                  pinItem(label)
+                }
+              }}
+              icon="auto-fix"
+            />
+          </Tooltip>
+        ) : null}
+      </>
+    )
+  }
+
+  return null
 }

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Separator, Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
+import { Children } from 'react'
 import { useNavigation } from './NavigationProvider'
 
 type GroupProps = {
@@ -29,22 +30,26 @@ export const Group = ({ children, label }: GroupProps) => {
 
   const { expanded } = context
 
-  return (
-    <>
-      <StyledSeparator />
-      <StyledStack direction="column">
-        {expanded ? (
-          <StyledText
-            as="span"
-            variant="bodySmallStrong"
-            sentiment="neutral"
-            prominence="weak"
-          >
-            {label}
-          </StyledText>
-        ) : null}
-        {children}
-      </StyledStack>
-    </>
-  )
+  if (Children.count(children) > 0) {
+    return (
+      <>
+        <StyledSeparator />
+        <StyledStack direction="column">
+          {expanded ? (
+            <StyledText
+              as="span"
+              variant="bodySmallStrong"
+              sentiment="neutral"
+              prominence="weak"
+            >
+              {label}
+            </StyledText>
+          ) : null}
+          {children}
+        </StyledStack>
+      </>
+    )
+  }
+
+  return null
 }

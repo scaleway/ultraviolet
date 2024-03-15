@@ -29,8 +29,10 @@ Playground.args = {
             label="Instance"
             badgeText="new"
             badgeSentiment="success"
+            active
           />
           <Navigation.Item label="Elastic Metal" />
+          <Navigation.Item label="Dedibox" href="https://scaleway.com" />
           <Navigation.Item
             label="Very long product name with spaces"
             badgeText="internal"
@@ -76,8 +78,8 @@ Playground.args = {
         </Navigation.Item>
       </Navigation.Group>
       <Navigation.Group label="Quick Links">
-        <Navigation.Item label="Support" />
-        <Navigation.Item label="Abuse" />
+        <Navigation.Item label="Support" noPinButton />
+        <Navigation.Item label="Abuse" noPinButton />
         <Navigation.Item
           label="Documentation"
           badgeText="new"
@@ -96,14 +98,14 @@ Playground.decorators = [
       style={{
         height: '600px',
         display: 'flex',
-        background: 'lightgray',
+        background: '#f1f1f1',
         margin: '-10px 0', // This is to compensate the border added by storybook around the story
       }}
     >
       <Story />
       <div
         style={{
-          overflow: 'scroll',
+          overflowY: 'scroll',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
