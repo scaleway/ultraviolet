@@ -95,10 +95,10 @@ export const NumberInputFieldV2 = <
         field.onBlur()
         onBlur?.(event)
       }}
-      onChange={event => {
+      onChange={newValue => {
         // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
-        field.onChange(event ?? null)
-        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
+        field.onChange(newValue ?? null)
+        onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       max={max}
       min={min}
