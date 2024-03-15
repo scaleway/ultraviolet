@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.43.1
+
+### Patch Changes
+
+- [#3555](https://github.com/scaleway/ultraviolet/pull/3555) [`1d836df`](https://github.com/scaleway/ultraviolet/commit/1d836dfe2e1ae570ce9a7e43cab44c5da4d1a388) Thanks [@fabienhebert](https://github.com/fabienhebert)! - NumberInputV2: only supports `number` type
+
 ## 1.43.0
 
 ### Minor Changes
