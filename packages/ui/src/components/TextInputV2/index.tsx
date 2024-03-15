@@ -86,7 +86,7 @@ const StyledInputWrapper = styled('div', {
     border-color: ${({ theme }) => theme.colors.danger.border};
   }
 
-  &[data-readOnly='true'] {
+  &[data-readonly='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     border-color: ${({ theme }) => theme.colors.neutral.border};
   }
@@ -104,7 +104,7 @@ const StyledInputWrapper = styled('div', {
     }
   }
 
-  &:not([data-disabled='true']):not([data-readOnly]):hover {
+  &:not([data-disabled='true']):not([data-readonly]):hover {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
@@ -243,7 +243,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
             <StyledInputWrapper
               hasFocus={hasFocus}
               data-disabled={disabled}
-              data-readOnly={readOnly}
+              data-readonly={readOnly}
               data-success={!!success}
               data-error={!!error}
               size={size}
