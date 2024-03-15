@@ -769,6 +769,7 @@ type OptionComponent = (
 /**
  * SelectInput component is a wrapper around [react-select](https://react-select.com) component.
  * It provides a styled select input with a label and an error message.
+ * @deprecated use SelectInputV2 component instead
  */
 export const SelectInput = forwardRef(
   (props: SelectInputProps, ref: ForwardedRef<StateManagedSelect>) => (

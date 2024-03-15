@@ -1,0 +1,48 @@
+import {Meta} from '@storybook/blocks'
+
+<Meta title="Migrations/SelectInput to SelectInputV2"/>
+
+
+# Migrate SelectInput to SelectInputV2
+
+Welcome to the migration of SelectInput into SelectInputV2, here we will see how to easily migrate to SelectInputV2 component.
+
+## One of the main changes is...
+
+A description of it...
+
+Example:
+
+```tsx
+import { SelectInput } from '@ultraviolet/ui'
+
+const MyComponent = () => (
+  <SelectInput>
+      My text
+  </SelectInput />
+)
+```
+
+Becomes:
+
+```tsx
+import { SelectInputV2 } from '@ultraviolet/ui'
+
+const MyComponent = () => (
+  <SelectInputV2>
+      My text
+  </SelectInputV2 />
+)
+```
+
+## Old and new props matching
+
+- `children` &rarr; `children`: No changes
+
+---
+
+- `as` &rarr; `as`*: Become required
+
+---
+
+etc...
