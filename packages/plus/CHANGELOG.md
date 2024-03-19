@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.10.5
+
+### Patch Changes
+
+- [#3573](https://github.com/scaleway/ultraviolet/pull/3573) [`117fefa`](https://github.com/scaleway/ultraviolet/commit/117fefa3867c5ecfee6956a777abb44d2b8886b6) Thanks [@fabienhebert](https://github.com/fabienhebert)! - NumberInputV2: fix empty value behavior
+
+- Updated dependencies [[`117fefa`](https://github.com/scaleway/ultraviolet/commit/117fefa3867c5ecfee6956a777abb44d2b8886b6), [`751c706`](https://github.com/scaleway/ultraviolet/commit/751c7065c32da5dba62a0a6e0fb5fb1a5e79588b), [`b1b6ea4`](https://github.com/scaleway/ultraviolet/commit/b1b6ea4793b978ccb76c93a9a3cdf23146c1f960)]:
+  - @ultraviolet/ui@1.43.2
+
 ## 0.10.4
 
 ### Patch Changes
