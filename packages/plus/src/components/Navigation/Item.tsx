@@ -9,16 +9,20 @@ import {
   Stack,
   Text,
   Tooltip,
+  fadeIn,
 } from '@ultraviolet/ui'
-import type { ComponentProps, FunctionComponent, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import {
   Children,
   cloneElement,
   isValidElement,
+  useCallback,
+  useEffect,
   useMemo,
-  useReducer,
+  useState,
 } from 'react'
 import { useNavigation } from './NavigationProvider'
+import { ANIMATION_DURATION, shrinkHeight } from './constants'
 
 const OPACITY_TRANSITION = '150ms ease-in-out'
 
@@ -76,18 +80,29 @@ const StyledBadge = styled(Badge)`
   transition: ${OPACITY_TRANSITION};
 `
 
+const AnimatedIcon = styled(Icon)``
+
+const WrapText = styled(Text, {
+  shouldForwardProp: prop => !['animation', 'subLabel'].includes(prop),
+})<{ animation?: 'collapse' | 'expand' | boolean; subLabel?: boolean }>`
+  overflow-wrap: ${({ animation }) => (animation ? 'normal' : 'anywhere')};
+  white-space: ${({ animation }) => (animation ? 'nowrap' : 'normal')};
+`
+
+const CustomExpandable = styled(Expandable, {
+  shouldForwardProp: prop => !['animation'].includes(prop),
+})<{ animation?: 'collapse' | 'expand' | boolean }>`
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space['0.25']};
+  padding-left: 28px; // This value needs to be hardcoded because of the category icon size
+`
+
 const StyledContainer = styled(Stack)`
   ${NeutralButtonLink};
   border-radius: ${({ theme }) => theme.radii.default};
   cursor: pointer;
-
-  &[data-has-sub-label='true'] {
-    padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
-  }
-
-  &[data-has-sub-label='false'] {
-    padding: ${({ theme }) => theme.space['1']};
-  }
+  padding: ${({ theme }) => theme.space['1']};
+  width: 100%;
 
   &:hover,
   &:focus {
@@ -108,21 +123,32 @@ const StyledContainer = styled(Stack)`
   &[data-is-active='true'] {
     background-color: ${({ theme }) => theme.colors.primary.background};
   }
-`
 
-const CustomExpandable = styled(Expandable)`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['0.25']};
-  padding-left: 28px; // This value needs to be hardcoded because of the category icon size
+  &[data-animation='collapse'] {
+    animation: ${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out;
+    ${WrapText}, ${AnimatedIcon}, ${StyledBadge} {
+      animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out reverse;
+    }
+  }
+
+  &[data-animation='expand'] {
+    animation: ${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out reverse;
+    ${WrapText}, ${AnimatedIcon}, ${StyledBadge} {
+      animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out;
+    }
+
+    ${CustomExpandable} {
+      display: none;
+    }
+  }
 `
 
 const MenuStack = styled(Stack)`
-  padding: ${({ theme }) => theme.space['0.5']};
+  padding: ${({ theme }) => `0 ${theme.space['2']}`};
 `
 
-const WrapText = styled(Text)`
-  overflow-wrap: anywhere;
+const ContainerCategoryIcon = styled(Stack)`
+  min-width: 20px;
 `
 
 type ItemType = 'default' | 'pinned' | 'pinnedGroup'
@@ -175,11 +201,6 @@ export const Item = ({
   hasParents,
 }: ItemProps) => {
   const context = useNavigation()
-  const [internalToggle, setToggle] = useReducer(state => {
-    onClickToggle?.(!state)
-
-    return !state
-  }, toggle !== false)
 
   if (!context) {
     throw new Error('Navigation.Item can only be used inside a Navigation')
@@ -193,7 +214,30 @@ export const Item = ({
     unpinItem,
     pinnedItems,
     pinLimit,
+    animation,
   } = context
+
+  const [internalToggle, setToggle] = useState(toggle !== false)
+
+  const triggerToggle = useCallback(
+    (value: boolean) => {
+      setToggle(value)
+      onClickToggle?.(internalToggle)
+    },
+    [internalToggle, onClickToggle],
+  )
+
+  useEffect(() => {
+    if (animation === 'collapse') {
+      setToggle(false)
+    }
+
+    if (animation === 'expand') {
+      setTimeout(() => {
+        setToggle(toggle ?? true)
+      }, 1)
+    }
+  }, [animation, toggle])
 
   const hasHrefAndNoChildren = href && !children
   const hasPinnedFunctionalityAndNoChildren =
@@ -239,7 +283,7 @@ export const Item = ({
   }, [hasHrefAndNoChildren, internalToggle])
 
   // This content is when the navigation is expanded
-  if (expanded) {
+  if (expanded || (!expanded && animation === 'expand')) {
     return (
       <>
         <Container
@@ -248,21 +292,36 @@ export const Item = ({
           alignItems="center"
           justifyContent="space-between"
           data-has-sub-label={!!subLabel}
-          onClick={children ? setToggle : undefined}
+          onClick={children ? () => triggerToggle(!internalToggle) : undefined}
           aria-expanded={ariaExpanded}
           href={href}
           target={href ? '_blank' : undefined}
           data-is-pinnable={shouldShowPinnedButton}
           data-is-active={active}
+          data-animation={animation}
+          data-has-children={!!children}
         >
-          <Stack direction="row" gap={1} alignItems="center">
-            {categoryIcon ? <CategoryIcon name={categoryIcon} /> : null}
+          <Stack
+            direction="row"
+            gap={1}
+            alignItems="center"
+            justifyContent="center"
+          >
+            {categoryIcon ? (
+              <ContainerCategoryIcon
+                alignItems="center"
+                justifyContent="center"
+              >
+                <CategoryIcon name={categoryIcon} />
+              </ContainerCategoryIcon>
+            ) : null}
             <Stack>
               <WrapText
                 as="span"
                 variant="bodySmallStrong"
                 sentiment={active ? 'primary' : 'neutral'}
                 prominence={categoryIcon || !hasParents ? undefined : 'weak'}
+                animation={animation}
               >
                 {label}
               </WrapText>
@@ -272,6 +331,8 @@ export const Item = ({
                   variant="caption"
                   sentiment="neutral"
                   prominence="weak"
+                  animation={animation}
+                  subLabel
                 >
                   {subLabel}
                 </WrapText>
@@ -315,31 +376,37 @@ export const Item = ({
               </>
             ) : null}
             {hasHrefAndNoChildren ? (
-              <Icon name="open-in-new" color="neutral" prominence="weak" />
+              <AnimatedIcon
+                name="open-in-new"
+                color="neutral"
+                prominence="weak"
+              />
             ) : null}
             {children ? (
               <Stack gap={1} direction="row" alignItems="center">
                 {type === 'pinnedGroup' ? (
-                  <Text
+                  <WrapText
                     as="span"
                     variant="caption"
                     sentiment="neutral"
                     prominence="weak"
                   >
                     {pinnedItems.length}/{pinLimit}
-                  </Text>
+                  </WrapText>
                 ) : null}
-                <Icon
-                  name={internalToggle ? 'arrow-down' : 'arrow-right'}
-                  color="neutral"
-                  prominence="weak"
-                />
+                {!animation ? (
+                  <AnimatedIcon
+                    name={internalToggle ? 'arrow-down' : 'arrow-right'}
+                    color="neutral"
+                    prominence="weak"
+                  />
+                ) : null}
               </Stack>
             ) : null}
           </Stack>
         </Container>
         {children ? (
-          <CustomExpandable opened={internalToggle}>
+          <CustomExpandable opened={internalToggle} animation={animation}>
             {Children.map(children, child =>
               isValidElement(child)
                 ? cloneElement<ItemProps>(child, {
@@ -356,7 +423,7 @@ export const Item = ({
   // This content is the menu of the navigation when collapsed
   if (categoryIcon) {
     return (
-      <MenuStack gap={1} alignItems="center" justifyContent="start">
+      <MenuStack gap={1} alignItems="start" justifyContent="start">
         {Children.count(children) > 0 ? (
           <StyledMenu
             disclosure={

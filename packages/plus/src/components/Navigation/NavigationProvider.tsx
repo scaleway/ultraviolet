@@ -12,6 +12,8 @@ import NavigationLocales from './locales/en'
 type ContextProps = {
   expanded: boolean
   setExpanded: () => void
+  animation: boolean | 'expand' | 'collapse'
+  setAnimation: (animation: boolean | 'expand' | 'collapse') => void
   pinnedFunctionality?: boolean
   onClickPinUnpin?: (pinned: string[]) => void
   pinItem: (item: string) => void
@@ -24,6 +26,8 @@ type ContextProps = {
 export const NavigationContext = createContext<ContextProps>({
   expanded: true,
   setExpanded: () => {},
+  animation: false,
+  setAnimation: () => {},
   locales: NavigationLocales,
   pinItem: () => {},
   unpinItem: () => {},
@@ -38,6 +42,7 @@ type NavigationProviderProps = {
   pinnedFunctionality?: boolean
   onClickPinUnpin?: (pinned: string[]) => void
   initialPinned?: string[]
+  initialExpanded: boolean
   locales: typeof NavigationLocales
   pinLimit: number
 }
@@ -47,11 +52,15 @@ export const NavigationProvider = ({
   pinnedFunctionality,
   onClickPinUnpin,
   initialPinned,
+  initialExpanded,
   locales,
   pinLimit,
 }: NavigationProviderProps) => {
-  const [expanded, setExpanded] = useReducer(state => !state, true)
+  const [expanded, setExpanded] = useReducer(state => !state, initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
+  const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(
+    false,
+  )
 
   const pinItem = useCallback(
     (item: string) => {
@@ -81,6 +90,8 @@ export const NavigationProvider = ({
       pinnedFunctionality,
       locales,
       pinLimit,
+      animation,
+      setAnimation,
     }),
     [
       expanded,
@@ -90,6 +101,7 @@ export const NavigationProvider = ({
       pinnedFunctionality,
       locales,
       pinLimit,
+      animation,
     ],
   )
 

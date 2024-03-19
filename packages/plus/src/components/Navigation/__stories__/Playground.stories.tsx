@@ -23,7 +23,7 @@ Playground.args = {
           label="Compute"
           subLabel="All compute ressources"
           categoryIcon="baremetal"
-          badgeSentiment="success"
+          toggle={false}
         >
           <Navigation.Item
             label="Instance"
