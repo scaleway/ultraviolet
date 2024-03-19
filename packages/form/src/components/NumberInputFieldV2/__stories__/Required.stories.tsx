@@ -16,4 +16,5 @@ export const Required: StoryFn<
 Required.args = {
   name: 'value',
   required: true,
+  label: 'This field is required',
 }

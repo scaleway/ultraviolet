@@ -184,8 +184,8 @@ type NumberInputProps = {
   error?: string
   success?: string | boolean
   helper?: ReactNode
-  value?: number
-  onChange?: (newValue: number) => void
+  value?: number | null
+  onChange?: (newValue: number | null) => void
   min?: number
   max?: number
 } & Pick<
@@ -385,12 +385,17 @@ export const NumberInputV2 = forwardRef(
                   placeholder={placeholder}
                   onKeyDown={event => {
                     if (event.key === 'Enter') {
-                      onChangeValue(localRef.current?.value ?? '')
+                      if (!localRef.current?.value) {
+                        onChange?.(null)
+                      } else if (onChange) {
+                        onChangeValue(localRef.current?.value ?? '')
+                      }
                     }
                   }}
                   onBlur={event => {
                     if (event.target.value === '') {
                       onBlur?.(event)
+                      onChange?.(null)
 
                       return
                     }
@@ -398,10 +403,9 @@ export const NumberInputV2 = forwardRef(
                     if (onChange) {
                       onChangeValue(event.target.value)
                     }
-
                     onBlur?.(event)
                   }}
-                  defaultValue={value}
+                  defaultValue={value?.toString()}
                   onFocus={onFocus}
                   data-size={size}
                   step={step}

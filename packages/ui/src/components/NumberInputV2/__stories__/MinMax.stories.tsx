@@ -4,7 +4,7 @@ import type { NumberInputV2 } from '../index'
 import { Template } from './Template.stories'
 
 export const MinMax: StoryFn<typeof NumberInputV2> = args => {
-  const [value, setValue] = useState(10)
+  const [value, setValue] = useState<number | null>(10)
 
   return <Template {...args} value={value} onChange={setValue} />
 }

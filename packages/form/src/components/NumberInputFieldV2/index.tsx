@@ -97,7 +97,7 @@ export const NumberInputFieldV2 = <
       }}
       onChange={newValue => {
         // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
-        field.onChange(newValue ?? null)
+        field.onChange(newValue)
         onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       max={max}
@@ -118,6 +118,7 @@ export const NumberInputFieldV2 = <
       aria-label={ariaLabel}
       autoFocus={autoFocus}
       readOnly={readOnly}
+      required={required}
     />
   )
 }

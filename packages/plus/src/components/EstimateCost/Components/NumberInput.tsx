@@ -6,8 +6,8 @@ import { Regular } from './Regular'
 
 type NumberInputProps = {
   amount?: number
-  itemCallback?: (amount?: number, isVariant?: boolean) => void
-  getAmountValue?: (amount?: number) => void
+  itemCallback?: (amount?: number | null, isVariant?: boolean) => void
+  getAmountValue?: (amount?: number | null) => void
   minValue?: number
   maxValue?: number
 }
@@ -20,7 +20,7 @@ export const NumberInput = ({
   itemCallback,
 }: NumberInputProps) => {
   const { isOverlay } = useOverlay()
-  const [value, setValue] = useState<number | undefined>(amount)
+  const [value, setValue] = useState<number | undefined | null>(amount)
 
   useEffect(() => {
     getAmountValue?.(amount)
