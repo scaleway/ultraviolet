@@ -14,6 +14,7 @@ import { ReactComponent as labs } from './assets/labs.svg'
 import { ReactComponent as managedServices } from './assets/managed-services.svg'
 import { ReactComponent as network } from './assets/network.svg'
 import { ReactComponent as observability } from './assets/observability.svg'
+import { ReactComponent as pin } from './assets/pin.svg'
 import { ReactComponent as security } from './assets/security.svg'
 import { ReactComponent as serverless } from './assets/serverless.svg'
 import { ReactComponent as storage } from './assets/storage.svg'
@@ -46,4 +47,5 @@ export const CATEGORY_ICONS = {
   ai,
   labs,
   devTools,
+  pin,
 } as const
