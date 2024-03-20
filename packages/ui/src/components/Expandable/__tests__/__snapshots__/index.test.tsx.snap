@@ -18,6 +18,24 @@ exports[`Expandable renders correctly opened 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Expandable renders correctly with animationDuration 1`] = `
+<DocumentFragment>
+  .css-1b4l2xb-StyledExpandable {
+  -webkit-transition: max-height 500ms ease-out,opacity 500ms ease-out;
+  transition: max-height 500ms ease-out,opacity 500ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+}
+
+<div
+    class="css-1b4l2xb-StyledExpandable e5hc7t70"
+  >
+    Sample Expandable
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Expandable renders correctly with className 1`] = `
 <DocumentFragment>
   .css-lzuy3q-StyledExpandable {

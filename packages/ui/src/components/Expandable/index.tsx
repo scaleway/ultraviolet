@@ -19,14 +19,16 @@ type ExpandableProps = {
   minHeight?: number
   className?: string
   'data-testid'?: string
+  animationDuration?: number
 }
 
 export const StyledExpandable = styled('div', {
-  shouldForwardProp: prop => !['opened', 'minHeight'].includes(prop),
-})<{ opened?: boolean; minHeight: number }>`
+  shouldForwardProp: prop =>
+    !['opened', 'minHeight', 'animationDuration'].includes(prop),
+})<{ opened?: boolean; minHeight: number; animationDuration: number }>`
   transition:
-    max-height ${ANIMATION_DURATION}ms ease-out,
-    opacity ${ANIMATION_DURATION}ms ease-out;
+    max-height ${({ animationDuration }) => animationDuration}ms ease-out,
+    opacity ${({ animationDuration }) => animationDuration}ms ease-out;
   overflow: ${({ opened }) => (opened ? 'visible' : 'hidden')};
   height: auto;
   max-height: ${({ opened, minHeight }) =>
@@ -44,6 +46,7 @@ export const Expandable = ({
   minHeight = 0,
   className,
   'data-testid': dataTestId,
+  animationDuration = ANIMATION_DURATION,
 }: ExpandableProps) => {
   const [height, setHeight] = useState<number | null>(null)
   const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
@@ -99,6 +102,7 @@ export const Expandable = ({
       className={className}
       opened={opened}
       minHeight={minHeight}
+      animationDuration={animationDuration}
     >
       {children}
     </StyledExpandable>
