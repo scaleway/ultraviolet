@@ -1,19 +1,13 @@
-import type { TextInputV2 } from '@ultraviolet/ui'
+import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import { useMemo, useState } from 'react'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { Stack, Text } from '..'
 import { Dropdown } from './Dropdown'
 import { SearchBar } from './SearchBar'
-import { ValueInput } from './helper'
-
-type DataType = Record<
-  string,
-  {
-    value: string
-    label: ReactNode
-    disabled: boolean
-  }[]
->
+import { SearchBar2 } from './SearchBar2'
+import { SearchBarMulti } from './SearchBarMulti'
+import { type DataType, ValueInput } from './helper'
 
 type SelectInputV2Props = {
   /**
@@ -42,6 +36,10 @@ type SelectInputV2Props = {
    */
   options: DataType
   /**
+   * Message to show when no option available
+   */
+  emptyState?: ReactNode
+  /**
    * Whether it is possible to search through the input
    */
   searchable?: boolean
@@ -60,7 +58,7 @@ type SelectInputV2Props = {
   /**
    * Size of the input
    */
-  size?: ComponentProps<typeof TextInputV2>['size']
+  size?: 'small' | 'medium' | 'large'
   /**
    * Whether it is possible to select multiple options
    */
@@ -69,25 +67,44 @@ type SelectInputV2Props = {
    * Whether the options should be showcase by group (will ignore groups if false)
    */
   grouped?: boolean
+  /**
+   * Whether field is required
+   */
+  required?: boolean
+  /**
+   * Whether the field is optional
+   */
+  optional?: boolean
+  /**
+   * Whether label description is on the right of the label or under it
+   */
+  direction?: 'row' | 'column'
 }
 
+const ColoredText = styled(Text)`
+  color: ${({ theme }) => theme.colors.neutral.textWeak};
+`
 /**
  * SelectInputV2 component is used to select one or many elements from a selection.
  */
 export const SelectInputV2 = ({
   name,
-  value = '',
+  value,
   label,
   placeholder,
   helper,
   options,
-  size,
+  size = 'medium',
+  emptyState,
+  direction,
   searchable = true,
   disabled = false,
   readOnly = false,
   clearable = true,
   multiselect = false,
   grouped = false,
+  required = false,
+  optional = false,
 }: SelectInputV2Props) => {
   const [displayedOptions, setDisplayedOptions] = useState(options)
   const [selectedValues, setSelectedValues] = useState([value])
@@ -110,13 +127,29 @@ export const SelectInputV2 = ({
         setSelectedValues={setSelectedValues}
         multiselect={multiselect}
         grouped={grouped}
+        emptyState={emptyState}
+        direction={direction}
       >
         <Stack gap={0.5}>
-          {label ? (
-            <Text as="div" variant="bodySmallStrong">
-              {label}
-            </Text>
-          ) : null}
+          <Stack direction="row" gap={0.5}>
+            {label ? (
+              <Text as="div" variant="bodySmallStrong">
+                {label}
+              </Text>
+            ) : null}
+            {required ? (
+              <Icon name="asterisk" sentiment="danger" size={8} />
+            ) : null}
+            {optional ? (
+              <ColoredText
+                as="span"
+                variant="bodySmallStrong"
+                prominence="weak"
+              >
+                (optional)
+              </ColoredText>
+            ) : null}
+          </Stack>
 
           <SearchBar
             name={name}
@@ -130,20 +163,57 @@ export const SelectInputV2 = ({
             readOnly={readOnly}
             value={selectedValues[0]}
             disabled={disabled}
+            multiselect={multiselect}
+            selectedValues={selectedValues}
+            setSelectedValues={setSelectedValues}
           />
-
-          {helper ? (
-            <Text
-              variant="caption"
-              as="span"
-              prominence="weak"
-              sentiment="neutral"
-            >
-              {helper}
-            </Text>
-          ) : null}
+          {multiselect ? (
+            <SearchBarMulti
+              name={name}
+              options={options}
+              onSearch={setDisplayedOptions}
+              placeholder={placeholder}
+              size={size}
+              clearable={clearable}
+              setIsDropdownVisible={setIsDropdownVisible}
+              searchable={searchable}
+              readOnly={readOnly}
+              value={selectedValues[0]}
+              disabled={disabled}
+              selectedValues={selectedValues}
+              setSelectedValues={setSelectedValues}
+            />
+          ) : (
+            <SearchBar2
+              name={name}
+              options={options}
+              onSearch={setDisplayedOptions}
+              placeholder={placeholder}
+              size={size}
+              clearable={clearable}
+              setIsDropdownVisible={setIsDropdownVisible}
+              searchable={searchable}
+              readOnly={readOnly}
+              value={selectedValues[0]}
+              disabled={disabled}
+              selectedValues={selectedValues}
+              setSelectedValues={setSelectedValues}
+            />
+          )}
+          <Text
+            variant="caption"
+            as="p"
+            sentiment="neutral"
+            prominence="default"
+          >
+            {helper}
+          </Text>
         </Stack>
       </Dropdown>
+      Selected values:
+      {selectedValues.map(val => (
+        <div key={val}>{val}</div>
+      ))}
     </ValueInput.Provider>
   )
 }

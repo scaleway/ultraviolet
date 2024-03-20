@@ -1,8 +1,17 @@
+import { Badge } from '../../Badge'
+import { Text } from '../../Text'
+
+const reactMercury = (
+  <Text as="div" variant="body">
+    Mercury <Badge>Label</Badge>
+  </Text>
+)
+
 export const dataUnGrouped = {
   data: [
     {
       value: 'mercury',
-      label: 'Mercury',
+      label: reactMercury,
       disabled: false,
     },
     {
@@ -14,6 +23,7 @@ export const dataUnGrouped = {
       value: 'earth',
       label: 'Earth',
       disabled: false,
+      description: 'Our home planet',
     },
     {
       value: 'mars',
@@ -24,6 +34,8 @@ export const dataUnGrouped = {
       value: 'jupiter',
       label: 'Jupiter',
       disabled: false,
+      description:
+        'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
     },
     {
       value: 'saturn',
@@ -59,6 +71,7 @@ export const dataGrouped = {
       value: 'earth',
       label: 'Earth',
       disabled: false,
+      description: 'Our home planet',
     },
     {
       value: 'mars',

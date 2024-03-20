@@ -4,26 +4,21 @@ import {
   type ReactNode,
   type SetStateAction,
   useContext,
+  useMemo,
 } from 'react'
-import { Popup, Stack, Text } from '..'
-import { ValueInput } from './helper'
+import { Checkbox, Popup, Stack, Text } from '..'
+import { type DataType, ValueInput } from './helper'
 
-type DataType = Record<
-  string,
-  {
-    value: string
-    label: ReactNode
-    disabled: boolean
-  }[]
->
 type DropdownProps = {
   options: DataType
   isVisible: boolean
   children: ReactNode
-  selectedValues: string[]
-  setSelectedValues: Dispatch<SetStateAction<string[]>>
+  selectedValues: (string | undefined)[]
+  setSelectedValues: Dispatch<SetStateAction<(string | undefined)[]>>
   multiselect: boolean
   grouped: boolean
+  emptyState: ReactNode
+  direction?: 'row' | 'column'
 }
 
 const StyledPopup = styled(Popup)`
@@ -34,15 +29,16 @@ const StyledPopup = styled(Popup)`
 `
 
 const DropdownContainer = styled.div`
-  max-height: 200px;
+  max-height: 312px;
   overflow: scroll;
   padding: 0px;
 `
 const DropdownGroup = styled(Stack)`
   height: ${({ theme }) => theme.space['4']};
-  padding: ${({ theme }) => theme.space['0']} ${({ theme }) => theme.space['2']}
-    ${({ theme }) => theme.space['0']} ${({ theme }) => theme.space['2']};
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  position: sticky;
+  top: 0px;
+  height: 32px;
 `
 
 const DropdownItem = styled(Stack, {
@@ -74,6 +70,10 @@ const DropdownItem = styled(Stack, {
   }
 `
 
+const StyledTextGroup = styled(Text)`
+  line-height: 32px;
+`
+
 export const Dropdown = ({
   options,
   isVisible,
@@ -82,17 +82,92 @@ export const Dropdown = ({
   setSelectedValues,
   multiselect,
   grouped,
+  emptyState,
+  direction,
 }: DropdownProps) => {
   const { setSearchInput } = useContext(ValueInput)
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    const clickedOption = event.currentTarget.textContent || ''
-
+  const handleClick = (clickedOption: string) => {
     if (multiselect) {
-      setSelectedValues(selectedValues)
+      if (selectedValues.includes(clickedOption)) {
+        setSelectedValues(selectedValues.filter(val => val !== clickedOption))
+      } else {
+        setSelectedValues([...selectedValues, clickedOption])
+      }
     } else {
       setSelectedValues([clickedOption])
       setSearchInput(clickedOption)
     }
+  }
+
+  const isEmpty = useMemo(() => {
+    const keys = Object.keys(options)
+    for (const key of keys) {
+      if (options[key].length !== 0) {
+        return false
+      }
+    }
+
+    return true
+  }, [options])
+
+  const computedEmptyState = emptyState ?? (
+    <Text variant="bodyStrong" as="div">
+      No options
+    </Text>
+  )
+
+  const displayOption = (option: {
+    value: string
+    label: ReactNode
+    disabled: boolean
+    description?: string
+  }) => {
+    if (multiselect) {
+      return (
+        <Stack direction="row">
+          <Checkbox
+            checked={selectedValues.includes(option.value)}
+            disabled={option.disabled}
+          >
+            <Stack gap={0.5} direction={direction}>
+              <Text as="span" variant="body" placement="left">
+                {option.label}
+              </Text>
+              {option.description ? (
+                <Text
+                  as="span"
+                  variant="bodySmall"
+                  sentiment="neutral"
+                  placement="left"
+                  prominence="weak"
+                >
+                  {option.description}
+                </Text>
+              ) : null}
+            </Stack>
+          </Checkbox>
+        </Stack>
+      )
+    }
+
+    return (
+      <Stack gap={0.5} direction={direction}>
+        <Text as="span" variant="body" placement="left">
+          {option.label}
+        </Text>
+        {option.description ? (
+          <Text
+            as="span"
+            variant="bodySmall"
+            sentiment="neutral"
+            placement="left"
+            prominence="weak"
+          >
+            {option.description}
+          </Text>
+        ) : null}{' '}
+      </Stack>
+    )
   }
 
   const text = grouped ? (
@@ -100,17 +175,17 @@ export const Dropdown = ({
       {Object.keys(options).map(key => (
         <>
           <DropdownGroup key={key}>
-            <Text variant="caption" as="span">
+            <StyledTextGroup variant="caption" as="span">
               {key.toUpperCase()}
-            </Text>
+            </StyledTextGroup>
           </DropdownGroup>
           <Stack>
             {options[key].map(option => (
               <DropdownItem
                 key={option.value}
-                onClick={event => {
+                onClick={() => {
                   if (!option.disabled) {
-                    handleClick(event)
+                    handleClick(option.value)
                   }
                 }}
                 disabled={option.disabled}
@@ -118,9 +193,7 @@ export const Dropdown = ({
                   selectedValues.includes(option.value) && option.disabled
                 }
               >
-                <Text as="span" variant="body">
-                  {option.label}
-                </Text>
+                {displayOption(option)}
               </DropdownItem>
             ))}
           </Stack>
@@ -134,13 +207,15 @@ export const Dropdown = ({
           {options[key].map(option => (
             <DropdownItem
               key={option.value}
-              onClick={handleClick}
+              onClick={() => {
+                if (!option.disabled) {
+                  handleClick(option.value)
+                }
+              }}
               disabled={option.disabled}
               selected={false}
             >
-              <Text as="span" variant="body">
-                {option.label}
-              </Text>
+              {displayOption(option)}
             </DropdownItem>
           ))}
         </Stack>
@@ -151,7 +226,7 @@ export const Dropdown = ({
   return (
     <StyledPopup
       visible={isVisible}
-      text={text}
+      text={isEmpty ? computedEmptyState : text}
       placement="bottom"
       containerFullWidth
       disableAnimation
