@@ -283,6 +283,7 @@ type NavigationProps = {
    * and it automatically collapse / expand.
    */
   onClickExpand?: () => void
+  className?: string
 }
 
 export const Navigation = ({
@@ -295,6 +296,7 @@ export const Navigation = ({
   initialExpanded = false,
   locales = NavigationLocales,
   pinLimit = 7,
+  className,
 }: NavigationProps) => (
   <NavigationProvider
     onClickPinUnpin={onClickPinUnpin}
@@ -304,7 +306,11 @@ export const Navigation = ({
     pinLimit={pinLimit}
     initialExpanded={initialExpanded}
   >
-    <NavigationContent onClickExpand={onClickExpand} logo={logo}>
+    <NavigationContent
+      onClickExpand={onClickExpand}
+      logo={logo}
+      className={className}
+    >
       {children}
     </NavigationContent>
   </NavigationProvider>
