@@ -45,7 +45,7 @@ const Image = styled.img`
 export const Template: StoryFn<ComponentProps<typeof Navigation>> = ({
   children,
 }) => {
-  const [expanded, setExpanded] = useReducer(s => !s, true)
+  const [expanded, setExpanded] = useReducer(s => !s, false)
 
   return (
     <Navigation
@@ -57,8 +57,6 @@ export const Template: StoryFn<ComponentProps<typeof Navigation>> = ({
       }
       onClickExpand={setExpanded}
       initialExpanded={expanded}
-      initialPinned={['this label doesnt exists']}
-      pinnedFeature
     >
       {children}
     </Navigation>

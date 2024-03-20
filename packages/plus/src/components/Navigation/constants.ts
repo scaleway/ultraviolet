@@ -8,7 +8,7 @@ export const NAVIGATION_COLLASPED_WIDTH = 67 // in px
  * ANIMATIONS
  */
 export const PIN_BUTTON_OPACITY_TRANSITION = '150ms ease-in-out' // this is the transition animation when hovering pin button
-export const ANIMATION_DURATION = 6000 // collapse and expand animation duration of the whole nav in ms
+export const ANIMATION_DURATION = 600 // collapse and expand animation duration of the whole nav in ms
 
 export const shrinkHeight = keyframes`
     0% {

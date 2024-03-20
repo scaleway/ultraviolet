@@ -431,8 +431,8 @@ export const Item = ({
         {children ? (
           <CustomExpandable opened={internalToggle} animation={animation}>
             {Children.map(children, child =>
-              isValidElement(child)
-                ? cloneElement<ItemProps>(child, {
+              isValidElement<ItemProps>(child)
+                ? cloneElement(child, {
                     hasParents: true,
                   })
                 : child,
@@ -471,8 +471,8 @@ export const Item = ({
                   alignItems="center"
                   justifyContent="space-between"
                 >
-                  {isValidElement(child)
-                    ? cloneElement<ItemProps>(child, {
+                  {isValidElement<ItemProps>(child)
+                    ? cloneElement(child, {
                         hasParents: true,
                       })
                     : child}
@@ -528,6 +528,29 @@ export const Item = ({
           </Tooltip>
         ) : null}
       </>
+    )
+  }
+
+  // This content is for when navigation is collapsed and we show an icon of link
+  if (!hasParents && href) {
+    return (
+      <Tooltip text={label} placement="right">
+        <MenuStack gap={1} alignItems="start" justifyContent="start">
+          <Container
+            gap={1}
+            alignItems="center"
+            justifyContent="center"
+            href={href}
+            target="_blank"
+          >
+            <AnimatedIcon
+              name="open-in-new"
+              color="neutral"
+              prominence="weak"
+            />
+          </Container>
+        </MenuStack>
+      </Tooltip>
     )
   }
 
