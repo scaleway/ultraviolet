@@ -4,6 +4,11 @@ import { Navigation } from '..'
 export default {
   component: Navigation,
   title: 'Plus/Compositions/Navigation',
-} satisfies Meta<typeof Navigation>
+  subcomponents: {
+    'Navigation.Group': Navigation.Group,
+    'Navigation.Item': Navigation.Item,
+    'Navigation.PinnedItems': Navigation.PinnedItems,
+  },
+} as Meta
 
 export { Playground } from './Playground.stories'

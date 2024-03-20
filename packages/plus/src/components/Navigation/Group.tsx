@@ -1,29 +1,14 @@
-import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Separator, Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { Children } from 'react'
 import { useNavigation } from './NavigationProvider'
-import { ANIMATION_DURATION } from './constants'
+import { ANIMATION_DURATION, groupAnimation } from './constants'
 
 type GroupProps = {
   children: ReactNode
   label: string
 }
-
-const animateGroup = keyframes`
-  0% {
-    opacity: 0;
-    max-height: 0;
-    margin-bottom: -8px;
-  }
-
-  100% {
-    opacity: 1;
-    max-height: 40px;
-    margin-bottom: 0;
-  }
-`
 
 const StyledText = styled(Text)`
   padding-bottom: ${({ theme }) => theme.space['1']};
@@ -46,13 +31,13 @@ const StyledSeparator = styled(Separator)`
 const Container = styled.div`
   &[data-animation='expand'] {
     ${StyledText} {
-      animation: ${animateGroup} ${ANIMATION_DURATION}ms ease-in-out;
+      animation: ${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out;
     }
   }
 
   &[data-animation='collapse'] {
     ${StyledText} {
-      animation: ${animateGroup} ${ANIMATION_DURATION}ms ease-in-out reverse;
+      animation: ${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out reverse;
     }
   }
 `

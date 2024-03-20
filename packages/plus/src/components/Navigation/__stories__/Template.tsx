@@ -57,7 +57,8 @@ export const Template: StoryFn<ComponentProps<typeof Navigation>> = ({
       }
       onClickExpand={setExpanded}
       initialExpanded={expanded}
-      pinnedFunctionality
+      initialPinned={['this label doesnt exists']}
+      pinnedFeature
     >
       {children}
     </Navigation>

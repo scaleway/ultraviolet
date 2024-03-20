@@ -244,30 +244,61 @@ const NavigationContent = ({
 
 type NavigationProps = {
   children: ReactNode
+  /**
+   * The logo to be displayed in header of the navigation
+   * It can be a component or a function. The function will retrun you
+   * expanded state of the navigation so you can decide to show/hide
+   * some part of your logo
+   */
   logo?: ReactNode | ((expanded: boolean) => ReactNode)
-  pinnedFunctionality?: boolean
+  /**
+   * This enable / disable the pinned feature of the navigation
+   * Pinned allows the use to pin (or favorite) some items in the navigation
+   */
+  pinnedFeature?: boolean
+  /**
+   * This define how many items can be pinned at the same time.
+   * If you want to disable the limit just set `Infinity` to this prop
+   */
+  pinLimit?: number
+  /**
+   * The initial pinned items. This should be an array of labels you've set on
+   * your `<Navigation.Item>`
+   */
   initialPinned?: string[]
+  /**
+   * The initial expanded state of the navigation. If set to true the
+   * navigation will be expanded by default otherwise it will be collapsed
+   */
   initialExpanded?: boolean
+  /**
+   * This function is triggered when the user click on the pin/unpin button
+   * of an item
+   */
   onClickPinUnpin?: (pinned: string[]) => void
   locales?: typeof NavigationLocales
-  pinLimit?: number
+  /**
+   * This function is triggered when user click on expand button on the footer
+   * of the navigation. This is not triggered when the user resize the navigation
+   * and it automatically collapse / expand.
+   */
   onClickExpand?: () => void
 }
 
 export const Navigation = ({
   children,
   logo,
-  pinnedFunctionality,
+  pinnedFeature = false,
   onClickPinUnpin,
   onClickExpand,
   initialPinned,
-  initialExpanded = true,
+  initialExpanded = false,
   locales = NavigationLocales,
   pinLimit = 7,
 }: NavigationProps) => (
   <NavigationProvider
     onClickPinUnpin={onClickPinUnpin}
-    pinnedFunctionality={pinnedFunctionality}
+    pinnedFeature={pinnedFeature}
     locales={locales}
     initialPinned={initialPinned}
     pinLimit={pinLimit}

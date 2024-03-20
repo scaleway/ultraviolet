@@ -10,9 +10,9 @@ export const PinnedItems = () => {
     )
   }
 
-  const { locales, pinnedItems } = context
+  const { locales, pinnedItems, pinnedFeature } = context
 
-  if (pinnedItems.length > 0) {
+  if (pinnedItems.length > 0 && pinnedFeature) {
     return (
       <Item
         label={locales['navigation.pinned.item.group.label']}

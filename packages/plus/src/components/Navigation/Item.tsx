@@ -22,9 +22,11 @@ import {
   useState,
 } from 'react'
 import { useNavigation } from './NavigationProvider'
-import { ANIMATION_DURATION, shrinkHeight } from './constants'
-
-const OPACITY_TRANSITION = '150ms ease-in-out'
+import {
+  ANIMATION_DURATION,
+  PIN_BUTTON_OPACITY_TRANSITION,
+  shrinkHeight,
+} from './constants'
 
 const NeutralButtonLink = css`
   color: inherit;
@@ -48,7 +50,7 @@ const ExpandedPinnedButton = styled(Button)`
     opacity: 1;
   }
 
-  transition: ${OPACITY_TRANSITION};
+  transition: ${PIN_BUTTON_OPACITY_TRANSITION};
 `
 
 const CollapsedPinnedButton = styled(Button)`
@@ -59,7 +61,7 @@ const CollapsedPinnedButton = styled(Button)`
     opacity: 1;
   }
 
-  transition: ${OPACITY_TRANSITION};
+  transition: ${PIN_BUTTON_OPACITY_TRANSITION};
 `
 
 const StyledMenuItem = styled(MenuV2.Item)`
@@ -77,7 +79,7 @@ const StyledMenu = styled(MenuV2)`
 `
 
 const StyledBadge = styled(Badge)`
-  transition: ${OPACITY_TRANSITION};
+  transition: ${PIN_BUTTON_OPACITY_TRANSITION};
 `
 
 const AnimatedIcon = styled(Icon)``
@@ -155,10 +157,28 @@ type ItemType = 'default' | 'pinned' | 'pinnedGroup'
 
 type ItemProps = {
   children?: ReactNode
+  /**
+   * Sets a category icon on the left of the item
+   */
   categoryIcon?: ComponentProps<typeof CategoryIcon>['name']
+  /**
+   * The label of the item that will be shown.
+   * It is also used as the key for pinning.
+   */
   label: string
+  /**
+   * Text shown under the label with a lighter color and smaller font size
+   */
   subLabel?: string
+  /**
+   * Badge is added on the right of the item. It is hidden on hover if pinned
+   * feature is enabled
+   */
   badgeText?: string
+  /**
+   * Defined the sentiment of the badge according to Badge component from
+   * `@ultraviolet/ui`
+   */
   badgeSentiment?: ComponentProps<typeof Badge>['sentiment']
   href?: string
   /**
@@ -170,6 +190,9 @@ type ItemProps = {
    * This prop is used to control if the item is expanded or collapsed
    */
   toggle?: boolean
+  /**
+   * Set this to true if your current page is this item.
+   */
   active?: boolean
   /**
    * If you want to remove pin button on your item use this prop
@@ -209,7 +232,7 @@ export const Item = ({
   const {
     expanded,
     locales,
-    pinnedFunctionality,
+    pinnedFeature,
     pinItem,
     unpinItem,
     pinnedItems,
@@ -240,25 +263,25 @@ export const Item = ({
   }, [animation, toggle])
 
   const hasHrefAndNoChildren = href && !children
-  const hasPinnedFunctionalityAndNoChildren =
-    pinnedFunctionality && !children && !noPinButton
+  const haspinnedFeatureAndNoChildren =
+    pinnedFeature && !children && !noPinButton
   const isItemPinned = pinnedItems.includes(label)
   const shouldShowPinnedButton = useMemo(() => {
     if (href) return false
 
     if (pinnedItems.length >= pinLimit && type === 'default') return false
 
-    if (hasPinnedFunctionalityAndNoChildren && type !== 'default') {
+    if (haspinnedFeatureAndNoChildren && type !== 'default') {
       return true
     }
 
-    if (hasPinnedFunctionalityAndNoChildren && !isItemPinned) {
+    if (haspinnedFeatureAndNoChildren && !isItemPinned) {
       return true
     }
 
     return false
   }, [
-    hasPinnedFunctionalityAndNoChildren,
+    haspinnedFeatureAndNoChildren,
     href,
     isItemPinned,
     pinLimit,
@@ -340,7 +363,7 @@ export const Item = ({
             </Stack>
           </Stack>
           <Stack direction="row" alignItems="center" gap={href ? 1 : undefined}>
-            {badgeText || hasPinnedFunctionalityAndNoChildren ? (
+            {badgeText || haspinnedFeatureAndNoChildren ? (
               <>
                 {badgeText ? (
                   <StyledBadge
@@ -384,7 +407,7 @@ export const Item = ({
             ) : null}
             {children ? (
               <Stack gap={1} direction="row" alignItems="center">
-                {type === 'pinnedGroup' ? (
+                {type === 'pinnedGroup' && pinLimit !== Infinity ? (
                   <WrapText
                     as="span"
                     variant="caption"

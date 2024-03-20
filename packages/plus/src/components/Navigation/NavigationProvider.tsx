@@ -14,7 +14,7 @@ type ContextProps = {
   setExpanded: () => void
   animation: boolean | 'expand' | 'collapse'
   setAnimation: (animation: boolean | 'expand' | 'collapse') => void
-  pinnedFunctionality?: boolean
+  pinnedFeature?: boolean
   onClickPinUnpin?: (pinned: string[]) => void
   pinItem: (item: string) => void
   pinnedItems: string[]
@@ -39,7 +39,7 @@ export const useNavigation = () => useContext(NavigationContext)
 
 type NavigationProviderProps = {
   children: ReactNode
-  pinnedFunctionality?: boolean
+  pinnedFeature?: boolean
   onClickPinUnpin?: (pinned: string[]) => void
   initialPinned?: string[]
   initialExpanded: boolean
@@ -49,7 +49,7 @@ type NavigationProviderProps = {
 
 export const NavigationProvider = ({
   children,
-  pinnedFunctionality,
+  pinnedFeature,
   onClickPinUnpin,
   initialPinned,
   initialExpanded,
@@ -87,7 +87,7 @@ export const NavigationProvider = ({
       pinnedItems,
       pinItem,
       unpinItem,
-      pinnedFunctionality,
+      pinnedFeature,
       locales,
       pinLimit,
       animation,
@@ -98,7 +98,7 @@ export const NavigationProvider = ({
       pinnedItems,
       pinItem,
       unpinItem,
-      pinnedFunctionality,
+      pinnedFeature,
       locales,
       pinLimit,
       animation,
