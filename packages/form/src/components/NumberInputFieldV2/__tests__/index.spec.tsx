@@ -1,9 +1,10 @@
-import { describe, expect, test } from '@jest/globals'
-import { act, screen, waitFor } from '@testing-library/react'
+import { describe, expect, jest, test } from '@jest/globals'
+import { act, renderHook, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { NumberInputFieldV2 } from '../..'
+import { useForm } from 'react-hook-form'
+import { NumberInputFieldV2, Submit } from '../..'
 import {
-  shouldMatchEmotionSnapshot,
+  renderWithTheme,
   shouldMatchEmotionSnapshotFormWrapper,
 } from '../../../../.jest/helpers'
 import { mockErrors } from '../../../mocks'
@@ -37,49 +38,49 @@ describe('NumberInputFieldV2', () => {
       },
     ))
 
-  test('should trigger event onMinCrossed & onMaxCrossed', () => {
-    const minValue = 5
-    const maxValue = 20
-
-    return shouldMatchEmotionSnapshot(
-      <Form
-        initialValues={{ test: 10 }}
-        onRawSubmit={() => {}}
-        errors={mockErrors}
-      >
-        <NumberInputFieldV2
-          max={maxValue}
-          min={minValue}
-          name="test"
-          aria-label="Number Input"
-        />
-      </Form>,
-      {
-        transform: async () => {
-          const input =
-            screen.getByLabelText<HTMLTextAreaElement>('Number Input')
-          // eslint-disable-next-line testing-library/no-node-access
-          if (input.parentElement) await userEvent.click(input.parentElement)
-
-          // trigger onMinCrossed
-          await userEvent.clear(input)
-          await userEvent.type(input, '1')
-          await waitFor(() => expect(input.value).toBe('1'))
-          act(() => {
-            input.blur()
-          })
-          await waitFor(() => expect(input.value).toBe('5'))
-
-          // trigger onMaxCrossed
-          await userEvent.clear(input)
-          await userEvent.type(input, '100')
-          await waitFor(() => expect(input.value).toBe('100'))
-          act(() => {
-            input.blur()
-          })
-          await waitFor(() => expect(input.value).toBe('20'))
+  test('should work fine with form setValue', async () => {
+    const onSubmit = jest.fn<(values: { test: number | null }) => void>()
+    const { result } = renderHook(() =>
+      useForm<{ test: number | null }>({
+        defaultValues: {
+          test: 10,
         },
-      },
+        mode: 'onChange',
+      }),
     )
+
+    renderWithTheme(
+      <Form
+        onRawSubmit={value => onSubmit(value)}
+        errors={mockErrors}
+        methods={result.current}
+      >
+        <NumberInputFieldV2 label="Test" name="test" required />
+        <Submit>Submit</Submit>
+      </Form>,
+    )
+
+    const numberInput = screen.getByLabelText('Test')
+    const submit = screen.getByText('Submit')
+    expect(numberInput).toHaveValue(10)
+    await userEvent.click(submit)
+    expect(onSubmit).toHaveBeenCalledWith({
+      test: 10,
+    })
+    await userEvent.clear(numberInput)
+    expect(numberInput).toHaveValue(null)
+    expect(submit).toBeDisabled()
+    act(() => {
+      result.current.setValue('test', 40, { shouldValidate: true })
+    })
+    await waitFor(() => {
+      expect(numberInput).toHaveValue(40)
+    })
+    await userEvent.click(submit)
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenNthCalledWith(2, {
+        test: 40,
+      })
+    })
   })
 })
