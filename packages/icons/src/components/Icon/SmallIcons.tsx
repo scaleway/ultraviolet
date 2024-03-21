@@ -96,6 +96,7 @@ import { ReactComponent as settingsOutline } from './assets/small-outline/settin
 import { ReactComponent as sunOutline } from './assets/small-outline/sun.svg'
 import { ReactComponent as supportOutline } from './assets/small-outline/support.svg'
 import { ReactComponent as unlockOutline } from './assets/small-outline/unlock.svg'
+import { ReactComponent as unpinOutline } from './assets/small-outline/unpin.svg'
 import { ReactComponent as weatherNightOutline } from './assets/small-outline/weather-night.svg'
 import { ReactComponent as address } from './assets/small-solid/address.svg'
 import { ReactComponent as alert } from './assets/small-solid/alert-circle.svg'
@@ -138,6 +139,7 @@ import { ReactComponent as settings } from './assets/small-solid/settings.svg'
 import { ReactComponent as sun } from './assets/small-solid/sun.svg'
 import { ReactComponent as support } from './assets/small-solid/support.svg'
 import { ReactComponent as unlock } from './assets/small-solid/unlock.svg'
+import { ReactComponent as unpin } from './assets/small-solid/unpin.svg'
 import { ReactComponent as weatherNight } from './assets/small-solid/weather-night.svg'
 
 export const SMALL_ICONS = {
@@ -241,6 +243,7 @@ export const SMALL_ICONS = {
     unlock,
     'weather-night': weatherNight,
     pin,
+    unpin,
   },
   outlined: {
     anchor,
@@ -342,5 +345,6 @@ export const SMALL_ICONS = {
     unlock: unlockOutline,
     'weather-night': weatherNightOutline,
     pin: pinOutline,
+    unpin: unpinOutline,
   },
 } as const
