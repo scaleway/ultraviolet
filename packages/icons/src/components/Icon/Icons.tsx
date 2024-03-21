@@ -87,6 +87,7 @@ import { ReactComponent as moonOutline } from './assets/default-outline/moon.svg
 import { ReactComponent as mosaicOutline } from './assets/default-outline/mosaic.svg'
 import { ReactComponent as pencilOutline } from './assets/default-outline/pencil.svg'
 import { ReactComponent as phoneOutline } from './assets/default-outline/phone.svg'
+import { ReactComponent as pinOutline } from './assets/default-outline/pin.svg'
 import { ReactComponent as playOutline } from './assets/default-outline/play.svg'
 import { ReactComponent as privacyOutline } from './assets/default-outline/privacy.svg'
 import { ReactComponent as profileOutline } from './assets/default-outline/profile.svg'
@@ -128,6 +129,7 @@ import { ReactComponent as moon } from './assets/default-solid/moon.svg'
 import { ReactComponent as mosaic } from './assets/default-solid/mosaic.svg'
 import { ReactComponent as pencil } from './assets/default-solid/pencil.svg'
 import { ReactComponent as phone } from './assets/default-solid/phone.svg'
+import { ReactComponent as pin } from './assets/default-solid/pin.svg'
 import { ReactComponent as play } from './assets/default-solid/play.svg'
 import { ReactComponent as privacy } from './assets/default-solid/privacy.svg'
 import { ReactComponent as profile } from './assets/default-solid/profile.svg'
@@ -238,6 +240,7 @@ export const ICONS = {
     support,
     unlock,
     'weather-night': weatherNight,
+    pin,
   },
   outlined: {
     anchor,
@@ -338,5 +341,6 @@ export const ICONS = {
     support: supportOutline,
     unlock: unlockOutline,
     'weather-night': weatherNightOutline,
+    pin: pinOutline,
   },
 } as const

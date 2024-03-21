@@ -87,6 +87,7 @@ import { ReactComponent as moonOutline } from './assets/small-outline/moon.svg'
 import { ReactComponent as mosaicOutline } from './assets/small-outline/mosaic.svg'
 import { ReactComponent as pencilOutline } from './assets/small-outline/pencil.svg'
 import { ReactComponent as phoneOutline } from './assets/small-outline/phone.svg'
+import { ReactComponent as pinOutline } from './assets/small-outline/pin.svg'
 import { ReactComponent as playOutline } from './assets/small-outline/play.svg'
 import { ReactComponent as privacyOutline } from './assets/small-outline/privacy.svg'
 import { ReactComponent as profileOutline } from './assets/small-outline/profile.svg'
@@ -128,6 +129,7 @@ import { ReactComponent as moon } from './assets/small-solid/moon.svg'
 import { ReactComponent as mosaic } from './assets/small-solid/mosaic.svg'
 import { ReactComponent as pencil } from './assets/small-solid/pencil.svg'
 import { ReactComponent as phone } from './assets/small-solid/phone.svg'
+import { ReactComponent as pin } from './assets/small-solid/pin.svg'
 import { ReactComponent as play } from './assets/small-solid/play.svg'
 import { ReactComponent as privacy } from './assets/small-solid/privacy.svg'
 import { ReactComponent as profile } from './assets/small-solid/profile.svg'
@@ -238,6 +240,7 @@ export const SMALL_ICONS = {
     support,
     unlock,
     'weather-night': weatherNight,
+    pin,
   },
   outlined: {
     anchor,
@@ -338,5 +341,6 @@ export const SMALL_ICONS = {
     support: supportOutline,
     unlock: unlockOutline,
     'weather-night': weatherNightOutline,
+    pin: pinOutline,
   },
 } as const
