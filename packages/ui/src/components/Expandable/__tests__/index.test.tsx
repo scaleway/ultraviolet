@@ -22,6 +22,11 @@ describe('Expandable', () => {
       <Expandable className="test">Sample Expandable</Expandable>,
     ))
 
+  test('renders correctly with animationDuration', () =>
+    shouldMatchEmotionSnapshot(
+      <Expandable animationDuration={500}>Sample Expandable</Expandable>,
+    ))
+
   test('should open the expandable', () => {
     jest.useFakeTimers()
     const { rerender } = render(
