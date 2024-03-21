@@ -2,10 +2,10 @@ import styled from '@emotion/styled'
 import { Button, Stack } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useCallback, useEffect, useRef } from 'react'
-import { Group } from './Group'
-import { Item } from './Item'
 import { NavigationProvider, useNavigation } from './NavigationProvider'
-import { PinnedItems } from './PinnedItems'
+import { Group } from './components/Group'
+import { Item } from './components/Item'
+import { PinnedItems } from './components/PinnedItems'
 import {
   ANIMATION_DURATION,
   NAVIGATION_COLLASPED_WIDTH,
@@ -294,7 +294,7 @@ export const Navigation = ({
   onClickPinUnpin,
   onClickExpand,
   initialPinned,
-  initialExpanded = false,
+  initialExpanded = true,
   locales = NavigationLocales,
   pinLimit = 7,
   className,

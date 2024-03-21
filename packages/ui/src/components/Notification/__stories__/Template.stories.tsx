@@ -15,9 +15,6 @@ export const Template: StoryFn<typeof NotificationContainer> = args => (
           'Invitation',
           <ProductIcon name="verifyCard" size="medium" variant="primary" />,
           true,
-          {
-            toastId: 'test',
-          },
         )
       }
     >

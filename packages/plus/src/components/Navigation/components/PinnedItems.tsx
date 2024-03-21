@@ -1,5 +1,5 @@
+import { useNavigation } from '../NavigationProvider'
 import { Item } from './Item'
-import { useNavigation } from './NavigationProvider'
 
 export const PinnedItems = () => {
   const context = useNavigation()
@@ -16,7 +16,7 @@ export const PinnedItems = () => {
     return (
       <Item
         label={locales['navigation.pinned.item.group.label']}
-        categoryIcon="webHosting"
+        categoryIcon="pin"
         toggle={false}
         type="pinnedGroup"
       >

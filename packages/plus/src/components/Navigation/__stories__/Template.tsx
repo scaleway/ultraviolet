@@ -45,7 +45,7 @@ const Image = styled.img`
 export const Template: StoryFn<ComponentProps<typeof Navigation>> = ({
   children,
 }) => {
-  const [expanded, setExpanded] = useReducer(s => !s, false)
+  const [expanded, setExpanded] = useReducer(s => !s, true)
 
   return (
     <Navigation

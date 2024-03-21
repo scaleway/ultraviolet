@@ -2,8 +2,8 @@ import styled from '@emotion/styled'
 import { Separator, Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { Children } from 'react'
-import { useNavigation } from './NavigationProvider'
-import { ANIMATION_DURATION, groupAnimation } from './constants'
+import { useNavigation } from '../NavigationProvider'
+import { ANIMATION_DURATION, groupAnimation } from '../constants'
 
 type GroupProps = {
   children: ReactNode

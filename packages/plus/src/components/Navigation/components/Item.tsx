@@ -21,12 +21,12 @@ import {
   useMemo,
   useState,
 } from 'react'
-import { useNavigation } from './NavigationProvider'
+import { useNavigation } from '../NavigationProvider'
 import {
   ANIMATION_DURATION,
   PIN_BUTTON_OPACITY_TRANSITION,
   shrinkHeight,
-} from './constants'
+} from '../constants'
 
 const NeutralButtonLink = css`
   color: inherit;
@@ -405,7 +405,7 @@ export const Item = ({
                         onClick={() =>
                           isItemPinned ? unpinItem(label) : pinItem(label)
                         }
-                        icon="auto-fix"
+                        icon="pin"
                       />
                     </div>
                   </Tooltip>
@@ -415,7 +415,7 @@ export const Item = ({
             {hasHrefAndNoChildren ? (
               <AnimatedIcon
                 name="open-in-new"
-                color="neutral"
+                sentiment="neutral"
                 prominence="weak"
               />
             ) : null}
@@ -434,7 +434,7 @@ export const Item = ({
                 {!animation ? (
                   <AnimatedIcon
                     name={internalToggle ? 'arrow-down' : 'arrow-right'}
-                    color="neutral"
+                    sentiment="neutral"
                     prominence="weak"
                   />
                 ) : null}
@@ -559,7 +559,7 @@ export const Item = ({
           >
             <AnimatedIcon
               name="open-in-new"
-              color="neutral"
+              sentiment="neutral"
               prominence="weak"
             />
           </Container>
