@@ -11,7 +11,6 @@ import type {
   ReactNode,
 } from 'react'
 import { forwardRef, useEffect, useId, useMemo, useState } from 'react'
-import flattenChildren from 'react-flatten-children'
 import type {
   ClearIndicatorProps,
   CommonProps,
@@ -681,7 +680,7 @@ const FwdSelectInput = ({
   const selectOptions = useMemo(
     () =>
       options ||
-      (flattenChildren(children) as ReactElement<{ children: string }>[]).map(
+      (children as ReactElement<{ children: string }>[]).map(
         ({ props: { children: label, ...subProps } }) =>
           ({
             ...subProps,
