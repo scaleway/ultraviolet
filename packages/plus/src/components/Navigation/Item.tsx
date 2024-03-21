@@ -11,7 +11,7 @@ import {
   Tooltip,
   fadeIn,
 } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, JSX, ReactNode } from 'react'
 import {
   Children,
   cloneElement,
@@ -91,11 +91,7 @@ const WrapText = styled(Text, {
   white-space: ${({ animation }) => (animation ? 'nowrap' : 'normal')};
 `
 
-const CustomExpandable = styled(Expandable, {
-  shouldForwardProp: prop => !['animation'].includes(prop),
-})<{ animation?: 'collapse' | 'expand' | boolean }>`
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['0.25']};
+const StyledStack = styled(Stack)`
   padding-left: 28px; // This value needs to be hardcoded because of the category icon size
 `
 
@@ -139,7 +135,7 @@ const StyledContainer = styled(Stack)`
       animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out;
     }
 
-    ${CustomExpandable} {
+    ${StyledStack} {
       display: none;
     }
   }
@@ -206,6 +202,13 @@ type ItemProps = {
    * You don't need to use this prop it's used internally to control if the item has a parent
    */
   hasParents?: boolean
+  /**
+   * When the item has href it becomes a link if not it is a button.
+   * When using an external routing tool you might need to remove both of them and use
+   * a non focusable element. This option allows you to choose the tag of the
+   * item.
+   */
+  as?: keyof JSX.IntrinsicElements
 }
 
 export const Item = ({
@@ -222,6 +225,7 @@ export const Item = ({
   noPinButton,
   type = 'default',
   hasParents,
+  as,
 }: ItemProps) => {
   const context = useNavigation()
 
@@ -289,9 +293,19 @@ export const Item = ({
     type,
   ])
 
-  const Container = StyledContainer.withComponent(
-    hasHrefAndNoChildren ? 'a' : 'button',
-  )
+  const containerTag = useMemo(() => {
+    if (as) {
+      return as
+    }
+
+    if (hasHrefAndNoChildren) {
+      return 'a'
+    }
+
+    return 'button'
+  }, [hasHrefAndNoChildren, as])
+
+  const Container = StyledContainer.withComponent(containerTag)
 
   const ariaExpanded = useMemo(() => {
     if (hasHrefAndNoChildren && internalToggle) {
@@ -429,7 +443,7 @@ export const Item = ({
           </Stack>
         </Container>
         {children ? (
-          <CustomExpandable opened={internalToggle} animation={animation}>
+          <Expandable opened={internalToggle}>
             {Children.map(children, child =>
               isValidElement<ItemProps>(child)
                 ? cloneElement(child, {
@@ -437,7 +451,7 @@ export const Item = ({
                   })
                 : child,
             )}
-          </CustomExpandable>
+          </Expandable>
         ) : null}
       </>
     )

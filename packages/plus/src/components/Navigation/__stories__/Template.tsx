@@ -57,6 +57,7 @@ export const Template: StoryFn<ComponentProps<typeof Navigation>> = ({
       }
       onClickExpand={setExpanded}
       initialExpanded={expanded}
+      pinnedFeature
     >
       {children}
     </Navigation>

@@ -18,6 +18,7 @@ const StyledNav = styled.nav`
   display: flex;
   flex-direction: row;
   position: relative;
+  border-right: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
 `
 
 const Container = styled.div`
