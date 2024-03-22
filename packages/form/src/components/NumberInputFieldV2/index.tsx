@@ -47,8 +47,8 @@ export const NumberInputFieldV2 = <
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   disabled,
-  max,
-  min,
+  max = Number.MAX_SAFE_INTEGER,
+  min = 0,
   name,
   onChange,
   onBlur,

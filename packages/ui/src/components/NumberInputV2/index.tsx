@@ -15,8 +15,6 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
-const NUMBER_INPUT_MAX_STR_LENGTH = Number.MAX_SAFE_INTEGER.toString().length
-
 const SIZES = {
   small: '30px',
   medium: '38px',
@@ -256,32 +254,6 @@ export const NumberInputV2 = forwardRef(
       [localRef, min, onChange],
     )
 
-    const onChangeValue = (inputStr: string) => {
-      if (onChange) {
-        let numericValue: number
-        if (
-          inputStr.length > NUMBER_INPUT_MAX_STR_LENGTH &&
-          inputStr.startsWith('-')
-        ) {
-          numericValue = min
-        } else if (inputStr.length > NUMBER_INPUT_MAX_STR_LENGTH) {
-          numericValue = max
-        } else {
-          numericValue = parseInt(inputStr, 10)
-
-          if (Number.isNaN(numericValue) || numericValue < min) {
-            numericValue = min
-          } else if (numericValue > max) {
-            numericValue = max
-          }
-        }
-        onChange(numericValue)
-        if (localRef.current) {
-          localRef.current.value = numericValue.toString()
-        }
-      }
-    }
-
     const isMinusDisabled = useMemo(
       () => {
         if (!localRef?.current?.value || localRef?.current?.value === '') {
@@ -325,6 +297,12 @@ export const NumberInputV2 = forwardRef(
 
       return 'neutral'
     }, [error, success])
+
+    let inputValue
+    if (value !== undefined) {
+      inputValue =
+        value !== null && Number.isInteger(value) ? value.toString() : ''
+    }
 
     return (
       <Stack gap="0.5" className={className}>
@@ -383,30 +361,17 @@ export const NumberInputV2 = forwardRef(
                   name={name}
                   id={localId}
                   placeholder={placeholder}
-                  onKeyDown={event => {
-                    if (event.key === 'Enter') {
-                      if (!localRef.current?.value) {
-                        onChange?.(null)
-                      } else if (onChange) {
-                        onChangeValue(localRef.current?.value ?? '')
-                      }
-                    }
-                  }}
-                  onBlur={event => {
-                    if (event.target.value === '') {
-                      onBlur?.(event)
-                      onChange?.(null)
-
-                      return
-                    }
-
-                    if (onChange) {
-                      onChangeValue(event.target.value)
-                    }
-                    onBlur?.(event)
-                  }}
-                  defaultValue={value?.toString()}
+                  onChange={
+                    onChange
+                      ? event => {
+                          const newNumber = parseInt(event.target.value, 10)
+                          onChange(Number.isNaN(newNumber) ? null : newNumber)
+                        }
+                      : undefined
+                  }
+                  value={inputValue}
                   onFocus={onFocus}
+                  onBlur={onBlur}
                   data-size={size}
                   step={step}
                   disabled={disabled}
