@@ -150,6 +150,7 @@ export const Form = <TFormValues extends FieldValues>({
               await handleSubmit(e)
             }}
             name={name}
+            noValidate
           >
             {typeof children === 'function'
               ? children({

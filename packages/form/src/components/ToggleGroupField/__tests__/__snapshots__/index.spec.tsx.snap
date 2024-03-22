@@ -245,7 +245,9 @@ exports[`GroupField should render correctly checked 1`] = `
   cursor: not-allowed;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div
       class="css-1civgmb ehpbis70"
     >
@@ -587,7 +589,9 @@ exports[`GroupField should trigger events correctly with required prop 1`] = `
   cursor: not-allowed;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div
       class="css-1civgmb ehpbis70"
     >

@@ -179,7 +179,9 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   text-decoration: none;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <button
       class="css-1nhcpqm e112qvla2"
       disabled=""
@@ -226,6 +228,8 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
 
 exports[`SubmitErrorAlert should render nothing if no error 1`] = `
 <DocumentFragment>
-  <form />
+  <form
+    novalidate=""
+  />
 </DocumentFragment>
 `;
