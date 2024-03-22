@@ -19,7 +19,7 @@ const StyledIconWrapper = styled('div', {
 `
 
 const StyledIcon = styled(Icon)<{ color: Color }>`
-  fill: ${({ color, theme }) => theme.colors[color].border};
+  fill: ${({ color, theme }) => theme.colors[color].borderWeak};
 `
 
 type HorizontalSeparatorProps = SeparatorProps & {
