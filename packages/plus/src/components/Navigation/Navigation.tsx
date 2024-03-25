@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Button, Stack } from '@ultraviolet/ui'
+import { Button, Stack, Tooltip } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { useCallback, useEffect, useRef } from 'react'
 import { NavigationProvider, useNavigation } from './NavigationProvider'
@@ -56,6 +56,7 @@ const StickyFooter = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
   transition: justify-content ${ANIMATION_DURATION}ms ease-in-out;
+  box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
 
   justify-content: flex-end;
 `
@@ -121,7 +122,8 @@ const NavigationContent = ({
   const sliderRef = useRef<HTMLDivElement>(null)
   const navigationRef = useRef<HTMLDivElement>(null)
 
-  const { expanded, setExpanded, animation, setAnimation } = useNavigation()
+  const { expanded, setExpanded, animation, setAnimation, locales } =
+    useNavigation()
 
   // This function will be triggered when expand/collapse button is clicked
   const triggerExpand = useCallback(() => {
@@ -228,13 +230,22 @@ const NavigationContent = ({
             {children}
           </Content>
           <StickyFooter data-expanded={expanded} data-animation={animation}>
-            <Button
-              variant="ghost"
-              sentiment="neutral"
-              size="small"
-              icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-              onClick={triggerExpand}
-            />
+            <Tooltip
+              text={
+                expanded
+                  ? locales['navigation.collapse.button']
+                  : locales['navigation.expand.button']
+              }
+              placement="right"
+            >
+              <Button
+                variant="ghost"
+                sentiment="neutral"
+                size="small"
+                icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
+                onClick={triggerExpand}
+              />
+            </Tooltip>
           </StickyFooter>
         </ContentContainer>
       </Container>

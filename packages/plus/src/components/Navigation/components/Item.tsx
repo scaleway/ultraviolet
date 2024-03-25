@@ -51,6 +51,7 @@ const ExpandedPinnedButton = styled(Button)`
   }
 
   transition: ${PIN_BUTTON_OPACITY_TRANSITION};
+  transition-delay: 0.3s;
 `
 
 const CollapsedPinnedButton = styled(Button)`
@@ -62,6 +63,7 @@ const CollapsedPinnedButton = styled(Button)`
   }
 
   transition: ${PIN_BUTTON_OPACITY_TRANSITION};
+  transition-delay: 0.3s;
 `
 
 const StyledMenuItem = styled(MenuV2.Item)`
@@ -80,6 +82,11 @@ const StyledMenu = styled(MenuV2)`
 
 const StyledBadge = styled(Badge)`
   transition: ${PIN_BUTTON_OPACITY_TRANSITION};
+  transition-delay: 0.3s;
+`
+
+const PaddedStack = styled(Stack)`
+  padding-left: 28px; // This value needs to be hardcoded because of the category icon size
 `
 
 const AnimatedIcon = styled(Icon)``
@@ -99,11 +106,19 @@ const StyledContainer = styled(Stack)`
   ${NeutralButtonLink};
   border-radius: ${({ theme }) => theme.radii.default};
   cursor: pointer;
-  padding: ${({ theme }) => theme.space['1']};
+  margin-top: ${({ theme }) => theme.space['0.25']};
+  padding: ${({ theme }) =>
+    `calc(${theme.space['0.25']} + ${theme.space['0.5']}) ${theme.space['1']}`};
+
+  &[data-has-sub-label='true'] {
+    padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
+  }
+
   width: 100%;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &[data-has-active-children='true'] {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 
     ${ExpandedPinnedButton}, ${CollapsedPinnedButton} {
@@ -115,11 +130,27 @@ const StyledContainer = styled(Stack)`
         opacity: 0;
       }
     }
+
+    ${WrapText} {
+      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
+    }
   }
 
-  &:active,
+  &:active {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
+  }
+
   &[data-is-active='true'] {
     background-color: ${({ theme }) => theme.colors.primary.background};
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.primary.backgroundHover};
+    }
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: unset;
   }
 
   &[data-animation='collapse'] {
@@ -143,6 +174,7 @@ const StyledContainer = styled(Stack)`
 
 const MenuStack = styled(Stack)`
   padding: ${({ theme }) => `0 ${theme.space['2']}`};
+  margin-top: ${({ theme }) => theme.space['0.25']};
 `
 
 const ContainerCategoryIcon = styled(Stack)`
@@ -209,6 +241,7 @@ type ItemProps = {
    * item.
    */
   as?: keyof JSX.IntrinsicElements
+  disabled?: boolean
 }
 
 export const Item = ({
@@ -226,6 +259,7 @@ export const Item = ({
   type = 'default',
   hasParents,
   as,
+  disabled,
 }: ItemProps) => {
   const context = useNavigation()
 
@@ -271,7 +305,7 @@ export const Item = ({
     pinnedFeature && !children && !noPinButton
   const isItemPinned = pinnedItems.includes(label)
   const shouldShowPinnedButton = useMemo(() => {
-    if (href) return false
+    if (href || disabled) return false
 
     if (pinnedItems.length >= pinLimit && type === 'default') return false
 
@@ -285,6 +319,7 @@ export const Item = ({
 
     return false
   }, [
+    disabled,
     haspinnedFeatureAndNoChildren,
     href,
     isItemPinned,
@@ -292,6 +327,12 @@ export const Item = ({
     pinnedItems.length,
     type,
   ])
+
+  const hasActiveChildren = children
+    ? Children.map(children, child =>
+        isValidElement<ItemProps>(child) ? child.props?.active : null,
+      )
+    : false
 
   const containerTag = useMemo(() => {
     if (as) {
@@ -337,6 +378,8 @@ export const Item = ({
           data-is-active={active}
           data-animation={animation}
           data-has-children={!!children}
+          data-has-active-children={hasActiveChildren}
+          disabled={disabled}
         >
           <Stack
             direction="row"
@@ -359,6 +402,7 @@ export const Item = ({
                 sentiment={active ? 'primary' : 'neutral'}
                 prominence={categoryIcon || !hasParents ? undefined : 'weak'}
                 animation={animation}
+                disabled={disabled}
               >
                 {label}
               </WrapText>
@@ -369,6 +413,7 @@ export const Item = ({
                   sentiment="neutral"
                   prominence="weak"
                   animation={animation}
+                  disabled={disabled}
                   subLabel
                 >
                   {subLabel}
@@ -384,6 +429,7 @@ export const Item = ({
                     sentiment={badgeSentiment}
                     size="small"
                     prominence="strong"
+                    disabled={disabled}
                   >
                     {badgeText}
                   </StyledBadge>
@@ -417,6 +463,7 @@ export const Item = ({
                 name="open-in-new"
                 sentiment="neutral"
                 prominence="weak"
+                disabled={disabled}
               />
             ) : null}
             {children ? (
@@ -443,14 +490,19 @@ export const Item = ({
           </Stack>
         </Container>
         {children ? (
-          <Expandable opened={internalToggle}>
-            {Children.map(children, child =>
-              isValidElement<ItemProps>(child)
-                ? cloneElement(child, {
-                    hasParents: true,
-                  })
-                : child,
-            )}
+          <Expandable
+            opened={internalToggle}
+            animationDuration={animation ? ANIMATION_DURATION / 2 : undefined}
+          >
+            <PaddedStack>
+              {Children.map(children, child =>
+                isValidElement<ItemProps>(child)
+                  ? cloneElement(child, {
+                      hasParents: true,
+                    })
+                  : child,
+              )}
+            </PaddedStack>
           </Expandable>
         ) : null}
       </>
@@ -478,7 +530,7 @@ export const Item = ({
             placement="right"
           >
             {Children.map(children, child => (
-              <StyledMenuItem href={href}>
+              <StyledMenuItem href={href} borderless>
                 <Stack
                   gap={1}
                   direction="row"
@@ -495,16 +547,18 @@ export const Item = ({
             ))}
           </StyledMenu>
         ) : (
-          <Button sentiment="neutral" variant="ghost" size="small">
-            <Stack
-              direction="row"
-              gap={1}
-              alignItems="center"
-              justifyContent="center"
-            >
-              <CategoryIcon name={categoryIcon} />
-            </Stack>
-          </Button>
+          <Tooltip text={label} placement="right">
+            <Button sentiment="neutral" variant="ghost" size="small">
+              <Stack
+                direction="row"
+                gap={1}
+                alignItems="center"
+                justifyContent="center"
+              >
+                <CategoryIcon name={categoryIcon} />
+              </Stack>
+            </Button>
+          </Tooltip>
         )}
       </MenuStack>
     )

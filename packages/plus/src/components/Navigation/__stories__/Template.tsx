@@ -50,10 +50,17 @@ export const Template: StoryFn<ComponentProps<typeof Navigation>> = ({
   return (
     <Navigation
       logo={
-        <Stack gap={1} direction="row">
-          <img src={logoSmall} alt="" height="22px" />
-          <Image src={logo} alt="" height="22px" data-expanded={expanded} />
-        </Stack>
+        <a
+          href="https://scaleway.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="logo"
+        >
+          <Stack gap={1} direction="row">
+            <img src={logoSmall} alt="" height="22px" />
+            <Image src={logo} alt="" height="22px" data-expanded={expanded} />
+          </Stack>
+        </a>
       }
       onClickExpand={setExpanded}
       initialExpanded={expanded}

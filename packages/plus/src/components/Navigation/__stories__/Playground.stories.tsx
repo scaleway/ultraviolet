@@ -31,7 +31,7 @@ Playground.args = {
             badgeSentiment="success"
             active
           />
-          <Navigation.Item label="Elastic Metal" />
+          <Navigation.Item label="Elastic Metal" disabled />
           <Navigation.Item label="Dedibox" href="https://scaleway.com" />
           <Navigation.Item
             label="Very long product name with spaces"
@@ -96,7 +96,7 @@ Playground.decorators = [
   Story => (
     <div
       style={{
-        height: '600px',
+        height: '800px',
         display: 'flex',
         background: '#f1f1f1',
         margin: '-10px 0', // This is to compensate the border added by storybook around the story

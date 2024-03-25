@@ -21,7 +21,7 @@ const StyledText = styled(Text)`
 `
 
 const StyledStack = styled(Stack)`
-  padding-top: ${({ theme }) => theme.space['2']};
+  padding-top: ${({ theme }) => theme.space['1']};
 `
 
 const StyledSeparator = styled(Separator)`
