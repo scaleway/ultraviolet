@@ -1,9 +1,21 @@
 import { CheckboxGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
+import { Children, isValidElement, useCallback } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
+
+const arraysContainSameValues = (array1: string[], array2: string[]) => {
+  if (array1.length !== array2.length) {
+    return false
+  }
+
+  const sortedArray1 = array1.slice().sort()
+  const sortedArray2 = array2.slice().sort()
+
+  return sortedArray1.every((element, index) => element === sortedArray2[index])
+}
 
 type CheckboxGroupFieldProps<
   TFieldValues extends FieldValues,
@@ -23,6 +35,12 @@ type CheckboxGroupFieldProps<
   > &
   Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend'>>
 
+type ElementProps = {
+  name: string
+  value: string
+  required?: boolean
+}
+
 export const CheckboxGroupField = <
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
@@ -38,14 +56,47 @@ export const CheckboxGroupField = <
   name,
   required = false,
   shouldUnregister = false,
+  rules,
 }: CheckboxGroupFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
+  const validate = useCallback(
+    (value: string[]) => {
+      const requiredChildren =
+        Children.map(children, child => {
+          if (isValidElement<ElementProps>(child)) {
+            if (child.props.required) {
+              return child.props.name
+            }
+
+            return null
+          }
+
+          return null
+        })?.filter(Boolean) ?? []
+
+      if (!required && arraysContainSameValues(value, requiredChildren)) {
+        return undefined
+      }
+
+      if (value.length >= Children.count(children)) {
+        return undefined
+      }
+
+      return false
+    },
+    [children, required],
+  )
+
   const {
     field,
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
     shouldUnregister,
+    rules: {
+      validate,
+      ...rules,
+    },
   })
 
   return (
