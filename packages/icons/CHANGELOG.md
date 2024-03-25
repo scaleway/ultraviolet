@@ -1,5 +1,23 @@
 # Change Log
 
+## 2.11.0
+
+### Minor Changes
+
+- [#3586](https://github.com/scaleway/ultraviolet/pull/3586) [`183850a`](https://github.com/scaleway/ultraviolet/commit/183850a36412b0017c17b6a18abd20c8f2b00d3f) Thanks [@matthprost](https://github.com/matthprost)! - Add new system icon `unpin` on `<Icon />` component
+
+- [#3580](https://github.com/scaleway/ultraviolet/pull/3580) [`7fcdff0`](https://github.com/scaleway/ultraviolet/commit/7fcdff0b010643aa0c1b432cc032e9410898d959) Thanks [@matthprost](https://github.com/matthprost)! - New system icon `pin` available in `<Icon />` component and in `<CategoryIcon />`
+
+### Patch Changes
+
+- [#3576](https://github.com/scaleway/ultraviolet/pull/3576) [`e695eee`](https://github.com/scaleway/ultraviolet/commit/e695eee730766105ee238e4a85c1cc6f51b6f116) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.1`.
+  Updated dependency `@babel/runtime` to `7.24.1`.
+  Updated dependency `@babel/eslint-parser` to `7.24.1`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.24.1`.
+  Updated dependency `@babel/preset-env` to `7.24.1`.
+  Updated dependency `@babel/preset-react` to `7.24.1`.
+  Updated dependency `@babel/preset-typescript` to `7.24.1`.
+
 ## 2.10.1
 
 ### Patch Changes
