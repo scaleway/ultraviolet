@@ -1,5 +1,27 @@
 # Change Log
 
+## 1.44.0
+
+### Minor Changes
+
+- [#3581](https://github.com/scaleway/ultraviolet/pull/3581) [`12415b1`](https://github.com/scaleway/ultraviolet/commit/12415b1f0d2c1511b5d50ac582bf9a96e5adcdd9) Thanks [@matthprost](https://github.com/matthprost)! - Add `animationDuration` on `<Expandable />` component
+
+- [#3584](https://github.com/scaleway/ultraviolet/pull/3584) [`167f96d`](https://github.com/scaleway/ultraviolet/commit/167f96d5158b80a211160a98af4d74169e7b56be) Thanks [@matthprost](https://github.com/matthprost)! - Change `<Separator />` color to `borderWeak`
+
+### Patch Changes
+
+- [#3583](https://github.com/scaleway/ultraviolet/pull/3583) [`51b9ec5`](https://github.com/scaleway/ultraviolet/commit/51b9ec53f873d462d4a57f0819a014ab544f364f) Thanks [@fabienhebert](https://github.com/fabienhebert)! - NumberInput: no more blur autofix
+
+- [#3576](https://github.com/scaleway/ultraviolet/pull/3576) [`e695eee`](https://github.com/scaleway/ultraviolet/commit/e695eee730766105ee238e4a85c1cc6f51b6f116) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.1`.
+  Updated dependency `@babel/runtime` to `7.24.1`.
+  Updated dependency `@babel/eslint-parser` to `7.24.1`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.24.1`.
+  Updated dependency `@babel/preset-env` to `7.24.1`.
+  Updated dependency `@babel/preset-react` to `7.24.1`.
+  Updated dependency `@babel/preset-typescript` to `7.24.1`.
+- Updated dependencies [[`e695eee`](https://github.com/scaleway/ultraviolet/commit/e695eee730766105ee238e4a85c1cc6f51b6f116), [`183850a`](https://github.com/scaleway/ultraviolet/commit/183850a36412b0017c17b6a18abd20c8f2b00d3f), [`7fcdff0`](https://github.com/scaleway/ultraviolet/commit/7fcdff0b010643aa0c1b432cc032e9410898d959)]:
+  - @ultraviolet/icons@2.11.0
+
 ## 1.43.2
 
 ### Patch Changes
