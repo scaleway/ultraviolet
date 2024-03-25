@@ -6,17 +6,19 @@ import type { XOR } from '../../types'
 const formatTextToAvatar = (text?: string): string => {
   if (!text) return ''
 
-  if (text.length <= 2) {
-    return text.toUpperCase()
+  const textCleaned = text.replace(/\s+/g, ' ').trim()
+
+  if (textCleaned.length <= 2) {
+    return textCleaned.toUpperCase()
   }
 
-  if (text.split(' ').length > 1) {
-    const [a, b] = text.split(' ')
+  if (textCleaned.split(' ').length > 1) {
+    const [a, b] = textCleaned.split(' ')
 
     return `${a[0]}${b[0]}`.toUpperCase()
   }
 
-  return text.substring(0, 2).toUpperCase()
+  return textCleaned.substring(0, 2).toUpperCase()
 }
 
 type TextAvatarProps = {
