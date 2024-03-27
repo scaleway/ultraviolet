@@ -18,6 +18,7 @@ Playground.args = {
         noPinButton
       />
       <Navigation.PinnedItems />
+      <Navigation.Separator />
       <Navigation.Group label="Products">
         <Navigation.Item
           label="Compute"
@@ -77,7 +78,8 @@ Playground.args = {
           <Navigation.Item label="VPN" />
         </Navigation.Item>
       </Navigation.Group>
-      <Navigation.Group label="Quick Links">
+      <Navigation.Separator />
+      <Navigation.Item label="Quick Links" noExpand>
         <Navigation.Item label="Support" noPinButton />
         <Navigation.Item label="Abuse" noPinButton />
         <Navigation.Item
@@ -87,7 +89,7 @@ Playground.args = {
           href="http://scaleway.com"
         />
         <Navigation.Item label="Feature Request" href="http://scaleway.com" />
-      </Navigation.Group>
+      </Navigation.Item>
     </>,
   ],
 }

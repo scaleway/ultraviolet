@@ -8,6 +8,7 @@ export default {
     'Navigation.Group': Navigation.Group,
     'Navigation.Item': Navigation.Item,
     'Navigation.PinnedItems': Navigation.PinnedItems,
+    'Navigation.Separator': Navigation.Separator,
   },
 } as Meta
 

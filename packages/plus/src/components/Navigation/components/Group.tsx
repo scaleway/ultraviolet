@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Separator, Stack, Text } from '@ultraviolet/ui'
+import { Stack, Text } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { Children } from 'react'
 import { useNavigation } from '../NavigationProvider'
@@ -22,10 +22,6 @@ const StyledText = styled(Text)`
 
 const StyledStack = styled(Stack)`
   padding-top: ${({ theme }) => theme.space['1']};
-`
-
-const StyledSeparator = styled(Separator)`
-  margin: ${({ theme }) => `${theme.space['2']} -${theme.space['2']}`};
 `
 
 const Container = styled.div`
@@ -54,7 +50,6 @@ export const Group = ({ children, label }: GroupProps) => {
   if (Children.count(children) > 0) {
     return (
       <Container data-animation={animation}>
-        <StyledSeparator />
         <StyledStack direction="column">
           {expanded || animation === 'expand' ? (
             <StyledText

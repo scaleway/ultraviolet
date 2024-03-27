@@ -6,6 +6,7 @@ import { NavigationProvider, useNavigation } from './NavigationProvider'
 import { Group } from './components/Group'
 import { Item } from './components/Item'
 import { PinnedItems } from './components/PinnedItems'
+import { Separator } from './components/Separator'
 import {
   ANIMATION_DURATION,
   NAVIGATION_COLLASPED_WIDTH,
@@ -359,3 +360,4 @@ export const Navigation = ({
 Navigation.Group = Group
 Navigation.Item = Item
 Navigation.PinnedItems = PinnedItems
+Navigation.Separator = Separator

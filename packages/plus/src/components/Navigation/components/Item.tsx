@@ -105,7 +105,10 @@ const StyledStack = styled(Stack)`
 const StyledContainer = styled(Stack)`
   ${NeutralButtonLink};
   border-radius: ${({ theme }) => theme.radii.default};
-  cursor: pointer;
+
+  &[data-has-no-expand='false'] {
+    cursor: pointer;
+  }
   margin-top: ${({ theme }) => theme.space['0.25']};
   padding: ${({ theme }) =>
     `calc(${theme.space['0.25']} + ${theme.space['0.5']}) ${theme.space['1']}`};
@@ -116,8 +119,8 @@ const StyledContainer = styled(Stack)`
 
   width: 100%;
 
-  &:hover,
-  &:focus,
+  &:hover[data-has-no-expand='false'],
+  &:focus[data-has-no-expand='false'],
   &[data-has-active-children='true'] {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 
@@ -136,7 +139,7 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &:active {
+  &:active[data-has-no-expand='false'] {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
 
@@ -151,6 +154,10 @@ const StyledContainer = styled(Stack)`
   &[disabled] {
     cursor: not-allowed;
     background-color: unset;
+
+    ${WrapText} {
+      color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
+    }
   }
 
   &[data-animation='collapse'] {
@@ -210,10 +217,10 @@ type ItemProps = {
   badgeSentiment?: ComponentProps<typeof Badge>['sentiment']
   href?: string
   /**
-   * This function will be triggered when item is clicked to expand collapse
-   * passing the new toggle state.
+   * This function will be triggered on click of the item. If the item is expandable
+   * toggle will be passed with it.
    */
-  onClickToggle?: (toggle: true | false) => void
+  onClick?: (toggle?: true | false) => void
   /**
    * This prop is used to control if the item is expanded or collapsed
    */
@@ -241,6 +248,11 @@ type ItemProps = {
    * item.
    */
   as?: keyof JSX.IntrinsicElements
+  /**
+   * Use this prop if you want to remove the expand behavior when the item
+   * has sub items.
+   */
+  noExpand?: boolean
   disabled?: boolean
 }
 
@@ -252,7 +264,7 @@ export const Item = ({
   badgeText,
   badgeSentiment,
   href,
-  onClickToggle,
+  onClick,
   toggle,
   active,
   noPinButton,
@@ -260,6 +272,7 @@ export const Item = ({
   hasParents,
   as,
   disabled,
+  noExpand = false,
 }: ItemProps) => {
   const context = useNavigation()
 
@@ -283,9 +296,9 @@ export const Item = ({
   const triggerToggle = useCallback(
     (value: boolean) => {
       setToggle(value)
-      onClickToggle?.(internalToggle)
+      onClick?.(internalToggle)
     },
-    [internalToggle, onClickToggle],
+    [internalToggle, onClick],
   )
 
   useEffect(() => {
@@ -328,11 +341,15 @@ export const Item = ({
     type,
   ])
 
-  const hasActiveChildren = children
-    ? Children.map(children, child =>
-        isValidElement<ItemProps>(child) ? child.props?.active : null,
-      )
-    : false
+  const hasActiveChildren = useMemo(() => {
+    if (!children) return false
+
+    return (
+      Children.map(children, child =>
+        isValidElement<ItemProps>(child) ? child.props?.active : false,
+      ) as boolean[]
+    ).includes(true)
+  }, [children])
 
   const containerTag = useMemo(() => {
     if (as) {
@@ -343,8 +360,12 @@ export const Item = ({
       return 'a'
     }
 
+    if (noExpand) {
+      return 'div'
+    }
+
     return 'button'
-  }, [hasHrefAndNoChildren, as])
+  }, [as, hasHrefAndNoChildren, noExpand])
 
   const Container = StyledContainer.withComponent(containerTag)
 
@@ -362,6 +383,14 @@ export const Item = ({
 
   // This content is when the navigation is expanded
   if (expanded || (!expanded && animation === 'expand')) {
+    const renderChildren = Children.map(children, child =>
+      isValidElement<ItemProps>(child)
+        ? cloneElement(child, {
+            hasParents: true,
+          })
+        : child,
+    )
+
     return (
       <>
         <Container
@@ -370,7 +399,13 @@ export const Item = ({
           alignItems="center"
           justifyContent="space-between"
           data-has-sub-label={!!subLabel}
-          onClick={children ? () => triggerToggle(!internalToggle) : undefined}
+          onClick={() => {
+            if (children) {
+              return triggerToggle(!internalToggle)
+            }
+
+            return onClick?.()
+          }}
           aria-expanded={ariaExpanded}
           href={href}
           target={href ? '_blank' : undefined}
@@ -379,6 +414,7 @@ export const Item = ({
           data-animation={animation}
           data-has-children={!!children}
           data-has-active-children={hasActiveChildren}
+          data-has-no-expand={noExpand}
           disabled={disabled}
         >
           <Stack
@@ -478,7 +514,7 @@ export const Item = ({
                     {pinnedItems.length}/{pinLimit}
                   </WrapText>
                 ) : null}
-                {!animation ? (
+                {!animation && !noExpand ? (
                   <AnimatedIcon
                     name={internalToggle ? 'arrow-down' : 'arrow-right'}
                     sentiment="neutral"
@@ -490,41 +526,48 @@ export const Item = ({
           </Stack>
         </Container>
         {children ? (
-          <Expandable
-            opened={internalToggle}
-            animationDuration={animation ? ANIMATION_DURATION / 2 : undefined}
-          >
-            <PaddedStack>
-              {Children.map(children, child =>
-                isValidElement<ItemProps>(child)
-                  ? cloneElement(child, {
-                      hasParents: true,
-                    })
-                  : child,
-              )}
-            </PaddedStack>
-          </Expandable>
+          <>
+            {!noExpand ? (
+              <Expandable
+                opened={internalToggle}
+                animationDuration={
+                  animation ? ANIMATION_DURATION / 2 : undefined
+                }
+              >
+                <PaddedStack>{renderChildren}</PaddedStack>
+              </Expandable>
+            ) : (
+              <PaddedStack>{renderChildren}</PaddedStack>
+            )}
+          </>
         ) : null}
       </>
     )
   }
 
   // This content is the menu of the navigation when collapsed
-  if (categoryIcon) {
+  if (categoryIcon || (Children.count(children) > 0 && !hasParents)) {
     return (
       <MenuStack gap={1} alignItems="start" justifyContent="start">
         {Children.count(children) > 0 ? (
           <StyledMenu
             disclosure={
-              <Button sentiment="neutral" variant="ghost" size="small">
-                <Stack
-                  direction="row"
-                  gap={1}
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <CategoryIcon name={categoryIcon} />
-                </Stack>
+              <Button
+                sentiment="neutral"
+                variant={hasActiveChildren ? 'filled' : 'ghost'}
+                size="small"
+                icon={!categoryIcon ? 'dots-horizontal' : undefined}
+              >
+                {categoryIcon ? (
+                  <Stack
+                    direction="row"
+                    gap={1}
+                    alignItems="center"
+                    justifyContent="center"
+                  >
+                    <CategoryIcon name={categoryIcon} />
+                  </Stack>
+                ) : null}
               </Button>
             }
             placement="right"
@@ -555,7 +598,7 @@ export const Item = ({
                 alignItems="center"
                 justifyContent="center"
               >
-                <CategoryIcon name={categoryIcon} />
+                <CategoryIcon name={categoryIcon ?? 'console'} />
               </Stack>
             </Button>
           </Tooltip>
