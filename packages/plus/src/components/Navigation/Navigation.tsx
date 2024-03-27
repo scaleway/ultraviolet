@@ -9,6 +9,7 @@ import { PinnedItems } from './components/PinnedItems'
 import {
   ANIMATION_DURATION,
   NAVIGATION_COLLASPED_WIDTH,
+  NAVIGATION_MAX_WIDTH,
   NAVIGATION_MIN_WIDTH,
   NAVIGATION_WIDTH,
 } from './constants'
@@ -21,15 +22,19 @@ const StyledNav = styled.nav`
   border-right: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
 `
 
-const Container = styled.div`
+const Container = styled('div', {
+  shouldForwardProp: prop => !['width'].includes(prop),
+})<{
+  width: number
+}>`
   background: ${({ theme }) => theme.colors.neutral.background};
   display: flex;
   flex-direction: column;
 
-  width: ${NAVIGATION_WIDTH}px;
+  width: ${({ width }) => width}px;
 
   &[data-expanded='true'][data-animation='false'] {
-    max-width: 320px;
+    max-width: ${NAVIGATION_MAX_WIDTH}px;
     min-width: ${NAVIGATION_MIN_WIDTH}px;
   }
 
@@ -39,7 +44,7 @@ const Container = styled.div`
 
   &[data-animation='expand'] {
     transition: width ${ANIMATION_DURATION}ms ease-in-out;
-    width: ${NAVIGATION_WIDTH}px;
+    width: ${({ width }) => width}px;
   }
 
   &[data-animation='collapse'] {
@@ -110,13 +115,17 @@ type NavigationContentProps = {
   children: ReactNode
   logo?: ReactNode | ((expanded: boolean) => ReactNode)
   className?: string
-  onClickExpand?: () => void
+  onClickExpand?: (expanded: boolean) => void
+  width: number
+  onWidthResize?: (width: number) => void
 }
 
 const NavigationContent = ({
   children,
   logo,
   onClickExpand,
+  width,
+  onWidthResize,
   className,
 }: NavigationContentProps) => {
   const sliderRef = useRef<HTMLDivElement>(null)
@@ -126,8 +135,8 @@ const NavigationContent = ({
     useNavigation()
 
   // This function will be triggered when expand/collapse button is clicked
-  const triggerExpand = useCallback(() => {
-    onClickExpand?.()
+  const toggleExpand = useCallback(() => {
+    onClickExpand?.(!expanded)
     if (navigationRef.current) {
       navigationRef.current.style.width = ''
     }
@@ -178,11 +187,17 @@ const NavigationContent = ({
 
       const mouseup = () => {
         if (shouldCollapseOnMouseUp || shouldExpandOnMouseUp) {
-          triggerExpand()
+          toggleExpand()
         }
 
-        if (navigationRef.current && !expanded) {
-          navigationRef.current.style.width = ''
+        if (navigationRef.current) {
+          if (!shouldCollapseOnMouseUp && !shouldExpandOnMouseUp) {
+            onWidthResize?.(navigationRef.current.offsetWidth)
+          }
+
+          if (!expanded) {
+            navigationRef.current.style.width = ''
+          }
         }
 
         document.removeEventListener('mousemove', mouseMove)
@@ -202,7 +217,7 @@ const NavigationContent = ({
       // eslint-disable-next-line react-hooks/exhaustive-deps
       sliderRef.current?.removeEventListener('mousedown', mousedown)
     }
-  }, [expanded, triggerExpand])
+  }, [expanded, onWidthResize, toggleExpand])
 
   return (
     <StyledNav className={className}>
@@ -210,6 +225,7 @@ const NavigationContent = ({
         ref={navigationRef}
         data-animation={animation}
         data-expanded={expanded}
+        width={width}
       >
         <Header>
           <LogoContainer
@@ -243,7 +259,7 @@ const NavigationContent = ({
                 sentiment="neutral"
                 size="small"
                 icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-                onClick={triggerExpand}
+                onClick={toggleExpand}
               />
             </Tooltip>
           </StickyFooter>
@@ -294,8 +310,16 @@ type NavigationProps = {
    * of the navigation. This is not triggered when the user resize the navigation
    * and it automatically collapse / expand.
    */
-  onClickExpand?: () => void
+  onClickExpand?: (expanded: boolean) => void
   className?: string
+  /**
+   * It defines the initial width of the navigation.
+   */
+  width?: number
+  /**
+   * This function is called when resize occur using the vertical bar on the left of the navigation.
+   */
+  onWidthResize?: (width: number) => void
 }
 
 export const Navigation = ({
@@ -308,6 +332,8 @@ export const Navigation = ({
   initialExpanded = true,
   locales = NavigationLocales,
   pinLimit = 7,
+  width = NAVIGATION_WIDTH,
+  onWidthResize,
   className,
 }: NavigationProps) => (
   <NavigationProvider
@@ -322,6 +348,8 @@ export const Navigation = ({
       onClickExpand={onClickExpand}
       logo={logo}
       className={className}
+      width={width}
+      onWidthResize={onWidthResize}
     >
       {children}
     </NavigationContent>

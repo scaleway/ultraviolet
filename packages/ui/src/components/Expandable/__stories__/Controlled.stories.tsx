@@ -20,10 +20,7 @@ export const Controlled: StoryFn<typeof Expandable> = args => {
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
       <Expandable {...args} opened={toggled}>
-        <Stack gap={1}>
-          <div>I&lsquo;m a visible Expandable content</div>
-          <div>feofpwefok weopkf powekf </div>
-        </Stack>
+        I&lsquo;m a visible Expandable content
       </Expandable>
     </div>
   )
