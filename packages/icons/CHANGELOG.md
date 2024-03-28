@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.11.1
+
+### Patch Changes
+
+- [#3540](https://github.com/scaleway/ultraviolet/pull/3540) [`ad00080`](https://github.com/scaleway/ultraviolet/commit/ad0008075e57d73fda7e25d288d27420fe395ccf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.64`.
+  Updated dependency `@types/react-dom` to `18.2.21`.
+
 ## 2.11.0
 
 ### Minor Changes

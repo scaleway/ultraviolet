@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.45.0
+
+### Minor Changes
+
+- [#3598](https://github.com/scaleway/ultraviolet/pull/3598) [`b8865ec`](https://github.com/scaleway/ultraviolet/commit/b8865ec1322f651128e45dd06fe8e2ec13d9038f) Thanks [@matthprost](https://github.com/matthprost)! - Change `<Separator />` color from `border` to `borderWeak`
+
+### Patch Changes
+
+- [#3588](https://github.com/scaleway/ultraviolet/pull/3588) [`8878dc5`](https://github.com/scaleway/ultraviolet/commit/8878dc5095786dca15735a9974696911d37a2c1c) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - fix(avatar): fix multiple space and trim for initials
+
+- [#3540](https://github.com/scaleway/ultraviolet/pull/3540) [`ad00080`](https://github.com/scaleway/ultraviolet/commit/ad0008075e57d73fda7e25d288d27420fe395ccf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.64`.
+  Updated dependency `@types/react-dom` to `18.2.21`.
+- Updated dependencies [[`ad00080`](https://github.com/scaleway/ultraviolet/commit/ad0008075e57d73fda7e25d288d27420fe395ccf)]:
+  - @ultraviolet/icons@2.11.1
+
 ## 1.44.0
 
 ### Minor Changes
