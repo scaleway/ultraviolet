@@ -2,13 +2,13 @@
 
 exports[`Carousel renders correctly with default props 1`] = `
 <DocumentFragment>
-  .css-vz5p1b-StyledWrapper {
+  .cache-vz5p1b-StyledWrapper {
   position: relative;
   margin-left: -100px;
   margin-right: -100px;
 }
 
-.css-odnhu9-StyledBeforeScroll {
+.cache-odnhu9-StyledBeforeScroll {
   position: absolute;
   width: 100px;
   height: 100%;
@@ -22,7 +22,7 @@ exports[`Carousel renders correctly with default props 1`] = `
   z-index: auto;
 }
 
-.css-vuvr7q-StyledScrollableWrapper {
+.cache-vuvr7q-StyledScrollableWrapper {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -34,7 +34,7 @@ exports[`Carousel renders correctly with default props 1`] = `
   gap: 16px;
 }
 
-.css-11t1kmz-StyledBorderWrapper {
+.cache-11t1kmz-StyledBorderWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,7 +55,7 @@ exports[`Carousel renders correctly with default props 1`] = `
   flex-shrink: 0;
 }
 
-.css-1r4agil-StyledAfterScroll {
+.cache-1r4agil-StyledAfterScroll {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -72,56 +72,56 @@ exports[`Carousel renders correctly with default props 1`] = `
 }
 
 <div
-    class="css-vz5p1b-StyledWrapper e1id70w04"
+    class="cache-vz5p1b-StyledWrapper e1id70w04"
     data-testid="scrollbar"
   >
     <span
-      class="css-odnhu9-StyledBeforeScroll e1id70w03"
+      class="cache-odnhu9-StyledBeforeScroll e1id70w03"
       data-testid="scrollbar-before"
     />
     <div
-      class="css-vuvr7q-StyledScrollableWrapper e1id70w02"
+      class="cache-vuvr7q-StyledScrollableWrapper e1id70w02"
       data-testid="scrollbar-wrapper"
     >
       <div
-        class="css-11t1kmz-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 1
       </div>
       <div
-        class="css-11t1kmz-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 2
       </div>
       <div
-        class="css-11t1kmz-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 3
       </div>
       <div
-        class="css-11t1kmz-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 4
       </div>
       <div
-        class="css-11t1kmz-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 5
       </div>
       <div
-        class="css-11t1kmz-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 6
       </div>
     </div>
     <span
-      class="css-1r4agil-StyledAfterScroll e1id70w01"
+      class="cache-1r4agil-StyledAfterScroll e1id70w01"
       data-testid="scrollbar-after"
     />
   </div>
