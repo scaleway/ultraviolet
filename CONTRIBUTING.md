@@ -83,7 +83,7 @@ git checkout -b fix/my-branch
 5. Install dependencies and start storybook to test your modifications:
 
 ```shell
-pnpm install && pnpm run start
+pnpm install && pnpm build && pnpm run start
 ```
 
 6. Make your code modifications and test them locally:
