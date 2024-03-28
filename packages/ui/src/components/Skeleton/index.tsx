@@ -68,6 +68,8 @@ type SkeletonProps = {
   length?: number
   col?: number
   className?: string
+  'aria-label'?: string
+  'data-testid'?: string
 }
 
 /**
@@ -80,11 +82,19 @@ export const Skeleton = ({
   length,
   col,
   className,
+  'aria-label': ariaLabel,
+  'data-testid': dataTestId,
 }: SkeletonProps) => {
   const Component = variants[variant]
 
   return (
-    <StyledContainer className={className} aria-busy aria-live="polite">
+    <StyledContainer
+      className={className}
+      aria-busy
+      aria-live="polite"
+      aria-label={ariaLabel}
+      data-testid={dataTestId}
+    >
       <Component length={length} col={col} />
 
       <StyledDiv />
