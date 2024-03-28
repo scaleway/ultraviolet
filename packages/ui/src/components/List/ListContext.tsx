@@ -1,8 +1,9 @@
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
 } from 'react'
@@ -41,6 +42,7 @@ type ListProviderProps = {
   autoCollapse: boolean
   selectable: boolean
   expandButton: boolean
+  onSelectedChange?: Dispatch<SetStateAction<string[]>>
 }
 
 export const ListProvider = ({
@@ -48,9 +50,18 @@ export const ListProvider = ({
   autoCollapse,
   selectable,
   expandButton,
+  onSelectedChange,
 }: ListProviderProps) => {
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
+
+  useEffect(() => {
+    if (onSelectedChange) {
+      onSelectedChange(
+        Object.keys(selectedRowIds).filter(row => selectedRowIds[row]),
+      )
+    }
+  }, [onSelectedChange, selectedRowIds])
 
   const registerExpandableRow = useCallback((rowId: string) => {
     setExpandedRowIds(current => ({ ...current, [rowId]: false }))

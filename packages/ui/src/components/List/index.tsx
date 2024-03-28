@@ -1,5 +1,11 @@
 import styled from '@emotion/styled'
-import type { ComponentProps, ForwardedRef, ReactNode } from 'react'
+import type {
+  ComponentProps,
+  Dispatch,
+  ForwardedRef,
+  ReactNode,
+  SetStateAction,
+} from 'react'
 import { forwardRef } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
@@ -50,6 +56,10 @@ type ListProps = {
    * Auto collapse is collapsing expandable row when another is expanding
    * */
   autoCollapse?: boolean
+  /**
+   * Action when selection changes (get the list of selected rows)
+   */
+  onSelectedChange?: Dispatch<SetStateAction<string[]>>
 }
 
 const BaseList = forwardRef(
@@ -61,6 +71,7 @@ const BaseList = forwardRef(
       children,
       loading,
       autoCollapse = false,
+      onSelectedChange,
     }: ListProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -75,6 +86,7 @@ const BaseList = forwardRef(
         selectable={selectable}
         expandButton={expandable}
         autoCollapse={autoCollapse}
+        onSelectedChange={onSelectedChange}
       >
         <StyledList ref={ref} role="grid" template={computeTemplate}>
           <HeaderRow hasSelectAllColumn={selectable}>
