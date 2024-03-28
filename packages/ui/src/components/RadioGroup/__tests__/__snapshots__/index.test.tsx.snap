@@ -2,7 +2,7 @@
 
 exports[`RadioGroup renders correctly 1`] = `
 <DocumentFragment>
-  .css-gw33n2-Stack {
+  .cache-gw33n2-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,13 +25,13 @@ exports[`RadioGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-103llo5-FieldSet {
+.cache-103llo5-FieldSet {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.css-oey408-Stack {
+.cache-oey408-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +54,7 @@ exports[`RadioGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-zvclys-StyledText {
+.cache-zvclys-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -65,7 +65,7 @@ exports[`RadioGroup renders correctly 1`] = `
   text-decoration: none;
 }
 
-.css-ymc80m-Stack {
+.cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,7 +88,7 @@ exports[`RadioGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-r0p235-RadioContainer {
+.cache-r0p235-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -104,50 +104,50 @@ exports[`RadioGroup renders correctly 1`] = `
   gap: 8px;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='false'],
-.css-r0p235-RadioContainer[aria-disabled='false']>label {
+.cache-r0p235-RadioContainer[aria-disabled='false'],
+.cache-r0p235-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
   fill: #e5dbfd;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
   fill: #b3144d;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
   fill: #ffd3e3;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] {
+.cache-r0p235-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true']>label,
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.cache-r0p235-RadioContainer[aria-disabled='true']>label,
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
   fill: #f3f3f4;
 }
 
-.css-1ghsgz8-RadioInput {
+.cache-1ghsgz8-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -157,7 +157,7 @@ exports[`RadioGroup renders correctly 1`] = `
   border-width: 0;
 }
 
-.css-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -167,44 +167,44 @@ exports[`RadioGroup renders correctly 1`] = `
   transform: scale(0);
 }
 
-.css-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.css-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
   fill: #e51963;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
   fill: #f1eefc;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
   fill: #ffebf2;
 }
 
-.css-1dyk1l0-Ring {
+.cache-1dyk1l0-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -213,53 +213,53 @@ exports[`RadioGroup renders correctly 1`] = `
   fill: #d9dadd;
 }
 
-.css-1dyk1l0-Ring .ehkrmld6 {
+.cache-1dyk1l0-Ring .ehkrmld6 {
   fill: #ffffff;
 }
 
-.css-shj57p-StyledLabel {
+.cache-shj57p-StyledLabel {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-    class="css-gw33n2-Stack ehpbis70"
+    class="cache-gw33n2-Stack ehpbis70"
   >
     <fieldset
-      class="css-103llo5-FieldSet e15shfap1"
+      class="cache-103llo5-FieldSet e15shfap1"
     >
       <div
-        class="css-oey408-Stack ehpbis70"
+        class="cache-oey408-Stack ehpbis70"
       >
         <legend
-          class="css-zvclys-StyledText e13y3mga0"
+          class="cache-zvclys-StyledText e13y3mga0"
         >
           Label 
         </legend>
         <div
-          class="css-gw33n2-Stack ehpbis70"
+          class="cache-gw33n2-Stack ehpbis70"
         >
           <div
-            class="css-ymc80m-Stack ehpbis70"
+            class="cache-ymc80m-Stack ehpbis70"
           >
             <div
               aria-disabled="false"
-              class="css-r0p235-RadioContainer ehkrmld2"
+              class="cache-r0p235-RadioContainer ehkrmld2"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="css-1ghsgz8-RadioInput ehkrmld3"
+                class="cache-1ghsgz8-RadioInput ehkrmld3"
                 id="radio-value-1"
                 name="radio"
                 type="radio"
                 value="value-1"
               />
               <svg
-                class="css-1dyk1l0-Ring ehkrmld4"
+                class="cache-1dyk1l0-Ring ehkrmld4"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -270,13 +270,13 @@ exports[`RadioGroup renders correctly 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="css-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="css-ivayk3-RadioMark ehkrmld5"
+                    class="cache-ivayk3-RadioMark ehkrmld5"
                     cx="12"
                     cy="12"
                     r="5"
@@ -284,7 +284,7 @@ exports[`RadioGroup renders correctly 1`] = `
                 </g>
               </svg>
               <label
-                class="css-shj57p-StyledLabel ehkrmld1"
+                class="cache-shj57p-StyledLabel ehkrmld1"
                 for="radio-value-1"
               >
                 Radio 1
@@ -292,24 +292,24 @@ exports[`RadioGroup renders correctly 1`] = `
             </div>
           </div>
           <div
-            class="css-ymc80m-Stack ehpbis70"
+            class="cache-ymc80m-Stack ehpbis70"
           >
             <div
               aria-disabled="false"
-              class="css-r0p235-RadioContainer ehkrmld2"
+              class="cache-r0p235-RadioContainer ehkrmld2"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="css-1ghsgz8-RadioInput ehkrmld3"
+                class="cache-1ghsgz8-RadioInput ehkrmld3"
                 id="radio-value-2"
                 name="radio"
                 type="radio"
                 value="value-2"
               />
               <svg
-                class="css-1dyk1l0-Ring ehkrmld4"
+                class="cache-1dyk1l0-Ring ehkrmld4"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -320,13 +320,13 @@ exports[`RadioGroup renders correctly 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="css-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="css-ivayk3-RadioMark ehkrmld5"
+                    class="cache-ivayk3-RadioMark ehkrmld5"
                     cx="12"
                     cy="12"
                     r="5"
@@ -334,7 +334,7 @@ exports[`RadioGroup renders correctly 1`] = `
                 </g>
               </svg>
               <label
-                class="css-shj57p-StyledLabel ehkrmld1"
+                class="cache-shj57p-StyledLabel ehkrmld1"
                 for="radio-value-2"
               >
                 Radio 2
@@ -350,7 +350,7 @@ exports[`RadioGroup renders correctly 1`] = `
 
 exports[`RadioGroup renders correctly with direction row 1`] = `
 <DocumentFragment>
-  .css-gw33n2-Stack {
+  .cache-gw33n2-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -373,13 +373,13 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-103llo5-FieldSet {
+.cache-103llo5-FieldSet {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.css-oey408-Stack {
+.cache-oey408-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -402,7 +402,7 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-zvclys-StyledText {
+.cache-zvclys-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -413,7 +413,7 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   text-decoration: none;
 }
 
-.css-4lkpn5-Stack {
+.cache-4lkpn5-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -436,7 +436,7 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-ymc80m-Stack {
+.cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -459,7 +459,7 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-r0p235-RadioContainer {
+.cache-r0p235-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -475,50 +475,50 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   gap: 8px;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='false'],
-.css-r0p235-RadioContainer[aria-disabled='false']>label {
+.cache-r0p235-RadioContainer[aria-disabled='false'],
+.cache-r0p235-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
   fill: #e5dbfd;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
   fill: #b3144d;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
   fill: #ffd3e3;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] {
+.cache-r0p235-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true']>label,
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.cache-r0p235-RadioContainer[aria-disabled='true']>label,
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
   fill: #f3f3f4;
 }
 
-.css-1ghsgz8-RadioInput {
+.cache-1ghsgz8-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -528,7 +528,7 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   border-width: 0;
 }
 
-.css-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -538,44 +538,44 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   transform: scale(0);
 }
 
-.css-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.css-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
   fill: #e51963;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
   fill: #f1eefc;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
   fill: #ffebf2;
 }
 
-.css-1dyk1l0-Ring {
+.cache-1dyk1l0-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -584,53 +584,53 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
   fill: #d9dadd;
 }
 
-.css-1dyk1l0-Ring .ehkrmld6 {
+.cache-1dyk1l0-Ring .ehkrmld6 {
   fill: #ffffff;
 }
 
-.css-shj57p-StyledLabel {
+.cache-shj57p-StyledLabel {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-    class="css-gw33n2-Stack ehpbis70"
+    class="cache-gw33n2-Stack ehpbis70"
   >
     <fieldset
-      class="css-103llo5-FieldSet e15shfap1"
+      class="cache-103llo5-FieldSet e15shfap1"
     >
       <div
-        class="css-oey408-Stack ehpbis70"
+        class="cache-oey408-Stack ehpbis70"
       >
         <legend
-          class="css-zvclys-StyledText e13y3mga0"
+          class="cache-zvclys-StyledText e13y3mga0"
         >
           Label 
         </legend>
         <div
-          class="css-4lkpn5-Stack ehpbis70"
+          class="cache-4lkpn5-Stack ehpbis70"
         >
           <div
-            class="css-ymc80m-Stack ehpbis70"
+            class="cache-ymc80m-Stack ehpbis70"
           >
             <div
               aria-disabled="false"
-              class="css-r0p235-RadioContainer ehkrmld2"
+              class="cache-r0p235-RadioContainer ehkrmld2"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="css-1ghsgz8-RadioInput ehkrmld3"
+                class="cache-1ghsgz8-RadioInput ehkrmld3"
                 id="radio-value-1"
                 name="radio"
                 type="radio"
                 value="value-1"
               />
               <svg
-                class="css-1dyk1l0-Ring ehkrmld4"
+                class="cache-1dyk1l0-Ring ehkrmld4"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -641,13 +641,13 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="css-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="css-ivayk3-RadioMark ehkrmld5"
+                    class="cache-ivayk3-RadioMark ehkrmld5"
                     cx="12"
                     cy="12"
                     r="5"
@@ -655,7 +655,7 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
                 </g>
               </svg>
               <label
-                class="css-shj57p-StyledLabel ehkrmld1"
+                class="cache-shj57p-StyledLabel ehkrmld1"
                 for="radio-value-1"
               >
                 Radio 1
@@ -663,24 +663,24 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
             </div>
           </div>
           <div
-            class="css-ymc80m-Stack ehpbis70"
+            class="cache-ymc80m-Stack ehpbis70"
           >
             <div
               aria-disabled="false"
-              class="css-r0p235-RadioContainer ehkrmld2"
+              class="cache-r0p235-RadioContainer ehkrmld2"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="css-1ghsgz8-RadioInput ehkrmld3"
+                class="cache-1ghsgz8-RadioInput ehkrmld3"
                 id="radio-value-2"
                 name="radio"
                 type="radio"
                 value="value-2"
               />
               <svg
-                class="css-1dyk1l0-Ring ehkrmld4"
+                class="cache-1dyk1l0-Ring ehkrmld4"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -691,13 +691,13 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="css-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="css-ivayk3-RadioMark ehkrmld5"
+                    class="cache-ivayk3-RadioMark ehkrmld5"
                     cx="12"
                     cy="12"
                     r="5"
@@ -705,7 +705,7 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
                 </g>
               </svg>
               <label
-                class="css-shj57p-StyledLabel ehkrmld1"
+                class="cache-shj57p-StyledLabel ehkrmld1"
                 for="radio-value-2"
               >
                 Radio 2
@@ -721,7 +721,7 @@ exports[`RadioGroup renders correctly with direction row 1`] = `
 
 exports[`RadioGroup renders correctly with error content 1`] = `
 <DocumentFragment>
-  .css-gw33n2-Stack {
+  .cache-gw33n2-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -744,13 +744,13 @@ exports[`RadioGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-103llo5-FieldSet {
+.cache-103llo5-FieldSet {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.css-oey408-Stack {
+.cache-oey408-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -773,7 +773,7 @@ exports[`RadioGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-zvclys-StyledText {
+.cache-zvclys-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -784,7 +784,7 @@ exports[`RadioGroup renders correctly with error content 1`] = `
   text-decoration: none;
 }
 
-.css-ymc80m-Stack {
+.cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -807,7 +807,7 @@ exports[`RadioGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-r0p235-RadioContainer {
+.cache-r0p235-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -823,50 +823,50 @@ exports[`RadioGroup renders correctly with error content 1`] = `
   gap: 8px;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='false'],
-.css-r0p235-RadioContainer[aria-disabled='false']>label {
+.cache-r0p235-RadioContainer[aria-disabled='false'],
+.cache-r0p235-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
   fill: #e5dbfd;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
   fill: #b3144d;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
   fill: #ffd3e3;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] {
+.cache-r0p235-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true']>label,
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.cache-r0p235-RadioContainer[aria-disabled='true']>label,
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
   fill: #f3f3f4;
 }
 
-.css-1ghsgz8-RadioInput {
+.cache-1ghsgz8-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -876,7 +876,7 @@ exports[`RadioGroup renders correctly with error content 1`] = `
   border-width: 0;
 }
 
-.css-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -886,44 +886,44 @@ exports[`RadioGroup renders correctly with error content 1`] = `
   transform: scale(0);
 }
 
-.css-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.css-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
   fill: #e51963;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
   fill: #f1eefc;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
   fill: #ffebf2;
 }
 
-.css-1dyk1l0-Ring {
+.cache-1dyk1l0-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -932,17 +932,17 @@ exports[`RadioGroup renders correctly with error content 1`] = `
   fill: #d9dadd;
 }
 
-.css-1dyk1l0-Ring .ehkrmld6 {
+.cache-1dyk1l0-Ring .ehkrmld6 {
   fill: #ffffff;
 }
 
-.css-shj57p-StyledLabel {
+.cache-shj57p-StyledLabel {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.css-vdlwt8-StyledText {
+.cache-vdlwt8-StyledText {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -955,42 +955,42 @@ exports[`RadioGroup renders correctly with error content 1`] = `
 }
 
 <div
-    class="css-gw33n2-Stack ehpbis70"
+    class="cache-gw33n2-Stack ehpbis70"
   >
     <fieldset
-      class="css-103llo5-FieldSet e15shfap1"
+      class="cache-103llo5-FieldSet e15shfap1"
     >
       <div
-        class="css-oey408-Stack ehpbis70"
+        class="cache-oey408-Stack ehpbis70"
       >
         <legend
-          class="css-zvclys-StyledText e13y3mga0"
+          class="cache-zvclys-StyledText e13y3mga0"
         >
           Label 
         </legend>
         <div
-          class="css-gw33n2-Stack ehpbis70"
+          class="cache-gw33n2-Stack ehpbis70"
         >
           <div
-            class="css-ymc80m-Stack ehpbis70"
+            class="cache-ymc80m-Stack ehpbis70"
           >
             <div
               aria-disabled="false"
-              class="css-r0p235-RadioContainer ehkrmld2"
+              class="cache-r0p235-RadioContainer ehkrmld2"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="css-1ghsgz8-RadioInput ehkrmld3"
+                class="cache-1ghsgz8-RadioInput ehkrmld3"
                 id="radio-value-1"
                 name="radio"
                 type="radio"
                 value="value-1"
               />
               <svg
-                class="css-1dyk1l0-Ring ehkrmld4"
+                class="cache-1dyk1l0-Ring ehkrmld4"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1001,13 +1001,13 @@ exports[`RadioGroup renders correctly with error content 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="css-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="css-ivayk3-RadioMark ehkrmld5"
+                    class="cache-ivayk3-RadioMark ehkrmld5"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1015,7 +1015,7 @@ exports[`RadioGroup renders correctly with error content 1`] = `
                 </g>
               </svg>
               <label
-                class="css-shj57p-StyledLabel ehkrmld1"
+                class="cache-shj57p-StyledLabel ehkrmld1"
                 for="radio-value-1"
               >
                 Radio 1
@@ -1023,24 +1023,24 @@ exports[`RadioGroup renders correctly with error content 1`] = `
             </div>
           </div>
           <div
-            class="css-ymc80m-Stack ehpbis70"
+            class="cache-ymc80m-Stack ehpbis70"
           >
             <div
               aria-disabled="false"
-              class="css-r0p235-RadioContainer ehkrmld2"
+              class="cache-r0p235-RadioContainer ehkrmld2"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="css-1ghsgz8-RadioInput ehkrmld3"
+                class="cache-1ghsgz8-RadioInput ehkrmld3"
                 id="radio-value-2"
                 name="radio"
                 type="radio"
                 value="value-2"
               />
               <svg
-                class="css-1dyk1l0-Ring ehkrmld4"
+                class="cache-1dyk1l0-Ring ehkrmld4"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1051,13 +1051,13 @@ exports[`RadioGroup renders correctly with error content 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="css-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="css-ivayk3-RadioMark ehkrmld5"
+                    class="cache-ivayk3-RadioMark ehkrmld5"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1065,7 +1065,7 @@ exports[`RadioGroup renders correctly with error content 1`] = `
                 </g>
               </svg>
               <label
-                class="css-shj57p-StyledLabel ehkrmld1"
+                class="cache-shj57p-StyledLabel ehkrmld1"
                 for="radio-value-2"
               >
                 Radio 2
@@ -1076,7 +1076,7 @@ exports[`RadioGroup renders correctly with error content 1`] = `
       </div>
     </fieldset>
     <span
-      class="css-vdlwt8-StyledText e13y3mga0"
+      class="cache-vdlwt8-StyledText e13y3mga0"
     >
       Eror content
     </span>
@@ -1086,7 +1086,7 @@ exports[`RadioGroup renders correctly with error content 1`] = `
 
 exports[`RadioGroup renders correctly with helper content 1`] = `
 <DocumentFragment>
-  .css-gw33n2-Stack {
+  .cache-gw33n2-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1109,13 +1109,13 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-103llo5-FieldSet {
+.cache-103llo5-FieldSet {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.css-oey408-Stack {
+.cache-oey408-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1138,7 +1138,7 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-zvclys-StyledText {
+.cache-zvclys-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -1149,7 +1149,7 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
   text-decoration: none;
 }
 
-.css-ymc80m-Stack {
+.cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1172,7 +1172,7 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.css-r0p235-RadioContainer {
+.cache-r0p235-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1188,50 +1188,50 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
   gap: 8px;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='false'],
-.css-r0p235-RadioContainer[aria-disabled='false']>label {
+.cache-r0p235-RadioContainer[aria-disabled='false'],
+.cache-r0p235-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
   fill: #e5dbfd;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
   fill: #b3144d;
 }
 
-.css-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
   fill: #ffd3e3;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] {
+.cache-r0p235-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true']>label,
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.cache-r0p235-RadioContainer[aria-disabled='true']>label,
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.css-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
   fill: #f3f3f4;
 }
 
-.css-1ghsgz8-RadioInput {
+.cache-1ghsgz8-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -1241,7 +1241,7 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
   border-width: 0;
 }
 
-.css-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1251,44 +1251,44 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
   transform: scale(0);
 }
 
-.css-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.css-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
   fill: #e51963;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
   fill: #f1eefc;
 }
 
-.css-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.css-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
   fill: #ffebf2;
 }
 
-.css-1dyk1l0-Ring {
+.cache-1dyk1l0-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -1297,17 +1297,17 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
   fill: #d9dadd;
 }
 
-.css-1dyk1l0-Ring .ehkrmld6 {
+.cache-1dyk1l0-Ring .ehkrmld6 {
   fill: #ffffff;
 }
 
-.css-shj57p-StyledLabel {
+.cache-shj57p-StyledLabel {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.css-ioay7l-StyledText {
+.cache-ioay7l-StyledText {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -1320,42 +1320,42 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
 }
 
 <div
-    class="css-gw33n2-Stack ehpbis70"
+    class="cache-gw33n2-Stack ehpbis70"
   >
     <fieldset
-      class="css-103llo5-FieldSet e15shfap1"
+      class="cache-103llo5-FieldSet e15shfap1"
     >
       <div
-        class="css-oey408-Stack ehpbis70"
+        class="cache-oey408-Stack ehpbis70"
       >
         <legend
-          class="css-zvclys-StyledText e13y3mga0"
+          class="cache-zvclys-StyledText e13y3mga0"
         >
           Label 
         </legend>
         <div
-          class="css-gw33n2-Stack ehpbis70"
+          class="cache-gw33n2-Stack ehpbis70"
         >
           <div
-            class="css-ymc80m-Stack ehpbis70"
+            class="cache-ymc80m-Stack ehpbis70"
           >
             <div
               aria-disabled="false"
-              class="css-r0p235-RadioContainer ehkrmld2"
+              class="cache-r0p235-RadioContainer ehkrmld2"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="css-1ghsgz8-RadioInput ehkrmld3"
+                class="cache-1ghsgz8-RadioInput ehkrmld3"
                 id="radio-value-1"
                 name="radio"
                 type="radio"
                 value="value-1"
               />
               <svg
-                class="css-1dyk1l0-Ring ehkrmld4"
+                class="cache-1dyk1l0-Ring ehkrmld4"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1366,13 +1366,13 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="css-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="css-ivayk3-RadioMark ehkrmld5"
+                    class="cache-ivayk3-RadioMark ehkrmld5"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1380,7 +1380,7 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
                 </g>
               </svg>
               <label
-                class="css-shj57p-StyledLabel ehkrmld1"
+                class="cache-shj57p-StyledLabel ehkrmld1"
                 for="radio-value-1"
               >
                 Radio 1
@@ -1388,24 +1388,24 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
             </div>
           </div>
           <div
-            class="css-ymc80m-Stack ehpbis70"
+            class="cache-ymc80m-Stack ehpbis70"
           >
             <div
               aria-disabled="false"
-              class="css-r0p235-RadioContainer ehkrmld2"
+              class="cache-r0p235-RadioContainer ehkrmld2"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="css-1ghsgz8-RadioInput ehkrmld3"
+                class="cache-1ghsgz8-RadioInput ehkrmld3"
                 id="radio-value-2"
                 name="radio"
                 type="radio"
                 value="value-2"
               />
               <svg
-                class="css-1dyk1l0-Ring ehkrmld4"
+                class="cache-1dyk1l0-Ring ehkrmld4"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1416,13 +1416,13 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="css-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="css-ivayk3-RadioMark ehkrmld5"
+                    class="cache-ivayk3-RadioMark ehkrmld5"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1430,7 +1430,7 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
                 </g>
               </svg>
               <label
-                class="css-shj57p-StyledLabel ehkrmld1"
+                class="cache-shj57p-StyledLabel ehkrmld1"
                 for="radio-value-2"
               >
                 Radio 2
@@ -1441,7 +1441,7 @@ exports[`RadioGroup renders correctly with helper content 1`] = `
       </div>
     </fieldset>
     <span
-      class="css-ioay7l-StyledText e13y3mga0"
+      class="cache-ioay7l-StyledText e13y3mga0"
     >
       Helper content
     </span>
