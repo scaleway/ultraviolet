@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Button, Stack, Tooltip } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useNavigation } from './NavigationProvider'
 import {
   ANIMATION_DURATION,
@@ -57,8 +57,13 @@ const StickyFooter = styled.div`
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
   transition: justify-content ${ANIMATION_DURATION}ms ease-in-out;
   box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
-
+  transition: box-shadow 230ms ease-in-out;
   justify-content: flex-end;
+
+  &[data-has-overflow-style='false'] {
+    box-shadow: none;
+    border: none;
+  }
 `
 
 const Header = styled.div`
@@ -125,6 +130,43 @@ export const NavigationContent = ({
 }: NavigationContentProps) => {
   const sliderRef = useRef<HTMLDivElement>(null)
   const navigationRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
+
+  const isScrollAtBottom = useCallback(() => {
+    if (contentRef.current) {
+      if (
+        contentRef.current.scrollTop + contentRef.current.offsetHeight >=
+        contentRef.current.scrollHeight
+      ) {
+        return false
+      }
+    }
+
+    return true
+  }, [])
+
+  const [footerHasOverflowStyle, setFooterHasOverflowStyle] =
+    useState(isScrollAtBottom())
+
+  // This is for detecting if there is scroll on the content and set the shadow on the footer
+  useEffect(() => {
+    const scroll = () => {
+      const hasOverflow = isScrollAtBottom()
+
+      if (footerHasOverflowStyle !== hasOverflow) {
+        setFooterHasOverflowStyle(hasOverflow)
+      }
+    }
+
+    if (contentRef.current) {
+      contentRef.current.addEventListener('scroll', scroll)
+    }
+
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      contentRef.current?.removeEventListener('scroll', scroll)
+    }
+  }, [footerHasOverflowStyle, isScrollAtBottom])
 
   const { expanded, setExpanded, animation, setAnimation, locales } =
     useNavigation()
@@ -140,9 +182,10 @@ export const NavigationContent = ({
 
     setTimeout(() => {
       setExpanded()
+      setFooterHasOverflowStyle(isScrollAtBottom())
       setAnimation(false)
     }, ANIMATION_DURATION)
-  }, [expanded, onClickExpand, setAnimation, setExpanded])
+  }, [expanded, isScrollAtBottom, onClickExpand, setAnimation, setExpanded])
 
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {
@@ -235,13 +278,14 @@ export const NavigationContent = ({
         </Header>
         <ContentContainer>
           <Content
+            ref={contentRef}
             gap={0.25}
             data-is-expanded={expanded}
             data-animation={animation}
           >
             {children}
           </Content>
-          <StickyFooter data-expanded={expanded} data-animation={animation}>
+          <StickyFooter data-has-overflow-style={footerHasOverflowStyle}>
             <Tooltip
               text={
                 expanded

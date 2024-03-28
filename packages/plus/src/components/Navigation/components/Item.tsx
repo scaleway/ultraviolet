@@ -85,7 +85,7 @@ const StyledBadge = styled(Badge)`
   transition-delay: 0.3s;
 `
 
-const PaddedStack = styled(Stack)`
+const PaddingStack = styled(Stack)`
   padding-left: 28px; // This value needs to be hardcoded because of the category icon size
 `
 
@@ -119,10 +119,16 @@ const StyledContainer = styled(Stack)`
 
   width: 100%;
 
-  &:hover[data-has-no-expand='false'],
-  &:focus[data-has-no-expand='false'],
-  &[data-has-active-children='true'] {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  &:hover[data-has-no-expand='false']:not([disabled]):not(
+      [data-is-active='true']
+    ),
+  &:focus[data-has-no-expand='false']:not([disabled]):not(
+      [data-is-active='true']
+    ),
+  &[data-has-active-children='true'][data-has-no-expand='false']:not(
+      [disabled][data-is-active='true']
+    ) {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
 
     ${ExpandedPinnedButton}, ${CollapsedPinnedButton} {
       opacity: 1;
@@ -139,11 +145,14 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &:active[data-has-no-expand='false'] {
+  &:active[data-has-no-expand='false']:not([disabled]):not(
+      [data-is-active='true']
+    ) {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
 
-  &[data-is-active='true'] {
+  &[data-is-active='true'],
+  &:hover[data-has-active='true'] {
     background-color: ${({ theme }) => theme.colors.primary.background};
 
     &:hover {
@@ -312,6 +321,8 @@ export const Item = ({
       }, 1)
     }
   }, [animation, toggle])
+
+  const PaddedStack = noExpand ? Stack : PaddingStack
 
   const hasHrefAndNoChildren = href && !children
   const haspinnedFeatureAndNoChildren =
@@ -572,26 +583,22 @@ export const Item = ({
             }
             placement="right"
           >
-            {Children.map(children, child => (
-              <StyledMenuItem href={href} borderless>
-                <Stack
-                  gap={1}
-                  direction="row"
-                  alignItems="center"
-                  justifyContent="space-between"
-                >
-                  {isValidElement<ItemProps>(child)
-                    ? cloneElement(child, {
-                        hasParents: true,
-                      })
-                    : child}
-                </Stack>
-              </StyledMenuItem>
-            ))}
+            {Children.map(children, child =>
+              isValidElement<ItemProps>(child)
+                ? cloneElement(child, {
+                    hasParents: true,
+                  })
+                : child,
+            )}
           </StyledMenu>
         ) : (
           <Tooltip text={label} placement="right">
-            <Button sentiment="neutral" variant="ghost" size="small">
+            <Button
+              sentiment="neutral"
+              variant={active ? 'filled' : 'ghost'}
+              size="small"
+              onClick={() => onClick?.()}
+            >
               <Stack
                 direction="row"
                 gap={1}
@@ -610,35 +617,42 @@ export const Item = ({
   // This content is what is inside a menu item the navigation is collapsed
   if (hasParents) {
     return (
-      <>
-        <WrapText as="span" variant="bodySmall">
-          {label}
-        </WrapText>
-        {shouldShowPinnedButton ? (
-          <Tooltip
-            text={
-              isItemPinned
-                ? locales['navigation.unpin.tooltip']
-                : locales['navigation.pin.tooltip']
-            }
-            placement="right"
-          >
-            <CollapsedPinnedButton
-              size="xsmall"
-              variant="ghost"
-              sentiment={active ? 'primary' : 'neutral'}
-              onClick={() => {
-                if (isItemPinned) {
-                  unpinItem(label)
-                } else {
-                  pinItem(label)
-                }
-              }}
-              icon="auto-fix"
-            />
-          </Tooltip>
-        ) : null}
-      </>
+      <StyledMenuItem href={href} onClick={() => onClick?.()} borderless>
+        <Stack
+          gap={1}
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <WrapText as="span" variant="bodySmall">
+            {label}
+          </WrapText>
+          {shouldShowPinnedButton ? (
+            <Tooltip
+              text={
+                isItemPinned
+                  ? locales['navigation.unpin.tooltip']
+                  : locales['navigation.pin.tooltip']
+              }
+              placement="right"
+            >
+              <CollapsedPinnedButton
+                size="xsmall"
+                variant="ghost"
+                sentiment={active ? 'primary' : 'neutral'}
+                onClick={() => {
+                  if (isItemPinned) {
+                    unpinItem(label)
+                  } else {
+                    pinItem(label)
+                  }
+                }}
+                icon="auto-fix"
+              />
+            </Tooltip>
+          ) : null}
+        </Stack>
+      </StyledMenuItem>
     )
   }
 

@@ -9,20 +9,14 @@ export const Controlled: StoryFn<typeof Expandable> = args => {
   const toggle = () => onToggle(state => !state)
 
   return (
-    <div
-      style={{
-        flexWrap: 'nowrap',
-        overflowY: 'auto',
-        overflowX: 'hidden',
-      }}
-    >
+    <>
       <Button icon={toggled ? 'minus' : 'plus'} onClick={toggle}>
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
       <Expandable {...args} opened={toggled}>
         I&lsquo;m a visible Expandable content
       </Expandable>
-    </div>
+    </>
   )
 }
 
