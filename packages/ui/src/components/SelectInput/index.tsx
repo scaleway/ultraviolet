@@ -680,7 +680,7 @@ const FwdSelectInput = ({
   const selectOptions = useMemo(
     () =>
       options ||
-      (children as ReactElement<{ children: string }>[]).map(
+      ((children as ReactElement<{ children: string }>[]) ?? []).map(
         ({ props: { children: label, ...subProps } }) =>
           ({
             ...subProps,
