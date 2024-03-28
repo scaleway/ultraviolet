@@ -12,7 +12,6 @@ import {
   useMemo,
   useState,
 } from 'react'
-import flattenChildren from 'react-flatten-children'
 import { useEstimateCost } from '../EstimateCostProvider'
 import { useOverlay } from '../OverlayContext'
 import {
@@ -435,7 +434,7 @@ export const Item = ({
           </Stack>
           <StyledResourceName isOverlay={isOverlay} animated={animated}>
             {isDefined
-              ? Children.map(flattenChildren(children), child =>
+              ? Children.map(children, child =>
                   isValidElement<ExtraProps>(child)
                     ? cloneElement(child, {
                         itemCallback,

@@ -564,9 +564,6 @@ importers:
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
-      react-flatten-children:
-        specifier: 1.1.2
-        version: 1.1.2
       react-intersection-observer:
         specifier: 9.8.1
         version: 9.8.1(react-dom@18.2.0)(react@18.2.0)
@@ -628,9 +625,6 @@ importers:
       '@nivo/scales':
         specifier: 0.80.0
         version: 0.80.0
-      '@nivo/tooltip':
-        specifier: 0.80.0
-        version: 0.80.0(@nivo/core@0.80.0)(react-dom@18.2.0)(react@18.2.0)
       '@scaleway/random-name':
         specifier: 4.0.3
         version: 4.0.3
@@ -649,9 +643,6 @@ importers:
       react-datepicker:
         specifier: 4.25.0
         version: 4.25.0(react-dom@18.2.0)(react@18.2.0)
-      react-flatten-children:
-        specifier: 1.1.2
-        version: 1.1.2
       react-select:
         specifier: 5.8.0
         version: 5.8.0(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
@@ -14837,10 +14828,6 @@ packages:
 
   /react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
-
-  /react-flatten-children@1.1.2:
-    resolution: {integrity: sha512-9pnG/uw2Wa0n97s+yBZg/WgfMPE8RC4qNcr6iYbyb19sacCk3gRJCmCzAhTuANSWesFsK9v/yTKW42pkenaAfw==}
-    dev: false
 
   /react-hook-form@7.51.1(react@18.2.0):
     resolution: {integrity: sha512-ifnBjl+kW0ksINHd+8C/Gp6a4eZOdWyvRv0UBaByShwU8JbVx5hTcTWEcd5VdybvmPTATkVVXk9npXArHmo56w==}

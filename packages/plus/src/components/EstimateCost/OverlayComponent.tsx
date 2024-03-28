@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { Icon, Stack } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, useMemo } from 'react'
-import flattenChildren from 'react-flatten-children'
 import { LineThrough } from './Components/LineThrough'
 import { Strong } from './Components/Strong'
 import { useEstimateCost } from './EstimateCostProvider'
@@ -85,7 +84,6 @@ export const OverlayComponent = ({
   const { locales, formatNumber } = useEstimateCost()
 
   const value = useMemo(() => ({ isOverlay: true }), [])
-  const list = flattenChildren(children)
 
   const totalOverlayPrice = {
     days: totalPrice.maxOverlayHourly * multiplier.days,
@@ -114,11 +112,11 @@ export const OverlayComponent = ({
               </OverlayLeft>
             </SideItem>
           ) : null}
-          {Children.map(list, (child, index) =>
+          {Children.map(children, (child, index) =>
             isValidElement<ExtraProps>(child)
               ? cloneElement(child, {
                   isFirstElement: index === 0,
-                  isLastElement: index === list.length - 1,
+                  isLastElement: index === Children.count(children) - 1,
                 })
               : null,
           )}
