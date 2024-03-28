@@ -7,14 +7,11 @@ import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
 const arraysContainSameValues = (array1: string[], array2: string[]) => {
-  if (array1.length !== array2.length) {
+  if (array1.length === 0) {
     return false
   }
 
-  const sortedArray1 = array1.slice().sort()
-  const sortedArray2 = array2.slice().sort()
-
-  return sortedArray1.every((element, index) => element === sortedArray2[index])
+  return array2.map(value => array1.includes(value)).every(Boolean)
 }
 
 type CheckboxGroupFieldProps<
@@ -75,11 +72,11 @@ export const CheckboxGroupField = <
         })?.filter(Boolean) ?? []
 
       if (!required && arraysContainSameValues(value, requiredChildren)) {
-        return undefined
+        return true
       }
 
       if (value.length >= Children.count(children)) {
-        return undefined
+        return true
       }
 
       return false

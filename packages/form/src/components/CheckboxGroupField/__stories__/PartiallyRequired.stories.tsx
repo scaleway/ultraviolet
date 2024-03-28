@@ -18,6 +18,9 @@ export const PartiallyRequiredStory: StoryFn<
       <CheckboxGroupField.Checkbox name="newsletter" value="newsletter">
         Accept to receive newsletter
       </CheckboxGroupField.Checkbox>
+      <CheckboxGroupField.Checkbox name="stuff" value="stuff">
+        Accept to receive some other stuff
+      </CheckboxGroupField.Checkbox>
     </CheckboxGroupField>
     <Submit>Submit</Submit>
   </Stack>
