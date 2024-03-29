@@ -276,7 +276,9 @@ exports[`CheckboxField should render correctly 1`] = `
   flex: 1;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div
       aria-disabled="false"
       class="cache-13gdmaa eqr7bqq1"
@@ -608,7 +610,9 @@ exports[`CheckboxField should render correctly checked without value 1`] = `
   flex: 1;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div
       aria-disabled="false"
       class="cache-13gdmaa eqr7bqq1"
@@ -941,7 +945,9 @@ exports[`CheckboxField should render correctly disabled 1`] = `
   flex: 1;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div
       aria-disabled="true"
       class="cache-13gdmaa eqr7bqq1"
@@ -1274,7 +1280,9 @@ exports[`CheckboxField should render correctly not checked without value 1`] = `
   flex: 1;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div
       aria-disabled="false"
       class="cache-13gdmaa eqr7bqq1"
@@ -1637,7 +1645,9 @@ exports[`CheckboxField should render correctly with errors 1`] = `
   padding-top: 4px;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div
       aria-disabled="false"
       class="cache-13gdmaa eqr7bqq1"
@@ -2001,7 +2011,9 @@ exports[`CheckboxField should trigger events correctly 1`] = `
   width: 100%;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div
       aria-disabled="false"
       class="cache-13gdmaa eqr7bqq1"

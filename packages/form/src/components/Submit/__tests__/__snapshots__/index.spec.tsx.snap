@@ -141,7 +141,9 @@ exports[`Submit form is invalid 1`] = `
   text-decoration: none;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <div>
       <div
         class="cache-bjn8wh el3h3g95"
@@ -231,7 +233,9 @@ exports[`Submit form is submitting 1`] = `
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <button
       class="cache-1nhcpqm e112qvla2"
       disabled=""
@@ -323,7 +327,9 @@ exports[`Submit renders correctly  1`] = `
   text-decoration: none;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <button
       class="cache-1nhcpqm e112qvla2"
       disabled=""
@@ -397,7 +403,9 @@ exports[`Submit renders correctly with icon and iconPosition  1`] = `
   fill: none;
 }
 
-<form>
+<form
+    novalidate=""
+  >
     <button
       class="cache-158usla e112qvla2"
       disabled=""
