@@ -22,6 +22,7 @@ import { ReactComponent as cockpit } from './assets/cockpit.svg'
 import { ReactComponent as coldStorage } from './assets/cold-storage.svg'
 import { ReactComponent as console } from './assets/console.svg'
 import { ReactComponent as containers } from './assets/containers.svg'
+import { ReactComponent as costManager } from './assets/cost-manager.svg'
 import { ReactComponent as dataWarehouse } from './assets/data-warehouse.svg'
 import { ReactComponent as ddos } from './assets/ddos.svg'
 import { ReactComponent as ddxCoreServers } from './assets/ddx-core-servers.svg'
@@ -78,6 +79,7 @@ import { ReactComponent as lb } from './assets/lb.svg'
 import { ReactComponent as lifeCycleRules } from './assets/life-cycle-rules.svg'
 import { ReactComponent as macMiniM2 } from './assets/mac-mini-m2.svg'
 import { ReactComponent as macMini } from './assets/mac-mini.svg'
+import { ReactComponent as managedSearchDataBase } from './assets/managed-search-database.svg'
 import { ReactComponent as monitoring } from './assets/monitoring.svg'
 import { ReactComponent as multiUser } from './assets/multi-user.svg'
 import { ReactComponent as nabu } from './assets/nabu.svg'
@@ -270,4 +272,6 @@ export const PRODUCT_ICONS = {
   jero,
   nabu,
   inference,
+  managedSearchDataBase,
+  costManager,
 } as const
