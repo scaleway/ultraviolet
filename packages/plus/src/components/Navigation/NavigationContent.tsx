@@ -168,6 +168,15 @@ export const NavigationContent = ({
     }
   }, [footerHasOverflowStyle, isScrollAtBottom])
 
+  // This will set the shadow on the footer when the component is mounted
+  useEffect(
+    () => {
+      setFooterHasOverflowStyle(isScrollAtBottom())
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [contentRef.current],
+  )
+
   const { expanded, setExpanded, animation, setAnimation, locales } =
     useNavigation()
 
