@@ -3,38 +3,43 @@ import { Stack } from '@ultraviolet/ui'
 import { CheckboxGroupField } from '..'
 import { Submit } from '../..'
 
-export const RequiredStory: StoryFn<typeof CheckboxGroupField> = args => (
+export const PartiallyRequiredStory: StoryFn<
+  typeof CheckboxGroupField
+> = args => (
   <Stack gap={1}>
     <CheckboxGroupField {...args}>
       <CheckboxGroupField.Checkbox
         name="termsAndConditions"
         value="termsAndConditions"
+        required
       >
         Accept terms and conditions
       </CheckboxGroupField.Checkbox>
       <CheckboxGroupField.Checkbox name="newsletter" value="newsletter">
         Accept to receive newsletter
       </CheckboxGroupField.Checkbox>
+      <CheckboxGroupField.Checkbox name="stuff" value="stuff">
+        Accept to receive some other stuff
+      </CheckboxGroupField.Checkbox>
     </CheckboxGroupField>
     <Submit>Submit</Submit>
   </Stack>
 )
 
-export const Required: StoryFn<typeof CheckboxGroupField> = args => (
-  <RequiredStory {...args} />
+export const PartiallyRequired: StoryFn<typeof CheckboxGroupField> = args => (
+  <PartiallyRequiredStory {...args} />
 )
 
-Required.parameters = {
+PartiallyRequired.parameters = {
   docs: {
     description: {
       story:
-        'You can make the whole group required using the `required` prop. This way all checkboxes will be validated.',
+        'You can make some of the checkboxes required using the `required` prop on each of them. This way only the required checkboxes will be validated.',
     },
   },
 }
 
-Required.args = {
+PartiallyRequired.args = {
   name: 'conditions',
   legend: 'Conditions',
-  required: true,
 }

@@ -22,9 +22,15 @@ const CheckboxGroupContext = createContext<
   CheckboxGroupContextType | undefined
 >(undefined)
 
+const StyledCheckbox = styled(Checkbox)`
+  label {
+    width: fit-content;
+  }
+`
+
 type CheckboxGroupCheckboxProps = Omit<
   ComponentProps<typeof Checkbox>,
-  'onChange' | 'checked' | 'required'
+  'onChange' | 'checked'
 > & {
   value: string
 }
@@ -41,6 +47,7 @@ export const CheckboxGroupCheckbox = ({
   className,
   autoFocus,
   'data-testid': dataTestId,
+  required,
 }: CheckboxGroupCheckboxProps) => {
   const context = useContext(CheckboxGroupContext)
 
@@ -56,7 +63,7 @@ export const CheckboxGroupCheckbox = ({
   const checkboxValue = `${value}`
 
   return (
-    <Checkbox
+    <StyledCheckbox
       onChange={onChange}
       checked={groupValues?.includes(checkboxValue)}
       onFocus={onFocus}
@@ -69,9 +76,10 @@ export const CheckboxGroupCheckbox = ({
       className={className}
       autoFocus={autoFocus}
       data-testid={dataTestId}
+      required={required}
     >
       {children}
-    </Checkbox>
+    </StyledCheckbox>
   )
 }
 
@@ -117,8 +125,9 @@ export const CheckboxGroup = ({
       groupName: name,
       groupValues: value ?? [],
       onChange,
+      required,
     }),
-    [name, value, onChange],
+    [name, value, onChange, required],
   )
 
   return (
