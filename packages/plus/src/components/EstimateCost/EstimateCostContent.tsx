@@ -9,7 +9,6 @@ import {
   useMemo,
   useState,
 } from 'react'
-import flattenChildren from 'react-flatten-children'
 import { useInView } from 'react-intersection-observer'
 import { CustomUnitInput } from './Components/CustomUnitInput'
 import { Item } from './Components/Item'
@@ -136,7 +135,6 @@ export const EstimateCostContent = ({
 
   const [isLongFractionDigits, setIsLongFractionDigits] = useState(false)
   const providerValue = useMemo(() => ({ isOverlay: false }), [])
-  const list = flattenChildren(children)
 
   const productsCallback = useMemo(
     () => ({
@@ -315,10 +313,10 @@ export const EstimateCostContent = ({
                 </thead>
               ) : null}
               <tbody>
-                {Children.map(list, (child, index) =>
+                {Children.map(children, (child, index) =>
                   isValidElement<ExtraProps>(child)
                     ? cloneElement(child, {
-                        isLastElement: index === list.length - 1,
+                        isLastElement: index === Children.count(children) - 1,
                         productsCallback,
                         iteration,
                         discount:

@@ -38,7 +38,7 @@ const StyledHr = styled('hr', {
     direction === 'horizontal' ? `${thickness}px` : 'auto'};
   flex-shrink: 0;
   background-color: ${({ theme, color }) =>
-    theme.colors[color as Color].border};
+    theme.colors[color as Color].borderWeak};
   ${({ hasIcon }) => hasIcon && `flex: 1;`}
 `
 

@@ -2,7 +2,6 @@ import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Children, Fragment } from 'react'
-import flattenChildren from 'react-flatten-children'
 import { Bullet } from '../Bullet'
 import { Text } from '../Text'
 
@@ -163,7 +162,7 @@ export const Stepper = ({
       labelPosition={labelPosition}
       size={size}
     >
-      {flattenChildren(children).map((child, index) => {
+      {Children.map(children, (child, index) => {
         const getTemporal = () => {
           if (selected > index) return 'previous'
 

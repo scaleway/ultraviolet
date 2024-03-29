@@ -137,12 +137,14 @@ export const SelectableCardGroup = ({
       <Stack gap={1}>
         <FieldSet className={className}>
           <Stack gap={1.5}>
-            <Text as="legend" variant="bodyStrong">
-              {legend && <>{legend} &nbsp;</>}
-              {required ? (
-                <StyledRequiredIcon name="asterisk" color="danger" size={8} />
-              ) : null}
-            </Text>
+            {legend ? (
+              <Text as="legend" variant="bodyStrong">
+                {legend && <>{legend} &nbsp;</>}
+                {required ? (
+                  <StyledRequiredIcon name="asterisk" color="danger" size={8} />
+                ) : null}
+              </Text>
+            ) : null}
             <Row gap={2} templateColumns={`repeat(${columns}, auto)`}>
               {children}
             </Row>
