@@ -5,7 +5,7 @@ export default {
   component: SelectInputV2,
   decorators: [
     StoryComponent => (
-      <div style={{ marginBottom: 150 }}>
+      <div style={{ marginBottom: 400 }}>
         <StoryComponent />
       </div>
     ),
@@ -18,3 +18,6 @@ export { Playground } from './Playground.stories'
 export { Grouped } from './Grouped.stories'
 export { EmptyState } from './EmptyState.stories'
 export { Multiselect } from './Multiselect.stories'
+export { PopupFooter } from './PopupFooter.stories'
+export { OnChange } from './OnChange.stories'
+export { AdditionalInfo } from './OptionalInfo.stories'

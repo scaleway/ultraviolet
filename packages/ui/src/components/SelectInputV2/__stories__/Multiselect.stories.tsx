@@ -6,8 +6,8 @@ export const Multiselect = Template.bind({})
 Multiselect.args = {
   ...Template.args,
   options: dataGrouped,
-  grouped: true,
   multiselect: true,
+  value: dataGrouped['terrestrial planets'][4],
 }
 Multiselect.decorators = [
   StoryComponent => (

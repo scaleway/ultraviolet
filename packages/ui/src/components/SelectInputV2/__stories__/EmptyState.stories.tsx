@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
+import type { StoryFn } from '@storybook/react'
+import { SelectInputV2 } from '..'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Template } from './Template.stories'
-import { dataGrouped } from './resources'
 
 const StyledStack = styled(Stack)`
-  padding: 12px;
+  padding: 30px;
 `
 const emptyStateText = (
   <StyledStack gap={2}>
@@ -25,13 +26,13 @@ const emptyStateText = (
     </Link>
   </StyledStack>
 )
-export const EmptyState = Template.bind({})
 
+export const EmptyState: StoryFn<typeof SelectInputV2> = args => (
+  <SelectInputV2 {...args} emptyState={emptyStateText} />
+)
 EmptyState.args = {
   ...Template.args,
-  options: dataGrouped,
-  grouped: true,
-  emptyState: emptyStateText,
+  options: {},
 }
 EmptyState.decorators = [
   StoryComponent => (

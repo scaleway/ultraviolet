@@ -3,7 +3,7 @@ import { dataGrouped } from './resources'
 
 export const Grouped = Template.bind({})
 
-Grouped.args = { ...Template.args, options: dataGrouped, grouped: true }
+Grouped.args = { ...Template.args, options: dataGrouped }
 Grouped.decorators = [
   StoryComponent => (
     <div style={{ height: '80px' }}>

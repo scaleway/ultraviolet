@@ -1,13 +1,12 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import { useMemo, useState } from 'react'
-import type { ReactNode } from 'react'
-import { Stack, Text } from '..'
+import { useRef, useState } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { Dropdown } from './Dropdown'
-import { SearchBar } from './SearchBar'
-import { SearchBar2 } from './SearchBar2'
-import { SearchBarMulti } from './SearchBarMulti'
-import { type DataType, ValueInput } from './helper'
+import { SelectBar } from './SelectBar'
+import type { DataType, OptionType } from './types'
 
 type SelectInputV2Props = {
   /**
@@ -15,24 +14,27 @@ type SelectInputV2Props = {
    */
   name: string
   /**
-   * Default value
+   * Default value, must be one of the options
    */
-  value?: string
+  value?: OptionType
   /**
    * Place holder when no value defined
    */
   placeholder: string
   /**
+   * When searchable, placeholder when no value is searched
+   */
+  placeholderSearch: string
+  /**
    * Label of the component
    */
-
   label?: string
   /**
    * Helper text to give more information to the user
    */
   helper?: string
   /**
-   * Selectable optiions
+   * Selectable options
    */
   options: DataType
   /**
@@ -64,73 +66,123 @@ type SelectInputV2Props = {
    */
   multiselect?: boolean
   /**
-   * Whether the options should be showcase by group (will ignore groups if false)
-   */
-  grouped?: boolean
-  /**
    * Whether field is required
    */
   required?: boolean
   /**
    * Whether the field is optional
    */
-  optional?: boolean
+  labelDescription?: ReactNode
   /**
-   * Whether label description is on the right of the label or under it
+   * Whether option description is on the right of the option or under it
    */
   direction?: 'row' | 'column'
+  /**
+   * To add custom fixed elements at the bottom of the dropdown
+   */
+  popupFooter?: ReactNode
+  /**
+   * The state of the component
+   */
+  state?: 'neutral' | 'danger' | 'success'
+  /**
+   * Display an error message under the select bar
+   */
+  error?: string
+  /**
+   * Display a success message under the select bar
+   */
+  success?: string
+  width?: string | number
+  autofocus?: boolean
+  'data-testid'?: string
+  onChange?: (value: (string | undefined)[]) => void
+} & Pick<
+  HTMLAttributes<HTMLDivElement>,
+  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
+>
+type ContainerProps = {
+  width: number | string
 }
-
-const ColoredText = styled(Text)`
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
+const SelectInputContainer = styled('div', {
+  shouldForwardProp: prop => !['width'].includes(prop),
+})<ContainerProps>`
+  width: ${({ width }) => (typeof width === 'number' ? `${width}px` : width)};
 `
+
 /**
  * SelectInputV2 component is used to select one or many elements from a selection.
  */
 export const SelectInputV2 = ({
   name,
+  id,
+  onBlur,
+  onFocus,
+  onChange,
+  'aria-label': ariaLabel,
   value,
   label,
-  placeholder,
   helper,
   options,
+  width = '100%',
   size = 'medium',
   emptyState,
   direction,
+  state = 'neutral',
+  success,
+  error,
+  'data-testid': dataTestId,
+  className,
+  popupFooter,
+  placeholderSearch = 'Search in list',
+  placeholder = 'Select item',
   searchable = true,
   disabled = false,
   readOnly = false,
   clearable = true,
   multiselect = false,
-  grouped = false,
   required = false,
-  optional = false,
+  labelDescription,
+  autofocus,
 }: SelectInputV2Props) => {
+  const defaultValue = value ? [value] : []
   const [displayedOptions, setDisplayedOptions] = useState(options)
-  const [selectedValues, setSelectedValues] = useState([value])
-  const [isDropdownVisible, setIsDropdownVisible] = useState(true)
+  const [selectedValues, setSelectedValues] =
+    useState<(OptionType | undefined)[]>(defaultValue)
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false)
   const [searchInput, setSearchInput] = useState('')
-  const valueInput = useMemo(
-    () => ({
-      searchInput,
-      setSearchInput,
-    }),
-    [searchInput, setSearchInput],
-  )
+  const ref = useRef<HTMLDivElement>(null)
 
   return (
-    <ValueInput.Provider value={valueInput}>
+    <SelectInputContainer
+      id={id}
+      onBlur={onBlur}
+      onFocus={onFocus}
+      data-testid={dataTestId}
+      className={className}
+      width={width}
+      aria-label={name}
+    >
       <Dropdown
-        options={displayedOptions}
-        isVisible={isDropdownVisible}
-        selectedValues={selectedValues}
-        setSelectedValues={setSelectedValues}
+        options={options}
+        displayedOptions={displayedOptions}
         multiselect={multiselect}
-        grouped={grouped}
         emptyState={emptyState}
         direction={direction}
+        searchable={searchable}
+        onSearch={setDisplayedOptions}
+        placeholder={placeholderSearch}
+        popupFooter={popupFooter}
+        onChange={onChange}
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        selectedValues={selectedValues}
+        setSelectedValues={setSelectedValues}
+        setIsDropdownVisible={setIsDropdownVisible}
+        isDropdownVisible={isDropdownVisible}
+        refSelect={ref}
       >
-        <Stack gap={0.5}>
+        <Stack gap={0.5} aria-label={ariaLabel}>
           <Stack direction="row" gap={0.5}>
             {label ? (
               <Text as="div" variant="bodySmallStrong">
@@ -140,80 +192,42 @@ export const SelectInputV2 = ({
             {required ? (
               <Icon name="asterisk" sentiment="danger" size={8} />
             ) : null}
-            {optional ? (
-              <ColoredText
-                as="span"
-                variant="bodySmallStrong"
-                prominence="weak"
-              >
-                (optional)
-              </ColoredText>
-            ) : null}
+            {labelDescription ?? null}
           </Stack>
-
-          <SearchBar
-            name={name}
-            options={options}
-            onSearch={setDisplayedOptions}
-            placeholder={placeholder}
+          <SelectBar
             size={size}
             clearable={clearable}
             setIsDropdownVisible={setIsDropdownVisible}
-            searchable={searchable}
             readOnly={readOnly}
             value={selectedValues[0]}
             disabled={disabled}
+            placeholder={placeholder}
+            isDropdownVisible={isDropdownVisible}
             multiselect={multiselect}
+            state={state}
+            onChange={onChange}
             selectedValues={selectedValues}
             setSelectedValues={setSelectedValues}
+            autoFocus={autofocus}
+            innerRef={ref}
           />
-          {multiselect ? (
-            <SearchBarMulti
-              name={name}
-              options={options}
-              onSearch={setDisplayedOptions}
-              placeholder={placeholder}
-              size={size}
-              clearable={clearable}
-              setIsDropdownVisible={setIsDropdownVisible}
-              searchable={searchable}
-              readOnly={readOnly}
-              value={selectedValues[0]}
-              disabled={disabled}
-              selectedValues={selectedValues}
-              setSelectedValues={setSelectedValues}
-            />
-          ) : (
-            <SearchBar2
-              name={name}
-              options={options}
-              onSearch={setDisplayedOptions}
-              placeholder={placeholder}
-              size={size}
-              clearable={clearable}
-              setIsDropdownVisible={setIsDropdownVisible}
-              searchable={searchable}
-              readOnly={readOnly}
-              value={selectedValues[0]}
-              disabled={disabled}
-              selectedValues={selectedValues}
-              setSelectedValues={setSelectedValues}
-            />
-          )}
-          <Text
-            variant="caption"
-            as="p"
-            sentiment="neutral"
-            prominence="default"
-          >
-            {helper}
-          </Text>
         </Stack>
       </Dropdown>
-      Selected values:
-      {selectedValues.map(val => (
-        <div key={val}>{val}</div>
-      ))}
-    </ValueInput.Provider>
+      {!error && !success ? (
+        <Text variant="caption" as="p" sentiment="neutral" prominence="default">
+          {helper}
+        </Text>
+      ) : null}
+      {error || success ? (
+        <Text
+          variant="caption"
+          as="p"
+          sentiment={error ? 'danger' : 'success'}
+          prominence="default"
+        >
+          {error || success}
+        </Text>
+      ) : null}
+    </SelectInputContainer>
   )
 }
