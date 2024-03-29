@@ -11,7 +11,7 @@ const arraysContainSameValues = (array1: string[], array2: string[]) => {
     return false
   }
 
-  return array2.map(value => array1.includes(value)).every(Boolean)
+  return array2.every(value => array1.includes(value))
 }
 
 type CheckboxGroupFieldProps<
