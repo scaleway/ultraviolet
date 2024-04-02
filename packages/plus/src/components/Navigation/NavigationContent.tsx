@@ -101,13 +101,17 @@ const Content = styled(Stack)`
 
 const Slider = styled.div`
   background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 8px;
   cursor: col-resize;
-  border: 2px solid transparent;
-  margin-right: -2px; // To make the slider look like it's part of the navigation
+  border-right: 2px solid transparent;
   display: flex;
 
   &:hover {
-    border: 2px solid ${({ theme }) => theme.colors.primary.border};
+    border-color: ${({ theme }) => theme.colors.primary.border};
   }
 `
 

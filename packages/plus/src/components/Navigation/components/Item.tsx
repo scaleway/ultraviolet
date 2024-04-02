@@ -247,6 +247,10 @@ type ItemProps = {
    */
   type?: ItemType
   /**
+   * You don't need to use this prop it's used internally to close the menu
+   */
+  toggleMenu?: () => void
+  /**
    * You don't need to use this prop it's used internally to control if the item has a parent
    */
   hasParents?: boolean
@@ -282,6 +286,7 @@ export const Item = ({
   as,
   disabled,
   noExpand = false,
+  toggleMenu,
 }: ItemProps) => {
   const context = useNavigation()
 
@@ -583,16 +588,19 @@ export const Item = ({
             }
             placement="right"
           >
-            {Children.map(children, child =>
-              isValidElement<ItemProps>(child)
-                ? cloneElement(child, {
-                    hasParents: true,
-                  })
-                : child,
-            )}
+            {({ toggle: toggleMenuLocal }) =>
+              Children.map(children, child =>
+                isValidElement<ItemProps>(child)
+                  ? cloneElement(child, {
+                      hasParents: true,
+                      toggleMenu: toggleMenuLocal,
+                    })
+                  : child,
+              )
+            }
           </StyledMenu>
         ) : (
-          <Tooltip text={label} placement="right">
+          <Tooltip text={label} placement="right" tabIndex={-1}>
             <Button
               sentiment="neutral"
               variant={active ? 'filled' : 'ghost'}
@@ -617,7 +625,14 @@ export const Item = ({
   // This content is what is inside a menu item the navigation is collapsed
   if (hasParents) {
     return (
-      <StyledMenuItem href={href} onClick={() => onClick?.()} borderless>
+      <StyledMenuItem
+        href={href}
+        onClick={() => {
+          onClick?.()
+          toggleMenu?.()
+        }}
+        borderless
+      >
         <Stack
           gap={1}
           direction="row"
