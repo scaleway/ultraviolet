@@ -1,5 +1,35 @@
 # Change Log
 
+## 1.45.0
+
+### Minor Changes
+
+- [#3598](https://github.com/scaleway/ultraviolet/pull/3598) [`b8865ec`](https://github.com/scaleway/ultraviolet/commit/b8865ec1322f651128e45dd06fe8e2ec13d9038f) Thanks [@matthprost](https://github.com/matthprost)! - Change `<Separator />` color from `border` to `borderWeak`
+
+- [#3610](https://github.com/scaleway/ultraviolet/pull/3610) [`9e08841`](https://github.com/scaleway/ultraviolet/commit/9e08841e134cc16b01ba7039c320c1422c993f37) Thanks [@matthprost](https://github.com/matthprost)! - Add `data-testid` and `aria-label` into `<Skeleton />` component
+
+- [#3585](https://github.com/scaleway/ultraviolet/pull/3585) [`e8dca84`](https://github.com/scaleway/ultraviolet/commit/e8dca8467a1b458bbba0914c9697894367aa95da) Thanks [@matthprost](https://github.com/matthprost)! - Remove `react-flatten-children` and `@nivo/toolip`
+
+### Patch Changes
+
+- [#3599](https://github.com/scaleway/ultraviolet/pull/3599) [`713a4df`](https://github.com/scaleway/ultraviolet/commit/713a4df7a14d17dfa2602284c6e036e00cd37e3f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CheckboxGroup.Checkbox />` to have prop `required`
+
+- [#3588](https://github.com/scaleway/ultraviolet/pull/3588) [`8878dc5`](https://github.com/scaleway/ultraviolet/commit/8878dc5095786dca15735a9974696911d37a2c1c) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - fix(avatar): fix multiple space and trim for initials
+
+- [#3608](https://github.com/scaleway/ultraviolet/pull/3608) [`0260206`](https://github.com/scaleway/ultraviolet/commit/0260206c4be4b11c059f0827cd758f4a3428c879) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/random-name` to `5.0.0`.
+
+- [#3540](https://github.com/scaleway/ultraviolet/pull/3540) [`ad00080`](https://github.com/scaleway/ultraviolet/commit/ad0008075e57d73fda7e25d288d27420fe395ccf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.64`.
+  Updated dependency `@types/react-dom` to `18.2.21`.
+
+- [#3600](https://github.com/scaleway/ultraviolet/pull/3600) [`6a7ec72`](https://github.com/scaleway/ultraviolet/commit/6a7ec7286ae10880695d2a9a7fc2a0fbaaf7cf68) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.24.3`.
+  Updated dependency `@babel/preset-env` to `7.24.3`.
+
+- [#3607](https://github.com/scaleway/ultraviolet/pull/3607) [`9e2215d`](https://github.com/scaleway/ultraviolet/commit/9e2215df8a6a31c11ec02e896a1fab6131917290) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCardGroup />` to hide required icon when there is no legend set
+
+- Updated dependencies [[`ad00080`](https://github.com/scaleway/ultraviolet/commit/ad0008075e57d73fda7e25d288d27420fe395ccf), [`6a7ec72`](https://github.com/scaleway/ultraviolet/commit/6a7ec7286ae10880695d2a9a7fc2a0fbaaf7cf68)]:
+  - @ultraviolet/icons@2.11.1
+
 ## 1.44.0
 
 ### Minor Changes
