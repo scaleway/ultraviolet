@@ -5,11 +5,11 @@ export const Playground = Template.bind({})
 Playground.args = {
   name: 'keyValues',
   inputKey: {
-    label: 'key',
+    label: 'Key',
     required: true,
   },
   inputValue: {
-    label: 'value',
+    label: 'Value',
     required: false,
   },
   addButton: {
