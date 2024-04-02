@@ -1,5 +1,30 @@
 # Change Log
 
+## 2.9.0
+
+### Minor Changes
+
+- [#3598](https://github.com/scaleway/ultraviolet/pull/3598) [`b8865ec`](https://github.com/scaleway/ultraviolet/commit/b8865ec1322f651128e45dd06fe8e2ec13d9038f) Thanks [@matthprost](https://github.com/matthprost)! - Change `<Separator />` color from `border` to `borderWeak`
+
+- [#3587](https://github.com/scaleway/ultraviolet/pull/3587) [`3a59f7c`](https://github.com/scaleway/ultraviolet/commit/3a59f7c606992c7972e3312a95290382b34b5e0c) Thanks [@johnrazeur](https://github.com/johnrazeur)! - feat(Form): add no validate to form
+
+### Patch Changes
+
+- [#3599](https://github.com/scaleway/ultraviolet/pull/3599) [`713a4df`](https://github.com/scaleway/ultraviolet/commit/713a4df7a14d17dfa2602284c6e036e00cd37e3f) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<CheckboxGroupField />` to make all checkbox of the group as required when set `required` prop
+
+  - Fix `<CheckboxGroupField.Checkbox />` to have prop `required` and allow partial requirement for the group to be valid
+
+- [#3606](https://github.com/scaleway/ultraviolet/pull/3606) [`fb1e2bc`](https://github.com/scaleway/ultraviolet/commit/fb1e2bc68f8f82adf84714a45ade3a4555d0f817) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.51.2`.
+
+- [#3540](https://github.com/scaleway/ultraviolet/pull/3540) [`ad00080`](https://github.com/scaleway/ultraviolet/commit/ad0008075e57d73fda7e25d288d27420fe395ccf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.64`.
+  Updated dependency `@types/react-dom` to `18.2.21`.
+
+- [#3600](https://github.com/scaleway/ultraviolet/pull/3600) [`6a7ec72`](https://github.com/scaleway/ultraviolet/commit/6a7ec7286ae10880695d2a9a7fc2a0fbaaf7cf68) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.24.3`.
+  Updated dependency `@babel/preset-env` to `7.24.3`.
+- Updated dependencies [[`b8865ec`](https://github.com/scaleway/ultraviolet/commit/b8865ec1322f651128e45dd06fe8e2ec13d9038f), [`9e08841`](https://github.com/scaleway/ultraviolet/commit/9e08841e134cc16b01ba7039c320c1422c993f37), [`713a4df`](https://github.com/scaleway/ultraviolet/commit/713a4df7a14d17dfa2602284c6e036e00cd37e3f), [`8878dc5`](https://github.com/scaleway/ultraviolet/commit/8878dc5095786dca15735a9974696911d37a2c1c), [`e8dca84`](https://github.com/scaleway/ultraviolet/commit/e8dca8467a1b458bbba0914c9697894367aa95da), [`0260206`](https://github.com/scaleway/ultraviolet/commit/0260206c4be4b11c059f0827cd758f4a3428c879), [`ad00080`](https://github.com/scaleway/ultraviolet/commit/ad0008075e57d73fda7e25d288d27420fe395ccf), [`6a7ec72`](https://github.com/scaleway/ultraviolet/commit/6a7ec7286ae10880695d2a9a7fc2a0fbaaf7cf68), [`9e2215d`](https://github.com/scaleway/ultraviolet/commit/9e2215df8a6a31c11ec02e896a1fab6131917290)]:
+  - @ultraviolet/ui@1.45.0
+
 ## 2.8.9
 
 ### Patch Changes
