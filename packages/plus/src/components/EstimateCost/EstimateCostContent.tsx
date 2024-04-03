@@ -116,6 +116,7 @@ export const EstimateCostContent = ({
   overlayUnit = 'hours',
   children = null,
   locales = EstimateCostLocales,
+  overlayMargin,
 }: EstimateCostProps) => {
   const { formatNumber } = useEstimateCost()
   const [ref, inView] = useInView()
@@ -260,6 +261,7 @@ export const EstimateCostContent = ({
           isBeta={isBeta}
           discount={discount}
           unit={overlayUnit ?? 'hours'}
+          overlayMargin={overlayMargin}
         >
           {children}
         </OverlayComponent>

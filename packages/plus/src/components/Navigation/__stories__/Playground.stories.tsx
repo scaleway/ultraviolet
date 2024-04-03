@@ -19,7 +19,6 @@ const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-
 `
 
 const fadeOut = keyframes`
@@ -30,7 +29,6 @@ const fadeOut = keyframes`
   to {
     opacity: 0;
   }
-
 `
 
 const Image = styled.img`
