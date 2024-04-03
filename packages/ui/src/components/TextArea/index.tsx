@@ -54,7 +54,7 @@ const StyledTextArea = styled('textarea', {
     border-color: ${({ theme }) => theme.colors.danger.border};
   }
 
-  &[data-readOnly='true'] {
+  &[data-readonly='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     border-color: ${({ theme }) => theme.colors.neutral.border};
   }
@@ -214,7 +214,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               }}
               hasSentimentIcon={!!success || !!error}
               data-disabled={disabled}
-              data-readOnly={readOnly}
+              data-readonly={readOnly}
               data-success={!!success}
               data-error={!!error}
               isClearable={!!computedClearable}
