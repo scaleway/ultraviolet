@@ -330,7 +330,7 @@ export const Item = ({
   const PaddedStack = noExpand ? Stack : PaddingStack
 
   const hasHrefAndNoChildren = href && !children
-  const haspinnedFeatureAndNoChildren =
+  const hasPinnedFeatureAndNoChildren =
     pinnedFeature && !children && !noPinButton
   const isItemPinned = pinnedItems.includes(label)
   const shouldShowPinnedButton = useMemo(() => {
@@ -338,18 +338,18 @@ export const Item = ({
 
     if (pinnedItems.length >= pinLimit && type === 'default') return false
 
-    if (haspinnedFeatureAndNoChildren && type !== 'default') {
+    if (hasPinnedFeatureAndNoChildren && type !== 'default') {
       return true
     }
 
-    if (haspinnedFeatureAndNoChildren && !isItemPinned) {
+    if (hasPinnedFeatureAndNoChildren && !isItemPinned) {
       return true
     }
 
     return false
   }, [
     disabled,
-    haspinnedFeatureAndNoChildren,
+    hasPinnedFeatureAndNoChildren,
     href,
     isItemPinned,
     pinLimit,
@@ -474,7 +474,7 @@ export const Item = ({
             </Stack>
           </Stack>
           <Stack direction="row" alignItems="center" gap={href ? 1 : undefined}>
-            {badgeText || haspinnedFeatureAndNoChildren ? (
+            {badgeText || hasPinnedFeatureAndNoChildren ? (
               <>
                 {badgeText ? (
                   <StyledBadge
