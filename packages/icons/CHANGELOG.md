@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.11.2
+
+### Patch Changes
+
+- [#3616](https://github.com/scaleway/ultraviolet/pull/3616) [`8f285a6`](https://github.com/scaleway/ultraviolet/commit/8f285a6460db5c442abf10f074dda8f3f543a271) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.11.5`.
+  Updated dependency `@emotion/serialize` to `1.1.4`.
+
+- [#3612](https://github.com/scaleway/ultraviolet/pull/3612) [`2278fb1`](https://github.com/scaleway/ultraviolet/commit/2278fb1f3b59ef5989e4fbbbf098948cefa222b5) Thanks [@lisalupi](https://github.com/lisalupi)! - New product icons: `costManager` and `managedSearchDatabase`
+
 ## 2.11.1
 
 ### Patch Changes
