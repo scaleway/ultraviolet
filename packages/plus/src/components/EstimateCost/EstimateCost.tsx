@@ -37,6 +37,7 @@ const EstimateCost = ({
   discount = 0,
   OverlayRight,
   OverlayLeft,
+  overlayMargin,
   isBeta = false,
   commitmentFees,
   commitmentFeesContent,
@@ -77,6 +78,7 @@ const EstimateCost = ({
       monthlyFeesContent={monthlyFeesContent}
       overlayUnit={overlayUnit}
       locales={locales}
+      overlayMargin={overlayMargin}
     >
       {children}
     </EstimateCostContent>
