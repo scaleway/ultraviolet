@@ -5,12 +5,15 @@ import * as cli from './cli'
 import * as cockpit from './cockpit'
 import * as containerRegistry from './containerRegistry'
 import * as containers from './containers'
+import * as costManager from './costManager'
 import * as dedibox from './dedibox'
+import * as distributedDataLab from './distributedDataLab'
 import * as documentDB from './documentDB'
 import * as domainsAndDns from './domainsAndDns'
 import * as elasticMetal from './elasticMetal'
 import * as functions from './functions'
 import * as iam from './iam'
+import * as inference from './inference'
 import * as instance from './instance'
 import * as iotHub from './iotHub'
 import * as ipfsNaming from './ipfsNaming'
@@ -76,4 +79,7 @@ export {
   jero,
   nabu,
   quantum,
+  inference,
+  distributedDataLab,
+  costManager,
 }
