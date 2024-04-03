@@ -107,6 +107,7 @@ export type EstimateCostProps = {
    * To understand better please read https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales
    */
   numberLocales?: string
+  overlayMargin?: string
 }
 
 export type Units = 'seconds' | 'minutes' | 'hours' | 'days' | 'months'

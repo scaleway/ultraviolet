@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.7.0
+
+### Minor Changes
+
+- [#3619](https://github.com/scaleway/ultraviolet/pull/3619) [`bf22992`](https://github.com/scaleway/ultraviolet/commit/bf2299294293d50ae7a75a197518a7cc175a7e33) Thanks [@matthprost](https://github.com/matthprost)! - New illustrations `costManager`, `distributedDataLab` and `inference`
+
 ## 1.6.4
 
 ### Patch Changes

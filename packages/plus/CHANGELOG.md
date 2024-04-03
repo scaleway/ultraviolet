@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.11.1
+
+### Patch Changes
+
+- [#3620](https://github.com/scaleway/ultraviolet/pull/3620) [`d63adc3`](https://github.com/scaleway/ultraviolet/commit/d63adc3bdd03f66c18980830774866c0aec7dc44) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<Navigation />` to work better with slider, have better tab index and close the menu when clicking
+
+  - Fix `<EstimateCost />` to have prop `overlayMargin` in order to adapt the overlay depending on the width of the navigation
+
+- [#3616](https://github.com/scaleway/ultraviolet/pull/3616) [`8f285a6`](https://github.com/scaleway/ultraviolet/commit/8f285a6460db5c442abf10f074dda8f3f543a271) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.11.5`.
+  Updated dependency `@emotion/serialize` to `1.1.4`.
+- Updated dependencies [[`d63adc3`](https://github.com/scaleway/ultraviolet/commit/d63adc3bdd03f66c18980830774866c0aec7dc44), [`8f285a6`](https://github.com/scaleway/ultraviolet/commit/8f285a6460db5c442abf10f074dda8f3f543a271)]:
+  - @ultraviolet/ui@1.45.1
+
 ## 0.11.0
 
 ### Minor Changes

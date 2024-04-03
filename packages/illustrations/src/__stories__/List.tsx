@@ -9,6 +9,11 @@ const StyledSnippet = styled(Snippet)`
   padding: ${({ theme }) => theme.space['2']};
 `
 
+const StyledStack = styled(Stack)`
+  min-width: 0;
+  padding-righti: ${({ theme }) => theme.space['2']};
+`
+
 const StyledButton = styled(Button)`
   width: fit-content;
   height: fit-content;
@@ -95,12 +100,12 @@ const SubListElement = ({
                   alt={productName}
                 />
               )}
-              <Stack direction="column">
+              <StyledStack direction="column">
                 <Text as="h3" variant="bodyStrong">
                   {productImg}.{imgSrc.split('.').pop()}
                 </Text>
                 <StyledSnippet>{`import { ${productImg} } from '@ultraviolet/illustrations/${category}/${productName}'`}</StyledSnippet>
-              </Stack>
+              </StyledStack>
             </Card>
           )
         })}

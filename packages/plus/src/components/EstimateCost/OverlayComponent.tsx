@@ -10,14 +10,16 @@ import { ItemResourceName, OverlayRow, StyledBadge } from './componentStyle'
 import { maximumFractionDigits, multiplier } from './constants'
 import type { Units } from './types'
 
-const OverlayContainer = styled.div<{ inView?: boolean }>`
+const OverlayContainer = styled('div', {
+  shouldForwardProp: prop => !['inView', 'overlayMargin'].includes(prop),
+})<{ inView?: boolean; overlayMargin?: string }>`
   position: fixed;
   left: 0;
   right: 0;
   bottom: ${({ inView }) => (inView ? -120 : 0)}px;
   height: 120px;
   background-color: ${({ theme }) => theme.colors.neutral.background};
-  margin: 0 0 0 260px;
+  margin: ${({ overlayMargin }) => overlayMargin || '0'};
   display: flex;
   justify-content: center;
   box-shadow: ${({ inView, theme }) =>
@@ -67,6 +69,7 @@ type OverlayComponentProps = {
     maxOverlayHourly: number
     overlayHourly: number
   }
+  overlayMargin?: string
 }
 
 export const OverlayComponent = ({
@@ -80,6 +83,7 @@ export const OverlayComponent = ({
   totalPrice,
   unit = 'hours',
   isBeta = false,
+  overlayMargin,
 }: OverlayComponentProps) => {
   const { locales, formatNumber } = useEstimateCost()
 
@@ -103,7 +107,11 @@ export const OverlayComponent = ({
 
   return (
     <OverlayContextProvider value={value}>
-      <OverlayContainer inView={inView} data-testid="summary-overlay">
+      <OverlayContainer
+        inView={inView}
+        data-testid="summary-overlay"
+        overlayMargin={overlayMargin}
+      >
         <List>
           {OverlayLeft ? (
             <SideItem>

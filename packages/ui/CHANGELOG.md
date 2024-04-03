@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.45.1
+
+### Patch Changes
+
+- [#3620](https://github.com/scaleway/ultraviolet/pull/3620) [`d63adc3`](https://github.com/scaleway/ultraviolet/commit/d63adc3bdd03f66c18980830774866c0aec7dc44) Thanks [@matthprost](https://github.com/matthprost)! - - Add `tabIndex` on `<Tooltip />` component to be able to disable tab when the children is already tabbable
+
+  - Fix `<Expandable />` to add `visibility: hidden` when the component is collapsed to avoid tabulation on hidden elements
+
+- [#3616](https://github.com/scaleway/ultraviolet/pull/3616) [`8f285a6`](https://github.com/scaleway/ultraviolet/commit/8f285a6460db5c442abf10f074dda8f3f543a271) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/styled` to `11.11.5`.
+  Updated dependency `@emotion/serialize` to `1.1.4`.
+- Updated dependencies [[`8f285a6`](https://github.com/scaleway/ultraviolet/commit/8f285a6460db5c442abf10f074dda8f3f543a271), [`2278fb1`](https://github.com/scaleway/ultraviolet/commit/2278fb1f3b59ef5989e4fbbbf098948cefa222b5)]:
+  - @ultraviolet/icons@2.11.2
+
 ## 1.45.0
 
 ### Minor Changes
