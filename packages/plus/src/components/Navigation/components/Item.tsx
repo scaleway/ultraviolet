@@ -139,10 +139,6 @@ const StyledContainer = styled(Stack)`
         opacity: 0;
       }
     }
-
-    ${WrapText} {
-      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
-    }
   }
 
   &:active[data-has-no-expand='false']:not([disabled]):not(
@@ -452,7 +448,7 @@ export const Item = ({
                 as="span"
                 variant="bodySmallStrong"
                 sentiment={active ? 'primary' : 'neutral'}
-                prominence={categoryIcon || !hasParents ? undefined : 'weak'}
+                prominence={categoryIcon || !hasParents ? 'strong' : 'weak'}
                 animation={animation}
                 disabled={disabled}
               >
