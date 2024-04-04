@@ -24,7 +24,7 @@ const StyledIcon = (
 
 type CategoryIconProps = {
   name: keyof typeof CATEGORY_ICONS
-  variant: 'primary' | 'neutral'
+  variant?: 'primary' | 'neutral'
   disabled?: boolean
 }
 
