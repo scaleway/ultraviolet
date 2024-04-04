@@ -162,23 +162,36 @@ export const darkerTheme = {
         text: { dark: '#000000', light: '#e2e4e4' },
       },
       icon: {
-        category: { primary: { fill: '#8d40ee', fillStrong: '#ceb1fb' } },
+        category: {
+          neutral: {
+            fill: '#d8d9dc',
+            fillDisabled: '#151a2d',
+            fillStrong: '#72747e',
+            fillStrongDisabled: '#3b3f4f',
+          },
+          primary: {
+            fill: '#8d40ee',
+            fillDisabled: '#151a2d',
+            fillStrong: '#ceb1fb',
+            fillStrongDisabled: '#3b3f4f',
+          },
+        },
         product: {
           danger: {
             fill: '#2e0514',
-            fillDisabled: '#212638',
+            fillDisabled: '#3b3f4f',
             fillStrong: '#2e0514',
-            fillStrongDisabled: '#212638',
+            fillStrongDisabled: '#3b3f4f',
             fillWeak: '#cd1759',
-            fillWeakDisabled: '#0c0f1a',
+            fillWeakDisabled: '#151a2d',
           },
           original: {
             fill: '#ffffff',
-            fillDisabled: '#212638',
+            fillDisabled: '#3b3f4f',
             fillStrong: '#bf95fd',
-            fillStrongDisabled: '#212638',
+            fillStrongDisabled: '#3b3f4f',
             fillWeak: '#4f1c89',
-            fillWeakDisabled: '#0c0f1a',
+            fillWeakDisabled: '#151a2d',
           },
           primary: {
             fill: '#954cf7',
@@ -190,11 +203,11 @@ export const darkerTheme = {
           },
           warning: {
             fill: '#1e1309',
-            fillDisabled: '#212638',
+            fillDisabled: '#3b3f4f',
             fillStrong: '#1e1309',
-            fillStrongDisabled: '#212638',
+            fillStrongDisabled: '#3b3f4f',
             fillWeak: '#d89d00',
-            fillWeakDisabled: '#0c0f1a',
+            fillWeakDisabled: '#151a2d',
           },
         },
       },
