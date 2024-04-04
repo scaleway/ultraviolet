@@ -2,17 +2,17 @@ import { Button, Row, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useFieldArray } from 'react-hook-form'
 import type { Control, FieldArrayPath, FieldValues } from 'react-hook-form'
-import { TextInputField } from '../TextInputField'
+import { TextInputField as TextInputFieldV2 } from '../TextInputFieldV2'
 
 type InputKeyProps = {
-  label: ComponentProps<typeof TextInputField>['label']
-  required?: ComponentProps<typeof TextInputField>['required']
-  regex?: ComponentProps<typeof TextInputField>['regex']
+  label: ComponentProps<typeof TextInputFieldV2>['label']
+  required?: ComponentProps<typeof TextInputFieldV2>['required']
+  regex?: ComponentProps<typeof TextInputFieldV2>['regex']
 }
 
 type InputValueProps = {
-  type?: ComponentProps<typeof TextInputField>['type']
-  placeholder?: ComponentProps<typeof TextInputField>['placeholder']
+  type?: ComponentProps<typeof TextInputFieldV2>['type']
+  placeholder?: ComponentProps<typeof TextInputFieldV2>['placeholder']
 } & InputKeyProps
 
 type AddButtonProps = {
@@ -64,17 +64,22 @@ export const KeyValueField = <
   return (
     <Stack gap={3}>
       {fields.length ? (
-        <Stack gap={2}>
+        <Stack gap={3}>
           {fields.map((field, index) => (
-            <Row key={field.id} templateColumns="1fr 1fr auto" gap={2}>
-              <TextInputField
+            <Row
+              key={field.id}
+              templateColumns="1fr 1fr auto"
+              gap={2}
+              alignItems="end"
+            >
+              <TextInputFieldV2
                 readOnly={readonly}
                 required={inputKey.required}
                 name={`${name}.${index}.key`}
                 label={inputKey.label}
                 regex={inputKey.regex}
               />
-              <TextInputField
+              <TextInputFieldV2
                 readOnly={readonly}
                 required={inputValue.required}
                 name={`${name}.${index}.value`}

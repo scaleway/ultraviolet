@@ -70,13 +70,12 @@ export const Expandable = ({
   useEffect(() => {
     if (opened && ref.current && height) {
       ref.current.style.maxHeight = `${height}px`
-      if (!minHeight) {
-        ref.current.style.visibility = ''
-      }
+      ref.current.style.visibility = ''
       transitionTimer.current = setTimeout(() => {
         if (ref.current) {
           ref.current.style.maxHeight = 'initial'
           ref.current.style.overflow = 'visible'
+          ref.current.style.visibility = ''
         }
       }, ANIMATION_DURATION)
     } else {

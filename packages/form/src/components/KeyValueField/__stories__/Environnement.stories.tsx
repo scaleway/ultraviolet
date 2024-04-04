@@ -25,7 +25,7 @@ Environnement.args = {
   },
   inputValue: {
     label: 'value',
-    type: 'toggleable-password',
+    type: 'password',
     placeholder: HIDDEN_SECRET_VALUE,
     regex: [alphanumDashUnderscoreDots],
     required: true,
