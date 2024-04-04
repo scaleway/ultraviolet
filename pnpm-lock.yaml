@@ -86,8 +86,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 6.1.3
-        version: 6.1.3(date-fns@3.6.0)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 6.1.4
+        version: 6.1.4(date-fns@3.6.0)(react-dom@18.2.0)(react@18.2.0)
       '@size-limit/file':
         specifier: 9.0.0
         version: 9.0.0(size-limit@9.0.0)
@@ -5053,8 +5053,8 @@ packages:
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
     dev: true
 
-  /@scaleway/use-i18n@6.1.3(date-fns@3.6.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-WN8QcdMfV/pOaeaZOwF+Ve6rtdmsbyxwsO/MpAk0nDxgWsnMJHigna7m0SVHRbunYcxkwlIuk3zd599rJvsdcQ==}
+  /@scaleway/use-i18n@6.1.4(date-fns@3.6.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Xwgl9HqD75jFE4ceaoy+1s46E9Me8gFWRb5TbcyQP7Dh8JZ8Ciq2IQYbNhpNpgsK9IIFe4TRfRVti8N0JzLhzw==}
     engines: {node: '>=18.x'}
     peerDependencies:
       date-fns: 3.x
@@ -5064,7 +5064,7 @@ packages:
       '@formatjs/ecma402-abstract': 1.18.2
       '@formatjs/fast-memoize': 2.2.0
       date-fns: 3.6.0
-      filesize: 10.1.0
+      filesize: 10.1.1
       international-types: 0.8.1
       intl-messageformat: 10.5.11
       react: 18.2.0
@@ -10583,8 +10583,8 @@ packages:
       minimatch: 5.1.6
     dev: true
 
-  /filesize@10.1.0:
-    resolution: {integrity: sha512-GTLKYyBSDz3nPhlLVPjPWZCnhkd9TrrRArNcy8Z+J2cqScB7h2McAzR6NBX6nYOoWafql0roY8hrocxnZBv9CQ==}
+  /filesize@10.1.1:
+    resolution: {integrity: sha512-L0cdwZrKlwZQkMSFnCflJ6J2Y+5egO/p3vgRSDQGxQt++QbUZe5gMbRO6kg6gzwQDPvq2Fk9AmoxUNfZ5gdqaQ==}
     engines: {node: '>= 10.4.0'}
     dev: true
 
