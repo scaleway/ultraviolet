@@ -201,6 +201,7 @@ type ItemProps = {
    * Sets a category icon on the left of the item
    */
   categoryIcon?: ComponentProps<typeof CategoryIcon>['name']
+  categoryIconVariant?: ComponentProps<typeof CategoryIcon>['variant']
   /**
    * The label of the item that will be shown.
    * It is also used as the key for pinning.
@@ -268,6 +269,7 @@ type ItemProps = {
 export const Item = ({
   children,
   categoryIcon,
+  categoryIconVariant,
   label,
   subLabel,
   badgeText,
@@ -440,7 +442,11 @@ export const Item = ({
                 alignItems="center"
                 justifyContent="center"
               >
-                <CategoryIcon name={categoryIcon} />
+                <CategoryIcon
+                  name={categoryIcon}
+                  variant={categoryIconVariant}
+                  disabled={disabled}
+                />
               </ContainerCategoryIcon>
             ) : null}
             <Stack>

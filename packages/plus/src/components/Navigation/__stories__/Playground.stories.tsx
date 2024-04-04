@@ -90,6 +90,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         <Navigation.Item
           label="Organization Dashboard"
           categoryIcon="console"
+          categoryIconVariant="neutral"
           noPinButton
           active={active === 'Organization Dashboard'}
           onClick={() => setActive('Organization Dashboard')}
@@ -97,6 +98,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         <Navigation.Item
           label="Project Dashboard"
           categoryIcon="useCase"
+          categoryIconVariant="neutral"
           noPinButton
           active={active === 'Project Dashboard'}
           onClick={() => setActive('Project Dashboard')}

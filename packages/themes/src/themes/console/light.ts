@@ -162,7 +162,20 @@ export const lightTheme = {
         text: { dark: '#222638', light: '#ffffff' },
       },
       icon: {
-        category: { primary: { fill: '#521094', fillStrong: '#a060f6' } },
+        category: {
+          neutral: {
+            fill: '#151a2d',
+            fillDisabled: '#f3f3f4',
+            fillStrong: '#b5b7bd',
+            fillStrongDisabled: '#d9dadd',
+          },
+          primary: {
+            fill: '#521094',
+            fillDisabled: '#f3f3f4',
+            fillStrong: '#a060f6',
+            fillStrongDisabled: '#d9dadd',
+          },
+        },
         product: {
           danger: {
             fill: '#ffebf2',
