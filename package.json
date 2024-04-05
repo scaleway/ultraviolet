@@ -15,7 +15,7 @@
     "linux"
   ],
   "scripts": {
-    "build": "pnpm --filter '@ultraviolet/*' recursive run build",
+    "build": "pnpm -r --filter '@ultraviolet/*' run build ",
     "build:profile": "cross-env PROFILE=true pnpm run build",
     "build:storybook": "pnpm run build && STORYBOOK_ENVIRONMENT=production storybook build",
     "build:storybook:stats": "pnpm run build:storybook --webpack-stats-json",

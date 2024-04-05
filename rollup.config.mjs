@@ -95,7 +95,7 @@ export default [
     plugins: [
       dts({
         compilerOptions: {
-          preserveSymlinks: false,
+          preserveSymlinks: true,
         },
       }),
     ],

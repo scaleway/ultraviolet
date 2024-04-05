@@ -2,32 +2,34 @@
   "name": "@ultraviolet/illustrations",
   "version": "1.7.1",
   "description": "Ultraviolet Illustrations",
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
+  },
+  
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/scaleway/ultraviolet",
-    "directory": "packages/illustrations"
-  },
-  "scripts": {
-    "build": "rollup -c rollup.config.mjs",
-    "typecheck": "tsc --noEmit"
-  },
   "keywords": [
     "illustrations",
     "ui"
   ],
   "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
-  },
-  "engines": {
-    "node": ">=18.x",
-    "pnpm": ">=9.x"
-  },
   "os": [
     "darwin",
     "linux"
   ],
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/illustrations",
+    "type": "git",
+    "url": "https://github.com/scaleway/ultraviolet"
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs",
+    "typecheck": "tsc --noEmit"
+  },
   "sideEffects": false,
   "type": "module",
   "exports": {
@@ -63,7 +65,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@ultraviolet/ui": "workspace:^",
-    "@ultraviolet/themes": "workspace:^"
+    "@ultraviolet/themes": "1.10.0",
+    "@ultraviolet/ui": "1.48.0"
   }
 }
