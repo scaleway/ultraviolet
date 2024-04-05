@@ -20,6 +20,12 @@ import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import Item from './Item'
 
+const SIZES = {
+  small: '180px',
+  medium: '280px',
+  large: '380px',
+}
+
 export type DisclosureProps = { visible: boolean }
 
 type DisclosureElement =
@@ -30,10 +36,12 @@ type DisclosureElement =
       ref?: Ref<HTMLButtonElement>
     })
 
-const StyledPopup = styled(Popup)`
+const StyledPopup = styled(Popup, {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})<{ size: keyof typeof SIZES }>`
   background-color: ${({ theme }) => theme.colors.neutral.background};
   box-shadow: ${({ theme }) => theme.shadows.menu};
-  padding: 0;
+  padding: ${({ theme }) => theme.space['0.5']};
 
   &[data-has-arrow='true'] {
     &::after {
@@ -41,30 +49,9 @@ const StyledPopup = styled(Popup)`
         transparent transparent transparent;
     }
   }
+
+  width: ${({ size }) => SIZES[size]};
 `
-
-type ChildMenuProps = {
-  toggle: () => void
-}
-
-type MenuProps = {
-  id?: string
-  ariaLabel?: string
-  placement?: ComponentProps<typeof Popup>['placement']
-  children?: ReactNode | (({ toggle }: ChildMenuProps) => ReactNode)
-  className?: string
-  disclosure: DisclosureElement
-  hasArrow?: boolean
-  visible?: boolean
-  'data-testid'?: string
-  maxHeight?: string
-  maxWidth?: string
-  /**
-   * By default, the portal target is children container or document.body if children is a function. You can override this
-   * behavior by setting a portalTarget prop.
-   */
-  portalTarget?: HTMLElement
-}
 
 const MenuList = styled(Stack)`
   &:after,
@@ -91,6 +78,33 @@ const MenuList = styled(Stack)`
   position: relative;
 `
 
+type ChildMenuProps = {
+  toggle: () => void
+}
+
+type MenuProps = {
+  id?: string
+  ariaLabel?: string
+  placement?: ComponentProps<typeof Popup>['placement']
+  children?: ReactNode | (({ toggle }: ChildMenuProps) => ReactNode)
+  className?: string
+  disclosure: DisclosureElement
+  hasArrow?: boolean
+  visible?: boolean
+  'data-testid'?: string
+  maxHeight?: string
+  /**
+   * @deprecated: use `size` instead
+   */
+  maxWidth?: string
+  /**
+   * By default, the portal target is children container or document.body if children is a function. You can override this
+   * behavior by setting a portalTarget prop.
+   */
+  portalTarget?: HTMLElement
+  size?: keyof typeof SIZES
+}
+
 const FwdMenu = forwardRef(
   (
     {
@@ -98,7 +112,7 @@ const FwdMenu = forwardRef(
       ariaLabel = 'Menu',
       children,
       disclosure,
-      hasArrow = true,
+      hasArrow = false,
       placement = 'bottom',
       visible = false,
       className,
@@ -106,6 +120,7 @@ const FwdMenu = forwardRef(
       maxHeight,
       maxWidth,
       portalTarget,
+      size = 'small',
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -152,6 +167,7 @@ const FwdMenu = forwardRef(
         tabIndex={-1}
         maxHeight={maxHeight}
         maxWidth={maxWidth}
+        size={size}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
             {typeof children === 'function'

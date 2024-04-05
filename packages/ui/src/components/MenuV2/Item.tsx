@@ -4,7 +4,7 @@ import type { MouseEventHandler, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Tooltip } from '../Tooltip'
 
-type MenuItemSentiment = 'neutral' | 'danger'
+type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
 const itemCoreStyle = ({
   theme,
@@ -18,6 +18,8 @@ const itemCoreStyle = ({
   disabled: boolean
 }) => `
   display: inline-block;
+  min-height: 32px;
+  max-height: 44px;
   font-size: ${theme.typography.bodySmall.fontSize};
   line-height: ${theme.typography.bodySmall.lineHeight};
   font-weight: inherit;
@@ -86,6 +88,9 @@ type ItemProps = {
   className?: string | undefined
   children: ReactNode
   onClick?: MouseEventHandler<HTMLElement> | undefined
+  /**
+   * @deprecated: this props is not used anymore, use `Menu.Separator` instead
+   */
   borderless?: boolean
   sentiment?: MenuItemSentiment
   'data-testid'?: string
@@ -94,7 +99,7 @@ type ItemProps = {
 const Item = forwardRef<HTMLElement, ItemProps>(
   (
     {
-      borderless = false,
+      borderless = true,
       disabled = false,
       onClick,
       sentiment = 'neutral',

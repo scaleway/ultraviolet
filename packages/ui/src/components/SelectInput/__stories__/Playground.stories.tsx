@@ -7,10 +7,7 @@ Playground.args = {
   ...Template.args,
   name: 'basic',
   value: { label: 'Option A', value: 'a' },
-  children: [
-    <SelectInput.Option value="a">Option A</SelectInput.Option>,
-    <SelectInput.Option value="b">Option B</SelectInput.Option>,
-  ],
+  children: [<SelectInput.Option value="a">Option A</SelectInput.Option>],
 }
 
 Playground.decorators = [
