@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.45.3
+
+### Patch Changes
+
+- [#3629](https://github.com/scaleway/ultraviolet/pull/3629) [`9d909c0`](https://github.com/scaleway/ultraviolet/commit/9d909c06b8df81a7c48c0d059934d45123bbacb9) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(SelectInput): null child type error
+
 ## 1.45.2
 
 ### Patch Changes
