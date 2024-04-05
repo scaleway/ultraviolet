@@ -1,5 +1,18 @@
 # Change Log
 
+## 2.10.0
+
+### Minor Changes
+
+- [#3618](https://github.com/scaleway/ultraviolet/pull/3618) [`946f924`](https://github.com/scaleway/ultraviolet/commit/946f924b29e10e59b5d3bc548a1298f5bc457a7f) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<KeyValueField />` component to have correct spacing and use `<TextInputFieldV2 />`
+
+### Patch Changes
+
+- [#3615](https://github.com/scaleway/ultraviolet/pull/3615) [`6c1edef`](https://github.com/scaleway/ultraviolet/commit/6c1edef32591c78469be0da9e6b212898a5ff4c5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.74`.
+  Updated dependency `@types/react-dom` to `18.2.23`.
+- Updated dependencies [[`823fcb0`](https://github.com/scaleway/ultraviolet/commit/823fcb0866c41a8e60a4bf3aca839e03e94707fe), [`6c1edef`](https://github.com/scaleway/ultraviolet/commit/6c1edef32591c78469be0da9e6b212898a5ff4c5), [`d05acf2`](https://github.com/scaleway/ultraviolet/commit/d05acf2f68f8b7d67b0b1cef8142d35a20af49f3)]:
+  - @ultraviolet/ui@1.45.2
+
 ## 2.9.1
 
 ### Patch Changes

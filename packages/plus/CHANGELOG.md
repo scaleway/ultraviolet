@@ -1,5 +1,27 @@
 # @ultraviolet/plus
 
+## 0.12.1
+
+### Patch Changes
+
+- [#3632](https://github.com/scaleway/ultraviolet/pull/3632) [`190c205`](https://github.com/scaleway/ultraviolet/commit/190c205a17b5f95d46121392d4cbd88fb4666af0) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` active item with wrong color
+
+## 0.12.0
+
+### Minor Changes
+
+- [#3627](https://github.com/scaleway/ultraviolet/pull/3627) [`a71f616`](https://github.com/scaleway/ultraviolet/commit/a71f6169c53727a1bc0945c2c1d78f96949d4307) Thanks [@matthprost](https://github.com/matthprost)! - New prop `categoryIconVariant` in `<Navigation />`
+
+### Patch Changes
+
+- [#3626](https://github.com/scaleway/ultraviolet/pull/3626) [`823fcb0`](https://github.com/scaleway/ultraviolet/commit/823fcb0866c41a8e60a4bf3aca839e03e94707fe) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` to have correct color for `<Navigation.Item />` that has sub items
+
+- [#3615](https://github.com/scaleway/ultraviolet/pull/3615) [`6c1edef`](https://github.com/scaleway/ultraviolet/commit/6c1edef32591c78469be0da9e6b212898a5ff4c5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.74`.
+  Updated dependency `@types/react-dom` to `18.2.23`.
+- Updated dependencies [[`823fcb0`](https://github.com/scaleway/ultraviolet/commit/823fcb0866c41a8e60a4bf3aca839e03e94707fe), [`a71f616`](https://github.com/scaleway/ultraviolet/commit/a71f6169c53727a1bc0945c2c1d78f96949d4307), [`6c1edef`](https://github.com/scaleway/ultraviolet/commit/6c1edef32591c78469be0da9e6b212898a5ff4c5), [`d05acf2`](https://github.com/scaleway/ultraviolet/commit/d05acf2f68f8b7d67b0b1cef8142d35a20af49f3)]:
+  - @ultraviolet/ui@1.45.2
+  - @ultraviolet/themes@1.10.0
+
 ## 0.11.1
 
 ### Patch Changes

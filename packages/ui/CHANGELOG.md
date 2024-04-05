@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.45.2
+
+### Patch Changes
+
+- [#3626](https://github.com/scaleway/ultraviolet/pull/3626) [`823fcb0`](https://github.com/scaleway/ultraviolet/commit/823fcb0866c41a8e60a4bf3aca839e03e94707fe) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Expandable />` component to have correct `visibility` set in css
+
+- [#3615](https://github.com/scaleway/ultraviolet/pull/3615) [`6c1edef`](https://github.com/scaleway/ultraviolet/commit/6c1edef32591c78469be0da9e6b212898a5ff4c5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.74`.
+  Updated dependency `@types/react-dom` to `18.2.23`.
+
+- [#3611](https://github.com/scaleway/ultraviolet/pull/3611) [`d05acf2`](https://github.com/scaleway/ultraviolet/commit/d05acf2f68f8b7d67b0b1cef8142d35a20af49f3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-media` to `3.0.0`.
+
+- Updated dependencies [[`a71f616`](https://github.com/scaleway/ultraviolet/commit/a71f6169c53727a1bc0945c2c1d78f96949d4307), [`6c1edef`](https://github.com/scaleway/ultraviolet/commit/6c1edef32591c78469be0da9e6b212898a5ff4c5)]:
+  - @ultraviolet/themes@1.10.0
+  - @ultraviolet/icons@2.12.0
+
 ## 1.45.1
 
 ### Patch Changes
