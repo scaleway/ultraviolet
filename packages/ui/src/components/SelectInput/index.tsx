@@ -693,7 +693,7 @@ const FwdSelectInput = ({
             {
               ...child.props,
               label: child.props.children,
-            } as SelectOption,
+            },
           ]
         }
 
