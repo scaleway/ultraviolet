@@ -448,7 +448,9 @@ export const Item = ({
                 as="span"
                 variant="bodySmallStrong"
                 sentiment={active ? 'primary' : 'neutral'}
-                prominence={categoryIcon || !hasParents ? 'strong' : 'weak'}
+                prominence={
+                  (categoryIcon || !hasParents) && !active ? 'strong' : 'weak'
+                }
                 animation={animation}
                 disabled={disabled}
               >
