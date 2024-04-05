@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.12.1
+
+### Patch Changes
+
+- [#3632](https://github.com/scaleway/ultraviolet/pull/3632) [`190c205`](https://github.com/scaleway/ultraviolet/commit/190c205a17b5f95d46121392d4cbd88fb4666af0) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` active item with wrong color
+
 ## 0.12.0
 
 ### Minor Changes
