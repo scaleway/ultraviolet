@@ -6640,6 +6640,493 @@ exports[`SelectInput renders correctly with emptyState 1`] = `
 </DocumentFragment>
 `;
 
+exports[`SelectInput renders with undefined children 1`] = `
+<DocumentFragment>
+  .cache-w1hmin-StyledContainer-container-StyledContainer {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cache-1f43avz-a11yText-A11yText {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.cache-1jt3i01-control {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 48px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d9dadd;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #3f4250;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.cache-1jt3i01-control:hover {
+  border-color: #2684FF;
+}
+
+.cache-1jt3i01-control:focus-within {
+  border-color: #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1jt3i01-control:hover {
+  border-color: #792dd4;
+}
+
+.cache-blvxib-ValueContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.cache-blvxib-ValueContainer label {
+  display: initial;
+}
+
+.cache-1jsol4n-StyledPlaceholder {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #3f4250;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+}
+
+.cache-s3sz6o-placeholder {
+  grid-area: 1/1/2/3;
+  color: #727683;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: border-box;
+}
+
+.cache-n0o3gm-inputStyles {
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 11px;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.cache-n0o3gm-inputStyles:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.cache-ralm3g-IndicatorsContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.cache-dh2bvv-indicatorSeparator {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d9dadd;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.cache-15lsz6c-indicatorContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 40%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cache-15lsz6c-indicatorContainer:hover {
+  color: hsl(0, 0%, 20%);
+}
+
+.cache-irytw7-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-znppnv {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.cache-1xqg3ns-menu {
+  top: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  box-shadow: 0px 0px 24px 6px #d9dadd66;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+
+.cache-i19tea-MenuList {
+  max-height: 225px;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  box-sizing: border-box;
+  background-color: #f9f9fa;
+}
+
+.cache-19r2qbi-option {
+  cursor: pointer;
+  display: block;
+  font-size: inherit;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #f1eefc;
+  color: #3f4250;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.cache-19r2qbi-option:active {
+  background-color: #f1eefc;
+  color: #641cb3;
+}
+
+.cache-19r2qbi-option:hover {
+  background-color: #f1eefc;
+  color: #3f4250;
+}
+
+.cache-1kauswa-option {
+  cursor: pointer;
+  display: block;
+  font-size: inherit;
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #ffffff;
+  color: #3f4250;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.cache-1kauswa-option:active {
+  background-color: #f1eefc;
+  color: #641cb3;
+}
+
+.cache-1kauswa-option:hover {
+  background-color: #f1eefc;
+  color: #3f4250;
+}
+
+.cache-lzuy3q-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+}
+
+.cache-1aqops6-StyledError {
+  font-size: 12px;
+  color: #b3144d;
+  padding-top: 2px;
+}
+
+<div
+    class=" cache-w1hmin-StyledContainer-container-StyledContainer e11gt5pw4"
+    data-testid="select-input-uncontrolled"
+  >
+    <span
+      class="cache-1f43avz-a11yText-A11yText"
+      id="react-select-27-live-region"
+    />
+    <span
+      aria-atomic="false"
+      aria-live="polite"
+      aria-relevant="additions text"
+      class="cache-1f43avz-a11yText-A11yText"
+      role="log"
+    >
+      <span
+        id="aria-selection"
+      />
+      <span
+        id="aria-focused"
+      />
+      <span
+        id="aria-results"
+      >
+        2 results available.
+      </span>
+      <span
+        id="aria-guidance"
+      >
+        Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
+      </span>
+    </span>
+    <div
+      class=" cache-1jt3i01-control"
+    >
+      <div
+        class=" cache-blvxib-ValueContainer"
+      >
+        <label
+          aria-live="assertive"
+          as="label"
+          class="cache-1jsol4n-StyledPlaceholder e11gt5pw2"
+          for="test"
+        >
+          Select...
+        </label>
+        <div
+          class=" cache-s3sz6o-placeholder"
+          id="react-select-27-placeholder"
+        >
+          Select...
+        </div>
+        <div
+          class="cache-n0o3gm-inputStyles"
+          data-value=""
+        >
+          <input
+            aria-activedescendant="react-select-27-option-0"
+            aria-autocomplete="list"
+            aria-describedby="react-select-27-placeholder"
+            aria-expanded="true"
+            aria-haspopup="true"
+            autocapitalize="none"
+            autocomplete="off"
+            autocorrect="off"
+            class=""
+            id="test"
+            role="combobox"
+            spellcheck="false"
+            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+            tabindex="0"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class=" cache-ralm3g-IndicatorsContainer"
+      >
+        <span
+          class=" cache-dh2bvv-indicatorSeparator"
+        />
+        <div
+          aria-hidden="true"
+          class=" cache-15lsz6c-indicatorContainer"
+        >
+          <div
+            class="cache-irytw7-Stack ehpbis70"
+          >
+            <svg
+              class="cache-znppnv e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class=" cache-1xqg3ns-menu"
+    >
+      <div
+        aria-multiselectable="false"
+        class=" cache-i19tea-MenuList"
+        id="react-select-27-listbox"
+        role="listbox"
+      >
+        <div
+          data-testid="option-uncontrolled-a"
+        >
+          <div
+            aria-disabled="false"
+            aria-selected="false"
+            class=" cache-19r2qbi-option"
+            id="react-select-27-option-0"
+            role="option"
+            tabindex="-1"
+          >
+            Option A
+          </div>
+        </div>
+        <div
+          data-testid="option-uncontrolled-b"
+        >
+          <div
+            aria-disabled="false"
+            aria-selected="false"
+            class=" cache-1kauswa-option"
+            id="react-select-27-option-1"
+            role="option"
+            tabindex="-1"
+          >
+            Option B
+          </div>
+        </div>
+      </div>
+    </div>
+    <input
+      name="uncontrolled"
+      type="hidden"
+      value=""
+    />
+    <div
+      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+    >
+      <div
+        class="cache-1aqops6-StyledError e11gt5pw3"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`SelectInput should render correctly custom isLoading 1`] = `
 <DocumentFragment>
   .cache-w1hmin-StyledContainer-container-StyledContainer {

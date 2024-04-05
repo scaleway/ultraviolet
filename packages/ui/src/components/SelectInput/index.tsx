@@ -7,10 +7,16 @@ import type {
   ForwardRefExoticComponent,
   ForwardedRef,
   JSX,
-  ReactElement,
   ReactNode,
 } from 'react'
-import { forwardRef, useEffect, useId, useMemo, useState } from 'react'
+import React, {
+  Children,
+  forwardRef,
+  useEffect,
+  useId,
+  useMemo,
+  useState,
+} from 'react'
 import type {
   ClearIndicatorProps,
   CommonProps,
@@ -680,13 +686,19 @@ const FwdSelectInput = ({
   const selectOptions = useMemo(
     () =>
       options ||
-      ((children as ReactElement<{ children: string }>[]) ?? []).map(
-        ({ props: { children: label, ...subProps } }) =>
-          ({
-            ...subProps,
-            label,
-          }) as SelectOption,
-      ),
+      Children.toArray(children).reduce<SelectOption[]>((acc, child) => {
+        if (React.isValidElement<{ children: string; value: string }>(child)) {
+          return [
+            ...acc,
+            {
+              ...child.props,
+              label: child.props.children,
+            } as SelectOption,
+          ]
+        }
+
+        return acc
+      }, []),
     [options, children],
   )
 
