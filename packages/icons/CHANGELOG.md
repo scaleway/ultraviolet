@@ -1,5 +1,18 @@
 # Change Log
 
+## 2.12.0
+
+### Minor Changes
+
+- [#3627](https://github.com/scaleway/ultraviolet/pull/3627) [`a71f616`](https://github.com/scaleway/ultraviolet/commit/a71f6169c53727a1bc0945c2c1d78f96949d4307) Thanks [@matthprost](https://github.com/matthprost)! - New `neutral` and `disabled` states on `<CategoryIcon />` component
+
+### Patch Changes
+
+- [#3615](https://github.com/scaleway/ultraviolet/pull/3615) [`6c1edef`](https://github.com/scaleway/ultraviolet/commit/6c1edef32591c78469be0da9e6b212898a5ff4c5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.74`.
+  Updated dependency `@types/react-dom` to `18.2.23`.
+- Updated dependencies [[`a71f616`](https://github.com/scaleway/ultraviolet/commit/a71f6169c53727a1bc0945c2c1d78f96949d4307)]:
+  - @ultraviolet/themes@1.10.0
+
 ## 2.11.2
 
 ### Patch Changes

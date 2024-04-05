@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.10.0
+
+### Minor Changes
+
+- [#3627](https://github.com/scaleway/ultraviolet/pull/3627) [`a71f616`](https://github.com/scaleway/ultraviolet/commit/a71f6169c53727a1bc0945c2c1d78f96949d4307) Thanks [@matthprost](https://github.com/matthprost)! - New `neutral` and `disabled` states on `<CategoryIcon />` component
+
 ## 1.9.0
 
 ### Minor Changes
