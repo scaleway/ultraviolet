@@ -346,4 +346,19 @@ describe('SelectInput', () => {
         </SelectInput.Option>
       </SelectInput>,
     ))
+
+  test('renders with undefined children', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInput inputId="test" labelId="test-label" name="uncontrolled">
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+        {null}
+      </SelectInput>,
+      {
+        transform: async () => {
+          const input = screen.getByRole('combobox')
+          await userEvent.click(input)
+        },
+      },
+    ))
 })
