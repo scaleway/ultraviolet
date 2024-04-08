@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.45.5
+
+### Patch Changes
+
+- [#3643](https://github.com/scaleway/ultraviolet/pull/3643) [`0db5ccf`](https://github.com/scaleway/ultraviolet/commit/0db5ccf6234e37e5d662115e6ba5189a9273f14b) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Stepper />` component to clean null or undefined children before rendering
+
 ## 1.45.4
 
 ### Patch Changes
