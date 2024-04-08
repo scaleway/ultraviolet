@@ -107,6 +107,11 @@ type MenuProps = {
    */
   portalTarget?: HTMLElement
   size?: keyof typeof SIZES
+  /**
+   * The behavior of the menu when it is opened. If set to `click`, the menu will open when the user clicks on the disclosure.
+   * If set to `hover`, the menu will open when the user hovers over the disclosure.
+   */
+  triggerMethod?: 'click' | 'hover'
 }
 
 const FwdMenu = forwardRef(
@@ -125,6 +130,7 @@ const FwdMenu = forwardRef(
       maxWidth,
       portalTarget,
       size = 'small',
+      triggerMethod = 'click',
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -156,11 +162,11 @@ const FwdMenu = forwardRef(
 
     return (
       <StyledPopup
-        needDebounce={false}
+        debounceDelay={triggerMethod === 'hover' ? 700 : 0}
         hideOnClickOutside
         aria-label={ariaLabel}
         className={className}
-        visible={isVisible}
+        visible={triggerMethod === 'click' ? isVisible : undefined}
         placement={placement}
         hasArrow={hasArrow}
         data-has-arrow={hasArrow}
