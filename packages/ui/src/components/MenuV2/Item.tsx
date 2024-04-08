@@ -6,9 +6,10 @@ import { Tooltip } from '../Tooltip'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
+const ANIMATION_DURATION = 200 // in ms
+
 const itemCoreStyle = ({
   theme,
-  borderless,
   sentiment,
   disabled,
 }: {
@@ -17,7 +18,9 @@ const itemCoreStyle = ({
   sentiment: MenuItemSentiment
   disabled: boolean
 }) => `
-  display: inline-block;
+  display: flex;
+  justify-content: start;
+  align-items: center;
   min-height: 32px;
   max-height: 44px;
   font-size: ${theme.typography.bodySmall.fontSize};
@@ -25,12 +28,11 @@ const itemCoreStyle = ({
   font-weight: inherit;
   padding: ${`${theme.space['0.5']} ${theme.space['1']}`};
   border: none;
-  ${
-    borderless ? '' : `border-bottom: 1px solid ${theme.colors.neutral.border};`
-  }
   cursor: pointer;
   min-width: 110px;
   width: 100%;
+  border-radius: ${theme.radii.default};
+  transition: background-color ${ANIMATION_DURATION}ms, color ${ANIMATION_DURATION}ms;
 
   color: ${theme.colors[sentiment][disabled ? 'textDisabled' : 'text']};
   svg {
@@ -44,7 +46,8 @@ const itemCoreStyle = ({
       `
       : `
           &:hover,
-          &:focus {
+          &:focus, &[data-active='true'] {
+            background-color: ${theme.colors[sentiment].backgroundHover};
             color: ${theme.colors[sentiment].textHover};
             svg {
               fill: ${theme.colors[sentiment].textHover};
@@ -52,6 +55,16 @@ const itemCoreStyle = ({
           }`
   }
   `
+
+const Container = styled('div', {
+  shouldForwardProp: prop => !['borderless'].includes(prop),
+})<{ borderless: boolean }>`
+  ${({ theme, borderless }) =>
+    borderless
+      ? ''
+      : `border-bottom: 1px solid ${theme.colors.neutral.border};`}
+  padding: 4px;
+`
 
 const StyledItem = styled('button', {
   shouldForwardProp: prop => !['borderless', 'sentiment'].includes(prop),
@@ -88,24 +101,23 @@ type ItemProps = {
   className?: string | undefined
   children: ReactNode
   onClick?: MouseEventHandler<HTMLElement> | undefined
-  /**
-   * @deprecated: this props is not used anymore, use `Menu.Separator` instead
-   */
   borderless?: boolean
   sentiment?: MenuItemSentiment
+  active?: boolean
   'data-testid'?: string
 }
 
 const Item = forwardRef<HTMLElement, ItemProps>(
   (
     {
-      borderless = true,
+      borderless = false,
       disabled = false,
       onClick,
       sentiment = 'neutral',
       href,
       children,
       tooltip,
+      active,
       className,
       'data-testid': dataTestId,
     },
@@ -113,9 +125,10 @@ const Item = forwardRef<HTMLElement, ItemProps>(
   ) => {
     if (href && !disabled) {
       return (
-        <div>
+        <Container borderless={borderless}>
           <Tooltip text={tooltip}>
             <StyledLinkItem
+              data-active={active}
               borderless
               href={href}
               ref={ref as Ref<HTMLAnchorElement>}
@@ -133,12 +146,12 @@ const Item = forwardRef<HTMLElement, ItemProps>(
               {children}
             </StyledLinkItem>
           </Tooltip>
-        </div>
+        </Container>
       )
     }
 
     return (
-      <div>
+      <Container borderless={borderless}>
         <Tooltip text={tooltip}>
           <StyledItem
             type="button"
@@ -150,11 +163,12 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             sentiment={sentiment}
             className={className}
             data-testid={dataTestId}
+            data-active={active}
           >
             {children}
           </StyledItem>
         </Tooltip>
-      </div>
+      </Container>
     )
   },
 )

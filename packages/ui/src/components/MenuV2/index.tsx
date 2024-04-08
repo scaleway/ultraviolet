@@ -41,7 +41,7 @@ const StyledPopup = styled(Popup, {
 })<{ size: keyof typeof SIZES }>`
   background-color: ${({ theme }) => theme.colors.neutral.background};
   box-shadow: ${({ theme }) => theme.shadows.menu};
-  padding: ${({ theme }) => theme.space['0.5']};
+  padding: 0;
 
   &[data-has-arrow='true'] {
     &::after {
@@ -51,9 +51,13 @@ const StyledPopup = styled(Popup, {
   }
 
   width: ${({ size }) => SIZES[size]};
+  max-width: none;
 `
 
 const MenuList = styled(Stack)`
+  max-height: 480px;
+  overflow-y: auto;
+  overflow-x: hidden;
   &:after,
   &:before {
     border: solid transparent;

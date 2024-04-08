@@ -27,6 +27,7 @@ export default {
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
 export { Borderless } from './Borderless.stories'
+export { Active } from './Active.stories'
 export { WithModal } from './WithModal.stories'
 export { FunctionDisclosure } from './FunctionDisclosure.stories'
 export { FunctionChildrenToggle } from './FunctionChildrenToggle.stories'
