@@ -153,7 +153,8 @@ export const Stepper = ({
   size = 'medium',
   'data-testid': dataTestId,
 }: StepperProps) => {
-  const lastStep = Children.count(children) - 1
+  const cleanChildren = Children.toArray(children)
+  const lastStep = Children.count(cleanChildren) - 1
 
   return (
     <StyledContainer
@@ -162,7 +163,7 @@ export const Stepper = ({
       labelPosition={labelPosition}
       size={size}
     >
-      {Children.map(children, (child, index) => {
+      {Children.map(cleanChildren, (child, index) => {
         const getTemporal = () => {
           if (selected > index) return 'previous'
 
