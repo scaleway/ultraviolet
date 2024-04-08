@@ -20,11 +20,11 @@ type SelectInputV2Props = {
   /**
    * Place holder when no value defined
    */
-  placeholder: string
+  placeholder?: string
   /**
    * When searchable, placeholder when no value is searched
    */
-  placeholderSearch: string
+  placeholderSearch?: string
   /**
    * Label of the component
    */
@@ -70,7 +70,7 @@ type SelectInputV2Props = {
    */
   required?: boolean
   /**
-   * Whether the field is optional
+   * More information regarding/description ofs the selectInput
    */
   labelDescription?: ReactNode
   /**
@@ -78,13 +78,13 @@ type SelectInputV2Props = {
    */
   direction?: 'row' | 'column'
   /**
+   * Where to place the additional info prop
+   */
+  optionalInfoPlacement?: 'left' | 'right'
+  /**
    * To add custom fixed elements at the bottom of the dropdown
    */
-  popupFooter?: ReactNode
-  /**
-   * The state of the component
-   */
-  state?: 'neutral' | 'danger' | 'success'
+  footer?: ReactNode
   /**
    * Display an error message under the select bar
    */
@@ -93,6 +93,14 @@ type SelectInputV2Props = {
    * Display a success message under the select bar
    */
   success?: string
+  /**
+   * Load more button to implement lazy loading
+   */
+  loadMore?: ReactNode
+  /**
+   * When the options are loading, display a skeleton
+   */
+  isLoading?: boolean
   width?: string | number
   autofocus?: boolean
   'data-testid'?: string
@@ -128,12 +136,11 @@ export const SelectInputV2 = ({
   size = 'medium',
   emptyState,
   direction,
-  state = 'neutral',
   success,
   error,
   'data-testid': dataTestId,
   className,
-  popupFooter,
+  footer,
   placeholderSearch = 'Search in list',
   placeholder = 'Select item',
   searchable = true,
@@ -144,6 +151,9 @@ export const SelectInputV2 = ({
   required = false,
   labelDescription,
   autofocus,
+  loadMore,
+  optionalInfoPlacement = 'right',
+  isLoading,
 }: SelectInputV2Props) => {
   const defaultValue = value ? [value] : []
   const [displayedOptions, setDisplayedOptions] = useState(options)
@@ -172,7 +182,7 @@ export const SelectInputV2 = ({
         searchable={searchable}
         onSearch={setDisplayedOptions}
         placeholder={placeholderSearch}
-        popupFooter={popupFooter}
+        footer={footer}
         onChange={onChange}
         searchInput={searchInput}
         setSearchInput={setSearchInput}
@@ -181,11 +191,14 @@ export const SelectInputV2 = ({
         setIsDropdownVisible={setIsDropdownVisible}
         isDropdownVisible={isDropdownVisible}
         refSelect={ref}
+        loadMore={loadMore}
+        optionalInfoPlacement={optionalInfoPlacement}
+        isLoading={isLoading}
       >
         <Stack gap={0.5} aria-label={ariaLabel}>
           <Stack direction="row" gap={0.5}>
             {label ? (
-              <Text as="div" variant="bodySmallStrong">
+              <Text as="label" variant="bodySmallStrong">
                 {label}
               </Text>
             ) : null}
@@ -204,7 +217,8 @@ export const SelectInputV2 = ({
             placeholder={placeholder}
             isDropdownVisible={isDropdownVisible}
             multiselect={multiselect}
-            state={state}
+            success={success}
+            error={error}
             onChange={onChange}
             selectedValues={selectedValues}
             setSelectedValues={setSelectedValues}

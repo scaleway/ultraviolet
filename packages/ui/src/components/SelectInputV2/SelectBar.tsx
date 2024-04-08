@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { Dispatch, RefObject, SetStateAction } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
@@ -16,7 +16,8 @@ type SelectBarProps = {
   value: OptionType | undefined
   placeholder: string
   multiselect: boolean
-  state: 'neutral' | 'danger' | 'success'
+  success?: string
+  error?: string
   onChange?: (value: (string | undefined)[]) => void
   autoFocus?: boolean
   innerRef: RefObject<HTMLDivElement>
@@ -33,6 +34,19 @@ type StyledInputWrapperProps = {
   openable: boolean
 }
 
+type DisplayValuesProps = {
+  multiselect: boolean
+  refTag: RefObject<HTMLDivElement>
+  width?: number
+  nonOverflowedValues: (OptionType | undefined)[]
+  disabled: boolean
+  readOnly: boolean
+  selectedValues: (OptionType | undefined)[]
+  setSelectedValues: Dispatch<SetStateAction<(OptionType | undefined)[]>>
+  onChange?: (value: (string | undefined)[]) => void
+  overflowed: boolean
+  overflowAmount: number
+}
 const StateStack = styled(Stack)`
   padding-right: ${({ theme }) => theme.space['2']};
   right: 0px;
@@ -43,7 +57,7 @@ const StackTags = styled(Stack, {
   shouldForwardProp: prop => !['width'].includes(prop),
 })<{ width: number | undefined }>`
   max-width: ${({ width }) => width}px;
-  overflow: hidden;
+  overflow: scroll;
 `
 const StyledInputWrapper = styled(Stack, {
   shouldForwardProp: prop =>
@@ -105,43 +119,67 @@ const StyledPlaceholder = styled(Text)`
   align-self: center;
 `
 
-type MakeTagProps = {
-  selectedValues: (OptionType | undefined)[]
-  disabled: boolean
-  readOnly: boolean
-  setSelectedValues: Dispatch<SetStateAction<(OptionType | undefined)[]>>
-  onChange?: (value: (string | undefined)[]) => void
-}
-const makeTags = ({
-  selectedValues,
+const DisplayValues = ({
+  multiselect,
+  refTag,
+  width,
+  nonOverflowedValues,
   disabled,
   readOnly,
+  selectedValues,
   setSelectedValues,
   onChange,
-}: MakeTagProps) =>
-  selectedValues.map(selectedValue => (
-    <CustomTag
-      key={selectedValue?.value}
-      sentiment="neutral"
-      disabled={disabled}
-      onClose={
-        !readOnly
-          ? event => {
-              event.stopPropagation()
-              const newSelectedValues = selectedValues
-                ?.filter(val => val !== selectedValue)
-                .map(val => val?.value)
-              setSelectedValues(
-                selectedValues?.filter(val => val !== selectedValue),
-              )
-              onChange?.(newSelectedValues)
-            }
-          : undefined
-      }
+  overflowed,
+  overflowAmount,
+}: DisplayValuesProps) =>
+  multiselect ? (
+    <StackTags
+      direction="row"
+      gap="1"
+      wrap="nowrap"
+      ref={refTag}
+      width={width}
+      alignItems="center"
     >
-      {selectedValue?.label}
-    </CustomTag>
-  ))
+      {nonOverflowedValues.map((option, index) => (
+        <CustomTag
+          key={option ? option.value : index}
+          sentiment="neutral"
+          disabled={disabled}
+          onClose={
+            !readOnly
+              ? event => {
+                  event.stopPropagation()
+                  const newSelectedValues = selectedValues
+                    ?.filter(val => val !== option)
+                    .map(val => val?.value)
+                  setSelectedValues(
+                    selectedValues?.filter(val => val !== option),
+                  )
+                  onChange?.(newSelectedValues)
+                }
+              : undefined
+          }
+        >
+          {option?.label}
+        </CustomTag>
+      ))}
+      {overflowed ? (
+        <Tag
+          sentiment="neutral"
+          disabled={disabled}
+          key="+"
+          data-testid="plus-tag"
+          aria-label="Plus tag"
+        >
+          <Icon name="plus" />
+          {overflowAmount}
+        </Tag>
+      ) : null}
+    </StackTags>
+  ) : (
+    selectedValues[0]?.label
+  )
 
 export const SelectBar = ({
   size,
@@ -151,7 +189,8 @@ export const SelectBar = ({
   value,
   placeholder,
   multiselect,
-  state,
+  success,
+  error,
   onChange,
   autoFocus,
   innerRef,
@@ -169,68 +208,46 @@ export const SelectBar = ({
     (OptionType | undefined)[]
   >([value])
 
+  const state = useMemo(() => {
+    if (error) {
+      return 'danger'
+    }
+    if (success) {
+      return 'success'
+    }
+
+    return 'neutral'
+  }, [error, success])
   useEffect(() => {
     let tagsWidth = 0
     let computedOverflowAmount = 0
-    let computedOverflowed = false
     let computedNonOverflowedValues: (OptionType | undefined)[] = []
-    if (computedOverflowed) {
-      computedOverflowAmount += 1
-      setOverflowAmount(computedOverflowAmount)
-    } else {
-      for (const selectedValue of selectedValues) {
-        if (selectedValue && selectedValue.label && width) {
-          const totalTagWidth =
-            SIZES_TAG.tagWidth +
-            SIZES_TAG.letterWidth * selectedValue.value.toString().length
-          if (totalTagWidth + tagsWidth > width - 100) {
-            setOverflowed(true)
-            computedOverflowed = true
-            computedOverflowAmount += 1
-            setOverflowAmount(computedOverflowAmount)
-          } else {
-            setOverflowed(false)
-            setNonOverFlowedValues([
-              ...computedNonOverflowedValues,
-              selectedValue,
-            ])
-            computedNonOverflowedValues = [
-              ...computedNonOverflowedValues,
-              selectedValue,
-            ]
-            tagsWidth += totalTagWidth
-          }
+
+    for (const selectedValue of selectedValues) {
+      if (selectedValue && selectedValue.label && width) {
+        const lengthValue = selectedValue.value.length // Better way to find the number of displayed characters?
+        const totalTagWidth =
+          SIZES_TAG.tagWidth + SIZES_TAG.letterWidth * lengthValue
+        if (totalTagWidth + tagsWidth > width - 100) {
+          computedOverflowAmount += 1
+          setOverflowAmount(computedOverflowAmount)
+        } else {
+          computedNonOverflowedValues = [
+            ...computedNonOverflowedValues,
+            selectedValue,
+          ]
+          setNonOverFlowedValues(computedNonOverflowedValues)
+          tagsWidth += totalTagWidth
         }
       }
     }
+    if (computedOverflowAmount === 0) {
+      setOverflowed(false)
+    } else {
+      setOverflowed(true)
+    }
     setOverflowAmount(computedOverflowAmount)
-  }, [selectedValues, width, overflowed])
-
-  const displayValues = () =>
-    multiselect ? (
-      <StackTags
-        direction="row"
-        gap="1"
-        wrap="nowrap"
-        ref={refTag}
-        width={width}
-      >
-        {makeTags({
-          selectedValues: nonOverflowedValues,
-          disabled,
-          readOnly,
-          setSelectedValues,
-          onChange,
-        })}
-        {overflowed ? (
-          <CustomTag sentiment="neutral" disabled={disabled} key="+">
-            +{overflowAmount}
-          </CustomTag>
-        ) : null}
-      </StackTags>
-    ) : (
-      selectedValues[0]?.label
-    )
+  }, [selectedValues, width])
 
   return (
     <StyledInputWrapper
@@ -247,6 +264,7 @@ export const SelectBar = ({
       onClick={
         openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined
       }
+      data-testid="select-bar"
       autoFocus={autoFocus}
       onKeyDown={event => {
         if (event.key === 'ArrowDown') {
@@ -266,21 +284,33 @@ export const SelectBar = ({
       tabIndex={0}
     >
       {selectedValues.length > 0 ? (
-        displayValues()
+        <DisplayValues
+          multiselect={multiselect}
+          refTag={refTag}
+          width={width}
+          nonOverflowedValues={nonOverflowedValues}
+          disabled={disabled}
+          readOnly={readOnly}
+          selectedValues={selectedValues}
+          setSelectedValues={setSelectedValues}
+          onChange={onChange}
+          overflowed={overflowed}
+          overflowAmount={overflowAmount}
+        />
       ) : (
         <StyledPlaceholder as="p" variant="body">
           {placeholder}
         </StyledPlaceholder>
       )}
       <StateStack direction="row" gap={1} alignItems="center">
-        {state === 'danger' ? <Icon name="alert" sentiment="danger" /> : null}
-        {state === 'success' ? (
+        {error ? <Icon name="alert" sentiment="danger" /> : null}
+        {success && !error ? (
           <Icon name="checkbox-circle-outline" sentiment="success" />
         ) : null}
         {clearable && selectedValues.length > 0 ? (
           <Button
             aria-label="clear value"
-            disabled={disabled || !value}
+            disabled={disabled || !value || readOnly}
             variant="ghost"
             size={size === 'small' ? 'xsmall' : 'small'}
             icon="close"
@@ -290,6 +320,7 @@ export const SelectBar = ({
               onChange?.([])
             }}
             sentiment="neutral"
+            data-testid="clear-all"
           />
         ) : null}
         <Icon
@@ -297,6 +328,7 @@ export const SelectBar = ({
           size={size === 'small' ? 'xsmall' : 'small'}
           name="arrow-down"
           sentiment="neutral"
+          disabled={disabled || readOnly}
         />
       </StateStack>
     </StyledInputWrapper>

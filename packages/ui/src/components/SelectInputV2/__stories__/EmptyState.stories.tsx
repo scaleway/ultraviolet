@@ -41,3 +41,11 @@ EmptyState.decorators = [
     </div>
   ),
 ]
+
+EmptyState.parameters = {
+  docs: {
+    description: {
+      story: 'Set a custom `EmptyState` when no option is available.',
+    },
+  },
+}

@@ -27,3 +27,12 @@ OnChange.args = {
   options: dataGrouped,
   multiselect: true,
 }
+
+OnChange.parameters = {
+  docs: {
+    description: {
+      story:
+        'You can pass a function to `OnChange` to deal with selection of options.',
+    },
+  },
+}

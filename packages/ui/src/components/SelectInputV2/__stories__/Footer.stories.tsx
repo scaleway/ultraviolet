@@ -3,9 +3,9 @@ import { Stack } from '../../Stack'
 import { Template } from './Template.stories'
 import { dataGrouped } from './resources'
 
-export const PopupFooter = Template.bind({})
+export const Footer = Template.bind({})
 
-const Footer = () => (
+const PopupFooter = () => (
   <Stack direction="row" gap="1" width="100%">
     <Button variant="outlined" sentiment="primary" fullWidth>
       Button 1
@@ -16,15 +16,23 @@ const Footer = () => (
   </Stack>
 )
 
-PopupFooter.args = {
+Footer.args = {
   ...Template.args,
   options: dataGrouped,
-  popupFooter: <Footer />,
+  footer: <PopupFooter />,
 }
-PopupFooter.decorators = [
+Footer.decorators = [
   StoryComponent => (
     <div style={{ height: '80px' }}>
       <StoryComponent />
     </div>
   ),
 ]
+
+Footer.parameters = {
+  docs: {
+    description: {
+      story: 'Set a custom footer to the dropdown using the `Footer` prop.',
+    },
+  },
+}

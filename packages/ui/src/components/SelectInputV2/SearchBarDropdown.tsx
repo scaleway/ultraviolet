@@ -118,8 +118,9 @@ export const SearchBarDropdown = ({
         })
         onSearch(filteredOptions)
       } else {
-        const filteredOptions = [...options]
-        filteredOptions.filter(option => option.value.match(regex))
+        const filteredOptions = [...options].filter(option =>
+          option.value.match(regex),
+        )
         onSearch(filteredOptions)
       }
     } else {
@@ -165,6 +166,7 @@ export const SearchBarDropdown = ({
         placeholder={placeholder}
         onFocus={() => setSearchBarActive(true)}
         onBlur={() => setSearchBarActive(false)}
+        data-testid="search-bar"
         autoFocus
       />
     </StyledStack>

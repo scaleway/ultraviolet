@@ -16,3 +16,11 @@ Multiselect.decorators = [
     </div>
   ),
 ]
+
+Multiselect.parameters = {
+  docs: {
+    description: {
+      story: '`multiselect` prop let the user selects more than one option.',
+    },
+  },
+}

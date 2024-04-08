@@ -1,15 +1,38 @@
+import { CategoryIcon } from '@ultraviolet/icons'
 import { Badge } from '../../Badge'
 import { Bullet } from '../../Bullet'
 import { Text } from '../../Text'
+import { Tooltip } from '../../Tooltip'
 
 const reactMercury = (
-  <Text as="div" variant="headingLarge">
+  <Text as="div" variant="body">
     Mercury <Badge>Label</Badge>
   </Text>
 )
 
+const marsToolTip = (
+  <Tooltip placement="top" text="This option is disabled">
+    Mars
+  </Tooltip>
+)
 const optionalInfo1 = <Badge>Optional info</Badge>
 const optionalInfo2 = <Bullet text="1" />
+const optionalInfo3 = <CategoryIcon name="network" />
+const optionalInfo41 = (
+  <Text as="span" variant="caption">
+    12
+  </Text>
+)
+const optionalInfo42 = (
+  <Text as="span" variant="caption">
+    3
+  </Text>
+)
+const optionalInfo43 = (
+  <Text as="span" variant="caption">
+    0
+  </Text>
+)
 
 export const dataUnGrouped = [
   {
@@ -30,7 +53,7 @@ export const dataUnGrouped = [
   },
   {
     value: 'mars',
-    label: 'Mars',
+    label: marsToolTip,
     disabled: true,
   },
   {
@@ -204,5 +227,49 @@ export const OptionalInfo2 = [
     label: 'Warsaw',
     disabled: false,
     optionalInfo: optionalInfo2,
+  },
+]
+
+export const OptionalInfo3 = [
+  {
+    value: 'par',
+    label: 'Paris',
+    disabled: false,
+    optionalInfo: optionalInfo3,
+    description: 'France',
+  },
+  {
+    value: 'ams',
+    label: 'Amsterdam',
+    disabled: false,
+    optionalInfo: optionalInfo3,
+  },
+  {
+    value: 'waw',
+    label: 'Warsaw',
+    disabled: false,
+    optionalInfo: optionalInfo3,
+  },
+]
+
+export const OptionalInfo4 = [
+  {
+    value: 'par',
+    label: 'Paris',
+    disabled: false,
+    optionalInfo: optionalInfo41,
+    description: 'France',
+  },
+  {
+    value: 'ams',
+    label: 'Amsterdam',
+    disabled: false,
+    optionalInfo: optionalInfo42,
+  },
+  {
+    value: 'waw',
+    label: 'Warsaw',
+    disabled: false,
+    optionalInfo: optionalInfo43,
   },
 ]

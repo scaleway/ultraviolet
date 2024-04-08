@@ -11,3 +11,12 @@ Grouped.decorators = [
     </div>
   ),
 ]
+
+Grouped.parameters = {
+  docs: {
+    description: {
+      story:
+        'It will detect when the data is grouped and display the options accordingly',
+    },
+  },
+}
