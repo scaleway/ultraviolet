@@ -92,8 +92,12 @@ const PaddingStack = styled(Stack)`
 const AnimatedIcon = styled(Icon)``
 
 const WrapText = styled(Text, {
-  shouldForwardProp: prop => !['animation', 'subLabel'].includes(prop),
-})<{ animation?: 'collapse' | 'expand' | boolean; subLabel?: boolean }>`
+  shouldForwardProp: prop =>
+    !['animation', 'subLabel', 'textProminence'].includes(prop),
+})<{
+  animation?: 'collapse' | 'expand' | boolean
+  subLabel?: boolean
+}>`
   overflow-wrap: ${({ animation }) => (animation ? 'normal' : 'anywhere')};
   white-space: ${({ animation }) => (animation ? 'nowrap' : 'normal')};
 `
@@ -117,6 +121,10 @@ const StyledContainer = styled(Stack)`
     padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   }
 
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+
   width: 100%;
 
   &:hover[data-has-no-expand='false']:not([disabled]):not(
@@ -129,6 +137,9 @@ const StyledContainer = styled(Stack)`
       [disabled][data-is-active='true']
     ) {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
+    ${WrapText} {
+      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
+    }
 
     ${ExpandedPinnedButton}, ${CollapsedPinnedButton} {
       opacity: 1;
@@ -138,6 +149,15 @@ const StyledContainer = styled(Stack)`
       ${StyledBadge} {
         opacity: 0;
       }
+    }
+  }
+
+  &:hover[data-has-children='false'][data-is-active='false'] {
+    ${WrapText} {
+      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
+      transition:
+        background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
     }
   }
 
