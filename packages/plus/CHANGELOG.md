@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.12.3
+
+### Patch Changes
+
+- [#3636](https://github.com/scaleway/ultraviolet/pull/3636) [`3b850d3`](https://github.com/scaleway/ultraviolet/commit/3b850d3691acd1454d2986ea1ac9bd026dc42855) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `18.2.24`.
+
+- [#3642](https://github.com/scaleway/ultraviolet/pull/3642) [`199ddfe`](https://github.com/scaleway/ultraviolet/commit/199ddfef030f2b85a276d70d029c7cda44ef21b8) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` to have correct text color on hover
+
+- Updated dependencies [[`3b850d3`](https://github.com/scaleway/ultraviolet/commit/3b850d3691acd1454d2986ea1ac9bd026dc42855)]:
+  - @ultraviolet/ui@1.45.4
+
 ## 0.12.2
 
 ### Patch Changes
