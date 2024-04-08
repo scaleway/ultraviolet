@@ -137,6 +137,10 @@ const StyledContainer = styled(Stack)`
       [disabled][data-is-active='true']
     ) {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
+    ${WrapText} {
+      color: ${({ theme }) => theme.colors.neutral.textWeakHover};
+    }
+
     ${ExpandedPinnedButton}, ${CollapsedPinnedButton} {
       opacity: 1;
     }
