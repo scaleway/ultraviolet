@@ -1,4 +1,5 @@
 import { ReactComponent as ai } from './assets/ai.svg'
+import { ReactComponent as applicationIntegration } from './assets/application-integration.svg' // This icon is a duplicate of queuing
 import { ReactComponent as baremetal } from './assets/baremetal.svg'
 import { ReactComponent as billing } from './assets/billing.svg'
 import { ReactComponent as compute } from './assets/compute.svg'
@@ -48,4 +49,5 @@ export const CATEGORY_ICONS = {
   labs,
   devTools,
   pin,
+  applicationIntegration,
 } as const

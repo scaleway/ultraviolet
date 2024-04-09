@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.45.6
+
+### Patch Changes
+
+- Updated dependencies [[`f2f9002`](https://github.com/scaleway/ultraviolet/commit/f2f900288bfffd982869460d31647827bc383cd7)]:
+  - @ultraviolet/icons@2.12.2
+
 ## 1.45.5
 
 ### Patch Changes
