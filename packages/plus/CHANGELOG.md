@@ -1,5 +1,12 @@
 # @ultraviolet/plus
 
+## 0.12.5
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @ultraviolet/ui@1.45.6
+
 ## 0.12.4
 
 ### Patch Changes
