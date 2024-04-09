@@ -111,7 +111,6 @@ export const toast = {
   /**
    * @deprecated "Deprecated, please use another variant instead"
    */
-  // eslint-disable-next-line deprecation/deprecation
   info: (
     children: ReactNode,
     options?: ToastOptions,
