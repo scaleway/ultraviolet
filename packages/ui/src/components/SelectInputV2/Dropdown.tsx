@@ -156,7 +156,7 @@ const handleKeyDownSelect = (key: string) => {
   }
 }
 const HandleDropdown = (
-  callback: () => void,
+  setIsDropdownVisibile: Dispatch<SetStateAction<boolean>>,
   isDropdownVisible: boolean,
   onSearch: Dispatch<SetStateAction<DataType>>,
   searchBarActive: boolean,
@@ -167,18 +167,24 @@ const HandleDropdown = (
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
   useEffect(() => {
+    if (!isDropdownVisible) {
+      setDefaultSearch(null)
+      setSearch('')
+    }
+
     const handleClickOutside = (event: MouseEvent) => {
       if (
         ref.current &&
         !ref.current.contains(event.target as Node) &&
         !refSelect.current?.contains(event.target as Node)
       ) {
-        callback()
+        setIsDropdownVisibile(false) // hide dropdown when clicking outside of the dropdown
         onSearch(options) // reset displayed options to default when dropdown is hidden
       }
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
+      // Deals with default search
       if (
         ref.current &&
         !searchBarActive &&
@@ -215,9 +221,6 @@ const HandleDropdown = (
         }
       }
     }
-    if (!isDropdownVisible) {
-      setDefaultSearch(null)
-    }
 
     document.addEventListener('mousedown', handleClickOutside)
     document.addEventListener('keydown', handleKeyDown)
@@ -227,7 +230,7 @@ const HandleDropdown = (
       document.removeEventListener('keydown', handleKeyDown)
     }
   }, [
-    callback,
+    setIsDropdownVisibile,
     isDropdownVisible,
     searchBarActive,
     options,
@@ -275,7 +278,7 @@ const CreateDropdown = ({
     if (defaultSearchValue && focusedItemRef?.current) {
       focusedItemRef.current.focus()
     }
-  })
+  }, [defaultSearchValue])
 
   if (isEmpty) {
     return (
@@ -385,6 +388,7 @@ const CreateDropdown = ({
         <Checkbox
           checked={selectedValues.includes(option)}
           disabled={option.disabled}
+          value={option.value}
           onChange={() => {
             if (!option.disabled) {
               handleClick(option)
@@ -499,9 +503,7 @@ export const Dropdown = ({
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
   const maxWidth = refSelect.current?.offsetWidth
   const ref = HandleDropdown(
-    () => {
-      setIsDropdownVisible(false)
-    },
+    setIsDropdownVisible,
     isDropdownVisible,
     onSearch,
     searchBarActive,

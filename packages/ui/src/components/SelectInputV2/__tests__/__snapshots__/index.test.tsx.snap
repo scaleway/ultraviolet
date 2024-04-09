@@ -523,1481 +523,6 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SelectInputV2 renders correctly dropdown with arrow down/up key press with grouped data 1`] = `
-<DocumentFragment>
-  .css-832x4l-SelectInputContainer {
-  width: 100%;
-}
-
-.css-1hzk1lh-StyledChildrenContainer {
-  display: inherit;
-}
-
-.css-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
-  width: 100%;
-}
-
-.css-ymc80m-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 40px;
-  padding: 8px;
-  padding-right: 0;
-  padding-left: 16px;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper:hover,
-.css-1mgniog-Stack-StyledInputWrapper:focus {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.css-upswjq-StyledText-StyledPlaceholder {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.css-ql1zbn-Stack-StateStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 16px;
-  right: 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.css-1gskhdj {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.css-1gskhdj .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.css-pf3qax-StyledPopup-StyledPopup {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
-  text-align: center;
-  position: absolute;
-  max-width: 0px;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 12px, 0);
-  -moz-transform: translate3d(0px, 12px, 0);
-  -ms-transform: translate3d(0px, 12px, 0);
-  transform: translate3d(0px, 12px, 0);
-  width: 100%;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  padding: 0;
-}
-
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
-  content: ' ';
-  position: absolute;
-  top: -13px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.css-1guc91g-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-kgxeo2-DropdownContainer {
-  max-height: 256px;
-  overflow: scroll;
-  padding: 0px;
-}
-
-.css-104ot6i-Stack-DropdownGroup {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  height: 32px;
-  background-color: #f9f9fa;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  height: 32px;
-  z-index: 1;
-}
-
-.css-q9kxzk-StyledText-StyledTextGroup {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  line-height: 32px;
-}
-
-.css-1j0568d-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  color: #3f4250;
-}
-
-.css-1j0568d-DropdownItem:hover,
-.css-1j0568d-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: pointer;
-  outline: none;
-}
-
-.css-qrj8hh-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-1ug7ot4-StyledText {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1e8qouo-StyledText {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.css-17bgpzb-StyledText-StyledSpan {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
-}
-
-.css-1wtuodf-StyledText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    aria-label="test"
-    class="css-832x4l-SelectInputContainer ebdnz3x0"
-  >
-    <div
-      aria-controls=":rec:"
-      aria-describedby=":rec:"
-      class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
-      data-container-full-width="true"
-      tabindex="0"
-    >
-      <div
-        class="css-ymc80m-Stack ehpbis70"
-      >
-        <div
-          class="css-wfyv8s-Stack ehpbis70"
-        />
-        <div
-          aria-controls="select-dropdown"
-          aria-expanded="true"
-          aria-haspopup="listbox"
-          aria-labelledby="select bar"
-          class="css-1mgniog-Stack-StyledInputWrapper ejy0aca2"
-          data-disabled="false"
-          data-readonly="false"
-          data-testid="select-bar"
-          tabindex="0"
-        >
-          <p
-            class="ejy0aca0 css-upswjq-StyledText-StyledPlaceholder e13y3mga0"
-          >
-            placeholder
-          </p>
-          <div
-            class="css-ql1zbn-Stack-StateStack ejy0aca4"
-          >
-            <svg
-              class="css-1gskhdj e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
-        data-has-arrow="false"
-        id=":rec:"
-        role="dialog"
-      >
-        <div
-          class="css-1guc91g-Stack ehpbis70"
-        >
-          <div
-            class="css-kgxeo2-DropdownContainer eeucz6c4"
-            id="select-dropdown"
-            role="listbox"
-          >
-            <div>
-              <div
-                class="css-104ot6i-Stack-DropdownGroup eeucz6c3"
-              >
-                <span
-                  class="eeucz6c1 css-q9kxzk-StyledText-StyledTextGroup e13y3mga0"
-                >
-                  TERRESTRIAL PLANETS
-                </span>
-              </div>
-              <div
-                class="css-1guc91g-Stack ehpbis70"
-                id="items"
-              >
-                <button
-                  aria-label="mercury"
-                  class="css-1j0568d-DropdownItem eeucz6c2"
-                  data-testid="option-0"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          <div
-                            class="css-1e8qouo-StyledText e13y3mga0"
-                          >
-                            Mercury 
-                            <span
-                              class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                            >
-                              Label
-                            </span>
-                          </div>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  aria-label="venus"
-                  class="css-1j0568d-DropdownItem eeucz6c2"
-                  data-testid="option-1"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Venus
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  aria-label="earth"
-                  class="css-1j0568d-DropdownItem eeucz6c2"
-                  data-testid="option-2"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Earth
-                        </span>
-                      </div>
-                      <span
-                        class="css-1p3f4r5-StyledText e13y3mga0"
-                      >
-                        Our home planet
-                      </span>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  aria-label="mars"
-                  class="css-1x19oh-DropdownItem eeucz6c2"
-                  data-testid="option-3"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Mars
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  aria-label="pluto"
-                  class="css-1j0568d-DropdownItem eeucz6c2"
-                  data-testid="option-4"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Pluto
-                        </span>
-                      </div>
-                      <span
-                        class="css-1p3f4r5-StyledText e13y3mga0"
-                      >
-                        Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
-                      </span>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div>
-              <div
-                class="css-104ot6i-Stack-DropdownGroup eeucz6c3"
-              >
-                <span
-                  class="eeucz6c1 css-q9kxzk-StyledText-StyledTextGroup e13y3mga0"
-                >
-                  JOVIAN PLANETS
-                </span>
-              </div>
-              <div
-                class="css-1guc91g-Stack ehpbis70"
-                id="items"
-              >
-                <button
-                  aria-label="jupiter"
-                  class="css-1j0568d-DropdownItem eeucz6c2"
-                  data-testid="option-0"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Jupiter
-                        </span>
-                      </div>
-                      <span
-                        class="css-1p3f4r5-StyledText e13y3mga0"
-                      >
-                        Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
-                      </span>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  aria-label="saturn"
-                  class="css-1j0568d-DropdownItem eeucz6c2"
-                  data-testid="option-1"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Saturn
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  aria-label="uranus"
-                  class="css-1j0568d-DropdownItem eeucz6c2"
-                  data-testid="option-2"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Uranus
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  aria-label="neptune"
-                  class="css-1j0568d-DropdownItem eeucz6c2"
-                  data-testid="option-3"
-                  role="option"
-                >
-                  <div
-                    class="css-1guc91g-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-ymc80m-Stack ehpbis70"
-                    >
-                      <div
-                        class="css-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="css-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Neptune
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p
-      class="css-1wtuodf-StyledText e13y3mga0"
-    />
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SelectInputV2 renders correctly dropdown with arrow down/up key press with ungrouped data 1`] = `
-<DocumentFragment>
-  .css-832x4l-SelectInputContainer {
-  width: 100%;
-}
-
-.css-1hzk1lh-StyledChildrenContainer {
-  display: inherit;
-}
-
-.css-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
-  width: 100%;
-}
-
-.css-ymc80m-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 40px;
-  padding: 8px;
-  padding-right: 0;
-  padding-left: 16px;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper:hover,
-.css-1mgniog-Stack-StyledInputWrapper:focus {
-  border-color: #792dd4;
-  outline: none;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
-  border-color: #8c40ef;
-}
-
-.css-1mgniog-Stack-StyledInputWrapper:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.css-upswjq-StyledText-StyledPlaceholder {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.css-ql1zbn-Stack-StateStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-right: 16px;
-  right: 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.css-1gskhdj {
-  vertical-align: middle;
-  fill: #3f4250;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.css-1gskhdj .fillStroke {
-  stroke: #3f4250;
-  fill: none;
-}
-
-.css-pf3qax-StyledPopup-StyledPopup {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
-  text-align: center;
-  position: absolute;
-  max-width: 0px;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 12px, 0);
-  -moz-transform: translate3d(0px, 12px, 0);
-  -ms-transform: translate3d(0px, 12px, 0);
-  transform: translate3d(0px, 12px, 0);
-  width: 100%;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 0px 8px 2px #d9dadd66;
-  padding: 0;
-}
-
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
-  content: ' ';
-  position: absolute;
-  top: -13px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.css-1guc91g-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-kgxeo2-DropdownContainer {
-  max-height: 256px;
-  overflow: scroll;
-  padding: 0px;
-}
-
-.css-1j0568d-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  color: #3f4250;
-}
-
-.css-1j0568d-DropdownItem:hover,
-.css-1j0568d-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: pointer;
-  outline: none;
-}
-
-.css-qrj8hh-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.css-1ug7ot4-StyledText {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1e8qouo-StyledText {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.css-17bgpzb-StyledText-StyledSpan {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
-  color: #3f4250;
-  background: #f9f9fa;
-  border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
-}
-
-.css-1wtuodf-StyledText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    aria-label="test"
-    class="css-832x4l-SelectInputContainer ebdnz3x0"
-  >
-    <div
-      aria-controls=":rds:"
-      aria-describedby=":rds:"
-      class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
-      data-container-full-width="true"
-      tabindex="0"
-    >
-      <div
-        class="css-ymc80m-Stack ehpbis70"
-      >
-        <div
-          class="css-wfyv8s-Stack ehpbis70"
-        />
-        <div
-          aria-controls="select-dropdown"
-          aria-expanded="true"
-          aria-haspopup="listbox"
-          aria-labelledby="select bar"
-          class="css-1mgniog-Stack-StyledInputWrapper ejy0aca2"
-          data-disabled="false"
-          data-readonly="false"
-          data-testid="select-bar"
-          tabindex="0"
-        >
-          <p
-            class="ejy0aca0 css-upswjq-StyledText-StyledPlaceholder e13y3mga0"
-          >
-            placeholder
-          </p>
-          <div
-            class="css-ql1zbn-Stack-StateStack ejy0aca4"
-          >
-            <svg
-              class="css-1gskhdj e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
-        data-has-arrow="false"
-        id=":rds:"
-        role="dialog"
-      >
-        <div
-          class="css-1guc91g-Stack ehpbis70"
-        >
-          <div
-            class="css-kgxeo2-DropdownContainer eeucz6c4"
-            id="select-dropdown"
-            role="listbox"
-          >
-            <div
-              class="css-1guc91g-Stack ehpbis70"
-              id="items"
-            >
-              <button
-                aria-label="mercury"
-                class="css-1j0568d-DropdownItem eeucz6c2"
-                data-testid="option-0"
-                role="option"
-              >
-                <div
-                  class="css-1guc91g-Stack ehpbis70"
-                >
-                  <div
-                    class="css-ymc80m-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-qrj8hh-Stack ehpbis70"
-                    >
-                      <span
-                        class="css-1ug7ot4-StyledText e13y3mga0"
-                      >
-                        <div
-                          class="css-1e8qouo-StyledText e13y3mga0"
-                        >
-                          Mercury 
-                          <span
-                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                          >
-                            Label
-                          </span>
-                        </div>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </button>
-              <button
-                aria-label="venus"
-                class="css-1j0568d-DropdownItem eeucz6c2"
-                data-testid="option-1"
-                role="option"
-              >
-                <div
-                  class="css-1guc91g-Stack ehpbis70"
-                >
-                  <div
-                    class="css-ymc80m-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-qrj8hh-Stack ehpbis70"
-                    >
-                      <span
-                        class="css-1ug7ot4-StyledText e13y3mga0"
-                      >
-                        Venus
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </button>
-              <button
-                aria-label="earth"
-                class="css-1j0568d-DropdownItem eeucz6c2"
-                data-testid="option-2"
-                role="option"
-              >
-                <div
-                  class="css-1guc91g-Stack ehpbis70"
-                >
-                  <div
-                    class="css-ymc80m-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-qrj8hh-Stack ehpbis70"
-                    >
-                      <span
-                        class="css-1ug7ot4-StyledText e13y3mga0"
-                      >
-                        Earth
-                      </span>
-                    </div>
-                    <span
-                      class="css-1p3f4r5-StyledText e13y3mga0"
-                    >
-                      Our home planet
-                    </span>
-                  </div>
-                </div>
-              </button>
-              <button
-                aria-label="mars"
-                class="css-1x19oh-DropdownItem eeucz6c2"
-                data-testid="option-3"
-                role="option"
-              >
-                <div
-                  class="css-1guc91g-Stack ehpbis70"
-                >
-                  <div
-                    class="css-ymc80m-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-qrj8hh-Stack ehpbis70"
-                    >
-                      <span
-                        class="css-1ug7ot4-StyledText e13y3mga0"
-                      >
-                        <div
-                          aria-controls=":re6:"
-                          aria-describedby=":re6:"
-                          class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
-                          tabindex="0"
-                        >
-                          Mars
-                        </div>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </button>
-              <button
-                aria-label="jupiter"
-                class="css-1j0568d-DropdownItem eeucz6c2"
-                data-testid="option-4"
-                role="option"
-              >
-                <div
-                  class="css-1guc91g-Stack ehpbis70"
-                >
-                  <div
-                    class="css-ymc80m-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-qrj8hh-Stack ehpbis70"
-                    >
-                      <span
-                        class="css-1ug7ot4-StyledText e13y3mga0"
-                      >
-                        Jupiter
-                      </span>
-                    </div>
-                    <span
-                      class="css-1p3f4r5-StyledText e13y3mga0"
-                    >
-                      Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
-                    </span>
-                  </div>
-                </div>
-              </button>
-              <button
-                aria-label="saturn"
-                class="css-1j0568d-DropdownItem eeucz6c2"
-                data-testid="option-5"
-                role="option"
-              >
-                <div
-                  class="css-1guc91g-Stack ehpbis70"
-                >
-                  <div
-                    class="css-ymc80m-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-qrj8hh-Stack ehpbis70"
-                    >
-                      <span
-                        class="css-1ug7ot4-StyledText e13y3mga0"
-                      >
-                        Saturn
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </button>
-              <button
-                aria-label="uranus"
-                class="css-1j0568d-DropdownItem eeucz6c2"
-                data-testid="option-6"
-                role="option"
-              >
-                <div
-                  class="css-1guc91g-Stack ehpbis70"
-                >
-                  <div
-                    class="css-ymc80m-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-qrj8hh-Stack ehpbis70"
-                    >
-                      <span
-                        class="css-1ug7ot4-StyledText e13y3mga0"
-                      >
-                        Uranus
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </button>
-              <button
-                aria-label="neptune"
-                class="css-1j0568d-DropdownItem eeucz6c2"
-                data-testid="option-7"
-                role="option"
-              >
-                <div
-                  class="css-1guc91g-Stack ehpbis70"
-                >
-                  <div
-                    class="css-ymc80m-Stack ehpbis70"
-                  >
-                    <div
-                      class="css-qrj8hh-Stack ehpbis70"
-                    >
-                      <span
-                        class="css-1ug7ot4-StyledText e13y3mga0"
-                      >
-                        Neptune
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p
-      class="css-1wtuodf-StyledText e13y3mga0"
-    />
-  </div>
-</DocumentFragment>
-`;
-
 exports[`SelectInputV2 renders correctly grouped 1`] = `
 <DocumentFragment>
   .css-832x4l-SelectInputContainer {
@@ -2183,14 +708,14 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -2208,7 +733,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2425,6 +950,35 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   text-align: left;
 }
 
+.css-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.css-1x19oh-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  color: #b5b7bd;
+}
+
+.css-1x19oh-DropdownItem:hover,
+.css-1x19oh-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
 .css-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2471,35 +1025,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .css-1wtuodf-StyledText {
@@ -2565,7 +1090,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":rn:"
         role="dialog"
@@ -2631,16 +1156,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                         <span
                           class="css-1ug7ot4-StyledText e13y3mga0"
                         >
-                          <div
-                            class="css-1e8qouo-StyledText e13y3mga0"
-                          >
-                            Mercury 
-                            <span
-                              class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                            >
-                              Label
-                            </span>
-                          </div>
+                          Mercury
                         </span>
                       </div>
                     </div>
@@ -2863,7 +1379,16 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                         <span
                           class="css-1ug7ot4-StyledText e13y3mga0"
                         >
-                          Neptune
+                          <div
+                            class="css-1e8qouo-StyledText e13y3mga0"
+                          >
+                            Neptune 
+                            <span
+                              class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                            >
+                              Label
+                            </span>
+                          </div>
                         </span>
                       </div>
                     </div>
@@ -3001,7 +1526,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.css-1il1bmy-Stack-StackTags {
+.css-1ooox0p-Stack-StackTags {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3022,7 +1547,8 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 0px;
+  width: 500;
+  max-width: 500px;
   overflow: scroll;
 }
 
@@ -3245,14 +1771,14 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -3270,7 +1796,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -3765,6 +2291,51 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   text-align: left;
 }
 
+.css-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.css-1x19oh-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  color: #b5b7bd;
+}
+
+.css-1x19oh-DropdownItem:hover,
+.css-1x19oh-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
+.css-16q4k4l-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f1eefc;
+  padding: 12px 16px 12px 16px;
+  color: #3f4250;
+}
+
+.css-16q4k4l-DropdownItem:hover,
+.css-16q4k4l-DropdownItem:focus {
+  background-color: #f1eefc;
+  color: #641cb3;
+  cursor: pointer;
+  outline: none;
+}
+
 .css-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -3813,51 +2384,6 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
-}
-
-.css-16q4k4l-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f1eefc;
-  padding: 12px 16px 12px 16px;
-  color: #3f4250;
-}
-
-.css-16q4k4l-DropdownItem:hover,
-.css-16q4k4l-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: pointer;
-  outline: none;
-}
-
 .css-1wtuodf-StyledText {
   color: #3f4250;
   font-size: 12px;
@@ -3899,10 +2425,11 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
           tabindex="0"
         >
           <div
-            class="css-1il1bmy-Stack-StackTags ejy0aca3"
+            class="css-1ooox0p-Stack-StackTags ejy0aca3"
           >
             <span
               class="ejy0aca1 css-1pspy8e-StyledContainer-CustomTag el6733p2"
+              data-testid="selected-options-tags"
             >
               <span
                 class="el6733p1 css-1olt749-StyledText-StyledText e13y3mga0"
@@ -3961,7 +2488,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r1t:"
         role="dialog"
@@ -4027,7 +2554,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
                       id=":r23:"
                       type="checkbox"
-                      value=""
+                      value="mercury"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4076,16 +2603,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                               <span
                                 class="css-1ug7ot4-StyledText e13y3mga0"
                               >
-                                <div
-                                  class="css-1e8qouo-StyledText e13y3mga0"
-                                >
-                                  Mercury 
-                                  <span
-                                    class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                                  >
-                                    Label
-                                  </span>
-                                </div>
+                                Mercury
                               </span>
                             </div>
                           </div>
@@ -4110,9 +2628,9 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r28:"
+                      id=":r26:"
                       type="checkbox"
-                      value=""
+                      value="venus"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4150,7 +2668,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="css-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r28:"
+                          for=":r26:"
                         >
                           <div
                             class="css-ymc80m-Stack ehpbis70"
@@ -4186,9 +2704,9 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2b:"
+                      id=":r29:"
                       type="checkbox"
-                      value=""
+                      value="earth"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4226,7 +2744,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="css-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2b:"
+                          for=":r29:"
                         >
                           <div
                             class="css-ymc80m-Stack ehpbis70"
@@ -4268,9 +2786,9 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
                       disabled=""
-                      id=":r2f:"
+                      id=":r2d:"
                       type="checkbox"
-                      value=""
+                      value="mars"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4308,7 +2826,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="css-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2f:"
+                          for=":r2d:"
                         >
                           <div
                             class="css-ymc80m-Stack ehpbis70"
@@ -4345,9 +2863,9 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       checked=""
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2i:"
+                      id=":r2g:"
                       type="checkbox"
-                      value=""
+                      value="pluto"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4385,7 +2903,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="css-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2i:"
+                          for=":r2g:"
                         >
                           <div
                             class="css-ymc80m-Stack ehpbis70"
@@ -4442,9 +2960,9 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2n:"
+                      id=":r2l:"
                       type="checkbox"
-                      value=""
+                      value="jupiter"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4482,7 +3000,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="css-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2n:"
+                          for=":r2l:"
                         >
                           <div
                             class="css-ymc80m-Stack ehpbis70"
@@ -4523,9 +3041,9 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2r:"
+                      id=":r2p:"
                       type="checkbox"
-                      value=""
+                      value="saturn"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4563,7 +3081,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="css-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2r:"
+                          for=":r2p:"
                         >
                           <div
                             class="css-ymc80m-Stack ehpbis70"
@@ -4599,9 +3117,9 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2u:"
+                      id=":r2s:"
                       type="checkbox"
-                      value=""
+                      value="uranus"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4639,7 +3157,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="css-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2u:"
+                          for=":r2s:"
                         >
                           <div
                             class="css-ymc80m-Stack ehpbis70"
@@ -4675,9 +3193,9 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="css-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r31:"
+                      id=":r2v:"
                       type="checkbox"
-                      value=""
+                      value="neptune"
                     />
                     <svg
                       class="css-1acemqq-StyledIcon eqr7bqq4"
@@ -4715,7 +3233,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="css-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r31:"
+                          for=":r2v:"
                         >
                           <div
                             class="css-ymc80m-Stack ehpbis70"
@@ -4726,7 +3244,16 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                               <span
                                 class="css-1ug7ot4-StyledText e13y3mga0"
                               >
-                                Neptune
+                                <div
+                                  class="css-1e8qouo-StyledText e13y3mga0"
+                                >
+                                  Neptune 
+                                  <span
+                                    class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                                  >
+                                    Label
+                                  </span>
+                                </div>
                               </span>
                             </div>
                           </div>
@@ -5200,14 +3727,14 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -5225,7 +3752,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -5400,6 +3927,35 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   text-align: left;
 }
 
+.css-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.css-1x19oh-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  color: #b5b7bd;
+}
+
+.css-1x19oh-DropdownItem:hover,
+.css-1x19oh-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
 .css-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -5446,35 +4002,6 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .css-1wtuodf-StyledText {
@@ -5550,7 +4077,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r62:"
         role="dialog"
@@ -5606,16 +4133,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        <div
-                          class="css-1e8qouo-StyledText e13y3mga0"
-                        >
-                          Mercury 
-                          <span
-                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                          >
-                            Label
-                          </span>
-                        </div>
+                        Mercury
                       </span>
                     </div>
                   </div>
@@ -5693,8 +4211,8 @@ exports[`SelectInputV2 renders correctly required 1`] = `
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
                         <div
-                          aria-controls=":r6c:"
-                          aria-describedby=":r6c:"
+                          aria-controls=":r6a:"
+                          aria-describedby=":r6a:"
                           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
                           tabindex="0"
                         >
@@ -5800,7 +4318,16 @@ exports[`SelectInputV2 renders correctly required 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        Neptune
+                        <div
+                          class="css-1e8qouo-StyledText e13y3mga0"
+                        >
+                          Neptune 
+                          <span
+                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                          >
+                            Label
+                          </span>
+                        </div>
                       </span>
                     </div>
                   </div>
@@ -6003,14 +4530,14 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -6028,7 +4555,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -6203,6 +4730,35 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   text-align: left;
 }
 
+.css-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.css-1x19oh-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  color: #b5b7bd;
+}
+
+.css-1x19oh-DropdownItem:hover,
+.css-1x19oh-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
 .css-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -6249,35 +4805,6 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .css-1wtuodf-StyledText {
@@ -6343,7 +4870,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r7:"
         role="dialog"
@@ -6399,16 +4926,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        <div
-                          class="css-1e8qouo-StyledText e13y3mga0"
-                        >
-                          Mercury 
-                          <span
-                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                          >
-                            Label
-                          </span>
-                        </div>
+                        Mercury
                       </span>
                     </div>
                   </div>
@@ -6486,8 +5004,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
                         <div
-                          aria-controls=":rh:"
-                          aria-describedby=":rh:"
+                          aria-controls=":rf:"
+                          aria-describedby=":rf:"
                           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
                           tabindex="0"
                         >
@@ -6593,7 +5111,16 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        Neptune
+                        <div
+                          class="css-1e8qouo-StyledText e13y3mga0"
+                        >
+                          Neptune 
+                          <span
+                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                          >
+                            Label
+                          </span>
+                        </div>
                       </span>
                     </div>
                   </div>
@@ -6841,14 +5368,14 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -6866,7 +5393,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -7083,6 +5610,51 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   text-align: left;
 }
 
+.css-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.css-1x19oh-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  color: #b5b7bd;
+}
+
+.css-1x19oh-DropdownItem:hover,
+.css-1x19oh-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
+.css-16q4k4l-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f1eefc;
+  padding: 12px 16px 12px 16px;
+  color: #3f4250;
+}
+
+.css-16q4k4l-DropdownItem:hover,
+.css-16q4k4l-DropdownItem:focus {
+  background-color: #f1eefc;
+  color: #641cb3;
+  cursor: pointer;
+  outline: none;
+}
+
 .css-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -7129,51 +5701,6 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
-}
-
-.css-16q4k4l-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f1eefc;
-  padding: 12px 16px 12px 16px;
-  color: #3f4250;
-}
-
-.css-16q4k4l-DropdownItem:hover,
-.css-16q4k4l-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: pointer;
-  outline: none;
 }
 
 .css-1wtuodf-StyledText {
@@ -7251,7 +5778,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r1a:"
         role="dialog"
@@ -7317,16 +5844,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                         <span
                           class="css-1ug7ot4-StyledText e13y3mga0"
                         >
-                          <div
-                            class="css-1e8qouo-StyledText e13y3mga0"
-                          >
-                            Mercury 
-                            <span
-                              class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                            >
-                              Label
-                            </span>
-                          </div>
+                          Mercury
                         </span>
                       </div>
                     </div>
@@ -7549,7 +6067,16 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                         <span
                           class="css-1ug7ot4-StyledText e13y3mga0"
                         >
-                          Neptune
+                          <div
+                            class="css-1e8qouo-StyledText e13y3mga0"
+                          >
+                            Neptune 
+                            <span
+                              class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                            >
+                              Label
+                            </span>
+                          </div>
                         </span>
                       </div>
                     </div>
@@ -7753,14 +6280,14 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -7778,7 +6305,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -7960,7 +6487,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r5s:"
         role="dialog"
@@ -8199,14 +6726,14 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -8224,7 +6751,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -8399,6 +6926,35 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   text-align: left;
 }
 
+.css-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.css-1x19oh-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  color: #b5b7bd;
+}
+
+.css-1x19oh-DropdownItem:hover,
+.css-1x19oh-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
 .css-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -8445,35 +7001,6 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .css-vdlwt8-StyledText {
@@ -8550,7 +7077,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r6l:"
         role="dialog"
@@ -8606,16 +7133,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        <div
-                          class="css-1e8qouo-StyledText e13y3mga0"
-                        >
-                          Mercury 
-                          <span
-                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                          >
-                            Label
-                          </span>
-                        </div>
+                        Mercury
                       </span>
                     </div>
                   </div>
@@ -8693,8 +7211,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
                         <div
-                          aria-controls=":r6v:"
-                          aria-describedby=":r6v:"
+                          aria-controls=":r6t:"
+                          aria-describedby=":r6t:"
                           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
                           tabindex="0"
                         >
@@ -8800,7 +7318,16 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        Neptune
+                        <div
+                          class="css-1e8qouo-StyledText e13y3mga0"
+                        >
+                          Neptune 
+                          <span
+                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                          >
+                            Label
+                          </span>
+                        </div>
                       </span>
                     </div>
                   </div>
@@ -9258,14 +7785,14 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -9283,7 +7810,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -9648,7 +8175,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r4g:"
         role="dialog"
@@ -10165,14 +8692,14 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -10190,7 +8717,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -10532,7 +9059,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r56:"
         role="dialog"
@@ -11049,14 +9576,14 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -11074,7 +9601,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -11439,7 +9966,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r34:"
         role="dialog"
@@ -11956,14 +10483,14 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -11981,7 +10508,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -12346,7 +10873,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r3q:"
         role="dialog"
@@ -12863,14 +11390,14 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -12888,7 +11415,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -12983,6 +11510,35 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   text-align: left;
 }
 
+.css-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.css-1x19oh-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  color: #b5b7bd;
+}
+
+.css-1x19oh-DropdownItem:hover,
+.css-1x19oh-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
 .css-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -13029,35 +11585,6 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .css-1wtuodf-StyledText {
@@ -13123,7 +11650,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r7l:"
         role="dialog"
@@ -13158,16 +11685,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        <div
-                          class="css-1e8qouo-StyledText e13y3mga0"
-                        >
-                          Mercury 
-                          <span
-                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                          >
-                            Label
-                          </span>
-                        </div>
+                        Mercury
                       </span>
                     </div>
                   </div>
@@ -13245,8 +11763,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
                         <div
-                          aria-controls=":r7v:"
-                          aria-describedby=":r7v:"
+                          aria-controls=":r7t:"
+                          aria-describedby=":r7t:"
                           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
                           tabindex="0"
                         >
@@ -13352,7 +11870,16 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        Neptune
+                        <div
+                          class="css-1e8qouo-StyledText e13y3mga0"
+                        >
+                          Neptune 
+                          <span
+                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                          >
+                            Label
+                          </span>
+                        </div>
                       </span>
                     </div>
                   </div>
@@ -13569,14 +12096,14 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   fill: none;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup {
+.css-5iyk4c-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
   padding: 4px 8px;
   text-align: center;
   position: absolute;
-  max-width: 0px;
+  max-width: 500px;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -13594,7 +12121,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   padding: 0;
 }
 
-.css-pf3qax-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.css-5iyk4c-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -13769,6 +12296,35 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   text-align: left;
 }
 
+.css-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.css-1x19oh-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  color: #b5b7bd;
+}
+
+.css-1x19oh-DropdownItem:hover,
+.css-1x19oh-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
 .css-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -13815,35 +12371,6 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
-}
-
-.css-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.css-1x19oh-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #f3f3f4;
-  padding: 12px 16px 12px 16px;
-  color: #b5b7bd;
-}
-
-.css-1x19oh-DropdownItem:hover,
-.css-1x19oh-DropdownItem:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .css-1n7fwv3-StyledText {
@@ -13920,7 +12447,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c5 css-pf3qax-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c5 css-5iyk4c-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r75:"
         role="dialog"
@@ -13976,16 +12503,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        <div
-                          class="css-1e8qouo-StyledText e13y3mga0"
-                        >
-                          Mercury 
-                          <span
-                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
-                          >
-                            Label
-                          </span>
-                        </div>
+                        Mercury
                       </span>
                     </div>
                   </div>
@@ -14063,8 +12581,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
                         <div
-                          aria-controls=":r7f:"
-                          aria-describedby=":r7f:"
+                          aria-controls=":r7d:"
+                          aria-describedby=":r7d:"
                           class="css-1hzk1lh-StyledChildrenContainer e4h1g860"
                           tabindex="0"
                         >
@@ -14170,7 +12688,16 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                       <span
                         class="css-1ug7ot4-StyledText e13y3mga0"
                       >
-                        Neptune
+                        <div
+                          class="css-1e8qouo-StyledText e13y3mga0"
+                        >
+                          Neptune 
+                          <span
+                            class="ej33bna0 css-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                          >
+                            Label
+                          </span>
+                        </div>
                       </span>
                     </div>
                   </div>

@@ -143,6 +143,7 @@ const DisplayValues = ({
     >
       {nonOverflowedValues.map((option, index) => (
         <CustomTag
+          data-testid="selected-options-tags"
           key={option ? option.value : index}
           sentiment="neutral"
           disabled={disabled}

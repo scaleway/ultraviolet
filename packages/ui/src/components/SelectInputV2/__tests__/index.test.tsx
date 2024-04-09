@@ -1,6 +1,8 @@
-import { describe, expect, test } from '@jest/globals'
-import { screen } from '@testing-library/react'
+import { beforeAll, describe, expect, jest, test } from '@jest/globals'
+import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import type { ReactNode } from 'react'
+import { act } from 'react-dom/test-utils'
 import { SelectInputV2 } from '..'
 import {
   renderWithTheme,
@@ -11,6 +13,14 @@ import {
   dataGrouped,
   dataUnGrouped,
 } from '../__stories__/resources'
+
+export type OptionType = {
+  value: string
+  label: ReactNode
+  disabled: boolean
+  description?: string
+  optionalInfo?: ReactNode
+}
 
 describe('SelectInputV2', () => {
   test('renders correctly', () =>
@@ -319,31 +329,6 @@ describe('SelectInputV2', () => {
     expect(dropdown).not.toBeInTheDocument()
   })
 
-  test('renders correctly selected tags when multiselect', async () => {
-    renderWithTheme(
-      <SelectInputV2
-        name="test"
-        options={dataUnGrouped}
-        searchable={false}
-        multiselect
-        width={500}
-        placeholder="placeholder"
-      />,
-    )
-    const input = screen.getByTestId('select-bar')
-    await userEvent.click(input)
-    const options = screen.getAllByRole('option')
-
-    await userEvent.click(options[0])
-    await userEvent.click(options[1])
-    await userEvent.click(options[2])
-    await userEvent.click(options[3])
-    await userEvent.click(options[4])
-    await userEvent.click(options[5])
-
-    // const plustag = screen.getByTestId('plus-tag')
-    // expect(plustag).toBeInTheDocument()
-  })
   test('renders correctly closed tags', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -363,8 +348,8 @@ describe('SelectInputV2', () => {
     expect(venus).not.toBeVisible()
   })
 
-  test('renders correctly dropdown with arrow down/up key press with ungrouped data', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly dropdown with arrow down/up key press with ungrouped data', async () => {
+    renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -372,28 +357,25 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         searchable={false}
       />,
+    )
 
-      {
-        transform: async () => {
-          const input = screen.getByTestId('select-bar')
-          await userEvent.tab()
-          await userEvent.tab()
-          expect(input).toHaveFocus()
-          await userEvent.keyboard('[arrowDown]')
-          const dropdown = screen.getByRole('dialog')
-          expect(dropdown).toBeVisible()
-          await userEvent.tab()
-          await userEvent.keyboard('[arrowDown]')
-          await userEvent.keyboard('[arrowUp]')
-          const venus = screen.getByRole('option', {
-            name: /mercury/i,
-          })
-          expect(venus).toHaveFocus()
-        },
-      },
-    ))
-  test('renders correctly dropdown with arrow down/up key press with grouped data', () =>
-    shouldMatchEmotionSnapshot(
+    const input = screen.getByTestId('select-bar')
+    await userEvent.tab()
+    await userEvent.tab()
+    expect(input).toHaveFocus()
+    await userEvent.keyboard('[arrowDown]')
+    const dropdown = screen.getByRole('dialog')
+    expect(dropdown).toBeVisible()
+    await userEvent.tab()
+    await userEvent.keyboard('[arrowDown]')
+    await userEvent.keyboard('[arrowUp]')
+    const venus = screen.getByRole('option', {
+      name: /mercury/i,
+    })
+    expect(venus).toHaveFocus()
+  })
+  test('renders correctly dropdown with arrow down/up key press with grouped data', async () => {
+    renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataGrouped}
@@ -401,26 +383,23 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         searchable={false}
       />,
+    )
 
-      {
-        transform: async () => {
-          const input = screen.getByTestId('select-bar')
-          await userEvent.tab()
-          await userEvent.tab()
-          expect(input).toHaveFocus()
-          await userEvent.keyboard('[arrowDown]')
-          const dropdown = screen.getByRole('dialog')
-          expect(dropdown).toBeVisible()
-          await userEvent.tab()
-          await userEvent.keyboard('[arrowDown]')
-          await userEvent.keyboard('[arrowUp]')
-          const venus = screen.getByRole('option', {
-            name: /mercury/i,
-          })
-          expect(venus).toHaveFocus()
-        },
-      },
-    ))
+    const input = screen.getByTestId('select-bar')
+    await userEvent.tab()
+    await userEvent.tab()
+    expect(input).toHaveFocus()
+    await userEvent.keyboard('[arrowDown]')
+    const dropdown = screen.getByRole('dialog')
+    expect(dropdown).toBeVisible()
+    await userEvent.tab()
+    await userEvent.keyboard('[arrowDown]')
+    await userEvent.keyboard('[arrowUp]')
+    const venus = screen.getByRole('option', {
+      name: /mercury/i,
+    })
+    expect(venus).toHaveFocus()
+  })
 
   test('renders correctly clear all', async () => {
     renderWithTheme(
@@ -438,19 +417,52 @@ describe('SelectInputV2', () => {
     expect(clearAll).not.toBeInTheDocument()
   })
 
-  test('handles click outside', async () => {
+  test('handles click autoclose when outside click', async () => {
+    renderWithTheme(
+      <>
+        Test outside element
+        <SelectInputV2
+          name="test"
+          options={dataUnGrouped}
+          placeholder="placeholder"
+          placeholderSearch="placeholdersearch"
+        />
+      </>,
+    )
+    const input = screen.getByTestId('select-bar')
+
+    act(() => input.click())
+    const dropdown = screen.getByRole('dialog')
+    const outsideClick = screen.getByText('Test outside element')
+
+    expect(dropdown).toBeVisible()
+    await userEvent.click(outsideClick)
+    await userEvent.click(outsideClick)
+
+    expect(dropdown).not.toBeVisible()
+  })
+  test('handles click on item', async () => {
+    const onChange = jest.fn()
+
     renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
+        onChange={onChange}
       />,
     )
     const input = screen.getByTestId('select-bar')
-    await userEvent.click(input)
+
+    act(() => input.click())
     const dropdown = screen.getByRole('dialog')
+    const venus = screen.getByText('Venus')
+
     expect(dropdown).toBeVisible()
+    await userEvent.click(venus)
+
+    expect(onChange).toHaveBeenCalledTimes(1)
   })
 
   test('handles keydown when not searchable on ungrouped data', async () => {
@@ -471,6 +483,7 @@ describe('SelectInputV2', () => {
     })
     await userEvent.type(dropdown, 'v')
     expect(venus).toHaveFocus()
+    await userEvent.type(dropdown, 'a')
   })
   test('handles keydown when not searchable on grouped data', async () => {
     renderWithTheme(
@@ -490,6 +503,7 @@ describe('SelectInputV2', () => {
     })
     await userEvent.type(dropdown, 'v')
     expect(venus).toHaveFocus()
+    await userEvent.type(dropdown, 'a')
   })
 
   test('renders with onChange', async () => {
@@ -622,5 +636,44 @@ describe('SelectInputV2', () => {
     }
     const emptyState = screen.getByText('No options')
     expect(emptyState).toBeVisible()
+  })
+
+  beforeAll(() => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
+      configurable: true,
+      value: 500,
+    })
+  })
+
+  test('renders correctly selected tags when multiselect', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        value={dataGrouped['jovian planets'][1]}
+        onChange={(values: (string | undefined)[]) => values}
+      />,
+    )
+
+    const closeTag = screen.getByTestId('close-tag')
+    const tag = screen.getByTestId('selected-options-tags')
+    expect(tag).toBeVisible()
+    await userEvent.click(closeTag)
+    expect(tag).not.toBeVisible()
+
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const options = screen.getAllByRole('option')
+
+    fireEvent.click(options[1])
+    fireEvent.click(options[2])
+    fireEvent.click(options[4])
+    fireEvent.click(options[5])
+    fireEvent.click(options[6])
+
+    const plustag = screen.getByTestId('plus-tag')
+    expect(plustag).toBeInTheDocument()
   })
 })

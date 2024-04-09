@@ -4,9 +4,9 @@ import { Bullet } from '../../Bullet'
 import { Text } from '../../Text'
 import { Tooltip } from '../../Tooltip'
 
-const reactMercury = (
+const reactNeptune = (
   <Text as="div" variant="body">
-    Mercury <Badge>Label</Badge>
+    Neptune <Badge>Label</Badge>
   </Text>
 )
 
@@ -37,7 +37,7 @@ const optionalInfo43 = (
 export const dataUnGrouped = [
   {
     value: 'mercury',
-    label: reactMercury,
+    label: 'Mercury',
     disabled: false,
   },
   {
@@ -75,7 +75,7 @@ export const dataUnGrouped = [
   },
   {
     value: 'neptune',
-    label: 'Neptune',
+    label: reactNeptune,
     disabled: false,
   },
 ]
@@ -84,7 +84,7 @@ export const dataGrouped = {
   'terrestrial planets': [
     {
       value: 'mercury',
-      label: reactMercury,
+      label: 'Mercury',
       disabled: false,
     },
     {
@@ -133,7 +133,7 @@ export const dataGrouped = {
 
     {
       value: 'neptune',
-      label: 'Neptune',
+      label: reactNeptune,
       disabled: false,
     },
   ],
