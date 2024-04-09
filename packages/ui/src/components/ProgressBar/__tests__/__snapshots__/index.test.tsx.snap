@@ -76,6 +76,44 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
 </DocumentFragment>
 `;
 
+exports[`ProgressBar renders danger 1`] = `
+<DocumentFragment>
+  .cache-1vlay40-StyledProgressContainer {
+  overflow: hidden;
+  position: relative;
+  height: 4px;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+}
+
+.cache-xfs6x2-StyledFilled {
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #e51963;
+  -webkit-transition: 0.3s width;
+  transition: 0.3s width;
+  width: 40%;
+}
+
+<div
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="40"
+    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
+    role="progressbar"
+  >
+    <div
+      class="cache-xfs6x2-StyledFilled e1b95x8r0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`ProgressBar renders info 1`] = `
 <DocumentFragment>
   .cache-1vlay40-StyledProgressContainer {

@@ -17,6 +17,7 @@ export const progressBarSentiments = [
   'success',
   'warning',
   'info',
+  'danger',
 ] as const
 
 const StyledProgressContainer = styled.div`
