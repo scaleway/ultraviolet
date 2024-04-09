@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.12.2
+
+### Patch Changes
+
+- [#3645](https://github.com/scaleway/ultraviolet/pull/3645) [`f2f9002`](https://github.com/scaleway/ultraviolet/commit/f2f900288bfffd982869460d31647827bc383cd7) Thanks [@vincentaudebert](https://github.com/vincentaudebert)! - fix(icons): adds application integration category icon
+
 ## 2.12.1
 
 ### Patch Changes
