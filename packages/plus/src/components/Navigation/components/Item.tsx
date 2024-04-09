@@ -637,7 +637,10 @@ export const Item = ({
                 alignItems="center"
                 justifyContent="center"
               >
-                <CategoryIcon name={categoryIcon ?? 'console'} />
+                <CategoryIcon
+                  name={categoryIcon ?? 'console'}
+                  variant={categoryIconVariant}
+                />
               </Stack>
             </Button>
           </Tooltip>
