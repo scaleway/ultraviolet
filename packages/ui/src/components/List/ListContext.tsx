@@ -1,4 +1,4 @@
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import {
   createContext,
   useCallback,
@@ -41,6 +41,7 @@ type ListProviderProps = {
   autoCollapse: boolean
   selectable: boolean
   expandButton: boolean
+  onSelectedChange?: Dispatch<SetStateAction<string[]>>
 }
 
 export const ListProvider = ({
@@ -48,6 +49,7 @@ export const ListProvider = ({
   autoCollapse,
   selectable,
   expandButton,
+  onSelectedChange,
 }: ListProviderProps) => {
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
@@ -116,36 +118,60 @@ export const ListProvider = ({
   }, [selectedRowIds])
 
   const selectAll = useCallback(() => {
-    setSelectedRowIds(current =>
-      Object.keys(current).reduce<typeof selectedRowIds>(
-        (acc, rowId) => ({ ...acc, [rowId]: true }),
-        {},
-      ),
-    )
-  }, [])
+    const newSelectedRowIds = Object.keys(selectedRowIds).reduce<
+      typeof selectedRowIds
+    >((acc, rowId) => ({ ...acc, [rowId]: true }), {})
+    setSelectedRowIds(newSelectedRowIds)
+    if (onSelectedChange) {
+      onSelectedChange(
+        Object.keys(newSelectedRowIds).filter(row => newSelectedRowIds[row]),
+      )
+    }
+  }, [onSelectedChange, selectedRowIds])
 
   const unselectAll = useCallback(() => {
-    setSelectedRowIds(current =>
-      Object.keys(current).reduce<typeof selectedRowIds>(
-        (acc, rowId) => ({ ...acc, [rowId]: false }),
-        {},
-      ),
-    )
-  }, [])
+    const newSelectedRowIds = Object.keys(selectedRowIds).reduce<
+      typeof selectedRowIds
+    >((acc, rowId) => ({ ...acc, [rowId]: false }), {})
+    setSelectedRowIds(newSelectedRowIds)
+    if (onSelectedChange) {
+      onSelectedChange(
+        Object.keys(newSelectedRowIds).filter(row => newSelectedRowIds[row]),
+      )
+    }
+  }, [onSelectedChange, selectedRowIds])
 
-  const selectRow = useCallback((rowId: string) => {
-    setSelectedRowIds(current => ({
-      ...current,
-      [rowId]: true,
-    }))
-  }, [])
+  const selectRow = useCallback(
+    (rowId: string) => {
+      const newSelectedRowIds = {
+        ...selectedRowIds,
+        [rowId]: true,
+      }
+      setSelectedRowIds(newSelectedRowIds)
+      if (onSelectedChange) {
+        onSelectedChange(
+          Object.keys(newSelectedRowIds).filter(row => newSelectedRowIds[row]),
+        )
+      }
+    },
+    [onSelectedChange, selectedRowIds],
+  )
 
-  const unselectRow = useCallback((rowId: string) => {
-    setSelectedRowIds(current => ({
-      ...current,
-      [rowId]: false,
-    }))
-  }, [])
+  const unselectRow = useCallback(
+    (rowId: string) => {
+      const newSelectedRowIds = {
+        ...selectedRowIds,
+        [rowId]: false,
+      }
+      setSelectedRowIds(newSelectedRowIds)
+      if (onSelectedChange) {
+        onSelectedChange(
+          Object.keys(newSelectedRowIds).filter(row => newSelectedRowIds[row]),
+        )
+      }
+    },
+    [onSelectedChange, selectedRowIds],
+  )
 
   const value = useMemo<ListContextValue>(
     () => ({
