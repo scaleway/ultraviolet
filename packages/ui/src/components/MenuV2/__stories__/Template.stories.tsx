@@ -14,4 +14,4 @@ export const DefaultDisclosure = (
 export const Template: StoryFn<typeof MenuV2> = ({
   disclosure = DefaultDisclosure,
   ...props
-}) => <MenuV2 disclosure={disclosure} triggerMethod="hover" {...props} />
+}) => <MenuV2 disclosure={disclosure} {...props} />

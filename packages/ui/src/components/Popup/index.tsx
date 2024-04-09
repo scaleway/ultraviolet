@@ -323,10 +323,16 @@ export const Popup = forwardRef(
             clearTimeout(debounceTimer.current)
             debounceTimer.current = undefined
           }
-          setVisibleInDom(true)
+          if (debounceDelay > 0) {
+            setTimeout(() => {
+              setVisibleInDom(true)
+            }, debounceDelay)
+          } else {
+            setVisibleInDom(true)
+          }
         }
       },
-      [closePopup, innerPopupRef],
+      [closePopup, debounceDelay],
     )
 
     /**

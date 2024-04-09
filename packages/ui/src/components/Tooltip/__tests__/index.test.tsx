@@ -11,15 +11,19 @@ import {
 describe('Tooltip', () => {
   test('should render correctly', () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Tooltip text="test">Hover me</Tooltip>,
+      <Tooltip debounceDelay={0} text="test">
+        Hover me
+      </Tooltip>,
     ))
 
   test('should render correctly without text', () =>
-    shouldMatchEmotionSnapshotWithPortal(<Tooltip>Hover me</Tooltip>))
+    shouldMatchEmotionSnapshotWithPortal(
+      <Tooltip debounceDelay={0}>Hover me</Tooltip>,
+    ))
 
   test(`should display tooltip on hover`, async () => {
     renderWithTheme(
-      <Tooltip id="test" text="test success!">
+      <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
       </Tooltip>,
     )
@@ -33,7 +37,7 @@ describe('Tooltip', () => {
 
   test(`should display tooltip on hover with function children`, async () => {
     renderWithTheme(
-      <Tooltip id="test" text="test success!">
+      <Tooltip debounceDelay={0} id="test" text="test success!">
         {props => (
           <p {...props} data-testid="children">
             Hover me
@@ -51,7 +55,7 @@ describe('Tooltip', () => {
 
   test(`should display tooltip on hover and hide when exit`, async () => {
     renderWithTheme(
-      <Tooltip id="test" text="test success!">
+      <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
       </Tooltip>,
     )
@@ -70,7 +74,7 @@ describe('Tooltip', () => {
 
   test(`should display tooltip on hover and hide when exit and hover back before animation ends`, async () => {
     renderWithTheme(
-      <Tooltip id="test" text="test success!">
+      <Tooltip debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
       </Tooltip>,
     )
@@ -87,7 +91,7 @@ describe('Tooltip', () => {
 
   test(`should create tooltip with random id`, async () => {
     renderWithTheme(
-      <Tooltip text="test success!">
+      <Tooltip debounceDelay={0} text="test success!">
         <p data-testid="children">Hover me</p>
       </Tooltip>,
     )
@@ -101,7 +105,7 @@ describe('Tooltip', () => {
 
   test(`should renders tooltip with maxWidth`, async () => {
     renderWithTheme(
-      <Tooltip text="test success!" maxWidth={100}>
+      <Tooltip debounceDelay={0} text="test success!" maxWidth={100}>
         <p data-testid="children">Hover me</p>
       </Tooltip>,
     )
@@ -118,6 +122,7 @@ describe('Tooltip', () => {
       test(`should renders tooltip with placement ${placement}`, async () => {
         renderWithTheme(
           <Tooltip
+            debounceDelay={0}
             text="test success!"
             placement={placement as ComponentProps<typeof Tooltip>['placement']}
           >
@@ -136,7 +141,7 @@ describe('Tooltip', () => {
 
   test(`should verify accessibility`, async () => {
     renderWithTheme(
-      <Tooltip text="test success!" maxWidth={100}>
+      <Tooltip debounceDelay={0} text="test success!" maxWidth={100}>
         <p data-testid="children">Hover me</p>
       </Tooltip>,
     )

@@ -584,6 +584,7 @@ export const Item = ({
       <MenuStack gap={1} alignItems="start" justifyContent="start">
         {Children.count(children) > 0 ? (
           <StyledMenu
+            triggerMethod="hover"
             disclosure={
               <Button
                 sentiment="neutral"
@@ -655,6 +656,8 @@ export const Item = ({
           toggleMenu?.()
         }}
         borderless
+        active={active}
+        sentiment={active ? 'primary' : 'neutral'}
       >
         <Stack
           gap={1}

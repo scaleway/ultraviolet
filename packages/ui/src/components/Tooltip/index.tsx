@@ -18,6 +18,7 @@ type TooltipProps = Pick<
   | 'containerFullWidth'
   | 'portalTarget'
   | 'tabIndex'
+  | 'debounceDelay'
 >
 
 const StyledPopup = styled(Popup)`
@@ -43,6 +44,7 @@ export const Tooltip = forwardRef(
       role = 'tooltip',
       'data-testid': dataTestId,
       portalTarget,
+      debounceDelay,
       tabIndex,
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
@@ -61,6 +63,7 @@ export const Tooltip = forwardRef(
       innerRef={innerRef}
       portalTarget={portalTarget}
       tabIndex={tabIndex}
+      debounceDelay={debounceDelay}
     >
       {children}
     </StyledPopup>
