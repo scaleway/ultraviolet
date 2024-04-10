@@ -46,6 +46,7 @@ import { ReactComponent as elasticMetalIridium } from './assets/elastic-metal-ir
 import { ReactComponent as elasticMetalLithium } from './assets/elastic-metal-lithium.svg'
 import { ReactComponent as elasticMetalTitanium } from './assets/elastic-metal-titanium.svg'
 import { ReactComponent as elasticMetal } from './assets/elastic-metal.svg'
+import { ReactComponent as environmentalFootprintCalculator } from './assets/environmental-footprint-calculator.svg'
 import { ReactComponent as file } from './assets/file.svg'
 import { ReactComponent as flexibleIp } from './assets/flexible-ip.svg'
 import { ReactComponent as folder } from './assets/folder.svg'
@@ -280,4 +281,5 @@ export const PRODUCT_ICONS = {
   vpsProServers,
   vpsServers,
   vpsStartServers,
+  environmentalFootprintCalculator,
 } as const

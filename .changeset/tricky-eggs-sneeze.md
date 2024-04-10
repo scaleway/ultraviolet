@@ -2,4 +2,4 @@
 "@ultraviolet/icons": patch
 ---
 
-New `ProductIcons` : "vpsServers", "vpsProServers" and "vpsStartServers"
+New `ProductIcons` : "vpsServers", "vpsProServers", "vpsStartServers" and "environmentalFootprintCalculator"
