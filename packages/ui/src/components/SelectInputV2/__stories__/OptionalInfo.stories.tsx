@@ -12,7 +12,7 @@ export const AdditionalInfo: StoryFn<typeof SelectInputV2> = args => (
     <SelectInputV2
       {...args}
       options={OptionalInfo}
-      label="Bigger badge - left"
+      label="Bigger badge - right"
       optionalInfoPlacement="right"
     />
     <SelectInputV2
@@ -31,7 +31,7 @@ export const AdditionalInfo: StoryFn<typeof SelectInputV2> = args => (
       {...args}
       options={OptionalInfo4}
       optionalInfoPlacement="right"
-      label="Left"
+      label="Right"
     />
   </>
 )

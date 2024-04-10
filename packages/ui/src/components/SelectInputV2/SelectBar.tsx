@@ -25,6 +25,7 @@ type SelectBarProps = {
   setSelectedValues: Dispatch<SetStateAction<(OptionType | undefined)[]>>
   isDropdownVisible: boolean
   setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
+  setAllSelected: Dispatch<SetStateAction<boolean>>
 }
 
 type StyledInputWrapperProps = {
@@ -57,7 +58,6 @@ const StackTags = styled(Stack, {
   shouldForwardProp: prop => !['width'].includes(prop),
 })<{ width: number | undefined }>`
   max-width: ${({ width }) => width}px;
-  overflow: scroll;
 `
 const StyledInputWrapper = styled(Stack, {
   shouldForwardProp: prop =>
@@ -141,23 +141,21 @@ const DisplayValues = ({
       width={width}
       alignItems="center"
     >
-      {nonOverflowedValues.map((option, index) => (
+      {nonOverflowedValues.map(option => (
         <CustomTag
           data-testid="selected-options-tags"
-          key={option ? option.value : index}
+          key={option?.value}
           sentiment="neutral"
           disabled={disabled}
           onClose={
             !readOnly
               ? event => {
                   event.stopPropagation()
-                  const newSelectedValues = selectedValues
-                    ?.filter(val => val !== option)
-                    .map(val => val?.value)
-                  setSelectedValues(
-                    selectedValues?.filter(val => val !== option),
+                  const newSelectedValues = selectedValues?.filter(
+                    val => val !== option,
                   )
-                  onChange?.(newSelectedValues)
+                  setSelectedValues(newSelectedValues)
+                  onChange?.(newSelectedValues.map(val => val?.value))
                 }
               : undefined
           }
@@ -199,6 +197,7 @@ export const SelectBar = ({
   setSelectedValues,
   isDropdownVisible,
   setIsDropdownVisible,
+  setAllSelected,
 }: SelectBarProps) => {
   const openable = !(readOnly || disabled)
   const refTag = useRef<HTMLDivElement>(null)
@@ -219,6 +218,7 @@ export const SelectBar = ({
 
     return 'neutral'
   }, [error, success])
+
   useEffect(() => {
     let tagsWidth = 0
     let computedOverflowAmount = 0
@@ -318,6 +318,7 @@ export const SelectBar = ({
             onClick={event => {
               event.stopPropagation()
               setSelectedValues([])
+              setAllSelected(false)
               onChange?.([])
             }}
             sentiment="neutral"

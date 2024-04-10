@@ -152,6 +152,7 @@ type TextInputProps = {
   | 'autoFocus'
   | 'tabIndex'
   | 'autoComplete'
+  | 'onKeyDown'
 >
 
 /**
@@ -192,6 +193,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       'aria-labelledby': ariaLabelledBy,
       'aria-label': ariaLabel,
       autoComplete,
+      onKeyDown,
     },
     ref,
   ) => {
@@ -297,6 +299,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 aria-label={ariaLabel}
                 autoComplete={autoComplete}
                 required={required}
+                onKeyDown={onKeyDown}
               />
               {success || error || loading || computedClearable ? (
                 <StateStack direction="row" gap={1} alignItems="center">

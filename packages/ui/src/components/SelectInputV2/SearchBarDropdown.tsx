@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
-import { Stack } from '../Stack'
+import { TextInputV2 } from '../TextInputV2'
 import type { DataType, OptionType } from './types'
 
 type SearchBarProps = {
@@ -18,35 +18,8 @@ type SearchBarProps = {
   onChange?: (value: (string | undefined)[]) => void
 }
 
-const StyledIcon = styled(Icon)`
+const StyledInput = styled(TextInputV2)`
   margin: ${({ theme }) => theme.space[2]};
-`
-
-const StyledStack = styled(Stack)`
-  height: 48px;
-  margin: ${({ theme }) => theme.space[2]};
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-  &:focus-within {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-  }
-`
-const StyledSearchDropdown = styled.input`
-  height: 48px;
-  diplay: flex;
-  flex: 1;
-  border: none;
-  background: inherit;
-  border-left: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  outline: none;
-  padding: ${({ theme }) => theme.space[1]};
-
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-    font-size: ${({ theme }) => theme.typography.body.fontSize};};
-  }
- 
 `
 
 const findClosestOption = (
@@ -69,11 +42,7 @@ const findClosestOption = (
         )
       ) {
         const firstFit = Object.keys(possibleOptions)
-          .map(key => {
-            const reduced = possibleOptions[key]
-
-            return reduced[0]
-          })
+          .map(key => possibleOptions[key][0])
           .filter(value => !!value)[0]
 
         return firstFit
@@ -130,7 +99,7 @@ export const SearchBarDropdown = ({
   }
 
   const handleKeyDown = (key: string, search?: string) => {
-    if (key === 'Enter' || key === ' ') {
+    if (key === 'Enter') {
       const closestOption = findClosestOption(displayedOptions, search)
       if (closestOption !== 'NO_MATCH') {
         if (multiselect) {
@@ -155,20 +124,18 @@ export const SearchBarDropdown = ({
   }
 
   return (
-    <StyledStack direction="row">
-      <StyledIcon name="search" size="small" sentiment="neutral" />
-      <StyledSearchDropdown
-        value={searchInput}
-        onChange={event => handleChange(event.target.value)}
-        onKeyDown={event => {
-          handleKeyDown(event.key, searchInput)
-        }}
-        placeholder={placeholder}
-        onFocus={() => setSearchBarActive(true)}
-        onBlur={() => setSearchBarActive(false)}
-        data-testid="search-bar"
-        autoFocus
-      />
-    </StyledStack>
+    <StyledInput
+      value={searchInput}
+      onChange={event => handleChange(event)}
+      placeholder={placeholder}
+      onFocus={() => setSearchBarActive(true)}
+      onBlur={() => setSearchBarActive(false)}
+      data-testid="search-bar"
+      prefix={<Icon name="search" size="small" sentiment="neutral" />}
+      onKeyDown={event => {
+        handleKeyDown(event.key, searchInput)
+      }}
+      autoFocus
+    />
   )
 }

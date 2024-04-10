@@ -347,6 +347,20 @@ describe('SelectInputV2', () => {
     await userEvent.click(venusCloseButton)
     expect(venus).not.toBeVisible()
   })
+  test('renders correctly unclosable tags when readonly', async () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        readOnly
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable={false}
+        multiselect
+        value={dataUnGrouped[1]}
+        onChange={() => {}}
+      />,
+    ))
 
   test('renders correctly dropdown with arrow down/up key press with ungrouped data', async () => {
     renderWithTheme(
@@ -369,10 +383,29 @@ describe('SelectInputV2', () => {
     await userEvent.tab()
     await userEvent.keyboard('[arrowDown]')
     await userEvent.keyboard('[arrowUp]')
-    const venus = screen.getByRole('option', {
+    const mercury = screen.getByRole('option', {
       name: /mercury/i,
     })
-    expect(venus).toHaveFocus()
+    expect(mercury).toHaveFocus()
+  })
+  test('renders correctly dropdown with arrow pressing enter or space', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        searchable={false}
+      />,
+    )
+
+    const input = screen.getByTestId('select-bar')
+    await userEvent.tab()
+    await userEvent.tab()
+    expect(input).toHaveFocus()
+    await userEvent.keyboard(' ')
+    const dropdown = screen.getByRole('dialog')
+    expect(dropdown).toBeVisible()
   })
   test('renders correctly dropdown with arrow down/up key press with grouped data', async () => {
     renderWithTheme(
@@ -395,10 +428,10 @@ describe('SelectInputV2', () => {
     await userEvent.tab()
     await userEvent.keyboard('[arrowDown]')
     await userEvent.keyboard('[arrowUp]')
-    const venus = screen.getByRole('option', {
+    const mercury = screen.getByRole('option', {
       name: /mercury/i,
     })
-    expect(venus).toHaveFocus()
+    expect(mercury).toHaveFocus()
   })
 
   test('renders correctly clear all', async () => {
@@ -675,5 +708,33 @@ describe('SelectInputV2', () => {
 
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
+  })
+
+  test('handles correcty selectAll', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        onChange={(values: (string | undefined)[]) => values}
+        selectAll={{
+          label: 'Select',
+          description: 'all',
+        }}
+      />,
+    )
+
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const selectAll = screen.getByRole('checkbox', {
+      name: 'Select all',
+    })
+    await userEvent.click(selectAll)
+    const plustag = screen.getByTestId('plus-tag')
+    expect(plustag).toBeInTheDocument()
+
+    await userEvent.click(selectAll)
+    expect(screen.getByText('placeholder')).toBeInTheDocument()
   })
 })

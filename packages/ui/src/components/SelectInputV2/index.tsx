@@ -101,6 +101,10 @@ type SelectInputV2Props = {
    * When the options are loading, display a skeleton
    */
   isLoading?: boolean
+  /**
+   * Adds an option to select every selectable options
+   */
+  selectAll?: { label: ReactNode; description?: string }
   width?: string | number
   autofocus?: boolean
   'data-testid'?: string
@@ -117,7 +121,9 @@ const SelectInputContainer = styled('div', {
 })<ContainerProps>`
   width: ${({ width }) => (typeof width === 'number' ? `${width}px` : width)};
 `
-
+const HelperText = styled(Text)`
+  padding-top: ${({ theme }) => theme.space['0.5']};
+`
 /**
  * SelectInputV2 component is used to select one or many elements from a selection.
  */
@@ -154,6 +160,7 @@ export const SelectInputV2 = ({
   loadMore,
   optionalInfoPlacement = 'right',
   isLoading,
+  selectAll,
 }: SelectInputV2Props) => {
   const defaultValue = value ? [value] : []
   const [displayedOptions, setDisplayedOptions] = useState(options)
@@ -161,6 +168,7 @@ export const SelectInputV2 = ({
     useState<(OptionType | undefined)[]>(defaultValue)
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
   const [searchInput, setSearchInput] = useState('')
+  const [allSelected, setAllSelected] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
   return (
@@ -194,6 +202,9 @@ export const SelectInputV2 = ({
         loadMore={loadMore}
         optionalInfoPlacement={optionalInfoPlacement}
         isLoading={isLoading}
+        selectAll={selectAll}
+        allSelected={allSelected}
+        setAllSelected={setAllSelected}
       >
         <Stack gap={0.5} aria-label={ariaLabel}>
           <Stack direction="row" gap={0.5}>
@@ -224,23 +235,29 @@ export const SelectInputV2 = ({
             setSelectedValues={setSelectedValues}
             autoFocus={autofocus}
             innerRef={ref}
+            setAllSelected={setAllSelected}
           />
         </Stack>
       </Dropdown>
       {!error && !success ? (
-        <Text variant="caption" as="p" sentiment="neutral" prominence="default">
+        <HelperText
+          variant="caption"
+          as="p"
+          sentiment="neutral"
+          prominence="default"
+        >
           {helper}
-        </Text>
+        </HelperText>
       ) : null}
       {error || success ? (
-        <Text
+        <HelperText
           variant="caption"
           as="p"
           sentiment={error ? 'danger' : 'success'}
           prominence="default"
         >
           {error || success}
-        </Text>
+        </HelperText>
       ) : null}
     </SelectInputContainer>
   )
