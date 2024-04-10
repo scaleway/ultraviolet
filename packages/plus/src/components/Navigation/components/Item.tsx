@@ -121,10 +121,6 @@ const StyledContainer = styled(Stack)`
     padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   }
 
-  transition:
-    background-color 0.2s ease-in-out,
-    color 0.2s ease-in-out;
-
   width: 100%;
 
   &:hover[data-has-no-expand='false']:not([disabled]):not(
@@ -155,9 +151,7 @@ const StyledContainer = styled(Stack)`
   &:hover[data-has-children='false'][data-is-active='false'] {
     ${WrapText} {
       color: ${({ theme }) => theme.colors.neutral.textWeakHover};
-      transition:
-        background-color 0.2s ease-in-out,
-        color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
     }
   }
 
