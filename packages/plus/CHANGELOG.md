@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.12.7
+
+### Patch Changes
+
+- [#3653](https://github.com/scaleway/ultraviolet/pull/3653) [`75735a6`](https://github.com/scaleway/ultraviolet/commit/75735a6cca6abc58ba58517a8e89f50d72a5924c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` category icon and add `id` prop
+
 ## 0.12.6
 
 ### Patch Changes
