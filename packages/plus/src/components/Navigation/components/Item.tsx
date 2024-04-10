@@ -151,7 +151,6 @@ const StyledContainer = styled(Stack)`
   &:hover[data-has-children='false'][data-is-active='false'] {
     ${WrapText} {
       color: ${({ theme }) => theme.colors.neutral.textWeakHover};
-      transition: background-color 0.2s ease-in-out;
     }
   }
 
@@ -458,7 +457,7 @@ export const Item = ({
               >
                 <CategoryIcon
                   name={categoryIcon}
-                  variant={categoryIconVariant}
+                  variant={active ? 'primary' : categoryIconVariant}
                   disabled={disabled}
                 />
               </ContainerCategoryIcon>
@@ -599,7 +598,10 @@ export const Item = ({
                     alignItems="center"
                     justifyContent="center"
                   >
-                    <CategoryIcon name={categoryIcon} />
+                    <CategoryIcon
+                      name={categoryIcon}
+                      variant={active ? 'primary' : categoryIconVariant}
+                    />
                   </Stack>
                 ) : null}
               </Button>
@@ -633,7 +635,7 @@ export const Item = ({
               >
                 <CategoryIcon
                   name={categoryIcon ?? 'console'}
-                  variant={categoryIconVariant}
+                  variant={active ? 'primary' : categoryIconVariant}
                 />
               </Stack>
             </Button>

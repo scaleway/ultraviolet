@@ -122,6 +122,7 @@ type NavigationContentProps = {
   onClickExpand?: (expanded: boolean) => void
   width: number
   onWidthResize?: (width: number) => void
+  id?: string
 }
 
 export const NavigationContent = ({
@@ -131,6 +132,7 @@ export const NavigationContent = ({
   width,
   onWidthResize,
   className,
+  id,
 }: NavigationContentProps) => {
   const sliderRef = useRef<HTMLDivElement>(null)
   const navigationRef = useRef<HTMLDivElement>(null)
@@ -272,7 +274,7 @@ export const NavigationContent = ({
   }, [expanded, onWidthResize, toggleExpand])
 
   return (
-    <StyledNav className={className}>
+    <StyledNav className={className} id={id}>
       <Container
         ref={navigationRef}
         data-animation={animation}
