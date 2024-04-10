@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.46.0
+
+### Minor Changes
+
+- [#3648](https://github.com/scaleway/ultraviolet/pull/3648) [`cd2d0f3`](https://github.com/scaleway/ultraviolet/commit/cd2d0f320a8bb17bc6026382fb607bd841fc7442) Thanks [@matthprost](https://github.com/matthprost)! - Add new sentiment `danger` to `<ProgressBar />` component
+
+### Patch Changes
+
+- [#3556](https://github.com/scaleway/ultraviolet/pull/3556) [`93055fa`](https://github.com/scaleway/ultraviolet/commit/93055faf1d36847b1aff4cfbbd030684790a9f75) Thanks [@lisalupi](https://github.com/lisalupi)! - New prop `onSelectedRows` for `List` to easily get the list of selected rows
+
+- [#3628](https://github.com/scaleway/ultraviolet/pull/3628) [`ae54a12`](https://github.com/scaleway/ultraviolet/commit/ae54a12483b943ec8552500e23cd74786172320b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.4`.
+  Updated dependency `@babel/runtime` to `7.24.4`.
+  Updated dependency `@babel/preset-env` to `7.24.4`.
+- Updated dependencies [[`ae54a12`](https://github.com/scaleway/ultraviolet/commit/ae54a12483b943ec8552500e23cd74786172320b)]:
+  - @ultraviolet/icons@2.12.3
+
 ## 1.45.6
 
 ### Patch Changes
