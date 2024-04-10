@@ -1,5 +1,15 @@
 # Change Log
 
+## 2.10.5
+
+### Patch Changes
+
+- [#3628](https://github.com/scaleway/ultraviolet/pull/3628) [`ae54a12`](https://github.com/scaleway/ultraviolet/commit/ae54a12483b943ec8552500e23cd74786172320b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.4`.
+  Updated dependency `@babel/runtime` to `7.24.4`.
+  Updated dependency `@babel/preset-env` to `7.24.4`.
+- Updated dependencies [[`93055fa`](https://github.com/scaleway/ultraviolet/commit/93055faf1d36847b1aff4cfbbd030684790a9f75), [`ae54a12`](https://github.com/scaleway/ultraviolet/commit/ae54a12483b943ec8552500e23cd74786172320b), [`cd2d0f3`](https://github.com/scaleway/ultraviolet/commit/cd2d0f320a8bb17bc6026382fb607bd841fc7442)]:
+  - @ultraviolet/ui@1.46.0
+
 ## 2.10.4
 
 ### Patch Changes
