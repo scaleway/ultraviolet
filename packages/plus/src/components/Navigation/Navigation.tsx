@@ -58,6 +58,7 @@ type NavigationProps = {
    * This function is called when resize occur using the vertical bar on the left of the navigation.
    */
   onWidthResize?: (width: number) => void
+  id?: string
 }
 
 /**
@@ -78,6 +79,7 @@ export const Navigation = ({
   width = NAVIGATION_WIDTH,
   onWidthResize,
   className,
+  id,
 }: NavigationProps) => (
   <NavigationProvider
     onClickPinUnpin={onClickPinUnpin}
@@ -93,6 +95,7 @@ export const Navigation = ({
       className={className}
       width={width}
       onWidthResize={onWidthResize}
+      id={id}
     >
       {children}
     </NavigationContent>
