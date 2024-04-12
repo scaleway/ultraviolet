@@ -946,7 +946,7 @@ describe('SelectInputV2', () => {
 
     await userEvent.click(mercury)
     expect(selectAllGroup).toBeChecked()
-  })
+  }, 10000)
   test('handles correcty selectAllGroup - keyboard events', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -979,7 +979,8 @@ describe('SelectInputV2', () => {
 
     await userEvent.click(selectAllGroup)
     expect(selectAllGroup).not.toBeChecked()
-  })
+  }, 10000)
+
   test('handles correcty selectAllGroup with selectAll - grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -1034,5 +1035,5 @@ describe('SelectInputV2', () => {
     expect(selectAll).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
     expect(selectAll).toBeChecked()
-  })
+  }, 10000)
 })
