@@ -430,7 +430,9 @@ const CreateDropdown = ({
           gap={0.5}
           direction="row"
           justifyContent={option.optionalInfo ? 'left' : 'space-between'}
-          alignItems="center"
+          alignItems={
+            option.optionalInfo && option.description ? 'normal' : 'center'
+          }
         >
           {option.optionalInfo ?? null}
 

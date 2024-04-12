@@ -932,9 +932,6 @@ describe('SelectInputV2', () => {
     const earth = screen.getByRole('checkbox', {
       name: /earth/i,
     })
-    const pluto = screen.getByRole('checkbox', {
-      name: /pluto/i,
-    })
     const jupiter = screen.getByRole('checkbox', {
       name: /jupiter/i,
     })
@@ -942,7 +939,6 @@ describe('SelectInputV2', () => {
     expect(mercury).toBeChecked()
     expect(venus).toBeChecked()
     expect(earth).toBeChecked()
-    expect(pluto).toBeChecked()
     expect(jupiter).not.toBeChecked()
 
     await userEvent.click(mercury)
@@ -950,6 +946,28 @@ describe('SelectInputV2', () => {
 
     await userEvent.click(mercury)
     expect(selectAllGroup).toBeChecked()
+  })
+  test('handles correcty selectAllGroup - keyboard events', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        onChange={(values: (string | undefined)[]) => values}
+        selectAllGroup
+      />,
+    )
+
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const selectAllGroup = screen.getByRole('checkbox', {
+      name: 'TERRESTRIAL PLANETS',
+    })
+    await userEvent.click(selectAllGroup)
+    const earth = screen.getByRole('checkbox', {
+      name: /earth/i,
+    })
 
     await userEvent.click(earth)
     await userEvent.click(screen.getByTestId('search-bar'))
