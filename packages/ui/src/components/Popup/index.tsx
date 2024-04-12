@@ -303,6 +303,12 @@ export const Popup = forwardRef(
      */
     const onPointerEvent = useCallback(
       (isVisible: boolean) => () => {
+        // If there is a debounceDelay and the popup is not visible, we clear the debounce timer
+        if (!visible && debounceDelay > 0 && debounceTimer.current) {
+          clearTimeout(debounceTimer.current)
+          debounceTimer.current = undefined
+        }
+
         // This condition is for when we want to unmount the popup
         // There is debounce in order to avoid popup to flicker when we move the mouse from children to popup
         // Timer is used to follow the animation duration
@@ -324,7 +330,7 @@ export const Popup = forwardRef(
             debounceTimer.current = undefined
           }
           if (debounceDelay > 0) {
-            setTimeout(() => {
+            debounceTimer.current = setTimeout(() => {
               setVisibleInDom(true)
             }, debounceDelay)
           } else {
@@ -332,7 +338,7 @@ export const Popup = forwardRef(
           }
         }
       },
-      [closePopup, debounceDelay],
+      [closePopup, debounceDelay, visible],
     )
 
     /**

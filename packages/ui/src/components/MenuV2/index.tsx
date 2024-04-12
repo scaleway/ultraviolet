@@ -18,6 +18,7 @@ import {
 } from 'react'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
+import { Group } from './Group'
 import Item from './Item'
 
 const SIZES = {
@@ -52,6 +53,7 @@ const StyledPopup = styled(Popup, {
 
   width: ${({ size }) => SIZES[size]};
   max-width: none;
+  padding: ${({ theme }) => `${theme.space['0.25']} 0`};
 `
 
 const MenuList = styled(Stack)`
@@ -162,7 +164,7 @@ const FwdMenu = forwardRef(
 
     return (
       <StyledPopup
-        debounceDelay={triggerMethod === 'hover' ? 500 : 0}
+        debounceDelay={triggerMethod === 'hover' ? 350 : 0}
         hideOnClickOutside
         aria-label={ariaLabel}
         className={className}
@@ -199,4 +201,4 @@ const FwdMenu = forwardRef(
  * sub menu, or by invoking a command, such as `Shift + F10` on Windows, that opens a context specific menu.
  * When a user activates a choice in a menu, the menu usually closes unless the choice opened a submenu.
  */
-export const MenuV2 = Object.assign(FwdMenu, { Item })
+export const MenuV2 = Object.assign(FwdMenu, { Item, Group })

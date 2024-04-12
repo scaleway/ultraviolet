@@ -100,6 +100,11 @@ const WrapText = styled(Text, {
 }>`
   overflow-wrap: ${({ animation }) => (animation ? 'normal' : 'anywhere')};
   white-space: ${({ animation }) => (animation ? 'nowrap' : 'normal')};
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: pre-wrap;
 `
 
 const StyledStack = styled(Stack)`
@@ -664,10 +669,29 @@ export const Item = ({
           direction="row"
           alignItems="center"
           justifyContent="space-between"
+          flex={1}
         >
           <WrapText as="span" variant="bodySmall">
             {label}
           </WrapText>
+          {badgeText ? (
+            <StyledBadge
+              sentiment={badgeSentiment}
+              size="small"
+              prominence="strong"
+              disabled={disabled}
+            >
+              {badgeText}
+            </StyledBadge>
+          ) : null}
+          {hasHrefAndNoChildren ? (
+            <AnimatedIcon
+              name="open-in-new"
+              sentiment="neutral"
+              prominence="weak"
+              disabled={disabled}
+            />
+          ) : null}
           {shouldShowPinnedButton ? (
             <Tooltip
               text={
