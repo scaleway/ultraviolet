@@ -1,5 +1,24 @@
 # @ultraviolet/plus
 
+## 0.12.7
+
+### Patch Changes
+
+- [#3653](https://github.com/scaleway/ultraviolet/pull/3653) [`75735a6`](https://github.com/scaleway/ultraviolet/commit/75735a6cca6abc58ba58517a8e89f50d72a5924c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` category icon and add `id` prop
+
+## 0.12.6
+
+### Patch Changes
+
+- [#3628](https://github.com/scaleway/ultraviolet/pull/3628) [`ae54a12`](https://github.com/scaleway/ultraviolet/commit/ae54a12483b943ec8552500e23cd74786172320b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.4`.
+  Updated dependency `@babel/runtime` to `7.24.4`.
+  Updated dependency `@babel/preset-env` to `7.24.4`.
+
+- [#3649](https://github.com/scaleway/ultraviolet/pull/3649) [`201bd77`](https://github.com/scaleway/ultraviolet/commit/201bd77a159065a28f2924db29084b9497351846) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` category icon variant on collapsed version
+
+- Updated dependencies [[`93055fa`](https://github.com/scaleway/ultraviolet/commit/93055faf1d36847b1aff4cfbbd030684790a9f75), [`ae54a12`](https://github.com/scaleway/ultraviolet/commit/ae54a12483b943ec8552500e23cd74786172320b), [`cd2d0f3`](https://github.com/scaleway/ultraviolet/commit/cd2d0f320a8bb17bc6026382fb607bd841fc7442)]:
+  - @ultraviolet/ui@1.46.0
+
 ## 0.12.5
 
 ### Patch Changes
