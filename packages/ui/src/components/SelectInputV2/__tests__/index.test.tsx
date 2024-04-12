@@ -39,6 +39,19 @@ describe('SelectInputV2', () => {
         searchable={false}
       />,
     ))
+  test('renders correctly not clearable', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        width={400}
+        clearable={false}
+        searchable={false}
+        value={dataUnGrouped[4]}
+      />,
+    ))
   test('renders correctly ungrouped', () =>
     shouldMatchEmotionSnapshot(
       <SelectInputV2
@@ -85,6 +98,23 @@ describe('SelectInputV2', () => {
         },
       },
     ))
+  test('renders correctly with footer', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        value={dataGrouped['terrestrial planets'][4]}
+        footer="this is a footer"
+      />,
+      {
+        transform: async () => {
+          const input = screen.getByText('Pluto')
+          await userEvent.click(input)
+        },
+      },
+    ))
   test('renders correctly multiselect', () =>
     shouldMatchEmotionSnapshot(
       <SelectInputV2
@@ -110,6 +140,7 @@ describe('SelectInputV2', () => {
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         direction="row"
+        onChange={() => {}}
       />,
       {
         transform: async () => {
@@ -518,6 +549,7 @@ describe('SelectInputV2', () => {
     expect(venus).toHaveFocus()
     await userEvent.type(dropdown, 'a')
   })
+
   test('handles keydown when not searchable on grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -637,7 +669,7 @@ describe('SelectInputV2', () => {
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
     const venus = screen.getByText('Venus')
-    const earth = screen.getByText('Venus')
+    const earth = screen.getByText('Earth')
     const earthCheckbox = screen.getByRole('checkbox', {
       name: /earth/i,
     })
@@ -661,7 +693,7 @@ describe('SelectInputV2', () => {
     await userEvent.click(screen.getByTestId('search-bar'))
 
     const options = screen.getAllByRole('option')
-    await userEvent.keyboard('aaa')
+    await userEvent.keyboard('aa')
     await userEvent.keyboard('[Enter]')
 
     for (const option of options) {
@@ -669,6 +701,70 @@ describe('SelectInputV2', () => {
     }
     const emptyState = screen.getByText('No options')
     expect(emptyState).toBeVisible()
+
+    await userEvent.keyboard('[Backspace]')
+    await userEvent.keyboard('[Enter]')
+    expect(screen.getByRole('checkbox', { name: /earth/i })).toBeChecked()
+  })
+  test('renders with searchable and closest value - multiselect & grouped data', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        multiselect
+        onChange={(values: (string | undefined)[]) => values}
+        searchable
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const dropdown = screen.getByRole('dialog')
+    expect(dropdown).toBeVisible()
+    const venus = screen.getByText('Venus')
+    const earth = screen.getByText('Earth')
+    const earthCheckbox = screen.getByRole('checkbox', {
+      name: /earth/i,
+    })
+    await userEvent.keyboard('[Enter]') // empty search doesn't do anything
+    await userEvent.keyboard('e')
+    expect(earth).toBeVisible()
+    expect(venus).toBeVisible()
+
+    await userEvent.keyboard('a')
+    await userEvent.keyboard('[Enter]')
+    await userEvent.keyboard('[Enter]') // do not add when already added
+    expect(venus).not.toBeVisible()
+    expect(earthCheckbox).toBeChecked()
+
+    await userEvent.keyboard(
+      '[Backspace][Backspace][Backspace][Backspace][Backspace]',
+    )
+    const mars = screen.getByText('Mars')
+    expect(mars).toBeVisible()
+    await userEvent.click(mars)
+    await userEvent.click(screen.getByTestId('search-bar'))
+
+    const options = screen.getAllByRole('option')
+    await userEvent.keyboard('aa')
+    await userEvent.keyboard('[Enter]')
+
+    for (const option of options) {
+      expect(option).not.toBeVisible()
+    }
+    const emptyState = screen.getByText('No options')
+    expect(emptyState).toBeVisible()
+
+    await userEvent.keyboard('[Backspace]')
+    await userEvent.keyboard('[Enter]')
+    expect(screen.getByRole('checkbox', { name: /earth/i })).toBeChecked() // with searchText defined
+    await userEvent.keyboard(
+      '[Backspace][Backspace][Backspace][Backspace][Backspace]',
+    )
+    await userEvent.keyboard('mer')
+    await userEvent.keyboard('[Enter]')
+    expect(screen.getByRole('checkbox', { name: /mercury/i })).toBeChecked() // searchText undefined
   })
 
   beforeAll(() => {
@@ -687,6 +783,8 @@ describe('SelectInputV2', () => {
         placeholder="placeholder"
         value={dataGrouped['jovian planets'][1]}
         onChange={(values: (string | undefined)[]) => values}
+        optionalInfoPlacement="left"
+        direction="column"
       />,
     )
 
@@ -710,7 +808,7 @@ describe('SelectInputV2', () => {
     expect(plustag).toBeInTheDocument()
   })
 
-  test('handles correcty selectAll', async () => {
+  test('handles correcty selectAll grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -734,7 +832,189 @@ describe('SelectInputV2', () => {
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
 
+    const venus = screen.getByRole('option', { name: /Venus/i })
+    const earth = screen.getByRole('checkbox', {
+      name: /earth/i,
+    })
+    await userEvent.click(venus)
+    expect(selectAll).not.toBeChecked()
+    await userEvent.click(venus)
+    expect(selectAll).toBeChecked()
+
     await userEvent.click(selectAll)
     expect(screen.getByText('placeholder')).toBeInTheDocument()
+
+    await userEvent.click(selectAll)
+    await userEvent.click(earth)
+    await userEvent.click(screen.getByTestId('search-bar'))
+
+    await userEvent.keyboard('ea')
+    await userEvent.keyboard('[Enter]')
+
+    expect(earth).toBeChecked()
+  })
+  test('handles correcty selectAll ungrouped data', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        multiselect
+        placeholder="placeholder"
+        onChange={(values: (string | undefined)[]) => values}
+        selectAll={{
+          label: 'Select',
+          description: 'all',
+        }}
+      />,
+    )
+
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const selectAll = screen.getByRole('checkbox', {
+      name: 'Select all',
+    })
+    await userEvent.click(selectAll)
+    const plustag = screen.getByTestId('plus-tag')
+    expect(plustag).toBeInTheDocument()
+
+    const venus = screen.getByRole('option', { name: /Venus/i })
+    const earth = screen.getByRole('checkbox', {
+      name: /earth/i,
+    })
+    await userEvent.click(venus)
+    expect(selectAll).not.toBeChecked()
+    await userEvent.click(venus)
+    expect(selectAll).toBeChecked()
+
+    await userEvent.click(selectAll)
+    expect(screen.getByText('placeholder')).toBeInTheDocument()
+
+    await userEvent.click(selectAll)
+    await userEvent.click(earth)
+    await userEvent.click(screen.getByTestId('search-bar'))
+
+    await userEvent.keyboard('ea')
+    await userEvent.keyboard('[Enter]')
+
+    expect(earth).toBeChecked()
+
+    await userEvent.tab()
+    await userEvent.keyboard(' ')
+    expect(selectAll).not.toBeChecked()
+    await userEvent.keyboard('[Enter]')
+    expect(selectAll).toBeChecked()
+  })
+
+  test('handles correcty selectAllGroup', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        onChange={(values: (string | undefined)[]) => values}
+        selectAllGroup
+      />,
+    )
+
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const selectAllGroup = screen.getByRole('checkbox', {
+      name: 'TERRESTRIAL PLANETS',
+    })
+    await userEvent.click(selectAllGroup)
+    const mercury = screen.getByRole('checkbox', {
+      name: /mercury/i,
+    })
+    const venus = screen.getByRole('checkbox', {
+      name: /venus/i,
+    })
+    const earth = screen.getByRole('checkbox', {
+      name: /earth/i,
+    })
+    const pluto = screen.getByRole('checkbox', {
+      name: /pluto/i,
+    })
+    const jupiter = screen.getByRole('checkbox', {
+      name: /jupiter/i,
+    })
+
+    expect(mercury).toBeChecked()
+    expect(venus).toBeChecked()
+    expect(earth).toBeChecked()
+    expect(pluto).toBeChecked()
+    expect(jupiter).not.toBeChecked()
+
+    await userEvent.click(mercury)
+    expect(selectAllGroup).not.toBeChecked()
+
+    await userEvent.click(mercury)
+    expect(selectAllGroup).toBeChecked()
+
+    await userEvent.click(earth)
+    await userEvent.click(screen.getByTestId('search-bar'))
+
+    await userEvent.keyboard('ea')
+    await userEvent.keyboard('[Enter]')
+
+    expect(selectAllGroup).toBeChecked()
+
+    await userEvent.click(selectAllGroup)
+    expect(selectAllGroup).not.toBeChecked()
+  })
+  test('handles correcty selectAllGroup with selectAll - grouped data', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        onChange={(values: (string | undefined)[]) => values}
+        selectAllGroup
+        selectAll={{
+          label: 'Select',
+          description: 'all',
+        }}
+      />,
+    )
+
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const selectAllGroup = screen.getByRole('checkbox', {
+      name: 'TERRESTRIAL PLANETS',
+    })
+    await userEvent.click(selectAllGroup)
+    const venus = screen.getByRole('checkbox', {
+      name: /venus/i,
+    })
+
+    const selectAll = screen.getByRole('checkbox', {
+      name: 'Select all',
+    })
+    await userEvent.click(selectAll)
+
+    await userEvent.click(venus)
+    await userEvent.click(screen.getByTestId('search-bar'))
+
+    await userEvent.keyboard('ve')
+    await userEvent.keyboard('[Enter]')
+
+    expect(venus).toBeChecked()
+    expect(selectAllGroup).toBeChecked()
+    expect(selectAll).toBeChecked()
+
+    await userEvent.click(selectAllGroup)
+    expect(selectAllGroup).not.toBeChecked()
+    expect(selectAll).not.toBeChecked()
+
+    await userEvent.click(selectAllGroup)
+    expect(selectAllGroup).toBeChecked()
+    expect(selectAll).toBeChecked()
+
+    await userEvent.tab()
+    await userEvent.keyboard(' ')
+    expect(selectAll).not.toBeChecked()
+    await userEvent.keyboard('[Enter]')
+    expect(selectAll).toBeChecked()
   })
 })

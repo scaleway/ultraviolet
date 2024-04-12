@@ -20,12 +20,12 @@ type DropdownProps = {
   onSearch: Dispatch<SetStateAction<DataType>>
   placeholder: string
   footer?: ReactNode
-  onChange?: (value: (string | undefined)[]) => void
+  onChange?: (value: string[]) => void
   searchInput: string | undefined
   setSearchInput: Dispatch<SetStateAction<string>>
   refSelect: RefObject<HTMLDivElement>
-  selectedValues: (OptionType | undefined)[]
-  setSelectedValues: Dispatch<SetStateAction<(OptionType | undefined)[]>>
+  selectedValues: OptionType[]
+  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
   isDropdownVisible: boolean
   setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
   loadMore?: ReactNode
@@ -34,6 +34,10 @@ type DropdownProps = {
   selectAll?: { label: ReactNode; description?: string }
   allSelected: boolean
   setAllSelected: Dispatch<SetStateAction<boolean>>
+  selectAllGroup?: boolean
+  selectedGroups: string[]
+  setSelectedGroups: Dispatch<SetStateAction<string[]>>
+  numberOfOptions: number
 }
 
 const NON_SEARCHABLE_KEYS = [
@@ -72,7 +76,6 @@ const DropdownGroup = styled(Stack)`
   padding-left: ${({ theme }) => theme.space[2]};
   padding-right: ${({ theme }) => theme.space[2]};
   height: ${({ theme }) => theme.space[4]};
-  z-index: 1;
 `
 const DropdownItem = styled('button', {
   shouldForwardProp: prop => !['disabled', 'selected'].includes(prop),
@@ -114,6 +117,7 @@ const PopupFooter = styled.div`
 `
 const StyledCheckbox = styled(Checkbox)`
   width: 100%;
+  position: static;
 `
 
 const moveFocusDown = () => {
@@ -203,9 +207,13 @@ const HandleDropdown = (
         ref.current.focus()
         if (!Array.isArray(options)) {
           const closestOptions = { ...options }
-          Object.keys(closestOptions).map((key: string) => {
-            closestOptions[key] = closestOptions[key].filter(option =>
-              option.value.toLocaleLowerCase().startsWith(currentSearch),
+          Object.keys(closestOptions).map((group: string) => {
+            closestOptions[group] = closestOptions[group].filter(option =>
+              option.searchText
+                ? option.searchText
+                    .toLocaleLowerCase()
+                    .startsWith(currentSearch)
+                : option.value.toLocaleLowerCase().startsWith(currentSearch),
             )
 
             return null
@@ -213,16 +221,18 @@ const HandleDropdown = (
           const closestOption =
             closestOptions[Object.keys(closestOptions)[0]][0]
           if (closestOption) {
-            setDefaultSearch(closestOption.value)
+            setDefaultSearch(closestOption.searchText ?? closestOption.value)
           } else {
             setDefaultSearch(null)
           }
         } else {
           const closestOption = [...options].filter(option =>
-            option.value.toLocaleLowerCase().startsWith(currentSearch),
+            option.searchText
+              ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
+              : option.value.toLocaleLowerCase().startsWith(currentSearch),
           )[0]
           if (closestOption) {
-            setDefaultSearch(closestOption.value)
+            setDefaultSearch(closestOption.searchText ?? closestOption.value)
           } else {
             setDefaultSearch(null)
           }
@@ -258,10 +268,10 @@ type CreateDropdownProps = {
   emptyState: ReactNode
   multiselect: boolean
   direction?: 'row' | 'column'
-  selectedValues: (OptionType | undefined)[]
+  selectedValues: OptionType[]
   setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
-  onChange?: (value: (string | undefined)[]) => void
-  setSelectedValues: Dispatch<SetStateAction<(OptionType | undefined)[]>>
+  onChange?: (value: string[]) => void
+  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
   loadMore?: ReactNode
   optionalInfoPlacement: 'left' | 'right'
   defaultSearchValue: string | null
@@ -269,6 +279,10 @@ type CreateDropdownProps = {
   selectAll?: { label: ReactNode; description?: string }
   allSelected: boolean
   setAllSelected: Dispatch<SetStateAction<boolean>>
+  selectAllGroup?: boolean
+  selectedGroups: string[]
+  setSelectedGroups: Dispatch<SetStateAction<string[]>>
+  numberOfOptions: number
 }
 const CreateDropdown = ({
   displayedOptions,
@@ -288,6 +302,10 @@ const CreateDropdown = ({
   options,
   allSelected,
   setAllSelected,
+  selectAllGroup,
+  selectedGroups,
+  setSelectedGroups,
+  numberOfOptions,
 }: CreateDropdownProps) => {
   const focusedItemRef = useRef<HTMLButtonElement>(null)
 
@@ -306,7 +324,7 @@ const CreateDropdown = ({
       )
     )
   }
-  const handleClick = (clickedOption: OptionType) => {
+  const handleClick = (clickedOption: OptionType, group?: string) => {
     if (multiselect) {
       if (selectedValues.includes(clickedOption)) {
         setSelectedValues(selectedValues.filter(val => val !== clickedOption))
@@ -316,9 +334,29 @@ const CreateDropdown = ({
             .map(val => val?.value),
         )
         setAllSelected(false)
+
+        if (selectAllGroup && group && selectedGroups.includes(group)) {
+          setSelectedGroups(
+            selectedGroups.filter(selectedGroup => selectedGroup !== group),
+          )
+        }
       } else {
         setSelectedValues([...selectedValues, clickedOption])
         onChange?.([...selectedValues, clickedOption].map(val => val?.value))
+        if (selectedValues.length + 1 === numberOfOptions) {
+          setAllSelected(true)
+        }
+        if (
+          !Array.isArray(options) &&
+          group &&
+          options[group].every(
+            option =>
+              [...selectedValues, clickedOption].includes(option) ||
+              option.disabled,
+          )
+        ) {
+          setSelectedGroups([...selectedGroups, group])
+        }
       }
     } else {
       setSelectedValues([clickedOption])
@@ -455,11 +493,13 @@ const CreateDropdown = ({
 
     if (allSelected) {
       setSelectedValues([])
+      setSelectedGroups([])
     } else {
-      const allValues: (OptionType | undefined)[] = []
+      setSelectedGroups(Object.keys(options))
+      const allValues: OptionType[] = []
       if (!Array.isArray(options)) {
-        Object.keys(options).map((key: string) =>
-          options[key].map(option => {
+        Object.keys(options).map((group: string) =>
+          options[group].map(option => {
             if (!option.disabled) {
               allValues.push(option)
             }
@@ -471,6 +511,41 @@ const CreateDropdown = ({
         options.map(option => allValues.push(option))
       }
       setSelectedValues(allValues)
+      onChange?.(allValues.map(value => value.value))
+    }
+  }
+
+  const handleSelectGroup = (group: string) => {
+    if (!Array.isArray(options)) {
+      if (selectedGroups.includes(group)) {
+        setSelectedGroups(
+          selectedGroups.filter(selectedGroup => selectedGroup !== group),
+        )
+        const newSelectedValues = [...selectedValues].filter(
+          selectedValue => !options[group].includes(selectedValue),
+        )
+        setSelectedValues(newSelectedValues)
+        onChange?.(newSelectedValues.map(value => value.value))
+
+        if (selectAll) {
+          setAllSelected(false)
+        }
+      } else {
+        const newSelectedValues = [...selectedValues]
+
+        setSelectedGroups([...selectedGroups, group])
+        options[group].map(option =>
+          newSelectedValues.includes(option) || option.disabled
+            ? null
+            : newSelectedValues.push(option),
+        )
+        setSelectedValues(newSelectedValues)
+        onChange?.(newSelectedValues.map(value => value.value))
+
+        if (newSelectedValues.length === numberOfOptions) {
+          setAllSelected(true)
+        }
+      }
     }
   }
 
@@ -489,6 +564,9 @@ const CreateDropdown = ({
             aria-label="select-all"
             data-testid="select-all"
             role="option"
+            onKeyDown={event =>
+              [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
+            }
           >
             <StyledCheckbox
               checked={allSelected}
@@ -515,17 +593,31 @@ const CreateDropdown = ({
           </DropdownItem>
         </Stack>
       ) : null}
-      {Object.keys(displayedOptions).map(key => (
-        <Stack key={key} gap={0.25}>
-          {displayedOptions[key].length > 0 ? (
-            <DropdownGroup key={key} justifyContent="center">
-              <Text variant="caption" as="span" placement="left">
-                {key.toUpperCase()}
-              </Text>
+      {Object.keys(displayedOptions).map(group => (
+        <Stack key={group} gap={0.25}>
+          {displayedOptions[group].length > 0 ? (
+            <DropdownGroup key={group} justifyContent="center">
+              {selectAllGroup ? (
+                <StyledCheckbox
+                  checked={selectedGroups.includes(group)}
+                  disabled={false}
+                  value={group}
+                  onChange={() => handleSelectGroup(group)}
+                  data-testid="select-group"
+                >
+                  <Text variant="caption" as="span" placement="left">
+                    {group.toUpperCase()}
+                  </Text>
+                </StyledCheckbox>
+              ) : (
+                <Text variant="caption" as="span" placement="left">
+                  {group.toUpperCase()}
+                </Text>
+              )}
             </DropdownGroup>
           ) : null}
           <Stack id="items" gap={0.25}>
-            {displayedOptions[key].map((option, index) => (
+            {displayedOptions[group].map((option, index) => (
               <DropdownItem
                 key={option.value}
                 disabled={option.disabled}
@@ -535,11 +627,14 @@ const CreateDropdown = ({
                 role="option"
                 onClick={() => {
                   if (!option.disabled) {
-                    handleClick(option)
+                    handleClick(option, group)
                   }
                 }}
                 ref={
-                  option.value === defaultSearchValue ? focusedItemRef : null
+                  option.value === defaultSearchValue ||
+                  option.searchText === defaultSearchValue
+                    ? focusedItemRef
+                    : null
                 }
               >
                 {multiselect ? (
@@ -549,7 +644,7 @@ const CreateDropdown = ({
                     value={option.value}
                     onChange={() => {
                       if (!option.disabled) {
-                        handleClick(option)
+                        handleClick(option, group)
                       }
                     }}
                   >
@@ -571,6 +666,43 @@ const CreateDropdown = ({
       id="select-dropdown"
       onKeyDown={event => handleKeyDownSelect(event.key)}
     >
+      {selectAll && multiselect ? (
+        <Stack id="items">
+          <DropdownItem
+            disabled={false}
+            selected={allSelected}
+            aria-label="select-all"
+            data-testid="select-all"
+            role="option"
+            onKeyDown={event =>
+              [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
+            }
+          >
+            <StyledCheckbox
+              checked={allSelected}
+              disabled={false}
+              value="select-all"
+              data-testid="select-all-checkbox"
+              onChange={selectAllOptions}
+            >
+              <Stack direction="column">
+                <Text as="span" variant="body" placement="left">
+                  {selectAll.label}
+                </Text>
+                <Text
+                  as="span"
+                  variant="bodySmall"
+                  sentiment="neutral"
+                  placement="left"
+                  prominence="weak"
+                >
+                  {selectAll.description}
+                </Text>
+              </Stack>
+            </StyledCheckbox>
+          </DropdownItem>
+        </Stack>
+      ) : null}
       <Stack id="items">
         {isLoading ? (
           <Skeleton variant="block" />
@@ -588,7 +720,12 @@ const CreateDropdown = ({
               aria-label={option.value}
               data-testid={`option-${index}`}
               role="option"
-              ref={option.value === defaultSearchValue ? focusedItemRef : null}
+              ref={
+                option.value === defaultSearchValue ||
+                option.searchText === defaultSearchValue
+                  ? focusedItemRef
+                  : null
+              }
             >
               {multiselect ? (
                 <StyledCheckbox
@@ -639,6 +776,10 @@ export const Dropdown = ({
   selectAll,
   allSelected,
   setAllSelected,
+  selectAllGroup,
+  selectedGroups,
+  setSelectedGroups,
+  numberOfOptions,
 }: DropdownProps) => {
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
@@ -657,9 +798,9 @@ export const Dropdown = ({
     if (Array.isArray(displayedOptions)) {
       return !(displayedOptions.length > 0)
     }
-    const keys = Object.keys(displayedOptions)
-    for (const key of keys) {
-      if (displayedOptions[key].length !== 0) {
+    const groups = Object.keys(displayedOptions)
+    for (const group of groups) {
+      if (displayedOptions[group].length !== 0) {
         return false
       }
     }
@@ -691,6 +832,12 @@ export const Dropdown = ({
               selectedValues={selectedValues}
               setSearchBarActive={setSearchBarActive}
               onChange={onChange}
+              selectAll={!!selectAll}
+              setAllSelected={setAllSelected}
+              selectAllGroup={selectAllGroup}
+              selectedGroups={selectedGroups}
+              setSelectedGroups={setSelectedGroups}
+              numberOfOptions={numberOfOptions}
             />
           ) : null}
           <CreateDropdown
@@ -711,6 +858,10 @@ export const Dropdown = ({
             options={options}
             allSelected={allSelected}
             setAllSelected={setAllSelected}
+            selectAllGroup={selectAllGroup}
+            selectedGroups={selectedGroups}
+            setSelectedGroups={setSelectedGroups}
+            numberOfOptions={numberOfOptions}
           />
           {footer ? <PopupFooter>{footer}</PopupFooter> : null}
         </Stack>

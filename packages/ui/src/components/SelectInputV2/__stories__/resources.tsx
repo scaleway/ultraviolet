@@ -50,6 +50,7 @@ export const dataUnGrouped = [
     label: 'Earth',
     disabled: false,
     description: 'Our home planet',
+    searchText: 'earth',
   },
   {
     value: 'mars',
@@ -97,6 +98,7 @@ export const dataGrouped = {
       label: 'Earth',
       disabled: false,
       description: 'Our home planet',
+      searchText: 'earth',
     },
     {
       value: 'mars',
@@ -215,18 +217,21 @@ export const OptionalInfo2 = [
     disabled: false,
     optionalInfo: optionalInfo2,
     description: 'France',
+    searchText: 'paris',
   },
   {
     value: 'ams',
     label: 'Amsterdam',
     disabled: false,
     optionalInfo: optionalInfo2,
+    searcText: 'amsterdam',
   },
   {
     value: 'waw',
     label: 'Warsaw',
     disabled: false,
     optionalInfo: optionalInfo2,
+    searchText: 'warsaw',
   },
 ]
 
@@ -237,18 +242,21 @@ export const OptionalInfo3 = [
     disabled: false,
     optionalInfo: optionalInfo3,
     description: 'France',
+    searchText: 'paris',
   },
   {
     value: 'ams',
     label: 'Amsterdam',
     disabled: false,
     optionalInfo: optionalInfo3,
+    searcText: 'amsterdam',
   },
   {
     value: 'waw',
     label: 'Warsaw',
     disabled: false,
     optionalInfo: optionalInfo3,
+    searchText: 'warsaw',
   },
 ]
 
@@ -259,17 +267,20 @@ export const OptionalInfo4 = [
     disabled: false,
     optionalInfo: optionalInfo41,
     description: 'France',
+    searchText: 'paris',
   },
   {
     value: 'ams',
     label: 'Amsterdam',
     disabled: false,
     optionalInfo: optionalInfo42,
+    searcText: 'amsterdam',
   },
   {
     value: 'waw',
     label: 'Warsaw',
     disabled: false,
     optionalInfo: optionalInfo43,
+    searchText: 'warsaw',
   },
 ]

@@ -18,11 +18,11 @@ type SelectBarProps = {
   multiselect: boolean
   success?: string
   error?: string
-  onChange?: (value: (string | undefined)[]) => void
+  onChange?: (value: string[]) => void
   autoFocus?: boolean
   innerRef: RefObject<HTMLDivElement>
-  selectedValues: (OptionType | undefined)[]
-  setSelectedValues: Dispatch<SetStateAction<(OptionType | undefined)[]>>
+  selectedValues: OptionType[]
+  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
   isDropdownVisible: boolean
   setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
   setAllSelected: Dispatch<SetStateAction<boolean>>
@@ -42,11 +42,12 @@ type DisplayValuesProps = {
   nonOverflowedValues: (OptionType | undefined)[]
   disabled: boolean
   readOnly: boolean
-  selectedValues: (OptionType | undefined)[]
-  setSelectedValues: Dispatch<SetStateAction<(OptionType | undefined)[]>>
-  onChange?: (value: (string | undefined)[]) => void
+  selectedValues: OptionType[]
+  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
+  onChange?: (value: string[]) => void
   overflowed: boolean
   overflowAmount: number
+  setAllSelected: Dispatch<SetStateAction<boolean>>
 }
 const StateStack = styled(Stack)`
   padding-right: ${({ theme }) => theme.space['2']};
@@ -131,6 +132,7 @@ const DisplayValues = ({
   onChange,
   overflowed,
   overflowAmount,
+  setAllSelected,
 }: DisplayValuesProps) =>
   multiselect ? (
     <StackTags
@@ -156,6 +158,7 @@ const DisplayValues = ({
                   )
                   setSelectedValues(newSelectedValues)
                   onChange?.(newSelectedValues.map(val => val?.value))
+                  setAllSelected(false)
                 }
               : undefined
           }
@@ -297,6 +300,7 @@ export const SelectBar = ({
           onChange={onChange}
           overflowed={overflowed}
           overflowAmount={overflowAmount}
+          setAllSelected={setAllSelected}
         />
       ) : (
         <StyledPlaceholder as="p" variant="body">

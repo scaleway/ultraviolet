@@ -6,6 +6,7 @@ export type OptionType = {
   disabled: boolean
   description?: string
   optionalInfo?: ReactNode
+  searchText?: string
 }
 
 export type DataType = Record<string, OptionType[]> | OptionType[]

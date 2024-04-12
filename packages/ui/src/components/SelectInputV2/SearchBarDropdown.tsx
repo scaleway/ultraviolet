@@ -12,10 +12,16 @@ type SearchBarProps = {
   multiselect: boolean
   searchInput: string | undefined
   setSearchInput: Dispatch<SetStateAction<string>>
-  selectedValues: (OptionType | undefined)[]
-  setSelectedValues: Dispatch<SetStateAction<(OptionType | undefined)[]>>
+  selectedValues: OptionType[]
+  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
-  onChange?: (value: (string | undefined)[]) => void
+  onChange?: (value: string[]) => void
+  selectAll?: boolean
+  setAllSelected: Dispatch<SetStateAction<boolean>>
+  selectAllGroup?: boolean
+  selectedGroups: string[]
+  setSelectedGroups: Dispatch<SetStateAction<string[]>>
+  numberOfOptions: number
 }
 
 const StyledInput = styled(TextInputV2)`
@@ -29,8 +35,8 @@ const findClosestOption = (
   if (searchInput) {
     if (!Array.isArray(options)) {
       const possibleOptions = { ...options }
-      Object.keys(possibleOptions).map((key: string) => {
-        possibleOptions[key] = possibleOptions[key].filter(
+      Object.keys(possibleOptions).map((group: string) => {
+        possibleOptions[group] = possibleOptions[group].filter(
           option => !option.disabled,
         )
 
@@ -38,18 +44,17 @@ const findClosestOption = (
       })
       if (
         Object.keys(possibleOptions).some(
-          key => possibleOptions[key].length > 0,
+          group => possibleOptions[group].length > 0,
         )
       ) {
         const firstFit = Object.keys(possibleOptions)
-          .map(key => possibleOptions[key][0])
+          .map(group => possibleOptions[group][0])
           .filter(value => !!value)[0]
 
         return firstFit
       }
     } else {
-      const possibleOptions = [...options]
-      possibleOptions.filter(option => !option.disabled)
+      const possibleOptions = [...options].filter(option => !option.disabled)
 
       if (possibleOptions.length > 0) {
         return possibleOptions[0]
@@ -71,6 +76,12 @@ export const SearchBarDropdown = ({
   setSelectedValues,
   setSearchBarActive,
   onChange,
+  selectAll,
+  setAllSelected,
+  selectAllGroup,
+  selectedGroups,
+  setSelectedGroups,
+  numberOfOptions,
 }: SearchBarProps) => {
   const handleChange = (search: string) => {
     if (search.length > 0) {
@@ -78,9 +89,11 @@ export const SearchBarDropdown = ({
       const regex = RegExp(search, 'gi')
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
-        Object.keys(filteredOptions).map((key: string) => {
-          filteredOptions[key] = filteredOptions[key].filter(option =>
-            option.value.match(regex),
+        Object.keys(filteredOptions).map((group: string) => {
+          filteredOptions[group] = filteredOptions[group].filter(option =>
+            option.searchText
+              ? option.searchText.match(regex)
+              : option.value.match(regex),
           )
 
           return null
@@ -88,7 +101,9 @@ export const SearchBarDropdown = ({
         onSearch(filteredOptions)
       } else {
         const filteredOptions = [...options].filter(option =>
-          option.value.match(regex),
+          option.searchText
+            ? option.searchText.match(regex)
+            : option.value.match(regex),
         )
         onSearch(filteredOptions)
       }
@@ -113,10 +128,36 @@ export const SearchBarDropdown = ({
               ? selectedValues.map(val => val?.value)
               : [...selectedValues, closestOption].map(val => val?.value),
           )
-          setSearchInput(closestOption.value)
+          setSearchInput(closestOption.searchText ?? closestOption.value)
+
+          if (
+            selectAll &&
+            !selectedValues.includes(closestOption) &&
+            selectedValues.length + 1 === numberOfOptions
+          ) {
+            setAllSelected(true)
+            if (selectAllGroup) {
+              setSelectedGroups(Object.keys(options))
+            }
+          }
+          if (
+            selectAllGroup &&
+            !selectedValues.includes(closestOption) &&
+            !Array.isArray(options)
+          ) {
+            Object.keys(options).map(group =>
+              options[group].every(
+                option =>
+                  [...selectedValues, closestOption].includes(option) ||
+                  option.disabled,
+              ) && !selectedGroups.includes(group)
+                ? setSelectedGroups([...selectedGroups, group])
+                : null,
+            )
+          }
         } else {
           setSelectedValues([closestOption])
-          setSearchInput(closestOption.value)
+          setSearchInput(closestOption.searchText ?? closestOption.value)
           onChange?.(selectedValues.map(val => val?.value))
         }
       }
@@ -132,9 +173,7 @@ export const SearchBarDropdown = ({
       onBlur={() => setSearchBarActive(false)}
       data-testid="search-bar"
       prefix={<Icon name="search" size="small" sentiment="neutral" />}
-      onKeyDown={event => {
-        handleKeyDown(event.key, searchInput)
-      }}
+      onKeyDown={event => handleKeyDown(event.key, searchInput)}
       autoFocus
     />
   )

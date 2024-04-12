@@ -472,8 +472,8 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r6h:"
-      aria-describedby=":r6h:"
+      aria-controls=":r78:"
+      aria-describedby=":r78:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -962,7 +962,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wnb1yk-Stack-DropdownGroup {
+.cache-1vg85hh-Stack-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -990,7 +990,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   height: 32px;
-  z-index: 1;
 }
 
 .cache-zis5in-StyledText {
@@ -1154,8 +1153,8 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rp:"
-      aria-describedby=":rp:"
+      aria-controls=":rr:"
+      aria-describedby=":rr:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1202,7 +1201,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":rp:"
+        id=":rr:"
         role="dialog"
       >
         <div
@@ -1238,7 +1237,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":rs:"
+                  id=":ru:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -1255,7 +1254,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -1383,7 +1382,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -2117,7 +2116,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wnb1yk-Stack-DropdownGroup {
+.cache-1vg85hh-Stack-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2145,7 +2144,6 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   height: 32px;
-  z-index: 1;
 }
 
 .cache-zis5in-StyledText {
@@ -2178,7 +2176,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   outline: none;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2190,67 +2188,68 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   align-items: start;
   gap: 8px;
   width: 100%;
+  position: static;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox .eqr7bqq3 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox .eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq3 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 {
   fill: #e9eaeb;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
   fill: #ffd3e3;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
   fill: #e5dbfd;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
   fill: #e5dbfd;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 path {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2264,55 +2263,55 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   transform: translate(2px, 2px);
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-rxnjgj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.cache-uvisb3-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
@@ -2606,8 +2605,8 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r23:"
-      aria-describedby=":r23:"
+      aria-controls=":r2q:"
+      aria-describedby=":r2q:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2695,7 +2694,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r23:"
+        id=":r2q:"
         role="dialog"
       >
         <div
@@ -2731,7 +2730,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r28:"
+                  id=":r2v:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -2748,7 +2747,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -2768,7 +2767,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="false"
                     data-error="false"
                   >
@@ -2776,7 +2775,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2b:"
+                      id=":r32:"
                       type="checkbox"
                       value="mercury"
                     />
@@ -2816,7 +2815,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2b:"
+                          for=":r32:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -2848,7 +2847,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="false"
                     data-error="false"
                   >
@@ -2856,7 +2855,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2e:"
+                      id=":r35:"
                       type="checkbox"
                       value="venus"
                     />
@@ -2896,7 +2895,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2e:"
+                          for=":r35:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -2928,7 +2927,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="false"
                     data-error="false"
                   >
@@ -2936,7 +2935,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2h:"
+                      id=":r38:"
                       type="checkbox"
                       value="earth"
                     />
@@ -2976,7 +2975,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2h:"
+                          for=":r38:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -3013,7 +3012,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="true"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="false"
                     data-error="false"
                   >
@@ -3022,7 +3021,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
                       disabled=""
-                      id=":r2l:"
+                      id=":r3c:"
                       type="checkbox"
                       value="mars"
                     />
@@ -3062,7 +3061,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2l:"
+                          for=":r3c:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -3094,7 +3093,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="true"
                     data-error="false"
                   >
@@ -3103,7 +3102,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       checked=""
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2o:"
+                      id=":r3f:"
                       type="checkbox"
                       value="pluto"
                     />
@@ -3143,7 +3142,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2o:"
+                          for=":r3f:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -3178,7 +3177,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -3198,7 +3197,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="false"
                     data-error="false"
                   >
@@ -3206,7 +3205,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r2t:"
+                      id=":r3k:"
                       type="checkbox"
                       value="jupiter"
                     />
@@ -3246,7 +3245,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r2t:"
+                          for=":r3k:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -3283,7 +3282,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="false"
                     data-error="false"
                   >
@@ -3291,7 +3290,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r31:"
+                      id=":r3o:"
                       type="checkbox"
                       value="saturn"
                     />
@@ -3331,7 +3330,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r31:"
+                          for=":r3o:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -3363,7 +3362,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="false"
                     data-error="false"
                   >
@@ -3371,7 +3370,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r34:"
+                      id=":r3r:"
                       type="checkbox"
                       value="uranus"
                     />
@@ -3411,7 +3410,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r34:"
+                          for=":r3r:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -3443,7 +3442,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 >
                   <div
                     aria-disabled="false"
-                    class="eeucz6c0 cache-rxnjgj-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    class="eeucz6c0 cache-uvisb3-CheckboxContainer-StyledCheckbox eqr7bqq1"
                     data-checked="false"
                     data-error="false"
                   >
@@ -3451,7 +3450,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r37:"
+                      id=":r3u:"
                       type="checkbox"
                       value="neptune"
                     />
@@ -3491,7 +3490,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r37:"
+                          for=":r3u:"
                         >
                           <div
                             class="cache-1guc91g-Stack ehpbis70"
@@ -3526,6 +3525,233 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectInputV2 renders correctly not clearable 1`] = `
+<DocumentFragment>
+  .cache-qy3zy5-SelectInputContainer {
+  width: 400px;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-wfyv8s-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-yedqkb-Stack-StyledInputWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  padding: 8px;
+  padding-right: 0;
+  padding-left: 16px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.cache-yedqkb-Stack-StyledInputWrapper:hover,
+.cache-yedqkb-Stack-StyledInputWrapper:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.cache-yedqkb-Stack-StyledInputWrapper[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-yedqkb-Stack-StyledInputWrapper[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.cache-yedqkb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.cache-yedqkb-Stack-StyledInputWrapper:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-ql1zbn-Stack-StateStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 16px;
+  right: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1gskhdj {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1gskhdj .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.cache-tb6hp-StyledText-HelperText {
+  color: #3f4250;
+  font-size: 12px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-top: 4px;
+}
+
+<div
+    aria-label="test"
+    class="cache-qy3zy5-SelectInputContainer ebdnz3x1"
+  >
+    <div
+      aria-controls=":r7:"
+      aria-describedby=":r7:"
+      class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
+      data-container-full-width="true"
+      tabindex="0"
+    >
+      <div
+        class="cache-ymc80m-Stack ehpbis70"
+      >
+        <div
+          class="cache-wfyv8s-Stack ehpbis70"
+        />
+        <div
+          aria-controls="select-dropdown"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          aria-labelledby="select bar"
+          class="cache-yedqkb-Stack-StyledInputWrapper ejy0aca2"
+          data-disabled="false"
+          data-readonly="false"
+          data-testid="select-bar"
+          tabindex="0"
+        >
+          Jupiter
+          <div
+            class="cache-ql1zbn-Stack-StateStack ejy0aca4"
+          >
+            <svg
+              class="cache-1gskhdj e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
           </div>
         </div>
       </div>
@@ -3738,8 +3964,8 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r76:"
-      aria-describedby=":r76:"
+      aria-controls=":r7t:"
+      aria-describedby=":r7t:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -4368,8 +4594,8 @@ exports[`SelectInputV2 renders correctly required 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r6k:"
-      aria-describedby=":r6k:"
+      aria-controls=":r7b:"
+      aria-describedby=":r7b:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -4426,7 +4652,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r6k:"
+        id=":r7b:"
         role="dialog"
       >
         <div
@@ -4462,7 +4688,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r6n:"
+                  id=":r7e:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -4560,8 +4786,8 @@ exports[`SelectInputV2 renders correctly required 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r6u:"
-                        aria-describedby=":r6u:"
+                        aria-controls=":r7l:"
+                        aria-describedby=":r7l:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -4985,8 +5211,8 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rdh:"
-      aria-describedby=":rdh:"
+      aria-controls=":re8:"
+      aria-describedby=":re8:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5627,8 +5853,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7:"
-      aria-describedby=":r7:"
+      aria-controls=":r9:"
+      aria-describedby=":r9:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5675,7 +5901,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r7:"
+        id=":r9:"
         role="dialog"
       >
         <div
@@ -5711,7 +5937,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":ra:"
+                  id=":rc:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -5809,8 +6035,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":rh:"
-                        aria-describedby=":rh:"
+                        aria-controls=":rj:"
+                        aria-describedby=":rj:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -6408,7 +6634,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wnb1yk-Stack-DropdownGroup {
+.cache-1vg85hh-Stack-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6436,7 +6662,6 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   height: 32px;
-  z-index: 1;
 }
 
 .cache-zis5in-StyledText {
@@ -6618,8 +6843,8 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1e:"
-      aria-describedby=":r1e:"
+      aria-controls=":r1g:"
+      aria-describedby=":r1g:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -6678,7 +6903,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r1e:"
+        id=":r1g:"
         role="dialog"
       >
         <div
@@ -6714,7 +6939,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r1h:"
+                  id=":r1j:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -6731,7 +6956,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -6859,7 +7084,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -7384,8 +7609,8 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r6c:"
-      aria-describedby=":r6c:"
+      aria-controls=":r73:"
+      aria-describedby=":r73:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7432,7 +7657,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r6c:"
+        id=":r73:"
         role="dialog"
       >
         <div
@@ -7468,7 +7693,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r6f:"
+                  id=":r76:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -8064,8 +8289,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r79:"
-      aria-describedby=":r79:"
+      aria-controls=":r80:"
+      aria-describedby=":r80:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -8123,7 +8348,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r79:"
+        id=":r80:"
         role="dialog"
       >
         <div
@@ -8159,7 +8384,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r7c:"
+                  id=":r83:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -8257,8 +8482,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r7j:"
-                        aria-describedby=":r7j:"
+                        aria-controls=":r8a:"
+                        aria-describedby=":r8a:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -8619,6 +8844,1068 @@ exports[`SelectInputV2 renders correctly with fixed width 1`] = `
                 fill-rule="evenodd"
               />
             </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectInputV2 renders correctly with footer 1`] = `
+<DocumentFragment>
+  .cache-832x4l-SelectInputContainer {
+  width: 100%;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-wfyv8s-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1mgniog-Stack-StyledInputWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  padding: 8px;
+  padding-right: 0;
+  padding-left: 16px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-1mgniog-Stack-StyledInputWrapper:hover,
+.cache-1mgniog-Stack-StyledInputWrapper:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.cache-1mgniog-Stack-StyledInputWrapper[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-1mgniog-Stack-StyledInputWrapper[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.cache-1mgniog-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.cache-1mgniog-Stack-StyledInputWrapper:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-ql1zbn-Stack-StateStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 16px;
+  right: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-znppnv {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-znppnv .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.cache-1gskhdj {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1gskhdj .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.cache-172mt1n-StyledPopup-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 500px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translate3d(0px, 12px, 0);
+  -moz-transform: translate3d(0px, 12px, 0);
+  -ms-transform: translate3d(0px, 12px, 0);
+  transform: translate3d(0px, 12px, 0);
+  width: 100%;
+  background-color: #ffffff;
+  color: #3f4250;
+  box-shadow: 0px 4px 24px 6px #d9dadd66;
+  padding: 0;
+}
+
+.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -13px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-1guc91g-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-vtxsty-Stack-StyledInput {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 16px;
+}
+
+.cache-1ttq42g-StyledInputWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
+}
+
+.cache-1ttq42g-StyledInputWrapper>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-1ttq42g-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-1ttq42g-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-1ttq42g-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-1ttq42g-StyledInputWrapper>.e7tir8v1::placeholder {
+  color: #727683;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+  color: #b5b7bd;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1ttq42g-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.cache-9nfzs0-Stack-BasicPrefixStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 16px;
+  border-right: 1px solid;
+  border-color: inherit;
+}
+
+.cache-137prd4-StyledInput {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding-left: 16px;
+  background: transparent;
+}
+
+.cache-pex3kq-Stack-DropdownContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-height: 256px;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+.cache-113ljh8-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1vg85hh-Stack-DropdownGroup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #f9f9fa;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 32px;
+}
+
+.cache-zis5in-StyledText {
+  font-size: 12px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.cache-lcdb64-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #ffffff;
+  padding: 12px 16px 12px 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #3f4250;
+}
+
+.cache-lcdb64-DropdownItem:hover,
+.cache-lcdb64-DropdownItem:focus {
+  background-color: #f1eefc;
+  color: #641cb3;
+  cursor: pointer;
+  outline: none;
+}
+
+.cache-qrj8hh-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1ug7ot4-StyledText {
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.cache-1p3f4r5-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: left;
+}
+
+.cache-6s582e-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f3f3f4;
+  padding: 12px 16px 12px 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #b5b7bd;
+}
+
+.cache-6s582e-DropdownItem:hover,
+.cache-6s582e-DropdownItem:focus {
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  outline: none;
+}
+
+.cache-1uubd69-DropdownItem {
+  text-align: left;
+  border: none;
+  background-color: #f1eefc;
+  padding: 12px 16px 12px 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #3f4250;
+}
+
+.cache-1uubd69-DropdownItem:hover,
+.cache-1uubd69-DropdownItem:focus {
+  background-color: #f1eefc;
+  color: #641cb3;
+  cursor: pointer;
+  outline: none;
+}
+
+.cache-1e8qouo-StyledText {
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-17bgpzb-StyledText-StyledSpan {
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: inherit;
+  color: #3f4250;
+  background: #f9f9fa;
+  border: 1px solid #d9dadd;
+}
+
+.cache-1ewxdgo-PopupFooter {
+  width: 100%;
+  padding: 12px 16px 12px 16px;
+  box-shadow: 0px 4px 24px 6px #d9dadd66;
+}
+
+.cache-tb6hp-StyledText-HelperText {
+  color: #3f4250;
+  font-size: 12px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-top: 4px;
+}
+
+<div
+    aria-label="test"
+    class="cache-832x4l-SelectInputContainer ebdnz3x1"
+  >
+    <div
+      aria-controls=":r25:"
+      aria-describedby=":r25:"
+      class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
+      data-container-full-width="true"
+      tabindex="0"
+    >
+      <div
+        class="cache-ymc80m-Stack ehpbis70"
+      >
+        <div
+          class="cache-wfyv8s-Stack ehpbis70"
+        />
+        <div
+          aria-controls="select-dropdown"
+          aria-expanded="true"
+          aria-haspopup="listbox"
+          aria-labelledby="select bar"
+          class="cache-1mgniog-Stack-StyledInputWrapper ejy0aca2"
+          data-disabled="false"
+          data-readonly="false"
+          data-testid="select-bar"
+          tabindex="0"
+        >
+          Pluto
+          <div
+            class="cache-ql1zbn-Stack-StateStack ejy0aca4"
+          >
+            <button
+              aria-label="clear value"
+              class="cache-1xcp86l-StyledGhostButton e112qvla0"
+              data-testid="clear-all"
+              type="button"
+            >
+              <svg
+                class="cache-znppnv e1gt4cfo0"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                />
+              </svg>
+            </button>
+            <svg
+              class="cache-1gskhdj e1gt4cfo0"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        data-has-arrow="false"
+        id=":r25:"
+        role="dialog"
+      >
+        <div
+          class="cache-1guc91g-Stack ehpbis70"
+        >
+          <div
+            class="e1ag0nf0 cache-vtxsty-Stack-StyledInput ehpbis70"
+          >
+            <div>
+              <div
+                class="cache-1ttq42g-StyledInputWrapper e7tir8v0"
+                data-disabled="false"
+                data-error="false"
+                data-readonly="false"
+                data-success="false"
+              >
+                <div
+                  class="cache-9nfzs0-Stack-BasicPrefixStack e7tir8v5"
+                >
+                  <svg
+                    class="cache-1gskhdj e1gt4cfo0"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06zM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <input
+                  aria-invalid="false"
+                  class="cache-137prd4-StyledInput e7tir8v1"
+                  data-testid="search-bar"
+                  id=":r28:"
+                  placeholder="placeholdersearch"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="cache-pex3kq-Stack-DropdownContainer eeucz6c4"
+            id="select-dropdown"
+            role="listbox"
+          >
+            <div
+              class="cache-113ljh8-Stack ehpbis70"
+            >
+              <div
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
+              >
+                <span
+                  class="cache-zis5in-StyledText e13y3mga0"
+                >
+                  TERRESTRIAL PLANETS
+                </span>
+              </div>
+              <div
+                class="cache-113ljh8-Stack ehpbis70"
+                id="items"
+              >
+                <button
+                  aria-label="mercury"
+                  class="cache-lcdb64-DropdownItem eeucz6c2"
+                  data-testid="option-0"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        Mercury
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-label="venus"
+                  class="cache-lcdb64-DropdownItem eeucz6c2"
+                  data-testid="option-1"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        Venus
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-label="earth"
+                  class="cache-lcdb64-DropdownItem eeucz6c2"
+                  data-testid="option-2"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        Earth
+                      </span>
+                    </div>
+                    <span
+                      class="cache-1p3f4r5-StyledText e13y3mga0"
+                    >
+                      Our home planet
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-label="mars"
+                  class="cache-6s582e-DropdownItem eeucz6c2"
+                  data-testid="option-3"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        Mars
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-label="pluto"
+                  class="cache-1uubd69-DropdownItem eeucz6c2"
+                  data-testid="option-4"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        Pluto
+                      </span>
+                    </div>
+                    <span
+                      class="cache-1p3f4r5-StyledText e13y3mga0"
+                    >
+                      Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="cache-113ljh8-Stack ehpbis70"
+            >
+              <div
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
+              >
+                <span
+                  class="cache-zis5in-StyledText e13y3mga0"
+                >
+                  JOVIAN PLANETS
+                </span>
+              </div>
+              <div
+                class="cache-113ljh8-Stack ehpbis70"
+                id="items"
+              >
+                <button
+                  aria-label="jupiter"
+                  class="cache-lcdb64-DropdownItem eeucz6c2"
+                  data-testid="option-0"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        Jupiter
+                      </span>
+                    </div>
+                    <span
+                      class="cache-1p3f4r5-StyledText e13y3mga0"
+                    >
+                      Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
+                    </span>
+                  </div>
+                </button>
+                <button
+                  aria-label="saturn"
+                  class="cache-lcdb64-DropdownItem eeucz6c2"
+                  data-testid="option-1"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        Saturn
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-label="uranus"
+                  class="cache-lcdb64-DropdownItem eeucz6c2"
+                  data-testid="option-2"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        Uranus
+                      </span>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-label="neptune"
+                  class="cache-lcdb64-DropdownItem eeucz6c2"
+                  data-testid="option-3"
+                  role="option"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div
+                      class="cache-qrj8hh-Stack ehpbis70"
+                    >
+                      <span
+                        class="cache-1ug7ot4-StyledText e13y3mga0"
+                      >
+                        <div
+                          class="cache-1e8qouo-StyledText e13y3mga0"
+                        >
+                          Neptune 
+                          <span
+                            class="ej33bna0 cache-17bgpzb-StyledText-StyledSpan e13y3mga0"
+                          >
+                            Label
+                          </span>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="cache-1ewxdgo-PopupFooter eeucz6c1"
+          >
+            this is a footer
           </div>
         </div>
       </div>
@@ -9067,7 +10354,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   flex-wrap: nowrap;
 }
 
-.cache-wnb1yk-Stack-DropdownGroup {
+.cache-1vg85hh-Stack-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9095,7 +10382,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   padding-left: 16px;
   padding-right: 16px;
   height: 32px;
-  z-index: 1;
 }
 
 .cache-zis5in-StyledText {
@@ -9288,8 +10574,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r4s:"
-      aria-describedby=":r4s:"
+      aria-controls=":r5j:"
+      aria-describedby=":r5j:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -9336,7 +10622,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r4s:"
+        id=":r5j:"
         role="dialog"
       >
         <div
@@ -9372,7 +10658,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r4v:"
+                  id=":r5m:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -9389,7 +10675,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -9531,7 +10817,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -10088,7 +11374,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   flex-wrap: nowrap;
 }
 
-.cache-wnb1yk-Stack-DropdownGroup {
+.cache-1vg85hh-Stack-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10116,7 +11402,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   padding-left: 16px;
   padding-right: 16px;
   height: 32px;
-  z-index: 1;
 }
 
 .cache-zis5in-StyledText {
@@ -10269,8 +11554,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r5k:"
-      aria-describedby=":r5k:"
+      aria-controls=":r6b:"
+      aria-describedby=":r6b:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -10317,7 +11602,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r5k:"
+        id=":r6b:"
         role="dialog"
       >
         <div
@@ -10353,7 +11638,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r5n:"
+                  id=":r6e:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -10370,7 +11655,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -10520,7 +11805,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -11085,7 +12370,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
-.cache-wnb1yk-Stack-DropdownGroup {
+.cache-1vg85hh-Stack-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11113,7 +12398,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   padding-left: 16px;
   padding-right: 16px;
   height: 32px;
-  z-index: 1;
 }
 
 .cache-zis5in-StyledText {
@@ -11289,8 +12573,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r3c:"
-      aria-describedby=":r3c:"
+      aria-controls=":r43:"
+      aria-describedby=":r43:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -11337,7 +12621,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r3c:"
+        id=":r43:"
         role="dialog"
       >
         <div
@@ -11373,7 +12657,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r3f:"
+                  id=":r46:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -11390,7 +12674,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -11540,7 +12824,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -12105,7 +13389,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
-.cache-wnb1yk-Stack-DropdownGroup {
+.cache-1vg85hh-Stack-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12133,7 +13417,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   padding-left: 16px;
   padding-right: 16px;
   height: 32px;
-  z-index: 1;
 }
 
 .cache-zis5in-StyledText {
@@ -12309,8 +13592,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r44:"
-      aria-describedby=":r44:"
+      aria-controls=":r4r:"
+      aria-describedby=":r4r:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -12357,7 +13640,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r44:"
+        id=":r4r:"
         role="dialog"
       >
         <div
@@ -12393,7 +13676,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r47:"
+                  id=":r4u:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -12410,7 +13693,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -12560,7 +13843,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
               class="cache-113ljh8-Stack ehpbis70"
             >
               <div
-                class="cache-wnb1yk-Stack-DropdownGroup eeucz6c3"
+                class="cache-1vg85hh-Stack-DropdownGroup eeucz6c3"
               >
                 <span
                   class="cache-zis5in-StyledText e13y3mga0"
@@ -13112,8 +14395,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8d:"
-      aria-describedby=":r8d:"
+      aria-controls=":r94:"
+      aria-describedby=":r94:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -13160,7 +14443,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r8d:"
+        id=":r94:"
         role="dialog"
       >
         <div
@@ -13256,8 +14539,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r8l:"
-                        aria-describedby=":r8l:"
+                        aria-controls=":r9c:"
+                        aria-describedby=":r9c:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -13950,8 +15233,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7r:"
-      aria-describedby=":r7r:"
+      aria-controls=":r8i:"
+      aria-describedby=":r8i:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -14009,7 +15292,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
       <div
         class="eeucz6c5 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r7r:"
+        id=":r8i:"
         role="dialog"
       >
         <div
@@ -14045,7 +15328,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                   aria-invalid="false"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r7u:"
+                  id=":r8l:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -14143,8 +15426,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r85:"
-                        aria-describedby=":r85:"
+                        aria-controls=":r8s:"
+                        aria-describedby=":r8s:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >

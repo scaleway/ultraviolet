@@ -105,10 +105,14 @@ type SelectInputV2Props = {
    * Adds an option to select every selectable options
    */
   selectAll?: { label: ReactNode; description?: string }
+  /**
+   * When options are group, define a option to select every selectable options of a group
+   */
+  selectAllGroup?: boolean
   width?: string | number
   autofocus?: boolean
   'data-testid'?: string
-  onChange?: (value: (string | undefined)[]) => void
+  onChange?: (value: string[]) => void
 } & Pick<
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
@@ -161,15 +165,24 @@ export const SelectInputV2 = ({
   optionalInfoPlacement = 'right',
   isLoading,
   selectAll,
+  selectAllGroup,
 }: SelectInputV2Props) => {
   const defaultValue = value ? [value] : []
   const [displayedOptions, setDisplayedOptions] = useState(options)
   const [selectedValues, setSelectedValues] =
-    useState<(OptionType | undefined)[]>(defaultValue)
+    useState<OptionType[]>(defaultValue)
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
   const [searchInput, setSearchInput] = useState('')
   const [allSelected, setAllSelected] = useState(false)
+  const [selectedGroups, setSelectedGroups] = useState<string[]>([])
   const ref = useRef<HTMLDivElement>(null)
+  const numberOfOptions = Array.isArray(options)
+    ? options.length
+    : Object.values(options).reduce(
+        (acc, current) =>
+          acc + current.filter(option => !option.disabled).length,
+        0,
+      )
 
   return (
     <SelectInputContainer
@@ -205,6 +218,10 @@ export const SelectInputV2 = ({
         selectAll={selectAll}
         allSelected={allSelected}
         setAllSelected={setAllSelected}
+        selectAllGroup={selectAllGroup}
+        selectedGroups={selectedGroups}
+        setSelectedGroups={setSelectedGroups}
+        numberOfOptions={numberOfOptions}
       >
         <Stack gap={0.5} aria-label={ariaLabel}>
           <Stack direction="row" gap={0.5}>

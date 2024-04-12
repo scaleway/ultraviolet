@@ -51,6 +51,10 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
           onChange={setValues}
           options={dataGrouped}
           label="Simple onChange to get the selected value"
+          selectAll={{
+            label: 'Select All',
+            description: 'You can click here to select every option',
+          }}
         />
         Selected values:
         <ul>
