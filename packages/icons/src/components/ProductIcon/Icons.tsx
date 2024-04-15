@@ -46,6 +46,7 @@ import { ReactComponent as elasticMetalIridium } from './assets/elastic-metal-ir
 import { ReactComponent as elasticMetalLithium } from './assets/elastic-metal-lithium.svg'
 import { ReactComponent as elasticMetalTitanium } from './assets/elastic-metal-titanium.svg'
 import { ReactComponent as elasticMetal } from './assets/elastic-metal.svg'
+import { ReactComponent as environmentalFootprintCalculator } from './assets/environmental-footprint-calculator.svg'
 import { ReactComponent as file } from './assets/file.svg'
 import { ReactComponent as flexibleIp } from './assets/flexible-ip.svg'
 import { ReactComponent as folder } from './assets/folder.svg'
@@ -132,6 +133,9 @@ import { ReactComponent as verifyCard } from './assets/verify-card.svg'
 import { ReactComponent as video } from './assets/video.svg'
 import { ReactComponent as volume } from './assets/volume.svg'
 import { ReactComponent as vpc } from './assets/vpc.svg'
+import { ReactComponent as vpsProServers } from './assets/vps-pro-servers.svg'
+import { ReactComponent as vpsServers } from './assets/vps-servers.svg'
+import { ReactComponent as vpsStartServers } from './assets/vps-start-servers.svg'
 import { ReactComponent as webPlatform } from './assets/web-platform.svg'
 import { ReactComponent as webhosting } from './assets/webhosting.svg'
 import { ReactComponent as zone } from './assets/zone.svg'
@@ -274,4 +278,8 @@ export const PRODUCT_ICONS = {
   inference,
   managedSearchDataBase,
   costManager,
+  vpsProServers,
+  vpsServers,
+  vpsStartServers,
+  environmentalFootprintCalculator,
 } as const
