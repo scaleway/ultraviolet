@@ -128,6 +128,7 @@ const SelectInputContainer = styled('div', {
 const HelperText = styled(Text)`
   padding-top: ${({ theme }) => theme.space['0.5']};
 `
+
 /**
  * SelectInputV2 component is used to select one or many elements from a selection.
  */
@@ -253,6 +254,8 @@ export const SelectInputV2 = ({
             autoFocus={autofocus}
             innerRef={ref}
             setAllSelected={setAllSelected}
+            options={options}
+            setSelectedGroups={setSelectedGroups}
           />
         </Stack>
       </Dropdown>

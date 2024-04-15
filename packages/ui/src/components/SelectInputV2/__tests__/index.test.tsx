@@ -411,7 +411,6 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('[arrowDown]')
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
-    await userEvent.tab()
     await userEvent.keyboard('[arrowDown]')
     await userEvent.keyboard('[arrowUp]')
     const mercury = screen.getByRole('option', {
@@ -987,6 +986,7 @@ describe('SelectInputV2', () => {
         name="test"
         options={dataGrouped}
         multiselect
+        clearable={false}
         placeholder="placeholder"
         onChange={(values: (string | undefined)[]) => values}
         selectAllGroup

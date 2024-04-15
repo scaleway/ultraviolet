@@ -6,7 +6,8 @@ import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
 import { Text } from '../Text'
-import { INPUT_SIZE_HEIGHT, type OptionType, SIZES_TAG } from './types'
+import type { DataType, OptionType } from './types'
+import { INPUT_SIZE_HEIGHT, SIZES_TAG } from './types'
 
 type SelectBarProps = {
   size: 'small' | 'medium' | 'large'
@@ -26,6 +27,8 @@ type SelectBarProps = {
   isDropdownVisible: boolean
   setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
   setAllSelected: Dispatch<SetStateAction<boolean>>
+  options: DataType
+  setSelectedGroups: Dispatch<SetStateAction<string[]>>
 }
 
 type StyledInputWrapperProps = {
@@ -39,7 +42,7 @@ type DisplayValuesProps = {
   multiselect: boolean
   refTag: RefObject<HTMLDivElement>
   width?: number
-  nonOverflowedValues: (OptionType | undefined)[]
+  nonOverflowedValues: OptionType[]
   disabled: boolean
   readOnly: boolean
   selectedValues: OptionType[]
@@ -69,6 +72,7 @@ const StyledInputWrapper = styled(Stack, {
   padding: ${({ theme }) => theme.space[1]};
   padding-right: 0;
   padding-left: ${({ theme }) => theme.space[2]};
+  cursor: pointer;
 
   background: ${({ theme }) => theme.colors.neutral.background};
   border: 1px solid ${({ theme, state }) => theme.colors[state].border};
@@ -119,6 +123,15 @@ const StyledPlaceholder = styled(Text)`
   flex: 1;
   align-self: center;
 `
+
+const isValidSelectedValue = (selectedValue: OptionType, options: DataType) =>
+  !Array.isArray(options)
+    ? Object.keys(options).some(group =>
+        options[group].some(
+          option => option === selectedValue && !option.disabled,
+        ),
+      )
+    : options.some(option => option === selectedValue && !option.disabled)
 
 const DisplayValues = ({
   multiselect,
@@ -201,15 +214,17 @@ export const SelectBar = ({
   isDropdownVisible,
   setIsDropdownVisible,
   setAllSelected,
+  options,
+  setSelectedGroups,
 }: SelectBarProps) => {
   const openable = !(readOnly || disabled)
   const refTag = useRef<HTMLDivElement>(null)
   const width = innerRef.current?.offsetWidth
   const [overflowed, setOverflowed] = useState(false)
   const [overflowAmount, setOverflowAmount] = useState(0)
-  const [nonOverflowedValues, setNonOverFlowedValues] = useState<
-    (OptionType | undefined)[]
-  >([value])
+  const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(
+    value ? [value] : [],
+  )
 
   const state = useMemo(() => {
     if (error) {
@@ -223,13 +238,21 @@ export const SelectBar = ({
   }, [error, success])
 
   useEffect(() => {
+    // When too many items are selected, too avoid overflow, compute the number of tags to display and add a + tag
     let tagsWidth = 0
     let computedOverflowAmount = 0
-    let computedNonOverflowedValues: (OptionType | undefined)[] = []
-
-    for (const selectedValue of selectedValues) {
-      if (selectedValue && selectedValue.label && width) {
-        const lengthValue = selectedValue.value.length // Better way to find the number of displayed characters?
+    let computedNonOverflowedValues: OptionType[] = []
+    const newSelectedValues = selectedValues.filter(selectedValue =>
+      isValidSelectedValue(selectedValue, options),
+    )
+    for (const selectedValue of newSelectedValues) {
+      if (
+        selectedValue &&
+        selectedValue.label &&
+        width &&
+        isValidSelectedValue(selectedValue, options)
+      ) {
+        const lengthValue = selectedValue.value.length // Find a better way to find the number of displayed characters?
         const totalTagWidth =
           SIZES_TAG.tagWidth + SIZES_TAG.letterWidth * lengthValue
         if (totalTagWidth + tagsWidth > width - 100) {
@@ -251,7 +274,7 @@ export const SelectBar = ({
       setOverflowed(true)
     }
     setOverflowAmount(computedOverflowAmount)
-  }, [selectedValues, width])
+  }, [options, selectedValues, width])
 
   return (
     <StyledInputWrapper
@@ -272,7 +295,11 @@ export const SelectBar = ({
       autoFocus={autoFocus}
       onKeyDown={event => {
         if (event.key === 'ArrowDown') {
-          setIsDropdownVisible(true)
+          if (!isDropdownVisible) {
+            setIsDropdownVisible(true)
+          } else {
+            document.getElementById(`option-0`)?.focus()
+          }
         }
 
         return ['Enter', ' '].includes(event.key) && openable
@@ -323,6 +350,7 @@ export const SelectBar = ({
               event.stopPropagation()
               setSelectedValues([])
               setAllSelected(false)
+              setSelectedGroups([])
               onChange?.([])
             }}
             sentiment="neutral"

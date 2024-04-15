@@ -69,13 +69,17 @@ const DropdownContainer = styled(Stack)`
   overflow-y: scroll;
   padding: ${({ theme }) => theme.space[0]};
 `
-const DropdownGroup = styled(Stack)`
+const DropdownGroup = styled(Stack, {
+  shouldForwardProp: prop => !['selectAllGroup'].includes(prop),
+})<{ selectAllGroup?: boolean }>`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   position: sticky;
   top: 0px;
-  padding-left: ${({ theme }) => theme.space[2]};
   padding-right: ${({ theme }) => theme.space[2]};
+  padding-left: ${({ theme, selectAllGroup }) =>
+    selectAllGroup ? '20px' : theme.space[2]};
   height: ${({ theme }) => theme.space[4]};
+  text-align: left;
 `
 const DropdownItem = styled('button', {
   shouldForwardProp: prop => !['disabled', 'selected'].includes(prop),
@@ -118,6 +122,7 @@ const PopupFooter = styled.div`
 const StyledCheckbox = styled(Checkbox)`
   width: 100%;
   position: static;
+  text-align: left;
 `
 
 const moveFocusDown = () => {
@@ -598,7 +603,11 @@ const CreateDropdown = ({
       {Object.keys(displayedOptions).map(group => (
         <Stack key={group} gap={0.25}>
           {displayedOptions[group].length > 0 ? (
-            <DropdownGroup key={group} justifyContent="center">
+            <DropdownGroup
+              key={group}
+              selectAllGroup={selectAllGroup}
+              justifyContent="center"
+            >
               {selectAllGroup ? (
                 <StyledCheckbox
                   checked={selectedGroups.includes(group)}
@@ -626,6 +635,7 @@ const CreateDropdown = ({
                 selected={selectedValues.includes(option) && !option.disabled}
                 aria-label={option.value}
                 data-testid={`option-${index}`}
+                id={`option-${index}`}
                 role="option"
                 onClick={() => {
                   if (!option.disabled) {
@@ -641,7 +651,9 @@ const CreateDropdown = ({
               >
                 {multiselect ? (
                   <StyledCheckbox
-                    checked={selectedValues.includes(option)}
+                    checked={
+                      selectedValues.includes(option) && !option.disabled
+                    }
                     disabled={option.disabled}
                     value={option.value}
                     onChange={() => {
@@ -721,6 +733,7 @@ const CreateDropdown = ({
               }}
               aria-label={option.value}
               data-testid={`option-${index}`}
+              id={`option-${index}`}
               role="option"
               ref={
                 option.value === defaultSearchValue ||
@@ -731,7 +744,7 @@ const CreateDropdown = ({
             >
               {multiselect ? (
                 <StyledCheckbox
-                  checked={selectedValues.includes(option)}
+                  checked={selectedValues.includes(option) && !option.disabled}
                   disabled={option.disabled}
                   value={option.value}
                   onChange={() => {
