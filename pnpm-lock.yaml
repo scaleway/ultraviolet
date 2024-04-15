@@ -80,8 +80,8 @@ importers:
         specifier: 3.18.1
         version: 3.18.1(eslint@8.57.0)(typescript@5.4.4)
       '@scaleway/jest-helpers':
-        specifier: 4.0.1
-        version: 4.0.1(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 4.0.2
+        version: 4.0.2(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
       '@scaleway/tsconfig':
         specifier: 1.1.1
         version: 1.1.1
@@ -5072,8 +5072,8 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers@4.0.1(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-uMsmzaJGl0EqjS0NyOsk7v+pe8+W6hx+F4vEejDqDbXclag31usFaggWGRy7J6q+Ca11k8XjSedrJopchicMcw==}
+  /@scaleway/jest-helpers@4.0.2(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-VP4G575pMZLnq96LE1zI+OX0CgulvY+djJAm63fL7frLT1H/ubegEdmEHC5qEK1nrU7U2lR+1LgIFh/MYYS2Kg==}
     engines: {node: '>=20.x'}
     peerDependencies:
       react: ^18.0.0 || 18
@@ -5081,7 +5081,7 @@ packages:
       '@emotion/cache': 11.11.0
       '@emotion/jest': 11.11.0
       '@emotion/react': 11.11.4(@types/react@18.2.74)(react@18.2.0)
-      '@testing-library/react': 14.2.2(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react': 14.3.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
     transitivePeerDependencies:
       - '@types/jest'
@@ -6513,6 +6513,20 @@ packages:
 
   /@testing-library/react@14.2.2(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-SOUuM2ysCvjUWBXTNfQ/ztmnKDmqaiPV3SvoIuyxMUca45rbSWWAT/qB8CUs/JQ/ux/8JFs9DNdFQ3f6jH3crA==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: ^18.0.0 || 18
+      react-dom: ^18.0.0 || 18
+    dependencies:
+      '@babel/runtime': 7.24.4
+      '@testing-library/dom': 9.3.4
+      '@types/react-dom': 18.2.24
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@testing-library/react@14.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-AYJGvNFMbCa5vt1UtDCa/dcaABrXq8gph6VN+cffIx0UeA0qiGqS+sT60+sb+Gjc8tGXdECWYQgaF0khf8b+Lg==}
     engines: {node: '>=14'}
     peerDependencies:
       react: ^18.0.0 || 18
