@@ -63,7 +63,11 @@ const Container = styled('div', {
     borderless
       ? ''
       : `border-bottom: 1px solid ${theme.colors.neutral.border};`}
-  padding: ${({ theme }) => `${theme.space['0.25']} ${theme.space['0.5']}`};
+  padding: ${({ theme, borderless }) =>
+    `${borderless ? theme.space['0.25'] : theme.space['0.5']} ${theme.space['0.5']}`};
+  &:last-child {
+    border: none;
+  }
 `
 
 const StyledItem = styled('button', {
