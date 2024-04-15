@@ -203,8 +203,9 @@ export const Popup = forwardRef(
 
     const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
     const popupPortalTarget = useMemo(() => {
+      if (portalTarget) return portalTarget
+
       if (role === 'dialog') {
-        if (portalTarget) return portalTarget
         if (childrenRef.current) return childrenRef.current
         if (typeof window !== 'undefined') return document.body
 
