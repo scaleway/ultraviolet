@@ -76,7 +76,7 @@ type SelectInputV2Props = {
   /**
    * Whether option description is on the right of the option or under it
    */
-  direction?: 'row' | 'column'
+  descriptionDirection?: 'row' | 'column'
   /**
    * Where to place the additional info prop
    */
@@ -109,7 +109,6 @@ type SelectInputV2Props = {
    * When options are group, define a option to select every selectable options of a group
    */
   selectAllGroup?: boolean
-  width?: string | number
   autofocus?: boolean
   'data-testid'?: string
   onChange?: (value: string[]) => void
@@ -117,13 +116,9 @@ type SelectInputV2Props = {
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
 >
-type ContainerProps = {
-  width: number | string
-}
-const SelectInputContainer = styled('div', {
-  shouldForwardProp: prop => !['width'].includes(prop),
-})<ContainerProps>`
-  width: ${({ width }) => (typeof width === 'number' ? `${width}px` : width)};
+
+const SelectInputContainer = styled.div`
+  width: 100%;
 `
 const HelperText = styled(Text)`
   padding-top: ${({ theme }) => theme.space['0.5']};
@@ -143,10 +138,9 @@ export const SelectInputV2 = ({
   label,
   helper,
   options,
-  width = '100%',
-  size = 'medium',
+  size = 'large',
   emptyState,
-  direction,
+  descriptionDirection,
   success,
   error,
   'data-testid': dataTestId,
@@ -192,7 +186,6 @@ export const SelectInputV2 = ({
       onFocus={onFocus}
       data-testid={dataTestId}
       className={className}
-      width={width}
       aria-label={name}
     >
       <Dropdown
@@ -200,7 +193,7 @@ export const SelectInputV2 = ({
         displayedOptions={displayedOptions}
         multiselect={multiselect}
         emptyState={emptyState}
-        direction={direction}
+        descriptionDirection={descriptionDirection}
         searchable={searchable}
         onSearch={setDisplayedOptions}
         placeholder={placeholderSearch}

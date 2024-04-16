@@ -8,11 +8,7 @@ import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
-import {
-  OptionalInfo,
-  dataGrouped,
-  dataUnGrouped,
-} from '../__stories__/resources'
+import { OptionalInfo, dataGrouped, dataUnGrouped } from '../resourceExamples'
 
 export type OptionType = {
   value: string
@@ -23,22 +19,18 @@ export type OptionType = {
 }
 
 describe('SelectInputV2', () => {
+  beforeAll(() => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
+      configurable: true,
+      value: 500,
+    })
+  })
+
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SelectInputV2 name="test" options={dataUnGrouped} label="label" />,
     ))
-  test('renders correctly with fixed width', () =>
-    shouldMatchEmotionSnapshot(
-      <SelectInputV2
-        name="test"
-        options={dataUnGrouped}
-        placeholder="placeholder"
-        placeholderSearch="placeholdersearch"
-        width={400}
-        clearable={false}
-        searchable={false}
-      />,
-    ))
+
   test('renders correctly not clearable', () =>
     shouldMatchEmotionSnapshot(
       <SelectInputV2
@@ -46,7 +38,6 @@ describe('SelectInputV2', () => {
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        width={400}
         clearable={false}
         searchable={false}
         value={dataUnGrouped[4]}
@@ -139,7 +130,7 @@ describe('SelectInputV2', () => {
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        direction="row"
+        descriptionDirection="row"
         onChange={() => {}}
       />,
       {
@@ -156,7 +147,7 @@ describe('SelectInputV2', () => {
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        direction="row"
+        descriptionDirection="row"
         optionalInfoPlacement="right"
       />,
       {
@@ -173,7 +164,7 @@ describe('SelectInputV2', () => {
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        direction="column"
+        descriptionDirection="column"
         optionalInfoPlacement="left"
       />,
       {
@@ -190,7 +181,7 @@ describe('SelectInputV2', () => {
         options={OptionalInfo}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        direction="column"
+        descriptionDirection="column"
         optionalInfoPlacement="right"
       />,
       {
@@ -315,7 +306,7 @@ describe('SelectInputV2', () => {
         },
       },
     ))
-  test('renders correctly dropdown with clicks - grouped', async () => {
+  test('handles correctly dropdown with clicks - grouped', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -324,7 +315,6 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         searchable={false}
         multiselect
-        width={500}
       />,
     )
 
@@ -337,7 +327,7 @@ describe('SelectInputV2', () => {
     await userEvent.click(input)
     expect(dropdown).not.toBeInTheDocument()
   })
-  test('renders correctly dropdown with clicks - ungrouped', async () => {
+  test('handles correctly dropdown with clicks - ungrouped', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -346,7 +336,6 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         searchable={false}
         multiselect
-        width={500}
       />,
     )
 
@@ -360,7 +349,7 @@ describe('SelectInputV2', () => {
     expect(dropdown).not.toBeInTheDocument()
   })
 
-  test('renders correctly closed tags', async () => {
+  test('handles correctly closable tags', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -393,7 +382,7 @@ describe('SelectInputV2', () => {
       />,
     ))
 
-  test('renders correctly dropdown with arrow down/up key press with ungrouped data', async () => {
+  test('handles correctly dropdown with arrow down/up key press with ungrouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -418,7 +407,7 @@ describe('SelectInputV2', () => {
     })
     expect(mercury).toHaveFocus()
   })
-  test('renders correctly dropdown with arrow pressing enter or space', async () => {
+  test('handles correctly dropdown with arrow pressing enter or space', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -437,7 +426,7 @@ describe('SelectInputV2', () => {
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
   })
-  test('renders correctly dropdown with arrow down/up key press with grouped data', async () => {
+  test('handles correctly dropdown with arrow down/up key press with grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -464,7 +453,7 @@ describe('SelectInputV2', () => {
     expect(mercury).toHaveFocus()
   })
 
-  test('renders correctly clear all', async () => {
+  test('handles correctly clear all', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -605,7 +594,7 @@ describe('SelectInputV2', () => {
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
-  test('renders with searchable and closest value - grouped data', async () => {
+  test('handles correctly searchable and closest value - grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -649,9 +638,14 @@ describe('SelectInputV2', () => {
 
     const emptyState = screen.getByText('No options')
     expect(emptyState).toBeVisible()
+
+    await userEvent.keyboard('[Backspace][Backspace]')
+    await userEvent.keyboard('ju')
+    await userEvent.keyboard('[Enter]')
+    expect(input.textContent).toContain('Jupiter')
   })
 
-  test('renders with searchable and closest value - multiselect', async () => {
+  test('handles correctly with searchable and closest value - multiselect', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -705,7 +699,7 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('[Enter]')
     expect(screen.getByRole('checkbox', { name: /earth/i })).toBeChecked()
   })
-  test('renders with searchable and closest value - multiselect & grouped data', async () => {
+  test('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"
@@ -764,14 +758,7 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('mer')
     await userEvent.keyboard('[Enter]')
     expect(screen.getByRole('checkbox', { name: /mercury/i })).toBeChecked() // searchText undefined
-  })
-
-  beforeAll(() => {
-    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
-      configurable: true,
-      value: 500,
-    })
-  })
+  }, 6000)
 
   test('renders correctly selected tags when multiselect', async () => {
     renderWithTheme(
@@ -783,7 +770,7 @@ describe('SelectInputV2', () => {
         value={dataGrouped['jovian planets'][1]}
         onChange={(values: (string | undefined)[]) => values}
         optionalInfoPlacement="left"
-        direction="column"
+        descriptionDirection="column"
       />,
     )
 
@@ -851,7 +838,17 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('[Enter]')
 
     expect(earth).toBeChecked()
-  })
+
+    await userEvent.click(screen.getByTestId('search-bar'))
+    await userEvent.tab()
+    await userEvent.keyboard(' ')
+    expect(selectAll).not.toBeChecked()
+    await userEvent.keyboard('[Enter]')
+    expect(selectAll).toBeChecked()
+    await userEvent.keyboard('<') // Nothing when the user press any key
+    expect(selectAll).toBeChecked()
+  }, 6000)
+
   test('handles correcty selectAll ungrouped data', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -897,10 +894,13 @@ describe('SelectInputV2', () => {
 
     expect(earth).toBeChecked()
 
+    await userEvent.click(screen.getByTestId('search-bar'))
     await userEvent.tab()
     await userEvent.keyboard(' ')
     expect(selectAll).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
+    expect(selectAll).toBeChecked()
+    await userEvent.keyboard('<') // Nothing when the user press any key
     expect(selectAll).toBeChecked()
   })
 
@@ -946,6 +946,7 @@ describe('SelectInputV2', () => {
     await userEvent.click(mercury)
     expect(selectAllGroup).toBeChecked()
   }, 10000)
+
   test('handles correcty selectAllGroup - keyboard events', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -1036,4 +1037,164 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('[Enter]')
     expect(selectAll).toBeChecked()
   }, 10000)
+
+  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        optionalInfoPlacement="left"
+        descriptionDirection="row"
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const earth = screen.getByTestId('option-stack-earth')
+    await userEvent.click(earth)
+  })
+  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        optionalInfoPlacement="right"
+        descriptionDirection="row"
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const earth = screen.getByTestId('option-stack-earth')
+    await userEvent.click(earth)
+  })
+  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        optionalInfoPlacement="left"
+        descriptionDirection="column"
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const earth = screen.getByTestId('option-stack-earth')
+    await userEvent.click(earth)
+  })
+  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        multiselect
+        placeholder="placeholder"
+        optionalInfoPlacement="right"
+        descriptionDirection="column"
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const earth = screen.getByTestId('option-stack-earth')
+    await userEvent.click(earth)
+  })
+  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        optionalInfoPlacement="left"
+        descriptionDirection="row"
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const earth = screen.getByTestId('option-stack-earth')
+    await userEvent.click(earth)
+  })
+  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        optionalInfoPlacement="right"
+        descriptionDirection="row"
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const earth = screen.getByTestId('option-stack-earth')
+    await userEvent.click(earth)
+  })
+  test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        optionalInfoPlacement="left"
+        descriptionDirection="column"
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const earth = screen.getByTestId('option-stack-earth')
+    await userEvent.click(earth)
+  })
+  test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
+    renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        optionalInfoPlacement="right"
+        descriptionDirection="column"
+      />,
+    )
+    const input = screen.getByTestId('select-bar')
+    await userEvent.click(input)
+    const earth = screen.getByTestId('option-stack-earth')
+    await userEvent.click(earth)
+  })
+  test('renders correctly loading - grouped data', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        descriptionDirection="row"
+        isLoading
+      />,
+      {
+        transform: async () => {
+          const input = screen.getByText('placeholder')
+          await userEvent.click(input)
+        },
+      },
+    ))
+
+  test('renders correctly loading - ungrouped data', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        descriptionDirection="row"
+        isLoading
+      />,
+      {
+        transform: async () => {
+          const input = screen.getByText('placeholder')
+          await userEvent.click(input)
+        },
+      },
+    ))
 })

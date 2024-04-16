@@ -4,7 +4,7 @@ import { Stack } from '../../Stack'
 import { dataGrouped } from './resources'
 
 export const SelectAll: StoryFn<typeof SelectInputV2> = args => (
-  <Stack gap={5}>
+  <Stack gap={5} width="50%">
     <SelectInputV2
       {...args}
       selectAll={{
@@ -35,7 +35,6 @@ SelectAll.args = {
   searchable: true,
   disabled: false,
   helper: 'helper',
-  width: 400,
 }
 SelectAll.decorators = [
   StoryComponent => (

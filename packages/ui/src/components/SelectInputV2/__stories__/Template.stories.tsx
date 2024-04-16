@@ -12,6 +12,4 @@ Template.args = {
   placeholderSearch: 'Search in list',
   searchable: true,
   disabled: false,
-  helper: 'helper',
-  width: 500,
 }

@@ -35,7 +35,8 @@ type StyledInputWrapperProps = {
   size: 'small' | 'medium' | 'large'
   isDropdownVisible: boolean
   state: 'neutral' | 'danger' | 'success'
-  openable: boolean
+  disabled: boolean
+  readOnly: boolean
 }
 
 type DisplayValuesProps = {
@@ -65,14 +66,25 @@ const StackTags = styled(Stack, {
 `
 const StyledInputWrapper = styled(Stack, {
   shouldForwardProp: prop =>
-    !['size', 'isDropdownVisible', 'state', 'openable'].includes(prop),
+    !['size', 'isDropdownVisible', 'state', 'disabled', 'readOnly'].includes(
+      prop,
+    ),
 })<StyledInputWrapperProps>`
   display: flex;
   height: ${({ size }) => INPUT_SIZE_HEIGHT[size]}px;
   padding: ${({ theme }) => theme.space[1]};
   padding-right: 0;
   padding-left: ${({ theme }) => theme.space[2]};
-  cursor: pointer;
+  cursor: ${({ disabled, readOnly }) => {
+    if (disabled) {
+      return 'not-allowed'
+    }
+    if (readOnly) {
+      return 'default'
+    }
+
+    return 'pointer'
+  }};
 
   background: ${({ theme }) => theme.colors.neutral.background};
   border: 1px solid ${({ theme, state }) => theme.colors[state].border};
@@ -98,8 +110,8 @@ const StyledInputWrapper = styled(Stack, {
   }
 
   &:active {
-    box-shadow: ${({ theme, openable }) =>
-      openable ? theme.shadows.focusPrimary : 'none'};
+    box-shadow: ${({ theme, disabled, readOnly }) =>
+      !(readOnly || disabled) ? theme.shadows.focusPrimary : 'none'};
   }
 
   ${({ theme, isDropdownVisible }) =>
@@ -116,8 +128,13 @@ const CustomTag = styled(Tag)`
   width: fit-content;
 `
 
-const StyledPlaceholder = styled(Text)`
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
+const StyledPlaceholder = styled(Text, {
+  shouldForwardProp: prop => !['disabled'].includes(prop),
+})`
+  color: ${({ theme, disabled }) =>
+    disabled
+      ? theme.colors.neutral.textWeakDisabled
+      : theme.colors.neutral.textWeak};
   text-size: ${({ theme }) => theme.typography.body.fontSize};
   display: flex;
   flex: 1;
@@ -307,7 +324,8 @@ export const SelectBar = ({
           : null
       }}
       ref={innerRef}
-      openable={!(readOnly || disabled)}
+      readOnly={readOnly}
+      disabled={disabled}
       aria-labelledby="select bar"
       aria-haspopup="listbox"
       aria-expanded={isDropdownVisible}
@@ -330,7 +348,7 @@ export const SelectBar = ({
           setAllSelected={setAllSelected}
         />
       ) : (
-        <StyledPlaceholder as="p" variant="body">
+        <StyledPlaceholder as="p" variant="body" disabled={disabled}>
           {placeholder}
         </StyledPlaceholder>
       )}
@@ -344,7 +362,7 @@ export const SelectBar = ({
             aria-label="clear value"
             disabled={disabled || !value || readOnly}
             variant="ghost"
-            size={size === 'small' ? 'xsmall' : 'small'}
+            size="small"
             icon="close"
             onClick={event => {
               event.stopPropagation()
@@ -359,7 +377,7 @@ export const SelectBar = ({
         ) : null}
         <Icon
           aria-label="show dropdown"
-          size={size === 'small' ? 'xsmall' : 'small'}
+          size="small"
           name="arrow-down"
           sentiment="neutral"
           disabled={disabled || readOnly}

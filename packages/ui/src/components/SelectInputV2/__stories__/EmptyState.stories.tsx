@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { SelectInputV2 } from '..'
 import { Link } from '../../Link'
@@ -6,11 +5,8 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Template } from './Template.stories'
 
-const StyledStack = styled(Stack)`
-  padding: 30px;
-`
 const emptyStateText = (
-  <StyledStack gap={2}>
+  <Stack gap={2} alignItems="center">
     <Text variant="heading" as="h3">
       No options
     </Text>
@@ -24,11 +20,13 @@ const emptyStateText = (
     >
       It is possible to add links, for instance.
     </Link>
-  </StyledStack>
+  </Stack>
 )
 
 export const EmptyState: StoryFn<typeof SelectInputV2> = args => (
-  <SelectInputV2 {...args} emptyState={emptyStateText} />
+  <Stack width="50%">
+    <SelectInputV2 {...args} emptyState={emptyStateText} />
+  </Stack>
 )
 EmptyState.args = {
   ...Template.args,

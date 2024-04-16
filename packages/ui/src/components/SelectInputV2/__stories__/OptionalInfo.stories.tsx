@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react'
 import { SelectInputV2 } from '..'
+import { Stack } from '../../Stack'
 import {
   OptionalInfo,
   OptionalInfo2,
@@ -8,7 +9,7 @@ import {
 } from './resources'
 
 export const AdditionalInfo: StoryFn<typeof SelectInputV2> = args => (
-  <>
+  <Stack gap="2" width="50%">
     <SelectInputV2
       {...args}
       options={OptionalInfo}
@@ -33,7 +34,7 @@ export const AdditionalInfo: StoryFn<typeof SelectInputV2> = args => (
       optionalInfoPlacement="right"
       label="Right"
     />
-  </>
+  </Stack>
 )
 
 AdditionalInfo.args = {
@@ -43,7 +44,6 @@ AdditionalInfo.args = {
   searchable: false,
   disabled: false,
   helper: 'helper',
-  width: 400,
 }
 
 AdditionalInfo.parameters = {

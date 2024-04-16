@@ -45,7 +45,7 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
 
   return (
     <>
-      <Stack direction="row" gap={4}>
+      <Stack direction="row" gap={4} width="50%">
         <SelectInputV2
           {...args}
           onChange={setValues}
@@ -81,7 +81,6 @@ OnChange.args = {
   searchable: true,
   disabled: false,
   helper: 'helper',
-  width: 400,
   multiselect: true,
 }
 

@@ -175,6 +175,7 @@ export const SearchBarDropdown = ({
       prefix={<Icon name="search" size="small" sentiment="neutral" />}
       onKeyDown={event => handleKeyDown(event.key, searchInput)}
       autoFocus
+      size="medium"
     />
   )
 }
