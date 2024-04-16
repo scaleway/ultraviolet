@@ -105,7 +105,7 @@ const Slider = styled.div`
   top: 0;
   bottom: 0;
   right: 0;
-  width: 8px;
+  width: 6px;
   cursor: col-resize;
   border-right: 2px solid transparent;
   display: flex;
