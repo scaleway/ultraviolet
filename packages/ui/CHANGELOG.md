@@ -1,5 +1,31 @@
 # Change Log
 
+## 1.47.0
+
+### Minor Changes
+
+- [#3631](https://github.com/scaleway/ultraviolet/pull/3631) [`30153dc`](https://github.com/scaleway/ultraviolet/commit/30153dc6ccf54e32281325386888263afd32bed9) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring of `<MenuV2 />` component with a new style and implement following props:
+
+  - New prop `size`: `small`, `medium`, `large`
+  - New prop `triggerMethod`: `click`, `hover` (default is `click`) it will trigger the menu to open on click or hover
+  - On `Menu.Item`:
+    - New variant `primary` on `sentiment` prop
+    - New prop `active` to set the item as active visually
+  - New sub component `<MenuV2.Group />` to group items together under a label
+
+  Refactoring of `<Popup />` component:
+
+  - Change of prop `hasDebounce` to `debounceDelay` => the prop will also add delay on the apparition of the popup
+
+### Patch Changes
+
+- [#3656](https://github.com/scaleway/ultraviolet/pull/3656) [`4e95be5`](https://github.com/scaleway/ultraviolet/commit/4e95be52f3bdb99c18d00d3db75756e608e7f72d) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Popup />` component to correctly set `portalTarget` prop
+
+- [#3658](https://github.com/scaleway/ultraviolet/pull/3658) [`53fb87d`](https://github.com/scaleway/ultraviolet/commit/53fb87d6899c892fb9b7ee5482fc2165cff76a0b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.78`.
+  Updated dependency `@types/react-dom` to `18.2.25`.
+- Updated dependencies [[`53fb87d`](https://github.com/scaleway/ultraviolet/commit/53fb87d6899c892fb9b7ee5482fc2165cff76a0b), [`9c47acf`](https://github.com/scaleway/ultraviolet/commit/9c47acfcea1606811a65772090c70587e1852fcb)]:
+  - @ultraviolet/icons@2.12.4
+
 ## 1.46.0
 
 ### Minor Changes

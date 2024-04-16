@@ -1,5 +1,20 @@
 # @ultraviolet/plus
 
+## 0.13.0
+
+### Minor Changes
+
+- [#3631](https://github.com/scaleway/ultraviolet/pull/3631) [`30153dc`](https://github.com/scaleway/ultraviolet/commit/30153dc6ccf54e32281325386888263afd32bed9) Thanks [@matthprost](https://github.com/matthprost)! - Update `<Navigation />` with the new style of the menu to open on hover and have badges
+
+### Patch Changes
+
+- [#3652](https://github.com/scaleway/ultraviolet/pull/3652) [`abe48a8`](https://github.com/scaleway/ultraviolet/commit/abe48a8ca4f70718776ec3ccb9d613d49674ba87) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.8.2`.
+
+- [#3658](https://github.com/scaleway/ultraviolet/pull/3658) [`53fb87d`](https://github.com/scaleway/ultraviolet/commit/53fb87d6899c892fb9b7ee5482fc2165cff76a0b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.78`.
+  Updated dependency `@types/react-dom` to `18.2.25`.
+- Updated dependencies [[`4e95be5`](https://github.com/scaleway/ultraviolet/commit/4e95be52f3bdb99c18d00d3db75756e608e7f72d), [`53fb87d`](https://github.com/scaleway/ultraviolet/commit/53fb87d6899c892fb9b7ee5482fc2165cff76a0b), [`30153dc`](https://github.com/scaleway/ultraviolet/commit/30153dc6ccf54e32281325386888263afd32bed9)]:
+  - @ultraviolet/ui@1.47.0
+
 ## 0.12.7
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.12.4
+
+### Patch Changes
+
+- [#3658](https://github.com/scaleway/ultraviolet/pull/3658) [`53fb87d`](https://github.com/scaleway/ultraviolet/commit/53fb87d6899c892fb9b7ee5482fc2165cff76a0b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.78`.
+  Updated dependency `@types/react-dom` to `18.2.25`.
+
+- [#3655](https://github.com/scaleway/ultraviolet/pull/3655) [`9c47acf`](https://github.com/scaleway/ultraviolet/commit/9c47acfcea1606811a65772090c70587e1852fcb) Thanks [@lisalupi](https://github.com/lisalupi)! - New `ProductIcons` : "vpsServers", "vpsProServers", "vpsStartServers" and "environmentalFootprintCalculator"
+
 ## 2.12.3
 
 ### Patch Changes
