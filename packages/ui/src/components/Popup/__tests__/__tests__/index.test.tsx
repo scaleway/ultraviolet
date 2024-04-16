@@ -10,14 +10,20 @@ import { Popup } from '../../index'
 
 describe('Popup', () => {
   test('should render correctly', () =>
-    shouldMatchEmotionSnapshotWithPortal(<Popup text="test">Hover me</Popup>))
+    shouldMatchEmotionSnapshotWithPortal(
+      <Popup debounceDelay={0} text="test">
+        Hover me
+      </Popup>,
+    ))
 
   test('should render correctly without text', () =>
-    shouldMatchEmotionSnapshotWithPortal(<Popup>Hover me</Popup>))
+    shouldMatchEmotionSnapshotWithPortal(
+      <Popup debounceDelay={0}>Hover me</Popup>,
+    ))
 
   test(`should display Popup on hover`, async () => {
     renderWithTheme(
-      <Popup id="test" text="test success!">
+      <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -31,7 +37,7 @@ describe('Popup', () => {
 
   test(`should display Popup on hover with no animation`, async () => {
     renderWithTheme(
-      <Popup id="test" text="test success!" disableAnimation>
+      <Popup debounceDelay={0} id="test" text="test success!" disableAnimation>
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -45,7 +51,7 @@ describe('Popup', () => {
 
   test(`should display Popup on hover with maxHeight`, async () => {
     renderWithTheme(
-      <Popup id="test" text="test success!" maxHeight="200px">
+      <Popup debounceDelay={0} id="test" text="test success!" maxHeight="200px">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -59,7 +65,7 @@ describe('Popup', () => {
 
   test(`should display Popup on hover with function children`, async () => {
     renderWithTheme(
-      <Popup id="test" text="test success!">
+      <Popup debounceDelay={0} id="test" text="test success!">
         {props => (
           <p {...props} data-testid="children">
             Hover me
@@ -77,7 +83,7 @@ describe('Popup', () => {
 
   test(`should display Popup on hover and hide when exit`, async () => {
     renderWithTheme(
-      <Popup id="test" text="test success!">
+      <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -96,7 +102,7 @@ describe('Popup', () => {
 
   test(`should display Popup on hover and hide when exit and hover back before animation ends`, async () => {
     renderWithTheme(
-      <Popup id="test" text="test success!">
+      <Popup debounceDelay={0} id="test" text="test success!">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -113,7 +119,7 @@ describe('Popup', () => {
 
   test(`should create Popup with random id`, async () => {
     renderWithTheme(
-      <Popup text="test success!">
+      <Popup debounceDelay={0} text="test success!">
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -127,7 +133,7 @@ describe('Popup', () => {
 
   test(`should renders Popup with maxWidth`, async () => {
     renderWithTheme(
-      <Popup text="test success!" maxWidth={100}>
+      <Popup debounceDelay={0} text="test success!" maxWidth={100}>
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -144,6 +150,7 @@ describe('Popup', () => {
       test(`should renders Popup with placement ${placement}`, async () => {
         renderWithTheme(
           <Popup
+            debounceDelay={0}
             text="test success!"
             placement={placement as ComponentProps<typeof Popup>['placement']}
           >
@@ -162,7 +169,7 @@ describe('Popup', () => {
 
   test(`should verify accessibility`, async () => {
     renderWithTheme(
-      <Popup text="test success!" maxWidth={100}>
+      <Popup debounceDelay={0} text="test success!" maxWidth={100}>
         <p data-testid="children">Hover me</p>
       </Popup>,
     )
@@ -180,7 +187,7 @@ describe('Popup', () => {
 
   test(`should verify trap focus`, async () => {
     renderWithTheme(
-      <Popup text="test success!" maxWidth={100}>
+      <Popup debounceDelay={0} text="test success!" maxWidth={100}>
         <button type="button" data-testid="1">
           Focus me
         </button>

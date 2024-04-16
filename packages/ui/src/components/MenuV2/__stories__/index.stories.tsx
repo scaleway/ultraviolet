@@ -21,12 +21,16 @@ export default {
   title: 'Components/Overlay/MenuV2',
   subcomponents: {
     'MenuV2.Item': MenuV2.Item,
+    'MenuV2.Group': MenuV2.Group,
   },
 } as Meta<typeof MenuV2>
 
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
 export { Borderless } from './Borderless.stories'
+export { Group } from './Group.stories'
+export { Active } from './Active.stories'
+export { TriggerMethod } from './TriggerMethod.stories'
 export { WithModal } from './WithModal.stories'
 export { FunctionDisclosure } from './FunctionDisclosure.stories'
 export { FunctionChildrenToggle } from './FunctionChildrenToggle.stories'

@@ -7,6 +7,7 @@ export const Sentiments: StoryFn<typeof MenuV2> = () => (
     <MenuV2.Item>Default</MenuV2.Item>
     <MenuV2.Item disabled>Default Disabled</MenuV2.Item>
     <MenuV2.Item sentiment="danger">Danger</MenuV2.Item>
+    <MenuV2.Item sentiment="primary">Danger</MenuV2.Item>
     <MenuV2.Item disabled sentiment="danger">
       Danger Disabled
     </MenuV2.Item>

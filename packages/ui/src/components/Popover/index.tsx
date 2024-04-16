@@ -158,7 +158,7 @@ export const Popover = forwardRef(
     return (
       <StyledPopup
         hideOnClickOutside
-        needDebounce={false}
+        debounceDelay={0}
         visible={localVisible}
         placement={placement}
         text={

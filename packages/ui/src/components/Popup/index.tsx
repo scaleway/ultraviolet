@@ -149,7 +149,11 @@ type PopupProps = {
   onKeyDown?: KeyboardEventHandler
   'aria-haspopup'?: HTMLAttributes<HTMLDivElement>['aria-haspopup']
   hideOnClickOutside?: boolean
-  needDebounce?: boolean
+  /**
+   * If you set debounceTime to false, the popup will not debounce the hover event and will be displayed instantly.
+   * If set to 0 it will disable debounce.
+   */
+  debounceDelay?: number
   /**
    * If you set a max height keep in mind that the animation is disabled, or it will not work properly on some browsers.
    */
@@ -189,7 +193,7 @@ export const Popup = forwardRef(
       onKeyDown,
       'aria-haspopup': ariaHasPopup,
       hideOnClickOutside = false,
-      needDebounce = true,
+      debounceDelay = DEFAULT_DEBOUNCE_DURATION,
       disableAnimation = false,
       portalTarget,
     }: PopupProps,
@@ -284,12 +288,12 @@ export const Popup = forwardRef(
             onClose?.()
           }, animationDuration)
         },
-        needDebounce && !disableAnimation ? DEFAULT_DEBOUNCE_DURATION : 0,
+        debounceDelay && !disableAnimation ? debounceDelay : 0,
       )
     }, [
       animationDuration,
       disableAnimation,
-      needDebounce,
+      debounceDelay,
       onClose,
       unmountPopupFromDom,
     ])
@@ -300,6 +304,12 @@ export const Popup = forwardRef(
      */
     const onPointerEvent = useCallback(
       (isVisible: boolean) => () => {
+        // If there is a debounceDelay and the popup is not visible, we clear the debounce timer
+        if (!visible && debounceDelay > 0 && debounceTimer.current) {
+          clearTimeout(debounceTimer.current)
+          debounceTimer.current = undefined
+        }
+
         // This condition is for when we want to unmount the popup
         // There is debounce in order to avoid popup to flicker when we move the mouse from children to popup
         // Timer is used to follow the animation duration
@@ -320,10 +330,16 @@ export const Popup = forwardRef(
             clearTimeout(debounceTimer.current)
             debounceTimer.current = undefined
           }
-          setVisibleInDom(true)
+          if (debounceDelay > 0) {
+            debounceTimer.current = setTimeout(() => {
+              setVisibleInDom(true)
+            }, debounceDelay)
+          } else {
+            setVisibleInDom(true)
+          }
         }
       },
-      [closePopup, innerPopupRef],
+      [closePopup, debounceDelay, visible],
     )
 
     /**
@@ -529,6 +545,8 @@ export const Popup = forwardRef(
                 data-testid={dataTestId}
                 data-has-arrow={hasArrow}
                 onClick={stopClickPropagation}
+                onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
+                onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
                 animationDuration={animationDuration}
                 onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
                 isDialog={role === 'dialog'}

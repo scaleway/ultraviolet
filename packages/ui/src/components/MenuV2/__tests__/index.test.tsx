@@ -43,6 +43,15 @@ describe('Menu', () => {
       </MenuV2>,
     ))
 
+  test(`renders with Menu.Group`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <MenuV2 visible disclosure={() => <button type="button">Menu</button>}>
+        <MenuV2.Group label="Group">
+          <MenuV2.Item>Menu.Item</MenuV2.Item>
+        </MenuV2.Group>
+      </MenuV2>,
+    ))
+
   test(`renders with Menu.ItemLink`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <MenuV2 visible disclosure={() => <button type="button">Menu</button>}>
@@ -144,6 +153,41 @@ describe('Menu', () => {
       ))
   })
 
+  describe('sizes', () => {
+    test('renders small', () =>
+      shouldMatchEmotionSnapshot(
+        <MenuV2
+          visible
+          size="small"
+          disclosure={() => <button type="button">Menu</button>}
+        >
+          <MenuV2.Item>small</MenuV2.Item>
+        </MenuV2>,
+      ))
+
+    test('renders medium', () =>
+      shouldMatchEmotionSnapshot(
+        <MenuV2
+          visible
+          size="medium"
+          disclosure={() => <button type="button">Menu</button>}
+        >
+          <MenuV2.Item>medium</MenuV2.Item>
+        </MenuV2>,
+      ))
+
+    test('renders large', () =>
+      shouldMatchEmotionSnapshot(
+        <MenuV2
+          visible
+          size="large"
+          disclosure={() => <button type="button">Menu</button>}
+        >
+          <MenuV2.Item>large</MenuV2.Item>
+        </MenuV2>,
+      ))
+  })
+
   describe('Menu.Item', () => {
     test(`render with default props`, () =>
       shouldMatchEmotionSnapshot(<MenuV2.Item>Default Props</MenuV2.Item>))
@@ -160,6 +204,10 @@ describe('Menu', () => {
     test(`render with borderless props`, () =>
       shouldMatchEmotionSnapshot(
         <MenuV2.Item borderless>Borderless Props</MenuV2.Item>,
+      ))
+    test(`render with active props`, () =>
+      shouldMatchEmotionSnapshot(
+        <MenuV2.Item active>Borderless Props</MenuV2.Item>,
       ))
   })
 })
