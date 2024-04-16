@@ -351,25 +351,7 @@ exports[`Menu Menu.Item render with sentiment danger 1`] = `
 
 exports[`Menu placement renders bottom 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -377,7 +359,7 @@ exports[`Menu placement renders bottom 1`] = `
   width: 100%;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup {
+.cache-nu0ev-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -385,6 +367,8 @@ exports[`Menu placement renders bottom 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -395,8 +379,6 @@ exports[`Menu placement renders bottom 1`] = `
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -405,7 +387,7 @@ exports[`Menu placement renders bottom 1`] = `
   padding: 2px 0;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -421,11 +403,11 @@ exports[`Menu placement renders bottom 1`] = `
   pointer-events: none;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -446,7 +428,6 @@ exports[`Menu placement renders bottom 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -455,8 +436,8 @@ exports[`Menu placement renders bottom 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -466,11 +447,11 @@ exports[`Menu placement renders bottom 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -544,13 +525,13 @@ exports[`Menu placement renders bottom 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-5k2du2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:rr:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -572,25 +553,7 @@ exports[`Menu placement renders bottom 1`] = `
 
 exports[`Menu placement renders left 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(-16px, 0px, 0);
-    -moz-transform: translate3d(-16px, 0px, 0);
-    -ms-transform: translate3d(-16px, 0px, 0);
-    transform: translate3d(-16px, 0px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(-16px, 0px, 0);
-    -moz-transform: translate3d(-16px, 0px, 0);
-    -ms-transform: translate3d(-16px, 0px, 0);
-    transform: translate3d(-16px, 0px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -598,7 +561,7 @@ exports[`Menu placement renders left 1`] = `
   width: 100%;
 }
 
-.cache-1rwii1t-StyledPopup-StyledPopup-StyledPopup {
+.cache-gykwiv-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -606,6 +569,8 @@ exports[`Menu placement renders left 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -616,8 +581,6 @@ exports[`Menu placement renders left 1`] = `
   -moz-transform: translate3d(-16px, 0px, 0);
   -ms-transform: translate3d(-16px, 0px, 0);
   transform: translate3d(-16px, 0px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -626,7 +589,7 @@ exports[`Menu placement renders left 1`] = `
   padding: 2px 0;
 }
 
-.cache-1rwii1t-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-gykwiv-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: 0px;
@@ -642,11 +605,11 @@ exports[`Menu placement renders left 1`] = `
   pointer-events: none;
 }
 
-.cache-1rwii1t-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-gykwiv-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -667,7 +630,6 @@ exports[`Menu placement renders left 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -676,8 +638,8 @@ exports[`Menu placement renders left 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -687,11 +649,11 @@ exports[`Menu placement renders left 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -765,13 +727,13 @@ exports[`Menu placement renders left 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-1rwii1t-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-gykwiv-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:ru:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -793,25 +755,7 @@ exports[`Menu placement renders left 1`] = `
 
 exports[`Menu placement renders right 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(16px, 0px, 0);
-    -moz-transform: translate3d(16px, 0px, 0);
-    -ms-transform: translate3d(16px, 0px, 0);
-    transform: translate3d(16px, 0px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(16px, 0px, 0);
-    -moz-transform: translate3d(16px, 0px, 0);
-    -ms-transform: translate3d(16px, 0px, 0);
-    transform: translate3d(16px, 0px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -819,7 +763,7 @@ exports[`Menu placement renders right 1`] = `
   width: 100%;
 }
 
-.cache-1ffg5rq-StyledPopup-StyledPopup-StyledPopup {
+.cache-1lcdhjg-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -827,6 +771,8 @@ exports[`Menu placement renders right 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -837,8 +783,6 @@ exports[`Menu placement renders right 1`] = `
   -moz-transform: translate3d(16px, 0px, 0);
   -ms-transform: translate3d(16px, 0px, 0);
   transform: translate3d(16px, 0px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -847,7 +791,7 @@ exports[`Menu placement renders right 1`] = `
   padding: 2px 0;
 }
 
-.cache-1ffg5rq-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lcdhjg-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: 0px;
@@ -863,11 +807,11 @@ exports[`Menu placement renders right 1`] = `
   pointer-events: none;
 }
 
-.cache-1ffg5rq-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lcdhjg-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -888,7 +832,6 @@ exports[`Menu placement renders right 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -897,8 +840,8 @@ exports[`Menu placement renders right 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -908,11 +851,11 @@ exports[`Menu placement renders right 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -986,13 +929,13 @@ exports[`Menu placement renders right 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-1ffg5rq-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1lcdhjg-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r11:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -1014,25 +957,7 @@ exports[`Menu placement renders right 1`] = `
 
 exports[`Menu placement renders top 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, -12px, 0);
-    -moz-transform: translate3d(0px, -12px, 0);
-    -ms-transform: translate3d(0px, -12px, 0);
-    transform: translate3d(0px, -12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, -12px, 0);
-    -moz-transform: translate3d(0px, -12px, 0);
-    -ms-transform: translate3d(0px, -12px, 0);
-    transform: translate3d(0px, -12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1040,7 +965,7 @@ exports[`Menu placement renders top 1`] = `
   width: 100%;
 }
 
-.cache-1l7or7n-StyledPopup-StyledPopup-StyledPopup {
+.cache-16b6nvk-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1048,6 +973,8 @@ exports[`Menu placement renders top 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -1058,8 +985,6 @@ exports[`Menu placement renders top 1`] = `
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -1068,7 +993,7 @@ exports[`Menu placement renders top 1`] = `
   padding: 2px 0;
 }
 
-.cache-1l7or7n-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-16b6nvk-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -1084,11 +1009,11 @@ exports[`Menu placement renders top 1`] = `
   pointer-events: none;
 }
 
-.cache-1l7or7n-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-16b6nvk-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1109,7 +1034,6 @@ exports[`Menu placement renders top 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -1118,8 +1042,8 @@ exports[`Menu placement renders top 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -1129,11 +1053,11 @@ exports[`Menu placement renders top 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -1207,13 +1131,13 @@ exports[`Menu placement renders top 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-1l7or7n-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-16b6nvk-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:ro:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -1235,25 +1159,7 @@ exports[`Menu placement renders top 1`] = `
 
 exports[`Menu renders with Menu.Group 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1261,7 +1167,7 @@ exports[`Menu renders with Menu.Group 1`] = `
   width: 100%;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup {
+.cache-nu0ev-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1269,6 +1175,8 @@ exports[`Menu renders with Menu.Group 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -1279,8 +1187,6 @@ exports[`Menu renders with Menu.Group 1`] = `
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -1289,7 +1195,7 @@ exports[`Menu renders with Menu.Group 1`] = `
   padding: 2px 0;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -1305,11 +1211,11 @@ exports[`Menu renders with Menu.Group 1`] = `
   pointer-events: none;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1330,7 +1236,6 @@ exports[`Menu renders with Menu.Group 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -1339,8 +1244,8 @@ exports[`Menu renders with Menu.Group 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -1350,11 +1255,11 @@ exports[`Menu renders with Menu.Group 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -1445,13 +1350,13 @@ exports[`Menu renders with Menu.Group 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-5k2du2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r7:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <span
@@ -1482,25 +1387,7 @@ exports[`Menu renders with Menu.Group 1`] = `
 
 exports[`Menu renders with Menu.Item 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1508,7 +1395,7 @@ exports[`Menu renders with Menu.Item 1`] = `
   width: 100%;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup {
+.cache-nu0ev-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1516,6 +1403,8 @@ exports[`Menu renders with Menu.Item 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -1526,8 +1415,6 @@ exports[`Menu renders with Menu.Item 1`] = `
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -1536,7 +1423,7 @@ exports[`Menu renders with Menu.Item 1`] = `
   padding: 2px 0;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -1552,11 +1439,11 @@ exports[`Menu renders with Menu.Item 1`] = `
   pointer-events: none;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1577,7 +1464,6 @@ exports[`Menu renders with Menu.Item 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -1586,8 +1472,8 @@ exports[`Menu renders with Menu.Item 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -1597,11 +1483,11 @@ exports[`Menu renders with Menu.Item 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -1675,13 +1561,13 @@ exports[`Menu renders with Menu.Item 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-5k2du2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r4:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -1703,25 +1589,7 @@ exports[`Menu renders with Menu.Item 1`] = `
 
 exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1729,7 +1597,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   width: 100%;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup {
+.cache-nu0ev-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1737,6 +1605,8 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -1747,8 +1617,6 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -1757,7 +1625,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   padding: 2px 0;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -1773,11 +1641,11 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   pointer-events: none;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1798,7 +1666,6 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -1807,8 +1674,8 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -1818,11 +1685,11 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -1884,13 +1751,13 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-5k2du2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:re:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -1925,25 +1792,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
 
 exports[`Menu renders with Menu.ItemLink 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1951,7 +1800,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   width: 100%;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup {
+.cache-nu0ev-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1959,6 +1808,8 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -1969,8 +1820,6 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -1979,7 +1828,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   padding: 2px 0;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -1995,11 +1844,11 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   pointer-events: none;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2020,7 +1869,6 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -2029,8 +1877,8 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -2040,11 +1888,11 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -2124,13 +1972,13 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-5k2du2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:rb:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -2206,61 +2054,7 @@ exports[`Menu renders with visible=false 1`] = `
 
 exports[`Menu sizes renders large 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-@keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-@keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -2268,7 +2062,7 @@ exports[`Menu sizes renders large 1`] = `
   width: 100%;
 }
 
-.cache-1rytjle-StyledPopup-StyledPopup-StyledPopup {
+.cache-sl3qfk-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2276,6 +2070,8 @@ exports[`Menu sizes renders large 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -2286,8 +2082,6 @@ exports[`Menu sizes renders large 1`] = `
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -2296,7 +2090,7 @@ exports[`Menu sizes renders large 1`] = `
   padding: 2px 0;
 }
 
-.cache-1rytjle-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-sl3qfk-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2312,11 +2106,11 @@ exports[`Menu sizes renders large 1`] = `
   pointer-events: none;
 }
 
-.cache-1rytjle-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-sl3qfk-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2337,7 +2131,6 @@ exports[`Menu sizes renders large 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -2346,8 +2139,8 @@ exports[`Menu sizes renders large 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -2357,11 +2150,11 @@ exports[`Menu sizes renders large 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -2435,13 +2228,13 @@ exports[`Menu sizes renders large 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-1rytjle-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-sl3qfk-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r1a:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -2463,43 +2256,7 @@ exports[`Menu sizes renders large 1`] = `
 
 exports[`Menu sizes renders medium 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-@keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -2507,7 +2264,7 @@ exports[`Menu sizes renders medium 1`] = `
   width: 100%;
 }
 
-.cache-fxlpoe-StyledPopup-StyledPopup-StyledPopup {
+.cache-bzwqpr-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2515,6 +2272,8 @@ exports[`Menu sizes renders medium 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -2525,8 +2284,6 @@ exports[`Menu sizes renders medium 1`] = `
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -2535,7 +2292,7 @@ exports[`Menu sizes renders medium 1`] = `
   padding: 2px 0;
 }
 
-.cache-fxlpoe-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-bzwqpr-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2551,11 +2308,11 @@ exports[`Menu sizes renders medium 1`] = `
   pointer-events: none;
 }
 
-.cache-fxlpoe-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-bzwqpr-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2576,7 +2333,6 @@ exports[`Menu sizes renders medium 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -2585,8 +2341,8 @@ exports[`Menu sizes renders medium 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -2596,11 +2352,11 @@ exports[`Menu sizes renders medium 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -2674,13 +2430,13 @@ exports[`Menu sizes renders medium 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-fxlpoe-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-bzwqpr-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r17:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div
@@ -2702,25 +2458,7 @@ exports[`Menu sizes renders medium 1`] = `
 
 exports[`Menu sizes renders small 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 12px, 0);
-    -moz-transform: translate3d(0px, 12px, 0);
-    -ms-transform: translate3d(0px, 12px, 0);
-    transform: translate3d(0px, 12px, 0);
-  }
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -2728,7 +2466,7 @@ exports[`Menu sizes renders small 1`] = `
   width: 100%;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup {
+.cache-nu0ev-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2736,6 +2474,8 @@ exports[`Menu sizes renders small 1`] = `
   text-align: center;
   position: absolute;
   max-width: 232px;
+  max-height: 480px;
+  overflow: auto;
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
@@ -2746,8 +2486,6 @@ exports[`Menu sizes renders small 1`] = `
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  -webkit-animation: 230ms animation-0 forwards;
-  animation: 230ms animation-0 forwards;
   background-color: #ffffff;
   box-shadow: 0px 0px 24px 6px #d9dadd66;
   padding: 0;
@@ -2756,7 +2494,7 @@ exports[`Menu sizes renders small 1`] = `
   padding: 2px 0;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2772,11 +2510,11 @@ exports[`Menu sizes renders small 1`] = `
   pointer-events: none;
 }
 
-.cache-5k2du2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
-.cache-13aqjby-Stack-MenuList {
+.cache-dfp9ph-Stack-MenuList {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2797,7 +2535,6 @@ exports[`Menu sizes renders small 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #ffffff;
@@ -2806,8 +2543,8 @@ exports[`Menu sizes renders small 1`] = `
   position: relative;
 }
 
-.cache-13aqjby-Stack-MenuList:after,
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:after,
+.cache-dfp9ph-Stack-MenuList:before {
   border: solid transparent;
   border-width: 9px;
   content: ' ';
@@ -2817,11 +2554,11 @@ exports[`Menu sizes renders small 1`] = `
   pointer-events: none;
 }
 
-.cache-13aqjby-Stack-MenuList:after {
+.cache-dfp9ph-Stack-MenuList:after {
   border-color: transparent;
 }
 
-.cache-13aqjby-Stack-MenuList:before {
+.cache-dfp9ph-Stack-MenuList:before {
   border-color: transparent;
 }
 
@@ -2895,13 +2632,13 @@ exports[`Menu sizes renders small 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-5k2du2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r14:"
       role="dialog"
     >
       <div
-        class="cache-13aqjby-Stack-MenuList e1jn11gg0"
+        class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
         role="menu"
       >
         <div

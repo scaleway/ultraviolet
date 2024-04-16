@@ -57,7 +57,6 @@ const StyledPopup = styled(Popup, {
 `
 
 const MenuList = styled(Stack)`
-  max-height: 480px;
   overflow-y: auto;
   overflow-x: hidden;
   &:after,
@@ -177,7 +176,7 @@ const FwdMenu = forwardRef(
         ref={popupRef}
         onClose={() => setIsVisible(false)}
         tabIndex={-1}
-        maxHeight={maxHeight}
+        maxHeight={maxHeight ?? '480px'}
         maxWidth={maxWidth}
         size={size}
         text={
