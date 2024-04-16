@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.47.1
+
+### Patch Changes
+
+- [#3673](https://github.com/scaleway/ultraviolet/pull/3673) [`59fb7f7`](https://github.com/scaleway/ultraviolet/commit/59fb7f7537d54066dda4249e89898a2921f642bd) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<MenuV2 />` max height to be 480px
+
 ## 1.47.0
 
 ### Minor Changes
