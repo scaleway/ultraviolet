@@ -908,6 +908,7 @@ export const Dropdown = ({
       ref={ref}
       tabIndex={0}
       role="dialog"
+      debounceDelay={0}
     >
       {children}
     </StyledPopup>
