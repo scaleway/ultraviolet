@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ReactElement, ReactNode } from 'react'
 import type React from 'react'
-import { useCallback, useEffect, useId, useState } from 'react'
+import { useCallback, useId, useState } from 'react'
 import { Button } from '../Button'
 import { Dialog } from './Dialog'
 import { Disclosure } from './Disclosure'
@@ -17,6 +17,10 @@ export type ModalProps = {
   isClosable?: boolean
   onClose?: () => void
   onBeforeClose?: () => Promise<void> | void
+  open?: boolean
+  /**
+   * @deprecated You should use open prop instead
+   */
   opened?: boolean
   placement?: ModalPlacement
   size?: ModalSize
@@ -58,6 +62,7 @@ export const Modal = ({
   isClosable = true,
   onClose,
   onBeforeClose,
+  open = false,
   opened = false,
   placement = 'center',
   preventBodyScroll = true,
@@ -69,7 +74,8 @@ export const Modal = ({
   customDialogStyles,
   customDialogBackdropStyles,
 }: ModalProps) => {
-  const [visible, setVisible] = useState(opened)
+  // Used for disclosure usage only
+  const [visible, setVisible] = useState(false)
   const controlId = useId()
 
   const handleOpen = useCallback(() => {
@@ -95,10 +101,6 @@ export const Modal = ({
   const finalId = id ?? controlId
   const finalSize = size ?? width
 
-  useEffect(() => {
-    setVisible(opened)
-  }, [opened])
-
   return (
     <>
       <Disclosure
@@ -110,7 +112,7 @@ export const Modal = ({
         toggle={handleToggle}
       />
       <Dialog
-        open={visible}
+        open={visible || open || opened}
         placement={placement}
         size={finalSize}
         ariaLabel={ariaLabel}
