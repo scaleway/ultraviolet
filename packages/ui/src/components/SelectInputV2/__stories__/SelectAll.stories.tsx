@@ -10,7 +10,7 @@ export const SelectAll: StoryFn<typeof SelectInputV2> = args => (
       selectAll={{
         label: 'Select All',
         description:
-          'You can click here to select every option. This description if optional',
+          'You can click here to select every option. This description is optional',
       }}
       label="SelectAll"
     />
