@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.7.1
+
+### Patch Changes
+
+- [#3680](https://github.com/scaleway/ultraviolet/pull/3680) [`4beb8ed`](https://github.com/scaleway/ultraviolet/commit/4beb8ed8017bbb9342503bdfa57cbaea5d638594) Thanks [@lisalupi](https://github.com/lisalupi)! - Illustrations: new svg for `generic` and `accountBilling` to fix issue in rendering
+
 ## 1.7.0
 
 ### Minor Changes
