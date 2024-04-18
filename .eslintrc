@@ -34,7 +34,8 @@
         // Allow inline nested components (for code snippets)
         "react/no-unstable-nested-components": "off",
         "@typescript-eslint/no-unnecessary-condition": "off",
-        "react/jsx-key": "off"
+        "react/jsx-key": "off",
+        "import/no-extraneous-dependencies": "off"
       }
     },
     {
@@ -45,7 +46,7 @@
       "extends": ["plugin:testing-library/react"]
     },
     {
-      "files": ["*.d.ts"],
+      "files": ["*.d.ts", "rollup.config.mjs", "jestMockMatchMedia.ts"],
       "rules": {
         "import/no-extraneous-dependencies": "off"
       }
