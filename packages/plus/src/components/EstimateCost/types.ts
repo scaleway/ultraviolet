@@ -60,6 +60,10 @@ export type EstimateCostProps = {
    */
   hideTotal?: boolean
   /**
+   * Hide the hourly price in total section at the bottom of the component.
+   */
+  hideHourlyPriceOnTotal?: boolean
+  /**
    * Show a badge beta on the total price with how much discount is applied.
    */
   isBeta?: boolean

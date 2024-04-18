@@ -104,6 +104,7 @@ export const EstimateCostContent = ({
   disableOverlayRight = false,
   hideTimeUnit = false,
   hideTotal = false,
+  hideHourlyPriceOnTotal = false,
   discount = 0,
   OverlayRight,
   OverlayLeft,
@@ -403,7 +404,8 @@ export const EstimateCostContent = ({
                           : null}
                       </LineThrough>
                     </StyledText>
-                    {totalPrice.hourly > 0 &&
+                    {hideHourlyPriceOnTotal &&
+                    totalPrice.hourly > 0 &&
                     totalPrice.hourly !== totalPrice.total &&
                     totalPrice.total > 0 ? (
                       <RightAlignedText as="p" variant="body">
