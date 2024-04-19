@@ -85,6 +85,7 @@ import { ReactComponent as lockOutline } from './assets/default-outline/lock.svg
 import { ReactComponent as membersOutline } from './assets/default-outline/members.svg'
 import { ReactComponent as moonOutline } from './assets/default-outline/moon.svg'
 import { ReactComponent as mosaicOutline } from './assets/default-outline/mosaic.svg'
+import { ReactComponent as penOutline } from './assets/default-outline/pen.svg'
 import { ReactComponent as pencilOutline } from './assets/default-outline/pencil.svg'
 import { ReactComponent as phoneOutline } from './assets/default-outline/phone.svg'
 import { ReactComponent as pinOutline } from './assets/default-outline/pin.svg'
@@ -128,6 +129,7 @@ import { ReactComponent as lock } from './assets/default-solid/lock.svg'
 import { ReactComponent as members } from './assets/default-solid/members.svg'
 import { ReactComponent as moon } from './assets/default-solid/moon.svg'
 import { ReactComponent as mosaic } from './assets/default-solid/mosaic.svg'
+import { ReactComponent as pen } from './assets/default-solid/pen.svg'
 import { ReactComponent as pencil } from './assets/default-solid/pencil.svg'
 import { ReactComponent as phone } from './assets/default-solid/phone.svg'
 import { ReactComponent as pin } from './assets/default-solid/pin.svg'
@@ -231,6 +233,7 @@ export const ICONS = {
     members,
     moon,
     mosaic,
+    pen,
     pencil,
     phone,
     'play-circle-outline': play,
@@ -333,6 +336,7 @@ export const ICONS = {
     members: membersOutline,
     moon: moonOutline,
     mosaic: mosaicOutline,
+    pen: penOutline,
     pencil: pencilOutline,
     phone: phoneOutline,
     'play-circle-outline': playOutline,
