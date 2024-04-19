@@ -1,5 +1,6 @@
 import type { StoryFn } from '@storybook/react'
 import { SelectInputV2 } from '..'
+import { EmptyState as EmptyStateComponent } from '../../EmptyState'
 import { Link } from '../../Link'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
@@ -24,8 +25,30 @@ const emptyStateText = (
 )
 
 export const EmptyState: StoryFn<typeof SelectInputV2> = args => (
-  <Stack width="50%">
-    <SelectInputV2 {...args} emptyState={emptyStateText} />
+  <Stack width="50%" direction="column" gap={2}>
+    <SelectInputV2
+      {...args}
+      emptyState={emptyStateText}
+      label="Using a custom component"
+    />
+    <SelectInputV2
+      {...args}
+      emptyState={
+        <EmptyStateComponent
+          bordered
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          image="static/media/packages/ui/src/components/EmptyState/__stories__/illustrations/kapsule.webp"
+          learnMore={{
+            link: 'https://scaleway.com',
+            text: 'Learn more',
+          }}
+          title="No option"
+          size="small"
+        />
+      }
+      label="Using component <EmptyState />"
+      helper="from ultraviolet/ui"
+    />
   </Stack>
 )
 EmptyState.args = {

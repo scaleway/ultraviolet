@@ -6,6 +6,7 @@ import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
 import { Text } from '../Text'
+import { useSelectInput } from './SelectInputProvider'
 import type { DataType, OptionType } from './types'
 import { INPUT_SIZE_HEIGHT, SIZES_TAG } from './types'
 
@@ -14,35 +15,23 @@ type SelectBarProps = {
   clearable: boolean
   disabled: boolean
   readOnly: boolean
-  value: OptionType | undefined
   placeholder: string
-  multiselect: boolean
   success?: string
   error?: string
   onChange?: (value: string[]) => void
   autoFocus?: boolean
   innerRef: RefObject<HTMLDivElement>
-  selectedValues: OptionType[]
-  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
-  isDropdownVisible: boolean
-  setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
-  setAllSelected: Dispatch<SetStateAction<boolean>>
-  options: DataType
-  setSelectedGroups: Dispatch<SetStateAction<string[]>>
 }
 
 type StyledInputWrapperProps = {
   size: 'small' | 'medium' | 'large'
   isDropdownVisible: boolean
   state: 'neutral' | 'danger' | 'success'
-  disabled: boolean
-  readOnly: boolean
 }
 
 type DisplayValuesProps = {
   multiselect: boolean
   refTag: RefObject<HTMLDivElement>
-  width?: number
   nonOverflowedValues: OptionType[]
   disabled: boolean
   readOnly: boolean
@@ -55,37 +44,20 @@ type DisplayValuesProps = {
 }
 const StateStack = styled(Stack)`
   padding-right: ${({ theme }) => theme.space['2']};
-  right: 0px;
   display: flex;
 `
 
-const StackTags = styled(Stack, {
-  shouldForwardProp: prop => !['width'].includes(prop),
-})<{ width: number | undefined }>`
-  max-width: ${({ width }) => width}px;
-`
 const StyledInputWrapper = styled(Stack, {
   shouldForwardProp: prop =>
-    !['size', 'isDropdownVisible', 'state', 'disabled', 'readOnly'].includes(
-      prop,
-    ),
+    !['size', 'isDropdownVisible', 'state'].includes(prop),
 })<StyledInputWrapperProps>`
   display: flex;
   height: ${({ size }) => INPUT_SIZE_HEIGHT[size]}px;
   padding: ${({ theme }) => theme.space[1]};
   padding-right: 0;
   padding-left: ${({ theme }) => theme.space[2]};
-  cursor: ${({ disabled, readOnly }) => {
-    if (disabled) {
-      return 'not-allowed'
-    }
-    if (readOnly) {
-      return 'default'
-    }
-
-    return 'pointer'
-  }};
-
+  cursor: pointer;
+  box-shadow: none;
   background: ${({ theme }) => theme.colors.neutral.background};
   border: 1px solid ${({ theme, state }) => theme.colors[state].border};
   border-radius: ${({ theme }) => theme.radii.default};
@@ -98,20 +70,21 @@ const StyledInputWrapper = styled(Stack, {
   &[data-readonly='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     border-color: ${({ theme }) => theme.colors.neutral.border};
+    cursor: default;
   }
 
   &[data-disabled='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+    cursor: not-allowed;
   }
 
   &:not([data-disabled='true']):not([data-readonly]):hover {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
-  &:active {
-    box-shadow: ${({ theme, disabled, readOnly }) =>
-      !(readOnly || disabled) ? theme.shadows.focusPrimary : 'none'};
+  &:not([data-disabled='true']):not([data-readonly]):active {
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
   ${({ theme, isDropdownVisible }) =>
@@ -153,7 +126,6 @@ const isValidSelectedValue = (selectedValue: OptionType, options: DataType) =>
 const DisplayValues = ({
   multiselect,
   refTag,
-  width,
   nonOverflowedValues,
   disabled,
   readOnly,
@@ -165,12 +137,11 @@ const DisplayValues = ({
   setAllSelected,
 }: DisplayValuesProps) =>
   multiselect ? (
-    <StackTags
+    <Stack
       direction="row"
       gap="1"
       wrap="nowrap"
       ref={refTag}
-      width={width}
       alignItems="center"
     >
       {nonOverflowedValues.map(option => (
@@ -208,7 +179,7 @@ const DisplayValues = ({
           {overflowAmount}
         </Tag>
       ) : null}
-    </StackTags>
+    </Stack>
   ) : (
     selectedValues[0]?.label
   )
@@ -218,29 +189,30 @@ export const SelectBar = ({
   clearable,
   disabled,
   readOnly,
-  value,
   placeholder,
-  multiselect,
   success,
   error,
   onChange,
   autoFocus,
   innerRef,
-  selectedValues,
-  setSelectedValues,
-  isDropdownVisible,
-  setIsDropdownVisible,
-  setAllSelected,
-  options,
-  setSelectedGroups,
 }: SelectBarProps) => {
+  const {
+    selectedValues,
+    setSelectedValues,
+    isDropdownVisible,
+    setIsDropdownVisible,
+    setAllSelected,
+    setSelectedGroups,
+    options,
+    multiselect,
+  } = useSelectInput()
   const openable = !(readOnly || disabled)
   const refTag = useRef<HTMLDivElement>(null)
   const width = innerRef.current?.offsetWidth
   const [overflowed, setOverflowed] = useState(false)
   const [overflowAmount, setOverflowAmount] = useState(0)
   const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(
-    value ? [value] : [],
+    selectedValues[0] ? [selectedValues[0]] : [],
   )
 
   const state = useMemo(() => {
@@ -324,8 +296,6 @@ export const SelectBar = ({
           : null
       }}
       ref={innerRef}
-      readOnly={readOnly}
-      disabled={disabled}
       aria-labelledby="select bar"
       aria-haspopup="listbox"
       aria-expanded={isDropdownVisible}
@@ -336,7 +306,6 @@ export const SelectBar = ({
         <DisplayValues
           multiselect={multiselect}
           refTag={refTag}
-          width={width}
           nonOverflowedValues={nonOverflowedValues}
           disabled={disabled}
           readOnly={readOnly}
@@ -360,7 +329,7 @@ export const SelectBar = ({
         {clearable && selectedValues.length > 0 ? (
           <Button
             aria-label="clear value"
-            disabled={disabled || !value || readOnly}
+            disabled={disabled || ![selectedValues[0]] || readOnly}
             variant="ghost"
             size="small"
             icon="close"

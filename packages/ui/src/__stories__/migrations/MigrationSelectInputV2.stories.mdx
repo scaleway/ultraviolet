@@ -17,7 +17,7 @@ Welcome to the migration of SelectInput into SelectInputV2, here we will see how
 -`value`(string | selectOption): `value` (OptionType)
 
 ## Removed Properties
--  `additionalStyles` (CSSInterpolation)
+- `additionalStyles` (CSSInterpolation)
 - `checked` (boolean)
 - `labelId` (string)
 - `time` (boolean)
@@ -35,5 +35,5 @@ Options are now only passed as a prop, not children. They can be of two types, o
 - `label` (ReactNode): label to display in the dropdown and on the selectBar when the option is selected. _This prop is required_.
 - `disabled` (boolean): whether the option is disabled. _This prop is required_.
 - `description` (string): more information on the option. The description can be placed at the right or beneath the option label in the dropdown with the prop `direction`, which is **global**. _This prop is optional_.
--  `optionalInfo` (ReactNode): if there is badges or icons to add next to the label (left or right) which are not meant to be visible when the option is selected. Its position is **globally** set using the prop `optionalInfoPlacement`. _This prop is optional_.
+- `optionalInfo` (ReactNode): if there is badges or icons to add next to the label (left or right) which are not meant to be visible when the option is selected. Its position is **globally** set using the prop `optionalInfoPlacement`. _This prop is optional_.
 - `searchText` (string): define here what should the user search to get this option. _This prop is optional_.

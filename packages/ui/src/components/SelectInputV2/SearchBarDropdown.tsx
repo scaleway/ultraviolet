@@ -2,30 +2,22 @@ import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
 import { TextInputV2 } from '../TextInputV2'
-import type { DataType, OptionType } from './types'
+import { useSelectInput } from './SelectInputProvider'
+import type { DataType } from './types'
 
 type SearchBarProps = {
-  options: DataType
-  onSearch: Dispatch<SetStateAction<DataType>>
   placeholder: string
   displayedOptions: DataType
-  multiselect: boolean
-  searchInput: string | undefined
-  setSearchInput: Dispatch<SetStateAction<string>>
-  selectedValues: OptionType[]
-  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
   onChange?: (value: string[]) => void
-  selectAll?: boolean
-  setAllSelected: Dispatch<SetStateAction<boolean>>
-  selectAllGroup?: boolean
-  selectedGroups: string[]
-  setSelectedGroups: Dispatch<SetStateAction<string[]>>
-  numberOfOptions: number
+  selectAll: boolean
 }
 
 const StyledInput = styled(TextInputV2)`
-  margin: ${({ theme }) => theme.space[2]};
+  padding-top: ${({ theme }) => theme.space[1.5]};
+  padding-bottom: ${({ theme }) => theme.space[1.5]};
+  padding-left: ${({ theme }) => theme.space[2]};
+  padding-right: ${({ theme }) => theme.space[2]};
 `
 
 const findClosestOption = (
@@ -62,31 +54,33 @@ const findClosestOption = (
     }
   }
 
-  return 'NO_MATCH'
+  return null
 }
 export const SearchBarDropdown = ({
-  options,
-  onSearch,
   placeholder,
   displayedOptions,
-  multiselect,
-  searchInput,
-  selectedValues,
-  setSearchInput,
-  setSelectedValues,
   setSearchBarActive,
   onChange,
   selectAll,
-  setAllSelected,
-  selectAllGroup,
-  selectedGroups,
-  setSelectedGroups,
-  numberOfOptions,
 }: SearchBarProps) => {
+  const {
+    onSearch,
+    setSearchInput,
+    selectedValues,
+    setAllSelected,
+    setSelectedGroups,
+    setSelectedValues,
+    searchInput,
+    options,
+    multiselect,
+    selectAllGroup,
+    selectedGroups,
+    numberOfOptions,
+  } = useSelectInput()
   const handleChange = (search: string) => {
     if (search.length > 0) {
       // case insensitive search
-      const regex = RegExp(search, 'gi')
+      const regex = RegExp(search, 'i')
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
@@ -116,7 +110,7 @@ export const SearchBarDropdown = ({
   const handleKeyDown = (key: string, search?: string) => {
     if (key === 'Enter') {
       const closestOption = findClosestOption(displayedOptions, search)
-      if (closestOption !== 'NO_MATCH') {
+      if (closestOption) {
         if (multiselect) {
           setSelectedValues(
             selectedValues.includes(closestOption)
@@ -176,6 +170,7 @@ export const SearchBarDropdown = ({
       onKeyDown={event => handleKeyDown(event.key, searchInput)}
       autoFocus
       size="medium"
+      aria-label="search-bar"
     />
   )
 }

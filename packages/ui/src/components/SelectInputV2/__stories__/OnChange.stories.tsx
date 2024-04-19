@@ -45,7 +45,7 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
 
   return (
     <>
-      <Stack direction="row" gap={4} width="50%">
+      <Stack direction="row" gap={4}>
         <SelectInputV2
           {...args}
           onChange={setValues}

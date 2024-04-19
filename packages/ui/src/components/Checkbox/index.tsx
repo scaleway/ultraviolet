@@ -279,7 +279,14 @@ type CheckboxProps = {
   tooltip?: string
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
-  'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
+  | 'onFocus'
+  | 'onBlur'
+  | 'name'
+  | 'value'
+  | 'autoFocus'
+  | 'id'
+  | 'onChange'
+  | 'tabIndex'
 > &
   XOR<
     [
@@ -321,6 +328,7 @@ export const Checkbox = forwardRef(
       required,
       'data-testid': dataTestId,
       tooltip,
+      tabIndex,
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -375,6 +383,7 @@ export const Checkbox = forwardRef(
             autoFocus={autoFocus}
             ref={ref}
             required={required}
+            tabIndex={tabIndex}
           />
 
           {!progress ? (

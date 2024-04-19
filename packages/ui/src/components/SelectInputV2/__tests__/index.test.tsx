@@ -611,7 +611,9 @@ describe('SelectInputV2', () => {
     const venus = screen.getByText('Venus')
     const earth = screen.getByText('Earth')
 
+    await userEvent.click(screen.getByTestId('search-bar'))
     await userEvent.keyboard('e')
+
     expect(earth).toBeVisible()
     expect(venus).toBeVisible()
 

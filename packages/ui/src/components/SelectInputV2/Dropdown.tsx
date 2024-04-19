@@ -6,40 +6,35 @@ import { Popup } from '../Popup'
 import { Skeleton } from '../Skeleton'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { DisplayOption } from './DropdownOption'
 import { SearchBarDropdown } from './SearchBarDropdown'
+import { useSelectInput } from './SelectInputProvider'
 import type { DataType, OptionType } from './types'
 
-type DropdownProps = {
-  options: DataType
-  displayedOptions: DataType
+export type DropdownProps = {
   children: ReactNode
-  multiselect: boolean
   emptyState: ReactNode
-  descriptionDirection?: 'row' | 'column'
+  descriptionDirection: 'row' | 'column'
   searchable: boolean
-  onSearch: Dispatch<SetStateAction<DataType>>
   placeholder: string
   footer?: ReactNode
   onChange?: (value: string[]) => void
-  searchInput: string | undefined
-  setSearchInput: Dispatch<SetStateAction<string>>
   refSelect: RefObject<HTMLDivElement>
-  selectedValues: OptionType[]
-  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
-  isDropdownVisible: boolean
-  setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
   loadMore?: ReactNode
   optionalInfoPlacement: 'left' | 'right'
   isLoading?: boolean
-  selectAll?: { label: ReactNode; description?: string }
-  allSelected: boolean
-  setAllSelected: Dispatch<SetStateAction<boolean>>
-  selectAllGroup?: boolean
-  selectedGroups: string[]
-  setSelectedGroups: Dispatch<SetStateAction<string[]>>
-  numberOfOptions: number
 }
 
+export type CreateDropdownProps = {
+  isEmpty: boolean
+  emptyState: ReactNode
+  descriptionDirection: 'row' | 'column'
+  onChange?: (value: string[]) => void
+  loadMore?: ReactNode
+  optionalInfoPlacement: 'left' | 'right'
+  defaultSearchValue: string | null
+  isLoading?: boolean
+}
 const NON_SEARCHABLE_KEYS = [
   'Tab',
   ' ',
@@ -53,9 +48,6 @@ const NON_SEARCHABLE_KEYS = [
   'Escape',
 ]
 
-const StyledInfo = styled.div`
-  align-content: center;
-`
 const StyledPopup = styled(Popup)`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.neutral.background};
@@ -64,55 +56,83 @@ const StyledPopup = styled(Popup)`
   padding: ${({ theme }) => theme.space[0]};
 `
 
-const DropdownContainer = styled(Stack)`
+const DropdownContainer = styled(Stack, {
+  shouldForwardProp: prop => !['grouped'].includes(prop),
+})<{ grouped: boolean }>`
   max-height: 256px;
   overflow-y: scroll;
   padding: ${({ theme }) => theme.space[0]};
   padding-bottom: ${({ theme }) => theme.space[0.5]};
+  padding-top: ${({ theme, grouped }) =>
+    grouped ? theme.space[0] : theme.space[0.5]};
 `
-const DropdownGroup = styled(Stack, {
-  shouldForwardProp: prop => !['selectAllGroup'].includes(prop),
-})<{ selectAllGroup?: boolean }>`
+const DropdownGroup = styled.button`
+  display: flex;
+  width: 100%;
+  justify-content: left;
+  align-items: center;
+  border: none;
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   position: sticky;
   top: 0px;
   padding-right: ${({ theme }) => theme.space[2]};
-  padding-left: ${({ theme, selectAllGroup }) =>
-    selectAllGroup ? '20px' : theme.space[2]};
+  padding-left: ${({ theme }) => theme.space[2]};
   height: ${({ theme }) => theme.space[4]};
   text-align: left;
   margin-bottom: ${({ theme }) => theme.space['0.25']};
+
+  &:focus {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    outline: none;
+  }
+
+  &[data-selectgroup='true'] {
+    padding-left: 20px;
+  }
+
+  &[data-selectgroup='true']:focus {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
+  }
+}
 `
-const DropdownItem = styled('button', {
-  shouldForwardProp: prop => !['disabled', 'selected'].includes(prop),
-})<{
-  disabled: boolean
-  selected: boolean
-}>`
+const DropdownGroupWrapper = styled.div`
+  position: sticky;
+  top: 0px;
+`
+const DropdownItem = styled.button`
   text-align:left;
   border: none;
-  background-color: ${({ theme, selected, disabled }) => {
-    if (selected) {
-      return `${theme.colors.primary.background};`
-    }
-    if (disabled) {
-      return `${theme.colors.neutral.backgroundDisabled};`
-    }
+  background-color: ${({ theme }) => theme.colors.neutral.background};
 
-    return `${theme.colors.neutral.background};`
-  }}
-  padding: ${({ theme }) => theme.space['1.5']}
-    ${({ theme }) => theme.space['2']} ${({ theme }) => theme.space['1.5']}
-    ${({ theme }) => theme.space['2']};
+  padding: ${({ theme }) => theme.space['1.5']} ${({ theme }) => theme.space['2']} ${({ theme }) => theme.space['1.5']} ${({ theme }) => theme.space['2']};
   margin-left: ${({ theme }) => theme.space['0.5']};
   margin-right: ${({ theme }) => theme.space['0.5']};
+  
   color:  ${({ theme, disabled }) => (disabled ? `${theme.colors.neutral.textDisabled}` : `${theme.colors.neutral.text}`)};
+  border-radius: ${({ theme }) => theme.radii.default};
 
   &:hover, :focus {
-    background-color: ${({ theme, disabled }) => (disabled ? `${theme.colors.neutral.backgroundStrongDisabled};` : `${theme.colors.primary.background};`)}
-    color: ${({ theme, disabled }) => (disabled ? `${theme.colors.neutral.textStrongDisabled}` : `${theme.colors.primary.text}`)};
-    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+    background-color: ${({ theme }) => theme.colors.primary.background};
+    color: ${({ theme }) => theme.colors.primary.text};
+    cursor: 'pointer';
     outline: none;
+  }
+
+  &[aria-selected='true'] {
+    background-color: ${({ theme }) => theme.colors.primary.background};
+  }
+
+  &[disabled] {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+  }
+
+  &[disabled]:hover, [disabled]:focus {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrongDisabled};
+    color: ${({ theme }) => theme.colors.neutral.textStrongDisabled};
+    cursor: not-allowed;
+    outline: none;
+  }
+  
   }
 `
 const PopupFooter = styled.div`
@@ -125,46 +145,35 @@ const StyledCheckbox = styled(Checkbox)`
   width: 100%;
   position: static;
   text-align: left;
+  align-items: center;
 `
 const EmptyState = styled(Stack)`
   padding: ${({ theme }) => theme.space[2]};
 `
-
+const LoadMore = styled(Stack)`
+  padding: ${({ theme }) => theme.space[0.5]};
+`
 const moveFocusDown = () => {
-  const listOptions: ChildNode[] = []
-  const options = document.querySelectorAll('#items')
+  const options = document.querySelectorAll('#items > button')
   const activeItem = document.activeElement
-  options.forEach(val => {
-    listOptions.push(...Array.from(val.childNodes))
 
-    return null
-  })
-
-  if (listOptions) {
-    for (let i = 0; i < listOptions?.length; i += 1) {
-      const listLength = listOptions.length
-      if (
-        activeItem === listOptions[i] &&
-        activeItem !== listOptions[listLength - 1]
-      ) {
-        ;(listOptions[i + 1] as HTMLElement).focus()
+  if (options) {
+    for (let i = 0; i < options?.length; i += 1) {
+      const listLength = options.length
+      if (activeItem === options[i] && activeItem !== options[listLength - 1]) {
+        ;(options[i + 1] as HTMLElement).focus()
       }
     }
   }
 }
 const moveFocusUp = () => {
-  let listOptions: ChildNode[] = []
-  const options = document.querySelectorAll('#items')
+  const options = document.querySelectorAll('#items > button')
   const activeItem = document.activeElement
-  options.forEach(val => {
-    listOptions = listOptions.concat(Array.from(val.childNodes))
 
-    return null
-  })
-  if (listOptions) {
-    for (let i = 0; i < listOptions.length; i += 1) {
-      if (activeItem === listOptions[i] && activeItem !== listOptions[0]) {
-        ;(listOptions[i - 1] as HTMLElement).focus()
+  if (options) {
+    for (let i = 0; i < options.length; i += 1) {
+      if (activeItem === options[i] && activeItem !== options[0]) {
+        ;(options[i - 1] as HTMLElement).focus()
       }
     }
   }
@@ -177,146 +186,99 @@ const handleKeyDownSelect = (key: string) => {
     moveFocusUp()
   }
 }
-const HandleDropdown = (
+const handleClickOutside = (
+  event: MouseEvent,
+  ref: RefObject<HTMLDivElement>,
   setIsDropdownVisibile: Dispatch<SetStateAction<boolean>>,
-  isDropdownVisible: boolean,
-  onSearch: Dispatch<SetStateAction<DataType>>,
-  searchBarActive: boolean,
-  options: DataType,
   refSelect: RefObject<HTMLDivElement>,
-  setDefaultSearch: Dispatch<SetStateAction<string | null>>,
+  onSearch: Dispatch<SetStateAction<DataType>>,
+  options: DataType,
 ) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const [search, setSearch] = useState<string>('')
-  useEffect(() => {
-    if (!isDropdownVisible) {
-      setDefaultSearch(null)
-      setSearch('')
-    }
-
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        ref.current &&
-        !ref.current.contains(event.target as Node) &&
-        !refSelect.current?.contains(event.target as Node)
-      ) {
-        setIsDropdownVisibile(false) // hide dropdown when clicking outside of the dropdown
-        onSearch(options) // reset displayed options to default when dropdown is hidden
-      }
-    }
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Deals with default search
-      if (
-        ref.current &&
-        !searchBarActive &&
-        !NON_SEARCHABLE_KEYS.includes(event.key)
-      ) {
-        const currentSearch = search + event.key
-        setSearch(currentSearch)
-        ref.current.focus()
-        if (!Array.isArray(options)) {
-          const closestOptions = { ...options }
-          Object.keys(closestOptions).map((group: string) => {
-            closestOptions[group] = closestOptions[group].filter(option =>
-              option.searchText
-                ? option.searchText
-                    .toLocaleLowerCase()
-                    .startsWith(currentSearch)
-                : option.value.toLocaleLowerCase().startsWith(currentSearch),
-            )
-
-            return null
-          })
-          const closestOption =
-            closestOptions[Object.keys(closestOptions)[0]][0]
-          if (closestOption) {
-            setDefaultSearch(closestOption.searchText ?? closestOption.value)
-          } else {
-            setDefaultSearch(null)
-          }
-        } else {
-          const closestOption = [...options].filter(option =>
-            option.searchText
-              ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
-              : option.value.toLocaleLowerCase().startsWith(currentSearch),
-          )[0]
-          if (closestOption) {
-            setDefaultSearch(closestOption.searchText ?? closestOption.value)
-          } else {
-            setDefaultSearch(null)
-          }
-        }
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-    document.addEventListener('keydown', handleKeyDown)
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-      document.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [
-    setIsDropdownVisibile,
-    isDropdownVisible,
-    searchBarActive,
-    options,
-    onSearch,
-    search,
-    refSelect,
-    setDefaultSearch,
-  ])
-
-  return ref
+  if (
+    ref.current &&
+    !ref.current.contains(event.target as Node) &&
+    !refSelect.current?.contains(event.target as Node)
+  ) {
+    setIsDropdownVisibile(false) // hide dropdown when clicking outside of the dropdown
+    onSearch(options) // reset displayed options to default when dropdown is hidden
+  }
 }
 
-type CreateDropdownProps = {
-  displayedOptions: DataType
-  options: DataType
-  isEmpty: boolean
-  emptyState: ReactNode
-  multiselect: boolean
-  descriptionDirection?: 'row' | 'column'
-  selectedValues: OptionType[]
-  setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
-  onChange?: (value: string[]) => void
-  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
-  loadMore?: ReactNode
-  optionalInfoPlacement: 'left' | 'right'
-  defaultSearchValue: string | null
-  isLoading?: boolean
-  selectAll?: { label: ReactNode; description?: string }
-  allSelected: boolean
-  setAllSelected: Dispatch<SetStateAction<boolean>>
-  selectAllGroup?: boolean
-  selectedGroups: string[]
-  setSelectedGroups: Dispatch<SetStateAction<string[]>>
-  numberOfOptions: number
+const handleKeyDown = (
+  event: KeyboardEvent,
+  ref: RefObject<HTMLDivElement>,
+  options: DataType,
+  searchBarActive: boolean,
+  setSearch: Dispatch<SetStateAction<string>>,
+  setDefaultSearch: Dispatch<SetStateAction<string | null>>,
+  search: string,
+) => {
+  // Deals with default search
+  if (
+    ref.current &&
+    !searchBarActive &&
+    !NON_SEARCHABLE_KEYS.includes(event.key) &&
+    document.activeElement?.ariaLabel !== 'search-bar'
+  ) {
+    const currentSearch = search + event.key
+    setSearch(currentSearch)
+    ref.current.focus()
+    if (!Array.isArray(options)) {
+      const closestOptions = { ...options }
+      Object.keys(closestOptions).map((group: string) => {
+        closestOptions[group] = closestOptions[group].filter(option =>
+          option.searchText
+            ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
+            : option.value.toLocaleLowerCase().startsWith(currentSearch),
+        )
+
+        return null
+      })
+      const closestOption = closestOptions[Object.keys(closestOptions)[0]][0]
+      if (closestOption) {
+        setDefaultSearch(closestOption.searchText ?? closestOption.value)
+      } else {
+        setDefaultSearch(null)
+      }
+    } else {
+      const closestOption = [...options].filter(option =>
+        option.searchText
+          ? option.searchText.toLocaleLowerCase().startsWith(currentSearch)
+          : option.value.toLocaleLowerCase().startsWith(currentSearch),
+      )[0]
+      if (closestOption) {
+        setDefaultSearch(closestOption.searchText ?? closestOption.value)
+      } else {
+        setDefaultSearch(null)
+      }
+    }
+  }
 }
 const CreateDropdown = ({
-  displayedOptions,
   isEmpty,
   emptyState,
   descriptionDirection,
-  selectedValues,
-  setIsDropdownVisible,
   onChange,
-  setSelectedValues,
   loadMore,
   optionalInfoPlacement,
   defaultSearchValue,
   isLoading,
-  selectAll,
-  multiselect,
-  options,
-  allSelected,
-  setAllSelected,
-  selectAllGroup,
-  selectedGroups,
-  setSelectedGroups,
-  numberOfOptions,
 }: CreateDropdownProps) => {
+  const {
+    setIsDropdownVisible,
+    selectedValues,
+    setSelectedValues,
+    setAllSelected,
+    setSelectedGroups,
+    multiselect,
+    options,
+    selectAll,
+    allSelected,
+    selectedGroups,
+    numberOfOptions,
+    selectAllGroup,
+    displayedOptions,
+  } = useSelectInput()
   const focusedItemRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
@@ -377,140 +339,14 @@ const CreateDropdown = ({
     }
     setIsDropdownVisible(multiselect) // hide the dropdown on click when single select only
   }
-  const displayOption = (option: OptionType) => {
-    if (descriptionDirection === 'row' && optionalInfoPlacement === 'left') {
-      return (
-        <Stack
-          gap={0.5}
-          direction="row"
-          justifyContent="left"
-          onClick={event => (multiselect ? event.stopPropagation() : null)}
-          data-testid={`option-stack-${option.value}`}
-        >
-          <Stack gap={0.5} direction="row" alignItems="center">
-            {option.optionalInfo ?? null}
-            <Text as="span" variant="body" placement="left">
-              {option.label}
-            </Text>
-            {option.description ? (
-              <Text
-                as="span"
-                variant="bodySmall"
-                sentiment="neutral"
-                placement="left"
-                prominence="weak"
-              >
-                {option.description}
-              </Text>
-            ) : null}
-          </Stack>
-        </Stack>
-      )
-    }
 
-    if (descriptionDirection === 'row' && optionalInfoPlacement === 'right') {
-      return (
-        <Stack
-          gap={0.5}
-          direction="row"
-          justifyContent="space-between"
-          onClick={event => (multiselect ? event.stopPropagation() : null)}
-          alignItems="baseline"
-          data-testid={`option-stack-${option.value}`}
-        >
-          <Stack gap={0.5} direction="row">
-            <Text as="span" variant="body" placement="left">
-              {option.label}
-            </Text>
-            {option.description ? (
-              <Text
-                as="span"
-                variant="bodySmall"
-                sentiment="neutral"
-                placement="left"
-                prominence="weak"
-              >
-                {option.description}
-              </Text>
-            ) : null}
-          </Stack>
-          {option.optionalInfo ? (
-            <StyledInfo>{option.optionalInfo}</StyledInfo>
-          ) : null}
-        </Stack>
-      )
-    }
-    if (descriptionDirection === 'column' && optionalInfoPlacement === 'left') {
-      return (
-        <Stack
-          gap={0.5}
-          direction="row"
-          justifyContent={option.optionalInfo ? 'left' : 'space-between'}
-          alignItems="normal"
-        >
-          {option.optionalInfo ?? null}
-
-          <Stack
-            gap={0.5}
-            direction="column"
-            onClick={event => (multiselect ? event.stopPropagation() : null)}
-            data-testid={`option-stack-${option.value}`}
-          >
-            <Text as="span" variant="body" placement="left">
-              {option.label}
-            </Text>
-            {option.description ? (
-              <Text
-                as="span"
-                variant="bodySmall"
-                sentiment="neutral"
-                placement="left"
-                prominence="weak"
-              >
-                {option.description}
-              </Text>
-            ) : null}
-          </Stack>
-        </Stack>
-      )
-    }
-
-    return (
-      <Stack
-        gap={0.5}
-        direction="column"
-        alignItems="normal"
-        onClick={event => (multiselect ? event.stopPropagation() : null)}
-        data-testid={`option-stack-${option.value}`}
-      >
-        <Stack gap={0.5} direction="row" justifyContent="space-between">
-          <Text as="span" variant="body" placement="left">
-            {option.label}
-          </Text>
-          {option.optionalInfo ? (
-            <StyledInfo>{option.optionalInfo}</StyledInfo>
-          ) : null}
-        </Stack>
-        {option.description ? (
-          <Text
-            as="span"
-            variant="bodySmall"
-            sentiment="neutral"
-            placement="left"
-            prominence="weak"
-          >
-            {option.description}
-          </Text>
-        ) : null}
-      </Stack>
-    )
-  }
   const selectAllOptions = () => {
     setAllSelected(!allSelected)
 
     if (allSelected) {
       setSelectedValues([])
       setSelectedGroups([])
+      onChange?.([])
     } else {
       setSelectedGroups(Object.keys(options))
       const allValues: OptionType[] = []
@@ -570,8 +406,11 @@ const CreateDropdown = ({
     <DropdownContainer
       role="listbox"
       id="select-dropdown"
-      onKeyDown={event => handleKeyDownSelect(event.key)}
-      gap={0.25}
+      onKeyDown={event => {
+        event.preventDefault()
+        handleKeyDownSelect(event.key)
+      }}
+      grouped
     >
       {isLoading ? (
         <Skeleton variant="block" />
@@ -581,9 +420,10 @@ const CreateDropdown = ({
             <Stack id="items">
               <DropdownItem
                 disabled={false}
-                selected={allSelected}
+                aria-selected={allSelected}
                 aria-label="select-all"
                 data-testid="select-all"
+                id="select-all"
                 role="option"
                 onKeyDown={event =>
                   [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
@@ -595,6 +435,7 @@ const CreateDropdown = ({
                   value="select-all"
                   data-testid="select-all-checkbox"
                   onChange={selectAllOptions}
+                  tabIndex={-1}
                 >
                   <Stack direction="column">
                     <Text as="span" variant="body" placement="left">
@@ -617,36 +458,46 @@ const CreateDropdown = ({
           {Object.keys(displayedOptions).map(group => (
             <Stack key={group} gap={0.25}>
               {displayedOptions[group].length > 0 ? (
-                <DropdownGroup
-                  key={group}
-                  selectAllGroup={selectAllGroup}
-                  justifyContent="center"
-                >
-                  {selectAllGroup ? (
-                    <StyledCheckbox
-                      checked={selectedGroups.includes(group)}
-                      disabled={false}
-                      value={group}
-                      onChange={() => handleSelectGroup(group)}
-                      data-testid="select-group"
-                    >
+                <DropdownGroupWrapper id={selectAllGroup ? 'items' : undefined}>
+                  <DropdownGroup
+                    key={group}
+                    tabIndex={selectAllGroup ? 0 : -1}
+                    onKeyDown={event => {
+                      if ([' ', 'Enter'].includes(event.key)) {
+                        event.preventDefault()
+                        handleSelectGroup(group)
+                      }
+                    }}
+                    data-selectgroup={selectAllGroup}
+                    role="group"
+                  >
+                    {selectAllGroup ? (
+                      <StyledCheckbox
+                        checked={selectedGroups.includes(group)}
+                        disabled={false}
+                        value={group}
+                        onChange={() => handleSelectGroup(group)}
+                        data-testid="select-group"
+                        tabIndex={-1}
+                      >
+                        <Text variant="caption" as="span" placement="left">
+                          {group.toUpperCase()}
+                        </Text>
+                      </StyledCheckbox>
+                    ) : (
                       <Text variant="caption" as="span" placement="left">
                         {group.toUpperCase()}
                       </Text>
-                    </StyledCheckbox>
-                  ) : (
-                    <Text variant="caption" as="span" placement="left">
-                      {group.toUpperCase()}
-                    </Text>
-                  )}
-                </DropdownGroup>
+                    )}
+                  </DropdownGroup>
+                </DropdownGroupWrapper>
               ) : null}
-              <Stack id="items" gap={0.25}>
+              <Stack id="items" gap="0.25">
                 {displayedOptions[group].map((option, index) => (
                   <DropdownItem
                     key={option.value}
                     disabled={option.disabled}
-                    selected={
+                    aria-selected={
                       selectedValues.includes(option) && !option.disabled
                     }
                     aria-label={option.value}
@@ -658,6 +509,11 @@ const CreateDropdown = ({
                         handleClick(option, group)
                       }
                     }}
+                    onKeyDown={event =>
+                      [' ', 'Enter'].includes(event.key)
+                        ? handleClick(option, group)
+                        : null
+                    }
                     ref={
                       option.value === defaultSearchValue ||
                       option.searchText === defaultSearchValue
@@ -677,15 +533,26 @@ const CreateDropdown = ({
                             handleClick(option, group)
                           }
                         }}
+                        tabIndex={-1}
                       >
-                        <Stack>{displayOption(option)}</Stack>
+                        <DisplayOption
+                          option={option}
+                          multiselect={multiselect}
+                          descriptionDirection={descriptionDirection}
+                          optionalInfoPlacement={optionalInfoPlacement}
+                        />
                       </StyledCheckbox>
                     ) : (
-                      displayOption(option)
+                      <DisplayOption
+                        option={option}
+                        multiselect={multiselect}
+                        descriptionDirection={descriptionDirection}
+                        optionalInfoPlacement={optionalInfoPlacement}
+                      />
                     )}
                   </DropdownItem>
                 ))}
-                {loadMore ?? null}
+                {loadMore ? <LoadMore>{loadMore}</LoadMore> : null}
               </Stack>
             </Stack>
           ))}
@@ -696,14 +563,18 @@ const CreateDropdown = ({
     <DropdownContainer
       role="listbox"
       id="select-dropdown"
-      onKeyDown={event => handleKeyDownSelect(event.key)}
+      onKeyDown={event => {
+        event.preventDefault()
+        handleKeyDownSelect(event.key)
+      }}
       gap={0.25}
+      grouped={false}
     >
       {selectAll && multiselect ? (
-        <Stack id="items">
+        <Stack id="items" gap={0.25}>
           <DropdownItem
             disabled={false}
-            selected={allSelected}
+            aria-selected={allSelected}
             aria-label="select-all"
             data-testid="select-all"
             role="option"
@@ -717,6 +588,7 @@ const CreateDropdown = ({
               value="select-all"
               data-testid="select-all-checkbox"
               onChange={selectAllOptions}
+              tabIndex={-1}
             >
               <Stack direction="column">
                 <Text as="span" variant="body" placement="left">
@@ -736,7 +608,7 @@ const CreateDropdown = ({
           </DropdownItem>
         </Stack>
       ) : null}
-      <Stack id="items">
+      <Stack id="items" gap={0.25}>
         {isLoading ? (
           <Skeleton variant="block" />
         ) : (
@@ -744,7 +616,9 @@ const CreateDropdown = ({
             <DropdownItem
               key={option.value}
               disabled={option.disabled}
-              selected={selectedValues.includes(option) && !option.disabled}
+              aria-selected={
+                selectedValues.includes(option) && !option.disabled
+              }
               onClick={() => {
                 if (!option.disabled) {
                   handleClick(option)
@@ -760,6 +634,9 @@ const CreateDropdown = ({
                   ? focusedItemRef
                   : null
               }
+              onKeyDown={event =>
+                [' ', 'Enter'].includes(event.key) ? handleClick(option) : null
+              }
             >
               {multiselect ? (
                 <StyledCheckbox
@@ -771,62 +648,132 @@ const CreateDropdown = ({
                       handleClick(option)
                     }
                   }}
+                  tabIndex={-1}
                 >
-                  <Stack>{displayOption(option)}</Stack>
+                  <DisplayOption
+                    option={option}
+                    multiselect={multiselect}
+                    descriptionDirection={descriptionDirection}
+                    optionalInfoPlacement={optionalInfoPlacement}
+                  />
                 </StyledCheckbox>
               ) : (
-                displayOption(option)
+                <DisplayOption
+                  option={option}
+                  multiselect={multiselect}
+                  descriptionDirection={descriptionDirection}
+                  optionalInfoPlacement={optionalInfoPlacement}
+                />
               )}
             </DropdownItem>
           ))
         )}
-        {loadMore ?? null}
+        {loadMore ? <LoadMore>{loadMore}</LoadMore> : null}
       </Stack>
     </DropdownContainer>
   )
 }
 export const Dropdown = ({
-  options,
-  displayedOptions,
   children,
-  multiselect,
   emptyState,
   descriptionDirection,
   searchable,
-  onSearch,
   placeholder,
   footer,
   onChange,
-  searchInput,
-  setSearchInput,
   refSelect,
-  selectedValues,
-  setSelectedValues,
-  isDropdownVisible,
-  setIsDropdownVisible,
   loadMore,
   optionalInfoPlacement,
   isLoading,
-  selectAll,
-  allSelected,
-  setAllSelected,
-  selectAllGroup,
-  selectedGroups,
-  setSelectedGroups,
-  numberOfOptions,
 }: DropdownProps) => {
-  const [searchBarActive, setSearchBarActive] = useState(false)
-  const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
-  const maxWidth = refSelect.current?.offsetWidth
-  const ref = HandleDropdown(
+  const {
     setIsDropdownVisible,
     isDropdownVisible,
     onSearch,
+    searchInput,
+    options,
+    selectAll,
+    displayedOptions,
+  } = useSelectInput()
+  const [searchBarActive, setSearchBarActive] = useState(false)
+  const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
+  const maxWidth = refSelect.current?.offsetWidth
+  const ref = useRef<HTMLDivElement>(null)
+  const [search, setSearch] = useState<string>('')
+
+  useEffect(() => {
+    if (!searchInput) {
+      onSearch(options)
+    }
+  }, [onSearch, options, searchInput])
+
+  useEffect(() => {
+    if (!isDropdownVisible) {
+      setDefaultSearch(null)
+      setSearch('')
+    }
+
+    document.addEventListener('mousedown', event =>
+      handleClickOutside(
+        event,
+        ref,
+        setIsDropdownVisible,
+        refSelect,
+        onSearch,
+        options,
+      ),
+    )
+
+    if (!searchable) {
+      document.addEventListener('keydown', event =>
+        handleKeyDown(
+          event,
+          ref,
+          options,
+          searchBarActive,
+          setSearch,
+          setDefaultSearch,
+          search,
+        ),
+      )
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', event =>
+        handleClickOutside(
+          event,
+          ref,
+          setIsDropdownVisible,
+          refSelect,
+          onSearch,
+          options,
+        ),
+      )
+      if (!searchable) {
+        document.removeEventListener('keydown', event =>
+          handleKeyDown(
+            event,
+            ref,
+            options,
+            searchBarActive,
+            setSearch,
+            setDefaultSearch,
+            search,
+          ),
+        )
+      }
+    }
+  }, [
+    isDropdownVisible,
     searchBarActive,
     options,
+    onSearch,
+    search,
     refSelect,
     setDefaultSearch,
-  )
+    setIsDropdownVisible,
+    searchable,
+  ])
 
   const isEmpty = useMemo(() => {
     if (Array.isArray(displayedOptions)) {
@@ -842,12 +789,6 @@ export const Dropdown = ({
     return true
   }, [displayedOptions])
 
-  useEffect(() => {
-    if (!searchInput) {
-      onSearch(options)
-    }
-  }, [onSearch, options, searchInput])
-
   return (
     <StyledPopup
       visible={isDropdownVisible}
@@ -855,47 +796,22 @@ export const Dropdown = ({
         <Stack>
           {searchable && !isLoading ? (
             <SearchBarDropdown
-              options={options}
-              onSearch={onSearch}
               placeholder={placeholder}
               displayedOptions={displayedOptions}
-              multiselect={multiselect}
-              searchInput={searchInput}
-              setSearchInput={setSearchInput}
-              setSelectedValues={setSelectedValues}
-              selectedValues={selectedValues}
               setSearchBarActive={setSearchBarActive}
               onChange={onChange}
               selectAll={!!selectAll}
-              setAllSelected={setAllSelected}
-              selectAllGroup={selectAllGroup}
-              selectedGroups={selectedGroups}
-              setSelectedGroups={setSelectedGroups}
-              numberOfOptions={numberOfOptions}
             />
           ) : null}
           <CreateDropdown
-            displayedOptions={displayedOptions}
             isEmpty={isEmpty}
             emptyState={emptyState}
-            multiselect={multiselect}
             descriptionDirection={descriptionDirection}
-            selectedValues={selectedValues}
-            setIsDropdownVisible={setIsDropdownVisible}
-            setSelectedValues={setSelectedValues}
             onChange={onChange}
             loadMore={loadMore}
             optionalInfoPlacement={optionalInfoPlacement}
             defaultSearchValue={defaultSearchValue}
             isLoading={isLoading}
-            selectAll={selectAll}
-            options={options}
-            allSelected={allSelected}
-            setAllSelected={setAllSelected}
-            selectAllGroup={selectAllGroup}
-            selectedGroups={selectedGroups}
-            setSelectedGroups={setSelectedGroups}
-            numberOfOptions={numberOfOptions}
           />
           {footer ? <PopupFooter>{footer}</PopupFooter> : null}
         </Stack>

@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import type { HTMLAttributes, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Dropdown } from './Dropdown'
 import { SelectBar } from './SelectBar'
+import { SelectInputProvider } from './SelectInputProvider'
 import type { DataType, OptionType } from './types'
 
 type SelectInputV2Props = {
@@ -140,7 +141,7 @@ export const SelectInputV2 = ({
   options,
   size = 'large',
   emptyState,
-  descriptionDirection,
+  descriptionDirection = 'column',
   success,
   error,
   'data-testid': dataTestId,
@@ -160,16 +161,8 @@ export const SelectInputV2 = ({
   optionalInfoPlacement = 'right',
   isLoading,
   selectAll,
-  selectAllGroup,
+  selectAllGroup = false,
 }: SelectInputV2Props) => {
-  const defaultValue = value ? [value] : []
-  const [displayedOptions, setDisplayedOptions] = useState(options)
-  const [selectedValues, setSelectedValues] =
-    useState<OptionType[]>(defaultValue)
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false)
-  const [searchInput, setSearchInput] = useState('')
-  const [allSelected, setAllSelected] = useState(false)
-  const [selectedGroups, setSelectedGroups] = useState<string[]>([])
   const ref = useRef<HTMLDivElement>(null)
   const numberOfOptions = Array.isArray(options)
     ? options.length
@@ -180,98 +173,81 @@ export const SelectInputV2 = ({
       )
 
   return (
-    <SelectInputContainer
-      id={id}
-      onBlur={onBlur}
-      onFocus={onFocus}
-      data-testid={dataTestId}
-      className={className}
-      aria-label={name}
+    <SelectInputProvider
+      options={options}
+      multiselect={multiselect}
+      selectAll={selectAll}
+      value={value}
+      selectAllGroup={selectAllGroup}
+      numberOfOptions={numberOfOptions}
     >
-      <Dropdown
-        options={options}
-        displayedOptions={displayedOptions}
-        multiselect={multiselect}
-        emptyState={emptyState}
-        descriptionDirection={descriptionDirection}
-        searchable={searchable}
-        onSearch={setDisplayedOptions}
-        placeholder={placeholderSearch}
-        footer={footer}
-        onChange={onChange}
-        searchInput={searchInput}
-        setSearchInput={setSearchInput}
-        selectedValues={selectedValues}
-        setSelectedValues={setSelectedValues}
-        setIsDropdownVisible={setIsDropdownVisible}
-        isDropdownVisible={isDropdownVisible}
-        refSelect={ref}
-        loadMore={loadMore}
-        optionalInfoPlacement={optionalInfoPlacement}
-        isLoading={isLoading}
-        selectAll={selectAll}
-        allSelected={allSelected}
-        setAllSelected={setAllSelected}
-        selectAllGroup={selectAllGroup}
-        selectedGroups={selectedGroups}
-        setSelectedGroups={setSelectedGroups}
-        numberOfOptions={numberOfOptions}
+      <SelectInputContainer
+        id={id}
+        onBlur={onBlur}
+        onFocus={onFocus}
+        data-testid={dataTestId}
+        className={className}
+        aria-label={name}
       >
-        <Stack gap={0.5} aria-label={ariaLabel}>
-          <Stack direction="row" gap={0.5}>
-            {label ? (
-              <Text as="label" variant="bodySmallStrong">
-                {label}
-              </Text>
-            ) : null}
-            {required ? (
-              <Icon name="asterisk" sentiment="danger" size={8} />
-            ) : null}
-            {labelDescription ?? null}
+        <Dropdown
+          emptyState={emptyState}
+          descriptionDirection={descriptionDirection}
+          searchable={searchable}
+          placeholder={placeholderSearch}
+          footer={footer}
+          onChange={onChange}
+          refSelect={ref}
+          loadMore={loadMore}
+          optionalInfoPlacement={optionalInfoPlacement}
+          isLoading={isLoading}
+        >
+          <Stack gap={0.5} aria-label={ariaLabel}>
+            <Stack direction="row" gap={0.5}>
+              {label ? (
+                <Text as="label" variant="bodySmallStrong">
+                  {label}
+                </Text>
+              ) : null}
+              {required ? (
+                <Icon name="asterisk" sentiment="danger" size={8} />
+              ) : null}
+              {labelDescription ?? null}
+            </Stack>
+            <SelectBar
+              size={size}
+              clearable={clearable}
+              readOnly={readOnly}
+              disabled={disabled}
+              placeholder={placeholder}
+              success={success}
+              error={error}
+              onChange={onChange}
+              autoFocus={autofocus}
+              innerRef={ref}
+            />
           </Stack>
-          <SelectBar
-            size={size}
-            clearable={clearable}
-            setIsDropdownVisible={setIsDropdownVisible}
-            readOnly={readOnly}
-            value={selectedValues[0]}
-            disabled={disabled}
-            placeholder={placeholder}
-            isDropdownVisible={isDropdownVisible}
-            multiselect={multiselect}
-            success={success}
-            error={error}
-            onChange={onChange}
-            selectedValues={selectedValues}
-            setSelectedValues={setSelectedValues}
-            autoFocus={autofocus}
-            innerRef={ref}
-            setAllSelected={setAllSelected}
-            options={options}
-            setSelectedGroups={setSelectedGroups}
-          />
-        </Stack>
-      </Dropdown>
-      {!error && !success ? (
-        <HelperText
-          variant="caption"
-          as="p"
-          sentiment="neutral"
-          prominence="default"
-        >
-          {helper}
-        </HelperText>
-      ) : null}
-      {error || success ? (
-        <HelperText
-          variant="caption"
-          as="p"
-          sentiment={error ? 'danger' : 'success'}
-          prominence="default"
-        >
-          {error || success}
-        </HelperText>
-      ) : null}
-    </SelectInputContainer>
+        </Dropdown>
+        {!error && !success ? (
+          <HelperText
+            variant="caption"
+            as="p"
+            sentiment="neutral"
+            prominence="default"
+          >
+            {helper}
+          </HelperText>
+        ) : null}
+        {error || success ? (
+          <HelperText
+            variant="caption"
+            as="p"
+            sentiment={error ? 'danger' : 'success'}
+            prominence="default"
+          >
+            {error || success}
+          </HelperText>
+        ) : null}
+      </SelectInputContainer>
+    </SelectInputProvider>
   )
 }
