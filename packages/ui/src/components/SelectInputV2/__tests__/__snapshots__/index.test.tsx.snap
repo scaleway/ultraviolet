@@ -71,7 +71,7 @@ exports[`SelectInputV2 renders correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,44 +95,71 @@ exports[`SelectInputV2 renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:hover,
-.cache-1ne7pbb-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -153,6 +180,10 @@ exports[`SelectInputV2 renders correctly 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -238,14 +269,17 @@ exports[`SelectInputV2 renders correctly 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1ne7pbb-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="false"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             Select item
           </p>
@@ -334,7 +368,7 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -358,44 +392,71 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:hover,
-.cache-1ne7pbb-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-25brly-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -404,7 +465,7 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #b5b7bd;
+  color: #727683;
   text-size: 16px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -416,6 +477,10 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -495,14 +560,17 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1ne7pbb-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="true"
+          data-isdropdownvisible="false"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-25brly-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -591,7 +659,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -615,46 +683,71 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -675,6 +768,10 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -925,7 +1022,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   background: transparent;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -950,6 +1047,10 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -982,7 +1083,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   top: 0px;
 }
 
-.cache-1dazg52-DropdownGroup {
+.cache-erc09e-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1008,16 +1109,17 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   margin-bottom: 2px;
 }
 
-.cache-1dazg52-DropdownGroup:focus {
+.cache-erc09e-DropdownGroup:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 20px;
+.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+  padding-left: 16px;
+  border-left: 4px solid #f9f9fa;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true']:focus {
+.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
@@ -1033,7 +1135,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   text-align: left;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -1044,24 +1146,25 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -1113,41 +1216,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: left;
-}
-
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .cache-1e8qouo-StyledText {
@@ -1233,14 +1301,17 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -1310,7 +1381,8 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
             </div>
           </div>
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -1321,7 +1393,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -1340,7 +1412,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="mercury"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -1363,7 +1435,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="venus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -1386,7 +1458,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="earth"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -1414,7 +1486,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="mars"
                   aria-selected="false"
-                  class="cache-okw0s8-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   disabled=""
                   id="option-3"
@@ -1438,7 +1510,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="pluto"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-4"
                   id="option-4"
                   role="option"
@@ -1472,7 +1544,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -1491,7 +1563,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="jupiter"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -1519,7 +1591,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="saturn"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -1542,7 +1614,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="uranus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -1565,7 +1637,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                 <button
                   aria-label="neptune"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -1677,7 +1749,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1701,46 +1773,71 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1761,6 +1858,10 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -1869,7 +1970,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1894,6 +1995,10 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -2001,8 +2106,8 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1fm:"
-      aria-describedby=":r1fm:"
+      aria-controls=":r1ea:"
+      aria-describedby=":r1ea:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2018,14 +2123,17 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -2049,14 +2157,15 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
       <div
         class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r1fm:"
+        id=":r1ea:"
         role="dialog"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
         >
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -2184,7 +2293,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2208,46 +2317,71 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -2268,6 +2402,10 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -2376,7 +2514,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-tejq21-Stack-DropdownContainer {
+.cache-59zv0a-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2402,6 +2540,10 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   padding: 0;
   padding-bottom: 4px;
   padding-top: 4px;
+}
+
+.cache-59zv0a-Stack-DropdownContainer[data-grouped='true'] {
+  padding-top: 0;
 }
 
 .cache-113ljh8-Stack {
@@ -2531,8 +2673,8 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1fp:"
-      aria-describedby=":r1fp:"
+      aria-controls=":r1ed:"
+      aria-describedby=":r1ed:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2548,14 +2690,17 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -2579,14 +2724,15 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
       <div
         class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r1fp:"
+        id=":r1ed:"
         role="dialog"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
         >
           <div
-            class="cache-tejq21-Stack-DropdownContainer eeucz6c7"
+            class="cache-59zv0a-Stack-DropdownContainer eeucz6c7"
+            data-grouped="false"
             id="select-dropdown"
             role="listbox"
           >
@@ -2709,7 +2855,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2733,43 +2879,68 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
 }
 
 .cache-irytw7-Stack {
@@ -3219,7 +3390,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   background: transparent;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3244,6 +3415,10 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -3276,7 +3451,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   top: 0px;
 }
 
-.cache-1dazg52-DropdownGroup {
+.cache-erc09e-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3302,16 +3477,17 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   margin-bottom: 2px;
 }
 
-.cache-1dazg52-DropdownGroup:focus {
+.cache-erc09e-DropdownGroup:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 20px;
+.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+  padding-left: 16px;
+  border-left: 4px solid #f9f9fa;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true']:focus {
+.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
@@ -3327,7 +3503,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   text-align: left;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -3338,24 +3514,25 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -3694,41 +3871,6 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   text-align: left;
 }
 
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
-}
-
 .cache-1e8qouo-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -3812,9 +3954,12 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
@@ -3930,7 +4075,8 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
             </div>
           </div>
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -3941,7 +4087,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -3960,7 +4106,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="mercury"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -4040,7 +4186,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="venus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -4120,7 +4266,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="earth"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -4205,7 +4351,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="mars"
                   aria-selected="false"
-                  class="cache-okw0s8-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   disabled=""
                   id="option-3"
@@ -4287,7 +4433,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="pluto"
                   aria-selected="true"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-4"
                   id="option-4"
                   role="option"
@@ -4379,7 +4525,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -4398,7 +4544,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="jupiter"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -4483,7 +4629,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="saturn"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -4563,7 +4709,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="uranus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -4643,7 +4789,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                 <button
                   aria-label="neptune"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -4802,7 +4948,7 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4826,41 +4972,68 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:hover,
-.cache-1ne7pbb-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -4940,9 +5113,12 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1ne7pbb-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="false"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
@@ -5032,7 +5208,7 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5056,44 +5232,71 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:hover,
-.cache-1ne7pbb-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -5114,6 +5317,10 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -5193,14 +5400,17 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1ne7pbb-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="false"
           data-readonly="true"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -5303,7 +5513,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   fill: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5327,46 +5537,71 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -5387,6 +5622,10 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -5637,7 +5876,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   background: transparent;
 }
 
-.cache-tejq21-Stack-DropdownContainer {
+.cache-59zv0a-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5665,6 +5904,10 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   padding-top: 4px;
 }
 
+.cache-59zv0a-Stack-DropdownContainer[data-grouped='true'] {
+  padding-top: 0;
+}
+
 .cache-113ljh8-Stack {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5688,7 +5931,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -5699,24 +5942,25 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -5768,41 +6012,6 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: left;
-}
-
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .cache-1e8qouo-StyledText {
@@ -5898,14 +6107,17 @@ exports[`SelectInputV2 renders correctly required 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -5975,7 +6187,8 @@ exports[`SelectInputV2 renders correctly required 1`] = `
             </div>
           </div>
           <div
-            class="cache-tejq21-Stack-DropdownContainer eeucz6c7"
+            class="cache-59zv0a-Stack-DropdownContainer eeucz6c7"
+            data-grouped="false"
             id="select-dropdown"
             role="listbox"
           >
@@ -5986,7 +6199,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
               <button
                 aria-label="mercury"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-0"
                 id="option-0"
                 role="option"
@@ -6009,7 +6222,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
               <button
                 aria-label="venus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-1"
                 id="option-1"
                 role="option"
@@ -6032,7 +6245,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
               <button
                 aria-label="earth"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-2"
                 id="option-2"
                 role="option"
@@ -6060,7 +6273,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
               <button
                 aria-label="mars"
                 aria-selected="false"
-                class="cache-okw0s8-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-3"
                 disabled=""
                 id="option-3"
@@ -6091,7 +6304,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
               <button
                 aria-label="jupiter"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-4"
                 id="option-4"
                 role="option"
@@ -6119,7 +6332,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
               <button
                 aria-label="saturn"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-5"
                 id="option-5"
                 role="option"
@@ -6142,7 +6355,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
               <button
                 aria-label="uranus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-6"
                 id="option-6"
                 role="option"
@@ -6165,7 +6378,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
               <button
                 aria-label="neptune"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-7"
                 id="option-7"
                 role="option"
@@ -6266,7 +6479,7 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6290,41 +6503,68 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:hover,
-.cache-1ne7pbb-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1ne7pbb-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
 }
 
 .cache-irytw7-Stack {
@@ -6533,9 +6773,12 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1ne7pbb-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="false"
           data-readonly="true"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
@@ -6655,7 +6898,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6679,46 +6922,71 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -6739,6 +7007,10 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -6989,7 +7261,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   background: transparent;
 }
 
-.cache-tejq21-Stack-DropdownContainer {
+.cache-59zv0a-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7017,6 +7289,10 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   padding-top: 4px;
 }
 
+.cache-59zv0a-Stack-DropdownContainer[data-grouped='true'] {
+  padding-top: 0;
+}
+
 .cache-113ljh8-Stack {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7040,7 +7316,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -7051,24 +7327,25 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -7120,41 +7397,6 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: left;
-}
-
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .cache-1e8qouo-StyledText {
@@ -7240,14 +7482,17 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -7317,7 +7562,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
             </div>
           </div>
           <div
-            class="cache-tejq21-Stack-DropdownContainer eeucz6c7"
+            class="cache-59zv0a-Stack-DropdownContainer eeucz6c7"
+            data-grouped="false"
             id="select-dropdown"
             role="listbox"
           >
@@ -7328,7 +7574,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
               <button
                 aria-label="mercury"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-0"
                 id="option-0"
                 role="option"
@@ -7351,7 +7597,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
               <button
                 aria-label="venus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-1"
                 id="option-1"
                 role="option"
@@ -7374,7 +7620,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
               <button
                 aria-label="earth"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-2"
                 id="option-2"
                 role="option"
@@ -7402,7 +7648,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
               <button
                 aria-label="mars"
                 aria-selected="false"
-                class="cache-okw0s8-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-3"
                 disabled=""
                 id="option-3"
@@ -7433,7 +7679,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
               <button
                 aria-label="jupiter"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-4"
                 id="option-4"
                 role="option"
@@ -7461,7 +7707,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
               <button
                 aria-label="saturn"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-5"
                 id="option-5"
                 role="option"
@@ -7484,7 +7730,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
               <button
                 aria-label="uranus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-6"
                 id="option-6"
                 role="option"
@@ -7507,7 +7753,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
               <button
                 aria-label="neptune"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-7"
                 id="option-7"
                 role="option"
@@ -7608,7 +7854,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7632,43 +7878,68 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -7987,7 +8258,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   background: transparent;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8012,6 +8283,10 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -8044,7 +8319,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   top: 0px;
 }
 
-.cache-1dazg52-DropdownGroup {
+.cache-erc09e-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8070,16 +8345,17 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   margin-bottom: 2px;
 }
 
-.cache-1dazg52-DropdownGroup:focus {
+.cache-erc09e-DropdownGroup:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 20px;
+.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+  padding-left: 16px;
+  border-left: 4px solid #f9f9fa;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true']:focus {
+.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
@@ -8095,7 +8371,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   text-align: left;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -8106,24 +8382,25 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -8175,41 +8452,6 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: left;
-}
-
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .cache-1e8qouo-StyledText {
@@ -8295,9 +8537,12 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
@@ -8384,7 +8629,8 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
             </div>
           </div>
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -8395,7 +8641,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -8414,7 +8660,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="mercury"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -8437,7 +8683,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="venus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -8460,7 +8706,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="earth"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -8488,7 +8734,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="mars"
                   aria-selected="false"
-                  class="cache-okw0s8-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   disabled=""
                   id="option-3"
@@ -8512,7 +8758,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="pluto"
                   aria-selected="true"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-4"
                   id="option-4"
                   role="option"
@@ -8546,7 +8792,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -8565,7 +8811,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="jupiter"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -8593,7 +8839,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="saturn"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -8616,7 +8862,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="uranus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -8639,7 +8885,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                 <button
                   aria-label="neptune"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -8741,7 +8987,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8765,46 +9011,71 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -8825,6 +9096,10 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -9134,14 +9409,17 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -9285,7 +9563,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-q50jlj-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9309,46 +9587,71 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #b3144d;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-q50jlj-Stack-StyledInputWrapper:hover,
-.cache-q50jlj-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-q50jlj-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-q50jlj-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-q50jlj-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-q50jlj-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -9369,6 +9672,10 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -9633,7 +9940,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   background: transparent;
 }
 
-.cache-tejq21-Stack-DropdownContainer {
+.cache-59zv0a-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9661,6 +9968,10 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   padding-top: 4px;
 }
 
+.cache-59zv0a-Stack-DropdownContainer[data-grouped='true'] {
+  padding-top: 0;
+}
+
 .cache-113ljh8-Stack {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9684,7 +9995,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -9695,24 +10006,25 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -9764,41 +10076,6 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: left;
-}
-
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .cache-1e8qouo-StyledText {
@@ -9884,14 +10161,17 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-q50jlj-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="danger"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -9972,7 +10252,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
             </div>
           </div>
           <div
-            class="cache-tejq21-Stack-DropdownContainer eeucz6c7"
+            class="cache-59zv0a-Stack-DropdownContainer eeucz6c7"
+            data-grouped="false"
             id="select-dropdown"
             role="listbox"
           >
@@ -9983,7 +10264,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
               <button
                 aria-label="mercury"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-0"
                 id="option-0"
                 role="option"
@@ -10006,7 +10287,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
               <button
                 aria-label="venus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-1"
                 id="option-1"
                 role="option"
@@ -10029,7 +10310,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
               <button
                 aria-label="earth"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-2"
                 id="option-2"
                 role="option"
@@ -10057,7 +10338,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
               <button
                 aria-label="mars"
                 aria-selected="false"
-                class="cache-okw0s8-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-3"
                 disabled=""
                 id="option-3"
@@ -10088,7 +10369,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
               <button
                 aria-label="jupiter"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-4"
                 id="option-4"
                 role="option"
@@ -10116,7 +10397,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
               <button
                 aria-label="saturn"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-5"
                 id="option-5"
                 role="option"
@@ -10139,7 +10420,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
               <button
                 aria-label="uranus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-6"
                 id="option-6"
                 role="option"
@@ -10162,7 +10443,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
               <button
                 aria-label="neptune"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-7"
                 id="option-7"
                 role="option"
@@ -10265,7 +10546,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10289,43 +10570,68 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -10644,7 +10950,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   background: transparent;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10669,6 +10975,10 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -10701,7 +11011,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   top: 0px;
 }
 
-.cache-1dazg52-DropdownGroup {
+.cache-erc09e-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10727,16 +11037,17 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   margin-bottom: 2px;
 }
 
-.cache-1dazg52-DropdownGroup:focus {
+.cache-erc09e-DropdownGroup:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 20px;
+.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+  padding-left: 16px;
+  border-left: 4px solid #f9f9fa;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true']:focus {
+.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
@@ -10752,7 +11063,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   text-align: left;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -10763,24 +11074,25 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -10832,41 +11144,6 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: left;
-}
-
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .cache-1e8qouo-StyledText {
@@ -10958,9 +11235,12 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
@@ -11047,7 +11327,8 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
             </div>
           </div>
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -11058,7 +11339,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -11077,7 +11358,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="mercury"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -11100,7 +11381,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="venus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -11123,7 +11404,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="earth"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -11151,7 +11432,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="mars"
                   aria-selected="false"
-                  class="cache-okw0s8-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   disabled=""
                   id="option-3"
@@ -11175,7 +11456,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="pluto"
                   aria-selected="true"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-4"
                   id="option-4"
                   role="option"
@@ -11209,7 +11490,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -11228,7 +11509,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="jupiter"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -11256,7 +11537,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="saturn"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -11279,7 +11560,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="uranus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -11302,7 +11583,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                 <button
                   aria-label="neptune"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -11409,7 +11690,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11433,46 +11714,71 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -11493,6 +11799,10 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -11743,7 +12053,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   background: transparent;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11768,6 +12078,10 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -11800,7 +12114,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   top: 0px;
 }
 
-.cache-1dazg52-DropdownGroup {
+.cache-erc09e-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11826,16 +12140,17 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   margin-bottom: 2px;
 }
 
-.cache-1dazg52-DropdownGroup:focus {
+.cache-erc09e-DropdownGroup:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 20px;
+.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+  padding-left: 16px;
+  border-left: 4px solid #f9f9fa;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true']:focus {
+.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
@@ -11851,7 +12166,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   text-align: left;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -11862,24 +12177,25 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -12040,14 +12356,17 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -12117,7 +12436,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
             </div>
           </div>
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -12128,7 +12448,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -12147,7 +12467,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="mercury"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -12175,7 +12495,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="venus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -12203,7 +12523,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="earth"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -12231,7 +12551,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="mars"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -12254,7 +12574,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="pluto"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-4"
                   id="option-4"
                   role="option"
@@ -12292,7 +12612,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -12311,7 +12631,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="jupiter"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -12344,7 +12664,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="saturn"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -12367,7 +12687,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="uranus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -12395,7 +12715,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="neptune"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -12488,7 +12808,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12512,46 +12832,71 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -12572,6 +12917,10 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -12822,7 +13171,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   background: transparent;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12847,6 +13196,10 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -12879,7 +13232,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   top: 0px;
 }
 
-.cache-1dazg52-DropdownGroup {
+.cache-erc09e-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12905,16 +13258,17 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   margin-bottom: 2px;
 }
 
-.cache-1dazg52-DropdownGroup:focus {
+.cache-erc09e-DropdownGroup:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 20px;
+.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+  padding-left: 16px;
+  border-left: 4px solid #f9f9fa;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true']:focus {
+.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
@@ -12930,7 +13284,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   text-align: left;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -12941,24 +13295,25 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -13102,14 +13457,17 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -13179,7 +13537,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
             </div>
           </div>
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -13190,7 +13549,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -13209,7 +13568,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="mercury"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -13241,7 +13600,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="venus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -13273,7 +13632,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="earth"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -13301,7 +13660,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="mars"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -13324,7 +13683,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="pluto"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-4"
                   id="option-4"
                   role="option"
@@ -13362,7 +13721,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -13381,7 +13740,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="jupiter"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -13418,7 +13777,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="saturn"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -13441,7 +13800,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="uranus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -13473,7 +13832,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                 <button
                   aria-label="neptune"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -13566,7 +13925,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13590,46 +13949,71 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -13650,6 +14034,10 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -13900,7 +14288,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   background: transparent;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13925,6 +14313,10 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -13957,7 +14349,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   top: 0px;
 }
 
-.cache-1dazg52-DropdownGroup {
+.cache-erc09e-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13983,16 +14375,17 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   margin-bottom: 2px;
 }
 
-.cache-1dazg52-DropdownGroup:focus {
+.cache-erc09e-DropdownGroup:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 20px;
+.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+  padding-left: 16px;
+  border-left: 4px solid #f9f9fa;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true']:focus {
+.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
@@ -14008,7 +14401,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   text-align: left;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -14019,24 +14412,25 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -14180,14 +14574,17 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -14257,7 +14654,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
             </div>
           </div>
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -14268,7 +14666,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -14287,7 +14685,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="mercury"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -14319,7 +14717,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="venus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -14351,7 +14749,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="earth"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -14379,7 +14777,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="mars"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -14402,7 +14800,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="pluto"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-4"
                   id="option-4"
                   role="option"
@@ -14440,7 +14838,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -14459,7 +14857,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="jupiter"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -14496,7 +14894,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="saturn"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -14519,7 +14917,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="uranus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -14551,7 +14949,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="neptune"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -14644,7 +15042,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14668,46 +15066,71 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -14728,6 +15151,10 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -14978,7 +15405,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   background: transparent;
 }
 
-.cache-1nqb6d5-Stack-DropdownContainer {
+.cache-tbrdar-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15003,6 +15430,10 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   overflow-y: scroll;
   padding: 0;
   padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
   padding-top: 0;
 }
 
@@ -15035,7 +15466,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   top: 0px;
 }
 
-.cache-1dazg52-DropdownGroup {
+.cache-erc09e-DropdownGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15061,16 +15492,17 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   margin-bottom: 2px;
 }
 
-.cache-1dazg52-DropdownGroup:focus {
+.cache-erc09e-DropdownGroup:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 20px;
+.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+  padding-left: 16px;
+  border-left: 4px solid #f9f9fa;
 }
 
-.cache-1dazg52-DropdownGroup[data-selectgroup='true']:focus {
+.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
@@ -15086,7 +15518,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   text-align: left;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -15097,24 +15529,25 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -15258,14 +15691,17 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -15335,7 +15771,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
             </div>
           </div>
           <div
-            class="cache-1nqb6d5-Stack-DropdownContainer eeucz6c7"
+            class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
+            data-grouped="true"
             id="select-dropdown"
             role="listbox"
           >
@@ -15346,7 +15783,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -15365,7 +15802,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="mercury"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -15397,7 +15834,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="venus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -15429,7 +15866,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="earth"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -15457,7 +15894,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="mars"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -15480,7 +15917,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="pluto"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-4"
                   id="option-4"
                   role="option"
@@ -15518,7 +15955,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 class="cache-psepay-DropdownGroupWrapper eeucz6c5"
               >
                 <button
-                  class="cache-1dazg52-DropdownGroup eeucz6c6"
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
                   data-selectgroup="false"
                   role="group"
                   tabindex="-1"
@@ -15537,7 +15974,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="jupiter"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-0"
                   id="option-0"
                   role="option"
@@ -15574,7 +16011,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="saturn"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-1"
                   id="option-1"
                   role="option"
@@ -15597,7 +16034,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="uranus"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-2"
                   id="option-2"
                   role="option"
@@ -15629,7 +16066,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                 <button
                   aria-label="neptune"
                   aria-selected="false"
-                  class="cache-k2cr32-DropdownItem eeucz6c4"
+                  class="cache-aivw3p-DropdownItem eeucz6c4"
                   data-testid="option-3"
                   id="option-3"
                   role="option"
@@ -15722,7 +16159,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15746,46 +16183,71 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #d9dadd;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:hover,
-.cache-16ie7om-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-16ie7om-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -15806,6 +16268,10 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -15914,7 +16380,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-tejq21-Stack-DropdownContainer {
+.cache-59zv0a-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15942,6 +16408,10 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   padding-top: 4px;
 }
 
+.cache-59zv0a-Stack-DropdownContainer[data-grouped='true'] {
+  padding-top: 0;
+}
+
 .cache-113ljh8-Stack {
   display: -webkit-box;
   display: -webkit-flex;
@@ -15965,7 +16435,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -15976,24 +16446,25 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -16045,41 +16516,6 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: left;
-}
-
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .cache-1e8qouo-StyledText {
@@ -16165,14 +16601,17 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-16ie7om-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="neutral"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -16203,7 +16642,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
           class="cache-1guc91g-Stack ehpbis70"
         >
           <div
-            class="cache-tejq21-Stack-DropdownContainer eeucz6c7"
+            class="cache-59zv0a-Stack-DropdownContainer eeucz6c7"
+            data-grouped="false"
             id="select-dropdown"
             role="listbox"
           >
@@ -16214,7 +16654,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
               <button
                 aria-label="mercury"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-0"
                 id="option-0"
                 role="option"
@@ -16237,7 +16677,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
               <button
                 aria-label="venus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-1"
                 id="option-1"
                 role="option"
@@ -16260,7 +16700,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
               <button
                 aria-label="earth"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-2"
                 id="option-2"
                 role="option"
@@ -16288,7 +16728,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
               <button
                 aria-label="mars"
                 aria-selected="false"
-                class="cache-okw0s8-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-3"
                 disabled=""
                 id="option-3"
@@ -16319,7 +16759,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
               <button
                 aria-label="jupiter"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-4"
                 id="option-4"
                 role="option"
@@ -16347,7 +16787,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
               <button
                 aria-label="saturn"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-5"
                 id="option-5"
                 role="option"
@@ -16370,7 +16810,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
               <button
                 aria-label="uranus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-6"
                 id="option-6"
                 role="option"
@@ -16393,7 +16833,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
               <button
                 aria-label="neptune"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-7"
                 id="option-7"
                 role="option"
@@ -16494,7 +16934,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1kyovaf-Stack-StyledInputWrapper {
+.cache-1jlifwd-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16518,46 +16958,71 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 48px;
   padding: 8px;
   padding-right: 0;
   padding-left: 16px;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border: 1px solid #22674e;
   border-radius: 4px;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border-color: #792dd4;
 }
 
-.cache-1kyovaf-Stack-StyledInputWrapper:hover,
-.cache-1kyovaf-Stack-StyledInputWrapper:focus {
+.cache-1jlifwd-Stack-StyledInputWrapper:hover,
+.cache-1jlifwd-Stack-StyledInputWrapper:focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1kyovaf-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1kyovaf-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1kyovaf-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='small'] {
+  height: 32px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='medium'] {
+  height: 40px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-size='larger'] {
+  height: 48px;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1kyovaf-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1jlifwd-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-upswjq-StyledText-StyledPlaceholder {
+.cache-1jlifwd-Stack-StyledInputWrapper[data-dropdownvisible] {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border-color: #792dd4;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -16578,6 +17043,10 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
+  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -16842,7 +17311,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   background: transparent;
 }
 
-.cache-tejq21-Stack-DropdownContainer {
+.cache-59zv0a-Stack-DropdownContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16870,6 +17339,10 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   padding-top: 4px;
 }
 
+.cache-59zv0a-Stack-DropdownContainer[data-grouped='true'] {
+  padding-top: 0;
+}
+
 .cache-113ljh8-Stack {
   display: -webkit-box;
   display: -webkit-flex;
@@ -16893,7 +17366,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-k2cr32-DropdownItem {
+.cache-aivw3p-DropdownItem {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -16904,24 +17377,25 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   border-radius: 4px;
 }
 
-.cache-k2cr32-DropdownItem:hover,
-.cache-k2cr32-DropdownItem:focus {
+.cache-aivw3p-DropdownItem:hover,
+.cache-aivw3p-DropdownItem:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: 'pointer';
   outline: none;
 }
 
-.cache-k2cr32-DropdownItem[aria-selected='true'] {
+.cache-aivw3p-DropdownItem[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-k2cr32-DropdownItem[disabled] {
+.cache-aivw3p-DropdownItem[disabled] {
   background-color: #f3f3f4;
+  color: #b5b7bd;
 }
 
-.cache-k2cr32-DropdownItem[disabled]:hover,
-.cache-k2cr32-DropdownItem [disabled]:focus {
+.cache-aivw3p-DropdownItem[disabled]:hover,
+.cache-aivw3p-DropdownItem [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -16973,41 +17447,6 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: left;
-}
-
-.cache-okw0s8-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #b5b7bd;
-  border-radius: 4px;
-}
-
-.cache-okw0s8-DropdownItem:hover,
-.cache-okw0s8-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: 'pointer';
-  outline: none;
-}
-
-.cache-okw0s8-DropdownItem[aria-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-okw0s8-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-}
-
-.cache-okw0s8-DropdownItem[disabled]:hover,
-.cache-okw0s8-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
 }
 
 .cache-1e8qouo-StyledText {
@@ -17093,14 +17532,17 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1kyovaf-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1jlifwd-Stack-StyledInputWrapper ejy0aca2"
           data-disabled="false"
+          data-isdropdownvisible="true"
           data-readonly="false"
+          data-size="large"
+          data-state="success"
           data-testid="select-bar"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-upswjq-StyledText-StyledPlaceholder e13y3mga0"
+            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
           >
             placeholder
           </p>
@@ -17181,7 +17623,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
             </div>
           </div>
           <div
-            class="cache-tejq21-Stack-DropdownContainer eeucz6c7"
+            class="cache-59zv0a-Stack-DropdownContainer eeucz6c7"
+            data-grouped="false"
             id="select-dropdown"
             role="listbox"
           >
@@ -17192,7 +17635,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
               <button
                 aria-label="mercury"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-0"
                 id="option-0"
                 role="option"
@@ -17215,7 +17658,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
               <button
                 aria-label="venus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-1"
                 id="option-1"
                 role="option"
@@ -17238,7 +17681,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
               <button
                 aria-label="earth"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-2"
                 id="option-2"
                 role="option"
@@ -17266,7 +17709,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
               <button
                 aria-label="mars"
                 aria-selected="false"
-                class="cache-okw0s8-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-3"
                 disabled=""
                 id="option-3"
@@ -17297,7 +17740,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
               <button
                 aria-label="jupiter"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-4"
                 id="option-4"
                 role="option"
@@ -17325,7 +17768,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
               <button
                 aria-label="saturn"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-5"
                 id="option-5"
                 role="option"
@@ -17348,7 +17791,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
               <button
                 aria-label="uranus"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-6"
                 id="option-6"
                 role="option"
@@ -17371,7 +17814,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
               <button
                 aria-label="neptune"
                 aria-selected="false"
-                class="cache-k2cr32-DropdownItem eeucz6c4"
+                class="cache-aivw3p-DropdownItem eeucz6c4"
                 data-testid="option-7"
                 id="option-7"
                 role="option"

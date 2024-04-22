@@ -1,13 +1,13 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { Dispatch, RefObject, SetStateAction } from 'react'
+import type { Dispatch, RefObject } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
 import { Text } from '../Text'
 import { useSelectInput } from './SelectInputProvider'
-import type { DataType, OptionType } from './types'
+import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 import { INPUT_SIZE_HEIGHT, SIZES_TAG } from './types'
 
 type SelectBarProps = {
@@ -23,43 +23,31 @@ type SelectBarProps = {
   innerRef: RefObject<HTMLDivElement>
 }
 
-type StyledInputWrapperProps = {
-  size: 'small' | 'medium' | 'large'
-  isDropdownVisible: boolean
-  state: 'neutral' | 'danger' | 'success'
-}
-
 type DisplayValuesProps = {
   multiselect: boolean
   refTag: RefObject<HTMLDivElement>
   nonOverflowedValues: OptionType[]
   disabled: boolean
   readOnly: boolean
-  selectedValues: OptionType[]
-  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
   onChange?: (value: string[]) => void
   overflowed: boolean
   overflowAmount: number
-  setAllSelected: Dispatch<SetStateAction<boolean>>
+  selectedData: ReducerState
+  setSelectedData: Dispatch<ReducerAction>
 }
 const StateStack = styled(Stack)`
   padding-right: ${({ theme }) => theme.space['2']};
   display: flex;
 `
 
-const StyledInputWrapper = styled(Stack, {
-  shouldForwardProp: prop =>
-    !['size', 'isDropdownVisible', 'state'].includes(prop),
-})<StyledInputWrapperProps>`
+const StyledInputWrapper = styled(Stack)`
   display: flex;
-  height: ${({ size }) => INPUT_SIZE_HEIGHT[size]}px;
   padding: ${({ theme }) => theme.space[1]};
   padding-right: 0;
   padding-left: ${({ theme }) => theme.space[2]};
   cursor: pointer;
   box-shadow: none;
   background: ${({ theme }) => theme.colors.neutral.background};
-  border: 1px solid ${({ theme, state }) => theme.colors[state].border};
   border-radius: ${({ theme }) => theme.radii.default};
 
   &:hover,
@@ -78,6 +66,24 @@ const StyledInputWrapper = styled(Stack, {
     border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
     cursor: not-allowed;
   }
+  &[data-size='small'] {
+    height: ${INPUT_SIZE_HEIGHT.small}px;
+  }
+  &[data-size='medium'] {
+    height: ${INPUT_SIZE_HEIGHT.medium}px;
+  }
+  &[data-size='larger'] {
+    height: ${INPUT_SIZE_HEIGHT.large}px;
+  }
+  &[data-state='neutral'] {
+    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  }
+  &[data-state='success'] {
+    border: 1px solid ${({ theme }) => theme.colors.success.border};
+  }
+  &[data-state='danger'] {
+    border: 1px solid ${({ theme }) => theme.colors.danger.border};
+  }
 
   &:not([data-disabled='true']):not([data-readonly]):hover {
     border-color: ${({ theme }) => theme.colors.primary.border};
@@ -87,33 +93,27 @@ const StyledInputWrapper = styled(Stack, {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
-  ${({ theme, isDropdownVisible }) =>
-    !isDropdownVisible
-      ? ''
-      : `
-          box-shadow: ${theme.shadows.focusPrimary};
-          border-color: ${theme.colors.primary.borderHover};
-          }
-        `}
+  &[data-dropdownvisible] {
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+  }
 `
 const CustomTag = styled(Tag)`
   height: fit-content;
   width: fit-content;
 `
 
-const StyledPlaceholder = styled(Text, {
-  shouldForwardProp: prop => !['disabled'].includes(prop),
-})`
-  color: ${({ theme, disabled }) =>
-    disabled
-      ? theme.colors.neutral.textWeakDisabled
-      : theme.colors.neutral.textWeak};
+const StyledPlaceholder = styled(Text)`
+  color: ${({ theme }) => theme.colors.neutral.textWeak};
   text-size: ${({ theme }) => theme.typography.body.fontSize};
   display: flex;
   flex: 1;
   align-self: center;
-`
 
+  &[data-disabled='true'] {
+    color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
+  }
+`
 const isValidSelectedValue = (selectedValue: OptionType, options: DataType) =>
   !Array.isArray(options)
     ? Object.keys(options).some(group =>
@@ -129,12 +129,11 @@ const DisplayValues = ({
   nonOverflowedValues,
   disabled,
   readOnly,
-  selectedValues,
-  setSelectedValues,
   onChange,
   overflowed,
   overflowAmount,
-  setAllSelected,
+  setSelectedData,
+  selectedData,
 }: DisplayValuesProps) =>
   multiselect ? (
     <Stack
@@ -154,12 +153,14 @@ const DisplayValues = ({
             !readOnly
               ? event => {
                   event.stopPropagation()
-                  const newSelectedValues = selectedValues?.filter(
+                  setSelectedData({
+                    type: 'selectOption',
+                    clickedOption: option,
+                  })
+                  const newSelectedValues = selectedData.selectedValues?.filter(
                     val => val !== option,
                   )
-                  setSelectedValues(newSelectedValues)
                   onChange?.(newSelectedValues.map(val => val?.value))
-                  setAllSelected(false)
                 }
               : undefined
           }
@@ -181,7 +182,7 @@ const DisplayValues = ({
       ) : null}
     </Stack>
   ) : (
-    selectedValues[0]?.label
+    selectedData.selectedValues[0]?.label
   )
 
 export const SelectBar = ({
@@ -197,14 +198,12 @@ export const SelectBar = ({
   innerRef,
 }: SelectBarProps) => {
   const {
-    selectedValues,
-    setSelectedValues,
     isDropdownVisible,
     setIsDropdownVisible,
-    setAllSelected,
-    setSelectedGroups,
     options,
     multiselect,
+    selectedData,
+    setSelectedData,
   } = useSelectInput()
   const openable = !(readOnly || disabled)
   const refTag = useRef<HTMLDivElement>(null)
@@ -212,7 +211,7 @@ export const SelectBar = ({
   const [overflowed, setOverflowed] = useState(false)
   const [overflowAmount, setOverflowAmount] = useState(0)
   const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(
-    selectedValues[0] ? [selectedValues[0]] : [],
+    selectedData.selectedValues[0] ? [selectedData.selectedValues[0]] : [],
   )
 
   const state = useMemo(() => {
@@ -231,8 +230,8 @@ export const SelectBar = ({
     let tagsWidth = 0
     let computedOverflowAmount = 0
     let computedNonOverflowedValues: OptionType[] = []
-    const newSelectedValues = selectedValues.filter(selectedValue =>
-      isValidSelectedValue(selectedValue, options),
+    const newSelectedValues = selectedData.selectedValues.filter(
+      selectedValue => isValidSelectedValue(selectedValue, options),
     )
     for (const selectedValue of newSelectedValues) {
       if (
@@ -263,15 +262,15 @@ export const SelectBar = ({
       setOverflowed(true)
     }
     setOverflowAmount(computedOverflowAmount)
-  }, [options, selectedValues, width])
+  }, [options, selectedData.selectedValues, width])
 
   return (
     <StyledInputWrapper
       data-disabled={disabled}
       data-readonly={readOnly}
-      size={size}
-      isDropdownVisible={isDropdownVisible}
-      state={state}
+      data-size={size}
+      data-isDropdownVisible={isDropdownVisible}
+      data-state={state}
       direction="row"
       wrap="nowrap"
       gap="1"
@@ -302,22 +301,21 @@ export const SelectBar = ({
       aria-controls="select-dropdown"
       tabIndex={0}
     >
-      {selectedValues.length > 0 ? (
+      {selectedData.selectedValues.length > 0 ? (
         <DisplayValues
           multiselect={multiselect}
           refTag={refTag}
           nonOverflowedValues={nonOverflowedValues}
           disabled={disabled}
           readOnly={readOnly}
-          selectedValues={selectedValues}
-          setSelectedValues={setSelectedValues}
+          selectedData={selectedData}
+          setSelectedData={setSelectedData}
           onChange={onChange}
           overflowed={overflowed}
           overflowAmount={overflowAmount}
-          setAllSelected={setAllSelected}
         />
       ) : (
-        <StyledPlaceholder as="p" variant="body" disabled={disabled}>
+        <StyledPlaceholder as="p" variant="body" data-disabled={disabled}>
           {placeholder}
         </StyledPlaceholder>
       )}
@@ -326,18 +324,16 @@ export const SelectBar = ({
         {success && !error ? (
           <Icon name="checkbox-circle-outline" sentiment="success" />
         ) : null}
-        {clearable && selectedValues.length > 0 ? (
+        {clearable && selectedData.selectedValues.length > 0 ? (
           <Button
             aria-label="clear value"
-            disabled={disabled || ![selectedValues[0]] || readOnly}
+            disabled={disabled || ![selectedData.selectedValues[0]] || readOnly}
             variant="ghost"
             size="small"
             icon="close"
             onClick={event => {
               event.stopPropagation()
-              setSelectedValues([])
-              setAllSelected(false)
-              setSelectedGroups([])
+              setSelectedData({ type: 'clearAll' })
               onChange?.([])
             }}
             sentiment="neutral"

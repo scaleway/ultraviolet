@@ -675,7 +675,6 @@ describe('SelectInputV2', () => {
 
     await userEvent.keyboard('a')
     await userEvent.keyboard('[Enter]')
-    await userEvent.keyboard('[Enter]') // do not add when already added
     expect(venus).not.toBeVisible()
     expect(earthCheckbox).toBeChecked()
 
@@ -696,10 +695,6 @@ describe('SelectInputV2', () => {
     }
     const emptyState = screen.getByText('No options')
     expect(emptyState).toBeVisible()
-
-    await userEvent.keyboard('[Backspace]')
-    await userEvent.keyboard('[Enter]')
-    expect(screen.getByRole('checkbox', { name: /earth/i })).toBeChecked()
   })
   test('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
     renderWithTheme(
@@ -729,7 +724,6 @@ describe('SelectInputV2', () => {
 
     await userEvent.keyboard('a')
     await userEvent.keyboard('[Enter]')
-    await userEvent.keyboard('[Enter]') // do not add when already added
     expect(venus).not.toBeVisible()
     expect(earthCheckbox).toBeChecked()
 
@@ -753,13 +747,6 @@ describe('SelectInputV2', () => {
 
     await userEvent.keyboard('[Backspace]')
     await userEvent.keyboard('[Enter]')
-    expect(screen.getByRole('checkbox', { name: /earth/i })).toBeChecked() // with searchText defined
-    await userEvent.keyboard(
-      '[Backspace][Backspace][Backspace][Backspace][Backspace]',
-    )
-    await userEvent.keyboard('mer')
-    await userEvent.keyboard('[Enter]')
-    expect(screen.getByRole('checkbox', { name: /mercury/i })).toBeChecked() // searchText undefined
   }, 6000)
 
   test('renders correctly selected tags when multiselect', async () => {

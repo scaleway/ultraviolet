@@ -11,6 +11,22 @@ export type OptionType = {
 
 export type DataType = Record<string, OptionType[]> | OptionType[]
 
+export type ReducerState = {
+  selectedValues: OptionType[]
+  allSelected: boolean
+  selectedGroups: string[]
+}
+
+export type ReducerAction =
+  | { type: 'selectAll' }
+  | { type: 'selectGroup'; selectedGroup: string }
+  | {
+      type: 'selectOption'
+      clickedOption: OptionType
+      group?: string
+    }
+  | { type: 'clearAll' }
+
 export const INPUT_SIZE_HEIGHT = {
   large: 48,
   medium: 40,

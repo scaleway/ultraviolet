@@ -1,45 +1,37 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useMemo, useReducer, useState } from 'react'
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
-import type { DataType, OptionType } from './types'
+import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 
 type ContextProps = {
   options: DataType
   multiselect: boolean
   onSearch: Dispatch<SetStateAction<DataType>>
-  selectedValues: OptionType[]
-  setSelectedValues: Dispatch<SetStateAction<OptionType[]>>
   isDropdownVisible: boolean
   setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
-  setAllSelected: Dispatch<SetStateAction<boolean>>
-  setSelectedGroups: Dispatch<SetStateAction<string[]>>
   searchInput: string
   setSearchInput: Dispatch<SetStateAction<string>>
   selectAll?: { label: ReactNode; description?: string }
-  allSelected: boolean
   selectAllGroup?: boolean
-  selectedGroups: string[]
   numberOfOptions: number
   displayedOptions: DataType
+  selectedData: ReducerState
+  setSelectedData: Dispatch<ReducerAction>
 }
 
 const SelectInputContext = createContext<ContextProps>({
   options: [],
   multiselect: false,
   onSearch: () => {},
-  selectedValues: [],
-  setSelectedValues: () => {},
   isDropdownVisible: false,
   setIsDropdownVisible: () => {},
-  setAllSelected: () => {},
-  setSelectedGroups: () => {},
   searchInput: '',
   setSearchInput: () => {},
   selectAll: { label: '' },
-  allSelected: false,
   selectAllGroup: false,
-  selectedGroups: [],
   numberOfOptions: 0,
   displayedOptions: [],
+  selectedData: { allSelected: false, selectedGroups: [], selectedValues: [] },
+  setSelectedData: () => {},
 })
 
 export const useSelectInput = () => useContext(SelectInputContext)
@@ -63,36 +55,144 @@ export const SelectInputProvider = ({
   children,
 }: SelectInputProviderProps) => {
   const defaultValue = value ? [value] : []
-  const [selectedValues, setSelectedValues] =
-    useState<OptionType[]>(defaultValue)
   const [displayedOptions, setDisplayedOptions] = useState(options)
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
   const [searchInput, setSearchInput] = useState('')
-  const [allSelected, setAllSelected] = useState(false)
-  const [selectedGroups, setSelectedGroups] = useState<string[]>([])
+  const allValues: OptionType[] = []
+  const allGroups: string[] = []
 
+  if (!Array.isArray(options)) {
+    Object.keys(options).map((group: string) =>
+      options[group].map(option => {
+        if (!option.disabled) {
+          allValues.push(option)
+        }
+
+        return null
+      }),
+    )
+    Object.keys(options).forEach(group => allGroups.push(group))
+  } else {
+    options.map(option => allValues.push(option))
+  }
+
+  const reducer = (
+    state: ReducerState,
+    action: ReducerAction,
+  ): ReducerState => {
+    switch (action.type) {
+      case 'selectAll':
+        if (state.allSelected) {
+          return { selectedValues: [], allSelected: false, selectedGroups: [] }
+        }
+
+        return {
+          selectedValues: allValues,
+          allSelected: true,
+          selectedGroups: allGroups,
+        }
+
+      case 'selectGroup':
+        if (!Array.isArray(options)) {
+          if (state.selectedGroups.includes(action.selectedGroup)) {
+            return {
+              selectedValues: [...state.selectedValues].filter(
+                selectedValue =>
+                  !options[action.selectedGroup].includes(selectedValue),
+              ),
+              allSelected: false,
+              selectedGroups: state.selectedGroups.filter(
+                selectedGroup => selectedGroup !== action.selectedGroup,
+              ),
+            }
+          }
+
+          const newSelectedValues = [...state.selectedValues]
+          options[action.selectedGroup].map(option =>
+            newSelectedValues.includes(option) || option.disabled
+              ? null
+              : newSelectedValues.push(option),
+          )
+
+          return {
+            selectedValues: newSelectedValues,
+            allSelected: newSelectedValues.length === numberOfOptions,
+            selectedGroups: [...state.selectedGroups, action.selectedGroup],
+          }
+        }
+
+        return state
+
+      case 'selectOption':
+        if (multiselect) {
+          if (state.selectedValues.includes(action.clickedOption)) {
+            return {
+              selectedValues: state.selectedValues.filter(
+                val => val !== action.clickedOption,
+              ),
+              allSelected: false,
+              selectedGroups:
+                action.group && state.selectedGroups.includes(action.group)
+                  ? state.selectedGroups.filter(
+                      selectedGroup => selectedGroup !== action.group,
+                    )
+                  : [],
+            }
+          }
+
+          return {
+            selectedValues: [...state.selectedValues, action.clickedOption],
+            allSelected: state.selectedValues.length + 1 === numberOfOptions,
+            selectedGroups:
+              !Array.isArray(options) &&
+              action.group &&
+              options[action.group].every(
+                option =>
+                  [...state.selectedValues, action.clickedOption].includes(
+                    option,
+                  ) || option.disabled,
+              )
+                ? [...state.selectedGroups, action.group]
+                : state.selectedGroups,
+          }
+        }
+
+        return {
+          selectedValues: [action.clickedOption],
+          allSelected: false,
+          selectedGroups: state.selectedGroups,
+        }
+
+      case 'clearAll':
+        return { selectedGroups: [], selectedValues: [], allSelected: false }
+
+      default:
+        return state
+    }
+  }
+
+  const [selectedData, setSelectedData] = useReducer(reducer, {
+    selectedValues: defaultValue,
+    allSelected: false,
+    selectedGroups: [],
+  })
   const providerValue = useMemo(
     () => ({
       onSearch: setDisplayedOptions,
-      selectedValues,
-      setSelectedValues,
       isDropdownVisible,
       setIsDropdownVisible,
-      setAllSelected,
-      setSelectedGroups,
       searchInput,
       setSearchInput,
       options,
       multiselect,
       selectAll,
-      allSelected,
       selectAllGroup,
-      selectedGroups,
       numberOfOptions,
       displayedOptions,
+      selectedData,
+      setSelectedData,
     }),
     [
-      allSelected,
       displayedOptions,
       isDropdownVisible,
       multiselect,
@@ -101,8 +201,7 @@ export const SelectInputProvider = ({
       searchInput,
       selectAll,
       selectAllGroup,
-      selectedGroups,
-      selectedValues,
+      selectedData,
     ],
   )
 

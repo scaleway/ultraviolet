@@ -10,7 +10,6 @@ type SearchBarProps = {
   displayedOptions: DataType
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
   onChange?: (value: string[]) => void
-  selectAll: boolean
 }
 
 const StyledInput = styled(TextInputV2)`
@@ -61,21 +60,15 @@ export const SearchBarDropdown = ({
   displayedOptions,
   setSearchBarActive,
   onChange,
-  selectAll,
 }: SearchBarProps) => {
   const {
     onSearch,
     setSearchInput,
-    selectedValues,
-    setAllSelected,
-    setSelectedGroups,
-    setSelectedValues,
     searchInput,
     options,
     multiselect,
-    selectAllGroup,
-    selectedGroups,
-    numberOfOptions,
+    setSelectedData,
+    selectedData,
   } = useSelectInput()
   const handleChange = (search: string) => {
     if (search.length > 0) {
@@ -112,47 +105,29 @@ export const SearchBarDropdown = ({
       const closestOption = findClosestOption(displayedOptions, search)
       if (closestOption) {
         if (multiselect) {
-          setSelectedValues(
-            selectedValues.includes(closestOption)
-              ? selectedValues
-              : [...selectedValues, closestOption],
-          )
+          setSelectedData({
+            type: 'selectOption',
+            clickedOption: closestOption,
+            group: !Array.isArray(options)
+              ? Object.keys(options).filter(group =>
+                  options[group].includes(closestOption),
+                )[0]
+              : undefined,
+          })
           onChange?.(
-            selectedValues.includes(closestOption)
-              ? selectedValues.map(val => val?.value)
-              : [...selectedValues, closestOption].map(val => val?.value),
+            selectedData.selectedValues.includes(closestOption)
+              ? selectedData.selectedValues.map(val => val?.value)
+              : [...selectedData.selectedValues, closestOption].map(
+                  val => val?.value,
+                ),
           )
           setSearchInput(closestOption.searchText ?? closestOption.value)
-
-          if (
-            selectAll &&
-            !selectedValues.includes(closestOption) &&
-            selectedValues.length + 1 === numberOfOptions
-          ) {
-            setAllSelected(true)
-            if (selectAllGroup) {
-              setSelectedGroups(Object.keys(options))
-            }
-          }
-          if (
-            selectAllGroup &&
-            !selectedValues.includes(closestOption) &&
-            !Array.isArray(options)
-          ) {
-            Object.keys(options).map(group =>
-              options[group].every(
-                option =>
-                  [...selectedValues, closestOption].includes(option) ||
-                  option.disabled,
-              ) && !selectedGroups.includes(group)
-                ? setSelectedGroups([...selectedGroups, group])
-                : null,
-            )
-          }
         } else {
-          setSelectedValues([closestOption])
-          setSearchInput(closestOption.searchText ?? closestOption.value)
-          onChange?.(selectedValues.map(val => val?.value))
+          setSelectedData({
+            type: 'selectOption',
+            clickedOption: closestOption,
+          })
+          onChange?.(selectedData.selectedValues.map(val => val?.value))
         }
       }
     }
