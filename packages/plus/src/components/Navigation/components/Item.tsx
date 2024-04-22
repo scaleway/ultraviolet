@@ -473,7 +473,9 @@ export const Item = ({
                 variant="bodySmallStrong"
                 sentiment={active ? 'primary' : 'neutral'}
                 prominence={
-                  (categoryIcon || !hasParents) && !active ? 'strong' : 'weak'
+                  (categoryIcon || !hasParents) && !active
+                    ? 'strong'
+                    : 'default'
                 }
                 animation={animation}
                 disabled={disabled}
