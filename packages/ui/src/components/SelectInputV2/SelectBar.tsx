@@ -40,7 +40,13 @@ const StateStack = styled(Stack)`
   display: flex;
 `
 
-const StyledInputWrapper = styled(Stack)`
+const StyledInputWrapper = styled(Stack)<{
+  'data-readonly': boolean
+  'data-disabled': boolean
+  'data-size': 'small' | 'medium' | 'large'
+  'data-state': 'neutral' | 'success' | 'danger'
+  'data-dropdownvisible': boolean
+}>`
   display: flex;
   padding: ${({ theme }) => theme.space[1]};
   padding-right: 0;
@@ -93,7 +99,7 @@ const StyledInputWrapper = styled(Stack)`
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
-  &[data-dropdownvisible] {
+  &[data-dropdownvisible='true'] {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
   }
@@ -103,7 +109,7 @@ const CustomTag = styled(Tag)`
   width: fit-content;
 `
 
-const StyledPlaceholder = styled(Text)`
+const StyledPlaceholder = styled(Text)<{ 'data-disabled': boolean }>`
   color: ${({ theme }) => theme.colors.neutral.textWeak};
   text-size: ${({ theme }) => theme.typography.body.fontSize};
   display: flex;
@@ -264,12 +270,16 @@ export const SelectBar = ({
     setOverflowAmount(computedOverflowAmount)
   }, [options, selectedData.selectedValues, width])
 
+  useEffect(() => {
+    setSelectedData({ type: 'update' })
+  }, [setSelectedData, options])
+
   return (
     <StyledInputWrapper
       data-disabled={disabled}
       data-readonly={readOnly}
       data-size={size}
-      data-isDropdownVisible={isDropdownVisible}
+      data-dropdownvisible={isDropdownVisible}
       data-state={state}
       direction="row"
       wrap="nowrap"

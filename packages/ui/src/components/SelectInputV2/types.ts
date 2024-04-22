@@ -26,6 +26,7 @@ export type ReducerAction =
       group?: string
     }
   | { type: 'clearAll' }
+  | { type: 'update' }
 
 export const INPUT_SIZE_HEIGHT = {
   large: 48,

@@ -11,7 +11,7 @@ type ContextProps = {
   searchInput: string
   setSearchInput: Dispatch<SetStateAction<string>>
   selectAll?: { label: ReactNode; description?: string }
-  selectAllGroup?: boolean
+  selectAllGroup: boolean
   numberOfOptions: number
   displayedOptions: DataType
   selectedData: ReducerState
@@ -166,6 +166,24 @@ export const SelectInputProvider = ({
       case 'clearAll':
         return { selectedGroups: [], selectedValues: [], allSelected: false }
 
+      case 'update': // update the selected values to only keep non-disabled one
+        return {
+          selectedGroups: state.selectedGroups,
+          allSelected: state.allSelected,
+          selectedValues: state.selectedValues.filter(selectedValue => {
+            if (!Array.isArray(options)) {
+              return Object.keys(options).some(group =>
+                options[group].some(
+                  option => option === selectedValue && !option.disabled,
+                ),
+              )
+            }
+
+            return options.some(
+              option => option === selectedValue && !option.disabled,
+            )
+          }),
+        }
       default:
         return state
     }

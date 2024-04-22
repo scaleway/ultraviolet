@@ -56,7 +56,7 @@ const StyledPopup = styled(Popup)`
   padding: ${({ theme }) => theme.space[0]};
 `
 
-const DropdownContainer = styled(Stack)`
+const DropdownContainer = styled(Stack)<{ 'data-grouped': boolean }>`
   max-height: 256px;
   overflow-y: scroll;
   padding: ${({ theme }) => theme.space[0]};
@@ -67,7 +67,7 @@ const DropdownContainer = styled(Stack)`
     padding-top: ${({ theme }) => theme.space[0]};
   }
 `
-const DropdownGroup = styled.button`
+const DropdownGroup = styled.button<{ 'data-selectgroup': boolean }>`
   display: flex;
   width: 100%;
   justify-content: left;
@@ -101,7 +101,10 @@ const DropdownGroupWrapper = styled.div`
   position: sticky;
   top: 0px;
 `
-const DropdownItem = styled.button`
+const DropdownItem = styled.button<{
+  'data-selected': boolean
+  disabled: boolean
+}>`
   text-align:left;
   border: none;
   background-color: ${({ theme }) => theme.colors.neutral.background};
@@ -120,7 +123,7 @@ const DropdownItem = styled.button`
     outline: none;
   }
 
-  &[aria-selected='true'] {
+  &[data-selected='true'] {
     background-color: ${({ theme }) => theme.colors.primary.background};
   }
 
@@ -157,6 +160,7 @@ const EmptyState = styled(Stack)`
 const LoadMore = styled(Stack)`
   padding: ${({ theme }) => theme.space[0.5]};
 `
+
 const moveFocusDown = () => {
   const options = document.querySelectorAll(
     '#items > button[role="option"]:not([disabled])',
@@ -386,7 +390,7 @@ const CreateDropdown = ({
             <Stack id="items">
               <DropdownItem
                 disabled={false}
-                aria-selected={selectedData.allSelected}
+                data-selected={selectedData.allSelected}
                 aria-label="select-all"
                 data-testid="select-all"
                 id="select-all"
@@ -463,7 +467,7 @@ const CreateDropdown = ({
                   <DropdownItem
                     key={option.value}
                     disabled={option.disabled}
-                    aria-selected={
+                    data-selected={
                       selectedData.selectedValues.includes(option) &&
                       !option.disabled
                     }
@@ -537,7 +541,7 @@ const CreateDropdown = ({
         <Stack id="items" gap={0.25}>
           <DropdownItem
             disabled={false}
-            aria-selected={selectedData.allSelected}
+            data-selected={selectedData.allSelected}
             aria-label="select-all"
             data-testid="select-all"
             role="option"
@@ -579,7 +583,7 @@ const CreateDropdown = ({
             <DropdownItem
               key={option.value}
               disabled={option.disabled}
-              aria-selected={
+              data-selected={
                 selectedData.selectedValues.includes(option) && !option.disabled
               }
               onClick={() => {
