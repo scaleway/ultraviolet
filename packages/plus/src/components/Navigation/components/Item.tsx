@@ -538,7 +538,7 @@ export const Item = ({
               <AnimatedIcon
                 name="open-in-new"
                 sentiment="neutral"
-                prominence="weak"
+                prominence="default"
                 disabled={disabled}
               />
             ) : null}
