@@ -1,4 +1,5 @@
 import { ReactComponent as abuse } from './assets/abuse.svg'
+import { ReactComponent as accountExperience } from './assets/account-experience.svg'
 import { ReactComponent as additionalDisk } from './assets/additional-disk.svg'
 import { ReactComponent as advancedSettings } from './assets/advanced-settings.svg'
 import { ReactComponent as ansible } from './assets/ansible.svg'
@@ -107,6 +108,7 @@ import { ReactComponent as rpnSan } from './assets/rpn-san.svg'
 import { ReactComponent as rpnV1 } from './assets/rpn-v1.svg'
 import { ReactComponent as rpnV2 } from './assets/rpn-v2.svg'
 import { ReactComponent as rpn } from './assets/rpn.svg'
+import { ReactComponent as savingPlan } from './assets/saving-plan.svg'
 import { ReactComponent as sdkGo } from './assets/sdk-go.svg'
 import { ReactComponent as sdkPython } from './assets/sdk-python.svg'
 import { ReactComponent as secretManager } from './assets/secret-manager.svg'
@@ -282,4 +284,6 @@ export const PRODUCT_ICONS = {
   vpsServers,
   vpsStartServers,
   environmentalFootprintCalculator,
+  accountExperience,
+  savingPlan,
 } as const
