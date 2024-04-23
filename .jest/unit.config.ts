@@ -29,6 +29,7 @@ const config = {
     '\\.svg$': '<rootDir>/.jest/svg.ts',
   },
   setupFilesAfterEnv: ['<rootDir>/.jest/setupTests.ts'],
+  testMatch: ['**/__tests__/**/*.test.[jt]s?(x)'],
 } satisfies Config.InitialOptions
 
 export default config

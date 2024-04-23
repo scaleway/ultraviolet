@@ -5,7 +5,7 @@ import type { ComponentProps } from 'react'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../../../.jest/helpers'
+} from '../../../../.jest/helpers'
 import { Popup } from '../../index'
 
 describe('Popup', () => {
