@@ -10,6 +10,12 @@ export default {
       </div>
     ),
   ],
+  parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated please do not use it any more.',
+    migrationLink: 'Migrations/SelectInput to SelectInputV2',
+  },
   title: 'Components/Data Entry/SelectInput',
 } as Meta<typeof SelectInput>
 
