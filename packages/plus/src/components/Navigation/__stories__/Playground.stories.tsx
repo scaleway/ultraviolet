@@ -85,6 +85,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         initialExpanded={navigationExpanded}
         onWidthResize={saveWidthInLocalStorage}
         width={navigationWidth}
+        pinnedFeature
         {...props}
       >
         <Navigation.Item

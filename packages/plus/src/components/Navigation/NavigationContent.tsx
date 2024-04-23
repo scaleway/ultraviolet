@@ -119,7 +119,6 @@ type NavigationContentProps = {
   children: ReactNode
   logo?: ReactNode | ((expanded: boolean) => ReactNode)
   className?: string
-  onClickExpand?: (expanded: boolean) => void
   width: number
   onWidthResize?: (width: number) => void
   id?: string
@@ -128,14 +127,12 @@ type NavigationContentProps = {
 export const NavigationContent = ({
   children,
   logo,
-  onClickExpand,
   width,
   onWidthResize,
   className,
   id,
 }: NavigationContentProps) => {
   const sliderRef = useRef<HTMLDivElement>(null)
-  const navigationRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
   const isScrollAtBottom = useCallback(() => {
@@ -183,24 +180,8 @@ export const NavigationContent = ({
     [contentRef.current],
   )
 
-  const { expanded, setExpanded, animation, setAnimation, locales } =
+  const { expanded, toggleExpand, animation, locales, navigationRef } =
     useNavigation()
-
-  // This function will be triggered when expand/collapse button is clicked
-  const toggleExpand = useCallback(() => {
-    onClickExpand?.(!expanded)
-    if (navigationRef.current) {
-      navigationRef.current.style.width = ''
-    }
-
-    setAnimation(expanded ? 'collapse' : 'expand')
-
-    setTimeout(() => {
-      setExpanded()
-      setFooterHasOverflowStyle(isScrollAtBottom())
-      setAnimation(false)
-    }, ANIMATION_DURATION)
-  }, [expanded, isScrollAtBottom, onClickExpand, setAnimation, setExpanded])
 
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {
@@ -271,7 +252,7 @@ export const NavigationContent = ({
       // eslint-disable-next-line react-hooks/exhaustive-deps
       sliderRef.current?.removeEventListener('mousedown', mousedown)
     }
-  }, [expanded, onWidthResize, toggleExpand])
+  }, [expanded, navigationRef, onWidthResize, toggleExpand])
 
   return (
     <StyledNav className={className} id={id}>

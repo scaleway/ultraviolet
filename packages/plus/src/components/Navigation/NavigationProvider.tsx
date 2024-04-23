@@ -1,38 +1,40 @@
-import type { ReactNode } from 'react'
+import type { ReactNode, RefObject } from 'react'
 import {
   createContext,
   useCallback,
   useContext,
   useMemo,
   useReducer,
+  useRef,
   useState,
 } from 'react'
+import { ANIMATION_DURATION } from './constants'
 import NavigationLocales from './locales/en'
 
 type ContextProps = {
   expanded: boolean
-  setExpanded: () => void
+  toggleExpand: () => void
   animation: boolean | 'expand' | 'collapse'
-  setAnimation: (animation: boolean | 'expand' | 'collapse') => void
   pinnedFeature?: boolean
   onClickPinUnpin?: (pinned: string[]) => void
   pinItem: (item: string) => void
   pinnedItems: string[]
   unpinItem: (item: string) => void
-  locales: typeof NavigationLocales
   pinLimit: number
+  navigationRef: RefObject<HTMLDivElement>
+  locales: typeof NavigationLocales
 }
 
 export const NavigationContext = createContext<ContextProps>({
   expanded: true,
-  setExpanded: () => {},
+  toggleExpand: () => {},
   animation: false,
-  setAnimation: () => {},
   locales: NavigationLocales,
   pinItem: () => {},
   unpinItem: () => {},
   pinnedItems: [],
   pinLimit: 7,
+  navigationRef: { current: null },
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -45,6 +47,7 @@ type NavigationProviderProps = {
   initialExpanded: boolean
   locales: typeof NavigationLocales
   pinLimit: number
+  onClickExpand?: (expanded: boolean) => void
 }
 
 export const NavigationProvider = ({
@@ -55,12 +58,30 @@ export const NavigationProvider = ({
   initialExpanded,
   locales,
   pinLimit,
+  onClickExpand,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useReducer(state => !state, initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
   const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(
     false,
   )
+  const navigationRef = useRef<HTMLDivElement>(null)
+
+  // This function will be triggered when expand/collapse button is clicked
+  const toggleExpand = useCallback(() => {
+    onClickExpand?.(!expanded)
+    if (navigationRef.current) {
+      navigationRef.current.style.width = ''
+    }
+
+    setAnimation(expanded ? 'collapse' : 'expand')
+
+    setTimeout(() => {
+      setExpanded()
+      // setFooterHasOverflowStyle(isScrollAtBottom())
+      setAnimation(false)
+    }, ANIMATION_DURATION)
+  }, [expanded, onClickExpand, setAnimation, setExpanded])
 
   const pinItem = useCallback(
     (item: string) => {
@@ -83,7 +104,7 @@ export const NavigationProvider = ({
   const value = useMemo(
     () => ({
       expanded,
-      setExpanded,
+      toggleExpand,
       pinnedItems,
       pinItem,
       unpinItem,
@@ -92,6 +113,7 @@ export const NavigationProvider = ({
       pinLimit,
       animation,
       setAnimation,
+      navigationRef,
     }),
     [
       expanded,
@@ -102,6 +124,8 @@ export const NavigationProvider = ({
       locales,
       pinLimit,
       animation,
+      navigationRef,
+      toggleExpand,
     ],
   )
 

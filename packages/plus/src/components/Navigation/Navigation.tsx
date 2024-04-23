@@ -88,9 +88,9 @@ export const Navigation = ({
     initialPinned={initialPinned}
     pinLimit={pinLimit}
     initialExpanded={initialExpanded}
+    onClickExpand={onClickExpand}
   >
     <NavigationContent
-      onClickExpand={onClickExpand}
       logo={logo}
       className={className}
       width={width}
