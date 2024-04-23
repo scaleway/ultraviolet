@@ -34,6 +34,7 @@ type DisplayValuesProps = {
   overflowAmount: number
   selectedData: ReducerState
   setSelectedData: Dispatch<ReducerAction>
+  size: 'small' | 'medium' | 'large'
 }
 const StateStack = styled(Stack)`
   padding-right: ${({ theme }) => theme.space['2']};
@@ -140,6 +141,7 @@ const DisplayValues = ({
   overflowAmount,
   setSelectedData,
   selectedData,
+  size,
 }: DisplayValuesProps) =>
   multiselect ? (
     <Stack
@@ -188,7 +190,9 @@ const DisplayValues = ({
       ) : null}
     </Stack>
   ) : (
-    selectedData.selectedValues[0]?.label
+    <Text as="p" variant={size === 'large' ? 'body' : 'bodySmall'}>
+      {selectedData.selectedValues[0]?.label}
+    </Text>
   )
 
 export const SelectBar = ({
@@ -323,9 +327,14 @@ export const SelectBar = ({
           onChange={onChange}
           overflowed={overflowed}
           overflowAmount={overflowAmount}
+          size={size}
         />
       ) : (
-        <StyledPlaceholder as="p" variant="body" data-disabled={disabled}>
+        <StyledPlaceholder
+          as="p"
+          variant={size === 'large' ? 'body' : 'bodySmall'}
+          data-disabled={disabled}
+        >
           {placeholder}
         </StyledPlaceholder>
       )}

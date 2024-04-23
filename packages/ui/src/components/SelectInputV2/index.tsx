@@ -204,7 +204,10 @@ export const SelectInputV2 = ({
           <Stack gap={0.5} aria-label={ariaLabel}>
             <Stack direction="row" gap={0.5}>
               {label ? (
-                <Text as="label" variant="bodySmallStrong">
+                <Text
+                  as="label"
+                  variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
+                >
                   {label}
                 </Text>
               ) : null}
