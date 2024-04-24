@@ -119,8 +119,8 @@ const DropdownItem = styled.button<{
   &:hover, :focus {
     background-color: ${({ theme }) => theme.colors.primary.background};
     color: ${({ theme }) => theme.colors.primary.text};
-    cursor: 'pointer';
-    outline: none;
+    cursor: pointer;
+    outline: none; 
   }
 
   &[data-selected='true'] {
@@ -153,7 +153,9 @@ const StyledCheckbox = styled(Checkbox)`
   position: static;
   text-align: left;
   align-items: center;
-`
+  pointer-events: none;
+` // pointer-events: none prevents any error when using the checkbox in a form since it is an unnamed input
+
 const EmptyState = styled(Stack)`
   padding: ${({ theme }) => theme.space[2]};
 `
@@ -398,13 +400,13 @@ const CreateDropdown = ({
                 onKeyDown={event =>
                   [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
                 }
+                onClick={selectAllOptions}
               >
                 <StyledCheckbox
                   checked={selectedData.allSelected}
                   disabled={false}
                   value="select-all"
                   data-testid="select-all-checkbox"
-                  onChange={selectAllOptions}
                   tabIndex={-1}
                 >
                   <Stack direction="column">
@@ -425,7 +427,7 @@ const CreateDropdown = ({
               </DropdownItem>
             </Stack>
           ) : null}
-          {Object.keys(displayedOptions).map(group => (
+          {Object.keys(displayedOptions).map((group, index) => (
             <Stack key={group} gap={0.25}>
               {displayedOptions[group].length > 0 ? (
                 <DropdownGroupWrapper id={selectAllGroup ? 'items' : undefined}>
@@ -440,13 +442,16 @@ const CreateDropdown = ({
                     }}
                     data-selectgroup={selectAllGroup}
                     role="group"
+                    data-testid={`group-${index}`}
+                    onClick={() =>
+                      selectAllGroup ? handleSelectGroup(group) : null
+                    }
                   >
                     {selectAllGroup ? (
                       <StyledCheckbox
                         checked={selectedData.selectedGroups.includes(group)}
                         disabled={false}
                         value={group}
-                        onChange={() => handleSelectGroup(group)}
                         data-testid="select-group"
                         tabIndex={-1}
                       >
@@ -463,7 +468,7 @@ const CreateDropdown = ({
                 </DropdownGroupWrapper>
               ) : null}
               <Stack id="items" gap="0.25">
-                {displayedOptions[group].map((option, index) => (
+                {displayedOptions[group].map((option, indexOption) => (
                   <DropdownItem
                     key={option.value}
                     disabled={option.disabled}
@@ -472,8 +477,8 @@ const CreateDropdown = ({
                       !option.disabled
                     }
                     aria-label={option.value}
-                    data-testid={`option-${index}`}
-                    id={`option-${index}`}
+                    data-testid={`option-${option.value}`}
+                    id={`option-${indexOption}`}
                     role="option"
                     onClick={() => {
                       if (!option.disabled) {
@@ -504,7 +509,6 @@ const CreateDropdown = ({
                       >
                         <DisplayOption
                           option={option}
-                          multiselect={multiselect}
                           descriptionDirection={descriptionDirection}
                           optionalInfoPlacement={optionalInfoPlacement}
                         />
@@ -512,7 +516,6 @@ const CreateDropdown = ({
                     ) : (
                       <DisplayOption
                         option={option}
-                        multiselect={multiselect}
                         descriptionDirection={descriptionDirection}
                         optionalInfoPlacement={optionalInfoPlacement}
                       />
@@ -548,13 +551,13 @@ const CreateDropdown = ({
             onKeyDown={event =>
               [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
             }
+            onClick={selectAllOptions}
           >
             <StyledCheckbox
               checked={selectedData.allSelected}
               disabled={false}
               value="select-all"
               data-testid="select-all-checkbox"
-              onChange={selectAllOptions}
               tabIndex={-1}
             >
               <Stack direction="column">
@@ -592,7 +595,7 @@ const CreateDropdown = ({
                 }
               }}
               aria-label={option.value}
-              data-testid={`option-${index}`}
+              data-testid={`option-${option.value}`}
               id={`option-${index}`}
               role="option"
               ref={
@@ -617,7 +620,6 @@ const CreateDropdown = ({
                 >
                   <DisplayOption
                     option={option}
-                    multiselect={multiselect}
                     descriptionDirection={descriptionDirection}
                     optionalInfoPlacement={optionalInfoPlacement}
                   />
@@ -625,7 +627,6 @@ const CreateDropdown = ({
               ) : (
                 <DisplayOption
                   option={option}
-                  multiselect={multiselect}
                   descriptionDirection={descriptionDirection}
                   optionalInfoPlacement={optionalInfoPlacement}
                 />
@@ -664,7 +665,6 @@ export const Dropdown = ({
   const maxWidth = refSelect.current?.offsetWidth
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
-
   useEffect(() => {
     if (!searchInput) {
       onSearch(options)
