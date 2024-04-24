@@ -6,7 +6,7 @@ export const PinnedItems = () => {
 
   if (!context) {
     throw new Error(
-      'Navigation.PinnedItems can only be used inside a Navigation',
+      'Navigation.PinnedItems can only be used inside a NavigationProvider.',
     )
   }
 

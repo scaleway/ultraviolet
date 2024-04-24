@@ -307,7 +307,9 @@ export const Item = ({
   const context = useNavigation()
 
   if (!context) {
-    throw new Error('Navigation.Item can only be used inside a Navigation')
+    throw new Error(
+      'Navigation.Item can only be used inside a NavigationProvider.',
+    )
   }
 
   const {

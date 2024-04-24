@@ -119,7 +119,6 @@ type NavigationContentProps = {
   children: ReactNode
   logo?: ReactNode | ((expanded: boolean) => ReactNode)
   className?: string
-  width: number
   onWidthResize?: (width: number) => void
   id?: string
 }
@@ -127,11 +126,28 @@ type NavigationContentProps = {
 export const NavigationContent = ({
   children,
   logo,
-  width,
   onWidthResize,
   className,
   id,
 }: NavigationContentProps) => {
+  const context = useNavigation()
+
+  if (!context) {
+    throw new Error(
+      'Navigation should be inside NavigationProvider to use it properly.',
+    )
+  }
+
+  const {
+    setWidth,
+    width,
+    expanded,
+    toggleExpand,
+    animation,
+    locales,
+    navigationRef,
+  } = context
+
   const sliderRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
@@ -180,9 +196,6 @@ export const NavigationContent = ({
     [contentRef.current],
   )
 
-  const { expanded, toggleExpand, animation, locales, navigationRef } =
-    useNavigation()
-
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {
     let prevX: number
@@ -228,6 +241,7 @@ export const NavigationContent = ({
         if (navigationRef.current) {
           if (!shouldCollapseOnMouseUp && !shouldExpandOnMouseUp) {
             onWidthResize?.(navigationRef.current.offsetWidth)
+            setWidth?.(navigationRef.current.offsetWidth)
           }
 
           if (!expanded) {
@@ -252,7 +266,7 @@ export const NavigationContent = ({
       // eslint-disable-next-line react-hooks/exhaustive-deps
       sliderRef.current?.removeEventListener('mousedown', mousedown)
     }
-  }, [expanded, navigationRef, onWidthResize, toggleExpand])
+  }, [expanded, navigationRef, onWidthResize, setWidth, toggleExpand])
 
   return (
     <StyledNav className={className} id={id}>
