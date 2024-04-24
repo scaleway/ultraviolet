@@ -65,8 +65,10 @@
       "matchUpdateTypes": ["major"]
     },
     {
-      "matchPackagePatterns": ["final-form-arrays"],
-      "enabled": false
+      "matchPackagePatterns": ["^@testing-library"],
+      "groupName": "Testing library",
+        "groupSlug": "testing-library",
+      "matchUpdateTypes": ["major", "minor", "patch"]
     },
     {
       "labels": ["UPDATE-MAJOR"],
