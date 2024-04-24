@@ -1,5 +1,22 @@
 # @ultraviolet/plus
 
+## 0.14.0
+
+### Minor Changes
+
+- [#3681](https://github.com/scaleway/ultraviolet/pull/3681) [`deb91d2`](https://github.com/scaleway/ultraviolet/commit/deb91d24672a4422c9bb97a90350bed702f944e6) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `hideHourlyPriceOnTotal` on `<EstimateCost />` component to be able to hide hourly price in total section
+
+- [#3695](https://github.com/scaleway/ultraviolet/pull/3695) [`a89b320`](https://github.com/scaleway/ultraviolet/commit/a89b32007f7ff7ac2767e4d838b99c79bbc1299c) Thanks [@matthprost](https://github.com/matthprost)! - Export `<NavigationProvider />` and `useNavigation()` to make the control of the nav easier
+
+### Patch Changes
+
+- [#3690](https://github.com/scaleway/ultraviolet/pull/3690) [`d3740c1`](https://github.com/scaleway/ultraviolet/commit/d3740c1d6d0b4fc965c7ba158779f99e597e4774) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.79`.
+
+- [#3693](https://github.com/scaleway/ultraviolet/pull/3693) [`76b258d`](https://github.com/scaleway/ultraviolet/commit/76b258d1875ce9c04edb76c57d029ec86ce9a163) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Navigation />`: Changed color of the text in `Navigation.Item` from textWeak to textDefault
+
+- Updated dependencies [[`d3740c1`](https://github.com/scaleway/ultraviolet/commit/d3740c1d6d0b4fc965c7ba158779f99e597e4774), [`dfa7a06`](https://github.com/scaleway/ultraviolet/commit/dfa7a06984f876da0574dcc7fbc1f4085c1f9f1c)]:
+  - @ultraviolet/ui@1.48.0
+
 ## 0.13.1
 
 ### Patch Changes

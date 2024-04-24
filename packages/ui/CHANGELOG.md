@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.48.0
+
+### Minor Changes
+
+- [#3651](https://github.com/scaleway/ultraviolet/pull/3651) [`dfa7a06`](https://github.com/scaleway/ultraviolet/commit/dfa7a06984f876da0574dcc7fbc1f4085c1f9f1c) Thanks [@lisalupi](https://github.com/lisalupi)! - - New component `<SelectInputV2 />` and deprecate `SelectInput`
+  - New prop `onKeyDown` for `<TextInputV2/>`
+  - New prop `tabIndex` from `<Checkbox />`
+
+### Patch Changes
+
+- [#3690](https://github.com/scaleway/ultraviolet/pull/3690) [`d3740c1`](https://github.com/scaleway/ultraviolet/commit/d3740c1d6d0b4fc965c7ba158779f99e597e4774) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.79`.
+
+- Updated dependencies [[`d3740c1`](https://github.com/scaleway/ultraviolet/commit/d3740c1d6d0b4fc965c7ba158779f99e597e4774), [`2fd8d55`](https://github.com/scaleway/ultraviolet/commit/2fd8d551453d427f12bca8f4acbce0bfb5c65f81)]:
+  - @ultraviolet/icons@2.12.5
+
 ## 1.47.1
 
 ### Patch Changes
