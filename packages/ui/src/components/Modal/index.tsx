@@ -103,14 +103,16 @@ export const Modal = ({
 
   return (
     <>
-      <Disclosure
-        id={finalId}
-        handleOpen={handleOpen}
-        disclosure={disclosure}
-        handleClose={handleClose}
-        visible={visible}
-        toggle={handleToggle}
-      />
+      {disclosure ? (
+        <Disclosure
+          id={finalId}
+          handleOpen={handleOpen}
+          disclosure={disclosure}
+          handleClose={handleClose}
+          visible={visible}
+          toggle={handleToggle}
+        />
+      ) : null}
       <Dialog
         open={visible || open || opened}
         placement={placement}

@@ -1,13 +1,15 @@
 import type { StoryFn } from '@storybook/react'
-import { DIALOG_SENTIMENTS, Dialog } from '..'
+import { Dialog } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
+import { DIALOG_SENTIMENTS } from '../constants'
 
-export const Sentiments: StoryFn<typeof Dialog> = () => (
+export const Sentiments: StoryFn<typeof Dialog> = props => (
   <Stack direction="row" gap={1}>
     {DIALOG_SENTIMENTS.map(sentiment => (
       <Dialog
         key={sentiment}
+        {...props}
         title={sentiment}
         sentiment={sentiment}
         disclosure={
@@ -28,9 +30,7 @@ export const Sentiments: StoryFn<typeof Dialog> = () => (
                 </Dialog.CancelButton>
               }
               primaryButton={
-                <Button sentiment={sentiment} onClick={close}>
-                  Confirm
-                </Button>
+                <Dialog.Button onClick={close}>Confirm</Dialog.Button>
               }
             />
           </Dialog.Stack>

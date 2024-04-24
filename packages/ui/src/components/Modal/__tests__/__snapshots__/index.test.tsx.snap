@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal renders opened custom size 1`] = `
+exports[`Modal renders open custom size 1`] = `
 <DocumentFragment>
   .cache-1i6y80v-StyledBackdrop {
   position: fixed;
@@ -221,7 +221,7 @@ exports[`Modal renders opened custom size 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal renders opened custom size and width (size take predecence) 1`] = `
+exports[`Modal renders open custom size and width (size take predecence) 1`] = `
 <DocumentFragment>
   .cache-1i6y80v-StyledBackdrop {
   position: fixed;
@@ -442,7 +442,7 @@ exports[`Modal renders opened custom size and width (size take predecence) 1`] =
 </DocumentFragment>
 `;
 
-exports[`Modal renders opened custom width 1`] = `
+exports[`Modal renders open custom width 1`] = `
 <DocumentFragment>
   .cache-1i6y80v-StyledBackdrop {
   position: fixed;
@@ -1121,7 +1121,7 @@ exports[`Modal renders with default Props 1`] = `
 
 exports[`Modal renders with default Props and function children 1`] = `<DocumentFragment />`;
 
-exports[`Modal renders with default Props and function children opened 1`] = `
+exports[`Modal renders with default Props and function children open 1`] = `
 <DocumentFragment>
   .cache-1i6y80v-StyledBackdrop {
   position: fixed;
@@ -1361,7 +1361,7 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
     aria-haspopup="dialog"
     type="button"
   >
-    Test modal-test
+    Open modal
   </button>
 </DocumentFragment>
 `;
@@ -1373,7 +1373,7 @@ exports[`Modal renders with disclosure and onClose 1`] = `
     aria-haspopup="dialog"
     type="button"
   >
-    Test modal-test
+    Open modal
   </button>
   .cache-1i6y80v-StyledBackdrop {
   position: fixed;
@@ -1597,7 +1597,7 @@ exports[`Modal renders with disclosure and onClose 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal renders with opened={true} 1`] = `
+exports[`Modal renders with open={true} 1`] = `
 <DocumentFragment>
   .cache-1i6y80v-StyledBackdrop {
   position: fixed;
@@ -1818,7 +1818,7 @@ exports[`Modal renders with opened={true} 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal renders with opened={true} and no close icon 1`] = `
+exports[`Modal renders with open={true} and no close icon 1`] = `
 <DocumentFragment>
   .cache-1i6y80v-StyledBackdrop {
   position: fixed;

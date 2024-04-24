@@ -52,42 +52,42 @@ describe('Modal', () => {
       <Modal>{() => <div>test</div>}</Modal>,
     ))
 
-  test(`renders with default Props and function children opened`, () =>
+  test(`renders with default Props and function children open`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal opened>{() => <div>test</div>}</Modal>,
+      <Modal open>{() => <div>test</div>}</Modal>,
     ))
 
-  test(`renders with opened={true}`, () =>
+  test(`renders with open={true}`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal opened>
+      <Modal open>
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders with opened={true} and no close icon`, () =>
+  test(`renders with open={true} and no close icon`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal opened isClosable={false}>
+      <Modal open isClosable={false}>
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders opened custom width`, () =>
+  test(`renders open custom width`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal opened width="medium">
+      <Modal open width="medium">
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders opened custom size`, () =>
+  test(`renders open custom size`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal opened size="medium">
+      <Modal open size="medium">
         <div>test</div>
       </Modal>,
     ))
 
-  test(`renders opened custom size and width (size take predecence)`, () =>
+  test(`renders open custom size and width (size take predecence)`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal opened size="medium" width="large">
+      <Modal open size="medium" width="large">
         <div>test</div>
       </Modal>,
     ))
@@ -95,7 +95,7 @@ describe('Modal', () => {
   test(`renders with customStyle`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal
-        opened
+        open
         customDialogBackdropStyles={customDialogBackdropStyles}
         customDialogStyles={customDialogStyles}
       >
@@ -106,7 +106,7 @@ describe('Modal', () => {
   test(`renders with custom classNames`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal
-        opened
+        open
         backdropClassName={customDialogBackdropStyles.name}
         className={customDialogStyles.name}
       >
@@ -132,19 +132,17 @@ describe('Modal', () => {
       <Modal
         ariaLabel="modal-test"
         id="modal-test"
-        disclosure={dialog => (
-          <button type="button">Test {dialog.modalId}</button>
-        )}
+        disclosure={<button type="button">Open modal</button>}
         onBeforeClose={() => {
           count += 1
         }}
         data-testid="test"
-        opened
       >
         <div>modal</div>
       </Modal>,
       {
         transform: async () => {
+          await userEvent.click(screen.getByText('Open modal'))
           const closeButton = screen.getByTestId('test-close-button')
           await userEvent.click(closeButton)
           expect(count).toBe(1)
@@ -160,11 +158,8 @@ describe('Modal', () => {
       <Modal
         ariaLabel="modal-test"
         id="modal-test"
-        disclosure={dialog => (
-          <button type="button">Test {dialog.modalId}</button>
-        )}
+        disclosure={<button type="button">Open modal</button>}
         data-testid="test"
-        opened
         onClose={() => {
           count += 1
         }}
@@ -173,6 +168,7 @@ describe('Modal', () => {
       </Modal>,
       {
         transform: async () => {
+          await userEvent.click(screen.getByText('Open modal'))
           const closeButton = screen.getByTestId('test-close-button')
           await userEvent.click(closeButton)
           expect(count).toBe(1)
@@ -181,7 +177,7 @@ describe('Modal', () => {
     )
   })
 
-  test(`disclosure function render onClick props is call`, async () => {
+  test(`disclosure function render onClick props is called`, async () => {
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -225,9 +221,9 @@ describe('Modal', () => {
     expect(mockOnClick).toBeCalledTimes(1)
   })
 
-  test(`disclosure function render onClick props is call with hide`, async () => {
+  test(`should call 'hide' prop from render props`, async () => {
     renderWithTheme(
-      <Modal ariaLabel="modal-test" id="modal-test" opened>
+      <Modal ariaLabel="modal-test" id="modal-test" open>
         {({ hide }) => (
           <button
             type="button"
@@ -246,9 +242,9 @@ describe('Modal', () => {
     expect(mockOnClick).toBeCalledTimes(1)
   })
 
-  test(`disclosure function render onClick props is call with close`, async () => {
+  test(`should call 'close' prop from render props`, async () => {
     renderWithTheme(
-      <Modal ariaLabel="modal-test" id="modal-test" opened>
+      <Modal ariaLabel="modal-test" id="modal-test" open>
         {({ close }) => (
           <button
             type="button"
@@ -295,8 +291,7 @@ describe('Modal', () => {
         id="modal-test"
         hideOnEsc
         onBeforeClose={mockOnClose}
-        disclosure={<button type="button">Open</button>}
-        opened
+        open
       >
         <div> test</div>
       </Modal>,
@@ -315,8 +310,7 @@ describe('Modal', () => {
         id="modal-test"
         hideOnEsc={false}
         onBeforeClose={mockOnClose}
-        disclosure={<button type="button">Open</button>}
-        opened
+        open
       >
         <div> test</div>
       </Modal>,
@@ -334,8 +328,7 @@ describe('Modal', () => {
         id="modal-test"
         hideOnClickOutside
         onBeforeClose={mockOnClose}
-        disclosure={<button type="button">Open</button>}
-        opened
+        open
         data-testid="test"
       >
         <div> test</div>
@@ -355,8 +348,7 @@ describe('Modal', () => {
         id="modal-test"
         hideOnClickOutside={false}
         onBeforeClose={mockOnClose}
-        disclosure={<button type="button">Open</button>}
-        opened
+        open
         data-testid="test"
       >
         <div> test</div>

@@ -4,13 +4,13 @@ import userEvent from '@testing-library/user-event'
 import { Dialog } from '..'
 import {
   renderWithTheme,
-  shouldMatchEmotionSnapshot,
+  shouldMatchEmotionSnapshotWithPortal,
 } from '../../../../.jest/helpers'
 import { Button } from '../../Button'
 
 describe('Dialog', () => {
   it('should renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+    shouldMatchEmotionSnapshotWithPortal(
       <Dialog title="Test" sentiment="primary" open>
         <Dialog.Stack>
           <Dialog.Text>text example</Dialog.Text>

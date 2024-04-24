@@ -10,11 +10,8 @@ export const DialogButtons = ({
   secondaryButton,
   primaryButton,
 }: DialogButtonsProps) => (
-  <Stack direction="row" gap={2} justifyContent="space-betwwen">
-    {backButton}
-    <Stack direction="row" gap={2} justifyContent="end">
-      {secondaryButton}
-      {primaryButton}
-    </Stack>
+  <Stack direction="row" gap={2} justifyContent="end">
+    {secondaryButton}
+    {primaryButton}
   </Stack>
 )

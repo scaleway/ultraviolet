@@ -4,6 +4,9 @@ import { Dialog } from '..'
 export default {
   component: Dialog,
   title: 'Components/Overlay/Dialog',
+  parameters: {
+    experimental: true,
+  },
 } as Meta<typeof Dialog>
 
 export { Playground } from './Playground.stories'
