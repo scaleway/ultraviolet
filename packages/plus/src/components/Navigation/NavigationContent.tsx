@@ -309,7 +309,7 @@ export const NavigationContent = ({
                 sentiment="neutral"
                 size="small"
                 icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-                onClick={toggleExpand}
+                onClick={() => toggleExpand()}
               />
             </Tooltip>
           </StickyFooter>

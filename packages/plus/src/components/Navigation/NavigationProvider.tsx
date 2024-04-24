@@ -4,7 +4,6 @@ import {
   useCallback,
   useContext,
   useMemo,
-  useReducer,
   useRef,
   useState,
 } from 'react'
@@ -13,7 +12,7 @@ import NavigationLocales from './locales/en'
 
 type ContextProps = {
   expanded: boolean
-  toggleExpand: () => void
+  toggleExpand: (toggle?: boolean) => void
   animation: boolean | 'expand' | 'collapse'
   pinnedFeature?: boolean
   onClickPinUnpin?: (pinned: string[]) => void
@@ -95,7 +94,7 @@ export const NavigationProvider = ({
   onClickExpand,
   initialWidth = NAVIGATION_WIDTH,
 }: NavigationProviderProps) => {
-  const [expanded, setExpanded] = useReducer(state => !state, initialExpanded)
+  const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
   const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(
     false,
@@ -104,20 +103,32 @@ export const NavigationProvider = ({
   const navigationRef = useRef<HTMLDivElement>(null)
 
   // This function will be triggered when expand/collapse button is clicked
-  const toggleExpand = useCallback(() => {
-    onClickExpand?.(!expanded)
-    if (navigationRef.current) {
-      navigationRef.current.style.width = ''
-    }
+  const toggleExpand = useCallback(
+    (toggle?: boolean) => {
+      if (typeof toggle !== 'boolean' && toggle !== undefined) {
+        throw new Error(
+          `toggleExpand only accepts boolean or undefined as parameter. You most likely did <button onClick={toggleExpand}> instead of <button onClick={() => toggleExpand()}>`,
+        )
+      }
 
-    setAnimation(expanded ? 'collapse' : 'expand')
+      if (toggle !== undefined && toggle === expanded) {
+        return
+      }
 
-    setTimeout(() => {
-      setExpanded()
-      // setFooterHasOverflowStyle(isScrollAtBottom())
-      setAnimation(false)
-    }, ANIMATION_DURATION)
-  }, [expanded, onClickExpand, setAnimation, setExpanded])
+      onClickExpand?.(!expanded)
+      if (navigationRef.current) {
+        navigationRef.current.style.width = ''
+      }
+
+      setAnimation(expanded ? 'collapse' : 'expand')
+
+      setTimeout(() => {
+        setExpanded(toggle !== undefined ? toggle : !expanded)
+        setAnimation(false)
+      }, ANIMATION_DURATION)
+    },
+    [expanded, onClickExpand, setAnimation, setExpanded],
+  )
 
   const pinItem = useCallback(
     (item: string) => {
