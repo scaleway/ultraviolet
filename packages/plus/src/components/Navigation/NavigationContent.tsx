@@ -119,8 +119,6 @@ type NavigationContentProps = {
   children: ReactNode
   logo?: ReactNode | ((expanded: boolean) => ReactNode)
   className?: string
-  onClickExpand?: (expanded: boolean) => void
-  width: number
   onWidthResize?: (width: number) => void
   id?: string
 }
@@ -128,14 +126,29 @@ type NavigationContentProps = {
 export const NavigationContent = ({
   children,
   logo,
-  onClickExpand,
-  width,
   onWidthResize,
   className,
   id,
 }: NavigationContentProps) => {
+  const context = useNavigation()
+
+  if (!context) {
+    throw new Error(
+      'Navigation should be inside NavigationProvider to use it properly.',
+    )
+  }
+
+  const {
+    setWidth,
+    width,
+    expanded,
+    toggleExpand,
+    animation,
+    locales,
+    navigationRef,
+  } = context
+
   const sliderRef = useRef<HTMLDivElement>(null)
-  const navigationRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
   const isScrollAtBottom = useCallback(() => {
@@ -183,25 +196,6 @@ export const NavigationContent = ({
     [contentRef.current],
   )
 
-  const { expanded, setExpanded, animation, setAnimation, locales } =
-    useNavigation()
-
-  // This function will be triggered when expand/collapse button is clicked
-  const toggleExpand = useCallback(() => {
-    onClickExpand?.(!expanded)
-    if (navigationRef.current) {
-      navigationRef.current.style.width = ''
-    }
-
-    setAnimation(expanded ? 'collapse' : 'expand')
-
-    setTimeout(() => {
-      setExpanded()
-      setFooterHasOverflowStyle(isScrollAtBottom())
-      setAnimation(false)
-    }, ANIMATION_DURATION)
-  }, [expanded, isScrollAtBottom, onClickExpand, setAnimation, setExpanded])
-
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {
     let prevX: number
@@ -247,6 +241,7 @@ export const NavigationContent = ({
         if (navigationRef.current) {
           if (!shouldCollapseOnMouseUp && !shouldExpandOnMouseUp) {
             onWidthResize?.(navigationRef.current.offsetWidth)
+            setWidth?.(navigationRef.current.offsetWidth)
           }
 
           if (!expanded) {
@@ -271,7 +266,7 @@ export const NavigationContent = ({
       // eslint-disable-next-line react-hooks/exhaustive-deps
       sliderRef.current?.removeEventListener('mousedown', mousedown)
     }
-  }, [expanded, onWidthResize, toggleExpand])
+  }, [expanded, navigationRef, onWidthResize, setWidth, toggleExpand])
 
   return (
     <StyledNav className={className} id={id}>
@@ -314,7 +309,7 @@ export const NavigationContent = ({
                 sentiment="neutral"
                 size="small"
                 icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-                onClick={toggleExpand}
+                onClick={() => toggleExpand()}
               />
             </Tooltip>
           </StickyFooter>

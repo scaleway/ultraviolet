@@ -42,7 +42,9 @@ export const Group = ({ children, label }: GroupProps) => {
   const context = useNavigation()
 
   if (!context) {
-    throw new Error('Navigation.Group can only be used inside a Navigation')
+    throw new Error(
+      'Navigation.Group can only be used inside a NavigationProvider.',
+    )
   }
 
   const { expanded, animation } = context
