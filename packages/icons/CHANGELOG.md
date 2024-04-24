@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.12.5
+
+### Patch Changes
+
+- [#3690](https://github.com/scaleway/ultraviolet/pull/3690) [`d3740c1`](https://github.com/scaleway/ultraviolet/commit/d3740c1d6d0b4fc965c7ba158779f99e597e4774) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.79`.
+
+- [#3688](https://github.com/scaleway/ultraviolet/pull/3688) [`2fd8d55`](https://github.com/scaleway/ultraviolet/commit/2fd8d551453d427f12bca8f4acbce0bfb5c65f81) Thanks [@lisalupi](https://github.com/lisalupi)! - - Two new `<ProductIcons />` : `savingPlan` and `accountExperience`
+  - One new `<Icon />` : `pen`
+
 ## 2.12.4
 
 ### Patch Changes
