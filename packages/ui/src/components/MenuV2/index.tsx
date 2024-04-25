@@ -163,7 +163,7 @@ const FwdMenu = forwardRef(
 
     return (
       <StyledPopup
-        debounceDelay={triggerMethod === 'hover' ? 350 : 0}
+        debounceDelay={triggerMethod === 'hover' ? 250 : 0}
         hideOnClickOutside
         aria-label={ariaLabel}
         className={className}
