@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.48.1
+
+### Patch Changes
+
+- [#3704](https://github.com/scaleway/ultraviolet/pull/3704) [`9a03d6d`](https://github.com/scaleway/ultraviolet/commit/9a03d6dcc43d8d20ea585e8d0976ed06931bd42f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<MenuV2 />` to have a debounce delay of 250ms instead of 350ms - it will make the menu appear faster on hover
+
 ## 1.48.0
 
 ### Minor Changes

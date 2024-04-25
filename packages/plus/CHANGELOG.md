@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.14.1
+
+### Patch Changes
+
+- [#3707](https://github.com/scaleway/ultraviolet/pull/3707) [`70256fb`](https://github.com/scaleway/ultraviolet/commit/70256fb186c43e6f5cbb702197a73865d3dbe08c) Thanks [@matthprost](https://github.com/matthprost)! - Export missing `<NaivgationProvider />` and `useNavigation()`
+
+- Updated dependencies [[`9a03d6d`](https://github.com/scaleway/ultraviolet/commit/9a03d6dcc43d8d20ea585e8d0976ed06931bd42f)]:
+  - @ultraviolet/ui@1.48.1
+
 ## 0.14.0
 
 ### Minor Changes
