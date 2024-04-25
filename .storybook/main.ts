@@ -12,6 +12,9 @@ export default {
     '@storybook/addon-a11y',
     'storybook-dark-mode',
   ],
+  core: {
+    builder: '@storybook/builder-vite',
+  },
   framework: {
     name: '@storybook/react-vite',
     options: {

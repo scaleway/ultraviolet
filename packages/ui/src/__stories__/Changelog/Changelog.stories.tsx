@@ -1,12 +1,12 @@
 import { Markdown } from '@storybook/blocks'
 import { useState } from 'react'
 // eslint-disable-next-line import/no-relative-packages
-import ChangelogMdForm from '../../../../form/CHANGELOG.md'
+import ChangelogMdForm from '../../../../form/CHANGELOG.md?raw'
 // eslint-disable-next-line import/no-relative-packages
-import ChangelogMdIcons from '../../../../icons/CHANGELOG.md'
+import ChangelogMdIcons from '../../../../icons/CHANGELOG.md?raw'
 // eslint-disable-next-line import/no-relative-packages
-import ChangelogMdThemes from '../../../../themes/CHANGELOG.md'
-import ChangelogMdComponents from '../../../CHANGELOG.md'
+import ChangelogMdThemes from '../../../../themes/CHANGELOG.md?raw'
+import ChangelogMdComponents from '../../../CHANGELOG.md?raw'
 import { Stack, Tabs } from '../../components'
 
 export const Changelog = () => {
