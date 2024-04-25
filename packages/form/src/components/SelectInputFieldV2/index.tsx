@@ -41,9 +41,7 @@ type SelectInputFieldV2Props<
     | 'onFocus'
     | 'optionalInfoPlacement'
     | 'disabled'
-  > & {
-    className?: string
-  }
+  >
 
 export const SelectInputFieldV2 = <
   TFieldValues extends FieldValues,
