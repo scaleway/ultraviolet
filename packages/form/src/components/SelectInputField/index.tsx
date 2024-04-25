@@ -95,6 +95,9 @@ type SelectInputOptions = SelectProps['options']
 type SelectInputOptionOrGroup = NonNullable<SelectInputOptions>[number]
 type SelectInputOption = { value: string; label: string }
 
+/**
+ * @deprecated This component is deprecated, please use `SelectInputFieldV2` instead
+ */
 export type SelectInputFieldProps<
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues>,

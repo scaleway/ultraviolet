@@ -9,14 +9,12 @@ const StyledInfo = styled.div`
 
 type DisplayOptionProps = {
   option: OptionType
-  multiselect: boolean
   descriptionDirection: 'row' | 'column'
   optionalInfoPlacement: 'left' | 'right'
 }
 
 export const DisplayOption = ({
   option,
-  multiselect,
   optionalInfoPlacement,
   descriptionDirection,
 }: DisplayOptionProps) => {
@@ -26,7 +24,6 @@ export const DisplayOption = ({
         gap={0.5}
         direction="row"
         justifyContent="left"
-        onClick={event => (multiselect ? event.stopPropagation() : null)}
         data-testid={`option-stack-${option.value}`}
       >
         <Stack gap={0.5} direction="row" alignItems="center">
@@ -56,7 +53,6 @@ export const DisplayOption = ({
         gap={0.5}
         direction="row"
         justifyContent="space-between"
-        onClick={event => (multiselect ? event.stopPropagation() : null)}
         alignItems="baseline"
         data-testid={`option-stack-${option.value}`}
       >
@@ -96,7 +92,6 @@ export const DisplayOption = ({
         <Stack
           gap={0.5}
           direction="column"
-          onClick={event => (multiselect ? event.stopPropagation() : null)}
           data-testid={`option-stack-${option.value}`}
         >
           <Text as="span" variant="body" placement="left">
@@ -123,7 +118,6 @@ export const DisplayOption = ({
       gap={0.5}
       direction="column"
       alignItems="normal"
-      onClick={event => (multiselect ? event.stopPropagation() : null)}
       data-testid={`option-stack-${option.value}`}
     >
       <Stack gap={0.5} direction="row" justifyContent="space-between">

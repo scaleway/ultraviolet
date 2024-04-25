@@ -7,7 +7,7 @@ import {
   Form,
   NumberInputField,
   RadioField,
-  SelectInputField,
+  SelectInputFieldV2,
   SelectableCardField,
   Submit,
   SubmitErrorAlert,
@@ -26,6 +26,10 @@ type FormValues = {
   disableName: boolean
   email: string
 }
+const data = [
+  { value: '1', label: '1', disabled: false },
+  { value: '2', label: '2', disabled: false },
+]
 
 export const Playground: StoryFn<typeof Form> = () => {
   const methods = useForm({
@@ -117,10 +121,12 @@ export const Playground: StoryFn<typeof Form> = () => {
           }}
         />
 
-        <SelectInputField name="select" required>
-          <SelectInputField.Option value="1">1</SelectInputField.Option>
-          <SelectInputField.Option value="2">2</SelectInputField.Option>
-        </SelectInputField>
+        <SelectInputFieldV2
+          name="select"
+          required
+          options={data}
+          searchable={false}
+        />
 
         <TagInputField name="taginput" placeholder="TagInput..." />
 

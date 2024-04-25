@@ -211,7 +211,7 @@ export const SelectInputV2 = ({
                   {label}
                 </Text>
               ) : null}
-              {required ? (
+              {required && label ? (
                 <Icon name="asterisk" sentiment="danger" size={8} />
               ) : null}
               {labelDescription ?? null}

@@ -1,6 +1,6 @@
-import { Badge } from '../Badge'
-import { Text } from '../Text'
-import { Tooltip } from '../Tooltip'
+import { Badge } from '../../Badge'
+import { Text } from '../../Text'
+import { Tooltip } from '../../Tooltip'
 
 const reactNeptune = (
   <Text as="div" variant="body">
@@ -190,3 +190,9 @@ export const OptionalInfo = {
     },
   ],
 }
+
+export const cities = [
+  { value: 'par', label: 'Paris', disabled: false },
+  { value: 'ams', label: 'Amsterdam', disabled: false },
+  { value: 'waw', label: 'Warsaw', disabled: false },
+]

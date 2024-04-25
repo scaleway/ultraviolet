@@ -8,7 +8,7 @@ import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
-import { OptionalInfo, dataGrouped, dataUnGrouped } from '../resourceExamples'
+import { OptionalInfo, cities, dataGrouped, dataUnGrouped } from './resources'
 
 export type OptionType = {
   value: string
@@ -29,6 +29,25 @@ describe('SelectInputV2', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SelectInputV2 name="test" options={dataUnGrouped} label="label" />,
+    ))
+  test('renders correctly small', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        label="label"
+        size="small"
+      />,
+    ))
+
+  test('renders correctly required', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        label="label"
+        required
+      />,
     ))
 
   test('renders correctly not clearable', () =>
@@ -191,6 +210,18 @@ describe('SelectInputV2', () => {
         },
       },
     ))
+  test('renders correctly loadMore', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectInputV2
+        name="test"
+        options={cities}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        clearable={false}
+        searchable={false}
+        loadMore="LoadMore"
+      />,
+    ))
   test('renders correctly with emptyState', () =>
     shouldMatchEmotionSnapshot(
       <SelectInputV2
@@ -336,6 +367,7 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         searchable={false}
         multiselect
+        size="medium"
       />,
     )
 
@@ -546,6 +578,7 @@ describe('SelectInputV2', () => {
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
+        size="medium"
       />,
     )
     const input = screen.getByTestId('select-bar')
@@ -590,7 +623,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByText('Earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
     await userEvent.click(earth)
   })
@@ -608,8 +641,8 @@ describe('SelectInputV2', () => {
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
-    const venus = screen.getByText('Venus')
-    const earth = screen.getByText('Earth')
+    const venus = screen.getByTestId('option-venus')
+    const earth = screen.getByTestId('option-earth')
 
     await userEvent.click(screen.getByTestId('search-bar'))
     await userEvent.keyboard('e')
@@ -681,7 +714,7 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard(
       '[Backspace][Backspace][Backspace][Backspace][Backspace]',
     )
-    const mars = screen.getByText('Mars')
+    const mars = screen.getByTestId('option-mars')
     expect(mars).toBeVisible()
     await userEvent.click(mars)
     await userEvent.click(screen.getByTestId('search-bar'))
@@ -730,7 +763,7 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard(
       '[Backspace][Backspace][Backspace][Backspace][Backspace]',
     )
-    const mars = screen.getByText('Mars')
+    const mars = screen.getByTestId('option-mars')
     expect(mars).toBeVisible()
     await userEvent.click(mars)
     await userEvent.click(screen.getByTestId('search-bar'))
@@ -800,21 +833,23 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const selectAll = screen.getByRole('checkbox', {
+    const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
     })
+    const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
 
-    const venus = screen.getByRole('option', { name: /Venus/i })
-    const earth = screen.getByRole('checkbox', {
+    const venus = screen.getByTestId('option-venus')
+    const earth = screen.getByTestId('option-earth')
+    const earthCheckbox = screen.getByRole('checkbox', {
       name: /earth/i,
     })
     await userEvent.click(venus)
-    expect(selectAll).not.toBeChecked()
+    expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.click(venus)
-    expect(selectAll).toBeChecked()
+    expect(selectAllCheckBox).toBeChecked()
 
     await userEvent.click(selectAll)
     expect(screen.getByText('placeholder')).toBeInTheDocument()
@@ -826,17 +861,17 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('ea')
     await userEvent.keyboard('[Enter]')
 
-    expect(earth).toBeChecked()
+    expect(earthCheckbox).toBeChecked()
 
     await userEvent.click(screen.getByTestId('search-bar'))
     await userEvent.tab()
     await userEvent.keyboard(' ')
-    expect(selectAll).not.toBeChecked()
+    expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
-    expect(selectAll).toBeChecked()
+    expect(selectAllCheckBox).toBeChecked()
     await userEvent.keyboard('<') // Nothing when the user press any key
-    expect(selectAll).toBeChecked()
-  }, 6000)
+    expect(selectAllCheckBox).toBeChecked()
+  }, 10000)
 
   test('handles correcty selectAll ungrouped data', async () => {
     renderWithTheme(
@@ -855,21 +890,23 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const selectAll = screen.getByRole('checkbox', {
+    const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
     })
+    const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
     const plustag = screen.getByTestId('plus-tag')
     expect(plustag).toBeInTheDocument()
 
-    const venus = screen.getByRole('option', { name: /Venus/i })
-    const earth = screen.getByRole('checkbox', {
+    const venus = screen.getByTestId('option-venus')
+    const earthCheckbox = screen.getByRole('checkbox', {
       name: /earth/i,
     })
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(venus)
-    expect(selectAll).not.toBeChecked()
+    expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.click(venus)
-    expect(selectAll).toBeChecked()
+    expect(selectAllCheckBox).toBeChecked()
 
     await userEvent.click(selectAll)
     expect(screen.getByText('placeholder')).toBeInTheDocument()
@@ -881,16 +918,16 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('ea')
     await userEvent.keyboard('[Enter]')
 
-    expect(earth).toBeChecked()
+    expect(earthCheckbox).toBeChecked()
 
     await userEvent.click(screen.getByTestId('search-bar'))
     await userEvent.tab()
     await userEvent.keyboard(' ')
-    expect(selectAll).not.toBeChecked()
+    expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
-    expect(selectAll).toBeChecked()
+    expect(selectAllCheckBox).toBeChecked()
     await userEvent.keyboard('<') // Nothing when the user press any key
-    expect(selectAll).toBeChecked()
+    expect(selectAllCheckBox).toBeChecked()
   })
 
   test('handles correcty selectAllGroup', async () => {
@@ -907,9 +944,10 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const selectAllGroup = screen.getByRole('checkbox', {
+    const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
+    const selectAllGroup = screen.getByTestId('group-0')
     await userEvent.click(selectAllGroup)
     const mercury = screen.getByRole('checkbox', {
       name: /mercury/i,
@@ -929,11 +967,11 @@ describe('SelectInputV2', () => {
     expect(earth).toBeChecked()
     expect(jupiter).not.toBeChecked()
 
-    await userEvent.click(mercury)
+    await userEvent.click(screen.getByTestId('option-mercury'))
     expect(selectAllGroup).not.toBeChecked()
 
-    await userEvent.click(mercury)
-    expect(selectAllGroup).toBeChecked()
+    await userEvent.click(screen.getByTestId('option-mercury'))
+    expect(selectAllGroupCheckBox).toBeChecked()
   }, 10000)
 
   test('handles correcty selectAllGroup - keyboard events', async () => {
@@ -950,13 +988,12 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const selectAllGroup = screen.getByRole('checkbox', {
+    const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
+    const selectAllGroup = screen.getByTestId('group-0')
     await userEvent.click(selectAllGroup)
-    const earth = screen.getByRole('checkbox', {
-      name: /earth/i,
-    })
+    const earth = screen.getByTestId('option-earth')
 
     await userEvent.click(earth)
     await userEvent.click(screen.getByTestId('search-bar'))
@@ -964,10 +1001,10 @@ describe('SelectInputV2', () => {
     await userEvent.keyboard('ea')
     await userEvent.keyboard('[Enter]')
 
-    expect(selectAllGroup).toBeChecked()
+    expect(selectAllGroupCheckBox).toBeChecked()
 
     await userEvent.click(selectAllGroup)
-    expect(selectAllGroup).not.toBeChecked()
+    expect(selectAllGroupCheckBox).not.toBeChecked()
   }, 10000)
 
   test('handles correcty selectAllGroup with selectAll - grouped data', async () => {
@@ -989,42 +1026,44 @@ describe('SelectInputV2', () => {
 
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const selectAllGroup = screen.getByRole('checkbox', {
+    const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
     })
+    const selectAllGroup = screen.getByTestId('group-0')
     await userEvent.click(selectAllGroup)
     const venus = screen.getByRole('checkbox', {
       name: /venus/i,
     })
 
-    const selectAll = screen.getByRole('checkbox', {
+    const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
     })
+    const selectAll = screen.getByTestId('select-all')
     await userEvent.click(selectAll)
 
-    await userEvent.click(venus)
+    await userEvent.click(screen.getByTestId('option-venus'))
     await userEvent.click(screen.getByTestId('search-bar'))
 
     await userEvent.keyboard('ve')
     await userEvent.keyboard('[Enter]')
 
     expect(venus).toBeChecked()
-    expect(selectAllGroup).toBeChecked()
-    expect(selectAll).toBeChecked()
+    expect(selectAllGroupCheckBox).toBeChecked()
+    expect(selectAllCheckBox).toBeChecked()
 
     await userEvent.click(selectAllGroup)
-    expect(selectAllGroup).not.toBeChecked()
-    expect(selectAll).not.toBeChecked()
+    expect(selectAllGroupCheckBox).not.toBeChecked()
+    expect(selectAllCheckBox).not.toBeChecked()
 
     await userEvent.click(selectAllGroup)
-    expect(selectAllGroup).toBeChecked()
-    expect(selectAll).toBeChecked()
+    expect(selectAllGroupCheckBox).toBeChecked()
+    expect(selectAllCheckBox).toBeChecked()
 
     await userEvent.tab()
     await userEvent.keyboard(' ')
-    expect(selectAll).not.toBeChecked()
+    expect(selectAllCheckBox).not.toBeChecked()
     await userEvent.keyboard('[Enter]')
-    expect(selectAll).toBeChecked()
+    expect(selectAllCheckBox).toBeChecked()
   }, 10000)
 
   test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row" & multiselect', async () => {
@@ -1040,7 +1079,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-stack-earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
   test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row" & multiselect', async () => {
@@ -1056,7 +1095,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-stack-earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
   test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column" & multiselect', async () => {
@@ -1072,7 +1111,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-stack-earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
   test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column" & multiselect', async () => {
@@ -1088,7 +1127,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-stack-earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
   test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="row"', async () => {
@@ -1103,7 +1142,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-stack-earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
   test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="row"', async () => {
@@ -1118,7 +1157,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-stack-earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
   test('handles correctly click on item - optionalInfoPlacement="left" & descriptionDirection="column"', async () => {
@@ -1133,7 +1172,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-stack-earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
   test('handles correctly click on item - optionalInfoPlacement="right" & descriptionDirection="column"', async () => {
@@ -1148,7 +1187,7 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByTestId('select-bar')
     await userEvent.click(input)
-    const earth = screen.getByTestId('option-stack-earth')
+    const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
   test('renders correctly loading - grouped data', () =>

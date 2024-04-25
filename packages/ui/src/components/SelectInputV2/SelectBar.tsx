@@ -57,11 +57,6 @@ const StyledInputWrapper = styled(Stack)<{
   background: ${({ theme }) => theme.colors.neutral.background};
   border-radius: ${({ theme }) => theme.radii.default};
 
-  &:hover,
-  :focus {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    outline: none;
-  }
   &[data-readonly='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     border-color: ${({ theme }) => theme.colors.neutral.border};
@@ -79,7 +74,7 @@ const StyledInputWrapper = styled(Stack)<{
   &[data-size='medium'] {
     height: ${INPUT_SIZE_HEIGHT.medium}px;
   }
-  &[data-size='larger'] {
+  &[data-size='large'] {
     height: ${INPUT_SIZE_HEIGHT.large}px;
   }
   &[data-state='neutral'] {
@@ -98,6 +93,11 @@ const StyledInputWrapper = styled(Stack)<{
 
   &:not([data-disabled='true']):not([data-readonly]):active {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+  }
+  &:hover,
+  :focus {
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+    outline: none;
   }
 
   &[data-dropdownvisible='true'] {
