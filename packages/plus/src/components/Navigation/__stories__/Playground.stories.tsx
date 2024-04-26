@@ -2,8 +2,8 @@ import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import { type ComponentProps, useCallback, useState } from 'react'
-import { Navigation, NavigationProvider } from '..'
+import { type ComponentProps, useCallback, useEffect, useState } from 'react'
+import { Navigation, NavigationProvider, useNavigation } from '..'
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
 
@@ -45,6 +45,12 @@ type PlaygroundContentProps = ComponentProps<typeof Navigation> & {
 
 const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
   const [active, setActive] = useState('Instance')
+  const { pinnedItems } = useNavigation()
+
+  useEffect(() => {
+    console.log('pinned items:', pinnedItems)
+    localStorage.setItem('pinnedItems', pinnedItems.toString())
+  }, [pinnedItems])
 
   const saveWidthInLocalStorage = useCallback((width: number) => {
     console.log(`width of ${width} saved in local storage`)
@@ -259,6 +265,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
 export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const navigationExpanded = localStorage.getItem('expanded') === 'true'
   const navigationWidth = Number(localStorage.getItem('width')) || undefined
+  const pinnedItems = localStorage.getItem('pinnedItems')?.split(',') || []
   const [expanded, setExpanded] = useState(navigationExpanded)
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
     setExpanded(localExpanded)
@@ -266,6 +273,10 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
       `expanded state with value ${localExpanded} saved in local storage`,
     )
     localStorage.setItem('expanded', localExpanded.toString())
+  }, [])
+
+  const onClickPinned = useCallback((pinned: string) => {
+    console.log(`You just pinned/unpin "${pinned}"`)
   }, [])
 
   return (
@@ -281,6 +292,8 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         onClickExpand={saveExpandedInLocalStorage}
         initialExpanded={navigationExpanded}
         initialWidth={navigationWidth}
+        initialPinned={pinnedItems}
+        onClickPinUnpin={onClickPinned}
         pinnedFeature
       >
         <PlaygroundContent expanded={expanded} {...props} />

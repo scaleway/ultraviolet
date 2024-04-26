@@ -12,6 +12,7 @@ type GroupProps = {
 
 const StyledText = styled(Text)`
   padding-bottom: ${({ theme }) => theme.space['1']};
+  padding-left: ${({ theme }) => theme.space['1']};
 
   transition:
     opacity ${ANIMATION_DURATION}ms ease-in-out,

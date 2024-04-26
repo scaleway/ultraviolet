@@ -24,6 +24,20 @@ type ContextProps = {
   locales: typeof NavigationLocales
   width: number
   setWidth: (width: number) => void
+  /**
+   * This function will reorder the pinned items based on the initial index and
+   * the end index.
+   */
+  reorderItems: (
+    /**
+     * The initial index of the item
+     */
+    initialIndex: number,
+    /**
+     * The end index of the item
+     */
+    endIndex: number,
+  ) => void
 }
 
 export const NavigationContext = createContext<ContextProps>({
@@ -42,6 +56,7 @@ export const NavigationContext = createContext<ContextProps>({
   navigationRef: { current: null },
   width: NAVIGATION_WIDTH,
   setWidth: () => {},
+  reorderItems: () => {},
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -69,11 +84,6 @@ type NavigationProviderProps = {
    * navigation will be expanded by default otherwise it will be collapsed
    */
   initialExpanded?: boolean
-  /**
-   * This function is triggered when the user click on the pin/unpin button
-   * of an item
-   */
-  onClickPinUnpin?: (pinned: string[]) => void
   locales?: typeof NavigationLocales
   /**
    * This function is triggered when user click on expand button on the footer
@@ -81,18 +91,29 @@ type NavigationProviderProps = {
    * and it automatically collapse / expand.
    */
   onClickExpand?: (expanded: boolean) => void
+  /**
+   * This function is triggered when the user click on the pin/unpin button
+   * of an item. To access all pinned item you can use the `useNavigation` hook
+   * and access the `pinnedItems` property.
+   */
+  onClickPinUnpin?: (
+    /**
+     * The current items that has been pinned on click
+     */
+    pinned: string,
+  ) => void
 }
 
 export const NavigationProvider = ({
   children,
   pinnedFeature = false,
-  onClickPinUnpin,
   initialPinned,
   initialExpanded = true,
   locales = NavigationLocales,
   pinLimit = 7,
   onClickExpand,
   initialWidth = NAVIGATION_WIDTH,
+  onClickPinUnpin,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
@@ -133,8 +154,7 @@ export const NavigationProvider = ({
   const pinItem = useCallback(
     (item: string) => {
       setPinnedItems([...pinnedItems, item])
-
-      onClickPinUnpin?.(pinnedItems)
+      onClickPinUnpin?.(item)
     },
     [onClickPinUnpin, pinnedItems],
   )
@@ -142,10 +162,19 @@ export const NavigationProvider = ({
   const unpinItem = useCallback(
     (item: string) => {
       setPinnedItems(pinnedItems.filter(localItem => localItem !== item))
-
-      onClickPinUnpin?.(pinnedItems)
+      onClickPinUnpin?.(item)
     },
     [onClickPinUnpin, pinnedItems],
+  )
+
+  const reorderItems = useCallback(
+    (initialIndex: number, endIndex: number) => {
+      const newPinnedItems = [...pinnedItems]
+      const [removed] = newPinnedItems.splice(initialIndex, 1)
+      newPinnedItems.splice(endIndex, 0, removed)
+      setPinnedItems(newPinnedItems)
+    },
+    [pinnedItems],
   )
 
   const value = useMemo(
@@ -163,6 +192,7 @@ export const NavigationProvider = ({
       navigationRef,
       width,
       setWidth,
+      reorderItems,
     }),
     [
       expanded,
@@ -175,6 +205,10 @@ export const NavigationProvider = ({
       pinLimit,
       animation,
       width,
+      setWidth,
+      navigationRef,
+      setAnimation,
+      reorderItems,
     ],
   )
 
