@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.11.0
+
+### Minor Changes
+
+- [#3702](https://github.com/scaleway/ultraviolet/pull/3702) [`0efe694`](https://github.com/scaleway/ultraviolet/commit/0efe6949aae27951b6cc9aeabad3cb6ee06de64c) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<SelectInputFieldV2 />`
+
 ## 2.10.9
 
 ### Patch Changes
