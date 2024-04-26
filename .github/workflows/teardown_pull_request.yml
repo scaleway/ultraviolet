@@ -12,7 +12,7 @@ jobs:
       STORYBOOK_DEPLOYMENT_NAME: storybook
 
     steps:
-      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
+      - uses: actions/checkout@v4 # v4.1.4
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
 
