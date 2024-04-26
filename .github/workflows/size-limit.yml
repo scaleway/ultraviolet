@@ -8,7 +8,7 @@ jobs:
     env:
       CI_JOB_NUMBER: 1
     steps:
-      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
+      - uses: actions/checkout@v4 # v4.1.4
       - uses: pnpm/action-setup@v3.0.0
       - uses: andresz1/size-limit-action@v1.8.0
         with:
