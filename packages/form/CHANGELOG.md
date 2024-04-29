@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.12.0
+
+### Minor Changes
+
+- [#3722](https://github.com/scaleway/ultraviolet/pull/3722) [`8ee1377`](https://github.com/scaleway/ultraviolet/commit/8ee13771ba89eddd1920248415e2aa276f9dbe17) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix(SelectInputV2Field): send good value to SelectInputV2
+
+### Patch Changes
+
+- Updated dependencies [[`8ee1377`](https://github.com/scaleway/ultraviolet/commit/8ee13771ba89eddd1920248415e2aa276f9dbe17), [`83d3902`](https://github.com/scaleway/ultraviolet/commit/83d39026cbdd66a3c8726b3c724059145f39aac3), [`a481e45`](https://github.com/scaleway/ultraviolet/commit/a481e45e8dfa343c7069490bf13bbf3f29bf8308)]:
+  - @ultraviolet/ui@1.49.0
+
 ## 2.11.0
 
 ### Minor Changes
