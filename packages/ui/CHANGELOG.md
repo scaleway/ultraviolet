@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.49.0
+
+### Minor Changes
+
+- [#3722](https://github.com/scaleway/ultraviolet/pull/3722) [`8ee1377`](https://github.com/scaleway/ultraviolet/commit/8ee13771ba89eddd1920248415e2aa276f9dbe17) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - Fix <SelectInputV2 /> component to pass string or string[] for values instead of an option (more compliant to native select tag). component is now controllable
+
+- [#3684](https://github.com/scaleway/ultraviolet/pull/3684) [`83d3902`](https://github.com/scaleway/ultraviolet/commit/83d39026cbdd66a3c8726b3c724059145f39aac3) Thanks [@fabienhebert](https://github.com/fabienhebert)! - New component: `Dialog`
+
+### Patch Changes
+
+- [#3705](https://github.com/scaleway/ultraviolet/pull/3705) [`a481e45`](https://github.com/scaleway/ultraviolet/commit/a481e45e8dfa343c7069490bf13bbf3f29bf8308) Thanks [@fabienhebert](https://github.com/fabienhebert)! - SelectableCardGroup: force item to follow grid
+
 ## 1.48.1
 
 ### Patch Changes
