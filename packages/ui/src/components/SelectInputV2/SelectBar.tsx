@@ -308,6 +308,7 @@ export const SelectBar = ({
         openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined
       }
       data-testid="select-bar"
+      id="select-bar"
       autoFocus={autoFocus}
       onKeyDown={event => {
         if (event.key === 'ArrowDown') {

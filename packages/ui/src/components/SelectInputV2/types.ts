@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 export type OptionType = {
   value: string
   label: ReactNode
-  disabled: boolean
+  disabled?: boolean
   description?: string
   optionalInfo?: ReactNode
   searchText?: string

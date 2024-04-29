@@ -228,19 +228,6 @@ exports[`SelectInputV2 renders correctly 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
@@ -276,8 +263,7 @@ exports[`SelectInputV2 renders correctly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r0:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -303,9 +289,6 @@ exports[`SelectInputV2 renders correctly 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -333,29 +316,6 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -527,26 +487,13 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r83:"
-      aria-describedby=":r83:"
+      aria-controls=":r74:"
+      aria-describedby=":r74:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -555,9 +502,7 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -568,8 +513,7 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r82:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -595,9 +539,6 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -643,29 +584,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1297,26 +1215,13 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r17:"
-      aria-describedby=":r17:"
+      aria-controls=":rs:"
+      aria-describedby=":rs:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1325,9 +1230,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -1338,8 +1241,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r16:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -1368,7 +1270,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r17:"
+        id=":rs:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -1406,7 +1308,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r1a:"
+                  id=":ru:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -1719,9 +1621,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -1749,29 +1648,6 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1943,26 +1819,13 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7p:"
-      aria-describedby=":r7p:"
+      aria-controls=":r6u:"
+      aria-describedby=":r6u:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1971,9 +1834,7 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -1984,8 +1845,7 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r7o:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -2011,9 +1871,6 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -2069,29 +1926,6 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2455,26 +2289,13 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   }
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1gl:"
-      aria-describedby=":r1gl:"
+      aria-controls=":r1de:"
+      aria-describedby=":r1de:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2483,9 +2304,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -2496,8 +2315,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r1gk:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -2526,7 +2344,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1gl:"
+        id=":r1de:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -2586,9 +2404,6 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -2644,29 +2459,6 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3053,26 +2845,13 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   }
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1gp:"
-      aria-describedby=":r1gp:"
+      aria-controls=":r1dg:"
+      aria-describedby=":r1dg:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -3081,9 +2860,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -3094,8 +2871,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r1go:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -3124,7 +2900,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1gp:"
+        id=":r1dg:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -3189,9 +2965,6 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -3237,29 +3010,6 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -4349,26 +4099,13 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r3b:"
-      aria-describedby=":r3b:"
+      aria-controls=":r2q:"
+      aria-describedby=":r2q:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -4377,9 +4114,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -4390,8 +4125,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r3a:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <div
@@ -4461,7 +4195,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r3b:"
+        id=":r2q:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -4499,7 +4233,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r3g:"
+                  id=":r2u:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -4557,7 +4291,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3j:"
+                      id=":r31:"
                       tabindex="-1"
                       type="checkbox"
                       value="mercury"
@@ -4598,7 +4332,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3j:"
+                          for=":r31:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4638,7 +4372,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3m:"
+                      id=":r34:"
                       tabindex="-1"
                       type="checkbox"
                       value="venus"
@@ -4679,7 +4413,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3m:"
+                          for=":r34:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4719,7 +4453,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3p:"
+                      id=":r37:"
                       tabindex="-1"
                       type="checkbox"
                       value="earth"
@@ -4760,7 +4494,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3p:"
+                          for=":r37:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4807,7 +4541,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
                       disabled=""
-                      id=":r3t:"
+                      id=":r3b:"
                       tabindex="-1"
                       type="checkbox"
                       value="mars"
@@ -4848,7 +4582,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3t:"
+                          for=":r3b:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4889,7 +4623,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       checked=""
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r40:"
+                      id=":r3e:"
                       tabindex="-1"
                       type="checkbox"
                       value="pluto"
@@ -4930,7 +4664,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r40:"
+                          for=":r3e:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5002,7 +4736,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r45:"
+                      id=":r3j:"
                       tabindex="-1"
                       type="checkbox"
                       value="jupiter"
@@ -5043,7 +4777,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r45:"
+                          for=":r3j:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5088,7 +4822,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r49:"
+                      id=":r3n:"
                       tabindex="-1"
                       type="checkbox"
                       value="saturn"
@@ -5129,7 +4863,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r49:"
+                          for=":r3n:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5169,7 +4903,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r4c:"
+                      id=":r3q:"
                       tabindex="-1"
                       type="checkbox"
                       value="uranus"
@@ -5210,7 +4944,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r4c:"
+                          for=":r3q:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5250,7 +4984,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r4f:"
+                      id=":r3t:"
                       tabindex="-1"
                       type="checkbox"
                       value="neptune"
@@ -5291,7 +5025,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r4f:"
+                          for=":r3t:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5327,9 +5061,6 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -5357,29 +5088,6 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5535,26 +5243,13 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rg:"
-      aria-describedby=":rg:"
+      aria-controls=":r9:"
+      aria-describedby=":r9:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5563,9 +5258,7 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -5576,8 +5269,7 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":rf:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -5603,9 +5295,6 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -5633,29 +5322,6 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -5827,26 +5493,13 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8q:"
-      aria-describedby=":r8q:"
+      aria-controls=":r7n:"
+      aria-describedby=":r7n:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5855,9 +5508,7 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -5868,8 +5519,7 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r8p:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -5895,9 +5545,6 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -6144,26 +5791,13 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rb:"
-      aria-describedby=":rb:"
+      aria-controls=":r6:"
+      aria-describedby=":r6:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -6201,8 +5835,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":ra:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -6228,9 +5861,6 @@ exports[`SelectInputV2 renders correctly required 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -6276,29 +5906,6 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -6872,26 +6479,13 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r87:"
-      aria-describedby=":r87:"
+      aria-controls=":r76:"
+      aria-describedby=":r76:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -6900,9 +6494,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -6913,8 +6505,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r86:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -6943,7 +6534,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r87:"
+        id=":r76:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -6981,7 +6572,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r8a:"
+                  id=":r78:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -7097,8 +6688,8 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r8h:"
-                        aria-describedby=":r8h:"
+                        aria-controls=":r7f:"
+                        aria-describedby=":r7f:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -7223,9 +6814,6 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -7458,26 +7046,13 @@ exports[`SelectInputV2 renders correctly small 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r6:"
-      aria-describedby=":r6:"
+      aria-controls=":r3:"
+      aria-describedby=":r3:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7506,8 +7081,7 @@ exports[`SelectInputV2 renders correctly small 1`] = `
           data-size="small"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r5:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -7533,9 +7107,6 @@ exports[`SelectInputV2 renders correctly small 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -7563,29 +7134,6 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -7859,26 +7407,13 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rfc:"
-      aria-describedby=":rfc:"
+      aria-controls=":rdt:"
+      aria-describedby=":rdt:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7887,9 +7422,7 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -7900,8 +7433,7 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":rfb:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <div
@@ -7953,9 +7485,6 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -8001,29 +7530,6 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -8597,26 +8103,13 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rk:"
-      aria-describedby=":rk:"
+      aria-controls=":rb:"
+      aria-describedby=":rb:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -8625,9 +8118,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -8638,8 +8129,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":rj:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -8668,7 +8158,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":rk:"
+        id=":rb:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -8706,7 +8196,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":rn:"
+                  id=":rd:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -8822,8 +8312,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":ru:"
-                        aria-describedby=":ru:"
+                        aria-controls=":rk:"
+                        aria-describedby=":rk:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -8948,9 +8438,6 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -8996,29 +8483,6 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -9691,26 +9155,13 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1t:"
-      aria-describedby=":r1t:"
+      aria-controls=":r1g:"
+      aria-describedby=":r1g:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -9719,9 +9170,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -9732,8 +9181,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r1s:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -9778,7 +9226,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1t:"
+        id=":r1g:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -9816,7 +9264,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r21:"
+                  id=":r1j:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -10129,9 +9577,6 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -10177,29 +9622,6 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -10611,26 +10033,13 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   padding: 16px;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="emptystate"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7t:"
-      aria-describedby=":r7t:"
+      aria-controls=":r70:"
+      aria-describedby=":r70:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -10639,9 +10048,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -10652,8 +10059,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r7s:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -10682,7 +10088,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r7t:"
+        id=":r70:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -10720,7 +10126,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r80:"
+                  id=":r72:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -10736,9 +10142,6 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -10784,29 +10187,6 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -11412,8 +10792,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8u:"
-      aria-describedby=":r8u:"
+      aria-controls=":r7p:"
+      aria-describedby=":r7p:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -11422,9 +10802,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -11435,8 +10813,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
           data-size="large"
           data-state="danger"
           data-testid="select-bar"
-          id=":r8t:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -11476,7 +10853,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r8u:"
+        id=":r7p:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -11514,7 +10891,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r91:"
+                  id=":r7s:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -11630,8 +11007,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r98:"
-                        aria-describedby=":r98:"
+                        aria-controls=":r83:"
+                        aria-describedby=":r83:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -11806,29 +11183,6 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -12507,26 +11861,13 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   box-shadow: 0px 4px 24px 6px #d9dadd66;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r2k:"
-      aria-describedby=":r2k:"
+      aria-controls=":r25:"
+      aria-describedby=":r25:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -12535,9 +11876,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -12548,8 +11887,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r2j:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -12594,7 +11932,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r2k:"
+        id=":r25:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -12632,7 +11970,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r2o:"
+                  id=":r28:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -12950,9 +12288,6 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -12998,29 +12333,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -13676,26 +12988,13 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   font-style: italic;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r67:"
-      aria-describedby=":r67:"
+      aria-controls=":r5g:"
+      aria-describedby=":r5g:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -13704,9 +13003,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -13717,8 +13014,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r66:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -13747,7 +13043,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r67:"
+        id=":r5g:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -13785,7 +13081,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r6a:"
+                  id=":r5i:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -14112,9 +13408,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -14160,29 +13453,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -14821,26 +14091,13 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   font-style: italic;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r70:"
-      aria-describedby=":r70:"
+      aria-controls=":r67:"
+      aria-describedby=":r67:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -14849,9 +14106,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -14862,8 +14117,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r6v:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -14892,7 +14146,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r70:"
+        id=":r67:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -14930,7 +14184,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r73:"
+                  id=":r69:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -15273,9 +14527,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -15335,29 +14586,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-1nqyb46-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -15902,6 +15130,29 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
+.cache-wfyv8s-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .cache-1ug7ot4-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -15982,26 +15233,13 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   font-style: italic;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r4l:"
-      aria-describedby=":r4l:"
+      aria-controls=":r42:"
+      aria-describedby=":r42:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -16010,9 +15248,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -16023,8 +15259,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r4k:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -16053,7 +15288,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r4l:"
+        id=":r42:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -16091,7 +15326,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r4o:"
+                  id=":r44:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -16434,9 +15669,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -16496,29 +15728,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-1nqyb46-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -17063,6 +16272,29 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
+.cache-wfyv8s-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .cache-1ug7ot4-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -17143,26 +16375,13 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   font-style: italic;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r5e:"
-      aria-describedby=":r5e:"
+      aria-controls=":r4p:"
+      aria-describedby=":r4p:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -17171,9 +16390,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -17184,8 +16401,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r5d:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -17214,7 +16430,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r5e:"
+        id=":r4p:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -17252,7 +16468,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r5h:"
+                  id=":r4r:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -17595,9 +16811,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -17643,29 +16856,6 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -18097,26 +17287,13 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":ra4:"
-      aria-describedby=":ra4:"
+      aria-controls=":r8t:"
+      aria-describedby=":r8t:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -18125,9 +17302,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -18138,8 +17313,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":ra3:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -18168,7 +17342,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":ra4:"
+        id=":r8t:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -18283,8 +17457,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":rac:"
-                        aria-describedby=":rac:"
+                        aria-controls=":r94:"
+                        aria-describedby=":r94:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -18409,9 +17583,6 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -18457,29 +17628,6 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -19085,8 +18233,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r9h:"
-      aria-describedby=":r9h:"
+      aria-controls=":r8b:"
+      aria-describedby=":r8b:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -19095,9 +18243,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
+          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -19108,8 +18254,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
           data-size="large"
           data-state="success"
           data-testid="select-bar"
-          id=":r9g:"
-          role="combobox"
+          id="select-bar"
           tabindex="0"
         >
           <p
@@ -19149,7 +18294,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r9h:"
+        id=":r8b:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -19187,7 +18332,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r9k:"
+                  id=":r8e:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -19303,8 +18448,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r9r:"
-                        aria-describedby=":r9r:"
+                        aria-controls=":r8l:"
+                        aria-describedby=":r8l:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
