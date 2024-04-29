@@ -1,8 +1,5 @@
 import type { ReactNode } from 'react'
 
-export type OnChangeMultiSelect = (value: string[]) => void
-export type OnChangeSingleSelect = (value: string) => void
-
 export type OptionType = {
   value: string
   label: ReactNode
