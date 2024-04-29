@@ -115,11 +115,9 @@ export const SearchBarDropdown = ({
               : undefined,
           })
           onChange?.(
-            selectedData.selectedValues.includes(closestOption)
-              ? selectedData.selectedValues.map(val => val?.value)
-              : [...selectedData.selectedValues, closestOption].map(
-                  val => val?.value,
-                ),
+            selectedData.selectedValues.includes(closestOption.value)
+              ? selectedData.selectedValues
+              : [...selectedData.selectedValues, closestOption.value],
           )
           setSearchInput(closestOption.searchText ?? closestOption.value)
         } else {
@@ -127,7 +125,7 @@ export const SearchBarDropdown = ({
             type: 'selectOption',
             clickedOption: closestOption,
           })
-          onChange?.(selectedData.selectedValues.map(val => val?.value))
+          onChange?.(selectedData.selectedValues)
         }
       }
     }

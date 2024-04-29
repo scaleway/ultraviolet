@@ -7,17 +7,13 @@ import { Text } from '../Text'
 import { Dropdown } from './Dropdown'
 import { SelectBar } from './SelectBar'
 import { SelectInputProvider } from './SelectInputProvider'
-import type { DataType, OptionType } from './types'
+import type { DataType } from './types'
 
 type SelectInputV2Props = {
   /**
    * Input name
    */
   name: string
-  /**
-   * Default value, must be one of the options
-   */
-  value?: OptionType
   /**
    * Place holder when no value defined
    */
@@ -62,10 +58,6 @@ type SelectInputV2Props = {
    * Size of the input
    */
   size?: 'small' | 'medium' | 'large'
-  /**
-   * Whether it is possible to select multiple options
-   */
-  multiselect?: boolean
   /**
    * Whether field is required
    */
@@ -116,7 +108,29 @@ type SelectInputV2Props = {
 } & Pick<
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
->
+> &
+  (
+    | {
+        /**
+         * Whether it is possible to select multiple options
+         */
+        multiselect: true
+        /**
+         * Default value, must be one of the options
+         */
+        value?: string[]
+      }
+    | {
+        /**
+         * Whether it is possible to select multiple options
+         */
+        multiselect?: false | undefined
+        /**
+         * Default value, must be one of the options
+         */
+        value?: string
+      }
+  )
 
 const SelectInputContainer = styled.div`
   width: 100%;

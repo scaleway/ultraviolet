@@ -5,4 +5,14 @@ import { planets } from './resources'
 
 export const Multiple: StoryFn<
   ComponentProps<typeof SelectInputFieldV2>
-> = () => <SelectInputFieldV2 name="options" multiselect options={planets} />
+> = () => (
+  <SelectInputFieldV2
+    selectAllGroup
+    selectAll={{
+      label: 'Select all',
+    }}
+    name="options"
+    multiselect
+    options={planets}
+  />
+)

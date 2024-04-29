@@ -59,7 +59,7 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         clearable={false}
         searchable={false}
-        value={dataUnGrouped[4]}
+        value={dataUnGrouped[4].value}
       />,
     ))
   test('renders correctly ungrouped', () =>
@@ -99,7 +99,7 @@ describe('SelectInputV2', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        value={dataGrouped['terrestrial planets'][4]}
+        value={dataGrouped['terrestrial planets'][4].value}
       />,
       {
         transform: async () => {
@@ -115,7 +115,7 @@ describe('SelectInputV2', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        value={dataGrouped['terrestrial planets'][4]}
+        value={dataGrouped['terrestrial planets'][4].value}
         footer="this is a footer"
       />,
       {
@@ -132,7 +132,7 @@ describe('SelectInputV2', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        value={dataGrouped['terrestrial planets'][4]}
+        value={[dataGrouped['terrestrial planets'][4].value]}
         multiselect
       />,
       {
@@ -390,7 +390,7 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         searchable={false}
         multiselect
-        value={dataUnGrouped[1]}
+        value={[dataUnGrouped[1].value]}
         onChange={() => {}}
       />,
     )
@@ -409,7 +409,7 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         searchable={false}
         multiselect
-        value={dataUnGrouped[1]}
+        value={[dataUnGrouped[1].value]}
         onChange={() => {}}
       />,
     ))
@@ -493,7 +493,7 @@ describe('SelectInputV2', () => {
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
-        value={dataUnGrouped[4]}
+        value={dataUnGrouped[4].value}
       />,
     )
     const clearAll = screen.getByTestId('clear-all')
@@ -789,7 +789,7 @@ describe('SelectInputV2', () => {
         options={dataGrouped}
         multiselect
         placeholder="placeholder"
-        value={dataGrouped['jovian planets'][1]}
+        value={[dataGrouped['jovian planets'][1].value]}
         onChange={(values: (string | undefined)[]) => values}
         optionalInfoPlacement="left"
         descriptionDirection="column"
