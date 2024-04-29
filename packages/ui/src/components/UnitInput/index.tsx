@@ -130,7 +130,7 @@ const UnitInputWrapper = styled(Stack)<{
   }
 `
 
-type UnitInputValue = { inputValue: number; unit: OptionType }
+type UnitInputValue = { inputValue: number; unit: string }
 
 type UnitInputProps = {
   id?: string

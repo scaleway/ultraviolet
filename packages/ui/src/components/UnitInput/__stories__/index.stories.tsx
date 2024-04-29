@@ -8,3 +8,4 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { LabelInformation } from './LabelInformation.stories'
+export { DefaultValues } from './DefaultValues.stories'
