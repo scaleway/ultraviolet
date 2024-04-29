@@ -6,5 +6,5 @@ DefaultValues.args = {
   ...Template.args,
   label: 'Label',
   value: 10,
-  unitValue: 'mb',
+  unitValue: 'days',
 }
