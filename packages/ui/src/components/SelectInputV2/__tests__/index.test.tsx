@@ -132,7 +132,7 @@ describe('SelectInputV2', () => {
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
-        value={dataGrouped['terrestrial planets'][4].value}
+        value={[dataGrouped['terrestrial planets'][4].value]}
         multiselect
       />,
       {

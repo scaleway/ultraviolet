@@ -15,10 +15,6 @@ type SelectInputV2Props = {
    */
   name: string
   /**
-   * Default value, must be one of the options
-   */
-  value?: string | string[]
-  /**
    * Place holder when no value defined
    */
   placeholder?: string
@@ -62,10 +58,6 @@ type SelectInputV2Props = {
    * Size of the input
    */
   size?: 'small' | 'medium' | 'large'
-  /**
-   * Whether it is possible to select multiple options
-   */
-  multiselect?: boolean
   /**
    * Whether field is required
    */
@@ -116,7 +108,29 @@ type SelectInputV2Props = {
 } & Pick<
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
->
+> &
+  (
+    | {
+        /**
+         * Whether it is possible to select multiple options
+         */
+        multiselect: true
+        /**
+         * Default value, must be one of the options
+         */
+        value?: string[]
+      }
+    | {
+        /**
+         * Whether it is possible to select multiple options
+         */
+        multiselect?: false | undefined
+        /**
+         * Default value, must be one of the options
+         */
+        value?: string
+      }
+  )
 
 const SelectInputContainer = styled.div`
   width: 100%;
