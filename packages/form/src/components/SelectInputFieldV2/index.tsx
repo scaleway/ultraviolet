@@ -1,5 +1,5 @@
 import { SelectInputV2 } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
+import { type ComponentProps, useCallback } from 'react'
 import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -95,14 +95,15 @@ export const SelectInputFieldV2 = <
 
   const { getError } = useErrors()
 
-  const handleSingleChange = (value: string) => {
-    onChange?.(value as PathValue<TFieldValues, TName>)
-    field.onChange(value)
-  }
-  const handleMultiChange = (value: string[]) => {
-    onChange?.(value as PathValue<TFieldValues, TName>)
-    field.onChange(value)
-  }
+  const handleChange: ComponentProps<
+    typeof SelectInputV2<typeof multiselect>
+  >['onChange'] = useCallback(
+    (value: string | string[]) => {
+      onChange?.(value as PathValue<TFieldValues, TName>)
+      field.onChange(value)
+    },
+    [onChange, field],
+  )
 
   return (
     <SelectInputV2
@@ -141,7 +142,7 @@ export const SelectInputFieldV2 = <
       autofocus={autofocus}
       optionalInfoPlacement={optionalInfoPlacement}
       aria-label={ariaLabel}
-      onChange={multiselect ? handleMultiChange : handleSingleChange}
+      onChange={handleChange}
     />
   )
 }
