@@ -41,7 +41,7 @@ type SelectInputProviderProps = {
   multiselect: boolean
   selectAll?: { label: ReactNode; description?: string }
   children: ReactNode
-  value?: OptionType
+  value?: string | string[]
   selectAllGroup: boolean
   numberOfOptions: number
 }
@@ -54,27 +54,52 @@ export const SelectInputProvider = ({
   numberOfOptions,
   children,
 }: SelectInputProviderProps) => {
-  const defaultValue = value ? [value] : []
+  const currentValue = useMemo(() => {
+    if (value) {
+      if (Array.isArray(value)) {
+        return value
+      }
+
+      return [value]
+    }
+
+    return []
+  }, [value])
+
+  const selectedGroups = useMemo(() => {
+    if (Array.isArray(options)) {
+      return []
+    }
+
+    return Object.keys(options).filter(group =>
+      options[group].every(groupOption =>
+        currentValue.includes(groupOption.value),
+      ),
+    )
+  }, [currentValue, options])
+
   const [displayedOptions, setDisplayedOptions] = useState(options)
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
   const [searchInput, setSearchInput] = useState('')
-  const allValues: OptionType[] = []
-  const allGroups: string[] = []
+  const allValues: OptionType[] = useMemo(() => {
+    if (!Array.isArray(options)) {
+      return Object.keys(options)
+        .map((group: string) =>
+          options[group].filter(option => !option.disabled),
+        )
+        .flat()
+    }
 
-  if (!Array.isArray(options)) {
-    Object.keys(options).map((group: string) =>
-      options[group].map(option => {
-        if (!option.disabled) {
-          allValues.push(option)
-        }
+    return options
+  }, [options])
 
-        return null
-      }),
-    )
-    Object.keys(options).forEach(group => allGroups.push(group))
-  } else {
-    options.map(option => allValues.push(option))
-  }
+  const allGroups: string[] = useMemo(() => {
+    if (!Array.isArray(options)) {
+      return Object.keys(options)
+    }
+
+    return []
+  }, [options])
 
   const reducer = (
     state: ReducerState,
@@ -87,7 +112,7 @@ export const SelectInputProvider = ({
         }
 
         return {
-          selectedValues: allValues,
+          selectedValues: allValues.map(option => option.value),
           allSelected: true,
           selectedGroups: allGroups,
         }
@@ -98,7 +123,9 @@ export const SelectInputProvider = ({
             return {
               selectedValues: [...state.selectedValues].filter(
                 selectedValue =>
-                  !options[action.selectedGroup].includes(selectedValue),
+                  !options[action.selectedGroup].find(
+                    option => option.value === selectedValue,
+                  ),
               ),
               allSelected: false,
               selectedGroups: state.selectedGroups.filter(
@@ -109,9 +136,10 @@ export const SelectInputProvider = ({
 
           const newSelectedValues = [...state.selectedValues]
           options[action.selectedGroup].map(option =>
-            newSelectedValues.includes(option) || option.disabled
+            newSelectedValues.find(aValue => aValue === option.value) ||
+            option.disabled
               ? null
-              : newSelectedValues.push(option),
+              : newSelectedValues.push(option.value),
           )
 
           return {
@@ -125,10 +153,10 @@ export const SelectInputProvider = ({
 
       case 'selectOption':
         if (multiselect) {
-          if (state.selectedValues.includes(action.clickedOption)) {
+          if (state.selectedValues.includes(action.clickedOption.value)) {
             return {
               selectedValues: state.selectedValues.filter(
-                val => val !== action.clickedOption,
+                val => val !== action.clickedOption.value,
               ),
               allSelected: false,
               selectedGroups:
@@ -141,16 +169,20 @@ export const SelectInputProvider = ({
           }
 
           return {
-            selectedValues: [...state.selectedValues, action.clickedOption],
+            selectedValues: [
+              ...state.selectedValues,
+              action.clickedOption.value,
+            ],
             allSelected: state.selectedValues.length + 1 === numberOfOptions,
             selectedGroups:
               !Array.isArray(options) &&
               action.group &&
               options[action.group].every(
                 option =>
-                  [...state.selectedValues, action.clickedOption].includes(
-                    option,
-                  ) || option.disabled,
+                  [
+                    ...state.selectedValues,
+                    action.clickedOption.value,
+                  ].includes(option.value) || option.disabled,
               )
                 ? [...state.selectedGroups, action.group]
                 : state.selectedGroups,
@@ -158,7 +190,7 @@ export const SelectInputProvider = ({
         }
 
         return {
-          selectedValues: [action.clickedOption],
+          selectedValues: [action.clickedOption.value],
           allSelected: false,
           selectedGroups: state.selectedGroups,
         }
@@ -174,13 +206,13 @@ export const SelectInputProvider = ({
             if (!Array.isArray(options)) {
               return Object.keys(options).some(group =>
                 options[group].some(
-                  option => option === selectedValue && !option.disabled,
+                  option => option.value === selectedValue && !option.disabled,
                 ),
               )
             }
 
             return options.some(
-              option => option === selectedValue && !option.disabled,
+              option => option.value === selectedValue && !option.disabled,
             )
           }),
         }
@@ -190,9 +222,9 @@ export const SelectInputProvider = ({
   }
 
   const [selectedData, setSelectedData] = useReducer(reducer, {
-    selectedValues: defaultValue,
+    selectedValues: currentValue,
     allSelected: false,
-    selectedGroups: [],
+    selectedGroups,
   })
   const providerValue = useMemo(
     () => ({

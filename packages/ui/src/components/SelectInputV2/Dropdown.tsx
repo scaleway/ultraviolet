@@ -112,7 +112,7 @@ const DropdownItem = styled.button<{
   padding: ${({ theme }) => theme.space['1.5']} ${({ theme }) => theme.space['2']} ${({ theme }) => theme.space['1.5']} ${({ theme }) => theme.space['2']};
   margin-left: ${({ theme }) => theme.space['0.5']};
   margin-right: ${({ theme }) => theme.space['0.5']};
-  
+
   color:  ${({ theme }) => theme.colors.neutral.text};
   border-radius: ${({ theme }) => theme.radii.default};
 
@@ -120,7 +120,7 @@ const DropdownItem = styled.button<{
     background-color: ${({ theme }) => theme.colors.primary.background};
     color: ${({ theme }) => theme.colors.primary.text};
     cursor: pointer;
-    outline: none; 
+    outline: none;
   }
 
   &[data-selected='true'] {
@@ -139,7 +139,7 @@ const DropdownItem = styled.button<{
     cursor: not-allowed;
     outline: none;
   }
-  
+
   }
 `
 const PopupFooter = styled.div`
@@ -310,18 +310,14 @@ const CreateDropdown = ({
   const handleClick = (clickedOption: OptionType, group?: string) => {
     setSelectedData({ type: 'selectOption', clickedOption, group })
     if (multiselect) {
-      if (selectedData.selectedValues.includes(clickedOption)) {
+      if (selectedData.selectedValues.includes(clickedOption.value)) {
         onChange?.(
-          selectedData.selectedValues
-            .filter(val => val !== clickedOption)
-            .map(val => val?.value),
-        )
-      } else {
-        onChange?.(
-          [...selectedData.selectedValues, clickedOption].map(
-            val => val?.value,
+          selectedData.selectedValues.filter(
+            val => val !== clickedOption.value,
           ),
         )
+      } else {
+        onChange?.([...selectedData.selectedValues, clickedOption.value])
       }
     } else {
       onChange?.([clickedOption.value])
@@ -358,18 +354,19 @@ const CreateDropdown = ({
     if (!Array.isArray(options)) {
       if (selectedData.selectedGroups.includes(group)) {
         const newSelectedValues = [...selectedData.selectedValues].filter(
-          selectedValue => !options[group].includes(selectedValue),
+          selectedValue =>
+            !options[group].find(option => option.value === selectedValue),
         )
-        onChange?.(newSelectedValues.map(value => value.value))
+        onChange?.(newSelectedValues)
       } else {
         const newSelectedValues = [...selectedData.selectedValues]
 
         options[group].map(option =>
-          newSelectedValues.includes(option) || option.disabled
+          newSelectedValues.includes(option.value) || option.disabled
             ? null
-            : newSelectedValues.push(option),
+            : newSelectedValues.push(option.value),
         )
-        onChange?.(newSelectedValues.map(value => value.value))
+        onChange?.(newSelectedValues)
       }
     }
   }
@@ -473,7 +470,7 @@ const CreateDropdown = ({
                     key={option.value}
                     disabled={option.disabled}
                     data-selected={
-                      selectedData.selectedValues.includes(option) &&
+                      selectedData.selectedValues.includes(option.value) &&
                       !option.disabled
                     }
                     aria-label={option.value}
@@ -500,7 +497,7 @@ const CreateDropdown = ({
                     {multiselect ? (
                       <StyledCheckbox
                         checked={
-                          selectedData.selectedValues.includes(option) &&
+                          selectedData.selectedValues.includes(option.value) &&
                           !option.disabled
                         }
                         disabled={option.disabled}
@@ -587,7 +584,8 @@ const CreateDropdown = ({
               key={option.value}
               disabled={option.disabled}
               data-selected={
-                selectedData.selectedValues.includes(option) && !option.disabled
+                selectedData.selectedValues.includes(option.value) &&
+                !option.disabled
               }
               onClick={() => {
                 if (!option.disabled) {
@@ -611,7 +609,7 @@ const CreateDropdown = ({
               {multiselect ? (
                 <StyledCheckbox
                   checked={
-                    selectedData.selectedValues.includes(option) &&
+                    selectedData.selectedValues.includes(option.value) &&
                     !option.disabled
                   }
                   disabled={option.disabled}

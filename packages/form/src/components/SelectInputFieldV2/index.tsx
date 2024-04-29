@@ -1,5 +1,5 @@
 import { SelectInputV2 } from '@ultraviolet/ui'
-import { type ComponentProps, useCallback } from 'react'
+import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -94,25 +94,6 @@ export const SelectInputFieldV2 = <
   })
 
   const { getError } = useErrors()
-  const format = useCallback(
-    (val: unknown) => {
-      if (!Array.isArray(options)) {
-        let formattedValue
-        Object.keys(options).forEach(group =>
-          options[group].forEach(option => {
-            if (option.value === val) {
-              formattedValue = option
-            }
-          }),
-        )
-
-        return formattedValue
-      }
-
-      return options.find(option => option.value === val)
-    },
-    [options],
-  )
 
   return (
     <SelectInputV2
@@ -132,7 +113,7 @@ export const SelectInputFieldV2 = <
       }}
       placeholder={placeholder}
       readOnly={readOnly}
-      value={format(field.value)}
+      value={field.value}
       placeholderSearch={placeholderSearch}
       helper={helper}
       emptyState={emptyState}

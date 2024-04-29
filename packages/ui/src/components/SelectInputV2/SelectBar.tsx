@@ -7,6 +7,7 @@ import { Stack } from '../Stack'
 import { Tag } from '../Tag'
 import { Text } from '../Text'
 import { useSelectInput } from './SelectInputProvider'
+import { findOptionInOptions } from './findOptionInOptions'
 import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 import { INPUT_SIZE_HEIGHT, SIZES_TAG } from './types'
 
@@ -35,6 +36,7 @@ type DisplayValuesProps = {
   selectedData: ReducerState
   setSelectedData: Dispatch<ReducerAction>
   size: 'small' | 'medium' | 'large'
+  options: DataType
 }
 const StateStack = styled(Stack)`
   padding-right: ${({ theme }) => theme.space['2']};
@@ -121,14 +123,14 @@ const StyledPlaceholder = styled(Text)<{ 'data-disabled': boolean }>`
     color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
   }
 `
-const isValidSelectedValue = (selectedValue: OptionType, options: DataType) =>
+const isValidSelectedValue = (selectedValue: string, options: DataType) =>
   !Array.isArray(options)
     ? Object.keys(options).some(group =>
         options[group].some(
-          option => option === selectedValue && !option.disabled,
+          option => option.value === selectedValue && !option.disabled,
         ),
       )
-    : options.some(option => option === selectedValue && !option.disabled)
+    : options.some(option => option.value === selectedValue && !option.disabled)
 
 const DisplayValues = ({
   multiselect,
@@ -142,6 +144,7 @@ const DisplayValues = ({
   setSelectedData,
   selectedData,
   size,
+  options,
 }: DisplayValuesProps) =>
   multiselect ? (
     <Stack
@@ -166,9 +169,9 @@ const DisplayValues = ({
                     clickedOption: option,
                   })
                   const newSelectedValues = selectedData.selectedValues?.filter(
-                    val => val !== option,
+                    val => val !== option.value,
                   )
-                  onChange?.(newSelectedValues.map(val => val?.value))
+                  onChange?.(newSelectedValues)
                 }
               : undefined
           }
@@ -191,7 +194,9 @@ const DisplayValues = ({
     </Stack>
   ) : (
     <Text as="p" variant={size === 'large' ? 'body' : 'bodySmall'}>
-      {selectedData.selectedValues[0]?.label}
+      {selectedData.selectedValues[0]
+        ? findOptionInOptions(options, selectedData.selectedValues[0])?.label
+        : null}
     </Text>
   )
 
@@ -221,7 +226,18 @@ export const SelectBar = ({
   const [overflowed, setOverflowed] = useState(false)
   const [overflowAmount, setOverflowAmount] = useState(0)
   const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(
-    selectedData.selectedValues[0] ? [selectedData.selectedValues[0]] : [],
+    () => {
+      if (selectedData.selectedValues[0]) {
+        const firstSelectOption = findOptionInOptions(
+          options,
+          selectedData.selectedValues[0],
+        )
+
+        return firstSelectOption ? [firstSelectOption] : []
+      }
+
+      return []
+    },
   )
 
   const state = useMemo(() => {
@@ -244,13 +260,13 @@ export const SelectBar = ({
       selectedValue => isValidSelectedValue(selectedValue, options),
     )
     for (const selectedValue of newSelectedValues) {
+      const selectedOption = findOptionInOptions(options, selectedValue)
       if (
-        selectedValue &&
-        selectedValue.label &&
+        selectedOption?.label &&
         width &&
         isValidSelectedValue(selectedValue, options)
       ) {
-        const lengthValue = selectedValue.value.length // Find a better way to find the number of displayed characters?
+        const lengthValue = selectedOption.value.length // Find a better way to find the number of displayed characters?
         const totalTagWidth =
           SIZES_TAG.tagWidth + SIZES_TAG.letterWidth * lengthValue
         if (totalTagWidth + tagsWidth > width - 100) {
@@ -259,7 +275,7 @@ export const SelectBar = ({
         } else {
           computedNonOverflowedValues = [
             ...computedNonOverflowedValues,
-            selectedValue,
+            selectedOption,
           ]
           setNonOverFlowedValues(computedNonOverflowedValues)
           tagsWidth += totalTagWidth
@@ -328,6 +344,7 @@ export const SelectBar = ({
           overflowed={overflowed}
           overflowAmount={overflowAmount}
           size={size}
+          options={options}
         />
       ) : (
         <StyledPlaceholder

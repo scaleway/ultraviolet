@@ -7,7 +7,7 @@ import { Text } from '../Text'
 import { Dropdown } from './Dropdown'
 import { SelectBar } from './SelectBar'
 import { SelectInputProvider } from './SelectInputProvider'
-import type { DataType, OptionType } from './types'
+import type { DataType } from './types'
 
 type SelectInputV2Props = {
   /**
@@ -17,7 +17,7 @@ type SelectInputV2Props = {
   /**
    * Default value, must be one of the options
    */
-  value?: OptionType
+  value?: string | string[]
   /**
    * Place holder when no value defined
    */

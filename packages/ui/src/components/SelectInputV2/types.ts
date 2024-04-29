@@ -12,7 +12,7 @@ export type OptionType = {
 export type DataType = Record<string, OptionType[]> | OptionType[]
 
 export type ReducerState = {
-  selectedValues: OptionType[]
+  selectedValues: string[]
   allSelected: boolean
   selectedGroups: string[]
 }
