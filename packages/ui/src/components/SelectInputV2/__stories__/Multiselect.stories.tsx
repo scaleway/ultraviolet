@@ -7,7 +7,7 @@ Multiselect.args = {
   ...Template.args,
   options: dataGrouped,
   multiselect: true,
-  value: dataGrouped['terrestrial planets'][4],
+  value: dataGrouped['terrestrial planets'][4].value,
 }
 Multiselect.decorators = [
   StoryComponent => (
