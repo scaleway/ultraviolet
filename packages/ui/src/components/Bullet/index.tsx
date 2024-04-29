@@ -143,7 +143,7 @@ export const Bullet = ({
       data-testid={dataTestId}
       prominence={prominence}
     >
-      {icon ? <Icon name={icon} size="50%" variant={iconVariant} /> : text}
+      {icon ? <Icon name={icon} size="small" variant={iconVariant} /> : text}
     </StyledContainer>
   </Tooltip>
 )
