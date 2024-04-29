@@ -9,7 +9,6 @@ type SearchBarProps = {
   placeholder: string
   displayedOptions: DataType
   setSearchBarActive: Dispatch<SetStateAction<boolean>>
-  onChange?: (value: string[]) => void
 }
 
 const StyledInput = styled(TextInputV2)`
@@ -59,9 +58,9 @@ export const SearchBarDropdown = ({
   placeholder,
   displayedOptions,
   setSearchBarActive,
-  onChange,
 }: SearchBarProps) => {
   const {
+    onChange,
     onSearch,
     setSearchInput,
     searchInput,
@@ -125,7 +124,7 @@ export const SearchBarDropdown = ({
             type: 'selectOption',
             clickedOption: closestOption,
           })
-          onChange?.(selectedData.selectedValues)
+          onChange?.(selectedData.selectedValues[0] ?? '')
         }
       }
     }
