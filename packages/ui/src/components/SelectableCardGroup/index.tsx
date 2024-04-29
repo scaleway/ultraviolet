@@ -145,7 +145,7 @@ export const SelectableCardGroup = ({
                 ) : null}
               </Text>
             ) : null}
-            <Row gap={2} templateColumns={`repeat(${columns}, auto)`}>
+            <Row gap={2} templateColumns={`repeat(${columns}, minmax(0, 1fr))`}>
               {children}
             </Row>
           </Stack>
