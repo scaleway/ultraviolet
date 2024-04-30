@@ -269,7 +269,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   fill: none;
 }
 
-.cache-bmgp9d {
+.cache-1opjlsj {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -282,6 +282,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -294,7 +295,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   padding: 0;
 }
 
-.cache-bmgp9d[data-has-arrow='true']::after {
+.cache-1opjlsj[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -308,6 +309,10 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-1opjlsj[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-77g8v1 {
@@ -615,10 +620,11 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
           </div>
         </div>
         <div
-          class="eeucz6c8 cache-bmgp9d e4h1g861"
+          class="eeucz6c8 cache-1opjlsj e4h1g861"
           data-has-arrow="false"
           id=":rc:"
           role="dialog"
+          style="opacity: 1;"
         >
           <div
             class="cache-77g8v1 ehpbis70"

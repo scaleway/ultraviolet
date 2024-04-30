@@ -28,7 +28,7 @@ exports[`Tooltip should render correctly with component in content prop 1`] = `
   width: 100%;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -41,6 +41,7 @@ exports[`Tooltip should render correctly with component in content prop 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -56,7 +57,7 @@ exports[`Tooltip should render correctly with component in content prop 1`] = `
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -72,7 +73,11 @@ exports[`Tooltip should render correctly with component in content prop 1`] = `
   pointer-events: none;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -210,10 +215,11 @@ exports[`Tooltip should render correctly with component in content prop 1`] = `
   >
     Children
     <div
-      class="ejpxv5a1 cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-1d0fann-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":r5:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -279,7 +285,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   width: 100%;
 }
 
-.cache-d0v2q0-StyledPopup-StyledPopup-StyledPopup {
+.cache-ore3kd-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -292,6 +298,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -307,7 +314,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-d0v2q0-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-ore3kd-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -323,7 +330,11 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   pointer-events: none;
 }
 
-.cache-d0v2q0-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-ore3kd-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-ore3kd-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -477,10 +488,11 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-d0v2q0-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-ore3kd-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":rk:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -548,7 +560,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   width: 100%;
 }
 
-.cache-8lso9b-StyledPopup-StyledPopup-StyledPopup {
+.cache-rmnyo6-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -561,6 +573,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(-16px, 0px, 0);
   -moz-transform: translate3d(-16px, 0px, 0);
@@ -576,7 +589,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-8lso9b-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-rmnyo6-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: 0px;
@@ -592,7 +605,11 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   pointer-events: none;
 }
 
-.cache-8lso9b-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-rmnyo6-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-rmnyo6-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -746,10 +763,11 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-8lso9b-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-rmnyo6-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":rc:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -817,7 +835,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   width: 100%;
 }
 
-.cache-t1923b-StyledPopup-StyledPopup-StyledPopup {
+.cache-1sxcz6y-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -830,6 +848,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(16px, 0px, 0);
   -moz-transform: translate3d(16px, 0px, 0);
@@ -845,7 +864,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-t1923b-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1sxcz6y-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: 0px;
@@ -861,7 +880,11 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   pointer-events: none;
 }
 
-.cache-t1923b-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1sxcz6y-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1sxcz6y-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1015,10 +1038,11 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-t1923b-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-1sxcz6y-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":rg:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -1086,7 +1110,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   width: 100%;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1099,6 +1123,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -1114,7 +1139,7 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -1130,7 +1155,11 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   pointer-events: none;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1284,10 +1313,11 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-1d0fann-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":r8:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -1376,7 +1406,7 @@ exports[`Tooltip should render correctly with required props and visible 1`] = `
   width: 100%;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1389,6 +1419,7 @@ exports[`Tooltip should render correctly with required props and visible 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -1404,7 +1435,7 @@ exports[`Tooltip should render correctly with required props and visible 1`] = `
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -1420,7 +1451,11 @@ exports[`Tooltip should render correctly with required props and visible 1`] = `
   pointer-events: none;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1570,10 +1605,11 @@ exports[`Tooltip should render correctly with required props and visible 1`] = `
   >
     Children
     <div
-      class="ejpxv5a1 cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-1d0fann-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":r1:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -1641,7 +1677,7 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
   width: 100%;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1654,6 +1690,7 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -1669,7 +1706,7 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -1685,7 +1722,11 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
   pointer-events: none;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1839,10 +1880,11 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-1d0fann-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":ro:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -1928,7 +1970,7 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
   width: 100%;
 }
 
-.cache-1sio0ha-StyledPopup-StyledPopup-StyledPopup {
+.cache-10l17es-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1941,6 +1983,7 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -1956,7 +1999,7 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-1sio0ha-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-10l17es-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -1972,7 +2015,11 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
   pointer-events: none;
 }
 
-.cache-1sio0ha-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-10l17es-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-10l17es-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #8c40ef transparent transparent transparent;
 }
 
@@ -2126,10 +2173,11 @@ exports[`Tooltip should render correctly with sentiment should renders tooltip w
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-1sio0ha-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-10l17es-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":rs:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -2251,7 +2299,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   width: 100%;
 }
 
-.cache-z41339-StyledPopup-StyledPopup-StyledPopup {
+.cache-1gacxva-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2264,6 +2312,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -2279,7 +2328,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-z41339-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1gacxva-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -2295,7 +2344,11 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   pointer-events: none;
 }
 
-.cache-z41339-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1gacxva-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1gacxva-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2449,10 +2502,11 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-z41339-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-1gacxva-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":r18:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -2556,7 +2610,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   width: 100%;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2569,6 +2623,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -2584,7 +2639,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -2600,7 +2655,11 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   pointer-events: none;
 }
 
-.cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1d0fann-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2754,10 +2813,11 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-ze6r6w-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-1d0fann-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":r14:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
@@ -2861,7 +2921,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   width: 100%;
 }
 
-.cache-i45kfj-StyledPopup-StyledPopup-StyledPopup {
+.cache-1k5agwv-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2874,6 +2934,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -2889,7 +2950,7 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   box-shadow: 0px 4px 32px 8px #151a2d5c;
 }
 
-.cache-i45kfj-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1k5agwv-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -2905,7 +2966,11 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   pointer-events: none;
 }
 
-.cache-i45kfj-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1k5agwv-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1k5agwv-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -3059,10 +3124,11 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
       Children
     </p>
     <div
-      class="ejpxv5a1 cache-i45kfj-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      class="ejpxv5a1 cache-1k5agwv-StyledPopup-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="true"
       id=":r10:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-ag4zk-Stack-StyledStack ejpxv5a0"

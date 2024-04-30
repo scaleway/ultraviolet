@@ -361,9 +361,6 @@ export const Popup = forwardRef(
     useEffect(() => {
       if (visibleInDom) {
         generatePopupPositions()
-        if (innerPopupRef.current) {
-          innerPopupRef.current.style.opacity = '1'
-        }
 
         if (popupPortalTarget === document.body) {
           // We want to detect scroll and resize in order to recompute positions of popup
@@ -388,6 +385,17 @@ export const Popup = forwardRef(
       maxWidth,
       popupPortalTarget,
     ])
+
+    // This will be triggered when positions are computed and popup is visible in the dom.
+    useEffect(
+      () => {
+        if (visibleInDom && innerPopupRef.current) {
+          innerPopupRef.current.style.opacity = '1'
+        }
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [positions],
+    )
 
     /**
      * If popup has `visible` prop it means the popup is manually controlled through this prop.
