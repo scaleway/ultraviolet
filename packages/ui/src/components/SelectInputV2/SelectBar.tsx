@@ -39,7 +39,7 @@ const StateStack = styled(Stack)`
   display: flex;
 `
 
-export const StyledInputWrapper = styled(Stack)<{
+const StyledInputWrapper = styled(Stack)<{
   'data-readonly': boolean
   'data-disabled': boolean
   'data-size': 'small' | 'medium' | 'large'

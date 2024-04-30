@@ -3,7 +3,6 @@ import { Icon } from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
 import { SelectInputV2 } from '../SelectInputV2'
-import { StyledInputWrapper } from '../SelectInputV2/SelectBar'
 import type { OptionType } from '../SelectInputV2/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -103,7 +102,7 @@ const CustomSelectInput = styled(SelectInputV2)<{
   width?: number
   'data-disabled': boolean
 }>`
-  ${StyledInputWrapper} {
+  #select-bar {
     border: none;
     background: transparent;
   }
