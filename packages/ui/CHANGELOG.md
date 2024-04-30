@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.51.0
+
+### Minor Changes
+
+- [#3727](https://github.com/scaleway/ultraviolet/pull/3727) [`9801140`](https://github.com/scaleway/ultraviolet/commit/980114070bef7258feaf4ab81627e14d7ac01e30) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - Fix `<SelectInputV2/>` : Search bar autoFocus make the content scroll to top
+
 ## 1.50.0
 
 ### Minor Changes
