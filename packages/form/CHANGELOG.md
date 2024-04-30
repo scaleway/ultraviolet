@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.13.0
+
+### Minor Changes
+
+- [#3725](https://github.com/scaleway/ultraviolet/pull/3725) [`4dd0d6e`](https://github.com/scaleway/ultraviolet/commit/4dd0d6e58e4a7666a3e729997c15246c297db02f) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - `<SelectInputV2Field />` handle `onChange` and `value` types based on `multiselect`
+
+### Patch Changes
+
+- Updated dependencies [[`4dd0d6e`](https://github.com/scaleway/ultraviolet/commit/4dd0d6e58e4a7666a3e729997c15246c297db02f)]:
+  - @ultraviolet/ui@1.50.0
+
 ## 2.12.0
 
 ### Minor Changes

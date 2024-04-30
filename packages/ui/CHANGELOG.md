@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.50.0
+
+### Minor Changes
+
+- [#3725](https://github.com/scaleway/ultraviolet/pull/3725) [`4dd0d6e`](https://github.com/scaleway/ultraviolet/commit/4dd0d6e58e4a7666a3e729997c15246c297db02f) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - `<SelectInputV2 />` now support `onChange` and `value` types based on `multiselect` value
+
 ## 1.49.0
 
 ### Minor Changes
