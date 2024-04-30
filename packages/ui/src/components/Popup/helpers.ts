@@ -5,13 +5,13 @@ export const ARROW_WIDTH = 8 // in px
 const SPACE = 4 // in px
 const TOTAL_USED_SPACE = 0 // in px
 export const DEFAULT_POSITIONS = {
-  arrowLeft: -999,
-  arrowTop: -999,
+  arrowLeft: 0,
+  arrowTop: 0,
   arrowTransform: 'translate(-50%, -50)',
   placement: 'top',
   rotate: 135,
-  popupInitialPosition: 'translate3d(-999px, -999px, 0)',
-  popupPosition: 'translate3d(-999px, -999px, 0)',
+  popupInitialPosition: 'translate3d(0px, 0px, 0)',
+  popupPosition: 'translate3d(0px, 0px, 0)',
 }
 
 type ComputePlacementTypes = {
