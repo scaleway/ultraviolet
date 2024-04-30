@@ -18,7 +18,6 @@ export type DropdownProps = {
   searchable: boolean
   placeholder: string
   footer?: ReactNode
-  onChange?: (value: string[]) => void
   refSelect: RefObject<HTMLDivElement>
   loadMore?: ReactNode
   optionalInfoPlacement: 'left' | 'right'
@@ -29,12 +28,12 @@ export type CreateDropdownProps = {
   isEmpty: boolean
   emptyState: ReactNode
   descriptionDirection: 'row' | 'column'
-  onChange?: (value: string[]) => void
   loadMore?: ReactNode
   optionalInfoPlacement: 'left' | 'right'
   defaultSearchValue: string | null
   isLoading?: boolean
 }
+
 const NON_SEARCHABLE_KEYS = [
   'Tab',
   ' ',
@@ -271,7 +270,6 @@ const CreateDropdown = ({
   isEmpty,
   emptyState,
   descriptionDirection,
-  onChange,
   loadMore,
   optionalInfoPlacement,
   defaultSearchValue,
@@ -279,6 +277,7 @@ const CreateDropdown = ({
 }: CreateDropdownProps) => {
   const {
     setIsDropdownVisible,
+    onChange,
     options,
     multiselect,
     selectAll,
@@ -320,53 +319,56 @@ const CreateDropdown = ({
         onChange?.([...selectedData.selectedValues, clickedOption.value])
       }
     } else {
-      onChange?.([clickedOption.value])
+      onChange?.(clickedOption.value)
     }
     setIsDropdownVisible(multiselect) // hide the dropdown on click when single select only
   }
 
   const selectAllOptions = () => {
-    setSelectedData({ type: 'selectAll' })
-
-    if (selectedData.allSelected && onChange) {
-      onChange?.([])
-    } else {
-      const allValues: OptionType[] = []
-      if (!Array.isArray(options)) {
-        Object.keys(options).map((group: string) =>
-          options[group].map(option => {
-            if (!option.disabled) {
-              allValues.push(option)
-            }
-
-            return null
-          }),
-        )
+    if (multiselect) {
+      setSelectedData({ type: 'selectAll' })
+      if (selectedData.allSelected && onChange) {
+        onChange([])
       } else {
-        options.map(option => allValues.push(option))
+        const allValues: OptionType[] = []
+        if (!Array.isArray(options)) {
+          Object.keys(options).map((group: string) =>
+            options[group].map(option => {
+              if (!option.disabled) {
+                allValues.push(option)
+              }
+
+              return null
+            }),
+          )
+        } else {
+          options.map(option => allValues.push(option))
+        }
+        onChange?.(allValues.map(value => value.value))
       }
-      onChange?.(allValues.map(value => value.value))
     }
   }
 
   const handleSelectGroup = (group: string) => {
-    setSelectedData({ type: 'selectGroup', selectedGroup: group })
-    if (!Array.isArray(options)) {
-      if (selectedData.selectedGroups.includes(group)) {
-        const newSelectedValues = [...selectedData.selectedValues].filter(
-          selectedValue =>
-            !options[group].find(option => option.value === selectedValue),
-        )
-        onChange?.(newSelectedValues)
-      } else {
-        const newSelectedValues = [...selectedData.selectedValues]
+    if (multiselect) {
+      setSelectedData({ type: 'selectGroup', selectedGroup: group })
+      if (!Array.isArray(options)) {
+        if (selectedData.selectedGroups.includes(group)) {
+          const newSelectedValues = [...selectedData.selectedValues].filter(
+            selectedValue =>
+              !options[group].find(option => option.value === selectedValue),
+          )
+          onChange?.(newSelectedValues)
+        } else {
+          const newSelectedValues = [...selectedData.selectedValues]
 
-        options[group].map(option =>
-          newSelectedValues.includes(option.value) || option.disabled
-            ? null
-            : newSelectedValues.push(option.value),
-        )
-        onChange?.(newSelectedValues)
+          options[group].map(option =>
+            newSelectedValues.includes(option.value) || option.disabled
+              ? null
+              : newSelectedValues.push(option.value),
+          )
+          onChange?.(newSelectedValues)
+        }
       }
     }
   }
@@ -644,7 +646,6 @@ export const Dropdown = ({
   searchable,
   placeholder,
   footer,
-  onChange,
   refSelect,
   loadMore,
   optionalInfoPlacement,
@@ -761,14 +762,12 @@ export const Dropdown = ({
               placeholder={placeholder}
               displayedOptions={displayedOptions}
               setSearchBarActive={setSearchBarActive}
-              onChange={onChange}
             />
           ) : null}
           <CreateDropdown
             isEmpty={isEmpty}
             emptyState={emptyState}
             descriptionDirection={descriptionDirection}
-            onChange={onChange}
             loadMore={loadMore}
             optionalInfoPlacement={optionalInfoPlacement}
             defaultSearchValue={defaultSearchValue}

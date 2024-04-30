@@ -5,7 +5,7 @@ import { Stack } from '../../Stack'
 import { OptionalInfo4, dataGrouped } from './resources'
 
 export const OnChange: StoryFn<typeof SelectInputV2> = args => {
-  const [values, setValues] = useState<(string | undefined)[]>([])
+  const [values, setValues] = useState<string[]>([])
 
   const defaultOptions = [
     {
@@ -48,6 +48,8 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
       <Stack direction="row" gap={4}>
         <SelectInputV2
           {...args}
+          multiselect
+          value={values}
           onChange={setValues}
           options={dataGrouped}
           label="Simple onChange to get the selected value"
@@ -65,6 +67,8 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
       </Stack>
       <SelectInputV2
         {...args}
+        value={undefined}
+        multiselect
         options={options}
         onChange={onChange}
         searchable={false}

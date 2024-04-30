@@ -9,7 +9,7 @@ import { SelectBar } from './SelectBar'
 import { SelectInputProvider } from './SelectInputProvider'
 import type { DataType } from './types'
 
-type SelectInputV2Props = {
+type SelectInputV2Props<IsMulti extends undefined | boolean = false> = {
   /**
    * Input name
    */
@@ -103,34 +103,22 @@ type SelectInputV2Props = {
    */
   selectAllGroup?: boolean
   autofocus?: boolean
+  /**
+   * Whether it is possible to select multiple options
+   */
+  multiselect?: IsMulti
+  /**
+   * Default value, must be one of the options
+   */
+  value?: IsMulti extends true ? string[] : string
+  onChange?: IsMulti extends true
+    ? (value: string[]) => void
+    : (value: string) => void
   'data-testid'?: string
-  onChange?: (value: string[]) => void
 } & Pick<
   HTMLAttributes<HTMLDivElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
-> &
-  (
-    | {
-        /**
-         * Whether it is possible to select multiple options
-         */
-        multiselect: true
-        /**
-         * Default value, must be one of the options
-         */
-        value?: string[]
-      }
-    | {
-        /**
-         * Whether it is possible to select multiple options
-         */
-        multiselect?: false | undefined
-        /**
-         * Default value, must be one of the options
-         */
-        value?: string
-      }
-  )
+>
 
 const SelectInputContainer = styled.div`
   width: 100%;
@@ -142,7 +130,7 @@ const HelperText = styled(Text)`
 /**
  * SelectInputV2 component is used to select one or many elements from a selection.
  */
-export const SelectInputV2 = ({
+export const SelectInputV2 = <IsMulti extends undefined | boolean>({
   name,
   id,
   onBlur,
@@ -176,7 +164,7 @@ export const SelectInputV2 = ({
   isLoading,
   selectAll,
   selectAllGroup = false,
-}: SelectInputV2Props) => {
+}: SelectInputV2Props<IsMulti>) => {
   const ref = useRef<HTMLDivElement>(null)
   const numberOfOptions = Array.isArray(options)
     ? options.length
@@ -194,6 +182,7 @@ export const SelectInputV2 = ({
       value={value}
       selectAllGroup={selectAllGroup}
       numberOfOptions={numberOfOptions}
+      onChange={onChange}
     >
       <SelectInputContainer
         id={id}
@@ -209,7 +198,6 @@ export const SelectInputV2 = ({
           searchable={searchable}
           placeholder={placeholderSearch}
           footer={footer}
-          onChange={onChange}
           refSelect={ref}
           loadMore={loadMore}
           optionalInfoPlacement={optionalInfoPlacement}
@@ -238,7 +226,6 @@ export const SelectInputV2 = ({
               placeholder={placeholder}
               success={success}
               error={error}
-              onChange={onChange}
               autoFocus={autofocus}
               innerRef={ref}
             />

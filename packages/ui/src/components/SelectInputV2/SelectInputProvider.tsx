@@ -4,7 +4,6 @@ import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 
 type ContextProps = {
   options: DataType
-  multiselect: boolean
   onSearch: Dispatch<SetStateAction<DataType>>
   isDropdownVisible: boolean
   setIsDropdownVisible: Dispatch<SetStateAction<boolean>>
@@ -16,11 +15,20 @@ type ContextProps = {
   displayedOptions: DataType
   selectedData: ReducerState
   setSelectedData: Dispatch<ReducerAction>
-}
+} & (
+  | {
+      multiselect: true
+      onChange?: (value: string[]) => void
+    }
+  | {
+      multiselect: false
+      onChange?: (value: string) => void
+    }
+)
 
 const SelectInputContext = createContext<ContextProps>({
   options: [],
-  multiselect: false,
+  multiselect: false as true | false,
   onSearch: () => {},
   isDropdownVisible: false,
   setIsDropdownVisible: () => {},
@@ -32,20 +40,25 @@ const SelectInputContext = createContext<ContextProps>({
   displayedOptions: [],
   selectedData: { allSelected: false, selectedGroups: [], selectedValues: [] },
   setSelectedData: () => {},
+  onChange: () => {},
 })
 
 export const useSelectInput = () => useContext(SelectInputContext)
 
-type SelectInputProviderProps = {
+type SelectInputProviderProps<IsMulti extends boolean> = {
   options: DataType
-  multiselect: boolean
   selectAll?: { label: ReactNode; description?: string }
   children: ReactNode
   value?: string | string[]
   selectAllGroup: boolean
   numberOfOptions: number
+  multiselect: IsMulti
+  onChange?: IsMulti extends true
+    ? (value: string[]) => void
+    : (value: string) => void
 }
-export const SelectInputProvider = ({
+
+export const SelectInputProvider = <T extends boolean>({
   options,
   multiselect,
   selectAll,
@@ -53,7 +66,8 @@ export const SelectInputProvider = ({
   selectAllGroup,
   numberOfOptions,
   children,
-}: SelectInputProviderProps) => {
+  onChange,
+}: SelectInputProviderProps<T>) => {
   const currentValue = useMemo(() => {
     if (value) {
       if (Array.isArray(value)) {
@@ -227,21 +241,23 @@ export const SelectInputProvider = ({
     selectedGroups,
   })
   const providerValue = useMemo(
-    () => ({
-      onSearch: setDisplayedOptions,
-      isDropdownVisible,
-      setIsDropdownVisible,
-      searchInput,
-      setSearchInput,
-      options,
-      multiselect,
-      selectAll,
-      selectAllGroup,
-      numberOfOptions,
-      displayedOptions,
-      selectedData,
-      setSelectedData,
-    }),
+    () =>
+      ({
+        onSearch: setDisplayedOptions,
+        isDropdownVisible,
+        setIsDropdownVisible,
+        searchInput,
+        setSearchInput,
+        options,
+        multiselect,
+        selectAll,
+        selectAllGroup,
+        numberOfOptions,
+        displayedOptions,
+        selectedData,
+        setSelectedData,
+        onChange,
+      }) as ContextProps,
     [
       displayedOptions,
       isDropdownVisible,
@@ -252,6 +268,7 @@ export const SelectInputProvider = ({
       selectAll,
       selectAllGroup,
       selectedData,
+      onChange,
     ],
   )
 

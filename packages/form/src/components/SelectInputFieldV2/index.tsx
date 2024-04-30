@@ -1,6 +1,6 @@
 import { SelectInputV2 } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
-import type { FieldPath, FieldValues } from 'react-hook-form'
+import { type ComponentProps, useCallback } from 'react'
+import type { FieldPath, FieldValues, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -95,6 +95,16 @@ export const SelectInputFieldV2 = <
 
   const { getError } = useErrors()
 
+  const handleChange: ComponentProps<
+    typeof SelectInputV2<typeof multiselect>
+  >['onChange'] = useCallback(
+    (value: string | string[]) => {
+      onChange?.(value as PathValue<TFieldValues, TName>)
+      field.onChange(value)
+    },
+    [onChange, field],
+  )
+
   return (
     <SelectInputV2
       name={field.name}
@@ -113,13 +123,13 @@ export const SelectInputFieldV2 = <
       }}
       placeholder={placeholder}
       readOnly={readOnly}
-      value={field.value}
+      multiselect={multiselect}
+      value={field.value as string | string[]}
       placeholderSearch={placeholderSearch}
       helper={helper}
       emptyState={emptyState}
       searchable={searchable}
       clearable={clearable}
-      multiselect={multiselect}
       descriptionDirection={descriptionDirection}
       footer={footer}
       labelDescription={labelDescription}
@@ -132,10 +142,7 @@ export const SelectInputFieldV2 = <
       autofocus={autofocus}
       optionalInfoPlacement={optionalInfoPlacement}
       aria-label={ariaLabel}
-      onChange={value => {
-        field.onChange(value)
-        onChange?.(value)
-      }}
+      onChange={handleChange}
     />
   )
 }

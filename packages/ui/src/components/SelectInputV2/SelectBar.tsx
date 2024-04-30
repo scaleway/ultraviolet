@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { Dispatch, RefObject } from 'react'
+import type { RefObject } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
@@ -8,7 +8,7 @@ import { Tag } from '../Tag'
 import { Text } from '../Text'
 import { useSelectInput } from './SelectInputProvider'
 import { findOptionInOptions } from './findOptionInOptions'
-import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
+import type { DataType, OptionType } from './types'
 import { INPUT_SIZE_HEIGHT, SIZES_TAG } from './types'
 
 type SelectBarProps = {
@@ -19,25 +19,20 @@ type SelectBarProps = {
   placeholder: string
   success?: string
   error?: string
-  onChange?: (value: string[]) => void
   autoFocus?: boolean
   innerRef: RefObject<HTMLDivElement>
 }
 
 type DisplayValuesProps = {
-  multiselect: boolean
   refTag: RefObject<HTMLDivElement>
   nonOverflowedValues: OptionType[]
   disabled: boolean
   readOnly: boolean
-  onChange?: (value: string[]) => void
   overflowed: boolean
   overflowAmount: number
-  selectedData: ReducerState
-  setSelectedData: Dispatch<ReducerAction>
   size: 'small' | 'medium' | 'large'
-  options: DataType
 }
+
 const StateStack = styled(Stack)`
   padding-right: ${({ theme }) => theme.space['2']};
   display: flex;
@@ -133,20 +128,18 @@ const isValidSelectedValue = (selectedValue: string, options: DataType) =>
     : options.some(option => option.value === selectedValue && !option.disabled)
 
 const DisplayValues = ({
-  multiselect,
   refTag,
   nonOverflowedValues,
   disabled,
   readOnly,
-  onChange,
   overflowed,
   overflowAmount,
-  setSelectedData,
-  selectedData,
   size,
-  options,
-}: DisplayValuesProps) =>
-  multiselect ? (
+}: DisplayValuesProps) => {
+  const { multiselect, selectedData, setSelectedData, options, onChange } =
+    useSelectInput()
+
+  return multiselect ? (
     <Stack
       direction="row"
       gap="1"
@@ -199,6 +192,7 @@ const DisplayValues = ({
         : null}
     </Text>
   )
+}
 
 export const SelectBar = ({
   size,
@@ -208,17 +202,17 @@ export const SelectBar = ({
   placeholder,
   success,
   error,
-  onChange,
   autoFocus,
   innerRef,
 }: SelectBarProps) => {
   const {
     isDropdownVisible,
+    onChange,
     setIsDropdownVisible,
     options,
-    multiselect,
     selectedData,
     setSelectedData,
+    multiselect,
   } = useSelectInput()
   const openable = !(readOnly || disabled)
   const refTag = useRef<HTMLDivElement>(null)
@@ -333,18 +327,13 @@ export const SelectBar = ({
     >
       {selectedData.selectedValues.length > 0 ? (
         <DisplayValues
-          multiselect={multiselect}
           refTag={refTag}
           nonOverflowedValues={nonOverflowedValues}
           disabled={disabled}
           readOnly={readOnly}
-          selectedData={selectedData}
-          setSelectedData={setSelectedData}
-          onChange={onChange}
           overflowed={overflowed}
           overflowAmount={overflowAmount}
           size={size}
-          options={options}
         />
       ) : (
         <StyledPlaceholder
@@ -370,7 +359,11 @@ export const SelectBar = ({
             onClick={event => {
               event.stopPropagation()
               setSelectedData({ type: 'clearAll' })
-              onChange?.([])
+              if (multiselect) {
+                onChange?.([])
+              } else {
+                onChange?.('')
+              }
             }}
             sentiment="neutral"
             data-testid="clear-all"
