@@ -157,7 +157,7 @@ type UnitInputProps = {
   value?: UnitInputValue['inputValue']
   unitValue?: UnitInputValue['unit']
   onChange?: (value: UnitInputValue['inputValue']) => void
-  onChangeUnitValue?: (values: string[]) => void
+  onChangeUnitValue?: (values: string) => void
   options: OptionType[]
   selectInputWidth?: number
   size?: 'small' | 'medium' | 'large'
@@ -306,7 +306,7 @@ export const UnitInput = ({
           data-disabled={disabled}
           id={id ? `${id}-unit` : undefined}
           name={`${name}-unit`}
-          onChange={newValue => {
+          onChange={(newValue: string) => {
             onChangeUnitValue?.(newValue)
           }}
           error={unitError}
