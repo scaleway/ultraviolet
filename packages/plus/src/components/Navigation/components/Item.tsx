@@ -256,6 +256,10 @@ type ItemProps = {
    */
   label: string
   /**
+   * It should be a unique id and will be used for pin/unpin feature.
+   */
+  id: string
+  /**
    * Text shown under the label with a lighter color and smaller font size
    */
   subLabel?: string
@@ -291,10 +295,6 @@ type ItemProps = {
    * You don't need to use this prop it's used internally to control the type of the item
    */
   type?: ItemType
-  /**
-   * You don't need to use this prop it's used internally to close the menu
-   */
-  toggleMenu?: () => void
   /**
    * You don't need to use this prop it's used internally to control if the item has a parent
    */
@@ -336,8 +336,8 @@ export const Item = ({
   as,
   disabled,
   noExpand = false,
-  toggleMenu,
   index,
+  id,
 }: ItemProps) => {
   const context = useNavigation()
 
@@ -356,7 +356,16 @@ export const Item = ({
     pinnedItems,
     pinLimit,
     animation,
+    registerItem,
   } = context
+
+  useEffect(
+    () => {
+      registerItem({ [id]: { label, active, onClick } })
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [active, id, label, registerItem],
+  )
 
   const [internalToggle, setToggle] = useState(toggle !== false)
 
@@ -385,7 +394,7 @@ export const Item = ({
   const hasHrefAndNoChildren = href && !children
   const hasPinnedFeatureAndNoChildren =
     pinnedFeature && !children && !noPinButton
-  const isItemPinned = pinnedItems.includes(label)
+  const isItemPinned = pinnedItems.includes(id)
   const shouldShowPinnedButton = useMemo(() => {
     if (href || disabled) return false
 
@@ -455,7 +464,13 @@ export const Item = ({
 
   const onDragStartTrigger = (event: DragEvent<HTMLDivElement>) => {
     event.dataTransfer.setData('text/plain', JSON.stringify({ label, index }))
-    // event.target.style.opacity = '0.5'
+    // eslint-disable-next-line no-param-reassign
+    event.currentTarget.style.opacity = '0.5'
+  }
+
+  const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
+    // eslint-disable-next-line no-param-reassign
+    event.currentTarget.style.opacity = '1'
   }
 
   // This content is when the navigation is expanded
@@ -497,6 +512,10 @@ export const Item = ({
           onDragStart={(event: DragEvent<HTMLDivElement>) =>
             expanded ? onDragStartTrigger(event) : undefined
           }
+          onDragEnd={(event: DragEvent<HTMLDivElement>) =>
+            expanded ? onDragStopTrigger(event) : undefined
+          }
+          id={id}
         >
           <Stack
             direction="row"
@@ -582,9 +601,14 @@ export const Item = ({
                         size="xsmall"
                         variant="ghost"
                         sentiment={active ? 'primary' : 'neutral'}
-                        onClick={() =>
-                          isItemPinned ? unpinItem(label) : pinItem(label)
-                        }
+                        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+                          if (isItemPinned) {
+                            unpinItem(id)
+                          } else {
+                            pinItem(id)
+                          }
+                          event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+                        }}
                         icon={isItemPinned ? 'unpin' : 'pin'}
                         iconVariant={isItemPinned ? 'filled' : 'outlined'}
                         disabled={isItemPinned ? false : isPinDisabled}
@@ -666,16 +690,13 @@ export const Item = ({
             }
             placement="right"
           >
-            {({ toggle: toggleMenuLocal }) =>
-              Children.map(children, child =>
-                isValidElement<ItemProps>(child)
-                  ? cloneElement(child, {
-                      hasParents: true,
-                      toggleMenu: toggleMenuLocal,
-                    })
-                  : child,
-              )
-            }
+            {Children.map(children, child =>
+              isValidElement<ItemProps>(child)
+                ? cloneElement(child, {
+                    hasParents: true,
+                  })
+                : child,
+            )}
           </StyledMenu>
         ) : (
           <Tooltip text={label} placement="right" tabIndex={-1}>
@@ -709,8 +730,8 @@ export const Item = ({
       <StyledMenuItem
         href={href}
         onClick={() => {
+          console.log('clicked', onClick)
           onClick?.()
-          toggleMenu?.()
         }}
         borderless
         active={active}
@@ -762,9 +783,9 @@ export const Item = ({
                   sentiment={active ? 'primary' : 'neutral'}
                   onClick={(event: MouseEvent<HTMLDivElement>) => {
                     if (isItemPinned) {
-                      unpinItem(label)
+                      unpinItem(id)
                     } else {
-                      pinItem(label)
+                      pinItem(id)
                     }
 
                     event.stopPropagation() // This is to avoid click spread to the parent and change the routing

@@ -45,7 +45,7 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
     )
   }
 
-  const { locales, pinnedItems, pinnedFeature, reorderItems, expanded } =
+  const { locales, pinnedItems, pinnedFeature, reorderItems, expanded, items } =
     context
   const theme = useTheme()
 
@@ -84,34 +84,48 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
     event.currentTarget.style.borderColor = 'transparent'
   }, [])
 
-  console.log(expanded)
+  console.log('itemssss:', items)
+
+  if (Object.keys(items).length === 0) {
+    return null
+  }
 
   if (pinnedItems.length > 0 && pinnedFeature) {
-    if (expanded) {
-      return (
-        <div>
-          <Item
-            label={locales['navigation.pinned.item.group.label']}
-            categoryIcon="pin"
-            categoryIconVariant="neutral"
-            toggle={toggle}
-            type="pinnedGroup"
-          >
-            {pinnedItems.map((item, index) => (
-              <div style={{ position: 'relative' }} key={item}>
+    return (
+      <div>
+        <Item
+          label={locales['navigation.pinned.item.group.label']}
+          categoryIcon="pin"
+          categoryIconVariant="neutral"
+          toggle={toggle}
+          type="pinnedGroup"
+          id="pinned-group"
+        >
+          {pinnedItems.map((itemId, index) => (
+            <div
+              style={{ position: expanded ? 'relative' : undefined }}
+              key={itemId}
+            >
+              {expanded ? (
                 <DropableArea
                   onDragOver={onDragOver}
                   onDragLeave={onDragLeave}
                   onDrop={event => onDrop(event, index)}
                 />
-                <Item
-                  label={item}
-                  type="pinned"
-                  index={index}
-                  toggle={toggle}
-                />
-              </div>
-            ))}
+              ) : null}
+              <Item
+                label={items[itemId]?.label ?? 'Unknown navigation item'}
+                type="pinned"
+                index={index}
+                toggle={toggle}
+                id={itemId}
+                active={items[itemId]?.active ?? false}
+                onClick={items[itemId]?.onClick ?? undefined}
+                hasParents
+              />
+            </div>
+          ))}
+          {expanded ? (
             <div style={{ position: 'relative' }}>
               <DropableArea
                 onDragOver={onDragOver}
@@ -119,24 +133,7 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
                 onDrop={event => onDrop(event, pinnedItems.length)}
               />
             </div>
-          </Item>
-        </div>
-      )
-    }
-
-    return (
-      <div>
-        <Item
-          label={locales['navigation.pinned.item.group.label']}
-          categoryIcon="pin"
-          categoryIconVariant="neutral"
-          type="pinnedGroup"
-        >
-          {pinnedItems.map((item, index) => (
-            <div style={{ position: 'relative' }} key={item}>
-              <Item label={item} type="pinned" index={index} hasParents />
-            </div>
-          ))}
+          ) : null}
         </Item>
       </div>
     )

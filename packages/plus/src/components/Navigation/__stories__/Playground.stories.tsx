@@ -47,6 +47,8 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
   const [active, setActive] = useState('Instance')
   const { pinnedItems } = useNavigation()
 
+  console.log('active', active)
+
   useEffect(() => {
     console.log('pinned items:', pinnedItems)
     localStorage.setItem('pinnedItems', pinnedItems.toString())
@@ -77,6 +79,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
     >
       <Navigation.Item
         label="Organization Dashboard"
+        id="organization-dashboard"
         categoryIcon="console"
         categoryIconVariant="neutral"
         noPinButton
@@ -85,6 +88,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
       />
       <Navigation.Item
         label="Project Dashboard"
+        id="project-dashboard"
         categoryIcon="useCase"
         categoryIconVariant="neutral"
         noPinButton
@@ -96,12 +100,14 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
       <Navigation.Group label="Products">
         <Navigation.Item
           label="Compute"
+          id="compute"
           subLabel="All compute ressources"
           categoryIcon="baremetal"
           toggle={false}
         >
           <Navigation.Item
             label="Instance"
+            id="instance"
             badgeText="new"
             badgeSentiment="success"
             active={active === 'Instance'}
@@ -109,18 +115,21 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
           />
           <Navigation.Item
             label="Elastic Metal"
+            id="elastic-metal"
             disabled
             active={active === 'Elastic Metal'}
             onClick={() => setActive('Elastic Metal')}
           />
           <Navigation.Item
             label="Dedibox"
+            id="dedibox"
             href="https://scaleway.com"
             active={active === 'Dedibox'}
             onClick={() => setActive('Dedibox')}
           />
           <Navigation.Item
             label="Very long product name with spaces"
+            id="very-long-product-name-with-spaces"
             badgeText="internal"
             badgeSentiment="danger"
             active={active === 'Very long product name with spaces'}
@@ -128,123 +137,151 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
           />
           <Navigation.Item
             label="Verylongproductnamewithoutspace"
+            id="verylongproductnamewithoutspace"
             badgeText="internal"
             badgeSentiment="danger"
             active={active === 'Verylongproductnamewithoutspace'}
             onClick={() => setActive('Verylongproductnamewithoutspace')}
           />
-          <Navigation.Item label="Advanced">
+          <Navigation.Item id="advanced" label="Advanced">
             <Navigation.Item
               label="Kubernetes"
+              id="kubernetes"
               active={active === 'Kubernetes'}
               onClick={() => setActive('Kubernetes')}
             />
             <Navigation.Item
               label="OpenStack"
+              id="openstack"
               active={active === 'OpenStack'}
               onClick={() => setActive('OpenStack')}
             />
           </Navigation.Item>
         </Navigation.Item>
-        <Navigation.Item label="Storage" categoryIcon="managedServices">
+        <Navigation.Item
+          label="Storage"
+          id="storage"
+          categoryIcon="managedServices"
+        >
           <Navigation.Item
             label="Block Storage"
+            id="block-storage"
             active={active === 'Block Storage'}
             onClick={() => setActive('Block Storage')}
           />
           <Navigation.Item
             label="Object Storage"
+            id="object-storage"
             badgeText="beta"
             badgeSentiment="warning"
             active={active === 'Object Storage'}
             onClick={() => setActive('Object Storage')}
           />
         </Navigation.Item>
-        <Navigation.Item label="Network" categoryIcon="network">
+        <Navigation.Item label="Network" id="network" categoryIcon="network">
           <Navigation.Item
             label="Load Balancer"
+            id="load-balancer"
             active={active === 'Load Balancer'}
             onClick={() => setActive('Load Balancer')}
           />
           <Navigation.Item
             label="IP"
+            id="ip"
             active={active === 'IP'}
             onClick={() => setActive('IP')}
           />
           <Navigation.Item
             label="VPC"
+            id="vpc"
             active={active === 'VPC'}
             onClick={() => setActive('VPC')}
           />
         </Navigation.Item>
-        <Navigation.Item label="Database" categoryIcon="database">
+        <Navigation.Item id="database" label="Database" categoryIcon="database">
           <Navigation.Item
             label="Managed Database"
+            id="managed-database"
             active={active === 'Managed Database'}
             onClick={() => setActive('Managed Database')}
           />
           <Navigation.Item
             label="Redis"
+            id="redis"
             active={active === 'Redis'}
             onClick={() => setActive('Redis')}
           />
           <Navigation.Item
             label="Elasticsearch"
+            id="elasticsearch"
             active={active === 'Elasticsearch'}
             onClick={() => setActive('Elasticsearch')}
           />
         </Navigation.Item>
-        <Navigation.Item label="Monitoring" categoryIcon="observability">
+        <Navigation.Item
+          label="Monitoring"
+          id="monitoring"
+          categoryIcon="observability"
+        >
           <Navigation.Item
             label="Logs"
+            id="logs"
             active={active === 'Logs'}
             onClick={() => setActive('Logs')}
           />
           <Navigation.Item
             label="Metrics"
+            id="metrics"
             active={active === 'Metrics'}
             onClick={() => setActive('Metrics')}
           />
           <Navigation.Item
             label="Alerts"
+            id="alerts"
             active={active === 'Alerts'}
             onClick={() => setActive('Alerts')}
           />
         </Navigation.Item>
-        <Navigation.Item label="Security" categoryIcon="security">
+        <Navigation.Item label="Security" id="security" categoryIcon="security">
           <Navigation.Item
             label="Firewall"
+            id="firewall"
             active={active === 'Firewall'}
             onClick={() => setActive('Firewall')}
           />
           <Navigation.Item
             label="Certificate"
+            id="certificate"
             active={active === 'Certificate'}
             onClick={() => setActive('Certificate')}
           />
           <Navigation.Item
             label="VPN"
+            id="vpn"
             active={active === 'VPN'}
             onClick={() => setActive('VPN')}
           />
         </Navigation.Item>
       </Navigation.Group>
       <Navigation.Separator />
-      <Navigation.Item label="Quick Links" noExpand>
+      <Navigation.Item label="Quick Links" id="quick-links" noExpand>
         <Navigation.Item
           label="Support"
+          id="support"
           noPinButton
           active={active === 'Support'}
           onClick={() => setActive('Support')}
         />
         <Navigation.Item
           label="Abuse"
+          id="abuse"
           noPinButton
           active={active === 'Abuse'}
           onClick={() => setActive('Abuse')}
         />
         <Navigation.Item
           label="Documentation"
+          id="documentation"
           badgeText="new"
           badgeSentiment="success"
           href="http://scaleway.com"
@@ -253,6 +290,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
         />
         <Navigation.Item
           label="Feature Request"
+          id="feature-request"
           href="http://scaleway.com"
           active={active === 'Feature Request'}
           onClick={() => setActive('Feature Request')}

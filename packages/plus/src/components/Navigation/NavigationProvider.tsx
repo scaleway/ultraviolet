@@ -1,14 +1,23 @@
-import type { ReactNode, RefObject } from 'react'
+import type { Dispatch, ReactNode, Reducer, RefObject } from 'react'
 import {
   createContext,
   useCallback,
   useContext,
   useMemo,
+  useReducer,
   useRef,
   useState,
 } from 'react'
 import { ANIMATION_DURATION, NAVIGATION_WIDTH } from './constants'
 import NavigationLocales from './locales/en'
+
+type Item = {
+  label: string
+  active?: boolean
+  onClick?: (toggle?: true | false) => void
+}
+
+type Items = Record<string, Item>
 
 type ContextProps = {
   expanded: boolean
@@ -38,6 +47,8 @@ type ContextProps = {
      */
     endIndex: number,
   ) => void
+  items: Items
+  registerItem: Dispatch<Items>
 }
 
 export const NavigationContext = createContext<ContextProps>({
@@ -57,6 +68,8 @@ export const NavigationContext = createContext<ContextProps>({
   width: NAVIGATION_WIDTH,
   setWidth: () => {},
   reorderItems: () => {},
+  items: {},
+  registerItem: () => {},
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -121,7 +134,19 @@ export const NavigationProvider = ({
     false,
   )
   const [width, setWidth] = useState<number>(initialWidth)
+
+  // This is used to store the items that are registered in the navigation
+  // This way we can retrieve items with their active state in pinned feature
+  const [items, registerItem] = useReducer<Reducer<Items, Items>>(
+    (oldState: Items, newState: Items) => ({
+      ...oldState,
+      ...newState,
+    }),
+    {},
+  )
   const navigationRef = useRef<HTMLDivElement>(null)
+
+  // console.log('items', items)
 
   // This function will be triggered when expand/collapse button is clicked
   const toggleExpand = useCallback(
@@ -193,6 +218,8 @@ export const NavigationProvider = ({
       width,
       setWidth,
       reorderItems,
+      registerItem,
+      items,
     }),
     [
       expanded,
@@ -205,10 +232,8 @@ export const NavigationProvider = ({
       pinLimit,
       animation,
       width,
-      setWidth,
-      navigationRef,
-      setAnimation,
       reorderItems,
+      items,
     ],
   )
 
