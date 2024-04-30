@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
+import { useEffect, useRef } from 'react'
 import { TextInputV2 } from '../TextInputV2'
 import { useSelectInput } from './SelectInputProvider'
 import type { DataType } from './types'
@@ -59,6 +60,7 @@ export const SearchBarDropdown = ({
   displayedOptions,
   setSearchBarActive,
 }: SearchBarProps) => {
+  const searchInputRef = useRef<HTMLInputElement>(null)
   const {
     onChange,
     onSearch,
@@ -130,6 +132,14 @@ export const SearchBarDropdown = ({
     }
   }
 
+  useEffect(() => {
+    // TODO: Remove me and use autoFocus when popup is fixed
+    // Explanation : Actually the component render at -999px -999px then it will be placed according to child position and it broke the autoFocus (scroll -999px to top)
+    setTimeout(() => {
+      searchInputRef.current?.focus()
+    }, 50)
+  }, [])
+
   return (
     <StyledInput
       value={searchInput}
@@ -140,9 +150,9 @@ export const SearchBarDropdown = ({
       data-testid="search-bar"
       prefix={<Icon name="search" size="small" sentiment="neutral" />}
       onKeyDown={event => handleKeyDown(event.key, searchInput)}
-      autoFocus
       size="medium"
       aria-label="search-bar"
+      ref={searchInputRef}
     />
   )
 }
