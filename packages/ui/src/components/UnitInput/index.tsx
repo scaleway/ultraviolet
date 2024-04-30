@@ -1,70 +1,31 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ComponentProps, ReactNode } from 'react'
-import { useEffect, useMemo, useState } from 'react'
-import { Notice } from '../Notice'
+import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
+import { useMemo, useState } from 'react'
 import { SelectInputV2 } from '../SelectInputV2'
+import { StyledInputWrapper } from '../SelectInputV2/SelectBar'
 import type { OptionType } from '../SelectInputV2/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
-export const INPUT_SIZE_HEIGHT: Record<string, number> = {
+const INPUT_SIZE_HEIGHT: Record<string, number> = {
   large: 48,
   medium: 40,
   small: 32,
 }
 
-const StyledInput = styled.input`
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  padding-left: ${({ theme }) => theme.space['2']};
-  background: transparent;
-  color: ${({ theme }) => theme.colors.neutral.text};
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
-  }
-`
-const StyledInputWrapper = styled.div<{ 'data-hovered': boolean }>`
+const StyledNumberInputWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
   padding-right: ${({ theme }) => theme.space['2']};
   border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
   width: 100%;
-
-  &[data-hovered='true'] {
-    border-right: 1px solid ${({ theme }) => theme.colors.primary.border};
-  }
-
   height: 100%;
-`
-
-const CustomSelectInput = styled(SelectInputV2)<{
-  width?: number
-}>`
-  ${({ width }) => width && `width: ${width}px;`}
-  &:active {
-    outline: none;
-    box-shadow: none;
-  }
-  &:hover {
-    & > ${StyledInputWrapper} {
-      background: red;
-      border-right-color: ${({ theme }) => theme.colors.primary.border};
-    }
-  }
 `
 
 const UnitInputWrapper = styled(Stack)<{
   'data-size': 'small' | 'medium' | 'large'
-  'data-focus': boolean
   'data-success': boolean
   'data-error': boolean
   'data-disabled': boolean
@@ -73,11 +34,18 @@ const UnitInputWrapper = styled(Stack)<{
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
 
-  &:hover,
-  &:focus {
+  &:not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):not([data-readonly='true']):hover,
+  :not([data-disabled='true']):not([data-error='true']):not(
+      [data-success='true']
+    ):focus {
     text-decoration: none;
     border-color: ${({ theme }) => theme.colors.primary.border};
     box-shadow: none;
+    & > ${StyledNumberInputWrapper} {
+      border-right-color: ${({ theme }) => theme.colors.primary.border};
+    }
   }
 
   &[data-readonly='true'] {
@@ -100,74 +68,129 @@ const UnitInputWrapper = styled(Stack)<{
   &[data-size='large'] {
     height: ${INPUT_SIZE_HEIGHT['large']}px;
   }
-  &[data-focus='true'] {
+  &:not([data-disabled='true']):focus,
+  :not([data-disabled='true']):active {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    & > ${StyledInputWrapper} {
+    & > ${StyledNumberInputWrapper} {
       border-right-color: ${({ theme }) => theme.colors.primary.border};
     }
   }
   &[data-success='true'] {
     border: 1px solid ${({ theme }) => theme.colors.success.border};
-    & > ${StyledInputWrapper} {
+    & > ${StyledNumberInputWrapper} {
       border-right-color: ${({ theme }) => theme.colors.success.border};
     }
   }
   &[data-error='true'] {
     border: 1px solid ${({ theme }) => theme.colors.danger.border};
-    & > ${StyledInputWrapper} {
+    & > ${StyledNumberInputWrapper} {
       border-right-color: ${({ theme }) => theme.colors.danger.border};
     }
-    & > ${StyledInputWrapper}:hover {
+    & > ${StyledNumberInputWrapper}:hover {
       border-right-color: ${({ theme }) => theme.colors.danger.border};
     }
   }
   &[data-error='true'] {
     border: 1px solid ${({ theme }) => theme.colors.danger.border};
-    & > ${StyledInputWrapper} {
+    & > ${StyledNumberInputWrapper} {
       border-right-color: ${({ theme }) => theme.colors.danger.border};
     }
   }
 `
 
+const CustomSelectInput = styled(SelectInputV2)<{
+  width?: number
+  'data-disabled': boolean
+}>`
+  ${StyledInputWrapper} {
+    border: none;
+    background: transparent;
+  }
+  ${({ width }) => width && `width: ${width}px;`}
+
+  &not([data-disabled="true"]):focus, 
+  :active {
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+    & > ${StyledNumberInputWrapper} {
+      border-right-color: ${({ theme }) => theme.colors.primary.border};
+    }
+  }
+
+  &:focus,
+  :active {
+    & > ${UnitInputWrapper} {
+      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+      border-color: ${({ theme }) => theme.colors.primary.borderHover};
+    }
+  }
+`
+const StyledInput = styled.input`
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding-left: ${({ theme }) => theme.space['2']};
+  background: transparent;
+  color: ${({ theme }) => theme.colors.neutral.text};
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
+  }
+
+  &:focus,
+  :active {
+    & > ${UnitInputWrapper} {
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
+  }
+`
 type UnitInputValue = { inputValue: number; unit: string }
 
 type UnitInputProps = {
-  id?: string
   className?: string
-  name: string
-  disabled?: boolean
-  maxValue?: number
-  minValue?: number
+  max?: number
+  min?: number
   value?: UnitInputValue['inputValue']
   unitValue?: UnitInputValue['unit']
-  onChange: (value: UnitInputValue['inputValue']) => void
-  onChangeUnitValue: (values: string[]) => void
+  onChange?: (value: UnitInputValue['inputValue']) => void
+  onChangeUnitValue?: (values: string[]) => void
   options: OptionType[]
-  placeholder?: string
   selectInputWidth?: number
   size?: 'small' | 'medium' | 'large'
   'data-testid'?: string
-  notice?: string
-  required?: boolean
   helper?: string
   unitError?: string
   width?: ComponentProps<typeof Stack>['width']
   placeholderUnit?: string
-  autoFocus?: boolean
-  error?: boolean
-  success?: boolean
+  error?: boolean | string
+  success?: boolean | string
   label?: string
   labelInformation?: ReactNode
   step?: number | string
-  readOnly?: boolean
-}
+} & Pick<
+  InputHTMLAttributes<HTMLInputElement>,
+  | 'onFocus'
+  | 'onBlur'
+  | 'name'
+  | 'id'
+  | 'placeholder'
+  | 'disabled'
+  | 'readOnly'
+  | 'required'
+  | 'autoFocus'
+  | 'onKeyDown'
+>
 
 export const UnitInput = ({
   id,
   name = '',
-  maxValue = 99999,
-  minValue = 1,
+  max = 99999,
+  min = 1,
   autoFocus = false,
   size = 'large',
   placeholder = '0',
@@ -183,7 +206,6 @@ export const UnitInput = ({
   label,
   step = 1,
   error,
-  notice,
   required,
   helper,
   unitError,
@@ -192,9 +214,10 @@ export const UnitInput = ({
   width,
   labelInformation,
   readOnly,
+  onFocus,
+  onBlur,
+  onKeyDown,
 }: UnitInputProps) => {
-  const [hasFocus, setHasFocus] = useState(false)
-  const [hovered, setHovered] = useState(false)
   const [val, setVal] = useState(value)
   const sentiment = useMemo(() => {
     if (error) {
@@ -206,16 +229,6 @@ export const UnitInput = ({
 
     return 'neutral'
   }, [error, success])
-
-  useEffect(() => {
-    const selectBar = document.getElementById('select-bar')
-
-    if (selectBar) {
-      selectBar.style.backgroundColor = 'transparent'
-      selectBar.style.border = 'none'
-      selectBar.style.borderRadius = '0px'
-    }
-  }, [])
 
   return (
     <Stack gap={0.5}>
@@ -240,19 +253,17 @@ export const UnitInput = ({
         direction="row"
         data-testid={dataTestId}
         data-size={size}
-        data-focus={hasFocus}
         width={width}
         id={id}
         data-success={!!success}
         data-error={!!error}
-        onMouseEnter={() =>
-          !disabled && !readOnly ? setHovered(true) : undefined
-        }
-        onMouseLeave={() => setHovered(false)}
         data-disabled={!!disabled}
         data-readonly={!!readOnly}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        onKeyDown={onKeyDown}
       >
-        <StyledInputWrapper id="input-field" data-hovered={hovered}>
+        <StyledNumberInputWrapper id="input-field">
           <StyledInput
             type="number"
             aria-invalid={!!error}
@@ -260,47 +271,44 @@ export const UnitInput = ({
             disabled={disabled}
             data-readOnly={readOnly}
             name={`${name}-value`}
+            id={id ? `${id}-value` : undefined}
             value={val}
             onChange={event => {
               const numericValue = Number.parseInt(event.target.value, 10)
-              if (numericValue > maxValue) {
-                setVal(maxValue)
-                onChange?.(maxValue)
-              } else if (numericValue < minValue) {
-                setVal(minValue)
-                onChange?.(minValue)
+              if (numericValue > max) {
+                setVal(max)
+                onChange?.(max)
+              } else if (numericValue < min) {
+                setVal(min)
+                onChange?.(min)
               } else {
                 setVal(numericValue)
                 onChange?.(numericValue)
               }
             }}
             placeholder={placeholder}
-            max={maxValue}
+            max={max}
             readOnly={readOnly}
-            min={minValue}
+            min={min}
             step={step}
             data-success={success}
             data-error={error}
             data-testid="unit-input"
             required={required}
             className={className}
-            onFocus={() =>
-              !disabled && !readOnly ? setHasFocus(true) : undefined
-            }
           />
           {error ? <Icon name="alert" sentiment="danger" /> : null}
           {success && !error ? (
             <Icon name="checkbox-circle-outline" sentiment="success" />
           ) : null}
-        </StyledInputWrapper>
+        </StyledNumberInputWrapper>
         <CustomSelectInput
           width={selectInputWidth}
-          id={`${name}-unit`}
+          data-disabled={disabled}
+          id={id ? `${id}-unit` : undefined}
           name={`${name}-unit`}
           onChange={newValue => {
-            onChangeUnitValue(newValue)
-            setHasFocus(false)
-            setHovered(false)
+            onChangeUnitValue?.(newValue)
           }}
           error={unitError}
           value={unitValue}
@@ -311,19 +319,22 @@ export const UnitInput = ({
           disabled={disabled || options.length === 1}
           size={size}
           multiselect={false}
-          onFocus={() =>
-            !disabled && !readOnly ? setHasFocus(true) : undefined
-          }
           readOnly={readOnly}
-          onBlur={() => setHasFocus(false)}
         />
       </UnitInputWrapper>
-      {helper ? (
-        <Text as="p" variant="caption" sentiment={sentiment}>
-          {helper}
+      {error || typeof success === 'string' || typeof helper === 'string' ? (
+        <Text
+          as="p"
+          variant="caption"
+          sentiment={sentiment}
+          disabled={disabled}
+        >
+          {error || success || helper}
         </Text>
       ) : null}
-      {notice ? <Notice>{notice}</Notice> : null}
+      {!error && !success && typeof helper !== 'string' && helper
+        ? helper
+        : null}
     </Stack>
   )
 }

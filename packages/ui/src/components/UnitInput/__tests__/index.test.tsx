@@ -36,7 +36,6 @@ describe('UnitInput', () => {
       <UnitInput
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        name="test"
         options={[
           {
             label: 'KB',
@@ -51,8 +50,8 @@ describe('UnitInput', () => {
             value: 'gb',
           },
         ]}
-        minValue={10}
-        maxValue={100}
+        min={10}
+        max={100}
       />,
     ))
   test(`renders with size small`, () =>
@@ -229,46 +228,36 @@ describe('UnitInput', () => {
           },
         ]}
         placeholder="100"
-        error
+        error="error"
         helper="test"
       />,
     ))
-  test('renders correctly on hover', async () => {
-    renderWithTheme(
-      <div>
-        <UnitInput
-          onChange={() => {}}
-          onChangeUnitValue={() => {}}
-          name="test"
-          options={[
-            {
-              label: 'KB',
-              value: 'kb',
-            },
-            {
-              label: 'MB',
-              value: 'mb',
-            },
-            {
-              label: 'GB',
-              value: 'gb',
-            },
-          ]}
-          placeholder="100"
-          error
-          helper="test"
-          id="test"
-        />
-        <button data-testid="test" type="button">
-          button
-        </button>
-      </div>,
-    )
-    await userEvent.hover(screen.getByText('test'))
-    await userEvent.click(screen.getByTestId('select-bar'))
-    await userEvent.click(screen.getByTestId('test'))
-    await userEvent.hover(screen.getByTestId('test'))
-  })
+  test(`renders with error  and success`, () =>
+    shouldMatchEmotionSnapshot(
+      <UnitInput
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        name="test"
+        options={[
+          {
+            label: 'KB',
+            value: 'kb',
+          },
+          {
+            label: 'MB',
+            value: 'mb',
+          },
+          {
+            label: 'GB',
+            value: 'gb',
+          },
+        ]}
+        placeholder="100"
+        error
+        helper="helper"
+        success="success"
+      />,
+    ))
 
   test('handles writing in input', async () => {
     renderWithTheme(
@@ -277,8 +266,8 @@ describe('UnitInput', () => {
           onChange={() => {}}
           onChangeUnitValue={() => {}}
           name="test"
-          maxValue={30}
-          minValue={2}
+          max={30}
+          min={2}
           options={[
             {
               label: 'KB',
@@ -321,8 +310,8 @@ describe('UnitInput', () => {
           onChange={() => {}}
           onChangeUnitValue={() => {}}
           name="test"
-          maxValue={30}
-          minValue={2}
+          max={30}
+          min={2}
           options={[
             {
               label: 'KB',
@@ -350,4 +339,81 @@ describe('UnitInput', () => {
     await userEvent.click(screen.getByTestId('select-bar'))
     await userEvent.click(screen.getByTestId('option-mb'))
   })
+
+  test(`renders with label and no label information`, () =>
+    shouldMatchEmotionSnapshot(
+      <UnitInput
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        name="test"
+        options={[
+          {
+            label: 'KB',
+            value: 'kb',
+          },
+          {
+            label: 'MB',
+            value: 'mb',
+          },
+          {
+            label: 'GB',
+            value: 'gb',
+          },
+        ]}
+        placeholder="100"
+        disabled
+        label="label"
+      />,
+    ))
+  test(`renders with label and label information`, () =>
+    shouldMatchEmotionSnapshot(
+      <UnitInput
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        name="test"
+        options={[
+          {
+            label: 'KB',
+            value: 'kb',
+          },
+          {
+            label: 'MB',
+            value: 'mb',
+          },
+          {
+            label: 'GB',
+            value: 'gb',
+          },
+        ]}
+        placeholder="100"
+        disabled
+        label="label"
+        labelInformation="label information"
+      />,
+    ))
+  test(`renders with no label and label information`, () =>
+    shouldMatchEmotionSnapshot(
+      <UnitInput
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        name="test"
+        options={[
+          {
+            label: 'KB',
+            value: 'kb',
+          },
+          {
+            label: 'MB',
+            value: 'mb',
+          },
+          {
+            label: 'GB',
+            value: 'gb',
+          },
+        ]}
+        placeholder="100"
+        disabled
+        labelInformation="label information"
+      />,
+    ))
 })
