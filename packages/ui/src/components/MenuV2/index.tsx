@@ -90,7 +90,6 @@ type ChildMenuProps = {
 type MenuProps = {
   id?: string
   ariaLabel?: string
-  placement?: ComponentProps<typeof Popup>['placement']
   children?: ReactNode | (({ toggle }: ChildMenuProps) => ReactNode)
   className?: string
   disclosure: DisclosureElement
@@ -113,7 +112,7 @@ type MenuProps = {
    * If set to `hover`, the menu will open when the user hovers over the disclosure.
    */
   triggerMethod?: 'click' | 'hover'
-}
+} & Pick<ComponentProps<typeof Popup>, 'placement' | 'dynamicDomRendering'>
 
 const FwdMenu = forwardRef(
   (
@@ -132,6 +131,7 @@ const FwdMenu = forwardRef(
       portalTarget,
       size = 'small',
       triggerMethod = 'click',
+      dynamicDomRendering,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -187,6 +187,7 @@ const FwdMenu = forwardRef(
           </MenuList>
         }
         portalTarget={portalTarget}
+        dynamicDomRendering={dynamicDomRendering}
       >
         {finalDisclosure}
       </StyledPopup>

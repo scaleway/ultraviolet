@@ -816,7 +816,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -829,6 +829,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -841,7 +842,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -855,6 +856,10 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -907,7 +912,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -919,67 +924,69 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -1331,10 +1338,11 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r11:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -1344,7 +1352,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -2197,7 +2205,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2210,6 +2218,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -2222,7 +2231,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2236,6 +2245,10 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -2446,10 +2459,11 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r1f0:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -2741,7 +2755,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2754,6 +2768,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -2766,7 +2781,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2780,6 +2795,10 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -3013,10 +3032,11 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r1f3:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -3475,7 +3495,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -3488,6 +3508,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -3500,7 +3521,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -3514,6 +3535,10 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -3566,7 +3591,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3578,67 +3603,69 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -4317,10 +4344,11 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r32:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -4330,7 +4358,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -6294,7 +6322,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -6307,6 +6335,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -6319,7 +6348,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -6333,6 +6362,10 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -6385,7 +6418,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6397,67 +6430,69 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -6751,10 +6786,11 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r7m:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -6764,7 +6800,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -7975,7 +8011,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -7988,6 +8024,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -8000,7 +8037,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -8014,6 +8051,10 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -8066,7 +8107,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8078,67 +8119,69 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -8432,10 +8475,11 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":rf:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -8445,7 +8489,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -8981,7 +9025,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -8994,6 +9038,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -9006,7 +9051,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -9020,6 +9065,10 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -9072,7 +9121,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9084,67 +9133,69 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -9501,10 +9552,11 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r1m:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -9514,7 +9566,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -10066,7 +10118,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -10079,6 +10131,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -10091,7 +10144,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -10105,6 +10158,10 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -10157,7 +10214,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10169,67 +10226,69 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -10361,10 +10420,11 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r7e:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -10374,7 +10434,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -10654,7 +10714,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -10667,6 +10727,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -10679,7 +10740,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -10693,6 +10754,10 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -10745,7 +10810,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10757,67 +10822,69 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -11122,10 +11189,11 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r8b:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -11135,7 +11203,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -11673,7 +11741,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -11686,6 +11754,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -11698,7 +11767,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -11712,6 +11781,10 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -11764,7 +11837,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11776,67 +11849,69 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -12199,10 +12274,11 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r2c:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -12212,7 +12288,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -12769,7 +12845,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -12782,6 +12858,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -12794,7 +12871,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -12808,6 +12885,10 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -12860,7 +12941,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12872,67 +12953,69 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -13308,10 +13391,11 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r5r:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -13321,7 +13405,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -13887,7 +13971,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -13900,6 +13984,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -13912,7 +13997,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -13926,6 +14011,10 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -13978,7 +14067,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13990,67 +14079,69 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -14409,10 +14500,11 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r6j:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -14422,7 +14514,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -15004,7 +15096,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -15017,6 +15109,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -15029,7 +15122,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -15043,6 +15136,10 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -15095,7 +15192,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15107,67 +15204,69 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -15526,10 +15625,11 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r4b:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -15539,7 +15639,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -16121,7 +16221,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -16134,6 +16234,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -16146,7 +16247,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -16160,6 +16261,10 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -16212,7 +16317,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16224,67 +16329,69 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -16643,10 +16750,11 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r53:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -16656,7 +16764,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"
@@ -17238,7 +17346,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -17251,6 +17359,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -17263,7 +17372,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -17277,6 +17386,10 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -17555,10 +17668,11 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r9f:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -18027,7 +18141,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   fill: none;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup {
+.cache-uchord-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -18040,6 +18154,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -18052,7 +18167,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   padding: 0;
 }
 
-.cache-172mt1n-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uchord-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -18066,6 +18181,10 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   border-style: solid;
   border-color: #151a2d transparent transparent transparent;
   pointer-events: none;
+}
+
+.cache-uchord-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
 }
 
 .cache-1guc91g-Stack {
@@ -18118,7 +18237,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   padding-right: 16px;
 }
 
-.cache-6ea5zk-StyledInputWrapper {
+.cache-1pejv6f-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18130,67 +18249,69 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1 {
   color: #3f4250;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-success='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-error='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-readonly='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true'] {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.cache-1pejv6f-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
   color: #b5b7bd;
 }
 
-.cache-6ea5zk-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1pejv6f-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
@@ -18495,10 +18616,11 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
         </div>
       </div>
       <div
-        class="eeucz6c8 cache-172mt1n-StyledPopup-StyledPopup e4h1g861"
+        class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
         id=":r8t:"
         role="dialog"
+        style="opacity: 1;"
       >
         <div
           class="cache-1guc91g-Stack ehpbis70"
@@ -18508,7 +18630,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
           >
             <div>
               <div
-                class="cache-6ea5zk-StyledInputWrapper e7tir8v0"
+                class="cache-1pejv6f-StyledInputWrapper e7tir8v0"
                 data-disabled="false"
                 data-error="false"
                 data-readonly="false"

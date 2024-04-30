@@ -65,6 +65,7 @@ const StyledPopup = styled('div', {
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   transform: ${({ positions }) => positions.popupPosition};
   animation: ${({
@@ -96,6 +97,10 @@ const StyledPopup = styled('div', {
         transparent transparent transparent;
       pointer-events: none;
     }
+  }
+
+  &[data-visible-in-dom='false'] {
+    display: none;
   }
 `
 
@@ -167,6 +172,12 @@ type PopupProps = {
    * behavior by setting a portalTarget prop.
    */
   portalTarget?: HTMLElement
+  /**
+   * If you set this to true, the popup will be rendered in the DOM only when it is visible.
+   * When set to false, the popup will always be rendered in the DOM. By default this value is set to `true`, if for some
+   * reason you need to disable it, you can set it to `false`.
+   */
+  dynamicDomRendering?: boolean
 }
 
 /**
@@ -196,6 +207,7 @@ export const Popup = forwardRef(
       debounceDelay = DEFAULT_DEBOUNCE_DURATION,
       disableAnimation = false,
       portalTarget,
+      dynamicDomRendering = true,
     }: PopupProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -374,6 +386,17 @@ export const Popup = forwardRef(
       popupPortalTarget,
     ])
 
+    // This will be triggered when positions are computed and popup is visible in the dom.
+    useEffect(
+      () => {
+        if (visibleInDom && innerPopupRef.current) {
+          innerPopupRef.current.style.opacity = '1'
+        }
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [positions],
+    )
+
     /**
      * If popup has `visible` prop it means the popup is manually controlled through this prop.
      * In this cas we don't want to display popup on hover, but only when `visible` is true.
@@ -515,6 +538,18 @@ export const Popup = forwardRef(
       tabIndex,
     ])
 
+    const shouldRender = useMemo(() => {
+      if (!dynamicDomRendering) {
+        return true
+      }
+
+      if (dynamicDomRendering && visibleInDom) {
+        return true
+      }
+
+      return false
+    }, [dynamicDomRendering, visibleInDom])
+
     if (!text) {
       if (typeof children === 'function') return null
 
@@ -531,7 +566,7 @@ export const Popup = forwardRef(
     return (
       <>
         {renderChildren()}
-        {visibleInDom
+        {shouldRender
           ? createPortal(
               <StyledPopup
                 ref={innerPopupRef}
@@ -550,6 +585,9 @@ export const Popup = forwardRef(
                 animationDuration={animationDuration}
                 onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
                 isDialog={role === 'dialog'}
+                data-visible-in-dom={
+                  !dynamicDomRendering ? visibleInDom : undefined
+                }
               >
                 {text}
               </StyledPopup>,

@@ -359,7 +359,7 @@ exports[`Menu placement renders bottom 1`] = `
   width: 100%;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup {
+.cache-1lek2c5-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -374,6 +374,7 @@ exports[`Menu placement renders bottom 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -387,7 +388,7 @@ exports[`Menu placement renders bottom 1`] = `
   padding: 2px 0;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -403,7 +404,11 @@ exports[`Menu placement renders bottom 1`] = `
   pointer-events: none;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -525,10 +530,11 @@ exports[`Menu placement renders bottom 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1lek2c5-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:rr:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -561,7 +567,7 @@ exports[`Menu placement renders left 1`] = `
   width: 100%;
 }
 
-.cache-gykwiv-StyledPopup-StyledPopup {
+.cache-1uyv7dc-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -576,6 +582,7 @@ exports[`Menu placement renders left 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(-16px, 0px, 0);
   -moz-transform: translate3d(-16px, 0px, 0);
@@ -589,7 +596,7 @@ exports[`Menu placement renders left 1`] = `
   padding: 2px 0;
 }
 
-.cache-gykwiv-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1uyv7dc-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: 0px;
@@ -605,7 +612,11 @@ exports[`Menu placement renders left 1`] = `
   pointer-events: none;
 }
 
-.cache-gykwiv-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1uyv7dc-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1uyv7dc-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -727,10 +738,11 @@ exports[`Menu placement renders left 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-gykwiv-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1uyv7dc-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:ru:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -763,7 +775,7 @@ exports[`Menu placement renders right 1`] = `
   width: 100%;
 }
 
-.cache-1lcdhjg-StyledPopup-StyledPopup {
+.cache-uejx8v-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -778,6 +790,7 @@ exports[`Menu placement renders right 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(16px, 0px, 0);
   -moz-transform: translate3d(16px, 0px, 0);
@@ -791,7 +804,7 @@ exports[`Menu placement renders right 1`] = `
   padding: 2px 0;
 }
 
-.cache-1lcdhjg-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uejx8v-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: 0px;
@@ -807,7 +820,11 @@ exports[`Menu placement renders right 1`] = `
   pointer-events: none;
 }
 
-.cache-1lcdhjg-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-uejx8v-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-uejx8v-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -929,10 +946,11 @@ exports[`Menu placement renders right 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-1lcdhjg-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-uejx8v-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r11:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -965,7 +983,7 @@ exports[`Menu placement renders top 1`] = `
   width: 100%;
 }
 
-.cache-16b6nvk-StyledPopup-StyledPopup {
+.cache-1kb01mu-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -980,6 +998,7 @@ exports[`Menu placement renders top 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, -12px, 0);
   -moz-transform: translate3d(0px, -12px, 0);
@@ -993,7 +1012,7 @@ exports[`Menu placement renders top 1`] = `
   padding: 2px 0;
 }
 
-.cache-16b6nvk-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1kb01mu-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -1009,7 +1028,11 @@ exports[`Menu placement renders top 1`] = `
   pointer-events: none;
 }
 
-.cache-16b6nvk-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1kb01mu-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1kb01mu-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1131,10 +1154,11 @@ exports[`Menu placement renders top 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-16b6nvk-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1kb01mu-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:ro:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -1167,7 +1191,7 @@ exports[`Menu renders with Menu.Group 1`] = `
   width: 100%;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup {
+.cache-1lek2c5-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1182,6 +1206,7 @@ exports[`Menu renders with Menu.Group 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -1195,7 +1220,7 @@ exports[`Menu renders with Menu.Group 1`] = `
   padding: 2px 0;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -1211,7 +1236,11 @@ exports[`Menu renders with Menu.Group 1`] = `
   pointer-events: none;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1350,10 +1379,11 @@ exports[`Menu renders with Menu.Group 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1lek2c5-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r7:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -1395,7 +1425,7 @@ exports[`Menu renders with Menu.Item 1`] = `
   width: 100%;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup {
+.cache-1lek2c5-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1410,6 +1440,7 @@ exports[`Menu renders with Menu.Item 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -1423,7 +1454,7 @@ exports[`Menu renders with Menu.Item 1`] = `
   padding: 2px 0;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -1439,7 +1470,11 @@ exports[`Menu renders with Menu.Item 1`] = `
   pointer-events: none;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1561,10 +1596,11 @@ exports[`Menu renders with Menu.Item 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1lek2c5-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r4:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -1597,7 +1633,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   width: 100%;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup {
+.cache-1lek2c5-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1612,6 +1648,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -1625,7 +1662,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   padding: 2px 0;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -1641,7 +1678,11 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   pointer-events: none;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1751,10 +1792,11 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1lek2c5-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:re:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -1800,7 +1842,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   width: 100%;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup {
+.cache-1lek2c5-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1815,6 +1857,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -1828,7 +1871,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   padding: 2px 0;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -1844,7 +1887,11 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   pointer-events: none;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1972,10 +2019,11 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1lek2c5-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:rb:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -2062,7 +2110,7 @@ exports[`Menu sizes renders large 1`] = `
   width: 100%;
 }
 
-.cache-sl3qfk-StyledPopup-StyledPopup {
+.cache-1nre05p-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2077,6 +2125,7 @@ exports[`Menu sizes renders large 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -2090,7 +2139,7 @@ exports[`Menu sizes renders large 1`] = `
   padding: 2px 0;
 }
 
-.cache-sl3qfk-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1nre05p-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2106,7 +2155,11 @@ exports[`Menu sizes renders large 1`] = `
   pointer-events: none;
 }
 
-.cache-sl3qfk-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1nre05p-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1nre05p-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2228,10 +2281,11 @@ exports[`Menu sizes renders large 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-sl3qfk-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1nre05p-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r1a:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -2264,7 +2318,7 @@ exports[`Menu sizes renders medium 1`] = `
   width: 100%;
 }
 
-.cache-bzwqpr-StyledPopup-StyledPopup {
+.cache-idb0o4-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2279,6 +2333,7 @@ exports[`Menu sizes renders medium 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -2292,7 +2347,7 @@ exports[`Menu sizes renders medium 1`] = `
   padding: 2px 0;
 }
 
-.cache-bzwqpr-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-idb0o4-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2308,7 +2363,11 @@ exports[`Menu sizes renders medium 1`] = `
   pointer-events: none;
 }
 
-.cache-bzwqpr-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-idb0o4-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-idb0o4-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2430,10 +2489,11 @@ exports[`Menu sizes renders medium 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-bzwqpr-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-idb0o4-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r17:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
@@ -2466,7 +2526,7 @@ exports[`Menu sizes renders small 1`] = `
   width: 100%;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup {
+.cache-1lek2c5-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2481,6 +2541,7 @@ exports[`Menu sizes renders small 1`] = `
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
+  opacity: 0;
   z-index: 1;
   -webkit-transform: translate3d(0px, 12px, 0);
   -moz-transform: translate3d(0px, 12px, 0);
@@ -2494,7 +2555,7 @@ exports[`Menu sizes renders small 1`] = `
   padding: 2px 0;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -13px;
@@ -2510,7 +2571,11 @@ exports[`Menu sizes renders small 1`] = `
   pointer-events: none;
 }
 
-.cache-nu0ev-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1lek2c5-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+  display: none;
+}
+
+.cache-1lek2c5-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2632,10 +2697,11 @@ exports[`Menu sizes renders small 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-nu0ev-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1lek2c5-StyledPopup-StyledPopup e4h1g861"
       data-has-arrow="false"
       id="menu-:r14:"
       role="dialog"
+      style="opacity: 1;"
     >
       <div
         class="cache-dfp9ph-Stack-MenuList e1jn11gg0"
