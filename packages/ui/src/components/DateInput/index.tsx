@@ -5,11 +5,11 @@ import type { FocusEvent, ReactNode } from 'react'
 import { useId } from 'react'
 import type { ReactDatePickerProps } from 'react-datepicker'
 import DatePicker, { registerLocale } from 'react-datepicker'
-import style from 'react-datepicker/dist/react-datepicker.min.css'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { TextInputV2 } from '../TextInputV2'
+import style from './datepicker.css?inline'
 
 const PREFIX = '.react-datepicker'
 
@@ -25,6 +25,7 @@ const StyledWrapper = styled.div`
   div${PREFIX}__triangle {
     display: none;
   }
+
   div${PREFIX}__month-container {
     padding: 16px;
   }

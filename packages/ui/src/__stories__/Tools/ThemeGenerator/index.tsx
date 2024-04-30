@@ -100,7 +100,6 @@ export const ThemeGenerator = () => {
       },
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     const tempGeneratedPalette = generatePalette(overloadedTokens, {
       inputTheme: 'productLight',
       palette: 'paletteLight',

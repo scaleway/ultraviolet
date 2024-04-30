@@ -11,10 +11,10 @@ import type {
   ToastOptions,
   TypeOptions,
 } from 'react-toastify'
-import style from 'react-toastify/dist/ReactToastify.min.css'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import style from './react-toastify.css?inline'
 
 const PREFIX = '.Toastify'
 

@@ -8,11 +8,11 @@ import {
   Slide,
   toast as baseToast,
 } from 'react-toastify'
-import style from 'react-toastify/dist/ReactToastify.min.css'
 import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import style from './react-toastify.css?inline'
 
 const PREFIX = '.Toastify'
 const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms

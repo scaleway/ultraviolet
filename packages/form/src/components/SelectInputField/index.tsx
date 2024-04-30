@@ -15,6 +15,8 @@ import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
 // Here we duplicate SelectInput types as they are using interfaces which are not portable
+export type SelectInputType = typeof SelectInput
+
 type SelectOption = {
   value: string
   label: ReactNode

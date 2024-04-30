@@ -222,7 +222,7 @@ const Colors = () => {
                       <StyledCard
                         color={
                           // @ts-expect-error can't infer properly
-                          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access
+                          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                           gradientBackgroundColors[type][background]
                         }
                         context="background"
@@ -256,7 +256,7 @@ const Colors = () => {
                         <Row templateColumns="repeat(3, 1fr)" gap={2}>
                           {Object.keys(
                             // @ts-expect-error can't infer properly
-                            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-argument
+                            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                             iconColors[type][sentiment],
                           ).map(value => (
                             <Stack key={value} gap={1}>
@@ -271,7 +271,7 @@ const Colors = () => {
                                 <Text variant="caption" as="small">
                                   {
                                     // @ts-expect-error can't infer properly
-                                    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+
                                     iconColors[type][sentiment][value]
                                   }
                                 </Text>
@@ -279,7 +279,7 @@ const Colors = () => {
                               <StyledCard
                                 color={
                                   // @ts-expect-error can't infer properly
-                                  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access
+                                  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                                   iconColors[type][sentiment][value]
                                 }
                                 context="background"
