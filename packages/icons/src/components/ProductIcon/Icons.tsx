@@ -76,6 +76,7 @@ import { ReactComponent as ipfsNaming } from './assets/ipfs-naming.svg'
 import { ReactComponent as ipfs } from './assets/ipfs.svg'
 import { ReactComponent as jero } from './assets/jero.svg'
 import { ReactComponent as k8sKosmos } from './assets/k8s-kosmos.svg'
+import { ReactComponent as kms } from './assets/kms.svg'
 import { ReactComponent as kubernetes } from './assets/kubernetes.svg'
 import { ReactComponent as lb } from './assets/lb.svg'
 import { ReactComponent as lifeCycleRules } from './assets/life-cycle-rules.svg'
@@ -94,9 +95,11 @@ import { ReactComponent as platinumSupport } from './assets/platinum-support.svg
 import { ReactComponent as policy } from './assets/policy.svg'
 import { ReactComponent as pool } from './assets/pool.svg'
 import { ReactComponent as postgreSqlAndMySql } from './assets/postgresql-mysql.svg'
+import { ReactComponent as privateIp } from './assets/private-ip.svg'
 import { ReactComponent as privateNetwork } from './assets/private-network.svg'
 import { ReactComponent as publicGateway } from './assets/public-gateway.svg'
 import { ReactComponent as qaas } from './assets/qaas.svg'
+import { ReactComponent as quantumApplication } from './assets/quantum-application.svg'
 import { ReactComponent as queueing } from './assets/queueing.svg'
 import { ReactComponent as rabbitMQ } from './assets/rabbit-mq.svg'
 import { ReactComponent as rdb } from './assets/rdb.svg'
@@ -286,4 +289,7 @@ export const PRODUCT_ICONS = {
   environmentalFootprintCalculator,
   accountExperience,
   savingPlan,
+  kms,
+  privateIp,
+  quantumApplication,
 } as const

@@ -21,6 +21,7 @@ import { ReactComponent as dotsVertical } from './assets/default/dots-vertical.s
 import { ReactComponent as download } from './assets/default/download.svg'
 import { ReactComponent as dragVariant } from './assets/default/drag-variant.svg'
 import { ReactComponent as drag } from './assets/default/drag.svg'
+import { ReactComponent as eastShort } from './assets/default/east-short.svg'
 import { ReactComponent as east } from './assets/default/east.svg'
 import { ReactComponent as equal } from './assets/default/equal.svg'
 import { ReactComponent as escape } from './assets/default/escape.svg'
@@ -31,6 +32,7 @@ import { ReactComponent as instagram } from './assets/default/instagram.svg'
 import { ReactComponent as linkedIn } from './assets/default/linkedin.svg'
 import { ReactComponent as logout } from './assets/default/logout.svg'
 import { ReactComponent as minus } from './assets/default/minus.svg'
+import { ReactComponent as northShort } from './assets/default/north-short.svg'
 import { ReactComponent as north } from './assets/default/north.svg'
 import { ReactComponent as openInNew } from './assets/default/open-in-new.svg'
 import { ReactComponent as organization } from './assets/default/organization.svg'
@@ -48,11 +50,13 @@ import { ReactComponent as search } from './assets/default/search.svg'
 import { ReactComponent as send } from './assets/default/send.svg'
 import { ReactComponent as slack } from './assets/default/slack.svg'
 import { ReactComponent as sort } from './assets/default/sort.svg'
+import { ReactComponent as southShort } from './assets/default/south-short.svg'
 import { ReactComponent as south } from './assets/default/south.svg'
 import { ReactComponent as switch_orga } from './assets/default/switch-orga.svg'
 import { ReactComponent as x } from './assets/default/twitter.svg'
 import { ReactComponent as upload } from './assets/default/upload.svg'
 import { ReactComponent as view } from './assets/default/view.svg'
+import { ReactComponent as westShort } from './assets/default/west-short.svg'
 import { ReactComponent as west } from './assets/default/west.svg'
 import { ReactComponent as youtube } from './assets/default/youtube.svg'
 import { ReactComponent as addressOutline } from './assets/default-outline/address.svg'
@@ -169,6 +173,7 @@ export const ICONS = {
     download,
     'drag-vertical': drag,
     'drag-variant': dragVariant,
+    'east-short': eastShort,
     east,
     equal,
     escape,
@@ -179,6 +184,7 @@ export const ICONS = {
     linkedIn,
     logout,
     minus,
+    'north-short': northShort,
     north,
     'open-in-new': openInNew,
     organization,
@@ -196,11 +202,13 @@ export const ICONS = {
     send,
     slack,
     sort,
+    'south-short': southShort,
     south,
     switch_orga,
     x,
     upload,
     view,
+    'west-short': westShort,
     west,
     youtube,
     address,
@@ -272,6 +280,7 @@ export const ICONS = {
     download,
     'drag-vertical': drag,
     'drag-variant': dragVariant,
+    'east-short': eastShort,
     east,
     equal,
     escape,
@@ -282,6 +291,7 @@ export const ICONS = {
     linkedIn,
     logout,
     minus,
+    'north-short': northShort,
     north,
     'open-in-new': openInNew,
     organization,
@@ -299,11 +309,13 @@ export const ICONS = {
     send,
     slack,
     sort,
+    'south-short': southShort,
     south,
     switch_orga,
     x,
     upload,
     view,
+    'west-short': westShort,
     west,
     youtube,
     address: addressOutline,
