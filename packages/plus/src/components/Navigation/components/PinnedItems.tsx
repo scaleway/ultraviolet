@@ -14,7 +14,7 @@ const DropableArea = styled.div`
   height: 2px;
   border-top: 2px solid;
   border-color: transparent;
-  padding: 4px 0;
+  padding: ${({ theme }) => theme.space['0.5']} 0;
 
   &::before {
     content: '';
@@ -83,8 +83,6 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
     // eslint-disable-next-line no-param-reassign
     event.currentTarget.style.borderColor = 'transparent'
   }, [])
-
-  console.log('itemssss:', items)
 
   if (Object.keys(items).length === 0) {
     return null

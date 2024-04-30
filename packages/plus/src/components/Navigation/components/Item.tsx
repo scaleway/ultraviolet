@@ -57,6 +57,7 @@ const ExpandedPinnedButton = styled(Button)`
 
 const GrabIcon = styled(Icon)`
   opacity: 0;
+  margin: 0 ${({ theme }) => theme.space['0.25']};
 `
 
 // Pin button when the navigation is collapsed
