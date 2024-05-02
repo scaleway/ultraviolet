@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.51.1
+
+### Patch Changes
+
+- [#3730](https://github.com/scaleway/ultraviolet/pull/3730) [`0f133ea`](https://github.com/scaleway/ultraviolet/commit/0f133ea7032a555bdb9624e005db92d21b6a04b7) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<Popup />` component to set initial position to 0 avoiding scroll on top when appearing and if an input has `autoFocus` inside
+  - New prop `dynamicDomRendering` to define if the popup will be rendered dynamically in the DOM or if it should be rendered at first render. Default is `true` to keep the current retro compatibility.
+  - Fix `<SelectInputV2 />` to remove timeout on search bar focus
+
 ## 1.51.0
 
 ### Minor Changes

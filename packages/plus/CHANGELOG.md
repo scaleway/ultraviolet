@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.15.0
+
+### Minor Changes
+
+- [#3717](https://github.com/scaleway/ultraviolet/pull/3717) [`87c3a99`](https://github.com/scaleway/ultraviolet/commit/87c3a99912c8323a5839b6fd9471fb070ac3da28) Thanks [@matthprost](https://github.com/matthprost)! - New pinned feature on `<Navigation />` you can enable it using prop `pinnedFeature={true}` on `<NavigationProvider />`
+
+### Patch Changes
+
+- Updated dependencies [[`0f133ea`](https://github.com/scaleway/ultraviolet/commit/0f133ea7032a555bdb9624e005db92d21b6a04b7)]:
+  - @ultraviolet/ui@1.51.1
+
 ## 0.14.4
 
 ### Patch Changes
