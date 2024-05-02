@@ -111,6 +111,10 @@ type NavigationProviderProps = {
    */
   onClickPinUnpin?: (
     /**
+     * The state of the item after the click
+     */
+    state: 'pin' | 'unpin',
+    /**
      * The current items that has been pinned on click
      */
     pinned: string,
@@ -146,8 +150,6 @@ export const NavigationProvider = ({
   )
   const navigationRef = useRef<HTMLDivElement>(null)
 
-  // console.log('items', items)
-
   // This function will be triggered when expand/collapse button is clicked
   const toggleExpand = useCallback(
     (toggle?: boolean) => {
@@ -179,7 +181,7 @@ export const NavigationProvider = ({
   const pinItem = useCallback(
     (item: string) => {
       setPinnedItems([...pinnedItems, item])
-      onClickPinUnpin?.(item)
+      onClickPinUnpin?.('pin', item)
     },
     [onClickPinUnpin, pinnedItems],
   )
@@ -187,7 +189,7 @@ export const NavigationProvider = ({
   const unpinItem = useCallback(
     (item: string) => {
       setPinnedItems(pinnedItems.filter(localItem => localItem !== item))
-      onClickPinUnpin?.(item)
+      onClickPinUnpin?.('unpin', item)
     },
     [onClickPinUnpin, pinnedItems],
   )

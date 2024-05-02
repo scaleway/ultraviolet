@@ -5,4 +5,5 @@ export default {
   'navigation.pinned.item.group.label': 'Pinned items',
   'navigation.expand.button': 'Expand sidebar',
   'navigation.collapse.button': 'Collapse sidebar',
+  'navigation.pinned.item.group.empty': 'You have no pinned items.',
 } as const

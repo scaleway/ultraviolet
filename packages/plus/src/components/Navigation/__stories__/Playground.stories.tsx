@@ -303,7 +303,8 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
 export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const navigationExpanded = localStorage.getItem('expanded') === 'true'
   const navigationWidth = Number(localStorage.getItem('width')) || undefined
-  const pinnedItems = localStorage.getItem('pinnedItems')?.split(',') || []
+  const storageItems = localStorage.getItem('pinnedItems')
+  const pinnedItems = storageItems ? storageItems.split(',') : []
   const [expanded, setExpanded] = useState(navigationExpanded)
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
     setExpanded(localExpanded)

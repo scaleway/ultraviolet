@@ -58,6 +58,7 @@ const ExpandedPinnedButton = styled(Button)`
 const GrabIcon = styled(Icon)`
   opacity: 0;
   margin: 0 ${({ theme }) => theme.space['0.25']};
+  cursor: grab;
 `
 
 // Pin button when the navigation is collapsed
@@ -362,7 +363,9 @@ export const Item = ({
 
   useEffect(
     () => {
-      registerItem({ [id]: { label, active, onClick } })
+      if (type !== 'pinnedGroup') {
+        registerItem({ [id]: { label, active, onClick } })
+      }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [active, id, label, registerItem],
@@ -731,7 +734,6 @@ export const Item = ({
       <StyledMenuItem
         href={href}
         onClick={() => {
-          console.log('clicked', onClick)
           onClick?.()
         }}
         borderless

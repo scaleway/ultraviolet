@@ -1,5 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { Text } from '@ultraviolet/ui'
 import type { DragEvent } from 'react'
 import { useCallback } from 'react'
 import { useNavigation } from '../NavigationProvider'
@@ -27,6 +28,12 @@ const DropableArea = styled.div`
     border-color: inherit;
     border-radius: ${({ theme }) => theme.radii.circle};
   }
+`
+
+const TextContainer = styled.div`
+  padding: ${({ theme }) => theme.space['1']} 0;
+  padding-left: ${({ theme }) => theme.space['4']};
+  margin-left: ${({ theme }) => theme.space['0.5']};
 `
 
 type PinnedItemsProps = {
@@ -88,7 +95,7 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
     return null
   }
 
-  if (pinnedItems.length > 0 && pinnedFeature) {
+  if (pinnedFeature) {
     return (
       <div>
         <Item
@@ -99,30 +106,43 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
           type="pinnedGroup"
           id="pinned-group"
         >
-          {pinnedItems.map((itemId, index) => (
-            <div
-              style={{ position: expanded ? 'relative' : undefined }}
-              key={itemId}
-            >
-              {expanded ? (
-                <DropableArea
-                  onDragOver={onDragOver}
-                  onDragLeave={onDragLeave}
-                  onDrop={event => onDrop(event, index)}
+          {pinnedItems.length > 0 ? (
+            pinnedItems.map((itemId, index) => (
+              <div
+                style={{ position: expanded ? 'relative' : undefined }}
+                key={itemId}
+              >
+                {expanded ? (
+                  <DropableArea
+                    onDragOver={onDragOver}
+                    onDragLeave={onDragLeave}
+                    onDrop={event => onDrop(event, index)}
+                  />
+                ) : null}
+                <Item
+                  label={items[itemId]?.label ?? 'Unknown navigation item'}
+                  type="pinned"
+                  index={index}
+                  toggle={toggle}
+                  id={itemId}
+                  active={items[itemId]?.active ?? false}
+                  onClick={items[itemId]?.onClick ?? undefined}
+                  hasParents
                 />
-              ) : null}
-              <Item
-                label={items[itemId]?.label ?? 'Unknown navigation item'}
-                type="pinned"
-                index={index}
-                toggle={toggle}
-                id={itemId}
-                active={items[itemId]?.active ?? false}
-                onClick={items[itemId]?.onClick ?? undefined}
-                hasParents
-              />
-            </div>
-          ))}
+              </div>
+            ))
+          ) : (
+            <TextContainer>
+              <Text
+                as="p"
+                variant="caption"
+                prominence="weak"
+                sentiment="neutral"
+              >
+                {locales['navigation.pinned.item.group.empty']}
+              </Text>
+            </TextContainer>
+          )}
           {expanded ? (
             <div style={{ position: 'relative' }}>
               <DropableArea
