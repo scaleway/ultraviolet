@@ -3,6 +3,11 @@ import { Button, Expandable, Snippet, Stack, Text } from '@ultraviolet/ui'
 import { useReducer } from 'react'
 import * as assets from '../index'
 
+const defaultAssets = {
+  products: assets.default.products,
+  various: assets.default.various,
+}
+
 type AssetsModule = Record<string, Record<string, Record<string, string>>>
 
 const StyledSnippet = styled(Snippet)`
@@ -71,11 +76,11 @@ const SubListElement = ({
     <Expandable opened={isExpanded}>
       <Stack gap={1}>
         {Object.keys(
-          (assets.default as AssetsModule)[category][productName],
+          (defaultAssets as AssetsModule)[category][productName],
         ).map(productImg => {
-          const imgSrc = (assets.default as AssetsModule)[category][
-            productName
-          ][productImg]
+          const imgSrc = (defaultAssets as AssetsModule)[category][productName][
+            productImg
+          ]
 
           return (
             <Card direction="row" gap={2} flex={1} alignItems="center">
@@ -83,7 +88,7 @@ const SubListElement = ({
                 <StyledImageProduct
                   width={200}
                   src={
-                    (assets.default as AssetsModule)[category][productName][
+                    (defaultAssets as AssetsModule)[category][productName][
                       productImg
                     ]
                   }
@@ -93,7 +98,7 @@ const SubListElement = ({
                 <StyledImageVarious
                   width={200}
                   src={
-                    (assets.default as AssetsModule)[category][productName][
+                    (defaultAssets as AssetsModule)[category][productName][
                       productImg
                     ]
                   }
@@ -125,7 +130,7 @@ export const List = () => {
   const [isAllExpanded, setIsAllExpanded] = useReducer(state => !state, false)
 
   const toggleAllExpanded = () => {
-    const newExpandedCategoryStates = Object.keys(assets.default).reduce(
+    const newExpandedCategoryStates = Object.keys(defaultAssets).reduce(
       (acc, category) => ({
         ...acc,
         [category]: !isAllExpanded,
@@ -134,10 +139,10 @@ export const List = () => {
     )
     setExpandedStates(newExpandedCategoryStates)
 
-    const newExpandedProductStates = Object.keys(assets.default).reduce(
+    const newExpandedProductStates = Object.keys(defaultAssets).reduce(
       (acc, category) => ({
         ...acc,
-        ...Object.keys((assets.default as AssetsModule)[category]).reduce(
+        ...Object.keys((defaultAssets as AssetsModule)[category]).reduce(
           (localAcc, productName) => ({
             ...localAcc,
             [productName]: !isAllExpanded,
@@ -161,41 +166,45 @@ export const List = () => {
         {isAllExpanded ? 'Collapse' : 'Expand'} all
       </Button>
       <Stack gap={1}>
-        {Object.keys(assets.default).map(category => (
-          <>
-            <StyledButton
-              sentiment="neutral"
-              onClick={() => {
-                const newExpandedStates = { ...expandedStates }
-                newExpandedStates[category] = !expandedStates[category]
-                setExpandedStates(newExpandedStates)
-              }}
-              icon={expandedStates[category] ? 'arrow-up' : 'arrow-down'}
-            >
-              {category}
-            </StyledButton>
-            <Expandable opened={expandedStates[category]}>
-              <Stack gap={1}>
-                {Object.keys((assets.default as AssetsModule)[category]).map(
-                  productName => (
-                    <SubListElement
-                      productName={productName}
-                      category={category}
-                      isExpanded={expandedStates[productName]}
-                      setIsExpanded={() => {
-                        // Toggle the expanded state for a specific element
-                        const newExpandedStates = { ...expandedStates }
-                        newExpandedStates[productName] =
-                          !expandedStates[productName]
-                        setExpandedStates(newExpandedStates)
-                      }}
-                    />
-                  ),
-                )}
-              </Stack>
-            </Expandable>
-          </>
-        ))}
+        {Object.keys(assets.default).map(category => {
+          if (category === 'components') return null
+
+          return (
+            <>
+              <StyledButton
+                sentiment="neutral"
+                onClick={() => {
+                  const newExpandedStates = { ...expandedStates }
+                  newExpandedStates[category] = !expandedStates[category]
+                  setExpandedStates(newExpandedStates)
+                }}
+                icon={expandedStates[category] ? 'arrow-up' : 'arrow-down'}
+              >
+                {category}
+              </StyledButton>
+              <Expandable opened={expandedStates[category]}>
+                <Stack gap={1}>
+                  {Object.keys((defaultAssets as AssetsModule)[category]).map(
+                    productName => (
+                      <SubListElement
+                        productName={productName}
+                        category={category}
+                        isExpanded={expandedStates[productName]}
+                        setIsExpanded={() => {
+                          // Toggle the expanded state for a specific element
+                          const newExpandedStates = { ...expandedStates }
+                          newExpandedStates[productName] =
+                            !expandedStates[productName]
+                          setExpandedStates(newExpandedStates)
+                        }}
+                      />
+                    ),
+                  )}
+                </Stack>
+              </Expandable>
+            </>
+          )
+        })}
       </Stack>
     </Stack>
   )

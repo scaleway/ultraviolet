@@ -9,7 +9,6 @@
     "directory": "packages/illustrations"
   },
   "scripts": {
-    "build:rollup": "rollup -c rollup.config.mjs",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
@@ -31,11 +30,18 @@
     "darwin",
     "linux"
   ],
+  "files": [
+    "dist/"
+  ],
   "sideEffects": false,
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
+    ".":{
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
     "./products/*": {
       "types": "./dist/products/*/index.d.ts",
       "default": "./dist/products/*/index.js"
@@ -52,11 +58,11 @@
       "types": "./dist/various/index.d.ts",
       "default": "./dist/various/index.js"
     },
-    "./components/*": {
+    "./components": {
       "types": "./dist/components/index.d.ts",
       "default": "./dist/components/index.js"
     },
-    "./components": {
+    "./components/*": {
       "types": "./dist/components/*/index.d.ts",
       "default": "./dist/components/*/index.js"
     }
@@ -68,7 +74,7 @@
     "react-dom": "18.3.1"
   },
   "dependencies": {
-     "@ultraviolet/themes": "workspace:*"
+    "@ultraviolet/themes": "workspace:*"
   },
   "devDependencies": {
     "@ultraviolet/ui": "workspace:*",
