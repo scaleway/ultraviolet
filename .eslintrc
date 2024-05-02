@@ -22,10 +22,14 @@
       }
     },
     {
-      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
+      "files": [
+        "**/__stories__/**/*.{ts,tsx}",
+        "**/__tests__/**/*.{ts,tsx}",
+        "**/vite.config.*",
+      ],
       "extends": ["@scaleway/react/typescript"],
       "parserOptions": {
-        "project": ["tsconfig.json"]
+        "project": ["tsconfig.json"],
       },
       "rules": {
         "no-console": "off",
@@ -35,8 +39,12 @@
         "react/no-unstable-nested-components": "off",
         "@typescript-eslint/no-unnecessary-condition": "off",
         "react/jsx-key": "off",
-        "import/no-extraneous-dependencies": "off"
-      }
+        "import/no-extraneous-dependencies": "off",
+        "eslint-plugin-import/no-relative-packages": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+      },
     },
     {
       "files": [

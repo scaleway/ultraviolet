@@ -57,7 +57,7 @@ describe('CopyButton', () => {
 
     await userEvent.click(screen.getByRole('button'))
     // @ts-expect-error we are voluntarily based on an older browser spec
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+
     expect(window.clipboardData.getData()).toBe('test')
   })
 })

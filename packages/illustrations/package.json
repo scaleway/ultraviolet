@@ -9,7 +9,10 @@
     "directory": "packages/illustrations"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.mjs",
+    "build:rollup": "rollup -c rollup.config.mjs",
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
+    "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
@@ -30,6 +33,8 @@
   ],
   "sideEffects": false,
   "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     "./products/*": {
       "types": "./dist/products/*/index.d.ts",
@@ -62,8 +67,11 @@
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
+  "dependencies": {
+     "@ultraviolet/themes": "workspace:*"
+  },
   "devDependencies": {
-    "@ultraviolet/ui": "workspace:^",
-    "@ultraviolet/themes": "workspace:^"
+    "@ultraviolet/ui": "workspace:*",
+    "@ultraviolet/themes": "workspace:*"
   }
 }

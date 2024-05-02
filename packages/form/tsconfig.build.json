@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "*.config.ts",
+    "*.setup.ts",
+    "**/__tests__",
+    "**/__mocks__",
+    "**/__stories__",
+    "src/**/*.test.tsx",
+    "../../.jest/setupTests.ts"
+  ]
+}

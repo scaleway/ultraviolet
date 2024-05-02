@@ -41,7 +41,7 @@ jobs:
     needs: [lint, typecheck]
     strategy:
       matrix:
-        node: ['18', '20']
+        node: ['20']
     steps:
       - uses: actions/checkout@v4 # v4.1.4
         with:
@@ -81,7 +81,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node: ['18', '20']
+        node: ['20']
     runs-on: ubuntu-22.04
     needs: [lint, typecheck]
     steps:

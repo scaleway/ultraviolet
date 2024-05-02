@@ -1,10 +1,11 @@
 {
   "extends": "@scaleway/tsconfig",
   "compilerOptions": {
+    // "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
     "jsxImportSource": "@emotion/react",
-
+    "types": ["vite/client"],
     "noEmit": true,
     "skipLibCheck": true,
 

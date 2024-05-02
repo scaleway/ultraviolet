@@ -1,8 +1,5 @@
 {
   "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-  },
   "include": ["src", "../../.jest/setupTests.ts"],
   "exclude": ["node_modules", "coverage", "dist"],
 }
