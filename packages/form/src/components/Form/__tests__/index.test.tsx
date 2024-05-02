@@ -1,37 +1,37 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { mockFormErrors, renderWithTheme } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { Form } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks'
 
 describe('Form', () => {
-  test('renders correctly ', () =>
-    shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+  test('renders correctly ', () => {
+    const { asFragment } = renderWithTheme(
+      <Form onRawSubmit={() => {}} errors={mockFormErrors}>
         {() => 'Test'}
       </Form>,
-    ))
-  test('renders correctly with node children', () =>
-    shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  test('renders correctly with node children', () => {
+    const { asFragment } = renderWithTheme(
+      <Form onRawSubmit={() => {}} errors={mockFormErrors}>
         Test
       </Form>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with onRawSubmit', () => {
-    const onRawSubmit = jest.fn(() => {})
+  test('renders correctly with onRawSubmit', async () => {
+    const onRawSubmit = vi.fn(() => {})
 
-    return shouldMatchEmotionSnapshot(
-      <Form errors={mockErrors} onRawSubmit={onRawSubmit}>
+    const { asFragment } = renderWithTheme(
+      <Form errors={mockFormErrors} onRawSubmit={onRawSubmit}>
         <button type="submit">Submit</button>
       </Form>,
-      {
-        transform: async () => {
-          await userEvent.click(screen.getByText('Submit'))
-          await waitFor(() => expect(onRawSubmit).toBeCalledTimes(1))
-        },
-      },
     )
+    await userEvent.click(screen.getByText('Submit'))
+    await waitFor(() => expect(onRawSubmit).toBeCalledTimes(1))
+    expect(asFragment()).toMatchSnapshot()
   })
 })

@@ -1,11 +1,8 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { TextInputV2 } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 
 describe('TextInputV2', () => {
   test('should render correctly with basic props', () =>
@@ -14,7 +11,7 @@ describe('TextInputV2', () => {
     ))
 
   test('should control the value', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn()
 
     renderWithTheme(
       <TextInputV2 label="Test" value="test" onChange={onChange} />,
@@ -28,7 +25,7 @@ describe('TextInputV2', () => {
   })
 
   test('should be clearable', async () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn()
 
     renderWithTheme(
       <TextInputV2 label="Test" value="test" onChange={onChange} clearable />,
@@ -72,7 +69,7 @@ describe('TextInputV2', () => {
     ))
 
   test('should display success message', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn()
     const successMessage = 'success message'
 
     renderWithTheme(
@@ -88,7 +85,7 @@ describe('TextInputV2', () => {
   })
 
   test('should display error message', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn()
     const errorMessage = 'error!'
 
     renderWithTheme(
@@ -104,7 +101,7 @@ describe('TextInputV2', () => {
   })
 
   test('should display helper message', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn()
     const helperMessage = 'helper'
 
     renderWithTheme(
@@ -120,7 +117,7 @@ describe('TextInputV2', () => {
   })
 
   test('should not display helper message when success is displayed', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn()
     const successMessage = 'success message'
     const helperMessage = 'helper'
 
@@ -139,7 +136,7 @@ describe('TextInputV2', () => {
   })
 
   test('should not display helper message when error is displayed', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn()
     const error = 'error!'
     const helperMessage = 'helper'
 

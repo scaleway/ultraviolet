@@ -1,6 +1,6 @@
 /* eslint-disable eslint-comments/disable-enable-pair */
 
-import { describe, expect, test } from '@jest/globals'
+import { describe, expect, test } from 'vitest'
 import type { ScreenSize } from '../../../theme'
 import { screens } from '../../../theme'
 import { down, up } from '../utilities'

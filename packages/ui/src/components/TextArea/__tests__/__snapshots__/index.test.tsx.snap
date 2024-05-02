@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TextArea should render correctly when input  has a error sentiment 1`] = `
+exports[`TextArea > should render correctly when input  has a error sentiment 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +25,30 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   flex-wrap: nowrap;
 }
 
-.cache-irytw7-Stack {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,7 +71,30 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   flex-wrap: nowrap;
 }
 
-.cache-135dzb3-Stack {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,7 +117,30 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -83,7 +152,19 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
+.emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -91,7 +172,15 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   display: flex;
 }
 
-.cache-1gib1rw-StyledTextArea {
+.emotion-8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -102,67 +191,67 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   padding-right: calc(24px + 0px + 16px);
 }
 
-.cache-1gib1rw-StyledTextArea::-webkit-input-placeholder {
+.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea::-moz-placeholder {
+.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea:-ms-input-placeholder {
+.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea::placeholder {
+.emotion-10::placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea[data-success='true'] {
+.emotion-10[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1gib1rw-StyledTextArea[data-error='true'] {
+.emotion-10[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1gib1rw-StyledTextArea[data-readOnly='true'] {
+.emotion-10[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10[data-disabled='true']::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.emotion-10[data-disabled='true']::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.emotion-10[data-disabled='true']:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::placeholder {
+.emotion-10[data-disabled='true']::placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:hover {
+.emotion-10:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:focus {
+.emotion-10:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +277,33 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   right: 8px;
 }
 
-.cache-7nxe52-StyledIcon-sizeStyles {
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.emotion-14 {
   vertical-align: middle;
   fill: #b3144d;
   height: 1em;
@@ -197,12 +312,12 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   min-height: 1em;
 }
 
-.cache-7nxe52-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.cache-1fmk7r4-StyledRow {
+.emotion-16 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) min-content;
   gap: 8px;
@@ -216,7 +331,7 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   justify-content: normal;
 }
 
-.cache-vdlwt8-StyledText {
+.emotion-18 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -229,71 +344,75 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      class="cache-irytw7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-135dzb3-Stack ehpbis70"
+        class="emotion-2 emotion-1"
       >
-        <label
-          class="cache-4gfeok-StyledText e13y3mga0"
-          for=":rk:"
+        <div
+          class="emotion-4 emotion-1"
         >
-          Test
-        </label>
+          <label
+            class="emotion-6 emotion-7"
+            for=":rk:"
+          >
+            Test
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
-    >
-      <textarea
-        aria-invalid="true"
-        class="cache-1gib1rw-StyledTextArea enu776d0"
-        data-disabled="false"
-        data-error="true"
-        data-readonly="false"
-        data-success="false"
-        id=":rk:"
-        rows="3"
-      >
-        test
-      </textarea>
       <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
+        class="emotion-8 emotion-9"
       >
-        <svg
-          class="cache-7nxe52-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
+        <textarea
+          aria-invalid="true"
+          class="emotion-10 emotion-11"
+          data-disabled="false"
+          data-error="true"
+          data-readonly="false"
+          data-success="false"
+          id=":rk:"
+          rows="3"
         >
-          <path
-            clip-rule="evenodd"
-            d="M10 3.455a6.545 6.545 0 1 0 0 13.09 6.545 6.545 0 0 0 0-13.09M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m8-3.152c.402 0 .727.326.727.728v3.03a.727.727 0 0 1-1.454 0v-3.03c0-.402.325-.728.727-.728m-.727 6.182c0-.401.325-.727.727-.727h.006c.402 0 .727.326.727.727v.006a.727.727 0 0 1-.727.728H10a.727.727 0 0 1-.727-.728z"
-            fill-rule="evenodd"
-          />
-        </svg>
+          test
+        </textarea>
+        <div
+          class="emotion-12 emotion-13"
+        >
+          <svg
+            class="emotion-14 emotion-15"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10 3.455a6.545 6.545 0 1 0 0 13.09 6.545 6.545 0 0 0 0-13.09M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0m8-3.152c.402 0 .727.326.727.728v3.03a.727.727 0 0 1-1.454 0v-3.03c0-.402.325-.728.727-.728m-.727 6.182c0-.401.325-.727.727-.727h.006c.402 0 .727.326.727.727v.006a.727.727 0 0 1-.727.728H10a.727.727 0 0 1-.727-.728z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-1fmk7r4-StyledRow e3f5lzv0"
-    >
-      <div>
-        <p
-          class="cache-vdlwt8-StyledText e13y3mga0"
-        >
-          success
-        </p>
+      <div
+        class="emotion-16 emotion-17"
+      >
+        <div>
+          <p
+            class="emotion-18 emotion-7"
+          >
+            success
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TextArea should render correctly when input has a success sentiment 1`] = `
+exports[`TextArea > should render correctly when input has a success sentiment 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -316,7 +435,30 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   flex-wrap: nowrap;
 }
 
-.cache-irytw7-Stack {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -339,7 +481,30 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   flex-wrap: nowrap;
 }
 
-.cache-135dzb3-Stack {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -362,7 +527,30 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -374,7 +562,19 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
+.emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -382,7 +582,15 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   display: flex;
 }
 
-.cache-1gib1rw-StyledTextArea {
+.emotion-8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -393,67 +601,67 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   padding-right: calc(24px + 0px + 16px);
 }
 
-.cache-1gib1rw-StyledTextArea::-webkit-input-placeholder {
+.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea::-moz-placeholder {
+.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea:-ms-input-placeholder {
+.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea::placeholder {
+.emotion-10::placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea[data-success='true'] {
+.emotion-10[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1gib1rw-StyledTextArea[data-error='true'] {
+.emotion-10[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1gib1rw-StyledTextArea[data-readOnly='true'] {
+.emotion-10[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10[data-disabled='true']::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.emotion-10[data-disabled='true']::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.emotion-10[data-disabled='true']:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::placeholder {
+.emotion-10[data-disabled='true']::placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:hover {
+.emotion-10:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:focus {
+.emotion-10:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -479,7 +687,33 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   right: 8px;
 }
 
-.cache-x49ond-StyledIcon-sizeStyles {
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.emotion-14 {
   vertical-align: middle;
   fill: #22674e;
   height: 16px;
@@ -488,12 +722,12 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   min-height: 16px;
 }
 
-.cache-x49ond-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: #22674e;
   fill: none;
 }
 
-.cache-1fmk7r4-StyledRow {
+.emotion-16 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) min-content;
   gap: 8px;
@@ -507,7 +741,7 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   justify-content: normal;
 }
 
-.cache-1n7fwv3-StyledText {
+.emotion-18 {
   color: #22674e;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -520,71 +754,75 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      class="cache-irytw7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-135dzb3-Stack ehpbis70"
+        class="emotion-2 emotion-1"
       >
-        <label
-          class="cache-4gfeok-StyledText e13y3mga0"
-          for=":rg:"
+        <div
+          class="emotion-4 emotion-1"
         >
-          Test
-        </label>
+          <label
+            class="emotion-6 emotion-7"
+            for=":rg:"
+          >
+            Test
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
-    >
-      <textarea
-        aria-invalid="false"
-        class="cache-1gib1rw-StyledTextArea enu776d0"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="true"
-        id=":rg:"
-        rows="3"
-      >
-        test
-      </textarea>
       <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
+        class="emotion-8 emotion-9"
       >
-        <svg
-          class="cache-x49ond-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <textarea
+          aria-invalid="false"
+          class="emotion-10 emotion-11"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="true"
+          id=":rg:"
+          rows="3"
         >
-          <path
-            clip-rule="evenodd"
-            d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m3.844-8.791a.75.75 0 0 0-1.187-.918l-3.7 4.79-1.65-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043z"
-            fill-rule="evenodd"
-          />
-        </svg>
+          test
+        </textarea>
+        <div
+          class="emotion-12 emotion-13"
+        >
+          <svg
+            class="emotion-14 emotion-15"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m3.844-8.791a.75.75 0 0 0-1.187-.918l-3.7 4.79-1.65-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-1fmk7r4-StyledRow e3f5lzv0"
-    >
-      <div>
-        <p
-          class="cache-1n7fwv3-StyledText e13y3mga0"
-        >
-          success
-        </p>
+      <div
+        class="emotion-16 emotion-17"
+      >
+        <div>
+          <p
+            class="emotion-18 emotion-7"
+          >
+            success
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TextArea should render correctly when input is disabled 1`] = `
+exports[`TextArea > should render correctly when input is disabled 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -607,7 +845,30 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-irytw7-Stack {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -630,7 +891,30 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-135dzb3-Stack {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -653,7 +937,30 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -665,7 +972,19 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
+.emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -673,7 +992,15 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   display: flex;
 }
 
-.cache-9412ib-StyledTextArea {
+.emotion-8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -684,67 +1011,164 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
+.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::-moz-placeholder {
+.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea:-ms-input-placeholder {
+.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::placeholder {
+.emotion-10::placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea[data-success='true'] {
+.emotion-10[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-9412ib-StyledTextArea[data-error='true'] {
+.emotion-10[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-9412ib-StyledTextArea[data-readOnly='true'] {
+.emotion-10[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10[data-disabled='true']::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.emotion-10[data-disabled='true']::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.emotion-10[data-disabled='true']:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
+.emotion-10[data-disabled='true']::placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
+.emotion-10:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
+.emotion-10:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
+.emotion-10 {
+  width: 100%;
+  resize: vertical;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border-radius: 4px;
+  padding: 12px 8px 12px 16px;
+  padding-right: calc(24px + 0px + 0px);
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-10::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-10::placeholder {
+  color: #727683;
+}
+
+.emotion-10[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-10[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10[data-disabled='true']::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10[data-disabled='true']:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10[data-disabled='true']::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10:not([data-disabled='true']):hover:hover {
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):hover:focus {
+  outline: none;
+  border-color: #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -771,49 +1195,53 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      class="cache-irytw7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-135dzb3-Stack ehpbis70"
+        class="emotion-2 emotion-1"
       >
-        <label
-          class="cache-4gfeok-StyledText e13y3mga0"
-          for=":ra:"
+        <div
+          class="emotion-4 emotion-1"
         >
-          Test
-        </label>
+          <label
+            class="emotion-6 emotion-7"
+            for=":ra:"
+          >
+            Test
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
-    >
-      <textarea
-        aria-invalid="false"
-        class="cache-9412ib-StyledTextArea enu776d0"
-        data-disabled="true"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
-        disabled=""
-        id=":ra:"
-        rows="3"
-      >
-        test
-      </textarea>
       <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
-      />
+        class="emotion-8 emotion-9"
+      >
+        <textarea
+          aria-invalid="false"
+          class="emotion-10 emotion-11"
+          data-disabled="true"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
+          disabled=""
+          id=":ra:"
+          rows="3"
+        >
+          test
+        </textarea>
+        <div
+          class="emotion-12 emotion-13"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TextArea should render correctly when input is readOnly 1`] = `
+exports[`TextArea > should render correctly when input is readOnly 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -836,7 +1264,30 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-irytw7-Stack {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -859,7 +1310,30 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-135dzb3-Stack {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -882,7 +1356,30 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -894,7 +1391,19 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
+.emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -902,7 +1411,15 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   display: flex;
 }
 
-.cache-9412ib-StyledTextArea {
+.emotion-8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -913,67 +1430,164 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
+.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::-moz-placeholder {
+.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea:-ms-input-placeholder {
+.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::placeholder {
+.emotion-10::placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea[data-success='true'] {
+.emotion-10[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-9412ib-StyledTextArea[data-error='true'] {
+.emotion-10[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-9412ib-StyledTextArea[data-readOnly='true'] {
+.emotion-10[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10[data-disabled='true']::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.emotion-10[data-disabled='true']::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.emotion-10[data-disabled='true']:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
+.emotion-10[data-disabled='true']::placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
+.emotion-10:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
+.emotion-10:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
+.emotion-10 {
+  width: 100%;
+  resize: vertical;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border-radius: 4px;
+  padding: 12px 8px 12px 16px;
+  padding-right: calc(24px + 0px + 0px);
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-10::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-10::placeholder {
+  color: #727683;
+}
+
+.emotion-10[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-10[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-10[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10[data-disabled='true']::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10[data-disabled='true']:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10[data-disabled='true']::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10:not([data-disabled='true']):hover:hover {
+  border-color: #8c40ef;
+}
+
+.emotion-10:not([data-disabled='true']):hover:focus {
+  outline: none;
+  border-color: #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1000,48 +1614,52 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      class="cache-irytw7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-135dzb3-Stack ehpbis70"
+        class="emotion-2 emotion-1"
       >
-        <label
-          class="cache-4gfeok-StyledText e13y3mga0"
-          for=":rd:"
+        <div
+          class="emotion-4 emotion-1"
         >
-          Test
-        </label>
+          <label
+            class="emotion-6 emotion-7"
+            for=":rd:"
+          >
+            Test
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
-    >
-      <textarea
-        aria-invalid="false"
-        class="cache-9412ib-StyledTextArea enu776d0"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="true"
-        data-success="false"
-        id=":rd:"
-        rows="3"
-      >
-        test
-      </textarea>
       <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
-      />
+        class="emotion-8 emotion-9"
+      >
+        <textarea
+          aria-invalid="false"
+          class="emotion-10 emotion-11"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="true"
+          data-success="false"
+          id=":rd:"
+          rows="3"
+        >
+          test
+        </textarea>
+        <div
+          class="emotion-12 emotion-13"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TextArea should render correctly with basic props 1`] = `
+exports[`TextArea > should render correctly with basic props 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1064,7 +1682,7 @@ exports[`TextArea should render correctly with basic props 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-irytw7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1087,7 +1705,7 @@ exports[`TextArea should render correctly with basic props 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-135dzb3-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1110,7 +1728,7 @@ exports[`TextArea should render correctly with basic props 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-6 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1122,7 +1740,7 @@ exports[`TextArea should render correctly with basic props 1`] = `
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1130,7 +1748,7 @@ exports[`TextArea should render correctly with basic props 1`] = `
   display: flex;
 }
 
-.cache-9412ib-StyledTextArea {
+.emotion-10 {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -1141,67 +1759,67 @@ exports[`TextArea should render correctly with basic props 1`] = `
   padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
+.emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::-moz-placeholder {
+.emotion-10::-moz-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea:-ms-input-placeholder {
+.emotion-10:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::placeholder {
+.emotion-10::placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea[data-success='true'] {
+.emotion-10[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-9412ib-StyledTextArea[data-error='true'] {
+.emotion-10[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-9412ib-StyledTextArea[data-readOnly='true'] {
+.emotion-10[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true'] {
+.emotion-10[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10[data-disabled='true']::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.emotion-10[data-disabled='true']::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.emotion-10[data-disabled='true']:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
+.emotion-10[data-disabled='true']::placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
+.emotion-10:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
+.emotion-10:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1228,40 +1846,44 @@ exports[`TextArea should render correctly with basic props 1`] = `
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      class="cache-irytw7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-135dzb3-Stack ehpbis70"
+        class="emotion-2 emotion-1"
       >
-        <label
-          class="cache-4gfeok-StyledText e13y3mga0"
-          for=":r0:"
+        <div
+          class="emotion-4 emotion-1"
         >
-          Test
-        </label>
+          <label
+            class="emotion-6 emotion-7"
+            for=":r0:"
+          >
+            Test
+          </label>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
-    >
-      <textarea
-        aria-invalid="false"
-        class="cache-9412ib-StyledTextArea enu776d0"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
-        id=":r0:"
-        rows="3"
-      >
-        test
-      </textarea>
       <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
-      />
+        class="emotion-8 emotion-9"
+      >
+        <textarea
+          aria-invalid="false"
+          class="emotion-10 emotion-11"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
+          id=":r0:"
+          rows="3"
+        >
+          test
+        </textarea>
+        <div
+          class="emotion-12 emotion-13"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>

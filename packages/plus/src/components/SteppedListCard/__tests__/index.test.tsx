@@ -1,12 +1,9 @@
-import { describe, expect, it, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { blockStorageWire } from '@ultraviolet/illustrations/products/blockStorage'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, it, test } from 'vitest'
 import { SteppedListContainer } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 
 describe('SteppedListCard', () => {
   it('should work with default props', () =>

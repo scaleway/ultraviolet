@@ -1,14 +1,27 @@
-import { describe, it } from '@jest/globals'
-import { DynamicIllustration } from '..'
 import {
-  shouldMatchEmotionSnapshotDark,
-  shouldMatchEmotionSnapshotLight,
-} from '../../../../.jest/helpers'
+  consoleDarkTheme,
+  consoleDarkerTheme,
+  consoleLightTheme,
+} from '@ultraviolet/themes'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, it } from 'vitest'
+import { DynamicIllustration } from '..'
 
 describe('DynamicIllustration', () => {
-  it('should work with light theme', () =>
-    shouldMatchEmotionSnapshotLight(<DynamicIllustration name="empty" />))
+  it('should work with consoleLightTheme', () =>
+    shouldMatchEmotionSnapshot(
+      <DynamicIllustration name="empty" />,
+      consoleLightTheme,
+    ))
+  it('should work with consoleDarkTheme', () =>
+    shouldMatchEmotionSnapshot(
+      <DynamicIllustration name="empty" />,
+      consoleDarkTheme,
+    ))
 
-  it('should work with dark theme', () =>
-    shouldMatchEmotionSnapshotDark(<DynamicIllustration name="empty" />))
+  it('should work with consoleDarkerTheme', () =>
+    shouldMatchEmotionSnapshot(
+      <DynamicIllustration name="empty" />,
+      consoleDarkerTheme,
+    ))
 })

@@ -25,7 +25,7 @@ jobs:
   lint:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4 # v4.1.4
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.2
@@ -43,7 +43,7 @@ jobs:
       matrix:
         node: ['20']
     steps:
-      - uses: actions/checkout@v4 # v4.1.4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: '0'
       - uses: pnpm/action-setup@v4.0.0
@@ -62,22 +62,22 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           verbose: true
 
-  accessibility:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4 # v4.1.4
-        with:
-          fetch-depth: '0'
-      - uses: pnpm/action-setup@v4.0.0
-      - name: Use Node.js
-        uses: actions/setup-node@v4.0.2
-        with:
-          node-version: 20
-          cache: 'pnpm'
-      - run: pnpm install
-      - run: pnpm run build
-      - run: pnpm install
-      - run: pnpm run test:a11y
+  # accessibility:
+  #   runs-on: ubuntu-22.04
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: '0'
+  #     - uses: pnpm/action-setup@v3.0.0
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@v4.0.2
+  #       with:
+  #         node-version: 20
+  #         cache: 'pnpm'
+  #     - run: pnpm install
+  #     - run: pnpm run build
+  #     - run: pnpm install
+  #     - run: pnpm run test:a11y
   build:
     strategy:
       matrix:

@@ -1,19 +1,17 @@
-import {
-  beforeAll,
-  beforeEach,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
+/**
+ * TODO/ outdated script with vitest migration
+ **/
+
 import type { Meta } from '@storybook/react'
 import { composeStories } from '@storybook/react'
+import { renderWithTheme } from '@utils/test'
 import fs from 'fs'
-import { axe, toHaveNoViolations } from 'jest-axe'
+import { toHaveNoViolations } from 'jest-axe'
+import { axe } from 'vitest-axe'
 import * as path from 'path'
 import * as process from 'process'
 import type { JSX } from 'react'
-import { renderWithTheme } from '../../.jest/helpers'
+import { beforeAll, beforeEach, describe, expect, test, vi } from 'vitest'
 
 const testedComponents = [
   'Alert',
@@ -89,50 +87,54 @@ if (process.argv[4]) {
 
 expect.extend(toHaveNoViolations)
 
-jest.setTimeout(120000)
+describe(
+  'A11y',
+  () => {
+    beforeEach(() => {
+      console.log = jest.fn()
+      console.warn = jest.fn()
+      console.error = jest.fn()
+    })
 
-describe('A11y', () => {
-  beforeEach(() => {
-    console.log = jest.fn()
-    console.warn = jest.fn()
-    console.error = jest.fn()
-  })
+    const moduleArray: Promise<{
+      default: Meta
+      __esModule?: boolean
+    }>[] = []
 
-  const moduleArray: Promise<{
-    default: Meta
-    __esModule?: boolean
-  }>[] = []
+    beforeAll(async () => {
+      for await (const file of foundFiles) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+        moduleArray.push(await import(file))
+      }
+    })
 
-  beforeAll(async () => {
-    for await (const file of foundFiles) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      moduleArray.push(await import(file))
-    }
-  })
-
-  foundFiles.forEach((file, index) => {
-    describe(`${file.split('/')[2]}`, () =>
-      test(file.split('/')[4].split('.')[0], async () => {
-        const module = {
-          // @ts-expect-error grab the first named export and pretend that module is a default export
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-          default: (await moduleArray[index])[0],
-        }
-        const components = composeStories(module)
-
-        for await (const componentName of Object.keys(components)) {
-          if (componentName !== 'default') {
-            const ComponentToRender = components[
-              componentName
-            ] as () => JSX.Element
-            const { container } = renderWithTheme(<ComponentToRender />)
-
+    foundFiles.forEach((file, index) => {
+      describe(`${file.split('/')[2]}`, () =>
+        test(file.split('/')[4].split('.')[0], async () => {
+          const module = {
+            // @ts-expect-error grab the first named export and pretend that module is a default export
             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-            const results = await axe(container)
-
-            expect(results).toHaveNoViolations()
+            default: (await moduleArray[index])[0],
           }
-        }
-      }))
-  })
-})
+          const components = composeStories(module)
+
+          for await (const componentName of Object.keys(components)) {
+            if (componentName !== 'default') {
+              const ComponentToRender = components[
+                componentName
+              ] as () => JSX.Element
+              const { container } = renderWithTheme(<ComponentToRender />)
+
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+              const results = await axe(container)
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+              expect(results).toHaveNoViolations()
+            }
+          }
+        }))
+    })
+  },
+  {
+    timeout: 120000,
+  },
+)

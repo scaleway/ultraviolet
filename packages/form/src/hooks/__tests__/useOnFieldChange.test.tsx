@@ -1,13 +1,11 @@
 import { ThemeProvider } from '@emotion/react'
-import { describe, expect, jest, test } from '@jest/globals'
 import { renderHook } from '@testing-library/react'
 import { theme as lightTheme } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
-import type { FieldValues } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
+import { describe, expect, test, vi } from 'vitest'
 import { CheckboxField, Form, TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
-import type { CallbackFn } from '../useOnFieldChange'
 import { useOnFieldChange } from '../useOnFieldChange'
 
 type FormValues = {
@@ -52,7 +50,7 @@ const Wrapper = ({ children, initialValues }: Wrapers) => {
 
 describe('useOnFieldChange', () => {
   test('should render correctly', () => {
-    const callback = jest.fn((value, values) => {
+    const callback = vi.fn((value, values) => {
       expect(value).toBe(updated.textInputName)
       expect(values).toStrictEqual(updated)
     })
@@ -84,8 +82,7 @@ describe('useOnFieldChange', () => {
   })
 
   test('should render when condition change', () => {
-    const callback =
-      jest.fn<CallbackFn<FieldValues, FormValues['textInputName']>>()
+    const callback = vi.fn()
 
     let initialValues = initial
 

@@ -1,1381 +1,123 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Modal renders open custom size 1`] = `
+exports[`Modal > renders open custom size 1`] = `
 <DocumentFragment>
-  .cache-1i6y80v-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959a6;
-  z-index: 1;
-}
-
-.cache-1i6y80v-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-7gphef-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151a2d5c;
-}
-
-.cache-7gphef-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-7gphef-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-7gphef-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-7gphef-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.cache-10pzl3m-StyledContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div>
-    <div
-      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
-      data-open="true"
-    >
-      <dialog
-        aria-label="modal"
-        aria-modal="true"
-        class="cache-7gphef-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="medium"
-        id=":ra:"
-        open=""
-        tabindex="0"
-      >
-        <div>
-          test
-        </div>
-        <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-        </div>
-      </dialog>
-    </div>
-  </div>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders open custom size and width (size take predecence) 1`] = `
+exports[`Modal > renders open custom size and width (size take predecence) 1`] = `
 <DocumentFragment>
-  .cache-1i6y80v-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959a6;
-  z-index: 1;
-}
-
-.cache-1i6y80v-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-7gphef-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151a2d5c;
-}
-
-.cache-7gphef-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-7gphef-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-7gphef-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-7gphef-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.cache-10pzl3m-StyledContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div>
-    <div
-      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
-      data-open="true"
-    >
-      <dialog
-        aria-label="modal"
-        aria-modal="true"
-        class="cache-7gphef-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="medium"
-        id=":rc:"
-        open=""
-        tabindex="0"
-      >
-        <div>
-          test
-        </div>
-        <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-        </div>
-      </dialog>
-    </div>
-  </div>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders open custom width 1`] = `
+exports[`Modal > renders open custom width 1`] = `
 <DocumentFragment>
-  .cache-1i6y80v-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959a6;
-  z-index: 1;
-}
-
-.cache-1i6y80v-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-7gphef-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151a2d5c;
-}
-
-.cache-7gphef-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-7gphef-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-7gphef-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-7gphef-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.cache-10pzl3m-StyledContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div>
-    <div
-      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
-      data-open="true"
-    >
-      <dialog
-        aria-label="modal"
-        aria-modal="true"
-        class="cache-7gphef-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="medium"
-        id=":r8:"
-        open=""
-        tabindex="0"
-      >
-        <div>
-          test
-        </div>
-        <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-        </div>
-      </dialog>
-    </div>
-  </div>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders with custom classNames 1`] = `
+exports[`Modal > renders with custom classNames 1`] = `
 <DocumentFragment>
-  .cache-1i6y80v-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959a6;
-  z-index: 1;
-}
-
-.cache-1i6y80v-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-7gphef-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151a2d5c;
-}
-
-.cache-7gphef-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-7gphef-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-7gphef-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-7gphef-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.cache-10pzl3m-StyledContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div>
-    <div
-      class="eibmy6-customDialogBackdropStyles cache-1i6y80v-StyledBackdrop e1cqen9h1"
-      data-open="true"
-    >
-      <dialog
-        aria-label="modal"
-        aria-modal="true"
-        class="1vjuh1t-customDialogStyles cache-7gphef-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        id=":rg:"
-        open=""
-        tabindex="0"
-      >
-        <div>
-          test
-        </div>
-        <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-        </div>
-      </dialog>
-    </div>
-  </div>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders with customStyle 1`] = `
+exports[`Modal > renders with customStyle 1`] = `
 <DocumentFragment>
-  .cache-w86j7w-StyledBackdrop-customDialogBackdropStyles {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959a6;
-  z-index: 1;
-  background-color: aliceblue;
-}
-
-.cache-w86j7w-StyledBackdrop-customDialogBackdropStyles[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151a2d5c;
-  background: radial-gradient(circle, #8b2fe6 0%, #4f0599 50%, #30015a 100%);
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-size="large"] {
-  width: 850px;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-size="small"] {
-  width: 616px;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-1sf34m-StyledDialog-customDialogStyles[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.cache-10pzl3m-StyledContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div>
-    <div
-      class="cache-w86j7w-StyledBackdrop-customDialogBackdropStyles e1cqen9h1"
-      data-open="true"
-    >
-      <dialog
-        aria-label="modal"
-        aria-modal="true"
-        class="cache-1sf34m-StyledDialog-customDialogStyles e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        id=":re:"
-        open=""
-        tabindex="0"
-      >
-        <div>
-          test
-        </div>
-        <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-        </div>
-      </dialog>
-    </div>
-  </div>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders with default Props 1`] = `
+exports[`Modal > renders with default Props 1`] = `
 <DocumentFragment>
-  <button
-    aria-controls=":r0:"
-    aria-haspopup="dialog"
-    type="button"
+  <div
+    data-testid="testing"
   >
-    Test
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Modal renders with default Props and function children 1`] = `<DocumentFragment />`;
-
-exports[`Modal renders with default Props and function children open 1`] = `
-<DocumentFragment>
-  .cache-1i6y80v-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959a6;
-  z-index: 1;
-}
-
-.cache-1i6y80v-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-7gphef-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151a2d5c;
-}
-
-.cache-7gphef-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-7gphef-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-7gphef-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-7gphef-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.cache-10pzl3m-StyledContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div>
-    <div
-      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
-      data-open="true"
+    <button
+      aria-controls=":r0:"
+      aria-haspopup="dialog"
+      type="button"
     >
-      <dialog
-        aria-label="modal"
-        aria-modal="true"
-        class="cache-7gphef-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        id=":r3:"
-        open=""
-        tabindex="0"
-      >
-        <div>
-          test
-        </div>
-        <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-        </div>
-      </dialog>
-    </div>
+      Test
+    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Modal renders with disclosure 1`] = `
+exports[`Modal > renders with default Props and function children 1`] = `
 <DocumentFragment>
-  <button
-    aria-controls="modal-test"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Test
-  </button>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders with disclosure and onBeforeClose 1`] = `
+exports[`Modal > renders with default Props and function children open 1`] = `
 <DocumentFragment>
-  <button
-    aria-controls="modal-test"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Open modal
-  </button>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders with disclosure and onClose 1`] = `
+exports[`Modal > renders with disclosure 1`] = `
 <DocumentFragment>
-  <button
-    aria-controls="modal-test"
-    aria-haspopup="dialog"
-    type="button"
+  <div
+    data-testid="testing"
   >
-    Open modal
-  </button>
-  .cache-1i6y80v-StyledBackdrop {
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Test
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Modal > renders with disclosure and onBeforeClose 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open modal
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Modal > renders with disclosure and onClose 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open modal
+    </button>
+  </div>
+  .emotion-0 {
   position: fixed;
   top: 0;
   right: 0;
@@ -1386,7 +128,7 @@ exports[`Modal renders with disclosure and onClose 1`] = `
   z-index: 1;
 }
 
-.cache-1i6y80v-StyledBackdrop[data-open='true'] {
+.emotion-0[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -1399,7 +141,31 @@ exports[`Modal renders with disclosure and onClose 1`] = `
   width: 100%;
 }
 
-.cache-7gphef-StyledDialog {
+.emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  background-color: #464959a6;
+  z-index: 1;
+}
+
+.emotion-0[data-open='true'] {
+  padding: 16px;
+  overflow: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.emotion-2 {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
@@ -1409,81 +175,165 @@ exports[`Modal renders with disclosure and onClose 1`] = `
   box-shadow: 0px 8px 40px 10px #151a2d5c;
 }
 
-.cache-7gphef-StyledDialog[data-size="large"] {
+.emotion-2[data-size="large"] {
   width: 850px;
 }
 
-.cache-7gphef-StyledDialog[data-size="medium"] {
+.emotion-2[data-size="medium"] {
   width: 708px;
 }
 
-.cache-7gphef-StyledDialog[data-size="small"] {
+.emotion-2[data-size="small"] {
   width: 616px;
 }
 
-.cache-7gphef-StyledDialog[data-size="xsmall"] {
+.emotion-2[data-size="xsmall"] {
   width: 400px;
 }
 
-.cache-7gphef-StyledDialog[data-size="xxsmall"] {
+.emotion-2[data-size="xxsmall"] {
   width: 360px;
 }
 
-.cache-7gphef-StyledDialog[data-placement="bottom"] {
+.emotion-2[data-placement="bottom"] {
   margin: auto;
   margin-bottom: 0;
 }
 
-.cache-7gphef-StyledDialog[data-placement="bottom-left"] {
+.emotion-2[data-placement="bottom-left"] {
   margin: auto;
   margin-left: 0;
   margin-bottom: 0;
 }
 
-.cache-7gphef-StyledDialog[data-placement="bottom-right"] {
+.emotion-2[data-placement="bottom-right"] {
   margin: auto;
   margin-right: 0;
   margin-bottom: 0;
 }
 
-.cache-7gphef-StyledDialog[data-placement="center"] {
+.emotion-2[data-placement="center"] {
   margin: auto;
 }
 
-.cache-7gphef-StyledDialog[data-placement="left"] {
+.emotion-2[data-placement="left"] {
   margin: auto;
   margin-left: 0;
 }
 
-.cache-7gphef-StyledDialog[data-placement="right"] {
+.emotion-2[data-placement="right"] {
   margin: auto;
   margin-right: 0;
 }
 
-.cache-7gphef-StyledDialog[data-placement="top"] {
+.emotion-2[data-placement="top"] {
   margin: auto;
   margin-top: 0px;
 }
 
-.cache-7gphef-StyledDialog[data-placement="top-left"] {
+.emotion-2[data-placement="top-left"] {
   margin: auto;
   margin-left: 0;
   margin-top: 0;
 }
 
-.cache-7gphef-StyledDialog[data-placement="top-right"] {
+.emotion-2[data-placement="top-right"] {
   margin: auto;
   margin-right: 0;
   margin-top: 0;
 }
 
-.cache-10pzl3m-StyledContainer {
+.emotion-2 {
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 4px;
+  border: 0;
+  padding: 24px;
+  width: 708px;
+  box-shadow: 0px 8px 40px 10px #151a2d5c;
+}
+
+.emotion-2[data-size="large"] {
+  width: 850px;
+}
+
+.emotion-2[data-size="medium"] {
+  width: 708px;
+}
+
+.emotion-2[data-size="small"] {
+  width: 616px;
+}
+
+.emotion-2[data-size="xsmall"] {
+  width: 400px;
+}
+
+.emotion-2[data-size="xxsmall"] {
+  width: 360px;
+}
+
+.emotion-2[data-placement="bottom"] {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.emotion-2[data-placement="bottom-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.emotion-2[data-placement="bottom-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.emotion-2[data-placement="center"] {
+  margin: auto;
+}
+
+.emotion-2[data-placement="left"] {
+  margin: auto;
+  margin-left: 0;
+}
+
+.emotion-2[data-placement="right"] {
+  margin: auto;
+  margin-right: 0;
+}
+
+.emotion-2[data-placement="top"] {
+  margin: auto;
+  margin-top: 0px;
+}
+
+.emotion-2[data-placement="top-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.emotion-2[data-placement="top-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.emotion-4 {
   position: absolute;
   top: 16px;
   right: 16px;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-4 {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1522,22 +372,76 @@ exports[`Modal renders with disclosure and onClose 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-6:hover,
+.emotion-6:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-6:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-6:hover,
+.emotion-6:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-8 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1546,21 +450,35 @@ exports[`Modal renders with disclosure and onClose 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-8 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-8 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div>
     <div
-      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
+      class="emotion-0 emotion-1"
       data-open="true"
       data-testid="test-backdrop"
     >
       <dialog
         aria-label="modal-test"
         aria-modal="true"
-        class="cache-7gphef-StyledDialog e1cqen9h0"
+        class="emotion-2 emotion-3"
         data-placement="center"
         data-size="small"
         data-testid="test"
@@ -1572,16 +490,16 @@ exports[`Modal renders with disclosure and onClose 1`] = `
           modal
         </div>
         <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
+          class="emotion-4 emotion-5"
         >
           <button
             aria-label="close"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            class="emotion-6 emotion-7"
             data-testid="test-close-button"
             type="button"
           >
             <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+              class="emotion-8 emotion-9"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -1597,362 +515,26 @@ exports[`Modal renders with disclosure and onClose 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Modal renders with open={true} 1`] = `
+exports[`Modal > renders with open={true} 1`] = `
 <DocumentFragment>
-  .cache-1i6y80v-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959a6;
-  z-index: 1;
-}
-
-.cache-1i6y80v-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-7gphef-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151a2d5c;
-}
-
-.cache-7gphef-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-7gphef-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-7gphef-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-7gphef-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.cache-10pzl3m-StyledContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div>
-    <div
-      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
-      data-open="true"
-    >
-      <dialog
-        aria-label="modal"
-        aria-modal="true"
-        class="cache-7gphef-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        id=":r5:"
-        open=""
-        tabindex="0"
-      >
-        <div>
-          test
-        </div>
-        <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-        </div>
-      </dialog>
-    </div>
-  </div>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders with open={true} and no close icon 1`] = `
+exports[`Modal > renders with open={true} and no close icon 1`] = `
 <DocumentFragment>
-  .cache-1i6y80v-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959a6;
-  z-index: 1;
-}
-
-.cache-1i6y80v-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-7gphef-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151a2d5c;
-}
-
-.cache-7gphef-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-7gphef-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-7gphef-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-7gphef-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-7gphef-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-7gphef-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-.cache-10pzl3m-StyledContainer {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-
-<div>
-    <div
-      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
-      data-open="true"
-    >
-      <dialog
-        aria-label="modal"
-        aria-modal="true"
-        class="cache-7gphef-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        id=":r7:"
-        open=""
-        tabindex="0"
-      >
-        <div>
-          test
-        </div>
-        <div
-          class="cache-10pzl3m-StyledContainer ebywm9u0"
-        />
-      </dialog>
-    </div>
-  </div>
+  <div
+    data-testid="testing"
+  />
 </DocumentFragment>
 `;
 
-exports[`Modal renders without disclosure 1`] = `<DocumentFragment />`;
+exports[`Modal > renders without disclosure 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;

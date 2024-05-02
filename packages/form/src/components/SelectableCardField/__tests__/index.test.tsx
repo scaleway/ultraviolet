@@ -1,73 +1,48 @@
-import {
-  afterAll,
-  beforeAll,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Form, SelectableCardField } from '../..'
-import {
-  mockRandom,
-  restoreRandom,
-  shouldMatchEmotionSnapshot,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks'
+import { renderWithForm } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
+import { SelectableCardField } from '../..'
 
 describe('SelectableCardField', () => {
-  beforeAll(() => {
-    mockRandom()
-  })
-  afterAll(restoreRandom)
-
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(
       <SelectableCardField name="test" value="test">
         Radio field
       </SelectableCardField>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly disabled', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly disabled', () => {
+    const { asFragment } = renderWithForm(
       <SelectableCardField name="test" value="disabled" disabled>
         Radio field disabled
       </SelectableCardField>,
-      {
-        transform: () => {
-          const input = screen.getByRole('radio', { hidden: true })
-          expect(input).toBeDisabled()
-        },
-      },
-    ))
+    )
+    const input = screen.getByRole('radio', { hidden: true })
+    expect(input).toBeDisabled()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly checked', () =>
-    shouldMatchEmotionSnapshot(
-      <Form
-        onRawSubmit={() => {}}
-        errors={mockErrors}
-        initialValues={{ test: 'checked' }}
-      >
-        <SelectableCardField name="test" value="checked">
-          Radio field checked
-        </SelectableCardField>
-      </Form>,
-      {
-        transform: () => {
-          const input = screen.getByRole('radio', { hidden: true })
-          expect(input).toBeChecked()
-        },
-      },
-    ))
+  test('should render correctly checked', () => {
+    const { asFragment } = renderWithForm(
+      <SelectableCardField name="test" value="checked">
+        Radio field checked
+      </SelectableCardField>,
+      { initialValues: { test: 'checked' } },
+    )
+    const input = screen.getByRole('radio', { hidden: true })
+    expect(input).toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => {})
-    const onChange = jest.fn(() => {})
-    const onBlur = jest.fn(() => {})
+    const onFocus = vi.fn(() => {})
+    const onChange = vi.fn(() => {})
+    const onBlur = vi.fn(() => {})
 
-    return shouldMatchEmotionSnapshotFormWrapper(
+    const { asFragment } = renderWithForm(
       <SelectableCardField
         name="test"
         value="events"
@@ -77,34 +52,30 @@ describe('SelectableCardField', () => {
       >
         Radio field events
       </SelectableCardField>,
-      {
-        transform: () => {
-          const input = screen.getByRole('radio', { hidden: true })
-          act(() => input.focus())
-          expect(onFocus).toBeCalledTimes(1)
-          act(() => input.click())
-          expect(onChange).toBeCalledTimes(1)
-          act(() => input.blur())
-          expect(onBlur).toBeCalledTimes(1)
-        },
-      },
     )
+    const input = screen.getByRole('radio', { hidden: true })
+    act(() => input.focus())
+    expect(onFocus).toBeCalledTimes(1)
+    act(() => input.click())
+    expect(onChange).toBeCalledTimes(1)
+    act(() => input.blur())
+    expect(onBlur).toBeCalledTimes(1)
+
+    expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with errors', () =>
-    shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+  test('should render correctly with errors', async () => {
+    const { asFragment } = renderWithForm(
+      <>
         <SelectableCardField name="test" value="checked" required>
           Radio field error
         </SelectableCardField>
         <button type="submit">Submit</button>
-      </Form>,
-      {
-        transform: async () => {
-          await userEvent.click(screen.getByRole('button'))
-          const input = screen.getByRole('radio', { hidden: true })
-          expect(input).toHaveAttribute('aria-invalid', 'true')
-        },
-      },
-    ))
+      </>,
+    )
+    await userEvent.click(screen.getByRole('button'))
+    const input = screen.getByRole('radio', { hidden: true })
+    expect(input).toHaveAttribute('aria-invalid', 'true')
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

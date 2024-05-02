@@ -9,14 +9,16 @@
     "directory": "packages/form"
   },
   "scripts": {
-    "prebuild": "shx rm -rf dist",
-    "type:generate": "tsc --declaration -p tsconfig.build.json",
-    "watch": "pnpm run '/^watch:.*/'",
-    "watch:build": "vite build --config vite.config.ts --watch",
-    "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "build": "vite build --config vite.config.ts && pnpm run type:generate",
+    "prebuild": "shx rm -rf dist",
+    "size": "pnpm run build && size-limit",
+    "test:unit:coverage": "pnpm test:unit --coverage",
+    "test:unit": "vitest --run --config vite.config.ts",
+    "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "size": "pnpm run build && size-limit"
+    "watch:build": "vite build --config vite.config.ts --watch",
+    "watch": "pnpm run '/^watch:.*/'"
   },
   "keywords": [
     "react",
@@ -70,8 +72,9 @@
   "devDependencies": {
     "@babel/core": "7.24.5",
     "@types/final-form-focus": "1.1.7",
-    "@types/react": "18.3.2",
+    "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
+    "@utils/test":"workspace:*",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
@@ -80,6 +83,7 @@
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
     "@ultraviolet/ui": "workspace:*",
+    "@ultraviolet/themes": "workspace:*",
     "react-select": "5.8.0",
     "react-hook-form": "7.51.4"
   }

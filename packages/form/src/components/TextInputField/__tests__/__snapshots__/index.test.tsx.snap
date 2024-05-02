@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TextInputField should render correctly 1`] = `
+exports[`TextInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1txlkbl-StyledRelativeDiv {
+  .emotion-0 {
   position: relative;
 }
 
-.cache-1ws5f5r-StyledInput {
+.emotion-2 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -35,98 +35,102 @@ exports[`TextInputField should render correctly 1`] = `
   padding: 8px;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:hover,
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-6 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
-      >
-        <input
-          autocomplete="on"
-          class="cache-1ws5f5r-StyledInput el3h3g92"
-          name="test"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
+    <form
+      novalidate=""
+    >
+      <div>
         <div
-          class="cache-1aqops6-StyledError el3h3g94"
-        />
+          class="emotion-0 emotion-1"
+        >
+          <input
+            autocomplete="on"
+            class="emotion-2 emotion-3"
+            name="test"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`TextInputField should render correctly disabled 1`] = `
+exports[`TextInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-1txlkbl-StyledRelativeDiv {
+  .emotion-0 {
   position: relative;
 }
 
-.cache-lsdaap-StyledInput {
+.emotion-2 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -160,99 +164,103 @@ exports[`TextInputField should render correctly disabled 1`] = `
   padding: 8px;
 }
 
-.cache-lsdaap-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-lsdaap-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-lsdaap-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-lsdaap-StyledInput::placeholder {
+.emotion-2::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-lsdaap-StyledInput:hover,
-.cache-lsdaap-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.cache-lsdaap-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-lsdaap-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-lsdaap-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-lsdaap-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-lsdaap-StyledInput::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-6 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
-      >
-        <input
-          autocomplete="on"
-          class="cache-lsdaap-StyledInput el3h3g92"
-          disabled=""
-          name="test"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
+    <form
+      novalidate=""
+    >
+      <div>
         <div
-          class="cache-1aqops6-StyledError el3h3g94"
-        />
+          class="emotion-0 emotion-1"
+        >
+          <input
+            autocomplete="on"
+            class="emotion-2 emotion-3"
+            disabled=""
+            name="test"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`TextInputField should render correctly generated 1`] = `
+exports[`TextInputField > should render correctly generated 1`] = `
 <DocumentFragment>
-  .cache-1txlkbl-StyledRelativeDiv {
+  .emotion-0 {
   position: relative;
 }
 
-.cache-1ws5f5r-StyledInput {
+.emotion-2 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -281,98 +289,102 @@ exports[`TextInputField should render correctly generated 1`] = `
   padding: 8px;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:hover,
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-6 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
-      >
-        <input
-          autocomplete="on"
-          class="cache-1ws5f5r-StyledInput el3h3g92"
-          name="test"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
+    <form
+      novalidate=""
+    >
+      <div>
         <div
-          class="cache-1aqops6-StyledError el3h3g94"
-        />
+          class="emotion-0 emotion-1"
+        >
+          <input
+            autocomplete="on"
+            class="emotion-2 emotion-3"
+            name="test"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`TextInputField should render correctly id 1`] = `
+exports[`TextInputField > should render correctly id 1`] = `
 <DocumentFragment>
-  .cache-1txlkbl-StyledRelativeDiv {
+  .emotion-0 {
   position: relative;
 }
 
-.cache-1ws5f5r-StyledInput {
+.emotion-2 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -401,99 +413,103 @@ exports[`TextInputField should render correctly id 1`] = `
   padding: 8px;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:hover,
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-6 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
-      >
-        <input
-          autocomplete="on"
-          class="cache-1ws5f5r-StyledInput el3h3g92"
-          id="id"
-          name="test"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
+    <form
+      novalidate=""
+    >
+      <div>
         <div
-          class="cache-1aqops6-StyledError el3h3g94"
-        />
+          class="emotion-0 emotion-1"
+        >
+          <input
+            autocomplete="on"
+            class="emotion-2 emotion-3"
+            id="id"
+            name="test"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`TextInputField should render correctly notice 1`] = `
+exports[`TextInputField > should render correctly notice 1`] = `
 <DocumentFragment>
-  .cache-1txlkbl-StyledRelativeDiv {
+  .emotion-0 {
   position: relative;
 }
 
-.cache-1ws5f5r-StyledInput {
+.emotion-2 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -522,65 +538,65 @@ exports[`TextInputField should render correctly notice 1`] = `
   padding: 8px;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:hover,
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-6 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-.cache-jfxruw-StyledText-StyledSpan-StyledNotice {
+.emotion-10 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -602,7 +618,7 @@ exports[`TextInputField should render correctly notice 1`] = `
   margin-top: 4px;
 }
 
-.cache-il0zju-StyledIcon-sizeStyles {
+.emotion-12 {
   vertical-align: middle;
   fill: #727683;
   height: 16px;
@@ -611,61 +627,65 @@ exports[`TextInputField should render correctly notice 1`] = `
   min-height: 16px;
 }
 
-.cache-il0zju-StyledIcon-sizeStyles .fillStroke {
+.emotion-12 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
-      >
-        <input
-          autocomplete="on"
-          class="cache-1ws5f5r-StyledInput el3h3g92"
-          name="test"
-          type="text"
-          value=""
-        />
-      </div>
-      <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
+    <form
+      novalidate=""
+    >
+      <div>
         <div
-          class="cache-1aqops6-StyledError el3h3g94"
-        />
-      </div>
-      <span
-        class="el3h3g93 e19pqvs30 cache-jfxruw-StyledText-StyledSpan-StyledNotice e13y3mga0"
-      >
-        <svg
-          class="cache-il0zju-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          class="emotion-0 emotion-1"
         >
-          <path
-            clip-rule="evenodd"
-            d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0M9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8z"
-            fill-rule="evenodd"
+          <input
+            autocomplete="on"
+            class="emotion-2 emotion-3"
+            name="test"
+            type="text"
+            value=""
           />
-        </svg>
-        notice
-      </span>
-    </div>
-  </form>
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
+        <span
+          class="emotion-8 emotion-9 emotion-10 emotion-11"
+        >
+          <svg
+            class="emotion-12 emotion-13"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0M9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          notice
+        </span>
+      </div>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`TextInputField should render correctly random 1`] = `
+exports[`TextInputField > should render correctly random 1`] = `
 <DocumentFragment>
-  .cache-1txlkbl-StyledRelativeDiv {
+  .emotion-0 {
   position: relative;
 }
 
-.cache-1ws5f5r-StyledInput {
+.emotion-2 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -694,53 +714,53 @@ exports[`TextInputField should render correctly random 1`] = `
   padding: 8px;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ws5f5r-StyledInput:hover,
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-1ws5f5r-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ws5f5r-StyledInput::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
 }
 
-.cache-i0z4cq-StyledRightElement-StyledRightElement-StyledRightElement {
+.emotion-4 {
   pointer-events: none;
   position: absolute;
   right: 0;
@@ -762,16 +782,16 @@ exports[`TextInputField should render correctly random 1`] = `
   pointer-events: auto;
 }
 
-.cache-i0z4cq-StyledRightElement-StyledRightElement-StyledRightElement:hover,
-.cache-i0z4cq-StyledRightElement-StyledRightElement-StyledRightElement:focus-within {
+.emotion-4:hover,
+.emotion-4:focus-within {
   color: #3f4250;
 }
 
-.cache-i0z4cq-StyledRightElement-StyledRightElement-StyledRightElement>button {
+.emotion-4>button {
   box-shadow: none!important;
 }
 
-.cache-1128fcb-Stack-RightComponent {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -795,7 +815,7 @@ exports[`TextInputField should render correctly random 1`] = `
   min-width: 24px;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -834,22 +854,22 @@ exports[`TextInputField should render correctly random 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-8:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-8:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-8:hover,
+.emotion-8:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-10 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -858,80 +878,84 @@ exports[`TextInputField should render correctly random 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-10 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-12 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-14 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
-      >
-        <input
-          autocomplete="on"
-          class="cache-1ws5f5r-StyledInput el3h3g92"
-          name="test"
-          type="text"
-          value=""
-        />
+    <form
+      novalidate=""
+    >
+      <div>
         <div
-          class="cache-i0z4cq-StyledRightElement-StyledRightElement-StyledRightElement el3h3g97"
+          class="emotion-0 emotion-1"
         >
+          <input
+            autocomplete="on"
+            class="emotion-2 emotion-3"
+            name="test"
+            type="text"
+            value=""
+          />
           <div
-            class="cache-1128fcb-Stack-RightComponent el3h3g91"
+            class="emotion-4 emotion-5"
           >
-            <button
-              aria-label="randomize"
-              class="cache-1xcp86l-StyledGhostButton e112qvla0"
-              type="button"
+            <div
+              class="emotion-6 emotion-7"
             >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                aria-label="randomize"
+                class="emotion-8 emotion-9"
+                type="button"
               >
-                <path
-                  d="m13.73 3.963.337-.732.731-.338a.345.345 0 0 0 0-.628l-.73-.338-.339-.725a.345.345 0 0 0-.628 0l-.338.731-.724.339a.345.345 0 0 0 0 .628l.731.338.338.725a.34.34 0 0 0 .621 0m-7.933 0 .338-.732.731-.338a.345.345 0 0 0 0-.628l-.73-.332-.339-.731a.34.34 0 0 0-.62 0l-.339.731-.73.339a.345.345 0 0 0 0 .628l.73.338.338.725a.34.34 0 0 0 .621 0m7.312 5.175-.338.732-.73.338a.345.345 0 0 0 0 .628l.73.338.338.732a.345.345 0 0 0 .628 0l.338-.732.724-.345a.345.345 0 0 0 0-.628l-.73-.338-.339-.732c-.117-.262-.503-.262-.62.007m-1.27-3.023L9.887 4.162a.687.687 0 0 0-.973 0L1.202 11.87a.69.69 0 0 0 0 .973l1.952 1.953c.269.27.704.27.973 0l7.705-7.709a.68.68 0 0 0 .007-.973M9.424 7.557l-.972-.973.952-.952.972.973z"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="emotion-10 emotion-11"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13.73 3.963.337-.732.731-.338a.345.345 0 0 0 0-.628l-.73-.338-.339-.725a.345.345 0 0 0-.628 0l-.338.731-.724.339a.345.345 0 0 0 0 .628l.731.338.338.725a.34.34 0 0 0 .621 0m-7.933 0 .338-.732.731-.338a.345.345 0 0 0 0-.628l-.73-.332-.339-.731a.34.34 0 0 0-.62 0l-.339.731-.73.339a.345.345 0 0 0 0 .628l.73.338.338.725a.34.34 0 0 0 .621 0m7.312 5.175-.338.732-.73.338a.345.345 0 0 0 0 .628l.73.338.338.732a.345.345 0 0 0 .628 0l.338-.732.724-.345a.345.345 0 0 0 0-.628l-.73-.338-.339-.732c-.117-.262-.503-.262-.62.007m-1.27-3.023L9.887 4.162a.687.687 0 0 0-.973 0L1.202 11.87a.69.69 0 0 0 0 .973l1.952 1.953c.269.27.704.27.973 0l7.705-7.709a.68.68 0 0 0 .007-.973M9.424 7.557l-.972-.973.952-.952.972.973z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
         <div
-          class="cache-1aqops6-StyledError el3h3g94"
-        />
+          class="emotion-12 emotion-13"
+        >
+          <div
+            class="emotion-14 emotion-15"
+          />
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`TextInputField should render correctly required 1`] = `
+exports[`TextInputField > should render correctly required 1`] = `
 <DocumentFragment>
-  .cache-1txlkbl-StyledRelativeDiv {
+  .emotion-0 {
   position: relative;
 }
 
-.cache-1ciudd4-StyledInput {
+.emotion-2 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -961,53 +985,53 @@ exports[`TextInputField should render correctly required 1`] = `
   padding-right: calc(1 * 32px);
 }
 
-.cache-1ciudd4-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ciudd4-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ciudd4-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ciudd4-StyledInput::placeholder {
+.emotion-2::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1ciudd4-StyledInput:hover,
-.cache-1ciudd4-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.cache-1ciudd4-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-1ciudd4-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ciudd4-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1ciudd4-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ciudd4-StyledInput::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
 }
 
-.cache-1539on3-StyledRightElement-StyledRightElement {
+.emotion-4 {
   pointer-events: none;
   position: absolute;
   right: 0;
@@ -1028,12 +1052,12 @@ exports[`TextInputField should render correctly required 1`] = `
   color: #727683;
 }
 
-.cache-1539on3-StyledRightElement-StyledRightElement:hover,
-.cache-1539on3-StyledRightElement-StyledRightElement:focus-within {
+.emotion-4:hover,
+.emotion-4:focus-within {
   color: #3f4250;
 }
 
-.cache-3cgt5r-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
@@ -1042,71 +1066,75 @@ exports[`TextInputField should render correctly required 1`] = `
   min-height: 10px;
 }
 
-.cache-3cgt5r-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-8 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-10 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
-      >
-        <input
-          autocomplete="on"
-          class="cache-1ciudd4-StyledInput el3h3g92"
-          name="test"
-          required=""
-          type="text"
-          value=""
-        />
+    <form
+      novalidate=""
+    >
+      <div>
         <div
-          class="cache-1539on3-StyledRightElement-StyledRightElement el3h3g97"
+          class="emotion-0 emotion-1"
         >
-          <svg
-            class="cache-3cgt5r-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          <input
+            autocomplete="on"
+            class="emotion-2 emotion-3"
+            name="test"
+            required=""
+            type="text"
+            value=""
+          />
+          <div
+            class="emotion-4 emotion-5"
           >
-            <path
-              d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-            />
-          </svg>
+            <svg
+              class="emotion-6 emotion-7"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <div
+            class="emotion-10 emotion-11"
+          />
         </div>
       </div>
-      <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
-        <div
-          class="cache-1aqops6-StyledError el3h3g94"
-        />
-      </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`TextInputField should render correctly with minLength 1`] = `
+exports[`TextInputField > should render correctly with minLength 1`] = `
 <DocumentFragment>
-  .cache-1txlkbl-StyledRelativeDiv {
+  .emotion-0 {
   position: relative;
 }
 
-.cache-1u8vb78-StyledInput {
+.emotion-2 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -1136,99 +1164,103 @@ exports[`TextInputField should render correctly with minLength 1`] = `
   border-color: #b3144d;
 }
 
-.cache-1u8vb78-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1u8vb78-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1u8vb78-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1u8vb78-StyledInput::placeholder {
+.emotion-2::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-1u8vb78-StyledInput:hover,
-.cache-1u8vb78-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #792dd4;
 }
 
-.cache-1u8vb78-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-1u8vb78-StyledInput::-webkit-input-placeholder {
+.emotion-2::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1u8vb78-StyledInput::-moz-placeholder {
+.emotion-2::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1u8vb78-StyledInput:-ms-input-placeholder {
+.emotion-2:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1u8vb78-StyledInput::placeholder {
+.emotion-2::placeholder {
   opacity: 1;
 }
 
-.cache-1u8vb78-StyledInput:hover,
-.cache-1u8vb78-StyledInput:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   border-color: #92103f;
 }
 
-.cache-1u8vb78-StyledInput:focus {
+.emotion-2:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
   border-color: #92103f;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-6 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
-      >
-        <input
-          autocomplete="on"
-          class="cache-1u8vb78-StyledInput el3h3g92"
-          name="test"
-          type="text"
-          value="test"
-        />
-      </div>
-      <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
+    <form
+      novalidate=""
+    >
+      <div>
         <div
-          class="cache-1aqops6-StyledError el3h3g94"
+          class="emotion-0 emotion-1"
         >
-          This field should have a length greater than 13
+          <input
+            autocomplete="on"
+            class="emotion-2 emotion-3"
+            name="test"
+            type="text"
+            value="test"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            This field should have a length greater than 13
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;

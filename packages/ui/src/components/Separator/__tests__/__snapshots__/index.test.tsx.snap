@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Separator renders correctly horizontally 1`] = `
+exports[`Separator > renders correctly horizontally 1`] = `
 <DocumentFragment>
-  .cache-1c0ixtd-StyledHr {
+  .emotion-0 {
   margin: 0;
   border: 0;
   width: auto;
@@ -13,17 +13,21 @@ exports[`Separator renders correctly horizontally 1`] = `
   background-color: #e9eaeb;
 }
 
-<hr
-    aria-orientation="horizontal"
-    class="cache-1c0ixtd-StyledHr e1d1zom90"
-    role="separator"
-  />
+<div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
+    />
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Separator renders correctly vertically 1`] = `
+exports[`Separator > renders correctly vertically 1`] = `
 <DocumentFragment>
-  .cache-wzysv3-StyledHr {
+  .emotion-0 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -34,17 +38,21 @@ exports[`Separator renders correctly vertically 1`] = `
   background-color: #e9eaeb;
 }
 
-<hr
-    aria-orientation="vertical"
-    class="cache-wzysv3-StyledHr e1d1zom90"
-    role="separator"
-  />
+<div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="vertical"
+      class="emotion-0 emotion-1"
+      role="separator"
+    />
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Separator renders correctly with custom color 1`] = `
+exports[`Separator > renders correctly with custom color 1`] = `
 <DocumentFragment>
-  .cache-1xrv66a-StyledHr {
+  .emotion-0 {
   margin: 0;
   border: 0;
   width: auto;
@@ -55,17 +63,21 @@ exports[`Separator renders correctly with custom color 1`] = `
   background-color: #521094;
 }
 
-<hr
-    aria-orientation="horizontal"
-    class="cache-1xrv66a-StyledHr e1d1zom90"
-    role="separator"
-  />
+<div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
+    />
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Separator renders correctly with custom color and icon 1`] = `
+exports[`Separator > renders correctly with custom color and icon 1`] = `
 <DocumentFragment>
-  .cache-1gpqkcp-StyledIconWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,7 +91,7 @@ exports[`Separator renders correctly with custom color and icon 1`] = `
   align-items: center;
 }
 
-.cache-1inhs19-StyledHr {
+.emotion-2 {
   margin: 0;
   border: 0;
   width: auto;
@@ -93,7 +105,7 @@ exports[`Separator renders correctly with custom color and icon 1`] = `
   flex: 1;
 }
 
-.cache-1g5a81l-StyledIcon-sizeStyles-StyledIcon {
+.emotion-5 {
   vertical-align: middle;
   fill: #641cb3;
   height: 24px;
@@ -103,43 +115,47 @@ exports[`Separator renders correctly with custom color and icon 1`] = `
   fill: #521094;
 }
 
-.cache-1g5a81l-StyledIcon-sizeStyles-StyledIcon .fillStroke {
+.emotion-5 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
 <div
-    aria-orientation="horizontal"
-    class="cache-1gpqkcp-StyledIconWrapper e1d1zom92"
-    role="separator"
+    data-testid="testing"
   >
-    <hr
-      class="cache-1inhs19-StyledHr e1d1zom90"
-    />
-    <svg
-      class="e1d1zom91 cache-1g5a81l-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
     >
-      <path
-        clip-rule="evenodd"
-        d="M12 4a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V4.75A.75.75 0 0 1 12 4"
-        fill-rule="evenodd"
+      <hr
+        class="emotion-2 emotion-3"
       />
-      <path
-        d="M14 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+      <svg
+        class="emotion-4 emotion-5 emotion-6"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M12 4a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V4.75A.75.75 0 0 1 12 4"
+          fill-rule="evenodd"
+        />
+        <path
+          d="M14 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+        />
+      </svg>
+      <hr
+        class="emotion-2 emotion-3"
       />
-    </svg>
-    <hr
-      class="cache-1inhs19-StyledHr e1d1zom90"
-    />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Separator renders correctly with custom icon 1`] = `
+exports[`Separator > renders correctly with custom icon 1`] = `
 <DocumentFragment>
-  .cache-1gpqkcp-StyledIconWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -153,7 +169,7 @@ exports[`Separator renders correctly with custom icon 1`] = `
   align-items: center;
 }
 
-.cache-mqe1it-StyledHr {
+.emotion-2 {
   margin: 0;
   border: 0;
   width: auto;
@@ -167,7 +183,7 @@ exports[`Separator renders correctly with custom icon 1`] = `
   flex: 1;
 }
 
-.cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon {
+.emotion-5 {
   vertical-align: middle;
   fill: #3f4250;
   height: 24px;
@@ -177,43 +193,47 @@ exports[`Separator renders correctly with custom icon 1`] = `
   fill: #e9eaeb;
 }
 
-.cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon .fillStroke {
+.emotion-5 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
 <div
-    aria-orientation="horizontal"
-    class="cache-1gpqkcp-StyledIconWrapper e1d1zom92"
-    role="separator"
+    data-testid="testing"
   >
-    <hr
-      class="cache-mqe1it-StyledHr e1d1zom90"
-    />
-    <svg
-      class="e1d1zom91 cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
     >
-      <path
-        clip-rule="evenodd"
-        d="M12 4a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V4.75A.75.75 0 0 1 12 4"
-        fill-rule="evenodd"
+      <hr
+        class="emotion-2 emotion-3"
       />
-      <path
-        d="M14 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+      <svg
+        class="emotion-4 emotion-5 emotion-6"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M12 4a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V4.75A.75.75 0 0 1 12 4"
+          fill-rule="evenodd"
+        />
+        <path
+          d="M14 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+        />
+      </svg>
+      <hr
+        class="emotion-2 emotion-3"
       />
-    </svg>
-    <hr
-      class="cache-mqe1it-StyledHr e1d1zom90"
-    />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Separator renders correctly with custom icon horizontally 1`] = `
+exports[`Separator > renders correctly with custom icon horizontally 1`] = `
 <DocumentFragment>
-  .cache-1gpqkcp-StyledIconWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -227,7 +247,7 @@ exports[`Separator renders correctly with custom icon horizontally 1`] = `
   align-items: center;
 }
 
-.cache-mqe1it-StyledHr {
+.emotion-2 {
   margin: 0;
   border: 0;
   width: auto;
@@ -241,7 +261,7 @@ exports[`Separator renders correctly with custom icon horizontally 1`] = `
   flex: 1;
 }
 
-.cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon {
+.emotion-5 {
   vertical-align: middle;
   fill: #3f4250;
   height: 24px;
@@ -251,43 +271,47 @@ exports[`Separator renders correctly with custom icon horizontally 1`] = `
   fill: #e9eaeb;
 }
 
-.cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon .fillStroke {
+.emotion-5 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
 <div
-    aria-orientation="horizontal"
-    class="cache-1gpqkcp-StyledIconWrapper e1d1zom92"
-    role="separator"
+    data-testid="testing"
   >
-    <hr
-      class="cache-mqe1it-StyledHr e1d1zom90"
-    />
-    <svg
-      class="e1d1zom91 cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
     >
-      <path
-        clip-rule="evenodd"
-        d="M12 4a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V4.75A.75.75 0 0 1 12 4"
-        fill-rule="evenodd"
+      <hr
+        class="emotion-2 emotion-3"
       />
-      <path
-        d="M14 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+      <svg
+        class="emotion-4 emotion-5 emotion-6"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M12 4a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V4.75A.75.75 0 0 1 12 4"
+          fill-rule="evenodd"
+        />
+        <path
+          d="M14 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+        />
+      </svg>
+      <hr
+        class="emotion-2 emotion-3"
       />
-    </svg>
-    <hr
-      class="cache-mqe1it-StyledHr e1d1zom90"
-    />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Separator renders correctly with custom icon vertically 1`] = `
+exports[`Separator > renders correctly with custom icon vertically 1`] = `
 <DocumentFragment>
-  .cache-15vpxe5-StyledIconWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -301,7 +325,7 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
   align-items: center;
 }
 
-.cache-vlk2oc-StyledHr {
+.emotion-2 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -315,7 +339,7 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
   flex: 1;
 }
 
-.cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon {
+.emotion-5 {
   vertical-align: middle;
   fill: #3f4250;
   height: 24px;
@@ -325,43 +349,47 @@ exports[`Separator renders correctly with custom icon vertically 1`] = `
   fill: #e9eaeb;
 }
 
-.cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon .fillStroke {
+.emotion-5 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
 <div
-    aria-orientation="vertical"
-    class="cache-15vpxe5-StyledIconWrapper e1d1zom92"
-    role="separator"
+    data-testid="testing"
   >
-    <hr
-      class="cache-vlk2oc-StyledHr e1d1zom90"
-    />
-    <svg
-      class="e1d1zom91 cache-1qu2zkn-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      aria-orientation="vertical"
+      class="emotion-0 emotion-1"
+      role="separator"
     >
-      <path
-        clip-rule="evenodd"
-        d="M12 4a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V4.75A.75.75 0 0 1 12 4"
-        fill-rule="evenodd"
+      <hr
+        class="emotion-2 emotion-3"
       />
-      <path
-        d="M14 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+      <svg
+        class="emotion-4 emotion-5 emotion-6"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M12 4a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V4.75A.75.75 0 0 1 12 4"
+          fill-rule="evenodd"
+        />
+        <path
+          d="M14 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+        />
+      </svg>
+      <hr
+        class="emotion-2 emotion-3"
       />
-    </svg>
-    <hr
-      class="cache-vlk2oc-StyledHr e1d1zom90"
-    />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Separator renders correctly with custom thickness 1`] = `
+exports[`Separator > renders correctly with custom thickness 1`] = `
 <DocumentFragment>
-  .cache-i90w9x-StyledHr {
+  .emotion-0 {
   margin: 0;
   border: 0;
   width: auto;
@@ -372,17 +400,21 @@ exports[`Separator renders correctly with custom thickness 1`] = `
   background-color: #e9eaeb;
 }
 
-<hr
-    aria-orientation="horizontal"
-    class="cache-i90w9x-StyledHr e1d1zom90"
-    role="separator"
-  />
+<div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
+    />
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Separator renders correctly with default props 1`] = `
+exports[`Separator > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-1c0ixtd-StyledHr {
+  .emotion-0 {
   margin: 0;
   border: 0;
   width: auto;
@@ -393,10 +425,14 @@ exports[`Separator renders correctly with default props 1`] = `
   background-color: #e9eaeb;
 }
 
-<hr
-    aria-orientation="horizontal"
-    class="cache-1c0ixtd-StyledHr e1d1zom90"
-    role="separator"
-  />
+<div
+    data-testid="testing"
+  >
+    <hr
+      aria-orientation="horizontal"
+      class="emotion-0 emotion-1"
+      role="separator"
+    />
+  </div>
 </DocumentFragment>
 `;

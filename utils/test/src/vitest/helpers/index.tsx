@@ -1,0 +1,121 @@
+import createCache from '@emotion/cache'
+import { CacheProvider, ThemeProvider } from '@emotion/react'
+import { render } from '@testing-library/react'
+import type { RenderOptions } from '@testing-library/react'
+import { consoleLightTheme } from '@ultraviolet/themes'
+import type { ComponentProps, ReactElement, ReactNode } from 'react'
+import { Form } from '../../../../../packages/form/src/index'
+import type { FormErrors } from '../../../../../packages/form/src/index'
+import { makeShouldMatchEmotionSnapshot } from './shouldMatchEmotionSnapshot'
+import { makeShouldMatchEmotionSnapshotWithPortal } from './shouldMatchEmotionSnapshotWithPortal'
+
+const emotionCache = createCache({
+  key: 'cache',
+})
+
+emotionCache.compat = true
+
+export const ComponentWrapper = ({
+  children,
+  theme = consoleLightTheme,
+}: {
+  children?: ReactNode
+  theme?: typeof consoleLightTheme
+}) => (
+  <ThemeProvider theme={theme}>
+    <div data-testid="testing">{children}</div>
+  </ThemeProvider>
+)
+
+export const mockFormErrors: FormErrors = {
+  maxLength: ({ maxLength }) =>
+    `This field should have a length lower than ${maxLength ?? ''}`,
+  minLength: ({ minLength }) =>
+    `This field should have a length greater than ${minLength ?? ''}`,
+  pattern: ({ regex }) =>
+    `This field should match the regex ${(regex ?? [])
+      .map(r =>
+        Array.isArray(r)
+          ? r.map(nestedRegex => nestedRegex.source).join(' or ')
+          : r.source,
+      )
+      .join(' and ')}`,
+  required: () => 'This field is required',
+  max: ({ max }) => `This field is too high (maximum is : ${max ?? ''})`,
+  min: ({ min }) => `This field is too low (minimum is: ${min ?? ''})`,
+  maxDate: ({ maxDate }) =>
+    `This field should be before ${maxDate?.toString() ?? ''}`,
+  minDate: ({ minDate }) =>
+    `This field should be after ${minDate?.toString() ?? ''}`,
+}
+
+/**
+ * use `asFragment()` from the `render` directly
+ *
+ * @example
+ * ```tsx
+ *  const { asFragment } = render(...)
+ *
+ *  expect(asFragment()).toMatchSnapshot()
+ * ```
+ *
+ */
+
+export const shouldMatchEmotionSnapshotWithPortal = (
+  component: ReactElement,
+  theme?: typeof consoleLightTheme,
+) =>
+  makeShouldMatchEmotionSnapshotWithPortal(component, {
+    wrapper: ({ children }) => (
+      <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
+    ),
+  })
+
+/**
+ * use `asFragment()` from the `render` directly
+ *
+ * @example
+ * ```tsx
+ *  const { asFragment } = render(...)
+ *
+ *  expect(asFragment()).toMatchSnapshot()
+ * ```
+ *
+ */
+export const shouldMatchEmotionSnapshot = (
+  component: ReactNode,
+  theme?: typeof consoleLightTheme,
+) =>
+  makeShouldMatchEmotionSnapshot(component, {
+    wrapper: ({ children }) => (
+      <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
+    ),
+  })
+
+export const renderWithTheme = (
+  compoment: ReactNode,
+  theme?: typeof consoleLightTheme,
+  options?: RenderOptions,
+) =>
+  render(compoment, {
+    ...options,
+    wrapper: ({ children }) => (
+      <CacheProvider value={emotionCache}>
+        <ComponentWrapper theme={theme}>{children}</ComponentWrapper>
+      </CacheProvider>
+    ),
+  })
+
+export const renderWithForm = (
+  compoment: ReactElement,
+  formOptions?: Partial<ComponentProps<typeof Form>>,
+  theme?: typeof consoleLightTheme,
+) =>
+  renderWithTheme(
+    <Form onRawSubmit={() => {}} errors={mockFormErrors} {...formOptions}>
+      {compoment}
+    </Form>,
+    theme,
+  )
+
+export const defaultError = new Error('Default error message')

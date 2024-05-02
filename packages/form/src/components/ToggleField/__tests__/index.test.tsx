@@ -1,39 +1,39 @@
-import { describe, expect, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
+import { renderWithForm } from '@utils/test'
+import { describe, expect, test } from 'vitest'
 import { ToggleField } from '..'
-import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
 
 describe('ToggleField', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<ToggleField name="test" />))
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(<ToggleField name="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly disabled', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<ToggleField name="test" disabled />))
+  test('should render correctly disabled', () => {
+    const { asFragment } = renderWithForm(<ToggleField name="test" disabled />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly checked', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
-      <ToggleField name="test" />,
-      {
-        transform: () => {
-          const element = screen.getByRole<HTMLInputElement>('checkbox')
-          expect(element.checked).toBeTruthy()
-        },
+  test('should render correctly checked', () => {
+    const { asFragment } = renderWithForm(<ToggleField name="test" />, {
+      initialValues: {
+        test: true,
       },
-      {
-        initialValues: {
-          test: true,
-        },
-      },
-    ))
+    })
+    const element = screen.getByRole<HTMLInputElement>('checkbox')
+    expect(element.checked).toBeTruthy()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly with label and checked', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly with label and checked', () => {
+    const { asFragment } = renderWithForm(
       <ToggleField name="test" label="test" />,
-      {},
       {
         initialValues: {
           test: true,
         },
       },
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

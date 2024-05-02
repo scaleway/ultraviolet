@@ -1,8 +1,8 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { BarStack } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 const fakeData = [
   { id: '1', text: 'Hello', value: 20 },
@@ -13,11 +13,17 @@ const fakeData = [
 ]
 
 describe('BarStack', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshot(<BarStack data={fakeData} />))
+  test('should render correctly', () => {
+    const { asFragment } = renderWithTheme(<BarStack data={fakeData} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly with total', () =>
-    shouldMatchEmotionSnapshot(<BarStack data={fakeData} total={1000} />))
+  test('should render correctly with total', () => {
+    const { asFragment } = renderWithTheme(
+      <BarStack data={fakeData} total={1000} />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should render correctly with event handlers', async () => {
     const [
@@ -27,9 +33,9 @@ describe('BarStack', () => {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
-    ] = new Array(6).fill(1).map(() => jest.fn())
+    ] = new Array(6).fill(1).map(() => vi.fn())
 
-    return shouldMatchEmotionSnapshot(
+    const { asFragment } = renderWithTheme(
       <BarStack
         data={[
           {
@@ -45,23 +51,21 @@ describe('BarStack', () => {
           },
         ]}
       />,
-      {
-        transform: async () => {
-          const helloDiv = screen.getByText('Hello')
-          await userEvent.click(helloDiv)
-          expect(onClick).toBeCalledTimes(1)
-          expect(onMouseEnter).toBeCalledTimes(1)
-          expect(onMouseDown).toBeCalledTimes(1)
-          expect(onMouseUp).toBeCalledTimes(1)
-          expect(onDoubleClick).toBeCalledTimes(0)
-          expect(onMouseLeave).toBeCalledTimes(0)
-          await userEvent.dblClick(helloDiv)
-          expect(onDoubleClick).toBeCalledTimes(1)
-          expect(onClick).toBeCalledTimes(3)
-          await userEvent.unhover(helloDiv)
-          expect(onMouseLeave).toBeCalledTimes(1)
-        },
-      },
     )
+    const helloDiv = screen.getByText('Hello')
+    await userEvent.click(helloDiv)
+    expect(onClick).toBeCalledTimes(1)
+    expect(onMouseEnter).toBeCalledTimes(1)
+    expect(onMouseDown).toBeCalledTimes(1)
+    expect(onMouseUp).toBeCalledTimes(1)
+    expect(onDoubleClick).toBeCalledTimes(0)
+    expect(onMouseLeave).toBeCalledTimes(0)
+    await userEvent.dblClick(helloDiv)
+    expect(onDoubleClick).toBeCalledTimes(1)
+    expect(onClick).toBeCalledTimes(3)
+    await userEvent.unhover(helloDiv)
+    expect(onMouseLeave).toBeCalledTimes(1)
+
+    expect(asFragment()).toMatchSnapshot()
   })
 })

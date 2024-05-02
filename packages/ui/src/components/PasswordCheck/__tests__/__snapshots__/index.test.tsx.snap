@@ -1,14 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PasswordCheck render with custom values 1`] = `
+exports[`PasswordCheck > render with custom values 1`] = `
 <DocumentFragment>
-  .cache-wayo1o-PasswordCheckContainer {
+  .emotion-0 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
 
-.cache-irytw7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31,7 +31,7 @@ exports[`PasswordCheck render with custom values 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-e7frw7-StyledIcon-sizeStyles {
+.emotion-4 {
   vertical-align: middle;
   fill: #727683;
   height: 20px;
@@ -40,12 +40,12 @@ exports[`PasswordCheck render with custom values 1`] = `
   min-height: 20px;
 }
 
-.cache-e7frw7-StyledIcon-sizeStyles .fillStroke {
+.emotion-4 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.cache-3l2mjz-StyledText {
+.emotion-6 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -56,7 +56,7 @@ exports[`PasswordCheck render with custom values 1`] = `
   text-decoration: none;
 }
 
-.cache-1slv93m-StyledIcon-sizeStyles {
+.emotion-10 {
   vertical-align: middle;
   fill: #22674e;
   height: 20px;
@@ -65,51 +65,55 @@ exports[`PasswordCheck render with custom values 1`] = `
   min-height: 20px;
 }
 
-.cache-1slv93m-StyledIcon-sizeStyles .fillStroke {
+.emotion-10 .fillStroke {
   stroke: #22674e;
   fill: none;
 }
 
 <div
-    class="cache-wayo1o-PasswordCheckContainer eunxap90"
+    data-testid="testing"
   >
     <div
-      class="cache-irytw7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
     >
-      <svg
-        class="cache-e7frw7-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
+      <div
+        class="emotion-2 emotion-3"
       >
-        <path
-          d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m2.59 6L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41z"
-        />
-      </svg>
-      <p
-        class="cache-3l2mjz-StyledText e13y3mga0"
+        <svg
+          class="emotion-4 emotion-5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m2.59 6L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41z"
+          />
+        </svg>
+        <p
+          class="emotion-6 emotion-7"
+        >
+          That's a beautiful custom password check we have right there
+        </p>
+      </div>
+      <div
+        class="emotion-2 emotion-3"
       >
-        That's a beautiful custom password check we have right there
-      </p>
-    </div>
-    <div
-      class="cache-irytw7-Stack ehpbis70"
-    >
-      <svg
-        class="cache-1slv93m-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089z"
-          fill-rule="evenodd"
-        />
-      </svg>
-      <p
-        class="cache-3l2mjz-StyledText e13y3mga0"
-      >
-        That's a second beautiful custom password check we have right there
-      </p>
+        <svg
+          class="emotion-10 emotion-5"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <p
+          class="emotion-6 emotion-7"
+        >
+          That's a second beautiful custom password check we have right there
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>

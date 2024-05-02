@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Tag renders correctly 1`] = `
+exports[`Tag > renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1anauza-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -28,7 +28,7 @@ exports[`Tag renders correctly 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-3 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -43,21 +43,25 @@ exports[`Tag renders correctly 1`] = `
   max-width: 232px;
 }
 
-<span
-    class="cache-1anauza-StyledContainer el6733p2"
+<div
+    data-testid="testing"
   >
     <span
-      class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      class="emotion-0 emotion-1"
     >
-      test
+      <span
+        class="emotion-2 emotion-3 emotion-4"
+      >
+        test
+      </span>
     </span>
-  </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Tag renders correctly colored 1`] = `
+exports[`Tag > renders correctly colored 1`] = `
 <DocumentFragment>
-  .cache-144rp8c-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -83,7 +87,7 @@ exports[`Tag renders correctly colored 1`] = `
   border: solid 1px #f1eefc;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-3 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -98,21 +102,25 @@ exports[`Tag renders correctly colored 1`] = `
   max-width: 232px;
 }
 
-<span
-    class="cache-144rp8c-StyledContainer el6733p2"
+<div
+    data-testid="testing"
   >
     <span
-      class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      class="emotion-0 emotion-1"
     >
-      test
+      <span
+        class="emotion-2 emotion-3 emotion-4"
+      >
+        test
+      </span>
     </span>
-  </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Tag renders correctly disabled 1`] = `
+exports[`Tag > renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-4ijz8s-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -139,136 +147,7 @@ exports[`Tag renders correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-<span
-    class="cache-4ijz8s-StyledContainer el6733p2"
-  >
-    <span
-      class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-    >
-      test
-    </span>
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Tag renders correctly neutral 1`] = `
-<DocumentFragment>
-  .cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-<span
-    class="cache-1anauza-StyledContainer el6733p2"
-  >
-    <span
-      class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-    >
-      test
-    </span>
-  </span>
-</DocumentFragment>
-`;
-
-exports[`Tag renders correctly with copiable 1`] = `
-<DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
-  display: inherit;
-}
-
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
-  width: 100%;
-}
-
-.cache-gkklu9-Container-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-gkklu9-Container-StyledContainer:hover,
-.cache-gkklu9-Container-StyledContainer:active {
-  cursor: pointer;
-  background: #e9eaeb;
-  border-color: #92959d;
-}
-
-.cache-gkklu9-Container-StyledContainer:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1olt749-StyledText-StyledText {
+.emotion-3 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -284,27 +163,24 @@ exports[`Tag renders correctly with copiable 1`] = `
 }
 
 <div
-    aria-controls=":r8:"
-    aria-describedby=":r8:"
-    class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    data-testid="testing"
   >
-    <button
-      class="cache-gkklu9-Container-StyledContainer el6733p3"
+    <span
+      class="emotion-0 emotion-1"
     >
       <span
-        class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+        class="emotion-2 emotion-3 emotion-4"
       >
         test
       </span>
-    </button>
+    </span>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Tag renders correctly with icon 1`] = `
+exports[`Tag > renders correctly neutral 1`] = `
 <DocumentFragment>
-  .cache-1anauza-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -330,7 +206,151 @@ exports[`Tag renders correctly with icon 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-3 {
+  font-size: 12px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 232px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <span
+      class="emotion-0 emotion-1"
+    >
+      <span
+        class="emotion-2 emotion-3 emotion-4"
+      >
+        test
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tag > renders correctly with copiable 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #3f4250;
+  background: #ffffff;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  cursor: pointer;
+  background: #e9eaeb;
+  border-color: #92959d;
+}
+
+.emotion-2:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-5 {
+  font-size: 12px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 232px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls=":r8:"
+      aria-describedby=":r8:"
+      class="emotion-0 emotion-1"
+      tabindex="0"
+    >
+      <button
+        class="emotion-2 emotion-3"
+      >
+        <span
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          test
+        </span>
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tag > renders correctly with icon 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #3f4250;
+  background: #ffffff;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-2 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -339,12 +359,12 @@ exports[`Tag renders correctly with icon 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-2 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-5 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -359,32 +379,36 @@ exports[`Tag renders correctly with icon 1`] = `
   max-width: 232px;
 }
 
-<span
-    class="cache-1anauza-StyledContainer el6733p2"
+<div
+    data-testid="testing"
   >
-    <svg
-      class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        clip-rule="evenodd"
-        d="M8 1a3.5 3.5 0 0 0-3.5 3.5V7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7V4.5A3.5 3.5 0 0 0 8 1m2 6V4.5a2 2 0 1 0-4 0V7z"
-        fill-rule="evenodd"
-      />
-    </svg>
     <span
-      class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      class="emotion-0 emotion-1"
     >
-      test
+      <svg
+        class="emotion-2 emotion-3"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 1a3.5 3.5 0 0 0-3.5 3.5V7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7V4.5A3.5 3.5 0 0 0 8 1m2 6V4.5a2 2 0 1 0-4 0V7z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <span
+        class="emotion-4 emotion-5 emotion-6"
+      >
+        test
+      </span>
     </span>
-  </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Tag renders correctly with isLoading 1`] = `
+exports[`Tag > renders correctly with isLoading 1`] = `
 <DocumentFragment>
-  .cache-1anauza-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -410,7 +434,7 @@ exports[`Tag renders correctly with isLoading 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-3 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -425,63 +449,67 @@ exports[`Tag renders correctly with isLoading 1`] = `
   max-width: 232px;
 }
 
-.cache-cmn72i-StyledSvg {
+.emotion-5 {
   -webkit-animation: spin 0.75s linear infinite;
   animation: spin 0.75s linear infinite;
 }
 
-.cache-11f05l0-Loader {
+.emotion-7 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-<span
-    class="cache-1anauza-StyledContainer el6733p2"
+<div
+    data-testid="testing"
   >
     <span
-      class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      class="emotion-0 emotion-1"
     >
-      test
+      <span
+        class="emotion-2 emotion-3 emotion-4"
+      >
+        test
+      </span>
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="emotion-5 emotion-6"
+        role="progressbar"
+        style="height: 16px; width: 16px;"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="#d9dadd"
+          stroke-width="16"
+        />
+        <circle
+          class="emotion-7"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="#8c40ef"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
+        />
+      </svg>
     </span>
-    <svg
-      aria-label="Loading"
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow="20"
-      aria-valuetext="20%"
-      class="cache-cmn72i-StyledSvg e1y1n78x1"
-      role="progressbar"
-      style="height: 16px; width: 16px;"
-      viewBox="0 0 100 100"
-    >
-      <circle
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#d9dadd"
-        stroke-width="16"
-      />
-      <circle
-        class="cache-11f05l0-Loader"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="#8c40ef"
-        stroke-dasharray="263.89378290154264"
-        stroke-dashoffset="211.11502632123413"
-        stroke-linecap="round"
-        stroke-width="16"
-      />
-    </svg>
-  </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Tag renders correctly with onClose 1`] = `
+exports[`Tag > renders correctly with onClose 1`] = `
 <DocumentFragment>
-  .cache-1anauza-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -507,7 +535,7 @@ exports[`Tag renders correctly with onClose 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-3 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -522,7 +550,7 @@ exports[`Tag renders correctly with onClose 1`] = `
   max-width: 232px;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -568,22 +596,22 @@ exports[`Tag renders correctly with onClose 1`] = `
   padding: 2px;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
+.emotion-6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
+.emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
+.emotion-6:hover,
+.emotion-6:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-8 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -592,35 +620,39 @@ exports[`Tag renders correctly with onClose 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<span
-    class="cache-1anauza-StyledContainer el6733p2"
+<div
+    data-testid="testing"
   >
     <span
-      class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+      class="emotion-0 emotion-1"
     >
-      test
-    </span>
-    <button
-      aria-label="Close tag"
-      class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-      data-testid="close-tag"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
+      <span
+        class="emotion-2 emotion-3 emotion-4"
       >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
-  </span>
+        test
+      </span>
+      <button
+        aria-label="Close tag"
+        class="emotion-5 emotion-6 emotion-7"
+        data-testid="close-tag"
+        type="button"
+      >
+        <svg
+          class="emotion-8 emotion-9"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </span>
+  </div>
 </DocumentFragment>
 `;

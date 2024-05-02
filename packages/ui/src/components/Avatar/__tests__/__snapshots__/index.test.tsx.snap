@@ -1,13 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Avatar renders correctly with custom background color 1`] = `
+exports[`Avatar > renders correctly with custom background color 1`] = `
 <DocumentFragment>
-  .cache-hjx5aa-AvatarContainer {
+  .emotion-0 {
   height: 32px;
   width: 32px;
 }
 
-.cache-1whnewf-StyledTextAvatar {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -29,26 +29,30 @@ exports[`Avatar renders correctly with custom background color 1`] = `
 }
 
 <div
-    class="cache-hjx5aa-AvatarContainer ec0473m0"
-    size="32"
+    data-testid="testing"
   >
-    <span
-      class="cache-1whnewf-StyledTextAvatar ec0473m1"
+    <div
+      class="emotion-0 emotion-1"
+      size="32"
     >
-      HW
-    </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        HW
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with custom text color 1`] = `
+exports[`Avatar > renders correctly with custom text color 1`] = `
 <DocumentFragment>
-  .cache-hjx5aa-AvatarContainer {
+  .emotion-0 {
   height: 32px;
   width: 32px;
 }
 
-.cache-1htqhnw-StyledTextAvatar {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -70,47 +74,55 @@ exports[`Avatar renders correctly with custom text color 1`] = `
 }
 
 <div
-    class="cache-hjx5aa-AvatarContainer ec0473m0"
-    size="32"
+    data-testid="testing"
   >
-    <span
-      class="cache-1htqhnw-StyledTextAvatar ec0473m1"
+    <div
+      class="emotion-0 emotion-1"
+      size="32"
     >
-      HW
-    </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        HW
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with default props 1`] = `
+exports[`Avatar > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-hjx5aa-AvatarContainer {
+  .emotion-0 {
   height: 32px;
   width: 32px;
 }
 
 <div
-    class="cache-hjx5aa-AvatarContainer ec0473m0"
-    size="32"
+    data-testid="testing"
   >
-    <img
-      alt=""
-      height="100%"
-      src="test-file-stub"
-      width="100%"
-    />
+    <div
+      class="emotion-0 emotion-1"
+      size="32"
+    >
+      <img
+        alt=""
+        height="100%"
+        src="/src/components/Avatar/__stories__/support.svg"
+        width="100%"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with lock 1`] = `
+exports[`Avatar > renders correctly with lock 1`] = `
 <DocumentFragment>
-  .cache-hjx5aa-AvatarContainer {
+  .emotion-0 {
   height: 32px;
   width: 32px;
 }
 
-.cache-1lc61rv-StyledTextAvatar {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -131,7 +143,7 @@ exports[`Avatar renders correctly with lock 1`] = `
   width: 100%;
 }
 
-.cache-5c112r-StyledIcon-sizeStyles {
+.emotion-4 {
   vertical-align: middle;
   fill: #727683;
   height: 1em;
@@ -140,42 +152,46 @@ exports[`Avatar renders correctly with lock 1`] = `
   min-height: 1em;
 }
 
-.cache-5c112r-StyledIcon-sizeStyles .fillStroke {
+.emotion-4 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
 <div
-    class="cache-hjx5aa-AvatarContainer ec0473m0"
-    size="32"
+    data-testid="testing"
   >
-    <span
-      class="cache-1lc61rv-StyledTextAvatar ec0473m1"
+    <div
+      class="emotion-0 emotion-1"
+      size="32"
     >
-      <svg
-        class="cache-5c112r-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
+      <span
+        class="emotion-2 emotion-3"
       >
-        <path
-          clip-rule="evenodd"
-          d="M10 2.5a3.75 3.75 0 0 0-3.75 3.75v2.917h-.417c-.92 0-1.666.746-1.666 1.666v5c0 .92.746 1.667 1.666 1.667h8.334c.92 0 1.666-.746 1.666-1.667v-5c0-.92-.746-1.666-1.666-1.666h-.417V6.25A3.75 3.75 0 0 0 10 2.5m2.5 6.667V6.25a2.5 2.5 0 0 0-5 0v2.917z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </span>
+        <svg
+          class="emotion-4 emotion-5"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M10 2.5a3.75 3.75 0 0 0-3.75 3.75v2.917h-.417c-.92 0-1.666.746-1.666 1.666v5c0 .92.746 1.667 1.666 1.667h8.334c.92 0 1.666-.746 1.666-1.667v-5c0-.92-.746-1.666-1.666-1.666h-.417V6.25A3.75 3.75 0 0 0 10 2.5m2.5 6.667V6.25a2.5 2.5 0 0 0-5 0v2.917z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with sentence 1`] = `
+exports[`Avatar > renders correctly with sentence 1`] = `
 <DocumentFragment>
-  .cache-hjx5aa-AvatarContainer {
+  .emotion-0 {
   height: 32px;
   width: 32px;
 }
 
-.cache-rma379-StyledTextAvatar {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -197,47 +213,55 @@ exports[`Avatar renders correctly with sentence 1`] = `
 }
 
 <div
-    class="cache-hjx5aa-AvatarContainer ec0473m0"
-    size="32"
+    data-testid="testing"
   >
-    <span
-      class="cache-rma379-StyledTextAvatar ec0473m1"
+    <div
+      class="emotion-0 emotion-1"
+      size="32"
     >
-      HW
-    </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        HW
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with size 1`] = `
+exports[`Avatar > renders correctly with size 1`] = `
 <DocumentFragment>
-  .cache-xgtog4-AvatarContainer {
+  .emotion-0 {
   height: 48px;
   width: 48px;
 }
 
 <div
-    class="cache-xgtog4-AvatarContainer ec0473m0"
-    size="48"
+    data-testid="testing"
   >
-    <img
-      alt=""
-      height="100%"
-      src="test-file-stub"
-      width="100%"
-    />
+    <div
+      class="emotion-0 emotion-1"
+      size="48"
+    >
+      <img
+        alt=""
+        height="100%"
+        src="/src/components/Avatar/__stories__/support.svg"
+        width="100%"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with small text 1`] = `
+exports[`Avatar > renders correctly with small text 1`] = `
 <DocumentFragment>
-  .cache-hjx5aa-AvatarContainer {
+  .emotion-0 {
   height: 32px;
   width: 32px;
 }
 
-.cache-rma379-StyledTextAvatar {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -259,26 +283,30 @@ exports[`Avatar renders correctly with small text 1`] = `
 }
 
 <div
-    class="cache-hjx5aa-AvatarContainer ec0473m0"
-    size="32"
+    data-testid="testing"
   >
-    <span
-      class="cache-rma379-StyledTextAvatar ec0473m1"
+    <div
+      class="emotion-0 emotion-1"
+      size="32"
     >
-      HW
-    </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        HW
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with text 1`] = `
+exports[`Avatar > renders correctly with text 1`] = `
 <DocumentFragment>
-  .cache-hjx5aa-AvatarContainer {
+  .emotion-0 {
   height: 32px;
   width: 32px;
 }
 
-.cache-rma379-StyledTextAvatar {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -300,26 +328,30 @@ exports[`Avatar renders correctly with text 1`] = `
 }
 
 <div
-    class="cache-hjx5aa-AvatarContainer ec0473m0"
-    size="32"
+    data-testid="testing"
   >
-    <span
-      class="cache-rma379-StyledTextAvatar ec0473m1"
+    <div
+      class="emotion-0 emotion-1"
+      size="32"
     >
-      HE
-    </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        HE
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with text and custom style 1`] = `
+exports[`Avatar > renders correctly with text and custom style 1`] = `
 <DocumentFragment>
-  .cache-hjx5aa-AvatarContainer {
+  .emotion-0 {
   height: 32px;
   width: 32px;
 }
 
-.cache-14vatin-StyledTextAvatar {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -341,26 +373,30 @@ exports[`Avatar renders correctly with text and custom style 1`] = `
 }
 
 <div
-    class="cache-hjx5aa-AvatarContainer ec0473m0"
-    size="32"
+    data-testid="testing"
   >
-    <span
-      class="cache-14vatin-StyledTextAvatar ec0473m1"
+    <div
+      class="emotion-0 emotion-1"
+      size="32"
     >
-      HW
-    </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        HW
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Avatar renders correctly with text size 1`] = `
+exports[`Avatar > renders correctly with text size 1`] = `
 <DocumentFragment>
-  .cache-1yyml98-AvatarContainer {
+  .emotion-0 {
   height: 50px;
   width: 50px;
 }
 
-.cache-1pv5uzr-StyledTextAvatar {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -382,14 +418,18 @@ exports[`Avatar renders correctly with text size 1`] = `
 }
 
 <div
-    class="cache-1yyml98-AvatarContainer ec0473m0"
-    size="50"
+    data-testid="testing"
   >
-    <span
-      class="cache-1pv5uzr-StyledTextAvatar ec0473m1"
+    <div
+      class="emotion-0 emotion-1"
+      size="50"
     >
-      HE
-    </span>
+      <span
+        class="emotion-2 emotion-3"
+      >
+        HE
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;

@@ -1,5 +1,5 @@
-import { describe, it } from '@jest/globals'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, it } from 'vitest'
 import { CodeEditor } from '../CodeEditor'
 
 // We are skipping this as CodeEditor seems to be generating new classNames

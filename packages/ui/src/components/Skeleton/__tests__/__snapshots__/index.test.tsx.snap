@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Skeleton renders correctly with type="block" 1`] = `
+exports[`Skeleton > renders correctly with type="block" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -12,7 +12,7 @@ exports[`Skeleton renders correctly with type="block" 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -28,7 +28,7 @@ exports[`Skeleton renders correctly with type="block" 1`] = `
   height: 100%;
 }
 
-.cache-efvoe1-StyledList {
+.emotion-2 {
   min-height: 200px;
   width: 100%;
   height: 100%;
@@ -38,11 +38,11 @@ exports[`Skeleton renders correctly with type="block" 1`] = `
   margin: 0;
 }
 
-.cache-efvoe1-StyledList>.ez87ex11:not(:last-child) {
+.emotion-2>.emotion-5:not(:last-child) {
   border-bottom: 1px solid #d9dadd;
 }
 
-.cache-1udri31-StyledLine {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +54,7 @@ exports[`Skeleton renders correctly with type="block" 1`] = `
   padding: 24px 16px;
 }
 
-.cache-h21geo-IconSkeleton {
+.emotion-6 {
   margin-right: 8px;
   width: 32px;
   height: 32px;
@@ -63,7 +63,7 @@ exports[`Skeleton renders correctly with type="block" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-mhtdbo-Line {
+.emotion-8 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -71,7 +71,7 @@ exports[`Skeleton renders correctly with type="block" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-22 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -92,59 +92,63 @@ exports[`Skeleton renders correctly with type="block" 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-22 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
-    <ul
-      class="cache-efvoe1-StyledList ez87ex10"
-    >
-      <li
-        class="cache-1udri31-StyledLine ez87ex11"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </li>
-      <li
-        class="cache-1udri31-StyledLine ez87ex11"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </li>
-      <li
-        class="cache-1udri31-StyledLine ez87ex11"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </li>
-    </ul>
     <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
+    >
+      <ul
+        class="emotion-2 emotion-3"
+      >
+        <li
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </li>
+        <li
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </li>
+        <li
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </li>
+      </ul>
+      <div
+        class="emotion-22 emotion-23"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Skeleton renders correctly with type="blocks" 1`] = `
+exports[`Skeleton > renders correctly with type="blocks" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -156,7 +160,7 @@ exports[`Skeleton renders correctly with type="blocks" 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -172,13 +176,13 @@ exports[`Skeleton renders correctly with type="blocks" 1`] = `
   height: 100%;
 }
 
-.cache-sprtbs-StyledContainer {
+.emotion-2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
-.cache-ay7hiz-Block {
+.emotion-4 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -194,7 +198,7 @@ exports[`Skeleton renders correctly with type="blocks" 1`] = `
   overflow: hidden;
 }
 
-.cache-h21geo-IconSkeleton {
+.emotion-6 {
   margin-right: 8px;
   width: 32px;
   height: 32px;
@@ -203,7 +207,7 @@ exports[`Skeleton renders correctly with type="blocks" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-mhtdbo-Line {
+.emotion-8 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -211,7 +215,7 @@ exports[`Skeleton renders correctly with type="blocks" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-52 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -232,109 +236,113 @@ exports[`Skeleton renders correctly with type="blocks" 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-52 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
     <div
-      class="cache-sprtbs-StyledContainer esrnljb1"
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-ay7hiz-Block esrnljb0"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
         <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
       </div>
       <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
+        class="emotion-52 emotion-53"
+      />
     </div>
-    <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
   </div>
 </DocumentFragment>
 `;
 
-exports[`Skeleton renders correctly with type="box" 1`] = `
+exports[`Skeleton > renders correctly with type="box" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -346,7 +354,7 @@ exports[`Skeleton renders correctly with type="box" 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -362,13 +370,13 @@ exports[`Skeleton renders correctly with type="box" 1`] = `
   height: 100%;
 }
 
-.cache-sprtbs-StyledContainer {
+.emotion-2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
-.cache-1m8d80p-Block {
+.emotion-4 {
   height: 130px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -390,7 +398,7 @@ exports[`Skeleton renders correctly with type="box" 1`] = `
   overflow: hidden;
 }
 
-.cache-h21geo-IconSkeleton {
+.emotion-6 {
   margin-right: 8px;
   width: 32px;
   height: 32px;
@@ -399,7 +407,7 @@ exports[`Skeleton renders correctly with type="box" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-mhtdbo-Line {
+.emotion-8 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -407,7 +415,7 @@ exports[`Skeleton renders correctly with type="box" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-52 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -428,109 +436,113 @@ exports[`Skeleton renders correctly with type="box" 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-52 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
     <div
-      class="cache-sprtbs-StyledContainer e18cng8b1"
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1m8d80p-Block e18cng8b0"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
         <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
       </div>
       <div
-        class="cache-1m8d80p-Block e18cng8b0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-1m8d80p-Block e18cng8b0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-1m8d80p-Block e18cng8b0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-1m8d80p-Block e18cng8b0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-1m8d80p-Block e18cng8b0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-1m8d80p-Block e18cng8b0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-1m8d80p-Block e18cng8b0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
+        class="emotion-52 emotion-53"
+      />
     </div>
-    <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
   </div>
 </DocumentFragment>
 `;
 
-exports[`Skeleton renders correctly with type="donut" 1`] = `
+exports[`Skeleton > renders correctly with type="donut" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -542,7 +554,7 @@ exports[`Skeleton renders correctly with type="donut" 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -558,14 +570,14 @@ exports[`Skeleton renders correctly with type="donut" 1`] = `
   height: 100%;
 }
 
-.cache-a1981g-StyledContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-1mvslid-StyledSVG {
+.emotion-4 {
   height: 206px;
   width: 206px;
   -webkit-transform: rotate(-90deg);
@@ -574,7 +586,7 @@ exports[`Skeleton renders correctly with type="donut" 1`] = `
   transform: rotate(-90deg);
 }
 
-.cache-g1cws9-StyledCircle {
+.emotion-6 {
   transform-origin: 50% 50%;
   stroke: #e9eaeb;
   stroke-width: 18;
@@ -582,13 +594,13 @@ exports[`Skeleton renders correctly with type="donut" 1`] = `
   fill: none;
 }
 
-.cache-1a6m9ou-LineList {
+.emotion-8 {
   display: grid;
   list-style: none;
   gap: 16px;
 }
 
-.cache-mhtdbo-Line {
+.emotion-10 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -596,7 +608,7 @@ exports[`Skeleton renders correctly with type="donut" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-18 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -617,63 +629,67 @@ exports[`Skeleton renders correctly with type="donut" 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-18 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
     <div
-      class="cache-a1981g-StyledContainer e1bu753f3"
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
     >
-      <svg
-        class="cache-1mvslid-StyledSVG e1bu753f2"
+      <div
+        class="emotion-2 emotion-3"
       >
-        <circle
-          class="cache-g1cws9-StyledCircle e1bu753f1"
-          cx="103"
-          cy="103"
-          r="90"
-        />
-      </svg>
-      <ul
-        class="cache-1a6m9ou-LineList e1bu753f0"
-      >
-        <li>
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
+        <svg
+          class="emotion-4 emotion-5"
+        >
+          <circle
+            class="emotion-6 emotion-7"
+            cx="103"
+            cy="103"
+            r="90"
           />
-        </li>
-        <li>
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </li>
-        <li>
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </li>
-        <li>
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </li>
-      </ul>
+        </svg>
+        <ul
+          class="emotion-8 emotion-9"
+        >
+          <li>
+            <div
+              class="emotion-10 emotion-11"
+            />
+          </li>
+          <li>
+            <div
+              class="emotion-10 emotion-11"
+            />
+          </li>
+          <li>
+            <div
+              class="emotion-10 emotion-11"
+            />
+          </li>
+          <li>
+            <div
+              class="emotion-10 emotion-11"
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        class="emotion-18 emotion-19"
+      />
     </div>
-    <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
   </div>
 </DocumentFragment>
 `;
 
-exports[`Skeleton renders correctly with type="line" 1`] = `
+exports[`Skeleton > renders correctly with type="line" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -685,7 +701,7 @@ exports[`Skeleton renders correctly with type="line" 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -701,7 +717,7 @@ exports[`Skeleton renders correctly with type="line" 1`] = `
   height: 100%;
 }
 
-.cache-mhtdbo-Line {
+.emotion-2 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -709,7 +725,7 @@ exports[`Skeleton renders correctly with type="line" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-4 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -730,28 +746,32 @@ exports[`Skeleton renders correctly with type="line" 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-4 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
     <div
-      class="cache-mhtdbo-Line e1denkbe0"
-    />
-    <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+      <div
+        class="emotion-4 emotion-5"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Skeleton renders correctly with type="list" 1`] = `
+exports[`Skeleton > renders correctly with type="list" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -763,7 +783,7 @@ exports[`Skeleton renders correctly with type="list" 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -779,17 +799,17 @@ exports[`Skeleton renders correctly with type="list" 1`] = `
   height: 100%;
 }
 
-.cache-1m2hi1y-StyledList {
+.emotion-2 {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-1m2hi1y-StyledList>.e639qnr2:nth-of-type(even) {
+.emotion-2>.emotion-5:nth-of-type(even) {
   background-color: #f3f3f4;
 }
 
-.cache-1ldrf1m-StyledItem {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -802,13 +822,13 @@ exports[`Skeleton renders correctly with type="list" 1`] = `
   padding: 4px 8px;
 }
 
-.cache-vmfh4y-StyledLine {
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.cache-mhtdbo-Line {
+.emotion-8 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -816,7 +836,7 @@ exports[`Skeleton renders correctly with type="list" 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-46 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -837,104 +857,108 @@ exports[`Skeleton renders correctly with type="list" 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-46 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
-    <ul
-      class="cache-1m2hi1y-StyledList e639qnr0"
-    >
-      <li
-        class="cache-1ldrf1m-StyledItem e639qnr2"
-      >
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-      </li>
-      <li
-        class="cache-1ldrf1m-StyledItem e639qnr2"
-      >
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-      </li>
-      <li
-        class="cache-1ldrf1m-StyledItem e639qnr2"
-      >
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-        <div
-          class="cache-vmfh4y-StyledLine e639qnr1"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-        </div>
-      </li>
-    </ul>
     <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
+    >
+      <ul
+        class="emotion-2 emotion-3"
+      >
+        <li
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+        </li>
+        <li
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+        </li>
+        <li
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+            />
+          </div>
+        </li>
+      </ul>
+      <div
+        class="emotion-46 emotion-47"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Skeleton renders correctly with type="slider" 1`] = `
+exports[`Skeleton > renders correctly with type="slider" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -946,7 +970,7 @@ exports[`Skeleton renders correctly with type="slider" 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -962,7 +986,7 @@ exports[`Skeleton renders correctly with type="slider" 1`] = `
   height: 100%;
 }
 
-.cache-1ibkrfq-StyledContainer {
+.emotion-2 {
   height: 277px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -970,7 +994,7 @@ exports[`Skeleton renders correctly with type="slider" 1`] = `
   overflow: auto;
 }
 
-.cache-yskav4-StyledCard {
+.emotion-4 {
   border: 1px solid #e9eaeb;
   border-radius: 4px;
   width: 239px;
@@ -978,14 +1002,14 @@ exports[`Skeleton renders correctly with type="slider" 1`] = `
   overflow: hidden;
 }
 
-.cache-hgkn6i-StyledBanner {
+.emotion-6 {
   border: 1px solid #e9eaeb;
   background-color: #e9eaeb;
   width: 100%;
   height: 33%;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-20 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -1006,57 +1030,61 @@ exports[`Skeleton renders correctly with type="slider" 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-20 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
     <div
-      class="cache-1ibkrfq-StyledContainer e1yrvvrg2"
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-yskav4-StyledCard e1yrvvrg1"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-hgkn6i-StyledBanner e1yrvvrg0"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+        </div>
       </div>
       <div
-        class="cache-yskav4-StyledCard e1yrvvrg1"
-      >
-        <div
-          class="cache-hgkn6i-StyledBanner e1yrvvrg0"
-        />
-      </div>
-      <div
-        class="cache-yskav4-StyledCard e1yrvvrg1"
-      >
-        <div
-          class="cache-hgkn6i-StyledBanner e1yrvvrg0"
-        />
-      </div>
-      <div
-        class="cache-yskav4-StyledCard e1yrvvrg1"
-      >
-        <div
-          class="cache-hgkn6i-StyledBanner e1yrvvrg0"
-        />
-      </div>
+        class="emotion-20 emotion-21"
+      />
     </div>
-    <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
   </div>
 </DocumentFragment>
 `;
 
-exports[`Skeleton renders correctly with type="square" 1`] = `
+exports[`Skeleton > renders correctly with type="square" 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -1068,7 +1096,7 @@ exports[`Skeleton renders correctly with type="square" 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -1084,14 +1112,14 @@ exports[`Skeleton renders correctly with type="square" 1`] = `
   height: 100%;
 }
 
-.cache-1526wye-Square {
+.emotion-2 {
   height: 100%;
   width: 100%;
   max-width: 100%;
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-4 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -1112,28 +1140,32 @@ exports[`Skeleton renders correctly with type="square" 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-4 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
     <div
-      class="cache-1526wye-Square e1uz28830"
-    />
-    <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+      <div
+        class="emotion-4 emotion-5"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Skeleton renders default variant 1`] = `
+exports[`Skeleton > renders default variant 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -1145,7 +1177,7 @@ exports[`Skeleton renders default variant 1`] = `
   }
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-0 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -1161,13 +1193,13 @@ exports[`Skeleton renders default variant 1`] = `
   height: 100%;
 }
 
-.cache-sprtbs-StyledContainer {
+.emotion-2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
-.cache-ay7hiz-Block {
+.emotion-4 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1183,7 +1215,7 @@ exports[`Skeleton renders default variant 1`] = `
   overflow: hidden;
 }
 
-.cache-h21geo-IconSkeleton {
+.emotion-6 {
   margin-right: 8px;
   width: 32px;
   height: 32px;
@@ -1192,7 +1224,7 @@ exports[`Skeleton renders default variant 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-mhtdbo-Line {
+.emotion-8 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -1200,7 +1232,7 @@ exports[`Skeleton renders default variant 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-52 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -1221,104 +1253,108 @@ exports[`Skeleton renders default variant 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-52 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
 <div
-    aria-busy="true"
-    aria-live="polite"
-    class="cache-1cu1y7v-StyledContainer e183x2r81"
+    data-testid="testing"
   >
     <div
-      class="cache-sprtbs-StyledContainer esrnljb1"
+      aria-busy="true"
+      aria-live="polite"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-ay7hiz-Block esrnljb0"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
         <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          />
+          <div
+            class="emotion-8 emotion-9"
+          />
+        </div>
       </div>
       <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
-      <div
-        class="cache-ay7hiz-Block esrnljb0"
-      >
-        <div
-          class="cache-h21geo-IconSkeleton e1kubpd30"
-        />
-        <div
-          class="cache-mhtdbo-Line e1denkbe0"
-        />
-      </div>
+        class="emotion-52 emotion-53"
+      />
     </div>
-    <div
-      class="cache-a7k45f-StyledDiv e183x2r80"
-    />
   </div>
 </DocumentFragment>
 `;

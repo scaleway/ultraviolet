@@ -1,27 +1,26 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { renderHook, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
+import { describe, expect, test, vi } from 'vitest'
 import { Form, Submit, TagInputField } from '../..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
 import { mockErrors } from '../../../mocks'
 
 describe('TagInputField', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(
       <TagInputField name="test" placeholder="placeholder" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should works with initialValues', async () => {
-    const onSubmit = jest.fn<(values: { test: string[] }) => void>()
+    const onSubmit = vi.fn<[{ test: string[] }], void>()
     const { result } = renderHook(() =>
       useForm<{ test: string[] }>({ defaultValues: { test: ['First'] } }),
     )
 
-    renderWithTheme(
+    const { asFragment } = renderWithTheme(
       <Form onRawSubmit={onSubmit} errors={mockErrors} methods={result.current}>
         <TagInputField label="Test" name="test" required clearable />
         <Submit>Submit</Submit>
@@ -35,5 +34,6 @@ describe('TagInputField', () => {
     expect(onSubmit.mock.calls[0][0]).toEqual({
       test: ['First'],
     })
+    expect(asFragment()).toMatchSnapshot()
   })
 })

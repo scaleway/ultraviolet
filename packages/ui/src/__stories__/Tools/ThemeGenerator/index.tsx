@@ -3,13 +3,8 @@ import {
   TOKENS_URL,
   generatePalette,
   // @ts-expect-error this is mjs file
-  // eslint-disable-next-line import/no-relative-packages
 } from '../../../../../../scripts/figma-synchronise-tokens'
-import {
-  Form,
-  useForm,
-  // eslint-disable-next-line import/no-relative-packages
-} from '../../../../../form/src'
+import { Form, useForm } from '../../../../../form/src'
 import { Stack, Text } from '../../../components'
 import type { SCWUITheme } from '../../../theme'
 import consoleLightTheme from '../../../theme'

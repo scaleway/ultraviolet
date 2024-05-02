@@ -1,8 +1,8 @@
-import { describe, test } from '@jest/globals'
 import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test } from 'vitest'
 import { TextInput } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('TextInput', () => {
   test('should render correctly', () =>
@@ -19,12 +19,12 @@ describe('TextInput', () => {
       />,
     ))
 
-  test('should render correctly label and noTopLabel', async () => {
-    await shouldMatchEmotionSnapshot(
+  test('should render correctly label and noTopLabel', () => {
+    shouldMatchEmotionSnapshot(
       <TextInput label="Test" value="test" noTopLabel />,
     )
-    await shouldMatchEmotionSnapshot(<TextInput value="test" noTopLabel />)
-    await shouldMatchEmotionSnapshot(<TextInput label="Test" value="test" />)
+    shouldMatchEmotionSnapshot(<TextInput value="test" noTopLabel />)
+    shouldMatchEmotionSnapshot(<TextInput label="Test" value="test" />)
   })
 
   test('should render correctly with notice', () =>
@@ -113,8 +113,8 @@ describe('TextInput', () => {
       <TextInput multiline rows={10} cols={50} fillAvailable resizable />,
     ))
 
-  test('should render on focus', () =>
-    shouldMatchEmotionSnapshot(
+  test('should render on focus', () => {
+    const { asFragment } = renderWithTheme(
       <TextInput
         id="test"
         label="Test"
@@ -123,88 +123,96 @@ describe('TextInput', () => {
         cols={50}
         onFocus={() => {}}
       />,
-      {
-        transform: () => {
-          const input = screen.getByLabelText('Test')
-          act(() => {
-            input.focus()
-          })
-        },
-      },
-    ))
+    )
+    const input = screen.getByLabelText('Test')
+    act(() => {
+      input.focus()
+    })
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render toggleable password', () =>
+  test('should render toggleable password', () => {
     shouldMatchEmotionSnapshot(
       <TextInput type="toggleable-password" name="password" />,
-    ))
+    )
+  })
 
-  test('should handle events on toggleable password', () =>
-    shouldMatchEmotionSnapshot(
+  test('should handle events on toggleable password', async () => {
+    const { asFragment } = renderWithTheme(
       <TextInput
         type="toggleable-password"
         name="password"
         data-testid="test"
       />,
-      {
-        transform: async () => {
-          const button = screen.getByTestId('test-visibility-button')
-          await userEvent.click(button)
-          await userEvent.type(button, '{enter}')
-          await userEvent.type(button, '{space}')
-        },
-      },
-    ))
+    )
+    const button = screen.getByTestId('test-visibility-button')
+    await userEvent.click(button)
+    await userEvent.type(button, '{enter}')
+    await userEvent.type(button, '{space}')
 
-  test('should render random', async () => {
-    await shouldMatchEmotionSnapshot(<TextInput random="test" name="test" />)
-    await shouldMatchEmotionSnapshot(
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should render random', () => {
+    shouldMatchEmotionSnapshot(<TextInput random="test" name="test" />)
+    shouldMatchEmotionSnapshot(
       <TextInput label="test" name="test" random="test" disabled />,
     )
   })
 
-  test('should handle events on random button', () =>
-    shouldMatchEmotionSnapshot(
+  test('should handle events on random button', async () => {
+    const { asFragment } = renderWithTheme(
       <TextInput
         random="test"
         name="test"
         data-testid="test"
         onChange={() => {}}
       />,
-      {
-        transform: async () => {
-          const button = screen.getByTestId('test-randomize-button')
-          await userEvent.click(button)
-          await userEvent.type(button, '{enter}')
-          await userEvent.type(button, '{space}')
-        },
-      },
-    ))
+    )
+    const button = screen.getByTestId('test-randomize-button')
+    await userEvent.click(button)
+    await userEvent.type(button, '{enter}')
+    await userEvent.type(button, '{space}')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render toggleable password with required', () =>
-    shouldMatchEmotionSnapshot(
+  test('should render toggleable password with required', () => {
+    const { asFragment } = renderWithTheme(
       <TextInput type="toggleable-password" name="password" required />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render random with required', () =>
-    shouldMatchEmotionSnapshot(
+  test('should render random with required', () => {
+    const { asFragment } = renderWithTheme(
       <TextInput random="test" name="test" required />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render unit with required', () =>
-    shouldMatchEmotionSnapshot(
+  test('should render unit with required', () => {
+    const { asFragment } = renderWithTheme(
       <TextInput label="test" name="test" unit="px" required />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly with valid true', () =>
-    shouldMatchEmotionSnapshot(<TextInput label="test" name="test" valid />))
+  test('should render correctly with valid true', () => {
+    const { asFragment } = renderWithTheme(
+      <TextInput label="test" name="test" valid />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly with valid false', () =>
-    shouldMatchEmotionSnapshot(
+  test('should render correctly with valid false', () => {
+    const { asFragment } = renderWithTheme(
       <TextInput label="test" name="test" valid={false} />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly with multiple right components', () =>
-    shouldMatchEmotionSnapshot(
+  test('should render correctly with multiple right components', () => {
+    const { asFragment } = renderWithTheme(
       <TextInput
         label="Multiple"
         random="prefix"
@@ -213,5 +221,7 @@ describe('TextInput', () => {
         type="toggleable-password"
         valid
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

@@ -1,5 +1,5 @@
-import { describe, expect, it, jest } from '@jest/globals'
 import { renderHook, waitFor } from '@testing-library/react'
+import { describe, expect, it, vi } from 'vitest'
 import { useIsOverflowing } from '../useIsOverflowing'
 
 describe('useIsOverflowing', () => {
@@ -13,7 +13,7 @@ describe('useIsOverflowing', () => {
   })
 
   it('should be false with no overflow and callback at false too', async () => {
-    const callback = jest.fn()
+    const callback = vi.fn()
     const { result } = renderHook(() =>
       useIsOverflowing({ current: document.createElement('div') }, callback),
     )
@@ -43,7 +43,7 @@ describe('useIsOverflowing', () => {
   })
 
   it('should be true with overflow and callback at true too', async () => {
-    const callback = jest.fn()
+    const callback = vi.fn()
     const element = document.createElement('div')
 
     const { result } = renderHook(() =>
@@ -72,7 +72,7 @@ describe('useIsOverflowing', () => {
       useIsOverflowing({ current: document.createElement('div') }),
     )
 
-    const removeEventListenerSpy = jest.spyOn(window, 'removeEventListener')
+    const removeEventListenerSpy = vi.spyOn(window, 'removeEventListener')
     unmount()
 
     expect(removeEventListenerSpy).toHaveBeenCalledWith(

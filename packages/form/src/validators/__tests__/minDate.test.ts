@@ -1,4 +1,4 @@
-import { describe, expect, test } from '@jest/globals'
+import { describe, expect, test } from 'vitest'
 import { minDateValidator } from '../minDate'
 
 const today = new Date()

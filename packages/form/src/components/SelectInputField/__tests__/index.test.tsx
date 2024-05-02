@@ -1,56 +1,54 @@
-import {
-  afterAll,
-  beforeAll,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { act, fireEvent, screen } from '@testing-library/react'
+import { renderWithForm } from '@utils/test'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { SelectInputField } from '..'
-import {
-  mockRandom,
-  restoreRandom,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
 
 describe('SelectInputField', () => {
-  beforeAll(() => {
-    mockRandom()
+  beforeEach(() => {
+    vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
   })
 
-  afterAll(restoreRandom)
-
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  afterEach(() => {
+    vi.spyOn(global.Math, 'random').mockRestore()
+  })
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(
       <SelectInputField name="test">
         <SelectInputField.Option value="value" label="Label" />
       </SelectInputField>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly disabled', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly disabled', () => {
+    const { asFragment } = renderWithForm(
       <SelectInputField name="test" disabled>
         <SelectInputField.Option value="value" label="Label" />
         <SelectInputField.Option value="value2" label="Label 2" />
       </SelectInputField>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly multiple', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly multiple', () => {
+    const { asFragment } = renderWithForm(
       <SelectInputField name="test" multiple>
         <SelectInputField.Option value="value" label="Label" />
         <SelectInputField.Option value="value2" label="Label 2" />
       </SelectInputField>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly with a disabled option', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly with a disabled option', () => {
+    const { asFragment } = renderWithForm(
       <SelectInputField name="test">
         <SelectInputField.Option value="value" label="Label" />
         <SelectInputField.Option value="value2" label="Label 2" disabled />
       </SelectInputField>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should display right value on grouped options', () => {
     const selectedOption = { label: 'Group Label', value: 'Group Value' }
@@ -64,37 +62,34 @@ describe('SelectInputField', () => {
       },
     ]
 
-    return shouldMatchEmotionSnapshotFormWrapper(
+    const { asFragment, container } = renderWithForm(
       <SelectInputField name="test" options={options} />,
-      {
-        transform: ({ container }) => {
-          const select = screen.getByRole<HTMLInputElement>('combobox')
-          act(() => select.focus())
-          fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
-          const option = screen.getByTestId(
-            `option-test-${selectedOption.value}`,
-            // eslint-disable-next-line testing-library/no-node-access
-          ).firstChild as HTMLElement
-
-          act(() => option.click())
-
-          // react-select works with a hidden input to handle value.
-          // eslint-disable-next-line testing-library/no-node-access
-          const hiddenSelectInput = container.querySelector(
-            'input[type="hidden"]',
-          ) as HTMLInputElement
-
-          const { value } = hiddenSelectInput
-          expect(value).toBe(selectedOption.value)
-        },
-      },
     )
+    const select = screen.getByRole<HTMLInputElement>('combobox')
+    act(() => select.focus())
+    fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
+    const option = screen.getByTestId(
+      `option-test-${selectedOption.value}`,
+      // eslint-disable-next-line testing-library/no-node-access
+    ).firstChild as HTMLElement
+
+    act(() => option.click())
+
+    // react-select works with a hidden input to handle value.
+    // eslint-disable-next-line testing-library/no-node-access, testing-library/no-container
+    const hiddenSelectInput = container.querySelector(
+      'input[type="hidden"]',
+    ) as HTMLInputElement
+
+    const { value } = hiddenSelectInput
+    expect(value).toBe(selectedOption.value)
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test('should trigger events', () => {
-    const onChange = jest.fn()
+    const onChange = vi.fn()
 
-    return shouldMatchEmotionSnapshotFormWrapper(
+    const { asFragment } = renderWithForm(
       <SelectInputField
         name="test"
         options={[
@@ -103,19 +98,16 @@ describe('SelectInputField', () => {
         ]}
         onChange={onChange}
       />,
-      {
-        transform: () => {
-          const select = screen.getByRole('combobox')
-          fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
-          const option =
-            // eslint-disable-next-line testing-library/no-node-access
-            screen.getByTestId('option-test-value').firstChild as HTMLElement
-
-          act(() => option.click())
-          expect(onChange).toBeCalledTimes(1)
-          act(() => select.blur())
-        },
-      },
     )
+    const select = screen.getByRole('combobox')
+    fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
+    const option =
+      // eslint-disable-next-line testing-library/no-node-access
+      screen.getByTestId('option-test-value').firstChild as HTMLElement
+
+    act(() => option.click())
+    expect(onChange).toBeCalledTimes(1)
+    act(() => select.blur())
+    expect(asFragment()).toMatchSnapshot()
   })
 })

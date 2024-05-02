@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Bullet renders correctly with a text 1`] = `
+exports[`Bullet > renders correctly with a text 1`] = `
 <DocumentFragment>
-  .cache-1k74lo7-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -25,16 +25,20 @@ exports[`Bullet renders correctly with a text 1`] = `
 }
 
 <div
-    class="cache-1k74lo7-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet renders correctly with an icon 1`] = `
+exports[`Bullet > renders correctly with an icon 1`] = `
 <DocumentFragment>
-  .cache-1k74lo7-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -56,7 +60,7 @@ exports[`Bullet renders correctly with an icon 1`] = `
   font-size: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-2 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -65,30 +69,34 @@ exports[`Bullet renders correctly with an icon 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-2 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1k74lo7-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    <svg
-      class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <path
-        d="M14.438 10.627c.19-.425-.321-.787-.748-.602A5.5 5.5 0 0 1 6.453 2.79c.186-.427-.176-.938-.6-.748a6.501 6.501 0 1 0 8.585 8.586"
-      />
-    </svg>
+      <svg
+        class="emotion-2 emotion-3"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.438 10.627c.19-.425-.321-.787-.748-.602A5.5 5.5 0 0 1 6.453 2.79c.186-.427-.176-.938-.6-.748a6.501 6.501 0 1 0 8.585 8.586"
+        />
+      </svg>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet renders correctly with an icon and icon variant 1`] = `
+exports[`Bullet > renders correctly with an icon and icon variant 1`] = `
 <DocumentFragment>
-  .cache-1k74lo7-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -110,7 +118,7 @@ exports[`Bullet renders correctly with an icon and icon variant 1`] = `
   font-size: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-2 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -119,32 +127,36 @@ exports[`Bullet renders correctly with an icon and icon variant 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-2 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1k74lo7-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    <svg
-      class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <path
-        clip-rule="evenodd"
-        d="M6.293 1.764a.56.56 0 0 1 .12.613 5.512 5.512 0 0 0 7.21 7.21.56.56 0 0 1 .734.733A6.635 6.635 0 0 1 1.6 7.767a6.635 6.635 0 0 1 4.08-6.124.56.56 0 0 1 .613.121m-1.32 1.557a5.512 5.512 0 1 0 7.705 7.705 6.633 6.633 0 0 1-7.705-7.705"
-        fill-rule="evenodd"
-      />
-    </svg>
+      <svg
+        class="emotion-2 emotion-3"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M6.293 1.764a.56.56 0 0 1 .12.613 5.512 5.512 0 0 0 7.21 7.21.56.56 0 0 1 .734.733A6.635 6.635 0 0 1 1.6 7.767a6.635 6.635 0 0 1 4.08-6.124.56.56 0 0 1 .613.121m-1.32 1.557a5.512 5.512 0 1 0 7.705 7.705 6.633 6.633 0 0 1-7.705-7.705"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet sentiment render danger 1`] = `
+exports[`Bullet > sentiment > render danger 1`] = `
 <DocumentFragment>
-  .cache-oil5vi-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -167,16 +179,20 @@ exports[`Bullet sentiment render danger 1`] = `
 }
 
 <div
-    class="cache-oil5vi-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet sentiment render disabled 1`] = `
+exports[`Bullet > sentiment > render disabled 1`] = `
 <DocumentFragment>
-  .cache-1n3x46n-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -199,16 +215,20 @@ exports[`Bullet sentiment render disabled 1`] = `
 }
 
 <div
-    class="cache-1n3x46n-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet sentiment render info 1`] = `
+exports[`Bullet > sentiment > render info 1`] = `
 <DocumentFragment>
-  .cache-2edmfk-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -231,16 +251,20 @@ exports[`Bullet sentiment render info 1`] = `
 }
 
 <div
-    class="cache-2edmfk-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet sentiment render neutral 1`] = `
+exports[`Bullet > sentiment > render neutral 1`] = `
 <DocumentFragment>
-  .cache-1k74lo7-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -263,16 +287,20 @@ exports[`Bullet sentiment render neutral 1`] = `
 }
 
 <div
-    class="cache-1k74lo7-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet sentiment render primary 1`] = `
+exports[`Bullet > sentiment > render primary 1`] = `
 <DocumentFragment>
-  .cache-j41hqp-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -295,16 +323,20 @@ exports[`Bullet sentiment render primary 1`] = `
 }
 
 <div
-    class="cache-j41hqp-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet sentiment render secondary 1`] = `
+exports[`Bullet > sentiment > render secondary 1`] = `
 <DocumentFragment>
-  .cache-wex34o-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -327,16 +359,20 @@ exports[`Bullet sentiment render secondary 1`] = `
 }
 
 <div
-    class="cache-wex34o-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet sentiment render success 1`] = `
+exports[`Bullet > sentiment > render success 1`] = `
 <DocumentFragment>
-  .cache-1h0t7zq-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -359,16 +395,20 @@ exports[`Bullet sentiment render success 1`] = `
 }
 
 <div
-    class="cache-1h0t7zq-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet sentiment render warning 1`] = `
+exports[`Bullet > sentiment > render warning 1`] = `
 <DocumentFragment>
-  .cache-8jzxlw-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -391,16 +431,20 @@ exports[`Bullet sentiment render warning 1`] = `
 }
 
 <div
-    class="cache-8jzxlw-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet size render medium 1`] = `
+exports[`Bullet > size > render medium 1`] = `
 <DocumentFragment>
-  .cache-1k74lo7-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -423,16 +467,20 @@ exports[`Bullet size render medium 1`] = `
 }
 
 <div
-    class="cache-1k74lo7-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Bullet size render small 1`] = `
+exports[`Bullet > size > render small 1`] = `
 <DocumentFragment>
-  .cache-rxjap1-StyledContainer {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -455,9 +503,13 @@ exports[`Bullet size render small 1`] = `
 }
 
 <div
-    class="cache-rxjap1-StyledContainer e11loam60"
+    data-testid="testing"
   >
-    1
+    <div
+      class="emotion-0 emotion-1"
+    >
+      1
+    </div>
   </div>
 </DocumentFragment>
 `;

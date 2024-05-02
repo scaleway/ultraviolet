@@ -5,7 +5,7 @@
     "target": "esnext",
     "module": "esnext",
     "jsxImportSource": "@emotion/react",
-    "types": ["vite/client"],
+    "types": ["vite/client", "@testing-library/jest-dom"],
     "noEmit": true,
     "skipLibCheck": true,
 
@@ -19,8 +19,7 @@
     ".storybook/**/*.tsx",
     "global.d.ts",
     "expect.d.ts",
-    "jest-axe.d.ts",
-    ".jest/setupTests.ts"
+    "jest-axe.d.ts"
   ],
   "exclude": ["node_modules", "coverage", "dist", "examples"]
 }

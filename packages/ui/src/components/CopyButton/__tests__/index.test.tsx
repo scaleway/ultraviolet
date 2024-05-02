@@ -1,10 +1,7 @@
-import { beforeAll, describe, expect, it, jest, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { beforeAll, describe, expect, it, test, vi } from 'vitest'
 import { CopyButton } from '../index'
 
 describe('CopyButton', () => {
@@ -13,8 +10,8 @@ describe('CopyButton', () => {
 
     // @ts-expect-error we are voluntarily based on an older browser spec
     window.clipboardData = {
-      getData: jest.fn(() => data),
-      setData: jest.fn((_, val: string) => {
+      getData: vi.fn(() => data),
+      setData: vi.fn((_, val: string) => {
         data = val
       }),
     }

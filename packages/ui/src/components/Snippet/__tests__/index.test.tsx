@@ -1,7 +1,7 @@
-import { describe, it, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, it, test } from 'vitest'
 import { Snippet } from '../index'
 
 const TEST_VALUE_MULTILINE = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -47,30 +47,39 @@ describe('Snippet', () => {
       <Snippet copyText="Test">{TEST_VALUE_SINGLELINE}</Snippet>,
     ))
 
-  test('renders correctly with copiedText', () =>
+  test('renders correctly with copiedText', () => {
     shouldMatchEmotionSnapshot(
       <Snippet copiedText="Test">{TEST_VALUE_SINGLELINE}</Snippet>,
-    ))
+    )
+  })
 
-  test('renders correctly with hideText', () =>
+  test('renders correctly with hideText', () => {
     shouldMatchEmotionSnapshot(
       <Snippet hideText="Test">{TEST_VALUE_MULTILINE}</Snippet>,
-    ))
+    )
+  })
 
-  test('renders correctly with showText', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with showText', () => {
+    const { asFragment } = renderWithTheme(
       <Snippet showText="Test">{TEST_VALUE_MULTILINE}</Snippet>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with initiallyExpanded', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with initiallyExpanded', () => {
+    const { asFragment } = renderWithTheme(
       <Snippet initiallyExpanded>{TEST_VALUE_MULTILINE}</Snippet>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should click on extend button to display full content on ', () =>
-    shouldMatchEmotionSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>, {
-      transform: async () => {
-        await userEvent.click(screen.getByRole('button', { name: 'Show' }))
-      },
-    }))
+  it('should click on extend button to display full content on ', async () => {
+    const { asFragment } = renderWithTheme(
+      <Snippet>{TEST_VALUE_MULTILINE}</Snippet>,
+    )
+
+    await userEvent.click(screen.getByRole('button', { name: 'Show' }))
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

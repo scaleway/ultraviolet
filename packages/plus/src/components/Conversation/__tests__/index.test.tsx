@@ -1,6 +1,6 @@
-import { describe, it } from '@jest/globals'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, it } from 'vitest'
 import { Conversation } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Conversation', () => {
   it('should work with Default', () =>

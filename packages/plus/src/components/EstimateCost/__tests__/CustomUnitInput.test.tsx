@@ -1,28 +1,20 @@
-import {
-  afterAll,
-  beforeAll,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
+  resetIntersectionMocking,
+  setupIntersectionMocking,
+} from 'react-intersection-observer/test-utils'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { CustomUnitInput } from '../Components/CustomUnitInput'
 
 describe('EstimateCost - CustomUnitInput', () => {
-  beforeAll(() => {
-    jest.spyOn(Math, 'random').mockReturnValue(0.4155913669444804)
+  beforeEach(() => {
+    setupIntersectionMocking(vi.fn)
   })
-
-  afterAll(() => {
-    jest.spyOn(Math, 'random').mockRestore()
+  afterEach(() => {
+    resetIntersectionMocking()
   })
-
   test('render default values', () =>
     shouldMatchEmotionSnapshot(
       <CustomUnitInput

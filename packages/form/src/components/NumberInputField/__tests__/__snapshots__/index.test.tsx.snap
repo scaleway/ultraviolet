@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`NumberInputField should render correctly 1`] = `
+exports[`NumberInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +25,7 @@ exports[`NumberInputField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,7 +48,7 @@ exports[`NumberInputField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-575b33-StyledContainer {
+.emotion-4 {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -70,26 +70,26 @@ exports[`NumberInputField should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-575b33-StyledContainer[data-error='true'] {
+.emotion-4[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-575b33-StyledContainer[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:hover,
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:focus {
+.emotion-4:not([aria-disabled='true']) .emotion-12:hover,
+.emotion-4:not([aria-disabled='true']) .emotion-12:focus {
   border: 1px solid #792dd4;
 }
 
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:focus-within {
+.emotion-4:not([aria-disabled='true']) .emotion-12:focus-within {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border: 1px solid #792dd4;
 }
 
-.cache-xg34c5-StyledGhostButton-StyledSelectButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -132,12 +132,12 @@ exports[`NumberInputField should render correctly 1`] = `
   height: 32px;
 }
 
-.cache-xg34c5-StyledGhostButton-StyledSelectButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-12fh1v6-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: #d8c5fc;
   height: 26px;
@@ -146,12 +146,12 @@ exports[`NumberInputField should render correctly 1`] = `
   min-height: 26px;
 }
 
-.cache-12fh1v6-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #d8c5fc;
   fill: none;
 }
 
-.cache-3i90o1-StyledCenterBox {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -177,7 +177,7 @@ exports[`NumberInputField should render correctly 1`] = `
   max-width: 100%;
 }
 
-.cache-1im6mgn-StyledInput {
+.emotion-13 {
   color: #3f4250;
   background-color: transparent;
   font-size: 16px;
@@ -191,34 +191,34 @@ exports[`NumberInputField should render correctly 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-1im6mgn-StyledInput::-webkit-outer-spin-button,
-.cache-1im6mgn-StyledInput::-webkit-inner-spin-button {
+.emotion-13::-webkit-outer-spin-button,
+.emotion-13::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1im6mgn-StyledInput::-webkit-input-placeholder {
+.emotion-13::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1im6mgn-StyledInput::-moz-placeholder {
+.emotion-13::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1im6mgn-StyledInput:-ms-input-placeholder {
+.emotion-13:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1im6mgn-StyledInput::placeholder {
+.emotion-13::placeholder {
   color: #727683;
 }
 
-.cache-1im6mgn-StyledInput[disabled] {
+.emotion-13[disabled] {
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.cache-1sbjmp7-StyledText {
+.emotion-15 {
   color: #3f4250;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -227,7 +227,7 @@ exports[`NumberInputField should render correctly 1`] = `
   margin-right: 8px;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton {
+.emotion-18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -269,22 +269,22 @@ exports[`NumberInputField should render correctly 1`] = `
   height: 32px;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton:hover {
+.emotion-18:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton:active {
+.emotion-18:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton:hover,
-.cache-p0598d-StyledGhostButton-StyledSelectButton:active {
+.emotion-18:hover,
+.emotion-18:active {
   background: #e5dbfd;
   color: #521094;
 }
 
-.cache-1iddbic-StyledIcon-sizeStyles {
+.emotion-20 {
   vertical-align: middle;
   fill: #641cb3;
   height: 26px;
@@ -293,395 +293,94 @@ exports[`NumberInputField should render correctly 1`] = `
   min-height: 26px;
 }
 
-.cache-1iddbic-StyledIcon-sizeStyles .fillStroke {
+.emotion-20 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-gw33n2-Stack ehpbis70"
+    <form
+      novalidate=""
     >
       <div
-        class="cache-ymc80m-Stack ehpbis70"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-disabled="false"
-          class="cache-575b33-StyledContainer exvap480"
-          data-error="false"
+          class="emotion-2 emotion-1"
         >
-          <button
-            aria-label="Minus"
-            class="exvap484 cache-xg34c5-StyledGhostButton-StyledSelectButton e112qvla0"
-            disabled=""
-            type="button"
-          >
-            <div>
-              <svg
-                class="cache-12fh1v6-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </button>
           <div
-            aria-live="assertive"
-            class="cache-3i90o1-StyledCenterBox exvap483"
-            role="status"
+            aria-disabled="false"
+            class="emotion-4 emotion-5"
+            data-error="false"
           >
-            <input
-              aria-label="Number Input"
-              class="cache-1im6mgn-StyledInput exvap482"
-              id=":r0:"
-              name="test"
-              style="width: 16px;"
-              type="number"
-              value="0"
-            />
-            <span
-              class="cache-1sbjmp7-StyledText exvap481"
-            />
-          </div>
-          <button
-            aria-label="Plus"
-            class="exvap484 cache-p0598d-StyledGhostButton-StyledSelectButton e112qvla0"
-            type="button"
-          >
-            <div>
-              <svg
-                class="cache-1iddbic-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
-                />
-              </svg>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
-  </form>
-</DocumentFragment>
-`;
-
-exports[`NumberInputField should render correctly disabled 1`] = `
-<DocumentFragment>
-  .cache-gw33n2-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-ymc80m-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-575b33-StyledContainer {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  font-weight: 500;
-  height: 48px;
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-}
-
-.cache-575b33-StyledContainer[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.cache-575b33-StyledContainer[aria-disabled='true'] {
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:hover,
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:focus {
-  border: 1px solid #792dd4;
-}
-
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:focus-within {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-  border: 1px solid #792dd4;
-}
-
-.cache-xg34c5-StyledGhostButton-StyledSelectButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  color: #d8c5fc;
-  margin: 0 8px;
-  width: 32px;
-  height: 32px;
-}
-
-.cache-xg34c5-StyledGhostButton-StyledSelectButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-12fh1v6-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #d8c5fc;
-  height: 26px;
-  width: 26px;
-  min-width: 26px;
-  min-height: 26px;
-}
-
-.cache-12fh1v6-StyledIcon-sizeStyles .fillStroke {
-  stroke: #d8c5fc;
-  fill: none;
-}
-
-.cache-3i90o1-StyledCenterBox {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  max-width: 100%;
-}
-
-.cache-1im6mgn-StyledInput {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  position: relative;
-  margin-right: 4px;
-  max-width: 100%;
-  font-weight: 500;
-  text-align: center;
-  -moz-appearance: textfield;
-}
-
-.cache-1im6mgn-StyledInput::-webkit-outer-spin-button,
-.cache-1im6mgn-StyledInput::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.cache-1im6mgn-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1im6mgn-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1im6mgn-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1im6mgn-StyledInput::placeholder {
-  color: #727683;
-}
-
-.cache-1im6mgn-StyledInput[disabled] {
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.cache-6u7k95-StyledText {
-  color: #b5b7bd;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 8px;
-}
-
-<form
-    novalidate=""
-  >
-    <div
-      class="cache-gw33n2-Stack ehpbis70"
-    >
-      <div
-        class="cache-ymc80m-Stack ehpbis70"
-      >
-        <div
-          aria-disabled="true"
-          class="cache-575b33-StyledContainer exvap480"
-          data-error="false"
-        >
-          <button
-            aria-label="Minus"
-            class="exvap484 cache-xg34c5-StyledGhostButton-StyledSelectButton e112qvla0"
-            disabled=""
-            type="button"
-          >
-            <div>
-              <svg
-                class="cache-12fh1v6-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </button>
-          <div
-            aria-live="assertive"
-            class="cache-3i90o1-StyledCenterBox exvap483"
-            role="status"
-          >
-            <input
-              aria-label="Number Input"
-              class="cache-1im6mgn-StyledInput exvap482"
+            <button
+              aria-label="Minus"
+              class="emotion-6 emotion-7 emotion-8"
               disabled=""
-              id=":r5:"
-              name="test"
-              style="width: 32px;"
-              type="number"
-              value="10"
-            />
-            <span
-              class="cache-6u7k95-StyledText exvap481"
-            />
-          </div>
-          <button
-            aria-label="Plus"
-            class="exvap484 cache-xg34c5-StyledGhostButton-StyledSelectButton e112qvla0"
-            disabled=""
-            type="button"
-          >
-            <div>
-              <svg
-                class="cache-12fh1v6-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
-                />
-              </svg>
+              type="button"
+            >
+              <div>
+                <svg
+                  class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              aria-live="assertive"
+              class="emotion-11 emotion-12"
+              role="status"
+            >
+              <input
+                aria-label="Number Input"
+                class="emotion-13 emotion-14"
+                id=":r0:"
+                name="test"
+                style="width: 16px;"
+                type="number"
+                value="0"
+              />
+              <span
+                class="emotion-15 emotion-16"
+              />
             </div>
-          </button>
+            <button
+              aria-label="Plus"
+              class="emotion-6 emotion-18 emotion-8"
+              type="button"
+            >
+              <div>
+                <svg
+                  class="emotion-20 emotion-10"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] = `
+exports[`NumberInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -704,7 +403,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -727,7 +426,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   flex-wrap: nowrap;
 }
 
-.cache-575b33-StyledContainer {
+.emotion-4 {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -749,173 +448,26 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   border-radius: 4px;
 }
 
-.cache-575b33-StyledContainer[data-error='true'] {
+.emotion-4[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-575b33-StyledContainer[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:hover,
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:focus {
+.emotion-4:not([aria-disabled='true']) .emotion-12:hover,
+.emotion-4:not([aria-disabled='true']) .emotion-12:focus {
   border: 1px solid #792dd4;
 }
 
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:focus-within {
+.emotion-4:not([aria-disabled='true']) .emotion-12:focus-within {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border: 1px solid #792dd4;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #641cb3;
-  margin: 0 8px;
-  width: 32px;
-  height: 32px;
-}
-
-.cache-p0598d-StyledGhostButton-StyledSelectButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-p0598d-StyledGhostButton-StyledSelectButton:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-p0598d-StyledGhostButton-StyledSelectButton:hover,
-.cache-p0598d-StyledGhostButton-StyledSelectButton:active {
-  background: #e5dbfd;
-  color: #521094;
-}
-
-.cache-1iddbic-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #641cb3;
-  height: 26px;
-  width: 26px;
-  min-width: 26px;
-  min-height: 26px;
-}
-
-.cache-1iddbic-StyledIcon-sizeStyles .fillStroke {
-  stroke: #641cb3;
-  fill: none;
-}
-
-.cache-3i90o1-StyledCenterBox {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  height: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  outline: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  max-width: 100%;
-}
-
-.cache-1im6mgn-StyledInput {
-  color: #3f4250;
-  background-color: transparent;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  position: relative;
-  margin-right: 4px;
-  max-width: 100%;
-  font-weight: 500;
-  text-align: center;
-  -moz-appearance: textfield;
-}
-
-.cache-1im6mgn-StyledInput::-webkit-outer-spin-button,
-.cache-1im6mgn-StyledInput::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.cache-1im6mgn-StyledInput::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-1im6mgn-StyledInput::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-1im6mgn-StyledInput:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-1im6mgn-StyledInput::placeholder {
-  color: #727683;
-}
-
-.cache-1im6mgn-StyledInput[disabled] {
-  color: #b5b7bd;
-  cursor: not-allowed;
-}
-
-.cache-1sbjmp7-StyledText {
-  color: #3f4250;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 8px;
-}
-
-.cache-xg34c5-StyledGhostButton-StyledSelectButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -958,12 +510,12 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   height: 32px;
 }
 
-.cache-xg34c5-StyledGhostButton-StyledSelectButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-12fh1v6-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: #d8c5fc;
   height: 26px;
@@ -972,90 +524,172 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   min-height: 26px;
 }
 
-.cache-12fh1v6-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #d8c5fc;
   fill: none;
 }
 
-<form
-    novalidate=""
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.emotion-13 {
+  color: #3f4250;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4px;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.emotion-13::-webkit-outer-spin-button,
+.emotion-13::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-13::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-13::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-13:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-13::placeholder {
+  color: #727683;
+}
+
+.emotion-13[disabled] {
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-15 {
+  color: #b5b7bd;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-gw33n2-Stack ehpbis70"
+    <form
+      novalidate=""
     >
       <div
-        class="cache-ymc80m-Stack ehpbis70"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-disabled="false"
-          class="cache-575b33-StyledContainer exvap480"
-          data-error="false"
+          class="emotion-2 emotion-1"
         >
-          <button
-            aria-label="Minus"
-            class="exvap484 cache-p0598d-StyledGhostButton-StyledSelectButton e112qvla0"
-            type="button"
-          >
-            <div>
-              <svg
-                class="cache-1iddbic-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </button>
           <div
-            aria-live="assertive"
-            class="cache-3i90o1-StyledCenterBox exvap483"
-            role="status"
+            aria-disabled="true"
+            class="emotion-4 emotion-5"
+            data-error="false"
           >
-            <input
-              aria-label="Number Input"
-              class="cache-1im6mgn-StyledInput exvap482"
-              id=":rf:"
-              name="test"
-              style="width: 32px;"
-              type="number"
-              value="20"
-            />
-            <span
-              class="cache-1sbjmp7-StyledText exvap481"
-            />
-          </div>
-          <button
-            aria-label="Plus"
-            class="exvap484 cache-xg34c5-StyledGhostButton-StyledSelectButton e112qvla0"
-            disabled=""
-            type="button"
-          >
-            <div>
-              <svg
-                class="cache-12fh1v6-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
-                />
-              </svg>
+            <button
+              aria-label="Minus"
+              class="emotion-6 emotion-7 emotion-8"
+              disabled=""
+              type="button"
+            >
+              <div>
+                <svg
+                  class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              aria-live="assertive"
+              class="emotion-11 emotion-12"
+              role="status"
+            >
+              <input
+                aria-label="Number Input"
+                class="emotion-13 emotion-14"
+                disabled=""
+                id=":r5:"
+                name="test"
+                style="width: 32px;"
+                type="number"
+                value="10"
+              />
+              <span
+                class="emotion-15 emotion-16"
+              />
             </div>
-          </button>
+            <button
+              aria-label="Plus"
+              class="emotion-6 emotion-7 emotion-8"
+              disabled=""
+              type="button"
+            >
+              <div>
+                <svg
+                  class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`NumberInputField should trigger events correctly 1`] = `
+exports[`NumberInputField > should trigger event onMinCrossed & onMaxCrossed 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1078,7 +712,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1101,7 +735,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-575b33-StyledContainer {
+.emotion-4 {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1123,26 +757,26 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-575b33-StyledContainer[data-error='true'] {
+.emotion-4[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-575b33-StyledContainer[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:hover,
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:focus {
+.emotion-4:not([aria-disabled='true']) .emotion-12:hover,
+.emotion-4:not([aria-disabled='true']) .emotion-12:focus {
   border: 1px solid #792dd4;
 }
 
-.cache-575b33-StyledContainer:not([aria-disabled='true']) .exvap483:focus-within {
+.emotion-4:not([aria-disabled='true']) .emotion-12:focus-within {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border: 1px solid #792dd4;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1184,22 +818,22 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   height: 32px;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton:active {
+.emotion-7:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-p0598d-StyledGhostButton-StyledSelectButton:hover,
-.cache-p0598d-StyledGhostButton-StyledSelectButton:active {
+.emotion-7:hover,
+.emotion-7:active {
   background: #e5dbfd;
   color: #521094;
 }
 
-.cache-1iddbic-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: #641cb3;
   height: 26px;
@@ -1208,12 +842,12 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   min-height: 26px;
 }
 
-.cache-1iddbic-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.cache-3i90o1-StyledCenterBox {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1239,7 +873,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   max-width: 100%;
 }
 
-.cache-1im6mgn-StyledInput {
+.emotion-13 {
   color: #3f4250;
   background-color: transparent;
   font-size: 16px;
@@ -1253,34 +887,34 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-1im6mgn-StyledInput::-webkit-outer-spin-button,
-.cache-1im6mgn-StyledInput::-webkit-inner-spin-button {
+.emotion-13::-webkit-outer-spin-button,
+.emotion-13::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1im6mgn-StyledInput::-webkit-input-placeholder {
+.emotion-13::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1im6mgn-StyledInput::-moz-placeholder {
+.emotion-13::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1im6mgn-StyledInput:-ms-input-placeholder {
+.emotion-13:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1im6mgn-StyledInput::placeholder {
+.emotion-13::placeholder {
   color: #727683;
 }
 
-.cache-1im6mgn-StyledInput[disabled] {
+.emotion-13[disabled] {
   color: #b5b7bd;
   cursor: not-allowed;
 }
 
-.cache-1sbjmp7-StyledText {
+.emotion-15 {
   color: #3f4250;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1289,77 +923,459 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   margin-right: 8px;
 }
 
-<form
-    novalidate=""
+.emotion-18 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #641cb3;
+  color: #d8c5fc;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.emotion-18:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-20 {
+  vertical-align: middle;
+  fill: #d8c5fc;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.emotion-20 .fillStroke {
+  stroke: #d8c5fc;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-gw33n2-Stack ehpbis70"
+    <form
+      novalidate=""
     >
       <div
-        class="cache-ymc80m-Stack ehpbis70"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-disabled="false"
-          class="cache-575b33-StyledContainer exvap480"
-          data-error="false"
+          class="emotion-2 emotion-1"
         >
-          <button
-            aria-label="Minus"
-            class="exvap484 cache-p0598d-StyledGhostButton-StyledSelectButton e112qvla0"
-            type="button"
-          >
-            <div>
-              <svg
-                class="cache-1iddbic-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </button>
           <div
-            aria-live="assertive"
-            class="cache-3i90o1-StyledCenterBox exvap483"
-            role="status"
+            aria-disabled="false"
+            class="emotion-4 emotion-5"
+            data-error="false"
           >
-            <input
-              aria-label="Number Input"
-              class="cache-1im6mgn-StyledInput exvap482"
-              id=":ra:"
-              name="test"
-              style="width: 32px;"
-              type="number"
-              value="10"
-            />
-            <span
-              class="cache-1sbjmp7-StyledText exvap481"
-            />
-          </div>
-          <button
-            aria-label="Plus"
-            class="exvap484 cache-p0598d-StyledGhostButton-StyledSelectButton e112qvla0"
-            type="button"
-          >
-            <div>
-              <svg
-                class="cache-1iddbic-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
-                />
-              </svg>
+            <button
+              aria-label="Minus"
+              class="emotion-6 emotion-7 emotion-8"
+              type="button"
+            >
+              <div>
+                <svg
+                  class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              aria-live="assertive"
+              class="emotion-11 emotion-12"
+              role="status"
+            >
+              <input
+                aria-label="Number Input"
+                class="emotion-13 emotion-14"
+                id=":rf:"
+                name="test"
+                style="width: 32px;"
+                type="number"
+                value="20"
+              />
+              <span
+                class="emotion-15 emotion-16"
+              />
             </div>
-          </button>
+            <button
+              aria-label="Plus"
+              class="emotion-6 emotion-18 emotion-8"
+              disabled=""
+              type="button"
+            >
+              <div>
+                <svg
+                  class="emotion-20 emotion-10"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NumberInputField > should trigger events correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-4[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-4[aria-disabled='true'] {
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-4:not([aria-disabled='true']) .emotion-12:hover,
+.emotion-4:not([aria-disabled='true']) .emotion-12:focus {
+  border: 1px solid #792dd4;
+}
+
+.emotion-4:not([aria-disabled='true']) .emotion-12:focus-within {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #792dd4;
+}
+
+.emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #641cb3;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.emotion-7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-7:hover,
+.emotion-7:active {
+  background: #e5dbfd;
+  color: #521094;
+}
+
+.emotion-9 {
+  vertical-align: middle;
+  fill: #641cb3;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.emotion-9 .fillStroke {
+  stroke: #641cb3;
+  fill: none;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.emotion-13 {
+  color: #3f4250;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4px;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.emotion-13::-webkit-outer-spin-button,
+.emotion-13::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-13::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-13::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-13:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-13::placeholder {
+  color: #727683;
+}
+
+.emotion-13[disabled] {
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-15 {
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+    >
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div
+          class="emotion-2 emotion-1"
+        >
+          <div
+            aria-disabled="false"
+            class="emotion-4 emotion-5"
+            data-error="false"
+          >
+            <button
+              aria-label="Minus"
+              class="emotion-6 emotion-7 emotion-8"
+              type="button"
+            >
+              <div>
+                <svg
+                  class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4 9.75A.75.75 0 0 1 4.75 9h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 9.75"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </button>
+            <div
+              aria-live="assertive"
+              class="emotion-11 emotion-12"
+              role="status"
+            >
+              <input
+                aria-label="Number Input"
+                class="emotion-13 emotion-14"
+                id=":ra:"
+                name="test"
+                style="width: 32px;"
+                type="number"
+                value="10"
+              />
+              <span
+                class="emotion-15 emotion-16"
+              />
+            </div>
+            <button
+              aria-label="Plus"
+              class="emotion-6 emotion-7 emotion-8"
+              type="button"
+            >
+              <div>
+                <svg
+                  class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5z"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </DocumentFragment>
 `;

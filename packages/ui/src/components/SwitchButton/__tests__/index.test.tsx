@@ -1,11 +1,8 @@
-import { describe, jest, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test, vi } from 'vitest'
 import { SwitchButton } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 import { FocusOverlay } from '../FocusOverlay'
 
 describe('SwitchButton', () => {
@@ -60,7 +57,7 @@ describe('SwitchButton', () => {
     ))
 
   test('renders with on change', async () => {
-    const onChange = jest.fn()
+    const onChange = vi.fn()
 
     renderWithTheme(
       <SwitchButton

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FocusOverlay renders correctly when left is focused 1`] = `
+exports[`FocusOverlay > renders correctly when left is focused 1`] = `
 <DocumentFragment>
-  .cache-vkpuwe-StyledDiv {
+  .emotion-0 {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
@@ -12,959 +12,109 @@ exports[`FocusOverlay renders correctly when left is focused 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.cache-vkpuwe-StyledDiv[data-focusposition='right'] {
+.emotion-0[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-vkpuwe-StyledDiv etutiin0"
-    data-focusposition="left"
-    style="transform: translate3d(0px, 0, 0) scale3d(1, 1, 1); width: 400px;"
-  />
-</DocumentFragment>
-`;
-
-exports[`FocusOverlay renders correctly when left is focused and has mouse down 1`] = `
-<DocumentFragment>
-  .cache-vkpuwe-StyledDiv {
-  position: absolute;
-  height: calc(100% - 8px);
-  border-radius: 4px;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.cache-vkpuwe-StyledDiv[data-focusposition='right'] {
-  transform-origin: right center;
-}
-
-<div
-    class="cache-vkpuwe-StyledDiv etutiin0"
-    data-focusposition="left"
-    style="transform: translate3d(0px, 0, 0) scale3d(1.015, 1, 1); width: 400px;"
-  />
-</DocumentFragment>
-`;
-
-exports[`FocusOverlay renders correctly when right is focused 1`] = `
-<DocumentFragment>
-  .cache-vkpuwe-StyledDiv {
-  position: absolute;
-  height: calc(100% - 8px);
-  border-radius: 4px;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.cache-vkpuwe-StyledDiv[data-focusposition='right'] {
-  transform-origin: right center;
-}
-
-<div
-    class="cache-vkpuwe-StyledDiv etutiin0"
-    data-focusposition="right"
-    style="transform: translate3d(408px, 0, 0) scale3d(1, 1, 1); width: 200px;"
-  />
-</DocumentFragment>
-`;
-
-exports[`FocusOverlay renders correctly when right is focused and has mouse down 1`] = `
-<DocumentFragment>
-  .cache-vkpuwe-StyledDiv {
-  position: absolute;
-  height: calc(100% - 8px);
-  border-radius: 4px;
-  background: #8c40ef;
-  transform-origin: left center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.cache-vkpuwe-StyledDiv[data-focusposition='right'] {
-  transform-origin: right center;
-}
-
-<div
-    class="cache-vkpuwe-StyledDiv etutiin0"
-    data-focusposition="right"
-    style="transform: translate3d(408px, 0, 0) scale3d(1.03, 1, 1); width: 200px;"
-  />
-</DocumentFragment>
-`;
-
-exports[`SwitchButton renders correctly 1`] = `
-<DocumentFragment>
-  .cache-tib6m2-StyledBorderedBox {
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  position: relative;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border: none;
-  height: 40px;
-  padding: 8px 16px;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  white-space: nowrap;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover,
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within,
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active {
-  box-shadow: none;
-  border: none;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
-  border: none;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
-  border: none;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] label {
-  color: #ffffff;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
-  color: #641cb3;
-}
-
-.cache-ymc80m-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
-  fill: #8c40ef;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
-  fill: #e5dbfd;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
-  fill: #b3144d;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
-  fill: #ffd3e3;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
-  cursor: not-allowed;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld4 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
-  fill: #f3f3f4;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
-  color: #641cb3;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
-  color: #b3144d;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement input+svg {
-  display: none;
-}
-
-.cache-1ghsgz8-RadioInput {
-  cursor: pointer;
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
-  fill: #8c40ef;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
-  fill: #e51963;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
-  fill: #f1eefc;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
-  fill: #ffebf2;
-}
-
-.cache-1dyk1l0-Ring {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.cache-1dyk1l0-Ring .ehkrmld6 {
-  fill: #ffffff;
-}
-
-.cache-shj57p-StyledLabel {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-<div
-    style="display: inline-flex;"
+    data-testid="testing"
   >
     <div
-      class="cache-tib6m2-StyledBorderedBox e4ryteh1"
-    >
-      <div
-        class="e4ryteh0 cache-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
-        data-checked="false"
-        data-disabled="false"
-        data-has-label="true"
-        data-type="radio"
-      >
-        <div
-          class="cache-ymc80m-Stack ehpbis70"
-        >
-          <div
-            aria-disabled="false"
-            class="e1s5n3hj4 cache-14syb4e-RadioContainer-StyledRadio-StyledElement ehkrmld2"
-            data-checked="false"
-          >
-            <input
-              aria-disabled="false"
-              aria-invalid="false"
-              class="cache-1ghsgz8-RadioInput ehkrmld3"
-              id="test-left"
-              name="test"
-              type="radio"
-              value="left"
-            />
-            <svg
-              class="cache-1dyk1l0-Ring ehkrmld4"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke-width="2"
-                />
-                <circle
-                  class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-                  cx="12"
-                  cy="12"
-                  r="8"
-                />
-                <circle
-                  class="cache-ivayk3-RadioMark ehkrmld5"
-                  cx="12"
-                  cy="12"
-                  r="5"
-                />
-              </g>
-            </svg>
-            <label
-              class="cache-shj57p-StyledLabel ehkrmld1"
-              for="test-left"
-            >
-              Left
-            </label>
-          </div>
-        </div>
-      </div>
-      <div
-        class="e4ryteh0 cache-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
-        data-checked="true"
-        data-disabled="false"
-        data-has-label="true"
-        data-type="radio"
-      >
-        <div
-          class="cache-ymc80m-Stack ehpbis70"
-        >
-          <div
-            aria-disabled="false"
-            class="e1s5n3hj4 cache-14syb4e-RadioContainer-StyledRadio-StyledElement ehkrmld2"
-            data-checked="true"
-          >
-            <input
-              aria-disabled="false"
-              aria-invalid="false"
-              checked=""
-              class="cache-1ghsgz8-RadioInput ehkrmld3"
-              id="test-right"
-              name="test"
-              type="radio"
-              value="right"
-            />
-            <svg
-              class="cache-1dyk1l0-Ring ehkrmld4"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke-width="2"
-                />
-                <circle
-                  class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-                  cx="12"
-                  cy="12"
-                  r="8"
-                />
-                <circle
-                  class="cache-ivayk3-RadioMark ehkrmld5"
-                  cx="12"
-                  cy="12"
-                  r="5"
-                />
-              </g>
-            </svg>
-            <label
-              class="cache-shj57p-StyledLabel ehkrmld1"
-              for="test-right"
-            >
-              Right
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
+      class="emotion-0 emotion-1"
+      data-focusposition="left"
+      style="transform: translate3d(0px, 0, 0) scale3d(1, 1, 1); width: 400px;"
+    />
   </div>
 </DocumentFragment>
 `;
 
-exports[`SwitchButton renders correctly with right value 1`] = `
+exports[`FocusOverlay > renders correctly when left is focused and has mouse down 1`] = `
 <DocumentFragment>
-  .cache-tib6m2-StyledBorderedBox {
-  border: 1px solid #d9dadd;
+  .emotion-0 {
+  position: absolute;
+  height: calc(100% - 8px);
   border-radius: 4px;
-  padding: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  position: relative;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  cursor: pointer;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  color: #3f4250;
-  border: none;
-  height: 40px;
-  padding: 8px 16px;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  background: #8c40ef;
+  transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  white-space: nowrap;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-error='true'] {
-  border: 1px solid #b3144d;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-  color: #b5b7bd;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #8c40ef;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover,
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within,
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active {
-  box-shadow: none;
-  border: none;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
-  border: none;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
-  border: none;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] label {
-  color: #ffffff;
-}
-
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
-  color: #641cb3;
-}
-
-.cache-ymc80m-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
-  fill: #8c40ef;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
-  fill: #e5dbfd;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
-  fill: #b3144d;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
-  fill: #ffd3e3;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
-  cursor: not-allowed;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld4 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
-  fill: #f3f3f4;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
-  color: #641cb3;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
-  color: #b3144d;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
-  color: #b5b7bd;
-}
-
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement input+svg {
-  display: none;
-}
-
-.cache-1ghsgz8-RadioInput {
-  cursor: pointer;
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
-  fill: #8c40ef;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
-  fill: #e51963;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
-  fill: #f1eefc;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
-  fill: #ffebf2;
-}
-
-.cache-1dyk1l0-Ring {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.cache-1dyk1l0-Ring .ehkrmld6 {
-  fill: #ffffff;
-}
-
-.cache-shj57p-StyledLabel {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.emotion-0[data-focusposition='right'] {
+  transform-origin: right center;
 }
 
 <div
-    style="display: inline-flex;"
+    data-testid="testing"
   >
     <div
-      class="cache-tib6m2-StyledBorderedBox e4ryteh1"
-    >
-      <div
-        class="e4ryteh0 cache-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
-        data-checked="false"
-        data-disabled="false"
-        data-has-label="true"
-        data-type="radio"
-      >
-        <div
-          class="cache-ymc80m-Stack ehpbis70"
-        >
-          <div
-            aria-disabled="false"
-            class="e1s5n3hj4 cache-14syb4e-RadioContainer-StyledRadio-StyledElement ehkrmld2"
-            data-checked="false"
-          >
-            <input
-              aria-disabled="false"
-              aria-invalid="false"
-              class="cache-1ghsgz8-RadioInput ehkrmld3"
-              id="test-left"
-              name="test"
-              type="radio"
-              value="left"
-            />
-            <svg
-              class="cache-1dyk1l0-Ring ehkrmld4"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke-width="2"
-                />
-                <circle
-                  class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-                  cx="12"
-                  cy="12"
-                  r="8"
-                />
-                <circle
-                  class="cache-ivayk3-RadioMark ehkrmld5"
-                  cx="12"
-                  cy="12"
-                  r="5"
-                />
-              </g>
-            </svg>
-            <label
-              class="cache-shj57p-StyledLabel ehkrmld1"
-              for="test-left"
-            >
-              Left
-            </label>
-          </div>
-        </div>
-      </div>
-      <div
-        class="e4ryteh0 cache-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
-        data-checked="true"
-        data-disabled="false"
-        data-has-label="true"
-        data-type="radio"
-      >
-        <div
-          class="cache-ymc80m-Stack ehpbis70"
-        >
-          <div
-            aria-disabled="false"
-            class="e1s5n3hj4 cache-14syb4e-RadioContainer-StyledRadio-StyledElement ehkrmld2"
-            data-checked="true"
-          >
-            <input
-              aria-disabled="false"
-              aria-invalid="false"
-              checked=""
-              class="cache-1ghsgz8-RadioInput ehkrmld3"
-              id="test-right"
-              name="test"
-              type="radio"
-              value="right"
-            />
-            <svg
-              class="cache-1dyk1l0-Ring ehkrmld4"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke-width="2"
-                />
-                <circle
-                  class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-                  cx="12"
-                  cy="12"
-                  r="8"
-                />
-                <circle
-                  class="cache-ivayk3-RadioMark ehkrmld5"
-                  cx="12"
-                  cy="12"
-                  r="5"
-                />
-              </g>
-            </svg>
-            <label
-              class="cache-shj57p-StyledLabel ehkrmld1"
-              for="test-right"
-            >
-              Right
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
+      class="emotion-0 emotion-1"
+      data-focusposition="left"
+      style="transform: translate3d(0px, 0, 0) scale3d(1.015, 1, 1); width: 400px;"
+    />
   </div>
 </DocumentFragment>
 `;
 
-exports[`SwitchButton renders with tooltip 1`] = `
+exports[`FocusOverlay > renders correctly when right is focused 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
-  display: inherit;
+  .emotion-0 {
+  position: absolute;
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
-  width: 100%;
+.emotion-0[data-focusposition='right'] {
+  transform-origin: right center;
 }
 
-.cache-tib6m2-StyledBorderedBox {
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-focusposition="right"
+      style="transform: translate3d(408px, 0, 0) scale3d(1, 1, 1); width: 200px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FocusOverlay > renders correctly when right is focused and has mouse down 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: absolute;
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background: #8c40ef;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.emotion-0[data-focusposition='right'] {
+  transform-origin: right center;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-focusposition="right"
+      style="transform: translate3d(408px, 0, 0) scale3d(1.03, 1, 1); width: 200px;"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton > renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
   border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 4px;
@@ -976,7 +126,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   position: relative;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1025,63 +175,63 @@ exports[`SwitchButton renders with tooltip 1`] = `
   white-space: nowrap;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-has-label='false']>:first-child {
+.emotion-3[data-has-label='false']>:first-child {
   margin-bottom: -4px;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
+.emotion-3[data-checked='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-error='true'] {
+.emotion-3[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-disabled='true'] {
+.emotion-3[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+.emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true']),
+.emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover,
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within,
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active {
+.emotion-3:hover,
+.emotion-3:focus-within,
+.emotion-3:active {
   box-shadow: none;
   border: none;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.emotion-3:hover:not([data-error='true'][data-disabled='true']),
+.emotion-3:focus-within:not([data-error='true'][data-disabled='true']),
+.emotion-3:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] {
+.emotion-3[data-checked='true'] {
   border: none;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard[data-checked='true'] label {
+.emotion-3[data-checked='true'] label {
   color: #ffffff;
 }
 
-.cache-ebhkqu-Stack-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+.emotion-3:not([data-checked='true']) label:hover {
   color: #641cb3;
 }
 
-.cache-ymc80m-Stack {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1104,7 +254,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement {
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1128,66 +278,66 @@ exports[`SwitchButton renders with tooltip 1`] = `
   align-items: start;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
+.emotion-8[aria-disabled='false'],
+.emotion-8[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
+.emotion-8[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
   fill: #8c40ef;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
   fill: #e5dbfd;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
   fill: #b3144d;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
   fill: #ffd3e3;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
+.emotion-8[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
+.emotion-8[aria-disabled='true']>label,
+.emotion-8[aria-disabled='true'] .emotion-11 {
   cursor: not-allowed;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld4 {
+.emotion-8[aria-disabled='true'] .emotion-13 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.emotion-8[aria-disabled='true'] .emotion-13 .emotion-15 {
   fill: #f3f3f4;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
+.emotion-8[data-checked='true'] {
   color: #641cb3;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
+.emotion-8[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
+.emotion-8[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-14syb4e-RadioContainer-StyledRadio-StyledElement input+svg {
+.emotion-8 input+svg {
   display: none;
 }
 
-.cache-1ghsgz8-RadioInput {
+.emotion-10 {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -1197,7 +347,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.emotion-10+.emotion-13 .emotion-17 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1207,44 +357,44 @@ exports[`SwitchButton renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.emotion-10:checked+svg .emotion-17 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.emotion-10[aria-disabled='false']:active+.emotion-13 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.emotion-10[aria-disabled='false']:active+.emotion-13 .emotion-15 {
   fill: #f1eefc;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.emotion-10[aria-disabled='false']:focus-visible+.emotion-13 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.emotion-10[aria-invalid='true']:focus+.emotion-13 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.emotion-10[aria-invalid='true']:focus+.emotion-13 .emotion-15 {
   fill: #ffebf2;
 }
 
-.cache-1dyk1l0-Ring {
+.emotion-12 {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -1253,54 +403,51 @@ exports[`SwitchButton renders with tooltip 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1dyk1l0-Ring .ehkrmld6 {
+.emotion-12 .emotion-15 {
   fill: #ffffff;
 }
 
-.cache-shj57p-StyledLabel {
+.emotion-18 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-    aria-controls=":re:"
-    aria-describedby=":re:"
-    class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    data-testid="testing"
   >
     <div
       style="display: inline-flex;"
     >
       <div
-        class="cache-tib6m2-StyledBorderedBox e4ryteh1"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="e4ryteh0 cache-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
+          class="emotion-2 emotion-3 emotion-4"
           data-checked="false"
           data-disabled="false"
           data-has-label="true"
           data-type="radio"
         >
           <div
-            class="cache-ymc80m-Stack ehpbis70"
+            class="emotion-5 emotion-6"
           >
             <div
               aria-disabled="false"
-              class="e1s5n3hj4 cache-14syb4e-RadioContainer-StyledRadio-StyledElement ehkrmld2"
+              class="emotion-7 emotion-8 emotion-9"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="cache-1ghsgz8-RadioInput ehkrmld3"
+                class="emotion-10 emotion-11"
                 id="test-left"
                 name="test"
                 type="radio"
                 value="left"
               />
               <svg
-                class="cache-1dyk1l0-Ring ehkrmld4"
+                class="emotion-12 emotion-13"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1311,13 +458,13 @@ exports[`SwitchButton renders with tooltip 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="emotion-14 emotion-15"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="cache-ivayk3-RadioMark ehkrmld5"
+                    class="emotion-16 emotion-17"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1325,7 +472,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
                 </g>
               </svg>
               <label
-                class="cache-shj57p-StyledLabel ehkrmld1"
+                class="emotion-18 emotion-19"
                 for="test-left"
               >
                 Left
@@ -1334,32 +481,32 @@ exports[`SwitchButton renders with tooltip 1`] = `
           </div>
         </div>
         <div
-          class="e4ryteh0 cache-ebhkqu-Stack-Container-StyledSelectableCard e1s5n3hj3"
+          class="emotion-2 emotion-3 emotion-4"
           data-checked="true"
           data-disabled="false"
           data-has-label="true"
           data-type="radio"
         >
           <div
-            class="cache-ymc80m-Stack ehpbis70"
+            class="emotion-5 emotion-6"
           >
             <div
               aria-disabled="false"
-              class="e1s5n3hj4 cache-14syb4e-RadioContainer-StyledRadio-StyledElement ehkrmld2"
+              class="emotion-7 emotion-8 emotion-9"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="cache-1ghsgz8-RadioInput ehkrmld3"
+                class="emotion-10 emotion-11"
                 id="test-right"
                 name="test"
                 type="radio"
                 value="right"
               />
               <svg
-                class="cache-1dyk1l0-Ring ehkrmld4"
+                class="emotion-12 emotion-13"
                 viewBox="0 0 24 24"
               >
                 <g>
@@ -1370,13 +517,13 @@ exports[`SwitchButton renders with tooltip 1`] = `
                     stroke-width="2"
                   />
                   <circle
-                    class="cache-1niv4ql-InnerCircleRing ehkrmld6"
+                    class="emotion-14 emotion-15"
                     cx="12"
                     cy="12"
                     r="8"
                   />
                   <circle
-                    class="cache-ivayk3-RadioMark ehkrmld5"
+                    class="emotion-16 emotion-17"
                     cx="12"
                     cy="12"
                     r="5"
@@ -1384,11 +531,892 @@ exports[`SwitchButton renders with tooltip 1`] = `
                 </g>
               </svg>
               <label
-                class="cache-shj57p-StyledLabel ehkrmld1"
+                class="emotion-18 emotion-19"
                 for="test-right"
               >
                 Right
               </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton > renders correctly with right value 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  height: 40px;
+  padding: 8px 16px;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+}
+
+.emotion-3[data-has-label='false']>:first-child {
+  margin-bottom: -4px;
+}
+
+.emotion-3[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-3[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-3[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true']),
+.emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-3:hover,
+.emotion-3:focus-within,
+.emotion-3:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-3:hover:not([data-error='true'][data-disabled='true']),
+.emotion-3:focus-within:not([data-error='true'][data-disabled='true']),
+.emotion-3:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-3[data-checked='true'] {
+  border: none;
+}
+
+.emotion-3[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-3:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-8[aria-disabled='false'],
+.emotion-8[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-8[aria-disabled='true'][data-checked='false'] {
+  color: #b5b7bd;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 {
+  fill: #8c40ef;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11+.emotion-13 .emotion-15 {
+  fill: #e5dbfd;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 {
+  fill: #b3144d;
+}
+
+.emotion-8:hover[aria-disabled='false'] .emotion-11[aria-invalid='true']+.emotion-13 .emotion-15 {
+  fill: #ffd3e3;
+}
+
+.emotion-8[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-8[aria-disabled='true']>label,
+.emotion-8[aria-disabled='true'] .emotion-11 {
+  cursor: not-allowed;
+}
+
+.emotion-8[aria-disabled='true'] .emotion-13 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-8[aria-disabled='true'] .emotion-13 .emotion-15 {
+  fill: #f3f3f4;
+}
+
+.emotion-8[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-8[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-8[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-8 input+svg {
+  display: none;
+}
+
+.emotion-10 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-10+.emotion-13 .emotion-17 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-10:checked+svg .emotion-17 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
+  fill: #8c40ef;
+}
+
+.emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
+  fill: #e51963;
+}
+
+.emotion-10[aria-disabled='false']:active+.emotion-13 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-10[aria-disabled='false']:active+.emotion-13 .emotion-15 {
+  fill: #f1eefc;
+}
+
+.emotion-10[aria-disabled='false']:focus-visible+.emotion-13 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-10[aria-invalid='true']:focus+.emotion-13 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-10[aria-invalid='true']:focus+.emotion-13 .emotion-15 {
+  fill: #ffebf2;
+}
+
+.emotion-12 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-12 .emotion-15 {
+  fill: #ffffff;
+}
+
+.emotion-18 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      style="display: inline-flex;"
+    >
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div
+          class="emotion-2 emotion-3 emotion-4"
+          data-checked="false"
+          data-disabled="false"
+          data-has-label="true"
+          data-type="radio"
+        >
+          <div
+            class="emotion-5 emotion-6"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-7 emotion-8 emotion-9"
+              data-checked="false"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="emotion-10 emotion-11"
+                id="test-left"
+                name="test"
+                type="radio"
+                value="left"
+              />
+              <svg
+                class="emotion-12 emotion-13"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-14 emotion-15"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-16 emotion-17"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-18 emotion-19"
+                for="test-left"
+              >
+                Left
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-2 emotion-3 emotion-4"
+          data-checked="true"
+          data-disabled="false"
+          data-has-label="true"
+          data-type="radio"
+        >
+          <div
+            class="emotion-5 emotion-6"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-7 emotion-8 emotion-9"
+              data-checked="true"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                checked=""
+                class="emotion-10 emotion-11"
+                id="test-right"
+                name="test"
+                type="radio"
+                value="right"
+              />
+              <svg
+                class="emotion-12 emotion-13"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-14 emotion-15"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-16 emotion-17"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-18 emotion-19"
+                for="test-right"
+              >
+                Right
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton > renders with tooltip 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border: none;
+  height: 40px;
+  padding: 8px 16px;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  white-space: nowrap;
+}
+
+.emotion-5[data-has-label='false']>:first-child {
+  margin-bottom: -4px;
+}
+
+.emotion-5[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-5[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-5[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-5:focus-within:not([data-error='true']):not([data-disabled='true']),
+.emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-5:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-5:hover,
+.emotion-5:focus-within,
+.emotion-5:active {
+  box-shadow: none;
+  border: none;
+}
+
+.emotion-5:hover:not([data-error='true'][data-disabled='true']),
+.emotion-5:focus-within:not([data-error='true'][data-disabled='true']),
+.emotion-5:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.emotion-5[data-checked='true'] {
+  border: none;
+}
+
+.emotion-5[data-checked='true'] label {
+  color: #ffffff;
+}
+
+.emotion-5:not([data-checked='true']) label:hover {
+  color: #641cb3;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-10[aria-disabled='false'],
+.emotion-10[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-10[aria-disabled='true'][data-checked='false'] {
+  color: #b5b7bd;
+}
+
+.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 {
+  fill: #8c40ef;
+}
+
+.emotion-10:hover[aria-disabled='false'] .emotion-13+.emotion-15 .emotion-17 {
+  fill: #e5dbfd;
+}
+
+.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 {
+  fill: #b3144d;
+}
+
+.emotion-10:hover[aria-disabled='false'] .emotion-13[aria-invalid='true']+.emotion-15 .emotion-17 {
+  fill: #ffd3e3;
+}
+
+.emotion-10[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-10[aria-disabled='true']>label,
+.emotion-10[aria-disabled='true'] .emotion-13 {
+  cursor: not-allowed;
+}
+
+.emotion-10[aria-disabled='true'] .emotion-15 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-10[aria-disabled='true'] .emotion-15 .emotion-17 {
+  fill: #f3f3f4;
+}
+
+.emotion-10[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-10[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-10[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-10 input+svg {
+  display: none;
+}
+
+.emotion-12 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-12+.emotion-15 .emotion-19 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-12:checked+svg .emotion-19 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
+  fill: #8c40ef;
+}
+
+.emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {
+  fill: #e51963;
+}
+
+.emotion-12[aria-disabled='false']:active+.emotion-15 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-12[aria-disabled='false']:active+.emotion-15 .emotion-17 {
+  fill: #f1eefc;
+}
+
+.emotion-12[aria-disabled='false']:focus-visible+.emotion-15 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-12[aria-invalid='true']:focus+.emotion-15 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-12[aria-invalid='true']:focus+.emotion-15 .emotion-17 {
+  fill: #ffebf2;
+}
+
+.emotion-14 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-14 .emotion-17 {
+  fill: #ffffff;
+}
+
+.emotion-20 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls=":re:"
+      aria-describedby=":re:"
+      class="emotion-0 emotion-1"
+      tabindex="0"
+    >
+      <div
+        style="display: inline-flex;"
+      >
+        <div
+          class="emotion-2 emotion-3"
+        >
+          <div
+            class="emotion-4 emotion-5 emotion-6"
+            data-checked="false"
+            data-disabled="false"
+            data-has-label="true"
+            data-type="radio"
+          >
+            <div
+              class="emotion-7 emotion-8"
+            >
+              <div
+                aria-disabled="false"
+                class="emotion-9 emotion-10 emotion-11"
+                data-checked="false"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  class="emotion-12 emotion-13"
+                  id="test-left"
+                  name="test"
+                  type="radio"
+                  value="left"
+                />
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="emotion-16 emotion-17"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="emotion-18 emotion-19"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  class="emotion-20 emotion-21"
+                  for="test-left"
+                >
+                  Left
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="emotion-4 emotion-5 emotion-6"
+            data-checked="true"
+            data-disabled="false"
+            data-has-label="true"
+            data-type="radio"
+          >
+            <div
+              class="emotion-7 emotion-8"
+            >
+              <div
+                aria-disabled="false"
+                class="emotion-9 emotion-10 emotion-11"
+                data-checked="true"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  checked=""
+                  class="emotion-12 emotion-13"
+                  id="test-right"
+                  name="test"
+                  type="radio"
+                  value="right"
+                />
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="emotion-16 emotion-17"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="emotion-18 emotion-19"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  class="emotion-20 emotion-21"
+                  for="test-right"
+                >
+                  Right
+                </label>
+              </div>
             </div>
           </div>
         </div>

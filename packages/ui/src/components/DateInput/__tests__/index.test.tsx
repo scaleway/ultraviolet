@@ -1,16 +1,16 @@
-import { describe, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
+import { describe, expect, test } from 'vitest'
 import { DateInput } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 tk.freeze(new Date(1609503120000))
 
 describe('DateInput', () => {
-  test('renders correctly with default props', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with default props', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
         onChange={() => {}}
@@ -24,28 +24,39 @@ describe('DateInput', () => {
           value instanceof Date ? value.toISOString() : value?.toString()
         }
       />,
-    ))
-  test('renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly disabled', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput label="Date" disabled onChange={() => {}} />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly required', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly required', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput label="Date" required onChange={() => {}} />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly error', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly error', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput label="Date" error="error" onChange={() => {}} />,
-    ))
-  test('renders correctly error disabled', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  test('renders correctly error disabled', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput label="Date" error="error" disabled onChange={() => {}} />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly error disabled required', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly error disabled required', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
         error="error"
@@ -53,53 +64,51 @@ describe('DateInput', () => {
         required
         onChange={() => {}}
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly min-max', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly min-max', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
         minDate={new Date('1995-12-11T03:24:00.000+00:00')}
         maxDate={new Date('1995-12-25T03:24:00.000+00:00')}
         onChange={() => {}}
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with date-fns locale fr', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with date-fns locale fr', async () => {
+    const { asFragment } = renderWithTheme(
       <DateInput label="Date" locale={fr} onChange={() => {}} />,
-      {
-        transform: async () => {
-          const buttonContainer = screen.getByLabelText('Date')
-          await userEvent.click(buttonContainer)
-        },
-      },
-    ))
+    )
+    const buttonContainer = screen.getByLabelText('Date')
+    await userEvent.click(buttonContainer)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with date-fns locale es', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with date-fns locale es', async () => {
+    const { asFragment } = renderWithTheme(
       <DateInput label="Date" locale={es} onChange={() => {}} />,
-      {
-        transform: async () => {
-          const buttonContainer = screen.getByLabelText('Date')
-          await userEvent.click(buttonContainer)
-        },
-      },
-    ))
+    )
+    const buttonContainer = screen.getByLabelText('Date')
+    await userEvent.click(buttonContainer)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with date-fns locale ru', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with date-fns locale ru', async () => {
+    const { asFragment } = renderWithTheme(
       <DateInput label="Date" locale={ru} onChange={() => {}} />,
-      {
-        transform: async () => {
-          const buttonContainer = screen.getByLabelText('Date')
-          await userEvent.click(buttonContainer)
-        },
-      },
-    ))
+    )
+    const buttonContainer = screen.getByLabelText('Date')
+    await userEvent.click(buttonContainer)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('render correctly with a range of date', () =>
-    shouldMatchEmotionSnapshot(
+  test('render correctly with a range of date', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
         selectsRange
@@ -107,10 +116,12 @@ describe('DateInput', () => {
         endDate={new Date('1995-12-25T03:24:00.000+00:00')}
         onChange={() => {}}
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('render correctly with a array of dates to exclude', () =>
-    shouldMatchEmotionSnapshot(
+  test('render correctly with a array of dates to exclude', () => {
+    const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
         value={new Date('1995-12-11T03:24:00.000+00:00')}
@@ -121,5 +132,7 @@ describe('DateInput', () => {
         ]}
         onChange={() => {}}
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

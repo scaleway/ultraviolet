@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`NumberInputFieldV2 should render correctly 1`] = `
+exports[`NumberInputFieldV2 > should render correctly 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +25,7 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-snr60n-Container {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,36 +44,36 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-snr60n-Container:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-snr60n-Container[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-snr60n-Container[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-snr60n-Container:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-snr60n-Container[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.cache-snr60n-Container[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-1mc02x-Stack-SideContainer {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -97,20 +97,20 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   padding: 2px 8px;
 }
 
-.cache-1mc02x-Stack-SideContainer[data-size='small'] {
+.emotion-4[data-size='small'] {
   height: 30px;
 }
 
-.cache-1mc02x-Stack-SideContainer[data-size='medium'] {
+.emotion-4[data-size='medium'] {
   height: 38px;
 }
 
-.cache-1mc02x-Stack-SideContainer[data-size='large'] {
+.emotion-4[data-size='large'] {
   height: 46px;
   padding: 4px 8px;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -149,22 +149,22 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-6:hover,
+.emotion-6:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-8 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -173,12 +173,12 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-19zw6op-StyledRow-InputContainer {
+.emotion-11 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -195,7 +195,7 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   width: 100%;
 }
 
-.cache-1wba9gt-Input {
+.emotion-13 {
   outline: none;
   border: none;
   padding: 0;
@@ -210,59 +210,59 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   background: none;
 }
 
-.cache-1wba9gt-Input[data-has-unit='true'] {
+.emotion-13[data-has-unit='true'] {
   text-align: left;
   padding: 8px 0 8px 8px;
 }
 
-.cache-1wba9gt-Input::-webkit-outer-spin-button,
-.cache-1wba9gt-Input::-webkit-inner-spin-button {
+.emotion-13::-webkit-outer-spin-button,
+.emotion-13::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1wba9gt-Input {
+.emotion-13 {
   -moz-appearance: textfield;
 }
 
-.cache-1wba9gt-Input[data-size='small'] {
+.emotion-13[data-size='small'] {
   height: 30px;
 }
 
-.cache-1wba9gt-Input[data-size='medium'] {
+.emotion-13[data-size='medium'] {
   height: 38px;
 }
 
-.cache-1wba9gt-Input[data-size='large'] {
+.emotion-13[data-size='large'] {
   height: 46px;
   font-size: 16px;
 }
 
-.cache-1wba9gt-Input:-moz-read-only {
+.emotion-13:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
-.cache-1wba9gt-Input:read-only {
+.emotion-13:read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
-.cache-1wba9gt-Input:-moz-read-only~.e1b9qdjy2 {
+.emotion-13:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.cache-1wba9gt-Input:read-only~.e1b9qdjy2 {
+.emotion-13:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.cache-1wba9gt-Input:disabled {
+.emotion-13:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-1wba9gt-Input:disabled~.e1b9qdjy2 {
+.emotion-13:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -271,90 +271,94 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   user-select: none;
 }
 
-.cache-1wba9gt-Input:placeholder-shown~.e1b9qdjy2 {
+.emotion-13:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-ymc80m-Stack ehpbis70"
+    <form
+      novalidate=""
     >
-      <div>
-        <div
-          class="cache-snr60n-Container e1b9qdjy0"
-          data-disabled="false"
-          data-error="false"
-          data-success="false"
-          data-unit="false"
-        >
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div>
           <div
-            class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
-            data-size="large"
+            class="emotion-2 emotion-3"
+            data-disabled="false"
+            data-error="false"
+            data-success="false"
+            data-unit="false"
           >
-            <button
-              aria-label="minus"
-              class="cache-1xcp86l-StyledGhostButton e112qvla0"
-              type="button"
-            >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
-          >
-            <input
-              class="cache-1wba9gt-Input e1b9qdjy1"
-              data-has-unit="false"
+            <div
+              class="emotion-4 emotion-5"
               data-size="large"
-              id=":r0:"
-              max="9007199254740991"
-              min="0"
-              name="test"
-              placeholder=""
-              type="number"
-              value=""
-            />
-          </div>
-          <div
-            class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
-            data-size="large"
-          >
-            <button
-              aria-label="plus"
-              class="cache-1xcp86l-StyledGhostButton e112qvla0"
-              type="button"
             >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                aria-label="minus"
+                class="emotion-6 emotion-7"
+                type="button"
               >
-                <path
-                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="emotion-8 emotion-9"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="emotion-10 emotion-11 emotion-12"
+            >
+              <input
+                class="emotion-13 emotion-14"
+                data-has-unit="false"
+                data-size="large"
+                id=":r0:"
+                max="9007199254740991"
+                min="0"
+                name="test"
+                placeholder=""
+                type="number"
+                value=""
+              />
+            </div>
+            <div
+              class="emotion-4 emotion-5"
+              data-size="large"
+            >
+              <button
+                aria-label="plus"
+                class="emotion-6 emotion-7"
+                type="button"
+              >
+                <svg
+                  class="emotion-8 emotion-9"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
+exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -377,7 +381,7 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-snr60n-Container {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -396,36 +400,36 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-snr60n-Container:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-snr60n-Container[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-snr60n-Container[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-snr60n-Container:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-snr60n-Container[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
 }
 
-.cache-snr60n-Container[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-1mc02x-Stack-SideContainer {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -449,20 +453,20 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   padding: 2px 8px;
 }
 
-.cache-1mc02x-Stack-SideContainer[data-size='small'] {
+.emotion-4[data-size='small'] {
   height: 30px;
 }
 
-.cache-1mc02x-Stack-SideContainer[data-size='medium'] {
+.emotion-4[data-size='medium'] {
   height: 38px;
 }
 
-.cache-1mc02x-Stack-SideContainer[data-size='large'] {
+.emotion-4[data-size='large'] {
   height: 46px;
   padding: 4px 8px;
 }
 
-.cache-1lhf2jx-StyledGhostButton {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -502,12 +506,12 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   color: #b5b7bd;
 }
 
-.cache-1lhf2jx-StyledGhostButton:hover {
+.emotion-6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-8 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -516,12 +520,12 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-19zw6op-StyledRow-InputContainer {
+.emotion-11 {
   display: grid;
   grid-template-columns: 1fr auto;
   -webkit-align-items: center;
@@ -538,7 +542,7 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   width: 100%;
 }
 
-.cache-1wba9gt-Input {
+.emotion-13 {
   outline: none;
   border: none;
   padding: 0;
@@ -553,59 +557,59 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   background: none;
 }
 
-.cache-1wba9gt-Input[data-has-unit='true'] {
+.emotion-13[data-has-unit='true'] {
   text-align: left;
   padding: 8px 0 8px 8px;
 }
 
-.cache-1wba9gt-Input::-webkit-outer-spin-button,
-.cache-1wba9gt-Input::-webkit-inner-spin-button {
+.emotion-13::-webkit-outer-spin-button,
+.emotion-13::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1wba9gt-Input {
+.emotion-13 {
   -moz-appearance: textfield;
 }
 
-.cache-1wba9gt-Input[data-size='small'] {
+.emotion-13[data-size='small'] {
   height: 30px;
 }
 
-.cache-1wba9gt-Input[data-size='medium'] {
+.emotion-13[data-size='medium'] {
   height: 38px;
 }
 
-.cache-1wba9gt-Input[data-size='large'] {
+.emotion-13[data-size='large'] {
   height: 46px;
   font-size: 16px;
 }
 
-.cache-1wba9gt-Input:-moz-read-only {
+.emotion-13:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
-.cache-1wba9gt-Input:read-only {
+.emotion-13:read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
-.cache-1wba9gt-Input:-moz-read-only~.e1b9qdjy2 {
+.emotion-13:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.cache-1wba9gt-Input:read-only~.e1b9qdjy2 {
+.emotion-13:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
-.cache-1wba9gt-Input:disabled {
+.emotion-13:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-1wba9gt-Input:disabled~.e1b9qdjy2 {
+.emotion-13:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
   -webkit-user-select: none;
@@ -614,87 +618,91 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   user-select: none;
 }
 
-.cache-1wba9gt-Input:placeholder-shown~.e1b9qdjy2 {
+.emotion-13:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-ymc80m-Stack ehpbis70"
+    <form
+      novalidate=""
     >
-      <div>
-        <div
-          class="cache-snr60n-Container e1b9qdjy0"
-          data-disabled="true"
-          data-error="false"
-          data-success="false"
-          data-unit="false"
-        >
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div>
           <div
-            class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
-            data-size="large"
+            class="emotion-2 emotion-3"
+            data-disabled="true"
+            data-error="false"
+            data-success="false"
+            data-unit="false"
           >
-            <button
-              aria-label="minus"
-              class="cache-1lhf2jx-StyledGhostButton e112qvla0"
-              disabled=""
-              type="button"
-            >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
-          >
-            <input
-              aria-label="Number Input"
-              class="cache-1wba9gt-Input e1b9qdjy1"
-              data-has-unit="false"
+            <div
+              class="emotion-4 emotion-5"
               data-size="large"
-              disabled=""
-              id=":r4:"
-              max="9007199254740991"
-              min="0"
-              name="test"
-              placeholder=""
-              type="number"
-              value=""
-            />
-          </div>
-          <div
-            class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
-            data-size="large"
-          >
-            <button
-              aria-label="plus"
-              class="cache-1lhf2jx-StyledGhostButton e112qvla0"
-              disabled=""
-              type="button"
             >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                aria-label="minus"
+                class="emotion-6 emotion-7"
+                disabled=""
+                type="button"
               >
-                <path
-                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="emotion-8 emotion-9"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="emotion-10 emotion-11 emotion-12"
+            >
+              <input
+                aria-label="Number Input"
+                class="emotion-13 emotion-14"
+                data-has-unit="false"
+                data-size="large"
+                disabled=""
+                id=":r4:"
+                max="9007199254740991"
+                min="0"
+                name="test"
+                placeholder=""
+                type="number"
+                value=""
+              />
+            </div>
+            <div
+              class="emotion-4 emotion-5"
+              data-size="large"
+            >
+              <button
+                aria-label="plus"
+                class="emotion-6 emotion-7"
+                disabled=""
+                type="button"
+              >
+                <svg
+                  class="emotion-8 emotion-9"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;

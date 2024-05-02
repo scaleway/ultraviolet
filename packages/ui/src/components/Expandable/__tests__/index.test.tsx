@@ -1,28 +1,40 @@
-import { describe, test } from '@jest/globals'
+import { renderWithTheme } from '@utils/test'
+import { describe, expect, test } from 'vitest'
 import { Expandable } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Expandable', () => {
-  test('renders correctly with default values', () =>
-    shouldMatchEmotionSnapshot(<Expandable>Sample Expandable</Expandable>))
+  test('renders correctly with default values', () => {
+    const { asFragment } = renderWithTheme(
+      <Expandable>Sample Expandable</Expandable>,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly opened', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly opened', () => {
+    const { asFragment } = renderWithTheme(
       <Expandable opened>Sample Expandable</Expandable>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with minHeight', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with minHeight', () => {
+    const { asFragment } = renderWithTheme(
       <Expandable minHeight={5}>Sample Expandable</Expandable>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with className', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with className', () => {
+    const { asFragment } = renderWithTheme(
       <Expandable className="test">Sample Expandable</Expandable>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with animationDuration', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with animationDuration', () => {
+    const { asFragment } = renderWithTheme(
       <Expandable animationDuration={500}>Sample Expandable</Expandable>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

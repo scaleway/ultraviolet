@@ -1,14 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Carousel renders correctly with default props 1`] = `
+exports[`Carousel > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-vz5p1b-StyledWrapper {
+  .emotion-0 {
   position: relative;
   margin-left: -100px;
   margin-right: -100px;
 }
 
-.cache-odnhu9-StyledBeforeScroll {
+.emotion-2 {
   position: absolute;
   width: 100px;
   height: 100%;
@@ -22,7 +22,7 @@ exports[`Carousel renders correctly with default props 1`] = `
   z-index: auto;
 }
 
-.cache-vuvr7q-StyledScrollableWrapper {
+.emotion-4 {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -34,7 +34,7 @@ exports[`Carousel renders correctly with default props 1`] = `
   gap: 16px;
 }
 
-.cache-11t1kmz-StyledBorderWrapper {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,7 +55,7 @@ exports[`Carousel renders correctly with default props 1`] = `
   flex-shrink: 0;
 }
 
-.cache-1r4agil-StyledAfterScroll {
+.emotion-18 {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -72,58 +72,62 @@ exports[`Carousel renders correctly with default props 1`] = `
 }
 
 <div
-    class="cache-vz5p1b-StyledWrapper e1id70w04"
-    data-testid="scrollbar"
+    data-testid="testing"
   >
-    <span
-      class="cache-odnhu9-StyledBeforeScroll e1id70w03"
-      data-testid="scrollbar-before"
-    />
     <div
-      class="cache-vuvr7q-StyledScrollableWrapper e1id70w02"
-      data-testid="scrollbar-wrapper"
+      class="emotion-0 emotion-1"
+      data-testid="scrollbar"
     >
+      <span
+        class="emotion-2 emotion-3"
+        data-testid="scrollbar-before"
+      />
       <div
-        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
-        draggable="true"
+        class="emotion-4 emotion-5"
+        data-testid="scrollbar-wrapper"
       >
-        Item 1
+        <div
+          class="emotion-6 emotion-7"
+          draggable="true"
+        >
+          Item 1
+        </div>
+        <div
+          class="emotion-6 emotion-7"
+          draggable="true"
+        >
+          Item 2
+        </div>
+        <div
+          class="emotion-6 emotion-7"
+          draggable="true"
+        >
+          Item 3
+        </div>
+        <div
+          class="emotion-6 emotion-7"
+          draggable="true"
+        >
+          Item 4
+        </div>
+        <div
+          class="emotion-6 emotion-7"
+          draggable="true"
+        >
+          Item 5
+        </div>
+        <div
+          class="emotion-6 emotion-7"
+          draggable="true"
+        >
+          Item 6
+        </div>
       </div>
-      <div
-        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
-        draggable="true"
-      >
-        Item 2
-      </div>
-      <div
-        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
-        draggable="true"
-      >
-        Item 3
-      </div>
-      <div
-        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
-        draggable="true"
-      >
-        Item 4
-      </div>
-      <div
-        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
-        draggable="true"
-      >
-        Item 5
-      </div>
-      <div
-        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
-        draggable="true"
-      >
-        Item 6
-      </div>
+      <span
+        class="emotion-18 emotion-19"
+        data-testid="scrollbar-after"
+      />
     </div>
-    <span
-      class="cache-1r4agil-StyledAfterScroll e1id70w01"
-      data-testid="scrollbar-after"
-    />
   </div>
 </DocumentFragment>
 `;

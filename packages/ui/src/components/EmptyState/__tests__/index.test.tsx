@@ -1,6 +1,6 @@
-import { describe, it } from '@jest/globals'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, it } from 'vitest'
 import { EmptyState } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import kapsuleLogo from '../__stories__/illustrations/kapsule.webp'
 
 describe('EmptySpace', () => {

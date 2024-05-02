@@ -1,27 +1,20 @@
-import {
-  afterAll,
-  beforeEach,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { MenuV2 } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../../.jest/helpers'
+} from '@utils/test'
+import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
+import { MenuV2 } from '..'
 
 describe('Menu', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   afterAll(() => {
-    jest.restoreAllMocks()
+    vi.restoreAllMocks()
   })
 
   test('renders with disclosure not a function', () =>

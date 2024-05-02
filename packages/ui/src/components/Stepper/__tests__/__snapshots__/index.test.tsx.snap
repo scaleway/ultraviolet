@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Stepper renders correctly with all selected 1`] = `
+exports[`Stepper > renders correctly with all selected 1`] = `
 <DocumentFragment>
-  .cache-i28g32-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +22,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   gap: 0;
 }
 
-.cache-i28g32-StyledContainer .e19ft7rb4 {
+.emotion-0 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,13 +38,13 @@ exports[`Stepper renders correctly with all selected 1`] = `
   white-space: nowrap;
 }
 
-.cache-i28g32-StyledContainer .e19ft7rb1 {
+.emotion-0 .emotion-13 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
-.cache-64yl8v-StyledStepContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,7 +62,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   justify-content: flex-start;
 }
 
-.cache-tp2if-StyledContainer-StyledBullet {
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -85,7 +85,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   margin-top: 0;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-7 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -94,12 +94,12 @@ exports[`Stepper renders correctly with all selected 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-7 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-16ebxbi-StyledText-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -111,7 +111,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   margin-top: 8px;
 }
 
-.cache-fkq8r-StyledLine {
+.emotion-12 {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -122,7 +122,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   position: relative;
 }
 
-.cache-fkq8r-StyledLine::after {
+.emotion-12::after {
   content: '';
   position: absolute;
   left: 0;
@@ -133,7 +133,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   width: 100%;
 }
 
-.cache-sdib28-StyledContainer-StyledBullet {
+.emotion-29 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -157,87 +157,91 @@ exports[`Stepper renders correctly with all selected 1`] = `
 }
 
 <div
-    class="cache-i28g32-StyledContainer e19ft7rb0"
+    data-testid="testing"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="e19ft7rb2 cache-tp2if-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="emotion-4 emotion-5 emotion-6"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 1
-        </span>
-      </span>
-    </div>
-    <div
-      class="cache-fkq8r-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
-      <div
-        class="e19ft7rb2 cache-tp2if-StyledContainer-StyledBullet e11loam60"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            class="emotion-7 emotion-8"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 2
+          <span>
+            Step 1
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      class="cache-fkq8r-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+      </div>
       <div
-        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
+        class="emotion-12 emotion-13"
+      />
+      <div
+        class="emotion-2 emotion-3"
       >
-        3
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 3
+        <div
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          <svg
+            class="emotion-7 emotion-8"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
+        >
+          <span>
+            Step 2
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
+      />
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-29 emotion-6"
+        >
+          3
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
+        >
+          <span>
+            Step 3
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stepper renders correctly with animation 1`] = `
+exports[`Stepper > renders correctly with animation 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -249,7 +253,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   }
 }
 
-.cache-i28g32-StyledContainer {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,7 +273,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   gap: 0;
 }
 
-.cache-i28g32-StyledContainer .e19ft7rb4 {
+.emotion-0 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -285,13 +289,13 @@ exports[`Stepper renders correctly with animation 1`] = `
   white-space: nowrap;
 }
 
-.cache-i28g32-StyledContainer .e19ft7rb1 {
+.emotion-0 .emotion-13 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
-.cache-64yl8v-StyledStepContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -309,7 +313,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   justify-content: flex-start;
 }
 
-.cache-tp2if-StyledContainer-StyledBullet {
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -332,7 +336,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   margin-top: 0;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-7 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -341,12 +345,12 @@ exports[`Stepper renders correctly with animation 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-7 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-16ebxbi-StyledText-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -358,7 +362,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   margin-top: 8px;
 }
 
-.cache-fkq8r-StyledLine {
+.emotion-12 {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -369,7 +373,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   position: relative;
 }
 
-.cache-fkq8r-StyledLine::after {
+.emotion-12::after {
   content: '';
   position: absolute;
   left: 0;
@@ -380,7 +384,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   width: 100%;
 }
 
-.cache-sdib28-StyledContainer-StyledBullet {
+.emotion-17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -403,7 +407,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   margin-top: 0;
 }
 
-.cache-12p7rjs-StyledLine-loadingStyle {
+.emotion-22 {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -414,7 +418,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   position: relative;
 }
 
-.cache-12p7rjs-StyledLine-loadingStyle::after {
+.emotion-22::after {
   content: '';
   position: absolute;
   left: 0;
@@ -426,7 +430,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   animation: animation-0 1s linear infinite;
 }
 
-.cache-7y11y9-StyledContainer-StyledBullet {
+.emotion-27 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -450,79 +454,83 @@ exports[`Stepper renders correctly with animation 1`] = `
 }
 
 <div
-    class="cache-i28g32-StyledContainer e19ft7rb0"
+    data-testid="testing"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="e19ft7rb2 cache-tp2if-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="emotion-4 emotion-5 emotion-6"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 1
+          <svg
+            class="emotion-7 emotion-8"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
+        >
+          <span>
+            Step 1
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      class="cache-fkq8r-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+      </div>
       <div
-        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
-      >
-        2
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 2
-        </span>
-      </span>
-    </div>
-    <div
-      class="cache-12p7rjs-StyledLine-loadingStyle e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+        class="emotion-12 emotion-13"
+      />
       <div
-        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        3
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 3
+        <div
+          class="emotion-4 emotion-17 emotion-6"
+        >
+          2
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
+        >
+          <span>
+            Step 2
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        class="emotion-22 emotion-13"
+      />
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-27 emotion-6"
+        >
+          3
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
+        >
+          <span>
+            Step 3
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stepper renders correctly with default props 1`] = `
+exports[`Stepper > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-i28g32-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -542,7 +550,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   gap: 0;
 }
 
-.cache-i28g32-StyledContainer .e19ft7rb4 {
+.emotion-0 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -558,13 +566,13 @@ exports[`Stepper renders correctly with default props 1`] = `
   white-space: nowrap;
 }
 
-.cache-i28g32-StyledContainer .e19ft7rb1 {
+.emotion-0 .emotion-11 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
-.cache-64yl8v-StyledStepContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -582,7 +590,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   justify-content: flex-start;
 }
 
-.cache-sdib28-StyledContainer-StyledBullet {
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -605,7 +613,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   margin-top: 0;
 }
 
-.cache-16ebxbi-StyledText-StyledText {
+.emotion-8 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -617,7 +625,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   margin-top: 8px;
 }
 
-.cache-n9n5oq-StyledLine {
+.emotion-10 {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -628,7 +636,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   position: relative;
 }
 
-.cache-n9n5oq-StyledLine::after {
+.emotion-10::after {
   content: '';
   position: absolute;
   left: 0;
@@ -638,7 +646,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   background-color: #8c40ef;
 }
 
-.cache-7y11y9-StyledContainer-StyledBullet {
+.emotion-15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -662,69 +670,73 @@ exports[`Stepper renders correctly with default props 1`] = `
 }
 
 <div
-    class="cache-i28g32-StyledContainer e19ft7rb0"
+    data-testid="testing"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        1
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 1
+        <div
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          1
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 1
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      class="cache-n9n5oq-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+      </div>
       <div
-        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
-      >
-        2
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 2
-        </span>
-      </span>
-    </div>
-    <div
-      class="cache-n9n5oq-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+        class="emotion-10 emotion-11"
+      />
       <div
-        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        3
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 3
+        <div
+          class="emotion-4 emotion-15 emotion-6"
+        >
+          2
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 2
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        class="emotion-10 emotion-11"
+      />
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-15 emotion-6"
+        >
+          3
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 3
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stepper renders correctly with selected prop 1`] = `
+exports[`Stepper > renders correctly with selected prop 1`] = `
 <DocumentFragment>
-  .cache-i28g32-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -744,7 +756,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   gap: 0;
 }
 
-.cache-i28g32-StyledContainer .e19ft7rb4 {
+.emotion-0 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -760,13 +772,13 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   white-space: nowrap;
 }
 
-.cache-i28g32-StyledContainer .e19ft7rb1 {
+.emotion-0 .emotion-13 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
-.cache-64yl8v-StyledStepContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -784,7 +796,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   justify-content: flex-start;
 }
 
-.cache-tp2if-StyledContainer-StyledBullet {
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -807,7 +819,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   margin-top: 0;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-7 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -816,12 +828,12 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-7 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-16ebxbi-StyledText-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -833,7 +845,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   margin-top: 8px;
 }
 
-.cache-fkq8r-StyledLine {
+.emotion-12 {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -844,7 +856,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   position: relative;
 }
 
-.cache-fkq8r-StyledLine::after {
+.emotion-12::after {
   content: '';
   position: absolute;
   left: 0;
@@ -855,7 +867,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   width: 100%;
 }
 
-.cache-sdib28-StyledContainer-StyledBullet {
+.emotion-17 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -878,7 +890,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   margin-top: 0;
 }
 
-.cache-n9n5oq-StyledLine {
+.emotion-22 {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -889,7 +901,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   position: relative;
 }
 
-.cache-n9n5oq-StyledLine::after {
+.emotion-22::after {
   content: '';
   position: absolute;
   left: 0;
@@ -899,7 +911,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   background-color: #8c40ef;
 }
 
-.cache-7y11y9-StyledContainer-StyledBullet {
+.emotion-27 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -923,79 +935,83 @@ exports[`Stepper renders correctly with selected prop 1`] = `
 }
 
 <div
-    class="cache-i28g32-StyledContainer e19ft7rb0"
+    data-testid="testing"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="e19ft7rb2 cache-tp2if-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="emotion-4 emotion-5 emotion-6"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 1
+          <svg
+            class="emotion-7 emotion-8"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
+        >
+          <span>
+            Step 1
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      class="cache-fkq8r-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+      </div>
       <div
-        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
-      >
-        2
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 2
-        </span>
-      </span>
-    </div>
-    <div
-      class="cache-n9n5oq-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+        class="emotion-12 emotion-13"
+      />
       <div
-        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        3
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 3
+        <div
+          class="emotion-4 emotion-17 emotion-6"
+        >
+          2
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
+        >
+          <span>
+            Step 2
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        class="emotion-22 emotion-13"
+      />
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-27 emotion-6"
+        >
+          3
+        </div>
+        <span
+          class="emotion-9 emotion-10 emotion-11"
+        >
+          <span>
+            Step 3
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stepper renders correctly with small size 1`] = `
+exports[`Stepper > renders correctly with small size 1`] = `
 <DocumentFragment>
-  .cache-7czxf9-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1015,7 +1031,7 @@ exports[`Stepper renders correctly with small size 1`] = `
   gap: 8px;
 }
 
-.cache-7czxf9-StyledContainer .e19ft7rb4 {
+.emotion-0 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1031,13 +1047,13 @@ exports[`Stepper renders correctly with small size 1`] = `
   white-space: nowrap;
 }
 
-.cache-7czxf9-StyledContainer .e19ft7rb1 {
+.emotion-0 .emotion-11 {
   height: 2px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
-.cache-64yl8v-StyledStepContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1055,7 +1071,7 @@ exports[`Stepper renders correctly with small size 1`] = `
   justify-content: flex-start;
 }
 
-.cache-vvq8bc-StyledContainer-StyledBullet {
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1078,7 +1094,7 @@ exports[`Stepper renders correctly with small size 1`] = `
   margin-top: 4px;
 }
 
-.cache-2seue4-StyledText-StyledText {
+.emotion-8 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1090,7 +1106,7 @@ exports[`Stepper renders correctly with small size 1`] = `
   margin-top: 8px;
 }
 
-.cache-n9n5oq-StyledLine {
+.emotion-10 {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1101,7 +1117,7 @@ exports[`Stepper renders correctly with small size 1`] = `
   position: relative;
 }
 
-.cache-n9n5oq-StyledLine::after {
+.emotion-10::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1111,7 +1127,7 @@ exports[`Stepper renders correctly with small size 1`] = `
   background-color: #8c40ef;
 }
 
-.cache-pqu96v-StyledContainer-StyledBullet {
+.emotion-15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1135,69 +1151,73 @@ exports[`Stepper renders correctly with small size 1`] = `
 }
 
 <div
-    class="cache-7czxf9-StyledContainer e19ft7rb0"
+    data-testid="testing"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="e19ft7rb2 cache-vvq8bc-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        1
-      </div>
-      <span
-        class="e19ft7rb3 cache-2seue4-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 1
+        <div
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          1
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 1
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      class="cache-n9n5oq-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+      </div>
       <div
-        class="e19ft7rb2 cache-pqu96v-StyledContainer-StyledBullet e11loam60"
-      >
-        2
-      </div>
-      <span
-        class="e19ft7rb3 cache-2seue4-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 2
-        </span>
-      </span>
-    </div>
-    <div
-      class="cache-n9n5oq-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+        class="emotion-10 emotion-11"
+      />
       <div
-        class="e19ft7rb2 cache-pqu96v-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        3
-      </div>
-      <span
-        class="e19ft7rb3 cache-2seue4-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 3
+        <div
+          class="emotion-4 emotion-15 emotion-6"
+        >
+          2
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 2
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        class="emotion-10 emotion-11"
+      />
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-15 emotion-6"
+        >
+          3
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 3
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stepper renders correctly with step number in row 1`] = `
+exports[`Stepper > renders correctly with step number in row 1`] = `
 <DocumentFragment>
-  .cache-14umgav-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1217,7 +1237,7 @@ exports[`Stepper renders correctly with step number in row 1`] = `
   gap: 8px;
 }
 
-.cache-14umgav-StyledContainer .e19ft7rb4 {
+.emotion-0 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1233,13 +1253,13 @@ exports[`Stepper renders correctly with step number in row 1`] = `
   white-space: nowrap;
 }
 
-.cache-14umgav-StyledContainer .e19ft7rb1 {
+.emotion-0 .emotion-11 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
-.cache-64yl8v-StyledStepContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1257,7 +1277,7 @@ exports[`Stepper renders correctly with step number in row 1`] = `
   justify-content: flex-start;
 }
 
-.cache-sdib28-StyledContainer-StyledBullet {
+.emotion-5 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1280,7 +1300,7 @@ exports[`Stepper renders correctly with step number in row 1`] = `
   margin-top: 0;
 }
 
-.cache-16ebxbi-StyledText-StyledText {
+.emotion-8 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1292,7 +1312,7 @@ exports[`Stepper renders correctly with step number in row 1`] = `
   margin-top: 8px;
 }
 
-.cache-n9n5oq-StyledLine {
+.emotion-10 {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1303,7 +1323,7 @@ exports[`Stepper renders correctly with step number in row 1`] = `
   position: relative;
 }
 
-.cache-n9n5oq-StyledLine::after {
+.emotion-10::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1313,7 +1333,7 @@ exports[`Stepper renders correctly with step number in row 1`] = `
   background-color: #8c40ef;
 }
 
-.cache-7y11y9-StyledContainer-StyledBullet {
+.emotion-15 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1337,61 +1357,65 @@ exports[`Stepper renders correctly with step number in row 1`] = `
 }
 
 <div
-    class="cache-14umgav-StyledContainer e19ft7rb0"
+    data-testid="testing"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        1
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 1
+        <div
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          1
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 1
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      class="cache-n9n5oq-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+      </div>
       <div
-        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
-      >
-        2
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 2
-        </span>
-      </span>
-    </div>
-    <div
-      class="cache-n9n5oq-StyledLine e19ft7rb1"
-    />
-    <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
-    >
+        class="emotion-10 emotion-11"
+      />
       <div
-        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
+        class="emotion-2 emotion-3"
       >
-        3
-      </div>
-      <span
-        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
-      >
-        <span>
-          Step 3
+        <div
+          class="emotion-4 emotion-15 emotion-6"
+        >
+          2
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 2
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        class="emotion-10 emotion-11"
+      />
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-15 emotion-6"
+        >
+          3
+        </div>
+        <span
+          class="emotion-7 emotion-8 emotion-9"
+        >
+          <span>
+            Step 3
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>

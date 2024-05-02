@@ -1,59 +1,42 @@
-import {
-  afterAll,
-  beforeAll,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithForm } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { DateField } from '..'
-import {
-  mockRandom,
-  restoreRandom,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
 
 describe('DateField', () => {
-  beforeAll(() => {
-    mockRandom()
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(<DateField name="test" />)
+    expect(asFragment()).toMatchSnapshot()
   })
 
-  afterAll(restoreRandom)
+  test('should render correctly disabled', () => {
+    const { asFragment } = renderWithForm(<DateField name="test" disabled />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<DateField name="test" />))
-
-  test('should render correctly disabled', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<DateField name="test" disabled />))
-
-  test('should trigger events', () => {
-    const onBlur = jest.fn()
-    const onChange = jest.fn()
-
-    return shouldMatchEmotionSnapshotFormWrapper(
+  test('should trigger events', async () => {
+    const onBlur = vi.fn()
+    const onChange = vi.fn()
+    const { asFragment } = renderWithForm(
       <DateField name="test" onBlur={onBlur} onChange={onChange} />,
-      {
-        transform: async () => {
-          const select = screen.getByRole('textbox')
-          await userEvent.type(select, '{ArrowDown}')
-          const option = screen.getAllByRole('option')[0]
-          await userEvent.click(option)
-          expect(onChange).toBeCalledTimes(1)
-          // Blur not working on react-datepicker:
-          // https://github.com/Hacker0x01/react-datepicker/issues/2028
-          // act(() => {
-          //   select.blur()
-          // })
-          // expect(onBlur).toBeCalledTimes(1)
-        },
-      },
       {
         initialValues: {
           test: new Date('2022-09-01'),
         },
       },
     )
+    const select = screen.getByRole('textbox')
+    await userEvent.type(select, '{ArrowDown}')
+    const option = screen.getAllByRole('option')[0]
+    await userEvent.click(option)
+    expect(onChange).toBeCalledTimes(1)
+    // Blur not working on react-datepicker:
+    // https://github.com/Hacker0x01/react-datepicker/issues/2028
+    // act(() => {
+    //   select.blur()
+    // })
+    // expect(onBlur).toBeCalledTimes(1)
+    expect(asFragment()).toMatchSnapshot()
   }, 10000)
 })

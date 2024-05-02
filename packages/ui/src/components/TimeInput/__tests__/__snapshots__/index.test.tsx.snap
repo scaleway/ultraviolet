@@ -1,14 +1,14 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TimeInput renders correctly with base props 1`] = `
+exports[`TimeInput > renders correctly with base props 1`] = `
 <DocumentFragment>
-  .cache-w1hmin-StyledContainer-container-StyledContainer {
+  .emotion-0 {
   width: 100%;
   position: relative;
   box-sizing: border-box;
 }
 
-.cache-1f43avz-a11yText-A11yText {
+.emotion-2 {
   z-index: 9999;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -20,7 +20,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   white-space: nowrap;
 }
 
-.cache-exqc6n-control {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,20 +57,20 @@ exports[`TimeInput renders correctly with base props 1`] = `
   animation: none;
 }
 
-.cache-exqc6n-control:hover {
+.emotion-4:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-exqc6n-control:focus-within {
+.emotion-4:focus-within {
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-exqc6n-control:hover {
+.emotion-4:hover {
   border-color: #792dd4;
 }
 
-.cache-blvxib-ValueContainer {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -92,11 +92,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding-top: 0;
 }
 
-.cache-blvxib-ValueContainer label {
+.emotion-5 label {
   display: initial;
 }
 
-.cache-1bxh4i1-StyledPlaceholder {
+.emotion-6 {
   position: absolute;
   left: 0;
   font-weight: 400;
@@ -120,7 +120,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   opacity: 1;
 }
 
-.cache-e4v0qe-singleValue {
+.emotion-8 {
   grid-area: 1/1/2/3;
   max-width: 100%;
   overflow: hidden;
@@ -134,7 +134,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding-left: 0;
 }
 
-.cache-n0o3gm-inputStyles {
+.emotion-9 {
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.emotion-10 {
   visibility: visible;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -152,11 +157,9 @@ exports[`TimeInput renders correctly with base props 1`] = `
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 0;
-  margin-left: 0px;
-  caret-color: transparent;
 }
 
-.cache-n0o3gm-inputStyles:after {
+.emotion-10:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -169,7 +172,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   padding: 0;
 }
 
-.cache-ralm3g-IndicatorsContainer {
+.emotion-11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -188,7 +191,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   max-height: 48px;
 }
 
-.cache-dh2bvv-indicatorSeparator {
+.emotion-12 {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -200,7 +203,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   display: none;
 }
 
-.cache-1xc3v61-indicatorContainer {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -212,11 +215,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   box-sizing: border-box;
 }
 
-.cache-1xc3v61-indicatorContainer:hover {
+.emotion-13:hover {
   color: hsl(0, 0%, 60%);
 }
 
-.cache-irytw7-Stack {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,7 +242,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-slhw9w-StyledHr-StyledSeparator {
+.emotion-17 {
   margin: 0;
   border: 0;
   width: 1px;
@@ -252,7 +255,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   height: 100%;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-19 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -261,124 +264,128 @@ exports[`TimeInput renders correctly with base props 1`] = `
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-19 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-21 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-1aqops6-StyledError {
+.emotion-23 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
 <div
-    class=" cache-w1hmin-StyledContainer-container-StyledContainer e11gt5pw4"
-    data-testid="select-input-timeinput-test-0"
+    data-testid="testing"
   >
-    <span
-      class="cache-1f43avz-a11yText-A11yText"
-      id="react-select-2-live-region"
-    />
-    <span
-      aria-atomic="false"
-      aria-live="polite"
-      aria-relevant="additions text"
-      class="cache-1f43avz-a11yText-A11yText"
-      role="log"
-    />
     <div
-      class=" cache-exqc6n-control"
+      class=" emotion-0 emotion-1"
+      data-testid="select-input-timeinput-test-0"
     >
+      <span
+        class="emotion-2"
+        id="react-select-2-live-region"
+      />
+      <span
+        aria-atomic="false"
+        aria-live="polite"
+        aria-relevant="additions text"
+        class="emotion-2"
+        role="log"
+      />
       <div
-        class=" cache-blvxib-ValueContainer"
+        class=" emotion-4"
       >
-        <label
-          aria-live="assertive"
-          as="label"
-          class="cache-1bxh4i1-StyledPlaceholder e11gt5pw2"
-          for="test"
-        >
-          Select...
-        </label>
         <div
-          class=" cache-e4v0qe-singleValue"
+          class=" emotion-5"
         >
-          00:00
-        </div>
-        <div
-          class="cache-n0o3gm-inputStyles"
-          data-value=""
-        >
-          <input
-            aria-activedescendant=""
-            aria-autocomplete="list"
-            aria-expanded="false"
-            aria-haspopup="true"
-            autocapitalize="none"
-            autocomplete="off"
-            autocorrect="off"
-            class=""
-            id="test"
-            role="combobox"
-            spellcheck="false"
-            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-            tabindex="0"
-            type="text"
-            value=""
-          />
-        </div>
-      </div>
-      <div
-        class=" cache-ralm3g-IndicatorsContainer"
-      >
-        <span
-          class=" cache-dh2bvv-indicatorSeparator"
-        />
-        <div
-          aria-hidden="true"
-          class=" cache-1xc3v61-indicatorContainer"
-        >
-          <div
-            class="cache-irytw7-Stack ehpbis70"
+          <label
+            aria-live="assertive"
+            as="label"
+            class="emotion-6 emotion-7"
+            for="test"
           >
-            <hr
-              aria-orientation="vertical"
-              class="e11gt5pw5 cache-slhw9w-StyledHr-StyledSeparator e1d1zom90"
-              role="separator"
+            Select...
+          </label>
+          <div
+            class=" emotion-8"
+          >
+            00:00
+          </div>
+          <div
+            class="emotion-9 emotion-10"
+            data-value=""
+          >
+            <input
+              aria-activedescendant=""
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-haspopup="true"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              class=""
+              id="test"
+              role="combobox"
+              spellcheck="false"
+              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
             />
-            <svg
-              class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+          </div>
+        </div>
+        <div
+          class=" emotion-11"
+        >
+          <span
+            class=" emotion-12"
+          />
+          <div
+            aria-hidden="true"
+            class=" emotion-13"
+          >
+            <div
+              class="emotion-14 emotion-15"
             >
-              <path
-                clip-rule="evenodd"
-                d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25z"
-                fill-rule="evenodd"
+              <hr
+                aria-orientation="vertical"
+                class="emotion-16 emotion-17 emotion-18"
+                role="separator"
               />
-            </svg>
+              <svg
+                class="emotion-19 emotion-20"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <input
-      name="timeinput-test-0"
-      type="hidden"
-      value="00:00"
-    />
-    <div
-      class="cache-1cgpxro-StyledExpandable e5hc7t70"
-    >
-      <div
-        class="cache-1aqops6-StyledError e11gt5pw3"
+      <input
+        name="timeinput-test-0"
+        type="hidden"
+        value="00:00"
       />
+      <div
+        class="emotion-21 emotion-22"
+      >
+        <div
+          class="emotion-23 emotion-24"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>

@@ -1,25 +1,35 @@
-import { describe, expect, test } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { consoleLightTheme } from '@ultraviolet/themes'
+import { renderWithTheme } from '@utils/test'
 import type { ComponentProps } from 'react'
+import { describe, expect, test } from 'vitest'
 import { Tooltip } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotWithPortal,
-} from '../../../../.jest/helpers'
 
 describe('Tooltip', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotWithPortal(
+  test('should render correctly', () => {
+    const { asFragment } = renderWithTheme(
       <Tooltip debounceDelay={0} text="test">
         Hover me
       </Tooltip>,
-    ))
+      consoleLightTheme,
+      {
+        container: document.body,
+      },
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly without text', () =>
-    shouldMatchEmotionSnapshotWithPortal(
+  test('should render correctly without text', () => {
+    const { asFragment } = renderWithTheme(
       <Tooltip debounceDelay={0}>Hover me</Tooltip>,
-    ))
+      consoleLightTheme,
+      {
+        container: document.body,
+      },
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test(`should display tooltip on hover`, async () => {
     renderWithTheme(

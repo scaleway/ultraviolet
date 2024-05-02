@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Meter render with  1`] = `
+exports[`Meter > render with  1`] = `
 <DocumentFragment>
-  .cache-10an7cj-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -13,7 +13,7 @@ exports[`Meter render with  1`] = `
   text-decoration: none;
 }
 
-.cache-1pnox5g-StyledText-StyledStrength {
+.emotion-3 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -27,7 +27,7 @@ exports[`Meter render with  1`] = `
   color: #b3144d;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-5 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -35,7 +35,7 @@ exports[`Meter render with  1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-7 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -43,40 +43,44 @@ exports[`Meter render with  1`] = `
 }
 
 <div
-    aria-labelledby="meter-label"
-    aria-live="polite"
-    aria-valuemax="5"
-    aria-valuemin="0"
-    aria-valuenow="0"
-    role="meter"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="cache-10an7cj-StyledText e13y3mga0"
-      id="meter-label"
-    >
-      MyTitle
-      <span
-        class="e157fc5l2 cache-1pnox5g-StyledText-StyledStrength e13y3mga0"
-      >
-        veryWeak
-      </span>
-    </p>
     <div
-      class="cache-15hdd4c-StyledWrapper e157fc5l1"
+      aria-labelledby="meter-label"
+      aria-live="polite"
+      aria-valuemax="5"
+      aria-valuemin="0"
+      aria-valuenow="0"
+      role="meter"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1"
+        id="meter-label"
+      >
+        MyTitle
+        <span
+          class="emotion-2 emotion-3 emotion-1"
+        >
+          veryWeak
+        </span>
+      </p>
       <div
-        class="cache-oco914-StyledMeter e157fc5l0"
-        style="background-color: rgb(179, 20, 77); width: 20%;"
-      />
+        class="emotion-5 emotion-6"
+      >
+        <div
+          class="emotion-7 emotion-8"
+          style="background-color: rgb(179, 20, 77); width: 20%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Meter render with medium password 1`] = `
+exports[`Meter > render with medium password 1`] = `
 <DocumentFragment>
-  .cache-10an7cj-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -87,7 +91,7 @@ exports[`Meter render with medium password 1`] = `
   text-decoration: none;
 }
 
-.cache-i4spz5-StyledText-StyledStrength {
+.emotion-3 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -101,7 +105,7 @@ exports[`Meter render with medium password 1`] = `
   color: yellow;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-5 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -109,7 +113,7 @@ exports[`Meter render with medium password 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-7 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -117,40 +121,44 @@ exports[`Meter render with medium password 1`] = `
 }
 
 <div
-    aria-labelledby="meter-label"
-    aria-live="polite"
-    aria-valuemax="5"
-    aria-valuemin="0"
-    aria-valuenow="2"
-    role="meter"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="cache-10an7cj-StyledText e13y3mga0"
-      id="meter-label"
-    >
-      MyTitle
-      <span
-        class="e157fc5l2 cache-i4spz5-StyledText-StyledStrength e13y3mga0"
-      >
-        medium
-      </span>
-    </p>
     <div
-      class="cache-15hdd4c-StyledWrapper e157fc5l1"
+      aria-labelledby="meter-label"
+      aria-live="polite"
+      aria-valuemax="5"
+      aria-valuemin="0"
+      aria-valuenow="2"
+      role="meter"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1"
+        id="meter-label"
+      >
+        MyTitle
+        <span
+          class="emotion-2 emotion-3 emotion-1"
+        >
+          medium
+        </span>
+      </p>
       <div
-        class="cache-oco914-StyledMeter e157fc5l0"
-        style="background-color: yellow; width: 60%;"
-      />
+        class="emotion-5 emotion-6"
+      >
+        <div
+          class="emotion-7 emotion-8"
+          style="background-color: yellow; width: 60%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Meter render with strong value 1`] = `
+exports[`Meter > render with strong value 1`] = `
 <DocumentFragment>
-  .cache-10an7cj-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -161,7 +169,7 @@ exports[`Meter render with strong value 1`] = `
   text-decoration: none;
 }
 
-.cache-1v23ck2-StyledText-StyledStrength {
+.emotion-3 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -175,7 +183,7 @@ exports[`Meter render with strong value 1`] = `
   color: #22674e;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-5 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -183,7 +191,7 @@ exports[`Meter render with strong value 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-7 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -191,40 +199,44 @@ exports[`Meter render with strong value 1`] = `
 }
 
 <div
-    aria-labelledby="meter-label"
-    aria-live="polite"
-    aria-valuemax="5"
-    aria-valuemin="0"
-    aria-valuenow="3"
-    role="meter"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="cache-10an7cj-StyledText e13y3mga0"
-      id="meter-label"
-    >
-      MyTitle
-      <span
-        class="e157fc5l2 cache-1v23ck2-StyledText-StyledStrength e13y3mga0"
-      >
-        strong
-      </span>
-    </p>
     <div
-      class="cache-15hdd4c-StyledWrapper e157fc5l1"
+      aria-labelledby="meter-label"
+      aria-live="polite"
+      aria-valuemax="5"
+      aria-valuemin="0"
+      aria-valuenow="3"
+      role="meter"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1"
+        id="meter-label"
+      >
+        MyTitle
+        <span
+          class="emotion-2 emotion-3 emotion-1"
+        >
+          strong
+        </span>
+      </p>
       <div
-        class="cache-oco914-StyledMeter e157fc5l0"
-        style="background-color: rgb(34, 103, 78); width: 80%;"
-      />
+        class="emotion-5 emotion-6"
+      >
+        <div
+          class="emotion-7 emotion-8"
+          style="background-color: rgb(34, 103, 78); width: 80%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Meter render with very strong value 1`] = `
+exports[`Meter > render with very strong value 1`] = `
 <DocumentFragment>
-  .cache-10an7cj-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -235,7 +247,7 @@ exports[`Meter render with very strong value 1`] = `
   text-decoration: none;
 }
 
-.cache-1v23ck2-StyledText-StyledStrength {
+.emotion-3 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -249,7 +261,7 @@ exports[`Meter render with very strong value 1`] = `
   color: #22674e;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-5 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -257,7 +269,7 @@ exports[`Meter render with very strong value 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-7 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -265,40 +277,44 @@ exports[`Meter render with very strong value 1`] = `
 }
 
 <div
-    aria-labelledby="meter-label"
-    aria-live="polite"
-    aria-valuemax="5"
-    aria-valuemin="0"
-    aria-valuenow="4"
-    role="meter"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="cache-10an7cj-StyledText e13y3mga0"
-      id="meter-label"
-    >
-      MyTitle
-      <span
-        class="e157fc5l2 cache-1v23ck2-StyledText-StyledStrength e13y3mga0"
-      >
-        veryStrong
-      </span>
-    </p>
     <div
-      class="cache-15hdd4c-StyledWrapper e157fc5l1"
+      aria-labelledby="meter-label"
+      aria-live="polite"
+      aria-valuemax="5"
+      aria-valuemin="0"
+      aria-valuenow="4"
+      role="meter"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1"
+        id="meter-label"
+      >
+        MyTitle
+        <span
+          class="emotion-2 emotion-3 emotion-1"
+        >
+          veryStrong
+        </span>
+      </p>
       <div
-        class="cache-oco914-StyledMeter e157fc5l0"
-        style="background-color: rgb(34, 103, 78); width: 100%;"
-      />
+        class="emotion-5 emotion-6"
+      >
+        <div
+          class="emotion-7 emotion-8"
+          style="background-color: rgb(34, 103, 78); width: 100%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Meter render with weak value 1`] = `
+exports[`Meter > render with weak value 1`] = `
 <DocumentFragment>
-  .cache-10an7cj-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -309,7 +325,7 @@ exports[`Meter render with weak value 1`] = `
   text-decoration: none;
 }
 
-.cache-1cf814y-StyledText-StyledStrength {
+.emotion-3 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -323,7 +339,7 @@ exports[`Meter render with weak value 1`] = `
   color: #7c5400;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-5 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -331,7 +347,7 @@ exports[`Meter render with weak value 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-7 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -339,32 +355,36 @@ exports[`Meter render with weak value 1`] = `
 }
 
 <div
-    aria-labelledby="meter-label"
-    aria-live="polite"
-    aria-valuemax="5"
-    aria-valuemin="0"
-    aria-valuenow="1"
-    role="meter"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="cache-10an7cj-StyledText e13y3mga0"
-      id="meter-label"
-    >
-      MyTitle
-      <span
-        class="e157fc5l2 cache-1cf814y-StyledText-StyledStrength e13y3mga0"
-      >
-        weak
-      </span>
-    </p>
     <div
-      class="cache-15hdd4c-StyledWrapper e157fc5l1"
+      aria-labelledby="meter-label"
+      aria-live="polite"
+      aria-valuemax="5"
+      aria-valuemin="0"
+      aria-valuenow="1"
+      role="meter"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1"
+        id="meter-label"
+      >
+        MyTitle
+        <span
+          class="emotion-2 emotion-3 emotion-1"
+        >
+          weak
+        </span>
+      </p>
       <div
-        class="cache-oco914-StyledMeter e157fc5l0"
-        style="background-color: rgb(124, 84, 0); width: 40%;"
-      />
+        class="emotion-5 emotion-6"
+      >
+        <div
+          class="emotion-7 emotion-8"
+          style="background-color: rgb(124, 84, 0); width: 40%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>

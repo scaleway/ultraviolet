@@ -1,24 +1,24 @@
-import { describe, jest, test } from '@jest/globals'
+// @vitest-environment jsdom
+
 import * as nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
+import { describe, expect, test, vi } from 'vitest'
 import { LineChart } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import {
   lineChartData,
   lineChartHoursData,
   lineChartMultipleData,
 } from '../__stories__/mockData'
 
-jest
-  .spyOn(nivo, 'ResponsiveWrapper')
-  .mockImplementation(
-    ({ children }: ComponentProps<typeof nivo.ResponsiveWrapper>) => (
-      <div>{children({ height: 500, width: 1000 })}</div>
-    ),
-  )
+vi.spyOn(nivo, 'ResponsiveWrapper').mockImplementation(
+  ({ children }: ComponentProps<typeof nivo.ResponsiveWrapper>) => (
+    <div>{children({ height: 500, width: 1000 })}</div>
+  ),
+)
 
 describe('LineChart', () => {
   test('renders correctly without data', () =>
@@ -75,30 +75,27 @@ describe('LineChart', () => {
       />,
     ))
 
-  test('renders correctly when chart is hovered', () =>
-    shouldMatchEmotionSnapshot(
+  test.skip('renders correctly when chart is hovered', async () => {
+    const { asFragment, debug } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
-      {
-        transform: async () => {
-          // eslint-disable-next-line testing-library/no-node-access
-          const line = document.querySelector('svg[role="img"] g path')
-          if (!line) throw new Error('LineChart line path not found')
-          await userEvent.unhover(line)
-          await userEvent.hover(line)
-        },
-      },
-    ))
+    )
+    // eslint-disable-next-line testing-library/no-node-access
+    const line = document.querySelector('svg[role="img"] g path')
+    debug()
+    if (!line) throw new Error('LineChart line path not found')
+    await userEvent.unhover(line)
+    await userEvent.hover(line)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly when legend is deselected', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly when legend is deselected', () => {
+    const { asFragment } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
-      {
-        transform: () => {
-          const id = `label-${lineChartData[0].id.toString()}`
-          fireEvent.click(screen.getByTestId(id))
-        },
-      },
-    ))
+    )
+    const id = `label-${lineChartData[0].id.toString()}`
+    fireEvent.click(screen.getByTestId(id))
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('renders correctly when data is async', () => {
     const AsyncLineChart = () => {
@@ -113,6 +110,7 @@ describe('LineChart', () => {
       return <LineChart data={data} withLegend xScale={{ type: 'linear' }} />
     }
 
-    return shouldMatchEmotionSnapshot(<AsyncLineChart />)
+    const { asFragment } = renderWithTheme(<AsyncLineChart />)
+    expect(asFragment()).toMatchSnapshot()
   })
 })

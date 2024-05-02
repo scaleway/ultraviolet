@@ -1,10 +1,7 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
+import { renderWithTheme } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { VerificationCode } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 
 const pasteEventWithValue = (selector: HTMLElement, value: string) =>
   fireEvent.paste(selector, {
@@ -12,91 +9,85 @@ const pasteEventWithValue = (selector: HTMLElement, value: string) =>
   })
 
 describe('VerificationCode', () => {
-  test('renders correctly with default values', () =>
-    shouldMatchEmotionSnapshot(<VerificationCode />))
+  test('renders correctly with default values', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with initial value and placeholder and 6 fields', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with initial value and placeholder and 6 fields', () => {
+    const { asFragment } = renderWithTheme(
       <VerificationCode fields={6} initialValue="13" placeholder="0037" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should handle keyDown and special key cases and focus/change events', () =>
-    shouldMatchEmotionSnapshot(
+  test('should handle keyDown and special key cases and focus/change events', () => {
+    const { asFragment } = renderWithTheme(
       <VerificationCode type="number" fields={4} initialValue="1" />,
-      {
-        transform: () => {
-          const input0 = screen.getByTestId('0')
-          fireEvent.keyDown(input0, { keyCode: 8 }) // press backspace
-          fireEvent.keyDown(input0, { keyCode: 37 }) // press arrow left
-          fireEvent.keyDown(input0, { keyCode: 39 }) // press arrow right
-          fireEvent.keyDown(input0, { keyCode: 38 }) // press arrow up
-          fireEvent.keyDown(input0, { keyCode: 40 }) // press arrow down
-          fireEvent.keyDown(input0, { keyCode: 50 }) // press 2
+    )
 
-          const input1 = screen.getByTestId('1')
+    const input0 = screen.getByTestId('0')
+    fireEvent.keyDown(input0, { keyCode: 8 }) // press backspace
+    fireEvent.keyDown(input0, { keyCode: 37 }) // press arrow left
+    fireEvent.keyDown(input0, { keyCode: 39 }) // press arrow right
+    fireEvent.keyDown(input0, { keyCode: 38 }) // press arrow up
+    fireEvent.keyDown(input0, { keyCode: 40 }) // press arrow down
+    fireEvent.keyDown(input0, { keyCode: 50 }) // press 2
 
-          input1.focus()
-          fireEvent.keyDown(input1, { keyCode: 8 }) // press backspace
+    const input1 = screen.getByTestId('1')
 
-          fireEvent.change(input1, { target: { value: '2' } })
-          fireEvent.change(input1, { target: { value: '' } })
-        },
-      },
-    ))
+    input1.focus()
+    fireEvent.keyDown(input1, { keyCode: 8 }) // press backspace
 
-  test('should handle paste with no overflowing values', () =>
-    shouldMatchEmotionSnapshot(
+    fireEvent.change(input1, { target: { value: '2' } })
+    fireEvent.change(input1, { target: { value: '' } })
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should handle paste with no overflowing values', () => {
+    const { asFragment } = renderWithTheme(
       <VerificationCode type="number" fields={4} initialValue="1" />,
-      {
-        transform: () => {
-          pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
-        },
-      },
-    ))
+    )
+    pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should handle and replace non number with "" when type is number', () =>
-    shouldMatchEmotionSnapshot(
+  test('should handle and replace non number with "" when type is number', () => {
+    const { asFragment } = renderWithTheme(
       <VerificationCode fields={4} initialValue="1" />,
-      {
-        transform: () => {
-          pasteEventWithValue(screen.getByDisplayValue('1'), '1a34')
-        },
-      },
-    ))
+    )
+    pasteEventWithValue(screen.getByDisplayValue('1'), '1a34')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should handle paste with overflowing values', () =>
-    shouldMatchEmotionSnapshot(
+  test('should handle paste with overflowing values', () => {
+    const { asFragment } = renderWithTheme(
       <VerificationCode fields={4} initialValue="12" />,
-      {
-        transform: () => {
-          pasteEventWithValue(screen.getByDisplayValue('1'), '123456')
-        },
-      },
-    ))
+    )
+    pasteEventWithValue(screen.getByDisplayValue('1'), '123456')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should handle paste with overflowing values at different index than 0', () =>
-    shouldMatchEmotionSnapshot(
+  test('should handle paste with overflowing values at different index than 0', () => {
+    const { asFragment } = renderWithTheme(
       <VerificationCode fields={4} initialValue="12" />,
-      {
-        transform: () => {
-          pasteEventWithValue(screen.getByDisplayValue('2'), '123456')
-        },
-      },
-    ))
+    )
+    pasteEventWithValue(screen.getByDisplayValue('2'), '123456')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should handle paste when type is not number', () =>
-    shouldMatchEmotionSnapshot(
+  test('should handle paste when type is not number', () => {
+    const { asFragment } = renderWithTheme(
       <VerificationCode type="text" fields={6} initialValue="12" />,
-      {
-        transform: () => {
-          pasteEventWithValue(screen.getByDisplayValue('2'), 'h23a*6')
-        },
-      },
-    ))
+    )
+    pasteEventWithValue(screen.getByDisplayValue('2'), 'h23a*6')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should trigger onChange and onComplete after pasting values', () => {
-    const onChange = jest.fn()
-    const onComplete = jest.fn()
+    const onChange = vi.fn()
+    const onComplete = vi.fn()
 
     renderWithTheme(
       <VerificationCode
@@ -118,14 +109,20 @@ describe('VerificationCode', () => {
     expect(onComplete).toHaveBeenCalledTimes(1)
   })
 
-  test('should handle error', () =>
-    shouldMatchEmotionSnapshot(
+  test('should handle error', () => {
+    const { asFragment } = renderWithTheme(
       <VerificationCode error type="number" fields={4} initialValue="1" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('render correctly with small size', () =>
-    shouldMatchEmotionSnapshot(<VerificationCode size="small" />))
+  test('render correctly with small size', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode size="small" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly disabled true', () =>
-    shouldMatchEmotionSnapshot(<VerificationCode disabled />))
+  test('should render correctly disabled true', () => {
+    const { asFragment } = renderWithTheme(<VerificationCode disabled />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

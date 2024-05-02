@@ -1,6 +1,6 @@
-import { describe, test } from '@jest/globals'
 import type { Point } from '@nivo/line'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test } from 'vitest'
 import { LineChartTooltip } from '../Tooltip'
 
 describe('LineChart Tooltip', () => {

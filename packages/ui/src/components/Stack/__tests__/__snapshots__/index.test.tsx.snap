@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Stack should render correctly with alignCenter 1`] = `
+exports[`Stack > should render correctly with alignCenter 1`] = `
 <DocumentFragment>
-  .cache-1l6mcrb-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,21 +26,25 @@ exports[`Stack should render correctly with alignCenter 1`] = `
 }
 
 <div
-    class="cache-1l6mcrb-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      first child
-    </div>
-    <div>
-      second child
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stack should render correctly with default props 1`] = `
+exports[`Stack > should render correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-1guc91g-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,24 +68,28 @@ exports[`Stack should render correctly with default props 1`] = `
 }
 
 <div
-    class="cache-1guc91g-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      first child
-    </div>
-    <div>
-      second child
-    </div>
-    <div>
-      third child
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stack should render correctly with flex 1 1`] = `
+exports[`Stack > should render correctly with flex 1 1`] = `
 <DocumentFragment>
-  .cache-10fpg8v-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,21 +116,25 @@ exports[`Stack should render correctly with flex 1 1`] = `
 }
 
 <div
-    class="cache-10fpg8v-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      first child
-    </div>
-    <div>
-      second child
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stack should render correctly with row direction 1`] = `
+exports[`Stack > should render correctly with row direction 1`] = `
 <DocumentFragment>
-  .cache-1tfad1c-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -146,24 +158,28 @@ exports[`Stack should render correctly with row direction 1`] = `
 }
 
 <div
-    class="cache-1tfad1c-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      first child
-    </div>
-    <div>
-      second child
-    </div>
-    <div>
-      third child
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
+      <div>
+        third child
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stack should render correctly with width 100% 1`] = `
+exports[`Stack > should render correctly with width 100% 1`] = `
 <DocumentFragment>
-  .cache-1sg8g9d-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,21 +204,25 @@ exports[`Stack should render correctly with width 100% 1`] = `
 }
 
 <div
-    class="cache-1sg8g9d-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      first child
-    </div>
-    <div>
-      second child
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stack should render correctly with wrap as boolean 1`] = `
+exports[`Stack > should render correctly with wrap as boolean 1`] = `
 <DocumentFragment>
-  .cache-1w45fx4-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,21 +246,25 @@ exports[`Stack should render correctly with wrap as boolean 1`] = `
 }
 
 <div
-    class="cache-1w45fx4-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      first child
-    </div>
-    <div>
-      second child
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stack should render correctly with wrap as string 1`] = `
+exports[`Stack > should render correctly with wrap as string 1`] = `
 <DocumentFragment>
-  .cache-1b660pb-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -264,13 +288,17 @@ exports[`Stack should render correctly with wrap as string 1`] = `
 }
 
 <div
-    class="cache-1b660pb-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      first child
-    </div>
-    <div>
-      second child
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        first child
+      </div>
+      <div>
+        second child
+      </div>
     </div>
   </div>
 </DocumentFragment>

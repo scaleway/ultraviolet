@@ -1,8 +1,16 @@
-import { describe, test } from '@jest/globals'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { ContentCardGroup } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('ContentCardGroup', () => {
+  beforeEach(() => {
+    vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+  })
+
+  afterEach(() => {
+    vi.spyOn(global.Math, 'random').mockRestore()
+  })
+
   test('renders correctly with required title & hread', () =>
     shouldMatchEmotionSnapshot(
       <ContentCardGroup>
@@ -32,12 +40,14 @@ describe('ContentCardGroup', () => {
       </ContentCardGroup>,
     ))
 
-  test('renders correctly with loading prop', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with loading prop', () => {
+    const { asFragment } = renderWithTheme(
       <ContentCardGroup loading>
         <ContentCardGroup.Card title="title" href="http://scaleway.com" />
       </ContentCardGroup>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('renders correctly with link target _parent', () =>
     shouldMatchEmotionSnapshot(

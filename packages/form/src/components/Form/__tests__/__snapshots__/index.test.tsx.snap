@@ -1,35 +1,47 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Form renders correctly  1`] = `
+exports[`Form > renders correctly  1`] = `
 <DocumentFragment>
-  <form
-    novalidate=""
+  <div
+    data-testid="testing"
   >
-    Test
-  </form>
-</DocumentFragment>
-`;
-
-exports[`Form renders correctly with node children 1`] = `
-<DocumentFragment>
-  <form
-    novalidate=""
-  >
-    Test
-  </form>
-</DocumentFragment>
-`;
-
-exports[`Form renders correctly with onRawSubmit 1`] = `
-<DocumentFragment>
-  <form
-    novalidate=""
-  >
-    <button
-      type="submit"
+    <form
+      novalidate=""
     >
-      Submit
-    </button>
-  </form>
+      Test
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Form > renders correctly with node children 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+    >
+      Test
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Form > renders correctly with onRawSubmit 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+    >
+      <button
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
 </DocumentFragment>
 `;

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`EmptySpace should work with border 1`] = `
+exports[`EmptySpace > should work with border 1`] = `
 <DocumentFragment>
-  .cache-1tq6cl1-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,7 +30,7 @@ exports[`EmptySpace should work with border 1`] = `
   border-radius: 4px;
 }
 
-.cache-1lrayyb-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +54,7 @@ exports[`EmptySpace should work with border 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,7 +77,7 @@ exports[`EmptySpace should work with border 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,7 +100,7 @@ exports[`EmptySpace should work with border 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1bkubus-StyledText-CenteredText {
+.emotion-9 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -112,7 +112,7 @@ exports[`EmptySpace should work with border 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,40 +136,44 @@ exports[`EmptySpace should work with border 1`] = `
 }
 
 <div
-    class="cache-1tq6cl1-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-1lrayyb-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="e1m66ceh2 cache-1bkubus-StyledText-CenteredText e13y3mga0"
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </p>
+            <p
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-13 emotion-5"
+          />
+        </div>
+        content
       </div>
-      content
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`EmptySpace should work with image 1`] = `
+exports[`EmptySpace > should work with image 1`] = `
 <DocumentFragment>
-  .cache-jqxwtt-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,7 +199,7 @@ exports[`EmptySpace should work with image 1`] = `
   padding: 0 140px;
 }
 
-.cache-1lrayyb-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -219,7 +223,7 @@ exports[`EmptySpace should work with image 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,7 +246,7 @@ exports[`EmptySpace should work with image 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -265,7 +269,7 @@ exports[`EmptySpace should work with image 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1bkubus-StyledText-CenteredText {
+.emotion-9 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -277,7 +281,7 @@ exports[`EmptySpace should work with image 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -301,45 +305,49 @@ exports[`EmptySpace should work with image 1`] = `
 }
 
 <div
-    class="cache-jqxwtt-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-1lrayyb-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <img
-          alt=""
-          src="test-file-stub"
-          width="240"
-        />
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="e1m66ceh2 cache-1bkubus-StyledText-CenteredText e13y3mga0"
+          <img
+            alt=""
+            src="/src/components/EmptyState/__stories__/illustrations/kapsule.webp"
+            width="240"
+          />
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </p>
+            <p
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-13 emotion-5"
+          />
+        </div>
+        content
       </div>
-      content
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`EmptySpace should work with image as component 1`] = `
+exports[`EmptySpace > should work with image as component 1`] = `
 <DocumentFragment>
-  .cache-jqxwtt-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -365,7 +373,7 @@ exports[`EmptySpace should work with image as component 1`] = `
   padding: 0 140px;
 }
 
-.cache-1lrayyb-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -389,7 +397,7 @@ exports[`EmptySpace should work with image as component 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -412,7 +420,7 @@ exports[`EmptySpace should work with image as component 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -435,7 +443,7 @@ exports[`EmptySpace should work with image as component 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1bkubus-StyledText-CenteredText {
+.emotion-9 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -447,7 +455,7 @@ exports[`EmptySpace should work with image as component 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -471,44 +479,48 @@ exports[`EmptySpace should work with image as component 1`] = `
 }
 
 <div
-    class="cache-jqxwtt-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-1lrayyb-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <img
-          alt="kapsule logo"
-          src="test-file-stub"
-        />
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="e1m66ceh2 cache-1bkubus-StyledText-CenteredText e13y3mga0"
+          <img
+            alt="kapsule logo"
+            src="/src/components/EmptyState/__stories__/illustrations/kapsule.webp"
+          />
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </p>
+            <p
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-13 emotion-5"
+          />
+        </div>
+        content
       </div>
-      content
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`EmptySpace should work with learn more 1`] = `
+exports[`EmptySpace > should work with learn more 1`] = `
 <DocumentFragment>
-  .cache-jqxwtt-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -534,7 +546,7 @@ exports[`EmptySpace should work with learn more 1`] = `
   padding: 0 140px;
 }
 
-.cache-1lrayyb-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -558,7 +570,7 @@ exports[`EmptySpace should work with learn more 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -581,7 +593,7 @@ exports[`EmptySpace should work with learn more 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -604,7 +616,7 @@ exports[`EmptySpace should work with learn more 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1bkubus-StyledText-CenteredText {
+.emotion-9 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -616,7 +628,7 @@ exports[`EmptySpace should work with learn more 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -639,7 +651,7 @@ exports[`EmptySpace should work with learn more 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-jzq3t2-StyledLink {
+.emotion-15 {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -677,17 +689,17 @@ exports[`EmptySpace should work with learn more 1`] = `
   text-case: none;
 }
 
-.cache-jzq3t2-StyledLink .e1afnb7a2 {
+.emotion-15 .emotion-17 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-jzq3t2-StyledLink>* {
+.emotion-15>* {
   pointer-events: none;
 }
 
-.cache-jzq3t2-StyledLink:hover,
-.cache-jzq3t2-StyledLink:focus {
+.emotion-15:hover,
+.emotion-15:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -696,30 +708,30 @@ exports[`EmptySpace should work with learn more 1`] = `
   text-decoration-color: #004c85;
 }
 
-.cache-jzq3t2-StyledLink:hover .e1afnb7a2,
-.cache-jzq3t2-StyledLink:focus .e1afnb7a2 {
+.emotion-15:hover .emotion-17,
+.emotion-15:focus .emotion-17 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-jzq3t2-StyledLink[data-variant='inline'] {
+.emotion-15[data-variant='inline'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.cache-jzq3t2-StyledLink:hover::after,
-.cache-jzq3t2-StyledLink:focus::after {
+.emotion-15:hover::after,
+.emotion-15:focus::after {
   background-color: #005da3;
 }
 
-.cache-jzq3t2-StyledLink:active {
+.emotion-15:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-15y9vhn-StyledIcon-sizeStyles-StyledIcon {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -728,64 +740,68 @@ exports[`EmptySpace should work with learn more 1`] = `
   min-height: 16px;
 }
 
-.cache-15y9vhn-StyledIcon-sizeStyles-StyledIcon .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-jqxwtt-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-1lrayyb-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="e1m66ceh2 cache-1bkubus-StyledText-CenteredText e13y3mga0"
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </p>
+            <p
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        />
-        <a
-          class="cache-jzq3t2-StyledLink e1afnb7a0"
-          data-variant="standalone"
-          href="https://scaleway.com"
+          class="emotion-4 emotion-5"
         >
-          Learn more
-          <svg
-            class="e1afnb7a2 cache-15y9vhn-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-13 emotion-5"
+          />
+          <a
+            class="emotion-15 emotion-16"
+            data-variant="standalone"
+            href="https://scaleway.com"
           >
-            <path
-              clip-rule="evenodd"
-              d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </a>
+            Learn more
+            <svg
+              class="emotion-17 emotion-18 emotion-19"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+        content
       </div>
-      content
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`EmptySpace should work with primary button 1`] = `
+exports[`EmptySpace > should work with primary button 1`] = `
 <DocumentFragment>
-  .cache-jqxwtt-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -811,7 +827,7 @@ exports[`EmptySpace should work with primary button 1`] = `
   padding: 0 140px;
 }
 
-.cache-1lrayyb-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -835,7 +851,7 @@ exports[`EmptySpace should work with primary button 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -858,7 +874,7 @@ exports[`EmptySpace should work with primary button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -881,7 +897,7 @@ exports[`EmptySpace should work with primary button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1bkubus-StyledText-CenteredText {
+.emotion-9 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -893,7 +909,7 @@ exports[`EmptySpace should work with primary button 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -917,46 +933,50 @@ exports[`EmptySpace should work with primary button 1`] = `
 }
 
 <div
-    class="cache-jqxwtt-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-1lrayyb-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="e1m66ceh2 cache-1bkubus-StyledText-CenteredText e13y3mga0"
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </p>
+            <p
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <button
-            type="button"
+          <div
+            class="emotion-13 emotion-5"
           >
-            Test
-          </button>
+            <button
+              type="button"
+            >
+              Test
+            </button>
+          </div>
         </div>
+        content
       </div>
-      content
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`EmptySpace should work with secondary button 1`] = `
+exports[`EmptySpace > should work with secondary button 1`] = `
 <DocumentFragment>
-  .cache-jqxwtt-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -982,7 +1002,7 @@ exports[`EmptySpace should work with secondary button 1`] = `
   padding: 0 140px;
 }
 
-.cache-1lrayyb-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1006,7 +1026,7 @@ exports[`EmptySpace should work with secondary button 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1029,7 +1049,7 @@ exports[`EmptySpace should work with secondary button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1052,7 +1072,7 @@ exports[`EmptySpace should work with secondary button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1bkubus-StyledText-CenteredText {
+.emotion-9 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1064,7 +1084,7 @@ exports[`EmptySpace should work with secondary button 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1088,46 +1108,50 @@ exports[`EmptySpace should work with secondary button 1`] = `
 }
 
 <div
-    class="cache-jqxwtt-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-1lrayyb-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="e1m66ceh2 cache-1bkubus-StyledText-CenteredText e13y3mga0"
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </p>
+            <p
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <button
-            type="button"
+          <div
+            class="emotion-13 emotion-5"
           >
-            Test
-          </button>
+            <button
+              type="button"
+            >
+              Test
+            </button>
+          </div>
         </div>
+        content
       </div>
-      content
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`EmptySpace should work with size 1`] = `
+exports[`EmptySpace > should work with size 1`] = `
 <DocumentFragment>
-  .cache-13rl8q3-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1152,7 +1176,7 @@ exports[`EmptySpace should work with size 1`] = `
   margin: 0 auto;
 }
 
-.cache-sv1joy-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1176,7 +1200,7 @@ exports[`EmptySpace should work with size 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1199,7 +1223,7 @@ exports[`EmptySpace should work with size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1222,7 +1246,7 @@ exports[`EmptySpace should work with size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-tjlos9-StyledText-CenteredText {
+.emotion-9 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1234,7 +1258,7 @@ exports[`EmptySpace should work with size 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1258,40 +1282,44 @@ exports[`EmptySpace should work with size 1`] = `
 }
 
 <div
-    class="cache-13rl8q3-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-sv1joy-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="e1m66ceh2 cache-tjlos9-StyledText-CenteredText e13y3mga0"
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </p>
+            <p
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-13 emotion-5"
+          />
+        </div>
+        content
       </div>
-      content
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`EmptySpace should work with title 1`] = `
+exports[`EmptySpace > should work with title 1`] = `
 <DocumentFragment>
-  .cache-jqxwtt-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1317,7 +1345,7 @@ exports[`EmptySpace should work with title 1`] = `
   padding: 0 140px;
 }
 
-.cache-1lrayyb-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1341,7 +1369,7 @@ exports[`EmptySpace should work with title 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1364,7 +1392,7 @@ exports[`EmptySpace should work with title 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1387,7 +1415,7 @@ exports[`EmptySpace should work with title 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-9vg8yi-StyledText-CenteredText {
+.emotion-9 {
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
   font-weight: 400;
@@ -1399,7 +1427,7 @@ exports[`EmptySpace should work with title 1`] = `
   text-align: center;
 }
 
-.cache-1bkubus-StyledText-CenteredText {
+.emotion-12 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1411,7 +1439,7 @@ exports[`EmptySpace should work with title 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1435,45 +1463,49 @@ exports[`EmptySpace should work with title 1`] = `
 }
 
 <div
-    class="cache-jqxwtt-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-1lrayyb-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <h2
-            class="e1m66ceh2 cache-9vg8yi-StyledText-CenteredText e13y3mga0"
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </h2>
-          <p
-            class="e1m66ceh2 cache-1bkubus-StyledText-CenteredText e13y3mga0"
-          >
-            test
-          </p>
+            <h2
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </h2>
+            <p
+              class="emotion-8 emotion-12 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-16 emotion-5"
+          />
+        </div>
+        content
       </div>
-      content
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`EmptySpace should work without parameters 1`] = `
+exports[`EmptySpace > should work without parameters 1`] = `
 <DocumentFragment>
-  .cache-jqxwtt-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1499,7 +1531,7 @@ exports[`EmptySpace should work without parameters 1`] = `
   padding: 0 140px;
 }
 
-.cache-1lrayyb-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1523,7 +1555,7 @@ exports[`EmptySpace should work without parameters 1`] = `
   padding: 40px;
 }
 
-.cache-si5b0e-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1546,7 +1578,7 @@ exports[`EmptySpace should work without parameters 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cm1duh-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1569,7 +1601,7 @@ exports[`EmptySpace should work without parameters 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1bkubus-StyledText-CenteredText {
+.emotion-9 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1581,7 +1613,7 @@ exports[`EmptySpace should work without parameters 1`] = `
   text-align: center;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1605,30 +1637,34 @@ exports[`EmptySpace should work without parameters 1`] = `
 }
 
 <div
-    class="cache-jqxwtt-Stack-Container e1m66ceh1"
+    data-testid="testing"
   >
     <div
-      class="cache-1lrayyb-Stack-StyledStack e1m66ceh0"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-si5b0e-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1cm1duh-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="e1m66ceh2 cache-1bkubus-StyledText-CenteredText e13y3mga0"
+          <div
+            class="emotion-6 emotion-5"
           >
-            test
-          </p>
+            <p
+              class="emotion-8 emotion-9 emotion-10"
+            >
+              test
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-si5b0e-Stack ehpbis70"
-      >
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        />
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-13 emotion-5"
+          />
+        </div>
       </div>
     </div>
   </div>

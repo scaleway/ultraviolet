@@ -1,45 +1,41 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { act, renderHook, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
 import { useForm } from 'react-hook-form'
+import { describe, expect, test, vi } from 'vitest'
 import { NumberInputFieldV2, Submit } from '../..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
 
 describe('NumberInputFieldV2', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(
       <NumberInputFieldV2 name="test" value={0} />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly disabled', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly disabled', () => {
+    const { asFragment } = renderWithForm(
       <NumberInputFieldV2
         name="test"
         value={10}
         disabled
         aria-label="Number Input"
       />,
-      {
-        transform: () => {
-          const input = screen.getByLabelText('Number Input')
-          expect(input).toBeDisabled()
+    )
+    const input = screen.getByLabelText('Number Input')
+    expect(input).toBeDisabled()
 
-          const inputMinus = screen.getByLabelText('minus')
-          expect(inputMinus).toBeDisabled()
+    const inputMinus = screen.getByLabelText('minus')
+    expect(inputMinus).toBeDisabled()
 
-          const inputPlus = screen.getByLabelText('plus')
-          expect(inputPlus).toBeDisabled()
-        },
-      },
-    ))
+    const inputPlus = screen.getByLabelText('plus')
+    expect(inputPlus).toBeDisabled()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should work fine with form setValue', async () => {
-    const onSubmit = jest.fn<(values: { test: number | null }) => void>()
+    const onSubmit = vi.fn<[{ test: number | null }], void>()
     const { result } = renderHook(() =>
       useForm<{ test: number | null }>({
         defaultValues: {
@@ -52,7 +48,7 @@ describe('NumberInputFieldV2', () => {
     renderWithTheme(
       <Form
         onRawSubmit={value => onSubmit(value)}
-        errors={mockErrors}
+        errors={mockFormErrors}
         methods={result.current}
       >
         <NumberInputFieldV2 label="Test" name="test" required />

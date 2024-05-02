@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Notice renders correctly with default props 1`] = `
+exports[`Notice > renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-1huzd4k-StyledText-StyledSpan {
+  .emotion-1 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -23,7 +23,7 @@ exports[`Notice renders correctly with default props 1`] = `
   gap: 8px;
 }
 
-.cache-il0zju-StyledIcon-sizeStyles {
+.emotion-3 {
   vertical-align: middle;
   fill: #727683;
   height: 16px;
@@ -32,26 +32,30 @@ exports[`Notice renders correctly with default props 1`] = `
   min-height: 16px;
 }
 
-.cache-il0zju-StyledIcon-sizeStyles .fillStroke {
+.emotion-3 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-<span
-    class="e19pqvs30 cache-1huzd4k-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    <svg
-      class="cache-il0zju-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      class="emotion-0 emotion-1 emotion-2"
     >
-      <path
-        clip-rule="evenodd"
-        d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0M9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8z"
-        fill-rule="evenodd"
-      />
-    </svg>
-    Hello
-  </span>
+      <svg
+        class="emotion-3 emotion-4"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0M9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      Hello
+    </span>
+  </div>
 </DocumentFragment>
 `;

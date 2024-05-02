@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Banner renders correctly with a button 1`] = `
+exports[`Banner > renders correctly with a button 1`] = `
 <DocumentFragment>
-  .cache-1n9wgfw-Container-styles {
+  .emotion-0 {
   padding: 24px;
   border-radius: 8px;
   display: -webkit-box;
@@ -24,23 +24,23 @@ exports[`Banner renders correctly with a button 1`] = `
   background-size: contain;
 }
 
-.cache-1n9wgfw-Container-styles>svg:first-child,
-.cache-1n9wgfw-Container-styles>img {
+.emotion-0>svg:first-child,
+.emotion-0>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close'] {
+.emotion-0 button[name='close'] {
   background: none;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close']:hover {
+.emotion-0 button[name='close']:hover {
   background: none;
 }
 
-.cache-hmn6z8-Stack-ImageStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,7 +64,7 @@ exports[`Banner renders correctly with a button 1`] = `
   width: 140px;
 }
 
-.cache-19d60zd-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,7 +86,7 @@ exports[`Banner renders correctly with a button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1yytme-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,7 +109,7 @@ exports[`Banner renders correctly with a button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-rox34e-StyledText {
+.emotion-8 {
   color: #641cb3;
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
@@ -121,7 +121,7 @@ exports[`Banner renders correctly with a button 1`] = `
   text-decoration: none;
 }
 
-.cache-qnqg38-StyledText {
+.emotion-10 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -133,7 +133,7 @@ exports[`Banner renders correctly with a button 1`] = `
   text-decoration: none;
 }
 
-.cache-1hgmfcr-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,7 +156,7 @@ exports[`Banner renders correctly with a button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-187g71g-StyledFilledButton {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -195,22 +195,22 @@ exports[`Banner renders correctly with a button 1`] = `
   color: #ffffff;
 }
 
-.cache-187g71g-StyledFilledButton:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-187g71g-StyledFilledButton:active {
+.emotion-14:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-187g71g-StyledFilledButton:hover,
-.cache-187g71g-StyledFilledButton:active {
+.emotion-14:hover,
+.emotion-14:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -249,22 +249,22 @@ exports[`Banner renders correctly with a button 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-16:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-16:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-16:hover,
+.emotion-16:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-18 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -273,74 +273,78 @@ exports[`Banner renders correctly with a button 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-18 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1n9wgfw-Container-styles e1kdwp5x1"
+    data-testid="testing"
   >
     <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-19d60zd-Stack ehpbis70"
-      style="flex: 1;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1yytme-Stack ehpbis70"
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
-        <p
-          class="cache-rox34e-StyledText e13y3mga0"
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
         >
-          Title
-        </p>
-        <p
-          class="cache-qnqg38-StyledText e13y3mga0"
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
+        <div
+          class="emotion-12 emotion-5"
         >
-          Description
-        </p>
+          <button
+            class="emotion-14 emotion-15"
+            type="button"
+          >
+            Button
+          </button>
+        </div>
       </div>
-      <div
-        class="cache-1hgmfcr-Stack ehpbis70"
+      <button
+        class="emotion-16 emotion-17"
+        name="close"
+        type="button"
       >
-        <button
-          class="cache-187g71g-StyledFilledButton e112qvla2"
-          type="button"
+        <svg
+          class="emotion-18 emotion-19"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          Button
-        </button>
-      </div>
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
     </div>
-    <button
-      class="cache-1xcp86l-StyledGhostButton e112qvla0"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Banner renders correctly with a link 1`] = `
+exports[`Banner > renders correctly with a link 1`] = `
 <DocumentFragment>
-  .cache-1n9wgfw-Container-styles {
+  .emotion-0 {
   padding: 24px;
   border-radius: 8px;
   display: -webkit-box;
@@ -362,23 +366,23 @@ exports[`Banner renders correctly with a link 1`] = `
   background-size: contain;
 }
 
-.cache-1n9wgfw-Container-styles>svg:first-child,
-.cache-1n9wgfw-Container-styles>img {
+.emotion-0>svg:first-child,
+.emotion-0>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close'] {
+.emotion-0 button[name='close'] {
   background: none;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close']:hover {
+.emotion-0 button[name='close']:hover {
   background: none;
 }
 
-.cache-hmn6z8-Stack-ImageStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -402,7 +406,7 @@ exports[`Banner renders correctly with a link 1`] = `
   width: 140px;
 }
 
-.cache-19d60zd-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -424,7 +428,7 @@ exports[`Banner renders correctly with a link 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1yytme-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -447,7 +451,7 @@ exports[`Banner renders correctly with a link 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-rox34e-StyledText {
+.emotion-8 {
   color: #641cb3;
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
@@ -459,7 +463,7 @@ exports[`Banner renders correctly with a link 1`] = `
   text-decoration: none;
 }
 
-.cache-qnqg38-StyledText {
+.emotion-10 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -471,7 +475,7 @@ exports[`Banner renders correctly with a link 1`] = `
   text-decoration: none;
 }
 
-.cache-1hgmfcr-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -494,7 +498,7 @@ exports[`Banner renders correctly with a link 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-bt0hmr-StyledLink {
+.emotion-14 {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -532,17 +536,17 @@ exports[`Banner renders correctly with a link 1`] = `
   text-case: none;
 }
 
-.cache-bt0hmr-StyledLink .e1afnb7a2 {
+.emotion-14 .emotion-18 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-bt0hmr-StyledLink>* {
+.emotion-14>* {
   pointer-events: none;
 }
 
-.cache-bt0hmr-StyledLink:hover,
-.cache-bt0hmr-StyledLink:focus {
+.emotion-14:hover,
+.emotion-14:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -551,30 +555,30 @@ exports[`Banner renders correctly with a link 1`] = `
   text-decoration-color: #521094;
 }
 
-.cache-bt0hmr-StyledLink:hover .e1afnb7a2,
-.cache-bt0hmr-StyledLink:focus .e1afnb7a2 {
+.emotion-14:hover .emotion-18,
+.emotion-14:focus .emotion-18 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-bt0hmr-StyledLink[data-variant='inline'] {
+.emotion-14[data-variant='inline'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.cache-bt0hmr-StyledLink:hover::after,
-.cache-bt0hmr-StyledLink:focus::after {
+.emotion-14:hover::after,
+.emotion-14:focus::after {
   background-color: #641cb3;
 }
 
-.cache-bt0hmr-StyledLink:active {
+.emotion-14:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1tang38-StyledExternalIconContainer {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -582,7 +586,7 @@ exports[`Banner renders correctly with a link 1`] = `
   padding-bottom: 4px;
 }
 
-.cache-10rgs5g-StyledIcon-sizeStyles-StyledIcon {
+.emotion-19 {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
@@ -591,12 +595,12 @@ exports[`Banner renders correctly with a link 1`] = `
   min-height: 14px;
 }
 
-.cache-10rgs5g-StyledIcon-sizeStyles-StyledIcon .fillStroke {
+.emotion-19 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -635,22 +639,22 @@ exports[`Banner renders correctly with a link 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-21:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-21:hover,
+.emotion-21:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-23 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -659,98 +663,102 @@ exports[`Banner renders correctly with a link 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-23 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1n9wgfw-Container-styles e1kdwp5x1"
+    data-testid="testing"
   >
     <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-19d60zd-Stack ehpbis70"
-      style="flex: 1;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1yytme-Stack ehpbis70"
-        style="flex: 1;"
+        class="emotion-2 emotion-3"
       >
-        <p
-          class="cache-rox34e-StyledText e13y3mga0"
-        >
-          Title
-        </p>
-        <p
-          class="cache-qnqg38-StyledText e13y3mga0"
-        >
-          Description
-        </p>
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
       </div>
       <div
-        class="cache-1hgmfcr-Stack ehpbis70"
+        class="emotion-4 emotion-5"
+        style="flex: 1;"
       >
-        <a
-          class="cache-bt0hmr-StyledLink e1afnb7a0"
-          data-variant="standalone"
-          href=""
-          prominence="default"
-          rel="noopener noreferrer"
-          target="_blank"
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
         >
-          Link
-          <span
-            class="cache-1tang38-StyledExternalIconContainer e1afnb7a1"
+          <p
+            class="emotion-8 emotion-9"
           >
-            <svg
-              class="e1afnb7a2 cache-10rgs5g-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
+        <div
+          class="emotion-12 emotion-5"
+        >
+          <a
+            class="emotion-14 emotion-15"
+            data-variant="standalone"
+            href=""
+            prominence="default"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Link
+            <span
+              class="emotion-16 emotion-17"
             >
-              <path
-                clip-rule="evenodd"
-                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </a>
+              <svg
+                class="emotion-18 emotion-19 emotion-20"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
       </div>
-    </div>
-    <button
-      class="cache-1xcp86l-StyledGhostButton e112qvla0"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-21 emotion-22"
+        name="close"
+        type="button"
       >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
+        <svg
+          class="emotion-23 emotion-20"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Banner renders correctly with an image 1`] = `
+exports[`Banner > renders correctly with closable to false 1`] = `
 <DocumentFragment>
-  .cache-1n9wgfw-Container-styles {
+  .emotion-0 {
   padding: 24px;
   border-radius: 8px;
   display: -webkit-box;
@@ -772,23 +780,23 @@ exports[`Banner renders correctly with an image 1`] = `
   background-size: contain;
 }
 
-.cache-1n9wgfw-Container-styles>svg:first-child,
-.cache-1n9wgfw-Container-styles>img {
+.emotion-0>svg:first-child,
+.emotion-0>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close'] {
+.emotion-0 button[name='close'] {
   background: none;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close']:hover {
+.emotion-0 button[name='close']:hover {
   background: none;
 }
 
-.cache-hmn6z8-Stack-ImageStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -812,7 +820,179 @@ exports[`Banner renders correctly with an image 1`] = `
   width: 140px;
 }
 
-.cache-19d60zd-Stack {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  color: #641cb3;
+  font-size: 21px;
+  font-family: Space Grotesk,Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-10 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
+        style="flex: 1;"
+      >
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
+        >
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner > renders correctly with default values 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  padding: 24px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f1eefc;
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.emotion-0>svg:first-child,
+.emotion-0>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-0 button[name='close'] {
+  background: none;
+}
+
+.emotion-0 button[name='close']:hover {
+  background: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -834,7 +1014,7 @@ exports[`Banner renders correctly with an image 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1yytme-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -857,7 +1037,7 @@ exports[`Banner renders correctly with an image 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-rox34e-StyledText {
+.emotion-8 {
   color: #641cb3;
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
@@ -869,7 +1049,7 @@ exports[`Banner renders correctly with an image 1`] = `
   text-decoration: none;
 }
 
-.cache-qnqg38-StyledText {
+.emotion-10 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -881,7 +1061,7 @@ exports[`Banner renders correctly with an image 1`] = `
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -920,22 +1100,22 @@ exports[`Banner renders correctly with an image 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -944,64 +1124,68 @@ exports[`Banner renders correctly with an image 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1n9wgfw-Container-styles e1kdwp5x1"
+    data-testid="testing"
   >
     <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-19d60zd-Stack ehpbis70"
-      style="flex: 1;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1yytme-Stack ehpbis70"
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
-        <p
-          class="cache-rox34e-StyledText e13y3mga0"
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
         >
-          Title
-        </p>
-        <p
-          class="cache-qnqg38-StyledText e13y3mga0"
-        >
-          Description
-        </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
       </div>
-    </div>
-    <button
-      class="cache-1xcp86l-StyledGhostButton e112qvla0"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-12 emotion-13"
+        name="close"
+        type="button"
       >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
+        <svg
+          class="emotion-14 emotion-15"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Banner renders correctly with closable to false 1`] = `
+exports[`Banner > renders correctly with direction row 1`] = `
 <DocumentFragment>
-  .cache-1n9wgfw-Container-styles {
+  .emotion-0 {
   padding: 24px;
   border-radius: 8px;
   display: -webkit-box;
@@ -1023,23 +1207,23 @@ exports[`Banner renders correctly with closable to false 1`] = `
   background-size: contain;
 }
 
-.cache-1n9wgfw-Container-styles>svg:first-child,
-.cache-1n9wgfw-Container-styles>img {
+.emotion-0>svg:first-child,
+.emotion-0>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close'] {
+.emotion-0 button[name='close'] {
   background: none;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close']:hover {
+.emotion-0 button[name='close']:hover {
   background: none;
 }
 
-.cache-hmn6z8-Stack-ImageStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1063,7 +1247,7 @@ exports[`Banner renders correctly with closable to false 1`] = `
   width: 140px;
 }
 
-.cache-wbv6k9-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1085,7 +1269,7 @@ exports[`Banner renders correctly with closable to false 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1yytme-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1108,7 +1292,7 @@ exports[`Banner renders correctly with closable to false 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-rox34e-StyledText {
+.emotion-8 {
   color: #641cb3;
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
@@ -1120,7 +1304,7 @@ exports[`Banner renders correctly with closable to false 1`] = `
   text-decoration: none;
 }
 
-.cache-qnqg38-StyledText {
+.emotion-10 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1132,44 +1316,131 @@ exports[`Banner renders correctly with closable to false 1`] = `
   text-decoration: none;
 }
 
+.emotion-12 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-12:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-12:hover,
+.emotion-12:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-14 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-14 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
 <div
-    class="cache-1n9wgfw-Container-styles e1kdwp5x1"
+    data-testid="testing"
   >
     <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-wbv6k9-Stack ehpbis70"
-      style="flex: 1;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1yytme-Stack ehpbis70"
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
-        <p
-          class="cache-rox34e-StyledText e13y3mga0"
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
         >
-          Title
-        </p>
-        <p
-          class="cache-qnqg38-StyledText e13y3mga0"
-        >
-          Description
-        </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
       </div>
+      <button
+        class="emotion-12 emotion-13"
+        name="close"
+        type="button"
+      >
+        <svg
+          class="emotion-14 emotion-15"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Banner renders correctly with default values 1`] = `
+exports[`Banner > sizes and variants > renders correctly with size medium and variant intro 1`] = `
 <DocumentFragment>
-  .cache-1n9wgfw-Container-styles {
+  .emotion-0 {
   padding: 24px;
   border-radius: 8px;
   display: -webkit-box;
@@ -1191,23 +1462,23 @@ exports[`Banner renders correctly with default values 1`] = `
   background-size: contain;
 }
 
-.cache-1n9wgfw-Container-styles>svg:first-child,
-.cache-1n9wgfw-Container-styles>img {
+.emotion-0>svg:first-child,
+.emotion-0>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close'] {
+.emotion-0 button[name='close'] {
   background: none;
 }
 
-.cache-1n9wgfw-Container-styles button[name='close']:hover {
+.emotion-0 button[name='close']:hover {
   background: none;
 }
 
-.cache-hmn6z8-Stack-ImageStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1231,7 +1502,7 @@ exports[`Banner renders correctly with default values 1`] = `
   width: 140px;
 }
 
-.cache-19d60zd-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1253,7 +1524,7 @@ exports[`Banner renders correctly with default values 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1yytme-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1276,7 +1547,7 @@ exports[`Banner renders correctly with default values 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-rox34e-StyledText {
+.emotion-8 {
   color: #641cb3;
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
@@ -1288,7 +1559,7 @@ exports[`Banner renders correctly with default values 1`] = `
   text-decoration: none;
 }
 
-.cache-qnqg38-StyledText {
+.emotion-10 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1300,7 +1571,7 @@ exports[`Banner renders correctly with default values 1`] = `
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1339,22 +1610,22 @@ exports[`Banner renders correctly with default values 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1363,566 +1634,68 @@ exports[`Banner renders correctly with default values 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1n9wgfw-Container-styles e1kdwp5x1"
+    data-testid="testing"
   >
     <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-19d60zd-Stack ehpbis70"
-      style="flex: 1;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1yytme-Stack ehpbis70"
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
-        <p
-          class="cache-rox34e-StyledText e13y3mga0"
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
         >
-          Title
-        </p>
-        <p
-          class="cache-qnqg38-StyledText e13y3mga0"
-        >
-          Description
-        </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
       </div>
-    </div>
-    <button
-      class="cache-1xcp86l-StyledGhostButton e112qvla0"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-12 emotion-13"
+        name="close"
+        type="button"
       >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
+        <svg
+          class="emotion-14 emotion-15"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Banner renders correctly with direction row 1`] = `
+exports[`Banner > sizes and variants > renders correctly with size medium and variant promotional 1`] = `
 <DocumentFragment>
-  .cache-1n9wgfw-Container-styles {
-  padding: 24px;
-  border-radius: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  gap: 16px;
-  background: #f1eefc;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.cache-1n9wgfw-Container-styles>svg:first-child,
-.cache-1n9wgfw-Container-styles>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-1n9wgfw-Container-styles button[name='close'] {
-  background: none;
-}
-
-.cache-1n9wgfw-Container-styles button[name='close']:hover {
-  background: none;
-}
-
-.cache-hmn6z8-Stack-ImageStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 140px;
-}
-
-.cache-wbv6k9-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1yytme-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-rox34e-StyledText {
-  color: #641cb3;
-  font-size: 21px;
-  font-family: Space Grotesk,Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 32px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-qnqg38-StyledText {
-  color: #3f4250;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
-    class="cache-1n9wgfw-Container-styles e1kdwp5x1"
-  >
-    <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-wbv6k9-Stack ehpbis70"
-      style="flex: 1;"
-    >
-      <div
-        class="cache-1yytme-Stack ehpbis70"
-        style="flex: 1;"
-      >
-        <p
-          class="cache-rox34e-StyledText e13y3mga0"
-        >
-          Title
-        </p>
-        <p
-          class="cache-qnqg38-StyledText e13y3mga0"
-        >
-          Description
-        </p>
-      </div>
-    </div>
-    <button
-      class="cache-1xcp86l-StyledGhostButton e112qvla0"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Banner sizes and variants renders correctly with size medium and variant intro 1`] = `
-<DocumentFragment>
-  .cache-1n9wgfw-Container-styles {
-  padding: 24px;
-  border-radius: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  gap: 16px;
-  background: #f1eefc;
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.cache-1n9wgfw-Container-styles>svg:first-child,
-.cache-1n9wgfw-Container-styles>img {
-  height: 140px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-1n9wgfw-Container-styles button[name='close'] {
-  background: none;
-}
-
-.cache-1n9wgfw-Container-styles button[name='close']:hover {
-  background: none;
-}
-
-.cache-hmn6z8-Stack-ImageStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 140px;
-}
-
-.cache-19d60zd-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1yytme-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-rox34e-StyledText {
-  color: #641cb3;
-  font-size: 21px;
-  font-family: Space Grotesk,Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 32px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-qnqg38-StyledText {
-  color: #3f4250;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
-    class="cache-1n9wgfw-Container-styles e1kdwp5x1"
-  >
-    <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-19d60zd-Stack ehpbis70"
-      style="flex: 1;"
-    >
-      <div
-        class="cache-1yytme-Stack ehpbis70"
-        style="flex: 1;"
-      >
-        <p
-          class="cache-rox34e-StyledText e13y3mga0"
-        >
-          Title
-        </p>
-        <p
-          class="cache-qnqg38-StyledText e13y3mga0"
-        >
-          Description
-        </p>
-      </div>
-    </div>
-    <button
-      class="cache-1xcp86l-StyledGhostButton e112qvla0"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Banner sizes and variants renders correctly with size medium and variant promotional 1`] = `
-<DocumentFragment>
-  .cache-1texvn3-Container-styles {
+  .emotion-0 {
   padding: 24px;
   border-radius: 8px;
   display: -webkit-box;
@@ -1944,23 +1717,23 @@ exports[`Banner sizes and variants renders correctly with size medium and varian
   background-size: contain;
 }
 
-.cache-1texvn3-Container-styles>svg:first-child,
-.cache-1texvn3-Container-styles>img {
+.emotion-0>svg:first-child,
+.emotion-0>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-1texvn3-Container-styles button[name='close'] {
+.emotion-0 button[name='close'] {
   background: none;
 }
 
-.cache-1texvn3-Container-styles button[name='close']:hover {
+.emotion-0 button[name='close']:hover {
   background: none;
 }
 
-.cache-hmn6z8-Stack-ImageStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1984,7 +1757,7 @@ exports[`Banner sizes and variants renders correctly with size medium and varian
   width: 140px;
 }
 
-.cache-19d60zd-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2006,7 +1779,7 @@ exports[`Banner sizes and variants renders correctly with size medium and varian
   flex-wrap: nowrap;
 }
 
-.cache-1yytme-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2029,7 +1802,7 @@ exports[`Banner sizes and variants renders correctly with size medium and varian
   flex-wrap: nowrap;
 }
 
-.cache-1voptut-StyledText {
+.emotion-8 {
   color: #ffffff;
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
@@ -2041,7 +1814,7 @@ exports[`Banner sizes and variants renders correctly with size medium and varian
   text-decoration: none;
 }
 
-.cache-19ma3ne-StyledText {
+.emotion-10 {
   color: #ffffff;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2053,7 +1826,7 @@ exports[`Banner sizes and variants renders correctly with size medium and varian
   text-decoration: none;
 }
 
-.cache-13hzq4w-StyledFilledButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2092,22 +1865,22 @@ exports[`Banner sizes and variants renders correctly with size medium and varian
   color: #ffffff;
 }
 
-.cache-13hzq4w-StyledFilledButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-13hzq4w-StyledFilledButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-13hzq4w-StyledFilledButton:hover,
-.cache-13hzq4w-StyledFilledButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2116,64 +1889,68 @@ exports[`Banner sizes and variants renders correctly with size medium and varian
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1texvn3-Container-styles e1kdwp5x1"
+    data-testid="testing"
   >
     <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-19d60zd-Stack ehpbis70"
-      style="flex: 1;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1yytme-Stack ehpbis70"
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
-        <p
-          class="cache-1voptut-StyledText e13y3mga0"
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
         >
-          Title
-        </p>
-        <p
-          class="cache-19ma3ne-StyledText e13y3mga0"
-        >
-          Description
-        </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
       </div>
-    </div>
-    <button
-      class="cache-13hzq4w-StyledFilledButton e112qvla2"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-12 emotion-13"
+        name="close"
+        type="button"
       >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
+        <svg
+          class="emotion-14 emotion-15"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Banner sizes and variants renders correctly with size small and variant intro 1`] = `
+exports[`Banner > sizes and variants > renders correctly with size small and variant intro 1`] = `
 <DocumentFragment>
-  .cache-1n2fykg-Container-styles {
+  .emotion-0 {
   padding: 16px;
   border-radius: 8px;
   display: -webkit-box;
@@ -2195,23 +1972,23 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   background-size: contain,contain;
 }
 
-.cache-1n2fykg-Container-styles>svg:first-child,
-.cache-1n2fykg-Container-styles>img {
+.emotion-0>svg:first-child,
+.emotion-0>img {
   height: 100px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-1n2fykg-Container-styles button[name='close'] {
+.emotion-0 button[name='close'] {
   background: none;
 }
 
-.cache-1n2fykg-Container-styles button[name='close']:hover {
+.emotion-0 button[name='close']:hover {
   background: none;
 }
 
-.cache-37jj6f-Stack-ImageStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2235,7 +2012,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   width: 74px;
 }
 
-.cache-19d60zd-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2257,7 +2034,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   flex-wrap: nowrap;
 }
 
-.cache-1yytme-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2280,7 +2057,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   flex-wrap: nowrap;
 }
 
-.cache-18fd44c-StyledText {
+.emotion-8 {
   color: #641cb3;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2292,7 +2069,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   text-decoration: none;
 }
 
-.cache-qnqg38-StyledText {
+.emotion-10 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2304,7 +2081,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2343,22 +2120,22 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2367,64 +2144,68 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1n2fykg-Container-styles e1kdwp5x1"
+    data-testid="testing"
   >
     <div
-      class="cache-37jj6f-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-19d60zd-Stack ehpbis70"
-      style="flex: 1;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1yytme-Stack ehpbis70"
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image-small.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
-        <p
-          class="cache-18fd44c-StyledText e13y3mga0"
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
         >
-          Title
-        </p>
-        <p
-          class="cache-qnqg38-StyledText e13y3mga0"
-        >
-          Description
-        </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
       </div>
-    </div>
-    <button
-      class="cache-1xcp86l-StyledGhostButton e112qvla0"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-12 emotion-13"
+        name="close"
+        type="button"
       >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
+        <svg
+          class="emotion-14 emotion-15"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Banner sizes and variants renders correctly with size small and variant promotional 1`] = `
+exports[`Banner > sizes and variants > renders correctly with size small and variant promotional 1`] = `
 <DocumentFragment>
-  .cache-ylo50y-Container-styles {
+  .emotion-0 {
   padding: 16px;
   border-radius: 8px;
   display: -webkit-box;
@@ -2446,23 +2227,23 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   background-size: contain,contain;
 }
 
-.cache-ylo50y-Container-styles>svg:first-child,
-.cache-ylo50y-Container-styles>img {
+.emotion-0>svg:first-child,
+.emotion-0>img {
   height: 100px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-ylo50y-Container-styles button[name='close'] {
+.emotion-0 button[name='close'] {
   background: none;
 }
 
-.cache-ylo50y-Container-styles button[name='close']:hover {
+.emotion-0 button[name='close']:hover {
   background: none;
 }
 
-.cache-37jj6f-Stack-ImageStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2486,7 +2267,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   width: 74px;
 }
 
-.cache-19d60zd-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2508,7 +2289,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   flex-wrap: nowrap;
 }
 
-.cache-1yytme-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2531,7 +2312,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   flex-wrap: nowrap;
 }
 
-.cache-1wdc4om-StyledText {
+.emotion-8 {
   color: #ffffff;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2543,7 +2324,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   text-decoration: none;
 }
 
-.cache-19ma3ne-StyledText {
+.emotion-10 {
   color: #ffffff;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2555,7 +2336,7 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   text-decoration: none;
 }
 
-.cache-13hzq4w-StyledFilledButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2594,22 +2375,22 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   color: #ffffff;
 }
 
-.cache-13hzq4w-StyledFilledButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-13hzq4w-StyledFilledButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-13hzq4w-StyledFilledButton:hover,
-.cache-13hzq4w-StyledFilledButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2618,57 +2399,61 @@ exports[`Banner sizes and variants renders correctly with size small and variant
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-ylo50y-Container-styles e1kdwp5x1"
+    data-testid="testing"
   >
     <div
-      class="cache-37jj6f-Stack-ImageStack e1kdwp5x0"
-    >
-      <img
-        alt=""
-        src="test-file-stub"
-      />
-    </div>
-    <div
-      class="cache-19d60zd-Stack ehpbis70"
-      style="flex: 1;"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1yytme-Stack ehpbis70"
+        class="emotion-2 emotion-3"
+      >
+        <img
+          alt=""
+          src="/src/components/Banner/assets/default-image-small.svg"
+        />
+      </div>
+      <div
+        class="emotion-4 emotion-5"
         style="flex: 1;"
       >
-        <p
-          class="cache-1wdc4om-StyledText e13y3mga0"
+        <div
+          class="emotion-6 emotion-5"
+          style="flex: 1;"
         >
-          Title
-        </p>
-        <p
-          class="cache-19ma3ne-StyledText e13y3mga0"
-        >
-          Description
-        </p>
+          <p
+            class="emotion-8 emotion-9"
+          >
+            Title
+          </p>
+          <p
+            class="emotion-10 emotion-9"
+          >
+            Description
+          </p>
+        </div>
       </div>
-    </div>
-    <button
-      class="cache-13hzq4w-StyledFilledButton e112qvla2"
-      name="close"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-12 emotion-13"
+        name="close"
+        type="button"
       >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
+        <svg
+          class="emotion-14 emotion-15"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;

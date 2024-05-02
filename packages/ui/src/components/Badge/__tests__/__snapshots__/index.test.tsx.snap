@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Badge renders correctly prominence default 1`] = `
+exports[`Badge > renders correctly prominence default 1`] = `
 <DocumentFragment>
-  .cache-17bgpzb-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -39,17 +39,21 @@ exports[`Badge renders correctly prominence default 1`] = `
   border: 1px solid #d9dadd;
 }
 
-<span
-    class="ej33bna0 cache-17bgpzb-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly prominence strong 1`] = `
+exports[`Badge > renders correctly prominence strong 1`] = `
 <DocumentFragment>
-  .cache-fntb0a-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -86,17 +90,21 @@ exports[`Badge renders correctly prominence strong 1`] = `
   border: 1px solid #151a2d;
 }
 
-<span
-    class="ej33bna0 cache-fntb0a-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly sentiment danger 1`] = `
+exports[`Badge > renders correctly sentiment danger 1`] = `
 <DocumentFragment>
-  .cache-vouq2z-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -133,17 +141,21 @@ exports[`Badge renders correctly sentiment danger 1`] = `
   border: 1px solid #ffebf2;
 }
 
-<span
-    class="ej33bna0 cache-vouq2z-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly sentiment info 1`] = `
+exports[`Badge > renders correctly sentiment info 1`] = `
 <DocumentFragment>
-  .cache-1wznsbi-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -180,17 +192,21 @@ exports[`Badge renders correctly sentiment info 1`] = `
   border: 1px solid #e0f2ff;
 }
 
-<span
-    class="ej33bna0 cache-1wznsbi-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly sentiment neutral 1`] = `
+exports[`Badge > renders correctly sentiment neutral 1`] = `
 <DocumentFragment>
-  .cache-17bgpzb-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -227,17 +243,21 @@ exports[`Badge renders correctly sentiment neutral 1`] = `
   border: 1px solid #d9dadd;
 }
 
-<span
-    class="ej33bna0 cache-17bgpzb-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly sentiment primary 1`] = `
+exports[`Badge > renders correctly sentiment primary 1`] = `
 <DocumentFragment>
-  .cache-q6guov-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -274,17 +294,21 @@ exports[`Badge renders correctly sentiment primary 1`] = `
   border: 1px solid #f1eefc;
 }
 
-<span
-    class="ej33bna0 cache-q6guov-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly sentiment secondary 1`] = `
+exports[`Badge > renders correctly sentiment secondary 1`] = `
 <DocumentFragment>
-  .cache-ixv5yo-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -321,17 +345,21 @@ exports[`Badge renders correctly sentiment secondary 1`] = `
   border: 1px solid #f9ebff;
 }
 
-<span
-    class="ej33bna0 cache-ixv5yo-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly sentiment success 1`] = `
+exports[`Badge > renders correctly sentiment success 1`] = `
 <DocumentFragment>
-  .cache-12wioen-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -368,17 +396,21 @@ exports[`Badge renders correctly sentiment success 1`] = `
   border: 1px solid #daf6ec;
 }
 
-<span
-    class="ej33bna0 cache-12wioen-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly sentiment warning 1`] = `
+exports[`Badge > renders correctly sentiment warning 1`] = `
 <DocumentFragment>
-  .cache-kkhzbd-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -415,17 +447,21 @@ exports[`Badge renders correctly sentiment warning 1`] = `
   border: 1px solid #fff6e6;
 }
 
-<span
-    class="ej33bna0 cache-kkhzbd-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly size large 1`] = `
+exports[`Badge > renders correctly size large 1`] = `
 <DocumentFragment>
-  .cache-78r57r-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -462,17 +498,21 @@ exports[`Badge renders correctly size large 1`] = `
   border: 1px solid #d9dadd;
 }
 
-<span
-    class="ej33bna0 cache-78r57r-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly size medium 1`] = `
+exports[`Badge > renders correctly size medium 1`] = `
 <DocumentFragment>
-  .cache-17bgpzb-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -509,17 +549,21 @@ exports[`Badge renders correctly size medium 1`] = `
   border: 1px solid #d9dadd;
 }
 
-<span
-    class="ej33bna0 cache-17bgpzb-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly size small 1`] = `
+exports[`Badge > renders correctly size small 1`] = `
 <DocumentFragment>
-  .cache-1vkqu8o-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -556,17 +600,21 @@ exports[`Badge renders correctly size small 1`] = `
   border: 1px solid #d9dadd;
 }
 
-<span
-    class="ej33bna0 cache-1vkqu8o-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly when disabled 1`] = `
+exports[`Badge > renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-z9oxdq-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -603,17 +651,21 @@ exports[`Badge renders correctly when disabled 1`] = `
   border: none;
 }
 
-<span
-    class="ej33bna0 cache-z9oxdq-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly with default values 1`] = `
+exports[`Badge > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-17bgpzb-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -650,17 +702,21 @@ exports[`Badge renders correctly with default values 1`] = `
   border: 1px solid #d9dadd;
 }
 
-<span
-    class="ej33bna0 cache-17bgpzb-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    Sample badge
-  </span>
+    <span
+      class="emotion-0 emotion-1 emotion-2"
+    >
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Badge renders correctly with icon 1`] = `
+exports[`Badge > renders correctly with icon 1`] = `
 <DocumentFragment>
-  .cache-17bgpzb-StyledText-StyledSpan {
+  .emotion-1 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -697,7 +753,7 @@ exports[`Badge renders correctly with icon 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-3 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -706,26 +762,30 @@ exports[`Badge renders correctly with icon 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-3 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<span
-    class="ej33bna0 cache-17bgpzb-StyledText-StyledSpan e13y3mga0"
+<div
+    data-testid="testing"
   >
-    <svg
-      class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      class="emotion-0 emotion-1 emotion-2"
     >
-      <path
-        clip-rule="evenodd"
-        d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0M9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8z"
-        fill-rule="evenodd"
-      />
-    </svg>
-    Sample badge
-  </span>
+      <svg
+        class="emotion-3 emotion-4"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0M9 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6.75 8a.75.75 0 0 0 0 1.5h.75v1.75a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8.25 8z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      Sample badge
+    </span>
+  </div>
 </DocumentFragment>
 `;

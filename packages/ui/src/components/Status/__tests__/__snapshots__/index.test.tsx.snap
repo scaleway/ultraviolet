@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Status render animated 1`] = `
+exports[`Status > render animated 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   75%, 100% {
@@ -12,7 +12,7 @@ exports[`Status render animated 1`] = `
   }
 }
 
-.cache-1oymmk9-Container {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,7 +21,7 @@ exports[`Status render animated 1`] = `
   height: 10px;
 }
 
-.cache-vlmqa1-StyledAnimatedCircle {
+.emotion-2 {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -32,7 +32,7 @@ exports[`Status render animated 1`] = `
   background-color: #2c8564;
 }
 
-.cache-1kgo85m-StyledCircle {
+.emotion-4 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -40,22 +40,26 @@ exports[`Status render animated 1`] = `
   background-color: #2c8564;
 }
 
-<span
-    class="cache-1oymmk9-Container eny0xmn0"
+<div
+    data-testid="testing"
   >
     <span
-      class="cache-vlmqa1-StyledAnimatedCircle eny0xmn1"
-    />
-    <span
-      class="cache-1kgo85m-StyledCircle eny0xmn2"
-    />
-  </span>
+      class="emotion-0 emotion-1"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      />
+      <span
+        class="emotion-4 emotion-5"
+      />
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Status render with className 1`] = `
+exports[`Status > render with className 1`] = `
 <DocumentFragment>
-  .cache-1oymmk9-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,7 +68,7 @@ exports[`Status render with className 1`] = `
   height: 10px;
 }
 
-.cache-1kgo85m-StyledCircle {
+.emotion-2 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -72,19 +76,23 @@ exports[`Status render with className 1`] = `
   background-color: #2c8564;
 }
 
-<span
-    class="test cache-1oymmk9-Container eny0xmn0"
+<div
+    data-testid="testing"
   >
     <span
-      class="cache-1kgo85m-StyledCircle eny0xmn2"
-    />
-  </span>
+      class="test emotion-0 emotion-1"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      />
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Status renders correctly with type="danger" 1`] = `
+exports[`Status > renders correctly with type="danger" 1`] = `
 <DocumentFragment>
-  .cache-1oymmk9-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,7 +101,7 @@ exports[`Status renders correctly with type="danger" 1`] = `
   height: 10px;
 }
 
-.cache-b2epwk-StyledCircle {
+.emotion-2 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -101,19 +109,23 @@ exports[`Status renders correctly with type="danger" 1`] = `
   background-color: #e51963;
 }
 
-<span
-    class="cache-1oymmk9-Container eny0xmn0"
+<div
+    data-testid="testing"
   >
     <span
-      class="cache-b2epwk-StyledCircle eny0xmn2"
-    />
-  </span>
+      class="emotion-0 emotion-1"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      />
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Status renders correctly with type="info" 1`] = `
+exports[`Status > renders correctly with type="info" 1`] = `
 <DocumentFragment>
-  .cache-1oymmk9-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -122,7 +134,7 @@ exports[`Status renders correctly with type="info" 1`] = `
   height: 10px;
 }
 
-.cache-3mqsje-StyledCircle {
+.emotion-2 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -130,19 +142,23 @@ exports[`Status renders correctly with type="info" 1`] = `
   background-color: #0078d2;
 }
 
-<span
-    class="cache-1oymmk9-Container eny0xmn0"
+<div
+    data-testid="testing"
   >
     <span
-      class="cache-3mqsje-StyledCircle eny0xmn2"
-    />
-  </span>
+      class="emotion-0 emotion-1"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      />
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Status renders correctly with type="neutral" 1`] = `
+exports[`Status > renders correctly with type="neutral" 1`] = `
 <DocumentFragment>
-  .cache-1oymmk9-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,7 +167,7 @@ exports[`Status renders correctly with type="neutral" 1`] = `
   height: 10px;
 }
 
-.cache-197fzv5-StyledCircle {
+.emotion-2 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -159,19 +175,23 @@ exports[`Status renders correctly with type="neutral" 1`] = `
   background-color: #151a2d;
 }
 
-<span
-    class="cache-1oymmk9-Container eny0xmn0"
+<div
+    data-testid="testing"
   >
     <span
-      class="cache-197fzv5-StyledCircle eny0xmn2"
-    />
-  </span>
+      class="emotion-0 emotion-1"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      />
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Status renders correctly with type="success" 1`] = `
+exports[`Status > renders correctly with type="success" 1`] = `
 <DocumentFragment>
-  .cache-1oymmk9-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,7 +200,7 @@ exports[`Status renders correctly with type="success" 1`] = `
   height: 10px;
 }
 
-.cache-1kgo85m-StyledCircle {
+.emotion-2 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -188,19 +208,23 @@ exports[`Status renders correctly with type="success" 1`] = `
   background-color: #2c8564;
 }
 
-<span
-    class="cache-1oymmk9-Container eny0xmn0"
+<div
+    data-testid="testing"
   >
     <span
-      class="cache-1kgo85m-StyledCircle eny0xmn2"
-    />
-  </span>
+      class="emotion-0 emotion-1"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      />
+    </span>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Status renders correctly with type="warning" 1`] = `
+exports[`Status > renders correctly with type="warning" 1`] = `
 <DocumentFragment>
-  .cache-1oymmk9-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,7 +233,7 @@ exports[`Status renders correctly with type="warning" 1`] = `
   height: 10px;
 }
 
-.cache-p1a4wa-StyledCircle {
+.emotion-2 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -217,12 +241,16 @@ exports[`Status renders correctly with type="warning" 1`] = `
   background-color: #fbc600;
 }
 
-<span
-    class="cache-1oymmk9-Container eny0xmn0"
+<div
+    data-testid="testing"
   >
     <span
-      class="cache-p1a4wa-StyledCircle eny0xmn2"
-    />
-  </span>
+      class="emotion-0 emotion-1"
+    >
+      <span
+        class="emotion-2 emotion-3"
+      />
+    </span>
+  </div>
 </DocumentFragment>
 `;

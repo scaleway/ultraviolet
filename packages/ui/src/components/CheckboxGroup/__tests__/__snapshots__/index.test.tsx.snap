@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`CheckboxGroup renders correctly 1`] = `
+exports[`CheckboxGroup > renders correctly 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,13 +25,13 @@ exports[`CheckboxGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +54,7 @@ exports[`CheckboxGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -65,7 +65,7 @@ exports[`CheckboxGroup renders correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox {
+.emotion-11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -78,65 +78,65 @@ exports[`CheckboxGroup renders correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq3 {
+.emotion-11 .emotion-24 {
   cursor: pointer;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq3 {
+.emotion-11[aria-disabled='true'] .emotion-24 {
   cursor: not-allowed;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-16 {
   fill: #e9eaeb;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-16 .emotion-18 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 path {
+.emotion-11 .emotion-14:checked+.emotion-16 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -150,66 +150,66 @@ exports[`CheckboxGroup renders correctly 1`] = `
   transform: translate(2px, 2px);
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14:checked+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox label {
+.emotion-11 label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.cache-1jd075o-CheckboxInput {
+.emotion-13 {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -218,57 +218,57 @@ exports[`CheckboxGroup renders correctly 1`] = `
   border-width: 0;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled) {
+.emotion-13:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-1jd075o-CheckboxInput:disabled {
+.emotion-13:disabled {
   cursor: not-allowed;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled):checked+.emotion-16,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 {
   fill: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled):checked+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 .emotion-18 {
   stroke: #b3144d;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 {
+.emotion-13:focus+.emotion-16 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:focus+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1acemqq-StyledIcon {
+.emotion-15 {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -276,7 +276,7 @@ exports[`CheckboxGroup renders correctly 1`] = `
   min-height: 24px;
 }
 
-.cache-1acemqq-StyledIcon path {
+.emotion-15 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -288,12 +288,12 @@ exports[`CheckboxGroup renders correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-1t9py5o-InnerCheckbox {
+.emotion-17 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.cache-10ivylf-Stack {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -319,7 +319,7 @@ exports[`CheckboxGroup renders correctly 1`] = `
   flex: 1;
 }
 
-.cache-17l4vsh-Stack {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -345,153 +345,157 @@ exports[`CheckboxGroup renders correctly 1`] = `
   flex: 1;
 }
 
-.cache-9k0c1e-StyledLabel {
+.emotion-23 {
   width: 100%;
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1k5uyng1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-gw33n2-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":r1:"
-              name="Checkbox.value-1"
-              type="checkbox"
-              value="value-1"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
+            Label 
+          </legend>
+          <div
+            class="emotion-0 emotion-1"
+          >
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":r1:"
+                name="Checkbox.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":r1:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 1
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":r1:"
+                  >
+                    Checkbox 1
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
-          >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":r3:"
-              name="Checkbox.value-2"
-              type="checkbox"
-              value="value-2"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":r3:"
+                name="Checkbox.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":r3:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 2
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":r3:"
+                  >
+                    Checkbox 2
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`CheckboxGroup renders correctly with direction row 1`] = `
+exports[`CheckboxGroup > renders correctly with direction row 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -514,13 +518,13 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -543,7 +547,7 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -554,7 +558,7 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   text-decoration: none;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -577,7 +581,7 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox {
+.emotion-11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -590,65 +594,65 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   gap: 8px;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq3 {
+.emotion-11 .emotion-24 {
   cursor: pointer;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq3 {
+.emotion-11[aria-disabled='true'] .emotion-24 {
   cursor: not-allowed;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-16 {
   fill: #e9eaeb;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-16 .emotion-18 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 path {
+.emotion-11 .emotion-14:checked+.emotion-16 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -662,66 +666,66 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   transform: translate(2px, 2px);
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14:checked+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox label {
+.emotion-11 label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.cache-1jd075o-CheckboxInput {
+.emotion-13 {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -730,57 +734,57 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   border-width: 0;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled) {
+.emotion-13:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-1jd075o-CheckboxInput:disabled {
+.emotion-13:disabled {
   cursor: not-allowed;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled):checked+.emotion-16,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 {
   fill: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled):checked+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 .emotion-18 {
   stroke: #b3144d;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 {
+.emotion-13:focus+.emotion-16 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:focus+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1acemqq-StyledIcon {
+.emotion-15 {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -788,7 +792,7 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   min-height: 24px;
 }
 
-.cache-1acemqq-StyledIcon path {
+.emotion-15 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -800,12 +804,12 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   transform: scale(0);
 }
 
-.cache-1t9py5o-InnerCheckbox {
+.emotion-17 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.cache-10ivylf-Stack {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -831,7 +835,7 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   flex: 1;
 }
 
-.cache-17l4vsh-Stack {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -857,153 +861,157 @@ exports[`CheckboxGroup renders correctly with direction row 1`] = `
   flex: 1;
 }
 
-.cache-9k0c1e-StyledLabel {
+.emotion-23 {
   width: 100%;
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1k5uyng1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":rb:"
-              name="Checkbox.value-1"
-              type="checkbox"
-              value="value-1"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
+            Label 
+          </legend>
+          <div
+            class="emotion-8 emotion-1"
+          >
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":rb:"
+                name="Checkbox.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":rb:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 1
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":rb:"
+                  >
+                    Checkbox 1
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
-          >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":rd:"
-              name="Checkbox.value-2"
-              type="checkbox"
-              value="value-2"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":rd:"
+                name="Checkbox.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":rd:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 2
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":rd:"
+                  >
+                    Checkbox 2
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`CheckboxGroup renders correctly with error content 1`] = `
+exports[`CheckboxGroup > renders correctly with error content 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1026,13 +1034,13 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1055,7 +1063,7 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -1066,7 +1074,7 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   text-decoration: none;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox {
+.emotion-11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1079,65 +1087,65 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   gap: 8px;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq3 {
+.emotion-11 .emotion-24 {
   cursor: pointer;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq3 {
+.emotion-11[aria-disabled='true'] .emotion-24 {
   cursor: not-allowed;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-16 {
   fill: #e9eaeb;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-16 .emotion-18 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 path {
+.emotion-11 .emotion-14:checked+.emotion-16 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1151,66 +1159,66 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   transform: translate(2px, 2px);
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14:checked+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox label {
+.emotion-11 label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.cache-1jd075o-CheckboxInput {
+.emotion-13 {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -1219,57 +1227,57 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   border-width: 0;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled) {
+.emotion-13:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-1jd075o-CheckboxInput:disabled {
+.emotion-13:disabled {
   cursor: not-allowed;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled):checked+.emotion-16,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 {
   fill: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled):checked+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 .emotion-18 {
   stroke: #b3144d;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 {
+.emotion-13:focus+.emotion-16 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:focus+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1acemqq-StyledIcon {
+.emotion-15 {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1277,7 +1285,7 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   min-height: 24px;
 }
 
-.cache-1acemqq-StyledIcon path {
+.emotion-15 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -1289,12 +1297,12 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   transform: scale(0);
 }
 
-.cache-1t9py5o-InnerCheckbox {
+.emotion-17 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.cache-10ivylf-Stack {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1320,7 +1328,7 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   flex: 1;
 }
 
-.cache-17l4vsh-Stack {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1346,11 +1354,11 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
   flex: 1;
 }
 
-.cache-9k0c1e-StyledLabel {
+.emotion-23 {
   width: 100%;
 }
 
-.cache-vdlwt8-StyledText {
+.emotion-40 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -1363,153 +1371,157 @@ exports[`CheckboxGroup renders correctly with error content 1`] = `
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1k5uyng1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-gw33n2-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":rm:"
-              name="Checkbox.value-1"
-              type="checkbox"
-              value="value-1"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
+            Label 
+          </legend>
+          <div
+            class="emotion-0 emotion-1"
+          >
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":rm:"
+                name="Checkbox.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":rm:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 1
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":rm:"
+                  >
+                    Checkbox 1
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
-          >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":ro:"
-              name="Checkbox.value-2"
-              type="checkbox"
-              value="value-2"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":ro:"
+                name="Checkbox.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":ro:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 2
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":ro:"
+                  >
+                    Checkbox 2
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </fieldset>
-    <span
-      class="cache-vdlwt8-StyledText e13y3mga0"
-    >
-      Eror content
-    </span>
+      </fieldset>
+      <span
+        class="emotion-40 emotion-7"
+      >
+        Eror content
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`CheckboxGroup renders correctly with helper content 1`] = `
+exports[`CheckboxGroup > renders correctly with helper content 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1532,13 +1544,13 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1561,7 +1573,7 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -1572,7 +1584,7 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   text-decoration: none;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox {
+.emotion-11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1585,65 +1597,65 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   gap: 8px;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq3 {
+.emotion-11 .emotion-24 {
   cursor: pointer;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq3 {
+.emotion-11[aria-disabled='true'] .emotion-24 {
   cursor: not-allowed;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-16 {
   fill: #e9eaeb;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-16 .emotion-18 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 path {
+.emotion-11 .emotion-14:checked+.emotion-16 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1657,66 +1669,66 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   transform: translate(2px, 2px);
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14:checked+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox label {
+.emotion-11 label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.cache-1jd075o-CheckboxInput {
+.emotion-13 {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -1725,57 +1737,57 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   border-width: 0;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled) {
+.emotion-13:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-1jd075o-CheckboxInput:disabled {
+.emotion-13:disabled {
   cursor: not-allowed;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled):checked+.emotion-16,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 {
   fill: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled):checked+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 .emotion-18 {
   stroke: #b3144d;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 {
+.emotion-13:focus+.emotion-16 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:focus+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1acemqq-StyledIcon {
+.emotion-15 {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1783,7 +1795,7 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   min-height: 24px;
 }
 
-.cache-1acemqq-StyledIcon path {
+.emotion-15 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -1795,12 +1807,12 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   transform: scale(0);
 }
 
-.cache-1t9py5o-InnerCheckbox {
+.emotion-17 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.cache-10ivylf-Stack {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1826,7 +1838,7 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   flex: 1;
 }
 
-.cache-17l4vsh-Stack {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1852,11 +1864,11 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
   flex: 1;
 }
 
-.cache-9k0c1e-StyledLabel {
+.emotion-23 {
   width: 100%;
 }
 
-.cache-ioay7l-StyledText {
+.emotion-40 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -1869,153 +1881,157 @@ exports[`CheckboxGroup renders correctly with helper content 1`] = `
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1k5uyng1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-gw33n2-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":rg:"
-              name="Checkbox.value-1"
-              type="checkbox"
-              value="value-1"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
+            Label 
+          </legend>
+          <div
+            class="emotion-0 emotion-1"
+          >
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":rg:"
+                name="Checkbox.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":rg:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 1
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":rg:"
+                  >
+                    Checkbox 1
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
-          >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":ri:"
-              name="Checkbox.value-2"
-              type="checkbox"
-              value="value-2"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":ri:"
+                name="Checkbox.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":ri:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 2
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":ri:"
+                  >
+                    Checkbox 2
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </fieldset>
-    <span
-      class="cache-ioay7l-StyledText e13y3mga0"
-    >
-      Helper content
-    </span>
+      </fieldset>
+      <span
+        class="emotion-40 emotion-7"
+      >
+        Helper content
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`] = `
+exports[`CheckboxGroup > renders correctly with no CheckboxGroup.Checkbox name 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2038,13 +2054,13 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2067,7 +2083,7 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -2078,7 +2094,7 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   text-decoration: none;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox {
+.emotion-11 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2091,65 +2107,65 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   gap: 8px;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq3 {
+.emotion-11 .emotion-24 {
   cursor: pointer;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] {
+.emotion-11[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq3 {
+.emotion-11[aria-disabled='true'] .emotion-24 {
   cursor: not-allowed;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-16 {
   fill: #e9eaeb;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-16 .emotion-18 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 {
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14:checked+.emotion-16 .emotion-18 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11[aria-disabled='true'] .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 path {
+.emotion-11 .emotion-14:checked+.emotion-16 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2163,66 +2179,66 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   transform: translate(2px, 2px);
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14:checked+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]:checked+.emotion-16 .emotion-18 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-checked="mixed"]+.emotion-16 .emotion-18 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='false'][aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='false']+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11:hover[aria-disabled='false'] .emotion-14[aria-invalid='true'][aria-checked='true']+.emotion-16 .emotion-18 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 {
   fill: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-11 .emotion-14[aria-invalid="true"]+.emotion-16 .emotion-18 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox label {
+.emotion-11 label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.cache-1jd075o-CheckboxInput {
+.emotion-13 {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -2231,57 +2247,57 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   border-width: 0;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled) {
+.emotion-13:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-1jd075o-CheckboxInput:disabled {
+.emotion-13:disabled {
   cursor: not-allowed;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled):checked+.emotion-16,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 {
   fill: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled):checked+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-checked='mixed']+.emotion-16 .emotion-18 {
   stroke: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 {
   fill: #ffebf2;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:not(:disabled)[aria-invalid='true']+.emotion-16 .emotion-18,
+.emotion-13:not(:disabled)[aria-invalid='mixed']+.emotion-16 .emotion-18 {
   stroke: #b3144d;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 {
+.emotion-13:focus+.emotion-16 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13:focus+.emotion-16 .emotion-18 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-13[aria-invalid='true']:focus+.emotion-16 .emotion-18 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1acemqq-StyledIcon {
+.emotion-15 {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -2289,7 +2305,7 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   min-height: 24px;
 }
 
-.cache-1acemqq-StyledIcon path {
+.emotion-15 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -2301,12 +2317,12 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   transform: scale(0);
 }
 
-.cache-1t9py5o-InnerCheckbox {
+.emotion-17 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.cache-10ivylf-Stack {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2332,7 +2348,7 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   flex: 1;
 }
 
-.cache-17l4vsh-Stack {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2358,153 +2374,157 @@ exports[`CheckboxGroup renders correctly with no CheckboxGroup.Checkbox name 1`]
   flex: 1;
 }
 
-.cache-9k0c1e-StyledLabel {
+.emotion-23 {
   width: 100%;
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1k5uyng1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-gw33n2-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":r6:"
-              name="Checkbox."
-              type="checkbox"
-              value="value-1"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
+            Label 
+          </legend>
+          <div
+            class="emotion-0 emotion-1"
+          >
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":r6:"
+                name="Checkbox."
+                type="checkbox"
+                value="value-1"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":r6:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 1
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":r6:"
+                  >
+                    Checkbox 1
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
-          >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":r8:"
-              name="Checkbox."
-              type="checkbox"
-              value="value-2"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-10 emotion-11 emotion-12"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-13 emotion-14"
+                id=":r8:"
+                name="Checkbox."
+                type="checkbox"
+                value="value-2"
+              />
+              <svg
+                class="emotion-15 emotion-16"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":r8:"
+                <g>
+                  <rect
+                    class="emotion-17 emotion-18"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-19 emotion-1"
+              >
+                <div
+                  class="emotion-21 emotion-1"
                 >
-                  Checkbox 2
-                </label>
+                  <label
+                    class="emotion-23 emotion-24"
+                    for=":r8:"
+                  >
+                    Checkbox 2
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`CheckboxGroup renders correctly with required prop 1`] = `
+exports[`CheckboxGroup > renders correctly with required prop 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2527,13 +2547,13 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2556,7 +2576,7 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -2567,7 +2587,7 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   text-decoration: none;
 }
 
-.cache-c9vmsg-StyledIcon-sizeStyles-StyledRequiredIcon {
+.emotion-9 {
   vertical-align: middle;
   fill: #b3144d;
   height: 8px;
@@ -2577,12 +2597,12 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   vertical-align: super;
 }
 
-.cache-c9vmsg-StyledIcon-sizeStyles-StyledRequiredIcon .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox {
+.emotion-14 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2595,65 +2615,65 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   gap: 8px;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq3 {
+.emotion-14 .emotion-27 {
   cursor: pointer;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] {
+.emotion-14[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq3 {
+.emotion-14[aria-disabled='true'] .emotion-27 {
   cursor: not-allowed;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 {
+.emotion-14[aria-disabled='true'] .emotion-19 {
   fill: #e9eaeb;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+.emotion-14[aria-disabled='true'] .emotion-19 .emotion-21 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 {
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 {
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14[aria-disabled='true'] .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14[aria-disabled='true'] .emotion-17:checked+.emotion-19 .emotion-21 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 {
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14[aria-disabled='true'] .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 path {
+.emotion-14 .emotion-17:checked+.emotion-19 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2667,66 +2687,66 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   transform: translate(2px, 2px);
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14 .emotion-17:checked+.emotion-19 .emotion-21 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14 .emotion-17[aria-invalid="true"]:checked+.emotion-19 .emotion-21 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .eqr7bqq5 {
   fill: #ffffff;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14 .emotion-17[aria-checked="mixed"]+.emotion-19 .emotion-21 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='false']+.emotion-19 .emotion-21 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='true']+.emotion-19 .emotion-21 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='false'][aria-checked='mixed']+.emotion-19 .emotion-21 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='false']+.emotion-19 .emotion-21 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='true']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14:hover[aria-disabled='false'] .emotion-17[aria-invalid='true'][aria-checked='true']+.emotion-19 .emotion-21 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 {
   fill: #e51963;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+.emotion-14 .emotion-17[aria-invalid="true"]+.emotion-19 .emotion-21 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-1kksioj-CheckboxContainer-StyledCheckbox label {
+.emotion-14 label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.cache-1jd075o-CheckboxInput {
+.emotion-16 {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -2735,57 +2755,57 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   border-width: 0;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled) {
+.emotion-16:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-1jd075o-CheckboxInput:disabled {
+.emotion-16:disabled {
   cursor: not-allowed;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
+.emotion-16:not(:disabled):checked+.emotion-19,
+.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 {
   fill: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-16:not(:disabled):checked+.emotion-19 .emotion-21,
+.emotion-16:not(:disabled)[aria-checked='mixed']+.emotion-19 .emotion-21 {
   stroke: #8c40ef;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
+.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19,
+.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 {
   fill: #ffebf2;
 }
 
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
-.cache-1jd075o-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.emotion-16:not(:disabled)[aria-invalid='true']+.emotion-19 .emotion-21,
+.emotion-16:not(:disabled)[aria-invalid='mixed']+.emotion-19 .emotion-21 {
   stroke: #b3144d;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 {
+.emotion-16:focus+.emotion-19 {
   background-color: #f1eefc;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1jd075o-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-16:focus+.emotion-19 .emotion-21 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 {
   background-color: #ffebf2;
   fill: #ffebf2;
   outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1jd075o-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+.emotion-16[aria-invalid='true']:focus+.emotion-19 .emotion-21 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.cache-1acemqq-StyledIcon {
+.emotion-18 {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -2793,7 +2813,7 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   min-height: 24px;
 }
 
-.cache-1acemqq-StyledIcon path {
+.emotion-18 path {
   fill: #ffffff;
   -webkit-transform: translate(2px, 2px);
   -moz-transform: translate(2px, 2px);
@@ -2805,12 +2825,12 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   transform: scale(0);
 }
 
-.cache-1t9py5o-InnerCheckbox {
+.emotion-20 {
   fill: #ffffff;
   stroke: #d9dadd;
 }
 
-.cache-10ivylf-Stack {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2836,7 +2856,7 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   flex: 1;
 }
 
-.cache-17l4vsh-Stack {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2862,155 +2882,159 @@ exports[`CheckboxGroup renders correctly with required prop 1`] = `
   flex: 1;
 }
 
-.cache-9k0c1e-StyledLabel {
+.emotion-26 {
   width: 100%;
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1k5uyng1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-          <svg
-            class="e1k5uyng0 cache-c9vmsg-StyledIcon-sizeStyles-StyledRequiredIcon e1gt4cfo0"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-            />
-          </svg>
-        </legend>
         <div
-          class="cache-gw33n2-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":rs:"
-              name="Checkbox.value-1"
-              type="checkbox"
-              value="value-1"
-            />
+            Label 
             <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
+              class="emotion-8 emotion-9 emotion-10"
               viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
+              <path
+                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
+              />
             </svg>
+          </legend>
+          <div
+            class="emotion-0 emotion-1"
+          >
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-13 emotion-14 emotion-15"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-16 emotion-17"
+                id=":rs:"
+                name="Checkbox.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+              <svg
+                class="emotion-18 emotion-19"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":rs:"
+                <g>
+                  <rect
+                    class="emotion-20 emotion-21"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-22 emotion-1"
+              >
+                <div
+                  class="emotion-24 emotion-1"
                 >
-                  Checkbox 1
-                </label>
+                  <label
+                    class="emotion-26 emotion-27"
+                    for=":rs:"
+                  >
+                    Checkbox 1
+                  </label>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            aria-disabled="false"
-            class="e1k5uyng2 cache-1kksioj-CheckboxContainer-StyledCheckbox eqr7bqq1"
-            data-checked="false"
-            data-error="false"
-          >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-1jd075o-CheckboxInput eqr7bqq2"
-              id=":ru:"
-              name="Checkbox.value-2"
-              type="checkbox"
-              value="value-2"
-            />
-            <svg
-              class="cache-1acemqq-StyledIcon eqr7bqq4"
-              fill="none"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                  height="16"
-                  rx="2px"
-                  stroke-width="2"
-                  width="16"
-                  x="4"
-                  y="4"
-                />
-                <path
-                  clip-rule="evenodd"
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                  fill-rule="evenodd"
-                  height="9"
-                  width="12"
-                  x="5"
-                  y="4"
-                />
-              </g>
-            </svg>
             <div
-              class="cache-10ivylf-Stack ehpbis70"
+              aria-disabled="false"
+              class="emotion-13 emotion-14 emotion-15"
+              data-checked="false"
+              data-error="false"
             >
-              <div
-                class="cache-17l4vsh-Stack ehpbis70"
+              <input
+                aria-checked="false"
+                aria-invalid="false"
+                class="emotion-16 emotion-17"
+                id=":ru:"
+                name="Checkbox.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+              <svg
+                class="emotion-18 emotion-19"
+                fill="none"
+                size="24"
+                viewBox="0 0 24 24"
               >
-                <label
-                  class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                  for=":ru:"
+                <g>
+                  <rect
+                    class="emotion-20 emotion-21"
+                    height="16"
+                    rx="2px"
+                    stroke-width="2"
+                    width="16"
+                    x="4"
+                    y="4"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                    fill-rule="evenodd"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
+                  />
+                </g>
+              </svg>
+              <div
+                class="emotion-22 emotion-1"
+              >
+                <div
+                  class="emotion-24 emotion-1"
                 >
-                  Checkbox 2
-                </label>
+                  <label
+                    class="emotion-26 emotion-27"
+                    for=":ru:"
+                  >
+                    Checkbox 2
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;

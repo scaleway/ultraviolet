@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SubmitErrorAlert should display an alert when submitError is present 1`] = `
+exports[`SubmitErrorAlert > should display an alert when submitError is present 1`] = `
 <DocumentFragment>
-  .cache-1wcjqa-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -43,12 +43,12 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   color: #ffffff;
 }
 
-.cache-1wcjqa-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-11mx9hk-Stack-StyledStackContainer-alertStyles {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,7 +76,7 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   border-left: 4px solid #b3144d;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,7 +103,7 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,7 +126,7 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-8 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -135,12 +135,12 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -168,7 +168,7 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-12 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -179,57 +179,65 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   text-decoration: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <button
-      class="cache-1wcjqa-StyledFilledButton e112qvla2"
-      disabled=""
-      type="submit"
+    <form
+      novalidate=""
     >
-      Submit
-    </button>
-    <div
-      class="cache-11mx9hk-Stack-StyledStackContainer-alertStyles e17p0ih04"
-    >
+      <button
+        class="emotion-0 emotion-1"
+        disabled=""
+        type="submit"
+      >
+        Submit
+      </button>
       <div
-        class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-102e6lf-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
-          <svg
-            class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-              fill-rule="evenodd"
-            />
-          </svg>
           <div
-            class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+            class="emotion-6 emotion-7"
           >
-            <p
-              class="cache-1e8qouo-StyledText e13y3mga0"
+            <svg
+              class="emotion-8 emotion-9"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              hello
-            </p>
+              <path
+                clip-rule="evenodd"
+                d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <div
+              class="emotion-10 emotion-11"
+            >
+              <p
+                class="emotion-12 emotion-13"
+              >
+                hello
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    ,
-  </form>
+      ,
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`SubmitErrorAlert should render nothing if no error 1`] = `
+exports[`SubmitErrorAlert > should render nothing if no error 1`] = `
 <DocumentFragment>
-  <form
-    novalidate=""
-  />
+  <div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+    />
+  </div>
 </DocumentFragment>
 `;

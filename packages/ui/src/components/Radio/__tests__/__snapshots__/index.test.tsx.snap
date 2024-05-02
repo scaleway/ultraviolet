@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Radio renders correctly 1`] = `
+exports[`Radio > renders correctly 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +25,7 @@ exports[`Radio renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r0p235-RadioContainer {
+.emotion-2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -41,50 +41,50 @@ exports[`Radio renders correctly 1`] = `
   gap: 8px;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='false'],
-.cache-r0p235-RadioContainer[aria-disabled='false']>label {
+.emotion-2[aria-disabled='false'],
+.emotion-2[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.emotion-2[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
   fill: #e5dbfd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
   fill: #b3144d;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
   fill: #ffd3e3;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] {
+.emotion-2[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true']>label,
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.emotion-2[aria-disabled='true']>label,
+.emotion-2[aria-disabled='true'] .emotion-5 {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.emotion-2[aria-disabled='true'] .emotion-7 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
   fill: #f3f3f4;
 }
 
-.cache-1ghsgz8-RadioInput {
+.emotion-4 {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -94,7 +94,7 @@ exports[`Radio renders correctly 1`] = `
   border-width: 0;
 }
 
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.emotion-4+.emotion-7 .emotion-11 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -104,44 +104,44 @@ exports[`Radio renders correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.emotion-4:checked+svg .emotion-11 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
   fill: #f1eefc;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
   fill: #ffebf2;
 }
 
-.cache-1dyk1l0-Ring {
+.emotion-6 {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -150,72 +150,76 @@ exports[`Radio renders correctly 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1dyk1l0-Ring .ehkrmld6 {
+.emotion-6 .emotion-9 {
   fill: #ffffff;
 }
 
-.cache-shj57p-StyledLabel {
+.emotion-12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      aria-disabled="false"
-      class="cache-r0p235-RadioContainer ehkrmld2"
-      data-checked="false"
+      class="emotion-0 emotion-1"
     >
-      <input
+      <div
         aria-disabled="false"
-        aria-invalid="false"
-        class="cache-1ghsgz8-RadioInput ehkrmld3"
-        id="radio-choice"
-        name="radio"
-        type="radio"
-        value="choice"
-      />
-      <svg
-        class="cache-1dyk1l0-Ring ehkrmld4"
-        viewBox="0 0 24 24"
+        class="emotion-2 emotion-3"
+        data-checked="false"
       >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-            cx="12"
-            cy="12"
-            r="8"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark ehkrmld5"
-            cx="12"
-            cy="12"
-            r="5"
-          />
-        </g>
-      </svg>
-      <label
-        class="cache-shj57p-StyledLabel ehkrmld1"
-        for="radio-choice"
-      >
-        Choice
-      </label>
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          class="emotion-4 emotion-5"
+          id="radio-choice"
+          name="radio"
+          type="radio"
+          value="choice"
+        />
+        <svg
+          class="emotion-6 emotion-7"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke-width="2"
+            />
+            <circle
+              class="emotion-8 emotion-9"
+              cx="12"
+              cy="12"
+              r="8"
+            />
+            <circle
+              class="emotion-10 emotion-11"
+              cx="12"
+              cy="12"
+              r="5"
+            />
+          </g>
+        </svg>
+        <label
+          class="emotion-12 emotion-13"
+          for="radio-choice"
+        >
+          Choice
+        </label>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Radio renders correctly when checked 1`] = `
+exports[`Radio > renders correctly when checked 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -238,7 +242,7 @@ exports[`Radio renders correctly when checked 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r0p235-RadioContainer {
+.emotion-2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -254,50 +258,50 @@ exports[`Radio renders correctly when checked 1`] = `
   gap: 8px;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='false'],
-.cache-r0p235-RadioContainer[aria-disabled='false']>label {
+.emotion-2[aria-disabled='false'],
+.emotion-2[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.emotion-2[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
   fill: #e5dbfd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
   fill: #b3144d;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
   fill: #ffd3e3;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] {
+.emotion-2[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true']>label,
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.emotion-2[aria-disabled='true']>label,
+.emotion-2[aria-disabled='true'] .emotion-5 {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.emotion-2[aria-disabled='true'] .emotion-7 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
   fill: #f3f3f4;
 }
 
-.cache-1ghsgz8-RadioInput {
+.emotion-4 {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -307,7 +311,7 @@ exports[`Radio renders correctly when checked 1`] = `
   border-width: 0;
 }
 
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.emotion-4+.emotion-7 .emotion-11 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -317,44 +321,44 @@ exports[`Radio renders correctly when checked 1`] = `
   transform: scale(0);
 }
 
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.emotion-4:checked+svg .emotion-11 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
   fill: #f1eefc;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
   fill: #ffebf2;
 }
 
-.cache-1dyk1l0-Ring {
+.emotion-6 {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -363,73 +367,77 @@ exports[`Radio renders correctly when checked 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1dyk1l0-Ring .ehkrmld6 {
+.emotion-6 .emotion-9 {
   fill: #ffffff;
 }
 
-.cache-shj57p-StyledLabel {
+.emotion-12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      aria-disabled="false"
-      class="cache-r0p235-RadioContainer ehkrmld2"
-      data-checked="true"
+      class="emotion-0 emotion-1"
     >
-      <input
+      <div
         aria-disabled="false"
-        aria-invalid="false"
-        checked=""
-        class="cache-1ghsgz8-RadioInput ehkrmld3"
-        id="radio-choice"
-        name="radio"
-        type="radio"
-        value="choice"
-      />
-      <svg
-        class="cache-1dyk1l0-Ring ehkrmld4"
-        viewBox="0 0 24 24"
+        class="emotion-2 emotion-3"
+        data-checked="true"
       >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-            cx="12"
-            cy="12"
-            r="8"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark ehkrmld5"
-            cx="12"
-            cy="12"
-            r="5"
-          />
-        </g>
-      </svg>
-      <label
-        class="cache-shj57p-StyledLabel ehkrmld1"
-        for="radio-choice"
-      >
-        Choice
-      </label>
+        <input
+          aria-disabled="false"
+          aria-invalid="false"
+          checked=""
+          class="emotion-4 emotion-5"
+          id="radio-choice"
+          name="radio"
+          type="radio"
+          value="choice"
+        />
+        <svg
+          class="emotion-6 emotion-7"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke-width="2"
+            />
+            <circle
+              class="emotion-8 emotion-9"
+              cx="12"
+              cy="12"
+              r="8"
+            />
+            <circle
+              class="emotion-10 emotion-11"
+              cx="12"
+              cy="12"
+              r="5"
+            />
+          </g>
+        </svg>
+        <label
+          class="emotion-12 emotion-13"
+          for="radio-choice"
+        >
+          Choice
+        </label>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Radio renders correctly when disabled 1`] = `
+exports[`Radio > renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -452,7 +460,7 @@ exports[`Radio renders correctly when disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r0p235-RadioContainer {
+.emotion-2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -468,50 +476,50 @@ exports[`Radio renders correctly when disabled 1`] = `
   gap: 8px;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='false'],
-.cache-r0p235-RadioContainer[aria-disabled='false']>label {
+.emotion-2[aria-disabled='false'],
+.emotion-2[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.emotion-2[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
   fill: #e5dbfd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
   fill: #b3144d;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
   fill: #ffd3e3;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] {
+.emotion-2[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true']>label,
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.emotion-2[aria-disabled='true']>label,
+.emotion-2[aria-disabled='true'] .emotion-5 {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.emotion-2[aria-disabled='true'] .emotion-7 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
   fill: #f3f3f4;
 }
 
-.cache-1ghsgz8-RadioInput {
+.emotion-4 {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -521,7 +529,7 @@ exports[`Radio renders correctly when disabled 1`] = `
   border-width: 0;
 }
 
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.emotion-4+.emotion-7 .emotion-11 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -531,44 +539,44 @@ exports[`Radio renders correctly when disabled 1`] = `
   transform: scale(0);
 }
 
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.emotion-4:checked+svg .emotion-11 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
   fill: #f1eefc;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
   fill: #ffebf2;
 }
 
-.cache-1dyk1l0-Ring {
+.emotion-6 {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -577,73 +585,77 @@ exports[`Radio renders correctly when disabled 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1dyk1l0-Ring .ehkrmld6 {
+.emotion-6 .emotion-9 {
   fill: #ffffff;
 }
 
-.cache-shj57p-StyledLabel {
+.emotion-12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      aria-disabled="true"
-      class="cache-r0p235-RadioContainer ehkrmld2"
-      data-checked="false"
+      class="emotion-0 emotion-1"
     >
-      <input
+      <div
         aria-disabled="true"
-        aria-invalid="false"
-        class="cache-1ghsgz8-RadioInput ehkrmld3"
-        disabled=""
-        id="radio-choice"
-        name="radio"
-        type="radio"
-        value="choice"
-      />
-      <svg
-        class="cache-1dyk1l0-Ring ehkrmld4"
-        viewBox="0 0 24 24"
+        class="emotion-2 emotion-3"
+        data-checked="false"
       >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-            cx="12"
-            cy="12"
-            r="8"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark ehkrmld5"
-            cx="12"
-            cy="12"
-            r="5"
-          />
-        </g>
-      </svg>
-      <label
-        class="cache-shj57p-StyledLabel ehkrmld1"
-        for="radio-choice"
-      >
-        Choice
-      </label>
+        <input
+          aria-disabled="true"
+          aria-invalid="false"
+          class="emotion-4 emotion-5"
+          disabled=""
+          id="radio-choice"
+          name="radio"
+          type="radio"
+          value="choice"
+        />
+        <svg
+          class="emotion-6 emotion-7"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke-width="2"
+            />
+            <circle
+              class="emotion-8 emotion-9"
+              cx="12"
+              cy="12"
+              r="8"
+            />
+            <circle
+              class="emotion-10 emotion-11"
+              cx="12"
+              cy="12"
+              r="5"
+            />
+          </g>
+        </svg>
+        <label
+          class="emotion-12 emotion-13"
+          for="radio-choice"
+        >
+          Choice
+        </label>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Radio renders correctly when error 1`] = `
+exports[`Radio > renders correctly when error 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -666,7 +678,7 @@ exports[`Radio renders correctly when error 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r0p235-RadioContainer {
+.emotion-2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -682,50 +694,50 @@ exports[`Radio renders correctly when error 1`] = `
   gap: 8px;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='false'],
-.cache-r0p235-RadioContainer[aria-disabled='false']>label {
+.emotion-2[aria-disabled='false'],
+.emotion-2[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.emotion-2[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
   fill: #e5dbfd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
   fill: #b3144d;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
   fill: #ffd3e3;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] {
+.emotion-2[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true']>label,
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.emotion-2[aria-disabled='true']>label,
+.emotion-2[aria-disabled='true'] .emotion-5 {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.emotion-2[aria-disabled='true'] .emotion-7 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
   fill: #f3f3f4;
 }
 
-.cache-1ghsgz8-RadioInput {
+.emotion-4 {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -735,7 +747,7 @@ exports[`Radio renders correctly when error 1`] = `
   border-width: 0;
 }
 
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.emotion-4+.emotion-7 .emotion-11 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -745,44 +757,44 @@ exports[`Radio renders correctly when error 1`] = `
   transform: scale(0);
 }
 
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.emotion-4:checked+svg .emotion-11 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
   fill: #f1eefc;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
   fill: #ffebf2;
 }
 
-.cache-1dyk1l0-Ring {
+.emotion-6 {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -791,73 +803,77 @@ exports[`Radio renders correctly when error 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1dyk1l0-Ring .ehkrmld6 {
+.emotion-6 .emotion-9 {
   fill: #ffffff;
 }
 
-.cache-shj57p-StyledLabel {
+.emotion-12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      aria-disabled="false"
-      class="cache-r0p235-RadioContainer ehkrmld2"
-      data-checked="false"
-      data-error="Invalid value"
+      class="emotion-0 emotion-1"
     >
-      <input
+      <div
         aria-disabled="false"
-        aria-invalid="true"
-        class="cache-1ghsgz8-RadioInput ehkrmld3"
-        id="radio-choice"
-        name="radio"
-        type="radio"
-        value="choice"
-      />
-      <svg
-        class="cache-1dyk1l0-Ring ehkrmld4"
-        viewBox="0 0 24 24"
+        class="emotion-2 emotion-3"
+        data-checked="false"
+        data-error="Invalid value"
       >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-            cx="12"
-            cy="12"
-            r="8"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark ehkrmld5"
-            cx="12"
-            cy="12"
-            r="5"
-          />
-        </g>
-      </svg>
-      <label
-        class="cache-shj57p-StyledLabel ehkrmld1"
-        for="radio-choice"
-      >
-        Choice
-      </label>
+        <input
+          aria-disabled="false"
+          aria-invalid="true"
+          class="emotion-4 emotion-5"
+          id="radio-choice"
+          name="radio"
+          type="radio"
+          value="choice"
+        />
+        <svg
+          class="emotion-6 emotion-7"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke-width="2"
+            />
+            <circle
+              class="emotion-8 emotion-9"
+              cx="12"
+              cy="12"
+              r="8"
+            />
+            <circle
+              class="emotion-10 emotion-11"
+              cx="12"
+              cy="12"
+              r="5"
+            />
+          </g>
+        </svg>
+        <label
+          class="emotion-12 emotion-13"
+          for="radio-choice"
+        >
+          Choice
+        </label>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Radio renders correctly when helper 1`] = `
+exports[`Radio > renders correctly when helper 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -880,7 +896,7 @@ exports[`Radio renders correctly when helper 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r0p235-RadioContainer {
+.emotion-2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -896,50 +912,50 @@ exports[`Radio renders correctly when helper 1`] = `
   gap: 8px;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='false'],
-.cache-r0p235-RadioContainer[aria-disabled='false']>label {
+.emotion-2[aria-disabled='false'],
+.emotion-2[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.emotion-2[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
   fill: #e5dbfd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
   fill: #b3144d;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
   fill: #ffd3e3;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] {
+.emotion-2[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true']>label,
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.emotion-2[aria-disabled='true']>label,
+.emotion-2[aria-disabled='true'] .emotion-5 {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.emotion-2[aria-disabled='true'] .emotion-7 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
   fill: #f3f3f4;
 }
 
-.cache-1ghsgz8-RadioInput {
+.emotion-4 {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -949,7 +965,7 @@ exports[`Radio renders correctly when helper 1`] = `
   border-width: 0;
 }
 
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.emotion-4+.emotion-7 .emotion-11 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -959,44 +975,44 @@ exports[`Radio renders correctly when helper 1`] = `
   transform: scale(0);
 }
 
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.emotion-4:checked+svg .emotion-11 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
   fill: #f1eefc;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
   fill: #ffebf2;
 }
 
-.cache-1dyk1l0-Ring {
+.emotion-6 {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -1005,17 +1021,17 @@ exports[`Radio renders correctly when helper 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1dyk1l0-Ring .ehkrmld6 {
+.emotion-6 .emotion-9 {
   fill: #ffffff;
 }
 
-.cache-shj57p-StyledLabel {
+.emotion-12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.cache-by24pi-StyledText-MargedText {
+.emotion-15 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -1029,256 +1045,27 @@ exports[`Radio renders correctly when helper 1`] = `
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      aria-disabled="false"
-      class="cache-r0p235-RadioContainer ehkrmld2"
-      data-checked="false"
-    >
-      <input
-        aria-disabled="false"
-        aria-invalid="false"
-        class="cache-1ghsgz8-RadioInput ehkrmld3"
-        id="radio-choice"
-        name="radio"
-        type="radio"
-        value="choice"
-      />
-      <svg
-        class="cache-1dyk1l0-Ring ehkrmld4"
-        viewBox="0 0 24 24"
-      >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-            cx="12"
-            cy="12"
-            r="8"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark ehkrmld5"
-            cx="12"
-            cy="12"
-            r="5"
-          />
-        </g>
-      </svg>
-      <label
-        class="cache-shj57p-StyledLabel ehkrmld1"
-        for="radio-choice"
-      >
-        Choice
-      </label>
-    </div>
-    <span
-      class="ehkrmld0 cache-by24pi-StyledText-MargedText e13y3mga0"
-    >
-      Helper
-    </span>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Radio renders correctly with tooltip 1`] = `
-<DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
-  display: inherit;
-}
-
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
-  width: 100%;
-}
-
-.cache-ymc80m-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-r0p235-RadioContainer {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.cache-r0p235-RadioContainer[aria-disabled='false'],
-.cache-r0p235-RadioContainer[aria-disabled='false']>label {
-  cursor: pointer;
-}
-
-.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
-  fill: #8c40ef;
-}
-
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
-  fill: #e5dbfd;
-}
-
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
-  fill: #b3144d;
-}
-
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
-  fill: #ffd3e3;
-}
-
-.cache-r0p235-RadioContainer[aria-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.cache-r0p235-RadioContainer[aria-disabled='true']>label,
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
-  cursor: not-allowed;
-}
-
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
-  fill: #e9eaeb;
-  cursor: not-allowed;
-}
-
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
-  fill: #f3f3f4;
-}
-
-.cache-1ghsgz8-RadioInput {
-  cursor: pointer;
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
-  fill: #8c40ef;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
-  fill: #e51963;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
-  background-color: #5e127e40;
-  fill: #8c40ef;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
-  fill: #f1eefc;
-}
-
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
-  background-color: #f91b6c40;
-  fill: #e51963;
-}
-
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
-  fill: #ffebf2;
-}
-
-.cache-1dyk1l0-Ring {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: 100%;
-  fill: #d9dadd;
-}
-
-.cache-1dyk1l0-Ring .ehkrmld6 {
-  fill: #ffffff;
-}
-
-.cache-shj57p-StyledLabel {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-<div
-    aria-controls=":r5:"
-    aria-describedby=":r5:"
-    class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
-  >
-    <div
-      class="cache-ymc80m-Stack ehpbis70"
+      class="emotion-0 emotion-1"
     >
       <div
         aria-disabled="false"
-        class="cache-r0p235-RadioContainer ehkrmld2"
+        class="emotion-2 emotion-3"
         data-checked="false"
       >
         <input
           aria-disabled="false"
           aria-invalid="false"
-          class="cache-1ghsgz8-RadioInput ehkrmld3"
+          class="emotion-4 emotion-5"
           id="radio-choice"
           name="radio"
           type="radio"
           value="choice"
         />
         <svg
-          class="cache-1dyk1l0-Ring ehkrmld4"
+          class="emotion-6 emotion-7"
           viewBox="0 0 24 24"
         >
           <g>
@@ -1289,13 +1076,13 @@ exports[`Radio renders correctly with tooltip 1`] = `
               stroke-width="2"
             />
             <circle
-              class="cache-1niv4ql-InnerCircleRing ehkrmld6"
+              class="emotion-8 emotion-9"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="cache-ivayk3-RadioMark ehkrmld5"
+              class="emotion-10 emotion-11"
               cx="12"
               cy="12"
               r="5"
@@ -1303,20 +1090,33 @@ exports[`Radio renders correctly with tooltip 1`] = `
           </g>
         </svg>
         <label
-          class="cache-shj57p-StyledLabel ehkrmld1"
+          class="emotion-12 emotion-13"
           for="radio-choice"
         >
           Choice
         </label>
       </div>
+      <span
+        class="emotion-14 emotion-15 emotion-16"
+      >
+        Helper
+      </span>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Radio renders without name 1`] = `
+exports[`Radio > renders correctly with tooltip 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1339,7 +1139,7 @@ exports[`Radio renders without name 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r0p235-RadioContainer {
+.emotion-4 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1355,50 +1155,50 @@ exports[`Radio renders without name 1`] = `
   gap: 8px;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='false'],
-.cache-r0p235-RadioContainer[aria-disabled='false']>label {
+.emotion-4[aria-disabled='false'],
+.emotion-4[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'][data-checked='false'] {
+.emotion-4[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
+.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 {
   fill: #8c40ef;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
+.emotion-4:hover[aria-disabled='false'] .emotion-7+.emotion-9 .emotion-11 {
   fill: #e5dbfd;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
+.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 {
   fill: #b3144d;
 }
 
-.cache-r0p235-RadioContainer:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
+.emotion-4:hover[aria-disabled='false'] .emotion-7[aria-invalid='true']+.emotion-9 .emotion-11 {
   fill: #ffd3e3;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] {
+.emotion-4[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true']>label,
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld3 {
+.emotion-4[aria-disabled='true']>label,
+.emotion-4[aria-disabled='true'] .emotion-7 {
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 {
+.emotion-4[aria-disabled='true'] .emotion-9 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-r0p235-RadioContainer[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
+.emotion-4[aria-disabled='true'] .emotion-9 .emotion-11 {
   fill: #f3f3f4;
 }
 
-.cache-1ghsgz8-RadioInput {
+.emotion-6 {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -1408,7 +1208,7 @@ exports[`Radio renders without name 1`] = `
   border-width: 0;
 }
 
-.cache-1ghsgz8-RadioInput+.ehkrmld4 .ehkrmld5 {
+.emotion-6+.emotion-9 .emotion-13 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1418,44 +1218,44 @@ exports[`Radio renders without name 1`] = `
   transform: scale(0);
 }
 
-.cache-1ghsgz8-RadioInput:checked+svg .ehkrmld5 {
+.emotion-6:checked+svg .emotion-13 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1ghsgz8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
+.emotion-6:checked[aria-disabled='false'][aria-invalid='false']+.emotion-9 {
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
+.emotion-6[aria-invalid='true']:not([aria-disabled='true'])+.emotion-9 {
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 {
+.emotion-6[aria-disabled='false']:active+.emotion-9 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
+.emotion-6[aria-disabled='false']:active+.emotion-9 .emotion-11 {
   fill: #f1eefc;
 }
 
-.cache-1ghsgz8-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld4 {
+.emotion-6[aria-disabled='false']:focus-visible+.emotion-9 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 {
+.emotion-6[aria-invalid='true']:focus+.emotion-9 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-1ghsgz8-RadioInput[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
+.emotion-6[aria-invalid='true']:focus+.emotion-9 .emotion-11 {
   fill: #ffebf2;
 }
 
-.cache-1dyk1l0-Ring {
+.emotion-8 {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -1464,65 +1264,293 @@ exports[`Radio renders without name 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1dyk1l0-Ring .ehkrmld6 {
+.emotion-8 .emotion-11 {
   fill: #ffffff;
 }
 
-.cache-shj57p-StyledLabel {
+.emotion-14 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
     <div
-      aria-disabled="true"
-      class="cache-r0p235-RadioContainer ehkrmld2"
-      data-checked="false"
+      aria-controls=":r5:"
+      aria-describedby=":r5:"
+      class="emotion-0 emotion-1"
+      tabindex="0"
     >
-      <input
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          aria-disabled="false"
+          class="emotion-4 emotion-5"
+          data-checked="false"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="false"
+            class="emotion-6 emotion-7"
+            id="radio-choice"
+            name="radio"
+            type="radio"
+            value="choice"
+          />
+          <svg
+            class="emotion-8 emotion-9"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke-width="2"
+              />
+              <circle
+                class="emotion-10 emotion-11"
+                cx="12"
+                cy="12"
+                r="8"
+              />
+              <circle
+                class="emotion-12 emotion-13"
+                cx="12"
+                cy="12"
+                r="5"
+              />
+            </g>
+          </svg>
+          <label
+            class="emotion-14 emotion-15"
+            for="radio-choice"
+          >
+            Choice
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Radio > renders without name 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.emotion-2[aria-disabled='false'],
+.emotion-2[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-2[aria-disabled='true'][data-checked='false'] {
+  color: #b5b7bd;
+}
+
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
+  fill: #8c40ef;
+}
+
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
+  fill: #e5dbfd;
+}
+
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
+  fill: #b3144d;
+}
+
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
+  fill: #ffd3e3;
+}
+
+.emotion-2[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-2[aria-disabled='true']>label,
+.emotion-2[aria-disabled='true'] .emotion-5 {
+  cursor: not-allowed;
+}
+
+.emotion-2[aria-disabled='true'] .emotion-7 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
+  fill: #f3f3f4;
+}
+
+.emotion-4 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-4+.emotion-7 .emotion-11 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-4:checked+svg .emotion-11 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
+  fill: #8c40ef;
+}
+
+.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
+  fill: #e51963;
+}
+
+.emotion-4[aria-disabled='false']:active+.emotion-7 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
+  fill: #f1eefc;
+}
+
+.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-4[aria-invalid='true']:focus+.emotion-7 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
+  fill: #ffebf2;
+}
+
+.emotion-6 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-6 .emotion-9 {
+  fill: #ffffff;
+}
+
+.emotion-12 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
         aria-disabled="true"
-        aria-invalid="false"
-        class="cache-1ghsgz8-RadioInput ehkrmld3"
-        disabled=""
-        id=":r6:-choice"
-        name=":r6:"
-        type="radio"
-        value="choice"
-      />
-      <svg
-        class="cache-1dyk1l0-Ring ehkrmld4"
-        viewBox="0 0 24 24"
+        class="emotion-2 emotion-3"
+        data-checked="false"
       >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-1niv4ql-InnerCircleRing ehkrmld6"
-            cx="12"
-            cy="12"
-            r="8"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark ehkrmld5"
-            cx="12"
-            cy="12"
-            r="5"
-          />
-        </g>
-      </svg>
-      <label
-        class="cache-shj57p-StyledLabel ehkrmld1"
-        for=":r6:-choice"
-      >
-        Choice
-      </label>
+        <input
+          aria-disabled="true"
+          aria-invalid="false"
+          class="emotion-4 emotion-5"
+          disabled=""
+          id=":r6:-choice"
+          name=":r6:"
+          type="radio"
+          value="choice"
+        />
+        <svg
+          class="emotion-6 emotion-7"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke-width="2"
+            />
+            <circle
+              class="emotion-8 emotion-9"
+              cx="12"
+              cy="12"
+              r="8"
+            />
+            <circle
+              class="emotion-10 emotion-11"
+              cx="12"
+              cy="12"
+              r="5"
+            />
+          </g>
+        </svg>
+        <label
+          class="emotion-12 emotion-13"
+          for=":r6:-choice"
+        >
+          Choice
+        </label>
+      </div>
     </div>
   </div>
 </DocumentFragment>

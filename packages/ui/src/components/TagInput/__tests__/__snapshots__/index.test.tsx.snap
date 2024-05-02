@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TagInput should renders correctly 1`] = `
+exports[`TagInput > should renders correctly 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +25,7 @@ exports[`TagInput should renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-h4to4s-TagInputContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,35 +39,35 @@ exports[`TagInput should renders correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-h4to4s-TagInputContainer:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-h4to4s-TagInputContainer[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-h4to4s-TagInputContainer[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-h4to4s-TagInputContainer:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-h4to4s-TagInputContainer[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.cache-h4to4s-TagInputContainer[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-bi6n77-DataContainer {
+.emotion-4 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -87,7 +87,7 @@ exports[`TagInput should renders correctly 1`] = `
   flex: 1;
 }
 
-.cache-1cbq1zy-StyledInput {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,46 +103,161 @@ exports[`TagInput should renders correctly 1`] = `
   height: 100%;
 }
 
-.cache-1cbq1zy-StyledInput::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::placeholder {
+.emotion-6::placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 16px;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-h4to4s-TagInputContainer ea7vc6o3"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
-      >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
         <div
-          class="cache-bi6n77-DataContainer ea7vc6o2"
+          class="emotion-2 emotion-3"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
         >
-          <input
-            class="cache-1cbq1zy-StyledInput ea7vc6o0"
-            data-size="large"
-            id=":r0:"
-            type="text"
-            value=""
+          <div
+            class="emotion-4 emotion-5"
+          >
+            <input
+              class="emotion-6 emotion-7"
+              data-size="large"
+              id=":r0:"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TagInput > should renders correctly disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  background-color: #ffffff;
+  padding: calc(12px - 1px) 16px;
+  cursor: text;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-2:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-2[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-2[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-2:hover {
+  border-color: #792dd4;
+}
+
+.emotion-2[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+}
+
+.emotion-2[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-4 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <div
+          class="emotion-2 emotion-3"
+          data-disabled="true"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
+        >
+          <div
+            class="emotion-4 emotion-5"
           />
         </div>
       </div>
@@ -151,9 +266,9 @@ exports[`TagInput should renders correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TagInput should renders correctly disabled 1`] = `
+exports[`TagInput > should renders correctly readOnly 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -176,7 +291,7 @@ exports[`TagInput should renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-h4to4s-TagInputContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -190,35 +305,35 @@ exports[`TagInput should renders correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-h4to4s-TagInputContainer:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-h4to4s-TagInputContainer[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-h4to4s-TagInputContainer[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-h4to4s-TagInputContainer:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-h4to4s-TagInputContainer[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.cache-h4to4s-TagInputContainer[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-bi6n77-DataContainer {
+.emotion-4 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -238,114 +353,7 @@ exports[`TagInput should renders correctly disabled 1`] = `
   flex: 1;
 }
 
-<div
-    class="cache-ymc80m-Stack ehpbis70"
-  >
-    <div>
-      <div
-        class="cache-h4to4s-TagInputContainer ea7vc6o3"
-        data-disabled="true"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
-      >
-        <div
-          class="cache-bi6n77-DataContainer ea7vc6o2"
-        />
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagInput should renders correctly readOnly 1`] = `
-<DocumentFragment>
-  .cache-ymc80m-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-h4to4s-TagInputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  background-color: #ffffff;
-  padding: calc(12px - 1px) 16px;
-  cursor: text;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-}
-
-.cache-h4to4s-TagInputContainer:focus-within {
-  border-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-h4to4s-TagInputContainer[data-success='true'] {
-  border-color: #22674e;
-}
-
-.cache-h4to4s-TagInputContainer[data-error='true'] {
-  border-color: #b3144d;
-}
-
-.cache-h4to4s-TagInputContainer:hover {
-  border-color: #792dd4;
-}
-
-.cache-h4to4s-TagInputContainer[data-readonly='true'] {
-  border-color: #d9dadd;
-  background: #f9f9fa;
-}
-
-.cache-h4to4s-TagInputContainer[data-disabled='true'] {
-  border-color: #e9eaeb;
-  background: #f3f3f4;
-  cursor: not-allowed;
-}
-
-.cache-bi6n77-DataContainer {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 8px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.cache-1cbq1zy-StyledInput {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -361,48 +369,52 @@ exports[`TagInput should renders correctly readOnly 1`] = `
   height: 100%;
 }
 
-.cache-1cbq1zy-StyledInput::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::placeholder {
+.emotion-6::placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 16px;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-h4to4s-TagInputContainer ea7vc6o3"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="true"
-        data-success="false"
-      >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
         <div
-          class="cache-bi6n77-DataContainer ea7vc6o2"
+          class="emotion-2 emotion-3"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="true"
+          data-success="false"
         >
-          <input
-            class="cache-1cbq1zy-StyledInput ea7vc6o0"
-            data-size="large"
-            id=":r4:"
-            readonly=""
-            type="text"
-            value=""
-          />
+          <div
+            class="emotion-4 emotion-5"
+          >
+            <input
+              class="emotion-6 emotion-7"
+              data-size="large"
+              id=":r4:"
+              readonly=""
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -410,9 +422,9 @@ exports[`TagInput should renders correctly readOnly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TagInput should renders correctly with error 1`] = `
+exports[`TagInput > should renders correctly with error 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -435,7 +447,7 @@ exports[`TagInput should renders correctly with error 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-h4to4s-TagInputContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -449,35 +461,35 @@ exports[`TagInput should renders correctly with error 1`] = `
   border-radius: 4px;
 }
 
-.cache-h4to4s-TagInputContainer:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-h4to4s-TagInputContainer[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-h4to4s-TagInputContainer[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-h4to4s-TagInputContainer:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-h4to4s-TagInputContainer[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.cache-h4to4s-TagInputContainer[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-bi6n77-DataContainer {
+.emotion-4 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -497,7 +509,7 @@ exports[`TagInput should renders correctly with error 1`] = `
   flex: 1;
 }
 
-.cache-1cbq1zy-StyledInput {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -513,27 +525,27 @@ exports[`TagInput should renders correctly with error 1`] = `
   height: 100%;
 }
 
-.cache-1cbq1zy-StyledInput::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::placeholder {
+.emotion-6::placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 16px;
 }
 
-.cache-16a972i-StateContainer {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -545,7 +557,7 @@ exports[`TagInput should renders correctly with error 1`] = `
   gap: 8px;
 }
 
-.cache-9kudic-StyledIcon-sizeStyles {
+.emotion-10 {
   vertical-align: middle;
   fill: #b3144d;
   height: 16px;
@@ -554,12 +566,12 @@ exports[`TagInput should renders correctly with error 1`] = `
   min-height: 16px;
 }
 
-.cache-9kudic-StyledIcon-sizeStyles .fillStroke {
+.emotion-10 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.cache-vdlwt8-StyledText {
+.emotion-12 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -572,56 +584,60 @@ exports[`TagInput should renders correctly with error 1`] = `
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-h4to4s-TagInputContainer ea7vc6o3"
-        data-disabled="false"
-        data-error="true"
-        data-readonly="false"
-        data-success="false"
-      >
-        <div
-          class="cache-bi6n77-DataContainer ea7vc6o2"
-        >
-          <input
-            class="cache-1cbq1zy-StyledInput ea7vc6o0"
-            data-size="large"
-            id=":r6:"
-            type="text"
-            value=""
-          />
-        </div>
-        <div
-          class="cache-16a972i-StateContainer ea7vc6o1"
-        >
-          <svg
-            class="cache-9kudic-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <span
-      class="cache-vdlwt8-StyledText e13y3mga0"
+    <div
+      class="emotion-0 emotion-1"
     >
-      This is an error
-    </span>
+      <div>
+        <div
+          class="emotion-2 emotion-3"
+          data-disabled="false"
+          data-error="true"
+          data-readonly="false"
+          data-success="false"
+        >
+          <div
+            class="emotion-4 emotion-5"
+          >
+            <input
+              class="emotion-6 emotion-7"
+              data-size="large"
+              id=":r6:"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <svg
+              class="emotion-10 emotion-11"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <span
+        class="emotion-12 emotion-13"
+      >
+        This is an error
+      </span>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TagInput should renders correctly with placeholder 1`] = `
+exports[`TagInput > should renders correctly with placeholder 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -644,7 +660,7 @@ exports[`TagInput should renders correctly with placeholder 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-h4to4s-TagInputContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -658,35 +674,35 @@ exports[`TagInput should renders correctly with placeholder 1`] = `
   border-radius: 4px;
 }
 
-.cache-h4to4s-TagInputContainer:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-h4to4s-TagInputContainer[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-h4to4s-TagInputContainer[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-h4to4s-TagInputContainer:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-h4to4s-TagInputContainer[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.cache-h4to4s-TagInputContainer[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-bi6n77-DataContainer {
+.emotion-4 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -706,7 +722,7 @@ exports[`TagInput should renders correctly with placeholder 1`] = `
   flex: 1;
 }
 
-.cache-1cbq1zy-StyledInput {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -722,48 +738,52 @@ exports[`TagInput should renders correctly with placeholder 1`] = `
   height: 100%;
 }
 
-.cache-1cbq1zy-StyledInput::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::placeholder {
+.emotion-6::placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 16px;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-h4to4s-TagInputContainer ea7vc6o3"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
-      >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
         <div
-          class="cache-bi6n77-DataContainer ea7vc6o2"
+          class="emotion-2 emotion-3"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
         >
-          <input
-            class="cache-1cbq1zy-StyledInput ea7vc6o0"
-            data-size="large"
-            id=":rc:"
-            placeholder="Enter a value here"
-            type="text"
-            value=""
-          />
+          <div
+            class="emotion-4 emotion-5"
+          >
+            <input
+              class="emotion-6 emotion-7"
+              data-size="large"
+              id=":rc:"
+              placeholder="Enter a value here"
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -771,9 +791,9 @@ exports[`TagInput should renders correctly with placeholder 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TagInput should renders correctly with some tags 1`] = `
+exports[`TagInput > should renders correctly with some tags 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -796,7 +816,7 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-h4to4s-TagInputContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -810,35 +830,35 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   border-radius: 4px;
 }
 
-.cache-h4to4s-TagInputContainer:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-h4to4s-TagInputContainer[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-h4to4s-TagInputContainer[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-h4to4s-TagInputContainer:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-h4to4s-TagInputContainer[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.cache-h4to4s-TagInputContainer[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-bi6n77-DataContainer {
+.emotion-4 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -858,7 +878,7 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   flex: 1;
 }
 
-.cache-1anauza-StyledContainer {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -884,7 +904,7 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-9 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -899,7 +919,7 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   max-width: 232px;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -945,22 +965,22 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   padding: 2px;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -969,12 +989,12 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1cbq1zy-StyledInput {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -990,100 +1010,104 @@ exports[`TagInput should renders correctly with some tags 1`] = `
   height: 100%;
 }
 
-.cache-1cbq1zy-StyledInput::-webkit-input-placeholder {
+.emotion-26::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::-moz-placeholder {
+.emotion-26::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput:-ms-input-placeholder {
+.emotion-26:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::placeholder {
+.emotion-26::placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput[data-size='large'] {
+.emotion-26[data-size='large'] {
   font-size: 16px;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-h4to4s-TagInputContainer ea7vc6o3"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
-      >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
         <div
-          class="cache-bi6n77-DataContainer ea7vc6o2"
+          class="emotion-2 emotion-3"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
         >
-          <span
-            class="cache-1anauza-StyledContainer el6733p2"
+          <div
+            class="emotion-4 emotion-5"
           >
             <span
-              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+              class="emotion-6 emotion-7"
             >
-              hello
-            </span>
-            <button
-              aria-label="Close tag"
-              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-              data-testid="close-tag"
-              type="button"
-            >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="emotion-8 emotion-9 emotion-10"
               >
-                <path
-                  d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-                />
-              </svg>
-            </button>
-          </span>
-          <span
-            class="cache-1anauza-StyledContainer el6733p2"
-          >
+                hello
+              </span>
+              <button
+                aria-label="Close tag"
+                class="emotion-11 emotion-12 emotion-13"
+                data-testid="close-tag"
+                type="button"
+              >
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                  />
+                </svg>
+              </button>
+            </span>
             <span
-              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+              class="emotion-6 emotion-7"
             >
-              world
-            </span>
-            <button
-              aria-label="Close tag"
-              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-              data-testid="close-tag"
-              type="button"
-            >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="emotion-8 emotion-9 emotion-10"
               >
-                <path
-                  d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-                />
-              </svg>
-            </button>
-          </span>
-          <input
-            aria-label="radio"
-            class="cache-1cbq1zy-StyledInput ea7vc6o0"
-            data-size="large"
-            id=":re:"
-            name="radio"
-            placeholder=""
-            type="text"
-            value=""
-          />
+                world
+              </span>
+              <button
+                aria-label="Close tag"
+                class="emotion-11 emotion-12 emotion-13"
+                data-testid="close-tag"
+                type="button"
+              >
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                  />
+                </svg>
+              </button>
+            </span>
+            <input
+              aria-label="radio"
+              class="emotion-26 emotion-27"
+              data-size="large"
+              id=":re:"
+              name="radio"
+              placeholder=""
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -1091,9 +1115,9 @@ exports[`TagInput should renders correctly with some tags 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TagInput should renders correctly with some tags objects 1`] = `
+exports[`TagInput > should renders correctly with some tags objects 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1116,7 +1140,7 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-h4to4s-TagInputContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1130,35 +1154,35 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   border-radius: 4px;
 }
 
-.cache-h4to4s-TagInputContainer:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-h4to4s-TagInputContainer[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-h4to4s-TagInputContainer[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-h4to4s-TagInputContainer:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-h4to4s-TagInputContainer[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.cache-h4to4s-TagInputContainer[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-bi6n77-DataContainer {
+.emotion-4 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1178,7 +1202,7 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   flex: 1;
 }
 
-.cache-1anauza-StyledContainer {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1204,7 +1228,7 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-9 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1219,7 +1243,7 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   max-width: 232px;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1265,22 +1289,22 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   padding: 2px;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:hover,
-.cache-sitm2s-StyledGhostButton-StyledCloseButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1289,12 +1313,12 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1cbq1zy-StyledInput {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1310,100 +1334,104 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
   height: 100%;
 }
 
-.cache-1cbq1zy-StyledInput::-webkit-input-placeholder {
+.emotion-26::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::-moz-placeholder {
+.emotion-26::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput:-ms-input-placeholder {
+.emotion-26:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::placeholder {
+.emotion-26::placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput[data-size='large'] {
+.emotion-26[data-size='large'] {
   font-size: 16px;
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-h4to4s-TagInputContainer ea7vc6o3"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
-      >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
         <div
-          class="cache-bi6n77-DataContainer ea7vc6o2"
+          class="emotion-2 emotion-3"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
         >
-          <span
-            class="cache-1anauza-StyledContainer el6733p2"
+          <div
+            class="emotion-4 emotion-5"
           >
             <span
-              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+              class="emotion-6 emotion-7"
             >
-              hello
-            </span>
-            <button
-              aria-label="Close tag"
-              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-              data-testid="close-tag"
-              type="button"
-            >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="emotion-8 emotion-9 emotion-10"
               >
-                <path
-                  d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-                />
-              </svg>
-            </button>
-          </span>
-          <span
-            class="cache-1anauza-StyledContainer el6733p2"
-          >
+                hello
+              </span>
+              <button
+                aria-label="Close tag"
+                class="emotion-11 emotion-12 emotion-13"
+                data-testid="close-tag"
+                type="button"
+              >
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                  />
+                </svg>
+              </button>
+            </span>
             <span
-              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+              class="emotion-6 emotion-7"
             >
-              world
-            </span>
-            <button
-              aria-label="Close tag"
-              class="el6733p0 cache-sitm2s-StyledGhostButton-StyledCloseButton e112qvla0"
-              data-testid="close-tag"
-              type="button"
-            >
-              <svg
-                class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="emotion-8 emotion-9 emotion-10"
               >
-                <path
-                  d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-                />
-              </svg>
-            </button>
-          </span>
-          <input
-            aria-label="radio"
-            class="cache-1cbq1zy-StyledInput ea7vc6o0"
-            data-size="large"
-            id=":rk:"
-            name="radio"
-            placeholder=""
-            type="text"
-            value=""
-          />
+                world
+              </span>
+              <button
+                aria-label="Close tag"
+                class="emotion-11 emotion-12 emotion-13"
+                data-testid="close-tag"
+                type="button"
+              >
+                <svg
+                  class="emotion-14 emotion-15"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                  />
+                </svg>
+              </button>
+            </span>
+            <input
+              aria-label="radio"
+              class="emotion-26 emotion-27"
+              data-size="large"
+              id=":rk:"
+              name="radio"
+              placeholder=""
+              type="text"
+              value=""
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -1411,9 +1439,9 @@ exports[`TagInput should renders correctly with some tags objects 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TagInput should renders correctly with success 1`] = `
+exports[`TagInput > should renders correctly with success 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1436,7 +1464,7 @@ exports[`TagInput should renders correctly with success 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-h4to4s-TagInputContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1450,35 +1478,35 @@ exports[`TagInput should renders correctly with success 1`] = `
   border-radius: 4px;
 }
 
-.cache-h4to4s-TagInputContainer:focus-within {
+.emotion-2:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-h4to4s-TagInputContainer[data-success='true'] {
+.emotion-2[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-h4to4s-TagInputContainer[data-error='true'] {
+.emotion-2[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-h4to4s-TagInputContainer:hover {
+.emotion-2:hover {
   border-color: #792dd4;
 }
 
-.cache-h4to4s-TagInputContainer[data-readonly='true'] {
+.emotion-2[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
 }
 
-.cache-h4to4s-TagInputContainer[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-bi6n77-DataContainer {
+.emotion-4 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1498,7 +1526,7 @@ exports[`TagInput should renders correctly with success 1`] = `
   flex: 1;
 }
 
-.cache-1cbq1zy-StyledInput {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1514,27 +1542,27 @@ exports[`TagInput should renders correctly with success 1`] = `
   height: 100%;
 }
 
-.cache-1cbq1zy-StyledInput::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput::placeholder {
+.emotion-6::placeholder {
   color: #727683;
 }
 
-.cache-1cbq1zy-StyledInput[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 16px;
 }
 
-.cache-16a972i-StateContainer {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1546,7 +1574,7 @@ exports[`TagInput should renders correctly with success 1`] = `
   gap: 8px;
 }
 
-.cache-x49ond-StyledIcon-sizeStyles {
+.emotion-10 {
   vertical-align: middle;
   fill: #22674e;
   height: 16px;
@@ -1555,12 +1583,12 @@ exports[`TagInput should renders correctly with success 1`] = `
   min-height: 16px;
 }
 
-.cache-x49ond-StyledIcon-sizeStyles .fillStroke {
+.emotion-10 .fillStroke {
   stroke: #22674e;
   fill: none;
 }
 
-.cache-1n7fwv3-StyledText {
+.emotion-12 {
   color: #22674e;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -1573,49 +1601,53 @@ exports[`TagInput should renders correctly with success 1`] = `
 }
 
 <div
-    class="cache-ymc80m-Stack ehpbis70"
+    data-testid="testing"
   >
-    <div>
-      <div
-        class="cache-h4to4s-TagInputContainer ea7vc6o3"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="true"
-      >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
         <div
-          class="cache-bi6n77-DataContainer ea7vc6o2"
+          class="emotion-2 emotion-3"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="true"
         >
-          <input
-            class="cache-1cbq1zy-StyledInput ea7vc6o0"
-            data-size="large"
-            id=":r9:"
-            type="text"
-            value=""
-          />
-        </div>
-        <div
-          class="cache-16a972i-StateContainer ea7vc6o1"
-        >
-          <svg
-            class="cache-x49ond-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-4 emotion-5"
           >
-            <path
-              clip-rule="evenodd"
-              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m3.844-8.791a.75.75 0 0 0-1.187-.918l-3.7 4.79-1.65-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043z"
-              fill-rule="evenodd"
+            <input
+              class="emotion-6 emotion-7"
+              data-size="large"
+              id=":r9:"
+              type="text"
+              value=""
             />
-          </svg>
+          </div>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <svg
+              class="emotion-10 emotion-11"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m3.844-8.791a.75.75 0 0 0-1.187-.918l-3.7 4.79-1.65-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
         </div>
       </div>
+      <span
+        class="emotion-12 emotion-13"
+      >
+        This is a success
+      </span>
     </div>
-    <span
-      class="cache-1n7fwv3-StyledText e13y3mga0"
-    >
-      This is a success
-    </span>
   </div>
 </DocumentFragment>
 `;
