@@ -78,11 +78,7 @@ const CollapsedPinnedButton = styled(Button)`
 
 const StyledBadge = styled(Badge)``
 
-const StyledMenuItem = styled(MenuV2.Item, {
-  shouldForwardProp: prop => !['isPinnable'].includes(prop),
-})<{
-  isPinnable?: boolean
-}>`
+const StyledMenuItem = styled(MenuV2.Item)`
   text-align: left;
 
   &:hover {
@@ -91,7 +87,12 @@ const StyledMenuItem = styled(MenuV2.Item, {
     }
 
     ${StyledBadge} {
-      opacity: ${({ isPinnable }) => (isPinnable ? 0 : 1)};
+      &[data-is-pinnable='true'] {
+        opacity: 0;
+      }
+      &[data-is-pinnable='false'] {
+        opacity: 1;
+      }
     }
   }
 `
@@ -670,6 +671,7 @@ export const Item = ({
         {Children.count(children) > 0 ? (
           <StyledMenu
             triggerMethod="hover"
+            dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
             disclosure={
               <Button
                 sentiment="neutral"
@@ -740,7 +742,7 @@ export const Item = ({
         active={active}
         disabled={disabled}
         sentiment={active ? 'primary' : 'neutral'}
-        isPinnable={shouldShowPinnedButton}
+        data-is-pinnable={shouldShowPinnedButton}
       >
         <Stack
           gap={1}

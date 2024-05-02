@@ -30,6 +30,10 @@ const DropableArea = styled.div`
   }
 `
 
+const RelativeDiv = styled.div`
+  position: relative;
+`
+
 const TextContainer = styled.div`
   padding: ${({ theme }) => theme.space['1']} 0;
   padding-left: ${({ theme }) => theme.space['4']};
@@ -144,13 +148,13 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
             </TextContainer>
           )}
           {expanded ? (
-            <div style={{ position: 'relative' }}>
+            <RelativeDiv style={{ position: 'relative' }}>
               <DropableArea
                 onDragOver={onDragOver}
                 onDragLeave={onDragLeave}
                 onDrop={event => onDrop(event, pinnedItems.length)}
               />
-            </div>
+            </RelativeDiv>
           ) : null}
         </Item>
       </div>
