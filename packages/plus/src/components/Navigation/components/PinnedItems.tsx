@@ -35,9 +35,12 @@ const RelativeDiv = styled.div`
 `
 
 const TextContainer = styled.div`
+  &[data-is-expanded='true'] {
+    padding-left: ${({ theme }) => theme.space['4']};
+    margin-left: ${({ theme }) => theme.space['0.5']};
+  }
+
   padding: ${({ theme }) => theme.space['1']} 0;
-  padding-left: ${({ theme }) => theme.space['4']};
-  margin-left: ${({ theme }) => theme.space['0.5']};
 `
 
 type PinnedItemsProps = {
@@ -136,7 +139,7 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
               </div>
             ))
           ) : (
-            <TextContainer>
+            <TextContainer data-is-expanded={expanded}>
               <Text
                 as="p"
                 variant="caption"
