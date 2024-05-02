@@ -1,7 +1,7 @@
 import type { RefObject } from 'react'
 
 export type PopupPlacement = 'top' | 'right' | 'bottom' | 'left' | 'auto'
-export const ARROW_WIDTH = 8 // in px
+export const DEFAULT_ARROW_WIDTH = 8 // in px
 const SPACE = 4 // in px
 const TOTAL_USED_SPACE = 0 // in px
 export const DEFAULT_POSITIONS = {
@@ -118,6 +118,7 @@ const getPopupOverflowFromParent = (
   offsetParentRect: DOMRect,
   childrenRect: DOMRect,
   popupStructuredRef: DOMRect,
+  arrowWidth: number,
 ) => {
   const {
     top: parentTop,
@@ -134,8 +135,8 @@ const getPopupOverflowFromParent = (
   } = childrenRect
 
   const { width: popupWidth, height: popupHeight } = popupStructuredRef
-  const popupHalfWidthWithArrow = popupWidth / 2 - ARROW_WIDTH
-  const popupHalfHeightWithArrow = popupHeight / 2 - ARROW_WIDTH
+  const popupHalfWidthWithArrow = popupWidth / 2 - arrowWidth
+  const popupHalfHeightWithArrow = popupHeight / 2 - arrowWidth
 
   if (position === 'top' || position === 'bottom') {
     const popupOverflowRight =
@@ -190,6 +191,7 @@ type ComputePositionsTypes = {
   childrenRef: RefObject<HTMLDivElement>
   popupRef: RefObject<HTMLDivElement>
   popupPortalTarget: HTMLElement
+  hasArrow: boolean
 }
 
 /**
@@ -200,7 +202,9 @@ export const computePositions = ({
   childrenRef,
   popupRef,
   popupPortalTarget,
+  hasArrow,
 }: ComputePositionsTypes) => {
+  const arrowWidth = hasArrow ? DEFAULT_ARROW_WIDTH : 0
   const childrenRect = (
     childrenRef.current as HTMLDivElement
   ).getBoundingClientRect()
@@ -262,6 +266,7 @@ export const computePositions = ({
     offsetParentRect,
     childrenRect,
     popupStructuredRef,
+    arrowWidth,
   )
 
   switch (placementBasedOnWindowSize) {
@@ -272,12 +277,12 @@ export const computePositions = ({
         overloadedChildrenTop +
         scrollTopValue +
         childrenHeight +
-        ARROW_WIDTH +
+        arrowWidth +
         SPACE
 
       return {
         arrowLeft: popupWidth / 2 + popupOverflow * -1,
-        arrowTop: -ARROW_WIDTH - 5,
+        arrowTop: -arrowWidth - 5,
         arrowTransform: '',
         placement: 'bottom',
         rotate: 180,
@@ -289,7 +294,7 @@ export const computePositions = ({
     }
     case 'left': {
       const positionX =
-        overloadedChildrenLeft - popupWidth - ARROW_WIDTH - SPACE * 2
+        overloadedChildrenLeft - popupWidth - arrowWidth - SPACE * 2
       const positionY =
         overloadedChildrenTop +
         scrollTopValue -
@@ -297,7 +302,7 @@ export const computePositions = ({
         childrenHeight / 2
 
       return {
-        arrowLeft: popupWidth + ARROW_WIDTH + 5,
+        arrowLeft: popupWidth + arrowWidth + 5,
         arrowTop: popupHeight / 2 + popupOverflow * -1,
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
@@ -309,7 +314,7 @@ export const computePositions = ({
       }
     }
     case 'right': {
-      const positionX = overloadedChildrenRight + ARROW_WIDTH + SPACE * 2
+      const positionX = overloadedChildrenRight + arrowWidth + SPACE * 2
       const positionY =
         overloadedChildrenTop +
         scrollTopValue -
@@ -317,7 +322,7 @@ export const computePositions = ({
         childrenHeight / 2
 
       return {
-        arrowLeft: -ARROW_WIDTH - 5,
+        arrowLeft: -arrowWidth - 5,
         arrowTop: popupHeight / 2 + popupOverflow * -1,
         arrowTransform: 'translate(50%, -50%)',
         placement: 'right',
@@ -336,7 +341,7 @@ export const computePositions = ({
         overloadedChildrenTop +
         scrollTopValue -
         popupHeight -
-        ARROW_WIDTH -
+        arrowWidth -
         SPACE
 
       return {
