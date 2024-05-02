@@ -11,7 +11,13 @@ import {
   Tooltip,
   fadeIn,
 } from '@ultraviolet/ui'
-import type { ComponentProps, JSX, ReactNode } from 'react'
+import type {
+  ComponentProps,
+  DragEvent,
+  JSX,
+  MouseEvent,
+  ReactNode,
+} from 'react'
 import {
   Children,
   cloneElement,
@@ -22,11 +28,7 @@ import {
   useState,
 } from 'react'
 import { useNavigation } from '../NavigationProvider'
-import {
-  ANIMATION_DURATION,
-  PIN_BUTTON_OPACITY_TRANSITION,
-  shrinkHeight,
-} from '../constants'
+import { ANIMATION_DURATION, shrinkHeight } from '../constants'
 
 const NeutralButtonLink = css`
   color: inherit;
@@ -36,6 +38,7 @@ const NeutralButtonLink = css`
   text-align: left;
 `
 
+// Pin button when the navigation is expanded
 const ExpandedPinnedButton = styled(Button)`
   opacity: 0;
   right: 0;
@@ -46,43 +49,56 @@ const ExpandedPinnedButton = styled(Button)`
   margin: auto;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     opacity: 1;
   }
-
-  transition: ${PIN_BUTTON_OPACITY_TRANSITION};
-  transition-delay: 0.3s;
 `
 
-const CollapsedPinnedButton = styled(Button)`
+const GrabIcon = styled(Icon)`
   opacity: 0;
-
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
-
-  transition: ${PIN_BUTTON_OPACITY_TRANSITION};
-  transition-delay: 0.3s;
+  margin: 0 ${({ theme }) => theme.space['0.25']};
+  cursor: grab;
 `
 
-const StyledMenuItem = styled(MenuV2.Item)`
-  text-align: left;
+// Pin button when the navigation is collapsed
+const CollapsedPinnedButton = styled(Button)`
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
 
   &:hover {
-    ${ExpandedPinnedButton}, ${CollapsedPinnedButton} {
+    opacity: 1;
+  }
+`
+
+const StyledBadge = styled(Badge)``
+
+const StyledMenuItem = styled(MenuV2.Item, {
+  shouldForwardProp: prop => !['isPinnable'].includes(prop),
+})<{
+  isPinnable?: boolean
+}>`
+  text-align: left;
+
+  &:hover,
+  &:focus,
+  &:active {
+    ${CollapsedPinnedButton} {
       opacity: 1;
+    }
+
+    ${StyledBadge} {
+      opacity: ${({ isPinnable }) => (isPinnable ? 0 : 1)};
     }
   }
 `
 
 const StyledMenu = styled(MenuV2)`
   width: 180px;
-`
-
-const StyledBadge = styled(Badge)`
-  transition: ${PIN_BUTTON_OPACITY_TRANSITION};
-  transition-delay: 0.3s;
 `
 
 const PaddingStack = styled(Stack)`
@@ -133,11 +149,14 @@ const StyledContainer = styled(Stack)`
     ),
   &:focus[data-has-no-expand='false']:not([disabled]):not(
       [data-is-active='true']
-    ),
+    ) {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  }
   &[data-has-active-children='true'][data-has-no-expand='false']:not(
       [disabled][data-is-active='true']
     ) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
+    background-color: ${({ theme }) =>
+      theme.colors.neutral.backgroundWeakHover};
     ${WrapText} {
       color: ${({ theme }) => theme.colors.neutral.textWeakHover};
     }
@@ -153,7 +172,21 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &:hover[data-has-children='false'][data-is-active='false'] {
+  &[data-has-no-expand='false']:not([disabled]) {
+    &:hover,
+    &:focus,
+    &:active {
+      ${ExpandedPinnedButton}, ${CollapsedPinnedButton}, ${GrabIcon} {
+        opacity: 1;
+      }
+
+      ${StyledBadge} {
+        opacity: 0;
+      }
+    }
+  }
+
+  &:hover[data-has-children='false'][data-is-active='false']:not([disabled]) {
     ${WrapText} {
       color: ${({ theme }) => theme.colors.neutral.textWeakHover};
     }
@@ -226,6 +259,10 @@ type ItemProps = {
    */
   label: string
   /**
+   * It should be a unique id and will be used for pin/unpin feature.
+   */
+  id: string
+  /**
    * Text shown under the label with a lighter color and smaller font size
    */
   subLabel?: string
@@ -262,13 +299,13 @@ type ItemProps = {
    */
   type?: ItemType
   /**
-   * You don't need to use this prop it's used internally to close the menu
-   */
-  toggleMenu?: () => void
-  /**
    * You don't need to use this prop it's used internally to control if the item has a parent
    */
   hasParents?: boolean
+  /**
+   * You don't need to use this prop it's used internally for pinned item to be reorganized with drag and drop
+   */
+  index?: number
   /**
    * When the item has href it becomes a link if not it is a button.
    * When using an external routing tool you might need to remove both of them and use
@@ -302,7 +339,8 @@ export const Item = ({
   as,
   disabled,
   noExpand = false,
-  toggleMenu,
+  index,
+  id,
 }: ItemProps) => {
   const context = useNavigation()
 
@@ -321,7 +359,18 @@ export const Item = ({
     pinnedItems,
     pinLimit,
     animation,
+    registerItem,
   } = context
+
+  useEffect(
+    () => {
+      if (type !== 'pinnedGroup') {
+        registerItem({ [id]: { label, active, onClick } })
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [active, id, label, registerItem],
+  )
 
   const [internalToggle, setToggle] = useState(toggle !== false)
 
@@ -345,35 +394,25 @@ export const Item = ({
     }
   }, [animation, toggle])
 
-  const PaddedStack = noExpand ? Stack : PaddingStack
+  const PaddedStack = noExpand || type === 'pinnedGroup' ? Stack : PaddingStack
 
   const hasHrefAndNoChildren = href && !children
   const hasPinnedFeatureAndNoChildren =
     pinnedFeature && !children && !noPinButton
-  const isItemPinned = pinnedItems.includes(label)
+  const isItemPinned = pinnedItems.includes(id)
   const shouldShowPinnedButton = useMemo(() => {
     if (href || disabled) return false
-
-    if (pinnedItems.length >= pinLimit && type === 'default') return false
 
     if (hasPinnedFeatureAndNoChildren && type !== 'default') {
       return true
     }
 
-    if (hasPinnedFeatureAndNoChildren && !isItemPinned) {
+    if (hasPinnedFeatureAndNoChildren) {
       return true
     }
 
     return false
-  }, [
-    disabled,
-    hasPinnedFeatureAndNoChildren,
-    href,
-    isItemPinned,
-    pinLimit,
-    pinnedItems.length,
-    type,
-  ])
+  }, [disabled, hasPinnedFeatureAndNoChildren, href, type])
 
   const hasActiveChildren = useMemo(() => {
     if (!children) return false
@@ -415,6 +454,30 @@ export const Item = ({
     return undefined
   }, [hasHrefAndNoChildren, internalToggle])
 
+  const isPinDisabled = pinnedItems.length >= pinLimit
+  const pinTooltipLocale = useMemo(() => {
+    if (isPinDisabled) {
+      return locales['navigation.pin.limit']
+    }
+
+    if (isItemPinned) {
+      return locales['navigation.unpin.tooltip']
+    }
+
+    return locales['navigation.pin.tooltip']
+  }, [isItemPinned, isPinDisabled, locales])
+
+  const onDragStartTrigger = (event: DragEvent<HTMLDivElement>) => {
+    event.dataTransfer.setData('text/plain', JSON.stringify({ label, index }))
+    // eslint-disable-next-line no-param-reassign
+    event.currentTarget.style.opacity = '0.5'
+  }
+
+  const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
+    // eslint-disable-next-line no-param-reassign
+    event.currentTarget.style.opacity = '1'
+  }
+
   // This content is when the navigation is expanded
   if (expanded || (!expanded && animation === 'expand')) {
     const renderChildren = Children.map(children, child =>
@@ -450,6 +513,14 @@ export const Item = ({
           data-has-active-children={hasActiveChildren}
           data-has-no-expand={noExpand}
           disabled={disabled}
+          draggable={type === 'pinned' && expanded}
+          onDragStart={(event: DragEvent<HTMLDivElement>) =>
+            expanded ? onDragStartTrigger(event) : undefined
+          }
+          onDragEnd={(event: DragEvent<HTMLDivElement>) =>
+            expanded ? onDragStopTrigger(event) : undefined
+          }
+          id={id}
         >
           <Stack
             direction="row"
@@ -468,6 +539,15 @@ export const Item = ({
                   disabled={disabled}
                 />
               </ContainerCategoryIcon>
+            ) : null}
+            {type === 'pinned' && expanded ? (
+              <GrabIcon
+                name="drag-vertical"
+                sentiment="neutral"
+                prominence="weak"
+                size="small"
+                disabled={disabled}
+              />
             ) : null}
             <Stack>
               <WrapText
@@ -517,7 +597,7 @@ export const Item = ({
                     text={
                       isItemPinned
                         ? locales['navigation.unpin.tooltip']
-                        : locales['navigation.pin.tooltip']
+                        : pinTooltipLocale
                     }
                     placement="right"
                   >
@@ -526,10 +606,17 @@ export const Item = ({
                         size="xsmall"
                         variant="ghost"
                         sentiment={active ? 'primary' : 'neutral'}
-                        onClick={() =>
-                          isItemPinned ? unpinItem(label) : pinItem(label)
-                        }
-                        icon="pin"
+                        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+                          if (isItemPinned) {
+                            unpinItem(id)
+                          } else {
+                            pinItem(id)
+                          }
+                          event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+                        }}
+                        icon={isItemPinned ? 'unpin' : 'pin'}
+                        iconVariant={isItemPinned ? 'filled' : 'outlined'}
+                        disabled={isItemPinned ? false : isPinDisabled}
                       />
                     </div>
                   </Tooltip>
@@ -546,16 +633,6 @@ export const Item = ({
             ) : null}
             {children ? (
               <Stack gap={1} direction="row" alignItems="center">
-                {type === 'pinnedGroup' && pinLimit !== Infinity ? (
-                  <WrapText
-                    as="span"
-                    variant="caption"
-                    sentiment="neutral"
-                    prominence="weak"
-                  >
-                    {pinnedItems.length}/{pinLimit}
-                  </WrapText>
-                ) : null}
                 {!animation && !noExpand ? (
                   <AnimatedIcon
                     name={internalToggle ? 'arrow-down' : 'arrow-right'}
@@ -593,7 +670,8 @@ export const Item = ({
       <MenuStack gap={1} alignItems="start" justifyContent="start">
         {Children.count(children) > 0 ? (
           <StyledMenu
-            triggerMethod="hover"
+            triggerMethod="click"
+            dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
             disclosure={
               <Button
                 sentiment="neutral"
@@ -618,16 +696,13 @@ export const Item = ({
             }
             placement="right"
           >
-            {({ toggle: toggleMenuLocal }) =>
-              Children.map(children, child =>
-                isValidElement<ItemProps>(child)
-                  ? cloneElement(child, {
-                      hasParents: true,
-                      toggleMenu: toggleMenuLocal,
-                    })
-                  : child,
-              )
-            }
+            {Children.map(children, child =>
+              isValidElement<ItemProps>(child)
+                ? cloneElement(child, {
+                    hasParents: true,
+                  })
+                : child,
+            )}
           </StyledMenu>
         ) : (
           <Tooltip text={label} placement="right" tabIndex={-1}>
@@ -662,11 +737,12 @@ export const Item = ({
         href={href}
         onClick={() => {
           onClick?.()
-          toggleMenu?.()
         }}
         borderless
         active={active}
+        disabled={disabled}
         sentiment={active ? 'primary' : 'neutral'}
+        isPinnable={shouldShowPinnedButton}
       >
         <Stack
           gap={1}
@@ -674,6 +750,7 @@ export const Item = ({
           alignItems="center"
           justifyContent="space-between"
           flex={1}
+          width="100%"
         >
           <WrapText as="span" variant="bodySmall">
             {label}
@@ -701,23 +778,29 @@ export const Item = ({
               text={
                 isItemPinned
                   ? locales['navigation.unpin.tooltip']
-                  : locales['navigation.pin.tooltip']
+                  : pinTooltipLocale
               }
               placement="right"
             >
-              <CollapsedPinnedButton
-                size="xsmall"
-                variant="ghost"
-                sentiment={active ? 'primary' : 'neutral'}
-                onClick={() => {
-                  if (isItemPinned) {
-                    unpinItem(label)
-                  } else {
-                    pinItem(label)
-                  }
-                }}
-                icon="auto-fix"
-              />
+              <div style={{ position: 'relative' }}>
+                <CollapsedPinnedButton
+                  size="xsmall"
+                  variant="ghost"
+                  sentiment={active ? 'primary' : 'neutral'}
+                  onClick={(event: MouseEvent<HTMLDivElement>) => {
+                    if (isItemPinned) {
+                      unpinItem(id)
+                    } else {
+                      pinItem(id)
+                    }
+
+                    event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+                  }}
+                  icon={isItemPinned ? 'unpin' : 'pin'}
+                  iconVariant={isItemPinned ? 'filled' : 'outlined'}
+                  disabled={isItemPinned ? false : isPinDisabled}
+                />
+              </div>
             </Tooltip>
           ) : null}
         </Stack>

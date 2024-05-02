@@ -1,14 +1,23 @@
-import type { ReactNode, RefObject } from 'react'
+import type { Dispatch, ReactNode, Reducer, RefObject } from 'react'
 import {
   createContext,
   useCallback,
   useContext,
   useMemo,
+  useReducer,
   useRef,
   useState,
 } from 'react'
 import { ANIMATION_DURATION, NAVIGATION_WIDTH } from './constants'
 import NavigationLocales from './locales/en'
+
+type Item = {
+  label: string
+  active?: boolean
+  onClick?: (toggle?: true | false) => void
+}
+
+type Items = Record<string, Item>
 
 type ContextProps = {
   expanded: boolean
@@ -24,6 +33,22 @@ type ContextProps = {
   locales: typeof NavigationLocales
   width: number
   setWidth: (width: number) => void
+  /**
+   * This function will reorder the pinned items based on the initial index and
+   * the end index.
+   */
+  reorderItems: (
+    /**
+     * The initial index of the item
+     */
+    initialIndex: number,
+    /**
+     * The end index of the item
+     */
+    endIndex: number,
+  ) => void
+  items: Items
+  registerItem: Dispatch<Items>
 }
 
 export const NavigationContext = createContext<ContextProps>({
@@ -42,6 +67,9 @@ export const NavigationContext = createContext<ContextProps>({
   navigationRef: { current: null },
   width: NAVIGATION_WIDTH,
   setWidth: () => {},
+  reorderItems: () => {},
+  items: {},
+  registerItem: () => {},
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -69,11 +97,6 @@ type NavigationProviderProps = {
    * navigation will be expanded by default otherwise it will be collapsed
    */
   initialExpanded?: boolean
-  /**
-   * This function is triggered when the user click on the pin/unpin button
-   * of an item
-   */
-  onClickPinUnpin?: (pinned: string[]) => void
   locales?: typeof NavigationLocales
   /**
    * This function is triggered when user click on expand button on the footer
@@ -81,18 +104,33 @@ type NavigationProviderProps = {
    * and it automatically collapse / expand.
    */
   onClickExpand?: (expanded: boolean) => void
+  /**
+   * This function is triggered when the user click on the pin/unpin button
+   * of an item. To access all pinned item you can use the `useNavigation` hook
+   * and access the `pinnedItems` property.
+   */
+  onClickPinUnpin?: (
+    /**
+     * The state of the item after the click
+     */
+    state: 'pin' | 'unpin',
+    /**
+     * The current items that has been pinned on click
+     */
+    pinned: string,
+  ) => void
 }
 
 export const NavigationProvider = ({
   children,
   pinnedFeature = false,
-  onClickPinUnpin,
   initialPinned,
   initialExpanded = true,
   locales = NavigationLocales,
   pinLimit = 7,
   onClickExpand,
   initialWidth = NAVIGATION_WIDTH,
+  onClickPinUnpin,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
@@ -100,6 +138,16 @@ export const NavigationProvider = ({
     false,
   )
   const [width, setWidth] = useState<number>(initialWidth)
+
+  // This is used to store the items that are registered in the navigation
+  // This way we can retrieve items with their active state in pinned feature
+  const [items, registerItem] = useReducer<Reducer<Items, Items>>(
+    (oldState: Items, newState: Items) => ({
+      ...oldState,
+      ...newState,
+    }),
+    {},
+  )
   const navigationRef = useRef<HTMLDivElement>(null)
 
   // This function will be triggered when expand/collapse button is clicked
@@ -133,8 +181,7 @@ export const NavigationProvider = ({
   const pinItem = useCallback(
     (item: string) => {
       setPinnedItems([...pinnedItems, item])
-
-      onClickPinUnpin?.(pinnedItems)
+      onClickPinUnpin?.('pin', item)
     },
     [onClickPinUnpin, pinnedItems],
   )
@@ -142,10 +189,19 @@ export const NavigationProvider = ({
   const unpinItem = useCallback(
     (item: string) => {
       setPinnedItems(pinnedItems.filter(localItem => localItem !== item))
-
-      onClickPinUnpin?.(pinnedItems)
+      onClickPinUnpin?.('unpin', item)
     },
     [onClickPinUnpin, pinnedItems],
+  )
+
+  const reorderItems = useCallback(
+    (initialIndex: number, endIndex: number) => {
+      const newPinnedItems = [...pinnedItems]
+      const [removed] = newPinnedItems.splice(initialIndex, 1)
+      newPinnedItems.splice(endIndex, 0, removed)
+      setPinnedItems(newPinnedItems)
+    },
+    [pinnedItems],
   )
 
   const value = useMemo(
@@ -163,6 +219,9 @@ export const NavigationProvider = ({
       navigationRef,
       width,
       setWidth,
+      reorderItems,
+      registerItem,
+      items,
     }),
     [
       expanded,
@@ -175,6 +234,8 @@ export const NavigationProvider = ({
       pinLimit,
       animation,
       width,
+      reorderItems,
+      items,
     ],
   )
 

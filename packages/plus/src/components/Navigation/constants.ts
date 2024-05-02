@@ -8,7 +8,6 @@ export const NAVIGATION_MAX_WIDTH = 320 // in px
 /**
  * ANIMATIONS
  */
-export const PIN_BUTTON_OPACITY_TRANSITION = 'opacity 250ms ease-in-out' // this is the transition animation when hovering pin button
 export const ANIMATION_DURATION = 700 // collapse and expand animation duration of the whole nav in ms
 
 export const shrinkHeight = keyframes`
@@ -34,3 +33,8 @@ export const groupAnimation = keyframes`
     margin-bottom: 0;
   }
 `
+
+export type DragNDropData = {
+  index: number
+  item: string
+}
