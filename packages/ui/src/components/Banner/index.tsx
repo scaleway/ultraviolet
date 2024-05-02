@@ -1,14 +1,16 @@
 import type { Theme } from '@emotion/react'
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import {
+  defaultIllustration,
+  defaultIllustrationSmall,
+} from '@ultraviolet/illustrations/various/banner'
 import type { ComponentProps, ReactNode } from 'react'
 import { useState } from 'react'
 import { Button } from '../Button'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import defaultIllustrationSmall from './assets/default-image-small.svg'
-import defaultIllustration from './assets/default-image.svg'
 
 type Variant = 'intro' | 'promotional'
 type Size = 'small' | 'medium'
