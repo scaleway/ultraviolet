@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.12.6
+
+### Patch Changes
+
+- [#3731](https://github.com/scaleway/ultraviolet/pull/3731) [`362a534`](https://github.com/scaleway/ultraviolet/commit/362a5348a67b986907b65eec2606fd36fd21f621) Thanks [@philibea](https://github.com/philibea)! - migrate from vite config to rollup
+
+- Updated dependencies [[`362a534`](https://github.com/scaleway/ultraviolet/commit/362a5348a67b986907b65eec2606fd36fd21f621)]:
+  - @ultraviolet/themes@1.10.1
+
 ## 2.12.5
 
 ### Patch Changes

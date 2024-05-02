@@ -1,5 +1,16 @@
 # @ultraviolet/illustrations
 
+## 1.7.2
+
+### Patch Changes
+
+- [#3731](https://github.com/scaleway/ultraviolet/pull/3731) [`362a534`](https://github.com/scaleway/ultraviolet/commit/362a5348a67b986907b65eec2606fd36fd21f621) Thanks [@philibea](https://github.com/philibea)! - migrate from vite config to rollup
+
+- [#3739](https://github.com/scaleway/ultraviolet/pull/3739) [`f509e4a`](https://github.com/scaleway/ultraviolet/commit/f509e4aeda2278c083bceefa2a54a117dcd257c6) Thanks [@philibea](https://github.com/philibea)! - export of packages was wrong on components
+
+- Updated dependencies [[`362a534`](https://github.com/scaleway/ultraviolet/commit/362a5348a67b986907b65eec2606fd36fd21f621)]:
+  - @ultraviolet/themes@1.10.1
+
 ## 1.7.1
 
 ### Patch Changes

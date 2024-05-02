@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.15.1
+
+### Patch Changes
+
+- [#3731](https://github.com/scaleway/ultraviolet/pull/3731) [`362a534`](https://github.com/scaleway/ultraviolet/commit/362a5348a67b986907b65eec2606fd36fd21f621) Thanks [@philibea](https://github.com/philibea)! - migrate from vite config to rollup
+
+- [#3740](https://github.com/scaleway/ultraviolet/pull/3740) [`bf6419b`](https://github.com/scaleway/ultraviolet/commit/bf6419b5a0523550153dfe5edc582ca3997b442f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<NavigationComponent />` to have correct empty state, pin / unpin to be div instead of button and fix on click on pin / unpin
+
+- Updated dependencies [[`362a534`](https://github.com/scaleway/ultraviolet/commit/362a5348a67b986907b65eec2606fd36fd21f621)]:
+  - @ultraviolet/themes@1.10.1
+  - @ultraviolet/icons@2.12.6
+  - @ultraviolet/ui@1.51.2
+
 ## 0.15.0
 
 ### Minor Changes
