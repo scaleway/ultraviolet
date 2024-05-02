@@ -70,29 +70,29 @@ const CollapsedPinnedButton = styled(Button)`
   top: 0;
   bottom: 0;
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 1;
   }
 `
 
 const StyledBadge = styled(Badge)``
 
-const StyledMenuItem = styled(MenuV2.Item)`
+const StyledMenuItem = styled(MenuV2.Item, {
+  shouldForwardProp: prop => !['isPinnable'].includes(prop),
+})<{
+  isPinnable?: boolean
+}>`
   text-align: left;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     ${CollapsedPinnedButton} {
       opacity: 1;
     }
 
     ${StyledBadge} {
-      &[data-is-pinnable='true'] {
-        opacity: 0;
-      }
-      &[data-is-pinnable='false'] {
-        opacity: 1;
-      }
+      opacity: ${({ isPinnable }) => (isPinnable ? 0 : 1)};
     }
   }
 `
@@ -670,7 +670,7 @@ export const Item = ({
       <MenuStack gap={1} alignItems="start" justifyContent="start">
         {Children.count(children) > 0 ? (
           <StyledMenu
-            triggerMethod="hover"
+            triggerMethod="click"
             dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
             disclosure={
               <Button
@@ -742,7 +742,7 @@ export const Item = ({
         active={active}
         disabled={disabled}
         sentiment={active ? 'primary' : 'neutral'}
-        data-is-pinnable={shouldShowPinnedButton}
+        isPinnable={shouldShowPinnedButton}
       >
         <Stack
           gap={1}
@@ -750,6 +750,7 @@ export const Item = ({
           alignItems="center"
           justifyContent="space-between"
           flex={1}
+          width="100%"
         >
           <WrapText as="span" variant="bodySmall">
             {label}
