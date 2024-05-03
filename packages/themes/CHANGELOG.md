@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.10.2
+
+### Patch Changes
+
+- [#3744](https://github.com/scaleway/ultraviolet/pull/3744) [`3c1d30d`](https://github.com/scaleway/ultraviolet/commit/3c1d30d0b7926e1843b257c56b6c972449dbf0cd) Thanks [@philibea](https://github.com/philibea)! - add cjs export
+
 ## 1.10.1
 
 ### Patch Changes

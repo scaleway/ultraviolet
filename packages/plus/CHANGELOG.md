@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.15.3
+
+### Patch Changes
+
+- [#3747](https://github.com/scaleway/ultraviolet/pull/3747) [`5e77f1b`](https://github.com/scaleway/ultraviolet/commit/5e77f1b9198390c76376733343b75aa5410daa2c) Thanks [@matthprost](https://github.com/matthprost)! - Fixes on `<Navigation />` component for pin / unpin feature
+
+- [#3744](https://github.com/scaleway/ultraviolet/pull/3744) [`3c1d30d`](https://github.com/scaleway/ultraviolet/commit/3c1d30d0b7926e1843b257c56b6c972449dbf0cd) Thanks [@philibea](https://github.com/philibea)! - add cjs export
+
+- Updated dependencies [[`3c1d30d`](https://github.com/scaleway/ultraviolet/commit/3c1d30d0b7926e1843b257c56b6c972449dbf0cd)]:
+  - @ultraviolet/themes@1.10.2
+  - @ultraviolet/icons@2.12.8
+  - @ultraviolet/ui@1.51.4
+
 ## 0.15.2
 
 ### Patch Changes
