@@ -13,7 +13,8 @@
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "size": "pnpm run build && size-limit"
   },
   "keywords": [
     "illustrations",
@@ -38,36 +39,57 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "main":  "./dist/index.cjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "require":  "./dist/index.cjs",
       "default": "./dist/index.js"
     },
     "./products/*": {
       "types": "./dist/products/*/index.d.ts",
+      "require":  "./dist/products/*/index.cjs",
       "default": "./dist/products/*/index.js"
     },
     "./products": {
       "types": "./dist/products/index.d.ts",
+      "require":  "./dist/products/index.cjs",
       "default": "./dist/products/index.js"
     },
     "./various/*": {
       "types": "./dist/various/*/index.d.ts",
+      "require":  "./dist/various/*/index.cjs",
       "default": "./dist/various/*/index.js"
     },
     "./various": {
       "types": "./dist/various/index.d.ts",
+      "require":  "./dist/various/index.cjs",
       "default": "./dist/various/index.js"
     },
     "./components": {
       "types": "./dist/components/index.d.ts",
+      "require":  "./dist/components/index.cjs",
       "default": "./dist/components/index.js"
     },
     "./components/*": {
       "types": "./dist/components/*/index.d.ts",
+      "require":  "./dist/components/*index.cjs",
       "default": "./dist/components/*/index.js"
     }
   },
+   "size-limit": [
+    {
+      "path": [
+        "dist/**/*.js",
+        "!*.d.ts",
+        "!*.cjs"
+      ],
+      "limit": "500 kB",
+      "webpack": false,
+      "brotli": true,
+      "running": false
+    }
+  ],
   "peerDependencies": {
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",

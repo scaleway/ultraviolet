@@ -39,10 +39,11 @@ export const defaultConfig: UserConfig = {
     outDir: 'dist',
     target: [...targets],
     minify: false,
+    ssr: true,
     lib: {
       name: pkg.name,
       entry: 'src/index.ts',
-      formats: ['es'],
+      formats: ['es', 'cjs'],
       fileName: (format, filename) => {
         if (format === 'es') {
           return `${filename}.js`
@@ -55,6 +56,7 @@ export const defaultConfig: UserConfig = {
       preserveSymlinks: true,
       external,
       output: {
+        interop: 'compat',
         preserveModules: true,
         preserveModulesRoot: './src',
       },

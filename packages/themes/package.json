@@ -35,9 +35,11 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "main":  "./dist/index.cjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "require":  "./dist/index.cjs",
       "default": "./dist/index.js"
     }
   },
