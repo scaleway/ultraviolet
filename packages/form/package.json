@@ -9,6 +9,7 @@
     "directory": "packages/form"
   },
   "scripts": {
+    "prebuild": "shx rm -rf dist",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
@@ -58,7 +59,6 @@
   },
   "dependencies": {
     "@babel/runtime": "7.24.5",
-    "@emotion/babel-plugin": "11.11.0",
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
     "@ultraviolet/ui": "workspace:*",
