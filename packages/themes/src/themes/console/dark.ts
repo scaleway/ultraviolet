@@ -371,7 +371,7 @@ export const darkTheme = {
   theme: 'dark',
   typography: {
     body: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '16px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -382,7 +382,7 @@ export const darkTheme = {
       weight: '400',
     },
     bodySmall: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '14px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -393,7 +393,7 @@ export const darkTheme = {
       weight: '400',
     },
     bodySmallStrong: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '14px',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -404,7 +404,7 @@ export const darkTheme = {
       weight: '500',
     },
     bodySmallStronger: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '14px',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -415,7 +415,7 @@ export const darkTheme = {
       weight: '600',
     },
     bodyStrong: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '16px',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -426,7 +426,7 @@ export const darkTheme = {
       weight: '500',
     },
     bodyStronger: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '16px',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -437,7 +437,7 @@ export const darkTheme = {
       weight: '600',
     },
     caption: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '12px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -448,7 +448,7 @@ export const darkTheme = {
       weight: '400',
     },
     captionSmall: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '10px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -459,7 +459,7 @@ export const darkTheme = {
       weight: '400',
     },
     captionSmallStrong: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '10px',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -470,7 +470,7 @@ export const darkTheme = {
       weight: '500',
     },
     captionSmallStronger: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '10px',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -481,7 +481,7 @@ export const darkTheme = {
       weight: '600',
     },
     captionStrong: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '12px',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -492,7 +492,7 @@ export const darkTheme = {
       weight: '500',
     },
     captionStronger: {
-      fontFamily: 'Inter',
+      fontFamily: 'Inter, sans-serif',
       fontSize: '12px',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -503,7 +503,7 @@ export const darkTheme = {
       weight: '600',
     },
     code: {
-      fontFamily: 'JetBrains',
+      fontFamily: 'JetBrains, monospace',
       fontSize: '14px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -514,7 +514,7 @@ export const darkTheme = {
       weight: '400',
     },
     codeStrong: {
-      fontFamily: 'JetBrains',
+      fontFamily: 'JetBrains, monospace',
       fontSize: '14px',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -525,7 +525,7 @@ export const darkTheme = {
       weight: '500',
     },
     codeStronger: {
-      fontFamily: 'JetBrains',
+      fontFamily: 'JetBrains, monospace',
       fontSize: '14px',
       fontWeight: 'Bold',
       letterSpacing: '0',
@@ -536,7 +536,7 @@ export const darkTheme = {
       weight: '600',
     },
     heading: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '25px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -547,7 +547,7 @@ export const darkTheme = {
       weight: '400',
     },
     headingLarge: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '35px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -558,7 +558,7 @@ export const darkTheme = {
       weight: '400',
     },
     headingLargeStrong: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '35px',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -569,7 +569,7 @@ export const darkTheme = {
       weight: '500',
     },
     headingLargeStronger: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '35px',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -580,7 +580,7 @@ export const darkTheme = {
       weight: '600',
     },
     headingSmall: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '21px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -591,7 +591,7 @@ export const darkTheme = {
       weight: '400',
     },
     headingSmallStrong: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '21px',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -602,7 +602,7 @@ export const darkTheme = {
       weight: '600',
     },
     headingSmallStronger: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '21px',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
@@ -613,7 +613,7 @@ export const darkTheme = {
       weight: '600',
     },
     headingStrong: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '25px',
       fontWeight: 'Medium',
       letterSpacing: '0',
@@ -624,7 +624,7 @@ export const darkTheme = {
       weight: '500',
     },
     headingStronger: {
-      fontFamily: 'Space Grotesk',
+      fontFamily: 'Space Grotesk, sans-serif',
       fontSize: '25px',
       fontWeight: 'SemiBold',
       letterSpacing: '0',
