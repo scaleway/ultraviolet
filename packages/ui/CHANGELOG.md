@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.51.4
+
+### Patch Changes
+
+- [#3744](https://github.com/scaleway/ultraviolet/pull/3744) [`3c1d30d`](https://github.com/scaleway/ultraviolet/commit/3c1d30d0b7926e1843b257c56b6c972449dbf0cd) Thanks [@philibea](https://github.com/philibea)! - add cjs export
+
+- Updated dependencies [[`3c1d30d`](https://github.com/scaleway/ultraviolet/commit/3c1d30d0b7926e1843b257c56b6c972449dbf0cd)]:
+  - @ultraviolet/themes@1.10.2
+  - @ultraviolet/icons@2.12.8
+
 ## 1.51.3
 
 ### Patch Changes

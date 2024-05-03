@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/illustrations",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Ultraviolet Illustrations",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -39,45 +39,45 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main":  "./dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require":  "./dist/index.cjs",
+      "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     },
     "./products/*": {
       "types": "./dist/products/*/index.d.ts",
-      "require":  "./dist/products/*/index.cjs",
+      "require": "./dist/products/*/index.cjs",
       "default": "./dist/products/*/index.js"
     },
     "./products": {
       "types": "./dist/products/index.d.ts",
-      "require":  "./dist/products/index.cjs",
+      "require": "./dist/products/index.cjs",
       "default": "./dist/products/index.js"
     },
     "./various/*": {
       "types": "./dist/various/*/index.d.ts",
-      "require":  "./dist/various/*/index.cjs",
+      "require": "./dist/various/*/index.cjs",
       "default": "./dist/various/*/index.js"
     },
     "./various": {
       "types": "./dist/various/index.d.ts",
-      "require":  "./dist/various/index.cjs",
+      "require": "./dist/various/index.cjs",
       "default": "./dist/various/index.js"
     },
     "./components": {
       "types": "./dist/components/index.d.ts",
-      "require":  "./dist/components/index.cjs",
+      "require": "./dist/components/index.cjs",
       "default": "./dist/components/index.js"
     },
     "./components/*": {
       "types": "./dist/components/*/index.d.ts",
-      "require":  "./dist/components/*index.cjs",
+      "require": "./dist/components/*index.cjs",
       "default": "./dist/components/*/index.js"
     }
   },
-   "size-limit": [
+  "size-limit": [
     {
       "path": [
         "dist/**/*.js",

@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/plus",
-  "version": "0.15.2",
+  "version": "0.15.3",
   "description": "Ultraviolet Plus",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -37,15 +37,15 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "main":  "./dist/index.cjs",
+  "main": "./dist/index.cjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require":  "./dist/index.cjs",
+      "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     }
   },
-    "size-limit": [
+  "size-limit": [
     {
       "path": [
         "dist/**/*.js",
