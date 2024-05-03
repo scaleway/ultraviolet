@@ -9,7 +9,7 @@
     "directory": "packages/icons"
   },
   "scripts": {
-    "build:rollup": "rollup -c ../../rollup.config.mjs",
+    "prebuild": "shx rm -rf dist",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
@@ -50,7 +50,6 @@
   },
   "devDependencies": {
     "@babel/core": "7.24.5",
-    "@emotion/babel-plugin": "11.11.0",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0"
   },

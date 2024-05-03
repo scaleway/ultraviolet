@@ -64,6 +64,9 @@ export const defaultConfig: UserConfig = {
     react({
       jsxRuntime: 'automatic',
       jsxImportSource: '@emotion/react',
+      babel: {
+        plugins: ['@emotion/babel-plugin'],
+      },
     }),
   ],
 }
