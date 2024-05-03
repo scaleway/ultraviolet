@@ -7,7 +7,7 @@ import { NumberInputField } from '../..'
 describe('NumberInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(<NumberInputField name="test" />, {
-      initialValues: {
+      defaultValues: {
         test: 0,
       },
     })
@@ -18,7 +18,7 @@ describe('NumberInputField', () => {
     const { asFragment } = renderWithForm(
       <NumberInputField name="test" disabled />,
       {
-        initialValues: {
+        defaultValues: {
           test: 10,
         },
       },
@@ -47,7 +47,7 @@ describe('NumberInputField', () => {
         onBlur={onBlur}
       />,
       {
-        initialValues: {
+        defaultValues: {
           test: 10,
         },
       },
@@ -84,7 +84,7 @@ describe('NumberInputField', () => {
         onMaxCrossed={onMaxCrossed}
       />,
       {
-        initialValues: {
+        defaultValues: {
           test: 10,
         },
       },

@@ -102,8 +102,8 @@ type SelectInputOption = { value: string; label: string }
  */
 export type SelectInputFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TName>, 'onChange'> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'onChange'> &
   Partial<
     Pick<
       SelectInputProps,
@@ -146,7 +146,7 @@ const identity = (x: unknown) => x
 
 export const SelectInputField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   animation,
   animationDuration,
@@ -176,13 +176,13 @@ export const SelectInputField = <
   placeholder,
   readOnly,
   required,
-  rules,
   noTopLabel,
   emptyState,
   customStyle,
   shouldUnregister = false,
   'data-testid': dataTestId,
-}: SelectInputFieldProps<TFieldValues, TName>) => {
+  validate,
+}: SelectInputFieldProps<TFieldValues, TFieldName>) => {
   const options = useMemo(
     () =>
       optionsProp ||
@@ -253,14 +253,14 @@ export const SelectInputField = <
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
     shouldUnregister,
     rules: {
       required,
       minLength: minLength || required ? 1 : undefined,
       maxLength,
-      ...rules,
+      validate,
     },
   })
 

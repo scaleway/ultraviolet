@@ -25,7 +25,7 @@ export default {
 
       return (
         <Form
-          onRawSubmit={() => {}}
+          onSubmit={() => {}}
           errors={mockErrors}
           methods={methods}
           name="SelectInput"

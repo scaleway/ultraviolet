@@ -1,37 +1,40 @@
-import { screen, waitFor } from '@testing-library/react'
+import { renderHook, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { mockFormErrors, renderWithTheme } from '@utils/test'
+import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
 import { Form } from '..'
 
 describe('Form', () => {
-  test('renders correctly ', () => {
-    const { asFragment } = renderWithTheme(
-      <Form onRawSubmit={() => {}} errors={mockFormErrors}>
-        {() => 'Test'}
-      </Form>,
-    )
-    expect(asFragment()).toMatchSnapshot()
-  })
   test('renders correctly with node children', () => {
+    const { result } = renderHook(() => useForm())
     const { asFragment } = renderWithTheme(
-      <Form onRawSubmit={() => {}} errors={mockFormErrors}>
+      <Form
+        onSubmit={() => {}}
+        errors={mockFormErrors}
+        methods={result.current}
+      >
         Test
       </Form>,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with onRawSubmit', async () => {
-    const onRawSubmit = vi.fn(() => {})
+  test('renders correctly with onSubmit', async () => {
+    const onSubmit = vi.fn(() => {})
+    const { result } = renderHook(() => useForm())
 
     const { asFragment } = renderWithTheme(
-      <Form errors={mockFormErrors} onRawSubmit={onRawSubmit}>
+      <Form
+        errors={mockFormErrors}
+        onSubmit={onSubmit}
+        methods={result.current}
+      >
         <button type="submit">Submit</button>
       </Form>,
     )
     await userEvent.click(screen.getByText('Submit'))
-    await waitFor(() => expect(onRawSubmit).toBeCalledTimes(1))
+    await waitFor(() => expect(onSubmit).toBeCalledTimes(1))
     expect(asFragment()).toMatchSnapshot()
   })
 })

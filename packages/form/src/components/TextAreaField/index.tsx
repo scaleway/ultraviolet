@@ -4,11 +4,12 @@ import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
+import { validateRegex } from '../../utils/validateRegex'
 
 export type TextAreaFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Omit<
     ComponentProps<typeof TextArea>,
     'value' | 'error' | 'name' | 'onChange'
@@ -21,12 +22,13 @@ export type TextAreaFieldProps<
  */
 export const TextAreaField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   autoFocus,
   clearable,
   className,
   tabIndex,
+  control,
   'data-testid': dataTestId,
   disabled,
   helper,
@@ -44,30 +46,23 @@ export const TextAreaField = <
   rows,
   success,
   tooltip,
-  validate,
   regex: regexes,
-}: TextAreaFieldProps<TFieldValues, TName>) => {
+  validate,
+}: TextAreaFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     rules: {
       required,
       validate: {
         ...(regexes
           ? {
-              pattern: value =>
-                regexes.every(
-                  regex =>
-                    value === undefined ||
-                    value === '' ||
-                    (Array.isArray(regex)
-                      ? regex.some(regexOr => regexOr.test(value))
-                      : regex.test(value)),
-                ),
+              pattern: value => validateRegex(value, regexes),
             }
           : {}),
         ...validate,

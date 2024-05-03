@@ -91,7 +91,7 @@ const SignUp = () => {
       <Form<FormValues>
         methods={methods}
         errors={mockErrors}
-        onRawSubmit={handleSubmit}
+        onSubmit={handleSubmit}
       >
         <Stack gap={1} alignItems="center">
           <Icon name="profile" size="1.7em" />
@@ -130,9 +130,7 @@ const SignUp = () => {
               name="email"
               required
               placeholder="example@email.com"
-              rules={{
-                pattern: { value: EMAIL_REGEX, message: 'Invalid format' },
-              }}
+              regex={[EMAIL_REGEX]}
               className="inputs"
             />
             <StyledInput

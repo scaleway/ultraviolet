@@ -30,7 +30,7 @@ describe('SelectableCardField', () => {
       <SelectableCardField name="test" value="checked">
         Radio field checked
       </SelectableCardField>,
-      { initialValues: { test: 'checked' } },
+      { defaultValues: { test: 'checked' } },
     )
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeChecked()

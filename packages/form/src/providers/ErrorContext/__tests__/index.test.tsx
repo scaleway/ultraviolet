@@ -1,20 +1,30 @@
 import { renderHook } from '@testing-library/react'
 import { mockFormErrors, renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
+import { useForm } from 'react-hook-form'
 import { describe, expect, test } from 'vitest'
 import { useErrors } from '..'
 import { Form } from '../../../components/Form'
 
-const HookWrapper = ({ children }: { children: ReactNode }) => (
-  <Form errors={mockFormErrors} onRawSubmit={() => null}>
-    {children}
-  </Form>
-)
+const HookWrapper = ({ children }: { children: ReactNode }) => {
+  const methods = useForm()
+
+  return (
+    <Form errors={mockFormErrors} onSubmit={() => null} methods={methods}>
+      {children}
+    </Form>
+  )
+}
 
 describe('ErrorProvider', () => {
   test('renders correctly ', () => {
+    const { result } = renderHook(() => useForm())
     const { asFragment } = renderWithTheme(
-      <Form onRawSubmit={() => null} errors={mockFormErrors}>
+      <Form
+        onSubmit={() => null}
+        errors={mockFormErrors}
+        methods={result.current}
+      >
         Test
       </Form>,
     )

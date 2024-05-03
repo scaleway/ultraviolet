@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 type NumberInputV2Props<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Partial<
     Pick<
       ComponentProps<typeof NumberInputV2>,
@@ -39,15 +39,14 @@ type NumberInputV2Props<
     >
   > & {
     className?: string
-    name: string
-    required?: boolean
   }
 
 export const NumberInputFieldV2 = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   disabled,
+  control,
   max = Number.MAX_SAFE_INTEGER,
   min = 0,
   name,
@@ -64,7 +63,6 @@ export const NumberInputFieldV2 = <
   placeholder,
   success,
   helper,
-  rules,
   controls = true,
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
@@ -72,19 +70,21 @@ export const NumberInputFieldV2 = <
   autoFocus,
   readOnly,
   shouldUnregister = false,
-}: NumberInputV2Props<TFieldValues, TName>) => {
+  validate,
+}: NumberInputV2Props<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
       max,
       min,
       required,
-      ...rules,
+      validate,
     },
   })
 

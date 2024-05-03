@@ -47,7 +47,7 @@ describe('NumberInputFieldV2', () => {
 
     renderWithTheme(
       <Form
-        onRawSubmit={value => onSubmit(value)}
+        onSubmit={value => onSubmit(value)}
         errors={mockFormErrors}
         methods={result.current}
       >

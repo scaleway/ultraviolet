@@ -4,11 +4,12 @@ import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
+import { validateRegex } from '../../utils/validateRegex'
 
 type TextInputFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Partial<
     Pick<
       ComponentProps<typeof TextInput>,
@@ -61,7 +62,7 @@ type TextInputFieldProps<
  */
 export const TextInputField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   autoCapitalize,
   autoComplete,
@@ -93,54 +94,46 @@ export const TextInputField = <
   type,
   unit,
   size,
-  rules,
   valid,
   parse,
   format,
   formatOnBlur = false,
   regex: regexes,
-  min,
-  max,
-  minLength,
-  maxLength,
-  validate,
   defaultValue,
   customError,
   innerRef,
   shouldUnregister = false,
   'data-testid': dataTestId,
-}: TextInputFieldProps<TFieldValues, TName>) => {
+  validate,
+  min,
+  max,
+  minLength,
+  maxLength,
+  control,
+}: TextInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
     defaultValue,
     shouldUnregister,
+    control,
     rules: {
       required,
+      minLength,
+      maxLength,
+      min,
+      max,
       validate: {
         ...(regexes
           ? {
-              pattern: value =>
-                regexes.every(
-                  regex =>
-                    value === undefined ||
-                    value === '' ||
-                    (Array.isArray(regex)
-                      ? regex.some(regexOr => regexOr.test(value))
-                      : regex.test(value)),
-                ),
+              pattern: value => validateRegex(value, regexes),
             }
           : {}),
         ...validate,
       },
-      minLength,
-      maxLength,
-      max,
-      min,
-      ...rules,
     },
   })
 

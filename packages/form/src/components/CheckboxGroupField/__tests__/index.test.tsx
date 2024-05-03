@@ -15,7 +15,7 @@ describe('CheckboxField', () => {
         </CheckboxGroupField.Checkbox>
       </CheckboxGroupField>,
       {
-        initialValues: {
+        defaultValues: {
           Checkbox: [],
         },
       },
@@ -51,7 +51,7 @@ describe('CheckboxField', () => {
         </CheckboxGroupField.Checkbox>
       </CheckboxGroupField>,
       {
-        initialValues: {
+        defaultValues: {
           test: [],
         },
       },

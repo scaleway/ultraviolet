@@ -19,7 +19,7 @@ describe('GroupField', () => {
         />
       </ToggleGroupField>,
       {
-        initialValues: {
+        defaultValues: {
           Group: [],
         },
       },
@@ -56,7 +56,7 @@ describe('GroupField', () => {
         />
       </ToggleGroupField>,
       {
-        initialValues: {
+        defaultValues: {
           test: [],
         },
       },

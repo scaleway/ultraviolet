@@ -3,6 +3,7 @@ import { useState } from 'react'
 import {
   Submit,
   TextInputField,
+  TextInputFieldV2,
   useFieldArray,
   useFormContext,
   useFormState,
@@ -129,18 +130,11 @@ export const FormContent = () => {
               </CapitalizeText>
               <Stack gap={1} alignItems="center" direction="row">
                 <StyledRow templateColumns="9fr 1fr" gap={1}>
-                  <TextInputField
+                  <TextInputFieldV2
                     name={`sentiments.${index}.value`}
                     id={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
-                    noTopLabel
-                    rules={{
-                      pattern: hexadecimalColorRegex,
-                    }}
-                    valid={
-                      // @ts-expect-error get field array error
-                      !errors['sentiments']?.[index]
-                    }
+                    regex={[hexadecimalColorRegex]}
                   />
                   <TextInputField
                     name={`sentiments.${index}.value`}
@@ -148,9 +142,7 @@ export const FormContent = () => {
                     placeholder="#FFFFFF"
                     noTopLabel
                     type="color"
-                    rules={{
-                      pattern: hexadecimalColorRegex,
-                    }}
+                    regex={[hexadecimalColorRegex]}
                   />
                 </StyledRow>
                 {!isRequiredSentiment ? (

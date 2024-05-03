@@ -54,11 +54,7 @@ const LogIn = () => {
 
   return (
     <StyledLoginContainer>
-      <Form<FormValues>
-        methods={methods}
-        errors={mockErrors}
-        onRawSubmit={handleSubmit}
-      >
+      <Form methods={methods} errors={mockErrors} onSubmit={handleSubmit}>
         <Stack gap={1} alignItems="center">
           <Icon name="id" size="1.7em" />
           <Text as="h1" variant="heading">
@@ -69,9 +65,7 @@ const LogIn = () => {
             name="email"
             required
             placeholder="example@email.com"
-            rules={{
-              pattern: { value: EMAIL_REGEX, message: 'Invalid format' },
-            }}
+            regex={[EMAIL_REGEX]}
           />
           <StyledInput
             label="Password"

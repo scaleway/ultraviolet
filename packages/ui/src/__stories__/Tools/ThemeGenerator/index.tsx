@@ -132,7 +132,7 @@ export const ThemeGenerator = () => {
             </Text>
           </Stack>
           <Form
-            onRawSubmit={onSubmit}
+            onSubmit={onSubmit}
             methods={methods}
             errors={{
               min: () => '',

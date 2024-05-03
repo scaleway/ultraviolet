@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 type RadioGroupFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Partial<
     Pick<
       ComponentProps<typeof RadioGroup>,
@@ -20,31 +20,33 @@ type RadioGroupFieldProps<
 
 export const RadioGroupField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   className,
+  control,
   legend = '',
   name,
   onChange,
   required,
-  rules,
   children,
   label = '',
   error: customError,
   helper,
   direction,
   shouldUnregister = false,
-}: RadioGroupFieldProps<TFieldValues, TName>): JSX.Element => {
+  validate,
+}: RadioGroupFieldProps<TFieldValues, TFieldName>): JSX.Element => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
       required,
-      ...rules,
+      validate,
     },
   })
 

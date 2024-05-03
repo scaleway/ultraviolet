@@ -21,7 +21,7 @@ describe('DateField', () => {
     const { asFragment } = renderWithForm(
       <DateField name="test" onBlur={onBlur} onChange={onChange} />,
       {
-        initialValues: {
+        defaultValues: {
           test: new Date('2022-09-01'),
         },
       },

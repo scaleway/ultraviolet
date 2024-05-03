@@ -44,7 +44,7 @@ describe('UnitInputField', () => {
 
     const { asFragment } = renderWithTheme(
       <Form
-        onRawSubmit={value => onSubmit(value)}
+        onSubmit={value => onSubmit(value)}
         errors={mockErrors}
         methods={result.current}
       >

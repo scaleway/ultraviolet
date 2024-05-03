@@ -59,7 +59,7 @@ describe('TextInputField', () => {
     const { asFragment } = renderWithForm(
       <TextInputField name="test" minLength={13} />,
       {
-        initialValues: {
+        defaultValues: {
           test: null,
         },
       },

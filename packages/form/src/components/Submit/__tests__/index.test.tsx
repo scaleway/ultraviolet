@@ -27,18 +27,22 @@ describe('Submit', () => {
         <TextInputField name="toto" regex={[alpha]} />
         <Submit>Test</Submit>
       </>,
-      { initialValues: { toto: '4' } },
+      { defaultValues: { toto: '4' } },
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('form is submitting', async () => {
-    const { asFragment } = renderWithForm(<Submit>Test</Submit>, {
-      onRawSubmit: () =>
-        new Promise(resolve => {
-          setTimeout(() => resolve(undefined), 5000)
-        }),
-    })
+    const { asFragment } = renderWithForm(
+      <Submit>Test</Submit>,
+      {},
+      {
+        onSubmit: () =>
+          new Promise(resolve => {
+            setTimeout(() => resolve(undefined), 5000)
+          }),
+      },
+    )
     await userEvent.click(
       // eslint-disable-next-line testing-library/no-node-access
       screen.getByText('Test').closest('button') as HTMLButtonElement,

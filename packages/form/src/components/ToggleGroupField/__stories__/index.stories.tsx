@@ -29,7 +29,7 @@ export default {
       } = methods.formState
 
       return (
-        <Form onRawSubmit={() => {}} errors={mockErrors} methods={methods}>
+        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>

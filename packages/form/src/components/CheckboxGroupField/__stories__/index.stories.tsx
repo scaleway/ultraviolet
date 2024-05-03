@@ -30,7 +30,7 @@ export default {
 
       return (
         <Form
-          onRawSubmit={data => {
+          onSubmit={data => {
             console.log('data', data)
           }}
           errors={mockErrors}

@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 type SelectInputFieldV2Props<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Pick<
     ComponentProps<typeof SelectInputV2>,
     | 'placeholder'
@@ -45,7 +45,7 @@ type SelectInputFieldV2Props<
 
 export const SelectInputFieldV2 = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   autofocus,
   className,
@@ -78,18 +78,20 @@ export const SelectInputFieldV2 = <
   name,
   'aria-label': ariaLabel,
   optionalInfoPlacement,
-  rules,
   shouldUnregister = false,
-}: SelectInputFieldV2Props<TFieldValues, TName>) => {
+  control,
+  validate,
+}: SelectInputFieldV2Props<TFieldValues, TFieldName>) => {
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
       required,
-      ...rules,
+      validate,
     },
   })
 
@@ -99,7 +101,7 @@ export const SelectInputFieldV2 = <
     typeof SelectInputV2<typeof multiselect>
   >['onChange'] = useCallback(
     (value: string | string[]) => {
-      onChange?.(value as PathValue<TFieldValues, TName>)
+      onChange?.(value as PathValue<TFieldValues, TFieldName>)
       field.onChange(value)
     },
     [onChange, field],

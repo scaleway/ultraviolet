@@ -11,8 +11,8 @@ type DateExtends = Date | [Date | null, Date | null]
 
 type DateFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Omit<
     ComponentProps<typeof DateInput>,
     | 'maxDate'
@@ -46,10 +46,11 @@ const isEmpty = (value?: Date | string): boolean =>
 
 export const DateField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   required,
   name,
+  control,
   label = '',
   format,
   locale,
@@ -59,29 +60,29 @@ export const DateField = <
   onChange,
   onBlur,
   onFocus,
-  rules,
+  validate,
   autoFocus = false,
   excludeDates,
   selectsRange,
   size,
   'data-testid': dataTestId,
   shouldUnregister = false,
-}: DateFieldProps<TFieldValues, TName>) => {
+}: DateFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
-      ...rules,
+      required,
       validate: {
-        ...rules?.validate,
         minDate: minDateValidator(minDate),
         maxDate: maxDateValidator(maxDate),
+        ...validate,
       },
-      required,
     },
   })
 
