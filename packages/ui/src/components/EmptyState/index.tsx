@@ -93,7 +93,11 @@ export const EmptyState = ({
     className={className}
     data-testid={dataTestId}
   >
-    <StyledStack gap={3} justifyContent="center" alignItems="center">
+    <StyledStack
+      gap={size === 'small' ? 2 : 3}
+      justifyContent="center"
+      alignItems="center"
+    >
       <Stack gap={2} justifyContent="center" alignItems="center">
         {image && typeof image === 'string' ? (
           <img width={IMAGE_SIZES[size]} alt="" src={image} />
