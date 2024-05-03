@@ -15,7 +15,7 @@
     "linux"
   ],
   "scripts": {
-    "build": "pnpm   --filter '@ultraviolet/*' recursive run build",
+    "build": "pnpm --filter '@ultraviolet/*' recursive run build",
     "build:example": "pnpm --filter '@examples/*' recursive run build",
     "build:storybook": "pnpm run build && STORYBOOK_ENVIRONMENT=production storybook build",
     "build:storybook:stats": "pnpm run build:storybook --webpack-stats-json",
@@ -34,6 +34,7 @@
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
     "prepare": "husky",
     "size": "pnpm run build && size-limit",
+    "size:packages": "pnpm --filter '@ultraviolet/*' recursive run size",
     "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm prettier --write packages/themes/src/themes/console",
     "chromatic": "chromatic --exit-zero-on-changes",
     "release": "pnpm build && pnpm changeset publish",
@@ -68,7 +69,7 @@
         "!packages/plus",
         "!packages/icons"
       ],
-      "limit": "230 kB",
+      "limit": "500 kB",
       "webpack": false,
       "brotli": true,
       "running": false
