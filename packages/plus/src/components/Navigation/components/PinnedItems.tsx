@@ -45,9 +45,13 @@ type PinnedItemsProps = {
    * This prop is used to control if the item is expanded or collapsed
    */
   toggle?: boolean
+  /**
+   * This function will be called when the user reorder the pinned items
+   */
+  onReorder?: (pinnedItems: string[]) => void
 }
 
-export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
+export const PinnedItems = ({ toggle = true, onReorder }: PinnedItemsProps) => {
   const context = useNavigation()
 
   if (!context) {
@@ -70,14 +74,16 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
           event.dataTransfer.getData('text'),
         ) as DragNDropData
         if (data.index === index - 1 || index > data.index) {
-          reorderItems(data.index, index - 1)
+          const newItems = reorderItems(data.index, index - 1)
+          onReorder?.(newItems)
 
           return
         }
-        reorderItems(data.index, index)
+        const newItems = reorderItems(data.index, index)
+        onReorder?.(newItems)
       }
     },
-    [reorderItems],
+    [onReorder, reorderItems],
   )
 
   const onDragOver = useCallback(
@@ -131,6 +137,7 @@ export const PinnedItems = ({ toggle = true }: PinnedItemsProps) => {
                   id={itemId}
                   active={items[itemId]?.active ?? false}
                   onClick={items[itemId]?.onClick ?? undefined}
+                  onClickPinUnpin={items[itemId]?.onClickPinUnpin ?? undefined}
                   hasParents
                 />
               </div>

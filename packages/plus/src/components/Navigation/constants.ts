@@ -38,3 +38,18 @@ export type DragNDropData = {
   index: number
   item: string
 }
+
+export type PinUnPinType = {
+  /**
+   * The state of the item after the click
+   */
+  state?: 'pin' | 'unpin'
+  /**
+   * The current item id that has been pinned on click
+   */
+  id?: string
+  /**
+   * The total pinned items including the current one
+   */
+  totalPinned?: string[]
+}

@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
 import { type ComponentProps, useCallback, useEffect, useState } from 'react'
+import type { PinUnPinType } from '..'
 import { Navigation, NavigationProvider, useNavigation } from '..'
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
@@ -59,6 +60,10 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
     localStorage.setItem('width', width.toString())
   }, [])
 
+  const onClickPinUnpin = useCallback(({ totalPinned }: PinUnPinType) => {
+    console.log('total pinned items:', totalPinned)
+  }, [])
+
   return (
     <Navigation
       onWidthResize={saveWidthInLocalStorage}
@@ -84,6 +89,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
         categoryIconVariant="neutral"
         noPinButton
         active={active === 'Organization Dashboard'}
+        onClickPinUnpin={onClickPinUnpin}
         onClick={() => setActive('Organization Dashboard')}
       />
       <Navigation.Item
@@ -93,6 +99,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
         categoryIconVariant="neutral"
         noPinButton
         active={active === 'Project Dashboard'}
+        onClickPinUnpin={onClickPinUnpin}
         onClick={() => setActive('Project Dashboard')}
       />
       <Navigation.PinnedItems />
@@ -111,6 +118,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             badgeText="new"
             badgeSentiment="success"
             active={active === 'Instance'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Instance')}
           />
           <Navigation.Item
@@ -118,6 +126,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             id="elastic-metal"
             disabled
             active={active === 'Elastic Metal'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Elastic Metal')}
           />
           <Navigation.Item
@@ -125,6 +134,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             id="dedibox"
             href="https://scaleway.com"
             active={active === 'Dedibox'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Dedibox')}
           />
           <Navigation.Item
@@ -133,6 +143,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             badgeText="internal"
             badgeSentiment="danger"
             active={active === 'Very long product name with spaces'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Very long product name with spaces')}
           />
           <Navigation.Item
@@ -141,6 +152,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             badgeText="internal"
             badgeSentiment="danger"
             active={active === 'Verylongproductnamewithoutspace'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Verylongproductnamewithoutspace')}
           />
           <Navigation.Item id="advanced" label="Advanced">
@@ -148,12 +160,14 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
               label="Kubernetes"
               id="kubernetes"
               active={active === 'Kubernetes'}
+              onClickPinUnpin={onClickPinUnpin}
               onClick={() => setActive('Kubernetes')}
             />
             <Navigation.Item
               label="OpenStack"
               id="openstack"
               active={active === 'OpenStack'}
+              onClickPinUnpin={onClickPinUnpin}
               onClick={() => setActive('OpenStack')}
             />
           </Navigation.Item>
@@ -167,6 +181,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             label="Block Storage"
             id="block-storage"
             active={active === 'Block Storage'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Block Storage')}
           />
           <Navigation.Item
@@ -175,6 +190,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             badgeText="beta"
             badgeSentiment="warning"
             active={active === 'Object Storage'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Object Storage')}
           />
         </Navigation.Item>
@@ -183,18 +199,21 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             label="Load Balancer"
             id="load-balancer"
             active={active === 'Load Balancer'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Load Balancer')}
           />
           <Navigation.Item
             label="IP"
             id="ip"
             active={active === 'IP'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('IP')}
           />
           <Navigation.Item
             label="VPC"
             id="vpc"
             active={active === 'VPC'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('VPC')}
           />
         </Navigation.Item>
@@ -203,18 +222,21 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             label="Managed Database"
             id="managed-database"
             active={active === 'Managed Database'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Managed Database')}
           />
           <Navigation.Item
             label="Redis"
             id="redis"
             active={active === 'Redis'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Redis')}
           />
           <Navigation.Item
             label="Elasticsearch"
             id="elasticsearch"
             active={active === 'Elasticsearch'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Elasticsearch')}
           />
         </Navigation.Item>
@@ -227,18 +249,21 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             label="Logs"
             id="logs"
             active={active === 'Logs'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Logs')}
           />
           <Navigation.Item
             label="Metrics"
             id="metrics"
             active={active === 'Metrics'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Metrics')}
           />
           <Navigation.Item
             label="Alerts"
             id="alerts"
             active={active === 'Alerts'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Alerts')}
           />
         </Navigation.Item>
@@ -247,18 +272,21 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
             label="Firewall"
             id="firewall"
             active={active === 'Firewall'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Firewall')}
           />
           <Navigation.Item
             label="Certificate"
             id="certificate"
             active={active === 'Certificate'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('Certificate')}
           />
           <Navigation.Item
             label="VPN"
             id="vpn"
             active={active === 'VPN'}
+            onClickPinUnpin={onClickPinUnpin}
             onClick={() => setActive('VPN')}
           />
         </Navigation.Item>
@@ -270,6 +298,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
           id="support"
           noPinButton
           active={active === 'Support'}
+          onClickPinUnpin={onClickPinUnpin}
           onClick={() => setActive('Support')}
         />
         <Navigation.Item
@@ -277,6 +306,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
           id="abuse"
           noPinButton
           active={active === 'Abuse'}
+          onClickPinUnpin={onClickPinUnpin}
           onClick={() => setActive('Abuse')}
         />
         <Navigation.Item
@@ -286,6 +316,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
           badgeSentiment="success"
           href="http://scaleway.com"
           active={active === 'Documentation'}
+          onClickPinUnpin={onClickPinUnpin}
           onClick={() => setActive('Documentation')}
         />
         <Navigation.Item
@@ -293,6 +324,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
           id="feature-request"
           href="http://scaleway.com"
           active={active === 'Feature Request'}
+          onClickPinUnpin={onClickPinUnpin}
           onClick={() => setActive('Feature Request')}
         />
       </Navigation.Item>
@@ -314,10 +346,6 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
     localStorage.setItem('expanded', localExpanded.toString())
   }, [])
 
-  const onClickPinned = useCallback((pinned: string) => {
-    console.log(`You just pinned/unpin "${pinned}"`)
-  }, [])
-
   return (
     <div
       style={{
@@ -332,7 +360,6 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         initialExpanded={navigationExpanded}
         initialWidth={navigationWidth}
         initialPinned={pinnedItems}
-        onClickPinUnpin={onClickPinned}
         pinnedFeature
       >
         <PlaygroundContent expanded={expanded} {...props} />
