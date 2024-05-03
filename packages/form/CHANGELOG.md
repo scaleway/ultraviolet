@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.13.4
+
+### Patch Changes
+
+- [#3742](https://github.com/scaleway/ultraviolet/pull/3742) [`0b2e92f`](https://github.com/scaleway/ultraviolet/commit/0b2e92f655b966e7d780593a27d7a291eb526f70) Thanks [@philibea](https://github.com/philibea)! - udpate build with @emotion/babel
+
+- Updated dependencies [[`0b2e92f`](https://github.com/scaleway/ultraviolet/commit/0b2e92f655b966e7d780593a27d7a291eb526f70)]:
+  - @ultraviolet/ui@1.51.3
+
 ## 2.13.3
 
 ### Patch Changes
