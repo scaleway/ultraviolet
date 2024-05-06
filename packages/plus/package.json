@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/plus",
-  "version": "0.15.2",
+  "version": "0.15.3",
   "description": "Ultraviolet Plus",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -13,7 +13,8 @@
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "size": "pnpm run build && size-limit"
   },
   "keywords": [
     "react",
@@ -36,12 +37,27 @@
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
       "default": "./dist/index.js"
     }
   },
+  "size-limit": [
+    {
+      "path": [
+        "dist/**/*.js",
+        "!*.d.ts",
+        "!*.cjs"
+      ],
+      "limit": "500 kB",
+      "webpack": false,
+      "brotli": true,
+      "running": false
+    }
+  ],
   "peerDependencies": {
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",

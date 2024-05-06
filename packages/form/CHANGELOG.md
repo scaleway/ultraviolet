@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.13.5
+
+### Patch Changes
+
+- [#3744](https://github.com/scaleway/ultraviolet/pull/3744) [`3c1d30d`](https://github.com/scaleway/ultraviolet/commit/3c1d30d0b7926e1843b257c56b6c972449dbf0cd) Thanks [@philibea](https://github.com/philibea)! - add cjs export
+
+- Updated dependencies [[`3c1d30d`](https://github.com/scaleway/ultraviolet/commit/3c1d30d0b7926e1843b257c56b6c972449dbf0cd)]:
+  - @ultraviolet/ui@1.51.4
+
 ## 2.13.4
 
 ### Patch Changes

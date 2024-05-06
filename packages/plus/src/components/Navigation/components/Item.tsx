@@ -28,6 +28,7 @@ import {
   useState,
 } from 'react'
 import { useNavigation } from '../NavigationProvider'
+import type { PinUnPinType } from '../constants'
 import { ANIMATION_DURATION, shrinkHeight } from '../constants'
 
 const RelativeDiv = styled.div`
@@ -291,7 +292,7 @@ type ItemProps = {
    * toggle will be passed with it.
    */
   onClick?: (toggle?: true | false) => void
-  onPinUnpinClick?: (event: MouseEvent<HTMLDivElement>) => void
+  onClickPinUnpin?: (parameters: PinUnPinType) => void
   /**
    * This prop is used to control if the item is expanded or collapsed
    */
@@ -341,7 +342,7 @@ export const Item = ({
   badgeSentiment,
   href,
   onClick,
-  onPinUnpinClick,
+  onClickPinUnpin,
   toggle,
   active,
   noPinButton,
@@ -376,7 +377,7 @@ export const Item = ({
   useEffect(
     () => {
       if (type !== 'pinnedGroup') {
-        registerItem({ [id]: { label, active, onClick } })
+        registerItem({ [id]: { label, active, onClick, onClickPinUnpin } })
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -621,12 +622,18 @@ export const Item = ({
                         onClick={(event: MouseEvent<HTMLDivElement>) => {
                           event.preventDefault()
                           event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+                          let newValue
                           if (isItemPinned) {
-                            unpinItem(id)
+                            newValue = unpinItem(id)
                           } else {
-                            pinItem(id)
+                            newValue = pinItem(id)
                           }
-                          onPinUnpinClick?.(event)
+
+                          onClickPinUnpin?.({
+                            state: isItemPinned ? 'unpin' : 'pin',
+                            id,
+                            totalPinned: newValue,
+                          })
                         }}
                         disabled={isItemPinned ? false : isPinDisabled}
                       >
@@ -813,12 +820,18 @@ export const Item = ({
                     onClick={(event: MouseEvent<HTMLDivElement>) => {
                       event.preventDefault()
                       event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+
+                      let newValue
                       if (isItemPinned) {
-                        unpinItem(id)
+                        newValue = unpinItem(id)
                       } else {
-                        pinItem(id)
+                        newValue = pinItem(id)
                       }
-                      onPinUnpinClick?.(event)
+                      onClickPinUnpin?.({
+                        state: isItemPinned ? 'unpin' : 'pin',
+                        id,
+                        totalPinned: newValue,
+                      })
                     }}
                     disabled={isItemPinned ? false : isPinDisabled}
                   >
