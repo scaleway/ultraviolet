@@ -1,5 +1,12 @@
-import { createContext, useContext, useMemo, useReducer, useState } from 'react'
-import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useReducer,
+  useState,
+} from 'react'
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import type { DataType, OptionType, ReducerAction, ReducerState } from './types'
 
 type ContextProps = {
@@ -53,6 +60,7 @@ type SelectInputProviderProps<IsMulti extends boolean> = {
   selectAllGroup: boolean
   numberOfOptions: number
   multiselect: IsMulti
+  refSelect?: RefObject<HTMLDivElement>
   onChange?: IsMulti extends true
     ? (value: string[]) => void
     : (value: string) => void
@@ -67,6 +75,7 @@ export const SelectInputProvider = <T extends boolean>({
   numberOfOptions,
   children,
   onChange,
+  refSelect,
 }: SelectInputProviderProps<T>) => {
   const currentValue = useMemo(() => {
     if (value) {
@@ -95,6 +104,21 @@ export const SelectInputProvider = <T extends boolean>({
   const [displayedOptions, setDisplayedOptions] = useState(options)
   const [isDropdownVisible, setIsDropdownVisible] = useState(false)
   const [searchInput, setSearchInput] = useState('')
+
+  const handleDropDownVisible = useCallback(
+    (newValue: boolean) => {
+      if (newValue) {
+        setIsDropdownVisible(newValue)
+      } else {
+        setIsDropdownVisible(newValue)
+        if (refSelect) {
+          refSelect.current?.focus()
+        }
+      }
+    },
+    [refSelect],
+  )
+
   const allValues: OptionType[] = useMemo(() => {
     if (!Array.isArray(options)) {
       return Object.keys(options)
@@ -245,7 +269,7 @@ export const SelectInputProvider = <T extends boolean>({
       ({
         onSearch: setDisplayedOptions,
         isDropdownVisible,
-        setIsDropdownVisible,
+        setIsDropdownVisible: handleDropDownVisible,
         searchInput,
         setSearchInput,
         options,
@@ -259,14 +283,15 @@ export const SelectInputProvider = <T extends boolean>({
         onChange,
       }) as ContextProps,
     [
-      displayedOptions,
       isDropdownVisible,
-      multiselect,
-      numberOfOptions,
-      options,
+      handleDropDownVisible,
       searchInput,
+      options,
+      multiselect,
       selectAll,
       selectAllGroup,
+      numberOfOptions,
+      displayedOptions,
       selectedData,
       onChange,
     ],

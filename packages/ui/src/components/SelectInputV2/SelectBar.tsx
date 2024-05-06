@@ -21,6 +21,7 @@ type SelectBarProps = {
   error?: string
   autoFocus?: boolean
   innerRef: RefObject<HTMLDivElement>
+  id?: string
 }
 
 type DisplayValuesProps = {
@@ -204,6 +205,7 @@ export const SelectBar = ({
   error,
   autoFocus,
   innerRef,
+  id,
 }: SelectBarProps) => {
   const {
     isDropdownVisible,
@@ -290,6 +292,8 @@ export const SelectBar = ({
 
   return (
     <StyledInputWrapper
+      role="combobox"
+      id={id}
       data-disabled={disabled}
       data-readonly={readOnly}
       data-size={size}
@@ -322,7 +326,6 @@ export const SelectBar = ({
       aria-labelledby="select bar"
       aria-haspopup="listbox"
       aria-expanded={isDropdownVisible}
-      aria-controls="select-dropdown"
       tabIndex={0}
     >
       {selectedData.selectedValues.length > 0 ? (
