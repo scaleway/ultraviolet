@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.13.6
+
+### Patch Changes
+
+- [#3759](https://github.com/scaleway/ultraviolet/pull/3759) [`fd81844`](https://github.com/scaleway/ultraviolet/commit/fd81844fed1d73b58b11f831015690e022e1c511) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` component to avoid submiting when selecting an intem in the list
+
+- Updated dependencies [[`fd81844`](https://github.com/scaleway/ultraviolet/commit/fd81844fed1d73b58b11f831015690e022e1c511)]:
+  - @ultraviolet/ui@1.51.5
+
 ## 2.13.5
 
 ### Patch Changes
