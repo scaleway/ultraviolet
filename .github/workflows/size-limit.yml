@@ -4,12 +4,17 @@ on:
     types: ['opened', 'edited', 'reopened', 'synchronize']
 jobs:
   size:
-    runs-on: ubuntu-latest
-    env:
-      CI_JOB_NUMBER: 1
+    strategy:
+      matrix:
+        node: ['20']
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4 # v4.1.4
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v3.0.0
-      - uses: andresz1/size-limit-action@v1.8.0
+      - name: Use Node.js
+        uses: actions/setup-node@v4.0.2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: ${{ matrix.node }}
+      - run: pnpm install
+      - run: pnpm run build
+      - run: pnpm run size:packages
