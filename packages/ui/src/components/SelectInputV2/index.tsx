@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import { useRef } from 'react'
+import { useId, useRef } from 'react'
 import type { HTMLAttributes, ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -165,6 +165,8 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
   selectAll,
   selectAllGroup = false,
 }: SelectInputV2Props<IsMulti>) => {
+  const localId = useId()
+  const finalId = id ?? localId
   const ref = useRef<HTMLDivElement>(null)
   const numberOfOptions = Array.isArray(options)
     ? options.length
@@ -183,9 +185,9 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
       selectAllGroup={selectAllGroup}
       numberOfOptions={numberOfOptions}
       onChange={onChange}
+      refSelect={ref}
     >
       <SelectInputContainer
-        id={id}
         onBlur={onBlur}
         onFocus={onFocus}
         data-testid={dataTestId}
@@ -209,6 +211,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
                 <Text
                   as="label"
                   variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
+                  htmlFor={finalId}
                 >
                   {label}
                 </Text>
@@ -228,6 +231,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
               error={error}
               autoFocus={autofocus}
               innerRef={ref}
+              id={finalId}
             />
           </Stack>
         </Dropdown>

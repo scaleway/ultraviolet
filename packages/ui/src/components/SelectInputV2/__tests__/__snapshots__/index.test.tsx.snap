@@ -246,8 +246,8 @@ exports[`SelectInputV2 renders correctly 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r0:"
-      aria-describedby=":r0:"
+      aria-controls=":r1:"
+      aria-describedby=":r1:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -260,12 +260,12 @@ exports[`SelectInputV2 renders correctly 1`] = `
         >
           <label
             class="cache-zvclys-StyledText e13y3mga0"
+            for=":r0:"
           >
             label
           </label>
         </div>
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -276,6 +276,8 @@ exports[`SelectInputV2 renders correctly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r0:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -543,8 +545,8 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7j:"
-      aria-describedby=":r7j:"
+      aria-controls=":r83:"
+      aria-describedby=":r83:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -556,7 +558,6 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -567,6 +568,8 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r82:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -1289,8 +1292,8 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r11:"
-      aria-describedby=":r11:"
+      aria-controls=":r17:"
+      aria-describedby=":r17:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1302,7 +1305,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -1313,6 +1315,8 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r16:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -1340,7 +1344,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r11:"
+        id=":r17:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -1378,7 +1382,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r14:"
+                  id=":r1a:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -1404,6 +1408,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="group-0"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -1423,6 +1428,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="option-mercury"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1446,6 +1452,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="option-venus"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1469,6 +1476,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="option-earth"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1498,6 +1506,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   disabled=""
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1521,6 +1530,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="option-pluto"
                   id="option-4"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1556,6 +1566,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="group-1"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -1575,6 +1586,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="option-jupiter"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1603,6 +1615,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="option-saturn"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1626,6 +1639,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="option-uranus"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1649,6 +1663,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   data-testid="option-neptune"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -1922,8 +1937,8 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7b:"
-      aria-describedby=":r7b:"
+      aria-controls=":r7p:"
+      aria-describedby=":r7p:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1935,7 +1950,6 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -1946,6 +1960,8 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r7o:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -2410,8 +2426,8 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1f0:"
-      aria-describedby=":r1f0:"
+      aria-controls=":r1gl:"
+      aria-describedby=":r1gl:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2423,7 +2439,6 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -2434,6 +2449,8 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r1gk:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -2461,7 +2478,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r1f0:"
+        id=":r1gl:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -2983,8 +3000,8 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1f3:"
-      aria-describedby=":r1f3:"
+      aria-controls=":r1gp:"
+      aria-describedby=":r1gp:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2996,7 +3013,6 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -3007,6 +3023,8 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r1go:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -3034,7 +3052,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r1f3:"
+        id=":r1gp:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -4254,8 +4272,8 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r32:"
-      aria-describedby=":r32:"
+      aria-controls=":r3b:"
+      aria-describedby=":r3b:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -4267,7 +4285,6 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -4278,6 +4295,8 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r3a:"
+          role="combobox"
           tabindex="0"
         >
           <div
@@ -4346,7 +4365,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r32:"
+        id=":r3b:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -4384,7 +4403,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r37:"
+                  id=":r3g:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -4410,6 +4429,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   data-testid="group-0"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -4429,6 +4449,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   data-testid="option-mercury"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     aria-disabled="false"
@@ -4440,7 +4461,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3a:"
+                      id=":r3j:"
                       tabindex="-1"
                       type="checkbox"
                       value="mercury"
@@ -4481,7 +4502,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3a:"
+                          for=":r3j:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4509,6 +4530,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   data-testid="option-venus"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     aria-disabled="false"
@@ -4520,7 +4542,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3d:"
+                      id=":r3m:"
                       tabindex="-1"
                       type="checkbox"
                       value="venus"
@@ -4561,7 +4583,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3d:"
+                          for=":r3m:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4589,6 +4611,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   data-testid="option-earth"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     aria-disabled="false"
@@ -4600,7 +4623,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3g:"
+                      id=":r3p:"
                       tabindex="-1"
                       type="checkbox"
                       value="earth"
@@ -4641,7 +4664,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3g:"
+                          for=":r3p:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4675,6 +4698,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   disabled=""
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     aria-disabled="true"
@@ -4687,7 +4711,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
                       disabled=""
-                      id=":r3k:"
+                      id=":r3t:"
                       tabindex="-1"
                       type="checkbox"
                       value="mars"
@@ -4728,7 +4752,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3k:"
+                          for=":r3t:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4756,6 +4780,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   data-testid="option-pluto"
                   id="option-4"
                   role="option"
+                  type="button"
                 >
                   <div
                     aria-disabled="false"
@@ -4768,206 +4793,10 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       checked=""
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3n:"
-                      tabindex="-1"
-                      type="checkbox"
-                      value="pluto"
-                    />
-                    <svg
-                      class="cache-1acemqq-StyledIcon eqr7bqq4"
-                      fill="none"
-                      size="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <g>
-                        <rect
-                          class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                          height="16"
-                          rx="2px"
-                          stroke-width="2"
-                          width="16"
-                          x="4"
-                          y="4"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                          fill="white"
-                          fill-rule="evenodd"
-                          height="9"
-                          width="12"
-                          x="5"
-                          y="4"
-                        />
-                      </g>
-                    </svg>
-                    <div
-                      class="cache-10ivylf-Stack ehpbis70"
-                    >
-                      <div
-                        class="cache-17l4vsh-Stack ehpbis70"
-                      >
-                        <label
-                          class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3n:"
-                        >
-                          <div
-                            class="cache-ymc80m-Stack ehpbis70"
-                            data-testid="option-stack-pluto"
-                          >
-                            <div
-                              class="cache-qrj8hh-Stack ehpbis70"
-                            >
-                              <span
-                                class="cache-1ug7ot4-StyledText e13y3mga0"
-                              >
-                                Pluto
-                              </span>
-                            </div>
-                            <span
-                              class="cache-1p3f4r5-StyledText e13y3mga0"
-                            >
-                              Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
-                            </span>
-                          </div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div
-              class="cache-113ljh8-Stack ehpbis70"
-            >
-              <div
-                class="cache-psepay-DropdownGroupWrapper eeucz6c5"
-              >
-                <button
-                  class="cache-erc09e-DropdownGroup eeucz6c6"
-                  data-selectgroup="false"
-                  data-testid="group-1"
-                  role="group"
-                  tabindex="-1"
-                >
-                  <span
-                    class="cache-zis5in-StyledText e13y3mga0"
-                  >
-                    JOVIAN PLANETS
-                  </span>
-                </button>
-              </div>
-              <div
-                class="cache-113ljh8-Stack ehpbis70"
-                id="items"
-              >
-                <button
-                  aria-label="jupiter"
-                  class="cache-1ej1xix-DropdownItem eeucz6c4"
-                  data-selected="false"
-                  data-testid="option-jupiter"
-                  id="option-0"
-                  role="option"
-                >
-                  <div
-                    aria-disabled="false"
-                    class="eeucz6c2 cache-1175o83-CheckboxContainer-StyledCheckbox eqr7bqq1"
-                    data-checked="false"
-                    data-error="false"
-                  >
-                    <input
-                      aria-checked="false"
-                      aria-invalid="false"
-                      class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3s:"
-                      tabindex="-1"
-                      type="checkbox"
-                      value="jupiter"
-                    />
-                    <svg
-                      class="cache-1acemqq-StyledIcon eqr7bqq4"
-                      fill="none"
-                      size="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <g>
-                        <rect
-                          class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                          height="16"
-                          rx="2px"
-                          stroke-width="2"
-                          width="16"
-                          x="4"
-                          y="4"
-                        />
-                        <path
-                          clip-rule="evenodd"
-                          d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                          fill="white"
-                          fill-rule="evenodd"
-                          height="9"
-                          width="12"
-                          x="5"
-                          y="4"
-                        />
-                      </g>
-                    </svg>
-                    <div
-                      class="cache-10ivylf-Stack ehpbis70"
-                    >
-                      <div
-                        class="cache-17l4vsh-Stack ehpbis70"
-                      >
-                        <label
-                          class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3s:"
-                        >
-                          <div
-                            class="cache-ymc80m-Stack ehpbis70"
-                            data-testid="option-stack-jupiter"
-                          >
-                            <div
-                              class="cache-qrj8hh-Stack ehpbis70"
-                            >
-                              <span
-                                class="cache-1ug7ot4-StyledText e13y3mga0"
-                              >
-                                Jupiter
-                              </span>
-                            </div>
-                            <span
-                              class="cache-1p3f4r5-StyledText e13y3mga0"
-                            >
-                              Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
-                            </span>
-                          </div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </button>
-                <button
-                  aria-label="saturn"
-                  class="cache-1ej1xix-DropdownItem eeucz6c4"
-                  data-selected="false"
-                  data-testid="option-saturn"
-                  id="option-1"
-                  role="option"
-                >
-                  <div
-                    aria-disabled="false"
-                    class="eeucz6c2 cache-1175o83-CheckboxContainer-StyledCheckbox eqr7bqq1"
-                    data-checked="false"
-                    data-error="false"
-                  >
-                    <input
-                      aria-checked="false"
-                      aria-invalid="false"
-                      class="cache-1jd075o-CheckboxInput eqr7bqq2"
                       id=":r40:"
                       tabindex="-1"
                       type="checkbox"
-                      value="saturn"
+                      value="pluto"
                     />
                     <svg
                       class="cache-1acemqq-StyledIcon eqr7bqq4"
@@ -5009,6 +4838,205 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
+                            data-testid="option-stack-pluto"
+                          >
+                            <div
+                              class="cache-qrj8hh-Stack ehpbis70"
+                            >
+                              <span
+                                class="cache-1ug7ot4-StyledText e13y3mga0"
+                              >
+                                Pluto
+                              </span>
+                            </div>
+                            <span
+                              class="cache-1p3f4r5-StyledText e13y3mga0"
+                            >
+                              Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
+                            </span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div
+              class="cache-113ljh8-Stack ehpbis70"
+            >
+              <div
+                class="cache-psepay-DropdownGroupWrapper eeucz6c5"
+              >
+                <button
+                  class="cache-erc09e-DropdownGroup eeucz6c6"
+                  data-selectgroup="false"
+                  data-testid="group-1"
+                  role="group"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <span
+                    class="cache-zis5in-StyledText e13y3mga0"
+                  >
+                    JOVIAN PLANETS
+                  </span>
+                </button>
+              </div>
+              <div
+                class="cache-113ljh8-Stack ehpbis70"
+                id="items"
+              >
+                <button
+                  aria-label="jupiter"
+                  class="cache-1ej1xix-DropdownItem eeucz6c4"
+                  data-selected="false"
+                  data-testid="option-jupiter"
+                  id="option-0"
+                  role="option"
+                  type="button"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="eeucz6c2 cache-1175o83-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    data-checked="false"
+                    data-error="false"
+                  >
+                    <input
+                      aria-checked="false"
+                      aria-invalid="false"
+                      class="cache-1jd075o-CheckboxInput eqr7bqq2"
+                      id=":r45:"
+                      tabindex="-1"
+                      type="checkbox"
+                      value="jupiter"
+                    />
+                    <svg
+                      class="cache-1acemqq-StyledIcon eqr7bqq4"
+                      fill="none"
+                      size="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <g>
+                        <rect
+                          class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+                          height="16"
+                          rx="2px"
+                          stroke-width="2"
+                          width="16"
+                          x="4"
+                          y="4"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                          fill="white"
+                          fill-rule="evenodd"
+                          height="9"
+                          width="12"
+                          x="5"
+                          y="4"
+                        />
+                      </g>
+                    </svg>
+                    <div
+                      class="cache-10ivylf-Stack ehpbis70"
+                    >
+                      <div
+                        class="cache-17l4vsh-Stack ehpbis70"
+                      >
+                        <label
+                          class="cache-9k0c1e-StyledLabel eqr7bqq3"
+                          for=":r45:"
+                        >
+                          <div
+                            class="cache-ymc80m-Stack ehpbis70"
+                            data-testid="option-stack-jupiter"
+                          >
+                            <div
+                              class="cache-qrj8hh-Stack ehpbis70"
+                            >
+                              <span
+                                class="cache-1ug7ot4-StyledText e13y3mga0"
+                              >
+                                Jupiter
+                              </span>
+                            </div>
+                            <span
+                              class="cache-1p3f4r5-StyledText e13y3mga0"
+                            >
+                              Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
+                            </span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                <button
+                  aria-label="saturn"
+                  class="cache-1ej1xix-DropdownItem eeucz6c4"
+                  data-selected="false"
+                  data-testid="option-saturn"
+                  id="option-1"
+                  role="option"
+                  type="button"
+                >
+                  <div
+                    aria-disabled="false"
+                    class="eeucz6c2 cache-1175o83-CheckboxContainer-StyledCheckbox eqr7bqq1"
+                    data-checked="false"
+                    data-error="false"
+                  >
+                    <input
+                      aria-checked="false"
+                      aria-invalid="false"
+                      class="cache-1jd075o-CheckboxInput eqr7bqq2"
+                      id=":r49:"
+                      tabindex="-1"
+                      type="checkbox"
+                      value="saturn"
+                    />
+                    <svg
+                      class="cache-1acemqq-StyledIcon eqr7bqq4"
+                      fill="none"
+                      size="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <g>
+                        <rect
+                          class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+                          height="16"
+                          rx="2px"
+                          stroke-width="2"
+                          width="16"
+                          x="4"
+                          y="4"
+                        />
+                        <path
+                          clip-rule="evenodd"
+                          d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                          fill="white"
+                          fill-rule="evenodd"
+                          height="9"
+                          width="12"
+                          x="5"
+                          y="4"
+                        />
+                      </g>
+                    </svg>
+                    <div
+                      class="cache-10ivylf-Stack ehpbis70"
+                    >
+                      <div
+                        class="cache-17l4vsh-Stack ehpbis70"
+                      >
+                        <label
+                          class="cache-9k0c1e-StyledLabel eqr7bqq3"
+                          for=":r49:"
+                        >
+                          <div
+                            class="cache-ymc80m-Stack ehpbis70"
                             data-testid="option-stack-saturn"
                           >
                             <div
@@ -5033,6 +5061,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   data-testid="option-uranus"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     aria-disabled="false"
@@ -5044,7 +5073,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r43:"
+                      id=":r4c:"
                       tabindex="-1"
                       type="checkbox"
                       value="uranus"
@@ -5085,7 +5114,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r43:"
+                          for=":r4c:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5113,6 +5142,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   data-testid="option-neptune"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     aria-disabled="false"
@@ -5124,7 +5154,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r46:"
+                      id=":r4f:"
                       tabindex="-1"
                       type="checkbox"
                       value="neptune"
@@ -5165,7 +5195,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r46:"
+                          for=":r4f:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5427,8 +5457,8 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rc:"
-      aria-describedby=":rc:"
+      aria-controls=":rg:"
+      aria-describedby=":rg:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5440,7 +5470,6 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -5451,6 +5480,8 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":rf:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -5718,8 +5749,8 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r88:"
-      aria-describedby=":r88:"
+      aria-controls=":r8q:"
+      aria-describedby=":r8q:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5731,7 +5762,6 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -5742,6 +5772,8 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r8p:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -6034,8 +6066,8 @@ exports[`SelectInputV2 renders correctly required 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8:"
-      aria-describedby=":r8:"
+      aria-controls=":rb:"
+      aria-describedby=":rb:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -6048,6 +6080,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
         >
           <label
             class="cache-zvclys-StyledText e13y3mga0"
+            for=":ra:"
           >
             label
           </label>
@@ -6062,7 +6095,6 @@ exports[`SelectInputV2 renders correctly required 1`] = `
           </svg>
         </div>
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -6073,6 +6105,8 @@ exports[`SelectInputV2 renders correctly required 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":ra:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -6737,8 +6771,8 @@ exports[`SelectInputV2 renders correctly required 2`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7m:"
-      aria-describedby=":r7m:"
+      aria-controls=":r87:"
+      aria-describedby=":r87:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -6750,7 +6784,6 @@ exports[`SelectInputV2 renders correctly required 2`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -6761,6 +6794,8 @@ exports[`SelectInputV2 renders correctly required 2`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r86:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -6788,7 +6823,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r7m:"
+        id=":r87:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -6826,7 +6861,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r7p:"
+                  id=":r8a:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -6851,6 +6886,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                 data-testid="option-mercury"
                 id="option-0"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -6874,6 +6910,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                 data-testid="option-venus"
                 id="option-1"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -6897,6 +6934,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                 data-testid="option-earth"
                 id="option-2"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -6926,6 +6964,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                 disabled=""
                 id="option-3"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -6938,8 +6977,8 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r80:"
-                        aria-describedby=":r80:"
+                        aria-controls=":r8h:"
+                        aria-describedby=":r8h:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -6956,6 +6995,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                 data-testid="option-jupiter"
                 id="option-4"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -6984,6 +7024,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                 data-testid="option-saturn"
                 id="option-5"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -7007,6 +7048,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                 data-testid="option-uranus"
                 id="option-6"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -7030,6 +7072,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                 data-testid="option-neptune"
                 id="option-7"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -7313,8 +7356,8 @@ exports[`SelectInputV2 renders correctly small 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r4:"
-      aria-describedby=":r4:"
+      aria-controls=":r6:"
+      aria-describedby=":r6:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7327,12 +7370,12 @@ exports[`SelectInputV2 renders correctly small 1`] = `
         >
           <label
             class="cache-10an7cj-StyledText e13y3mga0"
+            for=":r5:"
           >
             label
           </label>
         </div>
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -7343,6 +7386,8 @@ exports[`SelectInputV2 renders correctly small 1`] = `
           data-size="small"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r5:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -7712,8 +7757,8 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rej:"
-      aria-describedby=":rej:"
+      aria-controls=":rfc:"
+      aria-describedby=":rfc:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7725,7 +7770,6 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -7736,6 +7780,8 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":rfb:"
+          role="combobox"
           tabindex="0"
         >
           <div
@@ -8426,8 +8472,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rf:"
-      aria-describedby=":rf:"
+      aria-controls=":rk:"
+      aria-describedby=":rk:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -8439,7 +8485,6 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -8450,6 +8495,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":rj:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -8477,7 +8524,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":rf:"
+        id=":rk:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -8515,7 +8562,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":ri:"
+                  id=":rn:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -8540,6 +8587,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                 data-testid="option-mercury"
                 id="option-0"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -8563,6 +8611,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                 data-testid="option-venus"
                 id="option-1"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -8586,6 +8635,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                 data-testid="option-earth"
                 id="option-2"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -8615,6 +8665,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                 disabled=""
                 id="option-3"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -8627,8 +8678,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":rp:"
-                        aria-describedby=":rp:"
+                        aria-controls=":ru:"
+                        aria-describedby=":ru:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -8645,6 +8696,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                 data-testid="option-jupiter"
                 id="option-4"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -8673,6 +8725,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                 data-testid="option-saturn"
                 id="option-5"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -8696,6 +8749,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                 data-testid="option-uranus"
                 id="option-6"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -8719,6 +8773,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                 data-testid="option-neptune"
                 id="option-7"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -9487,8 +9542,8 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1m:"
-      aria-describedby=":r1m:"
+      aria-controls=":r1t:"
+      aria-describedby=":r1t:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -9500,7 +9555,6 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -9511,6 +9565,8 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r1s:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -9554,7 +9610,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r1m:"
+        id=":r1t:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -9592,7 +9648,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r1q:"
+                  id=":r21:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -9618,6 +9674,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="group-0"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -9637,6 +9694,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="option-mercury"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -9660,6 +9718,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="option-venus"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -9683,6 +9742,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="option-earth"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -9712,6 +9772,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   disabled=""
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -9735,6 +9796,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="option-pluto"
                   id="option-4"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -9770,6 +9832,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="group-1"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -9789,6 +9852,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="option-jupiter"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -9817,6 +9881,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="option-saturn"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -9840,6 +9905,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="option-uranus"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -9863,6 +9929,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   data-testid="option-neptune"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -10371,8 +10438,8 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7e:"
-      aria-describedby=":r7e:"
+      aria-controls=":r7t:"
+      aria-describedby=":r7t:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -10384,7 +10451,6 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -10395,6 +10461,8 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r7s:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -10422,7 +10490,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r7e:"
+        id=":r7t:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -10460,7 +10528,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r7h:"
+                  id=":r80:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -11129,8 +11197,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8b:"
-      aria-describedby=":r8b:"
+      aria-controls=":r8u:"
+      aria-describedby=":r8u:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -11142,7 +11210,6 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -11153,6 +11220,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
           data-size="large"
           data-state="danger"
           data-testid="select-bar"
+          id=":r8t:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -11191,7 +11260,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r8b:"
+        id=":r8u:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -11229,7 +11298,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r8e:"
+                  id=":r91:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -11254,6 +11323,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                 data-testid="option-mercury"
                 id="option-0"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -11277,6 +11347,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                 data-testid="option-venus"
                 id="option-1"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -11300,6 +11371,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                 data-testid="option-earth"
                 id="option-2"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -11329,6 +11401,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                 disabled=""
                 id="option-3"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -11341,8 +11414,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r8l:"
-                        aria-describedby=":r8l:"
+                        aria-controls=":r98:"
+                        aria-describedby=":r98:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -11359,6 +11432,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                 data-testid="option-jupiter"
                 id="option-4"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -11387,6 +11461,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                 data-testid="option-saturn"
                 id="option-5"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -11410,6 +11485,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                 data-testid="option-uranus"
                 id="option-6"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -11433,6 +11509,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                 data-testid="option-neptune"
                 id="option-7"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -12209,8 +12286,8 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r2c:"
-      aria-describedby=":r2c:"
+      aria-controls=":r2k:"
+      aria-describedby=":r2k:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -12222,7 +12299,6 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -12233,6 +12309,8 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r2j:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -12276,7 +12354,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r2c:"
+        id=":r2k:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -12314,7 +12392,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r2g:"
+                  id=":r2o:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -12340,6 +12418,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="group-0"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -12359,6 +12438,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="option-mercury"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -12382,6 +12462,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="option-venus"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -12405,6 +12486,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="option-earth"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -12434,6 +12516,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   disabled=""
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -12457,6 +12540,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="option-pluto"
                   id="option-4"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -12492,6 +12576,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="group-1"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -12511,6 +12596,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="option-jupiter"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -12539,6 +12625,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="option-saturn"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -12562,6 +12649,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="option-uranus"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -12585,6 +12673,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   data-testid="option-neptune"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -13342,8 +13431,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r5r:"
-      aria-describedby=":r5r:"
+      aria-controls=":r67:"
+      aria-describedby=":r67:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -13355,7 +13444,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -13366,6 +13454,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r66:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -13393,7 +13483,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r5r:"
+        id=":r67:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -13431,7 +13521,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r5u:"
+                  id=":r6a:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -13457,6 +13547,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="group-0"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -13476,6 +13567,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-mercury"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ad5xqq-Stack ehpbis70"
@@ -13504,6 +13596,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-venus"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ad5xqq-Stack ehpbis70"
@@ -13532,6 +13625,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-earth"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-qrj8hh-Stack ehpbis70"
@@ -13560,6 +13654,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-mars"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-qrj8hh-Stack ehpbis70"
@@ -13583,6 +13678,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-pluto"
                   id="option-4"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-qrj8hh-Stack ehpbis70"
@@ -13622,6 +13718,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="group-1"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -13641,6 +13738,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-jupiter"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ad5xqq-Stack ehpbis70"
@@ -13674,6 +13772,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-saturn"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-qrj8hh-Stack ehpbis70"
@@ -13697,6 +13796,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-uranus"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ad5xqq-Stack ehpbis70"
@@ -13725,6 +13825,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-neptune"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-qrj8hh-Stack ehpbis70"
@@ -14451,8 +14552,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r6j:"
-      aria-describedby=":r6j:"
+      aria-controls=":r70:"
+      aria-describedby=":r70:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -14464,7 +14565,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -14475,6 +14575,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r6v:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -14502,7 +14604,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r6j:"
+        id=":r70:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -14540,7 +14642,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r6m:"
+                  id=":r73:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -14566,6 +14668,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="group-0"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -14585,6 +14688,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-mercury"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -14617,6 +14721,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-venus"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -14649,6 +14754,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-earth"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -14677,6 +14783,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-mars"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -14700,6 +14807,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-pluto"
                   id="option-4"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -14739,6 +14847,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="group-1"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -14758,6 +14867,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-jupiter"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -14795,6 +14905,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-saturn"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -14818,6 +14929,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-uranus"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -14850,6 +14962,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   data-testid="option-neptune"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-ymc80m-Stack ehpbis70"
@@ -15576,8 +15689,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r4b:"
-      aria-describedby=":r4b:"
+      aria-controls=":r4l:"
+      aria-describedby=":r4l:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -15589,7 +15702,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -15600,6 +15712,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r4k:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -15627,7 +15741,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r4b:"
+        id=":r4l:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -15665,7 +15779,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r4e:"
+                  id=":r4o:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -15691,6 +15805,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="group-0"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -15710,6 +15825,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-mercury"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -15742,6 +15858,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-venus"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -15774,6 +15891,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-earth"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -15802,6 +15920,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-mars"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -15825,6 +15944,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-pluto"
                   id="option-4"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -15864,6 +15984,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="group-1"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -15883,6 +16004,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-jupiter"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -15920,6 +16042,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-saturn"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -15943,6 +16066,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-uranus"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -15975,6 +16099,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-neptune"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -16701,8 +16826,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r53:"
-      aria-describedby=":r53:"
+      aria-controls=":r5e:"
+      aria-describedby=":r5e:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -16714,7 +16839,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -16725,6 +16849,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":r5d:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -16752,7 +16878,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r53:"
+        id=":r5e:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -16790,7 +16916,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r56:"
+                  id=":r5h:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -16816,6 +16942,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="group-0"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -16835,6 +16962,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-mercury"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -16867,6 +16995,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-venus"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -16899,6 +17028,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-earth"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -16927,6 +17057,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-mars"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -16950,6 +17081,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-pluto"
                   id="option-4"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -16989,6 +17121,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="group-1"
                   role="group"
                   tabindex="-1"
+                  type="button"
                 >
                   <span
                     class="cache-zis5in-StyledText e13y3mga0"
@@ -17008,6 +17141,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-jupiter"
                   id="option-0"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -17045,6 +17179,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-saturn"
                   id="option-1"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -17068,6 +17203,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-uranus"
                   id="option-2"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -17100,6 +17236,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   data-testid="option-neptune"
                   id="option-3"
                   role="option"
+                  type="button"
                 >
                   <div
                     class="cache-1mgpzfx-Stack ehpbis70"
@@ -17619,8 +17756,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r9f:"
-      aria-describedby=":r9f:"
+      aria-controls=":ra4:"
+      aria-describedby=":ra4:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -17632,7 +17769,6 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -17643,6 +17779,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
+          id=":ra3:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -17670,7 +17808,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r9f:"
+        id=":ra4:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -17694,6 +17832,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                 data-testid="option-mercury"
                 id="option-0"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -17717,6 +17856,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                 data-testid="option-venus"
                 id="option-1"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -17740,6 +17880,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                 data-testid="option-earth"
                 id="option-2"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -17769,6 +17910,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                 disabled=""
                 id="option-3"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -17781,8 +17923,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r9n:"
-                        aria-describedby=":r9n:"
+                        aria-controls=":rac:"
+                        aria-describedby=":rac:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -17799,6 +17941,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                 data-testid="option-jupiter"
                 id="option-4"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -17827,6 +17970,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                 data-testid="option-saturn"
                 id="option-5"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -17850,6 +17994,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                 data-testid="option-uranus"
                 id="option-6"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -17873,6 +18018,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                 data-testid="option-neptune"
                 id="option-7"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -18556,8 +18702,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8t:"
-      aria-describedby=":r8t:"
+      aria-controls=":r9h:"
+      aria-describedby=":r9h:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -18569,7 +18715,6 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
           class="cache-wfyv8s-Stack ehpbis70"
         />
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -18580,6 +18725,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
           data-size="large"
           data-state="success"
           data-testid="select-bar"
+          id=":r9g:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -18618,7 +18765,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
       <div
         class="eeucz6c8 cache-uchord-StyledPopup-StyledPopup e4h1g861"
         data-has-arrow="false"
-        id=":r8t:"
+        id=":r9h:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -18656,7 +18803,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r90:"
+                  id=":r9k:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -18681,6 +18828,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                 data-testid="option-mercury"
                 id="option-0"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -18704,6 +18852,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                 data-testid="option-venus"
                 id="option-1"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -18727,6 +18876,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                 data-testid="option-earth"
                 id="option-2"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -18756,6 +18906,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                 disabled=""
                 id="option-3"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -18768,8 +18919,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r97:"
-                        aria-describedby=":r97:"
+                        aria-controls=":r9r:"
+                        aria-describedby=":r9r:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -18786,6 +18937,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                 data-testid="option-jupiter"
                 id="option-4"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -18814,6 +18966,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                 data-testid="option-saturn"
                 id="option-5"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -18837,6 +18990,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                 data-testid="option-uranus"
                 id="option-6"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"
@@ -18860,6 +19014,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                 data-testid="option-neptune"
                 id="option-7"
                 role="option"
+                type="button"
               >
                 <div
                   class="cache-ymc80m-Stack ehpbis70"

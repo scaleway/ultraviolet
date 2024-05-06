@@ -395,6 +395,7 @@ const CreateDropdown = ({
                 aria-label="select-all"
                 data-testid="select-all"
                 id="select-all"
+                type="button"
                 role="option"
                 onKeyDown={event =>
                   [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
@@ -432,6 +433,7 @@ const CreateDropdown = ({
                 <DropdownGroupWrapper id={selectAllGroup ? 'items' : undefined}>
                   <DropdownGroup
                     key={group}
+                    type="button"
                     tabIndex={selectAllGroup ? 0 : -1}
                     onKeyDown={event => {
                       if ([' ', 'Enter'].includes(event.key)) {
@@ -471,6 +473,7 @@ const CreateDropdown = ({
                   <DropdownItem
                     key={option.value}
                     disabled={option.disabled}
+                    type="button"
                     data-selected={
                       selectedData.selectedValues.includes(option.value) &&
                       !option.disabled
@@ -546,6 +549,7 @@ const CreateDropdown = ({
             data-selected={selectedData.allSelected}
             aria-label="select-all"
             data-testid="select-all"
+            type="button"
             role="option"
             onKeyDown={event =>
               [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
@@ -598,6 +602,7 @@ const CreateDropdown = ({
               data-testid={`option-${option.value}`}
               id={`option-${index}`}
               role="option"
+              type="button"
               ref={
                 option.value === defaultSearchValue ||
                 option.searchText === defaultSearchValue
