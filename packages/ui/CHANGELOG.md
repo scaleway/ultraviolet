@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.51.5
+
+### Patch Changes
+
+- [#3759](https://github.com/scaleway/ultraviolet/pull/3759) [`fd81844`](https://github.com/scaleway/ultraviolet/commit/fd81844fed1d73b58b11f831015690e022e1c511) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` component to avoid submiting when selecting an intem in the list
+
+- Updated dependencies [[`948b2eb`](https://github.com/scaleway/ultraviolet/commit/948b2ebbacfac4bad12dec6814876730ed7ee477)]:
+  - @ultraviolet/icons@2.12.9
+
 ## 1.51.4
 
 ### Patch Changes

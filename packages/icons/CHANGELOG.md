@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.12.9
+
+### Patch Changes
+
+- [#3729](https://github.com/scaleway/ultraviolet/pull/3729) [`948b2eb`](https://github.com/scaleway/ultraviolet/commit/948b2ebbacfac4bad12dec6814876730ed7ee477) Thanks [@lisalupi](https://github.com/lisalupi)! - - Three new `<ProductIcons />`: `kms`, `privateIp`, `quantumApplication`
+  - Four new `<Icon />`: `north-short`, `south-short`, `east-short`, `west-short`
+
 ## 2.12.8
 
 ### Patch Changes
