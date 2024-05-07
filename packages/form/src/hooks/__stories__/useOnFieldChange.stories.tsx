@@ -25,7 +25,7 @@ useOnFieldChange('email', () => {
     },
   },
   argTypes: {
-    name: {
+    argName: {
       description: 'Name of the field to listen to.',
       table: {
         type: {
@@ -48,7 +48,7 @@ useOnFieldChange('email', () => {
         type: {
           summary: 'boolean',
         },
-        defaultValue: { summary: true },
+        defaultValue: { summary: 'true' },
       },
     },
   },
