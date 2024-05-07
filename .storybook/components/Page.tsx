@@ -3,11 +3,11 @@ import {
   Subtitle,
   Description,
   Primary,
-  ArgsTable,
+  ArgTypes,
   Stories,
   PRIMARY_STORY,
 } from '@storybook/blocks'
-import { Badge, Button, Text, Stack, Link, Row } from '../../packages/ui/src'
+import { Badge, Button, Text, Stack, Link, Row } from '@ultraviolet/ui'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
 import { useMemo } from 'react'
@@ -109,7 +109,7 @@ const Page = ({
       ) : null}
       <Description />
       <Primary />
-      {!hideArgsTable ? <ArgsTable story={PRIMARY_STORY} /> : null}
+      {!hideArgsTable ? <ArgTypes of={PRIMARY_STORY} /> : null}
       <Stories />
     </>
   )

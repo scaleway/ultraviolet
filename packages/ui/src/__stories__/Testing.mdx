@@ -46,9 +46,9 @@ test(`click checkbox`, async () => {
 })
 ```
 
-- `component`: A valid React Node
-- `options`: [@testing-library/react options](https://testing-library.com/docs/react-testing-library/api/#render-options)
-- `theme`: A theme available as an object, you can find an example in `src/theme`
+* `component`: A valid React Node
+* `options`: [@testing-library/react options](https://testing-library.com/docs/react-testing-library/api/#render-options)
+* `theme`: A theme available as an object, you can find an example in `src/theme`
 
 ### `shouldMatchEmotionSnapshot(component, options = {})`
 
@@ -66,11 +66,11 @@ test(`click and snapshot checkbox`, async () =>
   }))
 ```
 
-- `component`: A valid React Node
-- `options`: `{ options, transform, theme } = {}`
-  - `options`: [@testing-library/react options](https://testing-library.com/docs/react-testing-library/api/#render-options)
-  - `theme`: A theme available as an object, you can find an example in `src/theme`
-  - `transform`: an async function receiving in parameters the rendered node. This can be used to apply transformation to the component before snapshotting
+* `component`: A valid React Node
+* `options`: `{ options, transform, theme } = {}`
+  * `options`: [@testing-library/react options](https://testing-library.com/docs/react-testing-library/api/#render-options)
+  * `theme`: A theme available as an object, you can find an example in `src/theme`
+  * `transform`: an async function receiving in parameters the rendered node. This can be used to apply transformation to the component before snapshotting
 
 ### `shouldMatchEmotionSnapshotWithPortal(component, options = {})`
 

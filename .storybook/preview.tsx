@@ -1,15 +1,16 @@
-import I18n from '@scaleway/use-i18n'
 import { Preview } from '@storybook/react'
 import { css, ThemeProvider, Global } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
-import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
 import seedrandom from 'seedrandom'
 import { light, dark } from './storybookThemes'
-import lightTheme, { darkTheme } from '../packages/ui/src/theme'
+import {
+  consoleDarkTheme as darkTheme,
+  consoleLightTheme as lightTheme,
+  consoleDarkerTheme as darkerTheme,
+} from '@ultraviolet/themes'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
-import { enGB, fr as frFr, es } from 'date-fns/locale'
 import isChromatic from 'chromatic/isChromatic'
 import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
 import InterSemiBoldWoff2 from './assets/fonts/inter/Inter-SemiBold.woff2'
@@ -17,10 +18,11 @@ import InterMediumWoff2 from './assets/fonts/inter/Inter-Medium.woff2'
 import InterRegularWoff2 from './assets/fonts/inter/Inter-Regular.woff2'
 import SpaceGroteskMediumWoff2 from './assets/fonts/space-grotesk/SpaceGrotesk-Medium.woff2'
 import SpaceGroteskRegularWoff2 from './assets/fonts/space-grotesk/SpaceGrotesk-Regular.woff2'
+import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 
 if (isChromatic()) seedrandom('manual-seed', { global: true })
 
-const parameters = {
+const parameters: Preview['parameters'] = {
   darkMode: {
     dark: { ...themes.dark, ...dark },
     light: { ...themes.normal, ...light, default: true },
@@ -68,12 +70,8 @@ const parameters = {
   },
 }
 
-export const globalStyles = (mode: 'light' | 'dark') => () => css`
+export const globalStyles = css`
   ${normalize()}
-
-  :root {
-    color-scheme: ${mode};
-  }
 
   p {
     margin: 0;
@@ -123,58 +121,17 @@ export const globalStyles = (mode: 'light' | 'dark') => () => css`
   }
 `
 
-const loadDateLocaleAsync = async (locale: string) => {
-  if (locale === 'en') {
-    return (await import('date-fns/locale/en-GB')).default
-  }
-  if (locale === 'fr') {
-    return (await import('date-fns/locale/fr')).default
-  }
-
-  if (locale === 'es') {
-    return (await import('date-fns/locale/es')).default
-  }
-
-  return (await import(`date-fns/locale/en-GB`)).default
-}
-
-const loadDateLocale = (locale: string) => {
-  if (locale === 'en') {
-    return enGB
-  }
-  if (locale === 'fr') {
-    return frFr
-  }
-  if (locale === 'es') {
-    return es
-  }
-
-  return enGB
-}
-
-const decorators: Preview['decorators'] = [
-  StoryComponent => {
-    const mode = useDarkMode() ? 'dark' : 'light'
-
-    return (
-      <I18n
-        defaultLoad={async ({ locale }) => import(`./locales/${locale}.json`)}
-        defaultLocale="en"
-        defaultTranslations={{}}
-        enableDebugKey={false}
-        enableDefaultLocale={false}
-        loadDateLocale={loadDateLocale}
-        loadDateLocaleAsync={loadDateLocaleAsync}
-        localeItemStorage="localeI18n"
-        supportedLocales={['en', 'fr', 'es']}
-      >
-        <ThemeProvider theme={mode === 'dark' ? darkTheme : lightTheme}>
-          <Global styles={[globalStyles(mode)]} />
-          <StoryComponent />
-        </ThemeProvider>
-      </I18n>
-    )
-  },
+export const decorators = [
+  withThemeFromJSXProvider({
+    themes: {
+      light: lightTheme,
+      dark: darkTheme,
+      darker: darkerTheme,
+    },
+    defaultTheme: 'light',
+    Provider: ThemeProvider,
+    GlobalStyles: () => <Global styles={[globalStyles]} />,
+  }),
 ]
 
 export default {
