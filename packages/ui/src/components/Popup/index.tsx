@@ -352,7 +352,9 @@ export const Popup = forwardRef(
               setVisibleInDom(true)
             }, debounceDelay)
           } else {
-            setVisibleInDom(true)
+            setTimeout(() => {
+              setVisibleInDom(true)
+            })
           }
         }
       },
