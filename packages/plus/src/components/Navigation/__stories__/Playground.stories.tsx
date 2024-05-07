@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
 import { type ComponentProps, useCallback, useEffect, useState } from 'react'
-import type { PinUnPinType } from '..'
 import { Navigation, NavigationProvider, useNavigation } from '..'
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
@@ -60,9 +59,11 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
     localStorage.setItem('width', width.toString())
   }, [])
 
-  const onClickPinUnpin = useCallback(({ totalPinned }: PinUnPinType) => {
+  const onClickPinUnpin: ComponentProps<
+    typeof Navigation.Item
+  >['onClickPinUnpin'] = ({ totalPinned }) => {
     console.log('total pinned items:', totalPinned)
-  }, [])
+  }
 
   return (
     <Navigation

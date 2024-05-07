@@ -117,31 +117,35 @@ export const PinnedItems = ({ toggle = true, onReorder }: PinnedItemsProps) => {
           id="pinned-group"
         >
           {pinnedItems.length > 0 ? (
-            pinnedItems.map((itemId, index) => (
-              <div
-                style={{ position: expanded ? 'relative' : undefined }}
-                key={itemId}
-              >
-                {expanded ? (
-                  <DropableArea
-                    onDragOver={onDragOver}
-                    onDragLeave={onDragLeave}
-                    onDrop={event => onDrop(event, index)}
+            pinnedItems.map((itemId, index) =>
+              items[itemId]?.label ? (
+                <div
+                  style={{ position: expanded ? 'relative' : undefined }}
+                  key={itemId}
+                >
+                  {expanded ? (
+                    <DropableArea
+                      onDragOver={onDragOver}
+                      onDragLeave={onDragLeave}
+                      onDrop={event => onDrop(event, index)}
+                    />
+                  ) : null}
+                  <Item
+                    label={items[itemId].label}
+                    type="pinned"
+                    index={index}
+                    toggle={toggle}
+                    id={itemId}
+                    active={items[itemId]?.active ?? false}
+                    onClick={items[itemId]?.onClick ?? undefined}
+                    onClickPinUnpin={
+                      items[itemId]?.onClickPinUnpin ?? undefined
+                    }
+                    hasParents
                   />
-                ) : null}
-                <Item
-                  label={items[itemId]?.label ?? 'Unknown navigation item'}
-                  type="pinned"
-                  index={index}
-                  toggle={toggle}
-                  id={itemId}
-                  active={items[itemId]?.active ?? false}
-                  onClick={items[itemId]?.onClick ?? undefined}
-                  onClickPinUnpin={items[itemId]?.onClickPinUnpin ?? undefined}
-                  hasParents
-                />
-              </div>
-            ))
+                </div>
+              ) : null,
+            )
           ) : (
             <TextContainer>
               <Text
