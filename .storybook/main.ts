@@ -10,7 +10,7 @@ export default {
     '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    'storybook-dark-mode',
+    '@storybook/addon-themes',
   ],
   framework: {
     name: '@storybook/react-vite',
@@ -25,6 +25,7 @@ export default {
   },
   core: {
     builder: '@storybook/builder-vite',
+    disableTelemetry: true,
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',

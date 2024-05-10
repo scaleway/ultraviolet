@@ -3,9 +3,8 @@ import {
   Subtitle,
   Description,
   Primary,
-  ArgTypes,
+  Controls,
   Stories,
-  PRIMARY_STORY,
 } from '@storybook/blocks'
 import { Badge, Button, Text, Stack, Link, Row } from '@ultraviolet/ui'
 import styled from '@emotion/styled'
@@ -109,7 +108,7 @@ const Page = ({
       ) : null}
       <Description />
       <Primary />
-      {!hideArgsTable ? <ArgTypes of={PRIMARY_STORY} /> : null}
+      {!hideArgsTable ? <Controls /> : null}
       <Stories />
     </>
   )

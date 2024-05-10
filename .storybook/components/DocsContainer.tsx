@@ -3,6 +3,8 @@ import {
   DocsContainer as BaseContainer,
   DocsContainerProps as BaseContainerProps,
 } from '@storybook/blocks'
+import { ThemeProvider } from '@emotion/react'
+import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
 
 type ExtraProps = {
   /**
@@ -28,32 +30,31 @@ type ExtraProps = {
 }
 
 type DocsContainerProps = BaseContainerProps & {
-  context: {
-    attachedCSFFile: { meta: { parameters?: ExtraProps; title: string } }
+  context?: {
+    attachedCSFFiles: Set<any>
   }
 } & { children: ReactNode }
 
 const DocsContainer = ({ children, context }: DocsContainerProps) => {
-  const isPlusLibrary =
-    context?.attachedCSFFile?.meta.title.includes('Plus/') ?? false
+  const scope = context?.attachedCSFFiles?.values()?.next()?.value?.meta
+  const parameters = scope?.parameters
+
+  const isPlusLibrary = scope?.title?.includes('Plus/') ?? false
 
   return (
-    <BaseContainer context={context}>
-      {isValidElement<ExtraProps>(children)
-        ? cloneElement(children, {
-            deprecated: context.attachedCSFFile?.meta?.parameters?.deprecated,
-            deprecatedReason:
-              context.attachedCSFFile?.meta?.parameters?.deprecatedReason,
-            migrationLink:
-              context.attachedCSFFile?.meta?.parameters?.migrationLink,
-            hideArgsTable:
-              context.attachedCSFFile?.meta?.parameters?.hideArgsTable,
-            experimental: isPlusLibrary
-              ? true
-              : context.attachedCSFFile?.meta?.parameters?.experimental,
-          })
-        : children}
-    </BaseContainer>
+    <ThemeProvider theme={lightTheme}>
+      <BaseContainer context={context}>
+        {isValidElement<ExtraProps>(children)
+          ? cloneElement(children, {
+              deprecated: parameters?.deprecated,
+              deprecatedReason: parameters?.deprecatedReason,
+              migrationLink: parameters?.migrationLink,
+              hideArgsTable: parameters?.hideArgsTable,
+              experimental: isPlusLibrary ? true : parameters?.experimental,
+            })
+          : children}
+      </BaseContainer>
+    </ThemeProvider>
   )
 }
 
