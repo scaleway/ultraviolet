@@ -24,6 +24,16 @@ const StyledTitle = styled.div`
   }
 `
 
+const StoriesThemes = styled.div`
+  .docs-story > div {
+    padding: 0;
+  }
+
+  .css-xzp052 .innerZoomElementWrapper > * {
+    border: 0 !important;
+  }
+`
+
 type PageProps = {
   deprecated?: boolean
   deprecatedReason?: string
@@ -50,8 +60,8 @@ const Page = ({
   }, [])
 
   return (
-    <>
-      <StyledHeaderContainer>
+    <StoriesThemes>
+      <StyledHeaderContainer justifyContent="space-between" alignItems="center">
         <StyledTitle data-state={state}>
           <Title />
         </StyledTitle>
@@ -76,7 +86,7 @@ const Page = ({
       </StyledHeaderContainer>
       {deprecated ? (
         <Row templateColumns="1fr auto" justifyContent="top">
-          <Text as="h3" variant="bodyStronger" color="danger">
+          <Text as="h3" variant="bodyStronger" sentiment="danger">
             {deprecatedReason
               ? deprecatedReason
               : 'This component is deprecated please do not use it any more.'}
@@ -95,7 +105,7 @@ const Page = ({
         <Subtitle />
       )}
       {experimental ? (
-        <Text as="h3" variant="bodyStronger" color="warning">
+        <Text as="h3" variant="bodyStronger" sentiment="warning">
           This component is at an unstable stage and is subject to change in
           future releases.&nbsp;
           <Link
@@ -110,7 +120,7 @@ const Page = ({
       <Primary />
       {!hideArgsTable ? <Controls /> : null}
       <Stories />
-    </>
+    </StoriesThemes>
   )
 }
 

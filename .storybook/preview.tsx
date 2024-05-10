@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/react'
+import type { Preview, StoryFn } from '@storybook/react'
 import { css, ThemeProvider, Global } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
 import { themes } from '@storybook/theming'
@@ -32,6 +32,20 @@ const parameters: Preview['parameters'] = {
     grid: {
       disable: true,
     },
+    values: [
+      {
+        name: 'light',
+        value: '#ffffff',
+      },
+      {
+        name: 'dark',
+        value: '#151a2d',
+      },
+      {
+        name: 'darker',
+        value: '#000000',
+      },
+    ],
   },
   viewMode: 'docs',
   previewTabs: {
@@ -121,6 +135,25 @@ export const globalStyles = css`
   }
 `
 
+const getThemeColor = (theme: string) => {
+  const { value } = parameters['backgrounds'].values.find(
+    ({ name }: { name: string }) => name === theme,
+  )
+
+  return value
+}
+
+const withThemeProvider = (Story: StoryFn, context: { globals: any }) => {
+  const { theme } = context.globals
+  const backgroundColor = getThemeColor(theme)
+
+  return (
+    <div style={{ backgroundColor, padding: '30px' }}>
+      <Story {...context} />
+    </div>
+  )
+}
+
 const decorators = [
   withThemeFromJSXProvider({
     themes: {
@@ -132,6 +165,7 @@ const decorators = [
     Provider: ThemeProvider,
     GlobalStyles: () => <Global styles={[globalStyles]} />,
   }),
+  withThemeProvider,
 ]
 
 export default {
