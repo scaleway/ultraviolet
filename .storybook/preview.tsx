@@ -136,9 +136,10 @@ export const globalStyles = css`
 `
 
 const getThemeColor = (theme: string) => {
-  const { value } = parameters['backgrounds'].values.find(
-    ({ name }: { name: string }) => name === theme,
-  )
+  const { value } =
+    parameters['backgrounds'].values.find(
+      ({ name }: { name: string }) => name === theme,
+    ) ?? parameters['backgrounds'].values[0]
 
   return value
 }
