@@ -61,7 +61,7 @@ const Page = ({
 
   return (
     <StoriesThemes>
-      <StyledHeaderContainer justifyContent="space-between" alignItems="center">
+      <StyledHeaderContainer>
         <StyledTitle data-state={state}>
           <Title />
         </StyledTitle>
