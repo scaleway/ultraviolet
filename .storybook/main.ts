@@ -26,4 +26,7 @@ export default {
   core: {
     builder: '@storybook/builder-vite',
   },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
 } satisfies StorybookConfig

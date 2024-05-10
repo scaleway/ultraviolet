@@ -50,7 +50,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
               context.attachedCSFFile?.meta?.parameters?.hideArgsTable,
             experimental: isPlusLibrary
               ? true
-              : context.attachedCSFFile.meta?.parameters?.experimental,
+              : context.attachedCSFFile?.meta?.parameters?.experimental,
           })
         : children}
     </BaseContainer>

@@ -1,4 +1,4 @@
-import { Preview } from '@storybook/react'
+import type { Preview } from '@storybook/react'
 import { css, ThemeProvider, Global } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
 import { themes } from '@storybook/theming'
@@ -121,7 +121,7 @@ export const globalStyles = css`
   }
 `
 
-export const decorators = [
+const decorators = [
   withThemeFromJSXProvider({
     themes: {
       light: lightTheme,
