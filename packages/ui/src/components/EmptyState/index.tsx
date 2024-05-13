@@ -93,7 +93,11 @@ export const EmptyState = ({
     className={className}
     data-testid={dataTestId}
   >
-    <StyledStack gap={3} justifyContent="center" alignItems="center">
+    <StyledStack
+      gap={size === 'small' ? 2 : 3}
+      justifyContent="center"
+      alignItems="center"
+    >
       <Stack gap={2} justifyContent="center" alignItems="center">
         {image && typeof image === 'string' ? (
           <img width={IMAGE_SIZES[size]} alt="" src={image} />
@@ -102,11 +106,18 @@ export const EmptyState = ({
         )}
         <Stack gap={0.5} alignItems="center">
           {title ? (
-            <CenteredText as="h2" variant="headingSmall" prominence="strong">
+            <CenteredText
+              as="h2"
+              variant={size === 'small' ? 'bodyStrong' : 'headingSmall'}
+              prominence="strong"
+            >
               {title}
             </CenteredText>
           ) : null}
-          <CenteredText as="p" variant="body">
+          <CenteredText
+            as="p"
+            variant={size === 'small' ? 'bodySmall' : 'body'}
+          >
             {description}
           </CenteredText>
         </Stack>
@@ -122,6 +133,7 @@ export const EmptyState = ({
             target={learnMore.target}
             sentiment="info"
             iconPosition="right"
+            size={size === 'small' ? 'small' : undefined}
           >
             {learnMore.text}
           </Link>

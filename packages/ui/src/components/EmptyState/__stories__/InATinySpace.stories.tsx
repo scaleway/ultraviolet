@@ -8,7 +8,7 @@ InATinySpace.args = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   image: kapsuleLogo,
   primaryButton: (
-    <Button variant="outlined" sentiment="primary">
+    <Button variant="outlined" sentiment="primary" size="small">
       Create a product
     </Button>
   ),
