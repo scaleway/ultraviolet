@@ -101,7 +101,7 @@ const CustomSelectInput = styled(SelectInputV2)<{
   width?: number
   'data-disabled': boolean
 }>`
-  #select-bar {
+  #unit {
     border: none;
     background: transparent;
   }
@@ -311,7 +311,7 @@ export const UnitInput = ({
         <CustomSelectInput
           width={selectInputWidth}
           data-disabled={disabled}
-          id={id ? `${id}-unit` : undefined}
+          id="unit"
           name={`${name}-unit`}
           onChange={(newValue: string) => {
             onChangeUnitValue?.(newValue)

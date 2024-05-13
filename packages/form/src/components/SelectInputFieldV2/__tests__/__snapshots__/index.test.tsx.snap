@@ -55,29 +55,6 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-1nqyb46-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -557,19 +534,6 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   text-align: left;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -578,8 +542,8 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":rh:"
-        aria-describedby=":rh:"
+        aria-controls=":rd:"
+        aria-describedby=":rd:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -588,20 +552,17 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="true"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-fha0al ejy0aca2"
+            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
             data-disabled="false"
             data-dropdownvisible="true"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":rg:"
+            id="select-bar"
             role="combobox"
             tabindex="0"
           >
@@ -647,7 +608,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
           class="eeucz6c8 cache-15w5je2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
           data-animated="false"
           data-has-arrow="false"
-          id=":rh:"
+          id=":rd:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -950,9 +911,6 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -981,29 +939,6 @@ exports[`SelectInputField should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1175,19 +1110,6 @@ exports[`SelectInputField should render correctly 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -1206,20 +1128,17 @@ exports[`SelectInputField should render correctly 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-fha0al ejy0aca2"
+            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":r0:"
+            id="select-bar"
             role="combobox"
             tabindex="0"
           >
@@ -1246,9 +1165,6 @@ exports[`SelectInputField should render correctly 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -1277,29 +1193,6 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1471,19 +1364,6 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -1492,8 +1372,8 @@ exports[`SelectInputField should render correctly disabled 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":r5:"
-        aria-describedby=":r5:"
+        aria-controls=":r4:"
+        aria-describedby=":r4:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -1502,20 +1382,17 @@ exports[`SelectInputField should render correctly disabled 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-fha0al ejy0aca2"
+            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
             data-disabled="true"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":r4:"
+            id="select-bar"
             role="combobox"
             tabindex="0"
           >
@@ -1542,9 +1419,6 @@ exports[`SelectInputField should render correctly disabled 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -1587,29 +1461,6 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-1nqyb46-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1767,19 +1618,6 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -1788,8 +1626,8 @@ exports[`SelectInputField should render correctly grouped 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":rd:"
-        aria-describedby=":rd:"
+        aria-controls=":ra:"
+        aria-describedby=":ra:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -1798,20 +1636,17 @@ exports[`SelectInputField should render correctly grouped 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-fha0al ejy0aca2"
+            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":rc:"
+            id="select-bar"
             role="combobox"
             tabindex="0"
           >
@@ -1838,9 +1673,6 @@ exports[`SelectInputField should render correctly grouped 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -1883,29 +1715,6 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
 .cache-1nqyb46-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2063,19 +1872,6 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -2084,8 +1880,8 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":r9:"
-        aria-describedby=":r9:"
+        aria-controls=":r7:"
+        aria-describedby=":r7:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -2094,20 +1890,17 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-fha0al ejy0aca2"
+            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":r8:"
+            id="select-bar"
             role="combobox"
             tabindex="0"
           >
@@ -2134,9 +1927,6 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -2183,29 +1973,6 @@ exports[`SelectInputField should trigger events 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2699,19 +2466,6 @@ exports[`SelectInputField should trigger events 1`] = `
   text-align: left;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -2720,8 +2474,8 @@ exports[`SelectInputField should trigger events 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":r15:"
-        aria-describedby=":r15:"
+        aria-controls=":r10:"
+        aria-describedby=":r10:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -2730,20 +2484,17 @@ exports[`SelectInputField should trigger events 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-fha0al ejy0aca2"
+            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":r14:"
+            id="select-bar"
             role="combobox"
             tabindex="0"
           >
@@ -2789,7 +2540,7 @@ exports[`SelectInputField should trigger events 1`] = `
           class="eeucz6c8 cache-1l0x2o-StyledPopup-StyledPopup-StyledPopup e4h1g861"
           data-animated="false"
           data-has-arrow="false"
-          id=":r15:"
+          id=":r10:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -3092,9 +2843,6 @@ exports[`SelectInputField should trigger events 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>

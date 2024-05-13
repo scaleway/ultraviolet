@@ -416,4 +416,32 @@ describe('UnitInput', () => {
         labelInformation="label information"
       />,
     ))
+
+  test(`renders with default value`, () =>
+    shouldMatchEmotionSnapshot(
+      <UnitInput
+        onChange={() => {}}
+        onChangeUnitValue={() => {}}
+        name="test"
+        options={[
+          {
+            label: 'KB',
+            value: 'kb',
+          },
+          {
+            label: 'MB',
+            value: 'mb',
+          },
+          {
+            label: 'GB',
+            value: 'gb',
+          },
+        ]}
+        placeholder="100"
+        disabled
+        labelInformation="label information"
+        value={1}
+        unitValue="kb"
+      />,
+    ))
 })

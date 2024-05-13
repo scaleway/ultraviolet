@@ -263,7 +263,8 @@ exports[`SelectInputV2 renders correctly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r0:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -492,8 +493,8 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r74:"
-      aria-describedby=":r74:"
+      aria-controls=":r7k:"
+      aria-describedby=":r7k:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -502,7 +503,6 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -513,7 +513,8 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r7j:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -1220,8 +1221,8 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rs:"
-      aria-describedby=":rs:"
+      aria-controls=":r12:"
+      aria-describedby=":r12:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1230,7 +1231,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -1241,7 +1241,8 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r11:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -1270,7 +1271,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":rs:"
+        id=":r12:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -1308,7 +1309,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":ru:"
+                  id=":r14:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -1824,8 +1825,8 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r6u:"
-      aria-describedby=":r6u:"
+      aria-controls=":r7c:"
+      aria-describedby=":r7c:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1834,7 +1835,6 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -1845,7 +1845,8 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r7b:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -2294,8 +2295,8 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1de:"
-      aria-describedby=":r1de:"
+      aria-controls=":r1f3:"
+      aria-describedby=":r1f3:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2304,7 +2305,6 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -2315,7 +2315,8 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r1f2:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -2344,7 +2345,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1de:"
+        id=":r1f3:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -2850,8 +2851,8 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1dg:"
-      aria-describedby=":r1dg:"
+      aria-controls=":r1f6:"
+      aria-describedby=":r1f6:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2860,7 +2861,6 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -2871,7 +2871,8 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r1f5:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -2900,7 +2901,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1dg:"
+        id=":r1f6:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -4104,8 +4105,8 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r2q:"
-      aria-describedby=":r2q:"
+      aria-controls=":r33:"
+      aria-describedby=":r33:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -4114,7 +4115,6 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -4125,7 +4125,8 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r32:"
+          role="combobox"
           tabindex="0"
         >
           <div
@@ -4195,7 +4196,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r2q:"
+        id=":r33:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -4233,7 +4234,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r2u:"
+                  id=":r37:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -4291,7 +4292,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r31:"
+                      id=":r3a:"
                       tabindex="-1"
                       type="checkbox"
                       value="mercury"
@@ -4332,7 +4333,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r31:"
+                          for=":r3a:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4372,7 +4373,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r34:"
+                      id=":r3d:"
                       tabindex="-1"
                       type="checkbox"
                       value="venus"
@@ -4413,7 +4414,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r34:"
+                          for=":r3d:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4453,7 +4454,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r37:"
+                      id=":r3g:"
                       tabindex="-1"
                       type="checkbox"
                       value="earth"
@@ -4494,7 +4495,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r37:"
+                          for=":r3g:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4541,7 +4542,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
                       disabled=""
-                      id=":r3b:"
+                      id=":r3k:"
                       tabindex="-1"
                       type="checkbox"
                       value="mars"
@@ -4582,7 +4583,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3b:"
+                          for=":r3k:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4623,7 +4624,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       checked=""
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3e:"
+                      id=":r3n:"
                       tabindex="-1"
                       type="checkbox"
                       value="pluto"
@@ -4664,7 +4665,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3e:"
+                          for=":r3n:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4736,7 +4737,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3j:"
+                      id=":r3s:"
                       tabindex="-1"
                       type="checkbox"
                       value="jupiter"
@@ -4777,7 +4778,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3j:"
+                          for=":r3s:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4822,7 +4823,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3n:"
+                      id=":r40:"
                       tabindex="-1"
                       type="checkbox"
                       value="saturn"
@@ -4863,7 +4864,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3n:"
+                          for=":r40:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4903,7 +4904,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3q:"
+                      id=":r43:"
                       tabindex="-1"
                       type="checkbox"
                       value="uranus"
@@ -4944,7 +4945,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3q:"
+                          for=":r43:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4984,7 +4985,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3t:"
+                      id=":r46:"
                       tabindex="-1"
                       type="checkbox"
                       value="neptune"
@@ -5025,7 +5026,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3t:"
+                          for=":r46:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5248,8 +5249,8 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r9:"
-      aria-describedby=":r9:"
+      aria-controls=":rd:"
+      aria-describedby=":rd:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5258,7 +5259,6 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -5269,7 +5269,8 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":rc:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -5498,8 +5499,8 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7n:"
-      aria-describedby=":r7n:"
+      aria-controls=":r89:"
+      aria-describedby=":r89:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5508,7 +5509,6 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -5519,7 +5519,8 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r88:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -5796,8 +5797,8 @@ exports[`SelectInputV2 renders correctly required 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r6:"
-      aria-describedby=":r6:"
+      aria-controls=":r9:"
+      aria-describedby=":r9:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5810,7 +5811,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
         >
           <label
             class="cache-zvclys-StyledText e13y3mga0"
-            for=":ra:"
+            for=":r8:"
           >
             label
           </label>
@@ -5835,7 +5836,8 @@ exports[`SelectInputV2 renders correctly required 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r8:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -6484,8 +6486,8 @@ exports[`SelectInputV2 renders correctly required 2`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r76:"
-      aria-describedby=":r76:"
+      aria-controls=":r7n:"
+      aria-describedby=":r7n:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -6494,7 +6496,6 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -6505,7 +6506,8 @@ exports[`SelectInputV2 renders correctly required 2`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r7m:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -6534,7 +6536,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r76:"
+        id=":r7n:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -6572,7 +6574,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r78:"
+                  id=":r7p:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -6688,8 +6690,8 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r7f:"
-                        aria-describedby=":r7f:"
+                        aria-controls=":r80:"
+                        aria-describedby=":r80:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -7051,8 +7053,8 @@ exports[`SelectInputV2 renders correctly small 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r3:"
-      aria-describedby=":r3:"
+      aria-controls=":r5:"
+      aria-describedby=":r5:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7065,7 +7067,7 @@ exports[`SelectInputV2 renders correctly small 1`] = `
         >
           <label
             class="cache-10an7cj-StyledText e13y3mga0"
-            for=":r5:"
+            for=":r4:"
           >
             label
           </label>
@@ -7081,7 +7083,8 @@ exports[`SelectInputV2 renders correctly small 1`] = `
           data-size="small"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r4:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -7412,8 +7415,8 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rdt:"
-      aria-describedby=":rdt:"
+      aria-controls=":rem:"
+      aria-describedby=":rem:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7422,7 +7425,6 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -7433,7 +7435,8 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":rel:"
+          role="combobox"
           tabindex="0"
         >
           <div
@@ -8108,8 +8111,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rb:"
-      aria-describedby=":rb:"
+      aria-controls=":rg:"
+      aria-describedby=":rg:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -8118,7 +8121,6 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -8129,7 +8131,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":rf:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -8158,7 +8161,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":rb:"
+        id=":rg:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -8196,7 +8199,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":rd:"
+                  id=":ri:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -8312,8 +8315,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":rk:"
-                        aria-describedby=":rk:"
+                        aria-controls=":rp:"
+                        aria-describedby=":rp:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -9160,8 +9163,8 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1g:"
-      aria-describedby=":r1g:"
+      aria-controls=":r1n:"
+      aria-describedby=":r1n:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -9170,7 +9173,6 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -9181,7 +9183,8 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r1m:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -9226,7 +9229,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1g:"
+        id=":r1n:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -9264,7 +9267,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r1j:"
+                  id=":r1q:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -10038,8 +10041,8 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r70:"
-      aria-describedby=":r70:"
+      aria-controls=":r7f:"
+      aria-describedby=":r7f:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -10048,7 +10051,6 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -10059,7 +10061,8 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r7e:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -10088,7 +10091,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r70:"
+        id=":r7f:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -10126,7 +10129,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r72:"
+                  id=":r7h:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -10792,8 +10795,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7p:"
-      aria-describedby=":r7p:"
+      aria-controls=":r8c:"
+      aria-describedby=":r8c:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -10802,7 +10805,6 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -10813,7 +10815,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
           data-size="large"
           data-state="danger"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r8b:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -10853,7 +10856,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r7p:"
+        id=":r8c:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -10891,7 +10894,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r7s:"
+                  id=":r8f:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -11007,8 +11010,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r83:"
-                        aria-describedby=":r83:"
+                        aria-controls=":r8m:"
+                        aria-describedby=":r8m:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -11866,8 +11869,8 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r25:"
-      aria-describedby=":r25:"
+      aria-controls=":r2d:"
+      aria-describedby=":r2d:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -11876,7 +11879,6 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -11887,7 +11889,8 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r2c:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -11932,7 +11935,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r25:"
+        id=":r2d:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -11970,7 +11973,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r28:"
+                  id=":r2g:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -12993,8 +12996,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r5g:"
-      aria-describedby=":r5g:"
+      aria-controls=":r5s:"
+      aria-describedby=":r5s:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -13003,7 +13006,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -13014,7 +13016,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r5r:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -13043,7 +13046,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r5g:"
+        id=":r5s:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -13081,7 +13084,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r5i:"
+                  id=":r5u:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -14096,8 +14099,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r67:"
-      aria-describedby=":r67:"
+      aria-controls=":r6k:"
+      aria-describedby=":r6k:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -14106,7 +14109,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -14117,7 +14119,8 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r6j:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -14146,7 +14149,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r67:"
+        id=":r6k:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -14184,7 +14187,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r69:"
+                  id=":r6m:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -15238,8 +15241,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r42:"
-      aria-describedby=":r42:"
+      aria-controls=":r4c:"
+      aria-describedby=":r4c:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -15248,7 +15251,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -15259,7 +15261,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r4b:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -15288,7 +15291,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r42:"
+        id=":r4c:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -15326,7 +15329,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r44:"
+                  id=":r4e:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -16380,8 +16383,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r4p:"
-      aria-describedby=":r4p:"
+      aria-controls=":r54:"
+      aria-describedby=":r54:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -16390,7 +16393,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -16401,7 +16403,8 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r53:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -16430,7 +16433,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r4p:"
+        id=":r54:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -16468,7 +16471,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r4r:"
+                  id=":r56:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -17292,8 +17295,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8t:"
-      aria-describedby=":r8t:"
+      aria-controls=":r9i:"
+      aria-describedby=":r9i:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -17302,7 +17305,6 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -17313,7 +17315,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r9h:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -17342,7 +17345,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r8t:"
+        id=":r9i:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -17457,8 +17460,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r94:"
-                        aria-describedby=":r94:"
+                        aria-controls=":r9p:"
+                        aria-describedby=":r9p:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -18233,8 +18236,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8b:"
-      aria-describedby=":r8b:"
+      aria-controls=":r8v:"
+      aria-describedby=":r8v:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -18243,7 +18246,6 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          aria-controls="select-dropdown"
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
@@ -18254,7 +18256,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
           data-size="large"
           data-state="success"
           data-testid="select-bar"
-          id="select-bar"
+          id=":r8u:"
+          role="combobox"
           tabindex="0"
         >
           <p
@@ -18294,7 +18297,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r8b:"
+        id=":r8v:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -18332,7 +18335,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                   aria-label="search-bar"
                   class="cache-137prd4-StyledInput e7tir8v1"
                   data-testid="search-bar"
-                  id=":r8e:"
+                  id=":r92:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -18448,8 +18451,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r8l:"
-                        aria-describedby=":r8l:"
+                        aria-controls=":r99:"
+                        aria-describedby=":r99:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
