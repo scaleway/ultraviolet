@@ -22,7 +22,11 @@ import { createPortal } from 'react-dom'
 import type { PositionsType } from './animations'
 import { animation, exitAnimation } from './animations'
 import type { PopupPlacement } from './helpers'
-import { ARROW_WIDTH, DEFAULT_POSITIONS, computePositions } from './helpers'
+import {
+  DEFAULT_ARROW_WIDTH,
+  DEFAULT_POSITIONS,
+  computePositions,
+} from './helpers'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
 const DEFAULT_DEBOUNCE_DURATION = 200 // in ms
@@ -90,8 +94,8 @@ const StyledPopup = styled('div', {
       left: ${({ positions }) => positions.arrowLeft}px;
       transform: ${({ positions }) => positions.arrowTransform}
         rotate(${({ positions }) => positions.rotate}deg);
-      margin-left: -${ARROW_WIDTH}px;
-      border-width: ${ARROW_WIDTH}px;
+      margin-left: -${DEFAULT_ARROW_WIDTH}px;
+      border-width: ${DEFAULT_ARROW_WIDTH}px;
       border-style: solid;
       border-color: ${({ theme }) => theme.colors.neutral.backgroundStronger}
         transparent transparent transparent;
@@ -260,10 +264,11 @@ export const Popup = forwardRef(
             placement,
             popupRef: innerPopupRef,
             popupPortalTarget: popupPortalTarget as HTMLElement,
+            hasArrow,
           }),
         )
       }
-    }, [placement, popupPortalTarget])
+    }, [hasArrow, placement, popupPortalTarget])
 
     /**
      * This function is called when we need to recompute positions of popup due to window scroll or resize.
