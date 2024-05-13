@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { SelectInputV2 } from '../SelectInputV2'
 import type { OptionType } from '../SelectInputV2/types'
 import { Stack } from '../Stack'
@@ -41,7 +41,6 @@ const UnitInputWrapper = styled(Stack)<{
     ):focus {
     text-decoration: none;
     border-color: ${({ theme }) => theme.colors.primary.border};
-    box-shadow: none;
     & > ${StyledNumberInputWrapper} {
       border-right-color: ${({ theme }) => theme.colors.primary.border};
     }
@@ -108,7 +107,7 @@ const CustomSelectInput = styled(SelectInputV2)<{
   }
   ${({ width }) => width && `width: ${width}px;`}
 
-  &not([data-disabled="true"]):focus, 
+  &:not([data-disabled="true"]):focus, 
   :active {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     & > ${StyledNumberInputWrapper} {
@@ -229,20 +228,28 @@ export const UnitInput = ({
     return 'neutral'
   }, [error, success])
 
+  useEffect(() => {
+    if (onChange && value) {
+      onChange(value)
+    }
+    if (onChangeUnitValue && unitValue) {
+      onChangeUnitValue(unitValue)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <Stack gap={0.5}>
       {label ? (
         <Stack direction="row" gap={0.5} alignItems="center">
-          {label ? (
-            <Text
-              as="label"
-              variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-              disabled={disabled}
-            >
-              {label}
-            </Text>
-          ) : null}
-          {required && label ? (
+          <Text
+            as="label"
+            variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
+            disabled={disabled}
+          >
+            {label}
+          </Text>
+          {required ? (
             <Icon name="asterisk" sentiment="danger" size={8} />
           ) : null}
           {labelInformation && label ? labelInformation : null}

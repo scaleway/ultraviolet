@@ -4,6 +4,13 @@ import { UnitInput } from '..'
 export default {
   component: UnitInput,
   title: 'Components/Data Entry/UnitInput',
+  decorators: [
+    StoryComponent => (
+      <div style={{ height: 400 }}>
+        <StoryComponent />
+      </div>
+    ),
+  ],
 } as Meta
 
 export { Playground } from './Playground.stories'
