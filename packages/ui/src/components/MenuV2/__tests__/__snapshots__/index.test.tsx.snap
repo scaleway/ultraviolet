@@ -351,7 +351,25 @@ exports[`Menu Menu.Item render with sentiment danger 1`] = `
 
 exports[`Menu placement renders bottom 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -359,7 +377,7 @@ exports[`Menu placement renders bottom 1`] = `
   width: 100%;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -388,7 +406,12 @@ exports[`Menu placement renders bottom 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -404,11 +427,11 @@ exports[`Menu placement renders bottom 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -530,7 +553,8 @@ exports[`Menu placement renders bottom 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:rr:"
       role="dialog"
@@ -559,7 +583,25 @@ exports[`Menu placement renders bottom 1`] = `
 
 exports[`Menu placement renders left 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-8px, 0px, 0);
+    -moz-transform: translate3d(-8px, 0px, 0);
+    -ms-transform: translate3d(-8px, 0px, 0);
+    transform: translate3d(-8px, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(-8px, 0px, 0);
+    -moz-transform: translate3d(-8px, 0px, 0);
+    -ms-transform: translate3d(-8px, 0px, 0);
+    transform: translate3d(-8px, 0px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -567,7 +609,7 @@ exports[`Menu placement renders left 1`] = `
   width: 100%;
 }
 
-.cache-bswf6j-StyledPopup-StyledPopup {
+.cache-1v5c213-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -596,7 +638,12 @@ exports[`Menu placement renders left 1`] = `
   padding: 2px 0;
 }
 
-.cache-bswf6j-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1v5c213-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-1v5c213-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: 0px;
@@ -612,11 +659,11 @@ exports[`Menu placement renders left 1`] = `
   pointer-events: none;
 }
 
-.cache-bswf6j-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-1v5c213-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-bswf6j-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1v5c213-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -738,7 +785,8 @@ exports[`Menu placement renders left 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-bswf6j-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1v5c213-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:ru:"
       role="dialog"
@@ -767,7 +815,25 @@ exports[`Menu placement renders left 1`] = `
 
 exports[`Menu placement renders right 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(8px, 0px, 0);
+    -moz-transform: translate3d(8px, 0px, 0);
+    -ms-transform: translate3d(8px, 0px, 0);
+    transform: translate3d(8px, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(8px, 0px, 0);
+    -moz-transform: translate3d(8px, 0px, 0);
+    -ms-transform: translate3d(8px, 0px, 0);
+    transform: translate3d(8px, 0px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -775,7 +841,7 @@ exports[`Menu placement renders right 1`] = `
   width: 100%;
 }
 
-.cache-ayg57d-StyledPopup-StyledPopup {
+.cache-1flwqmn-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -804,7 +870,12 @@ exports[`Menu placement renders right 1`] = `
   padding: 2px 0;
 }
 
-.cache-ayg57d-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1flwqmn-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-1flwqmn-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: 0px;
@@ -820,11 +891,11 @@ exports[`Menu placement renders right 1`] = `
   pointer-events: none;
 }
 
-.cache-ayg57d-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-1flwqmn-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-ayg57d-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1flwqmn-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -946,7 +1017,8 @@ exports[`Menu placement renders right 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-ayg57d-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1flwqmn-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:r11:"
       role="dialog"
@@ -975,7 +1047,25 @@ exports[`Menu placement renders right 1`] = `
 
 exports[`Menu placement renders top 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -4px, 0);
+    -moz-transform: translate3d(0px, -4px, 0);
+    -ms-transform: translate3d(0px, -4px, 0);
+    transform: translate3d(0px, -4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -4px, 0);
+    -moz-transform: translate3d(0px, -4px, 0);
+    -ms-transform: translate3d(0px, -4px, 0);
+    transform: translate3d(0px, -4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -983,7 +1073,7 @@ exports[`Menu placement renders top 1`] = `
   width: 100%;
 }
 
-.cache-1755w7x-StyledPopup-StyledPopup {
+.cache-4htjlm-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1012,7 +1102,12 @@ exports[`Menu placement renders top 1`] = `
   padding: 2px 0;
 }
 
-.cache-1755w7x-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-4htjlm-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-4htjlm-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -1px;
@@ -1028,11 +1123,11 @@ exports[`Menu placement renders top 1`] = `
   pointer-events: none;
 }
 
-.cache-1755w7x-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-4htjlm-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-1755w7x-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-4htjlm-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1154,7 +1249,8 @@ exports[`Menu placement renders top 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-1755w7x-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-4htjlm-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:ro:"
       role="dialog"
@@ -1183,7 +1279,25 @@ exports[`Menu placement renders top 1`] = `
 
 exports[`Menu renders with Menu.Group 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1191,7 +1305,7 @@ exports[`Menu renders with Menu.Group 1`] = `
   width: 100%;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1220,7 +1334,12 @@ exports[`Menu renders with Menu.Group 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -1236,11 +1355,11 @@ exports[`Menu renders with Menu.Group 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1379,7 +1498,8 @@ exports[`Menu renders with Menu.Group 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:r7:"
       role="dialog"
@@ -1417,7 +1537,25 @@ exports[`Menu renders with Menu.Group 1`] = `
 
 exports[`Menu renders with Menu.Item 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1425,7 +1563,7 @@ exports[`Menu renders with Menu.Item 1`] = `
   width: 100%;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1454,7 +1592,12 @@ exports[`Menu renders with Menu.Item 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -1470,11 +1613,11 @@ exports[`Menu renders with Menu.Item 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1596,7 +1739,8 @@ exports[`Menu renders with Menu.Item 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:r4:"
       role="dialog"
@@ -1625,7 +1769,25 @@ exports[`Menu renders with Menu.Item 1`] = `
 
 exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1633,7 +1795,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   width: 100%;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1662,7 +1824,12 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -1678,11 +1845,11 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -1792,7 +1959,8 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:re:"
       role="dialog"
@@ -1834,7 +2002,25 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
 
 exports[`Menu renders with Menu.ItemLink 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -1842,7 +2028,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   width: 100%;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -1871,7 +2057,12 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -1887,11 +2078,11 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2019,7 +2210,8 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:rb:"
       role="dialog"
@@ -2102,7 +2294,61 @@ exports[`Menu renders with visible=false 1`] = `
 
 exports[`Menu sizes renders large 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -2110,7 +2356,7 @@ exports[`Menu sizes renders large 1`] = `
   width: 100%;
 }
 
-.cache-1qj705j-StyledPopup-StyledPopup {
+.cache-o672vw-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2139,7 +2385,12 @@ exports[`Menu sizes renders large 1`] = `
   padding: 2px 0;
 }
 
-.cache-1qj705j-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-o672vw-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-o672vw-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -2155,11 +2406,11 @@ exports[`Menu sizes renders large 1`] = `
   pointer-events: none;
 }
 
-.cache-1qj705j-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-o672vw-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-1qj705j-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-o672vw-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2281,7 +2532,8 @@ exports[`Menu sizes renders large 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-1qj705j-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-o672vw-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:r1a:"
       role="dialog"
@@ -2310,7 +2562,43 @@ exports[`Menu sizes renders large 1`] = `
 
 exports[`Menu sizes renders medium 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -2318,7 +2606,7 @@ exports[`Menu sizes renders medium 1`] = `
   width: 100%;
 }
 
-.cache-dtfcw8-StyledPopup-StyledPopup {
+.cache-1xltgth-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2347,7 +2635,12 @@ exports[`Menu sizes renders medium 1`] = `
   padding: 2px 0;
 }
 
-.cache-dtfcw8-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1xltgth-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-1xltgth-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -2363,11 +2656,11 @@ exports[`Menu sizes renders medium 1`] = `
   pointer-events: none;
 }
 
-.cache-dtfcw8-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-1xltgth-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-dtfcw8-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-1xltgth-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2489,7 +2782,8 @@ exports[`Menu sizes renders medium 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-dtfcw8-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-1xltgth-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:r17:"
       role="dialog"
@@ -2518,7 +2812,25 @@ exports[`Menu sizes renders medium 1`] = `
 
 exports[`Menu sizes renders small 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -2526,7 +2838,7 @@ exports[`Menu sizes renders small 1`] = `
   width: 100%;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2555,7 +2867,12 @@ exports[`Menu sizes renders small 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -2571,11 +2888,11 @@ exports[`Menu sizes renders small 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2697,7 +3014,8 @@ exports[`Menu sizes renders small 1`] = `
       Menu
     </button>
     <div
-      class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+      class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+      data-animated="false"
       data-has-arrow="false"
       id="menu-:r14:"
       role="dialog"
