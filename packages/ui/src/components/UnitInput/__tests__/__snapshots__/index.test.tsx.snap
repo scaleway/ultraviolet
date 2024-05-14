@@ -2,7 +2,25 @@
 
 exports[`UnitInput renders click 1`] = `
 <DocumentFragment>
-  .cache-ymc80m-Stack {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -393,7 +411,7 @@ exports[`UnitInput renders click 1`] = `
   fill: none;
 }
 
-.cache-7fvx71-StyledPopup-StyledPopup {
+.cache-15w5je2-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -419,7 +437,12 @@ exports[`UnitInput renders click 1`] = `
   padding: 0;
 }
 
-.cache-7fvx71-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-15w5je2-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-15w5je2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -435,7 +458,7 @@ exports[`UnitInput renders click 1`] = `
   pointer-events: none;
 }
 
-.cache-7fvx71-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-15w5je2-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
@@ -667,7 +690,8 @@ exports[`UnitInput renders click 1`] = `
             </div>
           </div>
           <div
-            class="eeucz6c8 cache-7fvx71-StyledPopup-StyledPopup e4h1g861"
+            class="eeucz6c8 cache-15w5je2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+            data-animated="false"
             data-has-arrow="false"
             id=":rd:"
             role="dialog"
