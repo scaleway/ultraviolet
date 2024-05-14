@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.52.0
+
+### Minor Changes
+
+- [#3745](https://github.com/scaleway/ultraviolet/pull/3745) [`b70242f`](https://github.com/scaleway/ultraviolet/commit/b70242f5b0d23a23698b7d270cfe839b694896fc) Thanks [@matthprost](https://github.com/matthprost)! - Update `<EmptyState />` component to have smaller text on small size
+
+- [#3736](https://github.com/scaleway/ultraviolet/pull/3736) [`f275108`](https://github.com/scaleway/ultraviolet/commit/f275108351e5e53c3022fdd38d94fb36966f6d97) Thanks [@matthprost](https://github.com/matthprost)! - Update `<Popup />` margin between popup and button
+
+### Patch Changes
+
+- [#3763](https://github.com/scaleway/ultraviolet/pull/3763) [`46bcdda`](https://github.com/scaleway/ultraviolet/commit/46bcddab272a4c87a690ca7286f07d15789d1e63) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix `<Popup>` when mounting for the first time it can cause bad rerender and a scroll to the base position instead of the actual position of the popup
+
 ## 1.51.5
 
 ### Patch Changes
