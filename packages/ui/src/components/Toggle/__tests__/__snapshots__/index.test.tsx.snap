@@ -53,7 +53,7 @@ exports[`Toggle renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -75,11 +75,11 @@ exports[`Toggle renders correctly 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -92,25 +92,25 @@ exports[`Toggle renders correctly 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -118,17 +118,38 @@ exports[`Toggle renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -153,9 +174,10 @@ exports[`Toggle renders correctly 1`] = `
       class="cache-155uuxj-Stack ehpbis70"
     />
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -237,7 +259,7 @@ exports[`Toggle renders correctly label 1`] = `
   justify-content: normal;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -259,11 +281,11 @@ exports[`Toggle renders correctly label 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -276,25 +298,25 @@ exports[`Toggle renders correctly label 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -302,17 +324,38 @@ exports[`Toggle renders correctly label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -343,9 +386,10 @@ exports[`Toggle renders correctly label 1`] = `
       </div>
     </div>
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -413,7 +457,7 @@ exports[`Toggle renders correctly when checked 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -435,11 +479,11 @@ exports[`Toggle renders correctly when checked 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -452,25 +496,25 @@ exports[`Toggle renders correctly when checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -478,17 +522,38 @@ exports[`Toggle renders correctly when checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -513,9 +578,10 @@ exports[`Toggle renders correctly when checked 1`] = `
       class="cache-155uuxj-Stack ehpbis70"
     />
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="true"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="true"
@@ -584,7 +650,7 @@ exports[`Toggle renders correctly when disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -606,11 +672,11 @@ exports[`Toggle renders correctly when disabled 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -623,25 +689,25 @@ exports[`Toggle renders correctly when disabled 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -649,17 +715,38 @@ exports[`Toggle renders correctly when disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -684,9 +771,10 @@ exports[`Toggle renders correctly when disabled 1`] = `
       class="cache-155uuxj-Stack ehpbis70"
     />
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="true"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -783,7 +871,7 @@ exports[`Toggle renders correctly when required with label 1`] = `
   fill: none;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -805,11 +893,11 @@ exports[`Toggle renders correctly when required with label 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -822,25 +910,25 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -848,17 +936,38 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -900,9 +1009,10 @@ exports[`Toggle renders correctly when required with label 1`] = `
       </div>
     </div>
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -998,7 +1108,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   fill: none;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1020,11 +1130,11 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1037,25 +1147,25 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1063,17 +1173,38 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -1115,9 +1246,10 @@ exports[`Toggle renders correctly when required with label left 1`] = `
       </div>
     </div>
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -1199,7 +1331,7 @@ exports[`Toggle renders correctly with complex label 1`] = `
   justify-content: normal;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1221,11 +1353,11 @@ exports[`Toggle renders correctly with complex label 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1238,25 +1370,25 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1264,17 +1396,38 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -1307,9 +1460,10 @@ exports[`Toggle renders correctly with complex label 1`] = `
       </div>
     </div>
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -1391,7 +1545,7 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   justify-content: normal;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1413,11 +1567,11 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1430,25 +1584,25 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1456,17 +1610,38 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -1497,14 +1672,244 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
       </div>
     </div>
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
         class="cache-1myp2ct-StyledCheckbox e1wstm611"
         id=":ri:"
+        name="test"
+        type="checkbox"
+        value=""
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly with error 1`] = `
+<DocumentFragment>
+  .cache-r95p0q-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-155uuxj-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-ce8hur-StyledText {
+  color: #b3144d;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-izrm74-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-izrm74-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-izrm74-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-izrm74-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
+  background-color: #792dd4;
+}
+
+.cache-izrm74-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-izrm74-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-r95p0q-StyledLabel e1wstm610"
+  >
+    <div
+      class="cache-155uuxj-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
+      >
+        This is a label
+      </div>
+      <p
+        class="cache-ce8hur-StyledText e13y3mga0"
+      >
+        error text
+      </p>
+    </div>
+    <div
+      class="cache-izrm74-StyledToggle e1wstm612"
+      data-checked="false"
+      data-disabled="false"
+      data-error="true"
+    >
+      <input
+        aria-checked="false"
+        class="cache-1myp2ct-StyledCheckbox e1wstm611"
+        id=":rr:"
         name="test"
         type="checkbox"
         value=""
@@ -1592,7 +1997,7 @@ exports[`Toggle renders correctly with helper 1`] = `
   text-decoration: none;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1614,11 +2019,11 @@ exports[`Toggle renders correctly with helper 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1631,25 +2036,25 @@ exports[`Toggle renders correctly with helper 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1657,17 +2062,38 @@ exports[`Toggle renders correctly with helper 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -1703,9 +2129,10 @@ exports[`Toggle renders correctly with helper 1`] = `
       </p>
     </div>
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -1787,7 +2214,7 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   justify-content: normal;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1809,11 +2236,11 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1826,25 +2253,25 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1852,17 +2279,38 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -1893,9 +2341,10 @@ exports[`Toggle renders correctly with labels on left 1`] = `
       </div>
     </div>
     <div
-      class="cache-pptpcl-StyledToggle e1wstm612"
+      class="cache-izrm74-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -1963,7 +2412,7 @@ exports[`Toggle renders correctly with non default size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-2w8lgn-StyledToggle {
+.cache-feze0p-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1985,11 +2434,11 @@ exports[`Toggle renders correctly with non default size 1`] = `
   height: 20px;
 }
 
-.cache-2w8lgn-StyledToggle:hover {
+.cache-feze0p-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-2w8lgn-StyledToggle:after {
+.cache-feze0p-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -2002,25 +2451,25 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transition: all 300ms;
 }
 
-.cache-2w8lgn-StyledToggle:focus-within,
-.cache-2w8lgn-StyledToggle:focus {
+.cache-feze0p-StyledToggle:focus-within,
+.cache-feze0p-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-2w8lgn-StyledToggle[data-disabled='false']:active:after {
+.cache-feze0p-StyledToggle[data-disabled='false']:active:after {
   width: 16.53px;
 }
 
-.cache-2w8lgn-StyledToggle[data-checked='true'] {
+.cache-feze0p-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-2w8lgn-StyledToggle[data-checked='true']:hover {
+.cache-feze0p-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-2w8lgn-StyledToggle[data-checked='true']:after {
+.cache-feze0p-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2028,17 +2477,38 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-2w8lgn-StyledToggle[data-checked='true']:focus-within,
-.cache-2w8lgn-StyledToggle[data-checked='true']:focus {
+.cache-feze0p-StyledToggle[data-checked='true']:focus-within,
+.cache-feze0p-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2w8lgn-StyledToggle[data-disabled='true'] {
+.cache-feze0p-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-2w8lgn-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-feze0p-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-feze0p-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-feze0p-StyledToggle[data-error='true']:focus-within,
+.cache-feze0p-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-feze0p-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-feze0p-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-feze0p-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -2063,9 +2533,10 @@ exports[`Toggle renders correctly with non default size 1`] = `
       class="cache-155uuxj-Stack ehpbis70"
     />
     <div
-      class="cache-2w8lgn-StyledToggle e1wstm612"
+      class="cache-feze0p-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
+      data-error="false"
     >
       <input
         aria-checked="false"
@@ -2155,7 +2626,7 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   justify-content: normal;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2177,11 +2648,11 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -2194,25 +2665,25 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2220,17 +2691,38 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -2267,9 +2759,10 @@ exports[`Toggle renders correctly with tooltip 1`] = `
         </div>
       </div>
       <div
-        class="cache-pptpcl-StyledToggle e1wstm612"
+        class="cache-izrm74-StyledToggle e1wstm612"
         data-checked="false"
         data-disabled="false"
+        data-error="false"
       >
         <input
           aria-checked="false"

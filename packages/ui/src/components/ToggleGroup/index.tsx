@@ -38,6 +38,7 @@ export const ToggleGroupToggle = ({
   value,
   label,
   helper,
+  error,
   className,
   'data-testid': dataTestId,
 }: ToggleGroupToggleProps) => {
@@ -63,6 +64,7 @@ export const ToggleGroupToggle = ({
       className={className}
       data-testid={dataTestId}
       label={label}
+      error={error}
     />
   )
 }
