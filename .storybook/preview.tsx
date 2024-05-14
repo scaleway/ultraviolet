@@ -36,14 +36,17 @@ const parameters: Preview['parameters'] = {
       {
         name: 'light',
         value: '#ffffff',
+        textColor: '#3f4250',
       },
       {
         name: 'dark',
         value: '#151a2d',
+        textColor: '#b8bac0',
       },
       {
         name: 'darker',
         value: '#000000',
+        textColor: '#d8d9dc',
       },
     ],
   },
@@ -136,20 +139,26 @@ export const globalStyles = css`
 `
 
 const getThemeColor = (theme: string) => {
-  const { value } =
+  const { value: backgroundColor, textColor } =
     parameters['backgrounds'].values.find(
       ({ name }: { name: string }) => name === theme,
     ) ?? parameters['backgrounds'].values[0]
 
-  return value
+  return { backgroundColor, textColor }
 }
 
 const withThemeProvider = (Story: StoryFn, context: { globals: any }) => {
   const { theme } = context.globals
-  const backgroundColor = getThemeColor(theme)
+  const { backgroundColor, textColor } = getThemeColor(theme)
 
   return (
-    <div style={{ backgroundColor, padding: '30px' }}>
+    <div
+      style={{
+        backgroundColor,
+        padding: '30px',
+        color: textColor,
+      }}
+    >
       <Story {...context} />
     </div>
   )
