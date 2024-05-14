@@ -118,6 +118,7 @@ export const EstimateCostContent = ({
   children = null,
   locales = EstimateCostLocales,
   overlayMargin,
+  onTotalPriceChange,
 }: EstimateCostProps) => {
   const { formatNumber } = useEstimateCost()
   const [ref, inView] = useInView()
@@ -137,6 +138,26 @@ export const EstimateCostContent = ({
 
   const [isLongFractionDigits, setIsLongFractionDigits] = useState(false)
   const providerValue = useMemo(() => ({ isOverlay: false }), [])
+
+  const totalValue = useMemo(
+    () =>
+      formatNumber(totalPrice.total, {
+        maximumFractionDigits: isLongFractionDigits
+          ? maximumFractionDigitsLong[iteration.unit]
+          : maximumFractionDigits[iteration.unit],
+      }),
+    [formatNumber, isLongFractionDigits, iteration.unit, totalPrice.total],
+  )
+
+  const totalMaxValue = useMemo(
+    () =>
+      formatNumber(totalPrice.maxTotal, {
+        maximumFractionDigits: isLongFractionDigits
+          ? maximumFractionDigitsLong[iteration.unit]
+          : maximumFractionDigits[iteration.unit],
+      }),
+    [formatNumber, isLongFractionDigits, iteration.unit, totalPrice.maxTotal],
+  )
 
   const productsCallback = useMemo(
     () => ({
@@ -238,7 +259,21 @@ export const EstimateCostContent = ({
           )
         : 0,
     })
-  }, [hideTotal, products, iteration, setTotalPrice])
+    onTotalPriceChange?.({
+      total: totalPrice.total,
+      totalMax: totalPrice.maxTotal > 0 ? totalPrice.maxTotal : undefined,
+    })
+  }, [
+    hideTotal,
+    products,
+    iteration,
+    setTotalPrice,
+    onTotalPriceChange,
+    totalPrice.total,
+    totalPrice.maxTotal,
+    totalValue,
+    totalMaxValue,
+  ])
 
   useEffect(() => {
     if (
@@ -390,18 +425,8 @@ export const EstimateCostContent = ({
                       <LineThrough
                         isActive={isBeta && (discount === 0 || discount >= 1)}
                       >
-                        {formatNumber(totalPrice.total, {
-                          maximumFractionDigits: isLongFractionDigits
-                            ? maximumFractionDigitsLong[iteration.unit]
-                            : maximumFractionDigits[iteration.unit],
-                        })}
-                        {totalPrice.maxTotal > 0
-                          ? ` - ${formatNumber(totalPrice.maxTotal, {
-                              maximumFractionDigits: isLongFractionDigits
-                                ? maximumFractionDigitsLong[iteration.unit]
-                                : maximumFractionDigits[iteration.unit],
-                            })}`
-                          : null}
+                        {totalValue}
+                        {totalPrice.maxTotal > 0 ? ` - ${totalMaxValue}` : null}
                       </LineThrough>
                     </StyledText>
                     {hideHourlyPriceOnTotal &&

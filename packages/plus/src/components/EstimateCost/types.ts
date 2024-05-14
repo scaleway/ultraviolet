@@ -112,6 +112,19 @@ export type EstimateCostProps = {
    */
   numberLocales?: string
   overlayMargin?: string
+  onTotalPriceChange?: ({
+    total,
+    totalMax,
+  }: {
+    /**
+     * The total price of the estimate cost.
+     */
+    total: number
+    /**
+     * If the price has a range (ex: 10-20), this is the maximum value.
+     */
+    totalMax?: number
+  }) => void
 }
 
 export type Units = 'seconds' | 'minutes' | 'hours' | 'days' | 'months'
