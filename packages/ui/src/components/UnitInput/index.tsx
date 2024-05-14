@@ -23,6 +23,27 @@ const StyledNumberInputWrapper = styled.div`
   height: 100%;
 `
 
+const StyledInput = styled.input`
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding-left: ${({ theme }) => theme.space['2']};
+  background: transparent;
+  color: ${({ theme }) => theme.colors.neutral.text};
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &::placeholder {
+      color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
+    }
+  }
+`
+
 const UnitInputWrapper = styled(Stack)<{
   'data-size': 'small' | 'medium' | 'large'
   'data-success': boolean
@@ -32,6 +53,20 @@ const UnitInputWrapper = styled(Stack)<{
 }>`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
+
+  &:not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true']):focus,
+  :not([data-disabled='true']):not([data-readonly='true']):not(
+      [data-success='true']
+    ):not([data-error='true'])active {
+    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+
+    & > ${StyledNumberInputWrapper} {
+      border-right-color: ${({ theme }) => theme.colors.primary.border};
+    }
+  }
 
   &:not([data-disabled='true']):not([data-error='true']):not(
       [data-success='true']
@@ -51,10 +86,9 @@ const UnitInputWrapper = styled(Stack)<{
     border-color: ${({ theme }) => theme.colors.neutral.border};
     cursor: default;
   }
-  &[data-disabled='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    cursor: not-allowed;
+
+  &[data-readonly='true']:active {
+    border-color: ${({ theme }) => theme.colors.neutral.border};
   }
 
   &[data-size='small'] {
@@ -66,22 +100,38 @@ const UnitInputWrapper = styled(Stack)<{
   &[data-size='large'] {
     height: ${INPUT_SIZE_HEIGHT['large']}px;
   }
-  &:not([data-disabled='true']):focus,
-  :not([data-disabled='true']):active {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.primary.border};
-    }
-  }
+
   &[data-success='true'] {
     border: 1px solid ${({ theme }) => theme.colors.success.border};
     & > ${StyledNumberInputWrapper} {
       border-right-color: ${({ theme }) => theme.colors.success.border};
     }
   }
+  &[data-success='true']:active {
+    border: 1px solid ${({ theme }) => theme.colors.success.border};
+    box-shadow: ${({ theme }) => theme.shadows.focusSuccess};
+
+    & > ${StyledNumberInputWrapper} {
+      border-right-color: ${({ theme }) => theme.colors.success.border};
+    }
+  }
+
   &[data-error='true'] {
     border: 1px solid ${({ theme }) => theme.colors.danger.border};
+
+    & > ${StyledNumberInputWrapper} {
+      border-right-color: ${({ theme }) => theme.colors.danger.border};
+    }
+
+    & > ${StyledNumberInputWrapper}:hover {
+      border-right-color: ${({ theme }) => theme.colors.danger.border};
+    }
+  }
+
+  &[data-error='true']:active {
+    border: 1px solid ${({ theme }) => theme.colors.danger.border};
+    box-shadow: ${({ theme }) => theme.shadows.focusDanger};
+
     & > ${StyledNumberInputWrapper} {
       border-right-color: ${({ theme }) => theme.colors.danger.border};
     }
@@ -89,10 +139,14 @@ const UnitInputWrapper = styled(Stack)<{
       border-right-color: ${({ theme }) => theme.colors.danger.border};
     }
   }
-  &[data-error='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.danger.border};
+
+  &[data-disabled='true'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+    cursor: not-allowed;
+
     & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.danger.border};
+      border-right-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
     }
   }
 `
@@ -105,46 +159,12 @@ const CustomSelectInput = styled(SelectInputV2)<{
     border: none;
     background: transparent;
   }
+
   ${({ width }) => width && `width: ${width}px;`}
 
-  &:not([data-disabled="true"]):focus, 
-  :active {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    & > ${StyledNumberInputWrapper} {
-      border-right-color: ${({ theme }) => theme.colors.primary.border};
-    }
-  }
-
-  &:focus,
-  :active {
-    & > ${UnitInputWrapper} {
-      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-      border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    }
-  }
-`
-const StyledInput = styled.input`
-  flex: 1;
-  border: none;
-  outline: none;
-  height: 100%;
-  padding-left: ${({ theme }) => theme.space['2']};
-  background: transparent;
-  color: ${({ theme }) => theme.colors.neutral.text};
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-  }
-
-  &:focus,
-  :active {
-    & > ${UnitInputWrapper} {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
+  #unit:focus,
+  #unit:active {
+    box-shadow: none;
   }
 `
 type UnitInputValue = { inputValue: number; unit: string }
@@ -187,8 +207,8 @@ type UnitInputProps = {
 export const UnitInput = ({
   id,
   name = '',
-  max = 99999,
-  min = 1,
+  max = Number.MAX_SAFE_INTEGER,
+  min = 0,
   autoFocus = false,
   size = 'large',
   placeholder = '0',

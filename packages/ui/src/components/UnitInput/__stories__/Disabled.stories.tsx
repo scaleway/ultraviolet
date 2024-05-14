@@ -17,9 +17,10 @@ const optionsSelect = [
     value: 'months',
   },
 ]
-export const Disabled: StoryFn<typeof UnitInput> = () => (
+export const Disabled: StoryFn<typeof UnitInput> = props => (
   <Stack gap={2}>
     <UnitInput
+      {...props}
       options={optionsSelect}
       disabled
       label="Disabled"
@@ -28,6 +29,7 @@ export const Disabled: StoryFn<typeof UnitInput> = () => (
       placeholderUnit="Cannot select"
     />
     <UnitInput
+      {...props}
       options={optionsSelect}
       readOnly
       label="ReadOnly"

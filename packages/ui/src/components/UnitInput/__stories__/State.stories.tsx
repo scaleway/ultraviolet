@@ -17,15 +17,17 @@ const optionsSelect = [
     value: 'months',
   },
 ]
-export const States: StoryFn<typeof UnitInput> = () => (
+export const States: StoryFn<typeof UnitInput> = props => (
   <Stack gap={2}>
     <UnitInput
+      {...props}
       options={optionsSelect}
       success="success"
       label="Success"
       name="Success"
     />
     <UnitInput
+      {...props}
       options={optionsSelect}
       error="error"
       label="Error"
