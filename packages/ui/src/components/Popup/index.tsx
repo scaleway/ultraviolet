@@ -10,6 +10,7 @@ import type {
 } from 'react'
 import {
   forwardRef,
+  startTransition,
   useCallback,
   useEffect,
   useId,
@@ -72,19 +73,14 @@ const StyledPopup = styled('div', {
   opacity: 0;
   z-index: 1;
   transform: ${({ positions }) => positions.popupPosition};
-  animation: ${({
-    positions,
-    reverseAnimation,
-    maxHeight,
-    animationDuration,
-  }) =>
-    maxHeight || animationDuration === 0 || animationDuration === undefined
-      ? undefined
-      : css`
-          ${animationDuration}ms ${!reverseAnimation
-            ? animation(positions)
-            : exitAnimation(positions)} forwards
-        `};
+
+  &[data-animated='true'] {
+    animation: ${({ positions, reverseAnimation, animationDuration }) => css`
+      ${animationDuration}ms ${!reverseAnimation
+        ? animation(positions)
+        : exitAnimation(positions)} forwards
+    `};
+  }
 
   &[data-has-arrow='true'] {
     &::after {
@@ -352,7 +348,9 @@ export const Popup = forwardRef(
               setVisibleInDom(true)
             }, debounceDelay)
           } else {
-            setVisibleInDom(true)
+            startTransition(() => {
+              setVisibleInDom(true)
+            })
           }
         }
       },
@@ -593,6 +591,7 @@ export const Popup = forwardRef(
                 data-visible-in-dom={
                   !dynamicDomRendering ? visibleInDom : undefined
                 }
+                data-animated={animationDuration > 0 && !maxHeight}
               >
                 {text}
               </StyledPopup>,

@@ -711,7 +711,25 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       </div>
     </div>
   </div>
-  .cache-b3osgz-StyledPopup-StyledPopup {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -740,7 +758,12 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -756,11 +779,11 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -912,7 +935,8 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
 }
 
 <div
-    class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+    class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+    data-animated="false"
     data-has-arrow="false"
     id="menu-test"
     role="dialog"
@@ -2125,8 +2149,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       class="cache-sjyzwh-StyledPositioningWrapper edb1sh90"
     >
       <div
-        aria-controls="menu-:rq:"
-        aria-describedby="menu-:rq:"
+        aria-controls="menu-:ro:"
+        aria-describedby="menu-:ro:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         tabindex="-1"
       >
@@ -2153,7 +2177,25 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  .cache-b3osgz-StyledPopup-StyledPopup {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2182,7 +2224,12 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -2198,11 +2245,11 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2315,7 +2362,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
 }
 
 <div
-    class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+    class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+    data-animated="false"
     data-has-arrow="false"
     id="menu-test"
     role="dialog"
@@ -2349,7 +2397,25 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  .cache-b3osgz-StyledPopup-StyledPopup {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -2378,7 +2444,12 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -2394,11 +2465,11 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -2844,9 +2915,10 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
 }
 
 <div
-    class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+    class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+    data-animated="false"
     data-has-arrow="false"
-    id="menu-:rq:"
+    id="menu-:ro:"
     role="dialog"
     style="opacity: 1; animation: none;"
   >
@@ -3247,7 +3319,25 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
-  .cache-b3osgz-StyledPopup-StyledPopup {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -3276,7 +3366,12 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   padding: 2px 0;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -3292,11 +3387,11 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   pointer-events: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-b3osgz-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.cache-7k135r-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
   border-color: #ffffff transparent transparent transparent;
 }
 
@@ -3409,7 +3504,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
 }
 
 <div
-    class="e1jn11gg1 cache-b3osgz-StyledPopup-StyledPopup e4h1g861"
+    class="e1jn11gg1 cache-7k135r-StyledPopup-StyledPopup-StyledPopup e4h1g861"
+    data-animated="false"
     data-has-arrow="false"
     id="menu-test"
     role="dialog"
