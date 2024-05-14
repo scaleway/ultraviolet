@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.15.5
+
+### Patch Changes
+
+- [#3749](https://github.com/scaleway/ultraviolet/pull/3749) [`701c54b`](https://github.com/scaleway/ultraviolet/commit/701c54ba11ee32c0efd1a8ff2cf104fcb3d63a74) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` to hide unknown added pinned items
+
+- Updated dependencies [[`b70242f`](https://github.com/scaleway/ultraviolet/commit/b70242f5b0d23a23698b7d270cfe839b694896fc), [`46bcdda`](https://github.com/scaleway/ultraviolet/commit/46bcddab272a4c87a690ca7286f07d15789d1e63), [`f275108`](https://github.com/scaleway/ultraviolet/commit/f275108351e5e53c3022fdd38d94fb36966f6d97)]:
+  - @ultraviolet/ui@1.52.0
+
 ## 0.15.4
 
 ### Patch Changes
