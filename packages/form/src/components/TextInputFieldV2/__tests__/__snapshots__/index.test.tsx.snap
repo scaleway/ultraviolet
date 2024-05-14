@@ -159,7 +159,7 @@ exports[`TextInputFieldV2 should render correctly 1`] = `
   border-color: #8c40ef;
 }
 
-.cache-137prd4-StyledInput {
+.cache-zm0rg0-StyledInput {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -168,6 +168,11 @@ exports[`TextInputFieldV2 should render correctly 1`] = `
   height: 100%;
   padding-left: 16px;
   background: transparent;
+  font-size: 14px;
+}
+
+.cache-zm0rg0-StyledInput[data-size='large'] {
+  font-size: 16px;
 }
 
 <form
@@ -200,7 +205,8 @@ exports[`TextInputFieldV2 should render correctly 1`] = `
         >
           <input
             aria-invalid="false"
-            class="cache-137prd4-StyledInput e7tir8v1"
+            class="cache-zm0rg0-StyledInput e7tir8v1"
+            data-size="large"
             id=":r0:"
             name="test"
             type="text"

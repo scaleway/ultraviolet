@@ -159,7 +159,7 @@ exports[`TextInputV2 should render correctly when input  has a error sentiment 1
   border-color: #8c40ef;
 }
 
-.cache-137prd4-StyledInput {
+.cache-zm0rg0-StyledInput {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -168,6 +168,11 @@ exports[`TextInputV2 should render correctly when input  has a error sentiment 1
   height: 100%;
   padding-left: 16px;
   background: transparent;
+  font-size: 14px;
+}
+
+.cache-zm0rg0-StyledInput[data-size='large'] {
+  font-size: 16px;
 }
 
 .cache-pgps27-Stack-StateStack {
@@ -247,7 +252,8 @@ exports[`TextInputV2 should render correctly when input  has a error sentiment 1
       >
         <input
           aria-invalid="true"
-          class="cache-137prd4-StyledInput e7tir8v1"
+          class="cache-zm0rg0-StyledInput e7tir8v1"
+          data-size="large"
           id=":rk:"
           type="text"
           value="test"
@@ -437,7 +443,7 @@ exports[`TextInputV2 should render correctly when input has a success sentiment 
   border-color: #8c40ef;
 }
 
-.cache-137prd4-StyledInput {
+.cache-zm0rg0-StyledInput {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -446,6 +452,11 @@ exports[`TextInputV2 should render correctly when input has a success sentiment 
   height: 100%;
   padding-left: 16px;
   background: transparent;
+  font-size: 14px;
+}
+
+.cache-zm0rg0-StyledInput[data-size='large'] {
+  font-size: 16px;
 }
 
 .cache-pgps27-Stack-StateStack {
@@ -525,7 +536,8 @@ exports[`TextInputV2 should render correctly when input has a success sentiment 
       >
         <input
           aria-invalid="false"
-          class="cache-137prd4-StyledInput e7tir8v1"
+          class="cache-zm0rg0-StyledInput e7tir8v1"
+          data-size="large"
           id=":rg:"
           type="text"
           value="test"
@@ -715,7 +727,7 @@ exports[`TextInputV2 should render correctly when input is disabled 1`] = `
   border-color: #8c40ef;
 }
 
-.cache-137prd4-StyledInput {
+.cache-zm0rg0-StyledInput {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -724,6 +736,11 @@ exports[`TextInputV2 should render correctly when input is disabled 1`] = `
   height: 100%;
   padding-left: 16px;
   background: transparent;
+  font-size: 14px;
+}
+
+.cache-zm0rg0-StyledInput[data-size='large'] {
+  font-size: 16px;
 }
 
 <div
@@ -753,7 +770,8 @@ exports[`TextInputV2 should render correctly when input is disabled 1`] = `
       >
         <input
           aria-invalid="false"
-          class="cache-137prd4-StyledInput e7tir8v1"
+          class="cache-zm0rg0-StyledInput e7tir8v1"
+          data-size="large"
           disabled=""
           id=":ra:"
           type="text"
@@ -924,7 +942,7 @@ exports[`TextInputV2 should render correctly when input is readOnly 1`] = `
   border-color: #8c40ef;
 }
 
-.cache-137prd4-StyledInput {
+.cache-zm0rg0-StyledInput {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -933,6 +951,11 @@ exports[`TextInputV2 should render correctly when input is readOnly 1`] = `
   height: 100%;
   padding-left: 16px;
   background: transparent;
+  font-size: 14px;
+}
+
+.cache-zm0rg0-StyledInput[data-size='large'] {
+  font-size: 16px;
 }
 
 <div
@@ -962,7 +985,8 @@ exports[`TextInputV2 should render correctly when input is readOnly 1`] = `
       >
         <input
           aria-invalid="false"
-          class="cache-137prd4-StyledInput e7tir8v1"
+          class="cache-zm0rg0-StyledInput e7tir8v1"
+          data-size="large"
           id=":rd:"
           readonly=""
           type="text"
@@ -1133,7 +1157,7 @@ exports[`TextInputV2 should render correctly with basic props 1`] = `
   border-color: #8c40ef;
 }
 
-.cache-137prd4-StyledInput {
+.cache-zm0rg0-StyledInput {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1142,6 +1166,11 @@ exports[`TextInputV2 should render correctly with basic props 1`] = `
   height: 100%;
   padding-left: 16px;
   background: transparent;
+  font-size: 14px;
+}
+
+.cache-zm0rg0-StyledInput[data-size='large'] {
+  font-size: 16px;
 }
 
 <div
@@ -1171,7 +1200,8 @@ exports[`TextInputV2 should render correctly with basic props 1`] = `
       >
         <input
           aria-invalid="false"
-          class="cache-137prd4-StyledInput e7tir8v1"
+          class="cache-zm0rg0-StyledInput e7tir8v1"
+          data-size="large"
           id=":r0:"
           type="text"
           value="test"

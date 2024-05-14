@@ -19,6 +19,7 @@ export const Size: StoryFn<typeof TextInputV2> = args => {
           size={size}
           value={value}
           onChange={setValue}
+          placeholder="Placeholder"
         />
       ))}
     </Stack>

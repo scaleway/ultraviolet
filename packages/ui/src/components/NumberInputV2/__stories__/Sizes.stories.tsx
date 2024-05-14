@@ -6,7 +6,13 @@ import { NumberInputV2 } from '../index'
 export const Sizes: StoryFn = (args: ComponentProps<typeof NumberInputV2>) => (
   <Stack gap={2}>
     {(['small', 'medium', 'large'] as const).map(size => (
-      <NumberInputV2 key={size} {...args} size={size} label={size} />
+      <NumberInputV2
+        key={size}
+        {...args}
+        size={size}
+        label={size}
+        placeholder="12"
+      />
     ))}
   </Stack>
 )

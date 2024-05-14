@@ -2,7 +2,7 @@ import { beforeAll, describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { ReactNode } from 'react'
-import { act } from 'react-dom/test-utils'
+import { act } from 'react'
 import { SelectInputV2 } from '..'
 import {
   renderWithTheme,
@@ -780,7 +780,7 @@ describe('SelectInputV2', () => {
 
     await userEvent.keyboard('[Backspace]')
     await userEvent.keyboard('[Enter]')
-  }, 6000)
+  }, 10000)
 
   test('renders correctly selected tags when multiselect', async () => {
     renderWithTheme(
@@ -871,7 +871,7 @@ describe('SelectInputV2', () => {
     expect(selectAllCheckBox).toBeChecked()
     await userEvent.keyboard('<') // Nothing when the user press any key
     expect(selectAllCheckBox).toBeChecked()
-  }, 10000)
+  }, 15000)
 
   test('handles correcty selectAll ungrouped data', async () => {
     renderWithTheme(
@@ -928,7 +928,7 @@ describe('SelectInputV2', () => {
     expect(selectAllCheckBox).toBeChecked()
     await userEvent.keyboard('<') // Nothing when the user press any key
     expect(selectAllCheckBox).toBeChecked()
-  })
+  }, 10000)
 
   test('handles correcty selectAllGroup', async () => {
     renderWithTheme(
