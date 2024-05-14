@@ -19,8 +19,8 @@ please explain what is breaking with a detailed explanation. In this case we won
 
 This is the last solution to choose. Your breaking is so big that it couldn't be migrated easily, in this case you need to rename your component, two possibilities:
 
-- Your component don't have a new name then you will need to add V2 at the end of it. Example: You're refactoring Button so your component name should be ButtonV2.
-- Your component already have a new name (ex: Switch becomes Toggle) then use the new name.
+* Your component don't have a new name then you will need to add V2 at the end of it. Example: You're refactoring Button so your component name should be ButtonV2.
+* Your component already have a new name (ex: Switch becomes Toggle) then use the new name.
 
 In this scenario both old and new components will coexist until the end of migration. Here are the step of the migration:
 
@@ -49,11 +49,7 @@ In this scenario both old and new components will coexist until the end of migra
 
    This will add a badge and a message into your storybook documentation. It should look as follows:
 
-   <img
-     src="https://scaleway-ui-storybook.s3.fr-par.scw.cloud/Screenshot%202023-01-25%20at%2014.13.48.png"
-     alt="deprecated example screenshot"
-     width="1000px"
-   />
+   <img src="https://scaleway-ui-storybook.s3.fr-par.scw.cloud/Screenshot%202023-01-25%20at%2014.13.48.png" alt="deprecated example screenshot" width="1000px" />
 
 3. Third step is to mark component deprecated through JSDoc comments with a beautiful description on what to replace usage by. This should be shown in typescript hints. It should look as follows:
 

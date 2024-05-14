@@ -3,11 +3,10 @@ import {
   Subtitle,
   Description,
   Primary,
-  ArgsTable,
+  Controls,
   Stories,
-  PRIMARY_STORY,
 } from '@storybook/blocks'
-import { Badge, Button, Text, Stack, Link, Row } from '../../packages/ui/src'
+import { Badge, Button, Text, Stack, Link, Row } from '@ultraviolet/ui'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
 import { useMemo } from 'react'
@@ -22,6 +21,16 @@ const StyledTitle = styled.div`
   &[data-state='deprecated'] h1 {
     text-decoration: line-through;
     text-decoration-color: ${({ theme }) => theme.colors.danger.text};
+  }
+`
+
+const StoriesThemes = styled.div`
+  .docs-story > div {
+    padding: 0;
+  }
+
+  .css-xzp052 .innerZoomElementWrapper > * {
+    border: 0 !important;
   }
 `
 
@@ -51,7 +60,7 @@ const Page = ({
   }, [])
 
   return (
-    <>
+    <StoriesThemes>
       <StyledHeaderContainer>
         <StyledTitle data-state={state}>
           <Title />
@@ -77,7 +86,7 @@ const Page = ({
       </StyledHeaderContainer>
       {deprecated ? (
         <Row templateColumns="1fr auto" justifyContent="top">
-          <Text as="h3" variant="bodyStronger" color="danger">
+          <Text as="h3" variant="bodyStronger" sentiment="danger">
             {deprecatedReason
               ? deprecatedReason
               : 'This component is deprecated please do not use it any more.'}
@@ -96,7 +105,7 @@ const Page = ({
         <Subtitle />
       )}
       {experimental ? (
-        <Text as="h3" variant="bodyStronger" color="warning">
+        <Text as="h3" variant="bodyStronger" sentiment="warning">
           This component is at an unstable stage and is subject to change in
           future releases.&nbsp;
           <Link
@@ -109,9 +118,9 @@ const Page = ({
       ) : null}
       <Description />
       <Primary />
-      {!hideArgsTable ? <ArgsTable story={PRIMARY_STORY} /> : null}
+      {!hideArgsTable ? <Controls /> : null}
       <Stories />
-    </>
+    </StoriesThemes>
   )
 }
 

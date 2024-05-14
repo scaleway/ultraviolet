@@ -20,7 +20,7 @@ Button
 │   ├── Playground.stories.tsx
 ```
 
----
+***
 
 `index.stories.tsx` contains exports of each story and the parameters for the component story page. Here is an example with just Playground story:
 
@@ -54,7 +54,7 @@ Here we have the `component` parameter that is used to define the component that
 parameter is used to define the decorators that will be applied to the story. The `parameters` parameter is used to define the parameters for the component story page.
 The `title` parameter is used to define the title of the story.
 
----
+***
 
 `Template.stories.tsx` contains the default template of a story. If your story only change properties values you can use this template as base. Here is an example:
 
@@ -67,7 +67,7 @@ export const Template: StoryFn<typeof Button> = ({ ...props }) => (
 )
 ```
 
----
+***
 
 `Playground.stories.tsx` contains the playground of a story. This story will be the one user will manually change properties on storybook itself. Here is an example:
 
@@ -85,9 +85,9 @@ Playground.args = {
 
 Now that you understood how is structured our current stories, you can start writing your own story. Here are some guidelines to follow:
 
-- The story should be written in a `.stories.tsx` file.
-- The story should be exported in the `index.stories.tsx` file.
-- The story should use the `Template` as base if it only changes properties values.
+* The story should be written in a `.stories.tsx` file.
+* The story should be exported in the `index.stories.tsx` file.
+* The story should use the `Template` as base if it only changes properties values.
 
 Then you can simply create your file, write your story and export it in the `index.stories.tsx` file.
 
@@ -96,7 +96,7 @@ Then you can simply create your file, write your story and export it in the `ind
 Maybe you noticed that some of our stories have deprecated or experimental state. This is because we have some custom behaviors, we customized storybook
 page structure to add those status. Here is how to add those behaviors:
 
-- To add a deprecated state, you need to add the `deprecated` parameter in the `index.stories.tsx` file. Here is an example:
+* To add a deprecated state, you need to add the `deprecated` parameter in the `index.stories.tsx` file. Here is an example:
 
 ```tsx
 export default {
@@ -115,7 +115,7 @@ export default {
 } as Meta<typeof Button>
 ```
 
-- To add an experimental state, you need to add the `experimental` parameter in the `index.stories.tsx` file. Here is an example:
+* To add an experimental state, you need to add the `experimental` parameter in the `index.stories.tsx` file. Here is an example:
 
 ```tsx
 export default {

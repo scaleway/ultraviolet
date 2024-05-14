@@ -1,8 +1,8 @@
-import type { StorybookConfig } from '@storybook/react-webpack5'
+import type { StorybookConfig } from '@storybook/react-vite'
 
 export default {
   stories: [
-    '../packages/*/src/**/__stories__/**/*.stories.mdx',
+    '../packages/*/src/**/__stories__/**/*.mdx',
     '../packages/*/src/**/__stories__/index.stories.tsx',
   ],
   addons: [
@@ -10,50 +10,24 @@ export default {
     '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    'storybook-dark-mode',
+    '@storybook/addon-themes',
   ],
   framework: {
-    name: '@storybook/react-webpack5',
-    options: {},
+    name: '@storybook/react-vite',
+    options: {
+      builder: {
+        viteConfigPath: '.storybook/vite.config.ts',
+      },
+    },
   },
   docs: {
     autodocs: true,
   },
   core: {
-    builder: '@storybook/builder-webpack5',
+    builder: '@storybook/builder-vite',
+    disableTelemetry: true,
   },
-  webpackFinal: async config => {
-    const imageRule = config.module?.rules?.find(rule => {
-      const test = (rule as { test: RegExp }).test
-
-      if (!test) {
-        return false
-      }
-
-      return test.test('.svg')
-    }) as { [key: string]: any }
-
-    imageRule['exclude'] = /\.svg$/
-
-    config.module?.rules?.push({
-      test: /\.svg$/,
-      use: [
-        {
-          loader: '@svgr/webpack',
-        },
-        {
-          loader: 'file-loader',
-          options: {
-            name: 'static/media/[path][name].[ext]',
-          },
-        },
-      ],
-      type: 'javascript/auto',
-      issuer: {
-        and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
-      },
-    })
-
-    return config
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
 } satisfies StorybookConfig

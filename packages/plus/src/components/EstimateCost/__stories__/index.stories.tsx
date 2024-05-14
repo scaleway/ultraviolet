@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { EstimateCost } from '..'
 import { Item } from '../Components/Item'
 import { LineThrough } from '../Components/LineThrough'
@@ -20,7 +20,7 @@ export default {
     Unit,
   },
   title: 'Plus/Compositions/EstimateCost',
-} as ComponentMeta<typeof EstimateCost>
+} as Meta
 
 export { Playground } from './Playground.stories'
 export { DefaultLocales } from './DefaultLocales.stories'

@@ -3,11 +3,8 @@ import {
   DocsContainer as BaseContainer,
   DocsContainerProps as BaseContainerProps,
 } from '@storybook/blocks'
-import { useDarkMode } from 'storybook-dark-mode'
-import { light, dark } from '../storybookThemes'
-import lightTheme, { darkTheme } from '../../packages/ui/src/theme'
-import { Global, ThemeProvider } from '@emotion/react'
-import { globalStyles } from '../preview'
+import { ThemeProvider } from '@emotion/react'
+import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
 
 type ExtraProps = {
   /**
@@ -33,34 +30,27 @@ type ExtraProps = {
 }
 
 type DocsContainerProps = BaseContainerProps & {
-  context: {
-    attachedCSFFile: { meta: { parameters?: ExtraProps; title: string } }
+  context?: {
+    attachedCSFFiles: Set<any>
   }
 } & { children: ReactNode }
 
 const DocsContainer = ({ children, context }: DocsContainerProps) => {
-  const isDarkTheme = useDarkMode()
-  const mode = useDarkMode() ? 'dark' : 'light'
+  const scope = context?.attachedCSFFiles?.values()?.next()?.value?.meta
+  const parameters = scope?.parameters
 
-  const isPlusLibrary = context.attachedCSFFile.meta.title.includes('Plus/')
+  const isPlusLibrary = scope?.title?.includes('Plus/') ?? false
 
   return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <Global styles={[globalStyles(mode)]} />
-
-      <BaseContainer theme={isDarkTheme ? dark : light} context={context}>
+    <ThemeProvider theme={lightTheme}>
+      <BaseContainer context={context}>
         {isValidElement<ExtraProps>(children)
           ? cloneElement(children, {
-              deprecated: context.attachedCSFFile.meta.parameters?.deprecated,
-              deprecatedReason:
-                context.attachedCSFFile.meta.parameters?.deprecatedReason,
-              migrationLink:
-                context.attachedCSFFile.meta.parameters?.migrationLink,
-              hideArgsTable:
-                context.attachedCSFFile.meta.parameters?.hideArgsTable,
-              experimental: isPlusLibrary
-                ? true
-                : context.attachedCSFFile.meta.parameters?.experimental,
+              deprecated: parameters?.deprecated,
+              deprecatedReason: parameters?.deprecatedReason,
+              migrationLink: parameters?.migrationLink,
+              hideArgsTable: parameters?.hideArgsTable,
+              experimental: isPlusLibrary ? true : parameters?.experimental,
             })
           : children}
       </BaseContainer>
