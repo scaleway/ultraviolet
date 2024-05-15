@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
-import { useEffect, useMemo, useState } from 'react'
+import { useId, useMemo, useState } from 'react'
 import { SelectInputV2 } from '../SelectInputV2'
 import type { OptionType } from '../SelectInputV2/types'
 import { Stack } from '../Stack'
@@ -237,6 +237,7 @@ export const UnitInput = ({
   onKeyDown,
 }: UnitInputProps) => {
   const [val, setVal] = useState(value)
+  const localId = useId()
   const sentiment = useMemo(() => {
     if (error) {
       return 'danger'
@@ -248,16 +249,6 @@ export const UnitInput = ({
     return 'neutral'
   }, [error, success])
 
-  useEffect(() => {
-    if (onChange && value) {
-      onChange(value)
-    }
-    if (onChangeUnitValue && unitValue) {
-      onChangeUnitValue(unitValue)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
   return (
     <Stack gap={0.5}>
       {label ? (
@@ -266,13 +257,14 @@ export const UnitInput = ({
             as="label"
             variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
             disabled={disabled}
+            htmlFor={id ?? localId}
           >
             {label}
           </Text>
           {required ? (
             <Icon name="asterisk" sentiment="danger" size={8} />
           ) : null}
-          {labelInformation && label ? labelInformation : null}
+          {labelInformation ?? null}
         </Stack>
       ) : null}
       <UnitInputWrapper

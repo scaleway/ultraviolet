@@ -7,6 +7,20 @@ import {
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
 
+const options = [
+  {
+    label: 'KB',
+    value: 'kb',
+  },
+  {
+    label: 'MB',
+    value: 'mb',
+  },
+  {
+    label: 'GB',
+    value: 'gb',
+  },
+]
 describe('UnitInput', () => {
   test(`renders with default props`, () =>
     shouldMatchEmotionSnapshot(
@@ -14,20 +28,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
       />,
     ))
 
@@ -36,20 +37,7 @@ describe('UnitInput', () => {
       <UnitInput
         onChange={() => {}}
         onChangeUnitValue={() => {}}
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         min={10}
         max={100}
       />,
@@ -61,20 +49,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
       />,
     ))
 
@@ -85,20 +60,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
       />,
     ))
 
@@ -109,20 +71,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
       />,
       {
         transform: async () => {
@@ -139,20 +88,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
       />,
     ))
 
@@ -162,20 +98,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         placeholder="100"
         disabled
       />,
@@ -187,20 +110,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         placeholder="100"
         success
         helper="text"
@@ -213,20 +123,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         placeholder="100"
         error="error"
         helper="test"
@@ -238,20 +135,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         placeholder="100"
         error
         helper="helper"
@@ -268,20 +152,7 @@ describe('UnitInput', () => {
           name="test"
           max={30}
           min={2}
-          options={[
-            {
-              label: 'KB',
-              value: 'kb',
-            },
-            {
-              label: 'MB',
-              value: 'mb',
-            },
-            {
-              label: 'GB',
-              value: 'gb',
-            },
-          ]}
+          options={options}
           placeholder="100"
           error
           helper="test"
@@ -312,20 +183,7 @@ describe('UnitInput', () => {
           name="test"
           max={30}
           min={2}
-          options={[
-            {
-              label: 'KB',
-              value: 'kb',
-            },
-            {
-              label: 'MB',
-              value: 'mb',
-            },
-            {
-              label: 'GB',
-              value: 'gb',
-            },
-          ]}
+          options={options}
           placeholder="100"
           error
           helper="test"
@@ -346,20 +204,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         placeholder="100"
         disabled
         label="label"
@@ -371,20 +216,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         placeholder="100"
         disabled
         label="label"
@@ -397,20 +229,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         placeholder="100"
         disabled
         labelInformation="label information"
@@ -423,20 +242,7 @@ describe('UnitInput', () => {
         onChange={() => {}}
         onChangeUnitValue={() => {}}
         name="test"
-        options={[
-          {
-            label: 'KB',
-            value: 'kb',
-          },
-          {
-            label: 'MB',
-            value: 'mb',
-          },
-          {
-            label: 'GB',
-            value: 'gb',
-          },
-        ]}
+        options={options}
         placeholder="100"
         disabled
         labelInformation="label information"
