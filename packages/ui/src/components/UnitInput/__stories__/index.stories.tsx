@@ -6,7 +6,7 @@ export default {
   title: 'Components/Data Entry/UnitInput',
   decorators: [
     StoryComponent => (
-      <div style={{ height: 400 }}>
+      <div style={{ height: 250 }}>
         <StoryComponent />
       </div>
     ),

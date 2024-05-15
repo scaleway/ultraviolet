@@ -22,7 +22,7 @@ export const Template: StoryFn<typeof UnitInput> = args => {
   const [unit, setUnit] = useState<string>()
 
   return (
-    <Stack width="600px">
+    <Stack width="600px" gap={5}>
       <UnitInput
         {...args}
         options={optionsSelect}
