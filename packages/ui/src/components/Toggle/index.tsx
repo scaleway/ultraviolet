@@ -253,7 +253,7 @@ export const Toggle = forwardRef(
                 {error}
               </Text>
             ) : null}
-            {helper && typeof error !== 'string' ? (
+            {helper && !error ? (
               <Text as="p" variant="bodySmall" prominence="weak">
                 {helper}
               </Text>

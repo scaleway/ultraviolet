@@ -53,7 +53,7 @@ exports[`ToggleField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1s5rk9y-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -75,11 +75,11 @@ exports[`ToggleField should render correctly 1`] = `
   height: 24px;
 }
 
-.cache-1s5rk9y-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-1s5rk9y-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -92,25 +92,25 @@ exports[`ToggleField should render correctly 1`] = `
   transition: all 300ms;
 }
 
-.cache-1s5rk9y-StyledToggle:focus-within,
-.cache-1s5rk9y-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -118,30 +118,38 @@ exports[`ToggleField should render correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:focus-within,
-.cache-1s5rk9y-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true'] {
+.cache-izrm74-StyledToggle[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true']:focus-within,
-.cache-1s5rk9y-StyledToggle[data-error='true']:focus {
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
   background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -169,7 +177,7 @@ exports[`ToggleField should render correctly 1`] = `
         class="cache-155uuxj-Stack ehpbis70"
       />
       <div
-        class="cache-1s5rk9y-StyledToggle e1wstm612"
+        class="cache-izrm74-StyledToggle e1wstm612"
         data-checked="false"
         data-disabled="false"
         data-error="false"
@@ -241,7 +249,7 @@ exports[`ToggleField should render correctly checked 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1s5rk9y-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -263,11 +271,11 @@ exports[`ToggleField should render correctly checked 1`] = `
   height: 24px;
 }
 
-.cache-1s5rk9y-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-1s5rk9y-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -280,25 +288,25 @@ exports[`ToggleField should render correctly checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-1s5rk9y-StyledToggle:focus-within,
-.cache-1s5rk9y-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -306,30 +314,38 @@ exports[`ToggleField should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:focus-within,
-.cache-1s5rk9y-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true'] {
+.cache-izrm74-StyledToggle[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true']:focus-within,
-.cache-1s5rk9y-StyledToggle[data-error='true']:focus {
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
   background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -357,7 +373,7 @@ exports[`ToggleField should render correctly checked 1`] = `
         class="cache-155uuxj-Stack ehpbis70"
       />
       <div
-        class="cache-1s5rk9y-StyledToggle e1wstm612"
+        class="cache-izrm74-StyledToggle e1wstm612"
         data-checked="true"
         data-disabled="false"
         data-error="false"
@@ -430,7 +446,7 @@ exports[`ToggleField should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1s5rk9y-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -452,11 +468,11 @@ exports[`ToggleField should render correctly disabled 1`] = `
   height: 24px;
 }
 
-.cache-1s5rk9y-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-1s5rk9y-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -469,25 +485,25 @@ exports[`ToggleField should render correctly disabled 1`] = `
   transition: all 300ms;
 }
 
-.cache-1s5rk9y-StyledToggle:focus-within,
-.cache-1s5rk9y-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -495,30 +511,38 @@ exports[`ToggleField should render correctly disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:focus-within,
-.cache-1s5rk9y-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true'] {
+.cache-izrm74-StyledToggle[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true']:focus-within,
-.cache-1s5rk9y-StyledToggle[data-error='true']:focus {
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
   background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -546,7 +570,7 @@ exports[`ToggleField should render correctly disabled 1`] = `
         class="cache-155uuxj-Stack ehpbis70"
       />
       <div
-        class="cache-1s5rk9y-StyledToggle e1wstm612"
+        class="cache-izrm74-StyledToggle e1wstm612"
         data-checked="false"
         data-disabled="true"
         data-error="false"
@@ -633,7 +657,7 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   justify-content: normal;
 }
 
-.cache-1s5rk9y-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -655,11 +679,11 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   height: 24px;
 }
 
-.cache-1s5rk9y-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-1s5rk9y-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -672,25 +696,25 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-1s5rk9y-StyledToggle:focus-within,
-.cache-1s5rk9y-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -698,30 +722,38 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1s5rk9y-StyledToggle[data-checked='true']:focus-within,
-.cache-1s5rk9y-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1s5rk9y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true'] {
+.cache-izrm74-StyledToggle[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true']:focus-within,
-.cache-1s5rk9y-StyledToggle[data-error='true']:focus {
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-1s5rk9y-StyledToggle[data-error='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
   background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -755,7 +787,7 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
         </div>
       </div>
       <div
-        class="cache-1s5rk9y-StyledToggle e1wstm612"
+        class="cache-izrm74-StyledToggle e1wstm612"
         data-checked="true"
         data-disabled="false"
         data-error="false"
