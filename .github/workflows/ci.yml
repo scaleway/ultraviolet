@@ -145,6 +145,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           buildScriptName: build:storybook:stats
           onlyChanged: true
+          forceRebuild: true
 
       - name: Update deployment
         uses: bobheadxi/deployments@v1.5.0
