@@ -4,7 +4,7 @@ import { Text } from '@ultraviolet/ui'
 import type { DragEvent } from 'react'
 import { useCallback } from 'react'
 import { useNavigation } from '../NavigationProvider'
-import type { DragNDropData } from '../constants'
+import type { DragNDropData } from '../types'
 import { Item } from './Item'
 
 const DropableArea = styled.div`

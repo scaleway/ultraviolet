@@ -8,12 +8,9 @@ import {
   useRef,
   useState,
 } from 'react'
-import {
-  ANIMATION_DURATION,
-  NAVIGATION_WIDTH,
-  type PinUnPinType,
-} from './constants'
+import { ANIMATION_DURATION, NAVIGATION_WIDTH } from './constants'
 import NavigationLocales from './locales/en'
+import type { PinUnPinType } from './types'
 
 type Item = {
   label: string
@@ -106,11 +103,9 @@ type NavigationProviderProps = {
   initialExpanded?: boolean
   locales?: typeof NavigationLocales
   /**
-   * This function is triggered when user click on expand button on the footer
-   * of the navigation. This is not triggered when the user resize the navigation
-   * and it automatically collapse / expand.
+   * You can get the expanded state of the navigation with this function
    */
-  onClickExpand?: (expanded: boolean) => void
+  onExpandChange?: (expanded: boolean) => void
 }
 
 export const NavigationProvider = ({
@@ -120,7 +115,7 @@ export const NavigationProvider = ({
   initialExpanded = true,
   locales = NavigationLocales,
   pinLimit = 7,
-  onClickExpand,
+  onExpandChange,
   initialWidth = NAVIGATION_WIDTH,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
@@ -154,7 +149,7 @@ export const NavigationProvider = ({
         return
       }
 
-      onClickExpand?.(!expanded)
+      onExpandChange?.(!expanded)
       if (navigationRef.current) {
         navigationRef.current.style.width = ''
       }
@@ -166,7 +161,7 @@ export const NavigationProvider = ({
         setAnimation(false)
       }, ANIMATION_DURATION)
     },
-    [expanded, onClickExpand, setAnimation, setExpanded],
+    [expanded, onExpandChange, setAnimation, setExpanded],
   )
 
   const pinItem = useCallback(

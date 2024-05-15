@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import { Button, Stack, Tooltip } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useNavigation } from './NavigationProvider'
 import {
@@ -9,6 +8,7 @@ import {
   NAVIGATION_MAX_WIDTH,
   NAVIGATION_MIN_WIDTH,
 } from './constants'
+import type { NavigationProps } from './types'
 
 const StyledNav = styled.nav`
   display: flex;
@@ -115,21 +115,14 @@ const Slider = styled.div`
   }
 `
 
-type NavigationContentProps = {
-  children: ReactNode
-  logo?: ReactNode | ((expanded: boolean) => ReactNode)
-  className?: string
-  onWidthResize?: (width: number) => void
-  id?: string
-}
-
 export const NavigationContent = ({
   children,
   logo,
   onWidthResize,
   className,
   id,
-}: NavigationContentProps) => {
+  onToggleExpand,
+}: NavigationProps) => {
   const context = useNavigation()
 
   if (!context) {
@@ -236,6 +229,7 @@ export const NavigationContent = ({
       const mouseup = () => {
         if (shouldCollapseOnMouseUp || shouldExpandOnMouseUp) {
           toggleExpand()
+          onToggleExpand?.(!expanded)
         }
 
         if (navigationRef.current) {
@@ -266,7 +260,14 @@ export const NavigationContent = ({
       // eslint-disable-next-line react-hooks/exhaustive-deps
       sliderRef.current?.removeEventListener('mousedown', mousedown)
     }
-  }, [expanded, navigationRef, onWidthResize, setWidth, toggleExpand])
+  }, [
+    expanded,
+    navigationRef,
+    onToggleExpand,
+    onWidthResize,
+    setWidth,
+    toggleExpand,
+  ])
 
   return (
     <StyledNav className={className} id={id}>
@@ -309,7 +310,10 @@ export const NavigationContent = ({
                 sentiment="neutral"
                 size="small"
                 icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-                onClick={() => toggleExpand()}
+                onClick={() => {
+                  toggleExpand()
+                  onToggleExpand?.(!expanded)
+                }}
               />
             </Tooltip>
           </StickyFooter>
