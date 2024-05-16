@@ -75,6 +75,7 @@ const LogoContainer = styled(Stack)`
     `${theme.space['3']} ${theme.space['3']} ${theme.space['2']} ${theme.space['3']}`};
   max-width: 220px;
   height: 22px;
+  overflow: hidden;
 `
 
 const ContentContainer = styled.div`
@@ -277,16 +278,18 @@ export const NavigationContent = ({
         data-expanded={expanded}
         width={width}
       >
-        <Header>
-          <LogoContainer
-            justifyContent={!expanded ? 'center' : undefined}
-            alignItems="start"
-          >
-            {typeof logo === 'function'
-              ? logo(animation ? false : expanded)
-              : logo}
-          </LogoContainer>
-        </Header>
+        {logo ? (
+          <Header>
+            <LogoContainer
+              justifyContent={!expanded ? 'center' : undefined}
+              alignItems="start"
+            >
+              {typeof logo === 'function'
+                ? logo(animation ? false : expanded)
+                : logo}
+            </LogoContainer>
+          </Header>
+        ) : null}
         <ContentContainer>
           <Content
             ref={contentRef}
