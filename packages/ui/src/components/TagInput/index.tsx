@@ -92,10 +92,10 @@ const StateContainer = styled('div')`
   gap: ${({ theme }) => theme.space['1']};
 `
 
-const StyledInput = styled.input`
+const StyledInput = styled.input<{ 'data-size': TagInputSize }>`
   display: flex;
   flex: 1;
-  font-size: ${({ theme }) => theme.typography.body.fontSize};
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   background: inherit;
   color: ${({ theme: { colors } }) => colors.neutral.text};
   border: none;
@@ -104,6 +104,10 @@ const StyledInput = styled.input`
     color: ${({ theme: { colors } }) => colors.neutral.textWeak};
   }
   height: 100%;
+
+  &[data-size='large'] {
+    font-size: ${({ theme }) => theme.typography.body.fontSize};
+  }
 `
 
 const convertTagArrayToTagStateArray = (tags?: TagInputProp) =>
@@ -306,14 +310,14 @@ export const TagInput = ({
             <Stack direction="row" gap="0.5" alignItems="start">
               <Text
                 as="label"
-                variant="bodyStrong"
+                variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                 sentiment="neutral"
                 htmlFor={id ?? localId}
               >
                 {label}
               </Text>
               {required ? (
-                <Icon name="asterisk" color="danger" size={8} />
+                <Icon name="asterisk" sentiment="danger" size={8} />
               ) : null}
             </Stack>
           ) : null}
@@ -365,6 +369,7 @@ export const TagInput = ({
                   onPaste={handlePaste}
                   ref={inputRef}
                   readOnly={readOnly}
+                  data-size={size}
                 />
               ) : null}
             </DataContainer>

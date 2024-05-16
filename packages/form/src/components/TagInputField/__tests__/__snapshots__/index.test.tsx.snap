@@ -87,7 +87,7 @@ exports[`TagInputField should render correctly 1`] = `
   flex: 1;
 }
 
-.cache-45doph-StyledInput {
+.cache-1cbq1zy-StyledInput {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,7 +95,7 @@ exports[`TagInputField should render correctly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-size: 16px;
+  font-size: 14px;
   background: inherit;
   color: #3f4250;
   border: none;
@@ -103,20 +103,24 @@ exports[`TagInputField should render correctly 1`] = `
   height: 100%;
 }
 
-.cache-45doph-StyledInput::-webkit-input-placeholder {
+.cache-1cbq1zy-StyledInput::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-45doph-StyledInput::-moz-placeholder {
+.cache-1cbq1zy-StyledInput::-moz-placeholder {
   color: #727683;
 }
 
-.cache-45doph-StyledInput:-ms-input-placeholder {
+.cache-1cbq1zy-StyledInput:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-45doph-StyledInput::placeholder {
+.cache-1cbq1zy-StyledInput::placeholder {
   color: #727683;
+}
+
+.cache-1cbq1zy-StyledInput[data-size='large'] {
+  font-size: 16px;
 }
 
 <form
@@ -138,7 +142,8 @@ exports[`TagInputField should render correctly 1`] = `
           >
             <input
               aria-label="test"
-              class="cache-45doph-StyledInput ea7vc6o0"
+              class="cache-1cbq1zy-StyledInput ea7vc6o0"
+              data-size="large"
               id=":r0:"
               name="test"
               placeholder="placeholder"

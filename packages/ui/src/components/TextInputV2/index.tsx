@@ -38,21 +38,20 @@ const CTASuffixStack = styled(Stack)`
   border-color: inherit;
 `
 
-type StyledInputProps = {
-  isSuccess: boolean
-  isError: boolean
-  isClearable: boolean
-}
-const StyledInput = styled('input', {
-  shouldForwardProp: prop =>
-    !['isSuccess', 'isError', 'isClearable'].includes(prop),
-})<StyledInputProps>`
+const StyledInput = styled.input<{
+  'data-size': TextInputSize
+}>`
   flex: 1;
   border: none;
   outline: none;
   height: 100%;
   padding-left: ${({ theme }) => theme.space['2']};
   background: transparent;
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
+
+  &[data-size='large'] {
+    font-size: ${({ theme }) => theme.typography.body.fontSize};
+  }
 `
 
 type StyledInputWrapperProps = {
@@ -226,7 +225,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
               <Stack direction="row" gap="0.5" alignItems="start">
                 <Text
                   as="label"
-                  variant="bodyStrong"
+                  variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                   sentiment="neutral"
                   htmlFor={id ?? localId}
                 >
@@ -278,9 +277,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 onChange={event => {
                   onChange?.(event.currentTarget.value)
                 }}
-                isSuccess={!!success}
-                isError={!!error}
-                isClearable={!!computedClearable}
+                data-size={size}
                 placeholder={placeholder}
                 data-testid={dataTestId}
                 name={name}

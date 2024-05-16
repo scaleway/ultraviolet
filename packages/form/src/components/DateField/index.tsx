@@ -63,6 +63,7 @@ export const DateField = <
   autoFocus = false,
   excludeDates,
   selectsRange,
+  size,
   'data-testid': dataTestId,
   shouldUnregister = false,
 }: DateFieldProps<TFieldValues, TName>) => {
@@ -117,6 +118,7 @@ export const DateField = <
       }}
       onFocus={onFocus}
       maxDate={maxDate}
+      size={size}
       minDate={minDate}
       error={getError({ minDate, maxDate, label }, error)}
       disabled={disabled}

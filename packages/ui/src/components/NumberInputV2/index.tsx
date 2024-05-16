@@ -55,6 +55,10 @@ const Unit = styled(Text, {
   align-items: center;
   padding: ${({ theme }) => theme.space['1']};
   height: ${({ size }) => SIZES[size]};
+  font-size: ${({ theme, size }) =>
+    size === 'large'
+      ? theme.typography.body.fontSize
+      : theme.typography.bodySmall.fontSize};
 `
 
 const Input = styled.input`
@@ -63,7 +67,7 @@ const Input = styled.input`
   padding: 0;
   width: 100%;
   color: ${({ theme }) => theme.colors.neutral.text};
-  font-size: ${({ theme }) => theme.typography.body.fontSize};
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   font-family: ${({ theme }) => theme.typography.body.fontFamily};
   font-weight: ${({ theme }) => theme.typography.body.fontWeight};
   line-height: ${({ theme }) => theme.typography.body.lineHeight};
@@ -99,6 +103,7 @@ const Input = styled.input`
 
   &[data-size='large'] {
     height: ${SIZES.large};
+    font-size: ${({ theme }) => theme.typography.body.fontSize};
   }
 
   &:read-only {
@@ -312,14 +317,14 @@ export const NumberInputV2 = forwardRef(
               <Stack direction="row" gap="0.5" alignItems="start">
                 <Text
                   as="label"
-                  variant="bodyStrong"
+                  variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                   sentiment="neutral"
                   htmlFor={id ?? localId}
                 >
                   {label}
                 </Text>
                 {required ? (
-                  <Icon name="asterisk" color="danger" size={8} />
+                  <Icon name="asterisk" sentiment="danger" size={8} />
                 ) : null}
               </Stack>
             ) : null}
