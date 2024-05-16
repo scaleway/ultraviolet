@@ -1,5 +1,19 @@
 # @ultraviolet/plus
 
+## 0.16.0
+
+### Minor Changes
+
+- [#3774](https://github.com/scaleway/ultraviolet/pull/3774) [`1bb8016`](https://github.com/scaleway/ultraviolet/commit/1bb80165bf9409d12bbb9fc0011e06c16fbc914c) Thanks [@matthprost](https://github.com/matthprost)! - Add `onTotalPriceChange` prop on `<EstimateCost />` this function will provide `total` and `totalMax when the total price is re-computed allowing users to get that value.`
+
+### Patch Changes
+
+- [#3779](https://github.com/scaleway/ultraviolet/pull/3779) [`75d4446`](https://github.com/scaleway/ultraviolet/commit/75d4446c5dc91b599d7c40bb071771671318a704) Thanks [@matthprost](https://github.com/matthprost)! - Some fixes on `<Navigation />`:
+  - Rename of `onClickExpand` to `onExpandChange` on `<NavigationProvider />`
+  - Add new prop `onToggleExpand` on `<Navigation />` => this function will be triggered on click on the expand/collapse button
+- Updated dependencies [[`503aad3`](https://github.com/scaleway/ultraviolet/commit/503aad3931fcd2eb1b1e438c6d75e4934ba070cd), [`8ecd1b0`](https://github.com/scaleway/ultraviolet/commit/8ecd1b0c8b0a8a112fbfe23397ae78830b978539)]:
+  - @ultraviolet/ui@1.53.0
+
 ## 0.15.5
 
 ### Patch Changes

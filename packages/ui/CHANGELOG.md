@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.53.0
+
+### Minor Changes
+
+- [#3773](https://github.com/scaleway/ultraviolet/pull/3773) [`503aad3`](https://github.com/scaleway/ultraviolet/commit/503aad3931fcd2eb1b1e438c6d75e4934ba070cd) Thanks [@lisalupi](https://github.com/lisalupi)! - Font-size is now 14px instead of 16px for all small and medium inputs
+
+### Patch Changes
+
+- [#3775](https://github.com/scaleway/ultraviolet/pull/3775) [`8ecd1b0`](https://github.com/scaleway/ultraviolet/commit/8ecd1b0c8b0a8a112fbfe23397ae78830b978539) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Toggle />`: new prop "error"
+
 ## 1.52.0
 
 ### Minor Changes
