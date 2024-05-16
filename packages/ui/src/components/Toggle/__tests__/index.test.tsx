@@ -94,4 +94,13 @@ describe('Toggle', () => {
     shouldMatchEmotionSnapshot(
       <Toggle name="test" label="This is a label" helper="This is a helper" />,
     ))
+  test('renders correctly with error', () =>
+    shouldMatchEmotionSnapshot(
+      <Toggle
+        name="test"
+        label="This is a label"
+        helper="This is a helper"
+        error="error text"
+      />,
+    ))
 })

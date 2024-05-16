@@ -153,7 +153,7 @@ exports[`GroupField should render correctly checked 1`] = `
   justify-content: normal;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -175,11 +175,11 @@ exports[`GroupField should render correctly checked 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -192,25 +192,25 @@ exports[`GroupField should render correctly checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -218,17 +218,38 @@ exports[`GroupField should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -279,9 +300,10 @@ exports[`GroupField should render correctly checked 1`] = `
                 </div>
               </div>
               <div
-                class="cache-pptpcl-StyledToggle e1wstm612"
+                class="cache-izrm74-StyledToggle e1wstm612"
                 data-checked="false"
                 data-disabled="false"
+                data-error="false"
               >
                 <input
                   aria-checked="false"
@@ -307,9 +329,10 @@ exports[`GroupField should render correctly checked 1`] = `
                 </div>
               </div>
               <div
-                class="cache-pptpcl-StyledToggle e1wstm612"
+                class="cache-izrm74-StyledToggle e1wstm612"
                 data-checked="true"
                 data-disabled="false"
+                data-error="false"
               >
                 <input
                   aria-checked="true"
@@ -497,7 +520,7 @@ exports[`GroupField should trigger events correctly with required prop 1`] = `
   justify-content: normal;
 }
 
-.cache-pptpcl-StyledToggle {
+.cache-izrm74-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -519,11 +542,11 @@ exports[`GroupField should trigger events correctly with required prop 1`] = `
   height: 24px;
 }
 
-.cache-pptpcl-StyledToggle:hover {
+.cache-izrm74-StyledToggle:hover {
   background-color: #d9dadd;
 }
 
-.cache-pptpcl-StyledToggle:after {
+.cache-izrm74-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -536,25 +559,25 @@ exports[`GroupField should trigger events correctly with required prop 1`] = `
   transition: all 300ms;
 }
 
-.cache-pptpcl-StyledToggle:focus-within,
-.cache-pptpcl-StyledToggle:focus {
+.cache-izrm74-StyledToggle:focus-within,
+.cache-izrm74-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='false']:active:after {
+.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true'] {
+.cache-izrm74-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:hover {
+.cache-izrm74-StyledToggle[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:after {
+.cache-izrm74-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -562,17 +585,38 @@ exports[`GroupField should trigger events correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-pptpcl-StyledToggle[data-checked='true']:focus-within,
-.cache-pptpcl-StyledToggle[data-checked='true']:focus {
+.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
+.cache-izrm74-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-pptpcl-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.cache-izrm74-StyledToggle[data-error='true']:focus-within,
+.cache-izrm74-StyledToggle[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
 }
 
 .cache-1myp2ct-StyledCheckbox {
@@ -632,9 +676,10 @@ exports[`GroupField should trigger events correctly with required prop 1`] = `
                 </div>
               </div>
               <div
-                class="cache-pptpcl-StyledToggle e1wstm612"
+                class="cache-izrm74-StyledToggle e1wstm612"
                 data-checked="false"
                 data-disabled="false"
+                data-error="false"
               >
                 <input
                   aria-checked="false"
@@ -660,9 +705,10 @@ exports[`GroupField should trigger events correctly with required prop 1`] = `
                 </div>
               </div>
               <div
-                class="cache-pptpcl-StyledToggle e1wstm612"
+                class="cache-izrm74-StyledToggle e1wstm612"
                 data-checked="false"
                 data-disabled="false"
+                data-error="false"
               >
                 <input
                   aria-checked="false"

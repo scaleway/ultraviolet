@@ -30,6 +30,7 @@ const StyledToggle = styled.div<{
   'data-checked': boolean
   'data-disabled': boolean
   size: 'small' | 'large'
+  'data-error': boolean
 }>`
   box-sizing: content-box;
   outline: none;
@@ -98,6 +99,29 @@ const StyledToggle = styled.div<{
         theme.colors.primary.backgroundStrongDisabled};
     }
   }
+
+  &[data-error='true'] {
+    background-color: ${({ theme }) => theme.colors.danger.background};
+
+    &:focus-within,
+    &:focus {
+      box-shadow: ${({ theme }) => theme.shadows.focusDanger};
+    }
+
+    &[data-checked='true'] {
+      background-color: ${({ theme }) => theme.colors.danger.backgroundStrong};
+    }
+
+    &[data-disabled='true'] {
+      background-color: ${({ theme }) =>
+        theme.colors.danger.backgroundDisabled};
+
+      &[data-checked='true'] {
+        background-color: ${({ theme }) =>
+          theme.colors.danger.backgroundStrongDisabled};
+      }
+    }
+  }
 `
 
 const StyledCheckbox = styled.input`
@@ -158,6 +182,7 @@ type ToggleProps = {
   disabled?: boolean
   className?: string
   required?: boolean
+  error?: boolean | string
   'data-testid'?: string
 } & Pick<InputHTMLAttributes<HTMLInputElement>, 'value'>
 
@@ -181,6 +206,7 @@ export const Toggle = forwardRef(
       className,
       'data-testid': dataTestId,
       value,
+      error,
     }: ToggleProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -216,7 +242,18 @@ export const Toggle = forwardRef(
                 {required ? <RequiredIcon /> : null}
               </Row>
             ) : null}
-            {helper ? (
+            {typeof error === 'string' ? (
+              <Text
+                as="p"
+                variant="bodySmall"
+                prominence="default"
+                sentiment="danger"
+                disabled={disabled}
+              >
+                {error}
+              </Text>
+            ) : null}
+            {helper && !error ? (
               <Text as="p" variant="bodySmall" prominence="weak">
                 {helper}
               </Text>
@@ -226,6 +263,7 @@ export const Toggle = forwardRef(
             size={size}
             data-checked={state}
             data-disabled={disabled}
+            data-error={!!error}
           >
             <StyledCheckbox
               id={id || uniqueId}

@@ -2,6 +2,7 @@ import { Toggle } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
+import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
 type ToggleFieldProps<
@@ -42,7 +43,10 @@ export const ToggleField = <
   'data-testid': dataTestId,
   shouldUnregister = false,
 }: ToggleFieldProps<TFieldValues, TName>) => {
-  const { field } = useController<TFieldValues>({
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
     shouldUnregister,
     rules: {
@@ -50,6 +54,7 @@ export const ToggleField = <
       ...rules,
     },
   })
+  const { getError } = useErrors()
 
   const transformedValue = () => {
     if (format) {
@@ -80,6 +85,7 @@ export const ToggleField = <
       className={className}
       required={required}
       data-testid={dataTestId}
+      error={getError({ label: name }, error)}
     />
   )
 }
