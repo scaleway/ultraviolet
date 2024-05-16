@@ -28,8 +28,8 @@ import {
   useState,
 } from 'react'
 import { useNavigation } from '../NavigationProvider'
-import type { PinUnPinType } from '../constants'
 import { ANIMATION_DURATION, shrinkHeight } from '../constants'
+import type { PinUnPinType } from '../types'
 
 const RelativeDiv = styled.div`
   position: relative;

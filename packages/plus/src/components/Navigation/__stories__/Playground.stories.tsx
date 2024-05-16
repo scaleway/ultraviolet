@@ -39,15 +39,19 @@ const Image = styled.img`
   }
 `
 
-type PlaygroundContentProps = ComponentProps<typeof Navigation> & {
-  expanded: boolean
-}
-
-const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
+const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   const [active, setActive] = useState('Instance')
+  const [expanded, setExpanded] = useState(true)
+
   const { pinnedItems } = useNavigation()
 
-  console.log('active', active)
+  const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
+    setExpanded(localExpanded)
+    console.log(
+      `expanded state with value ${localExpanded} saved in local storage`,
+    )
+    localStorage.setItem('expanded', localExpanded.toString())
+  }, [])
 
   useEffect(() => {
     console.log('pinned items:', pinnedItems)
@@ -68,6 +72,7 @@ const PlaygroundContent = ({ expanded, ...props }: PlaygroundContentProps) => {
   return (
     <Navigation
       onWidthResize={saveWidthInLocalStorage}
+      onToggleExpand={saveExpandedInLocalStorage}
       logo={
         <a
           href="https://scaleway.com"
@@ -338,14 +343,6 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
   const navigationWidth = Number(localStorage.getItem('width')) || undefined
   const storageItems = localStorage.getItem('pinnedItems')
   const pinnedItems = storageItems ? storageItems.split(',') : []
-  const [expanded, setExpanded] = useState(navigationExpanded)
-  const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
-    setExpanded(localExpanded)
-    console.log(
-      `expanded state with value ${localExpanded} saved in local storage`,
-    )
-    localStorage.setItem('expanded', localExpanded.toString())
-  }, [])
 
   return (
     <div
@@ -357,13 +354,12 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
       }}
     >
       <NavigationProvider
-        onClickExpand={saveExpandedInLocalStorage}
         initialExpanded={navigationExpanded}
         initialWidth={navigationWidth}
         initialPinned={pinnedItems}
         pinnedFeature
       >
-        <PlaygroundContent expanded={expanded} {...props} />
+        <PlaygroundContent {...props} />
       </NavigationProvider>
       <div
         style={{
