@@ -5,7 +5,9 @@ import {
   Children,
   Fragment,
   createContext,
+  isValidElement,
   useContext,
+  useEffect,
   useMemo,
   useState,
 } from 'react'
@@ -13,16 +15,17 @@ import { Bullet } from '../Bullet'
 import { Text } from '../Text'
 
 type Temporal = 'previous' | 'next' | 'current'
-
 type ContextType = {
   step: number
   setStep: React.Dispatch<React.SetStateAction<number>>
   interactive: boolean
+  size: 'medium' | 'small'
 }
 const State = createContext<ContextType>({
   step: 0,
   setStep: () => {},
   interactive: false,
+  size: 'medium',
 })
 
 const LINE_HEIGHT_SIZES = {
@@ -65,6 +68,7 @@ const StyledText = styled(Text)`
 const StyledStepContainer = styled.div<{
   isActive: boolean
   isDone: boolean
+  'data-disabled': boolean
   'data-interactive': boolean
 }>`
   display: flex;
@@ -73,7 +77,7 @@ const StyledStepContainer = styled.div<{
   justify-content: flex-start;
   transition: all 300ms;
 
-  &[data-interactive='true'] {
+  &[data-interactive='true']:not([data-disabled='true']) {
     cursor: pointer;
 
     &:hover {
@@ -96,13 +100,32 @@ const StyledStepContainer = styled.div<{
       }
     }
   }
+
+  &[data-disabled='true'] {
+    cursor: not-allowed;
+
+    & > ${StyledText} {
+      color: ${({ theme }) => theme.colors.neutral.textDisabled};
+    }
+
+    & > ${StyledBullet} {
+      background-color: ${({ theme }) =>
+        theme.colors.neutral.backgroundDisabled};
+      box-shadow: none;
+      color: ${({ theme }) => theme.colors.neutral.textDisabled};
+      border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+    }
+  }
 `
 
 const loadingStyle = css`
   animation: ${loadingAnimation} 1s linear infinite;
 `
 
-const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
+const StyledLine = styled.div<{
+  temporal: Temporal
+  animated: boolean
+}>`
   border-radius: ${({ theme }) => theme.radii.default};
   flex-grow: 1;
   border-radius: ${({ theme }) => theme.radii.default};
@@ -120,6 +143,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
     ${({ temporal }) => temporal === 'previous' && `width: 100%;`}
     ${({ temporal, animated }) =>
       temporal === 'current' && animated && loadingStyle}
+  }
   }
 `
 
@@ -159,48 +183,57 @@ const StyledContainer = styled.div<{
 `
 
 type StepperNumbersProps = {
-  children: ReactNode
-  size?: 'small' | 'medium'
   onClick?: (index: number) => void
   index: number
+  disabled?: boolean
+  title?: ReactNode
+  children?: ReactNode
 }
 
-const StepperNumbers = ({
-  children,
+const Step = ({
   index,
   onClick,
-  size = 'medium',
+  disabled = false,
+  title,
+  children,
 }: StepperNumbersProps) => {
   const currentState = useContext(State)
   const isActive = index === currentState.step
   const isDone = index < currentState.step
 
   const textVariant = useMemo(() => {
-    if (size === 'medium') {
+    if (currentState.size === 'medium') {
       return isActive ? 'bodyStrong' : 'body'
     }
 
     return isActive ? 'bodySmallStrong' : 'bodySmall'
-  }, [isActive, size])
+  }, [currentState.size, isActive])
 
   return (
     <StyledStepContainer
-      data-interactive={currentState.interactive}
+      className="step"
+      data-interactive={currentState.interactive && isDone}
       isActive={isActive}
       isDone={isDone}
       onClick={() => {
-        if (currentState.interactive) {
+        if (
+          currentState.interactive &&
+          !disabled &&
+          index < currentState.step
+        ) {
           currentState.setStep(index)
+          onClick?.(index)
         }
-        onClick?.(index)
       }}
+      data-disabled={disabled}
+      data-testid={`stepper-step-${index}`}
     >
-      {isDone ? (
+      {isDone && !disabled ? (
         <StyledBullet
           sentiment="primary"
           icon="check"
           prominence="strong"
-          size={size}
+          size={currentState.size}
           isActive={isActive}
         />
       ) : (
@@ -208,7 +241,7 @@ const StepperNumbers = ({
           sentiment={isDone || isActive ? 'primary' : 'neutral'}
           text={index.toString()}
           prominence="strong"
-          size={size}
+          size={currentState.size}
           isActive={isActive}
         />
       )}
@@ -218,7 +251,7 @@ const StepperNumbers = ({
         prominence={isDone || isActive ? 'default' : 'weak'}
         sentiment={isActive ? 'primary' : 'neutral'}
       >
-        {children}
+        {title ?? children}
       </StyledText>
     </StyledStepContainer>
   )
@@ -249,25 +282,28 @@ const StepperContent = ({
   animated,
   separator,
 }: StepperContentProps) => {
-  const cleanChildren = Children.toArray(children)
+  const cleanChildren = Children.toArray(children).filter(isValidElement)
   const currentState = useContext(State)
   const lastStep = Children.count(cleanChildren) - 1
 
   return Children.map(cleanChildren, (child, index) => {
     const getTemporal = () => {
-      if (currentState.step > index) return 'previous'
+      if (currentState.step > index + 1) return 'previous'
 
-      if (currentState.step === index) return 'current'
+      if (currentState.step === index + 1) return 'current'
 
       return 'next'
     }
     const isNotLast = index < lastStep
     const temporal = getTemporal()
+    // Check if used Stepper.Step to do the steps
+    const usedStep =
+      typeof child.type === 'function' && child.type.name === 'Step'
 
     return (
       // eslint-disable-next-line react/no-array-index-key
       <Fragment key={`creation-progress-${index}`}>
-        {child}
+        {usedStep ? child : <Step index={index + 1}>{child}</Step>}
         {isNotLast && separator ? (
           <StyledLine temporal={temporal} animated={animated} />
         ) : null}
@@ -281,7 +317,7 @@ const StepperContent = ({
 export const Stepper = ({
   children,
   interactive = false,
-  selected = 0,
+  selected = 1,
   animated = false,
   className,
   labelPosition = 'bottom',
@@ -289,11 +325,12 @@ export const Stepper = ({
   'data-testid': dataTestId,
   separator = true,
 }: StepperProps) => {
-  const [step, setStep] = useState(selected ?? 0)
+  const [step, setStep] = useState(selected)
   const value = useMemo(
-    () => ({ step, setStep, interactive }),
-    [step, interactive],
+    () => ({ step, setStep, interactive, size }),
+    [step, interactive, size],
   )
+  useEffect(() => setStep(selected), [selected])
 
   return (
     <State.Provider value={value}>
@@ -312,4 +349,4 @@ export const Stepper = ({
   )
 }
 
-Stepper.Step = StepperNumbers
+Stepper.Step = Step

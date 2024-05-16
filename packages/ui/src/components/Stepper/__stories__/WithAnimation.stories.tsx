@@ -13,22 +13,10 @@ WithAnimation.parameters = {
 
 WithAnimation.args = {
   children: [
-    <Stepper.Step index={0}>
-      <span>Step 1</span>
-    </Stepper.Step>,
-    <Stepper.Step index={1}>
-      <span>Step 2</span>
-    </Stepper.Step>,
-    <Stepper.Step index={2}>
-      <span>Step 3</span>
-    </Stepper.Step>,
-    <Stepper.Step index={3}>
-      <span>Step 4</span>
-    </Stepper.Step>,
-    <Stepper.Step index={4}>
-      <span>Step 5</span>
-    </Stepper.Step>,
+    <Stepper.Step index={1} title="Step 1" />,
+    <Stepper.Step index={2} title="Step 2" />,
+    <Stepper.Step index={3} title="Step 3" />,
   ],
-  selected: 1,
+  selected: 2,
   animated: true,
 }

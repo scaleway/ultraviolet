@@ -17,15 +17,9 @@ Separator.args = {
   selected: 1,
   interactive: true,
   children: [
-    <Stepper.Step index={0}>
-      <span>Step 1</span>
-    </Stepper.Step>,
-    <Stepper.Step index={1}>
-      <span>Step 2</span>
-    </Stepper.Step>,
-    <Stepper.Step index={2}>
-      <span>Step 3</span>
-    </Stepper.Step>,
+    <Stepper.Step index={1} title="Step 1" />,
+    <Stepper.Step index={2} title="Step 2" />,
+    <Stepper.Step index={3} title="Step 3" />,
   ],
 }
 
@@ -33,7 +27,7 @@ Separator.parameters = {
   docs: {
     description: {
       story:
-        'You can pass a function to `OnChange` to deal with selection of options.',
+        'Steps can be separated by a separator or not. By default there is a separator.',
     },
   },
 }
