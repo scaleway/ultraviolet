@@ -52,6 +52,8 @@ type ContextProps = {
   items: Items
   registerItem: Dispatch<Items>
   setPinnedItems: (value: string[]) => void
+  allowNavigationResize: boolean
+  setAllowNavigationResize: (value: boolean) => void
 }
 
 export const NavigationContext = createContext<ContextProps>({
@@ -74,6 +76,8 @@ export const NavigationContext = createContext<ContextProps>({
   items: {},
   registerItem: () => {},
   setPinnedItems: () => {},
+  allowNavigationResize: true,
+  setAllowNavigationResize: () => {},
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -106,6 +110,10 @@ type NavigationProviderProps = {
    * You can get the expanded state of the navigation with this function
    */
   onExpandChange?: (expanded: boolean) => void
+  /**
+   * This boolean will define if the navigation can be resized or not.
+   */
+  initialAllowNavigationResize?: boolean
 }
 
 export const NavigationProvider = ({
@@ -117,6 +125,7 @@ export const NavigationProvider = ({
   pinLimit = 7,
   onExpandChange,
   initialWidth = NAVIGATION_WIDTH,
+  initialAllowNavigationResize = true,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
@@ -124,6 +133,9 @@ export const NavigationProvider = ({
     false,
   )
   const [width, setWidth] = useState<number>(initialWidth)
+  const [allowNavigationResize, setAllowNavigationResize] = useState(
+    initialAllowNavigationResize,
+  )
 
   // This is used to store the items that are registered in the navigation
   // This way we can retrieve items with their active state in pinned feature
@@ -215,6 +227,8 @@ export const NavigationProvider = ({
       registerItem,
       items,
       setPinnedItems,
+      allowNavigationResize,
+      setAllowNavigationResize,
     }),
     [
       expanded,
@@ -229,7 +243,7 @@ export const NavigationProvider = ({
       width,
       reorderItems,
       items,
-      setPinnedItems,
+      allowNavigationResize,
     ],
   )
 

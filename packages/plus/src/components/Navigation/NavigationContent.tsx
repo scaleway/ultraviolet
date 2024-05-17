@@ -140,6 +140,7 @@ export const NavigationContent = ({
     animation,
     locales,
     navigationRef,
+    allowNavigationResize,
   } = context
 
   const sliderRef = useRef<HTMLDivElement>(null)
@@ -299,30 +300,32 @@ export const NavigationContent = ({
           >
             {children}
           </Content>
-          <StickyFooter data-has-overflow-style={footerHasOverflowStyle}>
-            <Tooltip
-              text={
-                expanded
-                  ? locales['navigation.collapse.button']
-                  : locales['navigation.expand.button']
-              }
-              placement="right"
-            >
-              <Button
-                variant="ghost"
-                sentiment="neutral"
-                size="small"
-                icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-                onClick={() => {
-                  toggleExpand()
-                  onToggleExpand?.(!expanded)
-                }}
-              />
-            </Tooltip>
-          </StickyFooter>
+          {allowNavigationResize ? (
+            <StickyFooter data-has-overflow-style={footerHasOverflowStyle}>
+              <Tooltip
+                text={
+                  expanded
+                    ? locales['navigation.collapse.button']
+                    : locales['navigation.expand.button']
+                }
+                placement="right"
+              >
+                <Button
+                  variant="ghost"
+                  sentiment="neutral"
+                  size="small"
+                  icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
+                  onClick={() => {
+                    toggleExpand()
+                    onToggleExpand?.(!expanded)
+                  }}
+                />
+              </Tooltip>
+            </StickyFooter>
+          ) : null}
         </ContentContainer>
       </Container>
-      <Slider ref={sliderRef} />
+      {allowNavigationResize ? <Slider ref={sliderRef} /> : null}
     </StyledNav>
   )
 }
