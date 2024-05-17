@@ -17,9 +17,9 @@ Separator.args = {
   selected: 1,
   interactive: true,
   children: [
-    <Stepper.Step index={1} title="Step 1" />,
-    <Stepper.Step index={2} title="Step 2" />,
-    <Stepper.Step index={3} title="Step 3" />,
+    <Stepper.Step title="Step 1" />,
+    <Stepper.Step title="Step 2" />,
+    <Stepper.Step title="Step 3" />,
   ],
 }
 

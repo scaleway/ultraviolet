@@ -5,11 +5,11 @@ export const Disabled = Template.bind({})
 
 Disabled.args = {
   children: [
-    <Stepper.Step index={1} title="Step 1" />,
-    <Stepper.Step index={2} disabled title="Step 2" />,
-    <Stepper.Step index={3} title="Step 3" />,
-    <Stepper.Step index={4} disabled title="Step 4" />,
-    <Stepper.Step index={5} title="Step 5" />,
+    <Stepper.Step title="Step 1" />,
+    <Stepper.Step disabled title="Step 2" />,
+    <Stepper.Step title="Step 3" />,
+    <Stepper.Step disabled title="Step 4" />,
+    <Stepper.Step title="Step 5" />,
   ],
   selected: 1,
   interactive: true,

@@ -4,6 +4,9 @@ import { Stepper } from '..'
 export default {
   component: Stepper,
   decorators: [StoryComponent => <StoryComponent />],
+  subcomponents: {
+    'Stepper.Step': Stepper.Step,
+  },
   title: 'Components/Navigation/Stepper',
 } as Meta
 

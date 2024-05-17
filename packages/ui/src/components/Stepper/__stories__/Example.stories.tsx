@@ -12,8 +12,7 @@ export const Example: StoryFn<typeof Stepper> = args => {
     <Stack gap={2}>
       <Stepper {...args} selected={selected} interactive>
         <Stepper.Step
-          index={1}
-          onClick={setStep}
+          onClick={index => (selected > 1 ? setStep(index) : null)}
           title={
             <Stack direction="row" gap={1}>
               Custom title
@@ -25,10 +24,22 @@ export const Example: StoryFn<typeof Stepper> = args => {
             </Stack>
           }
         />
-        <Stepper.Step index={2} onClick={setStep} title="Create" />
-        <Stepper.Step index={3} onClick={setStep} title="Continue" />
-        <Stepper.Step index={4} onClick={setStep} title="Last step" />
-        <Stepper.Step index={5} onClick={setStep} title="Done" />
+        <Stepper.Step
+          onClick={index => (selected > 2 ? setStep(index) : null)}
+          title="Create"
+        />
+        <Stepper.Step
+          onClick={index => (selected > 3 ? setStep(index) : null)}
+          title="Continue"
+        />
+        <Stepper.Step
+          onClick={index => (selected > 4 ? setStep(index) : null)}
+          title="Last step"
+        />
+        <Stepper.Step
+          onClick={index => (selected > 5 ? setStep(index) : null)}
+          title="Done"
+        />
       </Stepper>
 
       {selected === 6 ? (
@@ -45,4 +56,13 @@ export const Example: StoryFn<typeof Stepper> = args => {
       )}
     </Stack>
   )
+}
+
+Example.parameters = {
+  docs: {
+    description: {
+      story:
+        'A more complex example with custom titles and a controllable state.',
+    },
+  },
 }

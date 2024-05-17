@@ -5,8 +5,8 @@ export const Template: StoryFn<typeof Stepper> = args => <Stepper {...args} />
 
 Template.args = {
   children: [
-    <Stepper.Step index={1} title="Initialize" />,
-    <Stepper.Step index={2} title="Create" />,
-    <Stepper.Step index={3} title="Done" />,
+    <Stepper.Step title="Initialize" />,
+    <Stepper.Step title="Create" />,
+    <Stepper.Step title="Done" />,
   ],
 }

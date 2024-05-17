@@ -14,24 +14,71 @@ import {
 import { Bullet } from '../Bullet'
 import { Text } from '../Text'
 
+const LINE_HEIGHT_SIZES = {
+  small: 2,
+  medium: 4,
+} as const
+
 type Temporal = 'previous' | 'next' | 'current'
+
 type ContextType = {
   step: number
   setStep: React.Dispatch<React.SetStateAction<number>>
   interactive: boolean
   size: 'medium' | 'small'
 }
+
+type StepperProps = {
+  animated?: boolean
+  /**
+   * When true, the user can navigate through the steps by clicking on the bullets
+   */
+  interactive?: boolean
+  /**
+   * Number of the active step
+   */
+  selected?: number
+  children: ReactNode[]
+  className?: string
+  labelPosition?: 'bottom' | 'right'
+  size?: 'small' | 'medium'
+  'data-testid'?: string
+  separator?: boolean
+}
+
+type StepProps = {
+  onClick?: (index: number) => void
+  /**
+   * Automatically attribued by the parent Stepper
+   */
+  index?: number
+  /**
+   * Whether the step is disabled
+   */
+  disabled?: boolean
+  /**
+   * Title of the step
+   */
+  title?: ReactNode
+  /**
+   * @deprecated
+   * Do not use with Stepper.Step: use prop "title" instead
+   */
+  children?: ReactNode
+}
+
+type StepperContentProps = {
+  children: ReactNode
+  animated: boolean
+  separator: boolean
+}
+
 const State = createContext<ContextType>({
   step: 0,
   setStep: () => {},
   interactive: false,
   size: 'medium',
 })
-
-const LINE_HEIGHT_SIZES = {
-  small: 2,
-  medium: 4,
-} as const
 
 const loadingAnimation = keyframes`
   from {
@@ -56,6 +103,7 @@ const StyledBullet = styled(Bullet)<{
       box-shadow: ${theme.shadows.focusPrimary};`
       : null}
 `
+
 const StyledText = styled(Text)`
   margin-top: ${({ theme }) => theme.space['1']};
   transition: text-decoration-color 250ms ease-out;
@@ -65,6 +113,7 @@ const StyledText = styled(Text)`
   text-decoration-color: transparent;
   }
 `
+
 const StyledStepContainer = styled.div<{
   isActive: boolean
   isDone: boolean
@@ -182,21 +231,13 @@ const StyledContainer = styled.div<{
   }
 `
 
-type StepperNumbersProps = {
-  onClick?: (index: number) => void
-  index: number
-  disabled?: boolean
-  title?: ReactNode
-  children?: ReactNode
-}
-
 const Step = ({
-  index,
+  index = 0,
   onClick,
   disabled = false,
   title,
   children,
-}: StepperNumbersProps) => {
+}: StepProps) => {
   const currentState = useContext(State)
   const isActive = index === currentState.step
   const isDone = index < currentState.step
@@ -216,12 +257,10 @@ const Step = ({
       isActive={isActive}
       isDone={isDone}
       onClick={() => {
-        if (
-          currentState.interactive &&
-          !disabled &&
-          index < currentState.step
-        ) {
-          currentState.setStep(index)
+        if (currentState.interactive && !disabled) {
+          if (index < currentState.step) {
+            currentState.setStep(index)
+          }
           onClick?.(index)
         }
       }}
@@ -257,26 +296,6 @@ const Step = ({
   )
 }
 
-type StepperProps = {
-  animated?: boolean
-  /**
-   * When true, the user can navigate through the steps by clicking on the bullets
-   */
-  interactive?: boolean
-  selected?: number
-  children: ReactNode[]
-  className?: string
-  labelPosition?: 'bottom' | 'right'
-  size?: 'small' | 'medium'
-  'data-testid'?: string
-  separator?: boolean
-}
-
-type StepperContentProps = {
-  children: ReactNode
-  animated: boolean
-  separator: boolean
-}
 const StepperContent = ({
   children,
   animated,
@@ -296,14 +315,12 @@ const StepperContent = ({
     }
     const isNotLast = index < lastStep
     const temporal = getTemporal()
-    // Check if used Stepper.Step to do the steps
-    const usedStep =
-      typeof child.type === 'function' && child.type.name === 'Step'
 
     return (
       // eslint-disable-next-line react/no-array-index-key
       <Fragment key={`creation-progress-${index}`}>
-        {usedStep ? child : <Step index={index + 1}>{child}</Step>}
+        <Step index={index + 1} {...(child.props as object)} />
+
         {isNotLast && separator ? (
           <StyledLine temporal={temporal} animated={animated} />
         ) : null}
