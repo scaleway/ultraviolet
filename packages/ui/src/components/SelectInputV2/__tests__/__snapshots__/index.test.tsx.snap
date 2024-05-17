@@ -71,7 +71,7 @@ exports[`SelectInputV2 renders correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,62 +104,62 @@ exports[`SelectInputV2 renders correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -168,22 +168,6 @@ exports[`SelectInputV2 renders correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -228,19 +212,6 @@ exports[`SelectInputV2 renders correctly 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
@@ -269,7 +240,7 @@ exports[`SelectInputV2 renders correctly 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="false"
           data-readonly="false"
@@ -281,12 +252,12 @@ exports[`SelectInputV2 renders correctly 1`] = `
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             Select item
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -303,9 +274,6 @@ exports[`SelectInputV2 renders correctly 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -347,30 +315,7 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -403,62 +348,62 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-1ea5b0f-StyledText {
+  color: #b5b7bd;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -467,22 +412,6 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -527,26 +456,13 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r83:"
-      aria-describedby=":r83:"
+      aria-controls=":r7k:"
+      aria-describedby=":r7k:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -555,30 +471,27 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="true"
           data-dropdownvisible="false"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r82:"
+          id=":r7j:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-1ea5b0f-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-l7q3qa-StyledIcon-sizeStyles e1gt4cfo0"
@@ -595,9 +508,6 @@ exports[`SelectInputV2 renders correctly disabled 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -657,30 +567,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -713,62 +600,62 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -777,22 +664,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -1302,26 +1173,13 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r17:"
-      aria-describedby=":r17:"
+      aria-controls=":r12:"
+      aria-describedby=":r12:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1330,30 +1188,27 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r16:"
+          id=":r11:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -1373,7 +1228,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r17:"
+        id=":r12:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -1412,7 +1267,7 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r1a:"
+                  id=":r14:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -1725,9 +1580,6 @@ exports[`SelectInputV2 renders correctly grouped 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -1769,30 +1621,7 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1825,62 +1654,62 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1889,22 +1718,6 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -1949,26 +1762,13 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7p:"
-      aria-describedby=":r7p:"
+      aria-controls=":r7c:"
+      aria-describedby=":r7c:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -1977,30 +1777,27 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="false"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r7o:"
+          id=":r7b:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -2017,9 +1814,6 @@ exports[`SelectInputV2 renders correctly loadMore 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -2089,30 +1883,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2145,62 +1916,62 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -2209,22 +1980,6 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -2461,26 +2216,13 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
   }
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1gl:"
-      aria-describedby=":r1gl:"
+      aria-controls=":r1f3:"
+      aria-describedby=":r1f3:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -2489,30 +2231,27 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r1gk:"
+          id=":r1f2:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -2532,7 +2271,7 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1gl:"
+        id=":r1f3:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -2592,9 +2331,6 @@ exports[`SelectInputV2 renders correctly loading - grouped data 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -2664,30 +2400,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2720,62 +2433,62 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -2784,22 +2497,6 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -3059,26 +2756,13 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
   }
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1gp:"
-      aria-describedby=":r1gp:"
+      aria-controls=":r1f6:"
+      aria-describedby=":r1f6:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -3087,30 +2771,27 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r1go:"
+          id=":r1f5:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -3130,7 +2811,7 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1gp:"
+        id=":r1f6:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -3195,9 +2876,6 @@ exports[`SelectInputV2 renders correctly loading - ungrouped data 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -3257,30 +2935,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3313,58 +2968,57 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -4360,26 +4014,13 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r3b:"
-      aria-describedby=":r3b:"
+      aria-controls=":r33:"
+      aria-describedby=":r33:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -4388,20 +4029,17 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r3a:"
+          id=":r32:"
           role="combobox"
           tabindex="0"
         >
@@ -4409,7 +4047,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
             class="cache-irytw7-Stack ehpbis70"
           >
             <span
-              class="ejy0aca1 cache-1pspy8e-StyledContainer-CustomTag el6733p2"
+              class="ejy0aca0 cache-1pspy8e-StyledContainer-CustomTag el6733p2"
               data-testid="selected-options-tags"
             >
               <span
@@ -4436,7 +4074,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
             </span>
           </div>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <button
               aria-label="clear value"
@@ -4472,7 +4110,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r3b:"
+        id=":r33:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -4511,7 +4149,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r3g:"
+                  id=":r37:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -4569,7 +4207,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3j:"
+                      id=":r3a:"
                       tabindex="-1"
                       type="checkbox"
                       value="mercury"
@@ -4610,7 +4248,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3j:"
+                          for=":r3a:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4650,7 +4288,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3m:"
+                      id=":r3d:"
                       tabindex="-1"
                       type="checkbox"
                       value="venus"
@@ -4691,7 +4329,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3m:"
+                          for=":r3d:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4731,7 +4369,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r3p:"
+                      id=":r3g:"
                       tabindex="-1"
                       type="checkbox"
                       value="earth"
@@ -4772,7 +4410,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3p:"
+                          for=":r3g:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4819,7 +4457,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
                       disabled=""
-                      id=":r3t:"
+                      id=":r3k:"
                       tabindex="-1"
                       type="checkbox"
                       value="mars"
@@ -4860,7 +4498,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r3t:"
+                          for=":r3k:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -4901,7 +4539,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-invalid="false"
                       checked=""
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r40:"
+                      id=":r3n:"
                       tabindex="-1"
                       type="checkbox"
                       value="pluto"
@@ -4942,7 +4580,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r40:"
+                          for=":r3n:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5014,7 +4652,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r45:"
+                      id=":r3s:"
                       tabindex="-1"
                       type="checkbox"
                       value="jupiter"
@@ -5055,7 +4693,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r45:"
+                          for=":r3s:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5100,7 +4738,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r49:"
+                      id=":r40:"
                       tabindex="-1"
                       type="checkbox"
                       value="saturn"
@@ -5141,7 +4779,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r49:"
+                          for=":r40:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5181,7 +4819,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r4c:"
+                      id=":r43:"
                       tabindex="-1"
                       type="checkbox"
                       value="uranus"
@@ -5222,7 +4860,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r4c:"
+                          for=":r43:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5262,7 +4900,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       aria-checked="false"
                       aria-invalid="false"
                       class="cache-1jd075o-CheckboxInput eqr7bqq2"
-                      id=":r4f:"
+                      id=":r46:"
                       tabindex="-1"
                       type="checkbox"
                       value="neptune"
@@ -5303,7 +4941,7 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
                       >
                         <label
                           class="cache-9k0c1e-StyledLabel eqr7bqq3"
-                          for=":r4f:"
+                          for=":r46:"
                         >
                           <div
                             class="cache-ymc80m-Stack ehpbis70"
@@ -5339,9 +4977,6 @@ exports[`SelectInputV2 renders correctly multiselect 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -5383,30 +5018,7 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5439,58 +5051,57 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -5547,26 +5158,13 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rg:"
-      aria-describedby=":rg:"
+      aria-controls=":rd:"
+      aria-describedby=":rd:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5575,20 +5173,17 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="false"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":rf:"
+          id=":rc:"
           role="combobox"
           tabindex="0"
         >
@@ -5598,7 +5193,7 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
             Jupiter
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -5615,9 +5210,6 @@ exports[`SelectInputV2 renders correctly not clearable 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -5659,30 +5251,7 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5715,62 +5284,62 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -5779,22 +5348,6 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -5839,26 +5392,13 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8q:"
-      aria-describedby=":r8q:"
+      aria-controls=":r89:"
+      aria-describedby=":r89:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -5867,30 +5407,27 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="false"
           data-readonly="true"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r8p:"
+          id=":r88:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-l7q3qa-StyledIcon-sizeStyles e1gt4cfo0"
@@ -5907,9 +5444,6 @@ exports[`SelectInputV2 renders correctly readOnly 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -5999,7 +5533,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   fill: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6032,62 +5566,62 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -6096,22 +5630,6 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -6156,26 +5674,13 @@ exports[`SelectInputV2 renders correctly required 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rb:"
-      aria-describedby=":rb:"
+      aria-controls=":r9:"
+      aria-describedby=":r9:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -6188,7 +5693,7 @@ exports[`SelectInputV2 renders correctly required 1`] = `
         >
           <label
             class="cache-zvclys-StyledText e13y3mga0"
-            for=":ra:"
+            for=":r8:"
           >
             label
           </label>
@@ -6206,24 +5711,24 @@ exports[`SelectInputV2 renders correctly required 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="false"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":ra:"
+          id=":r8:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             Select item
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -6240,9 +5745,6 @@ exports[`SelectInputV2 renders correctly required 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -6302,30 +5804,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6358,62 +5837,62 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -6422,22 +5901,6 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -6889,26 +6352,13 @@ exports[`SelectInputV2 renders correctly required 2`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r87:"
-      aria-describedby=":r87:"
+      aria-controls=":r7n:"
+      aria-describedby=":r7n:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -6917,30 +6367,27 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r86:"
+          id=":r7m:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -6960,7 +6407,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r87:"
+        id=":r7n:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -6999,7 +6446,7 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r8a:"
+                  id=":r7p:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -7115,8 +6562,8 @@ exports[`SelectInputV2 renders correctly required 2`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r8h:"
-                        aria-describedby=":r8h:"
+                        aria-controls=":r80:"
+                        aria-describedby=":r80:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -7241,9 +6688,6 @@ exports[`SelectInputV2 renders correctly required 2`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -7319,7 +6763,7 @@ exports[`SelectInputV2 renders correctly small 1`] = `
   text-decoration: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7352,62 +6796,62 @@ exports[`SelectInputV2 renders correctly small 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-1lmubt7-StyledText-StyledPlaceholder {
+.cache-1b19kf2-StyledText {
+  color: #727683;
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -7416,22 +6860,6 @@ exports[`SelectInputV2 renders correctly small 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-1lmubt7-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -7476,26 +6904,13 @@ exports[`SelectInputV2 renders correctly small 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r6:"
-      aria-describedby=":r6:"
+      aria-controls=":r5:"
+      aria-describedby=":r5:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7508,7 +6923,7 @@ exports[`SelectInputV2 renders correctly small 1`] = `
         >
           <label
             class="cache-10an7cj-StyledText e13y3mga0"
-            for=":r5:"
+            for=":r4:"
           >
             label
           </label>
@@ -7517,24 +6932,24 @@ exports[`SelectInputV2 renders correctly small 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="false"
           data-readonly="false"
           data-size="small"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r5:"
+          id=":r4:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-1lmubt7-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-1b19kf2-StyledText e13y3mga0"
           >
             Select item
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -7551,9 +6966,6 @@ exports[`SelectInputV2 renders correctly small 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -7595,30 +7007,7 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7651,58 +7040,57 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -7877,26 +7265,13 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rfc:"
-      aria-describedby=":rfc:"
+      aria-controls=":rem:"
+      aria-describedby=":rem:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -7905,20 +7280,17 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="false"
           data-readonly="true"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":rfb:"
+          id=":rel:"
           role="combobox"
           tabindex="0"
         >
@@ -7926,7 +7298,7 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
             class="cache-irytw7-Stack ehpbis70"
           >
             <span
-              class="ejy0aca1 cache-1pspy8e-StyledContainer-CustomTag el6733p2"
+              class="ejy0aca0 cache-1pspy8e-StyledContainer-CustomTag el6733p2"
               data-testid="selected-options-tags"
             >
               <span
@@ -7937,7 +7309,7 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
             </span>
           </div>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <button
               aria-label="clear value"
@@ -7971,9 +7343,6 @@ exports[`SelectInputV2 renders correctly unclosable tags when readonly 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -8033,30 +7402,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8089,62 +7435,62 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -8153,22 +7499,6 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -8620,26 +7950,13 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":rk:"
-      aria-describedby=":rk:"
+      aria-controls=":rg:"
+      aria-describedby=":rg:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -8648,30 +7965,27 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":rj:"
+          id=":rf:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -8691,7 +8005,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":rk:"
+        id=":rg:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -8730,7 +8044,7 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":rn:"
+                  id=":ri:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -8846,8 +8160,8 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":ru:"
-                        aria-describedby=":ru:"
+                        aria-controls=":rp:"
+                        aria-describedby=":rp:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -8972,9 +8286,6 @@ exports[`SelectInputV2 renders correctly ungrouped 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -9034,30 +8345,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9090,58 +8378,57 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -9720,26 +9007,13 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r1t:"
-      aria-describedby=":r1t:"
+      aria-controls=":r1n:"
+      aria-describedby=":r1n:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -9748,20 +9022,17 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r1s:"
+          id=":r1m:"
           role="combobox"
           tabindex="0"
         >
@@ -9771,7 +9042,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
             Pluto
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <button
               aria-label="clear value"
@@ -9807,7 +9078,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r1t:"
+        id=":r1n:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -9846,7 +9117,7 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r21:"
+                  id=":r1q:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -10159,9 +9430,6 @@ exports[`SelectInputV2 renders correctly with default value 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -10221,30 +9489,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10277,62 +9522,62 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -10341,22 +9586,6 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -10646,26 +9875,13 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
   padding: 16px;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="emptystate"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r7t:"
-      aria-describedby=":r7t:"
+      aria-controls=":r7f:"
+      aria-describedby=":r7f:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -10674,30 +9890,27 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r7s:"
+          id=":r7e:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -10717,7 +9930,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r7t:"
+        id=":r7f:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -10756,7 +9969,7 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r80:"
+                  id=":r7h:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -10772,9 +9985,6 @@ exports[`SelectInputV2 renders correctly with emptyState 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -10834,30 +10044,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10890,62 +10077,62 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -10954,22 +10141,6 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -11453,8 +10624,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r8u:"
-      aria-describedby=":r8u:"
+      aria-controls=":r8c:"
+      aria-describedby=":r8c:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -11463,30 +10634,27 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="danger"
           data-testid="select-bar"
-          id=":r8t:"
+          id=":r8b:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-7nxe52-StyledIcon-sizeStyles e1gt4cfo0"
@@ -11517,7 +10685,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r8u:"
+        id=":r8c:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -11556,7 +10724,7 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r91:"
+                  id=":r8f:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -11672,8 +10840,8 @@ exports[`SelectInputV2 renders correctly with error 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r98:"
-                        aria-describedby=":r98:"
+                        aria-controls=":r8m:"
+                        aria-describedby=":r8m:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -11862,30 +11030,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11918,58 +11063,57 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -12554,26 +11698,13 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
   box-shadow: 0px 4px 24px 6px #d9dadd66;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r2k:"
-      aria-describedby=":r2k:"
+      aria-controls=":r2d:"
+      aria-describedby=":r2d:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -12582,20 +11713,17 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r2j:"
+          id=":r2c:"
           role="combobox"
           tabindex="0"
         >
@@ -12605,7 +11733,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
             Pluto
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <button
               aria-label="clear value"
@@ -12641,7 +11769,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r2k:"
+        id=":r2d:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -12680,7 +11808,7 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r2o:"
+                  id=":r2g:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -12998,9 +12126,6 @@ exports[`SelectInputV2 renders correctly with footer 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -13060,30 +12185,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13116,62 +12218,62 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -13180,22 +12282,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -13729,26 +12815,13 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   font-style: italic;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r67:"
-      aria-describedby=":r67:"
+      aria-controls=":r5s:"
+      aria-describedby=":r5s:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -13757,30 +12830,27 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r66:"
+          id=":r5r:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -13800,7 +12870,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r67:"
+        id=":r5s:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -13839,7 +12909,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r6a:"
+                  id=":r5u:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -14166,9 +13236,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -14228,30 +13295,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14284,62 +13328,62 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -14348,22 +13392,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -14880,26 +13908,13 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
   font-style: italic;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r70:"
-      aria-describedby=":r70:"
+      aria-controls=":r6k:"
+      aria-describedby=":r6k:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -14908,30 +13923,27 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r6v:"
+          id=":r6j:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -14951,7 +13963,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r70:"
+        id=":r6k:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -14990,7 +14002,7 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r73:"
+                  id=":r6m:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -15333,9 +14345,6 @@ exports[`SelectInputV2 renders correctly with label on the bottom and optional i
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -15395,30 +14404,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15451,62 +14437,62 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -15515,22 +14501,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -15967,6 +14937,29 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
+.cache-wfyv8s-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .cache-1ug7ot4-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -16047,26 +15040,13 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   font-style: italic;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r4l:"
-      aria-describedby=":r4l:"
+      aria-controls=":r4c:"
+      aria-describedby=":r4c:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -16075,30 +15055,27 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r4k:"
+          id=":r4b:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -16118,7 +15095,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r4l:"
+        id=":r4c:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -16157,7 +15134,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r4o:"
+                  id=":r4e:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -16500,9 +15477,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -16562,30 +15536,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16618,62 +15569,62 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -16682,22 +15633,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -17134,6 +16069,29 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   flex-wrap: nowrap;
 }
 
+.cache-wfyv8s-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .cache-1ug7ot4-StyledText {
   font-size: 16px;
   font-family: Inter,Asap;
@@ -17214,26 +16172,13 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
   font-style: italic;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r5e:"
-      aria-describedby=":r5e:"
+      aria-controls=":r54:"
+      aria-describedby=":r54:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -17242,30 +16187,27 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":r5d:"
+          id=":r53:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -17285,7 +16227,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r5e:"
+        id=":r54:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -17324,7 +16266,7 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r5h:"
+                  id=":r56:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -17667,9 +16609,6 @@ exports[`SelectInputV2 renders correctly with label on the right and optional in
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -17729,30 +16668,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17785,62 +16701,62 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -17849,22 +16765,6 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -18169,26 +17069,13 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <div
     aria-label="test"
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":ra4:"
-      aria-describedby=":ra4:"
+      aria-controls=":r9i:"
+      aria-describedby=":r9i:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -18197,30 +17084,27 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="neutral"
           data-testid="select-bar"
-          id=":ra3:"
+          id=":r9h:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -18240,7 +17124,7 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":ra4:"
+        id=":r9i:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -18355,8 +17239,8 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":rac:"
-                        aria-describedby=":rac:"
+                        aria-controls=":r9p:"
+                        aria-describedby=":r9p:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >
@@ -18481,9 +17365,6 @@ exports[`SelectInputV2 renders correctly with not searchable 1`] = `
         </div>
       </div>
     </div>
-    <p
-      class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-    />
   </div>
 </DocumentFragment>
 `;
@@ -18543,30 +17424,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18599,62 +17457,62 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -18663,22 +17521,6 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -19162,8 +18004,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
     class="cache-832x4l-SelectInputContainer ebdnz3x1"
   >
     <div
-      aria-controls=":r9h:"
-      aria-describedby=":r9h:"
+      aria-controls=":r8v:"
+      aria-describedby=":r8v:"
       class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
       data-container-full-width="true"
       tabindex="0"
@@ -19172,30 +18014,27 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
         class="cache-ymc80m-Stack ehpbis70"
       >
         <div
-          class="cache-wfyv8s-Stack ehpbis70"
-        />
-        <div
           aria-expanded="true"
           aria-haspopup="listbox"
           aria-labelledby="select bar"
-          class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+          class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
           data-disabled="false"
           data-dropdownvisible="true"
           data-readonly="false"
           data-size="large"
           data-state="success"
           data-testid="select-bar"
-          id=":r9g:"
+          id=":r8u:"
           role="combobox"
           tabindex="0"
         >
           <p
-            class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+            class="cache-11pdlhi-StyledText e13y3mga0"
           >
             placeholder
           </p>
           <div
-            class="cache-wzr69d-Stack-StateStack ejy0aca3"
+            class="cache-wzr69d-Stack-StateStack ejy0aca2"
           >
             <svg
               class="cache-u6e2v8-StyledIcon-sizeStyles e1gt4cfo0"
@@ -19226,7 +18065,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
         class="eeucz6c8 cache-1cg39uk-StyledPopup-StyledPopup-StyledPopup e4h1g861"
         data-animated="false"
         data-has-arrow="false"
-        id=":r9h:"
+        id=":r8v:"
         role="dialog"
         style="opacity: 1;"
       >
@@ -19265,7 +18104,7 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                   class="cache-zm0rg0-StyledInput e7tir8v1"
                   data-size="medium"
                   data-testid="search-bar"
-                  id=":r9k:"
+                  id=":r92:"
                   placeholder="placeholdersearch"
                   type="text"
                   value=""
@@ -19381,8 +18220,8 @@ exports[`SelectInputV2 renders correctly with success 1`] = `
                       class="cache-1ug7ot4-StyledText e13y3mga0"
                     >
                       <div
-                        aria-controls=":r9r:"
-                        aria-describedby=":r9r:"
+                        aria-controls=":r99:"
+                        aria-describedby=":r99:"
                         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
                         tabindex="0"
                       >

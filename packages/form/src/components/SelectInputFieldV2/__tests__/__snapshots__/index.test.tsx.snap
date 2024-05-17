@@ -55,30 +55,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -111,58 +88,57 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -557,19 +533,6 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   text-align: left;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -578,8 +541,8 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":rh:"
-        aria-describedby=":rh:"
+        aria-controls=":rd:"
+        aria-describedby=":rd:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -588,20 +551,17 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="true"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
             data-disabled="false"
             data-dropdownvisible="true"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":rg:"
+            id=":rc:"
             role="combobox"
             tabindex="0"
           >
@@ -611,7 +571,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
               Mercury
             </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca3"
+              class="cache-wzr69d-Stack-StateStack ejy0aca2"
             >
               <button
                 aria-label="clear value"
@@ -647,7 +607,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
           class="eeucz6c8 cache-15w5je2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
           data-animated="false"
           data-has-arrow="false"
-          id=":rh:"
+          id=":rd:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -950,9 +910,6 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -995,30 +952,7 @@ exports[`SelectInputField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1051,62 +985,62 @@ exports[`SelectInputField should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1115,22 +1049,6 @@ exports[`SelectInputField should render correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -1175,19 +1093,6 @@ exports[`SelectInputField should render correctly 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -1206,13 +1111,10 @@ exports[`SelectInputField should render correctly 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
@@ -1224,12 +1126,12 @@ exports[`SelectInputField should render correctly 1`] = `
             tabindex="0"
           >
             <p
-              class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+              class="cache-11pdlhi-StyledText e13y3mga0"
             >
               Select item
             </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca3"
+              class="cache-wzr69d-Stack-StateStack ejy0aca2"
             >
               <svg
                 class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -1246,9 +1148,6 @@ exports[`SelectInputField should render correctly 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -1291,30 +1190,7 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1347,62 +1223,62 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-1ea5b0f-StyledText {
+  color: #b5b7bd;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1411,22 +1287,6 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -1471,19 +1331,6 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -1492,8 +1339,8 @@ exports[`SelectInputField should render correctly disabled 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":r5:"
-        aria-describedby=":r5:"
+        aria-controls=":r4:"
+        aria-describedby=":r4:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -1502,30 +1349,27 @@ exports[`SelectInputField should render correctly disabled 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
             data-disabled="true"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":r4:"
+            id=":r3:"
             role="combobox"
             tabindex="0"
           >
             <p
-              class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+              class="cache-1ea5b0f-StyledText e13y3mga0"
             >
               Select item
             </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca3"
+              class="cache-wzr69d-Stack-StateStack ejy0aca2"
             >
               <svg
                 class="cache-l7q3qa-StyledIcon-sizeStyles e1gt4cfo0"
@@ -1542,9 +1386,6 @@ exports[`SelectInputField should render correctly disabled 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -1587,30 +1428,7 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1643,62 +1461,62 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1707,22 +1525,6 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -1767,19 +1569,6 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -1788,8 +1577,8 @@ exports[`SelectInputField should render correctly grouped 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":rd:"
-        aria-describedby=":rd:"
+        aria-controls=":ra:"
+        aria-describedby=":ra:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -1798,30 +1587,27 @@ exports[`SelectInputField should render correctly grouped 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":rc:"
+            id=":r9:"
             role="combobox"
             tabindex="0"
           >
             <p
-              class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+              class="cache-11pdlhi-StyledText e13y3mga0"
             >
               Select item
             </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca3"
+              class="cache-wzr69d-Stack-StateStack ejy0aca2"
             >
               <svg
                 class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -1838,9 +1624,6 @@ exports[`SelectInputField should render correctly grouped 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -1883,30 +1666,7 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1939,62 +1699,62 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-2i7hx1-StyledText-StyledPlaceholder {
+.cache-11pdlhi-StyledText {
+  color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -2003,22 +1763,6 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #727683;
-  text-size: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.cache-2i7hx1-StyledText-StyledPlaceholder[data-disabled='true'] {
-  color: #b5b7bd;
 }
 
 .cache-wzr69d-Stack-StateStack {
@@ -2063,19 +1807,6 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   fill: none;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -2084,8 +1815,8 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":r9:"
-        aria-describedby=":r9:"
+        aria-controls=":r7:"
+        aria-describedby=":r7:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -2094,30 +1825,27 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":r8:"
+            id=":r6:"
             role="combobox"
             tabindex="0"
           >
             <p
-              class="ejy0aca0 cache-2i7hx1-StyledText-StyledPlaceholder e13y3mga0"
+              class="cache-11pdlhi-StyledText e13y3mga0"
             >
               Select item
             </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca3"
+              class="cache-wzr69d-Stack-StateStack ejy0aca2"
             >
               <svg
                 class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
@@ -2134,9 +1862,6 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>
@@ -2197,30 +1922,7 @@ exports[`SelectInputField should trigger events 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wfyv8s-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1nqyb46-Stack-StyledInputWrapper {
+.cache-1afrn3t-Stack-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2253,58 +1955,57 @@ exports[`SelectInputField should trigger events 1`] = `
   border-radius: 4px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-readonly='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-disabled='true'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='small'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
   height: 32px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='medium'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-size='large'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
   height: 48px;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='neutral'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='success'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-state='danger'] {
+.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper:hover,
-.cache-1nqyb46-Stack-StyledInputWrapper:focus {
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
+.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1nqyb46-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
@@ -2699,19 +2400,6 @@ exports[`SelectInputField should trigger events 1`] = `
   text-align: left;
 }
 
-.cache-tb6hp-StyledText-HelperText {
-  color: #3f4250;
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 4px;
-}
-
 <form
     novalidate=""
   >
@@ -2720,8 +2408,8 @@ exports[`SelectInputField should trigger events 1`] = `
       class="cache-832x4l-SelectInputContainer ebdnz3x1"
     >
       <div
-        aria-controls=":r15:"
-        aria-describedby=":r15:"
+        aria-controls=":r10:"
+        aria-describedby=":r10:"
         class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
         data-container-full-width="true"
         tabindex="0"
@@ -2730,20 +2418,17 @@ exports[`SelectInputField should trigger events 1`] = `
           class="cache-ymc80m-Stack ehpbis70"
         >
           <div
-            class="cache-wfyv8s-Stack ehpbis70"
-          />
-          <div
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select bar"
-            class="cache-1nqyb46-Stack-StyledInputWrapper ejy0aca2"
+            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
             data-disabled="false"
             data-dropdownvisible="false"
             data-readonly="false"
             data-size="large"
             data-state="neutral"
             data-testid="select-bar"
-            id=":r14:"
+            id=":rv:"
             role="combobox"
             tabindex="0"
           >
@@ -2753,7 +2438,7 @@ exports[`SelectInputField should trigger events 1`] = `
               Mercury
             </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca3"
+              class="cache-wzr69d-Stack-StateStack ejy0aca2"
             >
               <button
                 aria-label="clear value"
@@ -2789,7 +2474,7 @@ exports[`SelectInputField should trigger events 1`] = `
           class="eeucz6c8 cache-1l0x2o-StyledPopup-StyledPopup-StyledPopup e4h1g861"
           data-animated="false"
           data-has-arrow="false"
-          id=":r15:"
+          id=":r10:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -3092,9 +2777,6 @@ exports[`SelectInputField should trigger events 1`] = `
           </div>
         </div>
       </div>
-      <p
-        class="ebdnz3x0 cache-tb6hp-StyledText-HelperText e13y3mga0"
-      />
     </div>
   </form>
 </DocumentFragment>

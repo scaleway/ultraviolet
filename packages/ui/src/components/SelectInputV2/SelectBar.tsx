@@ -92,14 +92,14 @@ const StyledInputWrapper = styled(Stack)<{
   &:not([data-disabled='true']):not([data-readonly]):active {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
-  &:hover,
-  :focus {
+
+  &:not([data-disabled='true']):hover,
+  :not([data-disabled='true']):focus {
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
     outline: none;
   }
 
   &[data-dropdownvisible='true'] {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
   }
 `
@@ -108,17 +108,6 @@ const CustomTag = styled(Tag)`
   width: fit-content;
 `
 
-const StyledPlaceholder = styled(Text)<{ 'data-disabled': boolean }>`
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
-  text-size: ${({ theme }) => theme.typography.body.fontSize};
-  display: flex;
-  flex: 1;
-  align-self: center;
-
-  &[data-disabled='true'] {
-    color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
-  }
-`
 const isValidSelectedValue = (selectedValue: string, options: DataType) =>
   !Array.isArray(options)
     ? Object.keys(options).some(group =>
@@ -339,13 +328,15 @@ export const SelectBar = ({
           size={size}
         />
       ) : (
-        <StyledPlaceholder
+        <Text
           as="p"
           variant={size === 'large' ? 'body' : 'bodySmall'}
-          data-disabled={disabled}
+          sentiment="neutral"
+          disabled={disabled}
+          prominence="weak"
         >
           {placeholder}
-        </StyledPlaceholder>
+        </Text>
       )}
       <StateStack direction="row" gap={1} alignItems="center">
         {error ? <Icon name="alert" sentiment="danger" /> : null}

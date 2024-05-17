@@ -472,7 +472,7 @@ const CreateDropdown = ({
                 {displayedOptions[group].map((option, indexOption) => (
                   <DropdownItem
                     key={option.value}
-                    disabled={option.disabled}
+                    disabled={!!option.disabled}
                     type="button"
                     data-selected={
                       selectedData.selectedValues.includes(option.value) &&
@@ -588,7 +588,7 @@ const CreateDropdown = ({
           displayedOptions.map((option, index) => (
             <DropdownItem
               key={option.value}
-              disabled={option.disabled}
+              disabled={!!option.disabled}
               data-selected={
                 selectedData.selectedValues.includes(option.value) &&
                 !option.disabled

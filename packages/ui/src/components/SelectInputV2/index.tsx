@@ -206,8 +206,8 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
           isLoading={isLoading}
         >
           <Stack gap={0.5} aria-label={ariaLabel}>
-            <Stack direction="row" gap={0.5}>
-              {label ? (
+            {label ? (
+              <Stack direction="row" gap={0.5}>
                 <Text
                   as="label"
                   variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
@@ -215,12 +215,12 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
                 >
                   {label}
                 </Text>
-              ) : null}
-              {required && label ? (
-                <Icon name="asterisk" sentiment="danger" size={8} />
-              ) : null}
-              {labelDescription ?? null}
-            </Stack>
+                {required ? (
+                  <Icon name="asterisk" sentiment="danger" size={8} />
+                ) : null}
+                {labelDescription ?? null}
+              </Stack>
+            ) : null}
             <SelectBar
               size={size}
               clearable={clearable}
@@ -235,7 +235,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
             />
           </Stack>
         </Dropdown>
-        {!error && !success ? (
+        {!error && !success && helper ? (
           <HelperText
             variant="caption"
             as="p"
