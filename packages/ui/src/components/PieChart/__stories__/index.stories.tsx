@@ -3,7 +3,6 @@ import { PieChart } from '..'
 
 export default {
   component: PieChart,
-  decorators: [StoryComponent => <StoryComponent />],
   title: 'Components/Data Display/Chart/PieChart',
   parameters: {
     experimental: true,

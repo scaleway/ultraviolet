@@ -3,7 +3,6 @@ import { Popover } from '..'
 
 export default {
   component: Popover,
-  decorators: [StoryComponent => <StoryComponent />],
   title: 'Components/Overlay/Popover',
 } as Meta<typeof Popover>
 

@@ -165,6 +165,9 @@ const withThemeProvider = (Story: StoryFn, context: { globals: any }) => {
 }
 
 const decorators = [
+  (Story: StoryFn) => {
+    return <>{<Story />}</> // Storybook is broken without this please refer to this issue: https://github.com/storybookjs/storybook/issues/24625
+  },
   withThemeFromJSXProvider({
     themes: {
       light: lightTheme,

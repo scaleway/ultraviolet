@@ -31,7 +31,7 @@ export default {
                 width: '250px',
               }}
             >
-              {ChildStory()}
+              <ChildStory />
             </div>
             <Stack gap={1}>
               <Text variant="bodyStrong" as="p">
