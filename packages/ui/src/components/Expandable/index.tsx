@@ -23,16 +23,12 @@ type ExpandableProps = {
 }
 
 export const StyledExpandable = styled('div', {
-  shouldForwardProp: prop =>
-    !['opened', 'minHeight', 'animationDuration'].includes(prop),
-})<{ opened?: boolean; minHeight: number; animationDuration: number }>`
+  shouldForwardProp: prop => !['animationDuration'].includes(prop),
+})<{ animationDuration: number }>`
   transition:
     max-height ${({ animationDuration }) => animationDuration}ms ease-out,
     opacity ${({ animationDuration }) => animationDuration}ms ease-out;
-  overflow: ${({ opened }) => (opened ? 'visible' : 'hidden')};
   height: auto;
-  max-height: ${({ opened, minHeight }) =>
-    opened ? 'initial' : `${minHeight}px`};
 `
 
 /**
@@ -107,8 +103,6 @@ export const Expandable = ({
       data-testid={dataTestId}
       ref={ref}
       className={className}
-      opened={opened}
-      minHeight={minHeight}
       animationDuration={animationDuration}
     >
       {children}
