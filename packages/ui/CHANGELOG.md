@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.53.1
+
+### Patch Changes
+
+- [#3724](https://github.com/scaleway/ultraviolet/pull/3724) [`1ebb688`](https://github.com/scaleway/ultraviolet/commit/1ebb688d45b7c5085b2fe67cbdff74d9da7fa9ff) Thanks [@lisalupi](https://github.com/lisalupi)! - - New component `<UnitInput />`
+  - Prop `disabled` optional for the options in the component `<SelectInputV2 />`
+
 ## 1.53.0
 
 ### Minor Changes

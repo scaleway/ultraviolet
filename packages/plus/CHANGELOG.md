@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.17.0
+
+### Minor Changes
+
+- [#3776](https://github.com/scaleway/ultraviolet/pull/3776) [`a959390`](https://github.com/scaleway/ultraviolet/commit/a9593909a3208f036ad5b9bdee07b13ef7b59f40) Thanks [@matthprost](https://github.com/matthprost)! - New prop `initialAllowNavigationResize` on `<NavigationProvider />` and serving `allowNavigationResize` and `setAllowNavigationResize` through `useNavigation()`
+
+### Patch Changes
+
+- Updated dependencies [[`1ebb688`](https://github.com/scaleway/ultraviolet/commit/1ebb688d45b7c5085b2fe67cbdff74d9da7fa9ff)]:
+  - @ultraviolet/ui@1.53.1
+
 ## 0.16.0
 
 ### Minor Changes
