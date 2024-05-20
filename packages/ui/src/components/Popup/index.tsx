@@ -177,7 +177,7 @@ type PopupProps = {
    * reason you need to disable it, you can set it to `false`.
    */
   dynamicDomRendering?: boolean
-  ref: Ref<HTMLDivElement>
+  ref?: Ref<HTMLDivElement>
 }
 
 /**

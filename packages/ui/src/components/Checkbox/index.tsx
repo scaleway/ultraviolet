@@ -1,13 +1,8 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type {
-  ChangeEvent,
-  ForwardedRef,
-  InputHTMLAttributes,
-  ReactNode,
-} from 'react'
-import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
+import type { ChangeEvent, InputHTMLAttributes, ReactNode, Ref } from 'react'
+import { useCallback, useEffect, useId, useState } from 'react'
 import type { XOR } from '../../types'
 import { Loader } from '../Loader'
 import { Stack } from '../Stack'
@@ -277,6 +272,7 @@ type CheckboxProps = {
   required?: boolean
   'data-testid'?: string
   tooltip?: string
+  ref?: Ref<HTMLInputElement>
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'
@@ -305,139 +301,135 @@ type CheckboxProps = {
 /**
  * Checkbox is an input component used to select or deselect an option.
  */
-export const Checkbox = forwardRef(
-  (
-    {
-      id,
-      checked = false,
-      onChange,
-      onFocus,
-      onBlur,
-      error,
-      name,
-      helper,
-      value,
-      size = 24,
-      children,
-      progress = false,
-      disabled = false,
-      autoFocus = false,
-      className,
-      'data-visibility': dataVisibility,
-      'aria-label': ariaLabel,
-      required,
-      'data-testid': dataTestId,
-      tooltip,
-      tabIndex,
-    }: CheckboxProps,
-    ref: ForwardedRef<HTMLInputElement>,
-  ) => {
-    const [state, setState] = useState<boolean | 'indeterminate'>(checked)
-    const uniqId = useId()
-    const localId = id ?? uniqId
+export const Checkbox = ({
+  id,
+  checked = false,
+  onChange,
+  onFocus,
+  onBlur,
+  error,
+  name,
+  helper,
+  value,
+  size = 24,
+  children,
+  progress = false,
+  disabled = false,
+  autoFocus = false,
+  className,
+  'data-visibility': dataVisibility,
+  'aria-label': ariaLabel,
+  required,
+  'data-testid': dataTestId,
+  tooltip,
+  tabIndex,
+  ref,
+}: CheckboxProps) => {
+  const [state, setState] = useState<boolean | 'indeterminate'>(checked)
+  const uniqId = useId()
+  const localId = id ?? uniqId
 
-    useEffect(() => {
-      setState(checked)
-    }, [checked])
+  useEffect(() => {
+    setState(checked)
+  }, [checked])
 
-    const onLocalChange = useCallback(
-      (event: ChangeEvent<HTMLInputElement>) => {
-        if (!progress) onChange?.(event)
-        setState(current =>
-          current === 'indeterminate' ? false : event.target.checked,
-        )
-      },
-      [onChange, progress, setState],
-    )
+  const onLocalChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      if (!progress) onChange?.(event)
+      setState(current =>
+        current === 'indeterminate' ? false : event.target.checked,
+      )
+    },
+    [onChange, progress, setState],
+  )
 
-    return (
-      <Tooltip text={tooltip}>
-        <CheckboxContainer
-          className={className}
-          aria-disabled={disabled}
-          data-visibility={dataVisibility}
-          data-checked={state}
-          data-error={!!error}
-          data-testid={dataTestId}
-        >
-          {progress ? (
-            <StyledActivityContainer>
-              <Loader active size={size} />
-            </StyledActivityContainer>
-          ) : null}
-          <CheckboxInput
-            id={localId}
-            type="checkbox"
-            aria-invalid={!!error}
-            aria-describedby={error ? `${localId}-hint` : undefined}
-            aria-checked={state === 'indeterminate' ? 'mixed' : state}
-            aria-label={ariaLabel}
-            checked={state === 'indeterminate' ? false : state}
-            size={size}
-            onChange={onLocalChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            disabled={disabled}
-            value={value}
-            name={name}
-            autoFocus={autoFocus}
-            ref={ref}
-            required={required}
-            tabIndex={tabIndex}
-          />
+  return (
+    <Tooltip text={tooltip}>
+      <CheckboxContainer
+        className={className}
+        aria-disabled={disabled}
+        data-visibility={dataVisibility}
+        data-checked={state}
+        data-error={!!error}
+        data-testid={dataTestId}
+      >
+        {progress ? (
+          <StyledActivityContainer>
+            <Loader active size={size} />
+          </StyledActivityContainer>
+        ) : null}
+        <CheckboxInput
+          id={localId}
+          type="checkbox"
+          aria-invalid={!!error}
+          aria-describedby={error ? `${localId}-hint` : undefined}
+          aria-checked={state === 'indeterminate' ? 'mixed' : state}
+          aria-label={ariaLabel}
+          checked={state === 'indeterminate' ? false : state}
+          size={size}
+          onChange={onLocalChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          disabled={disabled}
+          value={value}
+          name={name}
+          autoFocus={autoFocus}
+          ref={ref}
+          required={required}
+          tabIndex={tabIndex}
+        />
 
-          {!progress ? (
-            <StyledIcon size={size} viewBox="0 0 24 24" fill="none">
-              <CheckboxIconContainer>
-                {state !== 'indeterminate' ? (
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    width={12}
-                    height={9}
-                    x="5"
-                    y="4"
-                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                    fill="white"
-                  />
-                ) : (
-                  <CheckMixedMark x="6" y="11" rx="1" width="12" height="2" />
-                )}
-              </CheckboxIconContainer>
-            </StyledIcon>
-          ) : null}
+        {!progress ? (
+          <StyledIcon size={size} viewBox="0 0 24 24" fill="none">
+            <CheckboxIconContainer>
+              {state !== 'indeterminate' ? (
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  width={12}
+                  height={9}
+                  x="5"
+                  y="4"
+                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                  fill="white"
+                />
+              ) : (
+                <CheckMixedMark x="6" y="11" rx="1" width="12" height="2" />
+              )}
+            </CheckboxIconContainer>
+          </StyledIcon>
+        ) : null}
 
-          <Stack gap={0.25} flex={1}>
-            <Stack gap={0.5} direction="row" alignItems="center" flex={1}>
-              {children ? (
-                <StyledLabel htmlFor={localId}>{children}</StyledLabel>
-              ) : null}
-              {required ? (
-                <sup>
-                  <Icon name="asterisk" size={10} color="danger" />
-                </sup>
-              ) : null}
-            </Stack>
-
-            {helper ? (
-              <Text
-                variant="caption"
-                as="span"
-                prominence="weak"
-                sentiment="neutral"
-              >
-                {helper}
-              </Text>
+        <Stack gap={0.25} flex={1}>
+          <Stack gap={0.5} direction="row" alignItems="center" flex={1}>
+            {children ? (
+              <StyledLabel htmlFor={localId}>{children}</StyledLabel>
             ) : null}
-
-            {error ? (
-              <ErrorText variant="caption" as="span" sentiment="danger">
-                {error}
-              </ErrorText>
+            {required ? (
+              <sup>
+                <Icon name="asterisk" size={10} color="danger" />
+              </sup>
             ) : null}
           </Stack>
-        </CheckboxContainer>
-      </Tooltip>
-    )
-  },
-)
+
+          {helper ? (
+            <Text
+              variant="caption"
+              as="span"
+              prominence="weak"
+              sentiment="neutral"
+            >
+              {helper}
+            </Text>
+          ) : null}
+
+          {error ? (
+            <ErrorText variant="caption" as="span" sentiment="danger">
+              {error}
+            </ErrorText>
+          ) : null}
+        </Stack>
+      </CheckboxContainer>
+    </Tooltip>
+  )
+}

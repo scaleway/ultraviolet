@@ -2,11 +2,10 @@ import styled from '@emotion/styled'
 import type {
   ComponentProps,
   Dispatch,
-  ForwardedRef,
   ReactNode,
+  Ref,
   SetStateAction,
 } from 'react'
-import { forwardRef } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
@@ -60,65 +59,62 @@ type ListProps = {
    * Action when selection changes (get the list of selected rows)
    */
   onSelectedChange?: Dispatch<SetStateAction<string[]>>
+  ref?: Ref<HTMLDivElement>
 }
 
-const BaseList = forwardRef(
-  (
-    {
-      expandable = false,
-      selectable = false,
-      columns,
-      children,
-      loading,
-      autoCollapse = false,
-      onSelectedChange,
-    }: ListProps,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => {
-    const computeTemplate = `${
-      selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
-    }${expandable ? `${EXPANDABLE_COLUMN_SIZE}px ` : ''}${columns
-      .map(({ width }) => width ?? 'minmax(0, 1fr)')
-      .join(' ')}`
+const BaseList = ({
+  expandable = false,
+  selectable = false,
+  columns,
+  children,
+  loading,
+  autoCollapse = false,
+  onSelectedChange,
+  ref,
+}: ListProps) => {
+  const computeTemplate = `${
+    selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
+  }${
+    expandable ? `${EXPANDABLE_COLUMN_SIZE}px ` : ''
+  }${columns.map(({ width }) => width ?? 'minmax(0, 1fr)').join(' ')}`
 
-    return (
-      <ListProvider
-        selectable={selectable}
-        expandButton={expandable}
-        autoCollapse={autoCollapse}
-        onSelectedChange={onSelectedChange}
-      >
-        <StyledList ref={ref} role="grid" template={computeTemplate}>
-          <HeaderRow hasSelectAllColumn={selectable}>
-            {columns.map((column, index) => (
-              <HeaderCell
-                // eslint-disable-next-line react/no-array-index-key
-                key={`header-column-${index}`}
-                isOrdered={column.isOrdered}
-                orderDirection={column.orderDirection}
-                onOrder={column.onOrder}
-                info={column.info}
-              >
-                {column.label}
-              </HeaderCell>
-            ))}
-          </HeaderRow>
-          <Body>
-            {loading ? (
-              <SkeletonRows
-                selectable={selectable}
-                rows={5}
-                cols={columns.length}
-              />
-            ) : (
-              children
-            )}
-          </Body>
-        </StyledList>
-      </ListProvider>
-    )
-  },
-)
+  return (
+    <ListProvider
+      selectable={selectable}
+      expandButton={expandable}
+      autoCollapse={autoCollapse}
+      onSelectedChange={onSelectedChange}
+    >
+      <StyledList ref={ref} role="grid" template={computeTemplate}>
+        <HeaderRow hasSelectAllColumn={selectable}>
+          {columns.map((column, index) => (
+            <HeaderCell
+              // eslint-disable-next-line react/no-array-index-key
+              key={`header-column-${index}`}
+              isOrdered={column.isOrdered}
+              orderDirection={column.orderDirection}
+              onOrder={column.onOrder}
+              info={column.info}
+            >
+              {column.label}
+            </HeaderCell>
+          ))}
+        </HeaderRow>
+        <Body>
+          {loading ? (
+            <SkeletonRows
+              selectable={selectable}
+              rows={5}
+              cols={columns.length}
+            />
+          ) : (
+            children
+          )}
+        </Body>
+      </StyledList>
+    </ListProvider>
+  )
+}
 
 /**
  * List is a component that displays a list of items based on the columns you provide and the data you pass.

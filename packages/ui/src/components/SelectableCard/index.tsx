@@ -2,10 +2,10 @@ import styled from '@emotion/styled'
 import type {
   ChangeEventHandler,
   FocusEventHandler,
-  ForwardedRef,
   ReactNode,
+  Ref,
 } from 'react'
-import { forwardRef, useCallback, useRef } from 'react'
+import { useCallback, useRef } from 'react'
 import { Checkbox } from '../Checkbox'
 import { Radio } from '../Radio'
 import { Stack } from '../Stack'
@@ -128,117 +128,114 @@ type SelectableCardProps = {
   tooltip?: string
   label?: ReactNode
   'data-testid'?: string
+  ref?: Ref<HTMLDivElement>
 }
 
 /**
  * SelectableCard is a component that can be used to create a radio or checkbox card.
  * It can be used to create a list of selectable items or a single selectable item.
  */
-export const SelectableCard = forwardRef(
-  (
-    {
-      name,
-      value,
-      onChange,
-      showTick = false,
-      type = 'radio',
-      checked = false,
-      disabled = false,
-      children,
-      className,
-      isError,
-      onFocus,
-      onBlur,
-      tooltip,
-      id,
-      label,
-      'data-testid': dataTestId,
-    }: SelectableCardProps,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => {
-    const innerRef = useRef<HTMLInputElement>(null)
+export const SelectableCard = ({
+  name,
+  value,
+  onChange,
+  showTick = false,
+  type = 'radio',
+  checked = false,
+  disabled = false,
+  children,
+  className,
+  isError,
+  onFocus,
+  onBlur,
+  tooltip,
+  id,
+  label,
+  'data-testid': dataTestId,
+  ref,
+}: SelectableCardProps) => {
+  const innerRef = useRef<HTMLInputElement>(null)
 
-    const ParentContainer = useCallback(
-      ({ children: subChildren }: { children: ReactNode }) => {
-        if (tooltip) {
-          return (
-            <Stack flex={1}>
-              <Tooltip text={tooltip}>{subChildren}</Tooltip>
-            </Stack>
-          )
-        }
+  const ParentContainer = useCallback(
+    ({ children: subChildren }: { children: ReactNode }) => {
+      if (tooltip) {
+        return (
+          <Stack flex={1}>
+            <Tooltip text={tooltip}>{subChildren}</Tooltip>
+          </Stack>
+        )
+      }
 
-        return <Tooltip>{subChildren}</Tooltip>
-      },
-      [tooltip],
-    )
+      return <Tooltip>{subChildren}</Tooltip>
+    },
+    [tooltip],
+  )
 
-    return (
-      <ParentContainer>
-        <Container
-          onClick={() => {
-            if (innerRef?.current) {
-              innerRef.current.click()
-            }
-          }}
-          className={className}
-          data-checked={checked}
-          data-disabled={disabled}
-          data-error={isError}
-          data-testid={dataTestId}
-          data-type={type}
-          data-has-label={!!label}
-          ref={ref}
-          alignItems="start"
-          direction="column"
-          gap={0.5}
-          flex={1}
-        >
-          {type === 'radio' ? (
-            <StyledRadio
-              name={name}
-              value={value}
-              onChange={onChange}
-              showTick={showTick}
-              checked={checked}
-              disabled={disabled}
-              error={isError}
-              onFocus={onFocus}
-              onBlur={onBlur}
-              hasLabel={!!label}
-              id={id}
-              ref={innerRef}
-              data-error={isError}
-              label={label}
-            />
-          ) : (
-            <StyledCheckbox
-              name={name}
-              value={value}
-              onChange={onChange}
-              showTick={showTick}
-              checked={checked}
-              disabled={disabled}
-              error={isError}
-              onFocus={onFocus}
-              onBlur={onBlur}
-              hasLabel={!!label}
-              id={id}
-              ref={innerRef}
-              data-error={isError}
-            >
-              {label}
-            </StyledCheckbox>
-          )}
-          {children ? (
-            <StyledStack data-has-label={!!label && showTick} width="100%">
-              {typeof children === 'function'
-                ? children({ checked, disabled })
-                : children}
-            </StyledStack>
-          ) : null}
-        </Container>
-      </ParentContainer>
-    )
-  },
-)
+  return (
+    <ParentContainer>
+      <Container
+        onClick={() => {
+          if (innerRef?.current) {
+            innerRef.current.click()
+          }
+        }}
+        className={className}
+        data-checked={checked}
+        data-disabled={disabled}
+        data-error={isError}
+        data-testid={dataTestId}
+        data-type={type}
+        data-has-label={!!label}
+        ref={ref}
+        alignItems="start"
+        direction="column"
+        gap={0.5}
+        flex={1}
+      >
+        {type === 'radio' ? (
+          <StyledRadio
+            name={name}
+            value={value}
+            onChange={onChange}
+            showTick={showTick}
+            checked={checked}
+            disabled={disabled}
+            error={isError}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            hasLabel={!!label}
+            id={id}
+            ref={innerRef}
+            data-error={isError}
+            label={label}
+          />
+        ) : (
+          <StyledCheckbox
+            name={name}
+            value={value}
+            onChange={onChange}
+            showTick={showTick}
+            checked={checked}
+            disabled={disabled}
+            error={isError}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            hasLabel={!!label}
+            id={id}
+            ref={innerRef}
+            data-error={isError}
+          >
+            {label}
+          </StyledCheckbox>
+        )}
+        {children ? (
+          <StyledStack data-has-label={!!label && showTick} width="100%">
+            {typeof children === 'function'
+              ? children({ checked, disabled })
+              : children}
+          </StyledStack>
+        ) : null}
+      </Container>
+    </ParentContainer>
+  )
+}

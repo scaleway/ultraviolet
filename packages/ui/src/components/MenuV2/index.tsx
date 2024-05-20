@@ -9,7 +9,6 @@ import type {
 } from 'react'
 import {
   cloneElement,
-  forwardRef,
   isValidElement,
   useId,
   useImperativeHandle,
@@ -112,88 +111,85 @@ type MenuProps = {
    * If set to `hover`, the menu will open when the user hovers over the disclosure.
    */
   triggerMethod?: 'click' | 'hover'
+  ref?: Ref<HTMLButtonElement | null>
 } & Pick<ComponentProps<typeof Popup>, 'placement' | 'dynamicDomRendering'>
 
-const FwdMenu = forwardRef(
-  (
-    {
-      id,
-      ariaLabel = 'Menu',
-      children,
-      disclosure,
-      hasArrow = false,
-      placement = 'bottom',
-      visible = false,
-      className,
-      'data-testid': dataTestId,
-      maxHeight,
-      maxWidth,
-      portalTarget,
-      size = 'small',
-      triggerMethod = 'click',
-      dynamicDomRendering,
-    }: MenuProps,
-    ref: Ref<HTMLButtonElement | null>,
-  ) => {
-    const [isVisible, setIsVisible] = useState(visible)
-    const popupRef = useRef<HTMLDivElement>(null)
-    const disclosureRef = useRef<HTMLButtonElement>(null)
-    const tempId = useId()
-    const finalId = `menu-${id ?? tempId}`
+const FwdMenu = ({
+  id,
+  ariaLabel = 'Menu',
+  children,
+  disclosure,
+  hasArrow = false,
+  placement = 'bottom',
+  visible = false,
+  className,
+  'data-testid': dataTestId,
+  maxHeight,
+  maxWidth,
+  portalTarget,
+  size = 'small',
+  triggerMethod = 'click',
+  dynamicDomRendering,
+  ref,
+}: MenuProps) => {
+  const [isVisible, setIsVisible] = useState(visible)
+  const popupRef = useRef<HTMLDivElement>(null)
+  const disclosureRef = useRef<HTMLButtonElement>(null)
+  const tempId = useId()
+  const finalId = `menu-${id ?? tempId}`
 
-    // if you need dialog inside your component, use function, otherwise component is fine
-    const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
-      disclosure,
-    )
-      ? disclosure
-      : disclosure({ visible: isVisible })
-    const innerRef = useRef(target as unknown as HTMLButtonElement)
-    useImperativeHandle(ref, () => innerRef.current)
+  // if you need dialog inside your component, use function, otherwise component is fine
+  const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
+    disclosure,
+  )
+    ? disclosure
+    : disclosure({ visible: isVisible })
+  const innerRef = useRef(target as unknown as HTMLButtonElement)
+  useImperativeHandle(ref, () => innerRef.current)
 
-    const finalDisclosure = cloneElement(target, {
-      onClick: (event: MouseEvent<HTMLButtonElement>) => {
-        target.props.onClick?.(event)
-        setIsVisible(!isVisible)
-      },
-      'aria-haspopup': 'dialog',
-      'aria-expanded': isVisible,
-      // @ts-expect-error not sure how to fix this
-      ref: disclosureRef,
-    })
+  const finalDisclosure = cloneElement(target, {
+    onClick: (event: MouseEvent<HTMLButtonElement>) => {
+      target.props.onClick?.(event)
+      setIsVisible(!isVisible)
+    },
+    'aria-haspopup': 'dialog',
+    'aria-expanded': isVisible,
+    // @ts-expect-error not sure how to fix this
+    ref: disclosureRef,
+  })
 
-    return (
-      <StyledPopup
-        debounceDelay={triggerMethod === 'hover' ? 250 : 0}
-        hideOnClickOutside
-        aria-label={ariaLabel}
-        className={className}
-        visible={triggerMethod === 'click' ? isVisible : undefined}
-        placement={placement}
-        hasArrow={hasArrow}
-        data-has-arrow={hasArrow}
-        role="dialog"
-        id={finalId}
-        ref={popupRef}
-        onClose={() => setIsVisible(false)}
-        tabIndex={-1}
-        maxHeight={maxHeight ?? '480px'}
-        maxWidth={maxWidth}
-        size={size}
-        text={
-          <MenuList data-testid={dataTestId} className={className} role="menu">
-            {typeof children === 'function'
-              ? children({ toggle: () => setIsVisible(!isVisible) })
-              : children}
-          </MenuList>
-        }
-        portalTarget={portalTarget}
-        dynamicDomRendering={dynamicDomRendering}
-      >
-        {finalDisclosure}
-      </StyledPopup>
-    )
-  },
-)
+  return (
+    <StyledPopup
+      debounceDelay={triggerMethod === 'hover' ? 250 : 0}
+      hideOnClickOutside
+      aria-label={ariaLabel}
+      className={className}
+      visible={triggerMethod === 'click' ? isVisible : undefined}
+      placement={placement}
+      hasArrow={hasArrow}
+      data-has-arrow={hasArrow}
+      role="dialog"
+      id={finalId}
+      ref={popupRef}
+      onClose={() => setIsVisible(false)}
+      tabIndex={-1}
+      maxHeight={maxHeight ?? '480px'}
+      maxWidth={maxWidth}
+      size={size}
+      text={
+        <MenuList data-testid={dataTestId} className={className} role="menu">
+          {typeof children === 'function'
+            ? children({ toggle: () => setIsVisible(!isVisible) })
+            : children}
+        </MenuList>
+      }
+      portalTarget={portalTarget}
+      dynamicDomRendering={dynamicDomRendering}
+    >
+      {finalDisclosure}
+    </StyledPopup>
+  )
+}
 
 /**
  * A menu is a widget that offers a list of choices to the user, such as a set of actions or functions.

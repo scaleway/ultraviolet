@@ -9,7 +9,6 @@ import type {
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef } from 'react'
 import type { SENTIMENTS } from '../../theme'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
@@ -264,6 +263,7 @@ type CommonProps = {
   onMouseDown?: MouseEventHandler<HTMLElement>
   onMouseUp?: MouseEventHandler<HTMLElement>
   onMouseOut?: MouseEventHandler<HTMLElement>
+  ref?: Ref<Element>
 }
 
 // @note: using XOR utility was generating some lint erros
@@ -311,104 +311,64 @@ type FinalProps = CommonProps &
  * Button component is used to trigger an action or event, such as submitting a form, opening a dialog,
  * canceling an action, or performing a delete operation.
  */
-export const Button = forwardRef<Element, FinalProps>(
-  (
-    {
-      type = 'button',
-      className,
-      'data-testid': dataTestId,
-      sentiment = 'primary',
-      variant = 'filled',
-      size = 'large',
-      disabled = false,
-      icon,
-      iconPosition = 'left',
-      iconVariant,
-      fullWidth = false,
-      isLoading = false,
-      children,
-      onClick,
-      onMouseDown,
-      onMouseUp,
-      onMouseOut,
-      name,
-      'aria-label': ariaLabel,
-      'aria-current': ariaCurrent,
-      'aria-controls': ariaControls,
-      'aria-expanded': ariaExpanded,
-      'aria-haspopup': ariaHaspopup,
-      href,
-      download,
-      target,
-      role,
-      tooltip,
-      tabIndex,
-      autoFocus,
-    },
-    ref,
-  ) => {
-    const computeIsDisabled = disabled || isLoading
-    const content = (
-      <>
-        {!isLoading && icon ? (
-          <Icon name={icon} size="small" variant={iconVariant} />
-        ) : null}
-        {isLoading ? (
-          <Loader
-            active
-            trailColor="transparent"
-            size="1em"
-            color="currentColor"
-          />
-        ) : null}
-        {children && typeof children !== 'string' ? (
-          <div>{children}</div>
-        ) : (
-          children
-        )}
-      </>
-    )
+export const Button = ({
+  type = 'button',
+  className,
+  'data-testid': dataTestId,
+  sentiment = 'primary',
+  variant = 'filled',
+  size = 'large',
+  disabled = false,
+  icon,
+  iconPosition = 'left',
+  iconVariant,
+  fullWidth = false,
+  isLoading = false,
+  children,
+  onClick,
+  onMouseDown,
+  onMouseUp,
+  onMouseOut,
+  name,
+  'aria-label': ariaLabel,
+  'aria-current': ariaCurrent,
+  'aria-controls': ariaControls,
+  'aria-expanded': ariaExpanded,
+  'aria-haspopup': ariaHaspopup,
+  href,
+  download,
+  target,
+  role,
+  tooltip,
+  tabIndex,
+  autoFocus,
+  ref,
+}: FinalProps) => {
+  const computeIsDisabled = disabled || isLoading
+  const content = (
+    <>
+      {!isLoading && icon ? (
+        <Icon name={icon} size="small" variant={iconVariant} />
+      ) : null}
+      {isLoading ? (
+        <Loader
+          active
+          trailColor="transparent"
+          size="1em"
+          color="currentColor"
+        />
+      ) : null}
+      {children && typeof children !== 'string' ? (
+        <div>{children}</div>
+      ) : (
+        children
+      )}
+    </>
+  )
 
-    // @note: an anchor can't be disabled
-    if (href && !computeIsDisabled) {
-      const Component = VARIANTS_COMPONENTS[variant].link
-
-      return (
-        <Tooltip text={tooltip} containerFullWidth={fullWidth}>
-          <Component
-            role={role}
-            className={className}
-            data-testid={dataTestId}
-            disabled={false}
-            fullWidth={fullWidth}
-            iconPosition={iconPosition}
-            sentiment={sentiment}
-            size={size}
-            type={type}
-            onClick={onClick}
-            aria-label={ariaLabel}
-            aria-current={ariaCurrent}
-            aria-controls={ariaControls}
-            aria-expanded={ariaExpanded}
-            aria-haspopup={ariaHaspopup}
-            href={href}
-            target={target}
-            download={download}
-            ref={ref as Ref<HTMLAnchorElement>}
-            iconOnly={!!icon && !children}
-            tabIndex={tabIndex}
-            autoFocus={autoFocus}
-            onMouseDown={onMouseDown}
-            onMouseUp={onMouseUp}
-            onMouseOut={onMouseOut}
-          >
-            {content}
-          </Component>
-        </Tooltip>
-      )
-    }
-
-    const Component = VARIANTS_COMPONENTS[variant].button
+  // @note: an anchor can't be disabled
+  if (href && !computeIsDisabled) {
+    const Component = VARIANTS_COMPONENTS[variant].link
 
     return (
       <Tooltip text={tooltip} containerFullWidth={fullWidth}>
@@ -416,20 +376,22 @@ export const Button = forwardRef<Element, FinalProps>(
           role={role}
           className={className}
           data-testid={dataTestId}
-          disabled={computeIsDisabled}
+          disabled={false}
           fullWidth={fullWidth}
           iconPosition={iconPosition}
           sentiment={sentiment}
           size={size}
           type={type}
           onClick={onClick}
-          ref={ref as Ref<HTMLButtonElement>}
-          name={name}
           aria-label={ariaLabel}
           aria-current={ariaCurrent}
           aria-controls={ariaControls}
           aria-expanded={ariaExpanded}
           aria-haspopup={ariaHaspopup}
+          href={href}
+          target={target}
+          download={download}
+          ref={ref as Ref<HTMLAnchorElement>}
           iconOnly={!!icon && !children}
           tabIndex={tabIndex}
           autoFocus={autoFocus}
@@ -441,5 +403,39 @@ export const Button = forwardRef<Element, FinalProps>(
         </Component>
       </Tooltip>
     )
-  },
-)
+  }
+
+  const Component = VARIANTS_COMPONENTS[variant].button
+
+  return (
+    <Tooltip text={tooltip} containerFullWidth={fullWidth}>
+      <Component
+        role={role}
+        className={className}
+        data-testid={dataTestId}
+        disabled={computeIsDisabled}
+        fullWidth={fullWidth}
+        iconPosition={iconPosition}
+        sentiment={sentiment}
+        size={size}
+        type={type}
+        onClick={onClick}
+        ref={ref as Ref<HTMLButtonElement>}
+        name={name}
+        aria-label={ariaLabel}
+        aria-current={ariaCurrent}
+        aria-controls={ariaControls}
+        aria-expanded={ariaExpanded}
+        aria-haspopup={ariaHaspopup}
+        iconOnly={!!icon && !children}
+        tabIndex={tabIndex}
+        autoFocus={autoFocus}
+        onMouseDown={onMouseDown}
+        onMouseUp={onMouseUp}
+        onMouseOut={onMouseOut}
+      >
+        {content}
+      </Component>
+    </Tooltip>
+  )
+}

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import type { ForwardedRef, ReactNode } from 'react'
-import { forwardRef, useEffect } from 'react'
+import type { ReactNode, Ref } from 'react'
+import { useEffect } from 'react'
 import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -92,155 +92,150 @@ type RowProps = {
   sentiment?: (typeof SENTIMENTS)[number]
   className?: string
   'data-testid'?: string
+  ref?: Ref<HTMLDivElement>
 }
 
-export const Row = forwardRef(
-  (
-    {
-      children,
-      id,
-      expandable,
-      disabled,
-      selectDisabled,
-      sentiment = 'neutral',
-      className,
-      'data-testid': dataTestid,
-    }: RowProps,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => {
-    const {
-      selectable,
-      registerExpandableRow,
-      expandedRowIds,
-      expandRow,
-      collapseRow,
-      registerSelectableRow,
-      selectedRowIds,
-      selectRow,
-      unselectRow,
-      expandButton,
-    } = useListContext()
+export const Row = ({
+  children,
+  id,
+  expandable,
+  disabled,
+  selectDisabled,
+  sentiment = 'neutral',
+  className,
+  'data-testid': dataTestid,
+  ref,
+}: RowProps) => {
+  const {
+    selectable,
+    registerExpandableRow,
+    expandedRowIds,
+    expandRow,
+    collapseRow,
+    registerSelectableRow,
+    selectedRowIds,
+    selectRow,
+    unselectRow,
+    expandButton,
+  } = useListContext()
 
-    const isSelectDisabled =
-      disabled || (selectDisabled !== undefined && selectDisabled !== false)
+  const isSelectDisabled =
+    disabled || (selectDisabled !== undefined && selectDisabled !== false)
 
-    const hasExpandable = !!expandable
-    useEffect(() => {
-      if (hasExpandable) {
-        const unregisterCallback = registerExpandableRow(id)
+  const hasExpandable = !!expandable
+  useEffect(() => {
+    if (hasExpandable) {
+      const unregisterCallback = registerExpandableRow(id)
 
-        return unregisterCallback
-      }
-
-      return undefined
-    }, [id, hasExpandable, registerExpandableRow])
-
-    useEffect(() => {
-      if (!isSelectDisabled) {
-        const unregisterCallback = registerSelectableRow(id)
-
-        return unregisterCallback
-      }
-
-      return undefined
-    }, [id, registerSelectableRow, isSelectDisabled])
-
-    const toggleRowExpand = () => {
-      if (expandedRowIds[id]) {
-        collapseRow(id)
-      } else {
-        expandRow(id)
-      }
+      return unregisterCallback
     }
 
-    const canClickRowToExpand = !disabled && !!expandable && !expandButton
+    return undefined
+  }, [id, hasExpandable, registerExpandableRow])
 
-    return (
-      <StyledRow
-        className={className}
-        ref={ref}
-        role={canClickRowToExpand ? 'button row' : 'row'}
-        onClick={canClickRowToExpand ? toggleRowExpand : undefined}
-        onKeyDown={
-          canClickRowToExpand
-            ? event => {
-                if (event.key === ' ') {
-                  toggleRowExpand()
-                  event.preventDefault()
-                }
+  useEffect(() => {
+    if (!isSelectDisabled) {
+      const unregisterCallback = registerSelectableRow(id)
+
+      return unregisterCallback
+    }
+
+    return undefined
+  }, [id, registerSelectableRow, isSelectDisabled])
+
+  const toggleRowExpand = () => {
+    if (expandedRowIds[id]) {
+      collapseRow(id)
+    } else {
+      expandRow(id)
+    }
+  }
+
+  const canClickRowToExpand = !disabled && !!expandable && !expandButton
+
+  return (
+    <StyledRow
+      className={className}
+      ref={ref}
+      role={canClickRowToExpand ? 'button row' : 'row'}
+      onClick={canClickRowToExpand ? toggleRowExpand : undefined}
+      onKeyDown={
+        canClickRowToExpand
+          ? event => {
+              if (event.key === ' ') {
+                toggleRowExpand()
+                event.preventDefault()
               }
-            : undefined
-        }
-        tabIndex={canClickRowToExpand ? 0 : -1}
-        sentiment={sentiment}
-        aria-disabled={disabled}
-        aria-expanded={expandable ? expandedRowIds[id] : undefined}
-        data-highlight={!!selectedRowIds[id]}
-        data-testid={dataTestid}
-      >
-        {selectable ? (
-          <Cell preventClick={canClickRowToExpand}>
-            <StyledCheckboxContainer>
-              <Tooltip
-                text={
-                  typeof selectDisabled === 'string'
-                    ? selectDisabled
-                    : undefined
+            }
+          : undefined
+      }
+      tabIndex={canClickRowToExpand ? 0 : -1}
+      sentiment={sentiment}
+      aria-disabled={disabled}
+      aria-expanded={expandable ? expandedRowIds[id] : undefined}
+      data-highlight={!!selectedRowIds[id]}
+      data-testid={dataTestid}
+    >
+      {selectable ? (
+        <Cell preventClick={canClickRowToExpand}>
+          <StyledCheckboxContainer>
+            <Tooltip
+              text={
+                typeof selectDisabled === 'string' ? selectDisabled : undefined
+              }
+            >
+              <Checkbox
+                name="list-select-checkbox"
+                aria-label="select"
+                checked={selectedRowIds[id]}
+                value={id}
+                onChange={() => {
+                  if (selectedRowIds[id]) {
+                    unselectRow(id)
+                  } else {
+                    selectRow(id)
+                  }
+                }}
+                disabled={isSelectDisabled}
+              />
+            </Tooltip>
+          </StyledCheckboxContainer>
+        </Cell>
+      ) : null}
+      {expandButton ? (
+        <Cell preventClick>
+          <Button
+            disabled={disabled || !expandable}
+            icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
+            onClick={toggleRowExpand}
+            size="small"
+            sentiment="neutral"
+            variant="ghost"
+          />
+        </Cell>
+      ) : null}
+      {children}
+      {expandable && expandedRowIds[id] ? (
+        <ExpandableWrapper
+          data-expandable-content
+          onClick={
+            canClickRowToExpand
+              ? e => {
+                  e.stopPropagation()
                 }
-              >
-                <Checkbox
-                  name="list-select-checkbox"
-                  aria-label="select"
-                  checked={selectedRowIds[id]}
-                  value={id}
-                  onChange={() => {
-                    if (selectedRowIds[id]) {
-                      unselectRow(id)
-                    } else {
-                      selectRow(id)
-                    }
-                  }}
-                  disabled={isSelectDisabled}
-                />
-              </Tooltip>
-            </StyledCheckboxContainer>
-          </Cell>
-        ) : null}
-        {expandButton ? (
-          <Cell preventClick>
-            <Button
-              disabled={disabled || !expandable}
-              icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
-              onClick={toggleRowExpand}
-              size="small"
-              sentiment="neutral"
-              variant="ghost"
-            />
-          </Cell>
-        ) : null}
-        {children}
-        {expandable && expandedRowIds[id] ? (
-          <ExpandableWrapper
-            data-expandable-content
-            onClick={
-              canClickRowToExpand
-                ? e => {
-                    e.stopPropagation()
-                  }
-                : undefined
-            }
-            onKeyDown={
-              canClickRowToExpand
-                ? e => {
-                    e.stopPropagation()
-                  }
-                : undefined
-            }
-          >
-            {expandable}
-          </ExpandableWrapper>
-        ) : null}
-      </StyledRow>
-    )
-  },
-)
+              : undefined
+          }
+          onKeyDown={
+            canClickRowToExpand
+              ? e => {
+                  e.stopPropagation()
+                }
+              : undefined
+          }
+        >
+          {expandable}
+        </ExpandableWrapper>
+      ) : null}
+    </StyledRow>
+  )
+}

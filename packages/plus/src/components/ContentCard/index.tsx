@@ -2,8 +2,8 @@ import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon, Stack, Text } from '@ultraviolet/ui'
-import type { MouseEventHandler, ReactNode } from 'react'
-import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
+import type { MouseEventHandler, ReactNode, Ref } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Skeleton } from './Skeleton'
 
 const activeStyle = (theme: Theme) => css`
@@ -107,6 +107,7 @@ type ContentCardProps = {
   onClick?: MouseEventHandler<HTMLElement>
   loading?: boolean
   className?: string
+  ref?: Ref<HTMLAnchorElement & HTMLButtonElement & HTMLDivElement>
 }
 
 /**
@@ -114,121 +115,114 @@ type ContentCardProps = {
  * It can take different directions to display the image and the content. You can also add more content
  * by passing children.
  */
-export const ContentCard = forwardRef<
-  HTMLAnchorElement & HTMLButtonElement & HTMLDivElement,
-  ContentCardProps
->(
-  (
-    {
-      image,
-      direction = 'column',
-      icon,
-      subtitle,
-      title,
-      description,
-      children,
-      href,
-      target = '_blank',
-      onClick,
-      loading,
-      className,
-    },
-    ref,
-  ) => {
-    const subContainerRef = useRef<HTMLDivElement>(null)
-    const [subContainerHeight, setSubContainerHeight] = useState(
-      subContainerRef?.current?.offsetHeight,
-    )
-    const Container = useMemo(() => {
-      if (href) {
-        return Card.withComponent('a')
-      }
+export const ContentCard = ({
+  image,
+  direction = 'column',
+  icon,
+  subtitle,
+  title,
+  description,
+  children,
+  href,
+  target = '_blank',
+  onClick,
+  loading,
+  className,
+  ref,
+}: ContentCardProps) => {
+  const subContainerRef = useRef<HTMLDivElement>(null)
+  const [subContainerHeight, setSubContainerHeight] = useState(
+    subContainerRef?.current?.offsetHeight,
+  )
+  const Container = useMemo(() => {
+    if (href) {
+      return Card.withComponent('a')
+    }
 
-      if (onClick) {
-        return Card.withComponent('button')
-      }
+    if (onClick) {
+      return Card.withComponent('button')
+    }
 
-      return Card
-    }, [href, onClick])
+    return Card
+  }, [href, onClick])
 
-    useEffect(
-      () => setSubContainerHeight(subContainerRef?.current?.offsetHeight),
-      [subContainerRef],
-    )
+  useEffect(
+    () => setSubContainerHeight(subContainerRef?.current?.offsetHeight),
+    [subContainerRef],
+  )
 
-    return (
-      <Container
-        target={target}
-        onClick={onClick}
-        href={href}
-        role={onClick && !href ? 'button' : undefined}
-        ref={ref}
-        className={className}
-      >
-        {loading ? (
-          <Skeleton direction={direction} />
-        ) : (
-          <FullHeightStack direction={direction}>
-            {image ? (
-              <Image
-                alt=""
-                src={image}
-                height={direction === 'column' ? 120 : undefined}
-                width={direction === 'row' ? 220 : undefined}
-                direction={direction}
-                subContainerHeight={subContainerHeight}
-              />
-            ) : null}
-            <Stack gap={2} direction={direction} flex={1}>
-              <SubContainer
-                gap={2}
-                direction={direction}
-                href={href}
-                ref={subContainerRef}
-              >
-                {icon ?? null}
-                <Stack gap={2} justifyContent="center">
-                  <Stack gap={0.5}>
-                    <Stack>
-                      {subtitle ? (
-                        <Text
-                          as="small"
-                          variant="caption"
-                          prominence="weak"
-                          sentiment="neutral"
-                        >
-                          {subtitle}
-                        </Text>
-                      ) : null}
-                      <Text as="h3" variant="bodyStrong" sentiment="neutral">
-                        {title}
-                      </Text>
-                    </Stack>
-                    {description ? (
-                      <Text as="p" variant="bodySmall" sentiment="neutral">
-                        {description}
+  return (
+    <Container
+      target={target}
+      onClick={onClick}
+      href={href}
+      role={onClick && !href ? 'button' : undefined}
+      ref={ref}
+      className={className}
+    >
+      {loading ? (
+        <Skeleton direction={direction} />
+      ) : (
+        <FullHeightStack direction={direction}>
+          {image ? (
+            <Image
+              alt=""
+              src={image}
+              height={direction === 'column' ? 120 : undefined}
+              width={direction === 'row' ? 220 : undefined}
+              direction={direction}
+              subContainerHeight={subContainerHeight}
+            />
+          ) : null}
+          <Stack gap={2} direction={direction} flex={1}>
+            <SubContainer
+              gap={2}
+              direction={direction}
+              href={href}
+              ref={subContainerRef}
+            >
+              {icon ?? null}
+              <Stack gap={2} justifyContent="center">
+                <Stack gap={0.5}>
+                  <Stack>
+                    {subtitle ? (
+                      <Text
+                        as="small"
+                        variant="caption"
+                        prominence="weak"
+                        sentiment="neutral"
+                      >
+                        {subtitle}
                       </Text>
                     ) : null}
+                    <Text as="h3" variant="bodyStrong" sentiment="neutral">
+                      {title}
+                    </Text>
                   </Stack>
-                  {children ? <Stack>{children}</Stack> : null}
+                  {description ? (
+                    <Text as="p" variant="bodySmall" sentiment="neutral">
+                      {description}
+                    </Text>
+                  ) : null}
                 </Stack>
-              </SubContainer>
-              {href ? (
-                <StyledIconStack
-                  flex={1}
-                  alignItems={direction === 'column' ? 'flex-end' : 'center'}
-                  justifyContent={direction === 'column' ? 'center' : 'end'}
-                  direction={direction}
-                >
-                  <IconContainer>
-                    <Icon name="open-in-new" color="neutral" />
-                  </IconContainer>
-                </StyledIconStack>
-              ) : null}
-            </Stack>
-          </FullHeightStack>
-        )}
-      </Container>
-    )
-  },
-)
+                {children ? <Stack>{children}</Stack> : null}
+              </Stack>
+            </SubContainer>
+            {href ? (
+              <StyledIconStack
+                flex={1}
+                alignItems={direction === 'column' ? 'flex-end' : 'center'}
+                justifyContent={direction === 'column' ? 'center' : 'end'}
+                direction={direction}
+              >
+                <IconContainer>
+                  <Icon name="open-in-new" color="neutral" />
+                </IconContainer>
+              </StyledIconStack>
+            ) : null}
+          </Stack>
+        </FullHeightStack>
+      )}
+    </Container>
+  )
+}
