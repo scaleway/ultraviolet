@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.53.2
+
+### Patch Changes
+
+- [#3782](https://github.com/scaleway/ultraviolet/pull/3782) [`0ed8930`](https://github.com/scaleway/ultraviolet/commit/0ed8930aac665a8283de27bf327f579d0db7d6ca) Thanks [@matthprost](https://github.com/matthprost)! - Slight performance improvement on `<Expandable />` component to remove class generation when open and close
+
 ## 1.53.1
 
 ### Patch Changes
