@@ -2,7 +2,7 @@
 
 exports[`Stepper > renders correctly with all selected 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .cache-1r7ypev-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,33 +21,12 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   gap: 4px;
 }
 
-.emotion-0 .emotion-3 {
+.cache-1qol73-Stack-StyledStepContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   gap: 4px;
-  white-space: nowrap;
-}
-
-.emotion-0 .emotion-13 {
-  height: 4px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -59,11 +38,50 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
 }
 
-.emotion-5 {
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -84,8 +102,8 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   height: 32px;
   font-size: 16px;
   margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
@@ -110,7 +128,7 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   text-decoration-color: transparent;
 }
 
-.cache-n9n5oq-StyledLine {
+.cache-1bhfl5j-StyledLine {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -119,1436 +137,31 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   border-radius: 4px;
   background-color: #e9eaeb;
   position: relative;
-}
-
-.cache-n9n5oq-StyledLine::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #8c40ef;
-}
-
-.cache-a2kdxv-StyledStepContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
-  cursor: pointer;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb3 {
-  color: #222638;
-  -webkit-text-decoration: underline #222638;
-  text-decoration: underline #222638;
-  text-decoration-thickness: 1px;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb4 {
-  box-shadow: none;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb3 {
-  color: #b5b7bd;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb4 {
-  background-color: #f3f3f4;
-  box-shadow: none;
-  color: #b5b7bd;
-  border-color: #e9eaeb;
-}
-
-.cache-1ywl7j-StyledContainer-StyledBullet {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-}
-
-.emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-10 {
-  font-size: 16px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-}
-
-.emotion-12 {
-  border-radius: 4px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 4px;
-  background-color: #e9eaeb;
-  position: relative;
-}
-
-.emotion-12::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #8c40ef;
-  width: 100%;
-}
-
-.emotion-29 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1gx27n9-StyledText-StyledText {
-  color: #641cb3;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5 emotion-6"
-        >
-          <svg
-            class="emotion-7 emotion-8"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 1
-          </span>
-        </span>
-      </div>
-      <div
-        class="emotion-12 emotion-13"
-      />
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5 emotion-6"
-        >
-          <svg
-            class="emotion-7 emotion-8"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 2
-          </span>
-        </span>
-      </div>
-      <div
-        class="emotion-12 emotion-13"
-      />
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-29 emotion-6"
-        >
-          3
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 3
-          </span>
-        </span>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Stepper > renders correctly with animation 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 4px;
-}
-
-.emotion-0 .emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-}
-
-.emotion-0 .emotion-13 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-10 {
-  font-size: 16px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.emotion-12 {
-  border-radius: 4px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 4px;
-  background-color: #e9eaeb;
-  position: relative;
-}
-
-.emotion-12::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #8c40ef;
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-}
-
-.cache-1jsjebb-StyledStepContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-22 {
-  border-radius: 4px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 4px;
-  background-color: #e9eaeb;
-  position: relative;
-}
-
-.emotion-22::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #8c40ef;
-}
-
-.cache-a2kdxv-StyledStepContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
-  cursor: pointer;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb3 {
-  color: #222638;
-  -webkit-text-decoration: underline #222638;
-  text-decoration: underline #222638;
-  text-decoration-thickness: 1px;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb4 {
-  box-shadow: none;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb3 {
-  color: #b5b7bd;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb4 {
-  background-color: #f3f3f4;
-  box-shadow: none;
-  color: #b5b7bd;
-  border-color: #e9eaeb;
-}
-
-.emotion-27 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-1ks5sbz-StyledText-StyledText {
-  color: #727683;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5 emotion-6"
-        >
-          <svg
-            class="emotion-7 emotion-8"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 1
-          </span>
-        </span>
-      </div>
-      <div
-        class="emotion-12 emotion-13"
-      />
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-17 emotion-6"
-        >
-          2
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 2
-          </span>
-        </span>
-      </div>
-      <div
-        class="emotion-22 emotion-13"
-      />
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-27 emotion-6"
-        >
-          3
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 3
-          </span>
-        </span>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Stepper > renders correctly with default props 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 4px;
-}
-
-.emotion-0 .emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-}
-
-.emotion-0 .emotion-11 {
-  height: 4px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-8 {
-  font-size: 16px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-}
-
-.emotion-10 {
-  border-radius: 4px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 4px;
-  background-color: #e9eaeb;
-  position: relative;
-}
-
-.emotion-10::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #8c40ef;
-}
-
-.emotion-15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1gx27n9-StyledText-StyledText {
-  color: #641cb3;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.cache-a2kdxv-StyledStepContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
-  cursor: pointer;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb3 {
-  color: #222638;
-  -webkit-text-decoration: underline #222638;
-  text-decoration: underline #222638;
-  text-decoration-thickness: 1px;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb4 {
-  box-shadow: none;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb3 {
-  color: #b5b7bd;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb4 {
-  background-color: #f3f3f4;
-  box-shadow: none;
-  color: #b5b7bd;
-  border-color: #e9eaeb;
-}
-
-.cache-1ywl7j-StyledContainer-StyledBullet {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-1ks5sbz-StyledText-StyledText {
-  color: #727683;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5 emotion-6"
-        >
-          1
-        </div>
-        <span
-          class="emotion-7 emotion-8 emotion-9"
-        >
-          <span>
-            Step 1
-          </span>
-        </span>
-      </div>
-      <div
-        class="emotion-10 emotion-11"
-      />
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-15 emotion-6"
-        >
-          2
-        </div>
-        <span
-          class="emotion-7 emotion-8 emotion-9"
-        >
-          <span>
-            Step 2
-          </span>
-        </span>
-      </div>
-      <div
-        class="emotion-10 emotion-11"
-      />
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-15 emotion-6"
-        >
-          3
-        </div>
-        <span
-          class="emotion-7 emotion-8 emotion-9"
-        >
-          <span>
-            Step 3
-          </span>
-        </span>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Stepper > renders correctly with selected prop 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 4px;
-}
-
-.emotion-0 .emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-}
-
-.emotion-0 .emotion-13 {
-  height: 4px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-7 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-7 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-10 {
-  font-size: 16px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-}
-
-.emotion-12 {
-  border-radius: 4px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 4px;
-  background-color: #e9eaeb;
-  position: relative;
-}
-
-.emotion-12::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #8c40ef;
-  width: 100%;
-}
-
-.emotion-17 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-}
-
-.emotion-22 {
-  border-radius: 4px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  border-radius: 4px;
-  background-color: #e9eaeb;
-  position: relative;
-}
-
-.emotion-22::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #8c40ef;
-}
-
-.emotion-27 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #792dd4;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-1gx27n9-StyledText-StyledText {
-  color: #641cb3;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-.cache-a2kdxv-StyledStepContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
-  cursor: pointer;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb3 {
-  color: #222638;
-  -webkit-text-decoration: underline #222638;
-  text-decoration: underline #222638;
-  text-decoration-thickness: 1px;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb4 {
-  box-shadow: none;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb3 {
-  color: #b5b7bd;
-}
-
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb4 {
-  background-color: #f3f3f4;
-  box-shadow: none;
-  color: #b5b7bd;
-  border-color: #e9eaeb;
-}
-
-.cache-1ywl7j-StyledContainer-StyledBullet {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #222638;
-  background: #ffffff;
-  border: 1px solid #d9dadd;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-1ks5sbz-StyledText-StyledText {
-  color: #727683;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin-top: 8px;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5 emotion-6"
-        >
-          <svg
-            class="emotion-7 emotion-8"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 1
-          </span>
-        </span>
-      </div>
-      <div
-        class="emotion-12 emotion-13"
-      />
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-17 emotion-6"
-        >
-          2
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 2
-          </span>
-        </span>
-      </div>
-      <div
-        class="emotion-22 emotion-13"
-      />
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-27 emotion-6"
-        >
-          3
-        </div>
-        <span
-          class="emotion-9 emotion-10 emotion-11"
-        >
-          <span>
-            Step 3
-          </span>
-        </span>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Stepper > renders correctly with small size 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 4px;
-}
-
-.emotion-0 .emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-}
-
-.emotion-0 .emotion-11 {
+.cache-1bhfl5j-StyledLine[data-size='small'] {
   height: 2px;
-  margin-top: 16px;
-  margin-bottom: 16px;
 }
 
-.emotion-2 {
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1560,11 +173,242 @@ exports[`Stepper > renders correctly with small size 1`] = `
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
 }
 
-.emotion-5 {
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-nllwul-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1ks5sbz-StyledText-StyledText {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper handles clicks when interactive and small 1`] = `
+<DocumentFragment>
+  .cache-1r7ypev-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-wtj1t-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1585,32 +429,33 @@ exports[`Stepper > renders correctly with small size 1`] = `
   height: 24px;
   font-size: 14px;
   margin-top: 4px;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-8 {
+.cache-jgp1og-StyledText-StyledText {
+  color: #641cb3;
   font-size: 14px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
+  font-family: Inter,Asap;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 20px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
 }
 
-.emotion-10 {
+.cache-1bhfl5j-StyledLine {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1619,9 +464,16 @@ exports[`Stepper > renders correctly with small size 1`] = `
   border-radius: 4px;
   background-color: #e9eaeb;
   position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.emotion-10::after {
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1631,7 +483,67 @@ exports[`Stepper > renders correctly with small size 1`] = `
   background-color: #8c40ef;
 }
 
-.emotion-15 {
+.cache-1x8pfxd-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-sh93qw-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1652,8 +564,8 @@ exports[`Stepper > renders correctly with small size 1`] = `
   height: 24px;
   font-size: 14px;
   margin-top: 4px;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
 }
 
 .cache-1qqy8hr-StyledText-StyledText {
@@ -1677,79 +589,74 @@ exports[`Stepper > renders correctly with small size 1`] = `
 }
 
 <div
-    data-testid="testing"
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="ewvv9212 cache-wtj1t-StyledContainer-StyledBullet e11loam60"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-            fill-rule="evenodd"
-          />
-        </svg>
+        1
       </div>
       <span
-        class="e19ft7rb3 cache-oexo0e-StyledText-StyledText e13y3mga0"
+        class="ewvv9211 cache-jgp1og-StyledText-StyledText e13y3mga0"
       >
-        Step 1
+        step 1
       </span>
     </div>
     <div
-      class="cache-fkq8r-StyledLine e19ft7rb1"
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
     />
     <div
-      class="step cache-1jsjebb-StyledStepContainer e19ft7rb2"
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
       data-disabled="false"
       data-interactive="false"
       data-testid="stepper-step-2"
     >
       <div
-        class="e19ft7rb4 cache-a4tztd-StyledContainer-StyledBullet e11loam60"
+        class="ewvv9212 cache-sh93qw-StyledContainer-StyledBullet e11loam60"
       >
         2
       </div>
       <span
-        class="e19ft7rb3 cache-jgp1og-StyledText-StyledText e13y3mga0"
+        class="ewvv9211 cache-1qqy8hr-StyledText-StyledText e13y3mga0"
       >
-        Step 2
+        step 2
       </span>
     </div>
     <div
-      class="cache-n9n5oq-StyledLine e19ft7rb1"
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
     />
     <div
-      class="step cache-a2kdxv-StyledStepContainer e19ft7rb2"
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
       data-disabled="false"
       data-interactive="false"
       data-testid="stepper-step-3"
     >
       <div
-        class="e19ft7rb4 cache-ai6jq8-StyledContainer-StyledBullet e11loam60"
+        class="ewvv9212 cache-sh93qw-StyledContainer-StyledBullet e11loam60"
       >
         3
       </div>
       <span
-        class="e19ft7rb3 cache-1qqy8hr-StyledText-StyledText e13y3mga0"
+        class="ewvv9211 cache-1qqy8hr-StyledText-StyledText e13y3mga0"
       >
-        Step 3
+        step 3
       </span>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Stepper > renders correctly with step number in row 1`] = `
+exports[`Stepper handles clicks when not interactive 1`] = `
 <DocumentFragment>
-  .emotion-0 {
+  .cache-1r7ypev-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1765,36 +672,15 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 32px;
-}
-
-.cache-14h8w15-StyledContainer .e19ft7rb2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   gap: 4px;
-  white-space: nowrap;
 }
 
-.cache-14h8w15-StyledContainer .e19ft7rb1 {
-  height: 4px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.cache-vge63h-StyledStepContainer {
+.cache-yc54hi-Stack-StyledStepContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1806,41 +692,50 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
 }
 
-.cache-vge63h-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
   cursor: pointer;
 }
 
-.cache-vge63h-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb3 {
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
   text-decoration-thickness: 1px;
 }
 
-.cache-vge63h-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb4 {
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-vge63h-StyledStepContainer[data-disabled='true'] {
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-vge63h-StyledStepContainer[data-disabled='true']>.e19ft7rb3 {
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
   color: #b5b7bd;
 }
 
-.cache-vge63h-StyledStepContainer[data-disabled='true']>.e19ft7rb4 {
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
   border-color: #e9eaeb;
 }
 
-.cache-138dc3a-StyledContainer-StyledBullet {
+.cache-1hyzhym-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1857,94 +752,49 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   color: #ffffff;
   background: #8c40ef;
   border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
 }
 
-.emotion-0 .emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  gap: 8px;
-  white-space: nowrap;
+.cache-1dnbbhk-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
-.emotion-0 .emotion-11 {
-  height: 4px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
 }
 
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffffff;
-  background: #8c40ef;
-  border: 1px solid #8c40ef;
-  width: 32px;
-  height: 32px;
-  font-size: 16px;
-  margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-8 {
-  font-size: 16px;
-  font-family: Inter,Asap,sans-serif;
+.cache-oexo0e-StyledText-StyledText {
+  color: #3f4250;
+  font-size: 14px;
+  font-family: Inter,Asap;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 20px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
 }
 
-.emotion-10 {
+.cache-1bhfl5j-StyledLine {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1953,9 +803,16 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   border-radius: 4px;
   background-color: #e9eaeb;
   position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.emotion-10::after {
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1965,7 +822,376 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   background-color: #8c40ef;
 }
 
-.emotion-15 {
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-wtj1t-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-jgp1og-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-sh93qw-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1qqy8hr-StyledText-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-yc54hi-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-1hyzhym-StyledContainer-StyledBullet e11loam60"
+      >
+        <svg
+          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <span
+        class="ewvv9211 cache-oexo0e-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-wtj1t-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-jgp1og-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-sh93qw-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1qqy8hr-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper renders correctly with all selected 1`] = `
+<DocumentFragment>
+  .cache-1r7ypev-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-wt2n6u-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1986,8 +1212,155 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   height: 32px;
   font-size: 16px;
   margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1dnbbhk-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.cache-1pc9uia-StyledText-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1bhfl5j-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
@@ -2012,11 +1385,12 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   text-decoration-color: transparent;
 }
 
-.cache-a2kdxv-StyledStepContainer {
+.cache-1x8pfxd-Stack-StyledStepContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2028,41 +1402,50 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   -ms-flex-pack: start;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
 }
 
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
   cursor: pointer;
 }
 
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb3 {
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
   color: #222638;
   -webkit-text-decoration: underline #222638;
   text-decoration: underline #222638;
   text-decoration-thickness: 1px;
 }
 
-.cache-a2kdxv-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.e19ft7rb4 {
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
   box-shadow: none;
 }
 
-.cache-a2kdxv-StyledStepContainer[data-disabled='true'] {
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb3 {
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
   color: #b5b7bd;
 }
 
-.cache-a2kdxv-StyledStepContainer[data-disabled='true']>.e19ft7rb4 {
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
   background-color: #f3f3f4;
   box-shadow: none;
   color: #b5b7bd;
   border-color: #e9eaeb;
 }
 
-.cache-1ywl7j-StyledContainer-StyledBullet {
+.cache-nllwul-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2083,8 +1466,8 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   height: 32px;
   font-size: 16px;
   margin-top: 0;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
 }
 
 .cache-1ks5sbz-StyledText-StyledText {
@@ -2108,65 +1491,3103 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
 }
 
 <div
-    data-testid="testing"
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="step cache-yc54hi-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="ewvv9212 cache-wt2n6u-StyledContainer-StyledBullet e11loam60"
       >
-        <div
-          class="emotion-4 emotion-5 emotion-6"
+        <svg
+          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          1
-        </div>
-        <span
-          class="emotion-7 emotion-8 emotion-9"
-        >
-          <span>
-            Step 1
-          </span>
-        </span>
+          <path
+            clip-rule="evenodd"
+            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+            fill-rule="evenodd"
+          />
+        </svg>
       </div>
-      <div
-        class="emotion-10 emotion-11"
-      />
-      <div
-        class="emotion-2 emotion-3"
+      <span
+        class="ewvv9211 cache-1pc9uia-StyledText-StyledText e13y3mga0"
       >
-        <div
-          class="emotion-4 emotion-15 emotion-6"
-        >
-          2
-        </div>
-        <span
-          class="emotion-7 emotion-8 emotion-9"
-        >
-          <span>
-            Step 2
-          </span>
-        </span>
-      </div>
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
       <div
-        class="emotion-10 emotion-11"
-      />
-      <div
-        class="emotion-2 emotion-3"
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
       >
-        <div
-          class="emotion-4 emotion-15 emotion-6"
-        >
-          3
-        </div>
-        <span
-          class="emotion-7 emotion-8 emotion-9"
-        >
-          <span>
-            Step 3
-          </span>
-        </span>
+        2
       </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper > renders correctly with animation 1`] = `
+<DocumentFragment>
+  .cache-1r7ypev-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1gx27n9-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1bhfl5j-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-nllwul-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1ks5sbz-StyledText-StyledText {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper > renders correctly with default props 1`] = `
+<DocumentFragment>
+  .cache-1r7ypev-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1gx27n9-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1bhfl5j-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-nllwul-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1ks5sbz-StyledText-StyledText {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper renders correctly with disabled steps 1`] = `
+<DocumentFragment>
+  .cache-1r7ypev-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1gx27n9-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1bhfl5j-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-nllwul-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1ks5sbz-StyledText-StyledText {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="true"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="true"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper > renders correctly with selected prop 1`] = `
+<DocumentFragment>
+  .cache-1r7ypev-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-wt2n6u-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.emotion-7 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-7 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-10 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1bhfl5j-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1gx27n9-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-yc54hi-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-wt2n6u-StyledContainer-StyledBullet e11loam60"
+      >
+        <svg
+          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <span
+        class="ewvv9211 cache-1pc9uia-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-yc54hi-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-wt2n6u-StyledContainer-StyledBullet e11loam60"
+      >
+        <svg
+          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <span
+        class="ewvv9211 cache-1pc9uia-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper renders correctly with small size 1`] = `
+<DocumentFragment>
+  .cache-1r7ypev-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-wtj1t-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-jgp1og-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1bhfl5j-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-sh93qw-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1qqy8hr-StyledText-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-wtj1t-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="ewvv9211 cache-jgp1og-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-sh93qw-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-1qqy8hr-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-sh93qw-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1qqy8hr-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper renders correctly with step number in row 1`] = `
+<DocumentFragment>
+  .cache-1twlulu-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cache-1la4458-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1gx27n9-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1bhfl5j-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-nllwul-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1ks5sbz-StyledText-StyledText {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1twlulu-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-1la4458-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-lbi4x6-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-lbi4x6-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper > renders correctly with small size 1`] = `
+<DocumentFragment>
+  .cache-1r7ypev-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-yc54hi-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-1hyzhym-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1dnbbhk-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-8 {
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1bhfl5j-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-1bhfl5j-StyledLine[data-size='small'] {
+  height: 2px;
+}
+
+.cache-1bhfl5j-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-wtj1t-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-jgp1og-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-sh93qw-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1qqy8hr-StyledText-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1r7ypev-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-yc54hi-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-1hyzhym-StyledContainer-StyledBullet e11loam60"
+      >
+        <svg
+          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <span
+        class="ewvv9211 cache-oexo0e-StyledText-StyledText e13y3mga0"
+      >
+        Step 1
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-wtj1t-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-jgp1og-StyledText-StyledText e13y3mga0"
+      >
+        Step 2
+      </span>
+    </div>
+    <div
+      class="cache-1bhfl5j-StyledLine e19ft7rb0"
+      data-size="medium"
+    />
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-sh93qw-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1qqy8hr-StyledText-StyledText e13y3mga0"
+      >
+        Step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper > renders correctly with step number in row 1`] = `
+<DocumentFragment>
+  .cache-1xvwa0b-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1qol73-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1gx27n9-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1x8pfxd-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-nllwul-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1ks5sbz-StyledText-StyledText {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1xvwa0b-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-1qol73-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="step cache-1x8pfxd-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper renders correctly without separator with label at the right 1`] = `
+<DocumentFragment>
+  .cache-1xvwa0b-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.cache-1la4458-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #521094;
+  -webkit-text-decoration: underline #641cb3;
+  text-decoration: underline #641cb3;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-1la4458-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-svudva-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+  background-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1gx27n9-StyledText-StyledText {
+  color: #641cb3;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  -webkit-transition: text-decoration 300ms;
+  transition: text-decoration 300ms;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']) {
+  cursor: pointer;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9211 {
+  color: #222638;
+  -webkit-text-decoration: underline #222638;
+  text-decoration: underline #222638;
+  text-decoration-thickness: 1px;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-interactive='true']:not([data-disabled='true']):hover>.ewvv9212 {
+  box-shadow: none;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-disabled='true']>.ewvv9211 {
+  color: #b5b7bd;
+}
+
+.cache-lbi4x6-Stack-StyledStepContainer[data-disabled='true']>.ewvv9212 {
+  background-color: #f3f3f4;
+  box-shadow: none;
+  color: #b5b7bd;
+  border-color: #e9eaeb;
+}
+
+.cache-nllwul-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222638;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+  -webkit-transition: box-shadow 300ms;
+  transition: box-shadow 300ms;
+}
+
+.cache-1ks5sbz-StyledText-StyledText {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+<div
+    class="cache-1xvwa0b-StyledContainer e19ft7rb1"
+  >
+    <div
+      class="step cache-1la4458-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-1"
+    >
+      <div
+        class="ewvv9212 cache-svudva-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="ewvv9211 cache-1gx27n9-StyledText-StyledText e13y3mga0"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="step cache-lbi4x6-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-2"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 2
+      </span>
+    </div>
+    <div
+      class="step cache-lbi4x6-Stack-StyledStepContainer ewvv9210"
+      data-disabled="false"
+      data-interactive="false"
+      data-testid="stepper-step-3"
+    >
+      <div
+        class="ewvv9212 cache-nllwul-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="ewvv9211 cache-1ks5sbz-StyledText-StyledText e13y3mga0"
+      >
+        step 3
+      </span>
     </div>
   </div>
 </DocumentFragment>

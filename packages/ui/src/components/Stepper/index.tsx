@@ -1,18 +1,9 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import {
-  Children,
-  Fragment,
-  createContext,
-  isValidElement,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
-import { Bullet } from '../Bullet'
-import { Text } from '../Text'
+import { Children, Fragment, isValidElement } from 'react'
+import { Step } from './Step'
+import { StepperProvider, useStepper } from './StepperProvider'
 
 const LINE_HEIGHT_SIZES = {
   small: 2,
@@ -20,13 +11,6 @@ const LINE_HEIGHT_SIZES = {
 } as const
 
 type Temporal = 'previous' | 'next' | 'current'
-
-type ContextType = {
-  step: number
-  setStep: React.Dispatch<React.SetStateAction<number>>
-  interactive: boolean
-  size: 'medium' | 'small'
-}
 
 type StepperProps = {
   animated?: boolean
@@ -38,163 +22,13 @@ type StepperProps = {
    * Number of the active step
    */
   selected?: number
-  children: ReactNode[]
+  children: ReactNode
   className?: string
   labelPosition?: 'bottom' | 'right'
   size?: 'small' | 'medium'
   'data-testid'?: string
   separator?: boolean
 }
-
-type StepProps = {
-  onClick?: (index: number) => void
-  /**
-   * Automatically attribued by the parent Stepper
-   */
-  index?: number
-  /**
-   * Whether the step is disabled
-   */
-  disabled?: boolean
-  /**
-   * Title of the step
-   */
-  title?: ReactNode
-  /**
-   * @deprecated
-   * Do not use with Stepper.Step: use prop "title" instead
-   */
-  children?: ReactNode
-}
-
-type StepperContentProps = {
-  children: ReactNode
-  animated: boolean
-  separator: boolean
-}
-
-const State = createContext<ContextType>({
-  step: 0,
-  setStep: () => {},
-  interactive: false,
-  size: 'medium',
-})
-
-const loadingAnimation = keyframes`
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-`
-
-const StyledBullet = styled(Bullet)<{
-  size: 'small' | 'medium'
-  isActive: boolean
-}>`
-  margin-top: ${({ theme, size }) =>
-    size === 'small' ? theme.space['0.5'] : 0};
-  transition: all 300ms;
-
-  ${({ theme, isActive }) =>
-    isActive
-      ? `background-color: ${theme.colors.primary.backgroundStrongHover}; 
-      box-shadow: ${theme.shadows.focusPrimary};`
-      : null}
-`
-
-const StyledText = styled(Text)`
-  margin-top: ${({ theme }) => theme.space['1']};
-  transition: text-decoration-color 250ms ease-out;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  }
-`
-
-const StyledStepContainer = styled.div<{
-  isActive: boolean
-  isDone: boolean
-  'data-disabled': boolean
-  'data-interactive': boolean
-}>`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  transition: all 300ms;
-
-  &[data-interactive='true']:not([data-disabled='true']) {
-    cursor: pointer;
-
-    &:hover {
-      & > ${StyledText} {
-        color: ${({ theme, isActive }) =>
-          isActive
-            ? theme.colors.primary.textHover
-            : theme.colors.neutral.textHover};
-        text-decoration: underline
-          ${({ theme, isActive }) =>
-            isActive
-              ? theme.colors.primary.text
-              : theme.colors.neutral.textHover};
-        text-decoration-thickness: 1px;
-      }
-
-      & > ${StyledBullet} {
-        box-shadow: ${({ theme, isDone, isActive }) =>
-          isDone || isActive ? theme.shadows.focusPrimary : 'none'};
-      }
-    }
-  }
-
-  &[data-disabled='true'] {
-    cursor: not-allowed;
-
-    & > ${StyledText} {
-      color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    }
-
-    & > ${StyledBullet} {
-      background-color: ${({ theme }) =>
-        theme.colors.neutral.backgroundDisabled};
-      box-shadow: none;
-      color: ${({ theme }) => theme.colors.neutral.textDisabled};
-      border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    }
-  }
-`
-
-const loadingStyle = css`
-  animation: ${loadingAnimation} 1s linear infinite;
-`
-
-const StyledLine = styled.div<{
-  temporal: Temporal
-  animated: boolean
-}>`
-  border-radius: ${({ theme }) => theme.radii.default};
-  flex-grow: 1;
-  border-radius: ${({ theme }) => theme.radii.default};
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-  position: relative;
-
-  ::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    border-radius: ${({ theme }) => theme.radii.default};
-    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
-    ${({ temporal }) => temporal === 'previous' && `width: 100%;`}
-    ${({ temporal, animated }) =>
-      temporal === 'current' && animated && loadingStyle}
-  }
-  }
-`
 
 const StyledContainer = styled.div<{
   size: 'small' | 'medium'
@@ -212,125 +46,53 @@ const StyledContainer = styled.div<{
 
     return theme.space['4']
   }};
+`
 
-  ${StyledStepContainer} {
-    display: flex;
-    flex-direction: ${({ labelPosition }) =>
-      labelPosition === 'bottom' ? 'column' : 'row'};
-    align-items: ${({ labelPosition }) =>
-      labelPosition === 'bottom' ? 'center' : 'baseline'};
-    gap: ${({ theme, labelPosition }) =>
-      labelPosition === 'bottom' ? theme.space['0.5'] : theme.space['1']};
-    white-space: nowrap;
+const loadingAnimation = keyframes`
+  from {
+    width: 0;
   }
-
-  ${StyledLine} {
-    height: ${({ size }) => LINE_HEIGHT_SIZES[size]}px;
-    margin-top: ${({ theme }) => theme.space['2']};
-    margin-bottom: ${({ theme }) => theme.space['2']};
+  to {
+    width: 100%;
   }
 `
 
-const Step = ({
-  index = 0,
-  onClick,
-  disabled = false,
-  title,
-  children,
-}: StepProps) => {
-  const currentState = useContext(State)
-  const isActive = index === currentState.step
-  const isDone = index < currentState.step
+const loadingStyle = css`
+  animation: ${loadingAnimation} 1s linear infinite;
+`
 
-  const textVariant = useMemo(() => {
-    if (currentState.size === 'medium') {
-      return isActive ? 'bodyStrong' : 'body'
+const StyledLine = styled.div<{
+  temporal: Temporal
+  animated: boolean
+  'data-size': 'small' | 'medium'
+}>`
+    border-radius: ${({ theme }) => theme.radii.default};
+    flex-grow: 1;
+    border-radius: ${({ theme }) => theme.radii.default};
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+    position: relative;
+    height: ${LINE_HEIGHT_SIZES.medium}px;
+    margin-top: ${({ theme }) => theme.space['2']};
+    margin-bottom: ${({ theme }) => theme.space['2']};
+
+    &[data-size='small'] {
+      height: ${LINE_HEIGHT_SIZES.small}px;
     }
-
-    return isActive ? 'bodySmallStrong' : 'bodySmall'
-  }, [currentState.size, isActive])
-
-  return (
-    <StyledStepContainer
-      className="step"
-      data-interactive={currentState.interactive && isDone}
-      isActive={isActive}
-      isDone={isDone}
-      onClick={() => {
-        if (currentState.interactive && !disabled) {
-          if (index < currentState.step) {
-            currentState.setStep(index)
-          }
-          onClick?.(index)
-        }
-      }}
-      data-disabled={disabled}
-      data-testid={`stepper-step-${index}`}
-    >
-      {isDone && !disabled ? (
-        <StyledBullet
-          sentiment="primary"
-          icon="check"
-          prominence="strong"
-          size={currentState.size}
-          isActive={isActive}
-        />
-      ) : (
-        <StyledBullet
-          sentiment={isDone || isActive ? 'primary' : 'neutral'}
-          text={index.toString()}
-          prominence="strong"
-          size={currentState.size}
-          isActive={isActive}
-        />
-      )}
-      <StyledText
-        as="span"
-        variant={textVariant}
-        prominence={isDone || isActive ? 'default' : 'weak'}
-        sentiment={isActive ? 'primary' : 'neutral'}
-      >
-        {title ?? children}
-      </StyledText>
-    </StyledStepContainer>
-  )
-}
-
-const StepperContent = ({
-  children,
-  animated,
-  separator,
-}: StepperContentProps) => {
-  const cleanChildren = Children.toArray(children).filter(isValidElement)
-  const currentState = useContext(State)
-  const lastStep = Children.count(cleanChildren) - 1
-
-  return Children.map(cleanChildren, (child, index) => {
-    const getTemporal = () => {
-      if (currentState.step > index + 1) return 'previous'
-
-      if (currentState.step === index + 1) return 'current'
-
-      return 'next'
+    ::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      border-radius: ${({ theme }) => theme.radii.default};
+      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      ${({ temporal }) => temporal === 'previous' && `width: 100%;`}
+      ${({ temporal, animated }) =>
+        temporal === 'current' && animated && loadingStyle}
     }
-    const isNotLast = index < lastStep
-    const temporal = getTemporal()
+    }
+  `
 
-    return (
-      // eslint-disable-next-line react/no-array-index-key
-      <Fragment key={`creation-progress-${index}`}>
-        <Step index={index + 1} {...(child.props as object)} />
-
-        {isNotLast && separator ? (
-          <StyledLine temporal={temporal} animated={animated} />
-        ) : null}
-      </Fragment>
-    )
-  })
-}
-/**
- * Stepper component to show the progress of a process in a linear way.
- */
 export const Stepper = ({
   children,
   interactive = false,
@@ -342,15 +104,18 @@ export const Stepper = ({
   'data-testid': dataTestId,
   separator = true,
 }: StepperProps) => {
-  const [step, setStep] = useState(selected)
-  const value = useMemo(
-    () => ({ step, setStep, interactive, size }),
-    [step, interactive, size],
-  )
-  useEffect(() => setStep(selected), [selected])
+  const cleanChildren = Children.toArray(children).filter(isValidElement)
+  const currentState = useStepper()
+  const lastStep = Children.count(cleanChildren) - 1
 
   return (
-    <State.Provider value={value}>
+    <StepperProvider
+      interactive={interactive}
+      selected={selected}
+      animated={animated}
+      labelPosition={labelPosition}
+      size={size}
+    >
       <StyledContainer
         className={className}
         data-testid={dataTestId}
@@ -358,11 +123,34 @@ export const Stepper = ({
         size={size}
         separator={separator}
       >
-        <StepperContent animated={animated} separator={separator}>
-          {children}
-        </StepperContent>
+        {Children.map(cleanChildren, (child, index) => {
+          const getTemporal = () => {
+            if (currentState.step > index + 1) return 'previous'
+
+            if (currentState.step === index + 1) return 'current'
+
+            return 'next'
+          }
+          const isNotLast = index < lastStep
+          const temporal = getTemporal()
+
+          return (
+            // eslint-disable-next-line react/no-array-index-key
+            <Fragment key={`creation-progress-${index}`}>
+              <Step index={index + 1} {...(child.props as object)} />
+
+              {isNotLast && separator ? (
+                <StyledLine
+                  temporal={temporal}
+                  animated={animated}
+                  data-size={currentState.size}
+                />
+              ) : null}
+            </Fragment>
+          )
+        })}
       </StyledContainer>
-    </State.Provider>
+    </StepperProvider>
   )
 }
 
