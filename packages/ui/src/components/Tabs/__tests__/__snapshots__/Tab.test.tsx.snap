@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Tab renders correctly 1`] = `
+exports[`Tab > renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1a7bljo-StyledTabButton {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,57 +44,57 @@ exports[`Tab renders correctly 1`] = `
   line-height: 24px;
 }
 
-.cache-1a7bljo-StyledTabButton:hover,
-.cache-1a7bljo-StyledTabButton:active,
-.cache-1a7bljo-StyledTabButton:focus {
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1a7bljo-StyledTabButton:focus-visible {
+.emotion-0:focus-visible {
   outline: auto;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-selected='true'] {
+.emotion-0[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-selected='true'] .e1hzf7cr3 {
+.emotion-0[aria-selected='true'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.emotion-0[aria-disabled='false']:not(:disabled):hover,
+.emotion-0[aria-disabled='false']:not(:disabled):focus,
+.emotion-0[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='true'],
-.cache-1a7bljo-StyledTabButton:disabled {
+.emotion-0[aria-disabled='true'],
+.emotion-0:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -117,7 +117,7 @@ exports[`Tab renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1l6mcrb-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -140,28 +140,32 @@ exports[`Tab renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-<button
-    aria-disabled="false"
-    aria-selected="false"
-    class="cache-1a7bljo-StyledTabButton e1hzf7cr0"
-    data-is-selected="false"
-    role="tab"
-    type="button"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-ymc80m-Stack ehpbis70"
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="emotion-0 emotion-1"
+      data-is-selected="false"
+      role="tab"
+      type="button"
     >
       <div
-        class="cache-1l6mcrb-Stack ehpbis70"
-      />
-    </div>
-  </button>
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-3"
+        />
+      </div>
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
+exports[`Tab > renders correctly with counter, badge and subtitle 1`] = `
 <DocumentFragment>
-  .cache-1a7bljo-StyledTabButton {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -203,57 +207,57 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   line-height: 24px;
 }
 
-.cache-1a7bljo-StyledTabButton:hover,
-.cache-1a7bljo-StyledTabButton:active,
-.cache-1a7bljo-StyledTabButton:focus {
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1a7bljo-StyledTabButton:focus-visible {
+.emotion-0:focus-visible {
   outline: auto;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-selected='true'] {
+.emotion-0[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-selected='true'] .e1hzf7cr3 {
+.emotion-0[aria-selected='true'] .emotion-14 {
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.emotion-0[aria-disabled='false']:not(:disabled):hover,
+.emotion-0[aria-disabled='false']:not(:disabled):focus,
+.emotion-0[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-6,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-6,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-6 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-14,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-14,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-14 {
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='true'],
-.cache-1a7bljo-StyledTabButton:disabled {
+.emotion-0[aria-disabled='true'],
+.emotion-0:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -276,7 +280,7 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1l6mcrb-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,7 +303,7 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-vwnmew-StyledText-StyledSpan-StyledBadge {
+.emotion-8 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -338,7 +342,7 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   margin-left: 8px;
 }
 
-.cache-1hjfwlj-BadgeContainer {
+.emotion-10 {
   margin-left: 8px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -346,7 +350,7 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   display: flex;
 }
 
-.cache-1tfad1c-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -369,7 +373,7 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ixnjme-StyledText-StyledText {
+.emotion-15 {
   color: #727683;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -381,48 +385,52 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   text-decoration: none;
 }
 
-<button
-    aria-disabled="false"
-    aria-selected="false"
-    class="cache-1a7bljo-StyledTabButton e1hzf7cr0"
-    data-is-selected="false"
-    role="tab"
-    type="button"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-ymc80m-Stack ehpbis70"
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="emotion-0 emotion-1"
+      data-is-selected="false"
+      role="tab"
+      type="button"
     >
       <div
-        class="cache-1l6mcrb-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <span
-          class="e1hzf7cr4 ej33bna0 cache-vwnmew-StyledText-StyledSpan-StyledBadge e13y3mga0"
+        <div
+          class="emotion-4 emotion-3"
         >
-          1
-        </span>
-        <span
-          class="cache-1hjfwlj-BadgeContainer e1hzf7cr1"
+          <span
+            class="emotion-6 emotion-7 emotion-8 emotion-9"
+          >
+            1
+          </span>
+          <span
+            class="emotion-10 emotion-11"
+          >
+            badge
+          </span>
+        </div>
+        <div
+          class="emotion-12 emotion-3"
         >
-          badge
-        </span>
+          <span
+            class="emotion-14 emotion-15 emotion-9"
+          >
+            subtitle
+          </span>
+        </div>
       </div>
-      <div
-        class="cache-1tfad1c-Stack ehpbis70"
-      >
-        <span
-          class="e1hzf7cr3 cache-ixnjme-StyledText-StyledText e13y3mga0"
-        >
-          subtitle
-        </span>
-      </div>
-    </div>
-  </button>
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Tab renders correctly with subtitle 1`] = `
+exports[`Tab > renders correctly with subtitle 1`] = `
 <DocumentFragment>
-  .cache-1a7bljo-StyledTabButton {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -464,57 +472,57 @@ exports[`Tab renders correctly with subtitle 1`] = `
   line-height: 24px;
 }
 
-.cache-1a7bljo-StyledTabButton:hover,
-.cache-1a7bljo-StyledTabButton:active,
-.cache-1a7bljo-StyledTabButton:focus {
+.emotion-0:hover,
+.emotion-0:active,
+.emotion-0:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1a7bljo-StyledTabButton:focus-visible {
+.emotion-0:focus-visible {
   outline: auto;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-selected='true'] {
+.emotion-0[aria-selected='true'] {
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-selected='true'] .e1hzf7cr3 {
+.emotion-0[aria-selected='true'] .emotion-8 {
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.emotion-0[aria-disabled='false']:not(:disabled):hover,
+.emotion-0[aria-disabled='false']:not(:disabled):focus,
+.emotion-0[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #641cb3;
   border-bottom-color: #8c40ef;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
   background-color: #f1eefc;
   border-color: #f1eefc;
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
-.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+.emotion-0[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .emotion-8,
+.emotion-0[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .emotion-8,
+.emotion-0[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .emotion-8 {
   color: #641cb3;
 }
 
-.cache-1a7bljo-StyledTabButton[aria-disabled='true'],
-.cache-1a7bljo-StyledTabButton:disabled {
+.emotion-0[aria-disabled='true'],
+.emotion-0:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -537,7 +545,7 @@ exports[`Tab renders correctly with subtitle 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1l6mcrb-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -560,7 +568,7 @@ exports[`Tab renders correctly with subtitle 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1tfad1c-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -583,7 +591,7 @@ exports[`Tab renders correctly with subtitle 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ixnjme-StyledText-StyledText {
+.emotion-9 {
   color: #727683;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -595,30 +603,34 @@ exports[`Tab renders correctly with subtitle 1`] = `
   text-decoration: none;
 }
 
-<button
-    aria-disabled="false"
-    aria-selected="false"
-    class="cache-1a7bljo-StyledTabButton e1hzf7cr0"
-    data-is-selected="false"
-    role="tab"
-    type="button"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-ymc80m-Stack ehpbis70"
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="emotion-0 emotion-1"
+      data-is-selected="false"
+      role="tab"
+      type="button"
     >
       <div
-        class="cache-1l6mcrb-Stack ehpbis70"
-      />
-      <div
-        class="cache-1tfad1c-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <span
-          class="e1hzf7cr3 cache-ixnjme-StyledText-StyledText e13y3mga0"
+        <div
+          class="emotion-4 emotion-3"
+        />
+        <div
+          class="emotion-6 emotion-3"
         >
-          test
-        </span>
+          <span
+            class="emotion-8 emotion-9 emotion-10"
+          >
+            test
+          </span>
+        </div>
       </div>
-    </div>
-  </button>
+    </button>
+  </div>
 </DocumentFragment>
 `;

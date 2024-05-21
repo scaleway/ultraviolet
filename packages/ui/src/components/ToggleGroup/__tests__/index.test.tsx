@@ -1,7 +1,7 @@
-import { describe, expect, test } from '@jest/globals'
 import { render } from '@testing-library/react'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test } from 'vitest'
 import { ToggleGroup } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('ToggleGroup', () => {
   test('renders correctly', () =>

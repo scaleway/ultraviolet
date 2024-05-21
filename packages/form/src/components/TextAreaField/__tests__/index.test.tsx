@@ -1,26 +1,24 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { TextAreaField } from '..'
 import { Submit } from '../..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
 
 describe('TextAreaField', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(
       <TextAreaField label="Test" name="test" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should render correctly generated', async () => {
-    const onSubmit = jest.fn<(values: { test: string }) => void>()
+    const onSubmit = vi.fn<[values: { test: string }], void>()
 
-    renderWithTheme(
-      <Form onRawSubmit={onSubmit} errors={mockErrors}>
+    const { asFragment } = renderWithTheme(
+      <Form onRawSubmit={onSubmit} errors={mockFormErrors}>
         <TextAreaField label="Test" name="test" required clearable />
         <Submit>Submit</Submit>
       </Form>,
@@ -38,5 +36,6 @@ describe('TextAreaField', () => {
         test: 'This is an example',
       })
     })
+    expect(asFragment()).toMatchSnapshot()
   })
 })

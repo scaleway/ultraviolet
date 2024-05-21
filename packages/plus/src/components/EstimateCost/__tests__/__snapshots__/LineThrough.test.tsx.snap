@@ -1,16 +1,20 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`EstimateCost - LineThrough render with basic values 1`] = `
+exports[`EstimateCost - LineThrough > render with basic values 1`] = `
 <DocumentFragment>
-  .cache-e3wpgr-LineThrough-LineThrough {
+  .emotion-0 {
   text-decoration-line: line-through;
   text-decoration-color: #7c5400;
 }
 
-<span
-    class="cache-e3wpgr-LineThrough-LineThrough e1d1k6i0"
+<div
+    data-testid="testing"
   >
-    This is a beta
-  </span>
+    <span
+      class="emotion-0 emotion-1"
+    >
+      This is a beta
+    </span>
+  </div>
 </DocumentFragment>
 `;

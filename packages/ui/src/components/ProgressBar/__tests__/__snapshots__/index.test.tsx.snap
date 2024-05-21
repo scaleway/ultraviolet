@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ProgressBar renders correctly when value < 0 1`] = `
+exports[`ProgressBar > renders correctly when value < 0 1`] = `
 <DocumentFragment>
-  .cache-1vlay40-StyledProgressContainer {
+  .emotion-0 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -12,7 +12,7 @@ exports[`ProgressBar renders correctly when value < 0 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-j2qx9g-StyledFilled {
+.emotion-2 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -25,22 +25,26 @@ exports[`ProgressBar renders correctly when value < 0 1`] = `
 }
 
 <div
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="-250"
-    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
-    role="progressbar"
+    data-testid="testing"
   >
     <div
-      class="cache-j2qx9g-StyledFilled e1b95x8r0"
-    />
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="-250"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ProgressBar renders correctly when value > 100 1`] = `
+exports[`ProgressBar > renders correctly when value > 100 1`] = `
 <DocumentFragment>
-  .cache-1vlay40-StyledProgressContainer {
+  .emotion-0 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -50,7 +54,7 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-acgzp-StyledFilled {
+.emotion-2 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -63,22 +67,26 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
 }
 
 <div
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="250"
-    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
-    role="progressbar"
+    data-testid="testing"
   >
     <div
-      class="cache-acgzp-StyledFilled e1b95x8r0"
-    />
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="250"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ProgressBar renders danger 1`] = `
+exports[`ProgressBar > renders danger 1`] = `
 <DocumentFragment>
-  .cache-1vlay40-StyledProgressContainer {
+  .emotion-0 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -88,7 +96,7 @@ exports[`ProgressBar renders danger 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-xfs6x2-StyledFilled {
+.emotion-2 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -101,22 +109,26 @@ exports[`ProgressBar renders danger 1`] = `
 }
 
 <div
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="40"
-    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
-    role="progressbar"
+    data-testid="testing"
   >
     <div
-      class="cache-xfs6x2-StyledFilled e1b95x8r0"
-    />
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="40"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ProgressBar renders info 1`] = `
+exports[`ProgressBar > renders info 1`] = `
 <DocumentFragment>
-  .cache-1vlay40-StyledProgressContainer {
+  .emotion-0 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -126,7 +138,7 @@ exports[`ProgressBar renders info 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-16tzv7z-StyledFilled {
+.emotion-2 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -139,22 +151,26 @@ exports[`ProgressBar renders info 1`] = `
 }
 
 <div
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="40"
-    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
-    role="progressbar"
+    data-testid="testing"
   >
     <div
-      class="cache-16tzv7z-StyledFilled e1b95x8r0"
-    />
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="40"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ProgressBar renders primary 1`] = `
+exports[`ProgressBar > renders primary 1`] = `
 <DocumentFragment>
-  .cache-1vlay40-StyledProgressContainer {
+  .emotion-0 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -164,7 +180,7 @@ exports[`ProgressBar renders primary 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-z27177-StyledFilled {
+.emotion-2 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -177,20 +193,24 @@ exports[`ProgressBar renders primary 1`] = `
 }
 
 <div
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="40"
-    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
-    role="progressbar"
+    data-testid="testing"
   >
     <div
-      class="cache-z27177-StyledFilled e1b95x8r0"
-    />
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="40"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ProgressBar renders progression 1`] = `
+exports[`ProgressBar > renders progression 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -202,7 +222,7 @@ exports[`ProgressBar renders progression 1`] = `
   }
 }
 
-.cache-1vlay40-StyledProgressContainer {
+.emotion-0 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -212,7 +232,7 @@ exports[`ProgressBar renders progression 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-9xmuru-StyledProgress {
+.emotion-2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -232,22 +252,26 @@ exports[`ProgressBar renders progression 1`] = `
 }
 
 <div
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="0"
-    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
-    role="progressbar"
+    data-testid="testing"
   >
     <div
-      class="cache-9xmuru-StyledProgress e1b95x8r1"
-    />
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="0"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ProgressBar renders success 1`] = `
+exports[`ProgressBar > renders success 1`] = `
 <DocumentFragment>
-  .cache-1vlay40-StyledProgressContainer {
+  .emotion-0 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -257,7 +281,7 @@ exports[`ProgressBar renders success 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-1ej1eqr-StyledFilled {
+.emotion-2 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -270,22 +294,26 @@ exports[`ProgressBar renders success 1`] = `
 }
 
 <div
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="40"
-    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
-    role="progressbar"
+    data-testid="testing"
   >
     <div
-      class="cache-1ej1eqr-StyledFilled e1b95x8r0"
-    />
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="40"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ProgressBar renders warning 1`] = `
+exports[`ProgressBar > renders warning 1`] = `
 <DocumentFragment>
-  .cache-1vlay40-StyledProgressContainer {
+  .emotion-0 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -295,7 +323,7 @@ exports[`ProgressBar renders warning 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-curehl-StyledFilled {
+.emotion-2 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -308,15 +336,19 @@ exports[`ProgressBar renders warning 1`] = `
 }
 
 <div
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="40"
-    class="cache-1vlay40-StyledProgressContainer e1b95x8r2"
-    role="progressbar"
+    data-testid="testing"
   >
     <div
-      class="cache-curehl-StyledFilled e1b95x8r0"
-    />
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="40"
+      class="emotion-0 emotion-1"
+      role="progressbar"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

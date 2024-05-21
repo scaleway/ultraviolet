@@ -1,11 +1,11 @@
-import { describe, expect, it } from '@jest/globals'
 import { act, screen } from '@testing-library/react'
+import { renderWithForm } from '@utils/test'
+import { describe, expect, it } from 'vitest'
 import { KeyValueField } from '..'
-import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
 
 describe('KeyValueField', () => {
-  it('should render with default props', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  it('should render with default props', () => {
+    const { asFragment } = renderWithForm(
       <KeyValueField
         name="test"
         inputKey={{
@@ -21,23 +21,21 @@ describe('KeyValueField', () => {
             'This is a tooltip when the max size is reached',
         }}
       />,
-      {
-        transform: () => {
-          const addButton = screen.getByTestId('add-button')
-          act(() => {
-            addButton.click()
-          })
+    )
+    const addButton = screen.getByTestId('add-button')
+    act(() => {
+      addButton.click()
+    })
 
-          const removeButton = screen.getByTestId('remove-button-0')
-          act(() => {
-            removeButton.click()
-          })
-        },
-      },
-    ))
+    const removeButton = screen.getByTestId('remove-button-0')
+    act(() => {
+      removeButton.click()
+    })
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render with default props & max size', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  it('should render with default props & max size', () => {
+    const { asFragment } = renderWithForm(
       <KeyValueField
         name="test"
         inputKey={{
@@ -54,10 +52,12 @@ describe('KeyValueField', () => {
         }}
         maxSize={42}
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  it('should render with default props in readonly mode', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  it('should render with default props in readonly mode', () => {
+    const { asFragment } = renderWithForm(
       <KeyValueField
         name="test"
         inputKey={{
@@ -74,11 +74,9 @@ describe('KeyValueField', () => {
         }}
         readonly
       />,
-      {
-        transform: () => {
-          const addButton = screen.getByTestId('add-button')
-          expect(addButton).toBeDisabled()
-        },
-      },
-    ))
+    )
+    const addButton = screen.getByTestId('add-button')
+    expect(addButton).toBeDisabled()
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

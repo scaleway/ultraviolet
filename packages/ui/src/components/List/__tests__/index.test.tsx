@@ -1,14 +1,11 @@
 import { ThemeProvider } from '@emotion/react'
-import { describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { List } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 import defaultTheme from '../../../theme'
 
 type WrapperProps = {
@@ -52,8 +49,15 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 )
 
 describe('List', () => {
+  beforeEach(() => {
+    vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+  })
+
+  afterEach(() => {
+    vi.spyOn(global.Math, 'random').mockRestore()
+  })
   test('Should throw an error', () => {
-    const consoleErrMock = jest
+    const consoleErrMock = vi
       .spyOn(console, 'error')
       .mockImplementation(() => {})
     expect(() => {
@@ -180,8 +184,8 @@ describe('List', () => {
       </List>,
     ))
 
-  test('Should render correctly with selectable then click on first row then uncheck all, then check all', () =>
-    shouldMatchEmotionSnapshot(
+  test('Should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
+    const { asFragment } = renderWithTheme(
       <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
@@ -196,34 +200,32 @@ describe('List', () => {
           </List.Row>
         ))}
       </List>,
-      {
-        transform: async () => {
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
+    )
+    const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
-          const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
-          const allCheckbox = checkboxes.find(({ value }) => value === 'all')
-          expect(firstRowCheckbox).toBeInTheDocument()
-          expect(allCheckbox).toBeInTheDocument()
-          if (!firstRowCheckbox) {
-            throw new Error('First checkbox is not defined')
-          }
-          if (!allCheckbox) {
-            throw new Error('Select all checkbox is not defined')
-          }
-          await userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).toBeChecked()
-          await userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
-          await userEvent.click(firstRowCheckbox)
-          await userEvent.click(allCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
-          await userEvent.click(allCheckbox)
-          expect(firstRowCheckbox).toBeChecked()
-        },
-      },
-    ))
+    const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
+    const allCheckbox = checkboxes.find(({ value }) => value === 'all')
+    expect(firstRowCheckbox).toBeInTheDocument()
+    expect(allCheckbox).toBeInTheDocument()
+    if (!firstRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+    if (!allCheckbox) {
+      throw new Error('Select all checkbox is not defined')
+    }
+    await userEvent.click(firstRowCheckbox)
+    expect(firstRowCheckbox).toBeChecked()
+    await userEvent.click(firstRowCheckbox)
+    expect(firstRowCheckbox).not.toBeChecked()
+    await userEvent.click(firstRowCheckbox)
+    await userEvent.click(allCheckbox)
+    expect(firstRowCheckbox).not.toBeChecked()
+    await userEvent.click(allCheckbox)
+    expect(firstRowCheckbox).toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('Should render correctly with sort then click', () => {
+  test('Should render correctly with sort then click', async () => {
     const LocalControlValue = ({
       children,
     }: {
@@ -253,7 +255,7 @@ describe('List', () => {
       return <div>{children({ value, setValue })}</div>
     }
 
-    return shouldMatchEmotionSnapshot(
+    const { asFragment } = renderWithTheme(
       <LocalControlValue>
         {({ value, setValue }) => (
           <List
@@ -281,31 +283,27 @@ describe('List', () => {
           </List>
         )}
       </LocalControlValue>,
+    )
+    const listHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
+      'button',
       {
-        transform: async () => {
-          const listHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
-            'button',
-            {
-              queryFallbacks: true,
-            },
-          )
-          expect(listHeaderCells).toHaveLength(columns.length)
-
-          expect(listHeaderCells).toHaveLength(columns.length)
-          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-          await userEvent.click(listHeaderCells[0])
-          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
-          fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
-          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(
-            'descending',
-          )
-          fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
-          await userEvent.click(listHeaderCells[1])
-          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-          expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
-        },
+        queryFallbacks: true,
       },
     )
+
+    expect(listHeaderCells).toHaveLength(columns.length)
+
+    expect(listHeaderCells).toHaveLength(columns.length)
+    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+    await userEvent.click(listHeaderCells[0])
+    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
+    fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
+    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('descending')
+    fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
+    await userEvent.click(listHeaderCells[1])
+    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+    expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test('Should render correctly with selectable but then change theme', () => {
@@ -366,8 +364,8 @@ describe('List', () => {
     )
   })
 
-  test('Should render correctly with isExpandable rows then click', () =>
-    shouldMatchEmotionSnapshot(
+  test('Should render correctly with isExpandable rows then click', async () => {
+    const { asFragment } = renderWithTheme(
       <List columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -381,16 +379,14 @@ describe('List', () => {
           ),
         )}
       </List>,
-      {
-        transform: async () => {
-          await userEvent.click(screen.getAllByRole('button')[0])
-          await userEvent.click(screen.getAllByRole('button')[0])
-        },
-      },
-    ))
+    )
+    await userEvent.click(screen.getAllByRole('button')[0])
+    await userEvent.click(screen.getAllByRole('button')[0])
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('Should render correctly with preventClick cell then click but event is prevented', () =>
-    shouldMatchEmotionSnapshot(
+  test('Should render correctly with preventClick cell then click but event is prevented', async () => {
+    const { asFragment } = renderWithTheme(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
@@ -402,16 +398,14 @@ describe('List', () => {
           </List.Row>
         ))}
       </List>,
-      {
-        transform: async () => {
-          const cell = screen.getByText(data[0].columnE)
-          await userEvent.click(cell)
-        },
-      },
-    ))
+    )
+    const cell = screen.getByText(data[0].columnE)
+    await userEvent.click(cell)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('Should render correctly with isExpandable and autoClose rows then click', () =>
-    shouldMatchEmotionSnapshot(
+  test('Should render correctly with isExpandable and autoClose rows then click', async () => {
+    const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -425,18 +419,16 @@ describe('List', () => {
           ),
         )}
       </List>,
-      {
-        transform: async () => {
-          const buttons = screen.getAllByRole('button')
-          await userEvent.click(buttons[0])
-          await userEvent.click(buttons[0])
-          await userEvent.click(buttons[0])
-          await userEvent.click(buttons[1])
-        },
-      },
-    ))
+    )
+    const buttons = screen.getAllByRole('button')
+    await userEvent.click(buttons[0])
+    await userEvent.click(buttons[0])
+    await userEvent.click(buttons[0])
+    await userEvent.click(buttons[1])
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('Should render correctly with bad sort value', () =>
+  test('Should render correctly with bad sort value', () => {
     shouldMatchEmotionSnapshot(
       <List
         // @ts-expect-error Wrong value used
@@ -455,7 +447,8 @@ describe('List', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 
   test('Should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
     const selectedIds = ['1']
@@ -550,8 +543,8 @@ describe('List', () => {
     )
   })
 
-  test('Should expand a row by pressing Space', () =>
-    shouldMatchEmotionSnapshot(
+  test('Should expand a row by pressing Space', () => {
+    const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -565,27 +558,25 @@ describe('List', () => {
           ),
         )}
       </List>,
-      {
-        transform: () => {
-          const rows = screen.getAllByRole('button')
-          const firstRow = rows[0]
-          expect(firstRow).toHaveAttribute('tabIndex', '0')
-          // Testing expanding by pressing space key
-          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-          fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
-          expect(firstRow).toHaveAttribute('aria-expanded', 'true')
-          // Testing collapsing by pressing space key
-          fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
-          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-          // Testing another key
-          fireEvent.keyDown(firstRow, { charCode: 65, code: 'KeyA', key: 'a' })
-          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-        },
-      },
-    ))
+    )
+    const rows = screen.getAllByRole('button')
+    const firstRow = rows[0]
+    expect(firstRow).toHaveAttribute('tabIndex', '0')
+    // Testing expanding by pressing space key
+    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+    fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
+    expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+    // Testing collapsing by pressing space key
+    fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
+    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+    // Testing another key
+    fireEvent.keyDown(firstRow, { charCode: 65, code: 'KeyA', key: 'a' })
+    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('Should not collapse a row by clicking on expandable content', () =>
-    shouldMatchEmotionSnapshot(
+  test('Should not collapse a row by clicking on expandable content', async () => {
+    const { asFragment } = renderWithTheme(
       <List autoCollapse columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
@@ -599,23 +590,21 @@ describe('List', () => {
           ),
         )}
       </List>,
-      {
-        transform: async () => {
-          const rows = screen.getAllByRole('button')
-          const firstRow = rows[0]
-          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-          fireEvent.click(firstRow)
-          expect(firstRow).toHaveAttribute('aria-expanded', 'true')
-          const expandableContent = await within(firstRow).findByText(
-            'Row 1 expandable content',
-          )
-          fireEvent.click(expandableContent)
-          expect(firstRow).toHaveAttribute('aria-expanded', 'true')
-        },
-      },
-    ))
+    )
+    const rows = screen.getAllByRole('button')
+    const firstRow = rows[0]
+    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+    fireEvent.click(firstRow)
+    expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+    const expandableContent = await within(firstRow).findByText(
+      'Row 1 expandable content',
+    )
+    fireEvent.click(expandableContent)
+    expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('Should render correctly with info', () =>
+  test('Should render correctly with info', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns.map(column => ({ ...column, info: 'example' }))}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -628,5 +617,6 @@ describe('List', () => {
           </List.Row>
         ))}
       </List>,
-    ))
+    )
+  })
 })

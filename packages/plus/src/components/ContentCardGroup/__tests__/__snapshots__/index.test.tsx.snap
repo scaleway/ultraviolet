@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ContentCardGroup renders correctly with a children 1`] = `
+exports[`ContentCardGroup > renders correctly with a children 1`] = `
 <DocumentFragment>
-  .cache-1b3nnm9-Stack-StyledWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,38 +29,65 @@ exports[`ContentCardGroup renders correctly with a children 1`] = `
   min-width: 0;
 }
 
-.cache-xlsc0t-StyledWrapper {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  border: 1px solid #d9dadd;
+  background: #ffffff;
+  min-width: 0;
+}
+
+.emotion-2 {
   padding: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
 }
 
-.cache-xlsc0t-StyledWrapper:not(:first-child) {
+.emotion-2:not(:first-child) {
   border-top: 1px solid #d9dadd;
 }
 
-.cache-xlsc0t-StyledWrapper:first-child {
+.emotion-2:first-child {
   border-radius: 4px 4px 0 0;
 }
 
-.cache-xlsc0t-StyledWrapper:last-child {
+.emotion-2:last-child {
   border-radius: 0 0 4px 4px;
 }
 
-.cache-xlsc0t-StyledWrapper .eqcw8nr2 {
+.emotion-2 .emotion-11 {
   background: #f9f9fa;
 }
 
-.cache-xlsc0t-StyledWrapper:hover {
+.emotion-2:hover {
   background: #e9eaeb;
 }
 
-.cache-xlsc0t-StyledWrapper:hover .eqcw8nr2 {
+.emotion-2:hover .emotion-11 {
   background: none;
 }
 
-.cache-hwahpj-Stack-FullHeightStack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,7 +110,7 @@ exports[`ContentCardGroup renders correctly with a children 1`] = `
   height: 100%;
 }
 
-.cache-9s29tc-Stack-StyledStack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,7 +134,7 @@ exports[`ContentCardGroup renders correctly with a children 1`] = `
   min-width: 0;
 }
 
-.cache-1s8ksau-StyledText {
+.emotion-8 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -122,7 +149,7 @@ exports[`ContentCardGroup renders correctly with a children 1`] = `
   overflow: hidden;
 }
 
-.cache-1vvrw62-IconWrapper {
+.emotion-10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -132,7 +159,7 @@ exports[`ContentCardGroup renders correctly with a children 1`] = `
   border-radius: 4px;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-12 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -141,63 +168,67 @@ exports[`ContentCardGroup renders correctly with a children 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-12 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
 <div
-    class="cache-1b3nnm9-Stack-StyledWrapper e1393dgx0"
+    data-testid="testing"
   >
-    <a
-      class="cache-xlsc0t-StyledWrapper eqcw8nr1"
-      href="http://scaleway.com"
-      target="_parent"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-hwahpj-Stack-FullHeightStack eqcw8nr0"
+      <a
+        class="emotion-2 emotion-3"
+        href="http://scaleway.com"
+        target="_parent"
       >
         <div
-          class="cache-9s29tc-Stack-StyledStack eqcw8nr3"
+          class="emotion-4 emotion-5"
         >
-          <div>
-            <h3
-              class="cache-1s8ksau-StyledText e13y3mga0"
-            />
-          </div>
-          <div>
-            test
-          </div>
-        </div>
-        <div
-          class="cache-1vvrw62-IconWrapper eqcw8nr2"
-        >
-          <svg
-            class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            class="emotion-6 emotion-7"
           >
-            <path
-              clip-rule="evenodd"
-              d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-              fill-rule="evenodd"
-            />
-          </svg>
+            <div>
+              <h3
+                class="emotion-8 emotion-9"
+              />
+            </div>
+            <div>
+              test
+            </div>
+          </div>
+          <div
+            class="emotion-10 emotion-11"
+          >
+            <svg
+              class="emotion-12 emotion-13"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ContentCardGroup renders correctly with description 1`] = `
+exports[`ContentCardGroup > renders correctly with description 1`] = `
 <DocumentFragment>
-  .cache-1b3nnm9-Stack-StyledWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -224,38 +255,38 @@ exports[`ContentCardGroup renders correctly with description 1`] = `
   min-width: 0;
 }
 
-.cache-xlsc0t-StyledWrapper {
+.emotion-2 {
   padding: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
 }
 
-.cache-xlsc0t-StyledWrapper:not(:first-child) {
+.emotion-2:not(:first-child) {
   border-top: 1px solid #d9dadd;
 }
 
-.cache-xlsc0t-StyledWrapper:first-child {
+.emotion-2:first-child {
   border-radius: 4px 4px 0 0;
 }
 
-.cache-xlsc0t-StyledWrapper:last-child {
+.emotion-2:last-child {
   border-radius: 0 0 4px 4px;
 }
 
-.cache-xlsc0t-StyledWrapper .eqcw8nr2 {
+.emotion-2 .emotion-13 {
   background: #f9f9fa;
 }
 
-.cache-xlsc0t-StyledWrapper:hover {
+.emotion-2:hover {
   background: #e9eaeb;
 }
 
-.cache-xlsc0t-StyledWrapper:hover .eqcw8nr2 {
+.emotion-2:hover .emotion-13 {
   background: none;
 }
 
-.cache-hwahpj-Stack-FullHeightStack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -278,7 +309,7 @@ exports[`ContentCardGroup renders correctly with description 1`] = `
   height: 100%;
 }
 
-.cache-9s29tc-Stack-StyledStack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -302,7 +333,7 @@ exports[`ContentCardGroup renders correctly with description 1`] = `
   min-width: 0;
 }
 
-.cache-1s8ksau-StyledText {
+.emotion-8 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -317,7 +348,7 @@ exports[`ContentCardGroup renders correctly with description 1`] = `
   overflow: hidden;
 }
 
-.cache-1gw5upo-StyledText {
+.emotion-10 {
   color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -332,7 +363,7 @@ exports[`ContentCardGroup renders correctly with description 1`] = `
   overflow: hidden;
 }
 
-.cache-1vvrw62-IconWrapper {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -342,7 +373,7 @@ exports[`ContentCardGroup renders correctly with description 1`] = `
   border-radius: 4px;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -351,67 +382,71 @@ exports[`ContentCardGroup renders correctly with description 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
 <div
-    class="cache-1b3nnm9-Stack-StyledWrapper e1393dgx0"
+    data-testid="testing"
   >
-    <a
-      class="cache-xlsc0t-StyledWrapper eqcw8nr1"
-      href="http://scaleway.com"
-      target="_blank"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-hwahpj-Stack-FullHeightStack eqcw8nr0"
+      <a
+        class="emotion-2 emotion-3"
+        href="http://scaleway.com"
+        target="_blank"
       >
         <div
-          class="cache-9s29tc-Stack-StyledStack eqcw8nr3"
+          class="emotion-4 emotion-5"
         >
-          <div>
-            <h3
-              class="cache-1s8ksau-StyledText e13y3mga0"
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div>
+              <h3
+                class="emotion-8 emotion-9"
+              >
+                title
+              </h3>
+            </div>
+            <p
+              class="emotion-10 emotion-9"
             >
-              title
-            </h3>
+              description
+            </p>
           </div>
-          <p
-            class="cache-1gw5upo-StyledText e13y3mga0"
+          <div
+            class="emotion-12 emotion-13"
           >
-            description
-          </p>
+            <svg
+              class="emotion-14 emotion-15"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
         </div>
-        <div
-          class="cache-1vvrw62-IconWrapper eqcw8nr2"
-        >
-          <svg
-            class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ContentCardGroup renders correctly with link target _parent 1`] = `
+exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
 <DocumentFragment>
-  .cache-1b3nnm9-Stack-StyledWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -438,38 +473,65 @@ exports[`ContentCardGroup renders correctly with link target _parent 1`] = `
   min-width: 0;
 }
 
-.cache-xlsc0t-StyledWrapper {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  border: 1px solid #d9dadd;
+  background: #ffffff;
+  min-width: 0;
+}
+
+.emotion-2 {
   padding: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
 }
 
-.cache-xlsc0t-StyledWrapper:not(:first-child) {
+.emotion-2:not(:first-child) {
   border-top: 1px solid #d9dadd;
 }
 
-.cache-xlsc0t-StyledWrapper:first-child {
+.emotion-2:first-child {
   border-radius: 4px 4px 0 0;
 }
 
-.cache-xlsc0t-StyledWrapper:last-child {
+.emotion-2:last-child {
   border-radius: 0 0 4px 4px;
 }
 
-.cache-xlsc0t-StyledWrapper .eqcw8nr2 {
+.emotion-2 .emotion-11 {
   background: #f9f9fa;
 }
 
-.cache-xlsc0t-StyledWrapper:hover {
+.emotion-2:hover {
   background: #e9eaeb;
 }
 
-.cache-xlsc0t-StyledWrapper:hover .eqcw8nr2 {
+.emotion-2:hover .emotion-11 {
   background: none;
 }
 
-.cache-hwahpj-Stack-FullHeightStack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -492,7 +554,7 @@ exports[`ContentCardGroup renders correctly with link target _parent 1`] = `
   height: 100%;
 }
 
-.cache-9s29tc-Stack-StyledStack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -516,7 +578,7 @@ exports[`ContentCardGroup renders correctly with link target _parent 1`] = `
   min-width: 0;
 }
 
-.cache-1s8ksau-StyledText {
+.emotion-8 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -531,7 +593,7 @@ exports[`ContentCardGroup renders correctly with link target _parent 1`] = `
   overflow: hidden;
 }
 
-.cache-1vvrw62-IconWrapper {
+.emotion-10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -541,7 +603,7 @@ exports[`ContentCardGroup renders correctly with link target _parent 1`] = `
   border-radius: 4px;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-12 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -550,60 +612,64 @@ exports[`ContentCardGroup renders correctly with link target _parent 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-12 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
 <div
-    class="cache-1b3nnm9-Stack-StyledWrapper e1393dgx0"
+    data-testid="testing"
   >
-    <a
-      class="cache-xlsc0t-StyledWrapper eqcw8nr1"
-      href="http://scaleway.com"
-      target="_parent"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-hwahpj-Stack-FullHeightStack eqcw8nr0"
+      <a
+        class="emotion-2 emotion-3"
+        href="http://scaleway.com"
+        target="_parent"
       >
         <div
-          class="cache-9s29tc-Stack-StyledStack eqcw8nr3"
+          class="emotion-4 emotion-5"
         >
-          <div>
-            <h3
-              class="cache-1s8ksau-StyledText e13y3mga0"
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div>
+              <h3
+                class="emotion-8 emotion-9"
+              >
+                title
+              </h3>
+            </div>
+          </div>
+          <div
+            class="emotion-10 emotion-11"
+          >
+            <svg
+              class="emotion-12 emotion-13"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              title
-            </h3>
+              <path
+                clip-rule="evenodd"
+                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
           </div>
         </div>
-        <div
-          class="cache-1vvrw62-IconWrapper eqcw8nr2"
-        >
-          <svg
-            class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ContentCardGroup renders correctly with loading prop 1`] = `
+exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -615,7 +681,7 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
   }
 }
 
-.cache-1b3nnm9-Stack-StyledWrapper {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -642,15 +708,42 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
   min-width: 0;
 }
 
-.cache-1d4gwso-StyledWrapper {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  border: 1px solid #d9dadd;
+  background: #ffffff;
+  min-width: 0;
+}
+
+.emotion-2 {
   padding: 24px;
 }
 
-.cache-1d4gwso-StyledWrapper:not(:first-child) {
+.emotion-2:not(:first-child) {
   border-top: 1px solid #d9dadd;
 }
 
-.cache-yxneb7-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -672,7 +765,7 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zl3m0r-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -695,7 +788,7 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-8 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -711,7 +804,7 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
   height: 100%;
 }
 
-.cache-mhtdbo-Line {
+.emotion-10 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -719,7 +812,7 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-12 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -740,13 +833,13 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-12 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
-.cache-ievivv-StyledContainer-StyledSquareSkeleton {
+.emotion-27 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -765,7 +858,7 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
   border-radius: 4px;
 }
 
-.cache-1526wye-Square {
+.emotion-29 {
   height: 100%;
   width: 100%;
   max-width: 100%;
@@ -773,65 +866,69 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
 }
 
 <div
-    class="cache-1b3nnm9-Stack-StyledWrapper e1393dgx0"
+    data-testid="testing"
   >
     <div
-      class="cache-1d4gwso-StyledWrapper e1xovou51"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-yxneb7-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-zl3m0r-Stack ehpbis70"
+          class="emotion-4 emotion-5"
         >
           <div
-            aria-busy="true"
-            aria-live="polite"
-            class="cache-1cu1y7v-StyledContainer e183x2r81"
+            class="emotion-6 emotion-5"
           >
             <div
-              class="cache-mhtdbo-Line e1denkbe0"
-            />
+              aria-busy="true"
+              aria-live="polite"
+              class="emotion-8 emotion-9"
+            >
+              <div
+                class="emotion-10 emotion-11"
+              />
+              <div
+                class="emotion-12 emotion-13"
+              />
+            </div>
             <div
-              class="cache-a7k45f-StyledDiv e183x2r80"
-            />
+              aria-busy="true"
+              aria-live="polite"
+              class="emotion-8 emotion-9"
+            >
+              <div
+                class="emotion-10 emotion-11"
+              />
+              <div
+                class="emotion-12 emotion-13"
+              />
+            </div>
+            <div
+              aria-busy="true"
+              aria-live="polite"
+              class="emotion-8 emotion-9"
+            >
+              <div
+                class="emotion-10 emotion-11"
+              />
+              <div
+                class="emotion-12 emotion-13"
+              />
+            </div>
           </div>
           <div
             aria-busy="true"
             aria-live="polite"
-            class="cache-1cu1y7v-StyledContainer e183x2r81"
+            class="emotion-26 emotion-27 emotion-9"
           >
             <div
-              class="cache-mhtdbo-Line e1denkbe0"
+              class="emotion-29 emotion-30"
             />
             <div
-              class="cache-a7k45f-StyledDiv e183x2r80"
+              class="emotion-12 emotion-13"
             />
           </div>
-          <div
-            aria-busy="true"
-            aria-live="polite"
-            class="cache-1cu1y7v-StyledContainer e183x2r81"
-          >
-            <div
-              class="cache-mhtdbo-Line e1denkbe0"
-            />
-            <div
-              class="cache-a7k45f-StyledDiv e183x2r80"
-            />
-          </div>
-        </div>
-        <div
-          aria-busy="true"
-          aria-live="polite"
-          class="e1xovou50 cache-ievivv-StyledContainer-StyledSquareSkeleton e183x2r81"
-        >
-          <div
-            class="cache-1526wye-Square e1uz28830"
-          />
-          <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
         </div>
       </div>
     </div>
@@ -839,9 +936,9 @@ exports[`ContentCardGroup renders correctly with loading prop 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ContentCardGroup renders correctly with required title & hread 1`] = `
+exports[`ContentCardGroup > renders correctly with required title & hread 1`] = `
 <DocumentFragment>
-  .cache-1b3nnm9-Stack-StyledWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -868,38 +965,38 @@ exports[`ContentCardGroup renders correctly with required title & hread 1`] = `
   min-width: 0;
 }
 
-.cache-xlsc0t-StyledWrapper {
+.emotion-2 {
   padding: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
 }
 
-.cache-xlsc0t-StyledWrapper:not(:first-child) {
+.emotion-2:not(:first-child) {
   border-top: 1px solid #d9dadd;
 }
 
-.cache-xlsc0t-StyledWrapper:first-child {
+.emotion-2:first-child {
   border-radius: 4px 4px 0 0;
 }
 
-.cache-xlsc0t-StyledWrapper:last-child {
+.emotion-2:last-child {
   border-radius: 0 0 4px 4px;
 }
 
-.cache-xlsc0t-StyledWrapper .eqcw8nr2 {
+.emotion-2 .emotion-11 {
   background: #f9f9fa;
 }
 
-.cache-xlsc0t-StyledWrapper:hover {
+.emotion-2:hover {
   background: #e9eaeb;
 }
 
-.cache-xlsc0t-StyledWrapper:hover .eqcw8nr2 {
+.emotion-2:hover .emotion-11 {
   background: none;
 }
 
-.cache-hwahpj-Stack-FullHeightStack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -922,7 +1019,7 @@ exports[`ContentCardGroup renders correctly with required title & hread 1`] = `
   height: 100%;
 }
 
-.cache-9s29tc-Stack-StyledStack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -946,7 +1043,7 @@ exports[`ContentCardGroup renders correctly with required title & hread 1`] = `
   min-width: 0;
 }
 
-.cache-1s8ksau-StyledText {
+.emotion-8 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -961,7 +1058,7 @@ exports[`ContentCardGroup renders correctly with required title & hread 1`] = `
   overflow: hidden;
 }
 
-.cache-1vvrw62-IconWrapper {
+.emotion-10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -971,7 +1068,7 @@ exports[`ContentCardGroup renders correctly with required title & hread 1`] = `
   border-radius: 4px;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-12 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -980,62 +1077,66 @@ exports[`ContentCardGroup renders correctly with required title & hread 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-12 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
 <div
-    class="cache-1b3nnm9-Stack-StyledWrapper e1393dgx0"
+    data-testid="testing"
   >
-    <a
-      class="cache-xlsc0t-StyledWrapper eqcw8nr1"
-      href="http://scaleway.com"
-      target="_blank"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-hwahpj-Stack-FullHeightStack eqcw8nr0"
+      <a
+        class="emotion-2 emotion-3"
+        href="http://scaleway.com"
+        target="_blank"
       >
         <div
-          class="cache-9s29tc-Stack-StyledStack eqcw8nr3"
+          class="emotion-4 emotion-5"
         >
-          <div>
-            <h3
-              class="cache-1s8ksau-StyledText e13y3mga0"
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div>
+              <h3
+                class="emotion-8 emotion-9"
+              >
+                title
+              </h3>
+            </div>
+          </div>
+          <div
+            class="emotion-10 emotion-11"
+          >
+            <svg
+              class="emotion-12 emotion-13"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              title
-            </h3>
+              <path
+                clip-rule="evenodd"
+                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
           </div>
         </div>
-        <div
-          class="cache-1vvrw62-IconWrapper eqcw8nr2"
-        >
-          <svg
-            class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ContentCardGroup renders correctly with subtitle 1`] = `
+exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
 <DocumentFragment>
-  .cache-1b3nnm9-Stack-StyledWrapper {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1062,38 +1163,38 @@ exports[`ContentCardGroup renders correctly with subtitle 1`] = `
   min-width: 0;
 }
 
-.cache-xlsc0t-StyledWrapper {
+.emotion-2 {
   padding: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
 }
 
-.cache-xlsc0t-StyledWrapper:not(:first-child) {
+.emotion-2:not(:first-child) {
   border-top: 1px solid #d9dadd;
 }
 
-.cache-xlsc0t-StyledWrapper:first-child {
+.emotion-2:first-child {
   border-radius: 4px 4px 0 0;
 }
 
-.cache-xlsc0t-StyledWrapper:last-child {
+.emotion-2:last-child {
   border-radius: 0 0 4px 4px;
 }
 
-.cache-xlsc0t-StyledWrapper .eqcw8nr2 {
+.emotion-2 .emotion-13 {
   background: #f9f9fa;
 }
 
-.cache-xlsc0t-StyledWrapper:hover {
+.emotion-2:hover {
   background: #e9eaeb;
 }
 
-.cache-xlsc0t-StyledWrapper:hover .eqcw8nr2 {
+.emotion-2:hover .emotion-13 {
   background: none;
 }
 
-.cache-hwahpj-Stack-FullHeightStack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1116,7 +1217,7 @@ exports[`ContentCardGroup renders correctly with subtitle 1`] = `
   height: 100%;
 }
 
-.cache-9s29tc-Stack-StyledStack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1140,7 +1241,7 @@ exports[`ContentCardGroup renders correctly with subtitle 1`] = `
   min-width: 0;
 }
 
-.cache-13k0bwe-StyledText {
+.emotion-8 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -1155,7 +1256,7 @@ exports[`ContentCardGroup renders correctly with subtitle 1`] = `
   overflow: hidden;
 }
 
-.cache-1s8ksau-StyledText {
+.emotion-10 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1170,7 +1271,7 @@ exports[`ContentCardGroup renders correctly with subtitle 1`] = `
   overflow: hidden;
 }
 
-.cache-1vvrw62-IconWrapper {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1180,7 +1281,7 @@ exports[`ContentCardGroup renders correctly with subtitle 1`] = `
   border-radius: 4px;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -1189,60 +1290,64 @@ exports[`ContentCardGroup renders correctly with subtitle 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
 <div
-    class="cache-1b3nnm9-Stack-StyledWrapper e1393dgx0"
+    data-testid="testing"
   >
-    <a
-      class="cache-xlsc0t-StyledWrapper eqcw8nr1"
-      href="http://scaleway.com"
-      target="_blank"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-hwahpj-Stack-FullHeightStack eqcw8nr0"
+      <a
+        class="emotion-2 emotion-3"
+        href="http://scaleway.com"
+        target="_blank"
       >
         <div
-          class="cache-9s29tc-Stack-StyledStack eqcw8nr3"
+          class="emotion-4 emotion-5"
         >
-          <div>
-            <h5
-              class="cache-13k0bwe-StyledText e13y3mga0"
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div>
+              <h5
+                class="emotion-8 emotion-9"
+              >
+                subtitle
+              </h5>
+              <h3
+                class="emotion-10 emotion-9"
+              >
+                title
+              </h3>
+            </div>
+          </div>
+          <div
+            class="emotion-12 emotion-13"
+          >
+            <svg
+              class="emotion-14 emotion-15"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              subtitle
-            </h5>
-            <h3
-              class="cache-1s8ksau-StyledText e13y3mga0"
-            >
-              title
-            </h3>
+              <path
+                clip-rule="evenodd"
+                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
           </div>
         </div>
-        <div
-          class="cache-1vvrw62-IconWrapper eqcw8nr2"
-        >
-          <svg
-            class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              clip-rule="evenodd"
-              d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-              fill-rule="evenodd"
-            />
-            <path
-              clip-rule="evenodd"
-              d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-              fill-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;

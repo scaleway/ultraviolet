@@ -1,6 +1,6 @@
-import { describe, test } from '@jest/globals'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test } from 'vitest'
 import { Stack } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Stack', () => {
   test(`should render correctly with default props`, () =>

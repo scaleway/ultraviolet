@@ -1,6 +1,6 @@
-import { describe, test } from '@jest/globals'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test } from 'vitest'
 import { Text, textVariants } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Text', () => {
   test.each(textVariants)('renders correctly with type="%s"', variant =>

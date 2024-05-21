@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`GlobalAlert renders correctly with all variants renders correctly variant danger 1`] = `
+exports[`GlobalAlert > renders correctly with all variants > renders correctly variant danger 1`] = `
 <DocumentFragment>
-  .cache-kjn9ce-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,19 +28,19 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   padding: 0 16px;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='info'] {
+.emotion-0[data-variant='info'] {
   background-color: #0078d2;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='danger'] {
+.emotion-0[data-variant='danger'] {
   background-color: #e51963;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='promotional'] {
+.emotion-0[data-variant='promotional'] {
   background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
 }
 
-.cache-1osn1u7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,7 +63,7 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   flex-wrap: nowrap;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-4 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -75,7 +75,7 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -117,28 +117,28 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   right: 24px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:focus,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:active {
   background: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -147,45 +147,49 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-kjn9ce-Stack-Container ewvyccp0"
-    data-variant="danger"
+    data-testid="testing"
   >
     <div
-      class="cache-1osn1u7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      data-variant="danger"
     >
-      <p
-        class="cache-fzpogg-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        Sample GlobalAlert
-      </p>
+        <p
+          class="emotion-4 emotion-5"
+        >
+          Sample GlobalAlert
+        </p>
+      </div>
+      <button
+        class="emotion-6 emotion-7 emotion-8"
+        type="button"
+      >
+        <svg
+          class="emotion-9 emotion-10"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
     </div>
-    <button
-      class="ewvyccp1 cache-yx7dgl-StyledFilledButton-CloseButton e112qvla2"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`GlobalAlert renders correctly with all variants renders correctly variant info 1`] = `
+exports[`GlobalAlert > renders correctly with all variants > renders correctly variant info 1`] = `
 <DocumentFragment>
-  .cache-kjn9ce-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -211,19 +215,19 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   padding: 0 16px;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='info'] {
+.emotion-0[data-variant='info'] {
   background-color: #0078d2;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='danger'] {
+.emotion-0[data-variant='danger'] {
   background-color: #e51963;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='promotional'] {
+.emotion-0[data-variant='promotional'] {
   background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
 }
 
-.cache-1osn1u7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -246,7 +250,7 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   flex-wrap: nowrap;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-4 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -258,7 +262,7 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -300,28 +304,28 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   right: 24px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:focus,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:active {
   background: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -330,45 +334,49 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-kjn9ce-Stack-Container ewvyccp0"
-    data-variant="info"
+    data-testid="testing"
   >
     <div
-      class="cache-1osn1u7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      data-variant="info"
     >
-      <p
-        class="cache-fzpogg-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        Sample GlobalAlert
-      </p>
+        <p
+          class="emotion-4 emotion-5"
+        >
+          Sample GlobalAlert
+        </p>
+      </div>
+      <button
+        class="emotion-6 emotion-7 emotion-8"
+        type="button"
+      >
+        <svg
+          class="emotion-9 emotion-10"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
     </div>
-    <button
-      class="ewvyccp1 cache-yx7dgl-StyledFilledButton-CloseButton e112qvla2"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`GlobalAlert renders correctly with all variants renders correctly variant promotional 1`] = `
+exports[`GlobalAlert > renders correctly with all variants > renders correctly variant promotional 1`] = `
 <DocumentFragment>
-  .cache-kjn9ce-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -394,19 +402,19 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   padding: 0 16px;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='info'] {
+.emotion-0[data-variant='info'] {
   background-color: #0078d2;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='danger'] {
+.emotion-0[data-variant='danger'] {
   background-color: #e51963;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='promotional'] {
+.emotion-0[data-variant='promotional'] {
   background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
 }
 
-.cache-1osn1u7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -429,7 +437,7 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   flex-wrap: nowrap;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-4 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -441,7 +449,7 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -483,28 +491,28 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   right: 24px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:focus,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:active {
   background: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -513,45 +521,49 @@ exports[`GlobalAlert renders correctly with all variants renders correctly varia
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-kjn9ce-Stack-Container ewvyccp0"
-    data-variant="promotional"
+    data-testid="testing"
   >
     <div
-      class="cache-1osn1u7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      data-variant="promotional"
     >
-      <p
-        class="cache-fzpogg-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        Sample GlobalAlert
-      </p>
+        <p
+          class="emotion-4 emotion-5"
+        >
+          Sample GlobalAlert
+        </p>
+      </div>
+      <button
+        class="emotion-6 emotion-7 emotion-8"
+        type="button"
+      >
+        <svg
+          class="emotion-9 emotion-10"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
     </div>
-    <button
-      class="ewvyccp1 cache-yx7dgl-StyledFilledButton-CloseButton e112qvla2"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`GlobalAlert renders correctly with buttonText and onClickButton 1`] = `
+exports[`GlobalAlert > renders correctly with buttonText and onClickButton 1`] = `
 <DocumentFragment>
-  .cache-kjn9ce-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -577,19 +589,19 @@ exports[`GlobalAlert renders correctly with buttonText and onClickButton 1`] = `
   padding: 0 16px;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='info'] {
+.emotion-0[data-variant='info'] {
   background-color: #0078d2;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='danger'] {
+.emotion-0[data-variant='danger'] {
   background-color: #e51963;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='promotional'] {
+.emotion-0[data-variant='promotional'] {
   background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
 }
 
-.cache-1osn1u7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -612,7 +624,7 @@ exports[`GlobalAlert renders correctly with buttonText and onClickButton 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-4 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -624,7 +636,7 @@ exports[`GlobalAlert renders correctly with buttonText and onClickButton 1`] = `
   text-decoration: none;
 }
 
-.cache-ulqn51-StyledFilledButton {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -663,22 +675,22 @@ exports[`GlobalAlert renders correctly with buttonText and onClickButton 1`] = `
   color: #222638;
 }
 
-.cache-ulqn51-StyledFilledButton:hover {
+.emotion-6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-ulqn51-StyledFilledButton:active {
+.emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-ulqn51-StyledFilledButton:hover,
-.cache-ulqn51-StyledFilledButton:active {
+.emotion-6:hover,
+.emotion-6:active {
   background: #d9dadd;
   color: #151a2d;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton {
+.emotion-9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -720,28 +732,28 @@ exports[`GlobalAlert renders correctly with buttonText and onClickButton 1`] = `
   right: 24px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover {
+.emotion-9:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-9:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-9:hover,
+.emotion-9:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:focus,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
   background: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-11 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -750,51 +762,55 @@ exports[`GlobalAlert renders correctly with buttonText and onClickButton 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-11 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-kjn9ce-Stack-Container ewvyccp0"
-    data-variant="info"
+    data-testid="testing"
   >
     <div
-      class="cache-1osn1u7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      data-variant="info"
     >
-      <p
-        class="cache-fzpogg-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        Sample GlobalAlert
-      </p>
+        <p
+          class="emotion-4 emotion-5"
+        >
+          Sample GlobalAlert
+        </p>
+        <button
+          class="emotion-6 emotion-7"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
       <button
-        class="cache-ulqn51-StyledFilledButton e112qvla2"
+        class="emotion-8 emotion-9 emotion-7"
         type="button"
       >
-        Button
+        <svg
+          class="emotion-11 emotion-12"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
       </button>
     </div>
-    <button
-      class="ewvyccp1 cache-yx7dgl-StyledFilledButton-CloseButton e112qvla2"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`GlobalAlert renders correctly with children as component 1`] = `
+exports[`GlobalAlert > renders correctly with children as component 1`] = `
 <DocumentFragment>
-  .cache-kjn9ce-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -820,19 +836,19 @@ exports[`GlobalAlert renders correctly with children as component 1`] = `
   padding: 0 16px;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='info'] {
+.emotion-0[data-variant='info'] {
   background-color: #0078d2;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='danger'] {
+.emotion-0[data-variant='danger'] {
   background-color: #e51963;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='promotional'] {
+.emotion-0[data-variant='promotional'] {
   background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
 }
 
-.cache-1osn1u7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -855,7 +871,7 @@ exports[`GlobalAlert renders correctly with children as component 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-4 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -867,7 +883,7 @@ exports[`GlobalAlert renders correctly with children as component 1`] = `
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -909,28 +925,28 @@ exports[`GlobalAlert renders correctly with children as component 1`] = `
   right: 24px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:focus,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:active {
   background: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -939,45 +955,49 @@ exports[`GlobalAlert renders correctly with children as component 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-kjn9ce-Stack-Container ewvyccp0"
-    data-variant="info"
+    data-testid="testing"
   >
     <div
-      class="cache-1osn1u7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      data-variant="info"
     >
-      <p
-        class="cache-fzpogg-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        Sample GlobalAlert
-      </p>
+        <p
+          class="emotion-4 emotion-5"
+        >
+          Sample GlobalAlert
+        </p>
+      </div>
+      <button
+        class="emotion-6 emotion-7 emotion-8"
+        type="button"
+      >
+        <svg
+          class="emotion-9 emotion-10"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
     </div>
-    <button
-      class="ewvyccp1 cache-yx7dgl-StyledFilledButton-CloseButton e112qvla2"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`GlobalAlert renders correctly with closable and onClose 1`] = `
+exports[`GlobalAlert > renders correctly with closable and onClose 1`] = `
 <DocumentFragment>
-  .cache-kjn9ce-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1003,19 +1023,19 @@ exports[`GlobalAlert renders correctly with closable and onClose 1`] = `
   padding: 0 16px;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='info'] {
+.emotion-0[data-variant='info'] {
   background-color: #0078d2;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='danger'] {
+.emotion-0[data-variant='danger'] {
   background-color: #e51963;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='promotional'] {
+.emotion-0[data-variant='promotional'] {
   background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
 }
 
-.cache-1osn1u7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1038,7 +1058,7 @@ exports[`GlobalAlert renders correctly with closable and onClose 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-4 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -1050,7 +1070,7 @@ exports[`GlobalAlert renders correctly with closable and onClose 1`] = `
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1092,28 +1112,28 @@ exports[`GlobalAlert renders correctly with closable and onClose 1`] = `
   right: 24px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:focus,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:active {
   background: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1122,45 +1142,49 @@ exports[`GlobalAlert renders correctly with closable and onClose 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-kjn9ce-Stack-Container ewvyccp0"
-    data-variant="info"
+    data-testid="testing"
   >
     <div
-      class="cache-1osn1u7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      data-variant="info"
     >
-      <p
-        class="cache-fzpogg-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        Sample GlobalAlert
-      </p>
+        <p
+          class="emotion-4 emotion-5"
+        >
+          Sample GlobalAlert
+        </p>
+      </div>
+      <button
+        class="emotion-6 emotion-7 emotion-8"
+        type="button"
+      >
+        <svg
+          class="emotion-9 emotion-10"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
     </div>
-    <button
-      class="ewvyccp1 cache-yx7dgl-StyledFilledButton-CloseButton e112qvla2"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`GlobalAlert renders correctly with default values 1`] = `
+exports[`GlobalAlert > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-kjn9ce-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1186,19 +1210,19 @@ exports[`GlobalAlert renders correctly with default values 1`] = `
   padding: 0 16px;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='info'] {
+.emotion-0[data-variant='info'] {
   background-color: #0078d2;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='danger'] {
+.emotion-0[data-variant='danger'] {
   background-color: #e51963;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='promotional'] {
+.emotion-0[data-variant='promotional'] {
   background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
 }
 
-.cache-1osn1u7-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1221,7 +1245,7 @@ exports[`GlobalAlert renders correctly with default values 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-4 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -1233,7 +1257,7 @@ exports[`GlobalAlert renders correctly with default values 1`] = `
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1275,28 +1299,28 @@ exports[`GlobalAlert renders correctly with default values 1`] = `
   right: 24px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:focus,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:active {
   background: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1305,45 +1329,49 @@ exports[`GlobalAlert renders correctly with default values 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-kjn9ce-Stack-Container ewvyccp0"
-    data-variant="info"
+    data-testid="testing"
   >
     <div
-      class="cache-1osn1u7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      data-variant="info"
     >
-      <p
-        class="cache-fzpogg-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        Simple GlobalAlert
-      </p>
+        <p
+          class="emotion-4 emotion-5"
+        >
+          Simple GlobalAlert
+        </p>
+      </div>
+      <button
+        class="emotion-6 emotion-7 emotion-8"
+        type="button"
+      >
+        <svg
+          class="emotion-9 emotion-10"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
     </div>
-    <button
-      class="ewvyccp1 cache-yx7dgl-StyledFilledButton-CloseButton e112qvla2"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`GlobalAlert renders correctly with link 1`] = `
+exports[`GlobalAlert > renders correctly with link 1`] = `
 <DocumentFragment>
-  .cache-kjn9ce-Stack-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1369,19 +1397,57 @@ exports[`GlobalAlert renders correctly with link 1`] = `
   padding: 0 16px;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='info'] {
+.emotion-0[data-variant='info'] {
   background-color: #0078d2;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='danger'] {
+.emotion-0[data-variant='danger'] {
   background-color: #e51963;
 }
 
-.cache-kjn9ce-Stack-Container[data-variant='promotional'] {
+.emotion-0[data-variant='promotional'] {
   background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
 }
 
-.cache-1osn1u7-Stack {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+}
+
+.emotion-0[data-variant='info'] {
+  background-color: #0078d2;
+}
+
+.emotion-0[data-variant='danger'] {
+  background-color: #e51963;
+}
+
+.emotion-0[data-variant='promotional'] {
+  background: linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1404,7 +1470,30 @@ exports[`GlobalAlert renders correctly with link 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -1416,7 +1505,19 @@ exports[`GlobalAlert renders correctly with link 1`] = `
   text-decoration: none;
 }
 
-.cache-11vhm6c-StyledLink {
+.emotion-4 {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1454,17 +1555,17 @@ exports[`GlobalAlert renders correctly with link 1`] = `
   text-case: none;
 }
 
-.cache-11vhm6c-StyledLink .e1afnb7a2 {
+.emotion-6 .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-11vhm6c-StyledLink>* {
+.emotion-6>* {
   pointer-events: none;
 }
 
-.cache-11vhm6c-StyledLink:hover,
-.cache-11vhm6c-StyledLink:focus {
+.emotion-6:hover,
+.emotion-6:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1473,30 +1574,30 @@ exports[`GlobalAlert renders correctly with link 1`] = `
   text-decoration-color: #f9f9fa;
 }
 
-.cache-11vhm6c-StyledLink:hover .e1afnb7a2,
-.cache-11vhm6c-StyledLink:focus .e1afnb7a2 {
+.emotion-6:hover .e1afnb7a2,
+.emotion-6:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-11vhm6c-StyledLink[data-variant='inline'] {
+.emotion-6[data-variant='inline'] {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 
-.cache-11vhm6c-StyledLink:hover::after,
-.cache-11vhm6c-StyledLink:focus::after {
+.emotion-6:hover::after,
+.emotion-6:focus::after {
   background-color: #3f4250;
 }
 
-.cache-11vhm6c-StyledLink:active {
+.emotion-6:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton {
+.emotion-9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1538,28 +1639,91 @@ exports[`GlobalAlert renders correctly with link 1`] = `
   right: 24px;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover {
+.emotion-9:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-9:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-9:hover,
+.emotion-9:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-.cache-yx7dgl-StyledFilledButton-CloseButton:hover,
-.cache-yx7dgl-StyledFilledButton-CloseButton:focus,
-.cache-yx7dgl-StyledFilledButton-CloseButton:active {
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
   background: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 24px;
+  padding: 0 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+  background: none;
+  position: absolute;
+  right: 24px;
+}
+
+.emotion-9:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9:hover,
+.emotion-9:active {
+  background: #792dd4;
+  color: #f9f9fa;
+}
+
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
+  background: none;
+}
+
+.emotion-11 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1568,47 +1732,65 @@ exports[`GlobalAlert renders correctly with link 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-11 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-11 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-11 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-kjn9ce-Stack-Container ewvyccp0"
-    data-variant="info"
+    data-testid="testing"
   >
     <div
-      class="cache-1osn1u7-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      data-variant="info"
     >
-      <p
-        class="cache-fzpogg-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        This is a 
-        <a
-          class="cache-11vhm6c-StyledLink e1afnb7a0"
-          data-variant="inline"
-          href="scaleway.com"
-          prominence="stronger"
+        <p
+          class="emotion-4 emotion-5"
         >
-          Global Alert
-        </a>
-          link
-      </p>
-    </div>
-    <button
-      class="ewvyccp1 cache-yx7dgl-StyledFilledButton-CloseButton e112qvla2"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
+          This is a 
+          <a
+            class="emotion-6 emotion-7"
+            data-variant="inline"
+            href="scaleway.com"
+            prominence="stronger"
+          >
+            Global Alert
+          </a>
+            link
+        </p>
+      </div>
+      <button
+        class="emotion-8 emotion-9 emotion-10"
+        type="button"
       >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
+        <svg
+          class="emotion-11 emotion-12"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;

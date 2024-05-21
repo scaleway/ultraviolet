@@ -1,15 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TagList renders correctly 1`] = `
+exports[`TagList > renders correctly 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-1alpvce-StyledTagContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +22,7 @@ exports[`TagList renders correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1anauza-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -48,7 +48,7 @@ exports[`TagList renders correctly 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-7 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -63,15 +63,15 @@ exports[`TagList renders correctly 1`] = `
   max-width: 232px;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-9 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-9[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1c8psug-TagsWrapper {
+.emotion-11 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -88,51 +88,55 @@ exports[`TagList renders correctly 1`] = `
   padding-right: 8px;
 }
 
-<div>
-    <div
-      class="cache-a1981g-StyledContainer eb6op482"
-    >
+<div
+    data-testid="testing"
+  >
+    <div>
       <div
-        class="cache-1alpvce-StyledTagContainer eb6op480"
+        class="emotion-0 emotion-1"
       >
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+        <div
+          class="emotion-2 emotion-3"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="emotion-4 emotion-5"
           >
-            scaleway
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+            >
+              scaleway
+            </span>
           </span>
-        </span>
-      </div>
-      <div
-        aria-controls=":r1:"
-        aria-describedby=":r1:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="-1"
-      >
-        <span
-          class="cache-1c8psug-TagsWrapper eb6op481"
-          data-testid="taglist-open"
+        </div>
+        <div
+          aria-controls=":r1:"
+          aria-describedby=":r1:"
+          class="emotion-9 emotion-10"
+          tabindex="-1"
         >
-          +1
-        </span>
+          <span
+            class="emotion-11 emotion-12"
+            data-testid="taglist-open"
+          >
+            +1
+          </span>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TagList renders correctly with copiable 1`] = `
+exports[`TagList > renders correctly with copiable 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-1alpvce-StyledTagContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -145,15 +149,15 @@ exports[`TagList renders correctly with copiable 1`] = `
   gap: 8px;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-gkklu9-Container-StyledContainer {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -179,18 +183,18 @@ exports[`TagList renders correctly with copiable 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-gkklu9-Container-StyledContainer:hover,
-.cache-gkklu9-Container-StyledContainer:active {
+.emotion-6:hover,
+.emotion-6:active {
   cursor: pointer;
   background: #e9eaeb;
   border-color: #92959d;
 }
 
-.cache-gkklu9-Container-StyledContainer:active {
+.emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-9 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -205,44 +209,146 @@ exports[`TagList renders correctly with copiable 1`] = `
   max-width: 232px;
 }
 
-<div>
-    <div
-      class="cache-a1981g-StyledContainer eb6op482"
-    >
+<div
+    data-testid="testing"
+  >
+    <div>
       <div
-        class="cache-1alpvce-StyledTagContainer eb6op480"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls=":re:"
-          aria-describedby=":re:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          tabindex="0"
+          class="emotion-2 emotion-3"
         >
-          <button
-            class="cache-gkklu9-Container-StyledContainer el6733p3"
+          <div
+            aria-controls=":re:"
+            aria-describedby=":re:"
+            class="emotion-4 emotion-5"
+            tabindex="0"
+          >
+            <button
+              class="emotion-6 emotion-7"
+            >
+              <span
+                class="emotion-8 emotion-9 emotion-10"
+              >
+                scaleway
+              </span>
+            </button>
+          </div>
+          <div
+            aria-controls=":rg:"
+            aria-describedby=":rg:"
+            class="emotion-4 emotion-5"
+            tabindex="0"
+          >
+            <button
+              class="emotion-6 emotion-7"
+            >
+              <span
+                class="emotion-8 emotion-9 emotion-10"
+              >
+                cloud
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TagList > renders correctly with custom threshold 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #3f4250;
+  gap: 8px;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #3f4250;
+  background: #ffffff;
+  border: solid 1px #d9dadd;
+}
+
+.emotion-7 {
+  font-size: 12px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 232px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div>
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div
+          class="emotion-2 emotion-3"
+        >
+          <span
+            class="emotion-4 emotion-5"
           >
             <span
-              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+              class="emotion-6 emotion-7 emotion-8"
             >
               scaleway
             </span>
-          </button>
-        </div>
-        <div
-          aria-controls=":rg:"
-          aria-describedby=":rg:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          tabindex="0"
-        >
-          <button
-            class="cache-gkklu9-Container-StyledContainer el6733p3"
+          </span>
+          <span
+            class="emotion-4 emotion-5"
           >
             <span
-              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+              class="emotion-6 emotion-7 emotion-8"
             >
               cloud
             </span>
-          </button>
+          </span>
         </div>
       </div>
     </div>
@@ -250,16 +356,16 @@ exports[`TagList renders correctly with copiable 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TagList renders correctly with custom threshold 1`] = `
+exports[`TagList > renders correctly with custom threshold and extra tags 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-1alpvce-StyledTagContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -272,7 +378,7 @@ exports[`TagList renders correctly with custom threshold 1`] = `
   gap: 8px;
 }
 
-.cache-1anauza-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -298,7 +404,7 @@ exports[`TagList renders correctly with custom threshold 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-7 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -313,109 +419,15 @@ exports[`TagList renders correctly with custom threshold 1`] = `
   max-width: 232px;
 }
 
-<div>
-    <div
-      class="cache-a1981g-StyledContainer eb6op482"
-    >
-      <div
-        class="cache-1alpvce-StyledTagContainer eb6op480"
-      >
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
-        >
-          <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-          >
-            scaleway
-          </span>
-        </span>
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
-        >
-          <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
-          >
-            cloud
-          </span>
-        </span>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`TagList renders correctly with custom threshold and extra tags 1`] = `
-<DocumentFragment>
-  .cache-a1981g-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-1alpvce-StyledTagContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #3f4250;
-  gap: 8px;
-}
-
-.cache-1anauza-StyledContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-1olt749-StyledText-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-14 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-14[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1c8psug-TagsWrapper {
+.emotion-16 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -432,60 +444,64 @@ exports[`TagList renders correctly with custom threshold and extra tags 1`] = `
   padding-right: 8px;
 }
 
-<div>
-    <div
-      class="cache-a1981g-StyledContainer eb6op482"
-    >
+<div
+    data-testid="testing"
+  >
+    <div>
       <div
-        class="cache-1alpvce-StyledTagContainer eb6op480"
+        class="emotion-0 emotion-1"
       >
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+        <div
+          class="emotion-2 emotion-3"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="emotion-4 emotion-5"
           >
-            scaleway
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+            >
+              scaleway
+            </span>
           </span>
-        </span>
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+          <span
+            class="emotion-4 emotion-5"
+          >
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+            >
+              cloud
+            </span>
+          </span>
+        </div>
+        <div
+          aria-controls=":r8:"
+          aria-describedby=":r8:"
+          class="emotion-14 emotion-15"
+          tabindex="-1"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="emotion-16 emotion-17"
+            data-testid="taglist-open"
           >
-            cloud
+            +1
           </span>
-        </span>
-      </div>
-      <div
-        aria-controls=":r8:"
-        aria-describedby=":r8:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="-1"
-      >
-        <span
-          class="cache-1c8psug-TagsWrapper eb6op481"
-          data-testid="taglist-open"
-        >
-          +1
-        </span>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TagList renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags 1`] = `
+exports[`TagList > renders correctly with custom threshold and extra tags and maxLength inferior to the combined size of tags 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-1alpvce-StyledTagContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -498,7 +514,7 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
   gap: 8px;
 }
 
-.cache-1anauza-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -524,7 +540,7 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-7 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -539,15 +555,15 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
   max-width: 232px;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-9 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-9[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1c8psug-TagsWrapper {
+.emotion-11 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -564,51 +580,55 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
   padding-right: 8px;
 }
 
-<div>
-    <div
-      class="cache-a1981g-StyledContainer eb6op482"
-    >
+<div
+    data-testid="testing"
+  >
+    <div>
       <div
-        class="cache-1alpvce-StyledTagContainer eb6op480"
+        class="emotion-0 emotion-1"
       >
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+        <div
+          class="emotion-2 emotion-3"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="emotion-4 emotion-5"
           >
-            scaleway
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+            >
+              scaleway
+            </span>
           </span>
-        </span>
-      </div>
-      <div
-        aria-controls=":ra:"
-        aria-describedby=":ra:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="-1"
-      >
-        <span
-          class="cache-1c8psug-TagsWrapper eb6op481"
-          data-testid="taglist-open"
+        </div>
+        <div
+          aria-controls=":ra:"
+          aria-describedby=":ra:"
+          class="emotion-9 emotion-10"
+          tabindex="-1"
         >
-          +2
-        </span>
+          <span
+            class="emotion-11 emotion-12"
+            data-testid="taglist-open"
+          >
+            +2
+          </span>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TagList renders correctly with icons 1`] = `
+exports[`TagList > renders correctly with icons 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-1alpvce-StyledTagContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -621,15 +641,15 @@ exports[`TagList renders correctly with icons 1`] = `
   gap: 8px;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-gkklu9-Container-StyledContainer {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -655,18 +675,18 @@ exports[`TagList renders correctly with icons 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-gkklu9-Container-StyledContainer:hover,
-.cache-gkklu9-Container-StyledContainer:active {
+.emotion-6:hover,
+.emotion-6:active {
   cursor: pointer;
   background: #e9eaeb;
   border-color: #92959d;
 }
 
-.cache-gkklu9-Container-StyledContainer:active {
+.emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-9 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -681,44 +701,48 @@ exports[`TagList renders correctly with icons 1`] = `
   max-width: 232px;
 }
 
-<div>
-    <div
-      class="cache-a1981g-StyledContainer eb6op482"
-    >
+<div
+    data-testid="testing"
+  >
+    <div>
       <div
-        class="cache-1alpvce-StyledTagContainer eb6op480"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls=":ri:"
-          aria-describedby=":ri:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          tabindex="0"
+          class="emotion-2 emotion-3"
         >
-          <button
-            class="cache-gkklu9-Container-StyledContainer el6733p3"
+          <div
+            aria-controls=":ri:"
+            aria-describedby=":ri:"
+            class="emotion-4 emotion-5"
+            tabindex="0"
           >
-            <span
-              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            <button
+              class="emotion-6 emotion-7"
             >
-              scaleway
-            </span>
-          </button>
-        </div>
-        <div
-          aria-controls=":rk:"
-          aria-describedby=":rk:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          tabindex="0"
-        >
-          <button
-            class="cache-gkklu9-Container-StyledContainer el6733p3"
+              <span
+                class="emotion-8 emotion-9 emotion-10"
+              >
+                scaleway
+              </span>
+            </button>
+          </div>
+          <div
+            aria-controls=":rk:"
+            aria-describedby=":rk:"
+            class="emotion-4 emotion-5"
+            tabindex="0"
           >
-            <span
-              class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            <button
+              class="emotion-6 emotion-7"
             >
-              cloud
-            </span>
-          </button>
+              <span
+                class="emotion-8 emotion-9 emotion-10"
+              >
+                cloud
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -726,16 +750,16 @@ exports[`TagList renders correctly with icons 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TagList renders correctly with multiline 1`] = `
+exports[`TagList > renders correctly with multiline 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-xzavwj-StyledTagContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -752,7 +776,7 @@ exports[`TagList renders correctly with multiline 1`] = `
   flex-wrap: wrap;
 }
 
-.cache-1anauza-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -778,7 +802,7 @@ exports[`TagList renders correctly with multiline 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-7 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -793,15 +817,15 @@ exports[`TagList renders correctly with multiline 1`] = `
   max-width: 232px;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-14 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-14[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1c8psug-TagsWrapper {
+.emotion-16 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -818,66 +842,74 @@ exports[`TagList renders correctly with multiline 1`] = `
   padding-right: 8px;
 }
 
-<div>
-    <div
-      class="cache-a1981g-StyledContainer eb6op482"
-    >
+<div
+    data-testid="testing"
+  >
+    <div>
       <div
-        class="cache-xzavwj-StyledTagContainer eb6op480"
+        class="emotion-0 emotion-1"
       >
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+        <div
+          class="emotion-2 emotion-3"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="emotion-4 emotion-5"
           >
-            scaleway
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+            >
+              scaleway
+            </span>
           </span>
-        </span>
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+          <span
+            class="emotion-4 emotion-5"
+          >
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+            >
+              cloud
+            </span>
+          </span>
+        </div>
+        <div
+          aria-controls=":rd:"
+          aria-describedby=":rd:"
+          class="emotion-14 emotion-15"
+          tabindex="-1"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="emotion-16 emotion-17"
+            data-testid="taglist-open"
           >
-            cloud
+            +1
           </span>
-        </span>
-      </div>
-      <div
-        aria-controls=":rd:"
-        aria-describedby=":rd:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="-1"
-      >
-        <span
-          class="cache-1c8psug-TagsWrapper eb6op481"
-          data-testid="taglist-open"
-        >
-          +1
-        </span>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TagList renders correctly with not tags 1`] = `
+exports[`TagList > renders correctly with not tags 1`] = `
 <DocumentFragment>
-  <div />
+  <div
+    data-testid="testing"
+  >
+    <div />
+  </div>
 </DocumentFragment>
 `;
 
-exports[`TagList renders correctly with placement 1`] = `
+exports[`TagList > renders correctly with placement 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-1alpvce-StyledTagContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -890,7 +922,7 @@ exports[`TagList renders correctly with placement 1`] = `
   gap: 8px;
 }
 
-.cache-1anauza-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -916,7 +948,7 @@ exports[`TagList renders correctly with placement 1`] = `
   border: solid 1px #d9dadd;
 }
 
-.cache-1olt749-StyledText-StyledText {
+.emotion-7 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -931,15 +963,15 @@ exports[`TagList renders correctly with placement 1`] = `
   max-width: 232px;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-9 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-9[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1c8psug-TagsWrapper {
+.emotion-11 {
   cursor: pointer;
   color: #641cb3;
   border: none;
@@ -956,35 +988,39 @@ exports[`TagList renders correctly with placement 1`] = `
   padding-right: 8px;
 }
 
-<div>
-    <div
-      class="cache-a1981g-StyledContainer eb6op482"
-    >
+<div
+    data-testid="testing"
+  >
+    <div>
       <div
-        class="cache-1alpvce-StyledTagContainer eb6op480"
+        class="emotion-0 emotion-1"
       >
-        <span
-          class="cache-1anauza-StyledContainer el6733p2"
+        <div
+          class="emotion-2 emotion-3"
         >
           <span
-            class="el6733p1 cache-1olt749-StyledText-StyledText e13y3mga0"
+            class="emotion-4 emotion-5"
           >
-            scaleway
+            <span
+              class="emotion-6 emotion-7 emotion-8"
+            >
+              scaleway
+            </span>
           </span>
-        </span>
-      </div>
-      <div
-        aria-controls=":r3:"
-        aria-describedby=":r3:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="-1"
-      >
-        <span
-          class="cache-1c8psug-TagsWrapper eb6op481"
-          data-testid="taglist-open"
+        </div>
+        <div
+          aria-controls=":r3:"
+          aria-describedby=":r3:"
+          class="emotion-9 emotion-10"
+          tabindex="-1"
         >
-          +1
-        </span>
+          <span
+            class="emotion-11 emotion-12"
+            data-testid="taglist-open"
+          >
+            +1
+          </span>
+        </div>
       </div>
     </div>
   </div>

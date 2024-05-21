@@ -1,11 +1,8 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { TextArea } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 
 describe('TextArea', () => {
   test('should render correctly with basic props', () =>
@@ -14,7 +11,7 @@ describe('TextArea', () => {
     ))
 
   test('should control the value', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn<[], () => string>()
 
     renderWithTheme(<TextArea label="Test" value="test" onChange={onChange} />)
 
@@ -26,7 +23,7 @@ describe('TextArea', () => {
   })
 
   test('should be clearable', async () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn<[], () => string>()
 
     renderWithTheme(
       <TextArea label="Test" value="test" onChange={onChange} clearable />,
@@ -70,7 +67,7 @@ describe('TextArea', () => {
     ))
 
   test('should display success message', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn<[], () => string>()
     const successMessage = 'success message'
 
     renderWithTheme(
@@ -86,7 +83,7 @@ describe('TextArea', () => {
   })
 
   test('should display error message', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn<[], () => string>()
     const errorMessage = 'error!'
 
     renderWithTheme(
@@ -102,7 +99,7 @@ describe('TextArea', () => {
   })
 
   test('should display helper message', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn<[], () => string>()
     const helperMessage = 'helper'
 
     renderWithTheme(
@@ -118,7 +115,7 @@ describe('TextArea', () => {
   })
 
   test('should not display helper message when success is displayed', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn<[], () => string>()
     const successMessage = 'success message'
     const helperMessage = 'helper'
 
@@ -137,7 +134,7 @@ describe('TextArea', () => {
   })
 
   test('should not display helper message when error is displayed', () => {
-    const onChange = jest.fn<() => string>()
+    const onChange = vi.fn<[], () => string>()
     const error = 'error!'
     const helperMessage = 'helper'
 

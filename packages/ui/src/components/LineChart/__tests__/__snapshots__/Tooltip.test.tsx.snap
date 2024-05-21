@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`LineChart Tooltip renders correctly  1`] = `
+exports[`LineChart Tooltip > renders correctly  1`] = `
 <DocumentFragment>
-  .cache-4e4p6f-LineTooltipContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@ exports[`LineChart Tooltip renders correctly  1`] = `
   align-items: center;
 }
 
-.cache-1l5q3kp-LineColorSquare {
+.emotion-2 {
   display: block;
   width: 12px;
   height: 12px;
@@ -25,7 +25,7 @@ exports[`LineChart Tooltip renders correctly  1`] = `
   margin-right: 12px;
 }
 
-.cache-1wdc4om-StyledText {
+.emotion-4 {
   color: #ffffff;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -37,7 +37,7 @@ exports[`LineChart Tooltip renders correctly  1`] = `
   text-decoration: none;
 }
 
-.cache-fzpogg-StyledText {
+.emotion-6 {
   color: #ffffff;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -50,24 +50,28 @@ exports[`LineChart Tooltip renders correctly  1`] = `
 }
 
 <div
-    class="cache-4e4p6f-LineTooltipContainer e11niu3b1"
+    data-testid="testing"
   >
-    <div>
-      <span
-        class="cache-1l5q3kp-LineColorSquare e11niu3b0"
-        color="#ff0000"
-      />
-    </div>
-    <div>
-      <div
-        class="cache-1wdc4om-StyledText e13y3mga0"
-      >
-        15 kb
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        <span
+          class="emotion-2 emotion-3"
+          color="#ff0000"
+        />
       </div>
-      <div
-        class="cache-fzpogg-StyledText e13y3mga0"
-      >
-        05-05-2022
+      <div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          15 kb
+        </div>
+        <div
+          class="emotion-6 emotion-5"
+        >
+          05-05-2022
+        </div>
       </div>
     </div>
   </div>

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ToggleGroup renders correctly 1`] = `
+exports[`ToggleGroup > renders correctly 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,13 +25,13 @@ exports[`ToggleGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +54,7 @@ exports[`ToggleGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -65,7 +65,7 @@ exports[`ToggleGroup renders correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-zl3m0r-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,7 +88,7 @@ exports[`ToggleGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r95p0q-StyledLabel {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,16 +107,16 @@ exports[`ToggleGroup renders correctly 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-10:active .emotion-17[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-10[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -139,7 +139,7 @@ exports[`ToggleGroup renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-14 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -153,7 +153,7 @@ exports[`ToggleGroup renders correctly 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-16 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -175,11 +175,11 @@ exports[`ToggleGroup renders correctly 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-16:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-16:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -192,25 +192,25 @@ exports[`ToggleGroup renders correctly 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-16:focus-within,
+.emotion-16:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-16[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-16[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-16[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-16[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -218,41 +218,41 @@ exports[`ToggleGroup renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-16[data-checked='true']:focus-within,
+.emotion-16[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-16[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-16[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-16[data-error='true']:focus-within,
+.emotion-16[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-16[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-16[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-16[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-18 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -262,95 +262,99 @@ exports[`ToggleGroup renders correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-18[disabled] {
   cursor: not-allowed;
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1qvneex1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-zl3m0r-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+            Label 
+          </legend>
+          <div
+            class="emotion-8 emotion-1"
+          >
+            <label
+              aria-disabled="false"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-12 emotion-1"
               >
-                Toggle 1
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  Toggle 1
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":r1:"
-                name="Toggle.value-1"
-                type="checkbox"
-                value="value-1"
-              />
-            </div>
-          </label>
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
-          >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+              <div
+                class="emotion-16 emotion-17"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-18 emotion-19"
+                  id=":r1:"
+                  name="Toggle.value-1"
+                  type="checkbox"
+                  value="value-1"
+                />
+              </div>
+            </label>
+            <label
+              aria-disabled="false"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-12 emotion-1"
               >
-                Toggle 2
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  Toggle 2
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":r3:"
-                name="Toggle.value-2"
-                type="checkbox"
-                value="value-2"
-              />
-            </div>
-          </label>
+              <div
+                class="emotion-16 emotion-17"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-18 emotion-19"
+                  id=":r3:"
+                  name="Toggle.value-2"
+                  type="checkbox"
+                  value="value-2"
+                />
+              </div>
+            </label>
+          </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ToggleGroup renders correctly with direction row 1`] = `
+exports[`ToggleGroup > renders correctly with direction row 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -373,13 +377,13 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -402,7 +406,7 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -413,7 +417,7 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   text-decoration: none;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -436,7 +440,7 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r95p0q-StyledLabel {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -455,16 +459,16 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-10:active .emotion-17[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-10[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -487,7 +491,7 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-14 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -501,7 +505,7 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-16 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -523,11 +527,11 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-16:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-16:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -540,25 +544,25 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-16:focus-within,
+.emotion-16:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-16[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-16[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-16[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-16[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -566,41 +570,41 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-16[data-checked='true']:focus-within,
+.emotion-16[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-16[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-16[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-16[data-error='true']:focus-within,
+.emotion-16[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-16[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-16[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-16[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-18 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -610,95 +614,99 @@ exports[`ToggleGroup renders correctly with direction row 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-18[disabled] {
   cursor: not-allowed;
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1qvneex1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-4lkpn5-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+            Label 
+          </legend>
+          <div
+            class="emotion-8 emotion-1"
+          >
+            <label
+              aria-disabled="false"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-12 emotion-1"
               >
-                Toggle 1
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  Toggle 1
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":r6:"
-                name="Toggle.value-1"
-                type="checkbox"
-                value="value-1"
-              />
-            </div>
-          </label>
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
-          >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+              <div
+                class="emotion-16 emotion-17"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-18 emotion-19"
+                  id=":r6:"
+                  name="Toggle.value-1"
+                  type="checkbox"
+                  value="value-1"
+                />
+              </div>
+            </label>
+            <label
+              aria-disabled="false"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-12 emotion-1"
               >
-                Toggle 2
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  Toggle 2
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":r8:"
-                name="Toggle.value-2"
-                type="checkbox"
-                value="value-2"
-              />
-            </div>
-          </label>
+              <div
+                class="emotion-16 emotion-17"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-18 emotion-19"
+                  id=":r8:"
+                  name="Toggle.value-2"
+                  type="checkbox"
+                  value="value-2"
+                />
+              </div>
+            </label>
+          </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ToggleGroup renders correctly with error content 1`] = `
+exports[`ToggleGroup > renders correctly with error content 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -721,13 +729,13 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -750,7 +758,7 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -761,7 +769,7 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   text-decoration: none;
 }
 
-.cache-zl3m0r-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -784,7 +792,7 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r95p0q-StyledLabel {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -803,16 +811,16 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-10:active .emotion-17[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-10[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -835,7 +843,7 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-14 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -849,7 +857,7 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-16 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -871,11 +879,11 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-16:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-16:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -888,25 +896,25 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-16:focus-within,
+.emotion-16:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-16[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-16[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-16[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-16[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -914,41 +922,41 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-16[data-checked='true']:focus-within,
+.emotion-16[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-16[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-16[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-16[data-error='true']:focus-within,
+.emotion-16[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-16[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-16[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-16[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-18 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -958,11 +966,11 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-18[disabled] {
   cursor: not-allowed;
 }
 
-.cache-ce8hur-StyledText {
+.emotion-30 {
   color: #b3144d;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -975,95 +983,99 @@ exports[`ToggleGroup renders correctly with error content 1`] = `
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1qvneex1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-zl3m0r-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+            Label 
+          </legend>
+          <div
+            class="emotion-8 emotion-1"
+          >
+            <label
+              aria-disabled="false"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-12 emotion-1"
               >
-                Toggle 1
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  Toggle 1
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":rh:"
-                name="Toggle.value-1"
-                type="checkbox"
-                value="value-1"
-              />
-            </div>
-          </label>
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
-          >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+              <div
+                class="emotion-16 emotion-17"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-18 emotion-19"
+                  id=":rh:"
+                  name="Toggle.value-1"
+                  type="checkbox"
+                  value="value-1"
+                />
+              </div>
+            </label>
+            <label
+              aria-disabled="false"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-12 emotion-1"
               >
-                Toggle 2
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  Toggle 2
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":rj:"
-                name="Toggle.value-2"
-                type="checkbox"
-                value="value-2"
-              />
-            </div>
-          </label>
+              <div
+                class="emotion-16 emotion-17"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-18 emotion-19"
+                  id=":rj:"
+                  name="Toggle.value-2"
+                  type="checkbox"
+                  value="value-2"
+                />
+              </div>
+            </label>
+          </div>
         </div>
-      </div>
-    </fieldset>
-    <p
-      class="cache-ce8hur-StyledText e13y3mga0"
-    >
-      Eror content
-    </p>
+      </fieldset>
+      <p
+        class="emotion-30 emotion-7"
+      >
+        Eror content
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ToggleGroup renders correctly with helper content 1`] = `
+exports[`ToggleGroup > renders correctly with helper content 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1086,13 +1098,13 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1115,7 +1127,7 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -1126,7 +1138,7 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   text-decoration: none;
 }
 
-.cache-zl3m0r-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1149,7 +1161,7 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r95p0q-StyledLabel {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1168,16 +1180,16 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-10:active .emotion-17[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-10[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1200,7 +1212,7 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-14 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -1214,7 +1226,7 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-16 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1236,11 +1248,11 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-16:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-16:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1253,25 +1265,25 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-16:focus-within,
+.emotion-16:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-16[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-16[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-16[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-16[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1279,41 +1291,41 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-16[data-checked='true']:focus-within,
+.emotion-16[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-16[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-16[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-16[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-16[data-error='true']:focus-within,
+.emotion-16[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-16[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-16[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-16[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-18 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1323,11 +1335,11 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-18[disabled] {
   cursor: not-allowed;
 }
 
-.cache-3l2mjz-StyledText {
+.emotion-30 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1339,95 +1351,99 @@ exports[`ToggleGroup renders correctly with helper content 1`] = `
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1qvneex1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-        </legend>
         <div
-          class="cache-zl3m0r-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+            Label 
+          </legend>
+          <div
+            class="emotion-8 emotion-1"
+          >
+            <label
+              aria-disabled="false"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-12 emotion-1"
               >
-                Toggle 1
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  Toggle 1
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":rb:"
-                name="Toggle.value-1"
-                type="checkbox"
-                value="value-1"
-              />
-            </div>
-          </label>
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
-          >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+              <div
+                class="emotion-16 emotion-17"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-18 emotion-19"
+                  id=":rb:"
+                  name="Toggle.value-1"
+                  type="checkbox"
+                  value="value-1"
+                />
+              </div>
+            </label>
+            <label
+              aria-disabled="false"
+              class="emotion-10 emotion-11"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-12 emotion-1"
               >
-                Toggle 2
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  Toggle 2
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":rd:"
-                name="Toggle.value-2"
-                type="checkbox"
-                value="value-2"
-              />
-            </div>
-          </label>
+              <div
+                class="emotion-16 emotion-17"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-18 emotion-19"
+                  id=":rd:"
+                  name="Toggle.value-2"
+                  type="checkbox"
+                  value="value-2"
+                />
+              </div>
+            </label>
+          </div>
         </div>
-      </div>
-    </fieldset>
-    <p
-      class="cache-3l2mjz-StyledText e13y3mga0"
-    >
-      Helper content
-    </p>
+      </fieldset>
+      <p
+        class="emotion-30 emotion-7"
+      >
+        Helper content
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`ToggleGroup renders correctly with required prop 1`] = `
+exports[`ToggleGroup > renders correctly with required prop 1`] = `
 <DocumentFragment>
-  .cache-gw33n2-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1450,13 +1466,13 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-103llo5-FieldSet {
+.emotion-2 {
   border: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-oey408-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1479,7 +1495,7 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-zvclys-StyledText {
+.emotion-6 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -1490,7 +1506,7 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   text-decoration: none;
 }
 
-.cache-c9vmsg-StyledIcon-sizeStyles-StyledRequiredIcon {
+.emotion-9 {
   vertical-align: middle;
   fill: #b3144d;
   height: 8px;
@@ -1500,12 +1516,12 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   vertical-align: super;
 }
 
-.cache-c9vmsg-StyledIcon-sizeStyles-StyledRequiredIcon .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.cache-zl3m0r-Stack {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1528,7 +1544,7 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r95p0q-StyledLabel {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1547,16 +1563,16 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-13:active .emotion-20[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-13[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1579,7 +1595,7 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-17 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -1593,7 +1609,7 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-19 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1615,11 +1631,11 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-19:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-19:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1632,25 +1648,25 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-19:focus-within,
+.emotion-19:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-19[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-19[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-19[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-19[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1658,41 +1674,41 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-19[data-checked='true']:focus-within,
+.emotion-19[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-19[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-19[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-19[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-19[data-error='true']:focus-within,
+.emotion-19[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-19[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-19[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-19[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-21 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1702,97 +1718,101 @@ exports[`ToggleGroup renders correctly with required prop 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-21[disabled] {
   cursor: not-allowed;
 }
 
 <div
-    class="cache-gw33n2-Stack ehpbis70"
+    data-testid="testing"
   >
-    <fieldset
-      class="cache-103llo5-FieldSet e1qvneex1"
+    <div
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-oey408-Stack ehpbis70"
+      <fieldset
+        class="emotion-2 emotion-3"
       >
-        <legend
-          class="cache-zvclys-StyledText e13y3mga0"
-        >
-          Label 
-          <svg
-            class="e1qvneex0 cache-c9vmsg-StyledIcon-sizeStyles-StyledRequiredIcon e1gt4cfo0"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-            />
-          </svg>
-        </legend>
         <div
-          class="cache-zl3m0r-Stack ehpbis70"
+          class="emotion-4 emotion-1"
         >
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
+          <legend
+            class="emotion-6 emotion-7"
           >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+            Label 
+            <svg
+              class="emotion-8 emotion-9 emotion-10"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
+              />
+            </svg>
+          </legend>
+          <div
+            class="emotion-11 emotion-1"
+          >
+            <label
+              aria-disabled="false"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-15 emotion-1"
               >
-                Toggle 1
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  Toggle 1
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":rn:"
-                name="Toggle.value-1"
-                type="checkbox"
-                value="value-1"
-              />
-            </div>
-          </label>
-          <label
-            aria-disabled="false"
-            class="cache-r95p0q-StyledLabel e1wstm610"
-          >
-            <div
-              class="cache-155uuxj-Stack ehpbis70"
+              <div
+                class="emotion-19 emotion-20"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-21 emotion-22"
+                  id=":rn:"
+                  name="Toggle.value-1"
+                  type="checkbox"
+                  value="value-1"
+                />
+              </div>
+            </label>
+            <label
+              aria-disabled="false"
+              class="emotion-13 emotion-14"
             >
               <div
-                class="cache-15fwcc4-StyledRow e3f5lzv0"
+                class="emotion-15 emotion-1"
               >
-                Toggle 2
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  Toggle 2
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-izrm74-StyledToggle e1wstm612"
-              data-checked="false"
-              data-disabled="false"
-              data-error="false"
-            >
-              <input
-                aria-checked="false"
-                class="cache-1myp2ct-StyledCheckbox e1wstm611"
-                id=":rp:"
-                name="Toggle.value-2"
-                type="checkbox"
-                value="value-2"
-              />
-            </div>
-          </label>
+              <div
+                class="emotion-19 emotion-20"
+                data-checked="false"
+                data-disabled="false"
+                data-error="false"
+              >
+                <input
+                  aria-checked="false"
+                  class="emotion-21 emotion-22"
+                  id=":rp:"
+                  name="Toggle.value-2"
+                  type="checkbox"
+                  value="value-2"
+                />
+              </div>
+            </label>
+          </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </div>
 </DocumentFragment>
 `;

@@ -1,11 +1,11 @@
-import { describe, expect, test } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import type { ComponentProps } from 'react'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../../.jest/helpers'
+} from '@utils/test'
+import type { ComponentProps } from 'react'
+import { describe, expect, test } from 'vitest'
 import { Popup } from '../../index'
 
 describe('Popup', () => {

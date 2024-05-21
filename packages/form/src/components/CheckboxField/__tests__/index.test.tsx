@@ -1,64 +1,55 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { CheckboxField, Form } from '../..'
-import {
-  shouldMatchEmotionSnapshot,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks'
+import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
+import { CheckboxField } from '../..'
+import { Form } from '../../Form'
 
 describe('CheckboxField', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<CheckboxField name="test" />))
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(<CheckboxField name="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly disabled', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly disabled', () => {
+    const { asFragment } = renderWithForm(
       <CheckboxField name="test" disabled />,
-      {
-        transform: () => {
-          const input = screen.getByRole('checkbox', { hidden: true })
-          expect(input).toBeDisabled()
-        },
-      },
-    ))
+    )
 
-  test('should render correctly checked without value', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
-      <CheckboxField name="checked" />,
-      {
-        transform: () => {
-          const input = screen.getByRole('checkbox', { hidden: true })
-          expect(input).toBeChecked()
-        },
-      },
-      {
-        initialValues: {
-          checked: true,
-        },
-      },
-    ))
+    const input = screen.getByRole('checkbox', { hidden: true })
+    expect(input).toBeDisabled()
 
-  test('should render correctly not checked without value', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
-      <CheckboxField name="checked" />,
-      {
-        transform: () => {
-          const input = screen.getByRole('checkbox', { hidden: true })
-          expect(input).not.toBeChecked()
-        },
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should render correctly checked without value', () => {
+    const { asFragment } = renderWithForm(<CheckboxField name="checked" />, {
+      initialValues: {
+        checked: true,
       },
-      {
-        initialValues: {},
-      },
-    ))
+    })
+    const input = screen.getByRole('checkbox', { hidden: true })
+    expect(input).toBeChecked()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should render correctly not checked without value', () => {
+    const { asFragment } = renderWithForm(<CheckboxField name="checked" />, {
+      initialValues: {},
+    })
+
+    const input = screen.getByRole('checkbox', { hidden: true })
+    expect(input).not.toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => {})
-    const onChange = jest.fn(() => {})
-    const onBlur = jest.fn(() => {})
+    const onFocus = vi.fn(() => {})
+    const onChange = vi.fn(() => {})
+    const onBlur = vi.fn(() => {})
 
-    return shouldMatchEmotionSnapshotFormWrapper(
+    const { asFragment } = renderWithForm(
       <CheckboxField
         name="test"
         onChange={onChange}
@@ -67,37 +58,35 @@ describe('CheckboxField', () => {
       >
         Checkbox field events
       </CheckboxField>,
-      {
-        transform: () => {
-          const input = screen.getByRole('checkbox', { hidden: true })
-          act(() => input.focus())
-          expect(onFocus).toBeCalledTimes(1)
-          act(() => input.click())
-          expect(onChange).toBeCalledTimes(1)
-          act(() => input.blur())
-          expect(onBlur).toBeCalledTimes(1)
-        },
-      },
     )
+
+    const input = screen.getByRole('checkbox', { hidden: true })
+    act(() => input.focus())
+    expect(onFocus).toBeCalledTimes(1)
+    act(() => input.click())
+    expect(onChange).toBeCalledTimes(1)
+    act(() => input.blur())
+    expect(onBlur).toBeCalledTimes(1)
+    expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should render correctly with errors', () =>
-    shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+  test('should render correctly with errors', async () => {
+    const { asFragment } = renderWithTheme(
+      <Form onRawSubmit={() => {}} errors={mockFormErrors}>
         <CheckboxField name="test" required>
           Checkbox field error
         </CheckboxField>
         <div>Focus</div>
       </Form>,
-      {
-        transform: async () => {
-          await userEvent.click(screen.getByRole('checkbox', { hidden: true }))
-          // to trigger error
-          await userEvent.click(screen.getByRole('checkbox', { hidden: true }))
-          await userEvent.click(screen.getByText('Focus'))
-          const error = screen.getByText(mockErrors.required({ label: '' }))
-          expect(error).toBeVisible()
-        },
-      },
-    ))
+    )
+
+    await userEvent.click(screen.getByRole('checkbox', { hidden: true }))
+    // to trigger error
+    await userEvent.click(screen.getByRole('checkbox', { hidden: true }))
+    await userEvent.click(screen.getByText('Focus'))
+    const error = screen.getByText(mockFormErrors.required({ label: '' }))
+    expect(error).toBeVisible()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

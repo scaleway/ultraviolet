@@ -1,81 +1,101 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Expandable renders correctly opened 1`] = `
+exports[`Expandable > renders correctly opened 1`] = `
 <DocumentFragment>
-  .cache-1cgpxro-StyledExpandable {
+  .emotion-0 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
 <div
-    class="cache-1cgpxro-StyledExpandable e5hc7t70"
+    data-testid="testing"
   >
-    Sample Expandable
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Sample Expandable
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Expandable renders correctly with animationDuration 1`] = `
+exports[`Expandable > renders correctly with animationDuration 1`] = `
 <DocumentFragment>
-  .cache-1ih71ho-StyledExpandable {
+  .emotion-0 {
   -webkit-transition: max-height 500ms ease-out,opacity 500ms ease-out;
   transition: max-height 500ms ease-out,opacity 500ms ease-out;
   height: auto;
 }
 
 <div
-    class="cache-1ih71ho-StyledExpandable e5hc7t70"
+    data-testid="testing"
   >
-    Sample Expandable
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Sample Expandable
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Expandable renders correctly with className 1`] = `
+exports[`Expandable > renders correctly with className 1`] = `
 <DocumentFragment>
-  .cache-1cgpxro-StyledExpandable {
+  .emotion-0 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
 <div
-    class="test cache-1cgpxro-StyledExpandable e5hc7t70"
+    data-testid="testing"
   >
-    Sample Expandable
+    <div
+      class="test emotion-0 emotion-1"
+    >
+      Sample Expandable
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Expandable renders correctly with default values 1`] = `
+exports[`Expandable > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-1cgpxro-StyledExpandable {
+  .emotion-0 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
 <div
-    class="cache-1cgpxro-StyledExpandable e5hc7t70"
+    data-testid="testing"
   >
-    Sample Expandable
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Sample Expandable
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Expandable renders correctly with minHeight 1`] = `
+exports[`Expandable > renders correctly with minHeight 1`] = `
 <DocumentFragment>
-  .cache-1cgpxro-StyledExpandable {
+  .emotion-0 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
 <div
-    class="cache-1cgpxro-StyledExpandable e5hc7t70"
+    data-testid="testing"
   >
-    Sample Expandable
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Sample Expandable
+    </div>
   </div>
 </DocumentFragment>
 `;

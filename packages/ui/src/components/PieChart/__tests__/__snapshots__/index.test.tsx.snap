@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PieChart renders correctly when legend is focused 1`] = `
+exports[`PieChart > renders correctly when legend is focused 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   0% {
@@ -16,7 +16,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   }
 }
 
-.cache-1kb8v2a-Container {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,7 +28,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   height: 206px;
 }
 
-.cache-1hor4qk-List {
+.emotion-2 {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -45,15 +45,15 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   overflow-y: auto;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1cmscyn-ListItem {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,13 +67,13 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   color: #641cb3;
 }
 
-.cache-1swvs82-ToggleBox {
+.emotion-8 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.cache-1a0n7uk-Bullet-animationFlash {
+.emotion-10 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -84,7 +84,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   animation: animation-0 linear 1500ms infinite;
 }
 
-.cache-s9pm9i-Label {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,7 +98,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   align-items: baseline;
 }
 
-.cache-yil21r-Text {
+.emotion-14 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -106,13 +106,13 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   font-weight: 500;
 }
 
-.cache-f85np2-Line {
+.emotion-16 {
   border-bottom: 1px solid #d9dadd;
   position: relative;
   width: 100%;
 }
 
-.cache-1dsk24o-ProgressiveLine {
+.emotion-18 {
   border-bottom: 1px solid #8c40ef;
   position: absolute;
   left: 0;
@@ -123,12 +123,12 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   width: 100%;
 }
 
-.cache-1y6i3uw-Value {
+.emotion-20 {
   margin-left: 6px;
   font-weight: 500;
 }
 
-.cache-1kxdvj5-ListItem {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,7 +142,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   color: #3f4250;
 }
 
-.cache-14y4sjq-Bullet {
+.emotion-28 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -151,7 +151,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   background: #0083e6;
 }
 
-.cache-1o1agb-Text {
+.emotion-32 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -159,7 +159,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   font-weight: 400;
 }
 
-.cache-1ci36lk-ProgressiveLine {
+.emotion-36 {
   border-bottom: 1px solid #8c40ef;
   position: absolute;
   left: 0;
@@ -170,175 +170,179 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   width: 0%;
 }
 
-.cache-ngx53z-Value {
+.emotion-38 {
   margin-left: 6px;
   font-weight: 400;
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
-              <path
-                d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
-                fill="#0083e6"
-                opacity="1"
-                stroke="rgb(0, 92, 161)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
+                  fill="#0083e6"
+                  opacity="1"
+                  stroke="rgb(0, 92, 161)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
+      <ul
+        class="emotion-2 emotion-3"
+      >
+        <div
+          aria-controls="chart-legend-compute"
+          aria-describedby="chart-legend-compute"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-compute"
+            />
+            <div
+              class="emotion-10 emotion-11"
+              color="#5e47be"
+              id="chart-legend-compute"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Compute
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-gpu"
+          aria-describedby="chart-legend-gpu"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-24 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-gpu"
+            />
+            <div
+              class="emotion-28 emotion-11"
+              color="#0083e6"
+              id="chart-legend-gpu"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-32 emotion-15"
+              >
+                GPU Instances
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-36 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-38 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+      </ul>
     </div>
-    <ul
-      class="cache-1hor4qk-List e12qyakg8"
-    >
-      <div
-        aria-controls="chart-legend-compute"
-        aria-describedby="chart-legend-compute"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1cmscyn-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-compute"
-          />
-          <div
-            class="cache-1a0n7uk-Bullet-animationFlash e12qyakg6"
-            color="#5e47be"
-            id="chart-legend-compute"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-yil21r-Text e12qyakg3"
-            >
-              Compute
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1dsk24o-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-1y6i3uw-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-gpu"
-        aria-describedby="chart-legend-gpu"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-gpu"
-          />
-          <div
-            class="cache-14y4sjq-Bullet e12qyakg6"
-            color="#0083e6"
-            id="chart-legend-gpu"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              GPU Instances
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-    </ul>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PieChart renders correctly when legend is hovered 1`] = `
+exports[`PieChart > renders correctly when legend is hovered 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   0% {
@@ -354,7 +358,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   }
 }
 
-.cache-1kb8v2a-Container {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -366,7 +370,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   height: 206px;
 }
 
-.cache-1hor4qk-List {
+.emotion-2 {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -383,15 +387,15 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   overflow-y: auto;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1cmscyn-ListItem {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -405,13 +409,13 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   color: #641cb3;
 }
 
-.cache-1swvs82-ToggleBox {
+.emotion-8 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.cache-1a0n7uk-Bullet-animationFlash {
+.emotion-10 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -422,7 +426,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   animation: animation-0 linear 1500ms infinite;
 }
 
-.cache-s9pm9i-Label {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -436,7 +440,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   align-items: baseline;
 }
 
-.cache-yil21r-Text {
+.emotion-14 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -444,13 +448,13 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   font-weight: 500;
 }
 
-.cache-f85np2-Line {
+.emotion-16 {
   border-bottom: 1px solid #d9dadd;
   position: relative;
   width: 100%;
 }
 
-.cache-1dsk24o-ProgressiveLine {
+.emotion-18 {
   border-bottom: 1px solid #8c40ef;
   position: absolute;
   left: 0;
@@ -461,12 +465,12 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   width: 100%;
 }
 
-.cache-1y6i3uw-Value {
+.emotion-20 {
   margin-left: 6px;
   font-weight: 500;
 }
 
-.cache-1kxdvj5-ListItem {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,7 +484,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   color: #3f4250;
 }
 
-.cache-14y4sjq-Bullet {
+.emotion-28 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -489,7 +493,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   background: #0083e6;
 }
 
-.cache-1o1agb-Text {
+.emotion-32 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -497,7 +501,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   font-weight: 400;
 }
 
-.cache-1ci36lk-ProgressiveLine {
+.emotion-36 {
   border-bottom: 1px solid #8c40ef;
   position: absolute;
   left: 0;
@@ -508,177 +512,181 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   width: 0%;
 }
 
-.cache-ngx53z-Value {
+.emotion-38 {
   margin-left: 6px;
   font-weight: 400;
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
-              <path
-                d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
-                fill="#0083e6"
-                opacity="1"
-                stroke="rgb(0, 92, 161)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
+                  fill="#0083e6"
+                  opacity="1"
+                  stroke="rgb(0, 92, 161)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
+      <ul
+        class="emotion-2 emotion-3"
+      >
+        <div
+          aria-controls="chart-legend-compute"
+          aria-describedby="chart-legend-compute"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-compute"
+            />
+            <div
+              class="emotion-10 emotion-11"
+              color="#5e47be"
+              id="chart-legend-compute"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Compute
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-gpu"
+          aria-describedby="chart-legend-gpu"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-24 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-gpu"
+            />
+            <div
+              class="emotion-28 emotion-11"
+              color="#0083e6"
+              id="chart-legend-gpu"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-32 emotion-15"
+              >
+                GPU Instances
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-36 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-38 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+      </ul>
     </div>
-    <ul
-      class="cache-1hor4qk-List e12qyakg8"
-    >
-      <div
-        aria-controls="chart-legend-compute"
-        aria-describedby="chart-legend-compute"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1cmscyn-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-compute"
-          />
-          <div
-            class="cache-1a0n7uk-Bullet-animationFlash e12qyakg6"
-            color="#5e47be"
-            id="chart-legend-compute"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-yil21r-Text e12qyakg3"
-            >
-              Compute
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1dsk24o-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-1y6i3uw-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-gpu"
-        aria-describedby="chart-legend-gpu"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-gpu"
-          />
-          <div
-            class="cache-14y4sjq-Bullet e12qyakg6"
-            color="#0083e6"
-            id="chart-legend-gpu"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              GPU Instances
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-    </ul>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PieChart renders correctly with data 1`] = `
+exports[`PieChart > renders correctly with data 1`] = `
 <DocumentFragment>
-  .cache-1kb8v2a-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -691,85 +699,89 @@ exports[`PieChart renders correctly with data 1`] = `
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
-              <path
-                d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
-                fill="#0083e6"
-                opacity="1"
-                stroke="rgb(0, 92, 161)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
+                  fill="#0083e6"
+                  opacity="1"
+                  stroke="rgb(0, 92, 161)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PieChart renders correctly with data and content 1`] = `
+exports[`PieChart > renders correctly with data and content 1`] = `
 <DocumentFragment>
-  .cache-1kb8v2a-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -781,7 +793,7 @@ exports[`PieChart renders correctly with data and content 1`] = `
   height: 206px;
 }
 
-.cache-1rvbv3u-StyledContent {
+.emotion-2 {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -798,90 +810,94 @@ exports[`PieChart renders correctly with data and content 1`] = `
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
-              <path
-                d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
-                fill="#0083e6"
-                opacity="1"
-                stroke="rgb(0, 92, 161)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
+                  fill="#0083e6"
+                  opacity="1"
+                  stroke="rgb(0, 92, 161)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
-      </div>
-      <div
-        class="cache-1rvbv3u-StyledContent epjfe5p0"
-      >
-        Test
+          </svg>
+        </div>
+        <div
+          class="emotion-2 emotion-3"
+        >
+          Test
+        </div>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PieChart renders correctly with detailed legend 1`] = `
+exports[`PieChart > renders correctly with detailed legend 1`] = `
 <DocumentFragment>
-  .cache-1kb8v2a-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -893,7 +909,7 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   height: 206px;
 }
 
-.cache-1hor4qk-List {
+.emotion-2 {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -910,15 +926,15 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   overflow-y: auto;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1kxdvj5-ListItem {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -932,13 +948,13 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   color: #3f4250;
 }
 
-.cache-1swvs82-ToggleBox {
+.emotion-8 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.cache-17ln093-Bullet {
+.emotion-10 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -947,7 +963,7 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   background: #5e47be;
 }
 
-.cache-s9pm9i-Label {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -961,7 +977,7 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   align-items: baseline;
 }
 
-.cache-1o1agb-Text {
+.emotion-14 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -969,13 +985,13 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   font-weight: 400;
 }
 
-.cache-f85np2-Line {
+.emotion-16 {
   border-bottom: 1px solid #d9dadd;
   position: relative;
   width: 100%;
 }
 
-.cache-1ci36lk-ProgressiveLine {
+.emotion-18 {
   border-bottom: 1px solid #8c40ef;
   position: absolute;
   left: 0;
@@ -986,12 +1002,12 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   width: 0%;
 }
 
-.cache-ngx53z-Value {
+.emotion-20 {
   margin-left: 6px;
   font-weight: 400;
 }
 
-.cache-14y4sjq-Bullet {
+.emotion-28 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1001,171 +1017,175 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
-              <path
-                d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
-                fill="#0083e6"
-                opacity="1"
-                stroke="rgb(0, 92, 161)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
+                  fill="#0083e6"
+                  opacity="1"
+                  stroke="rgb(0, 92, 161)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
+      <ul
+        class="emotion-2 emotion-3"
+      >
+        <div
+          aria-controls="chart-legend-compute"
+          aria-describedby="chart-legend-compute"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-compute"
+            />
+            <div
+              class="emotion-10 emotion-11"
+              color="#5e47be"
+              id="chart-legend-compute"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Compute
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-gpu"
+          aria-describedby="chart-legend-gpu"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-gpu"
+            />
+            <div
+              class="emotion-28 emotion-11"
+              color="#0083e6"
+              id="chart-legend-gpu"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                GPU Instances
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+      </ul>
     </div>
-    <ul
-      class="cache-1hor4qk-List e12qyakg8"
-    >
-      <div
-        aria-controls="chart-legend-compute"
-        aria-describedby="chart-legend-compute"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-compute"
-          />
-          <div
-            class="cache-17ln093-Bullet e12qyakg6"
-            color="#5e47be"
-            id="chart-legend-compute"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Compute
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-gpu"
-        aria-describedby="chart-legend-gpu"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-gpu"
-          />
-          <div
-            class="cache-14y4sjq-Bullet e12qyakg6"
-            color="#0083e6"
-            id="chart-legend-gpu"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              GPU Instances
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-    </ul>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PieChart renders correctly with detailed legend and discount 1`] = `
+exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
 <DocumentFragment>
-  .cache-1kb8v2a-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1177,7 +1197,7 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   height: 206px;
 }
 
-.cache-1hor4qk-List {
+.emotion-2 {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -1194,15 +1214,15 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   overflow-y: auto;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1kxdvj5-ListItem {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1216,13 +1236,13 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   color: #3f4250;
 }
 
-.cache-1swvs82-ToggleBox {
+.emotion-8 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.cache-17ln093-Bullet {
+.emotion-10 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1231,7 +1251,7 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   background: #5e47be;
 }
 
-.cache-s9pm9i-Label {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1245,7 +1265,7 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   align-items: baseline;
 }
 
-.cache-1o1agb-Text {
+.emotion-14 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -1253,13 +1273,13 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   font-weight: 400;
 }
 
-.cache-f85np2-Line {
+.emotion-16 {
   border-bottom: 1px solid #d9dadd;
   position: relative;
   width: 100%;
 }
 
-.cache-1ci36lk-ProgressiveLine {
+.emotion-18 {
   border-bottom: 1px solid #8c40ef;
   position: absolute;
   left: 0;
@@ -1270,129 +1290,133 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   width: 0%;
 }
 
-.cache-ngx53z-Value {
+.emotion-20 {
   margin-left: 6px;
   font-weight: 400;
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M-1.3667058278484462e-14,-74.4A74.4,74.4,0,1,0,1.3667058278484462e-14,74.4A74.4,74.4,0,1,0,-1.3667058278484462e-14,-74.4Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M-1.3667058278484462e-14,-74.4A74.4,74.4,0,1,0,1.3667058278484462e-14,74.4A74.4,74.4,0,1,0,-1.3667058278484462e-14,-74.4Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
-    </div>
-    <ul
-      class="cache-1hor4qk-List e12qyakg8"
-    >
-      <div
-        aria-controls="chart-legend-discount"
-        aria-describedby="chart-legend-discount"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
+      <ul
+        class="emotion-2 emotion-3"
       >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
+        <div
+          aria-controls="chart-legend-discount"
+          aria-describedby="chart-legend-discount"
+          class="emotion-4 emotion-5"
+          tabindex="0"
         >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-discount"
-          />
-          <div
-            class="cache-17ln093-Bullet e12qyakg6"
-            color="#5e47be"
-            id="chart-legend-discount"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
+          <li
+            class="emotion-6 emotion-7"
           >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              GPU Instances
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-discount"
+            />
+            <div
+              class="emotion-10 emotion-11"
+              color="#5e47be"
+              id="chart-legend-discount"
+            />
+            <div
+              class="emotion-12 emotion-13"
             >
               <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-    </ul>
+                class="emotion-14 emotion-15"
+              >
+                GPU Instances
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PieChart renders correctly with empty legend placeholder 1`] = `
+exports[`PieChart > renders correctly with empty legend placeholder 1`] = `
 <DocumentFragment>
-  .cache-1kb8v2a-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1404,7 +1428,7 @@ exports[`PieChart renders correctly with empty legend placeholder 1`] = `
   height: 206px;
 }
 
-.cache-16mg1da-EmptyLegend {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1416,7 +1440,7 @@ exports[`PieChart renders correctly with empty legend placeholder 1`] = `
   margin-left: 20px;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-4 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1428,87 +1452,91 @@ exports[`PieChart renders correctly with empty legend placeholder 1`] = `
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M-1.3667058278484462e-14,-74.4A74.4,74.4,0,1,0,1.3667058278484462e-14,74.4A74.4,74.4,0,1,0,-1.3667058278484462e-14,-74.4Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M-1.3667058278484462e-14,-74.4A74.4,74.4,0,1,0,1.3667058278484462e-14,74.4A74.4,74.4,0,1,0,-1.3667058278484462e-14,-74.4Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-16mg1da-EmptyLegend epjfe5p1"
-    >
-      <p
-        class="cache-1e8qouo-StyledText e13y3mga0"
+      <div
+        class="emotion-2 emotion-3"
       >
-        I am a legend
-      </p>
+        <p
+          class="emotion-4 emotion-5"
+        >
+          I am a legend
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PieChart renders correctly with legend 1`] = `
+exports[`PieChart > renders correctly with legend 1`] = `
 <DocumentFragment>
-  .cache-1kb8v2a-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1520,7 +1548,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   height: 206px;
 }
 
-.cache-1hor4qk-List {
+.emotion-2 {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -1537,15 +1565,15 @@ exports[`PieChart renders correctly with legend 1`] = `
   overflow-y: auto;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1kxdvj5-ListItem {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1559,13 +1587,13 @@ exports[`PieChart renders correctly with legend 1`] = `
   color: #3f4250;
 }
 
-.cache-1swvs82-ToggleBox {
+.emotion-8 {
   width: 250px;
   height: 21px;
   position: absolute;
 }
 
-.cache-17ln093-Bullet {
+.emotion-10 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1574,7 +1602,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #5e47be;
 }
 
-.cache-s9pm9i-Label {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1588,7 +1616,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   align-items: baseline;
 }
 
-.cache-1o1agb-Text {
+.emotion-14 {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
@@ -1596,13 +1624,13 @@ exports[`PieChart renders correctly with legend 1`] = `
   font-weight: 400;
 }
 
-.cache-f85np2-Line {
+.emotion-16 {
   border-bottom: 1px solid #d9dadd;
   position: relative;
   width: 100%;
 }
 
-.cache-1ci36lk-ProgressiveLine {
+.emotion-18 {
   border-bottom: 1px solid #8c40ef;
   position: absolute;
   left: 0;
@@ -1613,12 +1641,12 @@ exports[`PieChart renders correctly with legend 1`] = `
   width: 0%;
 }
 
-.cache-ngx53z-Value {
+.emotion-20 {
   margin-left: 6px;
   font-weight: 400;
 }
 
-.cache-14y4sjq-Bullet {
+.emotion-28 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1627,7 +1655,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #0083e6;
 }
 
-.cache-zctvtv-Bullet {
+.emotion-46 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1636,7 +1664,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #3ebd8f;
 }
 
-.cache-jlugwa-Bullet {
+.emotion-64 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1645,7 +1673,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #ac2740;
 }
 
-.cache-1lgtfr4-Bullet {
+.emotion-82 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1654,7 +1682,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #9a85ec;
 }
 
-.cache-574vwq-Bullet {
+.emotion-100 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1663,7 +1691,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #ff602e;
 }
 
-.cache-r46nv3-Bullet {
+.emotion-118 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1672,7 +1700,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #483800;
 }
 
-.cache-ck0x9h-Bullet {
+.emotion-136 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1681,7 +1709,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #02a5ad;
 }
 
-.cache-1vhat5-Bullet {
+.emotion-154 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1690,7 +1718,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #ffa488;
 }
 
-.cache-9x9mng-Bullet {
+.emotion-172 {
   display: inline-block;
   border-radius: 100%;
   width: 10px;
@@ -1700,555 +1728,559 @@ exports[`PieChart renders correctly with legend 1`] = `
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,53.81979226115179,-75.84477543619248L42.88613309329479,-60.7958846329602A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
-              <path
-                d="M55.501437463108275,-74.62298867995493A93,93,0,0,1,88.12156703782944,-29.725232089881683L70.43053488282992,-23.977067296032654A74.4,74.4,0,0,0,44.567778295251266,-59.574097876722654Z"
-                fill="#0083e6"
-                opacity="1"
-                stroke="rgb(0, 92, 161)"
-                stroke-width="0"
-              />
-              <path
-                d="M88.76389834795864,-27.748339591284847A93,93,0,0,1,88.76389834795864,27.748339591284847L71.07286619295911,22.000174797435825A74.4,74.4,0,0,0,71.07286619295911,-22.000174797435825Z"
-                fill="#3ebd8f"
-                opacity="1"
-                stroke="rgb(43, 132, 100)"
-                stroke-width="0"
-              />
-              <path
-                d="M88.12156703782944,29.725232089881683A93,93,0,0,1,55.501437463108275,74.62298867995493L44.567778295251266,59.574097876722654A74.4,74.4,0,0,0,70.43053488282992,23.977067296032654Z"
-                fill="#ac2740"
-                opacity="1"
-                stroke="rgb(120, 27, 45)"
-                stroke-width="0"
-              />
-              <path
-                d="M53.81979226115179,75.84477543619248A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,42.88613309329479,60.7958846329602Z"
-                fill="#9a85ec"
-                opacity="1"
-                stroke="rgb(108, 93, 165)"
-                stroke-width="0"
-              />
-              <path
-                d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-53.819792261151775,75.84477543619249L-42.886133093294774,60.79588463296021A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
-                fill="#ff602e"
-                opacity="1"
-                stroke="rgb(179, 67, 32)"
-                stroke-width="0"
-              />
-              <path
-                d="M-55.501437463108275,74.62298867995493A93,93,0,0,1,-88.12156703782944,29.725232089881704L-70.4305348828299,23.97706729603268A74.4,74.4,0,0,0,-44.56777829525128,59.57409787672265Z"
-                fill="#483800"
-                opacity="1"
-                stroke="rgb(50, 39, 0)"
-                stroke-width="0"
-              />
-              <path
-                d="M-88.76389834795864,27.748339591284847A93,93,0,0,1,-88.76389834795864,-27.748339591284825L-71.07286619295913,-22.0001747974358A74.4,74.4,0,0,0,-71.07286619295911,22.000174797435818Z"
-                fill="#02a5ad"
-                opacity="1"
-                stroke="rgb(1, 115, 121)"
-                stroke-width="0"
-              />
-              <path
-                d="M-88.12156703782944,-29.72523208988168A93,93,0,0,1,-55.50143746310825,-74.62298867995493L-44.567778295251294,-59.57409787672264A74.4,74.4,0,0,0,-70.43053488282992,-23.977067296032665Z"
-                fill="#ffa488"
-                opacity="1"
-                stroke="rgb(179, 115, 95)"
-                stroke-width="0"
-              />
-              <path
-                d="M-53.819792261151825,-75.84477543619245A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-42.88613309329479,-60.7958846329602Z"
-                fill="#96edf2"
-                opacity="1"
-                stroke="rgb(105, 166, 169)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M1.039313891827303,-92.99419243498087A93,93,0,0,1,53.81979226115179,-75.84477543619248L42.88613309329479,-60.7958846329602A74.4,74.4,0,0,0,1.0393138918272897,-74.39274041621438Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M55.501437463108275,-74.62298867995493A93,93,0,0,1,88.12156703782944,-29.725232089881683L70.43053488282992,-23.977067296032654A74.4,74.4,0,0,0,44.567778295251266,-59.574097876722654Z"
+                  fill="#0083e6"
+                  opacity="1"
+                  stroke="rgb(0, 92, 161)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M88.76389834795864,-27.748339591284847A93,93,0,0,1,88.76389834795864,27.748339591284847L71.07286619295911,22.000174797435825A74.4,74.4,0,0,0,71.07286619295911,-22.000174797435825Z"
+                  fill="#3ebd8f"
+                  opacity="1"
+                  stroke="rgb(43, 132, 100)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M88.12156703782944,29.725232089881683A93,93,0,0,1,55.501437463108275,74.62298867995493L44.567778295251266,59.574097876722654A74.4,74.4,0,0,0,70.43053488282992,23.977067296032654Z"
+                  fill="#ac2740"
+                  opacity="1"
+                  stroke="rgb(120, 27, 45)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M53.81979226115179,75.84477543619248A93,93,0,0,1,1.039313891827303,92.99419243498087L1.0393138918272897,74.39274041621438A74.4,74.4,0,0,0,42.88613309329479,60.7958846329602Z"
+                  fill="#9a85ec"
+                  opacity="1"
+                  stroke="rgb(108, 93, 165)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-1.0393138918272917,92.99419243498087A93,93,0,0,1,-53.819792261151775,75.84477543619249L-42.886133093294774,60.79588463296021A74.4,74.4,0,0,0,-1.0393138918272806,74.39274041621438Z"
+                  fill="#ff602e"
+                  opacity="1"
+                  stroke="rgb(179, 67, 32)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-55.501437463108275,74.62298867995493A93,93,0,0,1,-88.12156703782944,29.725232089881704L-70.4305348828299,23.97706729603268A74.4,74.4,0,0,0,-44.56777829525128,59.57409787672265Z"
+                  fill="#483800"
+                  opacity="1"
+                  stroke="rgb(50, 39, 0)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-88.76389834795864,27.748339591284847A93,93,0,0,1,-88.76389834795864,-27.748339591284825L-71.07286619295913,-22.0001747974358A74.4,74.4,0,0,0,-71.07286619295911,22.000174797435818Z"
+                  fill="#02a5ad"
+                  opacity="1"
+                  stroke="rgb(1, 115, 121)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-88.12156703782944,-29.72523208988168A93,93,0,0,1,-55.50143746310825,-74.62298867995493L-44.567778295251294,-59.57409787672264A74.4,74.4,0,0,0,-70.43053488282992,-23.977067296032665Z"
+                  fill="#ffa488"
+                  opacity="1"
+                  stroke="rgb(179, 115, 95)"
+                  stroke-width="0"
+                />
+                <path
+                  d="M-53.819792261151825,-75.84477543619245A93,93,0,0,1,-1.039313891827273,-92.99419243498087L-1.0393138918273153,-74.39274041621438A74.4,74.4,0,0,0,-42.88613309329479,-60.7958846329602Z"
+                  fill="#96edf2"
+                  opacity="1"
+                  stroke="rgb(105, 166, 169)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
+      <ul
+        class="emotion-2 emotion-3"
+      >
+        <div
+          aria-controls="chart-legend-compute"
+          aria-describedby="chart-legend-compute"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-compute"
+            />
+            <div
+              class="emotion-10 emotion-11"
+              color="#5e47be"
+              id="chart-legend-compute"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Compute
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-gpu"
+          aria-describedby="chart-legend-gpu"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-gpu"
+            />
+            <div
+              class="emotion-28 emotion-11"
+              color="#0083e6"
+              id="chart-legend-gpu"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                GPU Instances
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-functions"
+          aria-describedby="chart-legend-functions"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-functions"
+            />
+            <div
+              class="emotion-46 emotion-11"
+              color="#3ebd8f"
+              id="chart-legend-functions"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Serverless Functions
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-containers"
+          aria-describedby="chart-legend-containers"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-containers"
+            />
+            <div
+              class="emotion-64 emotion-11"
+              color="#ac2740"
+              id="chart-legend-containers"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Serverless Containers
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-s3"
+          aria-describedby="chart-legend-s3"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-s3"
+            />
+            <div
+              class="emotion-82 emotion-11"
+              color="#9a85ec"
+              id="chart-legend-s3"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Object Storage
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-dns"
+          aria-describedby="chart-legend-dns"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-dns"
+            />
+            <div
+              class="emotion-100 emotion-11"
+              color="#ff602e"
+              id="chart-legend-dns"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Domain zones
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-appleSilicon"
+          aria-describedby="chart-legend-appleSilicon"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-appleSilicon"
+            />
+            <div
+              class="emotion-118 emotion-11"
+              color="#483800"
+              id="chart-legend-appleSilicon"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Apple Silicon
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-baremetal"
+          aria-describedby="chart-legend-baremetal"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-baremetal"
+            />
+            <div
+              class="emotion-136 emotion-11"
+              color="#02a5ad"
+              id="chart-legend-baremetal"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Baremetal
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-database"
+          aria-describedby="chart-legend-database"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-database"
+            />
+            <div
+              class="emotion-154 emotion-11"
+              color="#ffa488"
+              id="chart-legend-database"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Database
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+        <div
+          aria-controls="chart-legend-lb"
+          aria-describedby="chart-legend-lb"
+          class="emotion-4 emotion-5"
+          tabindex="0"
+        >
+          <li
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-9"
+              data-testid="chart-legend-lb"
+            />
+            <div
+              class="emotion-172 emotion-11"
+              color="#96edf2"
+              id="chart-legend-lb"
+            />
+            <div
+              class="emotion-12 emotion-13"
+            >
+              <span
+                class="emotion-14 emotion-15"
+              >
+                Load Balancer
+              </span>
+              <span
+                class="emotion-16 emotion-17"
+              >
+                <span
+                  class="emotion-18 emotion-19"
+                />
+              </span>
+            </div>
+            <div
+              class="emotion-20 emotion-21"
+            >
+              20
+            </div>
+          </li>
+        </div>
+      </ul>
     </div>
-    <ul
-      class="cache-1hor4qk-List e12qyakg8"
-    >
-      <div
-        aria-controls="chart-legend-compute"
-        aria-describedby="chart-legend-compute"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-compute"
-          />
-          <div
-            class="cache-17ln093-Bullet e12qyakg6"
-            color="#5e47be"
-            id="chart-legend-compute"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Compute
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-gpu"
-        aria-describedby="chart-legend-gpu"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-gpu"
-          />
-          <div
-            class="cache-14y4sjq-Bullet e12qyakg6"
-            color="#0083e6"
-            id="chart-legend-gpu"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              GPU Instances
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-functions"
-        aria-describedby="chart-legend-functions"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-functions"
-          />
-          <div
-            class="cache-zctvtv-Bullet e12qyakg6"
-            color="#3ebd8f"
-            id="chart-legend-functions"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Serverless Functions
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-containers"
-        aria-describedby="chart-legend-containers"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-containers"
-          />
-          <div
-            class="cache-jlugwa-Bullet e12qyakg6"
-            color="#ac2740"
-            id="chart-legend-containers"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Serverless Containers
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-s3"
-        aria-describedby="chart-legend-s3"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-s3"
-          />
-          <div
-            class="cache-1lgtfr4-Bullet e12qyakg6"
-            color="#9a85ec"
-            id="chart-legend-s3"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Object Storage
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-dns"
-        aria-describedby="chart-legend-dns"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-dns"
-          />
-          <div
-            class="cache-574vwq-Bullet e12qyakg6"
-            color="#ff602e"
-            id="chart-legend-dns"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Domain zones
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-appleSilicon"
-        aria-describedby="chart-legend-appleSilicon"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-appleSilicon"
-          />
-          <div
-            class="cache-r46nv3-Bullet e12qyakg6"
-            color="#483800"
-            id="chart-legend-appleSilicon"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Apple Silicon
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-baremetal"
-        aria-describedby="chart-legend-baremetal"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-baremetal"
-          />
-          <div
-            class="cache-ck0x9h-Bullet e12qyakg6"
-            color="#02a5ad"
-            id="chart-legend-baremetal"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Baremetal
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-database"
-        aria-describedby="chart-legend-database"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-database"
-          />
-          <div
-            class="cache-1vhat5-Bullet e12qyakg6"
-            color="#ffa488"
-            id="chart-legend-database"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Database
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-      <div
-        aria-controls="chart-legend-lb"
-        aria-describedby="chart-legend-lb"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        tabindex="0"
-      >
-        <li
-          class="cache-1kxdvj5-ListItem e12qyakg7"
-        >
-          <div
-            class="cache-1swvs82-ToggleBox e12qyakg2"
-            data-testid="chart-legend-lb"
-          />
-          <div
-            class="cache-9x9mng-Bullet e12qyakg6"
-            color="#96edf2"
-            id="chart-legend-lb"
-          />
-          <div
-            class="cache-s9pm9i-Label e12qyakg5"
-          >
-            <span
-              class="cache-1o1agb-Text e12qyakg3"
-            >
-              Load Balancer
-            </span>
-            <span
-              class="cache-f85np2-Line e12qyakg1"
-            >
-              <span
-                class="cache-1ci36lk-ProgressiveLine e12qyakg0"
-              />
-            </span>
-          </div>
-          <div
-            class="cache-ngx53z-Value e12qyakg4"
-          >
-            20
-          </div>
-        </li>
-      </div>
-    </ul>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PieChart renders correctly with no props 1`] = `
+exports[`PieChart > renders correctly with no props 1`] = `
 <DocumentFragment>
-  .cache-1kb8v2a-Container {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2261,69 +2293,73 @@ exports[`PieChart renders correctly with no props 1`] = `
 }
 
 <div
-    class="cache-1kb8v2a-Container epjfe5p2"
-    height="206"
+    data-testid="testing"
   >
     <div
-      style="position: relative;"
+      class="emotion-0 emotion-1"
+      height="206"
     >
       <div
         style="position: relative;"
       >
-        <svg
-          height="206"
-          role="img"
-          width="206"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style="position: relative;"
         >
-          <defs
-            aria-hidden="true"
+          <svg
+            height="206"
+            role="img"
+            width="206"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <pattern
-              height="5"
-              id="lines"
-              patternUnits="userSpaceOnUse"
-              width="5"
+            <defs
+              aria-hidden="true"
             >
-              <rect
-                fill="inherit"
+              <pattern
                 height="5"
-                stroke="rgba(255, 0, 0, 0.1)"
-                stroke-width="0"
+                id="lines"
+                patternUnits="userSpaceOnUse"
                 width="5"
-              />
-              <path
-                d="
+              >
+                <rect
+                  fill="inherit"
+                  height="5"
+                  stroke="rgba(255, 0, 0, 0.1)"
+                  stroke-width="0"
+                  width="5"
+                />
+                <path
+                  d="
                 M 0 0 L 5 0
                 M 0 5 L 5 5
             "
-                stroke="#222638"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </pattern>
-          </defs>
-          <rect
-            fill="transparent"
-            height="206"
-            width="206"
-          />
-          <g
-            transform="translate(10,10)"
-          >
+                  stroke="#222638"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </pattern>
+            </defs>
+            <rect
+              fill="transparent"
+              height="206"
+              width="206"
+            />
             <g
-              transform="translate(93,93)"
+              transform="translate(10,10)"
             >
-              <path
-                d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M-1.3667058278484462e-14,-74.4A74.4,74.4,0,1,0,1.3667058278484462e-14,74.4A74.4,74.4,0,1,0,-1.3667058278484462e-14,-74.4Z"
-                fill="#5e47be"
-                opacity="1"
-                stroke="rgb(66, 50, 133)"
-                stroke-width="0"
-              />
+              <g
+                transform="translate(93,93)"
+              >
+                <path
+                  d="M5.694607616035192e-15,-93A93,93,0,1,1,-5.694607616035192e-15,93A93,93,0,1,1,5.694607616035192e-15,-93M-1.3667058278484462e-14,-74.4A74.4,74.4,0,1,0,1.3667058278484462e-14,74.4A74.4,74.4,0,1,0,-1.3667058278484462e-14,-74.4Z"
+                  fill="#5e47be"
+                  opacity="1"
+                  stroke="rgb(66, 50, 133)"
+                  stroke-width="0"
+                />
+              </g>
             </g>
-          </g>
-        </svg>
+          </svg>
+        </div>
       </div>
     </div>
   </div>

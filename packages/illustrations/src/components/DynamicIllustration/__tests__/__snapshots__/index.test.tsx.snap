@@ -1,19 +1,40 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DynamicIllustration should work with dark theme 1`] = `
+exports[`DynamicIllustration > should work with consoleDarkTheme 1`] = `
 <DocumentFragment>
-  <img
-    alt="empty"
-    src="test-file-stub"
-  />
+  <div
+    data-testid="testing"
+  >
+    <img
+      alt="empty"
+      src="/src/various/empty/empty-dark.webp"
+    />
+  </div>
 </DocumentFragment>
 `;
 
-exports[`DynamicIllustration should work with light theme 1`] = `
+exports[`DynamicIllustration > should work with consoleDarkerTheme 1`] = `
 <DocumentFragment>
-  <img
-    alt="empty"
-    src="test-file-stub"
-  />
+  <div
+    data-testid="testing"
+  >
+    <img
+      alt="empty"
+      src="/src/various/empty/empty-dark.webp"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DynamicIllustration > should work with consoleLightTheme 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <img
+      alt="empty"
+      src="/src/various/empty/empty-light.webp"
+    />
+  </div>
 </DocumentFragment>
 `;

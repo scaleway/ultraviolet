@@ -2,7 +2,8 @@ import react from '@vitejs/plugin-react'
 import browserslist from 'browserslist'
 import { resolveToEsbuildTarget } from 'esbuild-plugin-browserslist'
 import { readPackage } from 'read-pkg'
-import { type UserConfig, defineConfig } from 'vite'
+import { defineConfig } from 'vite'
+import type { UserConfig } from 'vitest/config'
 
 const pkg = await readPackage()
 
@@ -71,6 +72,64 @@ export const defaultConfig: UserConfig = {
       },
     }),
   ],
+  test: {
+    name: 'browser-jsdom',
+    globals: true,
+    clearMocks: true,
+    restoreMocks: true,
+    environment: 'jsdom',
+    alias: {
+      '.*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+        '<rootDir>/.vitest/fileMock.js',
+      '\\.svg$': '<rootDir>/.vitest/svg.ts',
+    },
+    setupFiles: ['vitest-localstorage-mock', 'vitest-canvas-mock'],
+    server: {
+      deps: {
+        inline: true,
+      },
+    },
+    deps: {
+      optimizer: {
+        web: {
+          enabled: true,
+          include: ['react-select', '@nivo/*'],
+        },
+      },
+    },
+    allowOnly: false,
+    css: true,
+    logHeapUsage: true,
+    reporters: ['default', 'junit'],
+    outputFile: {
+      junit: '.reports/tests.xml',
+    },
+    exclude: [
+      '**/node_modules/**',
+      '**/{dist,build}/**',
+      '**/__stories__/**',
+      '**.stories.*',
+      '**/coverages/**',
+      '**/__stories__/**',
+      '**/.{idea,git,cache,output,temp,reports,jest}/**',
+    ],
+    coverage: {
+      provider: 'istanbul',
+      reporter: ['text', 'json', 'cobertura', 'html', 'json-summary'],
+      exclude: [
+        '.reports/**',
+        '**/.eslintrc.*',
+        '**/*.d.ts',
+        'build',
+        'dist',
+        'node_modules',
+        '**/{webpack,vite,vitest,babel}.config.*',
+        '**.snap',
+        '**/__stories__/**',
+        '**.svg',
+      ],
+    },
+  },
 }
 
 export default defineConfig(defaultConfig)

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Card renders correctly with advanced header 1`] = `
+exports[`Card > renders correctly with advanced header 1`] = `
 <DocumentFragment>
-  .cache-wk9y1q-Stack-StyledStack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,11 +25,11 @@ exports[`Card renders correctly with advanced header 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wk9y1q-Stack-StyledStack[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-tj3hje-BorderedBox {
+.emotion-2 {
   border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 24px;
@@ -42,23 +42,64 @@ exports[`Card renders correctly with advanced header 1`] = `
   display: flex;
 }
 
-.cache-tj3hje-BorderedBox[data-is-active='true'] {
+.emotion-2[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-tj3hje-BorderedBox[data-disabled='true'] {
+.emotion-2[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
 <div
-    class="cache-wk9y1q-Stack-StyledStack exwxj841"
-    data-disabled="false"
+    data-testid="testing"
   >
-    <h2>
-      Advanced Title
-    </h2>
     <div
-      class="cache-tj3hje-BorderedBox exwxj840"
+      class="emotion-0 emotion-1"
+      data-disabled="false"
+    >
+      <h2>
+        Advanced Title
+      </h2>
+      <div
+        class="emotion-2 emotion-3"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card > renders correctly with className 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="test emotion-0 emotion-1"
       data-disabled="false"
       data-is-active="false"
     >
@@ -68,9 +109,9 @@ exports[`Card renders correctly with advanced header 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Card renders correctly with className 1`] = `
+exports[`Card > renders correctly with data-testid 1`] = `
 <DocumentFragment>
-  .cache-tj3hje-BorderedBox {
+  .emotion-0 {
   border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 24px;
@@ -83,163 +124,57 @@ exports[`Card renders correctly with className 1`] = `
   display: flex;
 }
 
-.cache-tj3hje-BorderedBox[data-is-active='true'] {
+.emotion-0[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-tj3hje-BorderedBox[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
 <div
-    class="test cache-tj3hje-BorderedBox exwxj840"
-    data-disabled="false"
-    data-is-active="false"
+    data-testid="testing"
   >
-    Hello
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Card renders correctly with data-testid 1`] = `
-<DocumentFragment>
-  .cache-tj3hje-BorderedBox {
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 24px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-tj3hje-BorderedBox[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.cache-tj3hje-BorderedBox[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
-    class="cache-tj3hje-BorderedBox exwxj840"
-    data-disabled="false"
-    data-is-active="false"
-    data-testid="test"
-  >
-    Hello
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Card renders correctly with disabled 1`] = `
-<DocumentFragment>
-  .cache-tj3hje-BorderedBox {
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 24px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-tj3hje-BorderedBox[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.cache-tj3hje-BorderedBox[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
-    class="cache-tj3hje-BorderedBox exwxj840"
-    data-disabled="true"
-    data-is-active="false"
-  >
-    Hello
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Card renders correctly with disabled and header 1`] = `
-<DocumentFragment>
-  .cache-wk9y1q-Stack-StyledStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-wk9y1q-Stack-StyledStack[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.cache-3j6na9-StyledText {
-  font-size: 25px;
-  font-family: Space Grotesk,Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 32px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-tj3hje-BorderedBox {
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 24px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-tj3hje-BorderedBox[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.cache-tj3hje-BorderedBox[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
-    class="cache-wk9y1q-Stack-StyledStack exwxj841"
-    data-disabled="true"
-  >
-    <h2
-      class="cache-3j6na9-StyledText e13y3mga0"
-    >
-      Title
-    </h2>
     <div
-      class="cache-tj3hje-BorderedBox exwxj840"
+      class="emotion-0 emotion-1"
+      data-disabled="false"
+      data-is-active="false"
+      data-testid="test"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card > renders correctly with disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
       data-disabled="true"
       data-is-active="false"
     >
@@ -249,9 +184,9 @@ exports[`Card renders correctly with disabled and header 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Card renders correctly with header 1`] = `
+exports[`Card > renders correctly with disabled and header 1`] = `
 <DocumentFragment>
-  .cache-wk9y1q-Stack-StyledStack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -274,11 +209,11 @@ exports[`Card renders correctly with header 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-wk9y1q-Stack-StyledStack[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-3j6na9-StyledText {
+.emotion-2 {
   font-size: 25px;
   font-family: Space Grotesk,Inter,Asap;
   font-weight: 400;
@@ -289,7 +224,7 @@ exports[`Card renders correctly with header 1`] = `
   text-decoration: none;
 }
 
-.cache-tj3hje-BorderedBox {
+.emotion-4 {
   border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 24px;
@@ -302,27 +237,153 @@ exports[`Card renders correctly with header 1`] = `
   display: flex;
 }
 
-.cache-tj3hje-BorderedBox[data-is-active='true'] {
+.emotion-4[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-tj3hje-BorderedBox[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
 <div
-    class="cache-wk9y1q-Stack-StyledStack exwxj841"
-    data-disabled="false"
+    data-testid="testing"
   >
-    <h2
-      class="cache-3j6na9-StyledText e13y3mga0"
-    >
-      Title
-    </h2>
     <div
-      class="cache-tj3hje-BorderedBox exwxj840"
+      class="emotion-0 emotion-1"
+      data-disabled="true"
+    >
+      <h2
+        class="emotion-2 emotion-3"
+      >
+        Title
+      </h2>
+      <div
+        class="emotion-4 emotion-5"
+        data-disabled="true"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card > renders correctly with header 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  font-size: 25px;
+  font-family: Space Grotesk,Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-4[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
       data-disabled="false"
-      data-is-active="false"
+    >
+      <h2
+        class="emotion-2 emotion-3"
+      >
+        Title
+      </h2>
+      <div
+        class="emotion-4 emotion-5"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card > renders correctly with isActive 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-disabled="false"
+      data-is-active="true"
     >
       Hello
     </div>
@@ -330,9 +391,9 @@ exports[`Card renders correctly with header 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Card renders correctly with isActive 1`] = `
+exports[`Card > renders correctly without header 1`] = `
 <DocumentFragment>
-  .cache-tj3hje-BorderedBox {
+  .emotion-0 {
   border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 24px;
@@ -345,53 +406,24 @@ exports[`Card renders correctly with isActive 1`] = `
   display: flex;
 }
 
-.cache-tj3hje-BorderedBox[data-is-active='true'] {
+.emotion-0[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-tj3hje-BorderedBox[data-disabled='true'] {
+.emotion-0[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
 <div
-    class="cache-tj3hje-BorderedBox exwxj840"
-    data-disabled="false"
-    data-is-active="true"
+    data-testid="testing"
   >
-    Hello
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Card renders correctly without header 1`] = `
-<DocumentFragment>
-  .cache-tj3hje-BorderedBox {
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 24px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-tj3hje-BorderedBox[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.cache-tj3hje-BorderedBox[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
-}
-
-<div
-    class="cache-tj3hje-BorderedBox exwxj840"
-    data-disabled="false"
-    data-is-active="false"
-  >
-    Hello
+    <div
+      class="emotion-0 emotion-1"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      Hello
+    </div>
   </div>
 </DocumentFragment>
 `;

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Toaster renders correctly with close button 1`] = `
+exports[`Toaster > renders correctly with close button 1`] = `
 [
-  .cache-1oov0zf-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 600;
@@ -14,37 +14,37 @@ exports[`Toaster renders correctly with close button 1`] = `
 }
 
 <h3
-    class="cache-1oov0zf-StyledText e13y3mga0"
+    class="emotion-0 emotion-1"
   >
     Title
   </h3>,
 ]
 `;
 
-exports[`Toaster renders correctly with close button 2`] = `
+exports[`Toaster > renders correctly with close button 2`] = `
 <DocumentFragment>
-  .cache-lkoz5w-toast {
+  .emotion-0 {
   border-radius: 4px;
 }
 
-.cache-lkoz5w-toast.Toastify__toast {
+.emotion-0.Toastify__toast {
   background-color: #ffffff;
   color: #3f4250;
   padding: 16px;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
 }
 
-.cache-lkoz5w-toast.Toastify__toast-container {
+.emotion-0.Toastify__toast-container {
   width: 312px;
 }
 
-.cache-lkoz5w-toast .Toastify__toast-body {
+.emotion-0 .Toastify__toast-body {
   margin: 0;
   padding: 0;
   display: none;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,7 +67,7 @@ exports[`Toaster renders correctly with close button 2`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,7 +90,7 @@ exports[`Toaster renders correctly with close button 2`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1oov0zf-StyledText {
+.emotion-5 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 600;
@@ -101,7 +101,7 @@ exports[`Toaster renders correctly with close button 2`] = `
   text-decoration: none;
 }
 
-.cache-dyxj60-StyledGhostButton {
+.emotion-7 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -140,22 +140,22 @@ exports[`Toaster renders correctly with close button 2`] = `
   color: #3f4250;
 }
 
-.cache-dyxj60-StyledGhostButton:hover {
+.emotion-7:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-dyxj60-StyledGhostButton:active {
+.emotion-7:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-dyxj60-StyledGhostButton:hover,
-.cache-dyxj60-StyledGhostButton:active {
+.emotion-7:hover,
+.emotion-7:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-9 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -164,75 +164,79 @@ exports[`Toaster renders correctly with close button 2`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-9 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="Toastify"
-    id="notification"
+    data-testid="testing"
   >
     <div
-      class="Toastify__toast-container Toastify__toast-container--top-right"
+      class="Toastify"
+      id="notification"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default cache-lkoz5w-toast Toastify--animate Toastify__slide-enter--top-right"
-        data-in="true"
-        id="1"
+        class="Toastify__toast-container Toastify__toast-container--top-right"
       >
         <div
-          class="Toastify__toast-body"
-          role="alert"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default emotion-0 Toastify--animate Toastify__slide-enter--top-right"
+          data-in="true"
+          id="1"
         >
-          <div />
-        </div>
-        <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        >
-          <div>
-            icon
+          <div
+            class="Toastify__toast-body"
+            role="alert"
+          >
+            <div />
           </div>
           <div
-            class="cache-1guc91g-Stack ehpbis70"
+            class="emotion-1 emotion-2"
           >
-            <h3
-              class="cache-1oov0zf-StyledText e13y3mga0"
+            <div>
+              icon
+            </div>
+            <div
+              class="emotion-3 emotion-2"
             >
-              Title
-            </h3>
-            Description
+              <h3
+                class="emotion-5 emotion-6"
+              >
+                Title
+              </h3>
+              Description
+            </div>
+            <button
+              aria-label="close"
+              class="emotion-7 emotion-8"
+              type="button"
+            >
+              <svg
+                class="emotion-9 emotion-10"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                />
+              </svg>
+            </button>
           </div>
-          <button
-            aria-label="close"
-            class="cache-dyxj60-StyledGhostButton e112qvla0"
-            type="button"
+          <div
+            class="Toastify__progress-bar--wrp"
+            data-hidden="true"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="Toastify__progress-bar--wrp"
-          data-hidden="true"
-        >
-          <div
-            class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--default"
-          />
-          <div
-            aria-hidden="true"
-            aria-label="notification timer"
-            class="Toastify__progress-bar Toastify__progress-bar--controlled Toastify__progress-bar-theme--light Toastify__progress-bar--default"
-            role="progressbar"
-            style="animation-duration: falsems; animation-play-state: paused; transform: scaleX(0);"
-          />
+            <div
+              class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            />
+            <div
+              aria-hidden="true"
+              aria-label="notification timer"
+              class="Toastify__progress-bar Toastify__progress-bar--controlled Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+              role="progressbar"
+              style="animation-duration: falsems; animation-play-state: paused; transform: scaleX(0);"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -240,7 +244,7 @@ exports[`Toaster renders correctly with close button 2`] = `
 </DocumentFragment>
 `;
 
-exports[`Toaster renders correctly with custom close button 1`] = `
+exports[`Toaster > renders correctly with custom close button 1`] = `
 [
   <button
     type="button"
@@ -250,30 +254,30 @@ exports[`Toaster renders correctly with custom close button 1`] = `
 ]
 `;
 
-exports[`Toaster renders correctly with custom close button 2`] = `
+exports[`Toaster > renders correctly with custom close button 2`] = `
 <DocumentFragment>
-  .cache-lkoz5w-toast {
+  .emotion-0 {
   border-radius: 4px;
 }
 
-.cache-lkoz5w-toast.Toastify__toast {
+.emotion-0.Toastify__toast {
   background-color: #ffffff;
   color: #3f4250;
   padding: 16px;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
 }
 
-.cache-lkoz5w-toast.Toastify__toast-container {
+.emotion-0.Toastify__toast-container {
   width: 312px;
 }
 
-.cache-lkoz5w-toast .Toastify__toast-body {
+.emotion-0 .Toastify__toast-body {
   margin: 0;
   padding: 0;
   display: none;
 }
 
-.cache-4lkpn5-Stack {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -296,7 +300,7 @@ exports[`Toaster renders correctly with custom close button 2`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -319,7 +323,7 @@ exports[`Toaster renders correctly with custom close button 2`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1oov0zf-StyledText {
+.emotion-5 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 600;
@@ -331,58 +335,62 @@ exports[`Toaster renders correctly with custom close button 2`] = `
 }
 
 <div
-    class="Toastify"
-    id="notification"
+    data-testid="testing"
   >
     <div
-      class="Toastify__toast-container Toastify__toast-container--top-right"
+      class="Toastify"
+      id="notification"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default cache-lkoz5w-toast Toastify--animate Toastify__slide-enter--top-right"
-        data-in="true"
-        id="2"
+        class="Toastify__toast-container Toastify__toast-container--top-right"
       >
         <div
-          class="Toastify__toast-body"
-          role="alert"
+          class="Toastify__toast Toastify__toast-theme--light Toastify__toast--default emotion-0 Toastify--animate Toastify__slide-enter--top-right"
+          data-in="true"
+          id="2"
         >
-          <div />
-        </div>
-        <div
-          class="cache-4lkpn5-Stack ehpbis70"
-        >
-          <div>
-            Avatar
-          </div>
           <div
-            class="cache-1guc91g-Stack ehpbis70"
+            class="Toastify__toast-body"
+            role="alert"
           >
-            <h3
-              class="cache-1oov0zf-StyledText e13y3mga0"
-            >
-              Invitation
-            </h3>
-            <button
-              type="button"
-            >
-              Decline
-            </button>
+            <div />
           </div>
-        </div>
-        <div
-          class="Toastify__progress-bar--wrp"
-          data-hidden="true"
-        >
           <div
-            class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--default"
-          />
+            class="emotion-1 emotion-2"
+          >
+            <div>
+              Avatar
+            </div>
+            <div
+              class="emotion-3 emotion-2"
+            >
+              <h3
+                class="emotion-5 emotion-6"
+              >
+                Invitation
+              </h3>
+              <button
+                type="button"
+              >
+                Decline
+              </button>
+            </div>
+          </div>
           <div
-            aria-hidden="true"
-            aria-label="notification timer"
-            class="Toastify__progress-bar Toastify__progress-bar--controlled Toastify__progress-bar-theme--light Toastify__progress-bar--default"
-            role="progressbar"
-            style="animation-duration: falsems; animation-play-state: paused; transform: scaleX(0);"
-          />
+            class="Toastify__progress-bar--wrp"
+            data-hidden="true"
+          >
+            <div
+              class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+            />
+            <div
+              aria-hidden="true"
+              aria-label="notification timer"
+              class="Toastify__progress-bar Toastify__progress-bar--controlled Toastify__progress-bar-theme--light Toastify__progress-bar--default"
+              role="progressbar"
+              style="animation-duration: falsems; animation-play-state: paused; transform: scaleX(0);"
+            />
+          </div>
         </div>
       </div>
     </div>

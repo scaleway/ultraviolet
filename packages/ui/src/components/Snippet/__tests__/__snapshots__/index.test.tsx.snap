@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Snippet renders correctly 1`] = `
+exports[`Snippet > renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1rjf9yl-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -17,7 +17,7 @@ exports[`Snippet renders correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,7 +41,7 @@ exports[`Snippet renders correctly 1`] = `
   width: 100%;
 }
 
-.cache-19hs08a-StyledText-PreText {
+.emotion-5 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -60,16 +60,16 @@ exports[`Snippet renders correctly 1`] = `
   counter-reset: section;
 }
 
-.cache-1e05ne7-StyledSpan {
+.emotion-7 {
   display: block;
 }
 
-.cache-1e05ne7-StyledSpan:after {
+.emotion-7:after {
   content: '';
   padding-right: 64px;
 }
 
-.cache-1eagt2o-ButtonContainer {
+.emotion-9 {
   position: absolute;
   top: 0;
   right: 0;
@@ -80,15 +80,15 @@ exports[`Snippet renders correctly 1`] = `
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-11 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-11[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -127,22 +127,22 @@ exports[`Snippet renders correctly 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-13:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-13:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-13:hover,
+.emotion-13:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-15 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -151,58 +151,62 @@ exports[`Snippet renders correctly 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1rjf9yl-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
-      <pre
-        class="e1q0gj908 cache-19hs08a-StyledText-PreText e13y3mga0"
-      >
-        <span
-          class="cache-1e05ne7-StyledSpan e1q0gj907"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-      </pre>
       <div
-        class="cache-1eagt2o-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
-        <div
-          aria-controls=":r1:"
-          aria-describedby=":r1:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+        <pre
+          class="emotion-4 emotion-5 emotion-6"
         >
-          <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
+          <span
+            class="emotion-7 emotion-8"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+        </pre>
+        <div
+          class="emotion-9 emotion-10"
+        >
+          <div
+            aria-controls=":r1:"
+            aria-describedby=":r1:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-13 emotion-14"
+              type="button"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
+              <svg
+                class="emotion-15 emotion-16"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -210,9 +214,9 @@ exports[`Snippet renders correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Snippet renders correctly in multiline  1`] = `
+exports[`Snippet > renders correctly in multiline  1`] = `
 <DocumentFragment>
-  .cache-358s5-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -228,7 +232,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -252,13 +256,13 @@ exports[`Snippet renders correctly in multiline  1`] = `
   width: 100%;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-pfeypm-StyledText-PreText {
+.emotion-7 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -276,16 +280,16 @@ exports[`Snippet renders correctly in multiline  1`] = `
   counter-reset: section;
 }
 
-.cache-bsg2e2-StyledSpan {
+.emotion-9 {
   display: block;
 }
 
-.cache-bsg2e2-StyledSpan:after {
+.emotion-9:after {
   content: '';
   padding: 32px;
 }
 
-.cache-z90995-ButtonContainer {
+.emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
@@ -295,15 +299,15 @@ exports[`Snippet renders correctly in multiline  1`] = `
   border: 2px solid transparent;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-23 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-23[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -342,22 +346,22 @@ exports[`Snippet renders correctly in multiline  1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-25:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:hover,
+.emotion-25:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-27 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -366,17 +370,17 @@ exports[`Snippet renders correctly in multiline  1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-98uomi-ShowMoreContainer {
+.emotion-29 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.cache-eg7v1i-StyledButton {
+.emotion-31 {
   width: 100%;
   background: none;
   border: none;
@@ -385,7 +389,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
   cursor: pointer;
 }
 
-.cache-19pgd1x-StyledText-AlignCenterText {
+.emotion-34 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -408,7 +412,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
   align-items: center;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon {
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -424,123 +428,127 @@ exports[`Snippet renders correctly in multiline  1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon .fillStroke {
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-358s5-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
-        <pre
-          class="e1q0gj908 cache-pfeypm-StyledText-PreText e13y3mga0"
-        >
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-        </pre>
-      </div>
-      <div
-        class="cache-z90995-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
         <div
-          aria-controls=":r3:"
-          aria-describedby=":r3:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-4 emotion-5"
+        >
+          <pre
+            class="emotion-6 emotion-7 emotion-8"
+          >
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+          </pre>
+        </div>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":r3:"
+            aria-describedby=":r3:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="emotion-29 emotion-30"
         >
           <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            aria-expanded="false"
+            class="emotion-31 emotion-32"
             type="button"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="emotion-33 emotion-34 emotion-8"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              Show 
+              <svg
+                class="emotion-36 emotion-37 emotion-28"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
           </button>
         </div>
-      </div>
-      <div
-        class="cache-98uomi-ShowMoreContainer e1q0gj903"
-      >
-        <button
-          aria-expanded="false"
-          class="cache-eg7v1i-StyledButton e1q0gj902"
-          type="button"
-        >
-          <span
-            class="e1q0gj901 cache-19pgd1x-StyledText-AlignCenterText e13y3mga0"
-          >
-            Show 
-            <svg
-              class="e1q0gj900 cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </button>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Snippet renders correctly in multiline with prefix command 1`] = `
+exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
 <DocumentFragment>
-  .cache-358s5-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -556,7 +564,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -580,13 +588,13 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   width: 100%;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-pfeypm-StyledText-PreText {
+.emotion-7 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -604,16 +612,16 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   counter-reset: section;
 }
 
-.cache-e8qyve-StyledSpan {
+.emotion-9 {
   display: block;
 }
 
-.cache-e8qyve-StyledSpan:after {
+.emotion-9:after {
   content: '';
   padding: 32px;
 }
 
-.cache-e8qyve-StyledSpan:before {
+.emotion-9:before {
   color: #727683;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -628,7 +636,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   padding-right: 8px;
 }
 
-.cache-z90995-ButtonContainer {
+.emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
@@ -638,15 +646,15 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   border: 2px solid transparent;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-23 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-23[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -685,22 +693,22 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-25:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:hover,
+.emotion-25:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-27 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -709,17 +717,17 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-98uomi-ShowMoreContainer {
+.emotion-29 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.cache-eg7v1i-StyledButton {
+.emotion-31 {
   width: 100%;
   background: none;
   border: none;
@@ -728,7 +736,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   cursor: pointer;
 }
 
-.cache-19pgd1x-StyledText-AlignCenterText {
+.emotion-34 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -751,7 +759,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   align-items: center;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon {
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -767,123 +775,127 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon .fillStroke {
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-358s5-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
-        <pre
-          class="e1q0gj908 cache-pfeypm-StyledText-PreText e13y3mga0"
-        >
-          <span
-            class="cache-e8qyve-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-e8qyve-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-e8qyve-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-          <span
-            class="cache-e8qyve-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-e8qyve-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-e8qyve-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-        </pre>
-      </div>
-      <div
-        class="cache-z90995-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
         <div
-          aria-controls=":r9:"
-          aria-describedby=":r9:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-4 emotion-5"
+        >
+          <pre
+            class="emotion-6 emotion-7 emotion-8"
+          >
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+          </pre>
+        </div>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":r9:"
+            aria-describedby=":r9:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="emotion-29 emotion-30"
         >
           <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            aria-expanded="false"
+            class="emotion-31 emotion-32"
             type="button"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="emotion-33 emotion-34 emotion-8"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              Show 
+              <svg
+                class="emotion-36 emotion-37 emotion-28"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
           </button>
         </div>
-      </div>
-      <div
-        class="cache-98uomi-ShowMoreContainer e1q0gj903"
-      >
-        <button
-          aria-expanded="false"
-          class="cache-eg7v1i-StyledButton e1q0gj902"
-          type="button"
-        >
-          <span
-            class="e1q0gj901 cache-19pgd1x-StyledText-AlignCenterText e13y3mga0"
-          >
-            Show 
-            <svg
-              class="e1q0gj900 cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </button>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
+exports[`Snippet > renders correctly in multiline with prefix lines number 1`] = `
 <DocumentFragment>
-  .cache-358s5-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -899,7 +911,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -923,13 +935,13 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   width: 100%;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-pfeypm-StyledText-PreText {
+.emotion-7 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -947,16 +959,16 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   counter-reset: section;
 }
 
-.cache-1flh8pl-StyledSpan {
+.emotion-9 {
   display: block;
 }
 
-.cache-1flh8pl-StyledSpan:after {
+.emotion-9:after {
   content: '';
   padding: 32px;
 }
 
-.cache-1flh8pl-StyledSpan:before {
+.emotion-9:before {
   color: #727683;
   width: 35px;
   display: -webkit-inline-box;
@@ -972,7 +984,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   padding-right: 8px;
 }
 
-.cache-z90995-ButtonContainer {
+.emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
@@ -982,15 +994,15 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   border: 2px solid transparent;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-23 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-23[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1029,22 +1041,22 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-25:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:hover,
+.emotion-25:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-27 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1053,17 +1065,17 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-98uomi-ShowMoreContainer {
+.emotion-29 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.cache-eg7v1i-StyledButton {
+.emotion-31 {
   width: 100%;
   background: none;
   border: none;
@@ -1072,7 +1084,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   cursor: pointer;
 }
 
-.cache-19pgd1x-StyledText-AlignCenterText {
+.emotion-34 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -1095,7 +1107,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   align-items: center;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon {
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -1111,323 +1123,545 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon .fillStroke {
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-358s5-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <pre
+            class="emotion-6 emotion-7 emotion-8"
+          >
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+          </pre>
+        </div>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":r6:"
+            aria-describedby=":r6:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="emotion-29 emotion-30"
+        >
+          <button
+            aria-expanded="false"
+            class="emotion-31 emotion-32"
+            type="button"
+          >
+            <span
+              class="emotion-33 emotion-34 emotion-8"
+            >
+              Show 
+              <svg
+                class="emotion-36 emotion-37 emotion-28"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Snippet > renders correctly with copiedText 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-5 {
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: auto;
+  counter-reset: section;
+}
+
+.emotion-7 {
+  display: block;
+}
+
+.emotion-7:after {
+  content: '';
+  padding-right: 64px;
+}
+
+.emotion-9 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
+}
+
+.emotion-11 {
+  display: inherit;
+}
+
+.emotion-11[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.emotion-13 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-13:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-13:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-13:hover,
+.emotion-13:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-15 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-15 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
       >
         <pre
-          class="e1q0gj908 cache-pfeypm-StyledText-PreText e13y3mga0"
+          class="emotion-4 emotion-5 emotion-6"
         >
           <span
-            class="cache-1flh8pl-StyledSpan e1q0gj907"
+            class="emotion-7 emotion-8"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-1flh8pl-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-1flh8pl-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-          <span
-            class="cache-1flh8pl-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-1flh8pl-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-1flh8pl-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
         </pre>
-      </div>
-      <div
-        class="cache-z90995-ButtonContainer e1q0gj904"
-      >
         <div
-          aria-controls=":r6:"
-          aria-describedby=":r6:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-9 emotion-10"
         >
-          <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
+          <div
+            aria-controls=":ri:"
+            aria-describedby=":ri:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="false"
+            tabindex="0"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              aria-label="Copy"
+              class="emotion-13 emotion-14"
+              type="button"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
+              <svg
+                class="emotion-15 emotion-16"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Snippet > renders correctly with copyText 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-5 {
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: auto;
+  counter-reset: section;
+}
+
+.emotion-7 {
+  display: block;
+}
+
+.emotion-7:after {
+  content: '';
+  padding-right: 64px;
+}
+
+.emotion-9 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
+}
+
+.emotion-11 {
+  display: inherit;
+}
+
+.emotion-11[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.emotion-13 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-13:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-13:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-13:hover,
+.emotion-13:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-15 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-15 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
       <div
-        class="cache-98uomi-ShowMoreContainer e1q0gj903"
+        class="emotion-2 emotion-3"
       >
-        <button
-          aria-expanded="false"
-          class="cache-eg7v1i-StyledButton e1q0gj902"
-          type="button"
+        <pre
+          class="emotion-4 emotion-5 emotion-6"
         >
           <span
-            class="e1q0gj901 cache-19pgd1x-StyledText-AlignCenterText e13y3mga0"
+            class="emotion-7 emotion-8"
           >
-            Show 
-            <svg
-              class="e1q0gj900 cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Snippet renders correctly with copiedText 1`] = `
-<DocumentFragment>
-  .cache-1rjf9yl-Container {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  max-width: 100%;
-  background: #f9f9fa;
-  border-radius: 4px;
-}
-
-.cache-jdits0-Stack-StyledStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.cache-19hs08a-StyledText-PreText {
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 16px;
-  padding-right: 72px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  height: auto;
-  counter-reset: section;
-}
-
-.cache-1e05ne7-StyledSpan {
-  display: block;
-}
-
-.cache-1e05ne7-StyledSpan:after {
-  content: '';
-  padding-right: 64px;
-}
-
-.cache-1eagt2o-ButtonContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 8px 16px 0 0;
-  background: #f9f9fa;
-  border-radius: 4px;
-  border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f9f9fa;
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
-  display: inherit;
-}
-
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
-  width: 100%;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
-    class="cache-1rjf9yl-Container e1q0gj906"
-  >
-    <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
-    >
-      <pre
-        class="e1q0gj908 cache-19hs08a-StyledText-PreText e13y3mga0"
-      >
-        <span
-          class="cache-1e05ne7-StyledSpan e1q0gj907"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-      </pre>
-      <div
-        class="cache-1eagt2o-ButtonContainer e1q0gj904"
-      >
+        </pre>
         <div
-          aria-controls=":ri:"
-          aria-describedby=":ri:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-9 emotion-10"
         >
-          <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
+          <div
+            aria-controls=":rg:"
+            aria-describedby=":rg:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="false"
+            tabindex="0"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              aria-label="Copy"
+              class="emotion-13 emotion-14"
+              type="button"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
+              <svg
+                class="emotion-15 emotion-16"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1435,9 +1669,9 @@ exports[`Snippet renders correctly with copiedText 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Snippet renders correctly with copyText 1`] = `
+exports[`Snippet > renders correctly with hideText 1`] = `
 <DocumentFragment>
-  .cache-1rjf9yl-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1448,11 +1682,12 @@ exports[`Snippet renders correctly with copyText 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
+  width: 100%;
   background: #f9f9fa;
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1476,224 +1711,13 @@ exports[`Snippet renders correctly with copyText 1`] = `
   width: 100%;
 }
 
-.cache-19hs08a-StyledText-PreText {
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 16px;
-  padding-right: 72px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  height: auto;
-  counter-reset: section;
-}
-
-.cache-1e05ne7-StyledSpan {
-  display: block;
-}
-
-.cache-1e05ne7-StyledSpan:after {
-  content: '';
-  padding-right: 64px;
-}
-
-.cache-1eagt2o-ButtonContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 8px 16px 0 0;
-  background: #f9f9fa;
-  border-radius: 4px;
-  border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f9f9fa;
-}
-
-.cache-1hzk1lh-StyledChildrenContainer {
-  display: inherit;
-}
-
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
-  width: 100%;
-}
-
-.cache-1xcp86l-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xcp86l-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-<div
-    class="cache-1rjf9yl-Container e1q0gj906"
-  >
-    <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
-    >
-      <pre
-        class="e1q0gj908 cache-19hs08a-StyledText-PreText e13y3mga0"
-      >
-        <span
-          class="cache-1e05ne7-StyledSpan e1q0gj907"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-      </pre>
-      <div
-        class="cache-1eagt2o-ButtonContainer e1q0gj904"
-      >
-        <div
-          aria-controls=":rg:"
-          aria-describedby=":rg:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
-        >
-          <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Snippet renders correctly with hideText 1`] = `
-<DocumentFragment>
-  .cache-358s5-Container {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  max-width: 100%;
-  width: 100%;
-  background: #f9f9fa;
-  border-radius: 4px;
-}
-
-.cache-jdits0-Stack-StyledStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.cache-1cgpxro-StyledExpandable {
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-pfeypm-StyledText-PreText {
+.emotion-7 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -1711,16 +1735,16 @@ exports[`Snippet renders correctly with hideText 1`] = `
   counter-reset: section;
 }
 
-.cache-bsg2e2-StyledSpan {
+.emotion-9 {
   display: block;
 }
 
-.cache-bsg2e2-StyledSpan:after {
+.emotion-9:after {
   content: '';
   padding: 32px;
 }
 
-.cache-z90995-ButtonContainer {
+.emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
@@ -1730,15 +1754,15 @@ exports[`Snippet renders correctly with hideText 1`] = `
   border: 2px solid transparent;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-23 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-23[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1777,22 +1801,22 @@ exports[`Snippet renders correctly with hideText 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-25:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:hover,
+.emotion-25:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-27 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1801,17 +1825,17 @@ exports[`Snippet renders correctly with hideText 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-98uomi-ShowMoreContainer {
+.emotion-29 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.cache-eg7v1i-StyledButton {
+.emotion-31 {
   width: 100%;
   background: none;
   border: none;
@@ -1820,7 +1844,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
   cursor: pointer;
 }
 
-.cache-19pgd1x-StyledText-AlignCenterText {
+.emotion-34 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -1843,7 +1867,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
   align-items: center;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon {
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -1859,123 +1883,127 @@ exports[`Snippet renders correctly with hideText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon .fillStroke {
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-358s5-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
-        <pre
-          class="e1q0gj908 cache-pfeypm-StyledText-PreText e13y3mga0"
-        >
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-        </pre>
-      </div>
-      <div
-        class="cache-z90995-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
         <div
-          aria-controls=":rk:"
-          aria-describedby=":rk:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-4 emotion-5"
+        >
+          <pre
+            class="emotion-6 emotion-7 emotion-8"
+          >
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+          </pre>
+        </div>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":rk:"
+            aria-describedby=":rk:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="emotion-29 emotion-30"
         >
           <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            aria-expanded="false"
+            class="emotion-31 emotion-32"
             type="button"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="emotion-33 emotion-34 emotion-8"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              Show 
+              <svg
+                class="emotion-36 emotion-37 emotion-28"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
           </button>
         </div>
-      </div>
-      <div
-        class="cache-98uomi-ShowMoreContainer e1q0gj903"
-      >
-        <button
-          aria-expanded="false"
-          class="cache-eg7v1i-StyledButton e1q0gj902"
-          type="button"
-        >
-          <span
-            class="e1q0gj901 cache-19pgd1x-StyledText-AlignCenterText e13y3mga0"
-          >
-            Show 
-            <svg
-              class="e1q0gj900 cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </button>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Snippet renders correctly with initiallyExpanded 1`] = `
+exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 <DocumentFragment>
-  .cache-358s5-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1991,7 +2019,23 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2015,13 +2059,43 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   width: 100%;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-pfeypm-StyledText-PreText {
+.emotion-4 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  height: auto;
+}
+
+.emotion-7 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -2039,16 +2113,43 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   counter-reset: section;
 }
 
-.cache-bsg2e2-StyledSpan {
+.emotion-7 {
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: auto;
+  counter-reset: section;
+}
+
+.emotion-9 {
   display: block;
 }
 
-.cache-bsg2e2-StyledSpan:after {
+.emotion-9:after {
   content: '';
   padding: 32px;
 }
 
-.cache-z90995-ButtonContainer {
+.emotion-9 {
+  display: block;
+}
+
+.emotion-9:after {
+  content: '';
+  padding: 32px;
+}
+
+.emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2058,15 +2159,33 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   border: 2px solid transparent;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-21 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.emotion-23 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-23[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-23 {
+  display: inherit;
+}
+
+.emotion-23[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2105,22 +2224,76 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-25:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:hover,
+.emotion-25:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-25:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-25:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25:hover,
+.emotion-25:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-27 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2129,17 +2302,31 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1ucxira-ShowMoreContainer {
+.emotion-27 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-27 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-29 {
   width: 100%;
   box-shadow: none;
 }
 
-.cache-eg7v1i-StyledButton {
+.emotion-31 {
   width: 100%;
   background: none;
   border: none;
@@ -2148,7 +2335,16 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   cursor: pointer;
 }
 
-.cache-19pgd1x-StyledText-AlignCenterText {
+.emotion-31 {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.emotion-34 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -2171,7 +2367,30 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   align-items: center;
 }
 
-.cache-sgrpwr-StyledIcon-sizeStyles-AnimatedArrowIcon {
+.emotion-34 {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -2187,123 +2406,127 @@ exports[`Snippet renders correctly with initiallyExpanded 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.cache-sgrpwr-StyledIcon-sizeStyles-AnimatedArrowIcon .fillStroke {
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-358s5-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
-        <pre
-          class="e1q0gj908 cache-pfeypm-StyledText-PreText e13y3mga0"
-        >
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-        </pre>
-      </div>
-      <div
-        class="cache-z90995-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
         <div
-          aria-controls=":rq:"
-          aria-describedby=":rq:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-4 emotion-5"
+        >
+          <pre
+            class="emotion-6 emotion-7 emotion-8"
+          >
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+          </pre>
+        </div>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":rq:"
+            aria-describedby=":rq:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="emotion-29 emotion-30"
         >
           <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            aria-expanded="true"
+            class="emotion-31 emotion-32"
             type="button"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="emotion-33 emotion-34 emotion-8"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              Hide 
+              <svg
+                class="emotion-36 emotion-37 emotion-28"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
           </button>
         </div>
-      </div>
-      <div
-        class="cache-1ucxira-ShowMoreContainer e1q0gj903"
-      >
-        <button
-          aria-expanded="true"
-          class="cache-eg7v1i-StyledButton e1q0gj902"
-          type="button"
-        >
-          <span
-            class="e1q0gj901 cache-19pgd1x-StyledText-AlignCenterText e13y3mga0"
-          >
-            Hide 
-            <svg
-              class="e1q0gj900 cache-sgrpwr-StyledIcon-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </button>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Snippet renders correctly with showText 1`] = `
+exports[`Snippet > renders correctly with showText 1`] = `
 <DocumentFragment>
-  .cache-358s5-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2319,7 +2542,23 @@ exports[`Snippet renders correctly with showText 1`] = `
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2343,13 +2582,43 @@ exports[`Snippet renders correctly with showText 1`] = `
   width: 100%;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-pfeypm-StyledText-PreText {
+.emotion-4 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  height: auto;
+}
+
+.emotion-7 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -2367,16 +2636,43 @@ exports[`Snippet renders correctly with showText 1`] = `
   counter-reset: section;
 }
 
-.cache-bsg2e2-StyledSpan {
+.emotion-7 {
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: auto;
+  counter-reset: section;
+}
+
+.emotion-9 {
   display: block;
 }
 
-.cache-bsg2e2-StyledSpan:after {
+.emotion-9:after {
   content: '';
   padding: 32px;
 }
 
-.cache-z90995-ButtonContainer {
+.emotion-9 {
+  display: block;
+}
+
+.emotion-9:after {
+  content: '';
+  padding: 32px;
+}
+
+.emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2386,15 +2682,33 @@ exports[`Snippet renders correctly with showText 1`] = `
   border: 2px solid transparent;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-21 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.emotion-23 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-23[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-23 {
+  display: inherit;
+}
+
+.emotion-23[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2433,22 +2747,76 @@ exports[`Snippet renders correctly with showText 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-25:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:hover,
+.emotion-25:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-25:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-25:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25:hover,
+.emotion-25:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-27 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2457,17 +2825,36 @@ exports[`Snippet renders correctly with showText 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-98uomi-ShowMoreContainer {
+.emotion-27 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-27 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-29 {
   width: 100%;
   box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
-.cache-eg7v1i-StyledButton {
+.emotion-29 {
+  width: 100%;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
+}
+
+.emotion-31 {
   width: 100%;
   background: none;
   border: none;
@@ -2476,7 +2863,16 @@ exports[`Snippet renders correctly with showText 1`] = `
   cursor: pointer;
 }
 
-.cache-19pgd1x-StyledText-AlignCenterText {
+.emotion-31 {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.emotion-34 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -2499,7 +2895,30 @@ exports[`Snippet renders correctly with showText 1`] = `
   align-items: center;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon {
+.emotion-34 {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -2515,123 +2934,148 @@ exports[`Snippet renders correctly with showText 1`] = `
   transition: transform 300ms ease-in-out;
 }
 
-.cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon .fillStroke {
+.emotion-37 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-37 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-358s5-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
-        <pre
-          class="e1q0gj908 cache-pfeypm-StyledText-PreText e13y3mga0"
-        >
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-        </pre>
-      </div>
-      <div
-        class="cache-z90995-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
         <div
-          aria-controls=":rn:"
-          aria-describedby=":rn:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-4 emotion-5"
+        >
+          <pre
+            class="emotion-6 emotion-7 emotion-8"
+          >
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+          </pre>
+        </div>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":rn:"
+            aria-describedby=":rn:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="emotion-29 emotion-30"
         >
           <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            aria-expanded="false"
+            class="emotion-31 emotion-32"
             type="button"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="emotion-33 emotion-34 emotion-8"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              Test 
+              <svg
+                class="emotion-36 emotion-37 emotion-28"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
           </button>
         </div>
-      </div>
-      <div
-        class="cache-98uomi-ShowMoreContainer e1q0gj903"
-      >
-        <button
-          aria-expanded="false"
-          class="cache-eg7v1i-StyledButton e1q0gj902"
-          type="button"
-        >
-          <span
-            class="e1q0gj901 cache-19pgd1x-StyledText-AlignCenterText e13y3mga0"
-          >
-            Test 
-            <svg
-              class="e1q0gj900 cache-1583buc-StyledIcon-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </button>
       </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Snippet renders correctly with single line with prefix command 1`] = `
+exports[`Snippet > renders correctly with single line with prefix command 1`] = `
 <DocumentFragment>
-  .cache-1rjf9yl-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2646,7 +3090,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2670,7 +3114,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   width: 100%;
 }
 
-.cache-19hs08a-StyledText-PreText {
+.emotion-5 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -2689,16 +3133,16 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   counter-reset: section;
 }
 
-.cache-1damn3v-StyledSpan {
+.emotion-7 {
   display: block;
 }
 
-.cache-1damn3v-StyledSpan:after {
+.emotion-7:after {
   content: '';
   padding-right: 64px;
 }
 
-.cache-1damn3v-StyledSpan:before {
+.emotion-7:before {
   color: #727683;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2713,7 +3157,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   padding-right: 8px;
 }
 
-.cache-1eagt2o-ButtonContainer {
+.emotion-9 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2724,15 +3168,15 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-11 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-11[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2771,22 +3215,22 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-13:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-13:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-13:hover,
+.emotion-13:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-15 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2795,58 +3239,62 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1rjf9yl-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
-      <pre
-        class="e1q0gj908 cache-19hs08a-StyledText-PreText e13y3mga0"
-      >
-        <span
-          class="cache-1damn3v-StyledSpan e1q0gj907"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-      </pre>
       <div
-        class="cache-1eagt2o-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
-        <div
-          aria-controls=":rc:"
-          aria-describedby=":rc:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+        <pre
+          class="emotion-4 emotion-5 emotion-6"
         >
-          <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
+          <span
+            class="emotion-7 emotion-8"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+        </pre>
+        <div
+          class="emotion-9 emotion-10"
+        >
+          <div
+            aria-controls=":rc:"
+            aria-describedby=":rc:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-13 emotion-14"
+              type="button"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
+              <svg
+                class="emotion-15 emotion-16"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -2854,9 +3302,9 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Snippet renders correctly with single line with prefix lines number 1`] = `
+exports[`Snippet > renders correctly with single line with prefix lines number 1`] = `
 <DocumentFragment>
-  .cache-1rjf9yl-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2871,7 +3319,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2895,7 +3343,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   width: 100%;
 }
 
-.cache-19hs08a-StyledText-PreText {
+.emotion-5 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -2914,16 +3362,16 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   counter-reset: section;
 }
 
-.cache-1720tme-StyledSpan {
+.emotion-7 {
   display: block;
 }
 
-.cache-1720tme-StyledSpan:after {
+.emotion-7:after {
   content: '';
   padding-right: 64px;
 }
 
-.cache-1720tme-StyledSpan:before {
+.emotion-7:before {
   color: #727683;
   width: 35px;
   display: -webkit-inline-box;
@@ -2939,7 +3387,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   padding-right: 8px;
 }
 
-.cache-1eagt2o-ButtonContainer {
+.emotion-9 {
   position: absolute;
   top: 0;
   right: 0;
@@ -2950,15 +3398,15 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-11 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-11[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2997,22 +3445,22 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-13:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-13:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-13:hover,
+.emotion-13:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-15 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -3021,58 +3469,62 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-1rjf9yl-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
-      <pre
-        class="e1q0gj908 cache-19hs08a-StyledText-PreText e13y3mga0"
-      >
-        <span
-          class="cache-1720tme-StyledSpan e1q0gj907"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-      </pre>
       <div
-        class="cache-1eagt2o-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
-        <div
-          aria-controls=":re:"
-          aria-describedby=":re:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+        <pre
+          class="emotion-4 emotion-5 emotion-6"
         >
-          <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
-            type="button"
+          <span
+            class="emotion-7 emotion-8"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+        </pre>
+        <div
+          class="emotion-9 emotion-10"
+        >
+          <div
+            aria-controls=":re:"
+            aria-describedby=":re:"
+            class="emotion-11 emotion-12"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-13 emotion-14"
+              type="button"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
+              <svg
+                class="emotion-15 emotion-16"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -3080,9 +3532,9 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
 </DocumentFragment>
 `;
 
-exports[`Snippet should click on extend button to display full content on  1`] = `
+exports[`Snippet > should click on extend button to display full content on  1`] = `
 <DocumentFragment>
-  .cache-358s5-Container {
+  .emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3098,7 +3550,23 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   border-radius: 4px;
 }
 
-.cache-jdits0-Stack-StyledStack {
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3122,13 +3590,43 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   width: 100%;
 }
 
-.cache-1cgpxro-StyledExpandable {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-4 {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.cache-pfeypm-StyledText-PreText {
+.emotion-4 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  height: auto;
+}
+
+.emotion-7 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -3146,16 +3644,43 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   counter-reset: section;
 }
 
-.cache-bsg2e2-StyledSpan {
+.emotion-7 {
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: auto;
+  counter-reset: section;
+}
+
+.emotion-9 {
   display: block;
 }
 
-.cache-bsg2e2-StyledSpan:after {
+.emotion-9:after {
   content: '';
   padding: 32px;
 }
 
-.cache-z90995-ButtonContainer {
+.emotion-9 {
+  display: block;
+}
+
+.emotion-9:after {
+  content: '';
+  padding: 32px;
+}
+
+.emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
@@ -3165,15 +3690,33 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   border: 2px solid transparent;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-21 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.emotion-23 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-23[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-23 {
+  display: inherit;
+}
+
+.emotion-23[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.emotion-25 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3212,22 +3755,76 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-25:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-25:hover,
+.emotion-25:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-25:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-25:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25:hover,
+.emotion-25:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-27 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -3236,17 +3833,31 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-27 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1ucxira-ShowMoreContainer {
+.emotion-27 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-27 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-29 {
   width: 100%;
   box-shadow: none;
 }
 
-.cache-eg7v1i-StyledButton {
+.emotion-31 {
   width: 100%;
   background: none;
   border: none;
@@ -3255,7 +3866,16 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   cursor: pointer;
 }
 
-.cache-19pgd1x-StyledText-AlignCenterText {
+.emotion-31 {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.emotion-34 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -3278,7 +3898,30 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   align-items: center;
 }
 
-.cache-sgrpwr-StyledIcon-sizeStyles-AnimatedArrowIcon {
+.emotion-34 {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-37 {
   vertical-align: middle;
   fill: currentColor;
   height: 1em;
@@ -3294,114 +3937,118 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   transition: transform 300ms ease-in-out;
 }
 
-.cache-sgrpwr-StyledIcon-sizeStyles-AnimatedArrowIcon .fillStroke {
+.emotion-37 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-358s5-Container e1q0gj906"
+    data-testid="testing"
   >
     <div
-      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-1cgpxro-StyledExpandable e5hc7t70"
-      >
-        <pre
-          class="e1q0gj908 cache-pfeypm-StyledText-PreText e13y3mga0"
-        >
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </span>
-          <span
-            class="cache-bsg2e2-StyledSpan e1q0gj907"
-          >
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          </span>
-        </pre>
-      </div>
-      <div
-        class="cache-z90995-ButtonContainer e1q0gj904"
+        class="emotion-2 emotion-3"
       >
         <div
-          aria-controls=":rt:"
-          aria-describedby=":rt:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-4 emotion-5"
+        >
+          <pre
+            class="emotion-6 emotion-7 emotion-8"
+          >
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <span
+              class="emotion-9 emotion-10"
+            >
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </span>
+          </pre>
+        </div>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":rt:"
+            aria-describedby=":rt:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="emotion-29 emotion-30"
         >
           <button
-            aria-label="Copy"
-            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            aria-expanded="true"
+            class="emotion-31 emotion-32"
             type="button"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              class="emotion-33 emotion-34 emotion-8"
             >
-              <path
-                clip-rule="evenodd"
-                d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
-                fill-rule="evenodd"
-              />
-            </svg>
+              Hide 
+              <svg
+                class="emotion-36 emotion-37 emotion-28"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
           </button>
         </div>
-      </div>
-      <div
-        class="cache-1ucxira-ShowMoreContainer e1q0gj903"
-      >
-        <button
-          aria-expanded="true"
-          class="cache-eg7v1i-StyledButton e1q0gj902"
-          type="button"
-        >
-          <span
-            class="e1q0gj901 cache-19pgd1x-StyledText-AlignCenterText e13y3mga0"
-          >
-            Hide 
-            <svg
-              class="e1q0gj900 cache-sgrpwr-StyledIcon-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </button>
       </div>
     </div>
   </div>

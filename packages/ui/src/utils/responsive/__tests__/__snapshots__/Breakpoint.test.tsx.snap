@@ -1,41 +1,49 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Breakpoint renders correctly down prop 1`] = `
+exports[`Breakpoint > renders correctly down prop 1`] = `
 <DocumentFragment>
-  .cache-1titrib-Breakpoint {
+  .emotion-0 {
   display: none;
 }
 
 @media (max-width: 767px) {
-  .cache-1titrib-Breakpoint {
+  .emotion-0 {
     display: block;
   }
 }
 
 <div
-    class="cache-1titrib-Breakpoint e1ehbeci0"
+    data-testid="testing"
   >
-    Hello
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Hello
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Breakpoint renders correctly up prop 1`] = `
+exports[`Breakpoint > renders correctly up prop 1`] = `
 <DocumentFragment>
-  .cache-1yjptq9-Breakpoint {
+  .emotion-0 {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .cache-1yjptq9-Breakpoint {
+  .emotion-0 {
     display: block;
   }
 }
 
 <div
-    class="cache-1yjptq9-Breakpoint e1ehbeci0"
+    data-testid="testing"
   >
-    Hello
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Hello
+    </div>
   </div>
 </DocumentFragment>
 `;

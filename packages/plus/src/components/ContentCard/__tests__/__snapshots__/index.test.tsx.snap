@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ContentCard renders correctly with all directions renders correctly direction column 1`] = `
+exports[`ContentCard > renders correctly with all directions > renders correctly direction column 1`] = `
 <DocumentFragment>
-  .cache-11erqz-Card {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -15,7 +15,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   overflow-wrap: break-word;
 }
 
-.cache-19c93m0-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,7 +39,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: 100%;
 }
 
-.cache-1dwb1l-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,7 +65,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex: 1;
 }
 
-.cache-1pfgzdf-Stack-SubContainer {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,7 +93,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -116,7 +116,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -139,7 +139,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -162,7 +162,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-14 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -175,32 +175,36 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
       <div
-        class="cache-1dwb1l-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1pfgzdf-Stack-SubContainer e2ipnt2"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-8 emotion-5"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-10 emotion-5"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-12 emotion-5"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-14 emotion-15"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -211,9 +215,9 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with all directions renders correctly direction column and image 1`] = `
+exports[`ContentCard > renders correctly with all directions > renders correctly direction column and image 1`] = `
 <DocumentFragment>
-  .cache-11erqz-Card {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -226,7 +230,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   overflow-wrap: break-word;
 }
 
-.cache-19c93m0-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -250,12 +254,12 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: 100%;
 }
 
-.cache-1huczc9-Image {
+.emotion-4 {
   object-fit: cover;
   border-radius: 4px 4px 0 0;
 }
 
-.cache-1dwb1l-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -281,7 +285,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex: 1;
 }
 
-.cache-1pfgzdf-Stack-SubContainer {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -309,7 +313,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -332,7 +336,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -355,7 +359,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -378,7 +382,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-16 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -391,38 +395,42 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
-      <img
-        alt=""
-        class="cache-1huczc9-Image e2ipnt1"
-        height="120"
-        src="test-file-stub"
-      />
       <div
-        class="cache-1dwb1l-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
+        <img
+          alt=""
+          class="emotion-4 emotion-5"
+          height="120"
+          src="/src/components/ContentCard/assets/illustration.png"
+        />
         <div
-          class="cache-1pfgzdf-Stack-SubContainer e2ipnt2"
+          class="emotion-6 emotion-7"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-8 emotion-9"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-10 emotion-7"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-12 emotion-7"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-14 emotion-7"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-16 emotion-17"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -433,7 +441,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with all directions renders correctly direction column and loading 1`] = `
+exports[`ContentCard > renders correctly with all directions > renders correctly direction column and loading 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -445,7 +453,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   }
 }
 
-.cache-11erqz-Card {
+.emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -458,7 +466,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   overflow-wrap: break-word;
 }
 
-.cache-1guc91g-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -481,7 +489,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-1j29q3n-StyledContainer-SkeletonImage {
+.emotion-5 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -499,14 +507,14 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: 120px;
 }
 
-.cache-1526wye-Square {
+.emotion-7 {
   height: 100%;
   width: 100%;
   max-width: 100%;
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-9 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -527,13 +535,13 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-9 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
-.cache-8fh24v-Stack-StyledStack {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -557,7 +565,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   padding: 24px;
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-13 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -573,7 +581,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: 100%;
 }
 
-.cache-mhtdbo-Line {
+.emotion-15 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -582,86 +590,90 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-1guc91g-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
       <div
-        aria-busy="true"
-        aria-live="polite"
-        class="e1wwr9dc1 cache-1j29q3n-StyledContainer-SkeletonImage e183x2r81"
-      >
-        <div
-          class="cache-1526wye-Square e1uz28830"
-        />
-        <div
-          class="cache-a7k45f-StyledDiv e183x2r80"
-        />
-      </div>
-      <div
-        class="cache-8fh24v-Stack-StyledStack e1wwr9dc0"
+        class="emotion-2 emotion-3"
       >
         <div
           aria-busy="true"
           aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
+          class="emotion-4 emotion-5 emotion-6"
         >
           <div
-            class="cache-mhtdbo-Line e1denkbe0"
+            class="emotion-7 emotion-8"
           />
           <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
+            class="emotion-9 emotion-10"
           />
         </div>
         <div
-          aria-busy="true"
-          aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
+          class="emotion-11 emotion-12"
         >
           <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
           <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
-        </div>
-        <div
-          aria-busy="true"
-          aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
-        >
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
           <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
           <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
-        </div>
-        <div
-          aria-busy="true"
-          aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
-        >
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
           <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-          <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
-        </div>
-        <div
-          aria-busy="true"
-          aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-          <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -669,9 +681,9 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with all directions renders correctly direction row 1`] = `
+exports[`ContentCard > renders correctly with all directions > renders correctly direction row 1`] = `
 <DocumentFragment>
-  .cache-11erqz-Card {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -684,7 +696,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   overflow-wrap: break-word;
 }
 
-.cache-1g4wx4u-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -708,7 +720,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: 100%;
 }
 
-.cache-mxo7mj-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -734,7 +746,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex: 1;
 }
 
-.cache-1ytsp1o-Stack-SubContainer {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -762,7 +774,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -785,7 +797,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -808,7 +820,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -831,7 +843,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-14 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -844,32 +856,36 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-1g4wx4u-Stack-FullHeightStack e2ipnt0"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
       <div
-        class="cache-mxo7mj-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1ytsp1o-Stack-SubContainer e2ipnt2"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-8 emotion-5"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-10 emotion-5"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-12 emotion-5"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-14 emotion-15"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -880,9 +896,9 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with all directions renders correctly direction row and image 1`] = `
+exports[`ContentCard > renders correctly with all directions > renders correctly direction row and image 1`] = `
 <DocumentFragment>
-  .cache-11erqz-Card {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -895,7 +911,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   overflow-wrap: break-word;
 }
 
-.cache-1g4wx4u-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -919,13 +935,13 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: 100%;
 }
 
-.cache-k6gsrq-Image {
+.emotion-4 {
   object-fit: cover;
   border-radius: 4px 0 0 4px;
   max-height: 0px;
 }
 
-.cache-mxo7mj-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -951,7 +967,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex: 1;
 }
 
-.cache-1ytsp1o-Stack-SubContainer {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -979,7 +995,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1002,7 +1018,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1025,7 +1041,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1048,7 +1064,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-16 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1061,38 +1077,42 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-1g4wx4u-Stack-FullHeightStack e2ipnt0"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
-      <img
-        alt=""
-        class="cache-k6gsrq-Image e2ipnt1"
-        src="test-file-stub"
-        width="220"
-      />
       <div
-        class="cache-mxo7mj-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
+        <img
+          alt=""
+          class="emotion-4 emotion-5"
+          src="/src/components/ContentCard/assets/illustration.png"
+          width="220"
+        />
         <div
-          class="cache-1ytsp1o-Stack-SubContainer e2ipnt2"
+          class="emotion-6 emotion-7"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-8 emotion-9"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-10 emotion-7"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-12 emotion-7"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-14 emotion-7"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-16 emotion-17"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -1103,7 +1123,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with all directions renders correctly direction row and loading 1`] = `
+exports[`ContentCard > renders correctly with all directions > renders correctly direction row and loading 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
@@ -1115,7 +1135,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   }
 }
 
-.cache-11erqz-Card {
+.emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -1128,7 +1148,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   overflow-wrap: break-word;
 }
 
-.cache-1tfad1c-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1151,7 +1171,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   flex-wrap: nowrap;
 }
 
-.cache-80qynh-StyledContainer-SkeletonImage {
+.emotion-5 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -1170,14 +1190,14 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: unset;
 }
 
-.cache-1526wye-Square {
+.emotion-7 {
   height: 100%;
   width: 100%;
   max-width: 100%;
   background-color: #e9eaeb;
 }
 
-.cache-a7k45f-StyledDiv {
+.emotion-9 {
   position: absolute;
   top: 0;
   height: 100%;
@@ -1198,13 +1218,13 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cache-a7k45f-StyledDiv {
+  .emotion-9 {
     -webkit-animation: unset;
     animation: unset;
   }
 }
 
-.cache-8fh24v-Stack-StyledStack {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1228,7 +1248,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   padding: 24px;
 }
 
-.cache-1cu1y7v-StyledContainer {
+.emotion-13 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -1244,7 +1264,7 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
   height: 100%;
 }
 
-.cache-mhtdbo-Line {
+.emotion-15 {
   height: 12px;
   width: 120px;
   max-width: 100%;
@@ -1253,86 +1273,90 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-1tfad1c-Stack ehpbis70"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
       <div
-        aria-busy="true"
-        aria-live="polite"
-        class="e1wwr9dc1 cache-80qynh-StyledContainer-SkeletonImage e183x2r81"
-      >
-        <div
-          class="cache-1526wye-Square e1uz28830"
-        />
-        <div
-          class="cache-a7k45f-StyledDiv e183x2r80"
-        />
-      </div>
-      <div
-        class="cache-8fh24v-Stack-StyledStack e1wwr9dc0"
+        class="emotion-2 emotion-3"
       >
         <div
           aria-busy="true"
           aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
+          class="emotion-4 emotion-5 emotion-6"
         >
           <div
-            class="cache-mhtdbo-Line e1denkbe0"
+            class="emotion-7 emotion-8"
           />
           <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
+            class="emotion-9 emotion-10"
           />
         </div>
         <div
-          aria-busy="true"
-          aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
+          class="emotion-11 emotion-12"
         >
           <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
           <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
-        </div>
-        <div
-          aria-busy="true"
-          aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
-        >
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
           <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
           <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
-        </div>
-        <div
-          aria-busy="true"
-          aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
-        >
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
           <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-          <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
-        </div>
-        <div
-          aria-busy="true"
-          aria-live="polite"
-          class="cache-1cu1y7v-StyledContainer e183x2r81"
-        >
-          <div
-            class="cache-mhtdbo-Line e1denkbe0"
-          />
-          <div
-            class="cache-a7k45f-StyledDiv e183x2r80"
-          />
+            aria-busy="true"
+            aria-live="polite"
+            class="emotion-13 emotion-6"
+          >
+            <div
+              class="emotion-15 emotion-16"
+            />
+            <div
+              class="emotion-9 emotion-10"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -1340,9 +1364,9 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with children 1`] = `
+exports[`ContentCard > renders correctly with children 1`] = `
 <DocumentFragment>
-  .cache-11erqz-Card {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -1355,7 +1379,7 @@ exports[`ContentCard renders correctly with children 1`] = `
   overflow-wrap: break-word;
 }
 
-.cache-19c93m0-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1379,7 +1403,7 @@ exports[`ContentCard renders correctly with children 1`] = `
   height: 100%;
 }
 
-.cache-1dwb1l-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1405,7 +1429,7 @@ exports[`ContentCard renders correctly with children 1`] = `
   flex: 1;
 }
 
-.cache-1pfgzdf-Stack-SubContainer {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1433,7 +1457,7 @@ exports[`ContentCard renders correctly with children 1`] = `
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1456,7 +1480,7 @@ exports[`ContentCard renders correctly with children 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1479,7 +1503,7 @@ exports[`ContentCard renders correctly with children 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1502,7 +1526,7 @@ exports[`ContentCard renders correctly with children 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-14 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1515,38 +1539,42 @@ exports[`ContentCard renders correctly with children 1`] = `
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
       <div
-        class="cache-1dwb1l-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1pfgzdf-Stack-SubContainer e2ipnt2"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-8 emotion-5"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-10 emotion-5"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-12 emotion-5"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-14 emotion-15"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
-            </div>
-            <div
-              class="cache-1guc91g-Stack ehpbis70"
-            >
-              This is the children of the component
+              <div
+                class="emotion-12 emotion-5"
+              >
+                This is the children of the component
+              </div>
             </div>
           </div>
         </div>
@@ -1556,9 +1584,9 @@ exports[`ContentCard renders correctly with children 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with empty string title 1`] = `
+exports[`ContentCard > renders correctly with empty string title 1`] = `
 <DocumentFragment>
-  .cache-11erqz-Card {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -1571,7 +1599,7 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
   overflow-wrap: break-word;
 }
 
-.cache-19c93m0-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1595,7 +1623,7 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
   height: 100%;
 }
 
-.cache-1dwb1l-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1621,7 +1649,7 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
   flex: 1;
 }
 
-.cache-1pfgzdf-Stack-SubContainer {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1649,7 +1677,7 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1672,7 +1700,7 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1695,7 +1723,7 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1718,7 +1746,7 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-14 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1731,30 +1759,34 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
       <div
-        class="cache-1dwb1l-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1pfgzdf-Stack-SubContainer e2ipnt2"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-8 emotion-5"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-10 emotion-5"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
-                />
+                <div
+                  class="emotion-12 emotion-5"
+                >
+                  <h3
+                    class="emotion-14 emotion-15"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -1765,9 +1797,9 @@ exports[`ContentCard renders correctly with empty string title 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with href 1`] = `
+exports[`ContentCard > renders correctly with href 1`] = `
 <DocumentFragment>
-  .cache-1g0z1dj-Container-Card-activeStyle {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -1780,13 +1812,13 @@ exports[`ContentCard renders correctly with href 1`] = `
   overflow-wrap: break-word;
 }
 
-.cache-1g0z1dj-Container-Card-activeStyle:hover {
+.emotion-0:hover {
   border: 1px solid #792dd4;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   cursor: pointer;
 }
 
-.cache-19c93m0-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1810,7 +1842,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   height: 100%;
 }
 
-.cache-1dwb1l-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1836,7 +1868,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   flex: 1;
 }
 
-.cache-15i1kt-Stack-SubContainer {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1863,7 +1895,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1886,7 +1918,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1909,7 +1941,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1932,7 +1964,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-14 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1944,7 +1976,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   text-decoration: none;
 }
 
-.cache-1kbvix3-Stack-StyledIconStack {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1971,7 +2003,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   padding: 0 24px 24px 24px;
 }
 
-.cache-1mfv1tz-IconContainer {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1984,7 +2016,7 @@ exports[`ContentCard renders correctly with href 1`] = `
   border-radius: 4px;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-20 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -1993,76 +2025,80 @@ exports[`ContentCard renders correctly with href 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-20 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-<a
-    class="cache-1g0z1dj-Container-Card-activeStyle e2ipnt6"
-    href="https://scaleway.com"
-    target="_blank"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
+    <a
+      class="emotion-0 emotion-1"
+      href="https://scaleway.com"
+      target="_blank"
     >
       <div
-        class="cache-1dwb1l-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-15i1kt-Stack-SubContainer e2ipnt2"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-8 emotion-5"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-10 emotion-5"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-12 emotion-5"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-14 emotion-15"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="cache-1kbvix3-Stack-StyledIconStack e2ipnt3"
-        >
           <div
-            class="cache-1mfv1tz-IconContainer e2ipnt4"
+            class="emotion-16 emotion-17"
           >
-            <svg
-              class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="emotion-18 emotion-19"
             >
-              <path
-                clip-rule="evenodd"
-                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                class="emotion-20 emotion-21"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with href and direction row 1`] = `
+exports[`ContentCard > renders correctly with href and direction row 1`] = `
 <DocumentFragment>
-  .cache-1g0z1dj-Container-Card-activeStyle {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -2075,13 +2111,13 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   overflow-wrap: break-word;
 }
 
-.cache-1g0z1dj-Container-Card-activeStyle:hover {
+.emotion-0:hover {
   border: 1px solid #792dd4;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   cursor: pointer;
 }
 
-.cache-1g4wx4u-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2105,7 +2141,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   height: 100%;
 }
 
-.cache-mxo7mj-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2131,7 +2167,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   flex: 1;
 }
 
-.cache-uyt4ax-Stack-SubContainer {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2158,7 +2194,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2181,7 +2217,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2204,7 +2240,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2227,7 +2263,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-14 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2239,7 +2275,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   text-decoration: none;
 }
 
-.cache-1ihgyv1-Stack-StyledIconStack {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2266,7 +2302,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   padding: 24px 24px 24px 0;
 }
 
-.cache-1mfv1tz-IconContainer {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2279,7 +2315,7 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   border-radius: 4px;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-20 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -2288,76 +2324,80 @@ exports[`ContentCard renders correctly with href and direction row 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-20 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-<a
-    class="cache-1g0z1dj-Container-Card-activeStyle e2ipnt6"
-    href="https://scaleway.com"
-    target="_blank"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-1g4wx4u-Stack-FullHeightStack e2ipnt0"
+    <a
+      class="emotion-0 emotion-1"
+      href="https://scaleway.com"
+      target="_blank"
     >
       <div
-        class="cache-mxo7mj-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-uyt4ax-Stack-SubContainer e2ipnt2"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-8 emotion-5"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-10 emotion-5"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-12 emotion-5"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-14 emotion-15"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="cache-1ihgyv1-Stack-StyledIconStack e2ipnt3"
-        >
           <div
-            class="cache-1mfv1tz-IconContainer e2ipnt4"
+            class="emotion-16 emotion-17"
           >
-            <svg
-              class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="emotion-18 emotion-19"
             >
-              <path
-                clip-rule="evenodd"
-                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                class="emotion-20 emotion-21"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with href and target 1`] = `
+exports[`ContentCard > renders correctly with href and target 1`] = `
 <DocumentFragment>
-  .cache-1g0z1dj-Container-Card-activeStyle {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -2370,13 +2410,13 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   overflow-wrap: break-word;
 }
 
-.cache-1g0z1dj-Container-Card-activeStyle:hover {
+.emotion-0:hover {
   border: 1px solid #792dd4;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   cursor: pointer;
 }
 
-.cache-19c93m0-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2400,7 +2440,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   height: 100%;
 }
 
-.cache-1dwb1l-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2426,7 +2466,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   flex: 1;
 }
 
-.cache-15i1kt-Stack-SubContainer {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2453,7 +2493,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2476,7 +2516,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2499,7 +2539,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2522,7 +2562,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-14 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2534,7 +2574,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   text-decoration: none;
 }
 
-.cache-1kbvix3-Stack-StyledIconStack {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2561,7 +2601,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   padding: 0 24px 24px 24px;
 }
 
-.cache-1mfv1tz-IconContainer {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2574,7 +2614,7 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   border-radius: 4px;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-20 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -2583,76 +2623,80 @@ exports[`ContentCard renders correctly with href and target 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-20 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-<a
-    class="cache-1g0z1dj-Container-Card-activeStyle e2ipnt6"
-    href="https://scaleway.com"
-    target="_blank"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
+    <a
+      class="emotion-0 emotion-1"
+      href="https://scaleway.com"
+      target="_blank"
     >
       <div
-        class="cache-1dwb1l-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-15i1kt-Stack-SubContainer e2ipnt2"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-8 emotion-5"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-10 emotion-5"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-12 emotion-5"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-14 emotion-15"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="cache-1kbvix3-Stack-StyledIconStack e2ipnt3"
-        >
           <div
-            class="cache-1mfv1tz-IconContainer e2ipnt4"
+            class="emotion-16 emotion-17"
           >
-            <svg
-              class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="emotion-18 emotion-19"
             >
-              <path
-                clip-rule="evenodd"
-                d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
-                fill-rule="evenodd"
-              />
-              <path
-                clip-rule="evenodd"
-                d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
+              <svg
+                class="emotion-20 emotion-21"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M4.25 6.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 18h-8.5A2.25 2.25 0 0 1 2 15.75v-8.5A2.25 2.25 0 0 1 4.25 5h5a.75.75 0 0 1 0 1.5z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M6.194 13.753a.75.75 0 0 0 1.06.053L16.5 5.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with image, title, description, subtitle and icon 1`] = `
+exports[`ContentCard > renders correctly with image, title, description, subtitle and icon 1`] = `
 <DocumentFragment>
-  .cache-11erqz-Card {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -2665,7 +2709,7 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   overflow-wrap: break-word;
 }
 
-.cache-19c93m0-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2689,12 +2733,12 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   height: 100%;
 }
 
-.cache-1huczc9-Image {
+.emotion-4 {
   object-fit: cover;
   border-radius: 4px 4px 0 0;
 }
 
-.cache-1dwb1l-Stack {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2720,7 +2764,7 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   flex: 1;
 }
 
-.cache-1pfgzdf-Stack-SubContainer {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2748,7 +2792,7 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2771,7 +2815,7 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2794,7 +2838,7 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2817,7 +2861,7 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   flex-wrap: nowrap;
 }
 
-.cache-ioay7l-StyledText {
+.emotion-16 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap;
@@ -2829,7 +2873,7 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   text-decoration: none;
 }
 
-.cache-4gfeok-StyledText {
+.emotion-18 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2841,7 +2885,7 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
   text-decoration: none;
 }
 
-.cache-91n8er-StyledText {
+.emotion-20 {
   color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -2854,50 +2898,54 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
     <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
+      class="emotion-0 emotion-1"
+      target="_blank"
     >
-      <img
-        alt=""
-        class="cache-1huczc9-Image e2ipnt1"
-        height="120"
-        src="test-file-stub"
-      />
       <div
-        class="cache-1dwb1l-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
+        <img
+          alt=""
+          class="emotion-4 emotion-5"
+          height="120"
+          src="/src/components/ContentCard/assets/illustration.png"
+        />
         <div
-          class="cache-1pfgzdf-Stack-SubContainer e2ipnt2"
+          class="emotion-6 emotion-7"
         >
-          test-file-stub
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-8 emotion-9"
           >
+            /src/components/ContentCard/assets/illustration.png
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-10 emotion-7"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-12 emotion-7"
               >
-                <small
-                  class="cache-ioay7l-StyledText e13y3mga0"
+                <div
+                  class="emotion-14 emotion-7"
                 >
-                  sub title test
-                </small>
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                  <small
+                    class="emotion-16 emotion-17"
+                  >
+                    sub title test
+                  </small>
+                  <h3
+                    class="emotion-18 emotion-17"
+                  >
+                    test
+                  </h3>
+                </div>
+                <p
+                  class="emotion-20 emotion-17"
                 >
-                  test
-                </h3>
+                  this is a description
+                </p>
               </div>
-              <p
-                class="cache-91n8er-StyledText e13y3mga0"
-              >
-                this is a description
-              </p>
             </div>
           </div>
         </div>
@@ -2907,9 +2955,9 @@ exports[`ContentCard renders correctly with image, title, description, subtitle 
 </DocumentFragment>
 `;
 
-exports[`ContentCard renders correctly with onClick 1`] = `
+exports[`ContentCard > renders correctly with onClick 1`] = `
 <DocumentFragment>
-  .cache-1g0z1dj-Container-Card-activeStyle {
+  .emotion-0 {
   display: block;
   text-align: left;
   padding: 0;
@@ -2922,13 +2970,13 @@ exports[`ContentCard renders correctly with onClick 1`] = `
   overflow-wrap: break-word;
 }
 
-.cache-1g0z1dj-Container-Card-activeStyle:hover {
+.emotion-0:hover {
   border: 1px solid #792dd4;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   cursor: pointer;
 }
 
-.cache-19c93m0-Stack-FullHeightStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2952,7 +3000,7 @@ exports[`ContentCard renders correctly with onClick 1`] = `
   height: 100%;
 }
 
-.cache-1dwb1l-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2978,7 +3026,7 @@ exports[`ContentCard renders correctly with onClick 1`] = `
   flex: 1;
 }
 
-.cache-1pfgzdf-Stack-SubContainer {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3006,7 +3054,7 @@ exports[`ContentCard renders correctly with onClick 1`] = `
   height: fit-content;
 }
 
-.cache-1ffxgmq-Stack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3029,7 +3077,7 @@ exports[`ContentCard renders correctly with onClick 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ymc80m-Stack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3052,7 +3100,7 @@ exports[`ContentCard renders correctly with onClick 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1guc91g-Stack {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3075,219 +3123,7 @@ exports[`ContentCard renders correctly with onClick 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-4gfeok-StyledText {
-  color: #3f4250;
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<button
-    class="cache-1g0z1dj-Container-Card-activeStyle e2ipnt7"
-    role="button"
-    target="_blank"
-  >
-    <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
-    >
-      <div
-        class="cache-1dwb1l-Stack ehpbis70"
-      >
-        <div
-          class="cache-1pfgzdf-Stack-SubContainer e2ipnt2"
-        >
-          <div
-            class="cache-1ffxgmq-Stack ehpbis70"
-          >
-            <div
-              class="cache-ymc80m-Stack ehpbis70"
-            >
-              <div
-                class="cache-1guc91g-Stack ehpbis70"
-              >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
-                >
-                  test
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`ContentCard renders correctly with required title 1`] = `
-<DocumentFragment>
-  .cache-11erqz-Card {
-  display: block;
-  text-align: left;
-  padding: 0;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border: 1px solid #d9dadd;
-  border-radius: 4px;
-  background: #ffffff;
-  overflow-wrap: break-word;
-}
-
-.cache-19c93m0-Stack-FullHeightStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  height: 100%;
-}
-
-.cache-1dwb1l-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.cache-1pfgzdf-Stack-SubContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding: 24px 24px 0 24px;
-  padding: 24px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.cache-1ffxgmq-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-ymc80m-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1guc91g-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-4gfeok-StyledText {
+.emotion-14 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -3300,32 +3136,252 @@ exports[`ContentCard renders correctly with required title 1`] = `
 }
 
 <div
-    class="cache-11erqz-Card e2ipnt5"
-    target="_blank"
+    data-testid="testing"
   >
-    <div
-      class="cache-19c93m0-Stack-FullHeightStack e2ipnt0"
+    <button
+      class="emotion-0 emotion-1"
+      role="button"
+      target="_blank"
     >
       <div
-        class="cache-1dwb1l-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-1pfgzdf-Stack-SubContainer e2ipnt2"
+          class="emotion-4 emotion-5"
         >
           <div
-            class="cache-1ffxgmq-Stack ehpbis70"
+            class="emotion-6 emotion-7"
           >
             <div
-              class="cache-ymc80m-Stack ehpbis70"
+              class="emotion-8 emotion-5"
             >
               <div
-                class="cache-1guc91g-Stack ehpbis70"
+                class="emotion-10 emotion-5"
               >
-                <h3
-                  class="cache-4gfeok-StyledText e13y3mga0"
+                <div
+                  class="emotion-12 emotion-5"
                 >
-                  test
-                </h3>
+                  <h3
+                    class="emotion-14 emotion-15"
+                  >
+                    test
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ContentCard > renders correctly with required title 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: block;
+  text-align: left;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  background: #ffffff;
+  overflow-wrap: break-word;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 24px 24px 0 24px;
+  padding: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      target="_blank"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <div
+                class="emotion-10 emotion-5"
+              >
+                <div
+                  class="emotion-12 emotion-5"
+                >
+                  <h3
+                    class="emotion-14 emotion-15"
+                  >
+                    test
+                  </h3>
+                </div>
               </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`KeyValueField should render with default props & max size 1`] = `
+exports[`KeyValueField > should render with default props & max size 1`] = `
 <DocumentFragment>
-  .cache-5zrmud-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,7 +25,7 @@ exports[`KeyValueField should render with default props & max size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-9fqmy3-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,15 +48,15 @@ exports[`KeyValueField should render with default props & max size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-16cjwtw-StyledFilledButton {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -95,22 +95,22 @@ exports[`KeyValueField should render with default props & max size 1`] = `
   color: #222638;
 }
 
-.cache-16cjwtw-StyledFilledButton:hover {
+.emotion-6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-16cjwtw-StyledFilledButton:active {
+.emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-16cjwtw-StyledFilledButton:hover,
-.cache-16cjwtw-StyledFilledButton:active {
+.emotion-6:hover,
+.emotion-6:active {
   background: #d9dadd;
   color: #151a2d;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-8 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -119,53 +119,57 @@ exports[`KeyValueField should render with default props & max size 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-5zrmud-Stack ehpbis70"
+    <form
+      novalidate=""
     >
       <div
-        class="cache-9fqmy3-Stack ehpbis70"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls=":r8:"
-          aria-describedby=":r8:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-2 emotion-1"
         >
-          <button
-            class="cache-16cjwtw-StyledFilledButton e112qvla2"
-            data-testid="add-button"
-            type="button"
+          <div
+            aria-controls=":r8:"
+            aria-describedby=":r8:"
+            class="emotion-4 emotion-5"
+            data-container-full-width="false"
+            tabindex="0"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              class="emotion-6 emotion-7"
+              data-testid="add-button"
+              type="button"
             >
-              <path
-                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-              />
-            </svg>
-            add
-          </button>
+              <svg
+                class="emotion-8 emotion-9"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                />
+              </svg>
+              add
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`KeyValueField should render with default props 1`] = `
+exports[`KeyValueField > should render with default props 1`] = `
 <DocumentFragment>
-  .cache-5zrmud-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,7 +192,7 @@ exports[`KeyValueField should render with default props 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-9fqmy3-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -211,15 +215,15 @@ exports[`KeyValueField should render with default props 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-16cjwtw-StyledFilledButton {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -258,22 +262,22 @@ exports[`KeyValueField should render with default props 1`] = `
   color: #222638;
 }
 
-.cache-16cjwtw-StyledFilledButton:hover {
+.emotion-6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-16cjwtw-StyledFilledButton:active {
+.emotion-6:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-16cjwtw-StyledFilledButton:hover,
-.cache-16cjwtw-StyledFilledButton:active {
+.emotion-6:hover,
+.emotion-6:active {
   background: #d9dadd;
   color: #151a2d;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-8 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -282,53 +286,57 @@ exports[`KeyValueField should render with default props 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-5zrmud-Stack ehpbis70"
+    <form
+      novalidate=""
     >
       <div
-        class="cache-9fqmy3-Stack ehpbis70"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls=":r0:"
-          aria-describedby=":r0:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-2 emotion-1"
         >
-          <button
-            class="cache-16cjwtw-StyledFilledButton e112qvla2"
-            data-testid="add-button"
-            type="button"
+          <div
+            aria-controls=":r0:"
+            aria-describedby=":r0:"
+            class="emotion-4 emotion-5"
+            data-container-full-width="false"
+            tabindex="0"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              class="emotion-6 emotion-7"
+              data-testid="add-button"
+              type="button"
             >
-              <path
-                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-              />
-            </svg>
-            add
-          </button>
+              <svg
+                class="emotion-8 emotion-9"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                />
+              </svg>
+              add
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`KeyValueField should render with default props in readonly mode 1`] = `
+exports[`KeyValueField > should render with default props in readonly mode 1`] = `
 <DocumentFragment>
-  .cache-5zrmud-Stack {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -351,7 +359,7 @@ exports[`KeyValueField should render with default props in readonly mode 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-9fqmy3-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -374,15 +382,15 @@ exports[`KeyValueField should render with default props in readonly mode 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-4 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-4[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-eckgs6-StyledFilledButton {
+.emotion-6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -423,12 +431,12 @@ exports[`KeyValueField should render with default props in readonly mode 1`] = `
   color: #b5b7bd;
 }
 
-.cache-eckgs6-StyledFilledButton:hover {
+.emotion-6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-8 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -437,47 +445,51 @@ exports[`KeyValueField should render with default props in readonly mode 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-8 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-5zrmud-Stack ehpbis70"
+    <form
+      novalidate=""
     >
       <div
-        class="cache-9fqmy3-Stack ehpbis70"
+        class="emotion-0 emotion-1"
       >
         <div
-          aria-controls=":r9:"
-          aria-describedby=":r9:"
-          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-          data-container-full-width="false"
-          tabindex="0"
+          class="emotion-2 emotion-1"
         >
-          <button
-            class="cache-eckgs6-StyledFilledButton e112qvla2"
-            data-testid="add-button"
-            disabled=""
-            type="button"
+          <div
+            aria-controls=":r9:"
+            aria-describedby=":r9:"
+            class="emotion-4 emotion-5"
+            data-container-full-width="false"
+            tabindex="0"
           >
-            <svg
-              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              class="emotion-6 emotion-7"
+              data-testid="add-button"
+              disabled=""
+              type="button"
             >
-              <path
-                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
-              />
-            </svg>
-            add
-          </button>
+              <svg
+                class="emotion-8 emotion-9"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                />
+              </svg>
+              add
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;

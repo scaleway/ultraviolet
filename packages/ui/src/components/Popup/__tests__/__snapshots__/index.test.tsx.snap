@@ -1,28 +1,36 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Popup should render correctly 1`] = `
+exports[`Popup > should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  .emotion-0 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-0[data-container-full-width='true'] {
   width: 100%;
 }
 
 <div
-    aria-controls=":r0:"
-    aria-describedby=":r0:"
-    class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    data-testid="testing"
   >
-    Hover me
+    <div
+      aria-controls=":r0:"
+      aria-describedby=":r0:"
+      class="emotion-0 emotion-1"
+      tabindex="0"
+    >
+      Hover me
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Popup should render correctly without text 1`] = `
+exports[`Popup > should render correctly without text 1`] = `
 <DocumentFragment>
-  Hover me
+  <div
+    data-testid="testing"
+  >
+    Hover me
+  </div>
 </DocumentFragment>
 `;

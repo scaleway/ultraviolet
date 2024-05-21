@@ -1,7 +1,7 @@
-import { describe, test } from '@jest/globals'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test } from 'vitest'
 import type { ProminenceProps } from '..'
 import { Link, PROMINENCES } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import type { Color } from '../../../theme'
 import { SENTIMENTS } from '../../../theme'
 

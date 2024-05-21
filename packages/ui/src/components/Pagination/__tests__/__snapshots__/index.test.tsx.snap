@@ -1,15 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Pagination should render correctly 1`] = `
+exports[`Pagination > should render correctly 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-14uy6tf-PageSwitchContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@ exports[`Pagination should render correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1qihu3b-StyledOutlinedButton {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -58,12 +58,12 @@ exports[`Pagination should render correctly 1`] = `
   border: 1px solid #d8c5fc;
 }
 
-.cache-1qihu3b-StyledOutlinedButton:hover {
+.emotion-4:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -72,12 +72,12 @@ exports[`Pagination should render correctly 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-2sizh-PageNumbersContainer {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,7 +86,7 @@ exports[`Pagination should render correctly 1`] = `
   margin: 0 16px;
 }
 
-.cache-tyvr0z-StyledOutlinedButton {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -125,23 +125,23 @@ exports[`Pagination should render correctly 1`] = `
   color: #641cb3;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-14:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover,
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-14:hover,
+.emotion-14:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
-.cache-3sara7-StyledOutlinedButton {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -180,23 +180,23 @@ exports[`Pagination should render correctly 1`] = `
   color: #3f4250;
 }
 
-.cache-3sara7-StyledOutlinedButton:hover {
+.emotion-16:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-3sara7-StyledOutlinedButton:active {
+.emotion-16:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-3sara7-StyledOutlinedButton:hover,
-.cache-3sara7-StyledOutlinedButton:active {
+.emotion-16:hover,
+.emotion-16:active {
   background: #e9eaeb;
   color: #222638;
   border: 1px solid #92959d;
 }
 
-.cache-ulwsob-StyledOutlinedButton {
+.emotion-26 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -235,171 +235,175 @@ exports[`Pagination should render correctly 1`] = `
   color: #641cb3;
 }
 
-.cache-ulwsob-StyledOutlinedButton:hover {
+.emotion-26:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-ulwsob-StyledOutlinedButton:active {
+.emotion-26:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-ulwsob-StyledOutlinedButton:hover,
-.cache-ulwsob-StyledOutlinedButton:active {
+.emotion-26:hover,
+.emotion-26:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e5s692s0"
+    data-testid="testing"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
+      class="emotion-0 emotion-1"
     >
-      <button
-        aria-label="First"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-label="First"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Back"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Back"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="cache-2sizh-PageNumbersContainer e5s692s2"
-    >
-      <button
-        aria-current="true"
-        aria-label="Page 1"
-        class="cache-tyvr0z-StyledOutlinedButton e112qvla1"
-        type="button"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
       >
-        <div>
-          1
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 2"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          2
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 3"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          3
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 4"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          4
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 5"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          5
-        </div>
-      </button>
-    </div>
-    <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
-    >
-      <button
-        aria-label="Next"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-current="true"
+          aria-label="Page 1"
+          class="emotion-14 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Last"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <div>
+            1
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 2"
+          class="emotion-16 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
+          <div>
+            2
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 3"
+          class="emotion-16 emotion-5"
+          type="button"
+        >
+          <div>
+            3
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 4"
+          class="emotion-16 emotion-5"
+          type="button"
+        >
+          <div>
+            4
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 5"
+          class="emotion-16 emotion-5"
+          type="button"
+        >
+          <div>
+            5
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <button
+          aria-label="Next"
+          class="emotion-26 emotion-5"
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Last"
+          class="emotion-26 emotion-5"
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Pagination should render correctly component with disabled 1`] = `
+exports[`Pagination > should render correctly component with disabled 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-14uy6tf-PageSwitchContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -407,7 +411,7 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   gap: 8px;
 }
 
-.cache-1qihu3b-StyledOutlinedButton {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -448,12 +452,12 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   border: 1px solid #d8c5fc;
 }
 
-.cache-1qihu3b-StyledOutlinedButton:hover {
+.emotion-4:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -462,12 +466,12 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-2sizh-PageNumbersContainer {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -476,7 +480,7 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   margin: 0 16px;
 }
 
-.cache-1tanet4-StyledOutlinedButton {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -517,12 +521,12 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-1tanet4-StyledOutlinedButton:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-13qtehh-StyledOutlinedButton {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -563,145 +567,149 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   border: 1px solid #d8c5fc;
 }
 
-.cache-13qtehh-StyledOutlinedButton:hover {
+.emotion-16:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e5s692s0"
+    data-testid="testing"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
+      class="emotion-0 emotion-1"
     >
-      <button
-        aria-label="First"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-label="First"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Back"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Back"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="cache-2sizh-PageNumbersContainer e5s692s2"
-    >
-      <button
-        aria-current="false"
-        aria-label="Page 4"
-        class="cache-1tanet4-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
       >
-        <div>
-          4
-        </div>
-      </button>
-      <button
-        aria-current="true"
-        aria-label="Page 5"
-        class="cache-13qtehh-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <div>
-          5
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 6"
-        class="cache-1tanet4-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <div>
-          6
-        </div>
-      </button>
-    </div>
-    <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
-    >
-      <button
-        aria-label="Next"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-current="false"
+          aria-label="Page 4"
+          class="emotion-14 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Last"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <div>
+            4
+          </div>
+        </button>
+        <button
+          aria-current="true"
+          aria-label="Page 5"
+          class="emotion-16 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
+          <div>
+            5
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 6"
+          class="emotion-14 emotion-5"
+          disabled=""
+          type="button"
+        >
+          <div>
+            6
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <button
+          aria-label="Next"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Last"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Pagination should render correctly component with disabled 2`] = `
+exports[`Pagination > should render correctly component with disabled 2`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-14uy6tf-PageSwitchContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -709,7 +717,7 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   gap: 8px;
 }
 
-.cache-1qihu3b-StyledOutlinedButton {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -750,12 +758,12 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   border: 1px solid #d8c5fc;
 }
 
-.cache-1qihu3b-StyledOutlinedButton:hover {
+.emotion-4:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -764,12 +772,12 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-2sizh-PageNumbersContainer {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -778,7 +786,7 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   margin: 0 16px;
 }
 
-.cache-1tanet4-StyledOutlinedButton {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -819,12 +827,12 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   border: 1px solid #d9dadd;
 }
 
-.cache-1tanet4-StyledOutlinedButton:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-13qtehh-StyledOutlinedButton {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -865,145 +873,149 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   border: 1px solid #d8c5fc;
 }
 
-.cache-13qtehh-StyledOutlinedButton:hover {
+.emotion-16:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e5s692s0"
+    data-testid="testing"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
+      class="emotion-0 emotion-1"
     >
-      <button
-        aria-label="First"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-label="First"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Back"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Back"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="cache-2sizh-PageNumbersContainer e5s692s2"
-    >
-      <button
-        aria-current="false"
-        aria-label="Page 4"
-        class="cache-1tanet4-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
       >
-        <div>
-          4
-        </div>
-      </button>
-      <button
-        aria-current="true"
-        aria-label="Page 5"
-        class="cache-13qtehh-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <div>
-          5
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 6"
-        class="cache-1tanet4-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <div>
-          6
-        </div>
-      </button>
-    </div>
-    <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
-    >
-      <button
-        aria-label="Next"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-current="false"
+          aria-label="Page 4"
+          class="emotion-14 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Last"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <div>
+            4
+          </div>
+        </button>
+        <button
+          aria-current="true"
+          aria-label="Page 5"
+          class="emotion-16 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
+          <div>
+            5
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 6"
+          class="emotion-14 emotion-5"
+          disabled=""
+          type="button"
+        >
+          <div>
+            6
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <button
+          aria-label="Next"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Last"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Pagination should render correctly component with pageTabCount 1`] = `
+exports[`Pagination > should render correctly component with pageTabCount 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-14uy6tf-PageSwitchContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1011,7 +1023,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   gap: 8px;
 }
 
-.cache-ulwsob-StyledOutlinedButton {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1050,23 +1062,23 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   color: #641cb3;
 }
 
-.cache-ulwsob-StyledOutlinedButton:hover {
+.emotion-4:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-ulwsob-StyledOutlinedButton:active {
+.emotion-4:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-ulwsob-StyledOutlinedButton:hover,
-.cache-ulwsob-StyledOutlinedButton:active {
+.emotion-4:hover,
+.emotion-4:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1075,12 +1087,12 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-2sizh-PageNumbersContainer {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1089,7 +1101,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-3sara7-StyledOutlinedButton {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1128,23 +1140,23 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   color: #3f4250;
 }
 
-.cache-3sara7-StyledOutlinedButton:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-3sara7-StyledOutlinedButton:active {
+.emotion-14:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-3sara7-StyledOutlinedButton:hover,
-.cache-3sara7-StyledOutlinedButton:active {
+.emotion-14:hover,
+.emotion-14:active {
   background: #e9eaeb;
   color: #222638;
   border: 1px solid #92959d;
 }
 
-.cache-tyvr0z-StyledOutlinedButton {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1183,149 +1195,153 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   color: #641cb3;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover {
+.emotion-16:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-16:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover,
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-16:hover,
+.emotion-16:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e5s692s0"
+    data-testid="testing"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
+      class="emotion-0 emotion-1"
     >
-      <button
-        aria-label="First"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
+      <div
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-label="First"
+          class="emotion-4 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Back"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Back"
+          class="emotion-4 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="cache-2sizh-PageNumbersContainer e5s692s2"
-    >
-      <button
-        aria-current="false"
-        aria-label="Page 4"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
       >
-        <div>
-          4
-        </div>
-      </button>
-      <button
-        aria-current="true"
-        aria-label="Page 5"
-        class="cache-tyvr0z-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          5
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 6"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          6
-        </div>
-      </button>
-    </div>
-    <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
-    >
-      <button
-        aria-label="Next"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-current="false"
+          aria-label="Page 4"
+          class="emotion-14 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Last"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <div>
+            4
+          </div>
+        </button>
+        <button
+          aria-current="true"
+          aria-label="Page 5"
+          class="emotion-16 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
+          <div>
+            5
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 6"
+          class="emotion-14 emotion-5"
+          type="button"
+        >
+          <div>
+            6
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <button
+          aria-label="Next"
+          class="emotion-4 emotion-5"
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Last"
+          class="emotion-4 emotion-5"
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Pagination should render correctly with pageClick 1`] = `
+exports[`Pagination > should render correctly with pageClick 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-14uy6tf-PageSwitchContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1333,7 +1349,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   gap: 8px;
 }
 
-.cache-ulwsob-StyledOutlinedButton {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1372,23 +1388,23 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   color: #641cb3;
 }
 
-.cache-ulwsob-StyledOutlinedButton:hover {
+.emotion-4:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-ulwsob-StyledOutlinedButton:active {
+.emotion-4:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-ulwsob-StyledOutlinedButton:hover,
-.cache-ulwsob-StyledOutlinedButton:active {
+.emotion-4:hover,
+.emotion-4:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1397,12 +1413,12 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-2sizh-PageNumbersContainer {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1411,7 +1427,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   margin: 0 16px;
 }
 
-.cache-3sara7-StyledOutlinedButton {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1450,23 +1466,23 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   color: #3f4250;
 }
 
-.cache-3sara7-StyledOutlinedButton:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-3sara7-StyledOutlinedButton:active {
+.emotion-14:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-3sara7-StyledOutlinedButton:hover,
-.cache-3sara7-StyledOutlinedButton:active {
+.emotion-14:hover,
+.emotion-14:active {
   background: #e9eaeb;
   color: #222638;
   border: 1px solid #92959d;
 }
 
-.cache-tyvr0z-StyledOutlinedButton {
+.emotion-16 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1505,169 +1521,173 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   color: #641cb3;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover {
+.emotion-16:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-16:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover,
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-16:hover,
+.emotion-16:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e5s692s0"
+    data-testid="testing"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
+      class="emotion-0 emotion-1"
     >
-      <button
-        aria-label="First"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
+      <div
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-label="First"
+          class="emotion-4 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Back"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Back"
+          class="emotion-4 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="cache-2sizh-PageNumbersContainer e5s692s2"
-    >
-      <button
-        aria-current="false"
-        aria-label="Page 1"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
       >
-        <div>
-          1
-        </div>
-      </button>
-      <button
-        aria-current="true"
-        aria-label="Page 2"
-        class="cache-tyvr0z-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          2
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 3"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          3
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 4"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          4
-        </div>
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Page 5"
-        class="cache-3sara7-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <div>
-          5
-        </div>
-      </button>
-    </div>
-    <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
-    >
-      <button
-        aria-label="Next"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-current="false"
+          aria-label="Page 1"
+          class="emotion-14 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Last"
-        class="cache-ulwsob-StyledOutlinedButton e112qvla1"
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <div>
+            1
+          </div>
+        </button>
+        <button
+          aria-current="true"
+          aria-label="Page 2"
+          class="emotion-16 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
+          <div>
+            2
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 3"
+          class="emotion-14 emotion-5"
+          type="button"
+        >
+          <div>
+            3
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 4"
+          class="emotion-14 emotion-5"
+          type="button"
+        >
+          <div>
+            4
+          </div>
+        </button>
+        <button
+          aria-current="false"
+          aria-label="Page 5"
+          class="emotion-14 emotion-5"
+          type="button"
+        >
+          <div>
+            5
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <button
+          aria-label="Next"
+          class="emotion-4 emotion-5"
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Last"
+          class="emotion-4 emotion-5"
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Pagination should render correctly with pageCount is 1 1`] = `
+exports[`Pagination > should render correctly with pageCount is 1 1`] = `
 <DocumentFragment>
-  .cache-a1981g-StyledContainer {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cache-14uy6tf-PageSwitchContainer {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1675,7 +1695,7 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   gap: 8px;
 }
 
-.cache-1qihu3b-StyledOutlinedButton {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1716,12 +1736,12 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   border: 1px solid #d8c5fc;
 }
 
-.cache-1qihu3b-StyledOutlinedButton:hover {
+.emotion-4:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1730,12 +1750,12 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-2sizh-PageNumbersContainer {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1744,7 +1764,7 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   margin: 0 16px;
 }
 
-.cache-tyvr0z-StyledOutlinedButton {
+.emotion-14 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1783,118 +1803,122 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   color: #641cb3;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover {
+.emotion-14:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-14:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover,
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-14:hover,
+.emotion-14:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e5s692s0"
+    data-testid="testing"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
+      class="emotion-0 emotion-1"
     >
-      <button
-        aria-label="First"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
+      <div
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-label="First"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Back"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M3.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06L4.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06zm8.25-3.25L8.22 7.47a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 1 0 1.06-1.06L9.81 8l2.72-2.72a.75.75 0 0 0-1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Back"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-    </div>
-    <div
-      class="cache-2sizh-PageNumbersContainer e5s692s2"
-    >
-      <button
-        aria-current="true"
-        aria-label="Page 1"
-        class="cache-tyvr0z-StyledOutlinedButton e112qvla1"
-        type="button"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="emotion-12 emotion-13"
       >
-        <div>
-          1
-        </div>
-      </button>
-    </div>
-    <div
-      class="cache-14uy6tf-PageSwitchContainer e5s692s1"
-    >
-      <button
-        aria-label="Next"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-current="true"
+          aria-label="Page 1"
+          class="emotion-14 emotion-5"
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-        aria-label="Last"
-        class="cache-1qihu3b-StyledOutlinedButton e112qvla1"
-        disabled=""
-        type="button"
+          <div>
+            1
+          </div>
+        </button>
+      </div>
+      <div
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          aria-label="Next"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </button>
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Last"
+          class="emotion-4 emotion-5"
+          disabled=""
+          type="button"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.78 7.47a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L11.19 8 8.47 5.28a.75.75 0 0 1 1.06-1.06zM4.53 4.22l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L6.19 8 3.47 5.28a.75.75 0 0 1 1.06-1.06"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>

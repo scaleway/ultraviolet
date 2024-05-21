@@ -1,11 +1,11 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { act, screen } from '@testing-library/react'
+import { renderWithForm } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { ToggleGroupField } from '..'
-import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
 
 describe('GroupField', () => {
-  test('should render correctly checked', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly checked', () => {
+    const { asFragment } = renderWithForm(
       <ToggleGroupField onChange={() => {}} name="Group" legend="Label">
         <ToggleGroupField.Toggle
           name="value-1"
@@ -19,27 +19,25 @@ describe('GroupField', () => {
         />
       </ToggleGroupField>,
       {
-        transform: () => {
-          const [firstInput, secondInput] = screen.getAllByRole('checkbox', {
-            hidden: true,
-          })
-          act(() => secondInput.click())
-
-          expect(firstInput).not.toBeChecked()
-          expect(secondInput).toBeChecked()
-        },
-      },
-      {
         initialValues: {
           Group: [],
         },
       },
-    ))
+    )
+    const [firstInput, secondInput] = screen.getAllByRole('checkbox', {
+      hidden: true,
+    })
+    act(() => secondInput.click())
+
+    expect(firstInput).not.toBeChecked()
+    expect(secondInput).toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should trigger events correctly with required prop', () => {
-    const onChange = jest.fn(() => {})
+    const onChange = vi.fn(() => {})
 
-    return shouldMatchEmotionSnapshotFormWrapper(
+    const { asFragment } = renderWithForm(
       <ToggleGroupField
         name="test"
         onChange={onChange}
@@ -58,22 +56,19 @@ describe('GroupField', () => {
         />
       </ToggleGroupField>,
       {
-        transform: () => {
-          const input = screen.getAllByRole('checkbox', { hidden: true })[0]
-          act(() => input.click())
-          expect(onChange).toBeCalledTimes(1)
-          expect(input).toBeChecked()
-
-          act(() => input.click())
-          expect(onChange).toBeCalledTimes(2)
-          expect(input).not.toBeChecked()
-        },
-      },
-      {
         initialValues: {
           test: [],
         },
       },
     )
+    const input = screen.getAllByRole('checkbox', { hidden: true })[0]
+    act(() => input.click())
+    expect(onChange).toBeCalledTimes(1)
+    expect(input).toBeChecked()
+
+    act(() => input.click())
+    expect(onChange).toBeCalledTimes(2)
+    expect(input).not.toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
   })
 })

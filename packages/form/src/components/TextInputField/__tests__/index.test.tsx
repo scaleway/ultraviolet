@@ -1,73 +1,83 @@
-import { describe, expect, test } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { mockFormErrors, renderWithForm } from '@utils/test'
+import { describe, expect, test } from 'vitest'
 import { TextInputField } from '..'
-import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks'
 
 describe('TextInputField', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<TextInputField name="test" />))
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(<TextInputField name="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly generated', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly generated', () => {
+    const { asFragment } = renderWithForm(
       <TextInputField name="test" generated />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly random', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly random', () => {
+    const { asFragment } = renderWithForm(
       <TextInputField name="test" random="random" />,
-    ))
-  test('should render correctly notice', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should render correctly notice', () => {
+    const { asFragment } = renderWithForm(
       <TextInputField name="test" notice="notice" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly required', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly required', () => {
+    const { asFragment } = renderWithForm(
       <TextInputField name="test" required />,
-    ))
-  test('should render correctly id', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should render correctly id', () => {
+    const { asFragment } = renderWithForm(
       <TextInputField name="test" id="id" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly disabled', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly disabled', () => {
+    const { asFragment } = renderWithForm(
       <TextInputField name="test" disabled />,
-      {
-        transform: () => {
-          const input = screen.getByRole('textbox')
-          expect(input).toBeDisabled()
-        },
-      },
-    ))
+    )
 
-  test('should render correctly with minLength', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+    const input = screen.getByRole('textbox')
+    expect(input).toBeDisabled()
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should render correctly with minLength', async () => {
+    const { asFragment } = renderWithForm(
       <TextInputField name="test" minLength={13} />,
-      {
-        transform: async () => {
-          const input = screen.getByRole('textbox')
-          await userEvent.type(input, 'test')
-          input.blur()
-          await waitFor(() => {
-            expect(
-              screen.getByText(
-                mockErrors.minLength({
-                  label: 'test',
-                  minLength: 13,
-                  value: 'test',
-                }),
-              ),
-            ).toBeVisible()
-          })
-        },
-      },
       {
         initialValues: {
           test: null,
         },
       },
-    ))
+    )
+    const input = screen.getByRole('textbox')
+    await userEvent.type(input, 'test')
+    input.blur()
+    await waitFor(() => {
+      expect(
+        screen.getByText(
+          mockFormErrors.minLength({
+            label: 'test',
+            minLength: 13,
+            value: 'test',
+          }),
+        ),
+      ).toBeVisible()
+    })
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

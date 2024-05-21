@@ -1,11 +1,11 @@
-import { describe, expect, it, jest } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Dialog } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../../.jest/helpers'
+} from '@utils/test'
+import { describe, expect, it, vi } from 'vitest'
+import { Dialog } from '..'
 import { Button } from '../../Button'
 
 describe('Dialog', () => {
@@ -61,7 +61,7 @@ describe('Dialog', () => {
   })
 
   it('[CancelButton] : should handle click', async () => {
-    const onClick = jest.fn<() => string>()
+    const onClick = vi.fn<[], () => string>()
 
     renderWithTheme(
       <Dialog.CancelButton onClick={onClick}>Cancel</Dialog.CancelButton>,

@@ -1,13 +1,10 @@
-import { beforeAll, describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
 import { act } from 'react'
+import { beforeAll, describe, expect, test, vi } from 'vitest'
 import { SelectInputV2 } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 import { OptionalInfo, cities, dataGrouped, dataUnGrouped } from './resources'
 
 export type OptionType = {
@@ -26,32 +23,39 @@ describe('SelectInputV2', () => {
     })
   })
 
-  test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2 name="test" options={dataUnGrouped} label="label" />,
-    ))
-  test('renders correctly small', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly small', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
         label="label"
         size="small"
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly required', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly required', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
         label="label"
         required
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly not clearable', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly not clearable', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -61,39 +65,40 @@ describe('SelectInputV2', () => {
         searchable={false}
         value={dataUnGrouped[4].value}
       />,
-    ))
-  test('renders correctly ungrouped', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly ungrouped', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly grouped', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly grouped', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataGrouped}
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with default value', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with default value', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataGrouped}
@@ -101,15 +106,14 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         value={dataGrouped['terrestrial planets'][4].value}
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('Pluto')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with footer', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('Pluto')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with footer', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataGrouped}
@@ -118,15 +122,14 @@ describe('SelectInputV2', () => {
         value={dataGrouped['terrestrial planets'][4].value}
         footer="this is a footer"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('Pluto')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly multiselect', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('Pluto')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly multiselect', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataGrouped}
@@ -135,15 +138,14 @@ describe('SelectInputV2', () => {
         value={[dataGrouped['terrestrial planets'][4].value]}
         multiselect
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('Pluto')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with label on the right and optional info on the left', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('Pluto')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with label on the right and optional info on the left', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={OptionalInfo}
@@ -152,15 +154,14 @@ describe('SelectInputV2', () => {
         descriptionDirection="row"
         onChange={() => {}}
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with label on the right and optional info on the right', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with label on the right and optional info on the right', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={OptionalInfo}
@@ -169,15 +170,14 @@ describe('SelectInputV2', () => {
         descriptionDirection="row"
         optionalInfoPlacement="right"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with label on the bottom and optional info on the left', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with label on the bottom and optional info on the left', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={OptionalInfo}
@@ -186,15 +186,14 @@ describe('SelectInputV2', () => {
         descriptionDirection="column"
         optionalInfoPlacement="left"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with label on the bottom and optional info on the right', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with label on the bottom and optional info on the right', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={OptionalInfo}
@@ -203,15 +202,14 @@ describe('SelectInputV2', () => {
         descriptionDirection="column"
         optionalInfoPlacement="right"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly loadMore', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly loadMore', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={cities}
@@ -221,9 +219,12 @@ describe('SelectInputV2', () => {
         searchable={false}
         loadMore="LoadMore"
       />,
-    ))
-  test('renders correctly with emptyState', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with emptyState', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="emptystate"
         options={{}}
@@ -231,16 +232,14 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         emptyState="no option"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly disabled', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -248,16 +247,14 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         disabled
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly required', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly required', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -265,15 +262,15 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         required
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly readOnly', () =>
-    shouldMatchEmotionSnapshot(
+    )
+
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly readOnly', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -281,15 +278,14 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         readOnly
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with error', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with error', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -297,15 +293,14 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         error="error"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with success', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with success', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -313,15 +308,14 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         success="success"
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly with not searchable', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with not searchable', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -329,14 +323,12 @@ describe('SelectInputV2', () => {
         placeholderSearch="placeholdersearch"
         searchable={false}
       />,
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
   test('handles correctly dropdown with clicks - grouped', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -358,6 +350,7 @@ describe('SelectInputV2', () => {
     await userEvent.click(input)
     expect(dropdown).not.toBeInTheDocument()
   })
+
   test('handles correctly dropdown with clicks - ungrouped', async () => {
     renderWithTheme(
       <SelectInputV2
@@ -399,8 +392,8 @@ describe('SelectInputV2', () => {
     await userEvent.click(venusCloseButton)
     expect(venus).not.toBeVisible()
   })
-  test('renders correctly unclosable tags when readonly', async () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly unclosable tags when readonly', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -412,7 +405,9 @@ describe('SelectInputV2', () => {
         value={[dataUnGrouped[1].value]}
         onChange={() => {}}
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('handles correctly dropdown with arrow down/up key press with ungrouped data', async () => {
     renderWithTheme(
@@ -526,7 +521,7 @@ describe('SelectInputV2', () => {
     expect(dropdown).not.toBeVisible()
   })
   test('handles click on item', async () => {
-    const onChange = jest.fn()
+    const onChange = vi.fn()
 
     renderWithTheme(
       <SelectInputV2
@@ -1190,8 +1185,8 @@ describe('SelectInputV2', () => {
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
   })
-  test('renders correctly loading - grouped data', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly loading - grouped data', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataGrouped}
@@ -1200,16 +1195,14 @@ describe('SelectInputV2', () => {
         descriptionDirection="row"
         isLoading
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly loading - ungrouped data', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly loading - ungrouped data', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInputV2
         name="test"
         options={dataUnGrouped}
@@ -1218,11 +1211,9 @@ describe('SelectInputV2', () => {
         descriptionDirection="row"
         isLoading
       />,
-      {
-        transform: async () => {
-          const input = screen.getByText('placeholder')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByText('placeholder')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

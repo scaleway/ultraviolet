@@ -1,12 +1,13 @@
 import type { CSSObject } from '@emotion/react'
-import { describe, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { SelectInput } from '..'
 import {
+  renderWithTheme,
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../../.jest/helpers'
+} from '@utils/test'
+import { describe, expect, test } from 'vitest'
+import { SelectInput } from '..'
 
 const customStyles: Record<string, CSSObject> = {
   control: {},
@@ -25,38 +26,34 @@ const customStyles: Record<string, CSSObject> = {
 }
 
 describe('SelectInput', () => {
-  test('renders correctly uncontrolled', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly uncontrolled', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="uncontrolled">
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
-      {
-        transform: async () => {
-          const input = screen.getByRole('combobox')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByRole('combobox')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with emptyState', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with emptyState', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput
         inputId="test"
         labelId="test-label"
         name="emptyState"
         emptyState={() => 'test'}
       />,
-      {
-        transform: async () => {
-          const input = screen.getByRole('combobox')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByRole('combobox')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with custom styles', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with custom styles', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput
         inputId="test"
         labelId="test-label"
@@ -66,10 +63,12 @@ describe('SelectInput', () => {
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly controlled', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly controlled', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput
         inputId="test"
         labelId="test-label"
@@ -80,31 +79,40 @@ describe('SelectInput', () => {
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly disabled', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly disabled', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="disabled" disabled>
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly required', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly required', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="required" required>
         <SelectInput.Option value="11">11:00</SelectInput.Option>
         <SelectInput.Option value="12">12:00</SelectInput.Option>
       </SelectInput>,
-    ))
-  test('renders correctly timed', () =>
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly timed', () => {
     shouldMatchEmotionSnapshot(
       <SelectInput inputId="test" labelId="test-label" name="time" time>
         <SelectInput.Option value="11">11:00</SelectInput.Option>
         <SelectInput.Option value="12">12:00</SelectInput.Option>
       </SelectInput>,
-    ))
-  test('renders correctly timed with error', () =>
+    )
+  })
+
+  test('renders correctly timed with error', () => {
     shouldMatchEmotionSnapshot(
       <SelectInput
         inputId="test"
@@ -116,24 +124,23 @@ describe('SelectInput', () => {
         <SelectInput.Option value="11">11:00</SelectInput.Option>
         <SelectInput.Option value="12">12:00</SelectInput.Option>
       </SelectInput>,
-    ))
+    )
+  })
 
-  test('renders correctly with click', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with click', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="test">
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
-      {
-        transform: async () => {
-          const input = screen.getByRole('combobox')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByRole('combobox')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with click and option disabled', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with click and option disabled', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="test">
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
@@ -141,16 +148,14 @@ describe('SelectInput', () => {
           Option C
         </SelectInput.Option>
       </SelectInput>,
-      {
-        transform: async () => {
-          const input = screen.getByRole('combobox')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByRole('combobox')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with click and options', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with click and options', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="test">
         <SelectInput.Option value="a" isFocused>
           Option A
@@ -162,36 +167,35 @@ describe('SelectInput', () => {
           Option C
         </SelectInput.Option>
       </SelectInput>,
-      {
-        transform: async () => {
-          const input = screen.getByRole('combobox')
-          await userEvent.click(input)
-        },
-      },
-    ))
-  test('renders correctly disabled with click', () =>
+    )
+    const input = screen.getByRole('combobox')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly disabled with click', () => {
     shouldMatchEmotionSnapshot(
       <SelectInput inputId="test" labelId="test-label" name="test" disabled>
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
-    ))
-  test('renders correctly default values with click', () =>
-    shouldMatchEmotionSnapshot(
+    )
+  })
+
+  test('renders correctly default values with click', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="test" value="a">
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
-      {
-        transform: async () => {
-          const input = screen.getByRole('combobox')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByRole('combobox')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly animated', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly animated', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput
         inputId="test"
         labelId="test-label"
@@ -205,9 +209,11 @@ describe('SelectInput', () => {
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
-    ))
-  test('renders correctly multi', () =>
-    shouldMatchEmotionSnapshot(
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+  test('renders correctly multi', () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="multi" isMulti>
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
@@ -216,7 +222,10 @@ describe('SelectInput', () => {
         <SelectInput.Option value="e">Option E</SelectInput.Option>
         <SelectInput.Option value="f">Option F</SelectInput.Option>
       </SelectInput>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly multi disabled', () =>
     shouldMatchEmotionSnapshot(
       <SelectInput
@@ -347,18 +356,16 @@ describe('SelectInput', () => {
       </SelectInput>,
     ))
 
-  test('renders with undefined children', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders with undefined children', async () => {
+    const { asFragment } = renderWithTheme(
       <SelectInput inputId="test" labelId="test-label" name="uncontrolled">
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
         {null}
       </SelectInput>,
-      {
-        transform: async () => {
-          const input = screen.getByRole('combobox')
-          await userEvent.click(input)
-        },
-      },
-    ))
+    )
+    const input = screen.getByRole('combobox')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

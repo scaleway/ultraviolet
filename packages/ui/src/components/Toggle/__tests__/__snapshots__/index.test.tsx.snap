@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Toggle renders correctly 1`] = `
+exports[`Toggle > renders correctly 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,16 +21,16 @@ exports[`Toggle renders correctly 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-5[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,7 +53,7 @@ exports[`Toggle renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -75,11 +75,11 @@ exports[`Toggle renders correctly 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-4:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -92,25 +92,25 @@ exports[`Toggle renders correctly 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-4[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-4[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-4[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-4[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -118,41 +118,41 @@ exports[`Toggle renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-4[data-checked='true']:focus-within,
+.emotion-4[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-4[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-4[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-4[data-error='true']:focus-within,
+.emotion-4[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-4[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -162,251 +162,43 @@ exports[`Toggle renders correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-r95p0q-StyledLabel e1wstm610"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
-    />
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":r0:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
-</DocumentFragment>
-`;
-
-exports[`Toggle renders correctly label 1`] = `
-<DocumentFragment>
-  .cache-r95p0q-StyledLabel {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
-  width: 22.04px;
-}
-
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.cache-155uuxj-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-15fwcc4-StyledRow {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.cache-izrm74-StyledToggle {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
-}
-
-.cache-izrm74-StyledToggle:hover {
-  background-color: #d9dadd;
-}
-
-.cache-izrm74-StyledToggle:after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 5px;
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
-  width: 22.04px;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true'] {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
-  background-color: #792dd4;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='true'] {
-  background: #f3f3f4;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
-  background: #e5dbfd;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'] {
-  background-color: #ffebf2;
-}
-
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
-  background-color: #e51963;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
-  background-color: #fff3f7;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
-  background-color: #ffd3e3;
-}
-
-.cache-1myp2ct-StyledCheckbox {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.cache-1myp2ct-StyledCheckbox[disabled] {
-  cursor: not-allowed;
-}
-
-<label
-    aria-disabled="false"
-    class="cache-r95p0q-StyledLabel e1wstm610"
-  >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-15fwcc4-StyledRow e3f5lzv0"
+        class="emotion-2 emotion-3"
+      />
+      <div
+        class="emotion-4 emotion-5"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
       >
-        This is a label
+        <input
+          aria-checked="false"
+          class="emotion-6 emotion-7"
+          id=":r0:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
       </div>
-    </div>
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":rc:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly when checked 1`] = `
+exports[`Toggle > renders correctly label 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -425,16 +217,16 @@ exports[`Toggle renders correctly when checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-7[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -457,393 +249,7 @@ exports[`Toggle renders correctly when checked 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-izrm74-StyledToggle {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
-}
-
-.cache-izrm74-StyledToggle:hover {
-  background-color: #d9dadd;
-}
-
-.cache-izrm74-StyledToggle:after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 5px;
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
-  width: 22.04px;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true'] {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
-  background-color: #792dd4;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='true'] {
-  background: #f3f3f4;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
-  background: #e5dbfd;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'] {
-  background-color: #ffebf2;
-}
-
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
-  background-color: #e51963;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
-  background-color: #fff3f7;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
-  background-color: #ffd3e3;
-}
-
-.cache-1myp2ct-StyledCheckbox {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.cache-1myp2ct-StyledCheckbox[disabled] {
-  cursor: not-allowed;
-}
-
-<label
-    aria-disabled="false"
-    class="cache-r95p0q-StyledLabel e1wstm610"
-  >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
-    />
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="true"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="true"
-        checked=""
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":r2:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
-</DocumentFragment>
-`;
-
-exports[`Toggle renders correctly when disabled 1`] = `
-<DocumentFragment>
-  .cache-r95p0q-StyledLabel {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
-  width: 22.04px;
-}
-
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.cache-155uuxj-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-izrm74-StyledToggle {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
-}
-
-.cache-izrm74-StyledToggle:hover {
-  background-color: #d9dadd;
-}
-
-.cache-izrm74-StyledToggle:after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 5px;
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
-  width: 22.04px;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true'] {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
-  background-color: #792dd4;
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='true'] {
-  background: #f3f3f4;
-}
-
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
-  background: #e5dbfd;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'] {
-  background-color: #ffebf2;
-}
-
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
-  background-color: #e51963;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
-  background-color: #fff3f7;
-}
-
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
-  background-color: #ffd3e3;
-}
-
-.cache-1myp2ct-StyledCheckbox {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.cache-1myp2ct-StyledCheckbox[disabled] {
-  cursor: not-allowed;
-}
-
-<label
-    aria-disabled="true"
-    class="cache-r95p0q-StyledLabel e1wstm610"
-  >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
-    />
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="true"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        disabled=""
-        id=":r4:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
-</DocumentFragment>
-`;
-
-exports[`Toggle renders correctly when required with label 1`] = `
-<DocumentFragment>
-  .cache-r95p0q-StyledLabel {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
-  width: 22.04px;
-}
-
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.cache-155uuxj-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-15fwcc4-StyledRow {
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -857,7 +263,617 @@ exports[`Toggle renders correctly when required with label 1`] = `
   justify-content: normal;
 }
 
-.cache-3cgt5r-StyledIcon-sizeStyles {
+.emotion-6 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.emotion-6:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-6:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-6:focus-within,
+.emotion-6:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-6[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.emotion-6[data-checked='true'] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-6[data-checked='true']:hover {
+  background-color: #792dd4;
+}
+
+.emotion-6[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-6[data-checked='true']:focus-within,
+.emotion-6[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-6[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.emotion-6[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.emotion-6[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.emotion-6[data-error='true']:focus-within,
+.emotion-6[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-6[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.emotion-6[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.emotion-6[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
+}
+
+.emotion-8 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.emotion-8[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          This is a label
+        </div>
+      </div>
+      <div
+        class="emotion-6 emotion-7"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-8 emotion-9"
+          id=":rc:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders correctly when checked 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.emotion-0:active .emotion-5[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.emotion-4:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-4:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-4:focus-within,
+.emotion-4:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-4[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.emotion-4[data-checked='true'] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-4[data-checked='true']:hover {
+  background-color: #792dd4;
+}
+
+.emotion-4[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-4[data-checked='true']:focus-within,
+.emotion-4[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-4[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.emotion-4[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.emotion-4[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.emotion-4[data-error='true']:focus-within,
+.emotion-4[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-4[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.emotion-4[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
+}
+
+.emotion-6 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.emotion-6[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+      <div
+        class="emotion-4 emotion-5"
+        data-checked="true"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="true"
+          checked=""
+          class="emotion-6 emotion-7"
+          id=":r2:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders correctly when disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.emotion-0:active .emotion-5[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.emotion-4:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-4:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-4:focus-within,
+.emotion-4:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-4[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.emotion-4[data-checked='true'] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-4[data-checked='true']:hover {
+  background-color: #792dd4;
+}
+
+.emotion-4[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-4[data-checked='true']:focus-within,
+.emotion-4[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-4[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.emotion-4[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.emotion-4[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.emotion-4[data-error='true']:focus-within,
+.emotion-4[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-4[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.emotion-4[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
+}
+
+.emotion-6 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.emotion-6[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="true"
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      />
+      <div
+        class="emotion-4 emotion-5"
+        data-checked="false"
+        data-disabled="true"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-6 emotion-7"
+          disabled=""
+          id=":r4:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders correctly when required with label 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.emotion-0:active .emotion-9[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-6 {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
@@ -866,12 +882,12 @@ exports[`Toggle renders correctly when required with label 1`] = `
   min-height: 10px;
 }
 
-.cache-3cgt5r-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-8 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -893,11 +909,11 @@ exports[`Toggle renders correctly when required with label 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-8:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-8:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -910,25 +926,25 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-8:focus-within,
+.emotion-8:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-8[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-8[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-8[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-8[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -936,41 +952,41 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-8[data-checked='true']:focus-within,
+.emotion-8[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-8[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-8[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-8[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-8[data-error='true']:focus-within,
+.emotion-8[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-8[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-10 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -980,56 +996,60 @@ exports[`Toggle renders correctly when required with label 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-10[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-r95p0q-StyledLabel e1wstm610"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-15fwcc4-StyledRow e3f5lzv0"
+        class="emotion-2 emotion-3"
       >
-        test
-        <sup>
-          <svg
-            class="cache-3cgt5r-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-            />
-          </svg>
-        </sup>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          test
+          <sup>
+            <svg
+              class="emotion-6 emotion-7"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
+              />
+            </svg>
+          </sup>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":r6:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
+      <div
+        class="emotion-8 emotion-9"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-10 emotion-11"
+          id=":r6:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly when required with label left 1`] = `
+exports[`Toggle > renders correctly when required with label left 1`] = `
 <DocumentFragment>
-  .cache-1gksb9y-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1048,16 +1068,16 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   flex-direction: row;
 }
 
-.cache-1gksb9y-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-9[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1gksb9y-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1080,7 +1100,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -1094,7 +1114,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   justify-content: normal;
 }
 
-.cache-3cgt5r-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: #b3144d;
   height: 10px;
@@ -1103,12 +1123,12 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   min-height: 10px;
 }
 
-.cache-3cgt5r-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-8 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1130,11 +1150,11 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-8:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-8:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1147,25 +1167,25 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-8:focus-within,
+.emotion-8:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-8[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-8[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-8[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-8[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1173,41 +1193,41 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-8[data-checked='true']:focus-within,
+.emotion-8[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-8[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-8[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-8[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-8[data-error='true']:focus-within,
+.emotion-8[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-8[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-10 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1217,56 +1237,60 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-10[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-1gksb9y-StyledLabel e1wstm610"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-15fwcc4-StyledRow e3f5lzv0"
+        class="emotion-2 emotion-3"
       >
-        test
-        <sup>
-          <svg
-            class="cache-3cgt5r-StyledIcon-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
-            />
-          </svg>
-        </sup>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          test
+          <sup>
+            <svg
+              class="emotion-6 emotion-7"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
+              />
+            </svg>
+          </sup>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":r8:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
+      <div
+        class="emotion-8 emotion-9"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-10 emotion-11"
+          id=":r8:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly with complex label 1`] = `
+exports[`Toggle > renders correctly with complex label 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1285,16 +1309,16 @@ exports[`Toggle renders correctly with complex label 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-7[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1317,7 +1341,7 @@ exports[`Toggle renders correctly with complex label 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -1331,7 +1355,7 @@ exports[`Toggle renders correctly with complex label 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1353,11 +1377,11 @@ exports[`Toggle renders correctly with complex label 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-6:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-6:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1370,25 +1394,25 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-6:focus-within,
+.emotion-6:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-6[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-6[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-6[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-6[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1396,41 +1420,41 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-6[data-checked='true']:focus-within,
+.emotion-6[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-6[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-6[data-error='true']:focus-within,
+.emotion-6[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-6[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-6[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-6[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-8 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1440,47 +1464,51 @@ exports[`Toggle renders correctly with complex label 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-8[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-r95p0q-StyledLabel e1wstm610"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-15fwcc4-StyledRow e3f5lzv0"
+        class="emotion-2 emotion-3"
       >
-        <span>
-          Custom label rendered
-        </span>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <span>
+            Custom label rendered
+          </span>
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":rk:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
+      <div
+        class="emotion-6 emotion-7"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-8 emotion-9"
+          id=":rk:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly with custom labels on right 1`] = `
+exports[`Toggle > renders correctly with custom labels on right 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1499,16 +1527,16 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-7[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1531,7 +1559,7 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -1545,7 +1573,7 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1567,11 +1595,11 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-6:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-6:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1584,25 +1612,25 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-6:focus-within,
+.emotion-6:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-6[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-6[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-6[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-6[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1610,41 +1638,41 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-6[data-checked='true']:focus-within,
+.emotion-6[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-6[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-6[data-error='true']:focus-within,
+.emotion-6[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-6[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-6[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-6[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-8 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1654,45 +1682,49 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-8[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-r95p0q-StyledLabel e1wstm610"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-15fwcc4-StyledRow e3f5lzv0"
+        class="emotion-2 emotion-3"
       >
-        This is a label
+        <div
+          class="emotion-4 emotion-5"
+        >
+          This is a label
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":ri:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
+      <div
+        class="emotion-6 emotion-7"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-8 emotion-9"
+          id=":ri:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly with error 1`] = `
+exports[`Toggle > renders correctly with error 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1711,16 +1743,44 @@ exports[`Toggle renders correctly with error 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-9[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.emotion-0:active .emotion-9[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1743,7 +1803,30 @@ exports[`Toggle renders correctly with error 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -1757,7 +1840,21 @@ exports[`Toggle renders correctly with error 1`] = `
   justify-content: normal;
 }
 
-.cache-ce8hur-StyledText {
+.emotion-4 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-6 {
   color: #b3144d;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -1769,7 +1866,7 @@ exports[`Toggle renders correctly with error 1`] = `
   text-decoration: none;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-8 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1791,11 +1888,11 @@ exports[`Toggle renders correctly with error 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-8:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-8:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1808,25 +1905,25 @@ exports[`Toggle renders correctly with error 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-8:focus-within,
+.emotion-8:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-8[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-8[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-8[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-8[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1834,41 +1931,140 @@ exports[`Toggle renders correctly with error 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-8[data-checked='true']:focus-within,
+.emotion-8[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-8[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-8[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-8[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-8[data-error='true']:focus-within,
+.emotion-8[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-8[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-8 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.emotion-8:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-8:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-8:focus-within,
+.emotion-8:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-8[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.emotion-8[data-checked='true'] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-8[data-checked='true']:hover {
+  background-color: #792dd4;
+}
+
+.emotion-8[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-8[data-checked='true']:focus-within,
+.emotion-8[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.emotion-8[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.emotion-8[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.emotion-8[data-error='true']:focus-within,
+.emotion-8[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-8[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.emotion-8[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.emotion-8[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
+}
+
+.emotion-10 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1878,50 +2074,68 @@ exports[`Toggle renders correctly with error 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-10[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-r95p0q-StyledLabel e1wstm610"
+.emotion-10 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.emotion-10[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-15fwcc4-StyledRow e3f5lzv0"
+        class="emotion-2 emotion-3"
       >
-        This is a label
+        <div
+          class="emotion-4 emotion-5"
+        >
+          This is a label
+        </div>
+        <p
+          class="emotion-6 emotion-7"
+        >
+          error text
+        </p>
       </div>
-      <p
-        class="cache-ce8hur-StyledText e13y3mga0"
+      <div
+        class="emotion-8 emotion-9"
+        data-checked="false"
+        data-disabled="false"
+        data-error="true"
       >
-        error text
-      </p>
-    </div>
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="true"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":rr:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
+        <input
+          aria-checked="false"
+          class="emotion-10 emotion-11"
+          id=":rr:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly with helper 1`] = `
+exports[`Toggle > renders correctly with helper 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1940,16 +2154,44 @@ exports[`Toggle renders correctly with helper 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-9[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.emotion-0:active .emotion-9[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.emotion-0[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1972,7 +2214,30 @@ exports[`Toggle renders correctly with helper 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -1986,7 +2251,21 @@ exports[`Toggle renders correctly with helper 1`] = `
   justify-content: normal;
 }
 
-.cache-3l2mjz-StyledText {
+.emotion-4 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-6 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1997,7 +2276,7 @@ exports[`Toggle renders correctly with helper 1`] = `
   text-decoration: none;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-8 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2019,11 +2298,11 @@ exports[`Toggle renders correctly with helper 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-8:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-8:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -2036,25 +2315,25 @@ exports[`Toggle renders correctly with helper 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-8:focus-within,
+.emotion-8:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-8[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-8[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-8[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-8[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2062,41 +2341,140 @@ exports[`Toggle renders correctly with helper 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-8[data-checked='true']:focus-within,
+.emotion-8[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-8[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-8[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-8[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-8[data-error='true']:focus-within,
+.emotion-8[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-8[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-8 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.emotion-8:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-8:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-8:focus-within,
+.emotion-8:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-8[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.emotion-8[data-checked='true'] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-8[data-checked='true']:hover {
+  background-color: #792dd4;
+}
+
+.emotion-8[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-8[data-checked='true']:focus-within,
+.emotion-8[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.emotion-8[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.emotion-8[data-error='true'] {
+  background-color: #ffebf2;
+}
+
+.emotion-8[data-error='true']:focus-within,
+.emotion-8[data-error='true']:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-8[data-error='true'][data-checked='true'] {
+  background-color: #e51963;
+}
+
+.emotion-8[data-error='true'][data-disabled='true'] {
+  background-color: #fff3f7;
+}
+
+.emotion-8[data-error='true'][data-disabled='true'][data-checked='true'] {
+  background-color: #ffd3e3;
+}
+
+.emotion-10 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2106,50 +2484,68 @@ exports[`Toggle renders correctly with helper 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-10[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-r95p0q-StyledLabel e1wstm610"
+.emotion-10 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.emotion-10[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-15fwcc4-StyledRow e3f5lzv0"
+        class="emotion-2 emotion-3"
       >
-        This is a label
+        <div
+          class="emotion-4 emotion-5"
+        >
+          This is a label
+        </div>
+        <p
+          class="emotion-6 emotion-7"
+        >
+          This is a helper
+        </p>
       </div>
-      <p
-        class="cache-3l2mjz-StyledText e13y3mga0"
+      <div
+        class="emotion-8 emotion-9"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
       >
-        This is a helper
-      </p>
-    </div>
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":ro:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
+        <input
+          aria-checked="false"
+          class="emotion-10 emotion-11"
+          id=":ro:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly with labels on left 1`] = `
+exports[`Toggle > renders correctly with labels on left 1`] = `
 <DocumentFragment>
-  .cache-1gksb9y-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2168,16 +2564,16 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   flex-direction: row;
 }
 
-.cache-1gksb9y-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-7[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1gksb9y-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2200,7 +2596,7 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -2214,7 +2610,7 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2236,11 +2632,11 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-6:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-6:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -2253,25 +2649,25 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-6:focus-within,
+.emotion-6:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-6[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-6[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-6[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-6[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2279,41 +2675,41 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-6[data-checked='true']:focus-within,
+.emotion-6[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-6[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-6[data-error='true']:focus-within,
+.emotion-6[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-6[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-6[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-6[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-8 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2323,45 +2719,49 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-8[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-1gksb9y-StyledLabel e1wstm610"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-15fwcc4-StyledRow e3f5lzv0"
+        class="emotion-2 emotion-3"
       >
-        This is a label
+        <div
+          class="emotion-4 emotion-5"
+        >
+          This is a label
+        </div>
       </div>
-    </div>
-    <div
-      class="cache-izrm74-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
-    >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":rg:"
-        name="test"
-        type="checkbox"
-        value=""
-      />
-    </div>
-  </label>
+      <div
+        class="emotion-6 emotion-7"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-8 emotion-9"
+          id=":rg:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly with non default size 1`] = `
+exports[`Toggle > renders correctly with non default size 1`] = `
 <DocumentFragment>
-  .cache-hfh15c-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2380,16 +2780,16 @@ exports[`Toggle renders correctly with non default size 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-hfh15c-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-5[data-disabled='false']:after {
   width: 16.53px;
 }
 
-.cache-hfh15c-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2412,7 +2812,7 @@ exports[`Toggle renders correctly with non default size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-feze0p-StyledToggle {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2434,11 +2834,11 @@ exports[`Toggle renders correctly with non default size 1`] = `
   height: 20px;
 }
 
-.cache-feze0p-StyledToggle:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.cache-feze0p-StyledToggle:after {
+.emotion-4:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -2451,25 +2851,25 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transition: all 300ms;
 }
 
-.cache-feze0p-StyledToggle:focus-within,
-.cache-feze0p-StyledToggle:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-feze0p-StyledToggle[data-disabled='false']:active:after {
+.emotion-4[data-disabled='false']:active:after {
   width: 16.53px;
 }
 
-.cache-feze0p-StyledToggle[data-checked='true'] {
+.emotion-4[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-feze0p-StyledToggle[data-checked='true']:hover {
+.emotion-4[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-feze0p-StyledToggle[data-checked='true']:after {
+.emotion-4[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2477,41 +2877,41 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-feze0p-StyledToggle[data-checked='true']:focus-within,
-.cache-feze0p-StyledToggle[data-checked='true']:focus {
+.emotion-4[data-checked='true']:focus-within,
+.emotion-4[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-feze0p-StyledToggle[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-feze0p-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-4[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-feze0p-StyledToggle[data-error='true'] {
+.emotion-4[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-feze0p-StyledToggle[data-error='true']:focus-within,
-.cache-feze0p-StyledToggle[data-error='true']:focus {
+.emotion-4[data-error='true']:focus-within,
+.emotion-4[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-feze0p-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-feze0p-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-4[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-feze0p-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2521,47 +2921,51 @@ exports[`Toggle renders correctly with non default size 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
-<label
-    aria-disabled="false"
-    class="cache-hfh15c-StyledLabel e1wstm610"
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-155uuxj-Stack ehpbis70"
-    />
-    <div
-      class="cache-feze0p-StyledToggle e1wstm612"
-      data-checked="false"
-      data-disabled="false"
-      data-error="false"
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
     >
-      <input
-        aria-checked="false"
-        class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":ra:"
-        name="test"
-        type="checkbox"
-        value=""
+      <div
+        class="emotion-2 emotion-3"
       />
-    </div>
-  </label>
+      <div
+        class="emotion-4 emotion-5"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-6 emotion-7"
+          id=":ra:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly with tooltip 1`] = `
+exports[`Toggle > renders correctly with tooltip 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  .emotion-0 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-0[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-r95p0q-StyledLabel {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2580,16 +2984,16 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-2:active .emotion-9[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-2[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2612,7 +3016,7 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-6 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -2626,7 +3030,7 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-8 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -2648,11 +3052,11 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-8:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-8:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -2665,25 +3069,25 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-8:focus-within,
+.emotion-8:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-8[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-8[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-8[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-8[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -2691,41 +3095,41 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-8[data-checked='true']:focus-within,
+.emotion-8[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-8[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-8[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-8[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-8[data-error='true']:focus-within,
+.emotion-8[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-8[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-8[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-10 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2735,45 +3139,49 @@ exports[`Toggle renders correctly with tooltip 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-10[disabled] {
   cursor: not-allowed;
 }
 
 <div
-    aria-controls=":rf:"
-    aria-describedby=":rf:"
-    class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    data-testid="testing"
   >
-    <label
-      aria-disabled="false"
-      class="cache-r95p0q-StyledLabel e1wstm610"
+    <div
+      aria-controls=":rf:"
+      aria-describedby=":rf:"
+      class="emotion-0 emotion-1"
+      tabindex="0"
     >
-      <div
-        class="cache-155uuxj-Stack ehpbis70"
+      <label
+        aria-disabled="false"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="cache-15fwcc4-StyledRow e3f5lzv0"
+          class="emotion-4 emotion-5"
         >
-          This is a label
+          <div
+            class="emotion-6 emotion-7"
+          >
+            This is a label
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-izrm74-StyledToggle e1wstm612"
-        data-checked="false"
-        data-disabled="false"
-        data-error="false"
-      >
-        <input
-          aria-checked="false"
-          class="cache-1myp2ct-StyledCheckbox e1wstm611"
-          id=":re:"
-          name="test"
-          type="checkbox"
-          value=""
-        />
-      </div>
-    </label>
+        <div
+          class="emotion-8 emotion-9"
+          data-checked="false"
+          data-disabled="false"
+          data-error="false"
+        >
+          <input
+            aria-checked="false"
+            class="emotion-10 emotion-11"
+            id=":re:"
+            name="test"
+            type="checkbox"
+            value=""
+          />
+        </div>
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;

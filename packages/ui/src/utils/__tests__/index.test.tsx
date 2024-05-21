@@ -1,8 +1,16 @@
-import { describe, expect, test } from '@jest/globals'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { getUUID } from '../ids'
 
 describe('ids', () => {
   describe('getUUID', () => {
+    beforeEach(() => {
+      vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+    })
+
+    afterEach(() => {
+      vi.spyOn(global.Math, 'random').mockRestore()
+    })
+
     test('returns correctly without arguments', () => {
       expect(getUUID()).toMatchSnapshot()
     })

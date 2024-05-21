@@ -1,42 +1,68 @@
-import { describe, test } from '@jest/globals'
+import { renderWithTheme } from '@utils/test'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { ContentCard } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import illustration from '../assets/illustration.png'
 
 describe('ContentCard', () => {
-  test('renders correctly with required title', () =>
-    shouldMatchEmotionSnapshot(<ContentCard title="test" />))
+  beforeEach(() => {
+    vi.useFakeTimers()
+    vi.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
+  })
 
-  test('renders correctly with empty string title', () =>
-    shouldMatchEmotionSnapshot(<ContentCard title="" />))
+  afterEach(() => {
+    vi.useRealTimers()
+    vi.spyOn(global.Math, 'random').mockRestore()
+  })
 
-  test('renders correctly with href', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with required title', () => {
+    const { asFragment } = renderWithTheme(<ContentCard title="test" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with empty string title', () => {
+    const { asFragment } = renderWithTheme(<ContentCard title="" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with href', () => {
+    const { asFragment } = renderWithTheme(
       <ContentCard title="test" href="https://scaleway.com" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with href and direction row', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with href and direction row', () => {
+    const { asFragment } = renderWithTheme(
       <ContentCard title="test" href="https://scaleway.com" direction="row" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with href and target', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with href and target', () => {
+    const { asFragment } = renderWithTheme(
       <ContentCard title="test" href="https://scaleway.com" target="_blank" />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with onClick', () =>
-    shouldMatchEmotionSnapshot(<ContentCard title="test" onClick={() => {}} />))
+  test('renders correctly with onClick', () => {
+    const { asFragment } = renderWithTheme(
+      <ContentCard title="test" onClick={() => {}} />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with children', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with children', () => {
+    const { asFragment } = renderWithTheme(
       <ContentCard title="test">
         This is the children of the component
       </ContentCard>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with image, title, description, subtitle and icon', () =>
-    shouldMatchEmotionSnapshot(
+  test('renders correctly with image, title, description, subtitle and icon', () => {
+    const { asFragment } = renderWithTheme(
       <ContentCard
         title="test"
         subtitle="sub title test"
@@ -44,30 +70,41 @@ describe('ContentCard', () => {
         icon={illustration}
         description="this is a description"
       />,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   describe(`renders correctly with all directions`, () => {
-    ;(['row', 'column'] as const).forEach(direction => {
-      test(`renders correctly direction ${direction}`, () =>
-        shouldMatchEmotionSnapshot(
+    const directions = ['row', 'column'] as const
+    directions.forEach(direction => {
+      test(`renders correctly direction ${direction}`, () => {
+        const { asFragment } = renderWithTheme(
           <ContentCard title="test" direction={direction} />,
-        ))
+        )
+        expect(asFragment()).toMatchSnapshot()
+      })
     })
-    ;(['row', 'column'] as const).forEach(direction => {
-      test(`renders correctly direction ${direction} and loading`, () =>
-        shouldMatchEmotionSnapshot(
+
+    directions.forEach(direction => {
+      test(`renders correctly direction ${direction} and loading`, () => {
+        const { asFragment } = renderWithTheme(
           <ContentCard title="test" direction={direction} loading />,
-        ))
+        )
+        expect(asFragment()).toMatchSnapshot()
+      })
     })
-    ;(['row', 'column'] as const).forEach(direction => {
-      test(`renders correctly direction ${direction} and image`, () =>
-        shouldMatchEmotionSnapshot(
+
+    directions.forEach(direction => {
+      test(`renders correctly direction ${direction} and image`, () => {
+        const { asFragment } = renderWithTheme(
           <ContentCard
             title="test"
             direction={direction}
             image={illustration}
           />,
-        ))
+        )
+        expect(asFragment()).toMatchSnapshot()
+      })
     })
   })
 })

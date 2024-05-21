@@ -1,8 +1,8 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { Breadcrumbs } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Breadcrumbs', () => {
   test('renders correctly with default values', () =>
@@ -29,10 +29,9 @@ describe('Breadcrumbs', () => {
       </Breadcrumbs>,
     ))
 
-  test('renders correctly with onClick', () => {
-    const onClick = jest.fn()
-
-    return shouldMatchEmotionSnapshot(
+  test('renders correctly with onClick', async () => {
+    const onClick = vi.fn()
+    const { asFragment } = renderWithTheme(
       <Breadcrumbs>
         <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
         <Breadcrumbs.Item to="/step1/step2">
@@ -41,17 +40,17 @@ describe('Breadcrumbs', () => {
         </Breadcrumbs.Item>
         <Breadcrumbs.Item onClick={onClick}>Step 3</Breadcrumbs.Item>
       </Breadcrumbs>,
-      {
-        transform: async () => {
-          const step3 = screen.getByText('Step 3')
-          await userEvent.click(step3)
-          expect(onClick).toHaveBeenCalledTimes(1)
-        },
-      },
     )
+    const step3 = screen.getByText('Step 3')
+    await userEvent.click(step3)
+    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(asFragment()).toMatchSnapshot()
   })
-  test('renders correctly with invalid child', () =>
-    shouldMatchEmotionSnapshot(
+
+  test('renders correctly with invalid child', () => {
+    const { asFragment } = renderWithTheme(
       <Breadcrumbs selected={1}>Invalid child</Breadcrumbs>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

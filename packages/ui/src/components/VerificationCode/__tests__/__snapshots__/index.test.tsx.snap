@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`VerificationCode render correctly with small size 1`] = `
+exports[`VerificationCode > render correctly with small size 1`] = `
 <DocumentFragment>
-  .cache-ivnnej-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -18,87 +18,91 @@ exports[`VerificationCode render correctly with small size 1`] = `
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-ivnnej-StyledInput-VerificationCode:hover,
-.cache-ivnnej-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-ivnnej-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-ivnnej-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-ivnnej-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-ivnnej-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-ivnnej-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-ivnnej-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-ivnnej-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":ra:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-ivnnej-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":ra:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-ivnnej-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":ra:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-ivnnej-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":ra:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":ra:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":ra:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":ra:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":ra:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode renders correctly with default values 1`] = `
+exports[`VerificationCode > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-mss1u0-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -114,87 +118,91 @@ exports[`VerificationCode renders correctly with default values 1`] = `
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:hover,
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r0:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r0:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r0:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r0:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r0:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r0:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r0:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r0:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode renders correctly with initial value and placeholder and 6 fields 1`] = `
+exports[`VerificationCode > renders correctly with initial value and placeholder and 6 fields 1`] = `
 <DocumentFragment>
-  .cache-mss1u0-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -210,109 +218,113 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:hover,
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r1:-0"
-      pattern="[0-9]*"
-      placeholder="0"
-      type="tel"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r1:-1"
-      pattern="[0-9]*"
-      placeholder="0"
-      type="tel"
-      value="3"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r1:-2"
-      pattern="[0-9]*"
-      placeholder="3"
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r1:-3"
-      pattern="[0-9]*"
-      placeholder="7"
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 4"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="4"
-      id=":r1:-4"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 5"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="5"
-      id=":r1:-5"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r1:-0"
+        pattern="[0-9]*"
+        placeholder="0"
+        type="tel"
+        value="1"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r1:-1"
+        pattern="[0-9]*"
+        placeholder="0"
+        type="tel"
+        value="3"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r1:-2"
+        pattern="[0-9]*"
+        placeholder="3"
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r1:-3"
+        pattern="[0-9]*"
+        placeholder="7"
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 4"
+        class="emotion-0 emotion-1"
+        data-testid="4"
+        id=":r1:-4"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 5"
+        class="emotion-0 emotion-1"
+        data-testid="5"
+        id=":r1:-5"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode should handle and replace non number with "" when type is number 1`] = `
+exports[`VerificationCode > should handle and replace non number with "" when type is number 1`] = `
 <DocumentFragment>
-  .cache-mss1u0-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -328,87 +340,91 @@ exports[`VerificationCode should handle and replace non number with "" when type
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:hover,
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r4:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r4:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r4:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="3"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r4:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="4"
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r4:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="1"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r4:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r4:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="3"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r4:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="4"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode should handle error 1`] = `
+exports[`VerificationCode > should handle error 1`] = `
 <DocumentFragment>
-  .cache-nx9uyl-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #b3144d;
   color: #b3144d;
@@ -424,87 +440,91 @@ exports[`VerificationCode should handle error 1`] = `
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-nx9uyl-StyledInput-VerificationCode:hover,
-.cache-nx9uyl-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #92103f;
 }
 
-.cache-nx9uyl-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-nx9uyl-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-nx9uyl-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-nx9uyl-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-nx9uyl-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-nx9uyl-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="true"
-      aria-label="Verification code 0"
-      class="cache-nx9uyl-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r9:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="1"
-    />
-    <input
-      aria-invalid="true"
-      aria-label="Verification code 1"
-      class="cache-nx9uyl-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r9:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="true"
-      aria-label="Verification code 2"
-      class="cache-nx9uyl-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r9:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="true"
-      aria-label="Verification code 3"
-      class="cache-nx9uyl-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r9:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="true"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r9:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="1"
+      />
+      <input
+        aria-invalid="true"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r9:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="true"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r9:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="true"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r9:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode should handle keyDown and special key cases and focus/change events 1`] = `
+exports[`VerificationCode > should handle keyDown and special key cases and focus/change events 1`] = `
 <DocumentFragment>
-  .cache-mss1u0-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -520,87 +540,91 @@ exports[`VerificationCode should handle keyDown and special key cases and focus/
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:hover,
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r2:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r2:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r2:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r2:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r2:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r2:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r2:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r2:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode should handle paste when type is not number 1`] = `
+exports[`VerificationCode > should handle paste when type is not number 1`] = `
 <DocumentFragment>
-  .cache-mss1u0-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -616,103 +640,107 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:hover,
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r7:-0"
-      placeholder=""
-      type="text"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r7:-1"
-      placeholder=""
-      type="text"
-      value="h"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r7:-2"
-      placeholder=""
-      type="text"
-      value="2"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r7:-3"
-      placeholder=""
-      type="text"
-      value="3"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 4"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="4"
-      id=":r7:-4"
-      placeholder=""
-      type="text"
-      value="a"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 5"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="5"
-      id=":r7:-5"
-      placeholder=""
-      type="text"
-      value="*"
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r7:-0"
+        placeholder=""
+        type="text"
+        value="1"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r7:-1"
+        placeholder=""
+        type="text"
+        value="h"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r7:-2"
+        placeholder=""
+        type="text"
+        value="2"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r7:-3"
+        placeholder=""
+        type="text"
+        value="3"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 4"
+        class="emotion-0 emotion-1"
+        data-testid="4"
+        id=":r7:-4"
+        placeholder=""
+        type="text"
+        value="a"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 5"
+        class="emotion-0 emotion-1"
+        data-testid="5"
+        id=":r7:-5"
+        placeholder=""
+        type="text"
+        value="*"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode should handle paste with no overflowing values 1`] = `
+exports[`VerificationCode > should handle paste with no overflowing values 1`] = `
 <DocumentFragment>
-  .cache-mss1u0-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -728,87 +756,91 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:hover,
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r3:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r3:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="2"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r3:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="3"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r3:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="4"
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r3:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="1"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r3:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="2"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r3:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="3"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r3:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="4"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode should handle paste with overflowing values 1`] = `
+exports[`VerificationCode > should handle paste with overflowing values 1`] = `
 <DocumentFragment>
-  .cache-mss1u0-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -824,87 +856,91 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:hover,
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r5:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r5:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="2"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r5:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="3"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r5:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="4"
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r5:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="1"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r5:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="2"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r5:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="3"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r5:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="4"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode should handle paste with overflowing values at different index than 0 1`] = `
+exports[`VerificationCode > should handle paste with overflowing values at different index than 0 1`] = `
 <DocumentFragment>
-  .cache-mss1u0-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -920,87 +956,91 @@ exports[`VerificationCode should handle paste with overflowing values at differe
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:hover,
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-mss1u0-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #727683;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      id=":r6:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      id=":r6:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      id=":r6:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="2"
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-mss1u0-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      id=":r6:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="3"
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        id=":r6:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="1"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        id=":r6:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="1"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        id=":r6:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="2"
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        id=":r6:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value="3"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`VerificationCode should render correctly disabled true 1`] = `
+exports[`VerificationCode > should render correctly disabled true 1`] = `
 <DocumentFragment>
-  .cache-1q1kaee-StyledInput-VerificationCode {
+  .emotion-0 {
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
@@ -1020,88 +1060,92 @@ exports[`VerificationCode should render correctly disabled true 1`] = `
   color: #b5b7bd;
 }
 
-.cache-1q1kaee-StyledInput-VerificationCode:hover,
-.cache-1q1kaee-StyledInput-VerificationCode:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   border-color: #792dd4;
 }
 
-.cache-1q1kaee-StyledInput-VerificationCode:focus {
+.emotion-0:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1q1kaee-StyledInput-VerificationCode:last-child {
+.emotion-0:last-child {
   margin-right: 0;
 }
 
-.cache-1q1kaee-StyledInput-VerificationCode::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1q1kaee-StyledInput-VerificationCode::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1q1kaee-StyledInput-VerificationCode:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1q1kaee-StyledInput-VerificationCode::placeholder {
+.emotion-0::placeholder {
   color: #b5b7bd;
 }
 
-.cache-1q1kaee-StyledInput-VerificationCode:hover {
+.emotion-0:hover {
   border: #e9eaeb;
 }
 
-<div>
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 0"
-      class="cache-1q1kaee-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="0"
-      disabled=""
-      id=":rb:-0"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 1"
-      class="cache-1q1kaee-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="1"
-      disabled=""
-      id=":rb:-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 2"
-      class="cache-1q1kaee-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="2"
-      disabled=""
-      id=":rb:-2"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
-    <input
-      aria-invalid="false"
-      aria-label="Verification code 3"
-      class="cache-1q1kaee-StyledInput-VerificationCode e1a2bx9q0"
-      data-testid="3"
-      disabled=""
-      id=":rb:-3"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value=""
-    />
+<div
+    data-testid="testing"
+  >
+    <div>
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 0"
+        class="emotion-0 emotion-1"
+        data-testid="0"
+        disabled=""
+        id=":rb:-0"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 1"
+        class="emotion-0 emotion-1"
+        data-testid="1"
+        disabled=""
+        id=":rb:-1"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 2"
+        class="emotion-0 emotion-1"
+        data-testid="2"
+        disabled=""
+        id=":rb:-2"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+      <input
+        aria-invalid="false"
+        aria-label="Verification code 3"
+        class="emotion-0 emotion-1"
+        data-testid="3"
+        disabled=""
+        id=":rb:-3"
+        pattern="[0-9]*"
+        placeholder=""
+        type="tel"
+        value=""
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

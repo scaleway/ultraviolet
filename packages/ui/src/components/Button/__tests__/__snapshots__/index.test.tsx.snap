@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Button render as an anchor with href prop 1`] = `
+exports[`Button > render as an anchor with href prop 1`] = `
 <DocumentFragment>
-  .cache-1husglq-link-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -41,34 +41,38 @@ exports[`Button render as an anchor with href prop 1`] = `
   color: #ffffff;
 }
 
-.cache-1husglq-link-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1husglq-link-StyledFilledButton:active {
+.emotion-0:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1husglq-link-StyledFilledButton:hover,
-.cache-1husglq-link-StyledFilledButton:active {
+.emotion-0:hover,
+.emotion-0:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-<a
-    class="cache-1husglq-link-StyledFilledButton e112qvla3"
-    href="http://scaleway.com"
-    type="button"
+<div
+    data-testid="testing"
   >
-    Scaleway
-  </a>
+    <a
+      class="emotion-0 emotion-1"
+      href="http://scaleway.com"
+      type="button"
+    >
+      Scaleway
+    </a>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render large 1`] = `
+exports[`Button > render large 1`] = `
 <DocumentFragment>
-  .cache-kds964-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -107,33 +111,37 @@ exports[`Button render large 1`] = `
   color: #ffffff;
 }
 
-.cache-kds964-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-kds964-StyledFilledButton:active {
+.emotion-0:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-kds964-StyledFilledButton:hover,
-.cache-kds964-StyledFilledButton:active {
+.emotion-0:hover,
+.emotion-0:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-<button
-    class="cache-kds964-StyledFilledButton e112qvla2"
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render medium 1`] = `
+exports[`Button > render medium 1`] = `
 <DocumentFragment>
-  .cache-187g71g-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -172,33 +180,37 @@ exports[`Button render medium 1`] = `
   color: #ffffff;
 }
 
-.cache-187g71g-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-187g71g-StyledFilledButton:active {
+.emotion-0:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-187g71g-StyledFilledButton:hover,
-.cache-187g71g-StyledFilledButton:active {
+.emotion-0:hover,
+.emotion-0:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-<button
-    class="cache-187g71g-StyledFilledButton e112qvla2"
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render small 1`] = `
+exports[`Button > render small 1`] = `
 <DocumentFragment>
-  .cache-1wzbopr-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -237,41 +249,45 @@ exports[`Button render small 1`] = `
   color: #ffffff;
 }
 
-.cache-1wzbopr-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1wzbopr-StyledFilledButton:active {
+.emotion-0:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1wzbopr-StyledFilledButton:hover,
-.cache-1wzbopr-StyledFilledButton:active {
+.emotion-0:hover,
+.emotion-0:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-<button
-    class="cache-1wzbopr-StyledFilledButton e112qvla2"
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render with a tooltip 1`] = `
+exports[`Button > render with a tooltip 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  .emotion-0 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-0[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-kds964-StyledFilledButton {
+.emotion-2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -310,41 +326,45 @@ exports[`Button render with a tooltip 1`] = `
   color: #ffffff;
 }
 
-.cache-kds964-StyledFilledButton:hover {
+.emotion-2:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-kds964-StyledFilledButton:active {
+.emotion-2:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-kds964-StyledFilledButton:hover,
-.cache-kds964-StyledFilledButton:active {
+.emotion-2:hover,
+.emotion-2:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
 <div
-    aria-controls=":r1m:"
-    aria-describedby=":r1m:"
-    class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    data-container-full-width="false"
-    tabindex="0"
+    data-testid="testing"
   >
-    <button
-      class="cache-kds964-StyledFilledButton e112qvla2"
-      type="button"
+    <div
+      aria-controls=":r1m:"
+      aria-describedby=":r1m:"
+      class="emotion-0 emotion-1"
+      data-container-full-width="false"
+      tabindex="0"
     >
-      Hello
-    </button>
+      <button
+        class="emotion-2 emotion-3"
+        type="button"
+      >
+        Hello
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Button render with fullWidth 1`] = `
+exports[`Button > render with fullWidth 1`] = `
 <DocumentFragment>
-  .cache-i0ducg-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -383,33 +403,37 @@ exports[`Button render with fullWidth 1`] = `
   color: #ffffff;
 }
 
-.cache-i0ducg-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-i0ducg-StyledFilledButton:active {
+.emotion-0:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-i0ducg-StyledFilledButton:hover,
-.cache-i0ducg-StyledFilledButton:active {
+.emotion-0:hover,
+.emotion-0:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-<button
-    class="cache-i0ducg-StyledFilledButton e112qvla2"
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render with icon 1`] = `
+exports[`Button > render with icon 1`] = `
 <DocumentFragment>
-  .cache-1wcjqa-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -450,12 +474,12 @@ exports[`Button render with icon 1`] = `
   color: #ffffff;
 }
 
-.cache-1wcjqa-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-2 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -464,36 +488,40 @@ exports[`Button render with icon 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-2 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<button
-    class="cache-1wcjqa-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    <svg
-      class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
     >
-      <path
-        d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
-      />
-      <path
-        d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
-      />
-    </svg>
-    Hello
-  </button>
+      <svg
+        class="emotion-2 emotion-3"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
+        />
+        <path
+          d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render with icon on the right 1`] = `
+exports[`Button > render with icon on the right 1`] = `
 <DocumentFragment>
-  .cache-6rmq1e-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -534,12 +562,12 @@ exports[`Button render with icon on the right 1`] = `
   color: #ffffff;
 }
 
-.cache-6rmq1e-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-2 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -548,36 +576,40 @@ exports[`Button render with icon on the right 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-2 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<button
-    class="cache-6rmq1e-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    <svg
-      class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
     >
-      <path
-        d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
-      />
-      <path
-        d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
-      />
-    </svg>
-    Hello
-  </button>
+      <svg
+        class="emotion-2 emotion-3"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
+        />
+        <path
+          d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render with icon only 1`] = `
+exports[`Button > render with icon only 1`] = `
 <DocumentFragment>
-  .cache-o0rdzf-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -618,12 +650,12 @@ exports[`Button render with icon only 1`] = `
   color: #ffffff;
 }
 
-.cache-o0rdzf-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-2 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -632,35 +664,39 @@ exports[`Button render with icon only 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-2 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<button
-    class="cache-o0rdzf-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    <svg
-      class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
     >
-      <path
-        d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
-      />
-      <path
-        d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
-      />
-    </svg>
-  </button>
+      <svg
+        class="emotion-2 emotion-3"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
+        />
+        <path
+          d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
+        />
+      </svg>
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render with isLoading with icon 1`] = `
+exports[`Button > render with isLoading with icon 1`] = `
 <DocumentFragment>
-  .cache-1wcjqa-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -701,66 +737,70 @@ exports[`Button render with isLoading with icon 1`] = `
   color: #ffffff;
 }
 
-.cache-1wcjqa-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-cmn72i-StyledSvg {
+.emotion-2 {
   -webkit-animation: spin 0.75s linear infinite;
   animation: spin 0.75s linear infinite;
 }
 
-.cache-11f05l0-Loader {
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-<button
-    class="cache-1wcjqa-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    <svg
-      aria-label="Loading"
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow="20"
-      aria-valuetext="20%"
-      class="cache-cmn72i-StyledSvg e1y1n78x1"
-      role="progressbar"
-      style="height: 1em; width: 1em;"
-      viewBox="0 0 100 100"
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
     >
-      <circle
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="transparent"
-        stroke-width="16"
-      />
-      <circle
-        class="cache-11f05l0-Loader"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="currentColor"
-        stroke-dasharray="263.89378290154264"
-        stroke-dashoffset="211.11502632123413"
-        stroke-linecap="round"
-        stroke-width="16"
-      />
-    </svg>
-    Hello
-  </button>
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="emotion-2 emotion-3"
+        role="progressbar"
+        style="height: 1em; width: 1em;"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="transparent"
+          stroke-width="16"
+        />
+        <circle
+          class="emotion-4"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="currentColor"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render with isLoading with icon variant 1`] = `
+exports[`Button > render with isLoading with icon variant 1`] = `
 <DocumentFragment>
-  .cache-tyvr0z-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -799,23 +839,23 @@ exports[`Button render with isLoading with icon variant 1`] = `
   color: #641cb3;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-0:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-tyvr0z-StyledOutlinedButton:hover,
-.cache-tyvr0z-StyledOutlinedButton:active {
+.emotion-0:hover,
+.emotion-0:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-2 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -824,35 +864,39 @@ exports[`Button render with isLoading with icon variant 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-2 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-<button
-    class="cache-tyvr0z-StyledOutlinedButton e112qvla1"
-    type="button"
+<div
+    data-testid="testing"
   >
-    <svg
-      class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-      viewBox="0 0 16 16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      class="emotion-0 emotion-1"
+      type="button"
     >
-      <path
-        d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
-      />
-      <path
-        d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
-      />
-    </svg>
-    Hello
-  </button>
+      <svg
+        class="emotion-2 emotion-3"
+        viewBox="0 0 16 16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.8 2.8 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.8 2.8 0 0 0 .892-.596l4.262-4.262a1.75 1.75 0 0 0 0-2.474"
+        />
+        <path
+          d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5z"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render with isLoading without icon 1`] = `
+exports[`Button > render with isLoading without icon 1`] = `
 <DocumentFragment>
-  .cache-1wcjqa-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -893,66 +937,70 @@ exports[`Button render with isLoading without icon 1`] = `
   color: #ffffff;
 }
 
-.cache-1wcjqa-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-cmn72i-StyledSvg {
+.emotion-2 {
   -webkit-animation: spin 0.75s linear infinite;
   animation: spin 0.75s linear infinite;
 }
 
-.cache-11f05l0-Loader {
+.emotion-4 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-<button
-    class="cache-1wcjqa-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    <svg
-      aria-label="Loading"
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow="20"
-      aria-valuetext="20%"
-      class="cache-cmn72i-StyledSvg e1y1n78x1"
-      role="progressbar"
-      style="height: 1em; width: 1em;"
-      viewBox="0 0 100 100"
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
     >
-      <circle
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="transparent"
-        stroke-width="16"
-      />
-      <circle
-        class="cache-11f05l0-Loader"
-        cx="50"
-        cy="50"
-        fill="none"
-        r="42"
-        stroke="currentColor"
-        stroke-dasharray="263.89378290154264"
-        stroke-dashoffset="211.11502632123413"
-        stroke-linecap="round"
-        stroke-width="16"
-      />
-    </svg>
-    Hello
-  </button>
+      <svg
+        aria-label="Loading"
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="20"
+        aria-valuetext="20%"
+        class="emotion-2 emotion-3"
+        role="progressbar"
+        style="height: 1em; width: 1em;"
+        viewBox="0 0 100 100"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="transparent"
+          stroke-width="16"
+        />
+        <circle
+          class="emotion-4"
+          cx="50"
+          cy="50"
+          fill="none"
+          r="42"
+          stroke="currentColor"
+          stroke-dasharray="263.89378290154264"
+          stroke-dashoffset="211.11502632123413"
+          stroke-linecap="round"
+          stroke-width="16"
+        />
+      </svg>
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button render xsmall 1`] = `
+exports[`Button > render xsmall 1`] = `
 <DocumentFragment>
-  .cache-7too4a-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -991,33 +1039,37 @@ exports[`Button render xsmall 1`] = `
   color: #ffffff;
 }
 
-.cache-7too4a-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-7too4a-StyledFilledButton:active {
+.emotion-0:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-7too4a-StyledFilledButton:hover,
-.cache-7too4a-StyledFilledButton:active {
+.emotion-0:hover,
+.emotion-0:active {
   background: #792dd4;
   color: #f9f9fa;
 }
 
-<button
-    class="cache-7too4a-StyledFilledButton e112qvla2"
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&danger 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&danger 1`] = `
 <DocumentFragment>
-  .cache-1o3nru0-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1058,24 +1110,28 @@ exports[`Button variant-sentiment-disabled combination render filled&danger 1`] 
   color: #ffffff;
 }
 
-.cache-1o3nru0-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1o3nru0-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&danger disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-1o3nru0-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1116,24 +1172,28 @@ exports[`Button variant-sentiment-disabled combination render filled&danger disa
   color: #ffffff;
 }
 
-.cache-1o3nru0-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1o3nru0-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&info 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&info 1`] = `
 <DocumentFragment>
-  .cache-tnhqkf-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1174,24 +1234,28 @@ exports[`Button variant-sentiment-disabled combination render filled&info 1`] = 
   color: #ffffff;
 }
 
-.cache-tnhqkf-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-tnhqkf-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&info disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&info disabled 1`] = `
 <DocumentFragment>
-  .cache-tnhqkf-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1232,24 +1296,28 @@ exports[`Button variant-sentiment-disabled combination render filled&info disabl
   color: #ffffff;
 }
 
-.cache-tnhqkf-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-tnhqkf-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&neutral 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&neutral 1`] = `
 <DocumentFragment>
-  .cache-eckgs6-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1290,24 +1358,28 @@ exports[`Button variant-sentiment-disabled combination render filled&neutral 1`]
   color: #b5b7bd;
 }
 
-.cache-eckgs6-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-eckgs6-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&neutral disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-eckgs6-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1348,24 +1420,28 @@ exports[`Button variant-sentiment-disabled combination render filled&neutral dis
   color: #b5b7bd;
 }
 
-.cache-eckgs6-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-eckgs6-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&primary 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&primary 1`] = `
 <DocumentFragment>
-  .cache-1wcjqa-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1406,24 +1482,28 @@ exports[`Button variant-sentiment-disabled combination render filled&primary 1`]
   color: #ffffff;
 }
 
-.cache-1wcjqa-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1wcjqa-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&primary disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-1wcjqa-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1464,24 +1544,28 @@ exports[`Button variant-sentiment-disabled combination render filled&primary dis
   color: #ffffff;
 }
 
-.cache-1wcjqa-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1wcjqa-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&secondary 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&secondary 1`] = `
 <DocumentFragment>
-  .cache-1vn5ywe-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1522,24 +1606,28 @@ exports[`Button variant-sentiment-disabled combination render filled&secondary 1
   color: #ffffff;
 }
 
-.cache-1vn5ywe-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1vn5ywe-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&secondary disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&secondary disabled 1`] = `
 <DocumentFragment>
-  .cache-1vn5ywe-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1580,24 +1668,28 @@ exports[`Button variant-sentiment-disabled combination render filled&secondary d
   color: #ffffff;
 }
 
-.cache-1vn5ywe-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1vn5ywe-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&success 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&success 1`] = `
 <DocumentFragment>
-  .cache-100zzti-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1638,24 +1730,28 @@ exports[`Button variant-sentiment-disabled combination render filled&success 1`]
   color: #ffffff;
 }
 
-.cache-100zzti-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-100zzti-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&success disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&success disabled 1`] = `
 <DocumentFragment>
-  .cache-100zzti-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1696,24 +1792,28 @@ exports[`Button variant-sentiment-disabled combination render filled&success dis
   color: #ffffff;
 }
 
-.cache-100zzti-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-100zzti-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&warning 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&warning 1`] = `
 <DocumentFragment>
-  .cache-g1azac-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1754,24 +1854,28 @@ exports[`Button variant-sentiment-disabled combination render filled&warning 1`]
   color: #ffffff;
 }
 
-.cache-g1azac-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-g1azac-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render filled&warning disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render filled&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-g1azac-StyledFilledButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1812,24 +1916,28 @@ exports[`Button variant-sentiment-disabled combination render filled&warning dis
   color: #ffffff;
 }
 
-.cache-g1azac-StyledFilledButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-g1azac-StyledFilledButton e112qvla2"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&danger 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&danger 1`] = `
 <DocumentFragment>
-  .cache-1b6mfr8-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1869,24 +1977,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&danger 1`] =
   color: #ffbbd3;
 }
 
-.cache-1b6mfr8-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1b6mfr8-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&danger disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-1b6mfr8-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1926,24 +2038,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&danger disab
   color: #ffbbd3;
 }
 
-.cache-1b6mfr8-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1b6mfr8-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&info 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&info 1`] = `
 <DocumentFragment>
-  .cache-a1miok-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1983,24 +2099,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&info 1`] = `
   color: #9ad4ff;
 }
 
-.cache-a1miok-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-a1miok-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&info disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&info disabled 1`] = `
 <DocumentFragment>
-  .cache-a1miok-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2040,24 +2160,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&info disable
   color: #9ad4ff;
 }
 
-.cache-a1miok-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-a1miok-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&neutral 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&neutral 1`] = `
 <DocumentFragment>
-  .cache-1pg5d94-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2097,24 +2221,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&neutral 1`] 
   color: #b5b7bd;
 }
 
-.cache-1pg5d94-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1pg5d94-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&neutral disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-1pg5d94-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2154,24 +2282,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&neutral disa
   color: #b5b7bd;
 }
 
-.cache-1pg5d94-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1pg5d94-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&primary 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&primary 1`] = `
 <DocumentFragment>
-  .cache-f5f4no-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2211,24 +2343,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary 1`] 
   color: #d8c5fc;
 }
 
-.cache-f5f4no-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-f5f4no-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&primary disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-f5f4no-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2268,24 +2404,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary disa
   color: #d8c5fc;
 }
 
-.cache-f5f4no-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-f5f4no-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&secondary 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&secondary 1`] = `
 <DocumentFragment>
-  .cache-1hug4my-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2325,24 +2465,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&secondary 1`
   color: #ebbcff;
 }
 
-.cache-1hug4my-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1hug4my-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&secondary disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&secondary disabled 1`] = `
 <DocumentFragment>
-  .cache-1hug4my-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2382,24 +2526,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&secondary di
   color: #ebbcff;
 }
 
-.cache-1hug4my-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1hug4my-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&success 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&success 1`] = `
 <DocumentFragment>
-  .cache-1ijcb6p-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2439,24 +2587,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&success 1`] 
   color: #7ee0bc;
 }
 
-.cache-1ijcb6p-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1ijcb6p-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&success disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&success disabled 1`] = `
 <DocumentFragment>
-  .cache-1ijcb6p-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2496,24 +2648,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&success disa
   color: #7ee0bc;
 }
 
-.cache-1ijcb6p-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1ijcb6p-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&warning 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&warning 1`] = `
 <DocumentFragment>
-  .cache-18f3kmq-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2553,24 +2709,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&warning 1`] 
   color: #ffdd5f;
 }
 
-.cache-18f3kmq-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-18f3kmq-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render ghost&warning disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render ghost&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-18f3kmq-StyledGhostButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2610,24 +2770,28 @@ exports[`Button variant-sentiment-disabled combination render ghost&warning disa
   color: #ffdd5f;
 }
 
-.cache-18f3kmq-StyledGhostButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-18f3kmq-StyledGhostButton e112qvla0"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&danger 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&danger 1`] = `
 <DocumentFragment>
-  .cache-1y8hhgo-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2668,24 +2832,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&danger 1`
   border: 1px solid #ffbbd3;
 }
 
-.cache-1y8hhgo-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1y8hhgo-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&danger disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-1y8hhgo-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2726,24 +2894,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&danger di
   border: 1px solid #ffbbd3;
 }
 
-.cache-1y8hhgo-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1y8hhgo-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&info 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&info 1`] = `
 <DocumentFragment>
-  .cache-gnaxj5-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2784,24 +2956,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&info 1`] 
   border: 1px solid #9ad4ff;
 }
 
-.cache-gnaxj5-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-gnaxj5-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&info disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&info disabled 1`] = `
 <DocumentFragment>
-  .cache-gnaxj5-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2842,24 +3018,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&info disa
   border: 1px solid #9ad4ff;
 }
 
-.cache-gnaxj5-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-gnaxj5-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&neutral 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&neutral 1`] = `
 <DocumentFragment>
-  .cache-1tanet4-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2900,24 +3080,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&neutral 1
   border: 1px solid #d9dadd;
 }
 
-.cache-1tanet4-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1tanet4-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&neutral disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-1tanet4-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2958,24 +3142,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&neutral d
   border: 1px solid #d9dadd;
 }
 
-.cache-1tanet4-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1tanet4-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&primary 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&primary 1`] = `
 <DocumentFragment>
-  .cache-13qtehh-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3016,24 +3204,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary 1
   border: 1px solid #d8c5fc;
 }
 
-.cache-13qtehh-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-13qtehh-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&primary disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-13qtehh-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3074,24 +3266,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary d
   border: 1px solid #d8c5fc;
 }
 
-.cache-13qtehh-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-13qtehh-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&secondary 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&secondary 1`] = `
 <DocumentFragment>
-  .cache-h4xo2e-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3132,24 +3328,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&secondary
   border: 1px solid #ebbcff;
 }
 
-.cache-h4xo2e-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-h4xo2e-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&secondary disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&secondary disabled 1`] = `
 <DocumentFragment>
-  .cache-h4xo2e-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3190,24 +3390,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&secondary
   border: 1px solid #ebbcff;
 }
 
-.cache-h4xo2e-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-h4xo2e-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&success 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&success 1`] = `
 <DocumentFragment>
-  .cache-1la2k9d-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3248,24 +3452,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&success 1
   border: 1px solid #7ee0bc;
 }
 
-.cache-1la2k9d-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1la2k9d-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&success disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&success disabled 1`] = `
 <DocumentFragment>
-  .cache-1la2k9d-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3306,24 +3514,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&success d
   border: 1px solid #7ee0bc;
 }
 
-.cache-1la2k9d-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1la2k9d-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&warning 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&warning 1`] = `
 <DocumentFragment>
-  .cache-1bk9pcg-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3364,24 +3576,28 @@ exports[`Button variant-sentiment-disabled combination render outlined&warning 1
   border: 1px solid #ffdd5f;
 }
 
-.cache-1bk9pcg-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1bk9pcg-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Button variant-sentiment-disabled combination render outlined&warning disabled 1`] = `
+exports[`Button > variant-sentiment-disabled combination > render outlined&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-1bk9pcg-StyledOutlinedButton {
+  .emotion-0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3422,17 +3638,21 @@ exports[`Button variant-sentiment-disabled combination render outlined&warning d
   border: 1px solid #ffdd5f;
 }
 
-.cache-1bk9pcg-StyledOutlinedButton:hover {
+.emotion-0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-<button
-    class="cache-1bk9pcg-StyledOutlinedButton e112qvla1"
-    disabled=""
-    type="button"
+<div
+    data-testid="testing"
   >
-    Hello
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      type="button"
+    >
+      Hello
+    </button>
+  </div>
 </DocumentFragment>
 `;

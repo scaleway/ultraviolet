@@ -1,11 +1,8 @@
-import { describe, expect, it, jest } from '@jest/globals'
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, it, vi } from 'vitest'
 import { TagInput } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 
 describe('TagInput', () => {
   it('should renders correctly', () =>
@@ -44,7 +41,7 @@ describe('TagInput', () => {
     ))
 
   it('should be able to be controlled', async () => {
-    const mockOnChange = jest.fn()
+    const mockOnChange = vi.fn()
 
     renderWithTheme(<TagInput value={['first']} onChange={mockOnChange} />)
     const input = screen.getByRole<HTMLInputElement>('textbox')
@@ -53,7 +50,7 @@ describe('TagInput', () => {
   })
 
   it('should be clearable', async () => {
-    const mockOnChange = jest.fn()
+    const mockOnChange = vi.fn()
 
     renderWithTheme(
       <TagInput value={['first']} onChange={mockOnChange} clearable />,
@@ -64,7 +61,7 @@ describe('TagInput', () => {
   })
 
   it('should delete tag', async () => {
-    const mockOnChange = jest.fn()
+    const mockOnChange = vi.fn()
 
     renderWithTheme(
       <TagInput value={['first', 'second']} onChange={mockOnChange} />,
@@ -82,7 +79,7 @@ describe('TagInput', () => {
   })
 
   it('should delete tag with backspace', async () => {
-    const mockOnChange = jest.fn()
+    const mockOnChange = vi.fn()
     renderWithTheme(
       <TagInput
         id="test"
@@ -102,7 +99,7 @@ describe('TagInput', () => {
   })
 
   it('should add tag on paste', async () => {
-    const mockOnChange = jest.fn()
+    const mockOnChange = vi.fn()
     renderWithTheme(
       <TagInput
         id="test"

@@ -1,6 +1,6 @@
-import { describe, test } from '@jest/globals'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test } from 'vitest'
 import { Separator } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Separator', () => {
   test(`renders correctly with default props`, () =>

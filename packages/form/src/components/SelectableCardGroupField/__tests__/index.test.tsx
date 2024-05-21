@@ -1,29 +1,11 @@
-import {
-  afterAll,
-  beforeAll,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { act, screen } from '@testing-library/react'
-import { Form, SelectableCardGroupField } from '../..'
-import {
-  mockRandom,
-  restoreRandom,
-  shouldMatchEmotionSnapshot,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks'
+import { renderWithForm } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
+import { SelectableCardGroupField } from '../..'
 
 describe('SelectableCardField', () => {
-  beforeAll(() => {
-    mockRandom()
-  })
-  afterAll(restoreRandom)
-
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('should render correctly', () => {
+    const { asFragment } = renderWithForm(
       <SelectableCardGroupField
         name="test"
         value="test"
@@ -33,68 +15,56 @@ describe('SelectableCardField', () => {
         <SelectableCardGroupField.Card value="radio 1" label="Radio 1" />
         <SelectableCardGroupField.Card value="radio 2" label="Radio 2" />
       </SelectableCardGroupField>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly checked as radiofield', () =>
-    shouldMatchEmotionSnapshot(
-      <Form
-        onRawSubmit={() => {}}
-        errors={mockErrors}
-        initialValues={{ test: 'checked' }}
+  test('should render correctly checked as radiofield', () => {
+    const { asFragment } = renderWithForm(
+      <SelectableCardGroupField
+        name="test"
+        value="checked"
+        legend="test"
+        type="radio"
       >
-        <SelectableCardGroupField
-          name="test"
+        <SelectableCardGroupField.Card
           value="checked"
-          legend="test"
-          type="radio"
-        >
-          <SelectableCardGroupField.Card
-            value="checked"
-            label="Radio 1"
-            data-testid="checked"
-          />
-        </SelectableCardGroupField>
-      </Form>,
-      {
-        transform: () => {
-          const input = screen.getByLabelText('Radio 1')
-          expect(input).toBeChecked()
-        },
-      },
-    ))
+          label="Radio 1"
+          data-testid="checked"
+        />
+      </SelectableCardGroupField>,
+      { initialValues: { test: 'checked' } },
+    )
+    const input = screen.getByLabelText('Radio 1')
+    expect(input).toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('should render correctly checked as a checkbox', () =>
-    shouldMatchEmotionSnapshot(
-      <Form
-        onRawSubmit={() => {}}
-        errors={mockErrors}
-        initialValues={{ test: 'checked' }}
+  test('should render correctly checked as a checkbox', () => {
+    const { asFragment } = renderWithForm(
+      <SelectableCardGroupField
+        name="test"
+        value={['checked']}
+        legend="test"
+        type="checkbox"
       >
-        <SelectableCardGroupField
-          name="test"
-          value={['checked']}
-          legend="test"
-          type="checkbox"
-        >
-          <SelectableCardGroupField.Card
-            value="checked"
-            label="Checkbox 1"
-            data-testid="checked"
-          />
-        </SelectableCardGroupField>
-      </Form>,
-      {
-        transform: () => {
-          const input = screen.getByLabelText('Checkbox 1')
-          expect(input).toBeChecked()
-        },
-      },
-    ))
+        <SelectableCardGroupField.Card
+          value="checked"
+          label="Checkbox 1"
+          data-testid="checked"
+        />
+      </SelectableCardGroupField>,
+      { initialValues: { test: 'checked' } },
+    )
+    const input = screen.getByLabelText('Checkbox 1')
+    expect(input).toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should trigger events correctly', () => {
-    const onChange = jest.fn(() => {})
+    const onChange = vi.fn(() => {})
 
-    return shouldMatchEmotionSnapshotFormWrapper(
+    const { asFragment } = renderWithForm(
       <SelectableCardGroupField
         name="test"
         value="events"
@@ -105,15 +75,12 @@ describe('SelectableCardField', () => {
         <SelectableCardGroupField.Card value="radio 1" label="Radio 1" />
         <SelectableCardGroupField.Card value="radio 2" label="Radio 2" />
       </SelectableCardGroupField>,
-      {
-        transform: () => {
-          const input = screen.getByLabelText('Radio 1')
-          act(() => input.click())
-          expect(onChange).toBeCalledTimes(1)
-          act(() => input.click())
-          expect(onChange).toBeCalledTimes(2)
-        },
-      },
     )
+    const input = screen.getByLabelText('Radio 1')
+    act(() => input.click())
+    expect(onChange).toBeCalledTimes(1)
+    act(() => input.click())
+    expect(onChange).toBeCalledTimes(2)
+    expect(asFragment()).toMatchSnapshot()
   })
 })

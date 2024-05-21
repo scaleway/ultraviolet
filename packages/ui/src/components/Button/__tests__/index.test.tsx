@@ -1,6 +1,6 @@
-import { describe, test } from '@jest/globals'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test } from 'vitest'
 import { Button, buttonSizes, buttonVariants } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { SENTIMENTS } from '../../../theme'
 
 const MockOnClick = () => {}

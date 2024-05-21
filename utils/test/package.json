@@ -1,0 +1,31 @@
+{
+  "name": "@utils/test",
+  "version": "0.0.1",
+  "description": "Ultratiolet utils test",
+  "private": true,
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "files": [
+    "src/*"
+  ],
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@emotion/cache": "11.11.0",
+    "@emotion/jest": "11.11.0",
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "@testing-library/jest-dom": "6.4.2",
+    "@testing-library/react": "15.0.5",
+    "@types/react": "18.3.1",
+    "@ultraviolet/themes": "workspace:*",
+    "jsdom": "24.0.0",
+    "react": "18.3.1",
+    "react-intersection-observer": "9.10.2",
+    "vitest": "1.5.3"
+  }
+}

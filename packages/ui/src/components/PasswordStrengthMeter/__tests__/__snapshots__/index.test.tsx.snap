@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PasswordStrengthMeter render with empty password 1`] = `
+exports[`PasswordStrengthMeter > render with empty password 1`] = `
 <DocumentFragment>
-  .cache-1myr1qz-StyledText-StyledTitle {
+  .emotion-1 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -16,7 +16,7 @@ exports[`PasswordStrengthMeter render with empty password 1`] = `
   line-height: 22px;
 }
 
-.cache-1pnox5g-StyledText-StyledStrength {
+.emotion-4 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -30,7 +30,7 @@ exports[`PasswordStrengthMeter render with empty password 1`] = `
   color: #b3144d;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-6 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -38,7 +38,7 @@ exports[`PasswordStrengthMeter render with empty password 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-8 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -46,35 +46,39 @@ exports[`PasswordStrengthMeter render with empty password 1`] = `
 }
 
 <div
-    aria-live="polite"
-    role="alert"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="e1uv9umu3 cache-1myr1qz-StyledText-StyledTitle e13y3mga0"
-    >
-      MyTitle
-    </p>
-    <span
-      class="e1uv9umu2 cache-1pnox5g-StyledText-StyledStrength e13y3mga0"
-    >
-      veryWeak
-    </span>
     <div
-      class="cache-15hdd4c-StyledWrapper e1uv9umu1"
+      aria-live="polite"
+      role="alert"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1 emotion-2"
+      >
+        MyTitle
+      </p>
+      <span
+        class="emotion-3 emotion-4 emotion-2"
+      >
+        veryWeak
+      </span>
       <div
-        class="cache-oco914-StyledMeter e1uv9umu0"
-        style="background-color: rgb(179, 20, 77); width: 20%;"
-      />
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+          style="background-color: rgb(179, 20, 77); width: 20%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PasswordStrengthMeter render with medium password 1`] = `
+exports[`PasswordStrengthMeter > render with medium password 1`] = `
 <DocumentFragment>
-  .cache-1myr1qz-StyledText-StyledTitle {
+  .emotion-1 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -88,7 +92,7 @@ exports[`PasswordStrengthMeter render with medium password 1`] = `
   line-height: 22px;
 }
 
-.cache-1pnox5g-StyledText-StyledStrength {
+.emotion-4 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -102,7 +106,7 @@ exports[`PasswordStrengthMeter render with medium password 1`] = `
   color: #b3144d;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-6 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -110,7 +114,7 @@ exports[`PasswordStrengthMeter render with medium password 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-8 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -118,35 +122,39 @@ exports[`PasswordStrengthMeter render with medium password 1`] = `
 }
 
 <div
-    aria-live="polite"
-    role="alert"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="e1uv9umu3 cache-1myr1qz-StyledText-StyledTitle e13y3mga0"
-    >
-      MyTitle
-    </p>
-    <span
-      class="e1uv9umu2 cache-1pnox5g-StyledText-StyledStrength e13y3mga0"
-    >
-      veryWeak
-    </span>
     <div
-      class="cache-15hdd4c-StyledWrapper e1uv9umu1"
+      aria-live="polite"
+      role="alert"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1 emotion-2"
+      >
+        MyTitle
+      </p>
+      <span
+        class="emotion-3 emotion-4 emotion-2"
+      >
+        veryWeak
+      </span>
       <div
-        class="cache-oco914-StyledMeter e1uv9umu0"
-        style="background-color: rgb(179, 20, 77); width: 20%;"
-      />
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+          style="background-color: rgb(179, 20, 77); width: 20%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PasswordStrengthMeter render with strong password 1`] = `
+exports[`PasswordStrengthMeter > render with strong password 1`] = `
 <DocumentFragment>
-  .cache-1myr1qz-StyledText-StyledTitle {
+  .emotion-1 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -160,7 +168,7 @@ exports[`PasswordStrengthMeter render with strong password 1`] = `
   line-height: 22px;
 }
 
-.cache-1pnox5g-StyledText-StyledStrength {
+.emotion-4 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -174,7 +182,7 @@ exports[`PasswordStrengthMeter render with strong password 1`] = `
   color: #b3144d;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-6 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -182,7 +190,7 @@ exports[`PasswordStrengthMeter render with strong password 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-8 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -190,35 +198,39 @@ exports[`PasswordStrengthMeter render with strong password 1`] = `
 }
 
 <div
-    aria-live="polite"
-    role="alert"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="e1uv9umu3 cache-1myr1qz-StyledText-StyledTitle e13y3mga0"
-    >
-      MyTitle
-    </p>
-    <span
-      class="e1uv9umu2 cache-1pnox5g-StyledText-StyledStrength e13y3mga0"
-    >
-      veryWeak
-    </span>
     <div
-      class="cache-15hdd4c-StyledWrapper e1uv9umu1"
+      aria-live="polite"
+      role="alert"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1 emotion-2"
+      >
+        MyTitle
+      </p>
+      <span
+        class="emotion-3 emotion-4 emotion-2"
+      >
+        veryWeak
+      </span>
       <div
-        class="cache-oco914-StyledMeter e1uv9umu0"
-        style="background-color: rgb(179, 20, 77); width: 20%;"
-      />
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+          style="background-color: rgb(179, 20, 77); width: 20%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PasswordStrengthMeter render with very strong password 1`] = `
+exports[`PasswordStrengthMeter > render with very strong password 1`] = `
 <DocumentFragment>
-  .cache-1myr1qz-StyledText-StyledTitle {
+  .emotion-1 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -232,7 +244,7 @@ exports[`PasswordStrengthMeter render with very strong password 1`] = `
   line-height: 22px;
 }
 
-.cache-1pnox5g-StyledText-StyledStrength {
+.emotion-4 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -246,7 +258,7 @@ exports[`PasswordStrengthMeter render with very strong password 1`] = `
   color: #b3144d;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-6 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -254,7 +266,7 @@ exports[`PasswordStrengthMeter render with very strong password 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-8 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -262,35 +274,39 @@ exports[`PasswordStrengthMeter render with very strong password 1`] = `
 }
 
 <div
-    aria-live="polite"
-    role="alert"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="e1uv9umu3 cache-1myr1qz-StyledText-StyledTitle e13y3mga0"
-    >
-      MyTitle
-    </p>
-    <span
-      class="e1uv9umu2 cache-1pnox5g-StyledText-StyledStrength e13y3mga0"
-    >
-      veryWeak
-    </span>
     <div
-      class="cache-15hdd4c-StyledWrapper e1uv9umu1"
+      aria-live="polite"
+      role="alert"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1 emotion-2"
+      >
+        MyTitle
+      </p>
+      <span
+        class="emotion-3 emotion-4 emotion-2"
+      >
+        veryWeak
+      </span>
       <div
-        class="cache-oco914-StyledMeter e1uv9umu0"
-        style="background-color: rgb(179, 20, 77); width: 20%;"
-      />
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+          style="background-color: rgb(179, 20, 77); width: 20%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`PasswordStrengthMeter render with weak password 1`] = `
+exports[`PasswordStrengthMeter > render with weak password 1`] = `
 <DocumentFragment>
-  .cache-1myr1qz-StyledText-StyledTitle {
+  .emotion-1 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -304,7 +320,7 @@ exports[`PasswordStrengthMeter render with weak password 1`] = `
   line-height: 22px;
 }
 
-.cache-1pnox5g-StyledText-StyledStrength {
+.emotion-4 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -318,7 +334,7 @@ exports[`PasswordStrengthMeter render with weak password 1`] = `
   color: #b3144d;
 }
 
-.cache-15hdd4c-StyledWrapper {
+.emotion-6 {
   background-color: #f3f3f4;
   border-radius: 4px;
   height: 8px;
@@ -326,7 +342,7 @@ exports[`PasswordStrengthMeter render with weak password 1`] = `
   margin-bottom: 16px;
 }
 
-.cache-oco914-StyledMeter {
+.emotion-8 {
   border-radius: 4px;
   height: 100%;
   -webkit-transition: all 0.5s;
@@ -334,27 +350,31 @@ exports[`PasswordStrengthMeter render with weak password 1`] = `
 }
 
 <div
-    aria-live="polite"
-    role="alert"
-    title="MyTitle"
+    data-testid="testing"
   >
-    <p
-      class="e1uv9umu3 cache-1myr1qz-StyledText-StyledTitle e13y3mga0"
-    >
-      MyTitle
-    </p>
-    <span
-      class="e1uv9umu2 cache-1pnox5g-StyledText-StyledStrength e13y3mga0"
-    >
-      veryWeak
-    </span>
     <div
-      class="cache-15hdd4c-StyledWrapper e1uv9umu1"
+      aria-live="polite"
+      role="alert"
+      title="MyTitle"
     >
+      <p
+        class="emotion-0 emotion-1 emotion-2"
+      >
+        MyTitle
+      </p>
+      <span
+        class="emotion-3 emotion-4 emotion-2"
+      >
+        veryWeak
+      </span>
       <div
-        class="cache-oco914-StyledMeter e1uv9umu0"
-        style="background-color: rgb(179, 20, 77); width: 20%;"
-      />
+        class="emotion-6 emotion-7"
+      >
+        <div
+          class="emotion-8 emotion-9"
+          style="background-color: rgb(179, 20, 77); width: 20%;"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>

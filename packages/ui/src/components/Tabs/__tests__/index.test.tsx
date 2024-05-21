@@ -1,18 +1,17 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
+import { consoleLightTheme } from '@ultraviolet/themes'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test, vi } from 'vitest'
 import { Tabs } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-  shouldMatchEmotionSnapshotWithPortal,
-} from '../../../../.jest/helpers'
 import { Link } from '../../Link'
 
 describe('Tabs', () => {
-  test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(<Tabs onChange={() => {}} />))
+  test('renders correctly', () => {
+    const { asFragment } = renderWithTheme(<Tabs onChange={() => {}} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with Tabs with prop', async () => {
+  test('renders correctly with Tabs with prop', () => {
     Object.defineProperty(HTMLElement.prototype, 'clientWidth', {
       configurable: true,
       value: 500,
@@ -26,7 +25,7 @@ describe('Tabs', () => {
       value: () => {},
     })
 
-    return shouldMatchEmotionSnapshotWithPortal(
+    const { asFragment } = renderWithTheme(
       <Tabs selected={0} onChange={() => {}}>
         <Tabs.Tab value={0} counter={2}>
           First
@@ -57,22 +56,23 @@ describe('Tabs', () => {
           <Tabs.MenuItem value={4}>Test 2</Tabs.MenuItem>
         </Tabs.Menu>
       </Tabs>,
+      consoleLightTheme,
       {
-        transform: () => {
-          fireEvent.scroll(screen.getByRole('tablist'), {})
-          fireEvent.click(screen.getByText('More'))
-          Object.defineProperty(HTMLElement.prototype, 'scrollWidth', {
-            configurable: true,
-            value: 500,
-          })
-          fireEvent.scroll(screen.getByRole('tablist'), {})
-        },
+        container: document.body,
       },
     )
+    fireEvent.scroll(screen.getByRole('tablist'), {})
+    fireEvent.click(screen.getByText('More'))
+    Object.defineProperty(HTMLElement.prototype, 'scrollWidth', {
+      configurable: true,
+      value: 500,
+    })
+    fireEvent.scroll(screen.getByRole('tablist'), {})
+    expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly with Tabs menu selected', () =>
-    shouldMatchEmotionSnapshotWithPortal(
+  test('renders correctly with Tabs menu selected', () => {
+    const { asFragment } = renderWithTheme(
       <Tabs selected={4} onChange={() => {}}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
@@ -88,9 +88,11 @@ describe('Tabs', () => {
           <Tabs.MenuItem>Test again</Tabs.MenuItem>
         </Tabs.Menu>
       </Tabs>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with Tabs and last disabled', () =>
+  test('renders correctly with Tabs and last disabled', () => {
     shouldMatchEmotionSnapshot(
       <Tabs selected={2} onChange={() => {}}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
@@ -99,9 +101,10 @@ describe('Tabs', () => {
           Very long tab name
         </Tabs.Tab>
       </Tabs>,
-    ))
+    )
+  })
 
-  test('renders correctly with Tabs name', () =>
+  test('renders correctly with Tabs name', () => {
     shouldMatchEmotionSnapshot(
       <Tabs selected="second" onChange={() => {}}>
         <Tabs.Tab value="first">First</Tabs.Tab>
@@ -110,9 +113,10 @@ describe('Tabs', () => {
           Very long tab name
         </Tabs.Tab>
       </Tabs>,
-    ))
+    )
+  })
 
-  test('renders correctly with custom Tabs component', () =>
+  test('renders correctly with custom Tabs component', () => {
     shouldMatchEmotionSnapshot(
       <Tabs onChange={() => {}}>
         <Tabs.Tab as="div">First</Tabs.Tab>
@@ -121,11 +125,12 @@ describe('Tabs', () => {
           Very long tab name
         </Tabs.Tab>
       </Tabs>,
-    ))
+    )
+  })
 
   test('updates tab on keydown', () => {
-    const onChange = jest.fn()
-    const onFirstTabClick = jest.fn()
+    const onChange = vi.fn()
+    const onFirstTabClick = vi.fn()
     renderWithTheme(
       <Tabs onChange={onChange}>
         <Tabs.Tab value={1} onClick={onFirstTabClick}>
@@ -152,8 +157,8 @@ describe('Tabs', () => {
   })
 
   test('updates tab on click', () => {
-    const onChange = jest.fn()
-    const onFirstTabClick = jest.fn()
+    const onChange = vi.fn()
+    const onFirstTabClick = vi.fn()
     renderWithTheme(
       <Tabs onChange={onChange}>
         <Tabs.Tab value="first" onClick={onFirstTabClick}>
@@ -188,7 +193,7 @@ describe('Tabs', () => {
   })
 
   test('no onChange', () => {
-    const onClick = jest.fn()
+    const onClick = vi.fn()
     const { unmount } = renderWithTheme(
       <Tabs onChange={() => {}}>
         <Tabs.Tab value="first" onClick={onClick}>

@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Alert renders correctly with all sentiments renders correctly sentiment danger 1`] = `
+exports[`Alert > renders correctly with all sentiments > renders correctly sentiment danger 1`] = `
 <DocumentFragment>
-  .cache-11mx9hk-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,7 +30,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   border-left: 4px solid #b3144d;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -57,7 +57,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,7 +80,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -89,12 +89,12 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -122,7 +122,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -134,33 +134,37 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
 }
 
 <div
-    class="cache-11mx9hk-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Sample Alert
-          </p>
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p
+              class="emotion-10 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -168,9 +172,9 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with all sentiments renders correctly sentiment info 1`] = `
+exports[`Alert > renders correctly with all sentiments > renders correctly sentiment info 1`] = `
 <DocumentFragment>
-  .cache-a128rg-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,7 +202,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   border-left: 4px solid #005da3;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,7 +229,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -248,7 +252,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -257,12 +261,12 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -290,7 +294,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -302,33 +306,37 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
 }
 
 <div
-    class="cache-a128rg-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0M9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9z"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Sample Alert
-          </p>
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0M9 9a.75.75 0 0 0 0 1.5h.253a.25.25 0 0 1 .244.304l-.459 2.066A1.75 1.75 0 0 0 10.747 15H11a.75.75 0 0 0 0-1.5h-.253a.25.25 0 0 1-.244-.304l.459-2.066A1.75 1.75 0 0 0 9.253 9z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p
+              class="emotion-10 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -336,9 +344,9 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with all sentiments renders correctly sentiment success 1`] = `
+exports[`Alert > renders correctly with all sentiments > renders correctly sentiment success 1`] = `
 <DocumentFragment>
-  .cache-csathi-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -366,7 +374,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   border-left: 4px solid #22674e;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -393,7 +401,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -416,7 +424,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -425,12 +433,12 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -458,7 +466,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -470,33 +478,37 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
 }
 
 <div
-    class="cache-csathi-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089z"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Sample Alert
-          </p>
+            <path
+              clip-rule="evenodd"
+              d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16m3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p
+              class="emotion-10 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -504,9 +516,9 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with all sentiments renders correctly sentiment warning 1`] = `
+exports[`Alert > renders correctly with all sentiments > renders correctly sentiment warning 1`] = `
 <DocumentFragment>
-  .cache-1hp5mca-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -534,7 +546,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   border-left: 4px solid #7c5400;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -561,7 +573,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -584,7 +596,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -593,12 +605,12 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -626,7 +638,7 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -638,33 +650,37 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
 }
 
 <div
-    class="cache-1hp5mca-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Sample Alert
-          </p>
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p
+              class="emotion-10 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -672,9 +688,9 @@ exports[`Alert renders correctly with all sentiments renders correctly sentiment
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
+exports[`Alert > renders correctly with buttonText and onClickButton 1`] = `
 <DocumentFragment>
-  .cache-11mx9hk-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -702,7 +718,7 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   border-left: 4px solid #b3144d;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -729,7 +745,7 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -752,7 +768,7 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -761,12 +777,12 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -794,7 +810,7 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -805,7 +821,7 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   text-decoration: none;
 }
 
-.cache-kctixj-StyledFilledButton-StyledButton {
+.emotion-13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -845,65 +861,69 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   margin-left: 40px;
 }
 
-.cache-kctixj-StyledFilledButton-StyledButton:hover {
+.emotion-13:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-kctixj-StyledFilledButton-StyledButton:active {
+.emotion-13:active {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-kctixj-StyledFilledButton-StyledButton:hover,
-.cache-kctixj-StyledFilledButton-StyledButton:active {
+.emotion-13:hover,
+.emotion-13:active {
   background: #d6175c;
   color: #f9f9fa;
 }
 
 <div
-    class="cache-11mx9hk-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Sample Alert
-          </p>
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p
+              class="emotion-10 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
         </div>
+        <button
+          class="emotion-12 emotion-13 emotion-14"
+          type="button"
+        >
+          Button
+        </button>
       </div>
-      <button
-        class="e17p0ih01 cache-kctixj-StyledFilledButton-StyledButton e112qvla2"
-        type="button"
-      >
-        Button
-      </button>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with children as component 1`] = `
+exports[`Alert > renders correctly with children as component 1`] = `
 <DocumentFragment>
-  .cache-11mx9hk-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -931,7 +951,7 @@ exports[`Alert renders correctly with children as component 1`] = `
   border-left: 4px solid #b3144d;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -958,7 +978,7 @@ exports[`Alert renders correctly with children as component 1`] = `
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -981,7 +1001,7 @@ exports[`Alert renders correctly with children as component 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -990,12 +1010,12 @@ exports[`Alert renders correctly with children as component 1`] = `
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1024,31 +1044,35 @@ exports[`Alert renders correctly with children as component 1`] = `
 }
 
 <div
-    class="cache-11mx9hk-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <p>
-            Sample Alert
-          </p>
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p>
+              Sample Alert
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -1056,9 +1080,9 @@ exports[`Alert renders correctly with children as component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with closable and onClose 1`] = `
+exports[`Alert > renders correctly with closable and onClose 1`] = `
 <DocumentFragment>
-  .cache-11mx9hk-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1086,7 +1110,7 @@ exports[`Alert renders correctly with closable and onClose 1`] = `
   border-left: 4px solid #b3144d;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1113,7 +1137,7 @@ exports[`Alert renders correctly with closable and onClose 1`] = `
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1136,7 +1160,7 @@ exports[`Alert renders correctly with closable and onClose 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -1145,12 +1169,12 @@ exports[`Alert renders correctly with closable and onClose 1`] = `
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1178,7 +1202,7 @@ exports[`Alert renders correctly with closable and onClose 1`] = `
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1189,7 +1213,7 @@ exports[`Alert renders correctly with closable and onClose 1`] = `
   text-decoration: none;
 }
 
-.cache-o00wx5-StyledGhostButton-CloseButton {
+.emotion-13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1231,22 +1255,22 @@ exports[`Alert renders correctly with closable and onClose 1`] = `
   align-self: start;
 }
 
-.cache-o00wx5-StyledGhostButton-CloseButton:hover {
+.emotion-13:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-o00wx5-StyledGhostButton-CloseButton:active {
+.emotion-13:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-o00wx5-StyledGhostButton-CloseButton:hover,
-.cache-o00wx5-StyledGhostButton-CloseButton:active {
+.emotion-13:hover,
+.emotion-13:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-15 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -1255,64 +1279,68 @@ exports[`Alert renders correctly with closable and onClose 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-15 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 <div
-    class="cache-11mx9hk-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p
+              class="emotion-10 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="close"
+        class="emotion-12 emotion-13 emotion-14"
+        type="button"
       >
         <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
+          class="emotion-15 emotion-7"
+          viewBox="0 0 16 16"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
+            d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
           />
         </svg>
-        <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
-        >
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
-          >
-            Sample Alert
-          </p>
-        </div>
-      </div>
+      </button>
     </div>
-    <button
-      aria-label="close"
-      class="e17p0ih00 cache-o00wx5-StyledGhostButton-CloseButton e112qvla0"
-      type="button"
-    >
-      <svg
-        class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-        viewBox="0 0 16 16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with default values 1`] = `
+exports[`Alert > renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-11mx9hk-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1340,7 +1368,7 @@ exports[`Alert renders correctly with default values 1`] = `
   border-left: 4px solid #b3144d;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1367,7 +1395,7 @@ exports[`Alert renders correctly with default values 1`] = `
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1390,7 +1418,7 @@ exports[`Alert renders correctly with default values 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -1399,12 +1427,12 @@ exports[`Alert renders correctly with default values 1`] = `
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1432,7 +1460,7 @@ exports[`Alert renders correctly with default values 1`] = `
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1444,33 +1472,37 @@ exports[`Alert renders correctly with default values 1`] = `
 }
 
 <div
-    class="cache-11mx9hk-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Sample Alert
-          </p>
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p
+              class="emotion-10 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -1478,9 +1510,9 @@ exports[`Alert renders correctly with default values 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with disabled 1`] = `
+exports[`Alert > renders correctly with disabled 1`] = `
 <DocumentFragment>
-  .cache-11mx9hk-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1508,7 +1540,35 @@ exports[`Alert renders correctly with disabled 1`] = `
   border-left: 4px solid #b3144d;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #ffebf2;
+  color: #b3144d;
+  border-left: 4px solid #b3144d;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1535,7 +1595,34 @@ exports[`Alert renders correctly with disabled 1`] = `
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1558,7 +1645,30 @@ exports[`Alert renders correctly with disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -1567,12 +1677,26 @@ exports[`Alert renders correctly with disabled 1`] = `
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-6 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.emotion-6 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1600,7 +1724,35 @@ exports[`Alert renders correctly with disabled 1`] = `
   flex-wrap: wrap;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-10 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1611,7 +1763,18 @@ exports[`Alert renders correctly with disabled 1`] = `
   text-decoration: none;
 }
 
-.cache-1bd7bz7-StyledFilledButton-StyledButton {
+.emotion-10 {
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1653,56 +1816,60 @@ exports[`Alert renders correctly with disabled 1`] = `
   margin-left: 40px;
 }
 
-.cache-1bd7bz7-StyledFilledButton-StyledButton:hover {
+.emotion-13:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 <div
-    class="cache-11mx9hk-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Sample Alert
-          </p>
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
+          >
+            <p
+              class="emotion-10 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
         </div>
+        <button
+          class="emotion-12 emotion-13 emotion-14"
+          disabled=""
+          type="button"
+        >
+          button
+        </button>
       </div>
-      <button
-        class="e17p0ih01 cache-1bd7bz7-StyledFilledButton-StyledButton e112qvla2"
-        disabled=""
-        type="button"
-      >
-        button
-      </button>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Alert renders correctly with title 1`] = `
+exports[`Alert > renders correctly with title 1`] = `
 <DocumentFragment>
-  .cache-11mx9hk-Stack-StyledStackContainer-alertStyles {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1730,7 +1897,7 @@ exports[`Alert renders correctly with title 1`] = `
   border-left: 4px solid #b3144d;
 }
 
-.cache-13ic1ao-Stack-WrapStack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1757,7 +1924,7 @@ exports[`Alert renders correctly with title 1`] = `
   width: 100%;
 }
 
-.cache-102e6lf-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1780,7 +1947,7 @@ exports[`Alert renders correctly with title 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 24px;
@@ -1789,12 +1956,12 @@ exports[`Alert renders correctly with title 1`] = `
   min-height: 24px;
 }
 
-.cache-1f84f2w-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-4ixw4c-Stack-TextStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1822,7 +1989,7 @@ exports[`Alert renders correctly with title 1`] = `
   flex-wrap: wrap;
 }
 
-.cache-18yznsf-StyledText {
+.emotion-10 {
   color: #b3144d;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1834,7 +2001,7 @@ exports[`Alert renders correctly with title 1`] = `
   text-decoration: none;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-12 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -1846,38 +2013,42 @@ exports[`Alert renders correctly with title 1`] = `
 }
 
 <div
-    class="cache-11mx9hk-Stack-StyledStackContainer-alertStyles e17p0ih04"
+    data-testid="testing"
   >
     <div
-      class="cache-13ic1ao-Stack-WrapStack e17p0ih02"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="cache-102e6lf-Stack ehpbis70"
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1f84f2w-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clip-rule="evenodd"
-            d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
         <div
-          class="cache-4ixw4c-Stack-TextStack e17p0ih03"
+          class="emotion-4 emotion-5"
         >
-          <span
-            class="cache-18yznsf-StyledText e13y3mga0"
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            title
-          </span>
-          <p
-            class="cache-1e8qouo-StyledText e13y3mga0"
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <div
+            class="emotion-8 emotion-9"
           >
-            Sample Alert
-          </p>
+            <span
+              class="emotion-10 emotion-11"
+            >
+              title
+            </span>
+            <p
+              class="emotion-12 emotion-11"
+            >
+              Sample Alert
+            </p>
+          </div>
         </div>
       </div>
     </div>

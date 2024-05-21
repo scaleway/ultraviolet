@@ -1,38 +1,38 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DateField should render correctly 1`] = `
+exports[`DateField > should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1omin95-StyledWrapper {
+  .emotion-0 {
   width: 100%;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker-wrapper {
+.emotion-0 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__input-container {
+.emotion-0 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__triangle {
+.emotion-0 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__month-container {
+.emotion-0 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-1omin95-StyledWrapper .react-datepicker-popper {
+.emotion-0 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-1omin95-StyledWrapper .calendar {
+.emotion-0 .calendar {
   font-family: Inter,Asap;
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__header {
+.emotion-0 .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -42,19 +42,19 @@ exports[`DateField should render correctly 1`] = `
   position: inherit;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__triangle {
+.emotion-0 .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__month {
+.emotion-0 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day-names {
+.emotion-0 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day-name {
+.emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap;
   color: #3f4250;
   font-weight: 500;
@@ -65,7 +65,7 @@ exports[`DateField should render correctly 1`] = `
   text-transform: capitalize;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day {
+.emotion-0 .calendar .react-datepicker__day {
   color: #727683;
   font-weight: 500;
   font-size: 16px;
@@ -75,87 +75,87 @@ exports[`DateField should render correctly 1`] = `
   margin-right: 3px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--outside-month {
+.emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
   font-size: 16px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected {
+.emotion-0 .calendar .react-datepicker__day--selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected:disabled {
+.emotion-0 .calendar .react-datepicker__day--selected[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--selected:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range {
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range:disabled {
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range {
+.emotion-0 .calendar .react-datepicker__day--in-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range:disabled {
+.emotion-0 .calendar .react-datepicker__day--in-range[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--in-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start {
+.emotion-0 .calendar .react-datepicker__day--range-start {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start:disabled {
+.emotion-0 .calendar .react-datepicker__day--range-start[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--range-start:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end {
+.emotion-0 .calendar .react-datepicker__day--range-end {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end:disabled {
+.emotion-0 .calendar .react-datepicker__day--range-end[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--range-end:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day:hover {
+.emotion-0 .calendar .react-datepicker__day:hover {
   color: #222638;
   background-color: #e9eaeb;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--disabled {
+.emotion-0 .calendar .react-datepicker__day--disabled {
   color: #b5b7bd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
   color: #b5b7bd;
   background-color: transparent;
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -178,7 +178,7 @@ exports[`DateField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-unj39u-StyledInputWrapper {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -192,69 +192,69 @@ exports[`DateField should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1 {
+.emotion-4>.emotion-7 {
   color: #3f4250;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.emotion-4>.emotion-7::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.emotion-4>.emotion-7::-moz-placeholder {
   color: #727683;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.emotion-4>.emotion-7:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1::placeholder {
+.emotion-4>.emotion-7::placeholder {
   color: #727683;
 }
 
-.cache-unj39u-StyledInputWrapper[data-success='true'] {
+.emotion-4[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-unj39u-StyledInputWrapper[data-error='true'] {
+.emotion-4[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-unj39u-StyledInputWrapper[data-readonly='true'] {
+.emotion-4[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.emotion-4[data-disabled='true']>.emotion-7 {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::placeholder {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-zm0rg0-StyledInput {
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -266,11 +266,11 @@ exports[`DateField should render correctly 1`] = `
   font-size: 14px;
 }
 
-.cache-zm0rg0-StyledInput[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 16px;
 }
 
-.cache-1scqdcm-Stack-BasicSuffixStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -296,7 +296,7 @@ exports[`DateField should render correctly 1`] = `
   border-color: inherit;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-10 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -305,104 +305,108 @@ exports[`DateField should render correctly 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-10 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-1omin95-StyledWrapper e1bm75lk1"
+    <form
+      novalidate=""
     >
       <div
-        class="react-datepicker-wrapper"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="react-datepicker__input-container"
+          class="react-datepicker-wrapper"
         >
           <div
-            class=" cache-ymc80m-Stack ehpbis70"
+            class="react-datepicker__input-container"
           >
-            <div>
-              <div
-                class="cache-unj39u-StyledInputWrapper e7tir8v0"
-                data-disabled="false"
-                data-error="false"
-                data-readonly="false"
-                data-success="false"
-              >
-                <input
-                  aria-invalid="false"
-                  class="cache-zm0rg0-StyledInput e7tir8v1"
-                  data-size="large"
-                  id=":r1:"
-                  name="test"
-                  type="text"
-                  value=""
-                />
+            <div
+              class=" emotion-2 emotion-3"
+            >
+              <div>
                 <div
-                  class="cache-1scqdcm-Stack-BasicSuffixStack e7tir8v3"
+                  class="emotion-4 emotion-5"
+                  data-disabled="false"
+                  data-error="false"
+                  data-readonly="false"
+                  data-success="false"
                 >
-                  <svg
-                    class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <input
+                    aria-invalid="false"
+                    class="emotion-6 emotion-7"
+                    data-size="large"
+                    id=":r1:"
+                    name="test"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="emotion-8 emotion-9"
                   >
-                    <path
-                      d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
+                    <svg
+                      class="emotion-10 emotion-11"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`DateField should render correctly disabled 1`] = `
+exports[`DateField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-1omin95-StyledWrapper {
+  .emotion-0 {
   width: 100%;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker-wrapper {
+.emotion-0 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__input-container {
+.emotion-0 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__triangle {
+.emotion-0 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__month-container {
+.emotion-0 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-1omin95-StyledWrapper .react-datepicker-popper {
+.emotion-0 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-1omin95-StyledWrapper .calendar {
+.emotion-0 .calendar {
   font-family: Inter,Asap;
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__header {
+.emotion-0 .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -412,19 +416,19 @@ exports[`DateField should render correctly disabled 1`] = `
   position: inherit;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__triangle {
+.emotion-0 .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__month {
+.emotion-0 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day-names {
+.emotion-0 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day-name {
+.emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap;
   color: #3f4250;
   font-weight: 500;
@@ -435,7 +439,7 @@ exports[`DateField should render correctly disabled 1`] = `
   text-transform: capitalize;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day {
+.emotion-0 .calendar .react-datepicker__day {
   color: #727683;
   font-weight: 500;
   font-size: 16px;
@@ -445,87 +449,87 @@ exports[`DateField should render correctly disabled 1`] = `
   margin-right: 3px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--outside-month {
+.emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
   font-size: 16px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected {
+.emotion-0 .calendar .react-datepicker__day--selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected:disabled {
+.emotion-0 .calendar .react-datepicker__day--selected[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--selected:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range {
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range:disabled {
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range {
+.emotion-0 .calendar .react-datepicker__day--in-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range:disabled {
+.emotion-0 .calendar .react-datepicker__day--in-range[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--in-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start {
+.emotion-0 .calendar .react-datepicker__day--range-start {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start:disabled {
+.emotion-0 .calendar .react-datepicker__day--range-start[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--range-start:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end {
+.emotion-0 .calendar .react-datepicker__day--range-end {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end:disabled {
+.emotion-0 .calendar .react-datepicker__day--range-end[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--range-end:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day:hover {
+.emotion-0 .calendar .react-datepicker__day:hover {
   color: #222638;
   background-color: #e9eaeb;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--disabled {
+.emotion-0 .calendar .react-datepicker__day--disabled {
   color: #b5b7bd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
   color: #b5b7bd;
   background-color: transparent;
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -548,7 +552,7 @@ exports[`DateField should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-unj39u-StyledInputWrapper {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -562,69 +566,69 @@ exports[`DateField should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1 {
+.emotion-4>.emotion-7 {
   color: #3f4250;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.emotion-4>.emotion-7::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.emotion-4>.emotion-7::-moz-placeholder {
   color: #727683;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.emotion-4>.emotion-7:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-unj39u-StyledInputWrapper>.e7tir8v1::placeholder {
+.emotion-4>.emotion-7::placeholder {
   color: #727683;
 }
 
-.cache-unj39u-StyledInputWrapper[data-success='true'] {
+.emotion-4[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-unj39u-StyledInputWrapper[data-error='true'] {
+.emotion-4[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-unj39u-StyledInputWrapper[data-readonly='true'] {
+.emotion-4[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.emotion-4[data-disabled='true']>.emotion-7 {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::placeholder {
   color: #b5b7bd;
 }
 
-.cache-unj39u-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-zm0rg0-StyledInput {
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -636,11 +640,11 @@ exports[`DateField should render correctly disabled 1`] = `
   font-size: 14px;
 }
 
-.cache-zm0rg0-StyledInput[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 16px;
 }
 
-.cache-1scqdcm-Stack-BasicSuffixStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -666,7 +670,7 @@ exports[`DateField should render correctly disabled 1`] = `
   border-color: inherit;
 }
 
-.cache-168pshp-StyledIcon-sizeStyles {
+.emotion-10 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 1em;
@@ -675,105 +679,109 @@ exports[`DateField should render correctly disabled 1`] = `
   min-height: 1em;
 }
 
-.cache-168pshp-StyledIcon-sizeStyles .fillStroke {
+.emotion-10 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-1omin95-StyledWrapper e1bm75lk1"
+    <form
+      novalidate=""
     >
       <div
-        class="react-datepicker-wrapper"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="react-datepicker__input-container"
+          class="react-datepicker-wrapper"
         >
           <div
-            class=" cache-ymc80m-Stack ehpbis70"
+            class="react-datepicker__input-container"
           >
-            <div>
-              <div
-                class="cache-unj39u-StyledInputWrapper e7tir8v0"
-                data-disabled="true"
-                data-error="false"
-                data-readonly="false"
-                data-success="false"
-              >
-                <input
-                  aria-invalid="false"
-                  class="cache-zm0rg0-StyledInput e7tir8v1"
-                  data-size="large"
-                  disabled=""
-                  id=":r4:"
-                  name="test"
-                  type="text"
-                  value=""
-                />
+            <div
+              class=" emotion-2 emotion-3"
+            >
+              <div>
                 <div
-                  class="cache-1scqdcm-Stack-BasicSuffixStack e7tir8v3"
+                  class="emotion-4 emotion-5"
+                  data-disabled="true"
+                  data-error="false"
+                  data-readonly="false"
+                  data-success="false"
                 >
-                  <svg
-                    class="cache-168pshp-StyledIcon-sizeStyles e1gt4cfo0"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <input
+                    aria-invalid="false"
+                    class="emotion-6 emotion-7"
+                    data-size="large"
+                    disabled=""
+                    id=":r4:"
+                    name="test"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="emotion-8 emotion-9"
                   >
-                    <path
-                      d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
+                    <svg
+                      class="emotion-10 emotion-11"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`DateField should trigger events 1`] = `
+exports[`DateField > should trigger events 1`] = `
 <DocumentFragment>
-  .cache-1omin95-StyledWrapper {
+  .emotion-0 {
   width: 100%;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker-wrapper {
+.emotion-0 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__input-container {
+.emotion-0 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__triangle {
+.emotion-0 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-1omin95-StyledWrapper div.react-datepicker__month-container {
+.emotion-0 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-1omin95-StyledWrapper .react-datepicker-popper {
+.emotion-0 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-1omin95-StyledWrapper .calendar {
+.emotion-0 .calendar {
   font-family: Inter,Asap;
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__header {
+.emotion-0 .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -783,19 +791,19 @@ exports[`DateField should trigger events 1`] = `
   position: inherit;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__triangle {
+.emotion-0 .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__month {
+.emotion-0 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day-names {
+.emotion-0 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day-name {
+.emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap;
   color: #3f4250;
   font-weight: 500;
@@ -806,7 +814,7 @@ exports[`DateField should trigger events 1`] = `
   text-transform: capitalize;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day {
+.emotion-0 .calendar .react-datepicker__day {
   color: #727683;
   font-weight: 500;
   font-size: 16px;
@@ -816,87 +824,87 @@ exports[`DateField should trigger events 1`] = `
   margin-right: 3px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--outside-month {
+.emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
   font-size: 16px;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected {
+.emotion-0 .calendar .react-datepicker__day--selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--selected:disabled {
+.emotion-0 .calendar .react-datepicker__day--selected[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--selected:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range {
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-selecting-range:disabled {
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--in-selecting-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range {
+.emotion-0 .calendar .react-datepicker__day--in-range {
   color: #641cb3;
   background-color: #f1eefc;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--in-range:disabled {
+.emotion-0 .calendar .react-datepicker__day--in-range[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--in-range:disabled {
   color: #d8c5fc;
   background-color: #f6f5fd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start {
+.emotion-0 .calendar .react-datepicker__day--range-start {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-start:disabled {
+.emotion-0 .calendar .react-datepicker__day--range-start[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--range-start:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end {
+.emotion-0 .calendar .react-datepicker__day--range-end {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--range-end:disabled {
+.emotion-0 .calendar .react-datepicker__day--range-end[aria-disabled='true'],
+.emotion-0 .calendar .react-datepicker__day--range-end:disabled {
   color: #ffffff;
   background-color: #e5dbfd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
+.emotion-0 .calendar .react-datepicker__day--keyboard-selected {
   color: #ffffff;
   background-color: #8c40ef;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day:hover {
+.emotion-0 .calendar .react-datepicker__day:hover {
   color: #222638;
   background-color: #e9eaeb;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--disabled {
+.emotion-0 .calendar .react-datepicker__day--disabled {
   color: #b5b7bd;
 }
 
-.cache-1omin95-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
+.emotion-0 .calendar .react-datepicker__day--disabled:hover {
   color: #b5b7bd;
   background-color: transparent;
 }
 
-.cache-ymc80m-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -919,7 +927,7 @@ exports[`DateField should trigger events 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1ttq42g-StyledInputWrapper {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -935,69 +943,69 @@ exports[`DateField should trigger events 1`] = `
   border: 1px solid #8c40ef;
 }
 
-.cache-1ttq42g-StyledInputWrapper>.e7tir8v1 {
+.emotion-4>.emotion-7 {
   color: #3f4250;
 }
 
-.cache-1ttq42g-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
+.emotion-4>.emotion-7::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1ttq42g-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
+.emotion-4>.emotion-7::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1ttq42g-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
+.emotion-4>.emotion-7:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1ttq42g-StyledInputWrapper>.e7tir8v1::placeholder {
+.emotion-4>.emotion-7::placeholder {
   color: #727683;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-success='true'] {
+.emotion-4[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-error='true'] {
+.emotion-4[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-readonly='true'] {
+.emotion-4[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
+.emotion-4[data-disabled='true']>.emotion-7 {
   color: #b5b7bd;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
+.emotion-4[data-disabled='true']>.emotion-7:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1ttq42g-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+.emotion-4[data-disabled='true']>.emotion-7::placeholder {
   color: #b5b7bd;
 }
 
-.cache-1ttq42g-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-zm0rg0-StyledInput {
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1009,11 +1017,11 @@ exports[`DateField should trigger events 1`] = `
   font-size: 14px;
 }
 
-.cache-zm0rg0-StyledInput[data-size='large'] {
+.emotion-6[data-size='large'] {
   font-size: 16px;
 }
 
-.cache-1scqdcm-Stack-BasicSuffixStack {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1039,7 +1047,7 @@ exports[`DateField should trigger events 1`] = `
   border-color: inherit;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles {
+.emotion-10 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -1048,67 +1056,71 @@ exports[`DateField should trigger events 1`] = `
   min-height: 1em;
 }
 
-.cache-2h5luv-StyledIcon-sizeStyles .fillStroke {
+.emotion-10 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      class="cache-1omin95-StyledWrapper e1bm75lk1"
+    <form
+      novalidate=""
     >
       <div
-        class="react-datepicker-wrapper"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="react-datepicker__input-container"
+          class="react-datepicker-wrapper"
         >
           <div
-            class=" cache-ymc80m-Stack ehpbis70"
+            class="react-datepicker__input-container"
           >
-            <div>
-              <div
-                class="cache-1ttq42g-StyledInputWrapper e7tir8v0"
-                data-disabled="false"
-                data-error="false"
-                data-readonly="false"
-                data-success="false"
-              >
-                <input
-                  aria-invalid="false"
-                  class="cache-zm0rg0-StyledInput e7tir8v1"
-                  data-size="large"
-                  id=":r7:"
-                  name="test"
-                  type="text"
-                  value="08/28/2022"
-                />
+            <div
+              class=" emotion-2 emotion-3"
+            >
+              <div>
                 <div
-                  class="cache-1scqdcm-Stack-BasicSuffixStack e7tir8v3"
+                  class="emotion-4 emotion-5"
+                  data-disabled="false"
+                  data-error="false"
+                  data-readonly="false"
+                  data-success="false"
                 >
-                  <svg
-                    class="cache-2h5luv-StyledIcon-sizeStyles e1gt4cfo0"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <input
+                    aria-invalid="false"
+                    class="emotion-6 emotion-7"
+                    data-size="large"
+                    id=":r7:"
+                    name="test"
+                    type="text"
+                    value="08/28/2022"
+                  />
+                  <div
+                    class="emotion-8 emotion-9"
                   >
-                    <path
-                      d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
+                    <svg
+                      class="emotion-10 emotion-11"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                      />
+                      <path
+                        clip-rule="evenodd"
+                        d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;

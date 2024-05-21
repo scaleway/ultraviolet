@@ -1,47 +1,57 @@
-import {
-  afterEach,
-  beforeEach,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { act, screen } from '@testing-library/react'
+import { consoleLightTheme } from '@ultraviolet/themes'
+import { renderWithTheme } from '@utils/test'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { ToastContainer, toast } from '..'
-import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
 
 describe('Toaster', () => {
   beforeEach(() => {
-    jest.useFakeTimers()
+    vi.useFakeTimers()
   })
 
   afterEach(() => {
-    jest.clearAllTimers()
+    vi.clearAllTimers()
   })
 
   test('renders correctly with all kind of toast', async () => {
-    await shouldMatchEmotionSnapshotWithPortal(<ToastContainer />, {
-      transform: async () => {
-        toast.info('This is an info', {
-          toastId: 'info',
-        })
-        toast.success('This is a success', {
-          toastId: 'success',
-        })
-        toast.error('This is an error', {
-          toastId: 'error',
-        })
-        toast.warning('This is a warning', {
-          toastId: 'warning',
-        })
-
-        act(() => jest.runAllTimers())
-
-        expect(await screen.findByText('This is an info')).toMatchSnapshot()
-        expect(await screen.findByText('This is a success')).toMatchSnapshot()
-        expect(await screen.findByText('This is an error')).toMatchSnapshot()
-        expect(await screen.findByText('This is a warning')).toMatchSnapshot()
+    const { asFragment } = renderWithTheme(
+      <ToastContainer />,
+      consoleLightTheme,
+      {
+        container: document.body,
       },
+    )
+    act(() => {
+      toast.info('This is an info', {
+        toastId: 'info',
+      })
     })
+
+    expect(await screen.findByText('This is an info')).toMatchSnapshot()
+
+    act(() => {
+      toast.success('This is a success', {
+        toastId: 'success',
+      })
+    })
+    expect(await screen.findByText('This is a success')).toMatchSnapshot()
+
+    act(() => {
+      toast.error('This is an error', {
+        toastId: 'error',
+      })
+    })
+
+    expect(await screen.findByText('This is an error')).toMatchSnapshot()
+
+    act(() => {
+      toast.warning('This is a warning', {
+        toastId: 'warning',
+      })
+    })
+
+    expect(await screen.findByText('This is a warning')).toMatchSnapshot()
+
+    expect(asFragment()).toMatchSnapshot()
   })
 })

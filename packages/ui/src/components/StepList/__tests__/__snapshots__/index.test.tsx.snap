@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`StepList renders correctly  1`] = `
+exports[`StepList > renders correctly  1`] = `
 <DocumentFragment>
-  .cache-1abqgir-Steps {
+  .emotion-0 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -17,7 +17,7 @@ exports[`StepList renders correctly  1`] = `
   font-size: 16px;
 }
 
-.cache-ubtlu3-Step {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,7 +34,7 @@ exports[`StepList renders correctly  1`] = `
   color: #222638;
 }
 
-.cache-1k74lo7-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -56,7 +56,7 @@ exports[`StepList renders correctly  1`] = `
   font-size: 16px;
 }
 
-.cache-66nq81-StyledDiv {
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -65,30 +65,34 @@ exports[`StepList renders correctly  1`] = `
   font-size: 24px;
 }
 
-<ul
-    class="cache-1abqgir-Steps ewuati22"
+<div
+    data-testid="testing"
   >
-    <li
-      class="cache-ubtlu3-Step ewuati21"
+    <ul
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-1k74lo7-StyledContainer e11loam60"
+      <li
+        class="emotion-2 emotion-3"
       >
-        1
-      </div>
-      <div
-        class="cache-66nq81-StyledDiv ewuati20"
-      >
-        Item 1
-      </div>
-    </li>
-  </ul>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          1
+        </div>
+        <div
+          class="emotion-6 emotion-7"
+        >
+          Item 1
+        </div>
+      </li>
+    </ul>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`StepList renders correctly with bulletIcon & sentiment 1`] = `
+exports[`StepList > renders correctly with bulletIcon & sentiment 1`] = `
 <DocumentFragment>
-  .cache-1abqgir-Steps {
+  .emotion-0 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -103,7 +107,7 @@ exports[`StepList renders correctly with bulletIcon & sentiment 1`] = `
   font-size: 16px;
 }
 
-.cache-ubtlu3-Step {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -120,7 +124,7 @@ exports[`StepList renders correctly with bulletIcon & sentiment 1`] = `
   color: #222638;
 }
 
-.cache-1h0t7zq-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -142,7 +146,7 @@ exports[`StepList renders correctly with bulletIcon & sentiment 1`] = `
   font-size: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -151,12 +155,12 @@ exports[`StepList renders correctly with bulletIcon & sentiment 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-66nq81-StyledDiv {
+.emotion-8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -165,40 +169,44 @@ exports[`StepList renders correctly with bulletIcon & sentiment 1`] = `
   font-size: 24px;
 }
 
-<ul
-    class="cache-1abqgir-Steps ewuati22"
+<div
+    data-testid="testing"
   >
-    <li
-      class="cache-ubtlu3-Step ewuati21"
+    <ul
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-1h0t7zq-StyledContainer e11loam60"
+      <li
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="emotion-4 emotion-5"
         >
-          <path
-            clip-rule="evenodd"
-            d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-66nq81-StyledDiv ewuati20"
-      >
-        Item 1
-      </div>
-    </li>
-  </ul>
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
+        >
+          Item 1
+        </div>
+      </li>
+    </ul>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`StepList renders correctly with bulletIcon 1`] = `
+exports[`StepList > renders correctly with bulletIcon 1`] = `
 <DocumentFragment>
-  .cache-1abqgir-Steps {
+  .emotion-0 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -213,7 +221,7 @@ exports[`StepList renders correctly with bulletIcon 1`] = `
   font-size: 16px;
 }
 
-.cache-ubtlu3-Step {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -230,7 +238,7 @@ exports[`StepList renders correctly with bulletIcon 1`] = `
   color: #222638;
 }
 
-.cache-1k74lo7-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -252,7 +260,7 @@ exports[`StepList renders correctly with bulletIcon 1`] = `
   font-size: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -261,12 +269,12 @@ exports[`StepList renders correctly with bulletIcon 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-66nq81-StyledDiv {
+.emotion-8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -275,40 +283,44 @@ exports[`StepList renders correctly with bulletIcon 1`] = `
   font-size: 24px;
 }
 
-<ul
-    class="cache-1abqgir-Steps ewuati22"
+<div
+    data-testid="testing"
   >
-    <li
-      class="cache-ubtlu3-Step ewuati21"
+    <ul
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-1k74lo7-StyledContainer e11loam60"
+      <li
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="emotion-4 emotion-5"
         >
-          <path
-            clip-rule="evenodd"
-            d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-66nq81-StyledDiv ewuati20"
-      >
-        Item 1
-      </div>
-    </li>
-  </ul>
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14M8 4a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 8 4m0 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
+        >
+          Item 1
+        </div>
+      </li>
+    </ul>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`StepList renders correctly with disabled state & bullet icon 1`] = `
+exports[`StepList > renders correctly with disabled state & bullet icon 1`] = `
 <DocumentFragment>
-  .cache-1abqgir-Steps {
+  .emotion-0 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -323,7 +335,7 @@ exports[`StepList renders correctly with disabled state & bullet icon 1`] = `
   font-size: 16px;
 }
 
-.cache-g6qori-Step {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -340,7 +352,7 @@ exports[`StepList renders correctly with disabled state & bullet icon 1`] = `
   color: #b5b7bd;
 }
 
-.cache-1n3x46n-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -362,7 +374,7 @@ exports[`StepList renders correctly with disabled state & bullet icon 1`] = `
   font-size: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-6 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -371,12 +383,12 @@ exports[`StepList renders correctly with disabled state & bullet icon 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-6 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-66nq81-StyledDiv {
+.emotion-8 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -385,42 +397,46 @@ exports[`StepList renders correctly with disabled state & bullet icon 1`] = `
   font-size: 24px;
 }
 
-<ul
-    class="cache-1abqgir-Steps ewuati22"
+<div
+    data-testid="testing"
   >
-    <li
-      class="cache-g6qori-Step ewuati21"
+    <ul
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-1n3x46n-StyledContainer e11loam60"
+      <li
+        class="emotion-2 emotion-3"
       >
-        <svg
-          class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
-          viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="emotion-4 emotion-5"
         >
-          <path
-            clip-rule="evenodd"
-            d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
-            fill-rule="evenodd"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-66nq81-StyledDiv ewuati20"
-      >
-        <div>
-          Item 1 with disabled state
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12.166 3.126a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.739a.75.75 0 0 1 1.04-.208"
+              fill-rule="evenodd"
+            />
+          </svg>
         </div>
-      </div>
-    </li>
-  </ul>
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <div>
+            Item 1 with disabled state
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`StepList renders correctly with disabled state 1`] = `
+exports[`StepList > renders correctly with disabled state 1`] = `
 <DocumentFragment>
-  .cache-1abqgir-Steps {
+  .emotion-0 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -435,7 +451,7 @@ exports[`StepList renders correctly with disabled state 1`] = `
   font-size: 16px;
 }
 
-.cache-g6qori-Step {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -452,7 +468,7 @@ exports[`StepList renders correctly with disabled state 1`] = `
   color: #b5b7bd;
 }
 
-.cache-1n3x46n-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -474,7 +490,7 @@ exports[`StepList renders correctly with disabled state 1`] = `
   font-size: 16px;
 }
 
-.cache-66nq81-StyledDiv {
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -483,32 +499,36 @@ exports[`StepList renders correctly with disabled state 1`] = `
   font-size: 24px;
 }
 
-<ul
-    class="cache-1abqgir-Steps ewuati22"
+<div
+    data-testid="testing"
   >
-    <li
-      class="cache-g6qori-Step ewuati21"
+    <ul
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-1n3x46n-StyledContainer e11loam60"
+      <li
+        class="emotion-2 emotion-3"
       >
-        1
-      </div>
-      <div
-        class="cache-66nq81-StyledDiv ewuati20"
-      >
-        <div>
-          Item 1 with disabled state
+        <div
+          class="emotion-4 emotion-5"
+        >
+          1
         </div>
-      </div>
-    </li>
-  </ul>
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <div>
+            Item 1 with disabled state
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`StepList renders correctly with small size 1`] = `
+exports[`StepList > renders correctly with small size 1`] = `
 <DocumentFragment>
-  .cache-1abqgir-Steps {
+  .emotion-0 {
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -523,7 +543,7 @@ exports[`StepList renders correctly with small size 1`] = `
   font-size: 16px;
 }
 
-.cache-ubtlu3-Step {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -540,7 +560,7 @@ exports[`StepList renders correctly with small size 1`] = `
   color: #222638;
 }
 
-.cache-rxjap1-StyledContainer {
+.emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -562,7 +582,7 @@ exports[`StepList renders correctly with small size 1`] = `
   font-size: 14px;
 }
 
-.cache-1jkk4vs-StyledDiv {
+.emotion-6 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -571,23 +591,27 @@ exports[`StepList renders correctly with small size 1`] = `
   font-size: 16px;
 }
 
-<ul
-    class="cache-1abqgir-Steps ewuati22"
+<div
+    data-testid="testing"
   >
-    <li
-      class="cache-ubtlu3-Step ewuati21"
+    <ul
+      class="emotion-0 emotion-1"
     >
-      <div
-        class="cache-rxjap1-StyledContainer e11loam60"
+      <li
+        class="emotion-2 emotion-3"
       >
-        1
-      </div>
-      <div
-        class="cache-1jkk4vs-StyledDiv ewuati20"
-      >
-        Item 1 small
-      </div>
-    </li>
-  </ul>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          1
+        </div>
+        <div
+          class="emotion-6 emotion-7"
+        >
+          Item 1 small
+        </div>
+      </li>
+    </ul>
+  </div>
 </DocumentFragment>
 `;

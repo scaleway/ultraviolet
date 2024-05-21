@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Text renders correctly with dir 1`] = `
+exports[`Text > renders correctly with dir 1`] = `
 <DocumentFragment>
-  .cache-1abh8n3-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -17,21 +17,25 @@ exports[`Text renders correctly with dir 1`] = `
 }
 
 <div
-    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+    data-testid="testing"
   >
     <div
-      class="cache-1abh8n3-StyledText e13y3mga0"
-      dir="rtl"
+      style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
     >
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <div
+        class="emotion-0 emotion-1"
+        dir="rtl"
+      >
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with htmlFor 1`] = `
+exports[`Text > renders correctly with htmlFor 1`] = `
 <DocumentFragment>
-  .cache-1e8qouo-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -43,21 +47,25 @@ exports[`Text renders correctly with htmlFor 1`] = `
 }
 
 <div
-    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+    data-testid="testing"
   >
     <div
-      class="cache-1e8qouo-StyledText e13y3mga0"
-      for="test"
+      style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
     >
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <div
+        class="emotion-0 emotion-1"
+        for="test"
+      >
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with placement 1`] = `
+exports[`Text > renders correctly with placement 1`] = `
 <DocumentFragment>
-  .cache-k7mcew-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -70,20 +78,24 @@ exports[`Text renders correctly with placement 1`] = `
 }
 
 <div
-    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+    data-testid="testing"
   >
     <div
-      class="cache-k7mcew-StyledText e13y3mga0"
+      style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
     >
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <div
+        class="emotion-0 emotion-1"
+      >
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with tooltip 1`] = `
+exports[`Text > renders correctly with tooltip 1`] = `
 <DocumentFragment>
-  .cache-1abh8n3-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -98,20 +110,24 @@ exports[`Text renders correctly with tooltip 1`] = `
 }
 
 <div
-    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+    data-testid="testing"
   >
     <div
-      class="cache-1abh8n3-StyledText e13y3mga0"
+      style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
     >
-      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <div
+        class="emotion-0 emotion-1"
+      >
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </div>
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="body" 1`] = `
+exports[`Text > renders correctly with type="body" 1`] = `
 <DocumentFragment>
-  .cache-1e8qouo-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -123,16 +139,20 @@ exports[`Text renders correctly with type="body" 1`] = `
 }
 
 <div
-    class="cache-1e8qouo-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    body
+    <div
+      class="emotion-0 emotion-1"
+    >
+      body
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="bodySmall" 1`] = `
+exports[`Text > renders correctly with type="bodySmall" 1`] = `
 <DocumentFragment>
-  .cache-3l2mjz-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -144,16 +164,20 @@ exports[`Text renders correctly with type="bodySmall" 1`] = `
 }
 
 <div
-    class="cache-3l2mjz-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    bodySmall
+    <div
+      class="emotion-0 emotion-1"
+    >
+      bodySmall
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
+exports[`Text > renders correctly with type="bodySmallStrong" 1`] = `
 <DocumentFragment>
-  .cache-10an7cj-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -165,16 +189,20 @@ exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
 }
 
 <div
-    class="cache-10an7cj-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    bodySmallStrong
+    <div
+      class="emotion-0 emotion-1"
+    >
+      bodySmallStrong
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
+exports[`Text > renders correctly with type="bodySmallStronger" 1`] = `
 <DocumentFragment>
-  .cache-1oov0zf-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 600;
@@ -186,16 +214,20 @@ exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
 }
 
 <div
-    class="cache-1oov0zf-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    bodySmallStronger
+    <div
+      class="emotion-0 emotion-1"
+    >
+      bodySmallStronger
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="bodyStrong" 1`] = `
+exports[`Text > renders correctly with type="bodyStrong" 1`] = `
 <DocumentFragment>
-  .cache-zvclys-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -207,16 +239,20 @@ exports[`Text renders correctly with type="bodyStrong" 1`] = `
 }
 
 <div
-    class="cache-zvclys-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    bodyStrong
+    <div
+      class="emotion-0 emotion-1"
+    >
+      bodyStrong
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="bodyStronger" 1`] = `
+exports[`Text > renders correctly with type="bodyStronger" 1`] = `
 <DocumentFragment>
-  .cache-vynu3m-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 600;
@@ -228,16 +264,20 @@ exports[`Text renders correctly with type="bodyStronger" 1`] = `
 }
 
 <div
-    class="cache-vynu3m-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    bodyStronger
+    <div
+      class="emotion-0 emotion-1"
+    >
+      bodyStronger
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="caption" 1`] = `
+exports[`Text > renders correctly with type="caption" 1`] = `
 <DocumentFragment>
-  .cache-vt2o5d-StyledText {
+  .emotion-0 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -249,16 +289,20 @@ exports[`Text renders correctly with type="caption" 1`] = `
 }
 
 <div
-    class="cache-vt2o5d-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    caption
+    <div
+      class="emotion-0 emotion-1"
+    >
+      caption
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="captionSmall" 1`] = `
+exports[`Text > renders correctly with type="captionSmall" 1`] = `
 <DocumentFragment>
-  .cache-1pm8aga-StyledText {
+  .emotion-0 {
   font-size: 10px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -270,16 +314,20 @@ exports[`Text renders correctly with type="captionSmall" 1`] = `
 }
 
 <div
-    class="cache-1pm8aga-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    captionSmall
+    <div
+      class="emotion-0 emotion-1"
+    >
+      captionSmall
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="captionSmallStrong" 1`] = `
+exports[`Text > renders correctly with type="captionSmallStrong" 1`] = `
 <DocumentFragment>
-  .cache-1wbhr4s-StyledText {
+  .emotion-0 {
   font-size: 10px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -291,16 +339,20 @@ exports[`Text renders correctly with type="captionSmallStrong" 1`] = `
 }
 
 <div
-    class="cache-1wbhr4s-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    captionSmallStrong
+    <div
+      class="emotion-0 emotion-1"
+    >
+      captionSmallStrong
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="captionSmallStronger" 1`] = `
+exports[`Text > renders correctly with type="captionSmallStronger" 1`] = `
 <DocumentFragment>
-  .cache-1484uab-StyledText {
+  .emotion-0 {
   font-size: 10px;
   font-family: Inter,Asap;
   font-weight: 600;
@@ -312,16 +364,20 @@ exports[`Text renders correctly with type="captionSmallStronger" 1`] = `
 }
 
 <div
-    class="cache-1484uab-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    captionSmallStronger
+    <div
+      class="emotion-0 emotion-1"
+    >
+      captionSmallStronger
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="captionStrong" 1`] = `
+exports[`Text > renders correctly with type="captionStrong" 1`] = `
 <DocumentFragment>
-  .cache-6ypnd3-StyledText {
+  .emotion-0 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 500;
@@ -333,16 +389,20 @@ exports[`Text renders correctly with type="captionStrong" 1`] = `
 }
 
 <div
-    class="cache-6ypnd3-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    captionStrong
+    <div
+      class="emotion-0 emotion-1"
+    >
+      captionStrong
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="captionStronger" 1`] = `
+exports[`Text > renders correctly with type="captionStronger" 1`] = `
 <DocumentFragment>
-  .cache-12ljaez-StyledText {
+  .emotion-0 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 600;
@@ -354,16 +414,20 @@ exports[`Text renders correctly with type="captionStronger" 1`] = `
 }
 
 <div
-    class="cache-12ljaez-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    captionStronger
+    <div
+      class="emotion-0 emotion-1"
+    >
+      captionStronger
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="code" 1`] = `
+exports[`Text > renders correctly with type="code" 1`] = `
 <DocumentFragment>
-  .cache-imijze-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -375,16 +439,20 @@ exports[`Text renders correctly with type="code" 1`] = `
 }
 
 <div
-    class="cache-imijze-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    code
+    <div
+      class="emotion-0 emotion-1"
+    >
+      code
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="codeStrong" 1`] = `
+exports[`Text > renders correctly with type="codeStrong" 1`] = `
 <DocumentFragment>
-  .cache-129x77d-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 500;
@@ -396,16 +464,20 @@ exports[`Text renders correctly with type="codeStrong" 1`] = `
 }
 
 <div
-    class="cache-129x77d-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    codeStrong
+    <div
+      class="emotion-0 emotion-1"
+    >
+      codeStrong
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="codeStronger" 1`] = `
+exports[`Text > renders correctly with type="codeStronger" 1`] = `
 <DocumentFragment>
-  .cache-1pdfd0r-StyledText {
+  .emotion-0 {
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 600;
@@ -417,16 +489,20 @@ exports[`Text renders correctly with type="codeStronger" 1`] = `
 }
 
 <div
-    class="cache-1pdfd0r-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    codeStronger
+    <div
+      class="emotion-0 emotion-1"
+    >
+      codeStronger
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="heading" 1`] = `
+exports[`Text > renders correctly with type="heading" 1`] = `
 <DocumentFragment>
-  .cache-3j6na9-StyledText {
+  .emotion-0 {
   font-size: 25px;
   font-family: Space Grotesk,Inter,Asap;
   font-weight: 400;
@@ -438,16 +514,20 @@ exports[`Text renders correctly with type="heading" 1`] = `
 }
 
 <div
-    class="cache-3j6na9-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    heading
+    <div
+      class="emotion-0 emotion-1"
+    >
+      heading
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="headingLarge" 1`] = `
+exports[`Text > renders correctly with type="headingLarge" 1`] = `
 <DocumentFragment>
-  .cache-10h0ge-StyledText {
+  .emotion-0 {
   font-size: 35px;
   font-family: Space Grotesk,Inter,Asap;
   font-weight: 400;
@@ -459,16 +539,20 @@ exports[`Text renders correctly with type="headingLarge" 1`] = `
 }
 
 <div
-    class="cache-10h0ge-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    headingLarge
+    <div
+      class="emotion-0 emotion-1"
+    >
+      headingLarge
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="headingLargeStrong" 1`] = `
+exports[`Text > renders correctly with type="headingLargeStrong" 1`] = `
 <DocumentFragment>
-  .cache-9i6wh-StyledText {
+  .emotion-0 {
   font-size: 35px;
   font-family: Space Grotesk;
   font-weight: 500;
@@ -480,16 +564,20 @@ exports[`Text renders correctly with type="headingLargeStrong" 1`] = `
 }
 
 <div
-    class="cache-9i6wh-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    headingLargeStrong
+    <div
+      class="emotion-0 emotion-1"
+    >
+      headingLargeStrong
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="headingLargeStronger" 1`] = `
+exports[`Text > renders correctly with type="headingLargeStronger" 1`] = `
 <DocumentFragment>
-  .cache-2eey3i-StyledText {
+  .emotion-0 {
   font-size: 35px;
   font-family: Space Grotesk;
   font-weight: 600;
@@ -501,16 +589,20 @@ exports[`Text renders correctly with type="headingLargeStronger" 1`] = `
 }
 
 <div
-    class="cache-2eey3i-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    headingLargeStronger
+    <div
+      class="emotion-0 emotion-1"
+    >
+      headingLargeStronger
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="headingSmall" 1`] = `
+exports[`Text > renders correctly with type="headingSmall" 1`] = `
 <DocumentFragment>
-  .cache-1yjl96t-StyledText {
+  .emotion-0 {
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
   font-weight: 400;
@@ -522,16 +614,20 @@ exports[`Text renders correctly with type="headingSmall" 1`] = `
 }
 
 <div
-    class="cache-1yjl96t-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    headingSmall
+    <div
+      class="emotion-0 emotion-1"
+    >
+      headingSmall
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="headingSmallStrong" 1`] = `
+exports[`Text > renders correctly with type="headingSmallStrong" 1`] = `
 <DocumentFragment>
-  .cache-1xftb8s-StyledText {
+  .emotion-0 {
   font-size: 21px;
   font-family: Space Grotesk;
   font-weight: 500;
@@ -543,16 +639,20 @@ exports[`Text renders correctly with type="headingSmallStrong" 1`] = `
 }
 
 <div
-    class="cache-1xftb8s-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    headingSmallStrong
+    <div
+      class="emotion-0 emotion-1"
+    >
+      headingSmallStrong
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="headingSmallStronger" 1`] = `
+exports[`Text > renders correctly with type="headingSmallStronger" 1`] = `
 <DocumentFragment>
-  .cache-tx5qw-StyledText {
+  .emotion-0 {
   font-size: 21px;
   font-family: Space Grotesk;
   font-weight: 600;
@@ -564,16 +664,20 @@ exports[`Text renders correctly with type="headingSmallStronger" 1`] = `
 }
 
 <div
-    class="cache-tx5qw-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    headingSmallStronger
+    <div
+      class="emotion-0 emotion-1"
+    >
+      headingSmallStronger
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="headingStrong" 1`] = `
+exports[`Text > renders correctly with type="headingStrong" 1`] = `
 <DocumentFragment>
-  .cache-4u3rrv-StyledText {
+  .emotion-0 {
   font-size: 25px;
   font-family: Space Grotesk;
   font-weight: 500;
@@ -585,16 +689,20 @@ exports[`Text renders correctly with type="headingStrong" 1`] = `
 }
 
 <div
-    class="cache-4u3rrv-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    headingStrong
+    <div
+      class="emotion-0 emotion-1"
+    >
+      headingStrong
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text renders correctly with type="headingStronger" 1`] = `
+exports[`Text > renders correctly with type="headingStronger" 1`] = `
 <DocumentFragment>
-  .cache-15l8cgl-StyledText {
+  .emotion-0 {
   font-size: 25px;
   font-family: Space Grotesk;
   font-weight: 600;
@@ -606,16 +714,20 @@ exports[`Text renders correctly with type="headingStronger" 1`] = `
 }
 
 <div
-    class="cache-15l8cgl-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    headingStronger
+    <div
+      class="emotion-0 emotion-1"
+    >
+      headingStronger
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text with disabled 1`] = `
+exports[`Text > with disabled 1`] = `
 <DocumentFragment>
-  .cache-1e8qouo-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -627,16 +739,20 @@ exports[`Text with disabled 1`] = `
 }
 
 <div
-    class="cache-1e8qouo-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    Lorem Ipsum
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Lorem Ipsum
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text with italic 1`] = `
+exports[`Text > with italic 1`] = `
 <DocumentFragment>
-  .cache-1373h6k-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -649,16 +765,20 @@ exports[`Text with italic 1`] = `
 }
 
 <div
-    class="cache-1373h6k-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    Lorem Ipsum
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Lorem Ipsum
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text with multiple nested chidldren renders correctly 1`] = `
+exports[`Text > with multiple nested chidldren renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1e8qouo-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -669,7 +789,7 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-3j6na9-StyledText {
+.emotion-2 {
   font-size: 25px;
   font-family: Space Grotesk,Inter,Asap;
   font-weight: 400;
@@ -681,27 +801,31 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
 }
 
 <div
-    class="cache-1e8qouo-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    Lorem
-    <span>
-      Ipsum
-    </span>
-    <span
-      class="cache-3j6na9-StyledText e13y3mga0"
+    <div
+      class="emotion-0 emotion-1"
     >
+      Lorem
       <span>
-        Dolor
+        Ipsum
       </span>
-    </span>
-    Sit
+      <span
+        class="emotion-2 emotion-1"
+      >
+        <span>
+          Dolor
+        </span>
+      </span>
+      Sit
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text with prominence stronger on non neutral 1`] = `
+exports[`Text > with prominence stronger on non neutral 1`] = `
 <DocumentFragment>
-  .cache-1g8n0eg-StyledText {
+  .emotion-0 {
   color: #b3144d;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -714,16 +838,20 @@ exports[`Text with prominence stronger on non neutral 1`] = `
 }
 
 <div
-    class="cache-1g8n0eg-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    Lorem Ipsum
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Lorem Ipsum
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Text with underline 1`] = `
+exports[`Text > with underline 1`] = `
 <DocumentFragment>
-  .cache-ez8ebe-StyledText {
+  .emotion-0 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -737,9 +865,13 @@ exports[`Text with underline 1`] = `
 }
 
 <div
-    class="cache-ez8ebe-StyledText e13y3mga0"
+    data-testid="testing"
   >
-    Lorem Ipsum
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Lorem Ipsum
+    </div>
   </div>
 </DocumentFragment>
 `;

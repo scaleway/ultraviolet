@@ -1,24 +1,25 @@
-import { describe, expect, test } from '@jest/globals'
 import { renderHook } from '@testing-library/react'
+import { mockFormErrors, renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
+import { describe, expect, test } from 'vitest'
 import { useErrors } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { Form } from '../../../components/Form'
-import { mockErrors } from '../../../mocks'
 
 const HookWrapper = ({ children }: { children: ReactNode }) => (
-  <Form errors={mockErrors} onRawSubmit={() => null}>
+  <Form errors={mockFormErrors} onRawSubmit={() => null}>
     {children}
   </Form>
 )
 
 describe('ErrorProvider', () => {
-  test('renders correctly ', () =>
-    shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => null} errors={mockErrors}>
+  test('renders correctly ', () => {
+    const { asFragment } = renderWithTheme(
+      <Form onRawSubmit={() => null} errors={mockFormErrors}>
         Test
       </Form>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('should return an error', () => {
     const { result } = renderHook(() => useErrors(), {
@@ -27,7 +28,7 @@ describe('ErrorProvider', () => {
 
     expect(
       result.current.getError({ label: 'test' }, { type: 'required' }),
-    ).toStrictEqual(mockErrors.required({ label: '' }))
+    ).toStrictEqual(mockFormErrors.required({ label: '' }))
 
     expect(
       result.current.getError({ label: 'test', min: 3 }, { type: 'min' }),

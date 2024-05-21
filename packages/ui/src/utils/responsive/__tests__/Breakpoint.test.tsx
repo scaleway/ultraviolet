@@ -1,5 +1,5 @@
-import { describe, test } from '@jest/globals'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test } from 'vitest'
 import Breakpoint from '../Breakpoint'
 
 describe('Breakpoint', () => {

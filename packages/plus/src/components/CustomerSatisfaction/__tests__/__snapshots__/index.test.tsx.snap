@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`CustomerSatisfaction should check hover and unhover 1`] = `
+exports[`CustomerSatisfaction > should check hover and unhover 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from, 10%, 40%, 80%, to {
@@ -40,7 +40,7 @@ exports[`CustomerSatisfaction should check hover and unhover 1`] = `
   }
 }
 
-.cache-141zsra-Stack {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,7 +62,7 @@ exports[`CustomerSatisfaction should check hover and unhover 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-pal2x8-Image-scaled {
+.emotion-2 {
   height: 88px;
   width: 88px;
   cursor: pointer;
@@ -70,15 +70,15 @@ exports[`CustomerSatisfaction should check hover and unhover 1`] = `
   transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.cache-pal2x8-Image-scaled:hover,
-.cache-pal2x8-Image-scaled:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.cache-137fro5-Image-scaled-Image {
+.emotion-8 {
   height: 88px;
   width: 88px;
   cursor: pointer;
@@ -88,8 +88,8 @@ exports[`CustomerSatisfaction should check hover and unhover 1`] = `
   animation: animation-0 1s ease infinite;
 }
 
-.cache-137fro5-Image-scaled-Image:hover,
-.cache-137fro5-Image-scaled-Image:focus {
+.emotion-8:hover,
+.emotion-8:focus {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -97,39 +97,43 @@ exports[`CustomerSatisfaction should check hover and unhover 1`] = `
 }
 
 <div
-    class="cache-141zsra-Stack ehpbis70"
-    data-testid="customer-satisfaction"
+    data-testid="testing"
   >
-    <img
-      class="cache-pal2x8-Image-scaled epmg9lb0"
-      data-testid="customer-satisfaction-1"
-      src="test-file-stub"
-    />
-    <img
-      class="cache-pal2x8-Image-scaled epmg9lb0"
-      data-testid="customer-satisfaction-2"
-      src="test-file-stub"
-    />
-    <img
-      class="cache-pal2x8-Image-scaled epmg9lb0"
-      data-testid="customer-satisfaction-3"
-      src="test-file-stub"
-    />
-    <img
-      class="cache-137fro5-Image-scaled-Image epmg9lb0"
-      data-testid="customer-satisfaction-4"
-      src="test-file-stub"
-    />
-    <img
-      class="cache-pal2x8-Image-scaled epmg9lb0"
-      data-testid="customer-satisfaction-5"
-      src="test-file-stub"
-    />
+    <div
+      class="emotion-0 emotion-1"
+      data-testid="customer-satisfaction"
+    >
+      <img
+        class="emotion-2 emotion-3"
+        data-testid="customer-satisfaction-1"
+        src="/src/components/CustomerSatisfaction/assets/1-5.svg"
+      />
+      <img
+        class="emotion-2 emotion-3"
+        data-testid="customer-satisfaction-2"
+        src="/src/components/CustomerSatisfaction/assets/2-5.svg"
+      />
+      <img
+        class="emotion-2 emotion-3"
+        data-testid="customer-satisfaction-3"
+        src="/src/components/CustomerSatisfaction/assets/3-5.svg"
+      />
+      <img
+        class="emotion-8 emotion-3"
+        data-testid="customer-satisfaction-4"
+        src="/src/components/CustomerSatisfaction/assets/4-5.svg"
+      />
+      <img
+        class="emotion-2 emotion-3"
+        data-testid="customer-satisfaction-5"
+        src="/src/components/CustomerSatisfaction/assets/5-5NB.svg"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`CustomerSatisfaction should work with parameters 1`] = `
+exports[`CustomerSatisfaction > should work with parameters 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from, 10%, 40%, 80%, to {
@@ -169,7 +173,7 @@ exports[`CustomerSatisfaction should work with parameters 1`] = `
   }
 }
 
-.cache-141zsra-Stack {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -191,7 +195,7 @@ exports[`CustomerSatisfaction should work with parameters 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-pal2x8-Image-scaled {
+.emotion-2 {
   height: 88px;
   width: 88px;
   cursor: pointer;
@@ -199,15 +203,15 @@ exports[`CustomerSatisfaction should work with parameters 1`] = `
   transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.cache-pal2x8-Image-scaled:hover,
-.cache-pal2x8-Image-scaled:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.cache-137fro5-Image-scaled-Image {
+.emotion-8 {
   height: 88px;
   width: 88px;
   cursor: pointer;
@@ -217,8 +221,8 @@ exports[`CustomerSatisfaction should work with parameters 1`] = `
   animation: animation-0 1s ease infinite;
 }
 
-.cache-137fro5-Image-scaled-Image:hover,
-.cache-137fro5-Image-scaled-Image:focus {
+.emotion-8:hover,
+.emotion-8:focus {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
@@ -226,33 +230,37 @@ exports[`CustomerSatisfaction should work with parameters 1`] = `
 }
 
 <div
-    class="cache-141zsra-Stack ehpbis70"
+    data-testid="testing"
   >
-    <img
-      class="cache-pal2x8-Image-scaled epmg9lb0"
-      data-testid="undefined-1"
-      src="test-file-stub"
-    />
-    <img
-      class="cache-pal2x8-Image-scaled epmg9lb0"
-      data-testid="undefined-2"
-      src="test-file-stub"
-    />
-    <img
-      class="cache-pal2x8-Image-scaled epmg9lb0"
-      data-testid="undefined-3"
-      src="test-file-stub"
-    />
-    <img
-      class="cache-137fro5-Image-scaled-Image epmg9lb0"
-      data-testid="undefined-4"
-      src="test-file-stub"
-    />
-    <img
-      class="cache-pal2x8-Image-scaled epmg9lb0"
-      data-testid="undefined-5"
-      src="test-file-stub"
-    />
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <img
+        class="emotion-2 emotion-3"
+        data-testid="undefined-1"
+        src="/src/components/CustomerSatisfaction/assets/1-5.svg"
+      />
+      <img
+        class="emotion-2 emotion-3"
+        data-testid="undefined-2"
+        src="/src/components/CustomerSatisfaction/assets/2-5.svg"
+      />
+      <img
+        class="emotion-2 emotion-3"
+        data-testid="undefined-3"
+        src="/src/components/CustomerSatisfaction/assets/3-5.svg"
+      />
+      <img
+        class="emotion-8 emotion-3"
+        data-testid="undefined-4"
+        src="/src/components/CustomerSatisfaction/assets/4-5.svg"
+      />
+      <img
+        class="emotion-2 emotion-3"
+        data-testid="undefined-5"
+        src="/src/components/CustomerSatisfaction/assets/5-5NB.svg"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

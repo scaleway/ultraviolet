@@ -1,6 +1,6 @@
-import { describe, it } from '@jest/globals'
+import { shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, it } from 'vitest'
 import { Avatar } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import support from '../__stories__/support.svg'
 
 describe('Avatar', () => {

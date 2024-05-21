@@ -1,11 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ErrorProvider renders correctly  1`] = `
+exports[`ErrorProvider > renders correctly  1`] = `
 <DocumentFragment>
-  <form
-    novalidate=""
+  <div
+    data-testid="testing"
   >
-    Test
-  </form>
+    <form
+      novalidate=""
+    >
+      Test
+    </form>
+  </div>
 </DocumentFragment>
 `;

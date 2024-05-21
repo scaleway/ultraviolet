@@ -1,5 +1,5 @@
-import { describe, expect, jest, test } from '@jest/globals'
 import type { KeyboardEvent } from 'react'
+import { describe, expect, test, vi } from 'vitest'
 import isJSONString from '../isJSON'
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'
@@ -17,7 +17,7 @@ describe('isJSONString', () => {
     ${'is Array'}             | ${[1, 2, 3]}     | ${false}
     ${'is String'}            | ${'hello'}       | ${false}
   `('returns $expected when $test', current => {
-    expect(isJSONString(current['value'] as string)).toBe(current['expected'])
+    expect(isJSONString(current.value as string)).toBe(current.expected)
   })
 })
 
@@ -41,8 +41,8 @@ describe('recursivelyGetChildrenString', () => {
     ${'is complex children with a nested array children'}     | ${complexChildrenWithArrayNestedChildren}     | ${''}
     ${'is complex children without a nested string children'} | ${complexChildrenWithoutStringNestedChildren} | ${''}
   `('returns "$expected" when $test', current => {
-    expect(recursivelyGetChildrenString(current['value'] as string)).toBe(
-      current['expected'],
+    expect(recursivelyGetChildrenString(current.value as string)).toBe(
+      current.expected,
     )
   })
 })
@@ -50,7 +50,7 @@ describe('recursivelyGetChildrenString', () => {
 describe('onKeyOnlyNumbers', () => {
   test('should only prevent numbers keyCodes', () => {
     ;[...Array(100).keys()].forEach(keyCode => {
-      const preventDefault = jest.fn()
+      const preventDefault = vi.fn()
 
       onKeyOnlyNumbers({
         key: String.fromCharCode(keyCode),
@@ -82,8 +82,6 @@ describe('parseIntOr', () => {
     ${'is Array w/ first index Number'} | ${[1, 'b', 'c']}       | ${1}
     ${'is String'}                      | ${'hello'}             | ${fallback}
   `('returns $expected when $test', current => {
-    expect(parseIntOr(current['value'] as string, fallback)).toBe(
-      current['expected'],
-    )
+    expect(parseIntOr(current.value as string, fallback)).toBe(current.expected)
   })
 })

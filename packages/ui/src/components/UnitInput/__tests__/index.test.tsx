@@ -1,11 +1,8 @@
-import { describe, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test } from 'vitest'
 import { UnitInput } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 
 const options = [
   {
@@ -64,8 +61,8 @@ describe('UnitInput', () => {
       />,
     ))
 
-  test(`renders click`, () =>
-    shouldMatchEmotionSnapshot(
+  test(`renders click`, async () => {
+    const { asFragment } = renderWithTheme(
       <UnitInput
         size="medium"
         onChange={() => {}}
@@ -73,13 +70,12 @@ describe('UnitInput', () => {
         name="test"
         options={options}
       />,
-      {
-        transform: async () => {
-          const select = screen.getByTestId('select-bar')
-          await userEvent.click(select)
-        },
-      },
-    ))
+    )
+
+    const select = screen.getByTestId('select-bar')
+    await userEvent.click(select)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test(`renders with size large`, () =>
     shouldMatchEmotionSnapshot(

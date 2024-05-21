@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ToggleField should render correctly 1`] = `
+exports[`ToggleField > should render correctly 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,16 +21,16 @@ exports[`ToggleField should render correctly 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-5[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,7 +53,7 @@ exports[`ToggleField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -75,11 +75,11 @@ exports[`ToggleField should render correctly 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-4:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -92,25 +92,25 @@ exports[`ToggleField should render correctly 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-4[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-4[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-4[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-4[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -118,41 +118,41 @@ exports[`ToggleField should render correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-4[data-checked='true']:focus-within,
+.emotion-4[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-4[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-4[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-4[data-error='true']:focus-within,
+.emotion-4[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-4[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -162,43 +162,47 @@ exports[`ToggleField should render correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <label
-      aria-disabled="false"
-      class="cache-r95p0q-StyledLabel e1wstm610"
+    <form
+      novalidate=""
     >
-      <div
-        class="cache-155uuxj-Stack ehpbis70"
-      />
-      <div
-        class="cache-izrm74-StyledToggle e1wstm612"
-        data-checked="false"
-        data-disabled="false"
-        data-error="false"
+      <label
+        aria-disabled="false"
+        class="emotion-0 emotion-1"
       >
-        <input
-          aria-checked="false"
-          class="cache-1myp2ct-StyledCheckbox e1wstm611"
-          id=":r0:"
-          name="test"
-          type="checkbox"
-          value=""
+        <div
+          class="emotion-2 emotion-3"
         />
-      </div>
-    </label>
-  </form>
+        <div
+          class="emotion-4 emotion-5"
+          data-checked="false"
+          data-disabled="false"
+          data-error="false"
+        >
+          <input
+            aria-checked="false"
+            class="emotion-6 emotion-7"
+            id=":r0:"
+            name="test"
+            type="checkbox"
+            value=""
+          />
+        </div>
+      </label>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`ToggleField should render correctly checked 1`] = `
+exports[`ToggleField > should render correctly checked 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -217,16 +221,16 @@ exports[`ToggleField should render correctly checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-5[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -249,7 +253,7 @@ exports[`ToggleField should render correctly checked 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -271,11 +275,11 @@ exports[`ToggleField should render correctly checked 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-4:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -288,25 +292,25 @@ exports[`ToggleField should render correctly checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-4[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-4[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-4[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-4[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -314,41 +318,41 @@ exports[`ToggleField should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-4[data-checked='true']:focus-within,
+.emotion-4[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-4[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-4[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-4[data-error='true']:focus-within,
+.emotion-4[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-4[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -358,44 +362,48 @@ exports[`ToggleField should render correctly checked 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <label
-      aria-disabled="false"
-      class="cache-r95p0q-StyledLabel e1wstm610"
+    <form
+      novalidate=""
     >
-      <div
-        class="cache-155uuxj-Stack ehpbis70"
-      />
-      <div
-        class="cache-izrm74-StyledToggle e1wstm612"
-        data-checked="true"
-        data-disabled="false"
-        data-error="false"
+      <label
+        aria-disabled="false"
+        class="emotion-0 emotion-1"
       >
-        <input
-          aria-checked="true"
-          checked=""
-          class="cache-1myp2ct-StyledCheckbox e1wstm611"
-          id=":r4:"
-          name="test"
-          type="checkbox"
-          value=""
+        <div
+          class="emotion-2 emotion-3"
         />
-      </div>
-    </label>
-  </form>
+        <div
+          class="emotion-4 emotion-5"
+          data-checked="true"
+          data-disabled="false"
+          data-error="false"
+        >
+          <input
+            aria-checked="true"
+            checked=""
+            class="emotion-6 emotion-7"
+            id=":r4:"
+            name="test"
+            type="checkbox"
+            value=""
+          />
+        </div>
+      </label>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`ToggleField should render correctly disabled 1`] = `
+exports[`ToggleField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -414,16 +422,16 @@ exports[`ToggleField should render correctly disabled 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-5[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -446,7 +454,7 @@ exports[`ToggleField should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-4 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -468,11 +476,11 @@ exports[`ToggleField should render correctly disabled 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-4:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-4:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -485,25 +493,25 @@ exports[`ToggleField should render correctly disabled 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-4:focus-within,
+.emotion-4:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-4[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-4[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-4[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-4[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -511,41 +519,41 @@ exports[`ToggleField should render correctly disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-4[data-checked='true']:focus-within,
+.emotion-4[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-4[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-4[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-4[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-4[data-error='true']:focus-within,
+.emotion-4[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-4[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-6 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -555,44 +563,48 @@ exports[`ToggleField should render correctly disabled 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-6[disabled] {
   cursor: not-allowed;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <label
-      aria-disabled="true"
-      class="cache-r95p0q-StyledLabel e1wstm610"
+    <form
+      novalidate=""
     >
-      <div
-        class="cache-155uuxj-Stack ehpbis70"
-      />
-      <div
-        class="cache-izrm74-StyledToggle e1wstm612"
-        data-checked="false"
-        data-disabled="true"
-        data-error="false"
+      <label
+        aria-disabled="true"
+        class="emotion-0 emotion-1"
       >
-        <input
-          aria-checked="false"
-          class="cache-1myp2ct-StyledCheckbox e1wstm611"
-          disabled=""
-          id=":r2:"
-          name="test"
-          type="checkbox"
-          value=""
+        <div
+          class="emotion-2 emotion-3"
         />
-      </div>
-    </label>
-  </form>
+        <div
+          class="emotion-4 emotion-5"
+          data-checked="false"
+          data-disabled="true"
+          data-error="false"
+        >
+          <input
+            aria-checked="false"
+            class="emotion-6 emotion-7"
+            disabled=""
+            id=":r2:"
+            name="test"
+            type="checkbox"
+            value=""
+          />
+        </div>
+      </label>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`ToggleField should render correctly with label and checked 1`] = `
+exports[`ToggleField > should render correctly with label and checked 1`] = `
 <DocumentFragment>
-  .cache-r95p0q-StyledLabel {
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -611,16 +623,16 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.emotion-0:active .emotion-7[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+.emotion-0[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-155uuxj-Stack {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -643,7 +655,7 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-15fwcc4-StyledRow {
+.emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
@@ -657,7 +669,7 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   justify-content: normal;
 }
 
-.cache-izrm74-StyledToggle {
+.emotion-6 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -679,11 +691,11 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   height: 24px;
 }
 
-.cache-izrm74-StyledToggle:hover {
+.emotion-6:hover {
   background-color: #d9dadd;
 }
 
-.cache-izrm74-StyledToggle:after {
+.emotion-6:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -696,25 +708,25 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-izrm74-StyledToggle:focus-within,
-.cache-izrm74-StyledToggle:focus {
+.emotion-6:focus-within,
+.emotion-6:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='false']:active:after {
+.emotion-6[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true'] {
+.emotion-6[data-checked='true'] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:hover {
+.emotion-6[data-checked='true']:hover {
   background-color: #792dd4;
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:after {
+.emotion-6[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -722,41 +734,41 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-izrm74-StyledToggle[data-checked='true']:focus-within,
-.cache-izrm74-StyledToggle[data-checked='true']:focus {
+.emotion-6[data-checked='true']:focus-within,
+.emotion-6[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-izrm74-StyledToggle[data-disabled='true'][data-checked='true'] {
+.emotion-6[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'] {
+.emotion-6[data-error='true'] {
   background-color: #ffebf2;
 }
 
-.cache-izrm74-StyledToggle[data-error='true']:focus-within,
-.cache-izrm74-StyledToggle[data-error='true']:focus {
+.emotion-6[data-error='true']:focus-within,
+.emotion-6[data-error='true']:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-checked='true'] {
+.emotion-6[data-error='true'][data-checked='true'] {
   background-color: #e51963;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'] {
+.emotion-6[data-error='true'][data-disabled='true'] {
   background-color: #fff3f7;
 }
 
-.cache-izrm74-StyledToggle[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-6[data-error='true'][data-disabled='true'][data-checked='true'] {
   background-color: #ffd3e3;
 }
 
-.cache-1myp2ct-StyledCheckbox {
+.emotion-8 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -766,43 +778,47 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   cursor: pointer;
 }
 
-.cache-1myp2ct-StyledCheckbox[disabled] {
+.emotion-8[disabled] {
   cursor: not-allowed;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <label
-      aria-disabled="false"
-      class="cache-r95p0q-StyledLabel e1wstm610"
+    <form
+      novalidate=""
     >
-      <div
-        class="cache-155uuxj-Stack ehpbis70"
+      <label
+        aria-disabled="false"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="cache-15fwcc4-StyledRow e3f5lzv0"
+          class="emotion-2 emotion-3"
         >
-          test
+          <div
+            class="emotion-4 emotion-5"
+          >
+            test
+          </div>
         </div>
-      </div>
-      <div
-        class="cache-izrm74-StyledToggle e1wstm612"
-        data-checked="true"
-        data-disabled="false"
-        data-error="false"
-      >
-        <input
-          aria-checked="true"
-          checked=""
-          class="cache-1myp2ct-StyledCheckbox e1wstm611"
-          id=":r6:"
-          name="test"
-          type="checkbox"
-          value=""
-        />
-      </div>
-    </label>
-  </form>
+        <div
+          class="emotion-6 emotion-7"
+          data-checked="true"
+          data-disabled="false"
+          data-error="false"
+        >
+          <input
+            aria-checked="true"
+            checked=""
+            class="emotion-8 emotion-9"
+            id=":r6:"
+            name="test"
+            type="checkbox"
+            value=""
+          />
+        </div>
+      </label>
+    </form>
+  </div>
 </DocumentFragment>
 `;

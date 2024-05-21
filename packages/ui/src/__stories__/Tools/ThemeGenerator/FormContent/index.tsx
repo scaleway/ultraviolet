@@ -6,7 +6,6 @@ import {
   useFieldArray,
   useFormContext,
   useFormState,
-  // eslint-disable-next-line import/no-relative-packages
 } from '../../../../../../form/src'
 import { Button, Row, Stack, Text, Tooltip } from '../../../../components'
 import { INITIAL_VALUES, hexadecimalColorRegex } from '../contants'

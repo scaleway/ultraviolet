@@ -1,68 +1,53 @@
-import { describe, expect, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Form, Submit, TextInputField } from '../..'
-import {
-  mockRandom,
-  restoreRandom,
-  shouldMatchEmotionSnapshot,
-  shouldMatchEmotionSnapshotFormWrapper,
-} from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks'
+import { renderWithForm } from '@utils/test'
+import { describe, expect, test } from 'vitest'
+import { Submit, TextInputField } from '../..'
 
 const alpha = /^[a-zA-Z]*$/
 
 describe('Submit', () => {
-  test('renders correctly ', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<Submit>Test</Submit>))
+  test('renders correctly ', () => {
+    const { asFragment } = renderWithForm(<Submit>Test</Submit>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('renders correctly with icon and iconPosition ', () =>
-    shouldMatchEmotionSnapshotFormWrapper(
+  test('renders correctly with icon and iconPosition ', () => {
+    const { asFragment } = renderWithForm(
       <Submit icon="east" iconPosition="right">
         Test
       </Submit>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('form is invalid', () =>
-    shouldMatchEmotionSnapshot(
-      <Form
-        onRawSubmit={() => {}}
-        initialValues={{ toto: '4' }}
-        errors={mockErrors}
-      >
+  test('form is invalid', () => {
+    const { asFragment } = renderWithForm(
+      <>
         <TextInputField name="toto" regex={[alpha]} />
         <Submit>Test</Submit>
-      </Form>,
-    ))
+      </>,
+      { initialValues: { toto: '4' } },
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('form is submitting', async () => {
-    mockRandom()
-
-    await shouldMatchEmotionSnapshot(
-      <Form
-        onRawSubmit={() =>
-          new Promise(resolve => {
-            setTimeout(() => resolve(undefined), 5000)
-          })
-        }
-        errors={mockErrors}
-      >
-        <Submit>Test</Submit>
-      </Form>,
-      {
-        transform: async () => {
-          await userEvent.click(
-            // eslint-disable-next-line testing-library/no-node-access
-            screen.getByText('Test').closest('button') as HTMLButtonElement,
-          )
-          expect(
-            // eslint-disable-next-line testing-library/no-node-access
-            screen.getByText('Test').closest('button') as HTMLButtonElement,
-          ).toBeDisabled()
-        },
-      },
+    const { asFragment } = renderWithForm(<Submit>Test</Submit>, {
+      onRawSubmit: () =>
+        new Promise(resolve => {
+          setTimeout(() => resolve(undefined), 5000)
+        }),
+    })
+    await userEvent.click(
+      // eslint-disable-next-line testing-library/no-node-access
+      screen.getByText('Test').closest('button') as HTMLButtonElement,
     )
+    expect(
+      // eslint-disable-next-line testing-library/no-node-access
+      screen.getByText('Test').closest('button') as HTMLButtonElement,
+    ).toBeDisabled()
 
-    restoreRandom()
+    expect(asFragment()).toMatchSnapshot()
   })
 })

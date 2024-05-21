@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Menu Menu.Item render with borderless props 1`] = `
+exports[`Menu > Menu.Item > render with borderless props 1`] = `
 <DocumentFragment>
-  .cache-1dn316x-StyledItem {
+  .emotion-0 {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
@@ -15,33 +15,37 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
   background: none;
 }
 
-.cache-1dn316x-StyledItem svg {
+.emotion-0 svg {
   fill: #3f4250;
 }
 
-.cache-1dn316x-StyledItem:hover,
-.cache-1dn316x-StyledItem:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   color: #222638;
 }
 
-.cache-1dn316x-StyledItem:hover svg,
-.cache-1dn316x-StyledItem:focus svg {
+.emotion-0:hover svg,
+.emotion-0:focus svg {
   fill: #222638;
 }
 
-<button
-    class="cache-1dn316x-StyledItem e10f690h1"
-    role="menuitem"
-    type="button"
+<div
+    data-testid="testing"
   >
-    Borderless Props
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      role="menuitem"
+      type="button"
+    >
+      Borderless Props
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Menu Menu.Item render with default props 1`] = `
+exports[`Menu > Menu.Item > render with default props 1`] = `
 <DocumentFragment>
-  .cache-1g2q9ft-StyledItem {
+  .emotion-0 {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
@@ -55,33 +59,65 @@ exports[`Menu Menu.Item render with default props 1`] = `
   background: none;
 }
 
-.cache-1g2q9ft-StyledItem svg {
+.emotion-0 svg {
   fill: #3f4250;
 }
 
-.cache-1g2q9ft-StyledItem:hover,
-.cache-1g2q9ft-StyledItem:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   color: #222638;
 }
 
-.cache-1g2q9ft-StyledItem:hover svg,
-.cache-1g2q9ft-StyledItem:focus svg {
+.emotion-0:hover svg,
+.emotion-0:focus svg {
   fill: #222638;
 }
 
-<button
-    class="cache-1g2q9ft-StyledItem e10f690h1"
-    role="menuitem"
-    type="button"
+.emotion-0 {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: 1px solid #d9dadd;
+  cursor: pointer;
+  min-width: 110px;
+  color: #3f4250;
+  background: none;
+}
+
+.emotion-0 svg {
+  fill: #3f4250;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  color: #222638;
+}
+
+.emotion-0:hover svg,
+.emotion-0:focus svg {
+  fill: #222638;
+}
+
+<div
+    data-testid="testing"
   >
-    Default Props
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      role="menuitem"
+      type="button"
+    >
+      Default Props
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Menu Menu.Item render with disabled props 1`] = `
+exports[`Menu > Menu.Item > render with disabled props 1`] = `
 <DocumentFragment>
-  .cache-mgnrz8-StyledItem {
+  .emotion-0 {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
@@ -96,24 +132,47 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
   background: none;
 }
 
-.cache-mgnrz8-StyledItem svg {
+.emotion-0 svg {
   fill: #b5b7bd;
 }
 
-<button
-    class="cache-mgnrz8-StyledItem e10f690h1"
-    disabled=""
-    role="menuitem"
-    type="button"
+.emotion-0 {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: 1px solid #d9dadd;
+  cursor: pointer;
+  min-width: 110px;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  background: none;
+}
+
+.emotion-0 svg {
+  fill: #b5b7bd;
+}
+
+<div
+    data-testid="testing"
   >
-    Disabled Props
-  </button>
+    <button
+      class="emotion-0 emotion-1"
+      disabled=""
+      role="menuitem"
+      type="button"
+    >
+      Disabled Props
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`Menu Menu.Item render with sentiment danger 1`] = `
+exports[`Menu > Menu.Item > render with sentiment danger 1`] = `
 <DocumentFragment>
-  .cache-1goa4p3-StyledItem {
+  .emotion-0 {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
@@ -127,582 +186,217 @@ exports[`Menu Menu.Item render with sentiment danger 1`] = `
   background: none;
 }
 
-.cache-1goa4p3-StyledItem svg {
+.emotion-0 svg {
   fill: #b3144d;
 }
 
-.cache-1goa4p3-StyledItem:hover,
-.cache-1goa4p3-StyledItem:focus {
+.emotion-0:hover,
+.emotion-0:focus {
   color: #92103f;
 }
 
-.cache-1goa4p3-StyledItem:hover svg,
-.cache-1goa4p3-StyledItem:focus svg {
+.emotion-0:hover svg,
+.emotion-0:focus svg {
   fill: #92103f;
 }
 
-<button
-    class="cache-1goa4p3-StyledItem e10f690h1"
-    role="menuitem"
-    type="button"
-  >
-    Danger
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Menu placement renders "bottom" 1`] = `
-<DocumentFragment>
-  <button
-    aria-controls="bottom"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Menu
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Menu placement renders "bottom-end" 1`] = `
-<DocumentFragment>
-  <button
-    aria-controls="bottom-end"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Menu
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Menu placement renders "bottom-start" 1`] = `
-<DocumentFragment>
-  <button
-    aria-controls="bottom-start"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Menu
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Menu placement renders "top" 1`] = `
-<DocumentFragment>
-  <button
-    aria-controls="top"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Menu
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Menu placement renders "top-end" 1`] = `
-<DocumentFragment>
-  <button
-    aria-controls="top-end"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Menu
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Menu placement renders "top-start" 1`] = `
-<DocumentFragment>
-  <button
-    aria-controls="top-start"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Menu
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Menu renders with Menu.Item 1`] = `
-<DocumentFragment>
-  <button
-    aria-controls="menu"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
-  >
-    Menu
-  </button>
-  .cache-co8i76-StyledPopover {
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 24px 6px #d9dadd66;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #3f4250;
-  border-radius: 4px;
-  position: relative;
-  box-shadow: 0px 0px 24px 6px #d9dadd66;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border: solid transparent;
-  border-width: 9px;
-  content: ' ';
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after {
-  border-color: transparent;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border-color: transparent;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  bottom: 100%;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after {
-  border-bottom-color: #ffffff;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border-bottom-color: transparent;
-}
-
-.cache-1g2q9ft-StyledItem {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: inherit;
-  padding: 4px 8px;
-  border: none;
-  border-bottom: 1px solid #d9dadd;
-  cursor: pointer;
-  min-width: 110px;
-  color: #3f4250;
-  background: none;
-}
-
-.cache-1g2q9ft-StyledItem svg {
-  fill: #3f4250;
-}
-
-.cache-1g2q9ft-StyledItem:hover,
-.cache-1g2q9ft-StyledItem:focus {
-  color: #222638;
-}
-
-.cache-1g2q9ft-StyledItem:hover svg,
-.cache-1g2q9ft-StyledItem:focus svg {
-  fill: #222638;
-}
-
 <div
-    class="__reakit-portal"
+    data-testid="testing"
   >
-    <div
-      aria-label="Menu"
-      class="cache-co8i76-StyledPopover e1hqs9p51"
-      data-dialog="true"
-      id="menu"
-      role="dialog"
-      style="position: fixed; left: 100%; top: 100%;"
-      tabindex="-1"
+    <button
+      class="emotion-0 emotion-1"
+      role="menuitem"
+      type="button"
     >
-      <div
-        class="cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom e1hqs9p50"
-        role="menu"
-      >
-        <button
-          class="cache-1g2q9ft-StyledItem e10f690h1"
-          role="menuitem"
-          type="button"
-        >
-          Menu.Item
-        </button>
-      </div>
-    </div>
+      Danger
+    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
+exports[`Menu > placement > renders "bottom" 1`] = `
 <DocumentFragment>
-  <button
-    aria-controls="menu-1"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
+  <div
+    data-testid="testing"
   >
-    Menu
-  </button>
-  .cache-co8i76-StyledPopover {
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 24px 6px #d9dadd66;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #3f4250;
-  border-radius: 4px;
-  position: relative;
-  box-shadow: 0px 0px 24px 6px #d9dadd66;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border: solid transparent;
-  border-width: 9px;
-  content: ' ';
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after {
-  border-color: transparent;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border-color: transparent;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  bottom: 100%;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after {
-  border-bottom-color: #ffffff;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border-bottom-color: transparent;
-}
-
-.cache-mgnrz8-StyledItem {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: inherit;
-  padding: 4px 8px;
-  border: none;
-  border-bottom: 1px solid #d9dadd;
-  cursor: pointer;
-  min-width: 110px;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  background: none;
-}
-
-.cache-mgnrz8-StyledItem svg {
-  fill: #b5b7bd;
-}
-
-<div
-    class="__reakit-portal"
-  >
-    <div
-      aria-label="Menu"
-      class="cache-co8i76-StyledPopover e1hqs9p51"
-      data-dialog="true"
-      id="menu-1"
-      role="dialog"
-      style="position: fixed; left: 100%; top: 100%;"
-      tabindex="-1"
+    <button
+      aria-controls="bottom"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
     >
-      <div
-        class="cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom e1hqs9p50"
-        role="menu"
-      >
-        <button
-          class="cache-mgnrz8-StyledItem e10f690h1"
-          disabled=""
-          role="menuitem"
-          type="button"
-        >
-          Menu.Item disabled
-        </button>
-        <button
-          class="cache-mgnrz8-StyledItem e10f690h1"
-          disabled=""
-          role="menuitem"
-          type="button"
-        >
-          Menu.Item Link disabled
-        </button>
-      </div>
-    </div>
+      Menu
+    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Menu renders with Menu.ItemLink 1`] = `
+exports[`Menu > placement > renders "bottom-end" 1`] = `
 <DocumentFragment>
-  <button
-    aria-controls="menu-1"
-    aria-expanded="true"
-    aria-haspopup="dialog"
-    type="button"
+  <div
+    data-testid="testing"
   >
-    Menu
-  </button>
-  .cache-co8i76-StyledPopover {
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 24px 6px #d9dadd66;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom {
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  text-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  color: #3f4250;
-  border-radius: 4px;
-  position: relative;
-  box-shadow: 0px 0px 24px 6px #d9dadd66;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border: solid transparent;
-  border-width: 9px;
-  content: ' ';
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after {
-  border-color: transparent;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border-color: transparent;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after,
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  bottom: 100%;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:after {
-  border-bottom-color: #ffffff;
-}
-
-.cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom:before {
-  border-bottom-color: transparent;
-}
-
-.cache-s7n5ht-StyledLinkItem {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: inherit;
-  padding: 4px 8px;
-  border: none;
-  cursor: pointer;
-  min-width: 110px;
-  color: #3f4250;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-s7n5ht-StyledLinkItem svg {
-  fill: #3f4250;
-}
-
-.cache-s7n5ht-StyledLinkItem:hover,
-.cache-s7n5ht-StyledLinkItem:focus {
-  color: #222638;
-}
-
-.cache-s7n5ht-StyledLinkItem:hover svg,
-.cache-s7n5ht-StyledLinkItem:focus svg {
-  fill: #222638;
-}
-
-.cache-s7n5ht-StyledLinkItem:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    class="__reakit-portal"
-  >
-    <div
-      aria-label="Menu"
-      class="cache-co8i76-StyledPopover e1hqs9p51"
-      data-dialog="true"
-      id="menu-1"
-      role="dialog"
-      style="position: fixed; left: 100%; top: 100%;"
-      tabindex="-1"
+    <button
+      aria-controls="bottom-end"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
     >
-      <div
-        class="cache-1k95x5n-MenuList-centerStyles-bottomStyles-bottom e1hqs9p50"
-        role="menu"
-      >
-        <a
-          class="cache-s7n5ht-StyledLinkItem e10f690h0"
-          href="/link"
-          role="menuitem"
-        >
-          Menu.Item as Link
-        </a>
-      </div>
-    </div>
+      Menu
+    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Menu renders with disclosure not a function 1`] = `
+exports[`Menu > placement > renders "bottom-start" 1`] = `
 <DocumentFragment>
-  <button
-    aria-controls="menu"
-    aria-expanded="false"
-    aria-haspopup="dialog"
-    type="button"
+  <div
+    data-testid="testing"
   >
-    Menu is visible
-  </button>
-  .cache-co8i76-StyledPopover {
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 24px 6px #d9dadd66;
-}
-
-<div
-    class="__reakit-portal"
-  >
-    <div
-      aria-label="Menu"
-      class="cache-co8i76-StyledPopover e1hqs9p51"
-      data-dialog="true"
-      hidden=""
-      id="menu"
-      role="dialog"
-      style="display: none; position: fixed; left: 100%; top: 100%;"
-      tabindex="-1"
-    />
+    <button
+      aria-controls="bottom-start"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Menu renders with visible=false 1`] = `
+exports[`Menu > placement > renders "top" 1`] = `
 <DocumentFragment>
-  <button
-    aria-controls="menu"
-    aria-expanded="false"
-    aria-haspopup="dialog"
-    type="button"
+  <div
+    data-testid="testing"
   >
-    Menu is visible
-  </button>
-  .cache-co8i76-StyledPopover {
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 24px 6px #d9dadd66;
-}
+    <button
+      aria-controls="top"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
 
-<div
-    class="__reakit-portal"
+exports[`Menu > placement > renders "top-end" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
   >
-    <div
-      aria-label="Menu"
-      class="cache-co8i76-StyledPopover e1hqs9p51"
-      data-dialog="true"
-      hidden=""
-      id="menu"
-      role="dialog"
-      style="display: none; position: fixed; left: 100%; top: 100%;"
-      tabindex="-1"
-    />
+    <button
+      aria-controls="top-end"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > placement > renders "top-start" 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="top-start"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > renders with Menu.Item 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="menu"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > renders with Menu.ItemLink & Menu.Item disabled 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="menu-1"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > renders with Menu.ItemLink 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="menu-1"
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > renders with disclosure not a function 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="menu"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu is visible
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > renders with visible=false 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="menu"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu is visible
+    </button>
   </div>
 </DocumentFragment>
 `;

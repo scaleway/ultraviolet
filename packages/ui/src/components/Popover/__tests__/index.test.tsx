@@ -1,14 +1,11 @@
 import styled from '@emotion/styled'
-import { describe, expect, jest, test } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { useCallback, useState } from 'react'
+import { describe, expect, test, vi } from 'vitest'
 import { Popover } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
 import { SelectInput } from '../../SelectInput'
@@ -92,8 +89,8 @@ describe('Tooltip', () => {
 
   describe(`should render correctly with placement`, () => {
     ;['top', 'left', 'right', 'bottom'].forEach(placement => {
-      test(`should renders tooltip with placement ${placement}`, async () => {
-        await shouldMatchEmotionSnapshot(
+      test(`should renders tooltip with placement ${placement}`, () => {
+        shouldMatchEmotionSnapshot(
           <Popover
             title="Test"
             content="Test"
@@ -110,8 +107,8 @@ describe('Tooltip', () => {
 
   describe(`should render correctly with sentiment`, () => {
     ;(['neutral', 'primary'] as const).forEach(sentiment => {
-      test(`should renders tooltip with placement ${sentiment}`, async () => {
-        await shouldMatchEmotionSnapshot(
+      test(`should renders tooltip with placement ${sentiment}`, () => {
+        shouldMatchEmotionSnapshot(
           <Popover
             title="Test"
             content="Test"
@@ -128,8 +125,8 @@ describe('Tooltip', () => {
 
   describe(`should render correctly with sizes`, () => {
     ;['small', 'medium', 'large'].forEach(size => {
-      test(`should renders tooltip with placement ${size}`, async () => {
-        await shouldMatchEmotionSnapshot(
+      test(`should renders tooltip with placement ${size}`, () => {
+        const { asFragment } = renderWithTheme(
           <Popover
             title="Test"
             content="Test"
@@ -140,12 +137,13 @@ describe('Tooltip', () => {
             <p data-testid="children">Children</p>
           </Popover>,
         )
+        expect(asFragment()).toMatchSnapshot()
       })
     })
   })
 
   test(`should render visible on mount and close on click on close button`, async () => {
-    const onClose = jest.fn(() => {})
+    const onClose = vi.fn(() => {})
 
     renderWithTheme(
       <Popover
@@ -169,7 +167,7 @@ describe('Tooltip', () => {
   })
 
   test(`should render visible on mount and close on click outside`, async () => {
-    const onClose = jest.fn(() => {})
+    const onClose = vi.fn(() => {})
 
     renderWithTheme(
       <div>

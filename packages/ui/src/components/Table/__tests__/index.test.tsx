@@ -1,14 +1,11 @@
 import { ThemeProvider } from '@emotion/react'
-import { describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
+import { describe, expect, test, vi } from 'vitest'
 import { Table } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 import defaultTheme from '../../../theme'
 
 type WrapperProps = {
@@ -54,10 +51,11 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 
 describe('Table', () => {
   test('Should throw an error', () => {
-    const consoleErrMock = jest
+    const consoleErrMock = vi
       .spyOn(console, 'error')
       .mockImplementation(() => {})
-    expect(() => {
+
+    expect(() =>
       renderWithTheme(
         data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <Table.Row key={id} id={id}>
@@ -68,8 +66,8 @@ describe('Table', () => {
             <Table.Cell>{columnE}</Table.Cell>
           </Table.Row>
         )),
-      )
-    }).toThrow()
+      ),
+    ).toThrow()
     expect(consoleErrMock).toHaveBeenCalled()
     consoleErrMock.mockRestore()
   })
@@ -108,8 +106,8 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with selectable then click on first row then uncheck all, then check all', () =>
-    shouldMatchEmotionSnapshot(
+  test('Should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
+    const { asFragment } = renderWithTheme(
       <Table columns={columns} selectable>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -126,34 +124,32 @@ describe('Table', () => {
           ))}
         </Table.Body>
       </Table>,
-      {
-        transform: async () => {
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
+    )
+    const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
-          const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
-          const allCheckbox = checkboxes.find(({ value }) => value === 'all')
-          expect(firstRowCheckbox).toBeInTheDocument()
-          expect(allCheckbox).toBeInTheDocument()
-          if (!firstRowCheckbox) {
-            throw new Error('First checkbox is not defined')
-          }
-          if (!allCheckbox) {
-            throw new Error('Select all checkbox is not defined')
-          }
-          await userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).toBeChecked()
-          await userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
-          await userEvent.click(firstRowCheckbox)
-          await userEvent.click(allCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
-          await userEvent.click(allCheckbox)
-          expect(firstRowCheckbox).toBeChecked()
-        },
-      },
-    ))
+    const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
+    const allCheckbox = checkboxes.find(({ value }) => value === 'all')
+    expect(firstRowCheckbox).toBeInTheDocument()
+    expect(allCheckbox).toBeInTheDocument()
+    if (!firstRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+    if (!allCheckbox) {
+      throw new Error('Select all checkbox is not defined')
+    }
+    await userEvent.click(firstRowCheckbox)
+    expect(firstRowCheckbox).toBeChecked()
+    await userEvent.click(firstRowCheckbox)
+    expect(firstRowCheckbox).not.toBeChecked()
+    await userEvent.click(firstRowCheckbox)
+    await userEvent.click(allCheckbox)
+    expect(firstRowCheckbox).not.toBeChecked()
+    await userEvent.click(allCheckbox)
+    expect(firstRowCheckbox).toBeChecked()
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('Should render correctly with sort then click', () => {
+  test('Should render correctly with sort then click', async () => {
     const LocalControlValue = ({
       children,
     }: {
@@ -183,7 +179,7 @@ describe('Table', () => {
       return <div>{children({ value, setValue })}</div>
     }
 
-    return shouldMatchEmotionSnapshot(
+    const { asFragment } = renderWithTheme(
       <LocalControlValue>
         {({ value, setValue }) => (
           <Table
@@ -215,37 +211,28 @@ describe('Table', () => {
           </Table>
         )}
       </LocalControlValue>,
+    )
+    const tableHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
+      'button',
       {
-        transform: async () => {
-          const tableHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
-            'button',
-            {
-              queryFallbacks: true,
-            },
-          )
-          expect(tableHeaderCells).toHaveLength(columns.length)
-          expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-          await userEvent.click(tableHeaderCells[0])
-          expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(
-            'ascending',
-          )
-          fireEvent.keyDown(tableHeaderCells[0], { key: 'Enter' })
-          expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(
-            'descending',
-          )
-          fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
-          await userEvent.click(tableHeaderCells[1])
-          expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-          expect(tableHeaderCells[1].getAttribute('aria-sort')).toBe(
-            'ascending',
-          )
-        },
+        queryFallbacks: true,
       },
     )
+    expect(tableHeaderCells).toHaveLength(columns.length)
+    expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+    await userEvent.click(tableHeaderCells[0])
+    expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
+    fireEvent.keyDown(tableHeaderCells[0], { key: 'Enter' })
+    expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe('descending')
+    fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
+    await userEvent.click(tableHeaderCells[1])
+    expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+    expect(tableHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
+    expect(asFragment()).toMatchSnapshot()
   })
 
-  test('Should render correctly with bad sort value', () =>
-    shouldMatchEmotionSnapshot(
+  test('Should render correctly with bad sort value', () => {
+    const { asFragment } = renderWithTheme(
       <Table
         // @ts-expect-error Wrong value used
         columns={columns.map(column => ({
@@ -265,7 +252,9 @@ describe('Table', () => {
           ))}
         </Table.Body>
       </Table>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('Should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
     const selectedIds = ['1']

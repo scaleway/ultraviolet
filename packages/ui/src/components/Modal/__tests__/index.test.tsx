@@ -1,19 +1,13 @@
 import { css } from '@emotion/react'
-import {
-  afterAll,
-  beforeEach,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Modal } from '..'
+import { consoleLightTheme } from '@ultraviolet/themes'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../../.jest/helpers'
+} from '@utils/test'
+import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
+import { Modal } from '..'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
@@ -22,15 +16,15 @@ const customDialogStyles = css`
   background: radial-gradient(circle, #8b2fe6 0%, #4f0599 50%, #30015a 100%);
 `
 
-const mockOnClick = jest.fn()
+const mockOnClick = vi.fn()
 
 describe('Modal', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   afterAll(() => {
-    jest.restoreAllMocks()
+    vi.restoreAllMocks()
   })
 
   test(`renders with default Props`, () =>
@@ -125,10 +119,9 @@ describe('Modal', () => {
       </Modal>,
     ))
 
-  test(`renders with disclosure and onBeforeClose`, () => {
+  test(`renders with disclosure and onBeforeClose`, async () => {
     let count = 0
-
-    return shouldMatchEmotionSnapshotWithPortal(
+    const { asFragment } = renderWithTheme(
       <Modal
         ariaLabel="modal-test"
         id="modal-test"
@@ -140,21 +133,22 @@ describe('Modal', () => {
       >
         <div>modal</div>
       </Modal>,
+      consoleLightTheme,
       {
-        transform: async () => {
-          await userEvent.click(screen.getByText('Open modal'))
-          const closeButton = screen.getByTestId('test-close-button')
-          await userEvent.click(closeButton)
-          expect(count).toBe(1)
-        },
+        container: document.body,
       },
     )
+    await userEvent.click(screen.getByText('Open modal'))
+    const closeButton = screen.getByTestId('test-close-button')
+    await userEvent.click(closeButton)
+    expect(count).toBe(1)
+
+    expect(asFragment()).toMatchSnapshot()
   })
 
-  test(`renders with disclosure and onClose`, () => {
+  test(`renders with disclosure and onClose`, async () => {
     let count = 0
-
-    return shouldMatchEmotionSnapshotWithPortal(
+    const { asFragment } = renderWithTheme(
       <Modal
         ariaLabel="modal-test"
         id="modal-test"
@@ -166,15 +160,17 @@ describe('Modal', () => {
       >
         <div>modal</div>
       </Modal>,
+      consoleLightTheme,
       {
-        transform: async () => {
-          await userEvent.click(screen.getByText('Open modal'))
-          const closeButton = screen.getByTestId('test-close-button')
-          await userEvent.click(closeButton)
-          expect(count).toBe(1)
-        },
+        container: document.body,
       },
     )
+
+    await userEvent.click(screen.getByText('Open modal'))
+    const closeButton = screen.getByTestId('test-close-button')
+    await userEvent.click(closeButton)
+    expect(count).toBe(1)
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test(`disclosure function render onClick props is called`, async () => {
@@ -284,7 +280,7 @@ describe('Modal', () => {
   })
 
   test(`test hideOnEsc is true`, async () => {
-    const mockOnClose = jest.fn(() => {})
+    const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -303,7 +299,7 @@ describe('Modal', () => {
   })
 
   test(`test hideOnEsc is false`, async () => {
-    const mockOnClose = jest.fn(() => {})
+    const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -321,7 +317,7 @@ describe('Modal', () => {
   })
 
   test(`test hideOnClickOutside is true`, async () => {
-    const mockOnClose = jest.fn(() => {})
+    const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -341,7 +337,7 @@ describe('Modal', () => {
   })
 
   test(`test hideOnClickOutside is false`, async () => {
-    const mockOnClose = jest.fn(() => {})
+    const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"

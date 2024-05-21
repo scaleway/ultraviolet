@@ -1,61 +1,41 @@
-import {
-  afterAll,
-  afterEach,
-  beforeAll,
-  beforeEach,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import {
   resetIntersectionMocking,
   setupIntersectionMocking,
 } from 'react-intersection-observer/test-utils'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { EstimateCost } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
-
-jest.setTimeout(10000)
 
 describe('EstimateCost - Unit Item', () => {
-  beforeAll(() => {
-    jest.spyOn(Math, 'random').mockReturnValue(0.4155913669444804)
-  })
-
-  afterAll(() => {
-    jest.spyOn(Math, 'random').mockRestore()
-  })
-
   beforeEach(() => {
-    setupIntersectionMocking(jest.fn)
+    setupIntersectionMocking(vi.fn)
   })
-
   afterEach(() => {
     resetIntersectionMocking()
   })
 
-  test('render basic props', () =>
-    shouldMatchEmotionSnapshot(
+  test('render basic props', () => {
+    const { asFragment } = renderWithTheme(
       <EstimateCost>
         <EstimateCost.Item label="Unit">
           <EstimateCost.Unit />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('render basic props with monthly price', () =>
+  test('render basic props with monthly price', () => {
     shouldMatchEmotionSnapshot(
       <EstimateCost>
         <EstimateCost.Item label="Unit" monthlyPrice={100}>
           <EstimateCost.Unit />
         </EstimateCost.Item>
       </EstimateCost>,
-    ))
+    )
+  })
 
   test('render basic props with values', () =>
     shouldMatchEmotionSnapshot(

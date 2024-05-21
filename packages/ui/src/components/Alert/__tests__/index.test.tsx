@@ -1,26 +1,16 @@
-import {
-  afterAll,
-  beforeAll,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
 import { Alert } from '..'
-import {
-  renderWithTheme,
-  shouldMatchEmotionSnapshot,
-} from '../../../../.jest/helpers'
 
 describe('Alert', () => {
   beforeAll(() => {
-    jest.spyOn(console, 'error').mockImplementation(() => null)
+    vi.spyOn(console, 'error').mockImplementation(() => null)
   })
 
   afterAll(() => {
-    jest.restoreAllMocks()
+    vi.restoreAllMocks()
   })
 
   test('renders correctly with default values', () =>

@@ -1,54 +1,43 @@
-import {
-  afterEach,
-  beforeEach,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
 import { act, screen } from '@testing-library/react'
+import { renderWithTheme } from '@utils/test'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { NotificationContainer, notification } from '..'
-import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
 
 describe('Toaster', () => {
   beforeEach(() => {
-    jest.useFakeTimers()
+    vi.useFakeTimers()
   })
 
   afterEach(() => {
-    jest.clearAllTimers()
+    vi.clearAllTimers()
   })
 
   test('renders correctly with close button', async () => {
-    await shouldMatchEmotionSnapshotWithPortal(<NotificationContainer />, {
-      transform: async () => {
-        notification('Description', 'Title', 'icon', true)
-
-        act(() => jest.runAllTimers())
-
-        expect(await screen.findAllByText('Title')).toMatchSnapshot()
-      },
+    const { asFragment } = renderWithTheme(<NotificationContainer />)
+    act(() => {
+      notification('Description', 'Title', 'icon', true)
     })
+
+    expect(await screen.findAllByText('Title')).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly with custom close button', async () => {
-    await shouldMatchEmotionSnapshotWithPortal(<NotificationContainer />, {
-      transform: async () => {
-        notification(
-          ({ closeToast }) => (
-            <button onClick={closeToast} type="button">
-              Decline
-            </button>
-          ),
-          'Invitation',
-          'Avatar',
-          false,
-        )
-
-        act(() => jest.runAllTimers())
-
-        expect(await screen.findAllByText('Decline')).toMatchSnapshot()
-      },
+    const { asFragment } = renderWithTheme(<NotificationContainer />)
+    act(() => {
+      notification(
+        ({ closeToast }) => (
+          <button onClick={closeToast} type="button">
+            Decline
+          </button>
+        ),
+        'Invitation',
+        'Avatar',
+        false,
+      )
     })
+
+    expect(await screen.findAllByText('Decline')).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot()
   })
 })

@@ -1,6 +1,8 @@
-import { jest } from '@jest/globals'
+/* eslint-disable eslint-comments/disable-enable-pair */
 
-export type MockMatchMedia = {
+import { vi } from 'vitest'
+
+type MockMatchMedia = {
   media: string
   matches?: boolean
 }
@@ -22,7 +24,7 @@ function getMockImplementation({ media, matches = false }: MockMatchMedia) {
   return () => mql
 }
 
-export default ({ media, matches = false }: MockMatchMedia): void => {
-  const mockedImplementation = getMockImplementation({ matches, media })
-  window.matchMedia = jest.fn<any>().mockImplementation(mockedImplementation)
+export const mockMatchMedia = ({ media, matches = false }: MockMatchMedia) => {
+  const mockedImplementation = getMockImplementation({ media, matches })
+  window.matchMedia = vi.fn().mockImplementation(mockedImplementation)
 }

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SelectInputField should display right value on grouped options 1`] = `
+exports[`SelectInputField > should display right value on grouped options 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   0% {
@@ -20,19 +20,19 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   }
 }
 
-.cache-832x4l-SelectInputContainer {
+.emotion-0 {
   width: 100%;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-2 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-2[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-ymc80m-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,7 +55,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,61 +88,61 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   border-radius: 4px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 32px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 48px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
+.emotion-6:not([data-disabled='true']):hover,
+.emotion-6:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
+.emotion-6[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-8 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -153,7 +153,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   text-decoration: none;
 }
 
-.cache-wzr69d-Stack-StateStack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,7 +181,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   display: flex;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -220,22 +220,22 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -244,12 +244,12 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles {
+.emotion-16 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -258,12 +258,12 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   min-height: 16px;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles .fillStroke {
+.emotion-16 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.cache-15w5je2-StyledPopup-StyledPopup-StyledPopup {
+.emotion-19 {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -289,12 +289,12 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   padding: 0;
 }
 
-.cache-15w5je2-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
+.emotion-19[data-animated='true'] {
   -webkit-animation: 0ms animation-0 forwards;
   animation: 0ms animation-0 forwards;
 }
 
-.cache-15w5je2-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
+.emotion-19[data-has-arrow='true']::after {
   content: ' ';
   position: absolute;
   top: -5px;
@@ -310,11 +310,11 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   pointer-events: none;
 }
 
-.cache-15w5je2-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
+.emotion-19[data-visible-in-dom='false'] {
   display: none;
 }
 
-.cache-1guc91g-Stack {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -337,7 +337,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-tbrdar-Stack-DropdownContainer {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -365,11 +365,11 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   padding-top: 4px;
 }
 
-.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
+.emotion-23[data-grouped='true'] {
   padding-top: 0;
 }
 
-.cache-113ljh8-Stack {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -392,13 +392,13 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-psepay-DropdownGroupWrapper {
+.emotion-27 {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
 }
 
-.cache-erc09e-DropdownGroup {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -424,21 +424,21 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   margin-bottom: 2px;
 }
 
-.cache-erc09e-DropdownGroup:focus {
+.emotion-29:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
+.emotion-29[data-selectgroup='true'] {
   padding-left: 16px;
   border-left: 4px solid #f9f9fa;
 }
 
-.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
+.emotion-29[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
-.cache-zis5in-StyledText {
+.emotion-31 {
   font-size: 12px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -450,7 +450,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   text-align: left;
 }
 
-.cache-1ej1xix-DropdownItem {
+.emotion-35 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -461,32 +461,32 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   border-radius: 4px;
 }
 
-.cache-1ej1xix-DropdownItem:hover,
-.cache-1ej1xix-DropdownItem:focus {
+.emotion-35:hover,
+.emotion-35:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
   outline: none;
 }
 
-.cache-1ej1xix-DropdownItem[data-selected='true'] {
+.emotion-35[data-selected='true'] {
   background-color: #f1eefc;
 }
 
-.cache-1ej1xix-DropdownItem[disabled] {
+.emotion-35[disabled] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.cache-1ej1xix-DropdownItem[disabled]:hover,
-.cache-1ej1xix-DropdownItem [disabled]:focus {
+.emotion-35[disabled]:hover,
+.emotion-35 [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.cache-qrj8hh-Stack {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -508,7 +508,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1ug7ot4-StyledText {
+.emotion-41 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -520,7 +520,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   text-align: left;
 }
 
-.cache-1p3f4r5-StyledText {
+.emotion-59 {
   color: #727683;
   font-size: 14px;
   font-family: Inter,Asap;
@@ -533,403 +533,407 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
   text-align: left;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      aria-label="test"
-      class="cache-832x4l-SelectInputContainer ebdnz3x1"
+    <form
+      novalidate=""
     >
       <div
-        aria-controls=":rd:"
-        aria-describedby=":rd:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        data-container-full-width="true"
-        tabindex="0"
+        aria-label="test"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="cache-ymc80m-Stack ehpbis70"
+          aria-controls=":rd:"
+          aria-describedby=":rd:"
+          class="emotion-2 emotion-3"
+          data-container-full-width="true"
+          tabindex="0"
         >
           <div
-            aria-expanded="true"
-            aria-haspopup="listbox"
-            aria-labelledby="select bar"
-            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
-            data-disabled="false"
-            data-dropdownvisible="true"
-            data-readonly="false"
-            data-size="large"
-            data-state="neutral"
-            data-testid="select-bar"
-            id=":rc:"
-            role="combobox"
-            tabindex="0"
+            class="emotion-4 emotion-5"
           >
-            <p
-              class="cache-1e8qouo-StyledText e13y3mga0"
-            >
-              Mercury
-            </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca2"
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              aria-labelledby="select bar"
+              class="emotion-6 emotion-7"
+              data-disabled="false"
+              data-dropdownvisible="true"
+              data-readonly="false"
+              data-size="large"
+              data-state="neutral"
+              data-testid="select-bar"
+              id=":rc:"
+              role="combobox"
+              tabindex="0"
             >
-              <button
-                aria-label="clear value"
-                class="cache-1xcp86l-StyledGhostButton e112qvla0"
-                data-testid="clear-all"
-                type="button"
+              <p
+                class="emotion-8 emotion-9"
               >
+                Mercury
+              </p>
+              <div
+                class="emotion-10 emotion-11"
+              >
+                <button
+                  aria-label="clear value"
+                  class="emotion-12 emotion-13"
+                  data-testid="clear-all"
+                  type="button"
+                >
+                  <svg
+                    class="emotion-14 emotion-15"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                    />
+                  </svg>
+                </button>
                 <svg
-                  class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                  class="emotion-16 emotion-15"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
                   />
                 </svg>
-              </button>
-              <svg
-                class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                  fill-rule="evenodd"
-                />
-              </svg>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="eeucz6c8 cache-15w5je2-StyledPopup-StyledPopup-StyledPopup e4h1g861"
-          data-animated="false"
-          data-has-arrow="false"
-          id=":rd:"
-          role="dialog"
-          style="opacity: 1;"
-        >
           <div
-            class="cache-1guc91g-Stack ehpbis70"
+            class="emotion-18 emotion-19 emotion-20"
+            data-animated="false"
+            data-has-arrow="false"
+            id=":rd:"
+            role="dialog"
+            style="opacity: 1;"
           >
             <div
-              class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
-              data-grouped="true"
-              id="select-dropdown"
-              role="listbox"
+              class="emotion-21 emotion-5"
             >
               <div
-                class="cache-113ljh8-Stack ehpbis70"
+                class="emotion-23 emotion-24"
+                data-grouped="true"
+                id="select-dropdown"
+                role="listbox"
               >
                 <div
-                  class="cache-psepay-DropdownGroupWrapper eeucz6c5"
+                  class="emotion-25 emotion-5"
                 >
-                  <button
-                    class="cache-erc09e-DropdownGroup eeucz6c6"
-                    data-selectgroup="false"
-                    data-testid="group-0"
-                    role="group"
-                    tabindex="-1"
-                    type="button"
+                  <div
+                    class="emotion-27 emotion-28"
                   >
-                    <span
-                      class="cache-zis5in-StyledText e13y3mga0"
+                    <button
+                      class="emotion-29 emotion-30"
+                      data-selectgroup="false"
+                      data-testid="group-0"
+                      role="group"
+                      tabindex="-1"
+                      type="button"
                     >
-                      TERRESTRIAL PLANETS
-                    </span>
-                  </button>
+                      <span
+                        class="emotion-31 emotion-9"
+                      >
+                        TERRESTRIAL PLANETS
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-25 emotion-5"
+                    id="items"
+                  >
+                    <button
+                      aria-label="mercury"
+                      class="emotion-35 emotion-36"
+                      data-selected="true"
+                      data-testid="option-mercury"
+                      id="option-0"
+                      role="option"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-mercury"
+                      >
+                        <div
+                          class="emotion-39 emotion-5"
+                        >
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Mercury
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+                    <button
+                      aria-label="venus"
+                      class="emotion-35 emotion-36"
+                      data-selected="false"
+                      data-testid="option-venus"
+                      id="option-1"
+                      role="option"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-venus"
+                      >
+                        <div
+                          class="emotion-39 emotion-5"
+                        >
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Venus
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+                    <button
+                      aria-label="earth"
+                      class="emotion-35 emotion-36"
+                      data-selected="false"
+                      data-testid="option-earth"
+                      id="option-2"
+                      role="option"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-earth"
+                      >
+                        <div
+                          class="emotion-39 emotion-5"
+                        >
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Earth
+                          </span>
+                        </div>
+                        <span
+                          class="emotion-59 emotion-9"
+                        >
+                          Our home planet
+                        </span>
+                      </div>
+                    </button>
+                    <button
+                      aria-label="mars"
+                      class="emotion-35 emotion-36"
+                      data-selected="false"
+                      data-testid="option-mars"
+                      disabled=""
+                      id="option-3"
+                      role="option"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-mars"
+                      >
+                        <div
+                          class="emotion-39 emotion-5"
+                        >
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Mars
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+                    <button
+                      aria-label="pluto"
+                      class="emotion-35 emotion-36"
+                      data-selected="false"
+                      data-testid="option-pluto"
+                      id="option-4"
+                      role="option"
+                      type="button"
+                    >
+                      <div
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-pluto"
+                      >
+                        <div
+                          class="emotion-39 emotion-5"
+                        >
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Pluto
+                          </span>
+                        </div>
+                        <span
+                          class="emotion-59 emotion-9"
+                        >
+                          Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
+                        </span>
+                      </div>
+                    </button>
+                  </div>
                 </div>
                 <div
-                  class="cache-113ljh8-Stack ehpbis70"
-                  id="items"
+                  class="emotion-25 emotion-5"
                 >
-                  <button
-                    aria-label="mercury"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="true"
-                    data-testid="option-mercury"
-                    id="option-0"
-                    role="option"
-                    type="button"
+                  <div
+                    class="emotion-27 emotion-28"
                   >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-mercury"
+                    <button
+                      class="emotion-29 emotion-30"
+                      data-selectgroup="false"
+                      data-testid="group-1"
+                      role="group"
+                      tabindex="-1"
+                      type="button"
                     >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Mercury
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="venus"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-venus"
-                    id="option-1"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-venus"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Venus
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="earth"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-earth"
-                    id="option-2"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-earth"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Earth
-                        </span>
-                      </div>
                       <span
-                        class="cache-1p3f4r5-StyledText e13y3mga0"
+                        class="emotion-31 emotion-9"
                       >
-                        Our home planet
+                        JOVIAN PLANETS
                       </span>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="mars"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-mars"
-                    disabled=""
-                    id="option-3"
-                    role="option"
-                    type="button"
+                    </button>
+                  </div>
+                  <div
+                    class="emotion-25 emotion-5"
+                    id="items"
                   >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-mars"
+                    <button
+                      aria-label="jupiter"
+                      class="emotion-35 emotion-36"
+                      data-selected="false"
+                      data-testid="option-jupiter"
+                      id="option-0"
+                      role="option"
+                      type="button"
                     >
                       <div
-                        class="cache-qrj8hh-Stack ehpbis70"
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-jupiter"
                       >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
+                        <div
+                          class="emotion-39 emotion-5"
                         >
-                          Mars
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Jupiter
+                          </span>
+                        </div>
+                        <span
+                          class="emotion-59 emotion-9"
+                        >
+                          Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
                         </span>
                       </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="pluto"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-pluto"
-                    id="option-4"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-pluto"
+                    </button>
+                    <button
+                      aria-label="saturn"
+                      class="emotion-35 emotion-36"
+                      data-selected="false"
+                      data-testid="option-saturn"
+                      id="option-1"
+                      role="option"
+                      type="button"
                     >
                       <div
-                        class="cache-qrj8hh-Stack ehpbis70"
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-saturn"
                       >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
+                        <div
+                          class="emotion-39 emotion-5"
                         >
-                          Pluto
-                        </span>
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Saturn
+                          </span>
+                        </div>
                       </div>
-                      <span
-                        class="cache-1p3f4r5-StyledText e13y3mga0"
-                      >
-                        Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
-                      </span>
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="cache-113ljh8-Stack ehpbis70"
-              >
-                <div
-                  class="cache-psepay-DropdownGroupWrapper eeucz6c5"
-                >
-                  <button
-                    class="cache-erc09e-DropdownGroup eeucz6c6"
-                    data-selectgroup="false"
-                    data-testid="group-1"
-                    role="group"
-                    tabindex="-1"
-                    type="button"
-                  >
-                    <span
-                      class="cache-zis5in-StyledText e13y3mga0"
-                    >
-                      JOVIAN PLANETS
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="cache-113ljh8-Stack ehpbis70"
-                  id="items"
-                >
-                  <button
-                    aria-label="jupiter"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-jupiter"
-                    id="option-0"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-jupiter"
+                    </button>
+                    <button
+                      aria-label="uranus"
+                      class="emotion-35 emotion-36"
+                      data-selected="false"
+                      data-testid="option-uranus"
+                      id="option-2"
+                      role="option"
+                      type="button"
                     >
                       <div
-                        class="cache-qrj8hh-Stack ehpbis70"
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-uranus"
                       >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
+                        <div
+                          class="emotion-39 emotion-5"
                         >
-                          Jupiter
-                        </span>
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Uranus
+                          </span>
+                        </div>
                       </div>
-                      <span
-                        class="cache-1p3f4r5-StyledText e13y3mga0"
-                      >
-                        Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
-                      </span>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="saturn"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-saturn"
-                    id="option-1"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-saturn"
+                    </button>
+                    <button
+                      aria-label="neptune"
+                      class="emotion-35 emotion-36"
+                      data-selected="false"
+                      data-testid="option-neptune"
+                      id="option-3"
+                      role="option"
+                      type="button"
                     >
                       <div
-                        class="cache-qrj8hh-Stack ehpbis70"
+                        class="emotion-4 emotion-5"
+                        data-testid="option-stack-neptune"
                       >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
+                        <div
+                          class="emotion-39 emotion-5"
                         >
-                          Saturn
-                        </span>
+                          <span
+                            class="emotion-41 emotion-9"
+                          >
+                            Neptune
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="uranus"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-uranus"
-                    id="option-2"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-uranus"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Uranus
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="neptune"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-neptune"
-                    id="option-3"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-neptune"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Neptune
-                        </span>
-                      </div>
-                    </div>
-                  </button>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`SelectInputField should render correctly 1`] = `
+exports[`SelectInputField > should render correctly 1`] = `
 <DocumentFragment>
-  .cache-832x4l-SelectInputContainer {
+  .emotion-0 {
   width: 100%;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-2 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-2[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-ymc80m-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -952,7 +956,7 @@ exports[`SelectInputField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -985,61 +989,61 @@ exports[`SelectInputField should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 32px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 48px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
+.emotion-6:not([data-disabled='true']):hover,
+.emotion-6:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
+.emotion-6[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-11pdlhi-StyledText {
+.emotion-8 {
   color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1051,7 +1055,7 @@ exports[`SelectInputField should render correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-wzr69d-Stack-StateStack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1079,7 +1083,7 @@ exports[`SelectInputField should render correctly 1`] = `
   display: flex;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles {
+.emotion-12 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -1088,86 +1092,90 @@ exports[`SelectInputField should render correctly 1`] = `
   min-height: 16px;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles .fillStroke {
+.emotion-12 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      aria-label="test"
-      class="cache-832x4l-SelectInputContainer ebdnz3x1"
+    <form
+      novalidate=""
     >
       <div
-        aria-controls=":r1:"
-        aria-describedby=":r1:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        data-container-full-width="true"
-        tabindex="0"
+        aria-label="test"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="cache-ymc80m-Stack ehpbis70"
+          aria-controls=":r1:"
+          aria-describedby=":r1:"
+          class="emotion-2 emotion-3"
+          data-container-full-width="true"
+          tabindex="0"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-labelledby="select bar"
-            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
-            data-disabled="false"
-            data-dropdownvisible="false"
-            data-readonly="false"
-            data-size="large"
-            data-state="neutral"
-            data-testid="select-bar"
-            id=":r0:"
-            role="combobox"
-            tabindex="0"
+            class="emotion-4 emotion-5"
           >
-            <p
-              class="cache-11pdlhi-StyledText e13y3mga0"
-            >
-              Select item
-            </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca2"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="select bar"
+              class="emotion-6 emotion-7"
+              data-disabled="false"
+              data-dropdownvisible="false"
+              data-readonly="false"
+              data-size="large"
+              data-state="neutral"
+              data-testid="select-bar"
+              id=":r0:"
+              role="combobox"
+              tabindex="0"
             >
-              <svg
-                class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="emotion-8 emotion-9"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                  fill-rule="evenodd"
-                />
-              </svg>
+                Select item
+              </p>
+              <div
+                class="emotion-10 emotion-11"
+              >
+                <svg
+                  class="emotion-12 emotion-13"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`SelectInputField should render correctly disabled 1`] = `
+exports[`SelectInputField > should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-832x4l-SelectInputContainer {
+  .emotion-0 {
   width: 100%;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-2 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-2[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-ymc80m-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1190,7 +1198,7 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1223,61 +1231,61 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 32px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 48px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
+.emotion-6:not([data-disabled='true']):hover,
+.emotion-6:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
+.emotion-6[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-1ea5b0f-StyledText {
+.emotion-8 {
   color: #b5b7bd;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1289,7 +1297,7 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   text-decoration: none;
 }
 
-.cache-wzr69d-Stack-StateStack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1317,7 +1325,7 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   display: flex;
 }
 
-.cache-l7q3qa-StyledIcon-sizeStyles {
+.emotion-12 {
   vertical-align: middle;
   fill: #b5b7bd;
   height: 16px;
@@ -1326,86 +1334,90 @@ exports[`SelectInputField should render correctly disabled 1`] = `
   min-height: 16px;
 }
 
-.cache-l7q3qa-StyledIcon-sizeStyles .fillStroke {
+.emotion-12 .fillStroke {
   stroke: #b5b7bd;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      aria-label="test"
-      class="cache-832x4l-SelectInputContainer ebdnz3x1"
+    <form
+      novalidate=""
     >
       <div
-        aria-controls=":r4:"
-        aria-describedby=":r4:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        data-container-full-width="true"
-        tabindex="0"
+        aria-label="test"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="cache-ymc80m-Stack ehpbis70"
+          aria-controls=":r4:"
+          aria-describedby=":r4:"
+          class="emotion-2 emotion-3"
+          data-container-full-width="true"
+          tabindex="0"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-labelledby="select bar"
-            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
-            data-disabled="true"
-            data-dropdownvisible="false"
-            data-readonly="false"
-            data-size="large"
-            data-state="neutral"
-            data-testid="select-bar"
-            id=":r3:"
-            role="combobox"
-            tabindex="0"
+            class="emotion-4 emotion-5"
           >
-            <p
-              class="cache-1ea5b0f-StyledText e13y3mga0"
-            >
-              Select item
-            </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca2"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="select bar"
+              class="emotion-6 emotion-7"
+              data-disabled="true"
+              data-dropdownvisible="false"
+              data-readonly="false"
+              data-size="large"
+              data-state="neutral"
+              data-testid="select-bar"
+              id=":r3:"
+              role="combobox"
+              tabindex="0"
             >
-              <svg
-                class="cache-l7q3qa-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="emotion-8 emotion-9"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                  fill-rule="evenodd"
-                />
-              </svg>
+                Select item
+              </p>
+              <div
+                class="emotion-10 emotion-11"
+              >
+                <svg
+                  class="emotion-12 emotion-13"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`SelectInputField should render correctly grouped 1`] = `
+exports[`SelectInputField > should render correctly grouped 1`] = `
 <DocumentFragment>
-  .cache-832x4l-SelectInputContainer {
+  .emotion-0 {
   width: 100%;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-2 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-2[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-ymc80m-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1428,7 +1440,7 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1461,61 +1473,61 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   border-radius: 4px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 32px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 48px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
+.emotion-6:not([data-disabled='true']):hover,
+.emotion-6:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
+.emotion-6[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-11pdlhi-StyledText {
+.emotion-8 {
   color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1527,7 +1539,7 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   text-decoration: none;
 }
 
-.cache-wzr69d-Stack-StateStack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1555,7 +1567,7 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   display: flex;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles {
+.emotion-12 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -1564,86 +1576,90 @@ exports[`SelectInputField should render correctly grouped 1`] = `
   min-height: 16px;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles .fillStroke {
+.emotion-12 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      aria-label="test"
-      class="cache-832x4l-SelectInputContainer ebdnz3x1"
+    <form
+      novalidate=""
     >
       <div
-        aria-controls=":ra:"
-        aria-describedby=":ra:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        data-container-full-width="true"
-        tabindex="0"
+        aria-label="test"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="cache-ymc80m-Stack ehpbis70"
+          aria-controls=":ra:"
+          aria-describedby=":ra:"
+          class="emotion-2 emotion-3"
+          data-container-full-width="true"
+          tabindex="0"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-labelledby="select bar"
-            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
-            data-disabled="false"
-            data-dropdownvisible="false"
-            data-readonly="false"
-            data-size="large"
-            data-state="neutral"
-            data-testid="select-bar"
-            id=":r9:"
-            role="combobox"
-            tabindex="0"
+            class="emotion-4 emotion-5"
           >
-            <p
-              class="cache-11pdlhi-StyledText e13y3mga0"
-            >
-              Select item
-            </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca2"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="select bar"
+              class="emotion-6 emotion-7"
+              data-disabled="false"
+              data-dropdownvisible="false"
+              data-readonly="false"
+              data-size="large"
+              data-state="neutral"
+              data-testid="select-bar"
+              id=":r9:"
+              role="combobox"
+              tabindex="0"
             >
-              <svg
-                class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="emotion-8 emotion-9"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                  fill-rule="evenodd"
-                />
-              </svg>
+                Select item
+              </p>
+              <div
+                class="emotion-10 emotion-11"
+              >
+                <svg
+                  class="emotion-12 emotion-13"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`SelectInputField should render correctly multiselect 1`] = `
+exports[`SelectInputField > should render correctly multiselect 1`] = `
 <DocumentFragment>
-  .cache-832x4l-SelectInputContainer {
+  .emotion-0 {
   width: 100%;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-2 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-2[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-ymc80m-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1666,7 +1682,7 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1699,61 +1715,61 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   border-radius: 4px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 32px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 48px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
+.emotion-6:not([data-disabled='true']):hover,
+.emotion-6:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
+.emotion-6[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-11pdlhi-StyledText {
+.emotion-8 {
   color: #727683;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -1765,7 +1781,7 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   text-decoration: none;
 }
 
-.cache-wzr69d-Stack-StateStack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1793,7 +1809,7 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   display: flex;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles {
+.emotion-12 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -1802,104 +1818,90 @@ exports[`SelectInputField should render correctly multiselect 1`] = `
   min-height: 16px;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles .fillStroke {
+.emotion-12 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      aria-label="test"
-      class="cache-832x4l-SelectInputContainer ebdnz3x1"
+    <form
+      novalidate=""
     >
       <div
-        aria-controls=":r7:"
-        aria-describedby=":r7:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        data-container-full-width="true"
-        tabindex="0"
+        aria-label="test"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="cache-ymc80m-Stack ehpbis70"
+          aria-controls=":r7:"
+          aria-describedby=":r7:"
+          class="emotion-2 emotion-3"
+          data-container-full-width="true"
+          tabindex="0"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-labelledby="select bar"
-            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
-            data-disabled="false"
-            data-dropdownvisible="false"
-            data-readonly="false"
-            data-size="large"
-            data-state="neutral"
-            data-testid="select-bar"
-            id=":r6:"
-            role="combobox"
-            tabindex="0"
+            class="emotion-4 emotion-5"
           >
-            <p
-              class="cache-11pdlhi-StyledText e13y3mga0"
-            >
-              Select item
-            </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca2"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="select bar"
+              class="emotion-6 emotion-7"
+              data-disabled="false"
+              data-dropdownvisible="false"
+              data-readonly="false"
+              data-size="large"
+              data-state="neutral"
+              data-testid="select-bar"
+              id=":r6:"
+              role="combobox"
+              tabindex="0"
             >
-              <svg
-                class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+              <p
+                class="emotion-8 emotion-9"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                  fill-rule="evenodd"
-                />
-              </svg>
+                Select item
+              </p>
+              <div
+                class="emotion-10 emotion-11"
+              >
+                <svg
+                  class="emotion-12 emotion-13"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
 
-exports[`SelectInputField should trigger events 1`] = `
+exports[`SelectInputField > should trigger events 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(0px, 4px, 0);
-    -moz-transform: translate3d(0px, 4px, 0);
-    -ms-transform: translate3d(0px, 4px, 0);
-    transform: translate3d(0px, 4px, 0);
-  }
-}
-
-.cache-832x4l-SelectInputContainer {
+  .emotion-0 {
   width: 100%;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer {
+.emotion-2 {
   display: inherit;
 }
 
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+.emotion-2[data-container-full-width='true'] {
   width: 100%;
 }
 
-.cache-ymc80m-Stack {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1922,7 +1924,7 @@ exports[`SelectInputField should trigger events 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1955,61 +1957,61 @@ exports[`SelectInputField should trigger events 1`] = `
   border-radius: 4px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-readonly='true'] {
+.emotion-6[data-readonly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
   cursor: default;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-disabled='true'] {
+.emotion-6[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='small'] {
+.emotion-6[data-size='small'] {
   height: 32px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='medium'] {
+.emotion-6[data-size='medium'] {
   height: 40px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-size='large'] {
+.emotion-6[data-size='large'] {
   height: 48px;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='neutral'] {
+.emotion-6[data-state='neutral'] {
   border: 1px solid #d9dadd;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='success'] {
+.emotion-6[data-state='success'] {
   border: 1px solid #22674e;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-state='danger'] {
+.emotion-6[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):hover {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):not([data-readonly]):active {
+.emotion-6:not([data-disabled='true']):not([data-readonly]):active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):hover,
-.cache-1afrn3t-Stack-StyledInputWrapper:not([data-disabled='true']):focus {
+.emotion-6:not([data-disabled='true']):hover,
+.emotion-6:not([data-disabled='true']):focus {
   border-color: #792dd4;
   outline: none;
 }
 
-.cache-1afrn3t-Stack-StyledInputWrapper[data-dropdownvisible='true'] {
+.emotion-6[data-dropdownvisible='true'] {
   border-color: #792dd4;
 }
 
-.cache-1e8qouo-StyledText {
+.emotion-8 {
   font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -2020,7 +2022,7 @@ exports[`SelectInputField should trigger events 1`] = `
   text-decoration: none;
 }
 
-.cache-wzr69d-Stack-StateStack {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2048,7 +2050,7 @@ exports[`SelectInputField should trigger events 1`] = `
   display: flex;
 }
 
-.cache-1xcp86l-StyledGhostButton {
+.emotion-12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2087,22 +2089,22 @@ exports[`SelectInputField should trigger events 1`] = `
   color: #3f4250;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover {
+.emotion-12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.cache-1xcp86l-StyledGhostButton:hover,
-.cache-1xcp86l-StyledGhostButton:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles {
+.emotion-14 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -2111,12 +2113,12 @@ exports[`SelectInputField should trigger events 1`] = `
   min-height: 16px;
 }
 
-.cache-1dnbbhk-StyledIcon-sizeStyles .fillStroke {
+.emotion-14 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles {
+.emotion-16 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -2125,659 +2127,87 @@ exports[`SelectInputField should trigger events 1`] = `
   min-height: 16px;
 }
 
-.cache-1xcfd85-StyledIcon-sizeStyles .fillStroke {
+.emotion-16 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.cache-1l0x2o-StyledPopup-StyledPopup-StyledPopup {
-  background: #151a2d;
-  color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
-  text-align: center;
-  position: absolute;
-  max-width: 0px;
-  overflow-wrap: break-word;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transform: translate3d(0px, 4px, 0);
-  -moz-transform: translate3d(0px, 4px, 0);
-  -ms-transform: translate3d(0px, 4px, 0);
-  transform: translate3d(0px, 4px, 0);
-  width: 100%;
-  background-color: #ffffff;
-  color: #3f4250;
-  box-shadow: 0px 4px 24px 6px #d9dadd66;
-  padding: 0;
-}
-
-.cache-1l0x2o-StyledPopup-StyledPopup-StyledPopup[data-animated='true'] {
-  -webkit-animation: 0ms animation-0 forwards;
-  animation: 0ms animation-0 forwards;
-}
-
-.cache-1l0x2o-StyledPopup-StyledPopup-StyledPopup[data-has-arrow='true']::after {
-  content: ' ';
-  position: absolute;
-  top: -5px;
-  left: 0px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  margin-left: -8px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: #151a2d transparent transparent transparent;
-  pointer-events: none;
-}
-
-.cache-1l0x2o-StyledPopup-StyledPopup-StyledPopup[data-visible-in-dom='false'] {
-  display: none;
-}
-
-.cache-1guc91g-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-tbrdar-Stack-DropdownContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  max-height: 256px;
-  overflow-y: scroll;
-  padding: 0;
-  padding-bottom: 4px;
-  padding-top: 4px;
-}
-
-.cache-tbrdar-Stack-DropdownContainer[data-grouped='true'] {
-  padding-top: 0;
-}
-
-.cache-113ljh8-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-psepay-DropdownGroupWrapper {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-}
-
-.cache-erc09e-DropdownGroup {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  background-color: #f9f9fa;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  padding-right: 16px;
-  padding-left: 16px;
-  height: 32px;
-  text-align: left;
-  margin-bottom: 2px;
-}
-
-.cache-erc09e-DropdownGroup:focus {
-  background-color: #f9f9fa;
-  outline: none;
-}
-
-.cache-erc09e-DropdownGroup[data-selectgroup='true'] {
-  padding-left: 16px;
-  border-left: 4px solid #f9f9fa;
-}
-
-.cache-erc09e-DropdownGroup[data-selectgroup='true']:focus {
-  background-color: #e9eaeb;
-}
-
-.cache-zis5in-StyledText {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.cache-1ej1xix-DropdownItem {
-  text-align: left;
-  border: none;
-  background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: #3f4250;
-  border-radius: 4px;
-}
-
-.cache-1ej1xix-DropdownItem:hover,
-.cache-1ej1xix-DropdownItem:focus {
-  background-color: #f1eefc;
-  color: #641cb3;
-  cursor: pointer;
-  outline: none;
-}
-
-.cache-1ej1xix-DropdownItem[data-selected='true'] {
-  background-color: #f1eefc;
-}
-
-.cache-1ej1xix-DropdownItem[disabled] {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-}
-
-.cache-1ej1xix-DropdownItem[disabled]:hover,
-.cache-1ej1xix-DropdownItem [disabled]:focus {
-  background-color: #f3f3f4;
-  color: #b5b7bd;
-  cursor: not-allowed;
-  outline: none;
-}
-
-.cache-qrj8hh-Stack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 4px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.cache-1ug7ot4-StyledText {
-  font-size: 16px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-.cache-1p3f4r5-StyledText {
-  color: #727683;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: left;
-}
-
-<form
-    novalidate=""
+<div
+    data-testid="testing"
   >
-    <div
-      aria-label="test"
-      class="cache-832x4l-SelectInputContainer ebdnz3x1"
+    <form
+      novalidate=""
     >
       <div
-        aria-controls=":r10:"
-        aria-describedby=":r10:"
-        class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-        data-container-full-width="true"
-        tabindex="0"
+        aria-label="test"
+        class="emotion-0 emotion-1"
       >
         <div
-          class="cache-ymc80m-Stack ehpbis70"
+          aria-controls=":r10:"
+          aria-describedby=":r10:"
+          class="emotion-2 emotion-3"
+          data-container-full-width="true"
+          tabindex="0"
         >
           <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-labelledby="select bar"
-            class="cache-1afrn3t-Stack-StyledInputWrapper ejy0aca1"
-            data-disabled="false"
-            data-dropdownvisible="false"
-            data-readonly="false"
-            data-size="large"
-            data-state="neutral"
-            data-testid="select-bar"
-            id=":rv:"
-            role="combobox"
-            tabindex="0"
+            class="emotion-4 emotion-5"
           >
-            <p
-              class="cache-1e8qouo-StyledText e13y3mga0"
-            >
-              Mercury
-            </p>
             <div
-              class="cache-wzr69d-Stack-StateStack ejy0aca2"
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="select bar"
+              class="emotion-6 emotion-7"
+              data-disabled="false"
+              data-dropdownvisible="false"
+              data-readonly="false"
+              data-size="large"
+              data-state="neutral"
+              data-testid="select-bar"
+              id=":rv:"
+              role="combobox"
+              tabindex="0"
             >
-              <button
-                aria-label="clear value"
-                class="cache-1xcp86l-StyledGhostButton e112qvla0"
-                data-testid="clear-all"
-                type="button"
+              <p
+                class="emotion-8 emotion-9"
               >
+                Mercury
+              </p>
+              <div
+                class="emotion-10 emotion-11"
+              >
+                <button
+                  aria-label="clear value"
+                  class="emotion-12 emotion-13"
+                  data-testid="clear-all"
+                  type="button"
+                >
+                  <svg
+                    class="emotion-14 emotion-15"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                    />
+                  </svg>
+                </button>
                 <svg
-                  class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                  class="emotion-16 emotion-15"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+                    clip-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
                   />
                 </svg>
-              </button>
-              <svg
-                class="cache-1xcfd85-StyledIcon-sizeStyles e1gt4cfo0"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div
-          class="eeucz6c8 cache-1l0x2o-StyledPopup-StyledPopup-StyledPopup e4h1g861"
-          data-animated="false"
-          data-has-arrow="false"
-          id=":r10:"
-          role="dialog"
-          style="opacity: 1;"
-        >
-          <div
-            class="cache-1guc91g-Stack ehpbis70"
-          >
-            <div
-              class="cache-tbrdar-Stack-DropdownContainer eeucz6c7"
-              data-grouped="true"
-              id="select-dropdown"
-              role="listbox"
-            >
-              <div
-                class="cache-113ljh8-Stack ehpbis70"
-              >
-                <div
-                  class="cache-psepay-DropdownGroupWrapper eeucz6c5"
-                >
-                  <button
-                    class="cache-erc09e-DropdownGroup eeucz6c6"
-                    data-selectgroup="false"
-                    data-testid="group-0"
-                    role="group"
-                    tabindex="-1"
-                    type="button"
-                  >
-                    <span
-                      class="cache-zis5in-StyledText e13y3mga0"
-                    >
-                      TERRESTRIAL PLANETS
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="cache-113ljh8-Stack ehpbis70"
-                  id="items"
-                >
-                  <button
-                    aria-label="mercury"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="true"
-                    data-testid="option-mercury"
-                    id="option-0"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-mercury"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Mercury
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="venus"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-venus"
-                    id="option-1"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-venus"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Venus
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="earth"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-earth"
-                    id="option-2"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-earth"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Earth
-                        </span>
-                      </div>
-                      <span
-                        class="cache-1p3f4r5-StyledText e13y3mga0"
-                      >
-                        Our home planet
-                      </span>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="mars"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-mars"
-                    disabled=""
-                    id="option-3"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-mars"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Mars
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="pluto"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-pluto"
-                    id="option-4"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-pluto"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Pluto
-                        </span>
-                      </div>
-                      <span
-                        class="cache-1p3f4r5-StyledText e13y3mga0"
-                      >
-                        Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
-                      </span>
-                    </div>
-                  </button>
-                </div>
-              </div>
-              <div
-                class="cache-113ljh8-Stack ehpbis70"
-              >
-                <div
-                  class="cache-psepay-DropdownGroupWrapper eeucz6c5"
-                >
-                  <button
-                    class="cache-erc09e-DropdownGroup eeucz6c6"
-                    data-selectgroup="false"
-                    data-testid="group-1"
-                    role="group"
-                    tabindex="-1"
-                    type="button"
-                  >
-                    <span
-                      class="cache-zis5in-StyledText e13y3mga0"
-                    >
-                      JOVIAN PLANETS
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="cache-113ljh8-Stack ehpbis70"
-                  id="items"
-                >
-                  <button
-                    aria-label="jupiter"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-jupiter"
-                    id="option-0"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-jupiter"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Jupiter
-                        </span>
-                      </div>
-                      <span
-                        class="cache-1p3f4r5-StyledText e13y3mga0"
-                      >
-                        Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
-                      </span>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="saturn"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-saturn"
-                    id="option-1"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-saturn"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Saturn
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="uranus"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-uranus"
-                    id="option-2"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-uranus"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Uranus
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    aria-label="neptune"
-                    class="cache-1ej1xix-DropdownItem eeucz6c4"
-                    data-selected="false"
-                    data-testid="option-neptune"
-                    id="option-3"
-                    role="option"
-                    type="button"
-                  >
-                    <div
-                      class="cache-ymc80m-Stack ehpbis70"
-                      data-testid="option-stack-neptune"
-                    >
-                      <div
-                        class="cache-qrj8hh-Stack ehpbis70"
-                      >
-                        <span
-                          class="cache-1ug7ot4-StyledText e13y3mga0"
-                        >
-                          Neptune
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </DocumentFragment>
 `;
