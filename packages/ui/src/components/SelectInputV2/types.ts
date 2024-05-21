@@ -27,6 +27,11 @@ export type ReducerAction =
     }
   | { type: 'clearAll' }
   | { type: 'update' }
+  | {
+      type: 'reset'
+      selectedValues: ReducerState['selectedValues']
+      selectedGroups: ReducerState['selectedGroups']
+    }
 
 export const INPUT_SIZE_HEIGHT = {
   large: 48,

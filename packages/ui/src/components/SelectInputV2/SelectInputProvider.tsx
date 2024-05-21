@@ -2,6 +2,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useReducer,
   useState,
@@ -254,6 +255,12 @@ export const SelectInputProvider = <T extends boolean>({
             )
           }),
         }
+      case 'reset':
+        return {
+          selectedValues: action.selectedValues,
+          allSelected: false,
+          selectedGroups: action.selectedGroups,
+        }
       default:
         return state
     }
@@ -264,6 +271,15 @@ export const SelectInputProvider = <T extends boolean>({
     allSelected: false,
     selectedGroups,
   })
+
+  useEffect(() => {
+    setSelectedData({
+      type: 'reset',
+      selectedGroups,
+      selectedValues: currentValue,
+    })
+  }, [currentValue, selectedGroups])
+
   const providerValue = useMemo(
     () =>
       ({
