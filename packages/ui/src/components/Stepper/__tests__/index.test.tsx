@@ -24,7 +24,7 @@ describe('Stepper', () => {
 
   test('renders correctly with animation', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper animated>
+      <Stepper animated selected={2}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -95,6 +95,7 @@ describe('Stepper', () => {
       {
         transform: async () => {
           await userEvent.click(screen.getByTestId('stepper-step-1'))
+          await userEvent.click(screen.getByTestId('stepper-step-2')) // should do nothing
         },
       },
     ))

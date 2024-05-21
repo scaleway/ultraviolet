@@ -35,10 +35,10 @@ export const useStepper = () => useContext(StepperContext)
 export const StepperProvider = ({
   children,
   interactive,
-  selected = 1,
+  selected,
   animated,
-  labelPosition = 'bottom',
-  size = 'medium',
+  labelPosition,
+  size,
 }: StepperProviderProps) => {
   const [step, setStep] = useState(selected)
   const value = useMemo(

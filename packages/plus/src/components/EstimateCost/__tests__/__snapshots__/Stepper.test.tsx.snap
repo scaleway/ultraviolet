@@ -922,14 +922,15 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   width: 100%;
 }
 
+.cache-h5mwdc-Input {
 .emotion-112 {
   outline: none;
   border: none;
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
-  font-family: Inter,Asap,sans-serif;
+  font-size: 16px;
+  font-family: Inter,Asap;
   font-weight: Regular;
   line-height: 24px;
   text-align: center;
@@ -937,58 +938,70 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   background: none;
 }
 
+.cache-h5mwdc-Input[data-has-unit='true'] {
 .emotion-112[data-has-unit='true'] {
   text-align: left;
   padding: 8px 0 8px 8px;
 }
 
+.cache-h5mwdc-Input::-webkit-outer-spin-button,
+.cache-h5mwdc-Input::-webkit-inner-spin-button {
 .emotion-112::-webkit-outer-spin-button,
 .emotion-112::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+.cache-h5mwdc-Input {
 .emotion-112 {
   -moz-appearance: textfield;
 }
 
+.cache-h5mwdc-Input[data-size='small'] {
 .emotion-112[data-size='small'] {
   height: 30px;
 }
 
+.cache-h5mwdc-Input[data-size='medium'] {
 .emotion-112[data-size='medium'] {
   height: 38px;
 }
 
+.cache-h5mwdc-Input[data-size='large'] {
 .emotion-112[data-size='large'] {
   height: 46px;
-  font-size: 16px;
 }
 
+.cache-h5mwdc-Input:-moz-read-only {
 .emotion-112:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:read-only {
 .emotion-112:read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:-moz-read-only~.e1b9qdjy2 {
 .emotion-112:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:read-only~.e1b9qdjy2 {
 .emotion-112:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:disabled {
 .emotion-112:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
+.cache-h5mwdc-Input:disabled~.e1b9qdjy2 {
 .emotion-112:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
@@ -998,6 +1011,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   user-select: none;
 }
 
+.cache-h5mwdc-Input:placeholder-shown~.e1b9qdjy2 {
 .emotion-112:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
 }
@@ -1064,6 +1078,404 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
     data-testid="testing"
   >
     <div
+      class="cache-1q6v71h-OverlayContainer e1p62vjs2"
+      data-testid="summary-overlay"
+    >
+      <ul
+        class="cache-lxo6w7-List e1p62vjs1"
+      >
+        <li
+          class="cache-15sn1rs-OverlayRow e1xb5k8j3"
+        >
+          <div
+            class="cache-4d2pis-Cell-Cell e1kzy2rr8"
+            width="inherit"
+          >
+            <div>
+              <div
+                class="cache-1guc91g-Stack ehpbis70"
+              >
+                <div
+                  class="cache-1tfad1c-Stack ehpbis70"
+                >
+                  <p
+                    class="cache-1e8qouo-StyledText e13y3mga0"
+                  >
+                    NumberInput
+                  </p>
+                </div>
+              </div>
+              <div
+                class="cache-2sj51q-StyledResourceName-StyledResourceName e1kzy2rr7"
+              >
+                <div
+                  class="cache-11xji2n-ItemResourceName e1xb5k8j1"
+                >
+                  <div
+                    class="cache-1qj6qoc-StyledRegular e1l9k4qo0"
+                  >
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="cache-upbfm5-OverlayRow e1xb5k8j3"
+        >
+          <div
+            class="cache-irytw7-Stack ehpbis70"
+          >
+            <svg
+              class="cache-1t6yapu-StyledIcon-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            Estimated cost
+          </div>
+          <div
+            class="cache-11xji2n-ItemResourceName e1xb5k8j1"
+          >
+            <div
+              class="e1bhvxf60 cache-12uv9zd-StyledRegular-StyledStrong e1l9k4qo0"
+            >
+              <span
+                class="cache-1bp6ks2-LineThrough e1d1k6i0"
+              >
+                €0.00/Hour(s)
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <span
+      class="cache-1e8qouo-StyledText e13y3mga0"
+    >
+      This summary provides a cost estimation based on your configuration, the amount of time you expect to use the resource for, and the scale of your expected usage. For the purposes of this calculation, we consider that 1 month equals to 730 hours.
+    </span>
+    <div>
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        class="cache-l49cjj-StyledTable-spacedChildren e1xb5k8j14"
+        data-testid="summary"
+      >
+        <colgroup>
+          <col />
+          <col
+            class="cache-d78yft-PriceCol e1xb5k8j12"
+          />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>
+              <h3
+                class="cache-gy9ug9-Title e1xb5k8j8"
+              >
+                <svg
+                  class="excc3v71 cache-1vvwj8w-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Estimated cost
+              </h3>
+            </th>
+            <th
+              class="cache-x833v6-StyledPriceCell-Cell-StyledPriceCell-PriceCell excc3v70"
+            >
+              <div
+                class="cache-1e9mbjr-TimeCell e1xb5k8j6"
+              >
+                <div
+                  class="cache-1y681pp-StyledRow e3f5lzv0"
+                >
+                  <div
+                    class="cache-igijr9-CustomTextInput epio27v1"
+                  >
+                    <div
+                      class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
+                    >
+                      <input
+                        autocomplete="on"
+                        class="cache-1ws5f5r-StyledInput el3h3g92"
+                        max="99999"
+                        min="1"
+                        name="iteration-value"
+                        placeholder="0"
+                        style="height: 40px;"
+                        type="number"
+                        value="1"
+                      />
+                    </div>
+                    <div
+                      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+                    >
+                      <div
+                        class="cache-1aqops6-StyledError el3h3g94"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="epio27v0 epio27v0 cache-1hwzy7c-StyledContainer-container-StyledContainer-CustomSelectInput-CustomSelectInput e11gt5pw4"
+                    data-testid="select-input-iteration-unit"
+                  >
+                    <span
+                      class="cache-1f43avz-a11yText-A11yText"
+                      id="react-select-2-live-region"
+                    />
+                    <span
+                      aria-atomic="false"
+                      aria-live="polite"
+                      aria-relevant="additions text"
+                      class="cache-1f43avz-a11yText-A11yText"
+                      role="log"
+                    />
+                    <div
+                      class=" cache-zhj3xq-control"
+                    >
+                      <div
+                        class=" cache-1827o3p-ValueContainer"
+                      >
+                        <label
+                          aria-live="assertive"
+                          as="label"
+                          class="cache-1bxh4i1-StyledPlaceholder e11gt5pw2"
+                          for=":r3:"
+                        >
+                          Select...
+                        </label>
+                        <div
+                          class=" cache-1deka0w-singleValue"
+                        >
+                          Hour(s)
+                        </div>
+                        <div
+                          class="cache-1xwier8-inputStyles"
+                          data-value=""
+                        >
+                          <input
+                            aria-activedescendant=""
+                            aria-autocomplete="list"
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            class=""
+                            id=":r3:"
+                            role="combobox"
+                            spellcheck="false"
+                            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class=" cache-ralm3g-IndicatorsContainer"
+                      >
+                        <span
+                          class=" cache-dh2bvv-indicatorSeparator"
+                        />
+                        <div
+                          aria-hidden="true"
+                          class=" cache-1xc3v61-indicatorContainer"
+                        >
+                          <div
+                            class="cache-irytw7-Stack ehpbis70"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <input
+                      name="iteration-unit"
+                      type="hidden"
+                      value="hours"
+                    />
+                    <div
+                      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+                    >
+                      <div
+                        class="cache-1aqops6-StyledError e11gt5pw3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="cache-11ls5i6-StyledTr e1xb5k8j4"
+          >
+            <td
+              class="cache-19b723i-Cell e1xb5k8j11"
+              width="530px"
+            >
+              <div
+                class="cache-1meok3w-StyledLeftSide e1xb5k8j2"
+              >
+                <div
+                  class="cache-1guc91g-Stack ehpbis70"
+                >
+                  <div
+                    class="cache-1tfad1c-Stack ehpbis70"
+                  >
+                    <p
+                      class="cache-1e8qouo-StyledText e13y3mga0"
+                    >
+                      NumberInput
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="cache-12tubxd-StyledResourceName e1kzy2rr7"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div>
+                      <div
+                        class="cache-snr60n-Container e1b9qdjy0"
+                        data-disabled="false"
+                        data-error="false"
+                        data-success="false"
+                        data-unit="false"
+                      >
+                        <div
+                          class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
+                          data-size="small"
+                        >
+                          <button
+                            aria-label="minus"
+                            class="cache-dyxj60-StyledGhostButton e112qvla0"
+                            type="button"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
+                        >
+                          <input
+                            class="cache-h5mwdc-Input e1b9qdjy1"
+                            data-has-unit="false"
+                            data-size="small"
+                            id=":r6:"
+                            max="100"
+                            min="0"
+                            placeholder=""
+                            type="number"
+                            value="1"
+                          />
+                        </div>
+                        <div
+                          class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
+                          data-size="small"
+                        >
+                          <button
+                            aria-label="plus"
+                            class="cache-dyxj60-StyledGhostButton e112qvla0"
+                            type="button"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="cache-np418x-Cell-StyledPriceCell-PriceCell e1kzy2rr1"
+            >
+              <p
+                class="e1kzy2rr0 cache-6mqld5-StyledText-StyleNoPriceItem e13y3mga0"
+              >
+                €0.00
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        class="cache-1k8mic4-EmptyTable e1xb5k8j9"
+      >
+        <colgroup>
+          <col />
+          <col
+            class="cache-d78yft-PriceCol e1xb5k8j12"
+          />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td
+              aria-label="control"
+              class="cache-wpkagv-EmptyCell e1xb5k8j7"
+            />
+            <td
+              class="cache-12u8ruk-Cell-TotalPriceCell e1xb5k8j10"
+            >
+              <h3
+                class="excc3v73 cache-1lcpkxj-StyledText-StyledText e13y3mga0"
+              >
+                <span
+                  class="cache-1bp6ks2-LineThrough e1d1k6i0"
+                >
+                  €0.00
+                </span>
+              </h3>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       class="emotion-0 emotion-1"
     >
       <div
@@ -2393,14 +2805,15 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   width: 100%;
 }
 
+.cache-h5mwdc-Input {
 .emotion-112 {
   outline: none;
   border: none;
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
-  font-family: Inter,Asap,sans-serif;
+  font-size: 16px;
+  font-family: Inter,Asap;
   font-weight: Regular;
   line-height: 24px;
   text-align: center;
@@ -2408,58 +2821,70 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   background: none;
 }
 
+.cache-h5mwdc-Input[data-has-unit='true'] {
 .emotion-112[data-has-unit='true'] {
   text-align: left;
   padding: 8px 0 8px 8px;
 }
 
+.cache-h5mwdc-Input::-webkit-outer-spin-button,
+.cache-h5mwdc-Input::-webkit-inner-spin-button {
 .emotion-112::-webkit-outer-spin-button,
 .emotion-112::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+.cache-h5mwdc-Input {
 .emotion-112 {
   -moz-appearance: textfield;
 }
 
+.cache-h5mwdc-Input[data-size='small'] {
 .emotion-112[data-size='small'] {
   height: 30px;
 }
 
+.cache-h5mwdc-Input[data-size='medium'] {
 .emotion-112[data-size='medium'] {
   height: 38px;
 }
 
+.cache-h5mwdc-Input[data-size='large'] {
 .emotion-112[data-size='large'] {
   height: 46px;
-  font-size: 16px;
 }
 
+.cache-h5mwdc-Input:-moz-read-only {
 .emotion-112:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:read-only {
 .emotion-112:read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:-moz-read-only~.e1b9qdjy2 {
 .emotion-112:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:read-only~.e1b9qdjy2 {
 .emotion-112:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:disabled {
 .emotion-112:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
+.cache-h5mwdc-Input:disabled~.e1b9qdjy2 {
 .emotion-112:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
@@ -2469,6 +2894,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   user-select: none;
 }
 
+.cache-h5mwdc-Input:placeholder-shown~.e1b9qdjy2 {
 .emotion-112:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
 }
@@ -2535,6 +2961,404 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
     data-testid="testing"
   >
     <div
+      class="cache-1q6v71h-OverlayContainer e1p62vjs2"
+      data-testid="summary-overlay"
+    >
+      <ul
+        class="cache-lxo6w7-List e1p62vjs1"
+      >
+        <li
+          class="cache-15sn1rs-OverlayRow e1xb5k8j3"
+        >
+          <div
+            class="cache-4d2pis-Cell-Cell e1kzy2rr8"
+            width="inherit"
+          >
+            <div>
+              <div
+                class="cache-1guc91g-Stack ehpbis70"
+              >
+                <div
+                  class="cache-1tfad1c-Stack ehpbis70"
+                >
+                  <p
+                    class="cache-1e8qouo-StyledText e13y3mga0"
+                  >
+                    NumberInput
+                  </p>
+                </div>
+              </div>
+              <div
+                class="cache-2sj51q-StyledResourceName-StyledResourceName e1kzy2rr7"
+              >
+                <div
+                  class="cache-11xji2n-ItemResourceName e1xb5k8j1"
+                >
+                  <div
+                    class="cache-1qj6qoc-StyledRegular e1l9k4qo0"
+                  >
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="cache-upbfm5-OverlayRow e1xb5k8j3"
+        >
+          <div
+            class="cache-irytw7-Stack ehpbis70"
+          >
+            <svg
+              class="cache-1t6yapu-StyledIcon-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            Estimated cost
+          </div>
+          <div
+            class="cache-11xji2n-ItemResourceName e1xb5k8j1"
+          >
+            <div
+              class="e1bhvxf60 cache-12uv9zd-StyledRegular-StyledStrong e1l9k4qo0"
+            >
+              <span
+                class="cache-1bp6ks2-LineThrough e1d1k6i0"
+              >
+                €0.00/Hour(s)
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <span
+      class="cache-1e8qouo-StyledText e13y3mga0"
+    >
+      This summary provides a cost estimation based on your configuration, the amount of time you expect to use the resource for, and the scale of your expected usage. For the purposes of this calculation, we consider that 1 month equals to 730 hours.
+    </span>
+    <div>
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        class="cache-l49cjj-StyledTable-spacedChildren e1xb5k8j14"
+        data-testid="summary"
+      >
+        <colgroup>
+          <col />
+          <col
+            class="cache-d78yft-PriceCol e1xb5k8j12"
+          />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>
+              <h3
+                class="cache-gy9ug9-Title e1xb5k8j8"
+              >
+                <svg
+                  class="excc3v71 cache-1vvwj8w-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Estimated cost
+              </h3>
+            </th>
+            <th
+              class="cache-x833v6-StyledPriceCell-Cell-StyledPriceCell-PriceCell excc3v70"
+            >
+              <div
+                class="cache-1e9mbjr-TimeCell e1xb5k8j6"
+              >
+                <div
+                  class="cache-1y681pp-StyledRow e3f5lzv0"
+                >
+                  <div
+                    class="cache-igijr9-CustomTextInput epio27v1"
+                  >
+                    <div
+                      class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
+                    >
+                      <input
+                        autocomplete="on"
+                        class="cache-1ws5f5r-StyledInput el3h3g92"
+                        max="99999"
+                        min="1"
+                        name="iteration-value"
+                        placeholder="0"
+                        style="height: 40px;"
+                        type="number"
+                        value="1"
+                      />
+                    </div>
+                    <div
+                      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+                    >
+                      <div
+                        class="cache-1aqops6-StyledError el3h3g94"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="epio27v0 epio27v0 cache-1hwzy7c-StyledContainer-container-StyledContainer-CustomSelectInput-CustomSelectInput e11gt5pw4"
+                    data-testid="select-input-iteration-unit"
+                  >
+                    <span
+                      class="cache-1f43avz-a11yText-A11yText"
+                      id="react-select-3-live-region"
+                    />
+                    <span
+                      aria-atomic="false"
+                      aria-live="polite"
+                      aria-relevant="additions text"
+                      class="cache-1f43avz-a11yText-A11yText"
+                      role="log"
+                    />
+                    <div
+                      class=" cache-zhj3xq-control"
+                    >
+                      <div
+                        class=" cache-1827o3p-ValueContainer"
+                      >
+                        <label
+                          aria-live="assertive"
+                          as="label"
+                          class="cache-1bxh4i1-StyledPlaceholder e11gt5pw2"
+                          for=":ri:"
+                        >
+                          Select...
+                        </label>
+                        <div
+                          class=" cache-1deka0w-singleValue"
+                        >
+                          Hour(s)
+                        </div>
+                        <div
+                          class="cache-1xwier8-inputStyles"
+                          data-value=""
+                        >
+                          <input
+                            aria-activedescendant=""
+                            aria-autocomplete="list"
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            class=""
+                            id=":ri:"
+                            role="combobox"
+                            spellcheck="false"
+                            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class=" cache-ralm3g-IndicatorsContainer"
+                      >
+                        <span
+                          class=" cache-dh2bvv-indicatorSeparator"
+                        />
+                        <div
+                          aria-hidden="true"
+                          class=" cache-1xc3v61-indicatorContainer"
+                        >
+                          <div
+                            class="cache-irytw7-Stack ehpbis70"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <input
+                      name="iteration-unit"
+                      type="hidden"
+                      value="hours"
+                    />
+                    <div
+                      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+                    >
+                      <div
+                        class="cache-1aqops6-StyledError e11gt5pw3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="cache-11ls5i6-StyledTr e1xb5k8j4"
+          >
+            <td
+              class="cache-19b723i-Cell e1xb5k8j11"
+              width="530px"
+            >
+              <div
+                class="cache-1meok3w-StyledLeftSide e1xb5k8j2"
+              >
+                <div
+                  class="cache-1guc91g-Stack ehpbis70"
+                >
+                  <div
+                    class="cache-1tfad1c-Stack ehpbis70"
+                  >
+                    <p
+                      class="cache-1e8qouo-StyledText e13y3mga0"
+                    >
+                      NumberInput
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="cache-12tubxd-StyledResourceName e1kzy2rr7"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div>
+                      <div
+                        class="cache-snr60n-Container e1b9qdjy0"
+                        data-disabled="false"
+                        data-error="false"
+                        data-success="false"
+                        data-unit="false"
+                      >
+                        <div
+                          class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
+                          data-size="small"
+                        >
+                          <button
+                            aria-label="minus"
+                            class="cache-dyxj60-StyledGhostButton e112qvla0"
+                            type="button"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
+                        >
+                          <input
+                            class="cache-h5mwdc-Input e1b9qdjy1"
+                            data-has-unit="false"
+                            data-size="small"
+                            id=":rl:"
+                            max="100"
+                            min="0"
+                            placeholder=""
+                            type="number"
+                            value="1"
+                          />
+                        </div>
+                        <div
+                          class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
+                          data-size="small"
+                        >
+                          <button
+                            aria-label="plus"
+                            class="cache-dyxj60-StyledGhostButton e112qvla0"
+                            type="button"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="cache-np418x-Cell-StyledPriceCell-PriceCell e1kzy2rr1"
+            >
+              <p
+                class="e1kzy2rr0 cache-6mqld5-StyledText-StyleNoPriceItem e13y3mga0"
+              >
+                €0.00
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        class="cache-1k8mic4-EmptyTable e1xb5k8j9"
+      >
+        <colgroup>
+          <col />
+          <col
+            class="cache-d78yft-PriceCol e1xb5k8j12"
+          />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td
+              aria-label="control"
+              class="cache-wpkagv-EmptyCell e1xb5k8j7"
+            />
+            <td
+              class="cache-12u8ruk-Cell-TotalPriceCell e1xb5k8j10"
+            >
+              <h3
+                class="excc3v73 cache-1lcpkxj-StyledText-StyledText e13y3mga0"
+              >
+                <span
+                  class="cache-1bp6ks2-LineThrough e1d1k6i0"
+                >
+                  €0.00
+                </span>
+              </h3>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       class="emotion-0 emotion-1"
     >
       <div
@@ -3864,14 +4688,15 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   width: 100%;
 }
 
+.cache-h5mwdc-Input {
 .emotion-112 {
   outline: none;
   border: none;
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
-  font-family: Inter,Asap,sans-serif;
+  font-size: 16px;
+  font-family: Inter,Asap;
   font-weight: Regular;
   line-height: 24px;
   text-align: center;
@@ -3879,58 +4704,70 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   background: none;
 }
 
+.cache-h5mwdc-Input[data-has-unit='true'] {
 .emotion-112[data-has-unit='true'] {
   text-align: left;
   padding: 8px 0 8px 8px;
 }
 
+.cache-h5mwdc-Input::-webkit-outer-spin-button,
+.cache-h5mwdc-Input::-webkit-inner-spin-button {
 .emotion-112::-webkit-outer-spin-button,
 .emotion-112::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+.cache-h5mwdc-Input {
 .emotion-112 {
   -moz-appearance: textfield;
 }
 
+.cache-h5mwdc-Input[data-size='small'] {
 .emotion-112[data-size='small'] {
   height: 30px;
 }
 
+.cache-h5mwdc-Input[data-size='medium'] {
 .emotion-112[data-size='medium'] {
   height: 38px;
 }
 
+.cache-h5mwdc-Input[data-size='large'] {
 .emotion-112[data-size='large'] {
   height: 46px;
-  font-size: 16px;
 }
 
+.cache-h5mwdc-Input:-moz-read-only {
 .emotion-112:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:read-only {
 .emotion-112:read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:-moz-read-only~.e1b9qdjy2 {
 .emotion-112:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:read-only~.e1b9qdjy2 {
 .emotion-112:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:disabled {
 .emotion-112:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
+.cache-h5mwdc-Input:disabled~.e1b9qdjy2 {
 .emotion-112:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
@@ -3940,6 +4777,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   user-select: none;
 }
 
+.cache-h5mwdc-Input:placeholder-shown~.e1b9qdjy2 {
 .emotion-112:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
 }
@@ -4006,6 +4844,404 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
     data-testid="testing"
   >
     <div
+      class="cache-1q6v71h-OverlayContainer e1p62vjs2"
+      data-testid="summary-overlay"
+    >
+      <ul
+        class="cache-lxo6w7-List e1p62vjs1"
+      >
+        <li
+          class="cache-15sn1rs-OverlayRow e1xb5k8j3"
+        >
+          <div
+            class="cache-4d2pis-Cell-Cell e1kzy2rr8"
+            width="inherit"
+          >
+            <div>
+              <div
+                class="cache-1guc91g-Stack ehpbis70"
+              >
+                <div
+                  class="cache-1tfad1c-Stack ehpbis70"
+                >
+                  <p
+                    class="cache-1e8qouo-StyledText e13y3mga0"
+                  >
+                    NumberInput
+                  </p>
+                </div>
+              </div>
+              <div
+                class="cache-2sj51q-StyledResourceName-StyledResourceName e1kzy2rr7"
+              >
+                <div
+                  class="cache-11xji2n-ItemResourceName e1xb5k8j1"
+                >
+                  <div
+                    class="cache-1qj6qoc-StyledRegular e1l9k4qo0"
+                  >
+                    1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="cache-upbfm5-OverlayRow e1xb5k8j3"
+        >
+          <div
+            class="cache-irytw7-Stack ehpbis70"
+          >
+            <svg
+              class="cache-1t6yapu-StyledIcon-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            Estimated cost
+          </div>
+          <div
+            class="cache-11xji2n-ItemResourceName e1xb5k8j1"
+          >
+            <div
+              class="e1bhvxf60 cache-12uv9zd-StyledRegular-StyledStrong e1l9k4qo0"
+            >
+              <span
+                class="cache-1bp6ks2-LineThrough e1d1k6i0"
+              >
+                €0.00/Hour(s)
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <span
+      class="cache-1e8qouo-StyledText e13y3mga0"
+    >
+      This summary provides a cost estimation based on your configuration, the amount of time you expect to use the resource for, and the scale of your expected usage. For the purposes of this calculation, we consider that 1 month equals to 730 hours.
+    </span>
+    <div>
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        class="cache-l49cjj-StyledTable-spacedChildren e1xb5k8j14"
+        data-testid="summary"
+      >
+        <colgroup>
+          <col />
+          <col
+            class="cache-d78yft-PriceCol e1xb5k8j12"
+          />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>
+              <h3
+                class="cache-gy9ug9-Title e1xb5k8j8"
+              >
+                <svg
+                  class="excc3v71 cache-1vvwj8w-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Estimated cost
+              </h3>
+            </th>
+            <th
+              class="cache-x833v6-StyledPriceCell-Cell-StyledPriceCell-PriceCell excc3v70"
+            >
+              <div
+                class="cache-1e9mbjr-TimeCell e1xb5k8j6"
+              >
+                <div
+                  class="cache-1y681pp-StyledRow e3f5lzv0"
+                >
+                  <div
+                    class="cache-igijr9-CustomTextInput epio27v1"
+                  >
+                    <div
+                      class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
+                    >
+                      <input
+                        autocomplete="on"
+                        class="cache-1ws5f5r-StyledInput el3h3g92"
+                        max="99999"
+                        min="1"
+                        name="iteration-value"
+                        placeholder="0"
+                        style="height: 40px;"
+                        type="number"
+                        value="1"
+                      />
+                    </div>
+                    <div
+                      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+                    >
+                      <div
+                        class="cache-1aqops6-StyledError el3h3g94"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="epio27v0 epio27v0 cache-1hwzy7c-StyledContainer-container-StyledContainer-CustomSelectInput-CustomSelectInput e11gt5pw4"
+                    data-testid="select-input-iteration-unit"
+                  >
+                    <span
+                      class="cache-1f43avz-a11yText-A11yText"
+                      id="react-select-5-live-region"
+                    />
+                    <span
+                      aria-atomic="false"
+                      aria-live="polite"
+                      aria-relevant="additions text"
+                      class="cache-1f43avz-a11yText-A11yText"
+                      role="log"
+                    />
+                    <div
+                      class=" cache-zhj3xq-control"
+                    >
+                      <div
+                        class=" cache-1827o3p-ValueContainer"
+                      >
+                        <label
+                          aria-live="assertive"
+                          as="label"
+                          class="cache-1bxh4i1-StyledPlaceholder e11gt5pw2"
+                          for=":r1i:"
+                        >
+                          Select...
+                        </label>
+                        <div
+                          class=" cache-1deka0w-singleValue"
+                        >
+                          Hour(s)
+                        </div>
+                        <div
+                          class="cache-1xwier8-inputStyles"
+                          data-value=""
+                        >
+                          <input
+                            aria-activedescendant=""
+                            aria-autocomplete="list"
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            class=""
+                            id=":r1i:"
+                            role="combobox"
+                            spellcheck="false"
+                            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class=" cache-ralm3g-IndicatorsContainer"
+                      >
+                        <span
+                          class=" cache-dh2bvv-indicatorSeparator"
+                        />
+                        <div
+                          aria-hidden="true"
+                          class=" cache-1xc3v61-indicatorContainer"
+                        >
+                          <div
+                            class="cache-irytw7-Stack ehpbis70"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <input
+                      name="iteration-unit"
+                      type="hidden"
+                      value="hours"
+                    />
+                    <div
+                      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+                    >
+                      <div
+                        class="cache-1aqops6-StyledError e11gt5pw3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="cache-11ls5i6-StyledTr e1xb5k8j4"
+          >
+            <td
+              class="cache-19b723i-Cell e1xb5k8j11"
+              width="530px"
+            >
+              <div
+                class="cache-1meok3w-StyledLeftSide e1xb5k8j2"
+              >
+                <div
+                  class="cache-1guc91g-Stack ehpbis70"
+                >
+                  <div
+                    class="cache-1tfad1c-Stack ehpbis70"
+                  >
+                    <p
+                      class="cache-1e8qouo-StyledText e13y3mga0"
+                    >
+                      NumberInput
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="cache-12tubxd-StyledResourceName e1kzy2rr7"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div>
+                      <div
+                        class="cache-snr60n-Container e1b9qdjy0"
+                        data-disabled="false"
+                        data-error="false"
+                        data-success="false"
+                        data-unit="false"
+                      >
+                        <div
+                          class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
+                          data-size="small"
+                        >
+                          <button
+                            aria-label="minus"
+                            class="cache-dyxj60-StyledGhostButton e112qvla0"
+                            type="button"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
+                        >
+                          <input
+                            class="cache-h5mwdc-Input e1b9qdjy1"
+                            data-has-unit="false"
+                            data-size="small"
+                            id=":r1l:"
+                            max="100"
+                            min="0"
+                            placeholder=""
+                            type="number"
+                            value="1"
+                          />
+                        </div>
+                        <div
+                          class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
+                          data-size="small"
+                        >
+                          <button
+                            aria-label="plus"
+                            class="cache-dyxj60-StyledGhostButton e112qvla0"
+                            type="button"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="cache-np418x-Cell-StyledPriceCell-PriceCell e1kzy2rr1"
+            >
+              <p
+                class="e1kzy2rr0 cache-6mqld5-StyledText-StyleNoPriceItem e13y3mga0"
+              >
+                €0.00
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        class="cache-1k8mic4-EmptyTable e1xb5k8j9"
+      >
+        <colgroup>
+          <col />
+          <col
+            class="cache-d78yft-PriceCol e1xb5k8j12"
+          />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td
+              aria-label="control"
+              class="cache-wpkagv-EmptyCell e1xb5k8j7"
+            />
+            <td
+              class="cache-12u8ruk-Cell-TotalPriceCell e1xb5k8j10"
+            >
+              <h3
+                class="excc3v73 cache-1lcpkxj-StyledText-StyledText e13y3mga0"
+              >
+                <span
+                  class="cache-1bp6ks2-LineThrough e1d1k6i0"
+                >
+                  €0.00
+                </span>
+              </h3>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       class="emotion-0 emotion-1"
     >
       <div
@@ -5349,14 +6585,15 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   width: 100%;
 }
 
+.cache-h5mwdc-Input {
 .emotion-115 {
   outline: none;
   border: none;
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
-  font-family: Inter,Asap,sans-serif;
+  font-size: 16px;
+  font-family: Inter,Asap;
   font-weight: Regular;
   line-height: 24px;
   text-align: center;
@@ -5364,58 +6601,70 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   background: none;
 }
 
+.cache-h5mwdc-Input[data-has-unit='true'] {
 .emotion-115[data-has-unit='true'] {
   text-align: left;
   padding: 8px 0 8px 8px;
 }
 
+.cache-h5mwdc-Input::-webkit-outer-spin-button,
+.cache-h5mwdc-Input::-webkit-inner-spin-button {
 .emotion-115::-webkit-outer-spin-button,
 .emotion-115::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+.cache-h5mwdc-Input {
 .emotion-115 {
   -moz-appearance: textfield;
 }
 
+.cache-h5mwdc-Input[data-size='small'] {
 .emotion-115[data-size='small'] {
   height: 30px;
 }
 
+.cache-h5mwdc-Input[data-size='medium'] {
 .emotion-115[data-size='medium'] {
   height: 38px;
 }
 
+.cache-h5mwdc-Input[data-size='large'] {
 .emotion-115[data-size='large'] {
   height: 46px;
-  font-size: 16px;
 }
 
+.cache-h5mwdc-Input:-moz-read-only {
 .emotion-115:-moz-read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:read-only {
 .emotion-115:read-only {
   color: #3f4250;
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:-moz-read-only~.e1b9qdjy2 {
 .emotion-115:-moz-read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:read-only~.e1b9qdjy2 {
 .emotion-115:read-only~.e1b9qdjy2 {
   background: #f9f9fa;
 }
 
+.cache-h5mwdc-Input:disabled {
 .emotion-115:disabled {
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
+.cache-h5mwdc-Input:disabled~.e1b9qdjy2 {
 .emotion-115:disabled~.e1b9qdjy2 {
   background: #f3f3f4;
   cursor: not-allowed;
@@ -5425,6 +6674,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   user-select: none;
 }
 
+.cache-h5mwdc-Input:placeholder-shown~.e1b9qdjy2 {
 .emotion-115:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
 }
@@ -5503,6 +6753,414 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
     data-testid="testing"
   >
     <div
+      class="cache-1q6v71h-OverlayContainer e1p62vjs2"
+      data-testid="summary-overlay"
+    >
+      <ul
+        class="cache-lxo6w7-List e1p62vjs1"
+      >
+        <li
+          class="cache-15sn1rs-OverlayRow e1xb5k8j3"
+        >
+          <div
+            class="cache-4d2pis-Cell-Cell e1kzy2rr8"
+            width="inherit"
+          >
+            <div>
+              <div
+                class="cache-1guc91g-Stack ehpbis70"
+              >
+                <div
+                  class="cache-1tfad1c-Stack ehpbis70"
+                >
+                  <p
+                    class="cache-1e8qouo-StyledText e13y3mga0"
+                  >
+                    Chocolates
+                  </p>
+                </div>
+              </div>
+              <div
+                class="cache-2sj51q-StyledResourceName-StyledResourceName e1kzy2rr7"
+              >
+                <div
+                  class="cache-11xji2n-ItemResourceName e1xb5k8j1"
+                >
+                  <div
+                    class="cache-1qj6qoc-StyledRegular e1l9k4qo0"
+                  >
+                    50
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="cache-upbfm5-OverlayRow e1xb5k8j3"
+        >
+          <div
+            class="cache-irytw7-Stack ehpbis70"
+          >
+            <svg
+              class="cache-1t6yapu-StyledIcon-sizeStyles e1gt4cfo0"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            Estimated cost
+          </div>
+          <div
+            class="cache-11xji2n-ItemResourceName e1xb5k8j1"
+          >
+            <div
+              class="e1bhvxf60 cache-12uv9zd-StyledRegular-StyledStrong e1l9k4qo0"
+            >
+              <span
+                class="cache-1bp6ks2-LineThrough e1d1k6i0"
+              >
+                €50.00/Hour(s)
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <span
+      class="cache-1e8qouo-StyledText e13y3mga0"
+    >
+      This summary provides a cost estimation based on your configuration, the amount of time you expect to use the resource for, and the scale of your expected usage. For the purposes of this calculation, we consider that 1 month equals to 730 hours.
+    </span>
+    <div>
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        class="cache-l49cjj-StyledTable-spacedChildren e1xb5k8j14"
+        data-testid="summary"
+      >
+        <colgroup>
+          <col />
+          <col
+            class="cache-d78yft-PriceCol e1xb5k8j12"
+          />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>
+              <h3
+                class="cache-gy9ug9-Title e1xb5k8j8"
+              >
+                <svg
+                  class="excc3v71 cache-1vvwj8w-StyledIcon-sizeStyles-StyledIcon e1gt4cfo0"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 1c-1.716 0-3.408.106-5.07.31A2.213 2.213 0 0 0 3 3.517V16.75A2.25 2.25 0 0 0 5.25 19h9.5A2.25 2.25 0 0 0 17 16.75V3.517c0-1.103-.806-2.068-1.93-2.207A41 41 0 0 0 10 1M5.99 8.75A.75.75 0 0 1 6.74 8h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.417-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm1.42-5.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm-.75 2.916a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zM12.5 8.75a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75zm.75 1.417a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75v-.01a.75.75 0 0 0-.75-.75zm0 2.166a.75.75 0 0 1 .75.75v2.167a.75.75 0 1 1-1.5 0v-2.167a.75.75 0 0 1 .75-.75M6.75 4a.75.75 0 0 0-.75.75v.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-.5a.75.75 0 0 0-.75-.75z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+                Estimated cost
+              </h3>
+            </th>
+            <th
+              class="cache-x833v6-StyledPriceCell-Cell-StyledPriceCell-PriceCell excc3v70"
+            >
+              <div
+                class="cache-1e9mbjr-TimeCell e1xb5k8j6"
+              >
+                <div
+                  class="cache-1y681pp-StyledRow e3f5lzv0"
+                >
+                  <div
+                    class="cache-igijr9-CustomTextInput epio27v1"
+                  >
+                    <div
+                      class="cache-1txlkbl-StyledRelativeDiv el3h3g95"
+                    >
+                      <input
+                        autocomplete="on"
+                        class="cache-1ws5f5r-StyledInput el3h3g92"
+                        max="99999"
+                        min="1"
+                        name="iteration-value"
+                        placeholder="0"
+                        style="height: 40px;"
+                        type="number"
+                        value="1"
+                      />
+                    </div>
+                    <div
+                      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+                    >
+                      <div
+                        class="cache-1aqops6-StyledError el3h3g94"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="epio27v0 epio27v0 cache-1hwzy7c-StyledContainer-container-StyledContainer-CustomSelectInput-CustomSelectInput e11gt5pw4"
+                    data-testid="select-input-iteration-unit"
+                  >
+                    <span
+                      class="cache-1f43avz-a11yText-A11yText"
+                      id="react-select-4-live-region"
+                    />
+                    <span
+                      aria-atomic="false"
+                      aria-live="polite"
+                      aria-relevant="additions text"
+                      class="cache-1f43avz-a11yText-A11yText"
+                      role="log"
+                    />
+                    <div
+                      class=" cache-zhj3xq-control"
+                    >
+                      <div
+                        class=" cache-1827o3p-ValueContainer"
+                      >
+                        <label
+                          aria-live="assertive"
+                          as="label"
+                          class="cache-1bxh4i1-StyledPlaceholder e11gt5pw2"
+                          for=":r11:"
+                        >
+                          Select...
+                        </label>
+                        <div
+                          class=" cache-1deka0w-singleValue"
+                        >
+                          Hour(s)
+                        </div>
+                        <div
+                          class="cache-1xwier8-inputStyles"
+                          data-value=""
+                        >
+                          <input
+                            aria-activedescendant=""
+                            aria-autocomplete="list"
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            class=""
+                            id=":r11:"
+                            role="combobox"
+                            spellcheck="false"
+                            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class=" cache-ralm3g-IndicatorsContainer"
+                      >
+                        <span
+                          class=" cache-dh2bvv-indicatorSeparator"
+                        />
+                        <div
+                          aria-hidden="true"
+                          class=" cache-1xc3v61-indicatorContainer"
+                        >
+                          <div
+                            class="cache-irytw7-Stack ehpbis70"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <input
+                      name="iteration-unit"
+                      type="hidden"
+                      value="hours"
+                    />
+                    <div
+                      class="cache-lzuy3q-StyledExpandable e5hc7t70"
+                    >
+                      <div
+                        class="cache-1aqops6-StyledError e11gt5pw3"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="cache-11ls5i6-StyledTr e1xb5k8j4"
+          >
+            <td
+              class="cache-19b723i-Cell e1xb5k8j11"
+              width="530px"
+            >
+              <div
+                class="cache-1meok3w-StyledLeftSide e1xb5k8j2"
+              >
+                <div
+                  class="cache-1guc91g-Stack ehpbis70"
+                >
+                  <div
+                    class="cache-1tfad1c-Stack ehpbis70"
+                  >
+                    <p
+                      class="cache-1e8qouo-StyledText e13y3mga0"
+                    >
+                      Chocolates
+                    </p>
+                    <p
+                      class="e1kzy2rr5 cache-1av8nj4-StyledText-StyledText e13y3mga0"
+                    >
+                      Chocolate is never free :(
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="cache-12tubxd-StyledResourceName e1kzy2rr7"
+                >
+                  <div
+                    class="cache-ymc80m-Stack ehpbis70"
+                  >
+                    <div>
+                      <div
+                        class="cache-snr60n-Container e1b9qdjy0"
+                        data-disabled="false"
+                        data-error="false"
+                        data-success="false"
+                        data-unit="false"
+                      >
+                        <div
+                          class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
+                          data-size="small"
+                        >
+                          <button
+                            aria-label="minus"
+                            class="cache-dyxj60-StyledGhostButton e112qvla0"
+                            type="button"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.75 7a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
+                        >
+                          <input
+                            class="cache-h5mwdc-Input e1b9qdjy1"
+                            data-has-unit="false"
+                            data-size="small"
+                            id=":r15:"
+                            max="51"
+                            min="0"
+                            placeholder=""
+                            type="number"
+                            value="50"
+                          />
+                        </div>
+                        <div
+                          class="cache-1mc02x-Stack-SideContainer e1b9qdjy4"
+                          data-size="small"
+                        >
+                          <button
+                            aria-label="plus"
+                            class="cache-dyxj60-StyledGhostButton e112qvla0"
+                            type="button"
+                          >
+                            <svg
+                              class="cache-1dnbbhk-StyledIcon-sizeStyles e1gt4cfo0"
+                              viewBox="0 0 16 16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td
+              class="cache-np418x-Cell-StyledPriceCell-PriceCell e1kzy2rr1"
+            >
+              <p
+                class="e1kzy2rr0 cache-1po8z2z-StyledText-StyleNoPriceItem e13y3mga0"
+              >
+                €50.00
+              </p>
+              <p
+                class="e1kzy2rr3 cache-1jyalxz-StyledText-TextAlignRight e13y3mga0"
+              >
+                €1.00/chocolate/hour(s)
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table
+        cellpadding="0"
+        cellspacing="0"
+        class="cache-1k8mic4-EmptyTable e1xb5k8j9"
+      >
+        <colgroup>
+          <col />
+          <col
+            class="cache-d78yft-PriceCol e1xb5k8j12"
+          />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td
+              aria-label="control"
+              class="cache-wpkagv-EmptyCell e1xb5k8j7"
+            />
+            <td
+              class="cache-12u8ruk-Cell-TotalPriceCell e1xb5k8j10"
+            >
+              <h3
+                class="excc3v73 cache-1lcpkxj-StyledText-StyledText e13y3mga0"
+              >
+                <span
+                  class="cache-1bp6ks2-LineThrough e1d1k6i0"
+                >
+                  €50.00
+                </span>
+              </h3>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       class="emotion-0 emotion-1"
     >
       <div
