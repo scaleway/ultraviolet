@@ -27,12 +27,15 @@ export const ChangeValue: StoryFn<typeof SelectInputV2> = () => {
         name="single"
         options={dataUnGrouped}
         value={valueSingle}
+        multiselect={false}
+        onChange={value => setValueSingle(value)}
       />
       <SelectInputV2
         name="multi"
         options={dataUnGrouped}
         value={valueMulti}
         multiselect
+        onChange={value => setValueMulti(value)}
       />
     </Stack>
   )

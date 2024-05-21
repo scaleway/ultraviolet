@@ -186,7 +186,6 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
       numberOfOptions={numberOfOptions}
       onChange={onChange}
       refSelect={ref}
-      key={Array.isArray(value) ? value.join() : value}
     >
       <SelectInputContainer
         onBlur={onBlur}
