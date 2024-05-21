@@ -4,6 +4,14 @@
  * PLEASE DO NOT EDIT HERE
  */
 export const darkTheme = {
+  breakpoints: {
+    large: '1440px',
+    medium: '1280px',
+    small: '1080px',
+    xlarge: '1800px',
+    xsmall: '720px',
+    xxsmall: '0px',
+  },
   colors: {
     danger: {
       background: '#4e0921',
