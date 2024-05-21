@@ -1,38 +1,48 @@
-import { useController, useErrors } from '@ultraviolet/form'
 import { UnitInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
+import { useController } from 'react-hook-form'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
-type UnitInputFieldProps = Pick<
-  ComponentProps<typeof UnitInput>,
-  | 'id'
-  | 'name'
-  | 'className'
-  | 'data-testid'
-  | 'disabled'
-  | 'value'
-  | 'max'
-  | 'min'
-  | 'options'
-  | 'placeholder'
-  | 'size'
-  | 'unitValue'
-  | 'required'
-  | 'width'
-  | 'selectInputWidth'
-> & {
-  onChange?: ComponentProps<typeof UnitInput>['onChange']
-  onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
-  label: string
-  minValueMessage: string
-  maxValueMessage: string
-  requiredMessage: string
-}
+type UnitInputFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Pick<
+    ComponentProps<typeof UnitInput>,
+    | 'id'
+    | 'name'
+    | 'className'
+    | 'data-testid'
+    | 'disabled'
+    | 'value'
+    | 'max'
+    | 'min'
+    | 'options'
+    | 'placeholder'
+    | 'size'
+    | 'unitValue'
+    | 'required'
+    | 'width'
+    | 'selectInputWidth'
+  > & {
+    onChange?: ComponentProps<typeof UnitInput>['onChange']
+    onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
+    label: string
+    minValueMessage?: string
+    maxValueMessage?: string
+    requiredMessage?: string
+  }
 
-export const UnitInputField = ({
+export const UnitInputField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   id,
   name,
-  max,
-  min,
+  max = Number.MAX_SAFE_INTEGER,
+  min = 0,
   size,
   placeholder,
   onChange,
@@ -43,19 +53,22 @@ export const UnitInputField = ({
   label,
   required,
   width,
-  requiredMessage,
-  minValueMessage,
-  maxValueMessage,
+  requiredMessage = 'Required',
+  minValueMessage = 'Minimum value',
+  maxValueMessage = 'Maximum value',
   selectInputWidth,
-}: UnitInputFieldProps) => {
+  shouldUnregister = false,
+}: UnitInputFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
 
   const { field: unitField } = useController({
     name: `${name}-unit`,
+    shouldUnregister,
   })
 
   const { field: valueField, fieldState: valueFieldState } = useController({
     name: `${name}-value`,
+    shouldUnregister,
     rules: {
       required: required ? requiredMessage : undefined,
       max: max
