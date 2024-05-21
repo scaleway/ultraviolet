@@ -6,7 +6,7 @@ import { Stack } from '../../Stack'
 import { Template } from './Template.stories'
 import { dataUnGrouped } from './resources'
 
-export const ChangeValue: StoryFn<typeof SelectInputV2> = () => {
+export const Controlled: StoryFn<typeof SelectInputV2> = () => {
   const [valueSingle, setValueSingle] =
     useState<(typeof dataUnGrouped)[number]['value']>('uranus')
   const [valueMulti, setValueMulti] = useState<
@@ -40,10 +40,10 @@ export const ChangeValue: StoryFn<typeof SelectInputV2> = () => {
     </Stack>
   )
 }
-ChangeValue.args = {
+Controlled.args = {
   ...Template.args,
 }
-ChangeValue.decorators = [
+Controlled.decorators = [
   StoryComponent => (
     <div style={{ height: '80px' }}>
       <StoryComponent />
@@ -51,10 +51,10 @@ ChangeValue.decorators = [
   ),
 ]
 
-ChangeValue.parameters = {
+Controlled.parameters = {
   docs: {
     description: {
-      story: 'Set a custom `EmptyState` when no option is available.',
+      story: 'Controlled SelectInput.',
     },
   },
 }
