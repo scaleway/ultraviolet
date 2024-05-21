@@ -3,7 +3,6 @@ import { Skeleton } from '..'
 
 export default {
   component: Skeleton,
-  decorators: [StoryComponent => <StoryComponent />],
   title: 'Components/Feedback/Skeleton',
 } as Meta<typeof Skeleton>
 

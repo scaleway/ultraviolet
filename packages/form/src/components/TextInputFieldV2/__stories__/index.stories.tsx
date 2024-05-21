@@ -26,7 +26,7 @@ export default {
       return (
         <Form onRawSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
-            {ChildStory()}
+            <ChildStory />
             <Stack gap={1}>
               <Text variant="bodyStrong" as="p">
                 Form input values:

@@ -14,7 +14,7 @@ export default {
           textarea: 'A long time ago in a galaxy far, far away',
         }}
       >
-        {ChildStory()}
+        <ChildStory />
       </Form>
     ),
   ],
