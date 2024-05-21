@@ -21,6 +21,7 @@ type UnitInputFieldProps<
     | 'min'
     | 'options'
     | 'placeholder'
+    | 'placeholderUnit'
     | 'size'
     | 'unitValue'
     | 'required'
@@ -30,9 +31,6 @@ type UnitInputFieldProps<
     onChange?: ComponentProps<typeof UnitInput>['onChange']
     onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
     label: string
-    minValueMessage?: string
-    maxValueMessage?: string
-    requiredMessage?: string
   }
 
 export const UnitInputField = <
@@ -45,6 +43,7 @@ export const UnitInputField = <
   min = 0,
   size,
   placeholder,
+  placeholderUnit,
   onChange,
   onChangeUnitValue,
   disabled,
@@ -53,10 +52,8 @@ export const UnitInputField = <
   label,
   required,
   width,
-  requiredMessage = 'Required',
-  minValueMessage = 'Minimum value',
-  maxValueMessage = 'Maximum value',
   selectInputWidth,
+  rules,
   shouldUnregister = false,
 }: UnitInputFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
@@ -64,27 +61,20 @@ export const UnitInputField = <
   const { field: unitField } = useController({
     name: `${name}-unit`,
     shouldUnregister,
+    rules: { required },
   })
 
-  const { field: valueField, fieldState: valueFieldState } = useController({
-    name: `${name}-value`,
-    shouldUnregister,
-    rules: {
-      required: required ? requiredMessage : undefined,
-      max: max
-        ? {
-            value: max,
-            message: maxValueMessage,
-          }
-        : undefined,
-      min: min
-        ? {
-            value: min,
-            message: minValueMessage,
-          }
-        : undefined,
-    },
-  })
+  const { field: valueField, fieldState: valueFieldState } =
+    useController<TFieldValues>({
+      name,
+      shouldUnregister,
+      rules: {
+        required,
+        min,
+        max,
+        ...rules,
+      },
+    })
 
   return (
     <UnitInput
@@ -112,6 +102,7 @@ export const UnitInputField = <
       label={label}
       className={className}
       width={width}
+      placeholderUnit={placeholderUnit}
     />
   )
 }

@@ -1,11 +1,19 @@
-import { describe, expect, jest, test } from '@jest/globals'
-import { renderHook, screen, waitFor } from '@testing-library/react'
+import {
+  afterAll,
+  beforeAll,
+  describe,
+  expect,
+  jest,
+  test,
+} from '@jest/globals'
+import { renderHook, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { useForm } from 'react-hook-form'
-import { UnitInputField } from '..'
-import { Submit } from '../..'
+import { Submit, UnitInputField } from '../..'
 import {
+  mockRandom,
   renderWithTheme,
+  restoreRandom,
   shouldMatchEmotionSnapshotFormWrapper,
 } from '../../../../.jest/helpers'
 import { mockErrors } from '../../../mocks'
@@ -27,40 +35,58 @@ const optionsSelect = [
 ]
 
 describe('UnitInputField', () => {
+  beforeAll(() => {
+    mockRandom()
+  })
+
+  afterAll(restoreRandom)
+
   test('should render correctly', () =>
     shouldMatchEmotionSnapshotFormWrapper(
       <UnitInputField label="Test" name="test" options={optionsSelect} />,
     ))
 
-  test('should render correctly generated', async () => {
-    const onSubmit = jest.fn<(values: { test: string | null }) => void>()
+  test('should handles onChange and selection', async () => {
+    const onSubmit = jest.fn<(values: { test: number | null }) => void>()
     const { result } = renderHook(() =>
-      useForm<{ test: string | null }>({ defaultValues: { test: null } }),
+      useForm<{ test: number | null }>({
+        defaultValues: {
+          test: 10,
+        },
+        mode: 'onChange',
+      }),
     )
 
     renderWithTheme(
-      <Form onRawSubmit={onSubmit} errors={mockErrors} methods={result.current}>
+      <Form
+        onRawSubmit={value => onSubmit(value)}
+        errors={mockErrors}
+        methods={result.current}
+      >
         <UnitInputField
           label="Test"
           name="test"
           required
           options={optionsSelect}
+          placeholder="input"
+          placeholderUnit="select"
         />
         <Submit>Submit</Submit>
       </Form>,
     )
 
-    await userEvent.click(screen.getByText('Submit'))
-    await waitFor(() => {
-      expect(onSubmit).toHaveBeenCalledTimes(0)
-    })
-    const textInput = screen.getByLabelText('Test')
-    await userEvent.type(textInput, 'This is an example')
-    await userEvent.click(screen.getByText('Submit'))
-    await waitFor(() => {
-      expect(onSubmit.mock.calls[0][0]).toEqual({
-        test: 'This is an example',
-      })
+    const selectBar = screen.getByTestId('select-bar')
+    const numberInput = screen.getByTestId('unit-input')
+    const submit = screen.getByText('Submit')
+    await userEvent.click(selectBar)
+    await userEvent.click(screen.getByText('Days'))
+    await userEvent.click(numberInput)
+    await userEvent.keyboard('0')
+    await userEvent.click(submit)
+
+    expect(onSubmit).toHaveBeenCalledWith({
+      test: 100,
+      'test-unit': 'days',
     })
   })
 })
