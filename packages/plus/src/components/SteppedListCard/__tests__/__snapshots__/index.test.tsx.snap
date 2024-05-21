@@ -103,18 +103,25 @@ exports[`SteppedListCard should work with custom hide action 1`] = `
   color: #222638;
 }
 
-.cache-1sfcvw3-BorderedBox-StyledCard {
+.cache-muwf6k-BorderedBox-StyledCard {
   border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 24px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0;
 }
 
-.cache-1sfcvw3-BorderedBox-StyledCard[data-is-active='true'] {
+.cache-muwf6k-BorderedBox-StyledCard[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-1sfcvw3-BorderedBox-StyledCard[data-disabled='true'] {
+.cache-muwf6k-BorderedBox-StyledCard[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
@@ -358,7 +365,7 @@ exports[`SteppedListCard should work with custom hide action 1`] = `
       </button>
     </div>
     <div
-      class="ebhkk9t1 cache-1sfcvw3-BorderedBox-StyledCard exwxj840"
+      class="ebhkk9t1 cache-muwf6k-BorderedBox-StyledCard exwxj840"
       data-disabled="false"
       data-is-active="false"
     >
@@ -536,18 +543,25 @@ exports[`SteppedListCard should work with default props 1`] = `
   color: #222638;
 }
 
-.cache-1sfcvw3-BorderedBox-StyledCard {
+.cache-muwf6k-BorderedBox-StyledCard {
   border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 24px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0;
 }
 
-.cache-1sfcvw3-BorderedBox-StyledCard[data-is-active='true'] {
+.cache-muwf6k-BorderedBox-StyledCard[data-is-active='true'] {
   border: 1px solid #8c40ef;
 }
 
-.cache-1sfcvw3-BorderedBox-StyledCard[data-disabled='true'] {
+.cache-muwf6k-BorderedBox-StyledCard[data-disabled='true'] {
   border: 1px solid #e9eaeb;
 }
 
@@ -808,7 +822,7 @@ exports[`SteppedListCard should work with default props 1`] = `
       </div>
     </div>
     <div
-      class="ebhkk9t1 cache-1sfcvw3-BorderedBox-StyledCard exwxj840"
+      class="ebhkk9t1 cache-muwf6k-BorderedBox-StyledCard exwxj840"
       data-disabled="false"
       data-is-active="false"
     >
