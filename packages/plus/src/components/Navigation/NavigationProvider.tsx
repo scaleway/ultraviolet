@@ -32,7 +32,7 @@ type ContextProps = {
   pinnedItems: string[]
   pinLimit: number
   navigationRef: RefObject<HTMLDivElement>
-  locales: typeof NavigationLocales
+  locales: Record<keyof typeof NavigationLocales, string>
   width: number
   setWidth: (width: number) => void
   /**
@@ -105,7 +105,7 @@ type NavigationProviderProps = {
    * navigation will be expanded by default otherwise it will be collapsed
    */
   initialExpanded?: boolean
-  locales?: typeof NavigationLocales
+  locales?: Record<keyof typeof NavigationLocales, string>
   /**
    * You can get the expanded state of the navigation with this function
    */

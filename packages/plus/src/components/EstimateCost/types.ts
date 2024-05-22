@@ -100,7 +100,7 @@ export type EstimateCostProps = {
   /**
    * Locales for the component. By default, it will use the english locales.
    */
-  locales?: typeof EstimateCostLocales
+  locales?: Record<keyof typeof EstimateCostLocales, string>
   /**
    * Defines the currency to be shown in the component.
    * To find out all currencies checkout https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes section "Code" of the table.

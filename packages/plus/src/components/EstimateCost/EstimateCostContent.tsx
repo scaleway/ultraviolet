@@ -82,7 +82,7 @@ const DescriptionComponent = ({
   locales,
 }: {
   description: ReactNode
-  locales: typeof EstimateCostLocales
+  locales: Record<keyof typeof EstimateCostLocales, string>
 }) =>
   description === undefined || typeof description === 'string' ? (
     <Text as="span" variant="body">

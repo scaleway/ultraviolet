@@ -3,7 +3,7 @@ import { createContext, useCallback, useContext, useMemo } from 'react'
 import EstimateCostLocales from './locales/en'
 
 const EstimateCostContext = createContext<{
-  locales: typeof EstimateCostLocales
+  locales: Record<keyof typeof EstimateCostLocales, string>
   formatNumber: (number: number, options: FormatNumberOption) => string
 }>({ locales: EstimateCostLocales, formatNumber: () => '' })
 
@@ -11,7 +11,7 @@ export const useEstimateCost = () => useContext(EstimateCostContext)
 
 type EstimateCostProviderProps = {
   children: ReactNode
-  locales?: typeof EstimateCostLocales
+  locales?: Record<keyof typeof EstimateCostLocales, string>
   currency?: string
   numberLocales?: string
 }
