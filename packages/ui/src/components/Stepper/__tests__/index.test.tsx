@@ -22,7 +22,14 @@ describe('Stepper', () => {
         <Stepper.Step title="step 3" />
       </Stepper>,
     ))
-
+  test('renders correctly with children', () =>
+    shouldMatchEmotionSnapshot(
+      <Stepper animated selected={2}>
+        <Stepper.Step title="step 1">Children</Stepper.Step>
+        <Stepper.Step title="step 2" />
+        <Stepper.Step title="step 3" />
+      </Stepper>,
+    ))
   test('renders correctly with animation', () =>
     shouldMatchEmotionSnapshot(
       <Stepper animated selected={2}>

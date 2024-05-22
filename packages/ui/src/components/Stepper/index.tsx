@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Children, Fragment, isValidElement } from 'react'
 import { Step } from './Step'
-import { StepperProvider, useStepper } from './StepperProvider'
+import { StepperProvider } from './StepperProvider'
 
 const LINE_HEIGHT_SIZES = {
   small: 2,
@@ -86,7 +86,11 @@ const StyledLine = styled.div<{
       height: 100%;
       border-radius: ${({ theme }) => theme.radii.default};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
-      ${({ temporal }) => temporal === 'previous' && `width: 100%;`}
+      ${({ temporal }) => {
+        if (temporal === 'previous') return 'width: 100%;'
+
+        return null
+      }}
       ${({ temporal, animated }) =>
         temporal === 'current' && animated && loadingStyle}
     }
@@ -105,7 +109,6 @@ export const Stepper = ({
   separator = true,
 }: StepperProps) => {
   const cleanChildren = Children.toArray(children).filter(isValidElement)
-  const currentState = useStepper()
   const lastStep = Children.count(cleanChildren) - 1
 
   return (
@@ -115,6 +118,7 @@ export const Stepper = ({
       animated={animated}
       labelPosition={labelPosition}
       size={size}
+      separator={separator}
     >
       <StyledContainer
         className={className}
@@ -125,9 +129,9 @@ export const Stepper = ({
       >
         {Children.map(cleanChildren, (child, index) => {
           const getTemporal = () => {
-            if (currentState.step > index + 1) return 'previous'
+            if (selected > index + 1) return 'previous'
 
-            if (currentState.step === index + 1) return 'current'
+            if (selected === index + 1) return 'current'
 
             return 'next'
           }
@@ -139,11 +143,11 @@ export const Stepper = ({
             <Fragment key={`creation-progress-${index}`}>
               <Step index={index + 1} {...(child.props as object)} />
 
-              {isNotLast && separator ? (
+              {isNotLast && separator && labelPosition === 'right' ? (
                 <StyledLine
                   temporal={temporal}
                   animated={animated}
-                  data-size={currentState.size}
+                  data-size={size}
                 />
               ) : null}
             </Fragment>
