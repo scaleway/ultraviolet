@@ -393,15 +393,21 @@ const StyledPlaceholder = styled('label', {
   ${({ isDisabled, hasValue }) => hasValue && isDisabled && 'opacity: 0.5'}
 `
 
-const StyledText = styled(Text)<{ isSelectedAndNotFocused: boolean }>`
-  margin-left: ${({ theme }) => theme.space['1']};
+const StyledText = styled(Text, {
+  shouldForwardProp: prop =>
+    !['isSelectedAndNotFocused', 'isInline'].includes(prop),
+})<{
+  isSelectedAndNotFocused: boolean
+  isInline?: boolean
+}>`
+  margin-left: ${({ theme, isInline }) => (isInline ? theme.space['1'] : 0)};
   color: ${({ isSelectedAndNotFocused, theme }) =>
     isSelectedAndNotFocused ? theme.colors.primary.textStrong : undefined};
 `
 
 const MaxLineStyledText = styled(StyledText)`
   -webkit-line-clamp: 3;
-  margin-top: ${({ theme }) => theme.space['2']};
+  margin-top: ${({ theme }) => theme.space['1']};
 `
 
 const ValueContainer = ({
@@ -542,6 +548,7 @@ const Option = ({
             as="span"
             variant="bodySmall"
             isSelectedAndNotFocused={isSelected && !isFocused}
+            isInline={!!inlineDescription}
           >
             {inlineDescription}
           </StyledText>
