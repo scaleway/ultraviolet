@@ -26,6 +26,7 @@ type UnitInputFieldProps<
     | 'unitValue'
     | 'required'
     | 'width'
+    | 'helper'
     | 'selectInputWidth'
   > & {
     onChange?: ComponentProps<typeof UnitInput>['onChange']
@@ -53,6 +54,7 @@ export const UnitInputField = <
   required,
   width,
   selectInputWidth,
+  helper,
   rules,
   shouldUnregister = false,
 }: UnitInputFieldProps<TFieldValues, TName>) => {
@@ -86,6 +88,7 @@ export const UnitInputField = <
       error={getError({ label }, valueFieldState.error)}
       size={size}
       placeholder={placeholder}
+      helper={helper}
       onChange={event => {
         valueField.onChange(event)
         onChange?.(event)
