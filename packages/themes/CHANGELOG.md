@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.11.0
+
+### Minor Changes
+
+- [#3802](https://github.com/scaleway/ultraviolet/pull/3802) [`c458956`](https://github.com/scaleway/ultraviolet/commit/c4589564872bc9fd3ddf95e327ae768226934274) Thanks [@matthprost](https://github.com/matthprost)! - New tokens `breakpoints` and added a fallback for each font family
+
 ## 1.10.2
 
 ### Patch Changes

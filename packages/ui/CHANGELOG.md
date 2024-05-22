@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.53.4
+
+### Patch Changes
+
+- Updated dependencies [[`c458956`](https://github.com/scaleway/ultraviolet/commit/c4589564872bc9fd3ddf95e327ae768226934274)]:
+  - @ultraviolet/themes@1.11.0
+  - @ultraviolet/icons@2.12.10
+
 ## 1.53.3
 
 ### Patch Changes
