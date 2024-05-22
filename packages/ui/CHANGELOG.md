@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.53.3
+
+### Patch Changes
+
+- [#3798](https://github.com/scaleway/ultraviolet/pull/3798) [`8a9bd89`](https://github.com/scaleway/ultraviolet/commit/8a9bd89a3331a14ff7540975a5212230c6dafa5a) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(SelectInputV2): handle change value
+
+- [#3784](https://github.com/scaleway/ultraviolet/pull/3784) [`097ed2f`](https://github.com/scaleway/ultraviolet/commit/097ed2f7e087354fb892b101d438d1d8e546b1c6) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Card />`: add flex to have full height card aligned into a Row.
+
+- [#3804](https://github.com/scaleway/ultraviolet/pull/3804) [`cf6de9a`](https://github.com/scaleway/ultraviolet/commit/cf6de9ac066449127d7a63412a00c24f52c6188d) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInput />` description and inline description spacings
+
+- [#3805](https://github.com/scaleway/ultraviolet/pull/3805) [`e4c4cd9`](https://github.com/scaleway/ultraviolet/commit/e4c4cd99ff822909d0ac5d737aeca9de349c3a77) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` autoFocus issue on search bar
+
 ## 1.53.2
 
 ### Patch Changes
