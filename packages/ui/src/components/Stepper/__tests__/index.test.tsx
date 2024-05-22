@@ -1,6 +1,7 @@
-import { describe, test } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, expect, test } from 'vitest'
 import { Stepper } from '..'
 
 describe('Stepper', () => {
@@ -85,48 +86,43 @@ describe('Stepper', () => {
       </Stepper>,
     ))
 
-  test('handles clicks when interactive', () =>
-    shouldMatchEmotionSnapshot(
+  test('handles clicks when interactive', async () => {
+    const { asFragment } = renderWithTheme(
       <Stepper selected={2} interactive>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
       </Stepper>,
-      {
-        transform: async () => {
-          await userEvent.click(screen.getByTestId('stepper-step-1'))
-          await userEvent.click(screen.getByTestId('stepper-step-2')) // should do nothing
-        },
-      },
-    ))
+    )
+    await userEvent.click(screen.getByTestId('stepper-step-1'))
+    await userEvent.click(screen.getByTestId('stepper-step-2')) // should do nothing
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('handles clicks when interactive and small', () =>
-    shouldMatchEmotionSnapshot(
+  test('handles clicks when interactive and small', async () => {
+    const { asFragment } = renderWithTheme(
       <Stepper selected={2} interactive size="small">
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
       </Stepper>,
-      {
-        transform: async () => {
-          await userEvent.click(screen.getByTestId('stepper-step-1'))
-        },
-      },
-    ))
+    )
+    await userEvent.click(screen.getByTestId('stepper-step-1'))
+    expect(asFragment()).toMatchSnapshot()
+  })
 
-  test('handles clicks when not interactive', () =>
-    shouldMatchEmotionSnapshot(
+  test('handles clicks when not interactive', async () => {
+    const { asFragment } = renderWithTheme(
       <Stepper selected={2} size="small">
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
       </Stepper>,
-      {
-        transform: async () => {
-          await userEvent.click(screen.getByTestId('stepper-step-1'))
-        },
-      },
-    ))
+    )
+
+    await userEvent.click(screen.getByTestId('stepper-step-1'))
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('renders correctly without Stepper.Step', () =>
     shouldMatchEmotionSnapshot(
