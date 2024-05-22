@@ -182,6 +182,11 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     variables: {},
   })
 
+  const breakpoints = getValues(inputTheme.breakpoints, {
+    typeFilter: 'dimension',
+    variables: {},
+  })
+
   const output = alphaOrder({
     colors: {
       ...colors,
@@ -198,6 +203,7 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     space,
     theme: themeMatch.outputTheme,
     typography,
+    breakpoints,
   })
 
   return output

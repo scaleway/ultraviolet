@@ -111,49 +111,49 @@ export const deprecatedLightTokens = {
   },
   typography: {
     body: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     bodySmall: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     bodySmallStrong: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     bodySmallStronger: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     bodyStrong: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     bodyStronger: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     caption: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     captionSmall: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     captionSmallStrong: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     captionSmallStronger: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     captionStrong: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     captionStronger: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Inter, Asap, sans-serif',
     },
     heading: {
-      fontFamily: 'Space Grotesk, Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap, sans-serif',
     },
     headingLarge: {
-      fontFamily: 'Space Grotesk, Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap, sans-serif',
     },
     headingSmall: {
-      fontFamily: 'Space Grotesk, Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap, sans-serif',
     },
   },
 }
