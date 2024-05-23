@@ -56,6 +56,7 @@ export const dataUnGrouped = [
     value: 'mars',
     label: marsToolTip,
     disabled: true,
+    tooltip: 'Mars cant be selected',
   },
   {
     value: 'jupiter',
