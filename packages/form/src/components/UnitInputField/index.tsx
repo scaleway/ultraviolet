@@ -57,9 +57,9 @@ export const UnitInputField = <
   helper,
   rules,
   shouldUnregister = false,
+  validate,
 }: UnitInputFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
-
   const { field: unitField } = useController({
     name: `${name}-unit`,
     shouldUnregister,
@@ -75,6 +75,7 @@ export const UnitInputField = <
         min,
         max,
         ...rules,
+        ...validate,
       },
     })
 
