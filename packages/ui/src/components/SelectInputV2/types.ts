@@ -4,9 +4,10 @@ export type OptionType = {
   value: string
   label: ReactNode
   disabled?: boolean
-  description?: string
+  description?: ReactNode
   optionalInfo?: ReactNode
   searchText?: string
+  tooltip?: string
 }
 
 export type DataType = Record<string, OptionType[]> | OptionType[]
