@@ -1,3 +1,4 @@
+import { Stepper } from '..'
 import { Template } from './Template.stories'
 
 export const WithAnimation = Template.bind({})
@@ -12,12 +13,10 @@ WithAnimation.parameters = {
 
 WithAnimation.args = {
   children: [
-    <span>Step 1</span>,
-    <span>Step 2</span>,
-    <span>Step 3</span>,
-    <span>Step 4</span>,
-    <span>Step 5</span>,
+    <Stepper.Step title="Step 1" />,
+    <Stepper.Step title="Step 2" />,
+    <Stepper.Step title="Step 3" />,
   ],
-  selected: 1,
+  selected: 2,
   animated: true,
 }
