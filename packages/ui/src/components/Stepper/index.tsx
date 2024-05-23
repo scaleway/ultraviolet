@@ -38,7 +38,8 @@ const StyledContainer = styled.div<{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: ${({ separator, labelPosition }) =>
+    !separator && labelPosition === 'right' ? 'flex-end' : 'flex-start'};
   gap: ${({ theme, labelPosition, separator }) => {
     if (separator) {
       return labelPosition === 'bottom' ? theme.space['0.5'] : theme.space['1']

@@ -66,7 +66,7 @@ const StyledBullet = styled(Bullet)<{
       : null};
 `
 
-const StyledText = styled(Text)<{ labelPosition: 'right' | 'bottom' }>`
+const StyledText = styled(Text)`
   margin-top: ${({ theme }) => theme.space['1']};
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
@@ -76,38 +76,43 @@ const StyledText = styled(Text)<{ labelPosition: 'right' | 'bottom' }>`
 `
 
 const StyledStepContainer = styled(Stack)<{
-  isActive: boolean
-  isDone: boolean
   'data-disabled': boolean
   'data-interactive': boolean
   'data-hide-separator': boolean
-  isAnimated: boolean
   'data-label-position': 'bottom' | 'right'
   size: 'small' | 'medium'
+  'aria-selected': boolean
+  'data-done': boolean
+  'data-animated': boolean
 }>`
   display: flex;
   white-space: nowrap;
   transition: text-decoration 300ms;
+
   &[data-interactive='true']:not([data-disabled='true']) {
     cursor: pointer;
 
-    &:hover {
-      & > ${StyledText} {
-        color: ${({ theme, isActive }) =>
-          isActive
-            ? theme.colors.primary.textHover
-            : theme.colors.neutral.textHover};
-        text-decoration: underline
-          ${({ theme, isActive }) =>
-            isActive
-              ? theme.colors.primary.text
-              : theme.colors.neutral.textHover};
-        text-decoration-thickness: 1px;
-      }
-
+    &[aria-selected='true']:hover {
       & > ${StyledBullet} {
-        box-shadow: ${({ theme, isDone, isActive }) =>
-          isDone || isActive ? theme.shadows.focusPrimary : 'none'};
+        box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+        & > ${StyledText} {
+          color: ${({ theme }) => theme.colors.primary.textHover};
+          text-decoration: underline
+            ${({ theme }) => theme.colors.primary.textHover};
+          text-decoration-thickness: 1px;
+        }
+      }
+    }
+
+    &[data-done='true']:hover {
+      & > ${StyledBullet} {
+        box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+      }
+      & > ${StyledText} {
+        color: ${({ theme }) => theme.colors.neutral.textHover};
+        text-decoration: underline
+          ${({ theme }) => theme.colors.neutral.textHover};
+        text-decoration-thickness: 1px;
       }
     }
   }
@@ -138,10 +143,8 @@ const StyledStepContainer = styled(Stack)<{
         position: relative;
         align-self: baseline;
         border-radius: ${({ theme }) => theme.radii.default};
-        background-color: ${({ theme, isDone, isActive, isAnimated }) =>
-          isDone || (isActive && isAnimated)
-            ? theme.colors.primary.backgroundStrong
-            : theme.colors.neutral.backgroundStrong};
+        background-color: ${({ theme }) =>
+          theme.colors.neutral.backgroundStrong};
 
         top: 20px;
         width: calc(
@@ -154,8 +157,17 @@ const StyledStepContainer = styled(Stack)<{
           size === 'small'
             ? LINE_HEIGHT_SIZES.small
             : LINE_HEIGHT_SIZES.medium}px;
-        ${({ isActive, isAnimated, size }) =>
-          isActive && isAnimated && loadingStyle(size)}
+      }
+
+      &[data-done='true']:after {
+        background-color: ${({ theme }) =>
+          theme.colors.primary.backgroundStrong};
+      }
+
+      &[aria-selected='true'][data-animated='true']:after {
+        background-color: ${({ theme }) =>
+          theme.colors.primary.backgroundStrong};
+        ${({ size }) => loadingStyle(size)}
       }
     }
     &:last-child {
@@ -196,9 +208,6 @@ export const Step = ({
       justifyContent="flex-start"
       className={className ?? 'step'}
       data-interactive={currentState.interactive && isDone}
-      isActive={isActive}
-      isDone={isDone}
-      isAnimated={currentState.animated}
       onClick={() => {
         if (currentState.interactive && !disabled) {
           if (index < currentState.step) {
@@ -212,6 +221,9 @@ export const Step = ({
       data-hide-separator={!currentState.separator}
       data-label-position={currentState.labelPosition}
       size={currentState.size}
+      aria-selected={isActive}
+      data-done={isDone}
+      data-animated={currentState.animated}
     >
       {isDone && !disabled ? (
         <StyledBullet
@@ -236,7 +248,6 @@ export const Step = ({
           variant={textVariant}
           prominence={isDone || isActive ? 'default' : 'weak'}
           sentiment={isActive ? 'primary' : 'neutral'}
-          labelPosition={currentState.labelPosition}
         >
           {title}
         </StyledText>
