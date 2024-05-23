@@ -1,6 +1,7 @@
 import type {
   FieldError,
   FieldPath,
+  FieldPathValue,
   FieldValues,
   Path,
   PathValue,
@@ -42,10 +43,13 @@ export type BaseFieldProps<
 > = {
   name: TName
   required?: boolean
+  validate?: Record<
+    string,
+    Validate<FieldPathValue<TFieldValues, TName>, TFieldValues>
+  >
   /**
-   * @deprecated use rules props instead
+   * @deprecated Use individual props instead
    */
-  validate?: Validate<PathValue<TFieldValues, Path<TFieldValues>>, TFieldValues>
   rules?: UseControllerProps<TFieldValues>['rules']
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
   label?: string
