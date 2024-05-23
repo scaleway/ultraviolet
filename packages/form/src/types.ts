@@ -42,10 +42,13 @@ export type BaseFieldProps<
 > = {
   name: TName
   required?: boolean
+  validate?: Record<
+    string,
+    Validate<PathValue<TFieldValues, Path<TFieldValues>>, TFieldValues>
+  >
   /**
-   * @deprecated use rules props instead
+   * @deprecated Use individual props instead
    */
-  validate?: Validate<PathValue<TFieldValues, Path<TFieldValues>>, TFieldValues>
   rules?: UseControllerProps<TFieldValues>['rules']
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
   label?: string
