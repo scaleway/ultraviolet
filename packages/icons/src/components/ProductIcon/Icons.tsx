@@ -33,6 +33,7 @@ import { ReactComponent as dediBackup } from './assets/dedibackup.svg'
 import { ReactComponent as dedibox } from './assets/dedibox.svg'
 import { ReactComponent as dedicatedControlPlane } from './assets/dedicated-control-plane.svg'
 import { ReactComponent as dedicatedServer } from './assets/dedicated-server.svg'
+import { ReactComponent as deleteMarker } from './assets/delete-marker.svg'
 import { ReactComponent as devices } from './assets/devices.svg'
 import { ReactComponent as directConnect } from './assets/direct-connect.svg'
 import { ReactComponent as distributedDataLab } from './assets/distributed-data-lab.svg'
@@ -72,6 +73,7 @@ import { ReactComponent as instance } from './assets/instance.svg'
 import { ReactComponent as iotEdge } from './assets/iot-edge.svg'
 import { ReactComponent as iot } from './assets/iot.svg'
 import { ReactComponent as ipFailover } from './assets/ip-failover.svg'
+import { ReactComponent as ipam } from './assets/ipam.svg'
 import { ReactComponent as ipfsNaming } from './assets/ipfs-naming.svg'
 import { ReactComponent as ipfs } from './assets/ipfs.svg'
 import { ReactComponent as jero } from './assets/jero.svg'
@@ -292,4 +294,6 @@ export const PRODUCT_ICONS = {
   kms,
   privateIp,
   quantumApplication,
+  ipam,
+  deleteMarker,
 } as const

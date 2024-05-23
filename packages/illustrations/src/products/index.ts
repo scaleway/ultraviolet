@@ -7,6 +7,7 @@ import * as containerRegistry from './containerRegistry'
 import * as containers from './containers'
 import * as costManager from './costManager'
 import * as dedibox from './dedibox'
+import * as dediboxVPS from './dediboxVPS'
 import * as distributedDataLab from './distributedDataLab'
 import * as documentDB from './documentDB'
 import * as domainsAndDns from './domainsAndDns'
@@ -21,6 +22,7 @@ import * as ipfsPinning from './ipfsPinning'
 import * as jero from './jero'
 import * as k8sKapsule from './k8sKapsule'
 import * as k8sKosmos from './k8sKosmos'
+import * as kms from './kms'
 import * as loadBalancers from './loadBalancers'
 import * as managedDatabase from './managedDatabase'
 import * as nabu from './nabu'
@@ -82,4 +84,6 @@ export {
   inference,
   distributedDataLab,
   costManager,
+  kms,
+  dediboxVPS,
 }
