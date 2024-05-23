@@ -1,6 +1,7 @@
 import type {
   FieldError,
   FieldPath,
+  FieldPathValue,
   FieldValues,
   Path,
   PathValue,
@@ -44,7 +45,7 @@ export type BaseFieldProps<
   required?: boolean
   validate?: Record<
     string,
-    Validate<PathValue<TFieldValues, Path<TFieldValues>>, TFieldValues>
+    Validate<FieldPathValue<TFieldValues, TName>, TFieldValues>
   >
   /**
    * @deprecated Use individual props instead
