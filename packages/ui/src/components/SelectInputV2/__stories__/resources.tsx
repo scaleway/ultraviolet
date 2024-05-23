@@ -2,7 +2,6 @@ import { CategoryIcon } from '@ultraviolet/icons'
 import { Badge } from '../../Badge'
 import { Bullet } from '../../Bullet'
 import { Text } from '../../Text'
-import { Tooltip } from '../../Tooltip'
 
 const reactNeptune = (
   <Text as="div" variant="body">
@@ -10,11 +9,6 @@ const reactNeptune = (
   </Text>
 )
 
-const marsToolTip = (
-  <Tooltip placement="top" text="This option is disabled">
-    Mars
-  </Tooltip>
-)
 const optionalInfo1 = <Badge>Optional info</Badge>
 const optionalInfo2 = <Bullet text="1" />
 const optionalInfo3 = <CategoryIcon name="network" />
@@ -54,7 +48,7 @@ export const dataUnGrouped = [
   },
   {
     value: 'mars',
-    label: marsToolTip,
+    label: 'Mars',
     disabled: true,
     tooltip: 'Mars cant be selected',
   },
