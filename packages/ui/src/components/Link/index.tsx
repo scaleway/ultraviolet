@@ -8,7 +8,7 @@ import type {
   ReactNode,
   RefObject,
 } from 'react'
-import { forwardRef, useEffect, useRef, useState } from 'react'
+import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import type { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
@@ -25,7 +25,7 @@ export const PROMINENCES = {
 
 export type ProminenceProps = keyof typeof PROMINENCES
 
-type LinkSizes = 'large' | 'small'
+type LinkSizes = 'large' | 'small' | 'xsmall'
 type LinkIconPosition = 'left' | 'right'
 type LinkProps = {
   children: ReactNode
@@ -61,7 +61,7 @@ const StyledLink = styled('a', {
 })<{
   sentiment: Color
   prominence?: ProminenceProps
-  size: LinkSizes
+  variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong'
   iconPosition?: LinkIconPosition
   oneLine?: boolean
 }>`
@@ -105,10 +105,7 @@ const StyledLink = styled('a', {
     display: block;`
       : 'width: fit-content;'}
 
-  ${({ size, theme }) => {
-    const variant = size === 'small' ? 'bodySmallStrong' : 'bodyStrong'
-
-    return `
+  ${({ variant, theme }) => `
       font-size: ${theme.typography[variant].fontSize};
       font-family: ${theme.typography[variant].fontFamily};
       font-weight: ${theme.typography[variant].weight};
@@ -116,8 +113,7 @@ const StyledLink = styled('a', {
       line-height: ${theme.typography[variant].lineHeight};
       paragraph-spacing: ${theme.typography[variant].paragraphSpacing};
       text-case: ${theme.typography[variant].textCase};
-    `
-  }}
+    `}
   &:hover,
   &:focus {
     ${StyledIcon} {
@@ -193,7 +189,12 @@ export const Link = forwardRef(
     const usedRef = (ref as RefObject<HTMLAnchorElement>) ?? elementRef
 
     const finalStringChildren = recursivelyGetChildrenString(children)
+    const textVariant = useMemo(() => {
+      if (size === 'xsmall') return 'captionStrong'
+      if (size === 'small') return 'bodySmallStrong'
 
+      return 'bodyStrong'
+    }, [size])
     useEffect(() => {
       if (oneLine && usedRef?.current) {
         const { offsetWidth, scrollWidth } = usedRef.current
@@ -212,7 +213,7 @@ export const Link = forwardRef(
           prominence={prominence}
           rel={computedRel}
           className={className}
-          size={size}
+          variant={textVariant}
           onClick={onClick}
           iconPosition={iconPosition}
           aria-label={ariaLabel}

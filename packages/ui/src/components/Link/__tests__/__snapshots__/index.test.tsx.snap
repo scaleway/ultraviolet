@@ -90,6 +90,7 @@ exports[`Link > prominence > render prominence default 1`] = `
       data-variant="standalone"
       href="/"
       prominence="default"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -187,6 +188,7 @@ exports[`Link > prominence > render prominence strong 1`] = `
       data-variant="standalone"
       href="/"
       prominence="strong"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -284,6 +286,7 @@ exports[`Link > prominence > render prominence stronger 1`] = `
       data-variant="standalone"
       href="/"
       prominence="stronger"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -381,6 +384,7 @@ exports[`Link > prominence > render prominence weak 1`] = `
       data-variant="standalone"
       href="/"
       prominence="weak"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -477,6 +481,7 @@ exports[`Link > render correctly with bad sentiment 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -573,6 +578,7 @@ exports[`Link > render correctly with href props 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -785,6 +791,7 @@ exports[`Link > render correctly with href props 2`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       <svg
         class="emotion-2 emotion-3 emotion-4"
@@ -803,6 +810,7 @@ exports[`Link > render correctly with href props 2`] = `
       class="emotion-5 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
       <svg
@@ -823,6 +831,7 @@ exports[`Link > render correctly with href props 2`] = `
       href="/"
       rel="noopener noreferrer"
       target="_blank"
+      variant="bodyStrong"
     >
       Hello
       <span
@@ -852,6 +861,7 @@ exports[`Link > render correctly with href props 2`] = `
       href="/"
       rel="noopener noreferrer"
       target="_blank"
+      variant="bodyStrong"
     >
       Hello
       <span
@@ -968,6 +978,7 @@ exports[`Link > render correctly with no sentiment 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1068,6 +1079,7 @@ exports[`Link > render correctly with oneLine 1`] = `
         class="emotion-0 emotion-1"
         data-variant="standalone"
         href="/"
+        variant="bodyStrong"
       >
         Hello this is a very long text that should be truncated
       </a>
@@ -1238,6 +1250,86 @@ exports[`Link > render correctly with sizes 1`] = `
   text-decoration-thickness: 2px;
 }
 
+.emotion-4 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #005da3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 16px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.emotion-4 .e1afnb7a2 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.emotion-4>* {
+  pointer-events: none;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #004c85;
+  text-decoration-color: #004c85;
+}
+
+.emotion-4:hover .e1afnb7a2,
+.emotion-4:focus .e1afnb7a2 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.emotion-4[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.emotion-4:hover::after,
+.emotion-4:focus::after {
+  background-color: #005da3;
+}
+
+.emotion-4:active {
+  text-decoration-thickness: 2px;
+}
+
 <div
     data-testid="testing"
   >
@@ -1245,6 +1337,7 @@ exports[`Link > render correctly with sizes 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1253,10 +1346,19 @@ exports[`Link > render correctly with sizes 1`] = `
       class="emotion-2 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodySmallStrong"
     >
       Hello
     </a>
     ,
+    <a
+      class="emotion-4 emotion-1"
+      data-variant="standalone"
+      href="/"
+      variant="captionStrong"
+    >
+      Hello
+    </a>
   </div>
 </DocumentFragment>
 `;
@@ -1374,6 +1476,7 @@ exports[`Link > render correctly with target blank 1`] = `
       href="/"
       rel="noopener noreferrer"
       target="_blank"
+      variant="bodyStrong"
     >
       Hello
       <span
@@ -1490,6 +1593,7 @@ exports[`Link > render correctly with variants props 1`] = `
       class="emotion-0 emotion-1"
       data-variant="inline"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1497,6 +1601,7 @@ exports[`Link > render correctly with variants props 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1593,6 +1698,7 @@ exports[`Link > sentiment > render danger 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1689,6 +1795,7 @@ exports[`Link > sentiment > render info 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1785,6 +1892,7 @@ exports[`Link > sentiment > render neutral 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1881,6 +1989,7 @@ exports[`Link > sentiment > render primary 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -1977,6 +2086,7 @@ exports[`Link > sentiment > render secondary 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -2073,6 +2183,7 @@ exports[`Link > sentiment > render success 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
@@ -2169,6 +2280,7 @@ exports[`Link > sentiment > render warning 1`] = `
       class="emotion-0 emotion-1"
       data-variant="standalone"
       href="/"
+      variant="bodyStrong"
     >
       Hello
     </a>
