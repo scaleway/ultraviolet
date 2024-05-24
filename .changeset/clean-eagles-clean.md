@@ -1,5 +1,5 @@
 ---
-"@ultraviolet/plus": patch
+"@ultraviolet/ui": patch
 ---
 
-Adjust the estimated cost condition to control the visibility of the description
+Fix Card component style by removing flex
