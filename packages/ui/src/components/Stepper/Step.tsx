@@ -39,10 +39,7 @@ const loadingAnimation = (size: 'small' | 'medium') => keyframes`
     width: 0;
   }
   to {
-    width: calc(
-      100% - ${size === 'small' ? '24px' : '32px'} -
-       8px}
-    );
+    width: calc(100% - ${size === 'small' ? '24px' : '32px'} - 8px});
   }
 `
 
@@ -61,7 +58,7 @@ const StyledBullet = styled(Bullet)<{
     size === 'small' ? theme.space[3] : theme.space[4]};
   ${({ theme, isActive }) =>
     isActive
-      ? `background-color: ${theme.colors.primary.backgroundStrongHover}; 
+      ? `background-color: ${theme.colors.primary.backgroundStrongHover};
           box-shadow: ${theme.shadows.focusPrimary};`
       : null};
 `
@@ -89,10 +86,10 @@ const StyledStepContainer = styled(Stack)<{
   white-space: nowrap;
   transition: text-decoration 300ms;
 
-  &[data-interactive='true']:not([data-disabled='true']) {
+  &[data-interactive="true"]:not([data-disabled="true"]) {
     cursor: pointer;
 
-    &[aria-selected='true']:hover {
+    &[aria-selected="true"]:hover {
       & > ${StyledBullet} {
         box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
         & > ${StyledText} {
@@ -104,7 +101,7 @@ const StyledStepContainer = styled(Stack)<{
       }
     }
 
-    &[data-done='true']:hover {
+    &[data-done="true"]:hover {
       & > ${StyledBullet} {
         box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
       }
@@ -117,7 +114,7 @@ const StyledStepContainer = styled(Stack)<{
     }
   }
 
-  &[data-disabled='true'] {
+  &[data-disabled="true"] {
     cursor: not-allowed;
 
     & > ${StyledText} {
@@ -133,13 +130,13 @@ const StyledStepContainer = styled(Stack)<{
     }
   }
 
-  &:not([data-hide-separator='true']):not([data-label-position='right']) {
+  &:not([data-hide-separator="true"]):not([data-label-position="right"]) {
     flex-direction: column;
     flex: 1;
 
     &:not(:last-child) {
       &:after {
-        content: '';
+        content: "";
         position: relative;
         align-self: baseline;
         border-radius: ${({ theme }) => theme.radii.default};
@@ -154,17 +151,15 @@ const StyledStepContainer = styled(Stack)<{
         left: calc(50% + 25px);
         order: -1;
         height: ${({ size }) =>
-          size === 'small'
-            ? LINE_HEIGHT_SIZES.small
-            : LINE_HEIGHT_SIZES.medium}px;
+          size === 'small' ? LINE_HEIGHT_SIZES.small : LINE_HEIGHT_SIZES.medium}px;
       }
 
-      &[data-done='true']:after {
+      &[data-done="true"]:after {
         background-color: ${({ theme }) =>
           theme.colors.primary.backgroundStrong};
       }
 
-      &[aria-selected='true'][data-animated='true']:after {
+      &[aria-selected="true"][data-animated="true"]:after {
         background-color: ${({ theme }) =>
           theme.colors.primary.backgroundStrong};
         ${({ size }) => loadingStyle(size)}

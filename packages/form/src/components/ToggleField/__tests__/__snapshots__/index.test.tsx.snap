@@ -25,7 +25,7 @@ exports[`ToggleField > should render correctly 1`] = `
   width: 22.04px;
 }
 
-.emotion-0[aria-disabled='true'] {
+.emotion-0[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -80,7 +80,7 @@ exports[`ToggleField > should render correctly 1`] = `
 }
 
 .emotion-4:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -97,20 +97,20 @@ exports[`ToggleField > should render correctly 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4[data-disabled='false']:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-4[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4[data-checked='true']:hover {
+.emotion-4[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-4[data-checked='true']:after {
+.emotion-4[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -118,37 +118,37 @@ exports[`ToggleField > should render correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4[data-checked='true']:focus-within,
-.emotion-4[data-checked='true']:focus {
+.emotion-4[data-checked="true"]:focus-within,
+.emotion-4[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled='true'][data-checked='true'] {
+.emotion-4[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-4[data-error='true']:focus-within,
-.emotion-4[data-error='true']:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true'][data-checked='true'] {
+.emotion-4[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-4[data-error='true'][data-disabled='true'] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-4[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
@@ -225,7 +225,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
   width: 22.04px;
 }
 
-.emotion-0[aria-disabled='true'] {
+.emotion-0[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -280,7 +280,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
 }
 
 .emotion-4:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -297,20 +297,20 @@ exports[`ToggleField > should render correctly checked 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4[data-disabled='false']:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-4[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4[data-checked='true']:hover {
+.emotion-4[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-4[data-checked='true']:after {
+.emotion-4[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -318,37 +318,37 @@ exports[`ToggleField > should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4[data-checked='true']:focus-within,
-.emotion-4[data-checked='true']:focus {
+.emotion-4[data-checked="true"]:focus-within,
+.emotion-4[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled='true'][data-checked='true'] {
+.emotion-4[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-4[data-error='true']:focus-within,
-.emotion-4[data-error='true']:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true'][data-checked='true'] {
+.emotion-4[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-4[data-error='true'][data-disabled='true'] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-4[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
@@ -426,7 +426,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   width: 22.04px;
 }
 
-.emotion-0[aria-disabled='true'] {
+.emotion-0[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -481,7 +481,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
 }
 
 .emotion-4:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -498,20 +498,20 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-4[data-disabled='false']:active:after {
+.emotion-4[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-4[data-checked='true'] {
+.emotion-4[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-4[data-checked='true']:hover {
+.emotion-4[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-4[data-checked='true']:after {
+.emotion-4[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -519,37 +519,37 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-4[data-checked='true']:focus-within,
-.emotion-4[data-checked='true']:focus {
+.emotion-4[data-checked="true"]:focus-within,
+.emotion-4[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-4[data-disabled='true'] {
+.emotion-4[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-4[data-disabled='true'][data-checked='true'] {
+.emotion-4[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-4[data-error='true'] {
+.emotion-4[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-4[data-error='true']:focus-within,
-.emotion-4[data-error='true']:focus {
+.emotion-4[data-error="true"]:focus-within,
+.emotion-4[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-4[data-error='true'][data-checked='true'] {
+.emotion-4[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-4[data-error='true'][data-disabled='true'] {
+.emotion-4[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-4[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-4[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
@@ -627,7 +627,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   width: 22.04px;
 }
 
-.emotion-0[aria-disabled='true'] {
+.emotion-0[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -696,7 +696,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 }
 
 .emotion-6:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -713,20 +713,20 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled='false']:active:after {
+.emotion-6[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-6[data-checked='true'] {
+.emotion-6[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6[data-checked='true']:hover {
+.emotion-6[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-6[data-checked='true']:after {
+.emotion-6[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -734,37 +734,37 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6[data-checked='true']:focus-within,
-.emotion-6[data-checked='true']:focus {
+.emotion-6[data-checked="true"]:focus-within,
+.emotion-6[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled='true'] {
+.emotion-6[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled='true'][data-checked='true'] {
+.emotion-6[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error='true'] {
+.emotion-6[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error='true']:focus-within,
-.emotion-6[data-error='true']:focus {
+.emotion-6[data-error="true"]:focus-within,
+.emotion-6[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error='true'][data-checked='true'] {
+.emotion-6[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-6[data-error='true'][data-disabled='true'] {
+.emotion-6[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 

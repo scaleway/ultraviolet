@@ -25,8 +25,8 @@ const StyledList = styled('div', {
   width: 100%;
   gap: ${({ theme }) => theme.space['1']};
 
-  [role='row'],
-  [role='button row'] {
+  [role="row"],
+  [role="button row"] {
     display: grid;
     width: 100%;
     grid-template-columns: ${({ template }) => template};
@@ -77,9 +77,9 @@ const BaseList = forwardRef(
   ) => {
     const computeTemplate = `${
       selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
-    }${
-      expandable ? `${EXPANDABLE_COLUMN_SIZE}px ` : ''
-    }${columns.map(({ width }) => width ?? 'minmax(0, 1fr)').join(' ')}`
+    }${expandable ? `${EXPANDABLE_COLUMN_SIZE}px ` : ''}${columns
+      .map(({ width }) => width ?? 'minmax(0, 1fr)')
+      .join(' ')}`
 
     return (
       <ListProvider

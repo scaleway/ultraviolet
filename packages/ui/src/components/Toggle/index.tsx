@@ -51,7 +51,7 @@ const StyledToggle = styled.div<{
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: ${({ size }) => SIZES[size].height / 2 - SIZES[size].ball / 2}px;
     left: 5px;
@@ -67,11 +67,11 @@ const StyledToggle = styled.div<{
     box-shadow: ${({ theme }) => theme.shadows.focusNeutral};
   }
 
-  &[data-disabled='false']:active:after {
+  &[data-disabled="false"]:active:after {
     width: ${({ size }) => SIZES[size].ball * 1.3775}px;
   }
 
-  &[data-checked='true'] {
+  &[data-checked="true"] {
     color: ${({ theme }) => theme.colors.neutral.textStrong};
     background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
@@ -91,16 +91,16 @@ const StyledToggle = styled.div<{
     }
   }
 
-  &[data-disabled='true'] {
+  &[data-disabled="true"] {
     background: ${({ theme }) => theme.colors.neutral.backgroundStrongDisabled};
 
-    &[data-checked='true'] {
+    &[data-checked="true"] {
       background: ${({ theme }) =>
         theme.colors.primary.backgroundStrongDisabled};
     }
   }
 
-  &[data-error='true'] {
+  &[data-error="true"] {
     background-color: ${({ theme }) => theme.colors.danger.background};
 
     &:focus-within,
@@ -108,15 +108,14 @@ const StyledToggle = styled.div<{
       box-shadow: ${({ theme }) => theme.shadows.focusDanger};
     }
 
-    &[data-checked='true'] {
+    &[data-checked="true"] {
       background-color: ${({ theme }) => theme.colors.danger.backgroundStrong};
     }
 
-    &[data-disabled='true'] {
-      background-color: ${({ theme }) =>
-        theme.colors.danger.backgroundDisabled};
+    &[data-disabled="true"] {
+      background-color: ${({ theme }) => theme.colors.danger.backgroundDisabled};
 
-      &[data-checked='true'] {
+      &[data-checked="true"] {
         background-color: ${({ theme }) =>
           theme.colors.danger.backgroundStrongDisabled};
       }
@@ -154,7 +153,7 @@ const StyledLabel = styled.label<{
     width: ${({ size }) => SIZES[size].ball * 1.3775}px;
   }
 
-  &[aria-disabled='true'] {
+  &[aria-disabled="true"] {
     cursor: not-allowed;
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
   }

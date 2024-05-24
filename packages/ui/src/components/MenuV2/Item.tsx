@@ -64,7 +64,9 @@ const Container = styled('div', {
       ? ''
       : `border-bottom: 1px solid ${theme.colors.neutral.border};`}
   padding: ${({ theme, borderless }) =>
-    `${borderless ? theme.space['0.25'] : theme.space['0.5']} ${theme.space['0.5']}`};
+    `${borderless ? theme.space['0.25'] : theme.space['0.5']} ${
+      theme.space['0.5']
+    }`};
   &:last-child {
     border: none;
   }

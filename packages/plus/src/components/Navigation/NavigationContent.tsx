@@ -28,21 +28,21 @@ const Container = styled('div', {
 
   width: ${({ width }) => width}px;
 
-  &[data-expanded='true'][data-animation='false'] {
+  &[data-expanded="true"][data-animation="false"] {
     max-width: ${NAVIGATION_MAX_WIDTH}px;
     min-width: ${NAVIGATION_MIN_WIDTH}px;
   }
 
-  &[data-expanded='false'] {
+  &[data-expanded="false"] {
     width: ${NAVIGATION_COLLASPED_WIDTH}px;
   }
 
-  &[data-animation='expand'] {
+  &[data-animation="expand"] {
     transition: width ${ANIMATION_DURATION}ms ease-in-out;
     width: ${({ width }) => width}px;
   }
 
-  &[data-animation='collapse'] {
+  &[data-animation="collapse"] {
     transition: width ${ANIMATION_DURATION}ms ease-in-out;
 
     width: ${NAVIGATION_COLLASPED_WIDTH}px;
@@ -60,7 +60,7 @@ const StickyFooter = styled.div`
   transition: box-shadow 230ms ease-in-out;
   justify-content: flex-end;
 
-  &[data-has-overflow-style='false'] {
+  &[data-has-overflow-style="false"] {
     box-shadow: none;
     border: none;
   }
@@ -90,12 +90,12 @@ const Content = styled(Stack)`
   overflow-x: hidden;
   flex-grow: 1;
 
-  &[data-is-expanded='false'] {
+  &[data-is-expanded="false"] {
     padding: ${({ theme }) => theme.space['2']} 0;
   }
 
-  &[data-is-expanded='true'],
-  &[data-animation='expand'] {
+  &[data-is-expanded="true"],
+  &[data-animation="expand"] {
     padding: ${({ theme }) => theme.space['2']};
   }
 `
@@ -159,8 +159,9 @@ export const NavigationContent = ({
     return true
   }, [])
 
-  const [footerHasOverflowStyle, setFooterHasOverflowStyle] =
-    useState(isScrollAtBottom())
+  const [footerHasOverflowStyle, setFooterHasOverflowStyle] = useState(
+    isScrollAtBottom(),
+  )
 
   // This is for detecting if there is scroll on the content and set the shadow on the footer
   useEffect(() => {

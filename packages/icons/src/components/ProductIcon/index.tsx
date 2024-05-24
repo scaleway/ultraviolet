@@ -25,8 +25,7 @@ const StyledIcon = (
 })<{ variant: Variants; disabled?: boolean; size: keyof typeof SIZES }>`
   & {
     width: ${({ size }) => `${SIZES[size]}px`};
-    min-width: ${({ size }) =>
-      `${SIZES[size]}px`}; // This is to avoid the icon to shrink when the text is too long
+    min-width: ${({ size }) => `${SIZES[size]}px`}; // This is to avoid the icon to shrink when the text is too long
     height: ${({ size }) => `${SIZES[size]}px`};
   }
 

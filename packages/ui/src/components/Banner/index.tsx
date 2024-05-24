@@ -35,8 +35,7 @@ const styles = ({
     if (variant === 'promotional') {
       return css`
         background-position: left, right;
-        background-image: ${theme.colors.other.gradients.background.linear
-          .aqua};
+        background-image: ${theme.colors.other.gradients.background.linear.aqua};
         background-repeat: no-repeat, no-repeat;
         background-size: contain, contain;
       `
@@ -55,8 +54,7 @@ const styles = ({
 
     if (variant === 'promotional') {
       return css`
-        background-image: ${theme.colors.other.gradients.background.linear
-          .aqua};
+        background-image: ${theme.colors.other.gradients.background.linear.aqua};
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
@@ -84,7 +82,7 @@ const Container = styled('div', {
     align-self: center;
   }
 
-  button[name='close'] {
+  button[name="close"] {
     background: none;
 
     &:hover {

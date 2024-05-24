@@ -26,8 +26,7 @@ const Card = styled.div<{
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
   background: ${({ theme }) => theme.colors.neutral.background};
-  ${({ onClick, href, theme }) =>
-    onClick || href ? activeStyle(theme) : null};
+  ${({ onClick, href, theme }) => (onClick || href ? activeStyle(theme) : null)};
   overflow-wrap: break-word;
 `
 

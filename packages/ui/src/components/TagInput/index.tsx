@@ -41,7 +41,9 @@ const TagInputContainer = styled('div', {
   background-color: ${({ theme: { colors } }) => colors.neutral.background};
 
   padding: ${({ theme, size }) =>
-    `calc(${theme.space[TAGINPUT_SIZE_PADDING[size]]} - 1px) ${theme.space['2']}`};
+    `calc(${theme.space[TAGINPUT_SIZE_PADDING[size]]} - 1px) ${
+      theme.space['2']
+    }`};
   cursor: text;
 
   background: ${({ theme }) => theme.colors.neutral.background};
@@ -53,11 +55,11 @@ const TagInputContainer = styled('div', {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
   }
 
-  &[data-success='true'] {
+  &[data-success="true"] {
     border-color: ${({ theme }) => theme.colors.success.border};
   }
 
-  &[data-error='true'] {
+  &[data-error="true"] {
     border-color: ${({ theme }) => theme.colors.danger.border};
   }
 
@@ -65,12 +67,12 @@ const TagInputContainer = styled('div', {
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
   }
 
-  &[data-readonly='true'] {
+  &[data-readonly="true"] {
     border-color: ${({ theme }) => theme.colors.neutral.border};
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   }
 
-  &[data-disabled='true'] {
+  &[data-disabled="true"] {
     border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     cursor: not-allowed;
@@ -105,7 +107,7 @@ const StyledInput = styled.input<{ 'data-size': TagInputSize }>`
   }
   height: 100%;
 
-  &[data-size='large'] {
+  &[data-size="large"] {
     font-size: ${({ theme }) => theme.typography.body.fontSize};
   }
 `
@@ -227,7 +229,9 @@ export const TagInput = ({
     setInput('')
     setTagInput(newTagInput)
     if (newTagInput.length !== tagInputState.length) {
-      setStatus({ [newTagInput[newTagInput.length - 1].index]: STATUS.LOADING })
+      setStatus({
+        [newTagInput[newTagInput.length - 1].index]: STATUS.LOADING,
+      })
     }
     try {
       dispatchOnChange(newTagInput)

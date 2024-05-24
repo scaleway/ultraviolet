@@ -27,7 +27,7 @@ const StyledTr = styled('tr', {
   shouldForwardProp: prop => !['highlightAnimation'].includes(prop),
 })<{ highlightAnimation?: boolean }>`
   animation: ${({ highlightAnimation, theme }) =>
-      highlightAnimation ? colorChange(theme) : undefined}
+    highlightAnimation ? colorChange(theme) : undefined}
     3s linear;
 `
 
