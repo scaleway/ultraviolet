@@ -14,7 +14,7 @@
     "prebuild": "shx rm -rf dist",
     "size": "pnpm run build && size-limit",
     "test:unit:coverage": "pnpm test:unit --coverage",
-    "test:unit": "vitest --run --config vite.config.ts",
+    "test:unit": "LC_ALL=en_US.UTF-8 pnpm vitest --run --config vite.config.ts",
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "watch:build": "vite build --config vite.config.ts --watch",
