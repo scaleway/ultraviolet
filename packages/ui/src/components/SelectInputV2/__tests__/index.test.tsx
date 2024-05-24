@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import type { ReactNode } from 'react'
 import { act } from 'react'
-import { beforeAll, describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { SelectInputV2 } from '..'
 import { OptionalInfo, cities, dataGrouped, dataUnGrouped } from './resources'
 
@@ -16,11 +16,15 @@ export type OptionType = {
 }
 
 describe('SelectInputV2', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
       configurable: true,
       value: 500,
     })
+  })
+
+  afterEach(() => {
+    Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {})
   })
 
   test('renders correctly', () => {
