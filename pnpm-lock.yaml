@@ -532,9 +532,6 @@ importers:
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:../themes
-      '@utils/test':
-        specifier: workspace:*
-        version: link:../../utils/test
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -545,6 +542,9 @@ importers:
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
+      '@utils/test':
+        specifier: workspace:*
+        version: link:../../utils/test
 
   packages/plus:
     dependencies:
