@@ -1,5 +1,22 @@
 # Change Log
 
+## 2.14.0
+
+### Minor Changes
+
+- [#3812](https://github.com/scaleway/ultraviolet/pull/3812) [`638c99a`](https://github.com/scaleway/ultraviolet/commit/638c99a7bec928d8c30f77fda10e5b0a5676e92d) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - Fix validate prop type on fields
+
+- [#3812](https://github.com/scaleway/ultraviolet/pull/3812) [`638c99a`](https://github.com/scaleway/ultraviolet/commit/638c99a7bec928d8c30f77fda10e5b0a5676e92d) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - Make rules deprecated an drop deprecated on validate prop
+
+- [#3801](https://github.com/scaleway/ultraviolet/pull/3801) [`3a808ce`](https://github.com/scaleway/ultraviolet/commit/3a808cec11a1435ff324085978b663bcf01cccad) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<UnitInputField />`
+
+### Patch Changes
+
+- [#3809](https://github.com/scaleway/ultraviolet/pull/3809) [`896ccd9`](https://github.com/scaleway/ultraviolet/commit/896ccd982d0c11c14c6cc83fc3f6e7eec739b1a7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.51.5`.
+
+- Updated dependencies [[`0c77ec7`](https://github.com/scaleway/ultraviolet/commit/0c77ec72bcce69989392f91f952042ab575e13f7), [`a915531`](https://github.com/scaleway/ultraviolet/commit/a915531712a6c819ffcf3b98dc190e338c9317f8), [`90dbb2b`](https://github.com/scaleway/ultraviolet/commit/90dbb2b9bf925c5b158ac8f221cc51bd0104ca6d), [`2c7da50`](https://github.com/scaleway/ultraviolet/commit/2c7da50c778527dd78a30c3cb33344175a21c8ef), [`2c7da50`](https://github.com/scaleway/ultraviolet/commit/2c7da50c778527dd78a30c3cb33344175a21c8ef)]:
+  - @ultraviolet/ui@1.54.0
+
 ## 2.13.12
 
 ### Patch Changes

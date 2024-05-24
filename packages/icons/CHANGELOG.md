@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.12.11
+
+### Patch Changes
+
+- [#3813](https://github.com/scaleway/ultraviolet/pull/3813) [`2be2c09`](https://github.com/scaleway/ultraviolet/commit/2be2c0947ce477b092f6494659f8d88c4e3873ac) Thanks [@lisalupi](https://github.com/lisalupi)! - - `<ProductIcon/>`: 2 new icons (`ipam` and `deleteMarker`)
+  - `<Illustration />`: 2 new types of illustrations (`kms` and `dediboxVPS`)
+
 ## 2.12.10
 
 ### Patch Changes
