@@ -3,7 +3,11 @@ import type { ComponentProps } from 'react'
 import { Link } from '..'
 import { Stack } from '../../Stack'
 
-const sizes: ComponentProps<typeof Link>['size'][] = ['large', 'small']
+const sizes: ComponentProps<typeof Link>['size'][] = [
+  'large',
+  'small',
+  'xsmall',
+]
 
 export const Size = (props: ComponentProps<typeof Link>) =>
   sizes.map(size => (

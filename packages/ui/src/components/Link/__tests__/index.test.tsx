@@ -99,6 +99,9 @@ describe('Link', () => {
           Hello
         </Link>
         ,
+        <Link size="xsmall" href="/">
+          Hello
+        </Link>
       </>,
     ))
 
