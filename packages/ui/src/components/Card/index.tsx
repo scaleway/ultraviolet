@@ -29,8 +29,6 @@ const BorderedBox = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['3']};
-  flex: 1;
-  display: flex;
 
   &[data-is-active='true'] {
     border: 1px solid ${({ theme }) => theme.colors.primary.border};
