@@ -1,4 +1,5 @@
 import fs from 'fs'
+import { createCSSFile } from './create-css-variables.mjs'
 
 const themesMatches = [
   {
@@ -226,5 +227,6 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
         console.log(`File written ${filePath}`)
       },
     )
+    createCSSFile(themeMatch.outputTheme, output)
   })
 })()
