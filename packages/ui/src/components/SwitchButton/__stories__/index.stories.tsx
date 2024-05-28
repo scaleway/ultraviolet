@@ -7,3 +7,4 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
+export { Size } from './Size.stories'

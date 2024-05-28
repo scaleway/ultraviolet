@@ -21,6 +21,22 @@ describe('SwitchButton', () => {
         }}
       />,
     ))
+  test('renders correctly medium', () =>
+    shouldMatchEmotionSnapshot(
+      <SwitchButton
+        name="test"
+        size="medium"
+        onChange={() => {}}
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
+      />,
+    ))
 
   test('renders correctly with right value', () =>
     shouldMatchEmotionSnapshot(
