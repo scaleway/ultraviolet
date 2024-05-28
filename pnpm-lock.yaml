@@ -198,8 +198,8 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       esbuild-plugin-browserslist:
-        specifier: 0.11.1
-        version: 0.11.1(browserslist@4.23.0)(esbuild@0.20.2)
+        specifier: 0.12.0
+        version: 0.12.0(browserslist@4.23.0)(esbuild@0.20.2)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -4676,12 +4676,12 @@ packages:
   esbuild-plugin-alias@0.2.1:
     resolution: {integrity: sha512-jyfL/pwPqaFXyKnj8lP8iLk6Z0m099uXR45aSN8Av1XD4vhvQutxxPzgA2bTcAwQpa1zCXDcWOlhFgyP3GKqhQ==}
 
-  esbuild-plugin-browserslist@0.11.1:
-    resolution: {integrity: sha512-yNdZRdDBEbm0PT4q2bJBhXvnwakXG5mG8ipiwGe5SRDPnKa7L7kQm2tHuBMowBtcFz6kRtZTv5njK7PJwU+tCQ==}
+  esbuild-plugin-browserslist@0.12.0:
+    resolution: {integrity: sha512-U9+fwm/e32UCZJreqr2EZx0F7/zQEaUslqIkixzouw7ChRRhu/QPgea5nk5nF9dj6qWt2bJJDVmGDSY9+8M5Xw==}
     engines: {node: '>=18'}
     peerDependencies:
       browserslist: ^4.21.8
-      esbuild: ~0.20.0
+      esbuild: ~0.21.3
 
   esbuild-register@3.5.0:
     resolution: {integrity: sha512-+4G/XmakeBAsvJuDugJvtyF1x+XJT4FMocynNpxrvEBViirpfUn2PgNpCHedfWhF4WokNsO/OvMKrmJOIJsI5A==}
@@ -8734,8 +8734,8 @@ packages:
   zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
 
-  zod@3.23.5:
-    resolution: {integrity: sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==}
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -10457,7 +10457,7 @@ snapshots:
       jest-util: 29.7.0
       jest-validate: 29.7.0
       jest-watcher: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-ansi: 6.0.1
@@ -10577,7 +10577,7 @@ snapshots:
       jest-haste-map: 29.7.0
       jest-regex-util: 29.6.3
       jest-util: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       pirates: 4.0.6
       slash: 3.0.0
       write-file-atomic: 4.0.2
@@ -14201,12 +14201,12 @@ snapshots:
 
   esbuild-plugin-alias@0.2.1: {}
 
-  esbuild-plugin-browserslist@0.11.1(browserslist@4.23.0)(esbuild@0.20.2):
+  esbuild-plugin-browserslist@0.12.0(browserslist@4.23.0)(esbuild@0.20.2):
     dependencies:
       browserslist: 4.23.0
       debug: 4.3.4
       esbuild: 0.20.2
-      zod: 3.23.5
+      zod: 3.23.8
     transitivePeerDependencies:
       - supports-color
 
@@ -15593,7 +15593,7 @@ snapshots:
       jest-runner: 29.7.0
       jest-util: 29.7.0
       jest-validate: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       parse-json: 5.2.0
       pretty-format: 29.7.0
       slash: 3.0.0
@@ -15650,7 +15650,7 @@ snapshots:
       jest-regex-util: 29.6.3
       jest-util: 29.7.0
       jest-worker: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       walker: 1.0.8
     optionalDependencies:
       fsevents: 2.3.3
@@ -19064,7 +19064,7 @@ snapshots:
 
   zod@3.22.4: {}
 
-  zod@3.23.5: {}
+  zod@3.23.8: {}
 
   zwitch@2.0.4: {}
 
