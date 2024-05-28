@@ -1,13 +1,10 @@
 import deepmerge from 'deepmerge'
 import { darkTheme } from './dark'
-import darkCSS from './darkCSS.css?inline'
 import { darkerTheme } from './darker'
-import darkerCSS from './darkerCSS.css?inline'
 import { deprecatedDarkTokens } from './deprecated/dark'
 import { deprecatedDarkerTokens } from './deprecated/darker'
 import { deprecatedLightTokens } from './deprecated/light'
 import { lightTheme } from './light'
-import lightCSS from './lightCSS.css?inline'
 
 const screens = {
   xsmall: 0,
@@ -34,7 +31,3 @@ export const consoleDarkerTheme = {
   ...(deepmerge(darkerTheme, deprecatedDarkerTokens) as typeof darkerTheme &
     typeof deprecatedDarkerTokens),
 }
-
-export const consoleLightThemeCSS = lightCSS
-export const consoleDarkThemeCSS = darkCSS
-export const consoleDarkerThemeCSS = darkerCSS

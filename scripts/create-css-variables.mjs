@@ -52,6 +52,6 @@ const generateThemeCss = uvTheme =>
 
 export const createCSSFile = (theme, content) => {
   const cssContent = generateThemeCss(content)
-  const filePath = `packages/themes/src/themes/console/${theme}CSS.css`
+  const filePath = `packages/themes/public/themes/${theme}.css`
   writeFileSync(filePath, cssContent, 'utf-8')
 }
