@@ -5,18 +5,13 @@ import { SelectableCard } from '../SelectableCard'
 import { Tooltip } from '../Tooltip'
 import { FocusOverlay } from './FocusOverlay'
 
-const StyledBorderedBox = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => theme.space['0.5']};
-  display: flex;
-  gap: ${({ theme }) => theme.space['1']};
-  position: relative;
-`
+const SIZES = {
+  small: 40,
+  medium: 48,
+}
 
 const StyledSelectableCard = styled(SelectableCard)`
   border: none;
-  height: 40px;
   padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
   font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
   justify-content: center;
@@ -48,7 +43,26 @@ const StyledSelectableCard = styled(SelectableCard)`
     }
   }
 `
+const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  border-radius: ${({ theme }) => theme.radii.default};
+  padding: ${({ theme }) => theme.space['0.5']};
+  display: flex;
+  gap: ${({ theme }) => theme.space['1']};
+  position: relative;
 
+  &[data-size='small'] {
+    & > ${StyledSelectableCard} {
+      height: ${SIZES.small}px;
+    }
+  }
+
+  &[data-size='medium'] {
+    & > ${StyledSelectableCard} {
+      height: ${SIZES.medium}px;
+    }
+  }
+`
 type SwitchButtonProps = {
   name: string
   onBlur?: FocusEventHandler
@@ -68,6 +82,7 @@ type SwitchButtonProps = {
   }
   className?: string
   'data-testid'?: string
+  size?: 'small' | 'medium'
 }
 
 /**
@@ -81,6 +96,7 @@ export const SwitchButton = ({
   name,
   leftButton,
   rightButton,
+  size = 'small',
   tooltip,
   className,
   'data-testid': dataTestId,
@@ -119,6 +135,7 @@ export const SwitchButton = ({
           onMouseDown={setMouseDown(true)}
           onMouseUp={setMouseDown(false)}
           onMouseLeave={setMouseDown(false)}
+          data-size={size}
         >
           {rightCardWidth && leftCardWidth ? (
             <FocusOverlay
