@@ -224,9 +224,10 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
       )}`,
       {},
       () => {
+        // eslint-disable-next-line no-console
         console.log(`File written ${filePath}`)
       },
     )
-    createCSSFile(themeMatch.outputTheme, output)
+    createCSSFile(themeMatch.outputTheme, output) // Create CSS-tokens
   })
 })()
