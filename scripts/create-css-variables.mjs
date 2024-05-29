@@ -1,5 +1,3 @@
-import { writeFileSync } from 'fs'
-
 const screens = {
   xsmall: 0,
   small: 576,
@@ -39,7 +37,7 @@ const createCssVariables = (prefix, obj) =>
     })
     .join('')
 
-const generateThemeCss = uvTheme =>
+export const generateThemeCss = uvTheme =>
   `:root {\n${
     createCssVariables('screen', screens) +
     createCssVariables('color', uvTheme.colors) +
@@ -49,9 +47,3 @@ const generateThemeCss = uvTheme =>
     createCssVariables('typography', uvTheme.typography) +
     createCssVariables('breakpoint', uvTheme.breakpoints)
   }}\n`
-
-export const createCSSFile = (theme, content) => {
-  const cssContent = generateThemeCss(content)
-  const filePath = `packages/themes/public/style/${theme}.css`
-  writeFileSync(filePath, cssContent, 'utf-8')
-}
