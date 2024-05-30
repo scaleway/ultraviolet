@@ -12,6 +12,24 @@ const fontWeightMap = {
   SemiBold: 600,
 }
 
+const makeCSSVariablesRec = (innerKey, innerValue, prefix, formattedKey) => {
+  if (typeof innerValue === 'object') {
+    return Object.entries(innerValue)
+      .map(([key, value]) =>
+        makeCSSVariablesRec(key, value, prefix, `${formattedKey}-${innerKey}`),
+      )
+      .join('')
+  }
+
+  const cssValue = fontWeightMap[innerValue] || innerValue
+  const formattedInnerKey = innerKey
+    .replace(/([A-Z])/g, '-$1')
+    .replace(/\./g, '-')
+    .toLowerCase() // Replace caps and dots by dashes, convert to kebab-case
+
+  return `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${cssValue};\n`
+}
+
 const createCssVariables = (prefix, obj) =>
   Object.entries(obj)
     .map(([key, value]) => {
@@ -19,17 +37,12 @@ const createCssVariables = (prefix, obj) =>
         .replace(/([A-Z])/g, '-$1')
         .replace(/\./g, '-')
         .toLowerCase()
+
       if (typeof value === 'object' && value !== null) {
         return Object.entries(value)
-          .map(([innerKey, innerValue]) => {
-            const cssValue = fontWeightMap[innerValue] || innerValue
-            const formattedInnerKey = innerKey
-              .replace(/([A-Z])/g, '-$1')
-              .replace(/\./g, '-')
-              .toLowerCase() // Replace caps and dots by dashes, convert to kebab-case
-
-            return `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${cssValue};\n`
-          })
+          .map(([innerKey, innerValue]) =>
+            makeCSSVariablesRec(innerKey, innerValue, prefix, formattedKey),
+          )
           .join('')
       }
 
