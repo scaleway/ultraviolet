@@ -33,12 +33,13 @@
     "darwin",
     "linux"
   ],
-  "sideEffects": false,
+  "sideEffects": ["**/*.css"],
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
   "exports": {
+    "./*.css": "./dist/style/*.css",
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
