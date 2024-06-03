@@ -1,6 +1,6 @@
-import redisContent from './redis-content.webp'
-import redisKeyvisual from './redis-keyvisual.webp'
-import redisOriginal from './redis-original.webp'
-import redisWire from './redis-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [redisContent, redisKeyvisual, redisOriginal, redisWire] =
+  bucketLinkProduct('redis')
 
 export { redisOriginal, redisContent, redisKeyvisual, redisWire }

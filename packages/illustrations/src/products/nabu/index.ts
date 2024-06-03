@@ -1,6 +1,6 @@
-import nabuContent from './nabu-content.webp'
-import nabuKeyvisual from './nabu-keyvisual.webp'
-import nabuOriginal from './nabu-original.webp'
-import nabuWire from './nabu-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [nabuContent, nabuKeyvisual, nabuOriginal, nabuWire] =
+  bucketLinkProduct('nabu')
 
 export { nabuContent, nabuOriginal, nabuWire, nabuKeyvisual }

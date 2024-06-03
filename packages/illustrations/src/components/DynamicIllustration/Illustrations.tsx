@@ -1,25 +1,28 @@
-import emptyDark from '../../various/empty/empty-dark.webp'
-import emptyLight from '../../various/empty/empty-light.webp'
-import failedDark from '../../various/empty/failed-dark.webp'
-import failedLight from '../../various/empty/failed-light.webp'
-import genericDark from '../../various/empty/generic-dark.webp'
-import genericLight from '../../various/empty/generic-light.webp'
-import loadingDark from '../../various/empty/loading-dark.webp'
-import loadingLight from '../../various/empty/loading-light.webp'
-import lockDark from '../../various/empty/lock-dark.webp'
-import lockLight from '../../various/empty/lock-light.webp'
-import plusDark from '../../various/empty/plus-dark.webp'
-import plusLight from '../../various/empty/plus-light.webp'
-import resourcesDark from '../../various/empty/resources-dark.webp'
-import resourcesLight from '../../various/empty/resources-light.webp'
-import searchDark from '../../various/empty/search-dark.webp'
-import searchLight from '../../various/empty/search-light.webp'
-import dangerDark from '../../various/feedback/danger-dark.webp'
-import dangerLight from '../../various/feedback/danger-light.webp'
-import successDark from '../../various/feedback/success-dark.webp'
-import successLight from '../../various/feedback/success-light.webp'
-import warningDark from '../../various/feedback/warning-dark.webp'
-import warningLight from '../../various/feedback/warning-light.webp'
+import { EMPTY_PATH, FEEDBACK_PATH, bucketLink } from '../../helper'
+
+const emptyDark = bucketLink(EMPTY_PATH, 'empty-dark')
+const emptyLight = bucketLink(EMPTY_PATH, 'empty-light')
+const failedDark = bucketLink(EMPTY_PATH, 'failed-dark')
+const failedLight = bucketLink(EMPTY_PATH, 'failed-light')
+const genericDark = bucketLink(EMPTY_PATH, 'generic-dark')
+const genericLight = bucketLink(EMPTY_PATH, 'generic-light')
+const loadingDark = bucketLink(EMPTY_PATH, 'loading-dark')
+const loadingLight = bucketLink(EMPTY_PATH, 'loading-light')
+const lockDark = bucketLink(EMPTY_PATH, 'lock-dark')
+const lockLight = bucketLink(EMPTY_PATH, 'lock-light')
+const plusDark = bucketLink(EMPTY_PATH, 'plus-dark')
+const plusLight = bucketLink(EMPTY_PATH, 'plus-light')
+const resourcesDark = bucketLink(EMPTY_PATH, 'resources-dark')
+const resourcesLight = bucketLink(EMPTY_PATH, 'resources-light')
+const searchDark = bucketLink(EMPTY_PATH, 'search-dark')
+const searchLight = bucketLink(EMPTY_PATH, 'search-light')
+
+const dangerDark = bucketLink(FEEDBACK_PATH, 'danger-dark')
+const dangerLight = bucketLink(FEEDBACK_PATH, 'danger-light')
+const successDark = bucketLink(FEEDBACK_PATH, 'success-dark')
+const successLight = bucketLink(FEEDBACK_PATH, 'success-light')
+const warningDark = bucketLink(FEEDBACK_PATH, 'warning-dark')
+const warningLight = bucketLink(FEEDBACK_PATH, 'warning-light')
 
 // To be sure that every illustration has both a light and a dark version
 export type IllustrationsKeys = {

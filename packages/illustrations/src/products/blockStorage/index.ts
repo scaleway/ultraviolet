@@ -1,7 +1,11 @@
-import blockStorageContent from './block-storage-content.webp'
-import blockStorageKeyvisual from './block-storage-keyvisual.webp'
-import blockStorageOriginal from './block-storage-original.webp'
-import blockStorageWire from './block-storage-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  blockStorageContent,
+  blockStorageKeyvisual,
+  blockStorageOriginal,
+  blockStorageWire,
+] = bucketLinkProduct('blockStorage')
 
 export {
   blockStorageOriginal,

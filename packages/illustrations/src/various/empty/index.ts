@@ -1,17 +1,19 @@
-import emptyDark from './empty-dark.webp'
-import emptyLight from './empty-light.webp'
-import failedDark from './failed-dark.webp'
-import failedLight from './failed-light.webp'
-import genericDark from './generic-dark.webp'
-import genericLight from './generic-light.webp'
-import loadingDark from './loading-dark.webp'
-import loadingLight from './loading-light.webp'
-import lockDark from './lock-dark.webp'
-import lockLight from './lock-light.webp'
-import plusDark from './plus-dark.webp'
-import plusLight from './plus-light.webp'
-import resourcesDark from './resources-dark.webp'
-import resourcesLight from './resources-light.webp'
+import { EMPTY_PATH, bucketLink } from '../../helper'
+
+const emptyDark = bucketLink(EMPTY_PATH, 'empty-dark')
+const emptyLight = bucketLink(EMPTY_PATH, 'empty-light')
+const failedDark = bucketLink(EMPTY_PATH, 'failed-dark')
+const failedLight = bucketLink(EMPTY_PATH, 'failed-light')
+const genericDark = bucketLink(EMPTY_PATH, 'generic-dark')
+const genericLight = bucketLink(EMPTY_PATH, 'generic-light')
+const loadingDark = bucketLink(EMPTY_PATH, 'loading-dark')
+const loadingLight = bucketLink(EMPTY_PATH, 'loading-light')
+const lockDark = bucketLink(EMPTY_PATH, 'lock-dark')
+const lockLight = bucketLink(EMPTY_PATH, 'lock-light')
+const plusDark = bucketLink(EMPTY_PATH, 'plus-dark')
+const plusLight = bucketLink(EMPTY_PATH, 'plus-light')
+const resourcesDark = bucketLink(EMPTY_PATH, 'resources-dark')
+const resourcesLight = bucketLink(EMPTY_PATH, 'resources-light')
 
 export {
   emptyDark,

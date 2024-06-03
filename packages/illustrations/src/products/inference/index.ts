@@ -1,7 +1,7 @@
-import inferenceContent from './inference-content.webp'
-import inferenceKeyvisual from './inference-keyvisual.webp'
-import inferenceOriginal from './inference-original.webp'
-import inferenceWire from './inference-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [inferenceContent, inferenceKeyvisual, inferenceOriginal, inferenceWire] =
+  bucketLinkProduct('inference')
 
 export {
   inferenceOriginal,

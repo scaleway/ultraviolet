@@ -1,7 +1,11 @@
-import costManagerContent from './cost-manager-content.webp'
-import costManagerKeyvisual from './cost-manager-keyvisual.webp'
-import costManagerOriginal from './cost-manager-original.webp'
-import costManagerWire from './cost-manager-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  costManagerContent,
+  costManagerKeyvisual,
+  costManagerOriginal,
+  costManagerWire,
+] = bucketLinkProduct('costManager')
 
 export {
   costManagerOriginal,

@@ -1,0 +1,16 @@
+name: Upload Illustrations
+
+on: 
+    pull_request:
+        types: ['opened', 'edited', 'reopened', 'synchronize']
+    push:
+        branches:
+            - main
+
+jobs:
+    upload-illustrations:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up AWS CLI
+              run: pnpm run illustrations:upload

@@ -1,7 +1,11 @@
-import domainsAndDnsContent from './domains-and-dns-content.webp'
-import domainsAndDnsKeyvisual from './domains-and-dns-keyvisual.webp'
-import domainsAndDnsOriginal from './domains-and-dns-original.webp'
-import domainsAndDnsWire from './domains-and-dns-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  domainsAndDnsContent,
+  domainsAndDnsKeyvisual,
+  domainsAndDnsOriginal,
+  domainsAndDnsWire,
+] = bucketLinkProduct('domainsAndDns')
 
 export {
   domainsAndDnsOriginal,

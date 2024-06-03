@@ -1,7 +1,11 @@
-import distributedDataLabContent from './distributed-data-lab-content.webp'
-import distributedDataLabKeyvisual from './distributed-data-lab-keyvisual.webp'
-import distributedDataLabOriginal from './distributed-data-lab-original.webp'
-import distributedDataLabWire from './distributed-data-lab-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  distributedDataLabContent,
+  distributedDataLabKeyvisual,
+  distributedDataLabOriginal,
+  distributedDataLabWire,
+] = bucketLinkProduct('distributedDataLab')
 
 export {
   distributedDataLabOriginal,

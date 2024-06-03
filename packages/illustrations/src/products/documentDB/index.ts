@@ -1,7 +1,25 @@
-import documentDBContent from './documentDB-content.webp'
-import documentDBKeyvisual from './documentDB-keyvisual.webp'
-import documentDBOriginal from './documentDB-original.webp'
-import documentDBWire from './documentDB-wire.svg'
+import { bucketLink } from '../../helper'
+
+const documentDBContent = bucketLink(
+  'products/documentDB',
+  'documentDB-content',
+)
+
+const documentDBKeyvisual = bucketLink(
+  'products/documentDB',
+  'documentDB-keyvisual',
+)
+
+const documentDBOriginal = bucketLink(
+  'products/documentDB',
+  'documentDB-original',
+)
+
+const documentDBWire = bucketLink(
+  'products/documentDB',
+  'documentDB-wire',
+  'svg',
+)
 
 export {
   documentDBOriginal,

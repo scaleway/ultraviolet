@@ -1,6 +1,6 @@
-import quantumContent from './quantum-content.webp'
-import quantumKeyVisual from './quantum-key-visual.webp'
-import quantumOrignal from './quantum-original.webp'
-import quantumWire from './quantum-wire.svg'
+import { bucketLinkProduct } from '../../helper'
 
-export { quantumContent, quantumKeyVisual, quantumOrignal, quantumWire }
+const [quantumContent, quantumKeyvisual, quantumOriginal, quantumWire] =
+  bucketLinkProduct('quantum')
+
+export { quantumContent, quantumKeyvisual, quantumOriginal, quantumWire }

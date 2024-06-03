@@ -1,7 +1,11 @@
-import ipfsPinningContent from './ipfs-pinning-content.webp'
-import ipfsPinningKeyvisual from './ipfs-pinning-keyvisual.webp'
-import ipfsPinningOriginal from './ipfs-pinning-original.webp'
-import ipfsPinningWire from './ipfs-pinning-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  ipfsPinningContent,
+  ipfsPinningKeyvisual,
+  ipfsPinningOriginal,
+  ipfsPinningWire,
+] = bucketLinkProduct('ipfsPinning')
 
 export {
   ipfsPinningOriginal,

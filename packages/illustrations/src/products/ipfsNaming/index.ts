@@ -1,7 +1,11 @@
-import ipfsNamingContent from './ipfs-naming-content.webp'
-import ipfsNamingKeyvisual from './ipfs-naming-keyvisual.webp'
-import ipfsNamingOriginal from './ipfs-naming-original.webp'
-import ipfsNamingWire from './ipfs-naming-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  ipfsNamingContent,
+  ipfsNamingKeyvisual,
+  ipfsNamingOriginal,
+  ipfsNamingWire,
+] = bucketLinkProduct('ipfsNaming')
 
 export {
   ipfsNamingOriginal,

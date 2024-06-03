@@ -1,6 +1,6 @@
-import cockpitContent from './cockpit-content.webp'
-import cockpitKeyvisual from './cockpit-keyvisual.webp'
-import cockpitOriginal from './cockpit-original.webp'
-import cockpitWire from './cockpit-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [cockpitContent, cockpitKeyvisual, cockpitOriginal, cockpitWire] =
+  bucketLinkProduct('cockpit')
 
 export { cockpitOriginal, cockpitKeyvisual, cockpitContent, cockpitWire }

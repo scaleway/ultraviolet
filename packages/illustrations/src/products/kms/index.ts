@@ -1,6 +1,6 @@
-import kmsContent from './kms-content.webp'
-import kmsKeyvisual from './kms-keyvisual.webp'
-import kmsOriginal from './kms-original.webp'
-import kmsWire from './kms-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [kmsContent, kmsKeyvisual, kmsOriginal, kmsWire] =
+  bucketLinkProduct('kms')
 
 export { kmsContent, kmsKeyvisual, kmsOriginal, kmsWire }

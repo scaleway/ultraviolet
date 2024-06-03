@@ -1,7 +1,11 @@
-import containersContent from './containers-content.webp'
-import containersKeyvisual from './containers-keyvisual.webp'
-import containersOriginal from './containers-original.webp'
-import containersWire from './containers-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  containersContent,
+  containersKeyvisual,
+  containersOriginal,
+  containersWire,
+] = bucketLinkProduct('containers')
 
 export {
   containersOriginal,

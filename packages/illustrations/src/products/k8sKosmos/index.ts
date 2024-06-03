@@ -1,7 +1,7 @@
-import k8sKosmosContent from './k8s-kosmos-content.webp'
-import k8sKosmosKeyvisual from './k8s-kosmos-keyvisual.webp'
-import k8sKosmosOriginal from './k8s-kosmos-original.webp'
-import k8sKosmosWire from './k8s-kosmos-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [k8sKosmosContent, k8sKosmosKeyvisual, k8sKosmosOriginal, k8sKosmosWire] =
+  bucketLinkProduct('k8sKosmos')
 
 export {
   k8sKosmosOriginal,
