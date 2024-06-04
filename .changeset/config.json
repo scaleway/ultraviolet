@@ -1,5 +1,5 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
+  "$schema": "https://unpkg.com/@changesets/config@3.0.1/schema.json",
   "changelog": [
     "@changesets/changelog-github",
     {
@@ -12,5 +12,10 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@examples/*"]
+  "ignore": ["@examples/*"],
+  "privatePackages":{
+    "tag": false,
+    "version": true
+  }
+
 }
