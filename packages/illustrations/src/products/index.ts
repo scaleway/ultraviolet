@@ -31,6 +31,7 @@ import * as objectStorage from './objectStorage'
 import * as publicGateway from './publicGateway'
 import * as quantum from './quantum'
 import * as redis from './redis'
+import * as savingsPlan from './savingsPlan'
 import * as secretManager from './secretManager'
 import * as serverlessDB from './serverlessDB'
 import * as serverlessJob from './serverlessJob'
@@ -86,4 +87,5 @@ export {
   costManager,
   kms,
   dediboxVPS,
+  savingsPlan,
 }
