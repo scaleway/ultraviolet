@@ -46,7 +46,7 @@ export const Example: StoryFn<typeof Stepper> = args => {
         'All done'
       ) : (
         <Stack width="30%">
-          Current step: {selected}{' '}
+          Current index: {selected}
           <Button
             onClick={() => (selected <= 5 ? setStep(selected + 1) : null)}
           >

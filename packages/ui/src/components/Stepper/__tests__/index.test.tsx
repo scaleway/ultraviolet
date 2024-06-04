@@ -16,7 +16,7 @@ describe('Stepper', () => {
 
   test('renders correctly with selected prop', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper selected={3}>
+      <Stepper selected={2}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -24,7 +24,7 @@ describe('Stepper', () => {
     ))
   test('renders correctly with children', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper animated selected={2}>
+      <Stepper animated selected={1}>
         <Stepper.Step title="step 1">Children</Stepper.Step>
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -32,7 +32,7 @@ describe('Stepper', () => {
     ))
   test('renders correctly with animation', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper animated selected={2}>
+      <Stepper animated selected={1}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -41,7 +41,7 @@ describe('Stepper', () => {
 
   test('renders correctly with all selected', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper selected={2}>
+      <Stepper selected={1}>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -86,7 +86,7 @@ describe('Stepper', () => {
 
   test('renders correctly with disabled steps', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper selected={1}>
+      <Stepper selected={0}>
         <Stepper.Step title="step 1" disabled />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" disabled />
@@ -95,7 +95,7 @@ describe('Stepper', () => {
 
   test('handles clicks when interactive', async () => {
     const { asFragment } = renderWithTheme(
-      <Stepper selected={2} interactive>
+      <Stepper selected={1} interactive>
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -108,7 +108,7 @@ describe('Stepper', () => {
 
   test('handles clicks when interactive and small', async () => {
     const { asFragment } = renderWithTheme(
-      <Stepper selected={2} interactive size="small">
+      <Stepper selected={1} interactive size="small">
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -120,7 +120,7 @@ describe('Stepper', () => {
 
   test('handles clicks when not interactive', async () => {
     const { asFragment } = renderWithTheme(
-      <Stepper selected={2} size="small">
+      <Stepper selected={1} size="small">
         <Stepper.Step title="step 1" />
         <Stepper.Step title="step 2" />
         <Stepper.Step title="step 3" />
@@ -133,7 +133,7 @@ describe('Stepper', () => {
 
   test('renders correctly without Stepper.Step', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper selected={2} size="small">
+      <Stepper selected={1} size="small">
         <span>Step 1</span>
         <span>Step 2</span>
         <span>Step 3</span>

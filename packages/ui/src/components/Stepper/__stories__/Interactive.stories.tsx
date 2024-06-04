@@ -5,7 +5,7 @@ export const Interactive = Template.bind({})
 
 Interactive.args = {
   ...Template.args,
-  selected: 4,
+  selected: 3,
   interactive: true,
   children: [
     <Stepper.Step title="Step 1" />,

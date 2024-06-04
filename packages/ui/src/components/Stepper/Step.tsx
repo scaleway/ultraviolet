@@ -236,7 +236,7 @@ export const Step = ({
       ) : (
         <StyledBullet
           sentiment={isDone || isActive ? 'primary' : 'neutral'}
-          text={index.toString()}
+          text={(index + 1).toString()}
           prominence="strong"
           size={currentState.size}
           isActive={isActive}
