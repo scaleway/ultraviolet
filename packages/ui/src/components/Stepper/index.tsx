@@ -142,7 +142,7 @@ export const Stepper = ({
           return (
             // eslint-disable-next-line react/no-array-index-key
             <Fragment key={`creation-progress-${index}`}>
-              <Step index={index + 1} {...(child.props as object)} />
+              <Step index={index} {...(child.props as object)} />
 
               {isNotLast && separator && labelPosition === 'right' ? (
                 <StyledLine
