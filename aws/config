@@ -1,0 +1,18 @@
+[plugins]
+endpoint = awscli_plugin_endpoint
+cli_legacy_plugin_path = /home/runner/.local/lib/python3.8/site-packages
+
+[default]
+region = fr-par
+output = json
+
+s3 =
+  endpoint_url = https://s3.fr-par.scw.cloud
+  signature_version = s3v4
+  max_concurrent_requests = 100
+  max_queue_size = 1000
+  multipart_threshold = 50 MB
+  multipart_chunksize = 10 MB
+
+s3api =
+  endpoint_url = https://s3.fr-par.scw.cloud

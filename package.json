@@ -40,7 +40,7 @@
     "svg": "npx svgo --pretty --multipass",
     "svg:all": "pnpm run svg -r -f .",
     "typecheck": "pnpm --filter '@ultraviolet/*' recursive run typecheck",
-    "illustrations:upload": "aws s3 sync ./packages/illustrations/src s3://test-bucket-illustrations/ --exclude \"*\" --include \"*.webp\" --acl public-read"
+    "illustrations:upload": "aws s3 sync ./packages/illustrations/src s3://test-bucket-illustrations/ --exclude \"*\" --include \"*.webp\" --include \"*.svg\" --acl public-read"
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [

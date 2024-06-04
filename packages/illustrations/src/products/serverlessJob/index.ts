@@ -1,7 +1,11 @@
-import serverlessJobContent from './serverlessJob-content.webp'
-import serverlessJobKeyvisual from './serverlessJob-keyvisual.webp'
-import serverlessJobOriginal from './serverlessJob-original.webp'
-import serverlessJobWire from './serverlessJob-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  serverlessJobContent,
+  serverlessJobKeyvisual,
+  serverlessJobOriginal,
+  serverlessJobWire,
+] = bucketLinkProduct('serverlessJob')
 
 export {
   serverlessJobOriginal,

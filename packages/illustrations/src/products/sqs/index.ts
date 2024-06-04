@@ -1,6 +1,6 @@
-import sqsContent from './sqs-content.webp'
-import sqsKeyvisual from './sqs-keyvisual.webp'
-import sqsOriginal from './sqs-original.webp'
-import sqsWire from './sqs-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [sqsContent, sqsKeyvisual, sqsOriginal, sqsWire] =
+  bucketLinkProduct('sqs')
 
 export { sqsOriginal, sqsWire, sqsContent, sqsKeyvisual }

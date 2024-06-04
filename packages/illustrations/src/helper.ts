@@ -7,10 +7,11 @@ export const FEEDBACK_PATH = 'various/feedback'
 export const DOCUMENTATION_PATH = 'various/documentation'
 export const ONBOARDING_PATH = 'various/onboarding'
 
-// Create patht to illustration on bucket
+// Create path to illustrations on bucket
 export const bucketLink = (path: string, name: string, type = 'webp') =>
   `${BASE_URL}/${path}/${name}.${type ?? 'webp'}`
 
+// Create path to product illustration on bucket. The product name must be in camelCase
 export const bucketLinkProduct = (productName: string, folder?: string) => {
   const baseLink = `${BASE_URL}/products/${folder ?? productName}/${productName.replace(/([A-Z])/g, '-$1').toLowerCase()}`
 

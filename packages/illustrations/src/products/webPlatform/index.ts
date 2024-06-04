@@ -1,7 +1,11 @@
-import webPlatformContent from './web-platform-content.webp'
-import webPlatformKeyvisual from './web-platform-keyvisual.webp'
-import webPlatformOriginal from './web-platform-original.webp'
-import webPlatformWire from './web-platform-wire.svg'
+import { bucketLinkProduct } from '../../helper'
+
+const [
+  webPlatformContent,
+  webPlatformKeyvisual,
+  webPlatformOriginal,
+  webPlatformWire,
+] = bucketLinkProduct('webPlatform')
 
 export {
   webPlatformContent,
