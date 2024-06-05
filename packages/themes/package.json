@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/themes",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "Ultraviolet Themes",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -33,7 +33,9 @@
     "darwin",
     "linux"
   ],
-  "sideEffects": ["**/*.css"],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

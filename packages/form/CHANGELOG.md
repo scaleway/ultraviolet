@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.14.2
+
+### Patch Changes
+
+- Updated dependencies [[`61fd691`](https://github.com/scaleway/ultraviolet/commit/61fd691d458acb42e925e4916d1c7aceda6321a0), [`39a5ee7`](https://github.com/scaleway/ultraviolet/commit/39a5ee76fcdc4e083b16fc8620bd666458bdda94), [`39a5ee7`](https://github.com/scaleway/ultraviolet/commit/39a5ee76fcdc4e083b16fc8620bd666458bdda94)]:
+  - @ultraviolet/ui@1.55.1
+  - @ultraviolet/themes@1.12.0
+
 ## 2.14.1
 
 ### Patch Changes

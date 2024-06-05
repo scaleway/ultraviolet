@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.12.0
+
+### Minor Changes
+
+- [#3827](https://github.com/scaleway/ultraviolet/pull/3827) [`39a5ee7`](https://github.com/scaleway/ultraviolet/commit/39a5ee76fcdc4e083b16fc8620bd666458bdda94) Thanks [@lisalupi](https://github.com/lisalupi)! - Ultraviolet theme as CSS variables
+
 ## 1.11.0
 
 ### Minor Changes
