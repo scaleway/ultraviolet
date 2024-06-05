@@ -37,7 +37,7 @@ const StyledSpan = styled('span', {
   display: block;
 
   &:after {
-    content: '';
+    content: "";
     ${({ theme, multiline }) =>
       multiline
         ? `padding: ${theme.space['4']}`
@@ -122,8 +122,7 @@ const AlignCenterText = styled(Text)`
 const AnimatedArrowIcon = styled(Icon, {
   shouldForwardProp: prop => !['showMore'].includes(prop),
 })<{ showMore?: boolean }>`
-  transform: ${({ showMore }) =>
-    showMore ? 'rotate(180deg)' : 'rotate(0deg)'};
+  transform: ${({ showMore }) => (showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
   transform-origin: center;
   transition: transform 300ms ease-in-out;
 `

@@ -51,8 +51,7 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__triangle {
-      border-bottom-color: ${({ theme }) =>
-        theme.colors.neutral.backgroundWeak};
+      border-bottom-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     }
     ${PREFIX}__month {
       margin: 0;
@@ -63,13 +62,11 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day-name {
-      font-family: ${({ theme }) =>
-        theme.typography.bodySmallStrong.fontFamily};
+      font-family: ${({ theme }) => theme.typography.bodySmallStrong.fontFamily};
       color: ${({ theme }) => theme.colors.neutral.text};
       font-weight: ${({ theme }) => theme.typography.bodySmallStrong.weight};
       font-size: ${({ theme }) => theme.typography.bodySmallStrong.fontSize};
-      line-height: ${({ theme }) =>
-        theme.typography.bodySmallStrong.lineHeight};
+      line-height: ${({ theme }) => theme.typography.bodySmallStrong.lineHeight};
       text-align: center;
       margin: 3px;
       text-transform: capitalize;
@@ -95,7 +92,7 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.primary.textStrong};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
-      &[aria-disabled='true'],
+      &[aria-disabled="true"],
       &:disabled {
         color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
         background-color: ${({ theme }) =>
@@ -107,7 +104,7 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.primary.text};
       background-color: ${({ theme }) => theme.colors.primary.background};
 
-      &[aria-disabled='true'],
+      &[aria-disabled="true"],
       &:disabled {
         color: ${({ theme }) => theme.colors.primary.textDisabled};
         background-color: ${({ theme }) =>
@@ -119,7 +116,7 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.primary.text};
       background-color: ${({ theme }) => theme.colors.primary.background};
 
-      &[aria-disabled='true'],
+      &[aria-disabled="true"],
       &:disabled {
         color: ${({ theme }) => theme.colors.primary.textDisabled};
         background-color: ${({ theme }) =>
@@ -131,7 +128,7 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.primary.textStrong};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
-      &[aria-disabled='true'],
+      &[aria-disabled="true"],
       &:disabled {
         color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
         background-color: ${({ theme }) =>
@@ -143,7 +140,7 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.primary.textStrong};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
-      &[aria-disabled='true'],
+      &[aria-disabled="true"],
       &:disabled {
         color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
         background-color: ${({ theme }) =>

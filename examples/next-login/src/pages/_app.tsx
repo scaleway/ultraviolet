@@ -4,19 +4,20 @@ import { darkTheme, theme, normalize } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
 import { useState } from 'react'
 
-const globalStyles = (mode: 'light' | 'dark') => () => css`
-  ${normalize()}
+const globalStyles = (mode: 'light' | 'dark') => () =>
+  css`
+    ${normalize()}
 
-  :root {
-    color-scheme: ${mode};
-  }
-  body {
-    padding: 1em;
-  }
-  p {
-    margin: 0 !important;
-  }
-`
+    :root {
+      color-scheme: ${mode};
+    }
+    body {
+      padding: 1em;
+    }
+    p {
+      margin: 0 !important;
+    }
+  `
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [isDark, setIsDark] = useState(false)

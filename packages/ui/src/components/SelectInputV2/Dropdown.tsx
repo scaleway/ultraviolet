@@ -62,7 +62,7 @@ const DropdownContainer = styled(Stack)<{ 'data-grouped': boolean }>`
   padding-bottom: ${({ theme }) => theme.space[0.5]};
   padding-top: ${({ theme }) => theme.space[0.5]};
 
-  &[data-grouped='true'] {
+  &[data-grouped="true"] {
     padding-top: ${({ theme }) => theme.space[0]};
   }
 `
@@ -88,7 +88,8 @@ const DropdownGroup = styled.button<{ 'data-selectgroup': boolean }>`
 
   &[data-selectgroup='true'] {
     padding-left: ${({ theme }) => theme.space[2]};
-    border-left: ${({ theme }) => theme.space[0.5]} solid ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    border-left: ${({ theme }) => theme.space[0.5]} solid ${({ theme }) =>
+      theme.colors.neutral.backgroundWeak};
   }
 
   &[data-selectgroup='true']:focus {
@@ -108,7 +109,9 @@ const DropdownItem = styled.button<{
   border: none;
   background-color: ${({ theme }) => theme.colors.neutral.background};
 
-  padding: ${({ theme }) => theme.space['1.5']} ${({ theme }) => theme.space['2']} ${({ theme }) => theme.space['1.5']} ${({ theme }) => theme.space['2']};
+  padding: ${({ theme }) => theme.space['1.5']} ${({ theme }) =>
+    theme.space['2']} ${({ theme }) => theme.space['1.5']} ${({ theme }) =>
+    theme.space['2']};
   margin-left: ${({ theme }) => theme.space['0.5']};
   margin-right: ${({ theme }) => theme.space['0.5']};
 
@@ -133,7 +136,8 @@ const DropdownItem = styled.button<{
   }
 
   &[disabled]:hover, [disabled]:focus {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrongDisabled};
+    background-color: ${({ theme }) =>
+      theme.colors.neutral.backgroundStrongDisabled};
     color: ${({ theme }) => theme.colors.neutral.textStrongDisabled};
     cursor: not-allowed;
     outline: none;

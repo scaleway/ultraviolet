@@ -74,17 +74,17 @@ const StyledPopup = styled('div', {
   z-index: 1;
   transform: ${({ positions }) => positions.popupPosition};
 
-  &[data-animated='true'] {
+  &[data-animated="true"] {
     animation: ${({ positions, reverseAnimation, animationDuration }) => css`
-      ${animationDuration}ms ${!reverseAnimation
-        ? animation(positions)
-        : exitAnimation(positions)} forwards
+      ${animationDuration}ms ${
+        !reverseAnimation ? animation(positions) : exitAnimation(positions)
+      } forwards
     `};
   }
 
-  &[data-has-arrow='true'] {
+  &[data-has-arrow="true"] {
     &::after {
-      content: ' ';
+      content: " ";
       position: absolute;
       top: ${({ positions }) => positions.arrowTop}px;
       left: ${({ positions }) => positions.arrowLeft}px;
@@ -99,7 +99,7 @@ const StyledPopup = styled('div', {
     }
   }
 
-  &[data-visible-in-dom='false'] {
+  &[data-visible-in-dom="false"] {
     display: none;
   }
 `
@@ -107,7 +107,7 @@ const StyledPopup = styled('div', {
 const StyledChildrenContainer = styled.div`
   display: inherit;
 
-  &[data-container-full-width='true'] {
+  &[data-container-full-width="true"] {
     width: 100%;
   }
 `

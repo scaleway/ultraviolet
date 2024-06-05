@@ -289,7 +289,9 @@ export const computePositions = ({
         popupInitialPosition: `translate3d(${positionX + popupOverflow}px, ${
           positionY - TOTAL_USED_SPACE
         }px, 0)`,
-        popupPosition: `translate3d(${positionX + popupOverflow}px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${
+          positionX + popupOverflow
+        }px, ${positionY}px, 0)`,
       }
     }
     case 'left': {
@@ -307,10 +309,12 @@ export const computePositions = ({
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
         rotate: -90,
-        popupInitialPosition: `translate3d(${
-          positionX + TOTAL_USED_SPACE
-        }px, ${positionY + popupOverflow}px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
+        popupInitialPosition: `translate3d(${positionX + TOTAL_USED_SPACE}px, ${
+          positionY + popupOverflow
+        }px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${
+          positionY + popupOverflow
+        }px, 0)`,
       }
     }
     case 'right': {
@@ -327,10 +331,12 @@ export const computePositions = ({
         arrowTransform: 'translate(50%, -50%)',
         placement: 'right',
         rotate: 90,
-        popupInitialPosition: `translate3d(${
-          positionX - TOTAL_USED_SPACE
-        }px, ${positionY + popupOverflow}px, 0)`,
-        popupPosition: `translate3d(${positionX}px, ${positionY + popupOverflow}px, 0)`,
+        popupInitialPosition: `translate3d(${positionX - TOTAL_USED_SPACE}px, ${
+          positionY + popupOverflow
+        }px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${
+          positionY + popupOverflow
+        }px, 0)`,
       }
     }
     default: {
@@ -353,7 +359,9 @@ export const computePositions = ({
         popupInitialPosition: `translate3d(${positionX + popupOverflow}px, ${
           positionY + TOTAL_USED_SPACE
         }px, 0)`,
-        popupPosition: `translate3d(${positionX + popupOverflow}px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${
+          positionX + popupOverflow
+        }px, ${positionY}px, 0)`,
       }
     }
   }

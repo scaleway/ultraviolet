@@ -111,7 +111,7 @@ exports[`ToggleGroup > renders correctly 1`] = `
   width: 22.04px;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-10[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -180,7 +180,7 @@ exports[`ToggleGroup > renders correctly 1`] = `
 }
 
 .emotion-16:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -197,20 +197,20 @@ exports[`ToggleGroup > renders correctly 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-16[data-disabled='false']:active:after {
+.emotion-16[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-16[data-checked='true'] {
+.emotion-16[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-16[data-checked='true']:hover {
+.emotion-16[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-16[data-checked='true']:after {
+.emotion-16[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -218,37 +218,37 @@ exports[`ToggleGroup > renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-16[data-checked='true']:focus-within,
-.emotion-16[data-checked='true']:focus {
+.emotion-16[data-checked="true"]:focus-within,
+.emotion-16[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-16[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-16[data-disabled='true'][data-checked='true'] {
+.emotion-16[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-16[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-16[data-error='true']:focus-within,
-.emotion-16[data-error='true']:focus {
+.emotion-16[data-error="true"]:focus-within,
+.emotion-16[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-error='true'][data-checked='true'] {
+.emotion-16[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-16[data-error='true'][data-disabled='true'] {
+.emotion-16[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-16[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-16[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
@@ -463,7 +463,7 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   width: 22.04px;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-10[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -532,7 +532,7 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
 }
 
 .emotion-16:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -549,20 +549,20 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-16[data-disabled='false']:active:after {
+.emotion-16[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-16[data-checked='true'] {
+.emotion-16[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-16[data-checked='true']:hover {
+.emotion-16[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-16[data-checked='true']:after {
+.emotion-16[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -570,37 +570,37 @@ exports[`ToggleGroup > renders correctly with direction row 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-16[data-checked='true']:focus-within,
-.emotion-16[data-checked='true']:focus {
+.emotion-16[data-checked="true"]:focus-within,
+.emotion-16[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-16[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-16[data-disabled='true'][data-checked='true'] {
+.emotion-16[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-16[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-16[data-error='true']:focus-within,
-.emotion-16[data-error='true']:focus {
+.emotion-16[data-error="true"]:focus-within,
+.emotion-16[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-error='true'][data-checked='true'] {
+.emotion-16[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-16[data-error='true'][data-disabled='true'] {
+.emotion-16[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-16[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-16[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
@@ -815,7 +815,7 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   width: 22.04px;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-10[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -884,7 +884,7 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
 }
 
 .emotion-16:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -901,20 +901,20 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-16[data-disabled='false']:active:after {
+.emotion-16[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-16[data-checked='true'] {
+.emotion-16[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-16[data-checked='true']:hover {
+.emotion-16[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-16[data-checked='true']:after {
+.emotion-16[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -922,37 +922,37 @@ exports[`ToggleGroup > renders correctly with error content 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-16[data-checked='true']:focus-within,
-.emotion-16[data-checked='true']:focus {
+.emotion-16[data-checked="true"]:focus-within,
+.emotion-16[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-16[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-16[data-disabled='true'][data-checked='true'] {
+.emotion-16[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-16[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-16[data-error='true']:focus-within,
-.emotion-16[data-error='true']:focus {
+.emotion-16[data-error="true"]:focus-within,
+.emotion-16[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-error='true'][data-checked='true'] {
+.emotion-16[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-16[data-error='true'][data-disabled='true'] {
+.emotion-16[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-16[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-16[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
@@ -1184,7 +1184,7 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   width: 22.04px;
 }
 
-.emotion-10[aria-disabled='true'] {
+.emotion-10[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -1253,7 +1253,7 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
 }
 
 .emotion-16:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -1270,20 +1270,20 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-16[data-disabled='false']:active:after {
+.emotion-16[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-16[data-checked='true'] {
+.emotion-16[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-16[data-checked='true']:hover {
+.emotion-16[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-16[data-checked='true']:after {
+.emotion-16[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1291,37 +1291,37 @@ exports[`ToggleGroup > renders correctly with helper content 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-16[data-checked='true']:focus-within,
-.emotion-16[data-checked='true']:focus {
+.emotion-16[data-checked="true"]:focus-within,
+.emotion-16[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-16[data-disabled='true'] {
+.emotion-16[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-16[data-disabled='true'][data-checked='true'] {
+.emotion-16[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-16[data-error='true'] {
+.emotion-16[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-16[data-error='true']:focus-within,
-.emotion-16[data-error='true']:focus {
+.emotion-16[data-error="true"]:focus-within,
+.emotion-16[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-16[data-error='true'][data-checked='true'] {
+.emotion-16[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-16[data-error='true'][data-disabled='true'] {
+.emotion-16[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-16[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-16[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
@@ -1567,7 +1567,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   width: 22.04px;
 }
 
-.emotion-13[aria-disabled='true'] {
+.emotion-13[aria-disabled="true"] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
@@ -1636,7 +1636,7 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
 }
 
 .emotion-19:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 4px;
   left: 5px;
@@ -1653,20 +1653,20 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-19[data-disabled='false']:active:after {
+.emotion-19[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-19[data-checked='true'] {
+.emotion-19[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-19[data-checked='true']:hover {
+.emotion-19[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-19[data-checked='true']:after {
+.emotion-19[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1674,37 +1674,37 @@ exports[`ToggleGroup > renders correctly with required prop 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-19[data-checked='true']:focus-within,
-.emotion-19[data-checked='true']:focus {
+.emotion-19[data-checked="true"]:focus-within,
+.emotion-19[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19[data-disabled='true'] {
+.emotion-19[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-19[data-disabled='true'][data-checked='true'] {
+.emotion-19[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-19[data-error='true'] {
+.emotion-19[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-19[data-error='true']:focus-within,
-.emotion-19[data-error='true']:focus {
+.emotion-19[data-error="true"]:focus-within,
+.emotion-19[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-19[data-error='true'][data-checked='true'] {
+.emotion-19[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-19[data-error='true'][data-disabled='true'] {
+.emotion-19[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-19[data-error='true'][data-disabled='true'][data-checked='true'] {
+.emotion-19[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
