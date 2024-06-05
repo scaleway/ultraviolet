@@ -55,6 +55,7 @@ export const TextInputField = <
   'aria-labelledby': ariaLabelledBy,
   'aria-label': ariaLabel,
   autoComplete,
+  shouldUnregister,
 }: TextInputFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
 
@@ -63,6 +64,7 @@ export const TextInputField = <
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       required,
       validate: {
