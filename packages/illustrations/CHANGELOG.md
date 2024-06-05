@@ -1,5 +1,14 @@
 # @ultraviolet/illustrations
 
+## 1.7.7
+
+### Patch Changes
+
+- [#3837](https://github.com/scaleway/ultraviolet/pull/3837) [`ee773fc`](https://github.com/scaleway/ultraviolet/commit/ee773fc82cb018e71aab1a2398a685808d6cec8c) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustrations `savingsPlan`
+
+- Updated dependencies [[`39a5ee7`](https://github.com/scaleway/ultraviolet/commit/39a5ee76fcdc4e083b16fc8620bd666458bdda94)]:
+  - @ultraviolet/themes@1.12.0
+
 ## 1.7.6
 
 ### Patch Changes

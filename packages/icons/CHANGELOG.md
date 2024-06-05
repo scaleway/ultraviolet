@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.12.13
+
+### Patch Changes
+
+- Updated dependencies [[`39a5ee7`](https://github.com/scaleway/ultraviolet/commit/39a5ee76fcdc4e083b16fc8620bd666458bdda94)]:
+  - @ultraviolet/themes@1.12.0
+
 ## 2.12.12
 
 ### Patch Changes

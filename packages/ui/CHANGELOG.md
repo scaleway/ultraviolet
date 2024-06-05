@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.55.1
+
+### Patch Changes
+
+- [#3846](https://github.com/scaleway/ultraviolet/pull/3846) [`61fd691`](https://github.com/scaleway/ultraviolet/commit/61fd691d458acb42e925e4916d1c7aceda6321a0) Thanks [@lisalupi](https://github.com/lisalupi)! - Stepper: Fix index to start at 0
+
+- [#3827](https://github.com/scaleway/ultraviolet/pull/3827) [`39a5ee7`](https://github.com/scaleway/ultraviolet/commit/39a5ee76fcdc4e083b16fc8620bd666458bdda94) Thanks [@lisalupi](https://github.com/lisalupi)! - Updated migration information of `SelectInput`
+
+- Updated dependencies [[`39a5ee7`](https://github.com/scaleway/ultraviolet/commit/39a5ee76fcdc4e083b16fc8620bd666458bdda94)]:
+  - @ultraviolet/themes@1.12.0
+  - @ultraviolet/icons@2.12.13
+
 ## 1.55.0
 
 ### Minor Changes
