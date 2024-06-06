@@ -1,6 +1,8 @@
-import { bucketLinkProduct } from '../../helper'
+const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
 
-const [iotHubContent, iotHubKeyvisual, iotHubOriginal, iotHubWire] =
-  bucketLinkProduct('iotHub')
+const iotHubContent = `${BASE_URL}/products/iotHub/iot-hub-content.webp`
+const iotHubKeyvisual = `${BASE_URL}/products/iotHub/iot-hub-keyvisual.webp`
+const iotHubOriginal = `${BASE_URL}/products/iotHub/iot-hub-original.webp`
+const iotHubWire = `${BASE_URL}/products/iotHub/iot-hub-wire.svg`
 
-export { iotHubOriginal, iotHubWire, iotHubContent, iotHubKeyvisual }
+export { iotHubContent, iotHubKeyvisual, iotHubOriginal, iotHubWire }

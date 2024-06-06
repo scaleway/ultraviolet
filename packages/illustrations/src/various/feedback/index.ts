@@ -1,12 +1,12 @@
-import { FEEDBACK_PATH, bucketLink } from '../../helper'
+const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
 
-const dangerDark = bucketLink(FEEDBACK_PATH, 'danger-dark')
-const dangerLight = bucketLink(FEEDBACK_PATH, 'danger-light')
-const successDark = bucketLink(FEEDBACK_PATH, 'success-dark')
-const successLight = bucketLink(FEEDBACK_PATH, 'success-light')
-const warningDark = bucketLink(FEEDBACK_PATH, 'warning-dark')
-const warningLight = bucketLink(FEEDBACK_PATH, 'warning-light')
-const notFound = bucketLink(FEEDBACK_PATH, '404', 'svg')
+const notFound = `${BASE_URL}/various/feedback/404.svg`
+const dangerDark = `${BASE_URL}/various/feedback/danger-dark.webp`
+const dangerLight = `${BASE_URL}/various/feedback/danger-light.webp`
+const successDark = `${BASE_URL}/various/feedback/success-dark.webp`
+const successLight = `${BASE_URL}/various/feedback/success-light.webp`
+const warningDark = `${BASE_URL}/various/feedback/warning-dark.webp`
+const warningLight = `${BASE_URL}/various/feedback/warning-light.webp`
 
 export {
   notFound,

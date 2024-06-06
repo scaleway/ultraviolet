@@ -1,6 +1,8 @@
-import { bucketLinkProduct } from '../../helper'
+const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
 
-const [redisContent, redisKeyvisual, redisOriginal, redisWire] =
-  bucketLinkProduct('redis')
+const redisContent = `${BASE_URL}/products/redis/redis-content.webp`
+const redisKeyvisual = `${BASE_URL}/products/redis/redis-keyvisual.webp`
+const redisOriginal = `${BASE_URL}/products/redis/redis-original.webp`
+const redisWire = `${BASE_URL}/products/redis/redis-wire.svg`
 
-export { redisOriginal, redisContent, redisKeyvisual, redisWire }
+export { redisContent, redisKeyvisual, redisOriginal, redisWire }

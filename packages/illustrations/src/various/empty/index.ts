@@ -1,19 +1,21 @@
-import { EMPTY_PATH, bucketLink } from '../../helper'
+const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
 
-const emptyDark = bucketLink(EMPTY_PATH, 'empty-dark')
-const emptyLight = bucketLink(EMPTY_PATH, 'empty-light')
-const failedDark = bucketLink(EMPTY_PATH, 'failed-dark')
-const failedLight = bucketLink(EMPTY_PATH, 'failed-light')
-const genericDark = bucketLink(EMPTY_PATH, 'generic-dark')
-const genericLight = bucketLink(EMPTY_PATH, 'generic-light')
-const loadingDark = bucketLink(EMPTY_PATH, 'loading-dark')
-const loadingLight = bucketLink(EMPTY_PATH, 'loading-light')
-const lockDark = bucketLink(EMPTY_PATH, 'lock-dark')
-const lockLight = bucketLink(EMPTY_PATH, 'lock-light')
-const plusDark = bucketLink(EMPTY_PATH, 'plus-dark')
-const plusLight = bucketLink(EMPTY_PATH, 'plus-light')
-const resourcesDark = bucketLink(EMPTY_PATH, 'resources-dark')
-const resourcesLight = bucketLink(EMPTY_PATH, 'resources-light')
+const emptyDark = `${BASE_URL}/various/empty/empty-dark.webp`
+const emptyLight = `${BASE_URL}/various/empty/empty-light.webp`
+const failedDark = `${BASE_URL}/various/empty/failed-dark.webp`
+const failedLight = `${BASE_URL}/various/empty/failed-light.webp`
+const genericDark = `${BASE_URL}/various/empty/generic-dark.webp`
+const genericLight = `${BASE_URL}/various/empty/generic-light.webp`
+const loadingDark = `${BASE_URL}/various/empty/loading-dark.webp`
+const loadingLight = `${BASE_URL}/various/empty/loading-light.webp`
+const lockDark = `${BASE_URL}/various/empty/lock-dark.webp`
+const lockLight = `${BASE_URL}/various/empty/lock-light.webp`
+const plusDark = `${BASE_URL}/various/empty/plus-dark.webp`
+const plusLight = `${BASE_URL}/various/empty/plus-light.webp`
+const resourcesDark = `${BASE_URL}/various/empty/resources-dark.webp`
+const resourcesLight = `${BASE_URL}/various/empty/resources-light.webp`
+const searchDark = `${BASE_URL}/various/empty/search-dark.webp`
+const searchLight = `${BASE_URL}/various/empty/search-light.webp`
 
 export {
   emptyDark,
@@ -30,4 +32,6 @@ export {
   plusLight,
   resourcesDark,
   resourcesLight,
+  searchDark,
+  searchLight,
 }

@@ -1,55 +1,45 @@
-import { bucketLinkProduct } from '../../helper'
+const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
 
-const [dediboxContent, dediboxKeyvisual, dediboxOriginal, dediboxWire] =
-  bucketLinkProduct('dedibox')
-
-const [
-  dediboxStoreContent,
-  dediboxStoreKeyvisual,
-  dediboxStoreOriginal,
-  dediboxStoreWire,
-] = bucketLinkProduct('dediboxStore', 'dedibox')
-
-const [
-  dediboxProContent,
-  dediboxProKeyvisual,
-  dediboxProOriginal,
-  dediboxProWire,
-] = bucketLinkProduct('dediboxPro', 'dedibox')
-
-const [
-  dediboxStartContent,
-  dediboxStartKeyvisual,
-  dediboxStartOriginal,
-  dediboxStartWire,
-] = bucketLinkProduct('dediboxStart', 'dedibox')
-
-const [
-  dediboxCoreContent,
-  dediboxCoreKeyvisual,
-  dediboxCoreOriginal,
-  dediboxCoreWire,
-] = bucketLinkProduct('dediboxCore', 'dedibox')
+const dediboxContent = `${BASE_URL}/products/dedibox/dedibox-content.webp`
+const dediboxCoreContent = `${BASE_URL}/products/dedibox/dedibox-core-content.webp`
+const dediboxCoreKeyvisual = `${BASE_URL}/products/dedibox/dedibox-core-keyvisual.webp`
+const dediboxCoreOriginal = `${BASE_URL}/products/dedibox/dedibox-core-original.webp`
+const dediboxCoreWire = `${BASE_URL}/products/dedibox/dedibox-core-wire.svg`
+const dediboxKeyvisual = `${BASE_URL}/products/dedibox/dedibox-keyvisual.webp`
+const dediboxOriginal = `${BASE_URL}/products/dedibox/dedibox-original.webp`
+const dediboxProContent = `${BASE_URL}/products/dedibox/dedibox-pro-content.webp`
+const dediboxProKeyvisual = `${BASE_URL}/products/dedibox/dedibox-pro-keyvisual.webp`
+const dediboxProOriginal = `${BASE_URL}/products/dedibox/dedibox-pro-original.webp`
+const dediboxProWire = `${BASE_URL}/products/dedibox/dedibox-pro-wire.svg`
+const dediboxStartContent = `${BASE_URL}/products/dedibox/dedibox-start-content.webp`
+const dediboxStartKeyvisual = `${BASE_URL}/products/dedibox/dedibox-start-keyvisual.webp`
+const dediboxStartOriginal = `${BASE_URL}/products/dedibox/dedibox-start-original.webp`
+const dediboxStartWire = `${BASE_URL}/products/dedibox/dedibox-start-wire.svg`
+const dediboxStoreContent = `${BASE_URL}/products/dedibox/dedibox-store-content.webp`
+const dediboxStoreKeyvisual = `${BASE_URL}/products/dedibox/dedibox-store-keyvisual.webp`
+const dediboxStoreOriginal = `${BASE_URL}/products/dedibox/dedibox-store-original.webp`
+const dediboxStoreWire = `${BASE_URL}/products/dedibox/dedibox-store-wire.svg`
+const dediboxWire = `${BASE_URL}/products/dedibox/dedibox-wire.svg`
 
 export {
-  dediboxOriginal,
   dediboxContent,
-  dediboxKeyvisual,
-  dediboxWire,
   dediboxCoreContent,
-  dediboxCoreOriginal,
   dediboxCoreKeyvisual,
+  dediboxCoreOriginal,
   dediboxCoreWire,
+  dediboxKeyvisual,
+  dediboxOriginal,
   dediboxProContent,
-  dediboxProOriginal,
   dediboxProKeyvisual,
+  dediboxProOriginal,
   dediboxProWire,
   dediboxStartContent,
-  dediboxStartOriginal,
   dediboxStartKeyvisual,
+  dediboxStartOriginal,
   dediboxStartWire,
   dediboxStoreContent,
-  dediboxStoreOriginal,
   dediboxStoreKeyvisual,
+  dediboxStoreOriginal,
   dediboxStoreWire,
+  dediboxWire,
 }

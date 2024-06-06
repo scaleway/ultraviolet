@@ -1,8 +1,8 @@
-import { DOCUMENTATION_PATH, bucketLink } from '../../helper'
+const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
 
-const accountBilling = bucketLink(DOCUMENTATION_PATH, 'account-billing', 'svg')
-const generic = bucketLink(DOCUMENTATION_PATH, 'generic', 'svg')
-const learning = bucketLink(DOCUMENTATION_PATH, 'learning', 'svg')
-const writeCommunity = bucketLink(DOCUMENTATION_PATH, 'write-community', 'svg')
+const accountBilling = `${BASE_URL}/various/documentation/account-billing.svg`
+const generic = `${BASE_URL}/various/documentation/generic.svg`
+const learning = `${BASE_URL}/various/documentation/learning.svg`
+const writeCommunity = `${BASE_URL}/various/documentation/write-community.svg`
 
 export { accountBilling, generic, learning, writeCommunity }

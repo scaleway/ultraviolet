@@ -1,6 +1,8 @@
-import { bucketLinkProduct } from '../../helper'
+const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
 
-const [vpcContent, vpcKeyvisual, vpcOriginal, vpcWire] =
-  bucketLinkProduct('vpc')
+const vpcContent = `${BASE_URL}/products/vpc/vpc-content.webp`
+const vpcKeyvisual = `${BASE_URL}/products/vpc/vpc-keyvisual.webp`
+const vpcOriginal = `${BASE_URL}/products/vpc/vpc-original.webp`
+const vpcWire = `${BASE_URL}/products/vpc/vpc-wire.svg`
 
-export { vpcOriginal, vpcWire, vpcContent, vpcKeyvisual }
+export { vpcContent, vpcKeyvisual, vpcOriginal, vpcWire }
