@@ -1,27 +1,57 @@
 name: Upload Illustrations
 
 on: 
-    pull_request:
-        types: ['opened', 'edited', 'reopened', 'synchronize']
     push:
         branches:
             - main
+        paths:
+          - illustrations/**
+env:
+  BUCKET_NAME: test-bucket-illustrations
+  BUCKET_REGION: fr-par
 
 jobs:
     upload-illustrations:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - name: Install AWS CLI v2
-              run: curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-                   unzip awscliv2.zip
-                   sudo ./aws/install
-            - name: Install awscli-plugin-endpoint
-              run: pip3 install awscli-plugin-endpoint
-            - name: Config AWS CLI
-              run:  # TODO
-            - name: Upload illustrations
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Set up Python environment
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.10'
+            - uses: pnpm/action-setup@v4.0.0
+            - uses: actions/setup-node@v4.0.2
+              with:
+                node-version: 20
+                cache: 'pnpm'
+            - run: pnpm install
+
+            - name: Install aws CLI
+              run: |
+                sudo python3 -m pip install --upgrade pip
+                sudo python3 -m pip install awscli==1.19.27 awscli_plugin_endpoint
+                pip3 install awscli_plugin_endpoint && pip3 show awscli_plugin_endpoint
+
+            - name: AWS CLI configuration
+              run: |
+                  mkdir ~/.aws
+                  cp ./aws/config ~/.aws/config
+                  sed -i -e 's/${BUCKET_REGION}/${{env.BUCKET_REGION}}/g' ~/.aws/config
+
+            - name: Upload illustrations on bucket
+              run: aws s3 sync packages/illustrations/src/assets s3://${{ env.BUCKET_NAME }}/ --exclude "*" --include "*.webp" --include "*.svg" --acl public-read
               env: 
                 AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
                 AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              run: pnpm run illustrations:upload
+
+            - name: Update illustrations exports
+              run: pnpm run illustrations:update
+            
+            - name: Git Auto Commit
+              uses: stefanzweifel/git-auto-commit-action@v5.0.1
+              with:
+                commit_message: Automatic export update
+          

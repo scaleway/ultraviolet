@@ -15,7 +15,7 @@ import {
   resourcesLight,
   searchDark,
   searchLight,
-} from '../../various/empty'
+} from '../../assets/various/empty'
 import {
   dangerDark,
   dangerLight,
@@ -23,7 +23,7 @@ import {
   successLight,
   warningDark,
   warningLight,
-} from '../../various/feedback'
+} from '../../assets/various/feedback'
 
 // To be sure that every illustration has both a light and a dark version
 export type IllustrationsKeys = {

@@ -12,7 +12,13 @@ export default defineConfig({
       '@ultraviolet/ui': resolve('packages/ui/src'),
       '@ultraviolet/themes': resolve('packages/themes/src'),
       '@ultraviolet/plus': resolve('packages/plus/src'),
-      '@ultraviolet/illustrations': resolve('packages/illustrations/src'),
+      '@ultraviolet/illustrations/various': resolve(
+        'packages/illustrations/src/assets/various',
+      ),
+      '@ultraviolet/illustrations/products': resolve(
+        'packages/illustrations/src/assets/products',
+      ),
+      '@ultraviolet/illustrations': resolve('packages/illustrations/src/'),
       '@ultraviolet/icons': resolve('packages/icons/src'),
       '@ultraviolet/form': resolve('packages/form/src'),
     },

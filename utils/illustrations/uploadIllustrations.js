@@ -1,8 +1,8 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 
-const ILLUSTRATIONS_DIR = 'packages/illustrations/src'
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const ILLUSTRATIONS_DIR = 'packages/illustrations/src/assets'
+const BASE_URL = `https://${process.env.BUCKET_NAME}.s3.${process.env.BUCKET_REGION}.scw.cloud`
 
 // Add .webp and .svg files to index.ts
 const importIllustration = (directory, file, output, illustrations) => {
@@ -10,12 +10,12 @@ const importIllustration = (directory, file, output, illustrations) => {
 
   if (parsedFile.ext === '.webp' || parsedFile.ext === '.svg') {
     const filename = parsedFile.name.replace(/-./g, x => x[1].toUpperCase())
-    const relativePath = directory.split('packages/illustrations/src/')[1]
+    const relativePath = directory.split('illustrations/src/assets/')[1]
 
-    illustrations.push(filename === '404' ? 'notFound' : filename)
+    illustrations.push(filename)
     fs.appendFileSync(
       output,
-      `const ${filename === '404' ? 'notFound' : filename} = \`\${BASE_URL}/${relativePath.replace(/\\/g, '/')}\`\n`,
+      `const ${filename} = \`\${BASE_URL}/${relativePath.replace(/\\/g, '/')}\`\n`,
     )
   }
 }
@@ -41,44 +41,53 @@ const exportIllustrations = (output, illustrations) => {
 }
 
 // Create index.ts for every illustration folder
-// !! only works if depth < 2 (src/sub1/sub2/index.ts will be created but not src/sub1/sub2/sub3/index.ts) !!
-const subDirs = fs.readdirSync(ILLUSTRATIONS_DIR)
+// !! only works if depth < 2 (assets/sub1/sub2/index.ts will be created but not assets/sub1/sub2/sub3/index.ts) !!
+const updateIndexes = () => {
+  const subDirs = fs.readdirSync(ILLUSTRATIONS_DIR)
 
-// Go through first subdirectories (product, various)
-subDirs.forEach(subDir => {
-  const subDirPath = path.join(ILLUSTRATIONS_DIR, subDir)
+  // Go through first subdirectories (product, various)
+  subDirs.forEach(subDir => {
+    const subDirPath = path.join(ILLUSTRATIONS_DIR, subDir)
 
-  if (
-    fs.statSync(subDirPath).isDirectory() &&
-    !['__stories__', 'components'].includes(subDir)
-  ) {
-    const files = fs.readdirSync(subDirPath)
+    if (
+      fs.statSync(subDirPath).isDirectory() &&
+      !['__stories__', 'components'].includes(subDir)
+    ) {
+      const files = fs.readdirSync(subDirPath)
 
-    // Create index for each directory inside the subdirectories
-    files.forEach(element => {
-      const fullPath = path.join(subDirPath, element)
-      if (fs.statSync(fullPath).isDirectory()) {
-        const illustrations = []
-        findFiles(fullPath, `${fullPath}/index.ts`, illustrations)
-        exportIllustrations(`${fullPath}/index.ts`, illustrations)
-      }
-    })
-  }
-})
+      // Create index for each directory inside the subdirectories
+      files.forEach(element => {
+        const fullPath = path.join(subDirPath, element)
+        if (fs.statSync(fullPath).isDirectory()) {
+          const illustrations = []
+          findFiles(fullPath, `${fullPath}/index.ts`, illustrations)
+          exportIllustrations(`${fullPath}/index.ts`, illustrations)
+        }
+      })
+    }
+  })
+}
 
 // Export all products in products/index.ts
-const PRODUCTS_DIR = `${ILLUSTRATIONS_DIR}/products`
-const productsDirs = fs.readdirSync(PRODUCTS_DIR)
-const productExports = []
-fs.writeFileSync(`${PRODUCTS_DIR}/index.ts`, ``)
-productsDirs.forEach(productDir => {
-  const fullPath = path.join(PRODUCTS_DIR, productDir)
-  if (fs.statSync(fullPath).isDirectory()) {
-    fs.appendFileSync(
-      `${PRODUCTS_DIR}/index.ts`,
-      `\nimport * as ${productDir} from './${productDir}'`,
-    )
-    productExports.push(productDir)
-  }
-})
-fs.appendFileSync(`${PRODUCTS_DIR}/index.ts`, `\n\nexport { ${productExports}}`)
+const exportProducts = () => {
+  const PRODUCTS_DIR = `${ILLUSTRATIONS_DIR}/products`
+  const productsDirs = fs.readdirSync(PRODUCTS_DIR)
+  const productExports = []
+  fs.writeFileSync(`${PRODUCTS_DIR}/index.ts`, ``)
+  productsDirs.forEach(productDir => {
+    const fullPath = path.join(PRODUCTS_DIR, productDir)
+    if (fs.statSync(fullPath).isDirectory()) {
+      fs.appendFileSync(
+        `${PRODUCTS_DIR}/index.ts`,
+        `\nimport * as ${productDir} from './${productDir}'`,
+      )
+      productExports.push(productDir)
+    }
+  })
+  fs.appendFileSync(
+    `${PRODUCTS_DIR}/index.ts`,
+    `\n\nexport { ${productExports}}`,
+  )
+}
+updateIndexes()
+exportProducts()

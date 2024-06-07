@@ -1,6 +1,6 @@
+import * as products from './assets/products'
+import * as various from './assets/various'
 import * as components from './components'
-import * as products from './products'
-import * as various from './various'
 
 export default {
   products,
