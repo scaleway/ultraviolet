@@ -22,12 +22,14 @@ const makeCSSVariablesRec = (innerKey, innerValue, prefix, formattedKey) => {
   }
 
   const cssValue = fontWeightMap[innerValue] || innerValue
+  const finalCSSValue =
+    typeof cssValue === 'string' ? cssValue.replace(/;$/, '') : cssValue
   const formattedInnerKey = innerKey
     .replace(/([A-Z])/g, '-$1')
     .replace(/\./g, '-')
     .toLowerCase() // Replace caps and dots by dashes, convert to kebab-case
 
-  return `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${cssValue};\n`
+  return `    --${prefix}-${formattedKey}-${formattedInnerKey}: ${finalCSSValue};\n`
 }
 
 const createCssVariables = (prefix, obj) =>
