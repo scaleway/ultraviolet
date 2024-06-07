@@ -201,8 +201,8 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       esbuild-plugin-browserslist:
-        specifier: 0.12.0
-        version: 0.12.0(browserslist@4.23.0)(esbuild@0.20.2)
+        specifier: 0.12.1
+        version: 0.12.1(browserslist@4.23.0)(esbuild@0.20.2)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -4633,6 +4633,15 @@ packages:
       supports-color:
         optional: true
 
+  debug@4.3.5:
+    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+
   decamelize-keys@1.1.1:
     resolution: {integrity: sha512-WiPxgEirIV0/eIOMcnFBA3/IJZAZqKnwAwWyvvdi4lsr1WCN22nhdf/3db3DoZcUjTV2SqfzIwNyp6y2xs3nmg==}
     engines: {node: '>=0.10.0'}
@@ -4937,12 +4946,12 @@ packages:
   esbuild-plugin-alias@0.2.1:
     resolution: {integrity: sha512-jyfL/pwPqaFXyKnj8lP8iLk6Z0m099uXR45aSN8Av1XD4vhvQutxxPzgA2bTcAwQpa1zCXDcWOlhFgyP3GKqhQ==}
 
-  esbuild-plugin-browserslist@0.12.0:
-    resolution: {integrity: sha512-U9+fwm/e32UCZJreqr2EZx0F7/zQEaUslqIkixzouw7ChRRhu/QPgea5nk5nF9dj6qWt2bJJDVmGDSY9+8M5Xw==}
+  esbuild-plugin-browserslist@0.12.1:
+    resolution: {integrity: sha512-DtAnJCCFwsM2az26wXh1lisc+pyXIDS3Fr0v5+m4OolALmhtl1AnY/SIZb/QqzNGMQrm7HAgWiO2IwCw9i3JqA==}
     engines: {node: '>=18'}
     peerDependencies:
       browserslist: ^4.21.8
-      esbuild: ~0.21.3
+      esbuild: ~0.21.4
 
   esbuild-register@3.5.0:
     resolution: {integrity: sha512-+4G/XmakeBAsvJuDugJvtyF1x+XJT4FMocynNpxrvEBViirpfUn2PgNpCHedfWhF4WokNsO/OvMKrmJOIJsI5A==}
@@ -14413,6 +14422,10 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
+  debug@4.3.5:
+    dependencies:
+      ms: 2.1.2
+
   decamelize-keys@1.1.1:
     dependencies:
       decamelize: 1.2.0
@@ -14781,10 +14794,10 @@ snapshots:
 
   esbuild-plugin-alias@0.2.1: {}
 
-  esbuild-plugin-browserslist@0.12.0(browserslist@4.23.0)(esbuild@0.20.2):
+  esbuild-plugin-browserslist@0.12.1(browserslist@4.23.0)(esbuild@0.20.2):
     dependencies:
       browserslist: 4.23.0
-      debug: 4.3.4
+      debug: 4.3.5
       esbuild: 0.20.2
       zod: 3.23.8
     transitivePeerDependencies:
