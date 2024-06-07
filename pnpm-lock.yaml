@@ -72,8 +72,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 6.1.7
-        version: 6.1.7(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 6.1.8
+        version: 6.1.8(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@size-limit/file':
         specifier: 11.1.4
         version: 11.1.4(size-limit@11.1.4)
@@ -2019,9 +2019,6 @@ packages:
   '@floating-ui/utils@0.2.2':
     resolution: {integrity: sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==}
 
-  '@formatjs/ecma402-abstract@1.18.3':
-    resolution: {integrity: sha512-J961RbhyjHWeCIv+iOceNxpoZ/qomJOs5lH+rUJCeKNa59gME4KC0LJVMeWODjHsnv/hTH8Hvd6sevzcAzjuaQ==}
-
   '@formatjs/ecma402-abstract@2.0.0':
     resolution: {integrity: sha512-rRqXOqdFmk7RYvj4khklyqzcfQl9vEL/usogncBHRZfZBDOwMGuSRNFl02fu5KGHXdbinju+YXyuR+Nk8xlr/g==}
 
@@ -2736,8 +2733,8 @@ packages:
   '@scaleway/tsconfig@1.1.1':
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
 
-  '@scaleway/use-i18n@6.1.7':
-    resolution: {integrity: sha512-gc316CfEIfCZ6S7QZ70jvyL91Vh+PqeCLk2ZtZi7F+d8J/7r3j99C3wn1GKU4l/E4Sb4UPsL0TzqUpMrWmvCDw==}
+  '@scaleway/use-i18n@6.1.8':
+    resolution: {integrity: sha512-Gy3652Il0+Yzzf6DR9m4jRYnB/1RsOwG/tmgCuYsrkKlFQFts9N0AEL49m+GpM9szAhBBz/MUtkHmJbZMjozVg==}
     engines: {node: '>=18.x'}
     peerDependencies:
       date-fns: 3.x
@@ -10777,11 +10774,6 @@ snapshots:
 
   '@floating-ui/utils@0.2.2': {}
 
-  '@formatjs/ecma402-abstract@1.18.3':
-    dependencies:
-      '@formatjs/intl-localematcher': 0.5.4
-      tslib: 2.6.2
-
   '@formatjs/ecma402-abstract@2.0.0':
     dependencies:
       '@formatjs/intl-localematcher': 0.5.4
@@ -11709,9 +11701,9 @@ snapshots:
 
   '@scaleway/tsconfig@1.1.1': {}
 
-  '@scaleway/use-i18n@6.1.7(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@scaleway/use-i18n@6.1.8(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@formatjs/ecma402-abstract': 1.18.3
+      '@formatjs/ecma402-abstract': 2.0.0
       '@formatjs/fast-memoize': 2.2.0
       date-fns: 3.6.0
       filesize: 10.1.2
