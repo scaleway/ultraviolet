@@ -18,7 +18,9 @@ export default defineConfig({
       '@ultraviolet/illustrations/products': resolve(
         'packages/illustrations/src/assets/products',
       ),
-      '@ultraviolet/illustrations': resolve('packages/illustrations/src/'),
+      '@ultraviolet/illustrations': resolve(
+        'packages/illustrations/src/components',
+      ),
       '@ultraviolet/icons': resolve('packages/icons/src'),
       '@ultraviolet/form': resolve('packages/form/src'),
     },

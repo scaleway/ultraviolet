@@ -48,7 +48,7 @@ jobs:
                 AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
             - name: Update illustrations exports
-              run: pnpm run illustrations:update
+              run: node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/
             
             - name: Git Auto Commit
               uses: stefanzweifel/git-auto-commit-action@v5.0.1

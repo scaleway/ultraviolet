@@ -1,5 +1,4 @@
 import * as accountExperience from './accountExperience'
-import * as accountExperience from './accountExperience'
 import * as apiGateway from './apiGateway'
 import * as appleSilicon from './appleSilicon'
 import * as blockStorage from './blockStorage'
@@ -80,6 +79,7 @@ export {
   publicGateway,
   quantum,
   redis,
+  savingsPlan,
   secretManager,
   serverlessDB,
   serverlessJob,
@@ -89,14 +89,5 @@ export {
   transactionalEmail,
   vpc,
   webHosting,
-  jero,
-  nabu,
-  quantum,
-  inference,
-  distributedDataLab,
-  costManager,
-  kms,
-  dediboxVPS,
-  savingsPlan,
-  accountExperience,
+  webPlatform,
 }

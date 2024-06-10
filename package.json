@@ -39,9 +39,8 @@
     "release": "pnpm build && pnpm changeset publish",
     "svg": "npx svgo --pretty --multipass",
     "svg:all": "pnpm run svg -r -f .",
-    "typecheck": "pnpm --filter '@ultraviolet/*' recursive run typecheck",
-    "illustrations:update": "node utils/illustrations/uploadIllustrations.js && pnpm prettier --write packages/illustrations/src/assets"
-  },
+    "typecheck": "pnpm --filter '@ultraviolet/*' recursive run typecheck"
+},
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
       "biome format --write .",

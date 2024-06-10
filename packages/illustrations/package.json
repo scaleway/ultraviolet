@@ -45,6 +45,11 @@
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
   "exports": {
+    ".": {
+      "types": "./dist/components/index.d.ts",
+      "require": "./dist/components/index.cjs",
+      "default": "./dist/components/index.js"
+    },
     "./products/*": {
       "types": "./dist/assets/products/*/index.d.ts",
       "require": "./dist/assets/products/*/index.cjs",
@@ -64,11 +69,6 @@
       "types": "./dist/assets/various/index.d.ts",
       "require": "./dist/assets/various/index.cjs",
       "default": "./dist/various/index.js"
-    },
-    ".": {
-      "types": "./dist/components/index.d.ts",
-      "require": "./dist/components/index.cjs",
-      "default": "./dist/components/index.js"
     },
     "./components": {
       "types": "./dist/components/index.d.ts",
