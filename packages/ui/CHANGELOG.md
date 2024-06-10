@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.55.2
+
+### Patch Changes
+
+- [#3858](https://github.com/scaleway/ultraviolet/pull/3858) [`36f2ef2`](https://github.com/scaleway/ultraviolet/commit/36f2ef2ee3fa9932536d1daea46ec691ec24e2b7) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - Fix `<SelectInputV2 />` when description is in row mode it should be aligned on baseline instead of normal
+
+- [#3850](https://github.com/scaleway/ultraviolet/pull/3850) [`8c4e45a`](https://github.com/scaleway/ultraviolet/commit/8c4e45aef4b181f344eaacdd2634e2ad9100e1b7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.7`.
+  Updated dependency `@babel/runtime` to `7.24.7`.
+  Updated dependency `@babel/eslint-parser` to `7.24.7`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.24.7`.
+  Updated dependency `@babel/preset-env` to `7.24.7`.
+  Updated dependency `@babel/preset-react` to `7.24.7`.
+  Updated dependency `@babel/preset-typescript` to `7.24.7`.
+- Updated dependencies [[`8c4e45a`](https://github.com/scaleway/ultraviolet/commit/8c4e45aef4b181f344eaacdd2634e2ad9100e1b7)]:
+  - @ultraviolet/icons@2.12.14
+
 ## 1.55.1
 
 ### Patch Changes
