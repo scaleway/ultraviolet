@@ -1,5 +1,21 @@
 # Change Log
 
+## 2.14.3
+
+### Patch Changes
+
+- [#3848](https://github.com/scaleway/ultraviolet/pull/3848) [`3c1d34f`](https://github.com/scaleway/ultraviolet/commit/3c1d34ff7f2b9aeec65c9fba2de2c569fcfc99cb) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(TextInputFieldV2): add shouldUnregister prop
+
+- [#3850](https://github.com/scaleway/ultraviolet/pull/3850) [`8c4e45a`](https://github.com/scaleway/ultraviolet/commit/8c4e45aef4b181f344eaacdd2634e2ad9100e1b7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.7`.
+  Updated dependency `@babel/runtime` to `7.24.7`.
+  Updated dependency `@babel/eslint-parser` to `7.24.7`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.24.7`.
+  Updated dependency `@babel/preset-env` to `7.24.7`.
+  Updated dependency `@babel/preset-react` to `7.24.7`.
+  Updated dependency `@babel/preset-typescript` to `7.24.7`.
+- Updated dependencies [[`36f2ef2`](https://github.com/scaleway/ultraviolet/commit/36f2ef2ee3fa9932536d1daea46ec691ec24e2b7), [`8c4e45a`](https://github.com/scaleway/ultraviolet/commit/8c4e45aef4b181f344eaacdd2634e2ad9100e1b7)]:
+  - @ultraviolet/ui@1.55.2
+
 ## 2.14.2
 
 ### Patch Changes
