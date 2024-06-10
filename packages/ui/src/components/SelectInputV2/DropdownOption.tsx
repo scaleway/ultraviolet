@@ -60,7 +60,7 @@ export const DisplayOption = ({
           alignItems="baseline"
           data-testid={`option-stack-${option.value}`}
         >
-          <Stack gap={0.5} direction="row">
+          <Stack gap={0.5} direction="row" alignItems="baseline">
             <Text as="span" variant="body" placement="left">
               {option.label}
             </Text>
