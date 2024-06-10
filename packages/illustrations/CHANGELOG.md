@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.7.8
+
+### Patch Changes
+
+- [#3862](https://github.com/scaleway/ultraviolet/pull/3862) [`f23d06e`](https://github.com/scaleway/ultraviolet/commit/f23d06e2101112d14f3d8b69101c26516675dde3) Thanks [@lisalupi](https://github.com/lisalupi)! - New product illustration `accountExperience`
+
 ## 1.7.7
 
 ### Patch Changes
