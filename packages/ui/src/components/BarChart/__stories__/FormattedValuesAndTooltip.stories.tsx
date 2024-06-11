@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import format from 'date-fns/format'
+import { format } from 'date-fns'
 import { BarChart } from '..'
 import { barChartSimpleData } from './mockData'
 
