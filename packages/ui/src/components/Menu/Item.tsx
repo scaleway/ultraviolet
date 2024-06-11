@@ -1,7 +1,6 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { MouseEventHandler, ReactNode, Ref } from 'react'
-import { forwardRef } from 'react'
 import { Tooltip } from '../Tooltip'
 
 type MenuItemSentiment = 'neutral' | 'danger'
@@ -88,65 +87,62 @@ type ItemProps = {
   borderless?: boolean
   sentiment?: MenuItemSentiment
   'data-testid'?: string
+  ref?: Ref<HTMLElement>
 }
 
-const Item = forwardRef<HTMLElement, ItemProps>(
-  (
-    {
-      borderless = false,
-      disabled = false,
-      onClick,
-      sentiment = 'neutral',
-      href,
-      children,
-      tooltip,
-      className,
-      'data-testid': dataTestId,
-    },
-    ref,
-  ) => {
-    if (href && !disabled) {
-      return (
-        <Tooltip text={tooltip}>
-          <StyledLinkItem
-            borderless
-            href={href}
-            ref={ref as Ref<HTMLAnchorElement>}
-            onClick={
-              disabled
-                ? undefined
-                : (onClick as MouseEventHandler<HTMLAnchorElement>)
-            }
-            role="menuitem"
-            disabled={disabled}
-            sentiment={sentiment}
-            className={className}
-            data-testid={dataTestId}
-          >
-            {children}
-          </StyledLinkItem>
-        </Tooltip>
-      )
-    }
-
+const Item = ({
+  borderless = false,
+  disabled = false,
+  onClick,
+  sentiment = 'neutral',
+  href,
+  children,
+  tooltip,
+  className,
+  'data-testid': dataTestId,
+  ref,
+}: ItemProps) => {
+  if (href && !disabled) {
     return (
       <Tooltip text={tooltip}>
-        <StyledItem
-          type="button"
-          ref={ref as Ref<HTMLButtonElement>}
+        <StyledLinkItem
+          borderless
+          href={href}
+          ref={ref as Ref<HTMLAnchorElement>}
+          onClick={
+            disabled
+              ? undefined
+              : (onClick as MouseEventHandler<HTMLAnchorElement>)
+          }
           role="menuitem"
           disabled={disabled}
-          onClick={onClick}
-          borderless={borderless}
           sentiment={sentiment}
           className={className}
           data-testid={dataTestId}
         >
           {children}
-        </StyledItem>
+        </StyledLinkItem>
       </Tooltip>
     )
-  },
-)
+  }
+
+  return (
+    <Tooltip text={tooltip}>
+      <StyledItem
+        type="button"
+        ref={ref as Ref<HTMLButtonElement>}
+        role="menuitem"
+        disabled={disabled}
+        onClick={onClick}
+        borderless={borderless}
+        sentiment={sentiment}
+        className={className}
+        data-testid={dataTestId}
+      >
+        {children}
+      </StyledItem>
+    </Tooltip>
+  )
+}
 
 export default Item

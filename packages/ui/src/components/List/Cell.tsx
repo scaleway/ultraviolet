@@ -1,11 +1,10 @@
 import styled from '@emotion/styled'
 import type {
-  ForwardedRef,
   KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
+  Ref,
 } from 'react'
-import { forwardRef } from 'react'
 
 const StyledCell = styled.div`
   display: flex;
@@ -22,36 +21,38 @@ type CellProps = {
    * */
   preventClick?: boolean
   'data-testid'?: string
+  ref?: Ref<HTMLDivElement>
 }
 
-export const Cell = forwardRef(
-  (
-    { children, className, preventClick, 'data-testid': dataTestid }: CellProps,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => {
-    const handleClick: MouseEventHandler<HTMLDivElement> = event => {
-      if (preventClick) {
-        event.stopPropagation()
-      }
+export const Cell = ({
+  children,
+  className,
+  preventClick,
+  'data-testid': dataTestid,
+  ref,
+}: CellProps) => {
+  const handleClick: MouseEventHandler<HTMLDivElement> = event => {
+    if (preventClick) {
+      event.stopPropagation()
     }
+  }
 
-    const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = event => {
-      if (preventClick) {
-        event.stopPropagation()
-      }
+  const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = event => {
+    if (preventClick) {
+      event.stopPropagation()
     }
+  }
 
-    return (
-      <StyledCell
-        ref={ref}
-        role="cell"
-        className={className}
-        onClick={handleClick}
-        onKeyDown={handleKeyDown}
-        data-testid={dataTestid}
-      >
-        {children}
-      </StyledCell>
-    )
-  },
-)
+  return (
+    <StyledCell
+      ref={ref}
+      role="cell"
+      className={className}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      data-testid={dataTestid}
+    >
+      {children}
+    </StyledCell>
+  )
+}

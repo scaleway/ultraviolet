@@ -2,13 +2,12 @@ import styled from '@emotion/styled'
 import type {
   ComponentProps,
   ElementType,
-  ForwardedRef,
   KeyboardEventHandler,
   MouseEventHandler,
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef, useMemo } from 'react'
+import { useMemo } from 'react'
 import { Badge } from '../Badge'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -115,6 +114,7 @@ type TabProps<T extends ElementType = 'button'> = {
   subtitle?: string
   tooltip?: string
   value?: string | number
+  ref?: Ref<HTMLElement>
 } & Omit<
   ComponentProps<T>,
   | 'as'
@@ -128,85 +128,81 @@ type TabProps<T extends ElementType = 'button'> = {
   | 'role'
 >
 
-export const Tab = forwardRef(
-  <T extends ElementType = 'button'>(
-    {
-      as,
-      badge,
-      children,
-      className,
-      counter,
-      disabled = false,
-      onClick,
-      onKeyDown,
-      subtitle,
-      tooltip,
-      value,
-      ...props
-    }: TabProps<T>,
-    ref: ForwardedRef<HTMLElement>,
-  ) => {
-    const { selected, onChange } = useTabsContext()
-    const computedAs = as ?? 'button'
-    const isSelected = useMemo(
-      () => value !== undefined && selected === value,
-      [value, selected],
-    )
+export const Tab = <T extends ElementType = 'button'>({
+  as,
+  badge,
+  children,
+  className,
+  counter,
+  disabled = false,
+  onClick,
+  onKeyDown,
+  subtitle,
+  tooltip,
+  value,
+  ref,
+  ...props
+}: TabProps<T>) => {
+  const { selected, onChange } = useTabsContext()
+  const computedAs = as ?? 'button'
+  const isSelected = useMemo(
+    () => value !== undefined && selected === value,
+    [value, selected],
+  )
 
-    return (
-      <StyledTooltip text={tooltip}>
-        <StyledTabButton
-          role="tab"
-          ref={ref as unknown as Ref<HTMLButtonElement>}
-          className={className}
-          as={computedAs}
-          aria-label={value ? `${value}` : undefined}
-          aria-selected={isSelected}
-          aria-disabled={disabled}
-          disabled={computedAs === 'button' ? disabled : undefined}
-          type={computedAs === 'button' ? 'button' : undefined}
-          onClick={event => {
-            if (value !== undefined) {
-              onChange(value)
-            }
-            onClick?.(event)
-          }}
-          onKeyDown={event => {
-            onKeyDown?.(event)
-            if (!event.defaultPrevented && !disabled && value) onChange(value)
-          }}
-          data-is-selected={isSelected}
-          {...props}
-        >
-          <Stack direction="column" gap={0.5}>
-            <Stack direction="row" alignItems="center">
-              {children}
-              {typeof counter === 'number' || typeof counter === 'string' ? (
-                <StyledBadge
-                  sentiment={isSelected ? 'primary' : 'neutral'}
-                  prominence={isSelected ? 'strong' : 'default'}
-                  size="medium"
-                >
-                  {counter}
-                </StyledBadge>
-              ) : null}
-              {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
-            </Stack>
-            {subtitle ? (
-              <Stack direction="row">
-                <StyledText
-                  as="span"
-                  variant="bodySmall"
-                  sentiment="neutral"
-                  prominence="weak"
-                >
-                  {subtitle}
-                </StyledText>
-              </Stack>
+  return (
+    <StyledTooltip text={tooltip}>
+      <StyledTabButton
+        role="tab"
+        ref={ref as unknown as Ref<HTMLButtonElement>}
+        className={className}
+        as={computedAs}
+        aria-label={value ? `${value}` : undefined}
+        aria-selected={isSelected}
+        aria-disabled={disabled}
+        disabled={computedAs === 'button' ? disabled : undefined}
+        type={computedAs === 'button' ? 'button' : undefined}
+        onClick={event => {
+          if (value !== undefined) {
+            onChange(value)
+          }
+          onClick?.(event)
+        }}
+        onKeyDown={event => {
+          onKeyDown?.(event)
+          if (!event.defaultPrevented && !disabled && value) onChange(value)
+        }}
+        data-is-selected={isSelected}
+        {...props}
+      >
+        <Stack direction="column" gap={0.5}>
+          <Stack direction="row" alignItems="center">
+            {children}
+            {typeof counter === 'number' || typeof counter === 'string' ? (
+              <StyledBadge
+                sentiment={isSelected ? 'primary' : 'neutral'}
+                prominence={isSelected ? 'strong' : 'default'}
+                size="medium"
+              >
+                {counter}
+              </StyledBadge>
             ) : null}
+            {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
           </Stack>
-        </StyledTabButton>
-      </StyledTooltip>
-    )
-  },
-)
+          {subtitle ? (
+            <Stack direction="row">
+              <StyledText
+                as="span"
+                variant="bodySmall"
+                sentiment="neutral"
+                prominence="weak"
+              >
+                {subtitle}
+              </StyledText>
+            </Stack>
+          ) : null}
+        </Stack>
+      </StyledTabButton>
+    </StyledTooltip>
+  )
+}

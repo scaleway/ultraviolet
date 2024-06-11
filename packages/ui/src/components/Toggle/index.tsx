@@ -7,7 +7,7 @@ import type {
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
+import { useCallback, useEffect, useId, useState } from 'react'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -183,101 +183,98 @@ type ToggleProps = {
   required?: boolean
   error?: boolean | string
   'data-testid'?: string
+  ref?: Ref<HTMLInputElement>
 } & Pick<InputHTMLAttributes<HTMLInputElement>, 'value'>
 
 /**
  * Toggle component is used to toggle between two states (on/off, true/false, etc.).
  */
-export const Toggle = forwardRef(
-  (
-    {
-      checked = false,
-      disabled = false,
-      id,
-      name,
-      onChange,
-      size = 'large',
-      tooltip,
-      labelPosition = 'right',
-      label,
-      helper,
-      required,
-      className,
-      'data-testid': dataTestId,
-      value,
-      error,
-    }: ToggleProps,
-    ref: Ref<HTMLInputElement>,
-  ) => {
-    const [state, setState] = useState(checked)
-    const uniqueId = useId()
+export const Toggle = ({
+  checked = false,
+  disabled = false,
+  id,
+  name,
+  onChange,
+  size = 'large',
+  tooltip,
+  labelPosition = 'right',
+  label,
+  helper,
+  required,
+  className,
+  'data-testid': dataTestId,
+  value,
+  error,
+  ref,
+}: ToggleProps) => {
+  const [state, setState] = useState(checked)
+  const uniqueId = useId()
 
-    const onLocalChange = useCallback(
-      (event: ChangeEvent<HTMLInputElement>) => {
-        if (onChange) onChange?.(event)
-        else setState(event.target.checked)
-      },
-      [onChange, setState],
-    )
+  const onLocalChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      if (onChange) onChange?.(event)
+      else setState(event.target.checked)
+    },
+    [onChange, setState],
+  )
 
-    useEffect(() => {
-      setState(checked)
-    }, [checked, setState])
+  useEffect(() => {
+    setState(checked)
+  }, [checked, setState])
 
-    return (
-      <Tooltip text={tooltip}>
-        <StyledLabel
-          aria-disabled={disabled}
-          size={size}
-          onClick={evt => evt.stopPropagation()}
-          className={className}
-          data-testid={dataTestId}
-          labelPosition={labelPosition}
-        >
-          <Stack gap={0.25} alignItems="baseline">
-            {label ? (
-              <Row templateColumns="auto 1fr" gap={1} alignItems="center">
-                {label}
-                {required ? <RequiredIcon /> : null}
-              </Row>
-            ) : null}
-            {typeof error === 'string' ? (
-              <Text
-                as="p"
-                variant="bodySmall"
-                prominence="default"
-                sentiment="danger"
-                disabled={disabled}
-              >
-                {error}
-              </Text>
-            ) : null}
-            {helper && !error ? (
-              <Text as="p" variant="bodySmall" prominence="weak">
-                {helper}
-              </Text>
-            ) : null}
-          </Stack>
-          <StyledToggle
-            size={size}
-            data-checked={state}
-            data-disabled={disabled}
-            data-error={!!error}
-          >
-            <StyledCheckbox
-              id={id || uniqueId}
-              checked={state}
-              aria-checked={state}
+  return (
+    <Tooltip text={tooltip}>
+      <StyledLabel
+        aria-disabled={disabled}
+        size={size}
+        onClick={evt => evt.stopPropagation()}
+        className={className}
+        data-testid={dataTestId}
+        labelPosition={labelPosition}
+      >
+        <Stack gap={0.25} alignItems="baseline">
+          {label ? (
+            <Row templateColumns="auto 1fr" gap={1} alignItems="center">
+              {label}
+              {required ? <RequiredIcon /> : null}
+            </Row>
+          ) : null}
+          {typeof error === 'string' ? (
+            <Text
+              as="p"
+              variant="bodySmall"
+              prominence="default"
+              sentiment="danger"
               disabled={disabled}
-              name={name}
-              onChange={onLocalChange}
-              type="checkbox"
-              ref={ref}
-              value={value}
-            />
-          </StyledToggle>
-        </StyledLabel>
-      </Tooltip>
-    )
-  },
-)
+            >
+              {error}
+            </Text>
+          ) : null}
+          {helper && !error ? (
+            <Text as="p" variant="bodySmall" prominence="weak">
+              {helper}
+            </Text>
+          ) : null}
+        </Stack>
+        <StyledToggle
+          size={size}
+          data-checked={state}
+          data-disabled={disabled}
+          data-error={!!error}
+        >
+          <StyledCheckbox
+            id={id || uniqueId}
+            checked={state}
+            aria-checked={state}
+            disabled={disabled}
+            name={name}
+            onChange={onLocalChange}
+            type="checkbox"
+            ref={ref}
+            value={value}
+          />
+        </StyledToggle>
+      </StyledLabel>
+    </Tooltip>
+  )
+}

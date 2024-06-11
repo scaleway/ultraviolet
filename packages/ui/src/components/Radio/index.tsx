@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
-import { forwardRef, useId } from 'react'
+import type { InputHTMLAttributes, ReactNode, Ref } from 'react'
+import { useId } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -147,6 +147,7 @@ type RadioProps = {
   className?: string
   'data-testid'?: string
   tooltip?: string
+  ref?: Ref<HTMLInputElement>
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
@@ -173,79 +174,75 @@ type RadioProps = {
 /**
  * Radio component is used to select a single option from a list of options. It is a type of input component.
  */
-export const Radio = forwardRef(
-  (
-    {
-      checked = false,
-      onChange,
-      onFocus,
-      onBlur,
-      disabled = false,
-      error,
-      name,
-      value,
-      label,
-      helper,
-      className,
-      autoFocus,
-      onKeyDown,
-      tooltip,
-      'aria-label': ariaLabel,
-      'data-testid': dataTestId,
-    }: RadioProps,
-    ref: ForwardedRef<HTMLInputElement>,
-  ) => {
-    const id = useId()
-    const computedName = name ?? id
+export const Radio = ({
+  checked = false,
+  onChange,
+  onFocus,
+  onBlur,
+  disabled = false,
+  error,
+  name,
+  value,
+  label,
+  helper,
+  className,
+  autoFocus,
+  onKeyDown,
+  tooltip,
+  'aria-label': ariaLabel,
+  'data-testid': dataTestId,
+  ref,
+}: RadioProps) => {
+  const id = useId()
+  const computedName = name ?? id
 
-    return (
-      <Tooltip text={tooltip}>
-        <Stack gap={0.5}>
-          <RadioContainer
+  return (
+    <Tooltip text={tooltip}>
+      <Stack gap={0.5}>
+        <RadioContainer
+          aria-disabled={disabled}
+          className={className}
+          data-checked={checked}
+          data-error={error}
+          data-testid={dataTestId}
+        >
+          <RadioInput
+            type="radio"
+            aria-invalid={!!error}
             aria-disabled={disabled}
-            className={className}
-            data-checked={checked}
-            data-error={error}
-            data-testid={dataTestId}
-          >
-            <RadioInput
-              type="radio"
-              aria-invalid={!!error}
-              aria-disabled={disabled}
-              aria-label={ariaLabel}
-              checked={checked}
-              id={`${computedName}-${value}`}
-              onChange={onChange}
-              onFocus={onFocus}
-              onKeyDown={onKeyDown}
-              onBlur={onBlur}
-              value={value}
-              disabled={disabled}
-              name={computedName}
-              autoFocus={autoFocus}
-              ref={ref}
-            />
-            <Ring viewBox="0 0 24 24">
-              <RadioMarkedIcon />
-            </Ring>
-            {label ? (
-              <StyledLabel htmlFor={`${computedName}-${value}`}>
-                {label}
-              </StyledLabel>
-            ) : null}
-          </RadioContainer>
-          {helper ? (
-            <MargedText
-              as="span"
-              variant="caption"
-              prominence="weak"
-              sentiment="neutral"
-            >
-              {helper}
-            </MargedText>
+            aria-label={ariaLabel}
+            checked={checked}
+            id={`${computedName}-${value}`}
+            onChange={onChange}
+            onFocus={onFocus}
+            onKeyDown={onKeyDown}
+            onBlur={onBlur}
+            value={value}
+            disabled={disabled}
+            name={computedName}
+            autoFocus={autoFocus}
+            ref={ref}
+          />
+          <Ring viewBox="0 0 24 24">
+            <RadioMarkedIcon />
+          </Ring>
+          {label ? (
+            <StyledLabel htmlFor={`${computedName}-${value}`}>
+              {label}
+            </StyledLabel>
           ) : null}
-        </Stack>
-      </Tooltip>
-    )
-  },
-)
+        </RadioContainer>
+        {helper ? (
+          <MargedText
+            as="span"
+            variant="caption"
+            prominence="weak"
+            sentiment="neutral"
+          >
+            {helper}
+          </MargedText>
+        ) : null}
+      </Stack>
+    </Tooltip>
+  )
+}

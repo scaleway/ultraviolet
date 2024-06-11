@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import type { ComponentProps, ReactNode } from 'react'
-import { forwardRef } from 'react'
+import type { ComponentProps, ReactNode, Ref } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
 import { Header } from './Header'
@@ -62,59 +61,56 @@ type TableProps = {
   loading?: boolean
   bordered?: boolean
   stripped?: boolean
+  ref?: Ref<HTMLTableElement>
 }
 
-export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
-  (
-    {
-      selectable = false,
-      children,
-      columns,
-      loading,
-      bordered = false,
-      stripped = false,
-    },
-    ref,
-  ) => (
-    <TableProvider
-      selectable={selectable}
-      stripped={stripped}
-      bordered={bordered}
-    >
-      <StyledTable ref={ref} stripped={stripped} bordered={bordered}>
-        <Header>
-          <HeaderRow hasSelectAllColumn={selectable}>
-            {columns.map((column, index) => (
-              <HeaderCell
-                // eslint-disable-next-line react/no-array-index-key
-                key={`header-column-${index}`}
-                isOrdered={column.isOrdered}
-                orderDirection={column.orderDirection}
-                onOrder={column.onOrder}
-                width={column.width}
-                minWidth={column.minWidth}
-                maxWidth={column.maxWidth}
-                info={column.info}
-              >
-                {column.label}
-              </HeaderCell>
-            ))}
-          </HeaderRow>
-        </Header>
-        {loading ? (
-          <Body>
-            <SkeletonRows
-              selectable={selectable}
-              rows={5}
-              cols={columns.length}
-            />
-          </Body>
-        ) : (
-          children
-        )}
-      </StyledTable>
-    </TableProvider>
-  ),
+export const BaseTable = ({
+  selectable = false,
+  children,
+  columns,
+  loading,
+  bordered = false,
+  stripped = false,
+  ref,
+}: TableProps) => (
+  <TableProvider
+    selectable={selectable}
+    stripped={stripped}
+    bordered={bordered}
+  >
+    <StyledTable ref={ref} stripped={stripped} bordered={bordered}>
+      <Header>
+        <HeaderRow hasSelectAllColumn={selectable}>
+          {columns.map((column, index) => (
+            <HeaderCell
+              // eslint-disable-next-line react/no-array-index-key
+              key={`header-column-${index}`}
+              isOrdered={column.isOrdered}
+              orderDirection={column.orderDirection}
+              onOrder={column.onOrder}
+              width={column.width}
+              minWidth={column.minWidth}
+              maxWidth={column.maxWidth}
+              info={column.info}
+            >
+              {column.label}
+            </HeaderCell>
+          ))}
+        </HeaderRow>
+      </Header>
+      {loading ? (
+        <Body>
+          <SkeletonRows
+            selectable={selectable}
+            rows={5}
+            cols={columns.length}
+          />
+        </Body>
+      ) : (
+        children
+      )}
+    </StyledTable>
+  </TableProvider>
 )
 
 /**

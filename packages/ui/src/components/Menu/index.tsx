@@ -10,7 +10,6 @@ import type {
 } from 'react'
 import {
   cloneElement,
-  forwardRef,
   isValidElement,
   useImperativeHandle,
   useRef,
@@ -128,18 +127,6 @@ export const arrowPlacements = Object.keys(
   arrowPlacementStyles,
 ) as ArrowPlacement[]
 
-type MenuProps = {
-  ariaLabel?: string
-  id?: string
-  placement?: ArrowPlacement
-  children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
-  className?: string
-  disclosure: DisclosureElement
-  hasArrow?: boolean
-  visible?: boolean
-  'data-testid'?: string
-}
-
 const MenuList = styled.div<MenuListProps>`
   &:after,
   &:before {
@@ -171,78 +158,85 @@ const MenuList = styled.div<MenuListProps>`
     hasArrow && arrowPlacementStyles[placement]?.(theme)}
 `
 
-const FwdMenu = forwardRef(
-  (
-    {
-      ariaLabel = 'Menu',
-      id,
-      children,
-      disclosure,
-      hasArrow = true,
-      placement = 'bottom',
-      visible = false,
-      className,
-      'data-testid': dataTestId,
-    }: MenuProps,
-    ref: Ref<HTMLButtonElement | null>,
-  ) => {
-    const popover = usePopoverState({
-      baseId: id,
-      placement,
-      visible,
-    })
+type MenuProps = {
+  ariaLabel?: string
+  id?: string
+  placement?: ArrowPlacement
+  children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
+  className?: string
+  disclosure: DisclosureElement
+  hasArrow?: boolean
+  visible?: boolean
+  'data-testid'?: string
+  ref?: Ref<HTMLButtonElement | null>
+}
 
-    // if you need dialog inside your component, use function, otherwise component is fine
-    const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
-      disclosure,
-    )
-      ? disclosure
-      : disclosure(popover)
-    const innerRef = useRef(target as unknown as HTMLButtonElement)
-    useImperativeHandle(ref, () => innerRef.current)
+const FwdMenu = ({
+  ariaLabel = 'Menu',
+  id,
+  children,
+  disclosure,
+  hasArrow = true,
+  placement = 'bottom',
+  visible = false,
+  className,
+  'data-testid': dataTestId,
+  ref,
+}: MenuProps) => {
+  const popover = usePopoverState({
+    baseId: id,
+    placement,
+    visible,
+  })
 
-    return (
-      <>
-        {disclosure && (
-          // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
-          <PopoverDisclosure
-            {...popover}
-            onClick={(event: MouseEvent<HTMLButtonElement>) => {
-              target?.props?.onClick?.(event)
-            }}
-            ref={innerRef}
-          >
-            {disclosureProps => cloneElement(target, disclosureProps)}
-          </PopoverDisclosure>
-        )}
-        <Portal>
-          <StyledPopover
-            {...popover}
-            aria-label={ariaLabel}
-            className={className}
-          >
-            {
-              /* Required to avoid loading menu content if not visible */
-              popover.visible ? (
-                <MenuList
-                  data-testid={dataTestId}
-                  className={className}
-                  hasArrow={hasArrow}
-                  placement={popover.placement as ArrowPlacement}
-                  role="menu"
-                >
-                  {typeof children === 'function'
-                    ? children(popover)
-                    : children}
-                </MenuList>
-              ) : null
-            }
-          </StyledPopover>
-        </Portal>
-      </>
-    )
-  },
-)
+  // if you need dialog inside your component, use function, otherwise component is fine
+  const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
+    disclosure,
+  )
+    ? disclosure
+    : disclosure(popover)
+  const innerRef = useRef(target as unknown as HTMLButtonElement)
+  useImperativeHandle(ref, () => innerRef.current)
+
+  return (
+    <>
+      {disclosure && (
+        // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
+        <PopoverDisclosure
+          {...popover}
+          onClick={(event: MouseEvent<HTMLButtonElement>) => {
+            target?.props?.onClick?.(event)
+          }}
+          ref={innerRef}
+        >
+          {disclosureProps => cloneElement(target, disclosureProps)}
+        </PopoverDisclosure>
+      )}
+      <Portal>
+        <StyledPopover
+          {...popover}
+          aria-label={ariaLabel}
+          className={className}
+        >
+          {
+            /* Required to avoid loading menu content if not visible */
+            popover.visible ? (
+              <MenuList
+                data-testid={dataTestId}
+                className={className}
+                hasArrow={hasArrow}
+                placement={popover.placement as ArrowPlacement}
+                role="menu"
+              >
+                {typeof children === 'function' ? children(popover) : children}
+              </MenuList>
+            ) : null
+          }
+        </StyledPopover>
+      </Portal>
+    </>
+  )
+}
 
 /**
  * A menu is a widget that offers a list of choices to the user, such as a set of actions or functions.

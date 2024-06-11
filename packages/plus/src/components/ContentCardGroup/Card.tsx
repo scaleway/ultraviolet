@@ -1,17 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { AnchorHTMLAttributes, ReactNode } from 'react'
-import { forwardRef } from 'react'
-
-type CardProps = {
-  title?: string
-  subtitle?: string
-  description?: string
-  children?: ReactNode
-  href: string
-  target?: AnchorHTMLAttributes<HTMLAnchorElement>['target']
-}
+import type { AnchorHTMLAttributes, ReactNode, Ref } from 'react'
 
 const StyledStack = styled(Stack)`
   min-width: 0;
@@ -60,46 +50,59 @@ const FullHeightStack = styled(Stack)`
   height: 100%;
 `
 
-export const Card = forwardRef<HTMLAnchorElement, CardProps>(
-  (
-    { title, subtitle, description, children, href, target = '_blank' },
-    ref,
-  ) => (
-    <StyledWrapper href={href} target={target} ref={ref}>
-      <FullHeightStack
-        direction="row"
-        gap={2}
-        alignItems="center"
-        justifyContent="space-between"
-      >
-        <StyledStack gap="0.5">
-          <div>
-            {subtitle ? (
-              <Text
-                as="h5"
-                variant="caption"
-                prominence="weak"
-                sentiment="neutral"
-                oneLine
-              >
-                {subtitle}
-              </Text>
-            ) : null}
-            <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
-              {title}
-            </Text>
-          </div>
-          {description ? (
-            <Text as="p" variant="bodySmall" sentiment="neutral" oneLine>
-              {description}
+type CardProps = {
+  title?: string
+  subtitle?: string
+  description?: string
+  children?: ReactNode
+  href: string
+  target?: AnchorHTMLAttributes<HTMLAnchorElement>['target']
+  ref?: Ref<HTMLAnchorElement>
+}
+
+export const Card = ({
+  title,
+  subtitle,
+  description,
+  children,
+  href,
+  target = '_blank',
+  ref,
+}: CardProps) => (
+  <StyledWrapper href={href} target={target} ref={ref}>
+    <FullHeightStack
+      direction="row"
+      gap={2}
+      alignItems="center"
+      justifyContent="space-between"
+    >
+      <StyledStack gap="0.5">
+        <div>
+          {subtitle ? (
+            <Text
+              as="h5"
+              variant="caption"
+              prominence="weak"
+              sentiment="neutral"
+              oneLine
+            >
+              {subtitle}
             </Text>
           ) : null}
-          {children}
-        </StyledStack>
-        <IconWrapper>
-          <Icon name="open-in-new" color="neutral" />
-        </IconWrapper>
-      </FullHeightStack>
-    </StyledWrapper>
-  ),
+          <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
+            {title}
+          </Text>
+        </div>
+        {description ? (
+          <Text as="p" variant="bodySmall" sentiment="neutral" oneLine>
+            {description}
+          </Text>
+        ) : null}
+        {children}
+      </StyledStack>
+      <IconWrapper>
+        <Icon name="open-in-new" color="neutral" />
+      </IconWrapper>
+    </FullHeightStack>
+  </StyledWrapper>
 )

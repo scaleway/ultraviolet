@@ -1,8 +1,8 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
-import type { FunctionComponent, SVGProps } from 'react'
-import { forwardRef, useMemo } from 'react'
+import type { FunctionComponent, Ref, SVGProps } from 'react'
+import { useMemo } from 'react'
 import capitalize from '../../utils/capitalize'
 import { ICONS } from './Icons'
 import { SMALL_ICONS } from './SmallIcons'
@@ -120,11 +120,12 @@ type IconProps = {
   /**
    * @deprecated use `sentiment` property instead
    */
-  color?: Color
+  color?: Color | string
   sentiment?: Color
   variant?: 'outlined' | 'filled'
   'data-testid'?: string
   disabled?: boolean
+  ref?: Ref<SVGSVGElement>
 } & Pick<
   SVGProps<SVGSVGElement>,
   'className' | 'stroke' | 'cursor' | 'strokeWidth'
@@ -133,70 +134,64 @@ type IconProps = {
 /**
  * Icon component is our set of system icons in the design system. All of them are SVGs.
  */
-export const Icon = forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      name = 'alert',
-      color = 'currentColor',
-      sentiment,
-      size = '1em',
-      prominence = 'default',
-      className,
-      'data-testid': dataTestId,
-      stroke,
-      variant = 'filled',
-      cursor,
-      strokeWidth,
-      disabled,
-    },
-    ref,
-  ) => {
-    const computedSentiment = sentiment ?? color
-    const SystemIcon = useMemo(() => {
-      if (size === 'small' || size === 16) {
-        return StyledIcon(
-          SMALL_ICONS[variant][name] || SMALL_ICONS.filled.alert,
-        )
-      }
+export const Icon = ({
+  name = 'alert',
+  color = 'currentColor',
+  sentiment,
+  size = '1em',
+  prominence = 'default',
+  className,
+  'data-testid': dataTestId,
+  stroke,
+  variant = 'filled',
+  cursor,
+  strokeWidth,
+  disabled,
+  ref,
+}: IconProps) => {
+  const computedSentiment = sentiment ?? color
+  const SystemIcon = useMemo(() => {
+    if (size === 'small' || size === 16) {
+      return StyledIcon(SMALL_ICONS[variant][name] || SMALL_ICONS.filled.alert)
+    }
 
-      return StyledIcon(ICONS[variant][name] || ICONS.filled.alert)
-    }, [name, size, variant])
+    return StyledIcon(ICONS[variant][name] || ICONS.filled.alert)
+  }, [name, size, variant])
 
-    /**
-     * @deprecated to be removed in next major
-     */
-    const defaultViewBox = useMemo(() => {
-      if (
-        [
-          'asterisk',
-          'close-circle-outline',
-          'drag-variant',
-          'expand-more',
-          'send',
-          'switch_orga',
-        ].includes(name)
-      ) {
-        return '0 0 24 24'
-      }
-      if (size === 'small' || size === 16) return '0 0 16 16'
+  /**
+   * @deprecated to be removed in next major
+   */
+  const defaultViewBox = useMemo(() => {
+    if (
+      [
+        'asterisk',
+        'close-circle-outline',
+        'drag-variant',
+        'expand-more',
+        'send',
+        'switch_orga',
+      ].includes(name)
+    ) {
+      return '0 0 24 24'
+    }
+    if (size === 'small' || size === 16) return '0 0 16 16'
 
-      return '0 0 20 20'
-    }, [name, size])
+    return '0 0 20 20'
+  }, [name, size])
 
-    return (
-      <SystemIcon
-        ref={ref}
-        sentiment={computedSentiment}
-        prominence={prominence}
-        size={size}
-        viewBox={defaultViewBox}
-        className={className}
-        data-testid={dataTestId}
-        stroke={stroke}
-        cursor={cursor}
-        strokeWidth={strokeWidth}
-        disabled={disabled}
-      />
-    )
-  },
-)
+  return (
+    <SystemIcon
+      ref={ref}
+      sentiment={computedSentiment}
+      prominence={prominence}
+      size={size}
+      viewBox={defaultViewBox}
+      className={className}
+      data-testid={dataTestId}
+      stroke={stroke}
+      cursor={cursor}
+      strokeWidth={strokeWidth}
+      disabled={disabled}
+    />
+  )
+}

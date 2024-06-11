@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import type { ComponentProps, Ref } from 'react'
-import { forwardRef } from 'react'
+import type { ComponentProps } from 'react'
 import { Popup } from '../Popup'
 
 type TooltipProps = Pick<
@@ -19,6 +18,7 @@ type TooltipProps = Pick<
   | 'portalTarget'
   | 'tabIndex'
   | 'debounceDelay'
+  | 'ref'
 >
 
 const StyledPopup = styled(Popup)`
@@ -29,43 +29,39 @@ const StyledPopup = styled(Popup)`
  * Tooltip component is used to display additional information on hover or focus.
  * It is used to explain the purpose of the element it is attached to.
  */
-export const Tooltip = forwardRef(
-  (
-    {
-      children,
-      text = '',
-      placement = 'auto',
-      id,
-      className,
-      containerFullWidth,
-      maxWidth = 232,
-      visible,
-      innerRef,
-      role = 'tooltip',
-      'data-testid': dataTestId,
-      portalTarget,
-      debounceDelay,
-      tabIndex,
-    }: TooltipProps,
-    tooltipRef: Ref<HTMLDivElement>,
-  ) => (
-    <StyledPopup
-      id={id}
-      ref={tooltipRef}
-      role={role}
-      data-testid={dataTestId}
-      className={className}
-      containerFullWidth={containerFullWidth}
-      maxWidth={maxWidth}
-      visible={visible}
-      placement={placement}
-      text={text}
-      innerRef={innerRef}
-      portalTarget={portalTarget}
-      tabIndex={tabIndex}
-      debounceDelay={debounceDelay}
-    >
-      {children}
-    </StyledPopup>
-  ),
+export const Tooltip = ({
+  children,
+  text = '',
+  placement = 'auto',
+  id,
+  className,
+  containerFullWidth,
+  maxWidth = 232,
+  visible,
+  innerRef,
+  role = 'tooltip',
+  'data-testid': dataTestId,
+  portalTarget,
+  debounceDelay,
+  tabIndex,
+  ref: tooltipRef,
+}: TooltipProps) => (
+  <StyledPopup
+    id={id}
+    ref={tooltipRef}
+    role={role}
+    data-testid={dataTestId}
+    className={className}
+    containerFullWidth={containerFullWidth}
+    maxWidth={maxWidth}
+    visible={visible}
+    placement={placement}
+    text={text}
+    innerRef={innerRef}
+    portalTarget={portalTarget}
+    tabIndex={tabIndex}
+    debounceDelay={debounceDelay}
+  >
+    {children}
+  </StyledPopup>
 )

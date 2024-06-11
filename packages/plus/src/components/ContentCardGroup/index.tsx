@@ -1,14 +1,9 @@
 import styled from '@emotion/styled'
 import { Stack } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
-import { Children, forwardRef } from 'react'
+import type { ReactNode, Ref } from 'react'
+import { Children } from 'react'
 import { Card } from './Card'
 import { SkeletonCard } from './SkeletonCard'
-
-type BaseContentCardGroupProps = {
-  children: ReactNode
-  loading?: boolean
-}
 
 const StyledWrapper = styled(Stack)`
   border-radius: ${({ theme }) => theme.radii.default};
@@ -17,10 +12,17 @@ const StyledWrapper = styled(Stack)`
   min-width: 0;
 `
 
-const BaseContentCardGroup = forwardRef<
-  HTMLDivElement,
-  BaseContentCardGroupProps
->(({ children, loading }, ref) => (
+type BaseContentCardGroupProps = {
+  children: ReactNode
+  loading?: boolean
+  ref?: Ref<HTMLDivElement>
+}
+
+const BaseContentCardGroup = ({
+  children,
+  loading,
+  ref,
+}: BaseContentCardGroupProps) => (
   <StyledWrapper direction="column" ref={ref}>
     {!loading ? (
       children
@@ -33,7 +35,7 @@ const BaseContentCardGroup = forwardRef<
       </>
     )}
   </StyledWrapper>
-))
+)
 
 export const ContentCardGroup = Object.assign(BaseContentCardGroup, {
   Card,

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode, Ref } from 'react'
-import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
@@ -117,76 +117,73 @@ type PopoverProps = {
    * behavior by setting a portalTarget prop.
    */
   portalTarget?: HTMLElement
+  ref?: Ref<HTMLDivElement>
 } & Pick<ComponentProps<typeof Popup>, 'placement' | 'dynamicDomRendering'>
 
 /**
  * Popover component is used to display additional information or actions on top of the main content of the page.
  * It is usually triggered by clicking on a button. It includes a title, a close button and a content area.
  */
-export const Popover = forwardRef(
-  (
-    {
-      visible = false,
-      children,
-      placement,
-      content,
-      title,
-      sentiment = 'neutral',
-      size = 'medium',
-      onClose,
-      className,
-      maxWidth,
-      maxHeight,
-      'data-testid': dataTestId,
-      portalTarget,
-      dynamicDomRendering,
-    }: PopoverProps,
-    ref: Ref<HTMLDivElement>,
-  ) => {
-    const innerRef = useRef<HTMLDivElement>(null)
-    const [localVisible, setLocalVisible] = useState(visible)
+export const Popover = ({
+  visible = false,
+  children,
+  placement,
+  content,
+  title,
+  sentiment = 'neutral',
+  size = 'medium',
+  onClose,
+  className,
+  maxWidth,
+  maxHeight,
+  'data-testid': dataTestId,
+  portalTarget,
+  dynamicDomRendering,
+  ref,
+}: PopoverProps) => {
+  const innerRef = useRef<HTMLDivElement>(null)
+  const [localVisible, setLocalVisible] = useState(visible)
 
-    // We change local value if visible prop changes
-    useEffect(() => {
-      setLocalVisible(visible)
-    }, [visible])
+  // We change local value if visible prop changes
+  useEffect(() => {
+    setLocalVisible(visible)
+  }, [visible])
 
-    const localOnClose = useCallback(() => {
-      setLocalVisible(false)
-      onClose?.()
-    }, [onClose])
+  const localOnClose = useCallback(() => {
+    setLocalVisible(false)
+    onClose?.()
+  }, [onClose])
 
-    return (
-      <StyledPopup
-        hideOnClickOutside
-        debounceDelay={0}
-        visible={localVisible}
-        placement={placement}
-        text={
-          <ContentWrapper
-            title={title}
-            onClose={localOnClose}
-            sentiment={sentiment}
-          >
-            {content}
-          </ContentWrapper>
-        }
-        className={className}
-        sentiment={sentiment}
-        data-testid={dataTestId}
-        size={size}
-        role="dialog"
-        ref={ref}
-        tabIndex={-1}
-        innerRef={innerRef}
-        onClose={localOnClose}
-        maxWidth={maxWidth}
-        maxHeight={maxHeight}
-        portalTarget={portalTarget}
-        dynamicDomRendering={dynamicDomRendering}
-      >
-        {children}
-      </StyledPopup>
-    )
-  },
-)
+  return (
+    <StyledPopup
+      hideOnClickOutside
+      debounceDelay={0}
+      visible={localVisible}
+      placement={placement}
+      text={
+        <ContentWrapper
+          title={title}
+          onClose={localOnClose}
+          sentiment={sentiment}
+        >
+          {content}
+        </ContentWrapper>
+      }
+      className={className}
+      sentiment={sentiment}
+      data-testid={dataTestId}
+      size={size}
+      role="dialog"
+      ref={ref}
+      tabIndex={-1}
+      innerRef={innerRef}
+      onClose={localOnClose}
+      maxWidth={maxWidth}
+      maxHeight={maxHeight}
+      portalTarget={portalTarget}
+      dynamicDomRendering={dynamicDomRendering}
+    >
+      {children}
+    </StyledPopup>
+  )
+}

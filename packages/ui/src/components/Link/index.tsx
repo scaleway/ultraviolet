@@ -2,13 +2,13 @@ import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type {
   AnchorHTMLAttributes,
-  ForwardedRef,
   HTMLAttributeAnchorTarget,
   MouseEventHandler,
   ReactNode,
+  Ref,
   RefObject,
 } from 'react'
-import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import type { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
@@ -27,24 +27,6 @@ export type ProminenceProps = keyof typeof PROMINENCES
 
 type LinkSizes = 'large' | 'small' | 'xsmall'
 type LinkIconPosition = 'left' | 'right'
-type LinkProps = {
-  children: ReactNode
-  target?: HTMLAttributeAnchorTarget
-  download?: string | boolean
-  sentiment?: Color
-  prominence?: ProminenceProps
-  size?: LinkSizes
-  iconPosition?: LinkIconPosition
-  rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
-  className?: string
-  href: string
-  // For react router shouldn't be used directly
-  onClick?: MouseEventHandler<HTMLAnchorElement>
-  'aria-label'?: string
-  oneLine?: boolean
-  'data-testid'?: string
-  variant?: 'inline' | 'standalone'
-}
 
 const ICON_SIZE = 16
 const BLANK_TARGET_ICON_SIZE = 14
@@ -157,86 +139,103 @@ const StyledLink = styled('a', {
   }
 `
 
+type LinkProps = {
+  children: ReactNode
+  target?: HTMLAttributeAnchorTarget
+  download?: string | boolean
+  sentiment?: Color
+  prominence?: ProminenceProps
+  size?: LinkSizes
+  iconPosition?: LinkIconPosition
+  rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
+  className?: string
+  href: string
+  // For react router shouldn't be used directly
+  onClick?: MouseEventHandler<HTMLAnchorElement>
+  'aria-label'?: string
+  oneLine?: boolean
+  'data-testid'?: string
+  variant?: 'inline' | 'standalone'
+  ref?: Ref<HTMLAnchorElement>
+}
+
 /**
  * Link is a component used to navigate between pages or to external websites.
  */
-export const Link = forwardRef(
-  (
-    {
-      children,
-      href,
-      target,
-      download,
-      sentiment = 'info',
-      prominence,
-      size = 'large',
-      iconPosition,
-      rel,
-      className,
-      onClick,
-      'aria-label': ariaLabel,
-      oneLine = false,
-      'data-testid': dataTestId,
-      variant = 'standalone',
-    }: LinkProps,
-    ref: ForwardedRef<HTMLAnchorElement>,
-  ) => {
-    const isBlank = target === '_blank'
-    const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
-    const [isTruncated, setIsTruncated] = useState(false)
-    const elementRef = useRef<HTMLAnchorElement>(null)
+export const Link = ({
+  children,
+  href,
+  target,
+  download,
+  sentiment = 'info',
+  prominence,
+  size = 'large',
+  iconPosition,
+  rel,
+  className,
+  onClick,
+  'aria-label': ariaLabel,
+  oneLine = false,
+  'data-testid': dataTestId,
+  variant = 'standalone',
+  ref,
+}: LinkProps) => {
+  const isBlank = target === '_blank'
+  const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
+  const [isTruncated, setIsTruncated] = useState(false)
+  const elementRef = useRef<HTMLAnchorElement>(null)
 
-    const usedRef = (ref as RefObject<HTMLAnchorElement>) ?? elementRef
+  const usedRef = (ref as RefObject<HTMLAnchorElement>) ?? elementRef
 
-    const finalStringChildren = recursivelyGetChildrenString(children)
+  const finalStringChildren = recursivelyGetChildrenString(children)
     const textVariant = useMemo(() => {
       if (size === 'xsmall') return 'captionStrong'
       if (size === 'small') return 'bodySmallStrong'
 
-      return 'bodyStrong'
+  return 'bodyStrong'
     }, [size])
-    useEffect(() => {
-      if (oneLine && usedRef?.current) {
-        const { offsetWidth, scrollWidth } = usedRef.current
-        setIsTruncated(offsetWidth < scrollWidth)
-      }
-    }, [oneLine, ref, usedRef])
 
-    return (
-      <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
-        <StyledLink
-          href={href}
-          target={target}
-          download={download}
-          ref={usedRef}
-          sentiment={sentiment}
-          prominence={prominence}
-          rel={computedRel}
-          className={className}
-          variant={textVariant}
-          onClick={onClick}
-          iconPosition={iconPosition}
-          aria-label={ariaLabel}
-          oneLine={oneLine}
-          data-testid={dataTestId}
-          data-variant={variant}
-        >
-          {!isBlank && iconPosition === 'left' ? (
-            <StyledIcon name="arrow-left" size={ICON_SIZE} />
-          ) : null}
-          {children}
+  useEffect(() => {
+    if (oneLine && usedRef?.current) {
+      const { offsetWidth, scrollWidth } = usedRef.current
+      setIsTruncated(offsetWidth < scrollWidth)
+    }
+  }, [oneLine, ref, usedRef])
 
-          {isBlank ? (
-            <StyledExternalIconContainer>
-              <StyledIcon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
-            </StyledExternalIconContainer>
-          ) : null}
+  return (
+    <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
+      <StyledLink
+        href={href}
+        target={target}
+        download={download}
+        ref={usedRef}
+        sentiment={sentiment}
+        prominence={prominence}
+        rel={computedRel}
+        className={className}
+        variant={textVariant}
+        onClick={onClick}
+        iconPosition={iconPosition}
+        aria-label={ariaLabel}
+        oneLine={oneLine}
+        data-testid={dataTestId}
+        data-variant={variant}
+      >
+        {!isBlank && iconPosition === 'left' ? (
+          <StyledIcon name="arrow-left" size={ICON_SIZE} />
+        ) : null}
+        {children}
 
-          {!isBlank && iconPosition === 'right' ? (
-            <StyledIcon name="arrow-right" size={ICON_SIZE} />
-          ) : null}
-        </StyledLink>
-      </Tooltip>
-    )
-  },
-)
+        {isBlank ? (
+          <StyledExternalIconContainer>
+            <StyledIcon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
+          </StyledExternalIconContainer>
+        ) : null}
+
+        {!isBlank && iconPosition === 'right' ? (
+          <StyledIcon name="arrow-right" size={ICON_SIZE} />
+        ) : null}
+      </StyledLink>
+    </Tooltip>
+  )
+}

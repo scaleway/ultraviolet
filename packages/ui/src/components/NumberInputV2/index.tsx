@@ -1,14 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
-import {
-  forwardRef,
-  useCallback,
-  useId,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-} from 'react'
+import type { InputHTMLAttributes, ReactNode, Ref } from 'react'
+import { useCallback, useId, useImperativeHandle, useMemo, useRef } from 'react'
 import { Button } from '../Button'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
@@ -191,6 +184,7 @@ type NumberInputProps = {
   onChange?: (newValue: number | null) => void
   min?: number
   max?: number
+  ref?: Ref<HTMLInputElement>
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'
@@ -210,230 +204,226 @@ type NumberInputProps = {
  * NumberInputV2 component is used to increment / decrement a number value by clicking on + / - buttons or
  * by typing into input. If the value is out of the min / max range, the input will automatically be the min / max value on blur.
  */
-export const NumberInputV2 = forwardRef(
-  (
-    {
-      disabled = false,
-      max = Number.MAX_SAFE_INTEGER,
-      min = 0,
-      name,
-      onChange,
-      onFocus,
-      onBlur,
-      size = 'large',
-      step,
-      unit,
-      value,
-      tooltip,
-      className,
-      label,
-      labelDescription,
-      id,
-      placeholder = '',
-      error,
-      success,
-      helper,
-      'aria-label': ariaLabel,
-      'data-testid': dataTestId,
-      required,
-      autoFocus,
-      readOnly,
-    }: NumberInputProps,
-    ref: ForwardedRef<HTMLInputElement>,
-  ) => {
-    const localRef = useRef<HTMLInputElement>(null)
-    useImperativeHandle(ref, () => localRef.current as HTMLInputElement)
+export const NumberInputV2 = ({
+  disabled = false,
+  max = Number.MAX_SAFE_INTEGER,
+  min = 0,
+  name,
+  onChange,
+  onFocus,
+  onBlur,
+  size = 'large',
+  step,
+  unit,
+  value,
+  tooltip,
+  className,
+  label,
+  labelDescription,
+  id,
+  placeholder = '',
+  error,
+  success,
+  helper,
+  'aria-label': ariaLabel,
+  'data-testid': dataTestId,
+  required,
+  autoFocus,
+  readOnly,
+  ref,
+}: NumberInputProps) => {
+  const localRef = useRef<HTMLInputElement>(null)
+  useImperativeHandle(ref, () => localRef.current as HTMLInputElement)
 
-    const uniqueId = useId()
-    const localId = id ?? uniqueId
+  const uniqueId = useId()
+  const localId = id ?? uniqueId
 
-    const onClickSideButton = useCallback(
-      (direction: 'up' | 'down') => () => {
-        if (direction === 'up') {
-          localRef.current?.stepUp()
-        } else if (direction === 'down') {
-          localRef.current?.stepDown()
-        }
-        onChange?.(parseInt(localRef.current?.value ?? '', 10) ?? min)
-      },
-      [localRef, min, onChange],
-    )
+  const onClickSideButton = useCallback(
+    (direction: 'up' | 'down') => () => {
+      if (direction === 'up') {
+        localRef.current?.stepUp()
+      } else if (direction === 'down') {
+        localRef.current?.stepDown()
+      }
+      onChange?.(parseInt(localRef.current?.value ?? '', 10) ?? min)
+    },
+    [localRef, min, onChange],
+  )
 
-    const isMinusDisabled = useMemo(
-      () => {
-        if (!localRef?.current?.value || localRef?.current?.value === '') {
-          return false
-        }
-
-        const numericValue = Number(localRef?.current?.value)
-        if (Number.isNaN(numericValue)) return false
-
-        const minValue = typeof min === 'number' ? min : Number(min)
-
-        return Number.isNaN(numericValue) || numericValue <= minValue
-      }, // eslint-disable-next-line react-hooks/exhaustive-deps
-      [localRef?.current?.value, min],
-    )
-
-    const isPlusDisabled = useMemo(
-      () => {
-        if (!localRef?.current?.value || localRef?.current?.value === '') {
-          return false
-        }
-
-        const numericValue = Number(localRef?.current?.value)
-        if (Number.isNaN(numericValue)) return false
-
-        const maxValue = typeof max === 'number' ? max : Number(max)
-
-        return numericValue >= maxValue
-      }, // eslint-disable-next-line react-hooks/exhaustive-deps
-      [localRef?.current?.value, max],
-    )
-
-    const helperSentiment = useMemo(() => {
-      if (error) {
-        return 'danger'
+  const isMinusDisabled = useMemo(
+    () => {
+      if (!localRef?.current?.value || localRef?.current?.value === '') {
+        return false
       }
 
-      if (success) {
-        return 'success'
+      const numericValue = Number(localRef?.current?.value)
+      if (Number.isNaN(numericValue)) return false
+
+      const minValue = typeof min === 'number' ? min : Number(min)
+
+      return Number.isNaN(numericValue) || numericValue <= minValue
+    }, // eslint-disable-next-line react-hooks/exhaustive-deps
+    [localRef?.current?.value, min],
+  )
+
+  const isPlusDisabled = useMemo(
+    () => {
+      if (!localRef?.current?.value || localRef?.current?.value === '') {
+        return false
       }
 
-      return 'neutral'
-    }, [error, success])
+      const numericValue = Number(localRef?.current?.value)
+      if (Number.isNaN(numericValue)) return false
 
-    let inputValue
-    if (value !== undefined) {
-      inputValue =
-        value !== null && Number.isInteger(value) ? value.toString() : ''
+      const maxValue = typeof max === 'number' ? max : Number(max)
+
+      return numericValue >= maxValue
+    }, // eslint-disable-next-line react-hooks/exhaustive-deps
+    [localRef?.current?.value, max],
+  )
+
+  const helperSentiment = useMemo(() => {
+    if (error) {
+      return 'danger'
     }
 
-    return (
-      <Stack gap="0.5" className={className}>
-        {label || labelDescription ? (
-          <Stack direction="row" gap="1" alignItems="center">
-            {label ? (
-              <Stack direction="row" gap="0.5" alignItems="start">
-                <Text
-                  as="label"
-                  variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
-                  sentiment="neutral"
-                  htmlFor={id ?? localId}
-                >
-                  {label}
-                </Text>
-                {required ? (
-                  <Icon name="asterisk" sentiment="danger" size={8} />
-                ) : null}
-              </Stack>
-            ) : null}
-            {labelDescription ?? null}
-          </Stack>
-        ) : null}
-        <div>
-          <Tooltip text={tooltip}>
-            <Container
-              data-disabled={disabled}
-              data-readonly={readOnly}
-              data-error={!!error}
-              data-success={!!success}
-              data-unit={!!unit}
-            >
-              <SideContainer
-                justifyContent="center"
-                alignItems="center"
-                data-size={size}
+    if (success) {
+      return 'success'
+    }
+
+    return 'neutral'
+  }, [error, success])
+
+  let inputValue
+  if (value !== undefined) {
+    inputValue =
+      value !== null && Number.isInteger(value) ? value.toString() : ''
+  }
+
+  return (
+    <Stack gap="0.5" className={className}>
+      {label || labelDescription ? (
+        <Stack direction="row" gap="1" alignItems="center">
+          {label ? (
+            <Stack direction="row" gap="0.5" alignItems="start">
+              <Text
+                as="label"
+                variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
+                sentiment="neutral"
+                htmlFor={id ?? localId}
               >
-                <Button
-                  sentiment="neutral"
-                  variant="ghost"
-                  icon="minus"
-                  size={size === 'small' ? 'xsmall' : 'small'}
-                  disabled={disabled || readOnly || isMinusDisabled}
-                  onClick={onClickSideButton('down')}
-                  aria-label="minus"
-                />
-              </SideContainer>
-              <InputContainer
-                justifyContent="space-between"
-                alignItems="center"
-                templateColumns="1fr auto"
-              >
-                <Input
-                  ref={localRef}
-                  type="number"
-                  name={name}
-                  id={localId}
-                  placeholder={placeholder}
-                  onChange={
-                    onChange
-                      ? event => {
-                          const newNumber = parseInt(event.target.value, 10)
-                          onChange(Number.isNaN(newNumber) ? null : newNumber)
-                        }
-                      : undefined
-                  }
-                  value={inputValue}
-                  onFocus={onFocus}
-                  onBlur={onBlur}
-                  data-size={size}
-                  step={step}
-                  disabled={disabled}
-                  aria-label={ariaLabel}
-                  data-testid={dataTestId}
-                  min={min}
-                  max={max}
-                  required={required}
-                  autoFocus={autoFocus}
-                  readOnly={readOnly}
-                  data-has-unit={!!unit}
-                />
-                {unit ? (
-                  <Unit
-                    variant="body"
-                    sentiment="neutral"
-                    as="span"
-                    disabled={disabled}
-                    size={size}
-                  >
-                    {unit}
-                  </Unit>
-                ) : null}
-              </InputContainer>
-              <SideContainer
-                justifyContent="center"
-                alignItems="center"
-                data-size={size}
-              >
-                <Button
-                  sentiment="neutral"
-                  variant="ghost"
-                  icon="plus"
-                  size={size === 'small' ? 'xsmall' : 'small'}
-                  disabled={disabled || readOnly || isPlusDisabled}
-                  onClick={onClickSideButton('up')}
-                  aria-label="plus"
-                />
-              </SideContainer>
-            </Container>
-          </Tooltip>
-        </div>
-        {error || typeof success === 'string' || typeof helper === 'string' ? (
-          <Text
-            variant="caption"
-            as="span"
-            prominence={!error && !success ? 'weak' : undefined}
-            sentiment={helperSentiment}
-            disabled={disabled || readOnly}
+                {label}
+              </Text>
+              {required ? (
+                <Icon name="asterisk" sentiment="danger" size={8} />
+              ) : null}
+            </Stack>
+          ) : null}
+          {labelDescription ?? null}
+        </Stack>
+      ) : null}
+      <div>
+        <Tooltip text={tooltip}>
+          <Container
+            data-disabled={disabled}
+            data-readonly={readOnly}
+            data-error={!!error}
+            data-success={!!success}
+            data-unit={!!unit}
           >
-            {error || success || helper}
-          </Text>
-        ) : null}
-        {!error && !success && typeof helper !== 'string' && helper
-          ? helper
-          : null}
-      </Stack>
-    )
-  },
-)
+            <SideContainer
+              justifyContent="center"
+              alignItems="center"
+              data-size={size}
+            >
+              <Button
+                sentiment="neutral"
+                variant="ghost"
+                icon="minus"
+                size={size === 'small' ? 'xsmall' : 'small'}
+                disabled={disabled || readOnly || isMinusDisabled}
+                onClick={onClickSideButton('down')}
+                aria-label="minus"
+              />
+            </SideContainer>
+            <InputContainer
+              justifyContent="space-between"
+              alignItems="center"
+              templateColumns="1fr auto"
+            >
+              <Input
+                ref={localRef}
+                type="number"
+                name={name}
+                id={localId}
+                placeholder={placeholder}
+                onChange={
+                  onChange
+                    ? event => {
+                        const newNumber = parseInt(event.target.value, 10)
+                        onChange(Number.isNaN(newNumber) ? null : newNumber)
+                      }
+                    : undefined
+                }
+                value={inputValue}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                data-size={size}
+                step={step}
+                disabled={disabled}
+                aria-label={ariaLabel}
+                data-testid={dataTestId}
+                min={min}
+                max={max}
+                required={required}
+                autoFocus={autoFocus}
+                readOnly={readOnly}
+                data-has-unit={!!unit}
+              />
+              {unit ? (
+                <Unit
+                  variant="body"
+                  sentiment="neutral"
+                  as="span"
+                  disabled={disabled}
+                  size={size}
+                >
+                  {unit}
+                </Unit>
+              ) : null}
+            </InputContainer>
+            <SideContainer
+              justifyContent="center"
+              alignItems="center"
+              data-size={size}
+            >
+              <Button
+                sentiment="neutral"
+                variant="ghost"
+                icon="plus"
+                size={size === 'small' ? 'xsmall' : 'small'}
+                disabled={disabled || readOnly || isPlusDisabled}
+                onClick={onClickSideButton('up')}
+                aria-label="plus"
+              />
+            </SideContainer>
+          </Container>
+        </Tooltip>
+      </div>
+      {error || typeof success === 'string' || typeof helper === 'string' ? (
+        <Text
+          variant="caption"
+          as="span"
+          prominence={!error && !success ? 'weak' : undefined}
+          sentiment={helperSentiment}
+          disabled={disabled || readOnly}
+        >
+          {error || success || helper}
+        </Text>
+      ) : null}
+      {!error && !success && typeof helper !== 'string' && helper
+        ? helper
+        : null}
+    </Stack>
+  )
+}
