@@ -174,7 +174,7 @@ const StyledText = styled(Text)`
 `
 
 type DateInputProps = Pick<
-  ReactDatePickerProps<string, boolean>,
+  ReactDatePickerProps<boolean | undefined, boolean>,
   'locale' | 'onChange'
 > & {
   autoFocus?: boolean

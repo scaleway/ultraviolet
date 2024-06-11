@@ -391,7 +391,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r1p:"
+                  for=":r28:"
                 >
                   Date
                 </label>
@@ -409,7 +409,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r1p:"
+                  id=":r28:"
                   type="text"
                   value="12/11/1995"
                 />
@@ -832,7 +832,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r1l:"
+                  for=":r23:"
                 >
                   Date
                 </label>
@@ -850,7 +850,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r1l:"
+                  id=":r23:"
                   type="text"
                   value="12/11/1995 - 12/25/1995"
                 />
@@ -1273,7 +1273,7 @@ exports[`DateInput > renders correctly disabled 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r5:"
+                  for=":r7:"
                 >
                   Date
                 </label>
@@ -1292,7 +1292,7 @@ exports[`DateInput > renders correctly disabled 1`] = `
                   class="emotion-12 emotion-13"
                   data-size="large"
                   disabled=""
-                  id=":r5:"
+                  id=":r7:"
                   type="text"
                   value=""
                 />
@@ -1765,7 +1765,7 @@ exports[`DateInput > renders correctly error 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":rd:"
+                  for=":rh:"
                 >
                   Date
                 </label>
@@ -1783,7 +1783,7 @@ exports[`DateInput > renders correctly error 1`] = `
                   aria-invalid="true"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":rd:"
+                  id=":rh:"
                   type="text"
                   value=""
                 />
@@ -2276,7 +2276,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":ri:"
+                  for=":rn:"
                 >
                   Date
                 </label>
@@ -2295,7 +2295,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
                   class="emotion-12 emotion-13"
                   data-size="large"
                   disabled=""
-                  id=":ri:"
+                  id=":rn:"
                   type="text"
                   value=""
                 />
@@ -2802,7 +2802,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":rn:"
+                  for=":rt:"
                 >
                   Date
                 </label>
@@ -2830,7 +2830,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
                   class="emotion-14 emotion-15"
                   data-size="large"
                   disabled=""
-                  id=":rn:"
+                  id=":rt:"
                   required=""
                   type="text"
                   value=""
@@ -3274,7 +3274,7 @@ exports[`DateInput > renders correctly min-max 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":rs:"
+                  for=":r13:"
                 >
                   Date
                 </label>
@@ -3292,7 +3292,7 @@ exports[`DateInput > renders correctly min-max 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":rs:"
+                  id=":r13:"
                   type="text"
                   value=""
                 />
@@ -3729,7 +3729,7 @@ exports[`DateInput > renders correctly required 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r9:"
+                  for=":rc:"
                 >
                   Date
                 </label>
@@ -3756,7 +3756,7 @@ exports[`DateInput > renders correctly required 1`] = `
                   aria-invalid="false"
                   class="emotion-14 emotion-15"
                   data-size="large"
-                  id=":r9:"
+                  id=":rc:"
                   required=""
                   type="text"
                   value=""
@@ -4284,7 +4284,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r17:"
+                  for=":r1h:"
                 >
                   Date
                 </label>
@@ -4302,7 +4302,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r17:"
+                  id=":r1h:"
                   type="text"
                   value=""
                 />
@@ -4338,19 +4338,18 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
         />
         <div
           class="react-datepicker-popper"
-          data-placement="bottom-start"
-          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
+          data-placement="bottom"
+          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
         >
           <div
             style="display: contents;"
           >
             <div
+              aria-label="Choose Date"
+              aria-modal="true"
               class="react-datepicker calendar"
+              role="dialog"
             >
-              <div
-                class="react-datepicker__triangle"
-                style="position: absolute; left: 0px; transform: translate(0px, 0px);"
-              />
               <span
                 aria-live="polite"
                 class="react-datepicker__aria-live"
@@ -4407,36 +4406,43 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                     class="react-datepicker__day-names"
                   >
                     <div
+                      aria-label="lunes"
                       class="react-datepicker__day-name"
                     >
                       lu
                     </div>
                     <div
+                      aria-label="martes"
                       class="react-datepicker__day-name"
                     >
                       ma
                     </div>
                     <div
+                      aria-label="miércoles"
                       class="react-datepicker__day-name"
                     >
                       mi
                     </div>
                     <div
+                      aria-label="jueves"
                       class="react-datepicker__day-name"
                     >
                       ju
                     </div>
                     <div
+                      aria-label="viernes"
                       class="react-datepicker__day-name"
                     >
                       vi
                     </div>
                     <div
+                      aria-label="sábado"
                       class="react-datepicker__day-name"
                     >
                       sá
                     </div>
                     <div
+                      aria-label="domingo"
                       class="react-datepicker__day-name"
                     >
                       do
@@ -4444,7 +4450,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                   </div>
                 </div>
                 <div
-                  aria-label="month  2021-01"
+                  aria-label="Month enero, 2021"
                   class="react-datepicker__month"
                   role="listbox"
                 >
@@ -4939,6 +4945,36 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
               </div>
             </div>
           </div>
+          <svg
+            aria-hidden="true"
+            class="react-datepicker__triangle"
+            fill="currentColor"
+            height="16"
+            style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg)translateY(-1px); left: 0px;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              clip-path="url(#:r1n:)"
+              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
+              fill="none"
+              stroke-width="3"
+            />
+            <path
+              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
+              stroke="currentColor"
+            />
+            <clippath
+              id=":r1n:"
+            >
+              <rect
+                height="16"
+                width="18"
+                x="-1"
+                y="1"
+              />
+            </clippath>
+          </svg>
         </div>
         <div
           class="react-datepicker__tab-loop__end"
@@ -5445,7 +5481,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r10:"
+                  for=":r18:"
                 >
                   Date
                 </label>
@@ -5463,7 +5499,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r10:"
+                  id=":r18:"
                   type="text"
                   value=""
                 />
@@ -5499,19 +5535,18 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
         />
         <div
           class="react-datepicker-popper"
-          data-placement="bottom-start"
-          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
+          data-placement="bottom"
+          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
         >
           <div
             style="display: contents;"
           >
             <div
+              aria-label="Choose Date"
+              aria-modal="true"
               class="react-datepicker calendar"
+              role="dialog"
             >
-              <div
-                class="react-datepicker__triangle"
-                style="position: absolute; left: 0px; transform: translate(0px, 0px);"
-              />
               <span
                 aria-live="polite"
                 class="react-datepicker__aria-live"
@@ -5568,36 +5603,43 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                     class="react-datepicker__day-names"
                   >
                     <div
+                      aria-label="lundi"
                       class="react-datepicker__day-name"
                     >
                       lu
                     </div>
                     <div
+                      aria-label="mardi"
                       class="react-datepicker__day-name"
                     >
                       ma
                     </div>
                     <div
+                      aria-label="mercredi"
                       class="react-datepicker__day-name"
                     >
                       me
                     </div>
                     <div
+                      aria-label="jeudi"
                       class="react-datepicker__day-name"
                     >
                       je
                     </div>
                     <div
+                      aria-label="vendredi"
                       class="react-datepicker__day-name"
                     >
                       ve
                     </div>
                     <div
+                      aria-label="samedi"
                       class="react-datepicker__day-name"
                     >
                       sa
                     </div>
                     <div
+                      aria-label="dimanche"
                       class="react-datepicker__day-name"
                     >
                       di
@@ -5605,7 +5647,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
                   </div>
                 </div>
                 <div
-                  aria-label="month  2021-01"
+                  aria-label="Month janvier, 2021"
                   class="react-datepicker__month"
                   role="listbox"
                 >
@@ -6100,6 +6142,36 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
               </div>
             </div>
           </div>
+          <svg
+            aria-hidden="true"
+            class="react-datepicker__triangle"
+            fill="currentColor"
+            height="16"
+            style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg)translateY(-1px); left: 0px;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              clip-path="url(#:r1e:)"
+              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
+              fill="none"
+              stroke-width="3"
+            />
+            <path
+              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
+              stroke="currentColor"
+            />
+            <clippath
+              id=":r1e:"
+            >
+              <rect
+                height="16"
+                width="18"
+                x="-1"
+                y="1"
+              />
+            </clippath>
+          </svg>
         </div>
         <div
           class="react-datepicker__tab-loop__end"
@@ -6606,7 +6678,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r1e:"
+                  for=":r1q:"
                 >
                   Date
                 </label>
@@ -6624,7 +6696,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r1e:"
+                  id=":r1q:"
                   type="text"
                   value=""
                 />
@@ -6660,19 +6732,18 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
         />
         <div
           class="react-datepicker-popper"
-          data-placement="bottom-start"
-          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
+          data-placement="bottom"
+          style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
         >
           <div
             style="display: contents;"
           >
             <div
+              aria-label="Choose Date"
+              aria-modal="true"
               class="react-datepicker calendar"
+              role="dialog"
             >
-              <div
-                class="react-datepicker__triangle"
-                style="position: absolute; left: 0px; transform: translate(0px, 0px);"
-              />
               <span
                 aria-live="polite"
                 class="react-datepicker__aria-live"
@@ -6729,36 +6800,43 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                     class="react-datepicker__day-names"
                   >
                     <div
+                      aria-label="понедельник"
                       class="react-datepicker__day-name"
                     >
                       пн
                     </div>
                     <div
+                      aria-label="вторник"
                       class="react-datepicker__day-name"
                     >
                       вт
                     </div>
                     <div
+                      aria-label="среда"
                       class="react-datepicker__day-name"
                     >
                       ср
                     </div>
                     <div
+                      aria-label="четверг"
                       class="react-datepicker__day-name"
                     >
                       чт
                     </div>
                     <div
+                      aria-label="пятница"
                       class="react-datepicker__day-name"
                     >
                       пт
                     </div>
                     <div
+                      aria-label="суббота"
                       class="react-datepicker__day-name"
                     >
                       сб
                     </div>
                     <div
+                      aria-label="воскресенье"
                       class="react-datepicker__day-name"
                     >
                       вс
@@ -6766,7 +6844,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                   </div>
                 </div>
                 <div
-                  aria-label="month  2021-01"
+                  aria-label="Month января, 2021"
                   class="react-datepicker__month"
                   role="listbox"
                 >
@@ -7261,6 +7339,36 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
               </div>
             </div>
           </div>
+          <svg
+            aria-hidden="true"
+            class="react-datepicker__triangle"
+            fill="currentColor"
+            height="16"
+            style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg)translateY(-1px); left: 0px;"
+            viewBox="0 0 16 16"
+            width="18"
+          >
+            <path
+              clip-path="url(#:r20:)"
+              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
+              fill="none"
+              stroke-width="3"
+            />
+            <path
+              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
+              stroke="currentColor"
+            />
+            <clippath
+              id=":r20:"
+            >
+              <rect
+                height="16"
+                width="18"
+                x="-1"
+                y="1"
+              />
+            </clippath>
+          </svg>
         </div>
         <div
           class="react-datepicker__tab-loop__end"
@@ -7663,7 +7771,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r1:"
+                  for=":r2:"
                 >
                   Date
                 </label>
@@ -7681,7 +7789,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r1:"
+                  id=":r2:"
                   name="test"
                   type="text"
                   value="12/17/1995"
