@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const ipfsNamingContent = `${BASE_URL}/products/ipfsNaming/ipfs-naming-content.webp`
 const ipfsNamingKeyvisual = `${BASE_URL}/products/ipfsNaming/ipfs-naming-keyvisual.webp`

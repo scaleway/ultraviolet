@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const terraformContent = `${BASE_URL}/products/terraform/terraform-content.webp`
 const terraformKeyvisual = `${BASE_URL}/products/terraform/terraform-keyvisual.webp`

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const nabuContent = `${BASE_URL}/products/nabu/nabu-content.webp`
 const nabuKeyvisual = `${BASE_URL}/products/nabu/nabu-keyvisual.webp`

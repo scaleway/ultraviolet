@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const publicGatewayContent = `${BASE_URL}/products/publicGateway/public-gateway-content.webp`
 const publicGatewayKeyvisual = `${BASE_URL}/products/publicGateway/public-gateway-keyvisual.webp`

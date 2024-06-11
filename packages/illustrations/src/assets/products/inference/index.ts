@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const inferenceContent = `${BASE_URL}/products/inference/inference-content.webp`
 const inferenceKeyvisual = `${BASE_URL}/products/inference/inference-keyvisual.webp`

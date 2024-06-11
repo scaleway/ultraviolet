@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const serverlessDBContent = `${BASE_URL}/products/serverlessDB/serverlessDB-content.webp`
 const serverlessDBKeyvisual = `${BASE_URL}/products/serverlessDB/serverlessDB-keyvisual.webp`

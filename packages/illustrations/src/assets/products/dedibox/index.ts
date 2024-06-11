@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const dediboxContent = `${BASE_URL}/products/dedibox/dedibox-content.webp`
 const dediboxCoreContent = `${BASE_URL}/products/dedibox/dedibox-core-content.webp`

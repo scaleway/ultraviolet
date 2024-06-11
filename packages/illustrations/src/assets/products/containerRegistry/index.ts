@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const containerRegistryContent = `${BASE_URL}/products/containerRegistry/container-registry-content.webp`
 const containerRegistryKeyvisual = `${BASE_URL}/products/containerRegistry/container-registry-keyvisual.webp`

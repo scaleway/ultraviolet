@@ -1,4 +1,4 @@
-const BASE_URL = 'https://test-bucket-illustrations.s3.fr-par.scw.cloud'
+const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
 
 const functionsContent = `${BASE_URL}/products/functions/functions-content.webp`
 const functionsKeyvisual = `${BASE_URL}/products/functions/functions-keyvisual.webp`
