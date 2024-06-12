@@ -20,6 +20,7 @@ const itemCoreStyle = ({
 }) => `
   display: flex;
   justify-content: start;
+  text-align: left;
   align-items: center;
   min-height: 32px;
   max-height: 44px;
