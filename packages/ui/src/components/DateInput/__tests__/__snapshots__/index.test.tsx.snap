@@ -391,7 +391,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r28:"
+                  for=":r25:"
                 >
                   Date
                 </label>
@@ -409,7 +409,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r28:"
+                  id=":r25:"
                   type="text"
                   value="12/11/1995"
                 />
@@ -832,7 +832,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r23:"
+                  for=":r20:"
                 >
                   Date
                 </label>
@@ -850,7 +850,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r23:"
+                  id=":r20:"
                   type="text"
                   value="12/11/1995 - 12/25/1995"
                 />
@@ -4284,7 +4284,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r1h:"
+                  for=":r1g:"
                 >
                   Date
                 </label>
@@ -4302,7 +4302,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r1h:"
+                  id=":r1g:"
                   type="text"
                   value=""
                 />
@@ -4338,7 +4338,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
         />
         <div
           class="react-datepicker-popper"
-          data-placement="bottom"
+          data-placement="bottom-start"
           style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
         >
           <div
@@ -4945,36 +4945,6 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
               </div>
             </div>
           </div>
-          <svg
-            aria-hidden="true"
-            class="react-datepicker__triangle"
-            fill="currentColor"
-            height="16"
-            style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg)translateY(-1px); left: 0px;"
-            viewBox="0 0 16 16"
-            width="18"
-          >
-            <path
-              clip-path="url(#:r1n:)"
-              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
-              fill="none"
-              stroke-width="3"
-            />
-            <path
-              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
-              stroke="currentColor"
-            />
-            <clippath
-              id=":r1n:"
-            >
-              <rect
-                height="16"
-                width="18"
-                x="-1"
-                y="1"
-              />
-            </clippath>
-          </svg>
         </div>
         <div
           class="react-datepicker__tab-loop__end"
@@ -5535,7 +5505,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
         />
         <div
           class="react-datepicker-popper"
-          data-placement="bottom"
+          data-placement="bottom-start"
           style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
         >
           <div
@@ -6142,36 +6112,6 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
               </div>
             </div>
           </div>
-          <svg
-            aria-hidden="true"
-            class="react-datepicker__triangle"
-            fill="currentColor"
-            height="16"
-            style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg)translateY(-1px); left: 0px;"
-            viewBox="0 0 16 16"
-            width="18"
-          >
-            <path
-              clip-path="url(#:r1e:)"
-              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
-              fill="none"
-              stroke-width="3"
-            />
-            <path
-              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
-              stroke="currentColor"
-            />
-            <clippath
-              id=":r1e:"
-            >
-              <rect
-                height="16"
-                width="18"
-                x="-1"
-                y="1"
-              />
-            </clippath>
-          </svg>
         </div>
         <div
           class="react-datepicker__tab-loop__end"
@@ -6678,7 +6618,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
               >
                 <label
                   class="emotion-8 emotion-9"
-                  for=":r1q:"
+                  for=":r1o:"
                 >
                   Date
                 </label>
@@ -6696,7 +6636,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
                   aria-invalid="false"
                   class="emotion-12 emotion-13"
                   data-size="large"
-                  id=":r1q:"
+                  id=":r1o:"
                   type="text"
                   value=""
                 />
@@ -6732,7 +6672,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
         />
         <div
           class="react-datepicker-popper"
-          data-placement="bottom"
+          data-placement="bottom-start"
           style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 10px);"
         >
           <div
@@ -7339,36 +7279,6 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
               </div>
             </div>
           </div>
-          <svg
-            aria-hidden="true"
-            class="react-datepicker__triangle"
-            fill="currentColor"
-            height="16"
-            style="position: absolute; pointer-events: none; bottom: 100%; transform: rotate(180deg)translateY(-1px); left: 0px;"
-            viewBox="0 0 16 16"
-            width="18"
-          >
-            <path
-              clip-path="url(#:r20:)"
-              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
-              fill="none"
-              stroke-width="3"
-            />
-            <path
-              d="M0,0 H16 L8,8 Q8,8 8,8 Z"
-              stroke="currentColor"
-            />
-            <clippath
-              id=":r20:"
-            >
-              <rect
-                height="16"
-                width="18"
-                x="-1"
-                y="1"
-              />
-            </clippath>
-          </svg>
         </div>
         <div
           class="react-datepicker__tab-loop__end"

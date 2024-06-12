@@ -291,6 +291,8 @@ export const DateInput = ({
           }
           selectsRange={selectsRange}
           excludeDates={excludeDates}
+          showPopperArrow={false}
+          popperPlacement="bottom-start"
           customInput={
             <TextInputV2
               error={error}
