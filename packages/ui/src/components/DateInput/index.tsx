@@ -174,7 +174,7 @@ const StyledText = styled(Text)`
 `
 
 type DateInputProps = Pick<
-  ReactDatePickerProps<string, boolean>,
+  ReactDatePickerProps<boolean | undefined, boolean>,
   'locale' | 'onChange'
 > & {
   autoFocus?: boolean
@@ -291,6 +291,8 @@ export const DateInput = ({
           }
           selectsRange={selectsRange}
           excludeDates={excludeDates}
+          showPopperArrow={false}
+          popperPlacement="bottom-start"
           customInput={
             <TextInputV2
               error={error}
