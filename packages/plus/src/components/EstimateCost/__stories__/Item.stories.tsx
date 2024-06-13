@@ -21,8 +21,10 @@ Item.args = {
 
 Item.parameters = {
   docs: {
-    storyDescription:
-      'Items are required to build and display your EstimateCost. In fact, `EstimateCost.Item` ' +
-      'is use to display each items of your total price. You can define a bunch of parameters such as `label`, `subLabel`, `price`, ...',
+    description: {
+      story:
+        'Items are required to build and display your EstimateCost. In fact, `EstimateCost.Item` ' +
+        'is use to display each items of your total price. You can define a bunch of parameters such as `label`, `subLabel`, `price`, ...',
+    },
   },
 }

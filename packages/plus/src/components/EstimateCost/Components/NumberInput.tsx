@@ -10,6 +10,7 @@ type NumberInputProps = {
   getAmountValue?: (amount?: number | null) => void
   minValue?: number
   maxValue?: number
+  controls?: boolean
 }
 
 export const NumberInput = ({
@@ -18,6 +19,7 @@ export const NumberInput = ({
   maxValue = 100,
   getAmountValue,
   itemCallback,
+  controls = true,
 }: NumberInputProps) => {
   const { isOverlay } = useOverlay()
   const [value, setValue] = useState<number | undefined | null>(amount)
@@ -41,6 +43,7 @@ export const NumberInput = ({
         getAmountValue?.(newValue)
       }}
       value={value}
+      controls={controls}
     />
   )
 }

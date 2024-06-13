@@ -13,6 +13,9 @@ describe('NumberInputV2', () => {
   it('should renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(<NumberInputV2 disabled />))
 
+  it('should renders correctly without controls', () =>
+    shouldMatchEmotionSnapshot(<NumberInputV2 controls={false} />))
+
   it('should renders correctly with error', () =>
     shouldMatchEmotionSnapshot(<NumberInputV2 error="This is an error" />))
 

@@ -16,7 +16,8 @@ Region.args = {
 
 Region.parameters = {
   docs: {
-    storyDescription:
-      'Region is a composed Item that will display a specific region.',
+    description: {
+      story: 'Region is a composed Item that will display a specific region.',
+    },
   },
 }
