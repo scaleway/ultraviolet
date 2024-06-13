@@ -294,15 +294,17 @@ describe('List', () => {
     expect(listHeaderCells).toHaveLength(columns.length)
 
     expect(listHeaderCells).toHaveLength(columns.length)
-    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-    await userEvent.click(listHeaderCells[0])
-    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
-    fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
-    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('descending')
-    fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
-    await userEvent.click(listHeaderCells[1])
-    expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-    expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
+    if (listHeaderCells[0] && listHeaderCells[1]) {
+      expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+      await userEvent.click(listHeaderCells[0])
+      expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
+      fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
+      expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('descending')
+      fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
+      await userEvent.click(listHeaderCells[1])
+      expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+      expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
+    }
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -380,8 +382,12 @@ describe('List', () => {
         )}
       </List>,
     )
-    await userEvent.click(screen.getAllByRole('button')[0])
-    await userEvent.click(screen.getAllByRole('button')[0])
+    const button = screen.getAllByRole('button')[0]
+
+    if (button) {
+      await userEvent.click(button)
+      await userEvent.click(button)
+    }
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -399,8 +405,12 @@ describe('List', () => {
         ))}
       </List>,
     )
-    const cell = screen.getByText(data[0].columnE)
-    await userEvent.click(cell)
+
+    if (data[0]) {
+      const cell = screen.getByText(data[0].columnE)
+      await userEvent.click(cell)
+    }
+
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -421,10 +431,13 @@ describe('List', () => {
       </List>,
     )
     const buttons = screen.getAllByRole('button')
-    await userEvent.click(buttons[0])
-    await userEvent.click(buttons[0])
-    await userEvent.click(buttons[0])
-    await userEvent.click(buttons[1])
+
+    if (buttons?.[0] && buttons[1]) {
+      await userEvent.click(buttons[0])
+      await userEvent.click(buttons[0])
+      await userEvent.click(buttons[0])
+      await userEvent.click(buttons[1])
+    }
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -561,17 +574,19 @@ describe('List', () => {
     )
     const rows = screen.getAllByRole('button')
     const firstRow = rows[0]
-    expect(firstRow).toHaveAttribute('tabIndex', '0')
-    // Testing expanding by pressing space key
-    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-    fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
-    expect(firstRow).toHaveAttribute('aria-expanded', 'true')
-    // Testing collapsing by pressing space key
-    fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
-    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-    // Testing another key
-    fireEvent.keyDown(firstRow, { charCode: 65, code: 'KeyA', key: 'a' })
-    expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+    if (firstRow) {
+      expect(firstRow).toHaveAttribute('tabIndex', '0')
+      // Testing expanding by pressing space key
+      expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+      fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
+      expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+      // Testing collapsing by pressing space key
+      fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
+      expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+      // Testing another key
+      fireEvent.keyDown(firstRow, { charCode: 65, code: 'KeyA', key: 'a' })
+      expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+    }
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -594,13 +609,16 @@ describe('List', () => {
     const rows = screen.getAllByRole('button')
     const firstRow = rows[0]
     expect(firstRow).toHaveAttribute('aria-expanded', 'false')
-    fireEvent.click(firstRow)
-    expect(firstRow).toHaveAttribute('aria-expanded', 'true')
-    const expandableContent = await within(firstRow).findByText(
-      'Row 1 expandable content',
-    )
-    fireEvent.click(expandableContent)
-    expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+
+    if (firstRow) {
+      fireEvent.click(firstRow)
+      expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+      const expandableContent = await within(firstRow).findByText(
+        'Row 1 expandable content',
+      )
+      fireEvent.click(expandableContent)
+      expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+    }
     expect(asFragment()).toMatchSnapshot()
   })
 
