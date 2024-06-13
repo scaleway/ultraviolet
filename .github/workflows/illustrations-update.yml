@@ -1,0 +1,40 @@
+name: Upload Illustrations
+
+on: 
+  pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+    paths:
+      - packages/illustrations/**
+
+  push:
+      branches:
+        - main
+      paths:
+        - packages/illustrations/**
+env:
+  BUCKET_NAME: ultraviolet
+  BUCKET_REGION: fr-par
+
+jobs:
+    ## Export indexes to export new assets
+    update-illustrations:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
+
+            - uses: pnpm/action-setup@v4.0.0
+            - uses: actions/setup-node@v4.0.2
+              with:
+                node-version: 20
+                cache: 'pnpm'
+            - run: pnpm install
+
+            - name: Update illustrations exports
+              run: pnpm run illustrations:update
+            
+            - name: Git Auto Commit
+              uses: stefanzweifel/git-auto-commit-action@v5.0.1
+              with:
+                commit_message: Automatic export update
