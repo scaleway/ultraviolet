@@ -42,7 +42,7 @@
     "svg:all": "pnpm run svg -r -f .",
     "typecheck": "pnpm --filter '@ultraviolet/*' recursive run typecheck",
     "illustrations:update": "BUCKET_NAME=ultraviolet BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/"
-},
+  },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
       "biome format --write .",
@@ -50,6 +50,9 @@
     ],
     "*.svg": [
       "pnpm run svg"
+    ],
+    "*.y(a)ml": [
+      "pnpm dlx prettier --write '**/*.{yml,yaml}' --single-quote"
     ]
   },
   "config": {
