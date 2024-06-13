@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.17.8
+
+### Patch Changes
+
+- [#3860](https://github.com/scaleway/ultraviolet/pull/3860) [`407888b`](https://github.com/scaleway/ultraviolet/commit/407888bbd0cb7894bea0d1a9995e0026c6b98abd) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.22.2`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.22.2`.
+  Updated dependency `@uiw/react-codemirror` to `4.22.2`.
+
+- [#3857](https://github.com/scaleway/ultraviolet/pull/3857) [`c18d7de`](https://github.com/scaleway/ultraviolet/commit/c18d7dece50df328256c146c999bead24ad89ec5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.10.3`.
+
+- Updated dependencies [[`a7c9266`](https://github.com/scaleway/ultraviolet/commit/a7c9266a832d75e8df515e0c7c561877acb763b0), [`7dd5063`](https://github.com/scaleway/ultraviolet/commit/7dd506377c10604d48f7f5144f3aa66ab676d16c)]:
+  - @ultraviolet/ui@1.55.3
+
 ## 0.17.7
 
 ### Patch Changes

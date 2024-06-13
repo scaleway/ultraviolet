@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.55.3
+
+### Patch Changes
+
+- [#3463](https://github.com/scaleway/ultraviolet/pull/3463) [`a7c9266`](https://github.com/scaleway/ultraviolet/commit/a7c9266a832d75e8df515e0c7c561877acb763b0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `6.2.0`.
+  Updated dependency `react-datepicker` to `6.9.0`.
+
+- [#3869](https://github.com/scaleway/ultraviolet/pull/3869) [`7dd5063`](https://github.com/scaleway/ultraviolet/commit/7dd506377c10604d48f7f5144f3aa66ab676d16c) Thanks [@lisalupi](https://github.com/lisalupi)! - `MenuV2`: fix menu text alignment
+
 ## 1.55.2
 
 ### Patch Changes
