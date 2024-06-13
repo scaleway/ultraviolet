@@ -1,5 +1,16 @@
 # @ultraviolet/illustrations
 
+## 2.0.0
+
+### Major Changes
+
+- [#3845](https://github.com/scaleway/ultraviolet/pull/3845) [`183a1c0`](https://github.com/scaleway/ultraviolet/commit/183a1c0ef5012f9a7bc69165a739cb123a63c849) Thanks [@lisalupi](https://github.com/lisalupi)! - Refactor of the package:
+  - BREAKING CHANGE :Fixed a typo `QuantumOrignal`-> `QuantumOriginal`
+  - Illustrations will now be imported from a bucket
+  - New way to import components in illustration
+  - All assets are now in a folder /assets/
+  - New illustrations are automatically added to the bucket and exported in the package (see [README](/packages/illustrations/README.md))
+
 ## 1.7.8
 
 ### Patch Changes
