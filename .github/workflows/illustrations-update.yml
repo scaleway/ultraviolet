@@ -1,15 +1,15 @@
-name: Upload Illustrations
+name: Update Illustrations
 
-on: 
+on:
   pull_request:
     types: ['opened', 'edited', 'reopened', 'synchronize']
     paths:
       - packages/illustrations/**
 
   push:
-      branches:
+    branches:
         - main
-      paths:
+   paths:
         - packages/illustrations/**
 env:
   BUCKET_NAME: ultraviolet
@@ -33,7 +33,7 @@ jobs:
 
             - name: Update illustrations exports
               run: pnpm run illustrations:update
-            
+
             - name: Git Auto Commit
               uses: stefanzweifel/git-auto-commit-action@v5.0.1
               with:

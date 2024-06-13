@@ -1,6 +1,6 @@
 name: Upload Illustrations
 
-on: 
+on:
     push:
         branches:
             - main
@@ -44,6 +44,6 @@ jobs:
 
             - name: Upload illustrations on bucket
               run: aws s3 sync packages/illustrations/src/assets s3://${{ env.BUCKET_NAME }}/illustrations/ --exclude "*" --include "*.webp" --include "*.svg" --acl public-read --cache-control max-age=2592000,public
-              env: 
+              env:
                 AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
                 AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_KEY }}
