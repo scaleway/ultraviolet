@@ -21,7 +21,7 @@ NumberInput.args = {
       unit="chocolate"
       amount={50}
     >
-      <EstimateCost.NumberInput minValue={0} maxValue={51} controls={false} />
+      <EstimateCost.NumberInput minValue={0} maxValue={51} />
     </EstimateCost.Item>,
   ],
 }
