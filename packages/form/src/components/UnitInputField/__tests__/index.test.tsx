@@ -60,7 +60,7 @@ describe('UnitInputField', () => {
       </Form>,
     )
 
-    const selectBar = screen.getByTestId('select-bar')
+    const selectBar = screen.getByTestId('select-input-test-unit')
     const numberInput = screen.getByTestId('unit-input')
     const submit = screen.getByText('Submit')
     await userEvent.click(selectBar)

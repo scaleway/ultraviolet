@@ -22,6 +22,7 @@ type SelectBarProps = {
   autoFocus?: boolean
   innerRef: RefObject<HTMLDivElement>
   id?: string
+  'data-testid': string
 }
 
 type DisplayValuesProps = {
@@ -195,6 +196,7 @@ export const SelectBar = ({
   autoFocus,
   innerRef,
   id,
+  'data-testid': dataTestId,
 }: SelectBarProps) => {
   const {
     isDropdownVisible,
@@ -296,7 +298,7 @@ export const SelectBar = ({
       onClick={
         openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined
       }
-      data-testid="select-bar"
+      data-testid={dataTestId}
       autoFocus={autoFocus}
       onKeyDown={event => {
         if (event.key === 'ArrowDown') {

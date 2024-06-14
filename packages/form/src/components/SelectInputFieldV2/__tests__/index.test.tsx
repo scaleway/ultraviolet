@@ -38,7 +38,7 @@ describe('SelectInputField', () => {
     const { asFragment } = renderWithForm(
       <SelectInputFieldV2 name="test" options={planets} searchable={false} />,
     )
-    const select = screen.getByTestId('select-bar')
+    const select = screen.getByTestId('select-input-test')
     act(() => select.click())
     fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
     const mercury = screen.getByTestId(`option-stack-mercury`)
@@ -61,7 +61,7 @@ describe('SelectInputField', () => {
         onChange={onChange}
       />,
     )
-    const select = screen.getByTestId('select-bar')
+    const select = screen.getByTestId('select-input-test')
     await userEvent.click(select)
     const option = screen.getByTestId('option-stack-mercury')
 

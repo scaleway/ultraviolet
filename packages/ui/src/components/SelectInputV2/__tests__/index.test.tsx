@@ -424,7 +424,7 @@ describe('SelectInputV2', () => {
       />,
     )
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.tab()
     await userEvent.tab()
     expect(input).toHaveFocus()
@@ -449,7 +449,7 @@ describe('SelectInputV2', () => {
       />,
     )
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.tab()
     await userEvent.tab()
     expect(input).toHaveFocus()
@@ -468,7 +468,7 @@ describe('SelectInputV2', () => {
       />,
     )
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.tab()
     await userEvent.tab()
     expect(input).toHaveFocus()
@@ -512,7 +512,7 @@ describe('SelectInputV2', () => {
         />
       </>,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
 
     act(() => input.click())
     const dropdown = screen.getByRole('dialog')
@@ -536,7 +536,7 @@ describe('SelectInputV2', () => {
         onChange={onChange}
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
 
     act(() => input.click())
     const dropdown = screen.getByRole('dialog')
@@ -558,7 +558,7 @@ describe('SelectInputV2', () => {
         searchable={false}
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     const venus = screen.getByRole('option', {
@@ -580,7 +580,7 @@ describe('SelectInputV2', () => {
         size="medium"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     const venus = screen.getByRole('option', {
@@ -602,7 +602,7 @@ describe('SelectInputV2', () => {
         onChange={(values: (string | undefined)[]) => values}
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByText('Earth')
     await userEvent.click(earth)
@@ -620,7 +620,7 @@ describe('SelectInputV2', () => {
         multiselect
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
@@ -636,7 +636,7 @@ describe('SelectInputV2', () => {
         onChange={(values: (string | undefined)[]) => values}
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
@@ -691,7 +691,7 @@ describe('SelectInputV2', () => {
         searchable
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
@@ -740,7 +740,7 @@ describe('SelectInputV2', () => {
         searchable
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const dropdown = screen.getByRole('dialog')
     expect(dropdown).toBeVisible()
@@ -801,7 +801,7 @@ describe('SelectInputV2', () => {
     await userEvent.click(closeTag)
     expect(tag).not.toBeVisible()
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const options = screen.getAllByRole('option')
 
@@ -830,7 +830,7 @@ describe('SelectInputV2', () => {
       />,
     )
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
@@ -887,7 +887,7 @@ describe('SelectInputV2', () => {
       />,
     )
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllCheckBox = screen.getByRole('checkbox', {
       name: 'Select all',
@@ -941,7 +941,7 @@ describe('SelectInputV2', () => {
       />,
     )
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
@@ -985,7 +985,7 @@ describe('SelectInputV2', () => {
       />,
     )
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
@@ -1023,7 +1023,7 @@ describe('SelectInputV2', () => {
       />,
     )
 
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const selectAllGroupCheckBox = screen.getByRole('checkbox', {
       name: 'TERRESTRIAL PLANETS',
@@ -1076,7 +1076,7 @@ describe('SelectInputV2', () => {
         descriptionDirection="row"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
@@ -1092,7 +1092,7 @@ describe('SelectInputV2', () => {
         descriptionDirection="row"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
@@ -1108,7 +1108,7 @@ describe('SelectInputV2', () => {
         descriptionDirection="column"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
@@ -1124,7 +1124,7 @@ describe('SelectInputV2', () => {
         descriptionDirection="column"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
@@ -1139,7 +1139,7 @@ describe('SelectInputV2', () => {
         descriptionDirection="row"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
@@ -1154,7 +1154,7 @@ describe('SelectInputV2', () => {
         descriptionDirection="row"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
@@ -1169,7 +1169,7 @@ describe('SelectInputV2', () => {
         descriptionDirection="column"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
@@ -1184,7 +1184,7 @@ describe('SelectInputV2', () => {
         descriptionDirection="column"
       />,
     )
-    const input = screen.getByTestId('select-bar')
+    const input = screen.getByTestId('select-input-test')
     await userEvent.click(input)
     const earth = screen.getByTestId('option-earth')
     await userEvent.click(earth)
