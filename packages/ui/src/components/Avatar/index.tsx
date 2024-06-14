@@ -15,7 +15,7 @@ const formatTextToAvatar = (text?: string): string => {
   if (textCleaned.split(' ').length > 1) {
     const [a, b] = textCleaned.split(' ')
 
-    return `${a[0]}${b[0]}`.toUpperCase()
+    return `${a?.[0]}${b?.[0]}`.toUpperCase()
   }
 
   return textCleaned.substring(0, 2).toUpperCase()

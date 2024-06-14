@@ -113,7 +113,7 @@ const StyledInput = styled.input<{ 'data-size': TagInputSize }>`
 `
 
 const convertTagArrayToTagStateArray = (tags?: TagInputProp) =>
-  (tags || [])?.map((tag, index) =>
+  (tags ?? [])?.map((tag, index) =>
     typeof tag === 'object'
       ? { ...tag, index: getUUID(`tag-${index}`) }
       : { index: getUUID(`tag-${index}`), label: tag },
@@ -191,7 +191,7 @@ export const TagInput = ({
   const tagsProp = value ?? tags
 
   const [tagInputState, setTagInput] = useState(
-    convertTagArrayToTagStateArray(tagsProp ?? []),
+    convertTagArrayToTagStateArray(tagsProp),
   )
   const [input, setInput] = useState<string>('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
@@ -228,14 +228,16 @@ export const TagInput = ({
       : tagInputState
     setInput('')
     setTagInput(newTagInput)
-    if (newTagInput.length !== tagInputState.length) {
+    if (newTagInput.length !== tagInputState.length && newTagInput) {
       setStatus({
         [newTagInput[newTagInput.length - 1].index]: STATUS.LOADING,
       })
     }
     try {
       dispatchOnChange(newTagInput)
-      setStatus({ [newTagInput[newTagInput.length - 1].index]: STATUS.IDLE })
+      if (newTagInput) {
+        setStatus({ [newTagInput[newTagInput.length - 1].index]: STATUS.IDLE })
+      }
     } catch (e) {
       setTagInput(tagInputState)
     }
@@ -266,7 +268,9 @@ export const TagInput = ({
       tagInputState.length
     ) {
       event.preventDefault()
-      deleteTag(tagInputState[tagInputState.length - 1].index)
+      if (tagInputState) {
+        deleteTag(tagInputState[tagInputState.length - 1].index)
+      }
     }
   }
 

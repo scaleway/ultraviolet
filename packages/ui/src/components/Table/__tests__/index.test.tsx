@@ -219,16 +219,20 @@ describe('Table', () => {
       },
     )
     expect(tableHeaderCells).toHaveLength(columns.length)
-    expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-    await userEvent.click(tableHeaderCells[0])
-    expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
-    fireEvent.keyDown(tableHeaderCells[0], { key: 'Enter' })
-    expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe('descending')
-    fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
-    await userEvent.click(tableHeaderCells[1])
-    expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-    expect(tableHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
-    expect(asFragment()).toMatchSnapshot()
+    if (tableHeaderCells[0] && tableHeaderCells[1]) {
+      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe(null)
+      await userEvent.click(tableHeaderCells[0])
+      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe('ascending')
+      if (tableHeaderCells[0]) {
+        fireEvent.keyDown(tableHeaderCells[0], { key: 'Enter' })
+      }
+      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe('descending')
+      fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
+      await userEvent.click(tableHeaderCells[1])
+      expect(tableHeaderCells[0]?.getAttribute('aria-sort')).toBe(null)
+      expect(tableHeaderCells[1]?.getAttribute('aria-sort')).toBe('ascending')
+      expect(asFragment()).toMatchSnapshot()
+    }
   })
 
   test('Should render correctly with bad sort value', () => {

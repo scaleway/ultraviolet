@@ -188,7 +188,7 @@ export const VerificationCode = ({
       }
 
       const sanitizedValue = value[0] // in case more than 1 char, we just take the first one
-      newValues[index] = sanitizedValue
+      newValues[index] = sanitizedValue ?? ''
       setValues(newValues)
       const nextIndex = Math.min(index + 1, fields - 1)
       const next = inputRefs[nextIndex]
