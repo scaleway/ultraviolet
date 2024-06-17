@@ -1,0 +1,220 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchInput > renders correctly without children props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-4>.emotion-11 {
+  color: #3f4250;
+}
+
+.emotion-4>.emotion-11::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-4>.emotion-11::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-4>.emotion-11:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-4>.emotion-11::placeholder {
+  color: #727683;
+}
+
+.emotion-4[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-4[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-4[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-4[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-4[data-disabled='true']>.emotion-11 {
+  color: #b5b7bd;
+}
+
+.emotion-4[data-disabled='true']>.emotion-11::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-4[data-disabled='true']>.emotion-11::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-4[data-disabled='true']>.emotion-11:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-4[data-disabled='true']>.emotion-11::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-4:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 16px;
+  border-right: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-8 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-8 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-10 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-10[data-size='large'] {
+  font-size: 16px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div>
+      <div
+        aria-controls=":r0:"
+        aria-describedby=":r0:"
+        class="emotion-0 emotion-1"
+        tabindex="0"
+      >
+        <div
+          class="emotion-2 emotion-3"
+        >
+          <div>
+            <div
+              class="emotion-4 emotion-5"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <div
+                class="emotion-6 emotion-7"
+              >
+                <svg
+                  class="emotion-8 emotion-9"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11M2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <input
+                aria-invalid="false"
+                class="emotion-10 emotion-11"
+                data-size="large"
+                id=":r1:"
+                placeholder="Type something"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
