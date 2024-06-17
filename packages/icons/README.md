@@ -4,7 +4,7 @@
 
 Ultraviolet Icons is a set of components based on SVG icons. It provides a set of icons that can be used in your projects.
 
-## Installation
+## Get Started
 
 For icons to work you will need to install some extra dependencies, such as `@ultraviolet/themes` and `@emotion/react`.
 

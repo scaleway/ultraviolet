@@ -8,7 +8,7 @@ We are going to make breaking changes regularly until the first version is relea
 
 Ultraviolet Plus is a set of complex components that are built on top of Ultraviolet UI.
 
-## Installation
+## Get Started
 
 ```sh
 $ pnpm add @ultraviolet/plus
