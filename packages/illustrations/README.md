@@ -4,7 +4,7 @@
 
 Ultraviolet Illustrations is a set of illustrations.
 
-## Installation
+## Get Started
 
 ```sh
 $ pnpm add @ultraviolet/illustrations

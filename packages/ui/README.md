@@ -4,7 +4,7 @@
 
 Ultraviolet UI is a set of React components and utilities to build fast application.
 
-## Installation
+## Get Started
 
 ```sh
 $ pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
@@ -48,10 +48,11 @@ const App = () => (
 > **Note**:
 > To generate your own theme easily you can check the [theme generator](https://storybook.ultraviolet.scaleway.com/?path=/docs/tools-theme-generator--docs).
 
-N.B. To allow typescript theme typings with `@emotion/styled` components,
+### Typescript
+To allow typescript theme typings with `@emotion/styled` components,
 you'll have to define the `@emotion/react` module `Theme` interface in your project.
 
-Example, in a `emotion.d.ts` file:
+For example, in a `emotion.d.ts` file:
 
 - Declaration to use the default Ultraviolet Themes
 
