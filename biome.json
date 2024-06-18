@@ -1,19 +1,16 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "organizeImports": { "enabled": false },
-  "linter": { "enabled": false },
+  "organizeImports": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": false
+  },
   "vcs": {
     "clientKind": "git",
     "useIgnoreFile": true
   },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": false,
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineEnding": "lf",
-    "lineWidth": 80,
-    "attributePosition": "auto",
+  "files": {
     "ignore": [
       ".next/",
       "coverage/",
@@ -26,6 +23,15 @@
       "*.snap",
       "**/__snapshots__/"
     ]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "attributePosition": "auto"
   },
   "javascript": {
     "formatter": {
