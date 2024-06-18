@@ -1,10 +1,28 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "organizeImports": { "enabled": false },
-  "linter": { "enabled": false },
+  "organizeImports": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": false
+  },
   "vcs": {
     "clientKind": "git",
     "useIgnoreFile": true
+  },
+  "files": {
+    "ignore": [
+      ".next/",
+      "coverage/",
+      "**/node_modules/",
+      "**/storybook-static",
+      "dist",
+      "**/pnpm-lock.yaml",
+      "**/package.json",
+      "**/CHANGELOG.md",
+      "*.snap",
+      "**/__snapshots__/"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -13,19 +31,7 @@
     "indentWidth": 2,
     "lineEnding": "lf",
     "lineWidth": 80,
-    "attributePosition": "auto",
-    "ignore": [
-      ".next/",
-      "coverage/",
-      "**/node_modules/",
-      "**/storybook-static",
-      "**/dist/",
-      "**/pnpm-lock.yaml",
-      "**/package.json",
-      "**/CHANGELOG.md",
-      "*.snap",
-      "**/__snapshots__/"
-    ]
+    "attributePosition": "auto"
   },
   "javascript": {
     "formatter": {
