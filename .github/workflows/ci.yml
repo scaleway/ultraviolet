@@ -37,9 +37,23 @@ jobs:
       - run: pnpm run build
       - run: pnpm install
       - run: pnpm run lint
+  format:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4.0.0
+      - name: Use Node.js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 20
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm run build
+      - run: pnpm install
+      - run: pnpm run format:ci
   test:
     runs-on: ubuntu-22.04
-    needs: [lint, typecheck]
+    needs: [lint, typecheck, format]
     strategy:
       matrix:
         node: ["20"]
@@ -84,7 +98,7 @@ jobs:
       matrix:
         node: ["20"]
     runs-on: ubuntu-22.04
-    needs: [lint, typecheck]
+    needs: [lint, typecheck, format]
     steps:
       - uses: actions/checkout@v4 # v4.1.4
       - uses: pnpm/action-setup@v4.0.0
@@ -99,7 +113,7 @@ jobs:
       matrix:
         node: ["20"]
     runs-on: ubuntu-22.04
-    needs: [lint, test]
+    needs: [lint, test, format]
     steps:
       - uses: actions/checkout@v4 # v4.1.4
       - uses: pnpm/action-setup@v4.0.0

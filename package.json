@@ -27,6 +27,7 @@
     "start": "STORYBOOK_ENVIRONMENT=development storybook dev -p 6006",
     "start:production": "STORYBOOK_ENVIRONMENT=production storybook dev -p 6006",
     "format": "biome format --write .",
+    "format:ci": "biome ci .",
     "lint:fix": "pnpm run lint --fix",
     "lint": "eslint --report-unused-disable-directives --cache .",
     "prebuild": "pnpm --filter '@ultraviolet/*' recursive run prebuild",
