@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 0.17.9
+
+### Patch Changes
+
+- [#3872](https://github.com/scaleway/ultraviolet/pull/3872) [`10e7a83`](https://github.com/scaleway/ultraviolet/commit/10e7a8352a229f49fe6f6782b09d031dc5dab399) Thanks [@lisalupi](https://github.com/lisalupi)! - `<NumberInputV2 />`: possibility to hide controls
+
+- [#3803](https://github.com/scaleway/ultraviolet/pull/3803) [`74973df`](https://github.com/scaleway/ultraviolet/commit/74973df8d260be3ac4bf0e5d29a2614336c4a233) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.3`.
+
+- Updated dependencies [[`31c2ac6`](https://github.com/scaleway/ultraviolet/commit/31c2ac6d51490ef1627b51bf75c74e363dba2a8c), [`10e7a83`](https://github.com/scaleway/ultraviolet/commit/10e7a8352a229f49fe6f6782b09d031dc5dab399), [`74973df`](https://github.com/scaleway/ultraviolet/commit/74973df8d260be3ac4bf0e5d29a2614336c4a233), [`885c605`](https://github.com/scaleway/ultraviolet/commit/885c605f91da60683916d9d1fd840b00248373b4), [`ce4dfdd`](https://github.com/scaleway/ultraviolet/commit/ce4dfdd88c7359e14a55499c5b7f7b67628cc8c4)]:
+  - @ultraviolet/ui@1.56.0
+  - @ultraviolet/icons@2.12.15
+
 ## 0.17.8
 
 ### Patch Changes
