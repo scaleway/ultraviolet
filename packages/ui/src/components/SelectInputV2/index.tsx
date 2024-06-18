@@ -211,6 +211,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
                 <Text
                   as="label"
                   variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
+                  sentiment="neutral"
                   htmlFor={finalId}
                 >
                   {label}
