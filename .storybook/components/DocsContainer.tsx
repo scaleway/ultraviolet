@@ -46,12 +46,12 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
       <BaseContainer context={context}>
         {isValidElement<ExtraProps>(children)
           ? cloneElement(children, {
-              deprecated: parameters?.deprecated,
-              deprecatedReason: parameters?.deprecatedReason,
-              migrationLink: parameters?.migrationLink,
-              hideArgsTable: parameters?.hideArgsTable,
-              experimental: isPlusLibrary ? true : parameters?.experimental,
-            })
+            deprecated: parameters?.deprecated,
+            deprecatedReason: parameters?.deprecatedReason,
+            migrationLink: parameters?.migrationLink,
+            hideArgsTable: parameters?.hideArgsTable,
+            experimental: isPlusLibrary ? true : parameters?.experimental,
+          })
           : children}
       </BaseContainer>
     </ThemeProvider>
