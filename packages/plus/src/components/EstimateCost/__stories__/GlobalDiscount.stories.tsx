@@ -18,8 +18,10 @@ GlobalDiscount.args = {
 
 GlobalDiscount.parameters = {
   docs: {
-    storyDescription:
-      'A global or local discount can be applied to your total using `discount` prop that take a value between 0 and 1 (ex: 0.5 equivalent to 50% discount).<br/>' +
-      'To make it global just add the prop `discount` to `EstimateCost`. Also you can use the prop `isBeta` to show a beta badge with the discount value.',
+    description: {
+      story:
+        'A global or local discount can be applied to your total using `discount` prop that take a value between 0 and 1 (ex: 0.5 equivalent to 50% discount).<br/>' +
+        'To make it global just add the prop `discount` to `EstimateCost`. Also you can use the prop `isBeta` to show a beta badge with the discount value.',
+    },
   },
 }

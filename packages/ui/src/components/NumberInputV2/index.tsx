@@ -130,6 +130,9 @@ const Input = styled.input`
   &:placeholder-shown ~ ${Unit} {
     color: ${({ theme }) => theme.colors.neutral.textWeak};
   }
+
+  &[data-controls='false'] {
+  text-align: left;
 `
 
 const Container = styled.div`
@@ -168,6 +171,12 @@ const Container = styled.div`
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     cursor: not-allowed;
   }
+
+  &[data-controls='false'] {
+    & > ${InputContainer} {
+          border-width: 0;
+    };
+  }
 `
 
 type NumberInputProps = {
@@ -184,6 +193,10 @@ type NumberInputProps = {
    * Label description displayed right next to the label. It allows you to customize the label content.
    */
   labelDescription?: ReactNode
+  /**
+   * Whether to show controls
+   */
+  controls?: boolean
   error?: string
   success?: string | boolean
   helper?: ReactNode
@@ -229,6 +242,7 @@ export const NumberInputV2 = forwardRef(
       label,
       labelDescription,
       id,
+      controls = true,
       placeholder = '',
       error,
       success,
@@ -339,22 +353,25 @@ export const NumberInputV2 = forwardRef(
               data-error={!!error}
               data-success={!!success}
               data-unit={!!unit}
+              data-controls={controls}
             >
-              <SideContainer
-                justifyContent="center"
-                alignItems="center"
-                data-size={size}
-              >
-                <Button
-                  sentiment="neutral"
-                  variant="ghost"
-                  icon="minus"
-                  size={size === 'small' ? 'xsmall' : 'small'}
-                  disabled={disabled || readOnly || isMinusDisabled}
-                  onClick={onClickSideButton('down')}
-                  aria-label="minus"
-                />
-              </SideContainer>
+              {controls ? (
+                <SideContainer
+                  justifyContent="center"
+                  alignItems="center"
+                  data-size={size}
+                >
+                  <Button
+                    sentiment="neutral"
+                    variant="ghost"
+                    icon="minus"
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                    disabled={disabled || readOnly || isMinusDisabled}
+                    onClick={onClickSideButton('down')}
+                    aria-label="minus"
+                  />
+                </SideContainer>
+              ) : null}
               <InputContainer
                 justifyContent="space-between"
                 alignItems="center"
@@ -388,6 +405,7 @@ export const NumberInputV2 = forwardRef(
                   autoFocus={autoFocus}
                   readOnly={readOnly}
                   data-has-unit={!!unit}
+                  data-controls={controls}
                 />
                 {unit ? (
                   <Unit
@@ -401,21 +419,23 @@ export const NumberInputV2 = forwardRef(
                   </Unit>
                 ) : null}
               </InputContainer>
-              <SideContainer
-                justifyContent="center"
-                alignItems="center"
-                data-size={size}
-              >
-                <Button
-                  sentiment="neutral"
-                  variant="ghost"
-                  icon="plus"
-                  size={size === 'small' ? 'xsmall' : 'small'}
-                  disabled={disabled || readOnly || isPlusDisabled}
-                  onClick={onClickSideButton('up')}
-                  aria-label="plus"
-                />
-              </SideContainer>
+              {controls ? (
+                <SideContainer
+                  justifyContent="center"
+                  alignItems="center"
+                  data-size={size}
+                >
+                  <Button
+                    sentiment="neutral"
+                    variant="ghost"
+                    icon="plus"
+                    size={size === 'small' ? 'xsmall' : 'small'}
+                    disabled={disabled || readOnly || isPlusDisabled}
+                    onClick={onClickSideButton('up')}
+                    aria-label="plus"
+                  />
+                </SideContainer>
+              ) : null}
             </Container>
           </Tooltip>
         </div>

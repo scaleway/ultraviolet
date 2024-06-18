@@ -35,6 +35,7 @@ type NumberInputV2Props<
       | 'readOnly'
       | 'min'
       | 'max'
+      | 'controls'
     >
   > & {
     className?: string
@@ -64,6 +65,7 @@ export const NumberInputFieldV2 = <
   success,
   helper,
   rules,
+  controls = true,
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
   required,
@@ -119,6 +121,7 @@ export const NumberInputFieldV2 = <
       autoFocus={autoFocus}
       readOnly={readOnly}
       required={required}
+      controls={controls}
     />
   )
 }
