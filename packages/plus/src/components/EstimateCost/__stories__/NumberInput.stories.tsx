@@ -28,11 +28,13 @@ NumberInput.args = {
 
 NumberInput.parameters = {
   docs: {
-    storyDescription:
-      'Item NumberInput is an interactive input. It allows user to change the amount of an item and see how much it will cost. <br/>' +
-      'The component `EstimateCost.Item` include a prop called `amountFree` as number. This number is deducted to NumberInput value ' +
-      '(check example with 2 million queries free).' +
-      '<br/><br/>' +
-      'You can get value of the amount set in NumberInput by using `getAmountValue` prop.',
+    description: {
+      story:
+        'Item NumberInput is an interactive input. It allows user to change the amount of an item and see how much it will cost. <br/>' +
+        'The component `EstimateCost.Item` include a prop called `amountFree` as number. This number is deducted to NumberInput value ' +
+        '(check example with 2 million queries free).' +
+        '<br/><br/>' +
+        'You can get value of the amount set in NumberInput by using `getAmountValue` prop. <br/>You can hide controls in NumberInput by using `controls` prop.',
+    },
   },
 }

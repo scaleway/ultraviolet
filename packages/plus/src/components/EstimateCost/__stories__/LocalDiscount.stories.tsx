@@ -23,7 +23,9 @@ LocalDiscount.args = {
 
 LocalDiscount.parameters = {
   docs: {
-    storyDescription:
-      'To make it local to one item add prop `discount` to the desired item `EstimateCost.Item`',
+    description: {
+      story:
+        'To make it local to one item add prop `discount` to the desired item `EstimateCost.Item`',
+    },
   },
 }

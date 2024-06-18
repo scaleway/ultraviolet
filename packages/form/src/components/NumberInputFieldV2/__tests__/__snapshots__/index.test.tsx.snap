@@ -73,6 +73,10 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-2[data-controls='false']>.emotion-10 {
+  border-width: 0;
+}
+
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -275,6 +279,10 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   color: #727683;
 }
 
+.emotion-13[data-controls='false'] {
+  text-align: left;
+}
+
 <div
     data-testid="testing"
   >
@@ -287,6 +295,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
         <div>
           <div
             class="emotion-2 emotion-3"
+            data-controls="true"
             data-disabled="false"
             data-error="false"
             data-success="false"
@@ -317,6 +326,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
             >
               <input
                 class="emotion-13 emotion-14"
+                data-controls="true"
                 data-has-unit="false"
                 data-size="large"
                 id=":r0:"
@@ -427,6 +437,10 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-2[data-controls='false']>.emotion-10 {
+  border-width: 0;
 }
 
 .emotion-4 {
@@ -622,6 +636,10 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   color: #727683;
 }
 
+.emotion-13[data-controls='false'] {
+  text-align: left;
+}
+
 <div
     data-testid="testing"
   >
@@ -634,6 +652,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
         <div>
           <div
             class="emotion-2 emotion-3"
+            data-controls="true"
             data-disabled="true"
             data-error="false"
             data-success="false"
@@ -666,6 +685,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
               <input
                 aria-label="Number Input"
                 class="emotion-13 emotion-14"
+                data-controls="true"
                 data-has-unit="false"
                 data-size="large"
                 disabled=""
