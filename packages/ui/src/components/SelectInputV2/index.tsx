@@ -175,6 +175,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
           acc + current.filter(option => !option.disabled).length,
         0,
       )
+  const finalDataTestId = dataTestId ?? `select-input-${name}`
 
   return (
     <SelectInputProvider
@@ -190,7 +191,6 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
       <SelectInputContainer
         onBlur={onBlur}
         onFocus={onFocus}
-        data-testid={dataTestId}
         className={className}
         aria-label={name}
       >
@@ -223,6 +223,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
             ) : null}
             <SelectBar
               size={size}
+              data-testid={finalDataTestId}
               clearable={clearable}
               readOnly={readOnly}
               disabled={disabled}

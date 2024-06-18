@@ -72,7 +72,7 @@ describe('UnitInput', () => {
       />,
     )
 
-    const select = screen.getByTestId('select-bar')
+    const select = screen.getByTestId('select-input-test-unit')
     await userEvent.click(select)
     expect(asFragment()).toMatchSnapshot()
   })
@@ -190,7 +190,7 @@ describe('UnitInput', () => {
         </button>
       </div>,
     )
-    await userEvent.click(screen.getByTestId('select-bar'))
+    await userEvent.click(screen.getByTestId('select-input-test-unit'))
     await userEvent.click(screen.getByTestId('option-mb'))
   })
 
