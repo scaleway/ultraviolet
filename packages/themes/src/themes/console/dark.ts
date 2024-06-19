@@ -137,6 +137,15 @@ export const darkTheme = {
           success: '#44d09e',
         },
       },
+      elevation: {
+        background: {
+          fixed: '#1e2335',
+          'fixed-reversed': '#1e2335',
+          overlay: '#303445',
+          raised: '#252a3b',
+          'raised-reversed': '#252a3b',
+        },
+      },
       gradients: {
         background: {
           linear: {
@@ -339,6 +348,14 @@ export const darkTheme = {
     defaultShadow: '0px 0px 8px 2px #0c0f1a66',
     drawer: '0px 0px 40px 10px #0c0f1a8c',
     dropdown: '0px 4px 24px 6px #0c0f1a66',
+    fixed: {
+      '0': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+      '1': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+    },
+    'fixed-reversed': {
+      '0': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+      '1': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+    },
     focusDanger: '0px 0px 0px 3px #e7196440',
     focusInfo: '0px 0px 0px 3px #004b8340',
     focusNeutral: '0px 0px 0px 3px #0c0f1a8c',
@@ -353,7 +370,19 @@ export const darkTheme = {
     hoverWarning: '0px 4px 16px 4px #302000cc',
     menu: '0px 0px 24px 6px #0c0f1a66',
     modal: '0px 8px 40px 10px #0c0f1a8c',
+    overlay: {
+      '0': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+      '1': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+    },
     popover: '0px 4px 32px 8px #0c0f1a8c',
+    raised: {
+      '0': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+      '1': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+    },
+    'raised-reversed': {
+      '0': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+      '1': '0px 0px 0px 0px rgba(0,0,0,0.0)',
+    },
     tabBar: {
       active: '0px -2px 0px 0px #bf96f8',
       off: '0px -1px 0px 0px #484b5a',

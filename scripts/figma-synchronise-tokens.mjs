@@ -14,7 +14,7 @@ const themesMatches = [
 const hexColorRegex = /#(?:(?:[\da-f]{3}){1,2}(?:[\da-f]{2}){0,1})/gi
 
 export const TOKENS_URL =
-  'https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json'
+  'https://raw.githubusercontent.com/scaleway/design-tokens/fixed-refactored-elevation/tokens.json'
 
 const header = `
 /**
@@ -148,7 +148,7 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     variables: {},
   })
 
-  // Variable : theme fontSize
+  // Variable : theme lineHeights
   const lineHeight = getValues(inputTheme.lineHeight, {
     typeFilter: 'lineHeights',
     variables: { unit },
@@ -165,9 +165,9 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     typeFilter: 'boxShadow',
     variables: {
       shades: paletteShades,
-      other: paletteOther,
       shadows: paletteShadows,
       ...colors,
+      other: paletteOther,
     },
   })
 
