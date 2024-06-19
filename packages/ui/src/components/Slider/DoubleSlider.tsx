@@ -1,109 +1,61 @@
-import type { Theme } from '@emotion/react'
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { HTMLAttributes } from 'react'
-import { useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { Text } from '../Text'
+import {
+  DataList,
+  Option,
+  StyledTooltip,
+  thumbStyle,
+  trackStyle,
+} from './SliderDecoration'
+import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
 
 type SliderProps = {
-  /**
-   * Slider name
-   */
   name: string
   min?: number
   max?: number
   direction: 'column' | 'row'
-
-  /**
-   * Step of the slider
-   */
   step?: number
-  /**
-   * When a maximum value and a minimum value are needed
-   */
-  value: string | string[]
-  labelTooltip?: boolean /**
-   * Whether the slider is disabled
-   */
+  value: number[]
+  options?: { value: number; label?: string }[]
+  labelTooltip?: boolean | string
   disabled?: boolean
-  /**
-   * Whether an error occured
-   */
   error: string | boolean
-  onChange: (value: string | string[]) => void
+  onChange: (value: number | number[]) => void
   'data-testid'?: string
+  setValues: (value: number[]) => void
 } & Pick<
   HTMLAttributes<HTMLInputElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
 >
 
-const trackStyle = `
-  appearance: none;
-  background: transparent;
-  border: transparent;
-`
-
-const thumbStyles = (theme: Theme, themeSlider: string) => `
-  appearance: none;
-  -webkit-appearance: none;
-  pointer-events: all;
-  width: ${theme.space[2]};
-  height: ${theme.space[2]};
-  background: ${themeSlider === 'light' ? theme.colors.neutral.background : theme.colors.neutral.backgroundStronger};
-  box-shadow: ${theme.shadows.defaultShadow};
-  border-radius: ${theme.radii.circle};
-  border: none;
-  cursor: grab;
-
-  &:active {
-    cursor: grabbing;
-    box-shadow: ${theme.shadows.focusPrimary}
-
-  }
-
-  &:hover, :active {
-    border: 1.5px solid ${theme.colors.primary.border}
-  }
-
-`
-
-const Controls = styled('div', {
-  shouldForwardProp: prop => !['themeSlider'].includes(prop),
-})<{ themeSlider: string }>`
-  ${({ theme, themeSlider }) => thumbStyles(theme, themeSlider)}
-  width: ${({ theme }) => theme.space[2]};
-  height: ${({ theme }) => theme.space[2]};
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  margin-left: calc(${({ theme }) => theme.space[2]} / -2);
-  transform: translate3d(0, -50%, 0);
-  z-index: 2;
-
-  &:hover, :active {
-    border: 1.5px solid ${({ theme }) => theme.colors.primary.border};
-    }
-
-  &:active {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-  }
-  `
 const SliderElement = styled('input', {
   shouldForwardProp: prop => !['themeSlider'].includes(prop),
-})<{ themeSlider: string }>`
+})<{ themeSlider: string; disabled: boolean }>`
   position: absolute;
   width: 100%;
   pointer-events: none;
   appearance: none;
   height: 100%;
-  opacity: 0;
-  z-index: 3;
+  opacity: 1;
   padding: 0;
+  background: transparent;
 
-  &::-ms-track {
+  &[data-tooltip = "true"] {
+    margin-top: -${({ theme }) => theme.space[1]};
+  }
+  /* Mozilla */
+  &::-moz-range-track {
     ${trackStyle}
   }
+  &::-moz-range-thumb {
+    ${({ theme, themeSlider, disabled }) => thumbStyle(theme, themeSlider, disabled)}
+    }
 
-  &::-moz-range-track {
+  /* Other browsers */
+  &::-ms-track {
     ${trackStyle}
   }
 
@@ -111,16 +63,8 @@ const SliderElement = styled('input', {
     ${trackStyle}
   }
 
-  &::-ms-thumb {
-    ${({ theme, themeSlider }) => thumbStyles(theme, themeSlider)}
-  }
-
-  &::-moz-range-thumb {
-    ${({ theme, themeSlider }) => thumbStyles(theme, themeSlider)}
-    }
-
   &::-webkit-slider-thumb {
-    ${({ theme, themeSlider }) => thumbStyles(theme, themeSlider)}
+    ${({ theme, themeSlider, disabled }) => thumbStyle(theme, themeSlider, disabled)}
   }
 `
 const DoubleSliderWrapper = styled.div`
@@ -130,12 +74,8 @@ const DoubleSliderWrapper = styled.div`
   width: -webkit-fill-available;
   height: ${({ theme }) => theme.space[2]};
   `
-const ControlsWrapper = styled.div`
-width: 100%;
-position: absolute;
-height: ${({ theme }) => theme.space[2]};
-`
-const Rail = styled.div`
+
+const CustomRail = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -155,6 +95,13 @@ const InnerRail = styled.div`
   &[data-error='true']{
     background-color: ${({ theme }) => theme.colors.danger.backgroundStrong};
   }
+
+  &[aria-disabled='true'] {
+    background-color: ${({ theme }) => theme.colors.primary.borderDisabled};
+  }
+`
+const StyledDataList = styled(DataList)`
+margin-top: ${({ theme }) => theme.space[3]};
 `
 
 export const DoubleSlider = ({
@@ -172,87 +119,197 @@ export const DoubleSlider = ({
   id,
   onBlur,
   onFocus,
+  options,
+  setValues,
   'aria-label': ariaLabel,
 }: SliderProps) => {
   const { theme } = useTheme()
-  const [maxValue, setMaxValue] = useState(parseFloat(value[1]))
-  const [minValue, setMinValue] = useState(parseFloat(value[0]))
+  const refSlider = useRef<HTMLInputElement>(null)
+  const [maxValue, setMaxValue] = useState(
+    typeof value === 'object' ? value[1] : value,
+  )
+  const [minValue, setMinValue] = useState(
+    typeof value === 'object' ? value[0] : value,
+  )
+  const [sliderWidth, setWidth] = useState(
+    refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
+  )
 
-  const handleMinChange = (newMinVal: string) => {
-    const newVal = Math.min(parseFloat(newMinVal), maxValue - step)
+  // Update maxValue and minValue so that maxValue > minValue
+  useEffect(() => {
+    if (maxValue < minValue) {
+      setMinValue(maxValue)
+      setMaxValue(minValue)
+      setValues([maxValue, minValue])
+      onChange?.([maxValue, minValue])
+    }
+  }, [maxValue, minValue, onChange, setValues])
+
+  // Update maxValue to always have minValue < maxValue <= max
+  useEffect(() => {
+    if (!value[1]) {
+      setMaxValue(max)
+    } else if (value[1] <= minValue + step) {
+      setMaxValue(minValue + step)
+    } else {
+      setMaxValue(value[1])
+    }
+  }, [min, max, value, minValue, step])
+
+  // Update minValue to always have min <= maxValue <= min
+  useEffect(() => {
+    if (!value[0]) {
+      setMinValue(min)
+    } else if (value[0] >= maxValue - step) {
+      setMinValue(maxValue - step)
+    } else {
+      setMinValue(value[0])
+    }
+  }, [min, max, value, maxValue, step])
+
+  // Get slider size
+  useEffect(() => {
+    const setWidthResize = () => {
+      setWidth(refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max)
+    }
+    window.addEventListener('resize', setWidthResize)
+
+    return () => {
+      window.removeEventListener('resize', setWidthResize)
+    }
+  }, [])
+
+  const handleMinChange = (newMinVal: number) => {
+    const newVal = Math.min(newMinVal, maxValue - step)
     setMinValue(newVal)
-    onChange([String(newVal), String(maxValue)])
+    onChange([newVal, maxValue])
   }
-  const handleMaxChange = (newMaxVal: string) => {
-    const newVal = Math.max(parseFloat(newMaxVal), minValue + step)
+  const handleMaxChange = (newMaxVal: number) => {
+    const newVal = Math.max(newMaxVal, minValue + step)
     setMaxValue(newVal)
-    onChange([String(minValue), String(newVal)])
+    onChange([minValue, newVal])
   }
 
   // Position of the sliders to look like one range slider
-  const minPos = ((minValue - min) * 100) / (max - min)
-  const maxPos = ((maxValue - min) * 100) / (max - min)
+  const minPos = ((value[0] - min) * 100) / (max - min)
+  const maxPos = ((value[1] - min) * 100) / (max - min)
+
+  const tooltipText = useMemo(() => {
+    if (typeof labelTooltip === 'boolean') {
+      return value
+    }
+    if (typeof labelTooltip === 'string') {
+      return [labelTooltip, labelTooltip]
+    }
+    if (labelTooltip) {
+      return labelTooltip
+    }
+
+    return [null, null]
+  }, [labelTooltip, value])
+
+  const placementTooltip = [
+    ((value[0] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
+      THUMB_SIZE / 2,
+    ((value[1] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
+      THUMB_SIZE / 2,
+  ]
 
   return (
     <DoubleSliderWrapper>
-      <SliderElement
-        className="input"
-        name={name}
-        data-tooltip={labelTooltip}
-        id={id}
-        disabled={disabled}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        data-error={error}
-        data-direction={direction}
-        type="range"
-        value={minValue}
-        min={min}
-        aria-label={ariaLabel}
-        max={max}
-        step={step}
-        data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
-        onChange={event => {
-          event.preventDefault()
-          handleMinChange(event.target.value)
-        }}
-        themeSlider={theme}
-      />
+      <CustomRail>
+        <InnerRail
+          style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
+          data-error={!!error}
+          aria-disabled={!!disabled}
+        />
+      </CustomRail>
+      <StyledTooltip
+        text={tooltipText[0]}
+        placement="top"
+        left={placementTooltip[0]}
+      >
+        <SliderElement
+          className="input"
+          name={name}
+          data-tooltip={!!labelTooltip}
+          id={id}
+          disabled={!!disabled}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          data-error={error}
+          data-direction={direction}
+          type="range"
+          value={minValue}
+          min={min}
+          aria-label={ariaLabel}
+          max={max}
+          step={step}
+          data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
+          onChange={event => {
+            event.preventDefault()
+            handleMinChange(parseFloat(event.target.value))
+          }}
+          themeSlider={theme}
+          ref={refSlider}
+        />
+      </StyledTooltip>
+      <StyledTooltip
+        text={tooltipText[1]}
+        placement="top"
+        left={placementTooltip[1]}
+      >
+        <SliderElement
+          className="input"
+          type="range"
+          value={maxValue}
+          name={name}
+          disabled={!!disabled}
+          data-tooltip={!!labelTooltip}
+          id={id}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          data-error={error}
+          data-direction={direction}
+          aria-label={ariaLabel}
+          data-testid={dataTestId ? `${dataTestId}-right` : 'handle-right'}
+          min={min}
+          max={max}
+          step={step}
+          onChange={event => {
+            event.preventDefault()
+            handleMaxChange(parseFloat(event.target.value))
+          }}
+          themeSlider={theme}
+        />
+      </StyledTooltip>
+      {options ? (
+        <StyledDataList>
+          {options.map(element => {
+            const offsetElement = element.value === min ? 0 : 4
+            const left =
+              ((element.value - min) / (max - min)) *
+                (sliderWidth - THUMB_SIZE) +
+              offsetElement
 
-      <SliderElement
-        className="input"
-        type="range"
-        value={maxValue}
-        name={name}
-        disabled={disabled}
-        data-tooltip={labelTooltip}
-        id={id}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        data-error={error}
-        data-direction={direction}
-        aria-label={ariaLabel}
-        data-testid={dataTestId ? `${dataTestId}-right` : 'handle-right'}
-        min={min}
-        max={max}
-        step={step}
-        onChange={event => {
-          event.preventDefault()
-          handleMaxChange(event.target.value)
-        }}
-        themeSlider={theme}
-      />
-
-      <ControlsWrapper>
-        <Controls style={{ left: `${minPos}%` }} themeSlider={theme} />
-        <Rail>
-          <InnerRail
-            style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
-            data-error={!!error}
-          />
-        </Rail>
-        <Controls style={{ left: `${maxPos}%` }} themeSlider={theme} />
-      </ControlsWrapper>
+            return (
+              <Option key={element.value} left={left}>
+                <Text
+                  as="p"
+                  variant={
+                    value.includes(element.value) ? 'captionStrong' : 'caption'
+                  }
+                  sentiment={
+                    value.includes(element.value) ? 'primary' : 'neutral'
+                  }
+                >
+                  {element.label ?? element.value}
+                </Text>
+              </Option>
+            )
+          })}
+        </StyledDataList>
+      ) : null}
     </DoubleSliderWrapper>
   )
 }

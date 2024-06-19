@@ -8,5 +8,7 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Double } from './Double.stories'
+export { Disabled } from './Disabled.stories'
+export { Options } from './Options.stories'
 export { PrefixSuffix } from './PrefixSuffix.stories'
-export { InteractiveSuffix } from './InteractiveSuffix.stories'
+export { Tooltip } from './Tooltip.stories'
