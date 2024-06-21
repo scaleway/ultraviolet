@@ -212,7 +212,6 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
                   as="label"
                   variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                   sentiment="neutral"
-                  htmlFor={finalId}
                 >
                   {label}
                 </Text>
@@ -234,6 +233,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
               autoFocus={autofocus}
               innerRef={ref}
               id={finalId}
+              label={label}
             />
           </Stack>
         </Dropdown>

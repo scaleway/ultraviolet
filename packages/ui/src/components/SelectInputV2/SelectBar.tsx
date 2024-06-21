@@ -23,6 +23,7 @@ type SelectBarProps = {
   innerRef: RefObject<HTMLDivElement>
   id?: string
   'data-testid': string
+  label?: string
 }
 
 type DisplayValuesProps = {
@@ -46,6 +47,7 @@ const StyledInputWrapper = styled(Stack)<{
   'data-size': 'small' | 'medium' | 'large'
   'data-state': 'neutral' | 'success' | 'danger'
   'data-dropdownvisible': boolean
+  'aria-label'?: string
 }>`
   display: flex;
   padding: ${({ theme }) => theme.space[1]};
@@ -197,6 +199,7 @@ export const SelectBar = ({
   innerRef,
   id,
   'data-testid': dataTestId,
+  label,
 }: SelectBarProps) => {
   const {
     isDropdownVisible,
@@ -314,10 +317,10 @@ export const SelectBar = ({
           : null
       }}
       ref={innerRef}
-      aria-labelledby="select bar"
       aria-haspopup="listbox"
       aria-expanded={isDropdownVisible}
       tabIndex={0}
+      aria-label={label}
     >
       {selectedData.selectedValues.length > 0 ? (
         <DisplayValues
