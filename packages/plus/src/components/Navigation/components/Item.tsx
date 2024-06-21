@@ -49,7 +49,6 @@ const StyledIcon = styled(Icon, {
 
     ${({ active, theme }) => (active ? `background: ${theme.colors.primary.backgroundHover};` : null)}
     }
-  }
 `
 
 const NeutralButtonLink = css`
@@ -140,29 +139,29 @@ const StyledContainer = styled(Stack)`
   ${NeutralButtonLink};
   border-radius: ${({ theme }) => theme.radii.default};
 
-  &[data-has-no-expand='false'] {
+  &[data-has-no-expand="false"] {
     cursor: pointer;
   }
   margin-top: ${({ theme }) => theme.space['0.25']};
   padding: ${({ theme }) =>
     `calc(${theme.space['0.25']} + ${theme.space['0.5']}) ${theme.space['1']}`};
 
-  &[data-has-sub-label='true'] {
+  &[data-has-sub-label="true"] {
     padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   }
 
   width: 100%;
 
-  &:hover[data-has-no-expand='false']:not([disabled]):not(
-      [data-is-active='true']
+  &:hover[data-has-no-expand="false"]:not([disabled]):not(
+      [data-is-active="true"]
     ),
-  &:focus[data-has-no-expand='false']:not([disabled]):not(
-      [data-is-active='true']
+  &:focus[data-has-no-expand="false"]:not([disabled]):not(
+      [data-is-active="true"]
     ) {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   }
-  &[data-has-active-children='true'][data-has-no-expand='false']:not(
-      [disabled][data-is-active='true']
+  &[data-has-active-children="true"][data-has-no-expand="false"]:not(
+      [disabled][data-is-active="true"]
     ) {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeakHover};
     ${WrapText} {
@@ -173,14 +172,14 @@ const StyledContainer = styled(Stack)`
       opacity: 1;
     }
 
-    &[data-is-pinnable='true'] {
+    &[data-is-pinnable="true"] {
       ${StyledBadge} {
         opacity: 0;
       }
     }
   }
 
-  &[data-has-no-expand='false']:not([disabled]) {
+  &[data-has-no-expand="false"]:not([disabled]) {
     &:hover,
     &:focus,
     &:active {
@@ -194,20 +193,20 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &:hover[data-has-children='false'][data-is-active='false']:not([disabled]) {
+  &:hover[data-has-children="false"][data-is-active="false"]:not([disabled]) {
     ${WrapText} {
       color: ${({ theme }) => theme.colors.neutral.textWeakHover};
     }
   }
 
-  &:active[data-has-no-expand='false']:not([disabled]):not(
-      [data-is-active='true']
+  &:active[data-has-no-expand="false"]:not([disabled]):not(
+      [data-is-active="true"]
     ) {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
 
-  &[data-is-active='true'],
-  &:hover[data-has-active='true'] {
+  &[data-is-active="true"],
+  &:hover[data-has-active="true"] {
     background-color: ${({ theme }) => theme.colors.primary.background};
 
     &:hover {
@@ -224,14 +223,14 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &[data-animation='collapse'] {
+  &[data-animation="collapse"] {
     animation: ${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out;
     ${WrapText}, ${AnimatedIcon}, ${StyledBadge} {
       animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out reverse;
     }
   }
 
-  &[data-animation='expand'] {
+  &[data-animation="expand"] {
     animation: ${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out reverse;
     ${WrapText}, ${AnimatedIcon}, ${StyledBadge} {
       animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out;
