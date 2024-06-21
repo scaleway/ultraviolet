@@ -45,6 +45,7 @@ const StyledInput = styled.input<{
   border: none;
   outline: none;
   height: 100%;
+  width: 100%;
   padding-left: ${({ theme }) => theme.space['2']};
   background: transparent;
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
@@ -316,16 +317,16 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                   {success ? (
                     <Icon
                       name="checkbox-circle-outline"
-                      color="success"
-                      size={16}
+                      sentiment="success"
+                      size="small"
                       disabled={disabled}
                     />
                   ) : null}
                   {error ? (
                     <Icon
                       name="alert"
-                      color="danger"
-                      size={16}
+                      sentiment="danger"
+                      size="small"
                       disabled={disabled}
                     />
                   ) : null}
