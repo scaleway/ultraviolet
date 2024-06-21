@@ -11,13 +11,7 @@ export const Disabled: StoryFn<typeof Slider> = args => (
       labelTooltip="Disabled"
       label="Disabled with tooltip"
     />
-    <Slider
-      {...args}
-      value={[10, 40]}
-      double
-      disabled
-      label="Disabled double"
-    />
+    <Slider {...args} value={[10, 40]} disabled label="Disabled double" />
   </Stack>
 )
 

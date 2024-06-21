@@ -33,7 +33,6 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
       <Slider
         {...args}
         suffix="GB"
-        double
         label="Interactive label - double"
         value={[15, 70]}
       />

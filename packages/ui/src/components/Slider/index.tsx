@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type { HTMLAttributes, ReactNode } from 'react'
-import { useId, useState } from 'react'
+import { useCallback, useEffect, useId, useState } from 'react'
 import { NumberInputV2 } from '../NumberInputV2'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -38,12 +39,9 @@ type SliderProps = {
    * Step of the slider
    */
   step?: number
-  /**
-   * When a maximum value and a minimum value are needed
-   */
-  double?: boolean
-  value: number[] | number
-  labelTooltip?: boolean | string | string[]
+  required?: boolean
+  value: number | number[]
+  labelTooltip?: boolean | string[] | string
   /**
    * Whether user can change the value with an input
    */
@@ -63,28 +61,33 @@ type SliderProps = {
   /**
    * Whether an error occured
    */
-  error: string | boolean
+  error?: string | boolean
   /**
    * The labels/ticks to show
    */
   options?: { value: number; label?: string }[]
-  onChange?: (value?: number | number[]) => void
+  onChange?: (newValue?: number[] | number) => void
   'data-testid'?: string
 } & Pick<
   HTMLAttributes<HTMLInputElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
 >
 
+/**
+ * You can define simple or double sliders with the slider component.
+ * - For a simple slider (one handle) : prop `value` must be number.
+ * - For a double slider (two handles):  prop `value` must be an array of numbers (of length two). **Make sure that others props have the correct type.**
+ */
 export const Slider = ({
   name,
   label,
   helper,
-  double = false,
   labelTooltip,
   direction = 'column',
   input,
   prefix,
   suffix,
+  required,
   disabled,
   error,
   options,
@@ -102,30 +105,69 @@ export const Slider = ({
 }: SliderProps) => {
   const localId = useId()
   const finalId = id ?? localId
-  const [computedValue, setValues] = useState<number | number[] | undefined>(
-    value,
-  )
+  const [computedValue, setValues] = useState(value)
+  const isDouble = Array.isArray(computedValue)
 
-  const handleChange = (newValue: number | number[]) => {
-    onChange?.(newValue)
-    setValues(newValue)
-  }
-  const handleChangeInput = (val?: number, side?: 'left' | 'right') => {
-    if (side === 'left' && typeof computedValue === 'object') {
-      if (val) {
+  useEffect(() => {
+    if (isDouble) {
+      const newValues = [computedValue[0], computedValue[1]]
+      // Update maxValue and minValue so that maxValue > minValue
+      if (newValues[1] < newValues[0]) {
+        ;[newValues[0], newValues[1]] = [newValues[1], newValues[0]]
+      }
+
+      // Update maxValue to always have minValue < maxValue <= max
+      if (!newValues[1] || newValues[1] > max) {
+        newValues[1] = max
+      } else if (newValues[1] <= newValues[0] + step) {
+        newValues[1] = newValues[0] + step
+      }
+
+      // Update minValue to always have min <= maxValue <= min
+      if (!newValues[0] || newValues[0] < min) {
+        newValues[0] = min
+      } else if (newValues[0] >= newValues[1] - step) {
+        newValues[0] = newValues[1] - step
+      }
+
+      // Update minValue, maxValue and call onChange only if values were changed
+      if (
+        newValues[0] !== computedValue[0] ||
+        newValues[1] !== computedValue[1]
+      ) {
+        setValues(newValues)
+      }
+    }
+
+    // For single slider make sure that min <= value <= max
+    if (typeof computedValue === 'number') {
+      if (computedValue < min) {
+        setValues(min)
+      }
+      if (computedValue > max) {
+        setValues(max)
+      }
+    }
+  }, [computedValue, isDouble, max, min, onChange, step, value])
+
+  const handleChange = useCallback(
+    (newValue: typeof computedValue) => {
+      onChange?.(newValue)
+      setValues(newValue)
+    },
+    [onChange],
+  )
+  const handleChangeInput = (val: number, side?: 'left' | 'right') => {
+    if (isDouble) {
+      if (side === 'left') {
         const newComputedValue = [...computedValue]
         newComputedValue[0] = Math.max(
           min,
-          Math.min(computedValue[1] + step, val),
+          Math.min(computedValue[1] - step, val),
         )
         setValues(newComputedValue)
         onChange?.(newComputedValue)
-      } else {
-        setValues([undefined, computedValue[1]])
-        onChange?.([undefined, computedValue[1]])
-      }
-    } else if (side === 'right') {
-      if (val) {
+      } else if (side === 'right') {
         const newComputedValue = [...computedValue]
         newComputedValue[1] = Math.min(
           max,
@@ -133,23 +175,16 @@ export const Slider = ({
         )
         setValues(newComputedValue)
         onChange?.(newComputedValue)
-      } else {
-        setValues([computedValue[0], undefined])
-        onChange?.([computedValue[0], undefined])
       }
-    } else if (val) {
-      if (val > max) {
-        onChange?.(max)
-        setValues(max)
-      } else {
-        onChange?.(Math.max(val, min))
-        setValues(Math.max(val, min))
-      }
+    } else if (val > max) {
+      onChange?.(max)
+      setValues(max)
     } else {
-      onChange?.(undefined)
-      setValues(undefined)
+      onChange?.(Math.max(val, min))
+      setValues(Math.max(val, min))
     }
   }
+
   const styledValue = (valueNumber?: number, side?: 'left' | 'right') =>
     input ? (
       <StyledNumberInput
@@ -159,20 +194,22 @@ export const Slider = ({
         max={max}
         step={step}
         controls={false}
+        data-testid={side ? `slider-input-${side}` : 'slider-input'}
         unit={typeof suffix === 'string' ? suffix : undefined}
-        onChange={newVal =>
-          double
-            ? handleChangeInput(newVal ?? undefined, side)
-            : handleChangeInput(newVal ?? undefined)
-        }
+        onChange={newVal => {
+          if (newVal) {
+            if (isDouble) handleChangeInput(newVal, side)
+            else handleChangeInput(newVal)
+          }
+        }}
       />
     ) : (
       <StyledText
         as="span"
         variant="bodySmall"
         sentiment="neutral"
-        placement={!double && direction !== 'row' ? 'right' : 'center'}
-        double={double}
+        placement={!isDouble && direction !== 'row' ? 'right' : 'center'}
+        double={isDouble}
         isColumn={direction === 'column'}
       >
         {prefix}
@@ -182,70 +219,64 @@ export const Slider = ({
     )
 
   return (
-    <SliderContainer aria-label={ariaLabel} data-options={!!options}>
+    <SliderContainer
+      aria-label={ariaLabel}
+      data-options={!!options}
+      gap={options ? 3 : 1}
+    >
       <Stack gap={1} direction={direction} justifyContent="left">
         {label ? (
           <Stack justifyContent="space-between" direction="row">
-            <Text
-              as="label"
-              variant="bodyStrong"
-              htmlFor={finalId}
-              placement="left"
-            >
-              {label}
-            </Text>
+            <Stack gap={0.5} direction="row">
+              <Text
+                as="label"
+                variant="bodyStrong"
+                htmlFor={finalId}
+                placement="left"
+              >
+                {label}
+              </Text>
+              {required ? (
+                <Icon name="asterisk" sentiment="danger" size={8} />
+              ) : null}
+            </Stack>
 
-            {direction === 'column' &&
-            !double &&
-            typeof computedValue !== 'object'
+            {direction === 'column' && !isDouble
               ? styledValue(computedValue)
               : null}
           </Stack>
         ) : null}
-        {direction === 'column' &&
-        !label &&
-        !double &&
-        typeof computedValue !== 'object'
+        {direction === 'column' && !label && !isDouble
           ? styledValue(computedValue)
           : null}
-        {direction === 'column' && double ? (
+        {direction === 'column' && isDouble ? (
           <Stack justifyContent="space-between" direction="row">
-            {styledValue(
-              typeof computedValue === 'object' ? computedValue[0] : undefined,
-              'left',
-            )}
-            {styledValue(
-              typeof computedValue === 'object' ? computedValue[1] : undefined,
-              'right',
-            )}
+            {styledValue(computedValue[0], 'left')}
+            {styledValue(computedValue[1], 'right')}
           </Stack>
         ) : null}
 
-        {direction === 'row' && double
-          ? styledValue(
-              typeof computedValue === 'object' ? computedValue[0] : undefined,
-              'left',
-            )
+        {direction === 'row' && isDouble
+          ? styledValue(computedValue[0], 'left')
           : null}
-        {double && typeof value !== 'number' ? (
+        {isDouble ? (
           <DoubleSlider
             name={name}
             min={min}
             max={max}
             step={step}
             value={computedValue}
-            labelTooltip={labelTooltip}
+            labelTooltip={labelTooltip as string[] | boolean | undefined}
             disabled={disabled}
             error={error}
             onChange={handleChange}
             data-testid={dataTestId}
-            id={id}
+            id={finalId}
             onBlur={onBlur}
             onFocus={onFocus}
             className={className}
             options={options}
             direction={direction}
-            setValues={setValues}
           />
         ) : (
           <SingleSlider
@@ -253,29 +284,24 @@ export const Slider = ({
             min={min}
             max={max}
             step={step}
-            value={typeof computedValue === 'number' ? computedValue : min}
-            labelTooltip={labelTooltip}
+            value={computedValue}
+            labelTooltip={labelTooltip as string | boolean | undefined}
             disabled={disabled}
             error={error}
             onChange={handleChange}
             options={options}
             data-testid={dataTestId}
-            id={id}
+            id={finalId}
             onBlur={onBlur}
             onFocus={onFocus}
             className={className}
             direction={direction}
           />
         )}
-        {direction === 'row' && double
-          ? styledValue(
-              typeof computedValue === 'object' ? computedValue[1] : undefined,
-              'right',
-            )
+        {direction === 'row' && isDouble
+          ? styledValue(computedValue[1], 'right')
           : null}
-        {direction === 'row' && !double && typeof computedValue !== 'object'
-          ? styledValue(computedValue)
-          : null}
+        {direction === 'row' && !isDouble ? styledValue(computedValue) : null}
       </Stack>
       {error || helper ? (
         <Text

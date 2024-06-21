@@ -23,7 +23,7 @@ type SliderProps = {
   value: number
   labelTooltip?: boolean | string
   disabled?: boolean
-  error: string | boolean
+  error?: string | boolean
   onChange: (value: number | number[]) => void
   'data-testid'?: string
 } & Pick<
@@ -152,11 +152,12 @@ export const SingleSlider = ({
           id={id}
           onBlur={onBlur}
           onFocus={onFocus}
+          role="slider"
           aria-label={ariaLabel}
           className={className}
           data-tooltip={labelTooltip}
           style={getBackgroundSize}
-          data-error={error}
+          data-error={!!error}
           data-direction={direction}
           themeSlider={theme}
           ref={refSlider}

@@ -20,12 +20,11 @@ type SliderProps = {
   step?: number
   value: number[]
   options?: { value: number; label?: string }[]
-  labelTooltip?: boolean | string
+  labelTooltip?: boolean | string[]
   disabled?: boolean
-  error: string | boolean
+  error?: string | boolean
   onChange: (value: number | number[]) => void
   'data-testid'?: string
-  setValues: (value: number[]) => void
 } & Pick<
   HTMLAttributes<HTMLInputElement>,
   'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
@@ -120,52 +119,20 @@ export const DoubleSlider = ({
   onBlur,
   onFocus,
   options,
-  setValues,
   'aria-label': ariaLabel,
 }: SliderProps) => {
   const { theme } = useTheme()
   const refSlider = useRef<HTMLInputElement>(null)
-  const [maxValue, setMaxValue] = useState(
-    typeof value === 'object' ? value[1] : value,
-  )
-  const [minValue, setMinValue] = useState(
-    typeof value === 'object' ? value[0] : value,
-  )
+  const [maxValue, setMaxValue] = useState(value[1])
+  const [minValue, setMinValue] = useState(value[0])
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
   )
 
-  // Update maxValue and minValue so that maxValue > minValue
   useEffect(() => {
-    if (maxValue < minValue) {
-      setMinValue(maxValue)
-      setMaxValue(minValue)
-      setValues([maxValue, minValue])
-      onChange?.([maxValue, minValue])
-    }
-  }, [maxValue, minValue, onChange, setValues])
-
-  // Update maxValue to always have minValue < maxValue <= max
-  useEffect(() => {
-    if (!value[1]) {
-      setMaxValue(max)
-    } else if (value[1] <= minValue + step) {
-      setMaxValue(minValue + step)
-    } else {
-      setMaxValue(value[1])
-    }
-  }, [min, max, value, minValue, step])
-
-  // Update minValue to always have min <= maxValue <= min
-  useEffect(() => {
-    if (!value[0]) {
-      setMinValue(min)
-    } else if (value[0] >= maxValue - step) {
-      setMinValue(maxValue - step)
-    } else {
-      setMinValue(value[0])
-    }
-  }, [min, max, value, maxValue, step])
+    setMinValue(value[0])
+    setMaxValue(value[1])
+  }, [value])
 
   // Get slider size
   useEffect(() => {
@@ -198,10 +165,7 @@ export const DoubleSlider = ({
     if (typeof labelTooltip === 'boolean') {
       return value
     }
-    if (typeof labelTooltip === 'string') {
-      return [labelTooltip, labelTooltip]
-    }
-    if (labelTooltip) {
+    if (Array.isArray(labelTooltip)) {
       return labelTooltip
     }
 
@@ -233,7 +197,7 @@ export const DoubleSlider = ({
           className="input"
           name={name}
           data-tooltip={!!labelTooltip}
-          id={id}
+          id={`${id}-left`}
           disabled={!!disabled}
           onBlur={onBlur}
           onFocus={onFocus}
@@ -266,7 +230,7 @@ export const DoubleSlider = ({
           name={name}
           disabled={!!disabled}
           data-tooltip={!!labelTooltip}
-          id={id}
+          id={`${id}-left`}
           onBlur={onBlur}
           onFocus={onFocus}
           data-error={error}

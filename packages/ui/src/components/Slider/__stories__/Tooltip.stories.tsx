@@ -12,7 +12,7 @@ export const Tooltip: StoryFn<typeof Slider> = args => {
   return (
     <Stack gap={4}>
       <Slider {...args} value={3} label="Default" />
-      <Slider {...args} value={[5, 14]} double label="Default double" />
+      <Slider {...args} value={[5, 14]} label="Default double" />
       <Slider
         {...args}
         value={value}
@@ -38,7 +38,7 @@ Tooltip.parameters = {
   docs: {
     description: {
       story:
-        'It is possible to have tooltips on slider. By default, the tooltip shows the current value but it is possible to define a custom tooltip.',
+        'It is possible to have tooltips on slider. By default, the tooltip shows the current value but it is possible to define a custom tooltip. When defining custom tooltip for a double slider, remember to pass an array of tooltip',
     },
   },
 }

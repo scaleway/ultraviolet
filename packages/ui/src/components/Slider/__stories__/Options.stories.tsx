@@ -24,14 +24,7 @@ export const Options: StoryFn<typeof Slider> = args => (
   <Stack gap={4}>
     <Slider {...args} options={optionsAll} max={5} min={1} value={3} />
     <Slider {...args} options={options} min={1} max={25} value={3} />
-    <Slider
-      {...args}
-      options={optionsAll}
-      min={1}
-      max={5}
-      double
-      value={[3, 1]}
-    />
+    <Slider {...args} options={optionsAll} min={1} max={5} value={[3, 1]} />
   </Stack>
 )
 
