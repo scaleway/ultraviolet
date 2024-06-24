@@ -1,7 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { NumberInputV2 } from '..'
 
 describe('NumberInputV2', () => {
@@ -78,8 +78,15 @@ describe('NumberInputV2', () => {
   })
 
   it('should focus input and modify value', async () => {
+    const onChange = vi.fn()
     const { asFragment } = renderWithTheme(
-      <NumberInputV2 min={0} step={10} max={100} />,
+      <NumberInputV2
+        min={10}
+        step={10}
+        max={100}
+        onChange={onChange}
+        value={1}
+      />,
     )
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
@@ -88,8 +95,22 @@ describe('NumberInputV2', () => {
     input.blur()
 
     await userEvent.clear(input)
-    await userEvent.type(input, '20')
-    await waitFor(() => expect(input.value).toBe('20'))
+    expect(onChange).toHaveBeenCalledTimes(2)
+    expect(asFragment()).toMatchSnapshot()
+  })
+  it('should focus input and modify value when value > max', async () => {
+    const onChange = vi.fn()
+    const { asFragment } = renderWithTheme(
+      <NumberInputV2 min={1} step={1} max={5} onChange={onChange} value={10} />,
+    )
+    const input = screen.getByRole<HTMLInputElement>('spinbutton')
+
+    await userEvent.click(input)
+    await waitFor(() => expect(input).toHaveFocus())
+    input.blur()
+
+    await userEvent.clear(input)
+    expect(onChange).toHaveBeenCalledTimes(2)
     expect(asFragment()).toMatchSnapshot()
   })
 

@@ -227,6 +227,10 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
 
 .emotion-13 {
   -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -ms-appearance: textfield;
+  appearance: textfield;
 }
 
 .emotion-13[data-size='small'] {
@@ -584,6 +588,10 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
 
 .emotion-13 {
   -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -ms-appearance: textfield;
+  appearance: textfield;
 }
 
 .emotion-13[data-size='small'] {
