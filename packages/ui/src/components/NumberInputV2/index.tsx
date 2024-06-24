@@ -91,6 +91,7 @@ const Input = styled.input`
 
   & {
     -moz-appearance: textfield;
+    appearance: textfield;
   }
 
   &[data-size='small'] {
@@ -133,6 +134,7 @@ const Input = styled.input`
 
   &[data-controls='false'] {
   text-align: left;
+}
 `
 
 const Container = styled.div`
@@ -268,7 +270,7 @@ export const NumberInputV2 = forwardRef(
         } else if (direction === 'down') {
           localRef.current?.stepDown()
         }
-        onChange?.(parseInt(localRef.current?.value ?? '', 10) ?? min)
+        onChange?.(parseFloat(localRef.current?.value ?? '') ?? min)
       },
       [localRef, min, onChange],
     )
@@ -320,7 +322,7 @@ export const NumberInputV2 = forwardRef(
     let inputValue
     if (value !== undefined) {
       inputValue =
-        value !== null && Number.isInteger(value) ? value.toString() : ''
+        value !== null && typeof value === 'number' ? value.toString() : ''
     }
 
     return (
@@ -386,14 +388,21 @@ export const NumberInputV2 = forwardRef(
                   onChange={
                     onChange
                       ? event => {
-                          const newNumber = parseInt(event.target.value, 10)
+                          const newNumber = parseFloat(event.target.value)
                           onChange(Number.isNaN(newNumber) ? null : newNumber)
                         }
                       : undefined
                   }
                   value={inputValue}
                   onFocus={onFocus}
-                  onBlur={onBlur}
+                  onBlur={event => {
+                    if (value && value > max) {
+                      onChange?.(max)
+                    } else if (value && value < min) {
+                      onChange?.(min)
+                    }
+                    onBlur?.(event)
+                  }}
                   data-size={size}
                   step={step}
                   disabled={disabled}
