@@ -69,7 +69,7 @@ importers:
         specifier: 1.1.0
         version: 1.1.0
       '@eslint/eslintrc':
-        specifier: ^3.1.0
+        specifier: 3.1.0
         version: 3.1.0
       '@scaleway/eslint-config-react':
         specifier: 4.0.0
@@ -222,7 +222,7 @@ importers:
         specifier: 6.2.0
         version: 6.2.0(webpack@5.91.0(esbuild@0.20.2))
       globals:
-        specifier: ^15.4.0
+        specifier: 15.6.0
         version: 15.6.0
       happy-dom:
         specifier: 14.12.3
@@ -13551,9 +13551,9 @@ snapshots:
       mime-types: 2.1.35
       negotiator: 0.6.3
 
-  acorn-import-assertions@1.9.0(acorn@8.11.3):
+  acorn-import-assertions@1.9.0(acorn@8.12.0):
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
 
   acorn-jsx@5.3.2(acorn@7.4.1):
     dependencies:
@@ -16273,7 +16273,7 @@ snapshots:
   istanbul-lib-source-maps@5.0.4:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
-      debug: 4.3.4
+      debug: 4.3.5
       istanbul-lib-coverage: 3.2.2
     transitivePeerDependencies:
       - supports-color
@@ -19165,7 +19165,7 @@ snapshots:
   terser@5.31.0:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.11.3
+      acorn: 8.12.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
@@ -19427,7 +19427,7 @@ snapshots:
 
   unplugin@1.10.1:
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
       chokidar: 3.6.0
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.1
@@ -19621,8 +19621,8 @@ snapshots:
       '@webassemblyjs/ast': 1.12.1
       '@webassemblyjs/wasm-edit': 1.12.1
       '@webassemblyjs/wasm-parser': 1.12.1
-      acorn: 8.11.3
-      acorn-import-assertions: 1.9.0(acorn@8.11.3)
+      acorn: 8.12.0
+      acorn-import-assertions: 1.9.0(acorn@8.12.0)
       browserslist: 4.23.1
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.16.0
