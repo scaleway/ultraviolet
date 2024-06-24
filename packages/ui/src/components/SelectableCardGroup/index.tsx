@@ -25,7 +25,7 @@ const SelectableCardGroupContext = createContext<
   SelectableCardGroupContextType | undefined
 >(undefined)
 
-type CardSelectableCardProps = Omit<
+export type CardSelectableCardProps = Omit<
   ComponentProps<typeof SelectableCard>,
   'onChange' | 'checked' | 'type' | 'showTick'
 >
