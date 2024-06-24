@@ -81,6 +81,9 @@
     }
   ],
   "pnpm": {
+    "overrides": {
+      "vite": "$vite"
+    },
     "peerDependencyRules": {
       "allowedVersions": {
         "react": "18",

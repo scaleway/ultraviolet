@@ -106,7 +106,7 @@ const StyledCheckbox = styled(OverloadedCheckbox)`
   pointer-events: none; // Prevents the label from being clickable as we want the container to be clickable
 `
 
-type SelectableCardProps = {
+export type SelectableCardProps = {
   name?: string
   children?:
     | (({
