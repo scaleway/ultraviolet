@@ -42,14 +42,12 @@ export const Example: StoryFn<typeof Stepper> = args => {
         />
       </Stepper>
 
-      {selected === 6 ? (
+      {selected === 5 ? (
         'All done'
       ) : (
         <Stack width="30%">
           Current index: {selected}
-          <Button
-            onClick={() => (selected <= 5 ? setStep(selected + 1) : null)}
-          >
+          <Button onClick={() => (selected < 5 ? setStep(selected + 1) : null)}>
             Next step
           </Button>
         </Stack>

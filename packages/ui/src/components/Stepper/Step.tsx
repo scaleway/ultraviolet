@@ -39,8 +39,7 @@ const loadingAnimation = (size: 'small' | 'medium') => keyframes`
     width: 0;
   }
   to {
-    width: calc(100% - ${size === 'small' ? '24px' : '32px'} - 8px});
-  }
+    width: calc(100% - ${size === 'small' ? '24px' : '32px'} - 8px)};
 `
 
 const loadingStyle = (size: 'small' | 'medium') => css`
@@ -64,7 +63,6 @@ const StyledBullet = styled(Bullet)<{
 `
 
 const StyledText = styled(Text)`
-  margin-top: ${({ theme }) => theme.space['1']};
   transition: text-decoration-color 250ms ease-out;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -78,7 +76,7 @@ const StyledStepContainer = styled(Stack)<{
   'data-hide-separator': boolean
   'data-label-position': 'bottom' | 'right'
   size: 'small' | 'medium'
-  'aria-selected': boolean
+  'data-selected': boolean
   'data-done': boolean
   'data-animated': boolean
 }>`
@@ -89,7 +87,7 @@ const StyledStepContainer = styled(Stack)<{
   &[data-interactive="true"]:not([data-disabled="true"]) {
     cursor: pointer;
 
-    &[aria-selected="true"]:hover {
+    &[data-selected="true"]:hover {
       & > ${StyledBullet} {
         box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
         & > ${StyledText} {
@@ -134,20 +132,18 @@ const StyledStepContainer = styled(Stack)<{
     flex-direction: column;
     flex: 1;
 
-    &:not(:last-child) {
+    & > ${StyledText} {
+      margin-top: ${({ theme }) => theme.space[1]};
+    }
+
+    &:not(:last-child){
       &:after {
         content: "";
         position: relative;
         align-self: baseline;
         border-radius: ${({ theme }) => theme.radii.default};
-        background-color: ${({ theme }) =>
-          theme.colors.neutral.backgroundStrong};
-
-        top: 20px;
-        width: calc(
-          100% - ${({ size }) => (size === 'small' ? '24px' : '32px')} -
-            ${({ theme }) => theme.space[2]}
-        );
+        top: ${({ theme }) => theme.space[2]};
+        width: calc(100% - ${({ theme, size }) => (size === 'small' ? theme.space[5] : theme.space[6])});
         left: calc(50% + 25px);
         order: -1;
         height: ${({ size }) =>
@@ -158,16 +154,34 @@ const StyledStepContainer = styled(Stack)<{
         background-color: ${({ theme }) =>
           theme.colors.primary.backgroundStrong};
       }
-
-      &[aria-selected="true"][data-animated="true"]:after {
+      &[data-selected="true"][data-animated="true"]:after {
+        ${({ size }) => loadingStyle(size)}
         background-color: ${({ theme }) =>
           theme.colors.primary.backgroundStrong};
-        ${({ size }) => loadingStyle(size)}
+
       }
     }
+      &:not(:last-child){
+      &::before {
+        content: "";
+        position: relative;
+        align-self: baseline;
+        border-radius: ${({ theme }) => theme.radii.default};
+        background-color: ${({ theme }) =>
+          theme.colors.neutral.backgroundStrong};
+        top: 20px;
+        width: calc(
+          100% - ${({ theme, size }) => (size === 'small' ? theme.space[5] : theme.space[6])});
+        left: calc(50% + 25px);
+        order: -1;
+        height: ${({ size }) =>
+          size === 'small' ? LINE_HEIGHT_SIZES.small : LINE_HEIGHT_SIZES.medium}px;
+      }
+    }
+
     &:last-child {
       margin-top: ${({ theme, size }) =>
-        size === 'small' ? '6px' : theme.space[1]};
+        size === 'small' ? '0px' : theme.space[1]};
     }
   }
 `
@@ -195,11 +209,9 @@ export const Step = ({
 
   return (
     <StyledStepContainer
-      gap={currentState.labelPosition === 'right' ? 1 : 0.5}
+      gap={currentState.labelPosition === 'right' ? 1 : 0}
       direction={currentState.labelPosition === 'right' ? 'row' : 'column'}
-      alignItems={
-        currentState.labelPosition === 'right' ? 'baseline' : 'center'
-      }
+      alignItems="center"
       justifyContent="flex-start"
       className={className ?? 'step'}
       data-interactive={currentState.interactive && isDone}
@@ -216,7 +228,7 @@ export const Step = ({
       data-hide-separator={!currentState.separator}
       data-label-position={currentState.labelPosition}
       size={currentState.size}
-      aria-selected={isActive}
+      data-selected={isActive}
       data-done={isDone}
       data-animated={currentState.animated}
     >
