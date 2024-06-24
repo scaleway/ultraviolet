@@ -9,9 +9,7 @@ export function orderBy<T extends Record<string, unknown>>(
     typeof key === 'function'
       ? key
       : (item: T) =>
-          typeof item[key] === 'string'
-            ? (item[key] as string).toLowerCase()
-            : item[key]
+          typeof item[key] === 'string' ? item[key].toLowerCase() : item[key]
 
   return (a, b) => {
     const transformedA = transform(a) as ComparableType

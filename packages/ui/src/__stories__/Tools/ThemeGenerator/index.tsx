@@ -6,7 +6,7 @@ import {
 } from '../../../../../../scripts/figma-synchronise-tokens'
 import { Form, useForm } from '../../../../../form/src'
 import { Stack, Text } from '../../../components'
-import type { SCWUITheme } from '../../../theme'
+import type { UltravioletUITheme } from '../../../theme'
 import consoleLightTheme from '../../../theme'
 import { FormContent } from './FormContent'
 import { ThemeResult } from './ThemeResult'
@@ -67,7 +67,7 @@ export const ThemeGenerator = () => {
       }
 
       return {
-        [SHADES_KEYS_MATCHING[key] as string]: SHADES_KEYS.reduce(
+        [SHADES_KEYS_MATCHING[key]]: SHADES_KEYS.reduce(
           (secondAcc, shadeKey, index) => ({
             [shadeKey]: {
               value: generateShadeContrast(shadeKey, value, index),
@@ -99,7 +99,7 @@ export const ThemeGenerator = () => {
       inputTheme: 'productLight',
       palette: 'paletteLight',
       outputTheme: 'light',
-    }) as SCWUITheme
+    }) as UltravioletUITheme
 
     setGeneratedPalette(tempGeneratedPalette)
     setStep(1)
