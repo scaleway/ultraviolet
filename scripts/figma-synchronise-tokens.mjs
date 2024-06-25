@@ -148,7 +148,7 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     variables: {},
   })
 
-  // Variable : theme fontSize
+  // Variable : theme lineHeights
   const lineHeight = getValues(inputTheme.lineHeight, {
     typeFilter: 'lineHeights',
     variables: { unit },
@@ -165,9 +165,9 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     typeFilter: 'boxShadow',
     variables: {
       shades: paletteShades,
-      other: paletteOther,
       shadows: paletteShadows,
       ...colors,
+      other: paletteOther,
     },
   })
 

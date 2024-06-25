@@ -137,6 +137,15 @@ export const lightTheme = {
           success: '#45d19f',
         },
       },
+      elevation: {
+        background: {
+          fixed: '#ffffff',
+          fixedReversed: '#ffffff',
+          overlay: '#ffffff',
+          raised: '#ffffff',
+          raisedReversed: '#ffffff',
+        },
+      },
       gradients: {
         background: {
           linear: {
@@ -339,6 +348,14 @@ export const lightTheme = {
     defaultShadow: '0px 0px 8px 2px #d9dadd66',
     drawer: '0px 0px 40px 10px #151a2d5c',
     dropdown: '0px 4px 24px 6px #d9dadd66',
+    fixed: {
+      '0': '0px 0px 2px 0px #22263829',
+      '1': '0px 2px 4px 0px #2226381f',
+    },
+    fixedReversed: {
+      '0': '0px 0px 2px 0px #22263829',
+      '1': '0px -2px 4px 0px #2226381f',
+    },
     focusDanger: '0px 0px 0px 3px #f91b6c40',
     focusInfo: '0px 0px 0px 3px #71c2ff40',
     focusNeutral: '0px 0px 0px 3px #151a2d5c',
@@ -353,7 +370,19 @@ export const lightTheme = {
     hoverWarning: '0px 4px 16px 4px #fff5d0cc',
     menu: '0px 0px 24px 6px #d9dadd66',
     modal: '0px 8px 40px 10px #151a2d5c',
+    overlay: {
+      '0': '0px 12px 24px 0px #2226383d',
+      '1': '0px 8px 60px 0px #22263852',
+    },
     popover: '0px 4px 32px 8px #151a2d5c',
+    raised: {
+      '0': '0px 4px 8px 0px #22263829',
+      '1': '0px 8px 24px 0px #2226383d',
+    },
+    raisedReversed: {
+      '0': '0px -4px 8px 0px #22263829',
+      '1': '0px -8px 24px 0px #2226383d',
+    },
     tabBar: {
       active: '0px -2px 0px 0px #8c40ef',
       off: '0px -1px 0px 0px #e9eaeb',
