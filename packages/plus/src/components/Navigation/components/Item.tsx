@@ -47,10 +47,8 @@ const StyledIcon = styled(Icon, {
   &:hover {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeakHover};
 
-    ${({ active, theme }) =>
-      active ? `background: ${theme.colors.primary.backgroundHover};` : null}
+    ${({ active, theme }) => (active ? `background: ${theme.colors.primary.backgroundHover};` : null)}
     }
-  }
 `
 
 const NeutralButtonLink = css`
@@ -94,7 +92,6 @@ const StyledMenuItem = styled(MenuV2.Item, {
   isPinnable?: boolean
 }>`
   text-align: left;
-
   &:hover,
   &:focus,
   &:active {
@@ -355,7 +352,6 @@ export const Item = ({
   id,
 }: ItemProps) => {
   const context = useNavigation()
-
   if (!context) {
     throw new Error(
       'Navigation.Item can only be used inside a NavigationProvider.',
@@ -452,7 +448,10 @@ export const Item = ({
     return 'button'
   }, [as, hasHrefAndNoChildren, noExpand])
 
-  const Container = StyledContainer.withComponent(containerTag)
+  const Container = useMemo(
+    () => StyledContainer.withComponent(containerTag),
+    [containerTag],
+  )
 
   const ariaExpanded = useMemo(() => {
     if (hasHrefAndNoChildren && internalToggle) {
