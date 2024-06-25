@@ -212,7 +212,7 @@ export const Row = forwardRef(
               disabled={disabled || !expandable}
               icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
               onClick={toggleRowExpand}
-              size="small"
+              size="xsmall"
               sentiment="neutral"
               variant="ghost"
             />
