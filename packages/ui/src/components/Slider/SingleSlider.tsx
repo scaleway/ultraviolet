@@ -1,35 +1,20 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { HTMLAttributes } from 'react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { Icon } from '@ultraviolet/icons'
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import {
   DataList,
   Option,
+  StyledNumberInput,
+  StyledText,
   StyledTooltip,
   thumbStyle,
   trackStyle,
 } from './SliderDecoration'
 import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
-
-type SliderProps = {
-  name: string
-  min?: number
-  max?: number
-  options?: { value: number; label?: string }[]
-  direction: 'column' | 'row'
-  step?: number
-  value: number
-  labelTooltip?: boolean | string
-  disabled?: boolean
-  error?: string | boolean
-  onChange: (value: number | number[]) => void
-  'data-testid'?: string
-} & Pick<
-  HTMLAttributes<HTMLInputElement>,
-  'id' | 'onBlur' | 'onFocus' | 'aria-label' | 'className'
->
+import type { SingleSliderProps } from './types'
 
 const SliderElement = styled('input', {
   shouldForwardProp: prop => !['themeSlider'].includes(prop),
@@ -92,19 +77,103 @@ export const SingleSlider = ({
   options,
   onFocus,
   className,
+  label,
+  input,
+  prefix,
+  suffix,
+  required,
   'aria-label': ariaLabel,
-}: SliderProps) => {
+}: SingleSliderProps) => {
+  const localId = useId()
   const { theme } = useTheme()
+  const finalId = id ?? localId
+  const [computedValue, setValues] = useState(value)
+  const [valueToShow, setValuesToShow] = useState<number | null>(value)
   const refSlider = useRef<HTMLInputElement>(null)
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
   )
   const getBackgroundSize = useMemo(
     () => ({
-      backgroundSize: `${((Number(value) - min) * 100) / (max - min)}% 100%`,
+      backgroundSize: `${((computedValue - min) * 100) / (max - min)}% 100%`,
     }),
-    [value, min, max],
+    [computedValue, min, max],
   )
+  useEffect(() => {
+    // Make sure that min <= value <= max
+    if (typeof computedValue === 'number') {
+      if (computedValue < min) {
+        setValues(min)
+      }
+      if (computedValue > max) {
+        setValues(max)
+      }
+    }
+  }, [computedValue, max, min, onChange, step])
+
+  useEffect(() => {
+    setValues(valueToShow ?? min)
+    onChange?.(valueToShow ?? min)
+  }, [max, min, onChange, valueToShow])
+
+  const handleChange = useCallback(
+    (newValue: typeof computedValue) => {
+      onChange?.(newValue)
+      setValuesToShow(newValue)
+    },
+    [onChange],
+  )
+  const handleChangeInput = (val: number) => {
+    if (val) {
+      setValuesToShow(val)
+    }
+  }
+
+  const handleBlur = (val: number) => {
+    if (val) {
+      if (val > max) {
+        setValuesToShow(max)
+      } else {
+        setValuesToShow(Math.max(val, min))
+      }
+    }
+  }
+
+  const styledValue = (valueNumber: number | null) =>
+    input ? (
+      <StyledNumberInput
+        value={valueNumber}
+        size="small"
+        min={min}
+        max={max}
+        step={step}
+        controls={false}
+        data-testid="slider-input"
+        unit={typeof suffix === 'string' ? suffix : undefined}
+        onChange={newVal => {
+          if (newVal) {
+            handleChangeInput(newVal)
+          } else setValuesToShow(null)
+        }}
+        onBlur={event => {
+          const valueToCompute = parseFloat(event.target.value)
+          handleBlur(valueToCompute)
+        }}
+      />
+    ) : (
+      <StyledText
+        as="span"
+        variant="bodySmall"
+        sentiment="neutral"
+        placement="center"
+        double={false}
+        isColumn={direction === 'column'}
+      >
+        {prefix}
+        {valueNumber}
+        {suffix}
+      </StyledText>
+    )
 
   // Get slider size
   useEffect(() => {
@@ -119,75 +188,107 @@ export const SingleSlider = ({
   }, [])
   const tooltipText = useMemo(() => {
     if (typeof labelTooltip === 'boolean') {
-      return value
+      return computedValue
     }
     if (labelTooltip) {
       return labelTooltip
     }
 
     return null
-  }, [labelTooltip, value])
+  }, [labelTooltip, computedValue])
 
   const placementTooltip =
-    ((value - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
+    ((computedValue - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
     THUMB_SIZE / 2 -
     sliderWidth / 2
 
   return (
-    <Stack direction="column" width="100%" gap={1} justifyContent="center">
-      <StyledTooltip text={tooltipText} placement="top" left={placementTooltip}>
-        <SliderElement
-          type="range"
-          value={value}
-          onChange={event => {
-            onChange(parseFloat(event.target.value))
-          }}
-          min={min}
-          max={max}
-          step={step}
-          name={name}
-          disabled={!!disabled}
-          aria-disabled={disabled}
-          data-testid={dataTestId}
-          id={id}
-          onBlur={onBlur}
-          onFocus={onFocus}
-          role="slider"
-          aria-label={ariaLabel}
-          className={className}
-          data-tooltip={labelTooltip}
-          style={getBackgroundSize}
-          data-error={!!error}
-          data-direction={direction}
-          themeSlider={theme}
-          ref={refSlider}
-        />
-      </StyledTooltip>
-      {options ? (
-        <DataList>
-          {options.map(element => {
-            const offsetElement = element.value === min ? 0 : 4
-            const left =
-              ((element.value - min) / (max - min)) *
-                (sliderWidth - THUMB_SIZE) +
-              offsetElement
+    <Stack gap={1} direction={direction} justifyContent="left">
+      {label ? (
+        <Stack justifyContent="space-between" direction="row">
+          <Stack gap={0.5} direction="row">
+            <Text
+              as="label"
+              variant="bodyStrong"
+              htmlFor={finalId}
+              placement="left"
+            >
+              {label}
+            </Text>
+            {required ? (
+              <Icon name="asterisk" sentiment="danger" size={8} />
+            ) : null}
+          </Stack>
 
-            return (
-              <Option key={element.value} left={left}>
-                <Text
-                  as="p"
-                  variant={
-                    element.value === value ? 'captionStrong' : 'caption'
-                  }
-                  sentiment={element.value === value ? 'primary' : 'neutral'}
-                >
-                  {element.label ?? element.value}
-                </Text>
-              </Option>
-            )
-          })}
-        </DataList>
+          {direction === 'column' ? styledValue(valueToShow) : null}
+        </Stack>
       ) : null}
+
+      {direction === 'column' && !label ? styledValue(valueToShow) : null}
+      <Stack direction="column" width="100%" gap={1} justifyContent="center">
+        <StyledTooltip
+          text={tooltipText}
+          placement="top"
+          left={placementTooltip}
+        >
+          <SliderElement
+            type="range"
+            value={computedValue}
+            onChange={event => {
+              handleChange(parseFloat(event.target.value))
+            }}
+            min={min}
+            max={max}
+            step={step}
+            name={name}
+            disabled={!!disabled}
+            aria-disabled={disabled}
+            data-testid={dataTestId}
+            id={id}
+            onBlur={onBlur}
+            onFocus={onFocus}
+            role="slider"
+            aria-label={ariaLabel}
+            className={className}
+            data-tooltip={labelTooltip}
+            style={getBackgroundSize}
+            data-error={!!error}
+            data-direction={direction}
+            themeSlider={theme}
+            ref={refSlider}
+          />
+        </StyledTooltip>
+        {options ? (
+          <DataList>
+            {options.map(element => {
+              const offsetElement = element.value === min ? 0 : 4
+              const left =
+                ((element.value - min) / (max - min)) *
+                  (sliderWidth - THUMB_SIZE) +
+                offsetElement
+
+              return (
+                <Option key={element.value} left={left}>
+                  <Text
+                    as="p"
+                    variant={
+                      element.value === computedValue
+                        ? 'captionStrong'
+                        : 'caption'
+                    }
+                    sentiment={
+                      element.value === computedValue ? 'primary' : 'neutral'
+                    }
+                  >
+                    {element.label ?? element.value}
+                  </Text>
+                </Option>
+              )
+            })}
+          </DataList>
+        ) : null}
+      </Stack>
+      {direction === 'row' ? styledValue(valueToShow) : null}
     </Stack>
   )
 }

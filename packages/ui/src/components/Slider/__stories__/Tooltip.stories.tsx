@@ -8,17 +8,25 @@ export const Tooltip: StoryFn<typeof Slider> = args => {
   const [values, setValues] = useState<number[]>([2, 4])
   const labels = [`Current min: ${values[0]}`, `Current max: ${values[1]}`]
   const label = `Current value: ${value}`
+  const onChangeSingle = (val: number) => setValue(val)
 
   return (
     <Stack gap={4}>
-      <Slider {...args} value={3} label="Default" />
-      <Slider {...args} value={[5, 14]} label="Default double" />
+      <Slider {...args} value={3} label="Default" onChange={() => {}} />
+      <Slider
+        {...args}
+        value={[5, 14]}
+        label="Default double"
+        double
+        onChange={() => {}}
+      />
       <Slider
         {...args}
         value={value}
         label="Custom"
         labelTooltip={label}
-        onChange={setValue}
+        onChange={onChangeSingle}
+        double={false}
       />
       <Slider
         {...args}

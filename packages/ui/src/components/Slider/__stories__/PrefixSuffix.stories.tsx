@@ -5,9 +5,9 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 
 export const PrefixSuffix: StoryFn<typeof Slider> = args => {
-  const [value, setValue] = useState<number | number[]>(10)
+  const [value, setValue] = useState(10)
   const [price, setPrice] = useState(105)
-  const onChange = (newValue: number | number[] | undefined) => {
+  const onChange = (newValue: number) => {
     if (newValue && typeof newValue === 'number') {
       setValue(newValue)
       setPrice(newValue * 10 + 30)
@@ -32,9 +32,11 @@ export const PrefixSuffix: StoryFn<typeof Slider> = args => {
       <Slider {...args} prefix="+" label="Prefix" />
       <Slider
         {...args}
+        double
         suffix="GB"
-        label="Interactive label - double"
+        label="Double"
         value={[15, 70]}
+        onChange={() => {}}
       />
       <Slider
         {...args}
@@ -53,7 +55,7 @@ PrefixSuffix.parameters = {
   docs: {
     description: {
       story:
-        'Add a prefix and/or a suffix to the values. The component supports custom prefixes and suffixes but please note that prefixes and non-string suffixes are not compatible with prop `input = true`.',
+        'Add a prefix and/or a suffix to the values. The component supports custom prefixes and suffixes but please note that prefixes and non-string suffixes are not compatible with prop `input = true` and double sliders.',
     },
   },
 }

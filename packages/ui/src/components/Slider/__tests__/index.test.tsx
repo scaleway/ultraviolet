@@ -23,7 +23,7 @@ describe('Slider', () => {
 
   test('renders correctly', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={1} name="Name" label="Label" />,
+      <Slider value={1} name="Name" label="Label" helper="helper" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -77,14 +77,20 @@ describe('Slider', () => {
 
   test('renders correctly direction row double', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[1, 14]} name="Name" label="Label" direction="row" />,
+      <Slider
+        value={[1, 14]}
+        name="Name"
+        label="Label"
+        direction="row"
+        double
+      />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly double ', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[12, 14]} name="Name" label="Label" />,
+      <Slider value={[12, 14]} name="Name" label="Label" double />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -96,6 +102,7 @@ describe('Slider', () => {
         name="Name"
         label="Label"
         data-testid="slider"
+        double
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -114,6 +121,7 @@ describe('Slider', () => {
         min={10}
         max={50}
         data-testid="slider"
+        double
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -148,21 +156,21 @@ describe('Slider', () => {
 
   test('renders correctly double disabled', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[12, 14]} name="Name" label="Label" disabled />,
+      <Slider value={[12, 14]} name="Name" label="Label" disabled double />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly error boolean', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={1} name="Name" label="Label" error />,
+      <Slider value={1} name="Name" label="Label" error helper="helper" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('renders correctly double error boolean ', () => {
+  test('renders correctly error boolean and helper', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[12, 14]} name="Name" label="Label" error />,
+      <Slider value={1} name="Name" label="Label" error helper="helper" />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -173,10 +181,15 @@ describe('Slider', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
-
-  test('renders correctly double error string', () => {
+  test('renders correctly error string and helper', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[12, 14]} name="Name" label="Label" error="error" />,
+      <Slider
+        value={1}
+        name="Name"
+        label="Label"
+        error="error"
+        helper="helper"
+      />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -190,7 +203,7 @@ describe('Slider', () => {
 
   test('renders correctly double input', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[12, 14]} name="Name" label="Label" input />,
+      <Slider value={[12, 14]} name="Name" label="Label" input double />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -209,6 +222,7 @@ describe('Slider', () => {
         name="Name"
         label="Label"
         labelTooltip={['tooltip', 'tooltip2']}
+        double
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -223,7 +237,7 @@ describe('Slider', () => {
 
   test('renders correctly double default toolipt ', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[12, 14]} name="Name" label="Label" labelTooltip />,
+      <Slider value={[12, 14]} name="Name" label="Label" labelTooltip double />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -232,12 +246,19 @@ describe('Slider', () => {
     const { asFragment } = renderWithTheme(
       <Slider value={1} name="Name" label="Label" options={options} />,
     )
+
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly double with ticks', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[12, 14]} name="Name" label="Label" options={options} />,
+      <Slider
+        value={[12, 14]}
+        name="Name"
+        label="Label"
+        options={options}
+        double
+      />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -251,7 +272,14 @@ describe('Slider', () => {
 
   test('renders correctly double min max', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[1, 4]} name="Name" label="Label" min={1} max={10} />,
+      <Slider
+        value={[1, 4]}
+        name="Name"
+        label="Label"
+        min={1}
+        max={10}
+        double
+      />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -265,7 +293,7 @@ describe('Slider', () => {
 
   test('renders correctly double step', () => {
     const { asFragment } = renderWithTheme(
-      <Slider value={[12, 14]} name="Name" label="Label" step={0.5} />,
+      <Slider value={[12, 14]} name="Name" label="Label" step={0.5} double />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -273,7 +301,7 @@ describe('Slider', () => {
   test('handles correctly onChange', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
+    const { asFragment } = renderWithTheme(
       <Slider
         name="slider"
         onChange={onChange}
@@ -288,18 +316,20 @@ describe('Slider', () => {
     const input = screen.getByTestId('slider-input')
     await userEvent.type(input, '5')
     expect(slider.value).toBe('55')
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test('handles correctly onChange double', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
+    const { asFragment } = renderWithTheme(
       <Slider
         name="slider"
         onChange={onChange}
         data-testid="slider"
         value={[1, 2]}
         input
+        double
       />,
     )
     const sliderRight = screen.getByTestId<HTMLInputElement>('slider-right')
@@ -318,11 +348,12 @@ describe('Slider', () => {
     const inputLeft = screen.getByTestId('slider-input-left')
     await userEvent.type(inputLeft, '5')
     expect(sliderLeft.value).toBe('35')
+    expect(asFragment()).toMatchSnapshot()
   })
   test('handles correctly onChange with min and max', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
+    const { asFragment } = renderWithTheme(
       <Slider
         name="slider"
         onChange={onChange}
@@ -334,15 +365,27 @@ describe('Slider', () => {
       />,
     )
     const slider = screen.getByRole<HTMLInputElement>('slider')
-    const input = screen.getByTestId('slider-input')
+    const input = screen.getByTestId<HTMLInputElement>('slider-input')
     await userEvent.type(input, '5')
+    await userEvent.tab()
     expect(slider.value).toBe('10')
+
+    await userEvent.clear(input)
+    await userEvent.tab()
+    expect(slider.value).toBe('2')
+
+    await userEvent.clear(input)
+    await userEvent.type(input, '1')
+    await userEvent.tab()
+    expect(slider.value).toBe('2')
+
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test('handles correctly onChange with min and max double', async () => {
     const onChange = vi.fn()
 
-    renderWithTheme(
+    const { asFragment } = renderWithTheme(
       <Slider
         name="slider"
         onChange={onChange}
@@ -351,6 +394,7 @@ describe('Slider', () => {
         input
         max={10}
         min={2}
+        double
       />,
     )
     const sliderRight = screen.getByTestId<HTMLInputElement>('slider-right')
@@ -358,10 +402,21 @@ describe('Slider', () => {
 
     const inputRight = screen.getByTestId('slider-input-right')
     await userEvent.type(inputRight, '5')
+    await userEvent.tab()
     expect(sliderRight.value).toBe('10')
 
     const inputLeft = screen.getByTestId('slider-input-left')
     await userEvent.type(inputLeft, '5')
+    await userEvent.tab()
     expect(sliderLeft.value).toBe('9')
+
+    await userEvent.clear(inputLeft)
+    await userEvent.tab()
+    expect(sliderLeft.value).toBe('2')
+
+    await userEvent.clear(inputRight)
+    await userEvent.tab()
+    expect(sliderRight.value).toBe('10')
+    expect(asFragment()).toMatchSnapshot()
   })
 })
