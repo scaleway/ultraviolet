@@ -8,13 +8,19 @@ import {
   DataList,
   Option,
   StyledNumberInput,
-  StyledText,
   StyledTooltip,
   thumbStyle,
   trackStyle,
 } from './SliderDecoration'
 import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
 import type { DoubleSliderProps } from './types'
+
+const StyledTextValue = styled(Text, {
+  shouldForwardProp: prop => !['double', 'isColumn'].includes(prop),
+})<{ double: boolean; isColumn: boolean }>`
+  min-width: ${({ theme, double, isColumn }) => (double && isColumn ? null : theme.space[5])};
+  align-self: ${({ double }) => (double ? 'center' : 'end')};
+`
 
 const SliderElement = styled('input', {
   shouldForwardProp: prop => !['themeSlider'].includes(prop),
@@ -225,7 +231,7 @@ export const DoubleSlider = ({
         }}
       />
     ) : (
-      <StyledText
+      <StyledTextValue
         as="span"
         variant="bodySmall"
         sentiment="neutral"
@@ -236,7 +242,7 @@ export const DoubleSlider = ({
         {prefix}
         {valueNumber}
         {suffix}
-      </StyledText>
+      </StyledTextValue>
     )
 
   // Position of the sliders to look like one range slider

@@ -2,7 +2,6 @@ import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { NumberInputV2 } from '../NumberInputV2'
 import { Stack } from '../Stack'
-import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
 
@@ -36,11 +35,6 @@ export const SliderContainer = styled(Stack)<{ 'data-options': boolean }>`
 export const StyledNumberInput = styled(NumberInputV2)`
   min-width: 44px;
   max-width: fit-content;
-`
-
-export const StyledText = styled(Text)<{ double: boolean; isColumn: boolean }>`
-  min-width: ${({ theme, double, isColumn }) => (double && isColumn ? null : theme.space[5])};
-  align-self: ${({ double }) => (double ? 'center' : 'end')};
 `
 
 export const StyledTooltip = styled(Tooltip, {
