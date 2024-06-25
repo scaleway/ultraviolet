@@ -92,9 +92,11 @@ export const Example: StoryFn = args => {
           <List.Cell>{planet.name}</List.Cell>
           <List.Cell>{planet.perihelion}AU</List.Cell>
           <List.Cell>{planet.aphelion}AU</List.Cell>
-          <List.Cell><MenuV2 disclosure={<button>Menu</button>}>
-            <MenuV2.Item>MenuItem</MenuV2.Item>
-          </MenuV2></List.Cell>
+          <List.Cell>
+            <MenuV2 disclosure={<button type="button">Menu</button>}>
+              <MenuV2.Item>MenuItem</MenuV2.Item>
+            </MenuV2>
+          </List.Cell>
         </List.Row>
       ))}
     </List>

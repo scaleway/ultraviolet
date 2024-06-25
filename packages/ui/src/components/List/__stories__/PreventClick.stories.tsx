@@ -24,7 +24,7 @@ PreventClick.parameters = {
   docs: {
     description: {
       story:
-        'By adding the prop `preventClick` on the `Cell`, you can limit any event propagation to go outside the cell. It can be used for prevent button to interfere with row expand onClick.',
+        "**DEPRECATED**: This prop won't be needed in the future as expandable will be triggered only via a button.\n\n By adding the prop `preventClick` on the `Cell`, you can limit any event propagation to go outside the cell. It can be used for prevent button to interfere with row expand onClick.",
     },
   },
 }

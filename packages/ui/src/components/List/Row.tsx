@@ -22,7 +22,7 @@ const ExpandableWrapper = styled.div`
 
 export const StyledRow = styled('div', {
   shouldForwardProp: prop => !['sentiment'].includes(prop),
-}) <{
+})<{
   sentiment: (typeof SENTIMENTS)[number]
 }>`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
@@ -52,13 +52,14 @@ export const StyledRow = styled('div', {
       border-color: ${theme.colors[sentiment].border};
     }
 
-    ${sentiment === 'neutral'
-      ? `&:hover {
+    ${
+      sentiment === 'neutral'
+        ? `&:hover {
           border-color: ${theme.colors.primary.border};
           box-shadow: ${theme.shadows.hoverPrimary};
         }
         `
-      : ''
+        : ''
     }
   `}
 
@@ -163,11 +164,11 @@ export const Row = forwardRef(
         onKeyDown={
           canClickRowToExpand
             ? event => {
-              if (event.key === ' ') {
-                toggleRowExpand()
-                event.preventDefault()
+                if (event.key === ' ') {
+                  toggleRowExpand()
+                  event.preventDefault()
+                }
               }
-            }
             : undefined
         }
         tabIndex={canClickRowToExpand ? 0 : -1}
@@ -206,7 +207,7 @@ export const Row = forwardRef(
           </Cell>
         ) : null}
         {expandButton ? (
-          <Cell preventClick>
+          <Cell>
             <Button
               disabled={disabled || !expandable}
               icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
@@ -224,15 +225,15 @@ export const Row = forwardRef(
             onClick={
               canClickRowToExpand
                 ? e => {
-                  e.stopPropagation()
-                }
+                    e.stopPropagation()
+                  }
                 : undefined
             }
             onKeyDown={
               canClickRowToExpand
                 ? e => {
-                  e.stopPropagation()
-                }
+                    e.stopPropagation()
+                  }
                 : undefined
             }
           >
