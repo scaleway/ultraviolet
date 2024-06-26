@@ -17,6 +17,6 @@ WithAnimation.args = {
     <Stepper.Step title="Step 2" />,
     <Stepper.Step title="Step 3" />,
   ],
-  selected: 2,
+  selected: 1,
   animated: true,
 }

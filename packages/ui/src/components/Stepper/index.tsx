@@ -10,7 +10,7 @@ const LINE_HEIGHT_SIZES = {
   medium: 4,
 } as const
 
-type Temporal = 'previous' | 'next' | 'current'
+type Temporal = 'done' | 'current' | 'next'
 
 type StepperProps = {
   animated?: boolean
@@ -70,7 +70,7 @@ const StyledLine = styled.div<{
     border-radius: ${({ theme }) => theme.radii.default};
     flex-grow: 1;
     border-radius: ${({ theme }) => theme.radii.default};
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+    background-color: ${({ theme, temporal }) => (temporal === 'done' ? theme.colors.primary.backgroundStrong : theme.colors.neutral.backgroundStrong)};
     position: relative;
     height: ${LINE_HEIGHT_SIZES.medium}px;
     margin-top: ${({ theme }) => theme.space['2']};
@@ -88,13 +88,12 @@ const StyledLine = styled.div<{
       border-radius: ${({ theme }) => theme.radii.default};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
       ${({ temporal }) => {
-        if (temporal === 'previous') return 'width: 100%;'
+        if (temporal === 'done') return 'width: 100%;'
 
         return null
       }}
       ${({ temporal, animated }) =>
         temporal === 'current' && animated && loadingStyle}
-    }
     }
   `
 
@@ -130,9 +129,9 @@ export const Stepper = ({
       >
         {Children.map(cleanChildren, (child, index) => {
           const getTemporal = () => {
-            if (selected > index + 1) return 'previous'
+            if (index < selected) return 'done'
 
-            if (selected === index + 1) return 'current'
+            if (index === selected) return 'current'
 
             return 'next'
           }

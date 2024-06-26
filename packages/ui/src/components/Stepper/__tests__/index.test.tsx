@@ -75,7 +75,7 @@ describe('Stepper', () => {
       </Stepper>,
     ))
 
-  test('renders correctly without separator with label at the right', () =>
+  test('renders correctly without separator with label on the right', () =>
     shouldMatchEmotionSnapshot(
       <Stepper separator={false} labelPosition="right">
         <Stepper.Step title="step 1" />
