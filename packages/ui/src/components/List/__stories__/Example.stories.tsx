@@ -2,6 +2,7 @@ import type { StoryFn } from '@storybook/react'
 import { useMemo, useState } from 'react'
 import { List } from '..'
 import { Button } from '../../Button/index'
+import { MenuV2 } from '../../MenuV2'
 import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
@@ -54,6 +55,10 @@ export const Example: StoryFn = args => {
           label: 'Aphelion',
           width: '200px',
         },
+        {
+          label: '',
+          width: '64px',
+        },
       ]}
     >
       {sortedData.map(planet => (
@@ -87,6 +92,11 @@ export const Example: StoryFn = args => {
           <List.Cell>{planet.name}</List.Cell>
           <List.Cell>{planet.perihelion}AU</List.Cell>
           <List.Cell>{planet.aphelion}AU</List.Cell>
+          <List.Cell>
+            <MenuV2 disclosure={<button type="button">Menu</button>}>
+              <MenuV2.Item>MenuItem</MenuV2.Item>
+            </MenuV2>
+          </List.Cell>
         </List.Row>
       ))}
     </List>

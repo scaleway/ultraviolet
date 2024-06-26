@@ -18,6 +18,8 @@ type CellProps = {
   children?: ReactNode
   className?: string
   /**
+   *  @deprecated: This prop won't be needed in the future as expandable will be triggered only via a button.
+   *
    *  Use this if you want to prevent onClick to be handled by parents (Like when you have an expandable content)
    * */
   preventClick?: boolean

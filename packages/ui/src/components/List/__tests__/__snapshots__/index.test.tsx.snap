@@ -11963,6 +11963,573 @@ exports[`List > Should render correctly with selectable then click on first row 
 </DocumentFragment>
 `;
 
+exports[`List > Should render correctly with sentiment rows 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 8px;
+}
+
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  padding: 0 16px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Inter,Asap,sans-serif;
+  color: #3f4250;
+  gap: 8px;
+}
+
+.emotion-4[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4[aria-sort] {
+  color: #641cb3;
+}
+
+.emotion-4[aria-sort='ascending'] .e1q5cnom2 {
+  color: #641cb3;
+}
+
+.emotion-4[aria-sort='descending'] .e1q5cnom3 {
+  color: #641cb3;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.emotion-16 {
+  position: relative;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
+  transition: box-shadow 200ms ease,border-color 200ms ease;
+  box-shadow: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  padding: 0 16px;
+  color: #005da3;
+  border-color: #005da3;
+  background-color: #e0f2ff;
+}
+
+.emotion-16[role='button row'] {
+  cursor: pointer;
+}
+
+.emotion-16 [data-expandable-content] {
+  border-color: #005da3;
+}
+
+.emotion-16[data-highlight='true'] {
+  border-color: #8c40ef;
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-16[aria-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  background-color: #f3f3f4;
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 60px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      role="grid"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        role="row"
+      >
+        <div
+          class="emotion-4 emotion-5"
+          tabindex="-1"
+        >
+          Column 1
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+          tabindex="-1"
+        >
+          Column 2
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+          tabindex="-1"
+        >
+          Column 3
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+          tabindex="-1"
+        >
+          Column 4
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+          tabindex="-1"
+        >
+          Column 5
+        </div>
+      </div>
+      <div
+        class="emotion-14 emotion-15"
+        role="rowgroup"
+      >
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 1 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 1 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 1 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 1 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 1 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 2 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 2 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 2 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 2 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 2 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 3 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 3 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 3 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 3 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 3 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 4 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 4 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 4 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 4 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 4 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 5 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 5 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 5 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 5 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 5 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 6 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 6 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 6 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 6 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 6 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 7 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 7 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 7 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 7 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 7 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 8 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 8 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 8 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 8 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 8 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 9 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 9 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 9 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 9 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 9 Column 5
+          </div>
+        </div>
+        <div
+          aria-expanded="false"
+          class="emotion-16 emotion-17"
+          data-highlight="false"
+          role="button row"
+          tabindex="0"
+        >
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 10 Column 1
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 10 Column 2
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 10 Column 3
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 10 Column 4
+          </div>
+          <div
+            class="emotion-18 emotion-19"
+            role="cell"
+          >
+            Row 10 Column 5
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`List > Should render correctly with sort 1`] = `
 <DocumentFragment>
   .emotion-0 {

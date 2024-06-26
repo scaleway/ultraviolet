@@ -207,14 +207,16 @@ export const Row = forwardRef(
           </Cell>
         ) : null}
         {expandButton ? (
-          <Cell preventClick>
+          <Cell>
             <Button
               disabled={disabled || !expandable}
               icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
               onClick={toggleRowExpand}
               size="small"
-              sentiment="neutral"
+              sentiment={sentiment}
               variant="ghost"
+              aria-label="expand"
+              data-testid="list-expand-button"
             />
           </Cell>
         ) : null}

@@ -184,6 +184,23 @@ describe('List', () => {
       </List>,
     ))
 
+  test('Should render correctly with sentiment rows', () =>
+    shouldMatchEmotionSnapshot(
+      <List columns={columns}>
+        {data.map(
+          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+            <List.Row sentiment="info" key={id} id={id} expandable={columnF}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ),
+        )}
+      </List>,
+    ))
+
   test('Should render correctly with selectable then click on first row then uncheck all, then check all', async () => {
     const { asFragment } = renderWithTheme(
       <List columns={columns} selectable>
