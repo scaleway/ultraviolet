@@ -1,5 +1,25 @@
 # Change Log
 
+## 1.56.1
+
+### Patch Changes
+
+- [#3913](https://github.com/scaleway/ultraviolet/pull/3913) [`c41ded2`](https://github.com/scaleway/ultraviolet/commit/c41ded21c99e830cfcc55c65c6907897bd665493) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Stepper />`: fix animated style
+
+- [#3892](https://github.com/scaleway/ultraviolet/pull/3892) [`02cc330`](https://github.com/scaleway/ultraviolet/commit/02cc330cd530b116d4dcde26df95be7559dfd95d) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` label color
+
+- [#3908](https://github.com/scaleway/ultraviolet/pull/3908) [`e618b6e`](https://github.com/scaleway/ultraviolet/commit/e618b6e90801749be57cde6d40d27d6f9f12e790) Thanks [@lisalupi](https://github.com/lisalupi)! - `<TextInputV2 />` and `<TextInputFieldV2 />`: input width won't change with error
+
+- [#3897](https://github.com/scaleway/ultraviolet/pull/3897) [`5ffacdc`](https://github.com/scaleway/ultraviolet/commit/5ffacdc76e3d6f331c59197c360d52714808d43e) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(SelectInputV2): add label to combobox
+
+- [#3900](https://github.com/scaleway/ultraviolet/pull/3900) [`ed837ad`](https://github.com/scaleway/ultraviolet/commit/ed837ad86f6b0c9af9f5a8424e6bd9aa29d55450) Thanks [@lisalupi](https://github.com/lisalupi)! - `NumberInputV2`: if the value is out of the min / max range, the input will automatically be the min / max value on blur when controlled (fixed)
+  `NumberInputV2`: now supports float
+
+- [#3919](https://github.com/scaleway/ultraviolet/pull/3919) [`e1fda7e`](https://github.com/scaleway/ultraviolet/commit/e1fda7e8f64185ffe12c2aff94171c94842e056c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<List />` expand button to have correct sizing
+
+- Updated dependencies [[`35292ba`](https://github.com/scaleway/ultraviolet/commit/35292baeffd460f35b03f23117dd7b741cd5f851)]:
+  - @ultraviolet/icons@2.12.16
+
 ## 1.56.0
 
 ### Minor Changes

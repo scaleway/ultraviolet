@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 0.17.10
+
+### Patch Changes
+
+- [#3864](https://github.com/scaleway/ultraviolet/pull/3864) [`f69471f`](https://github.com/scaleway/ultraviolet/commit/f69471fc23840270c90040dfd79fe3ddaace9066) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix(`Navigation`): Focus disappear on space pressed
+
+- Updated dependencies [[`c41ded2`](https://github.com/scaleway/ultraviolet/commit/c41ded21c99e830cfcc55c65c6907897bd665493), [`35292ba`](https://github.com/scaleway/ultraviolet/commit/35292baeffd460f35b03f23117dd7b741cd5f851), [`02cc330`](https://github.com/scaleway/ultraviolet/commit/02cc330cd530b116d4dcde26df95be7559dfd95d), [`e618b6e`](https://github.com/scaleway/ultraviolet/commit/e618b6e90801749be57cde6d40d27d6f9f12e790), [`5ffacdc`](https://github.com/scaleway/ultraviolet/commit/5ffacdc76e3d6f331c59197c360d52714808d43e), [`ed837ad`](https://github.com/scaleway/ultraviolet/commit/ed837ad86f6b0c9af9f5a8424e6bd9aa29d55450), [`e1fda7e`](https://github.com/scaleway/ultraviolet/commit/e1fda7e8f64185ffe12c2aff94171c94842e056c)]:
+  - @ultraviolet/ui@1.56.1
+  - @ultraviolet/icons@2.12.16
+
 ## 0.17.9
 
 ### Patch Changes
