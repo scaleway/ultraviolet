@@ -52,8 +52,11 @@
     "*.svg": [
       "pnpm run svg"
     ],
-    "*.y(a)ml": [
+    "*.y?(a)ml": [
       "pnpm dlx prettier --write '**/*.{yml,yaml}' --single-quote"
+    ],
+    ".md?(x)": [
+      "pnpm dlx prettier --write '**/*.{md,mdx}' --single-quote"
     ]
   },
   "config": {
