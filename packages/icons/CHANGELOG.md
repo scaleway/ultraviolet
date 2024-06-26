@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.12.16
+
+### Patch Changes
+
+- [#3909](https://github.com/scaleway/ultraviolet/pull/3909) [`35292ba`](https://github.com/scaleway/ultraviolet/commit/35292baeffd460f35b03f23117dd7b741cd5f851) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Icon />` : fix size of lock-solid
+
 ## 2.12.15
 
 ### Patch Changes
