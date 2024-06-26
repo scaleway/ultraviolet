@@ -49,9 +49,9 @@ const NON_SEARCHABLE_KEYS = [
 
 const StyledPopup = styled(Popup)`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
+  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
   color: ${({ theme }) => theme.colors.neutral.text};
-  box-shadow: ${({ theme }) => theme.shadows.dropdown};
+  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: ${({ theme }) => theme.space[0]};
 `
 
@@ -107,7 +107,7 @@ const DropdownItem = styled.button<{
 }>`
   text-align:left;
   border: none;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
+  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
 
   padding: ${({ theme }) => theme.space['1.5']} ${({ theme }) =>
     theme.space['2']} ${({ theme }) => theme.space['1.5']} ${({ theme }) =>
