@@ -216,6 +216,7 @@ export const Row = forwardRef(
               sentiment={sentiment}
               variant="ghost"
               aria-label="expand"
+              data-testid="list-expand-button"
             />
           </Cell>
         ) : null}
