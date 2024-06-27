@@ -8,6 +8,7 @@ import * as containerRegistry from './containerRegistry'
 import * as containers from './containers'
 import * as costManager from './costManager'
 import * as dedibox from './dedibox'
+import * as dediboxVPS from './dediboxVPS'
 import * as dediboxVps from './dediboxVps'
 import * as distributedDataLab from './distributedDataLab'
 import * as documentDB from './documentDB'
@@ -55,6 +56,7 @@ export {
   containers,
   costManager,
   dedibox,
+  dediboxVPS,
   dediboxVps,
   distributedDataLab,
   documentDB,
