@@ -118,6 +118,7 @@ export const PinnedItems = ({ toggle = true, onReorder }: PinnedItemsProps) => {
           toggle={toggle}
           type="pinnedGroup"
           id="pinned-group"
+          data-testid="pinned-group"
         >
           {pinnedItems.length > 0 ? (
             pinnedItems.map((itemId, index) =>

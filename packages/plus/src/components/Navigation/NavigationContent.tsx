@@ -317,6 +317,7 @@ export const NavigationContent = ({
                   sentiment="neutral"
                   size="small"
                   icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
+                  aria-label="Toggle navigation expand/collapse"
                   onClick={() => {
                     toggleExpand()
                     onToggleExpand?.(!expanded)
@@ -327,7 +328,9 @@ export const NavigationContent = ({
           ) : null}
         </ContentContainer>
       </Container>
-      {allowNavigationResize ? <Slider ref={sliderRef} /> : null}
+      {allowNavigationResize ? (
+        <Slider data-testid="slider" ref={sliderRef} />
+      ) : null}
     </StyledNav>
   )
 }
