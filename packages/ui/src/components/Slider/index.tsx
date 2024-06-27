@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { Text } from '../Text'
 import { DoubleSlider } from './DoubleSlider'
 import { SingleSlider } from './SingleSlider'
@@ -13,12 +14,15 @@ export const Slider = ({
   name,
   label,
   helper,
-  labelTooltip,
+  tooltip,
   direction = 'column',
   input,
+  optionsUnit,
   prefix,
+  unit,
   suffix,
   required,
+  possibleValues,
   disabled,
   error,
   options,
@@ -33,73 +37,88 @@ export const Slider = ({
   onBlur,
   onFocus,
   className,
+  tooltipPosition = 'top',
   'aria-label': ariaLabel,
-}: SliderProps) => (
-  <SliderContainer
-    aria-label={ariaLabel}
-    data-options={!!options}
-    gap={options ? 3 : 1}
-  >
-    {double ? (
-      <DoubleSlider
-        name={name}
-        min={min}
-        max={max}
-        label={label}
-        step={step}
-        value={value as number[]}
-        labelTooltip={labelTooltip as string[] | boolean | undefined}
-        disabled={disabled}
-        error={error}
-        onChange={onChange as (value: number[]) => void}
-        data-testid={dataTestId}
-        id={id}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        className={className}
-        options={options}
-        input={input}
-        prefix={prefix}
-        suffix={suffix}
-        required={required}
-        direction={direction}
-        aria-label={ariaLabel}
-      />
-    ) : (
-      <SingleSlider
-        name={name}
-        min={min}
-        max={max}
-        step={step}
-        value={value as number}
-        labelTooltip={labelTooltip as string | boolean | undefined}
-        disabled={disabled}
-        error={error}
-        onChange={onChange as (value: number) => void}
-        options={options}
-        data-testid={dataTestId}
-        id={id}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        className={className}
-        direction={direction}
-        input={input}
-        prefix={prefix}
-        label={label}
-        suffix={suffix}
-        required={required}
-        aria-label={ariaLabel}
-      />
-    )}
-    {error || helper ? (
-      <Text
-        as="p"
-        variant="caption"
-        sentiment={error ? 'danger' : 'neutral'}
-        prominence="default"
-      >
-        {typeof error === 'string' ? error : helper}
-      </Text>
-    ) : null}
-  </SliderContainer>
-)
+}: SliderProps) => {
+  const correctedBounds = possibleValues
+    ? { min: 0, max: possibleValues.length - 1 }
+    : { min, max }
+
+  return (
+    <SliderContainer
+      aria-label={ariaLabel}
+      data-options={!!options}
+      gap={options ? 3 : 1}
+    >
+      {double ? (
+        <DoubleSlider
+          name={name}
+          min={correctedBounds.min}
+          max={correctedBounds.max}
+          label={label}
+          step={step}
+          value={value as number[]}
+          tooltip={tooltip as string[] | boolean | undefined}
+          disabled={disabled}
+          error={error}
+          onChange={onChange as (value: number[]) => void}
+          data-testid={dataTestId}
+          id={id}
+          optionsUnit={optionsUnit}
+          onBlur={onBlur}
+          tooltipPosition={tooltipPosition}
+          onFocus={onFocus}
+          className={className}
+          options={options}
+          input={input}
+          unit={unit}
+          prefix={prefix}
+          suffix={suffix as ReactNode[]}
+          required={required}
+          possibleValues={possibleValues}
+          direction={direction}
+          aria-label={ariaLabel}
+        />
+      ) : (
+        <SingleSlider
+          name={name}
+          min={correctedBounds.min}
+          max={correctedBounds.max}
+          step={step}
+          value={value as number}
+          tooltip={tooltip as string | boolean | undefined}
+          disabled={disabled}
+          error={error}
+          onChange={onChange as (value: number) => void}
+          options={options}
+          data-testid={dataTestId}
+          id={id}
+          tooltipPosition={tooltipPosition}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          className={className}
+          direction={direction}
+          optionsUnit={optionsUnit}
+          input={input}
+          prefix={prefix}
+          label={label}
+          unit={unit}
+          suffix={suffix as ReactNode}
+          required={required}
+          possibleValues={possibleValues}
+          aria-label={ariaLabel}
+        />
+      )}
+      {error || helper ? (
+        <Text
+          as="p"
+          variant="caption"
+          sentiment={error ? 'danger' : 'neutral'}
+          prominence="default"
+        >
+          {typeof error === 'string' ? error : helper}
+        </Text>
+      ) : null}
+    </SliderContainer>
+  )
+}

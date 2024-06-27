@@ -23,8 +23,8 @@ const StyledTextValue = styled(Text, {
 `
 
 const SliderElement = styled('input', {
-  shouldForwardProp: prop => !['themeSlider'].includes(prop),
-})<{ themeSlider: string; disabled: boolean }>`
+  shouldForwardProp: prop => !['themeSlider', 'suffix'].includes(prop),
+})<{ themeSlider: string; disabled: boolean; suffix: boolean }>`
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -33,7 +33,21 @@ const SliderElement = styled('input', {
   opacity: 1;
   padding: 0;
   background: transparent;
+  outline: none;
 
+
+  &:focus {
+    &::-moz-range-thumb {
+      border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
+      box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
+      }
+
+      &::-webkit-slider-thumb {
+        border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
+      box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
+     
+      }
+  }
   &[data-tooltip = "true"] {
     margin-top: -${({ theme }) => theme.space[1]};
   }
@@ -55,7 +69,12 @@ const SliderElement = styled('input', {
   }
 
   &::-webkit-slider-thumb {
+    &[data-tooltip = "true"] {
+      margin-top: -${({ theme, suffix }) => (suffix ? theme.space[2] : 0)};  }
+    
     ${({ theme, themeSlider, disabled }) => thumbStyle(theme, themeSlider, disabled)}
+   
+   
   }
 `
 const DoubleSliderWrapper = styled.div`
@@ -98,7 +117,7 @@ margin-top: ${({ theme }) => theme.space[3]};
 
 export const DoubleSlider = ({
   name,
-  labelTooltip,
+  tooltip,
   direction,
   disabled,
   error,
@@ -111,12 +130,17 @@ export const DoubleSlider = ({
   id,
   onBlur,
   onFocus,
+  possibleValues,
   options,
+  optionsUnit,
+  unit,
   label,
+  className,
   input,
   prefix,
   suffix,
   required,
+  tooltipPosition,
   'aria-label': ariaLabel,
 }: DoubleSliderProps) => {
   const { theme } = useTheme()
@@ -129,23 +153,37 @@ export const DoubleSlider = ({
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
   )
+  const [customValue, setCustomValue] = useState<undefined | number[]>(
+    undefined,
+  )
+
+  const ticks = useMemo(() => {
+    if (options === true) {
+      return Array.from({ length: max - min + 1 }, (_, index) => ({
+        value: min + index * step,
+        label: String(min + index * step),
+      })).filter(element => element.value <= max && element.value >= min)
+    }
+    if (options) return options
+    if (possibleValues) {
+      return possibleValues.map((element, index) => ({
+        value: index,
+        label: String(element),
+      }))
+    }
+
+    return []
+  }, [max, min, options, possibleValues, step])
 
   // Update the values to be correct
   useEffect(() => {
-    const newMinValue =
-      !valueToShow[0] || valueToShow[0] < min ? min : valueToShow[0]
-    const newMaxValue =
-      !valueToShow[1] || valueToShow[1] > max ? max : valueToShow[1]
+    const newMinValue = !valueToShow[0] ? min : valueToShow[0]
+    const newMaxValue = !valueToShow[1] ? max : valueToShow[1]
     const newValues = [newMinValue, newMaxValue]
 
     // Update maxValue and minValue so that maxValue > minValue
     if (newValues[1] < newValues[0]) {
       ;[newValues[0], newValues[1]] = [newValues[1], newValues[0]]
-    }
-
-    // Update maxValue to always have minValue < maxValue
-    if (newValues[1] <= newValues[0] + step) {
-      newValues[1] = newValues[0] + step
     }
 
     // Update all values and call onChange only if values were changed to avoid infinite loops
@@ -172,12 +210,32 @@ export const DoubleSlider = ({
 
   const handleMinChange = (newMinVal: number) => {
     const newVal = Math.min(newMinVal, computedValue[1] - step)
+    if (possibleValues) {
+      // Custom scale
+      const optionLabel = possibleValues[newVal]
+      const newCustomValue = [
+        optionLabel,
+        customValue ? customValue[1] : computedValue[1],
+      ]
+      setCustomValue(newCustomValue)
+      onChange?.(newCustomValue)
+    }
     onChange?.([newVal, computedValue[1]])
     setValuesToShow([newVal, computedValue[1]])
   }
 
   const handleMaxChange = (newMaxVal: number) => {
     const newVal = Math.max(newMaxVal, computedValue[0] + step)
+    if (possibleValues) {
+      // Custom scale
+      const optionLabel = possibleValues[newVal]
+      const newCustomValue = [
+        customValue ? customValue[0] : computedValue[0],
+        optionLabel,
+      ]
+      setCustomValue(newCustomValue)
+      onChange?.(newCustomValue)
+    }
     onChange?.([computedValue[0], newVal])
     setValuesToShow([computedValue[0], newVal])
   }
@@ -187,35 +245,25 @@ export const DoubleSlider = ({
     else if (side === 'right') setValuesToShow([valueToShow[0], val])
   }
 
-  const handleBlur = (val: number, side?: 'left' | 'right') => {
-    if (side === 'left') {
-      const newComputedValue = [...valueToShow]
-      newComputedValue[0] = Math.max(
-        min,
-        Math.min((valueToShow[1] ?? max) - step, val),
-      )
-      setValuesToShow(newComputedValue)
-    } else if (side === 'right') {
-      const newComputedValue = [...valueToShow]
-      newComputedValue[1] = Math.min(
-        max,
-        Math.max((valueToShow[0] ?? min) + step, val),
-      )
-      setValuesToShow(newComputedValue)
-    }
-  }
-
-  const styledValue = (valueNumber: number | null, side?: 'left' | 'right') =>
-    input ? (
+  const styledValue = (
+    valueNumber: string | number | null,
+    side?: 'left' | 'right',
+  ) =>
+    input && (!options || options === true) && !possibleValues ? (
       <StyledNumberInput
-        value={valueNumber}
+        value={
+          typeof valueNumber === 'string'
+            ? parseFloat(valueNumber)
+            : valueNumber
+        }
         size="small"
-        min={min}
-        max={max}
+        min={side === 'left' ? min : computedValue[0] + step}
+        max={side === 'left' ? computedValue[1] - step : max}
         step={step}
+        aria-label={`input-${side}`}
         controls={false}
         data-testid={side ? `slider-input-${side}` : 'slider-input'}
-        unit={typeof suffix === 'string' ? suffix : undefined}
+        unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
           if (newVal) {
             handleChangeInput(newVal, side)
@@ -226,8 +274,14 @@ export const DoubleSlider = ({
           }
         }}
         onBlur={event => {
-          const valueToCompute = parseFloat(event.target.value)
-          handleBlur(valueToCompute, side)
+          if (!event.target.value) {
+            // Default to min/max when the input is left empty
+            setValuesToShow(
+              side === 'left'
+                ? [min, computedValue[1]]
+                : [computedValue[0], max],
+            )
+          }
         }}
       />
     ) : (
@@ -241,7 +295,7 @@ export const DoubleSlider = ({
       >
         {prefix}
         {valueNumber}
-        {suffix}
+        {suffix ? suffix[side === 'left' ? 0 : 1] : unit}
       </StyledTextValue>
     )
 
@@ -250,15 +304,15 @@ export const DoubleSlider = ({
   const maxPos = ((computedValue[1] - min) * 100) / (max - min)
 
   const tooltipText = useMemo(() => {
-    if (typeof labelTooltip === 'boolean') {
+    if (tooltip === true) {
       return computedValue
     }
-    if (Array.isArray(labelTooltip)) {
-      return labelTooltip
+    if (Array.isArray(tooltip)) {
+      return tooltip
     }
 
     return [null, null]
-  }, [labelTooltip, computedValue])
+  }, [tooltip, computedValue])
 
   const placementTooltip = [
     ((computedValue[0] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
@@ -268,7 +322,7 @@ export const DoubleSlider = ({
   ]
 
   return (
-    <Stack gap={1} direction={direction} justifyContent="left">
+    <Stack gap={1} direction="column" justifyContent="left">
       {label ? (
         <Stack justifyContent="space-between" direction="row">
           <Stack gap={0.5} direction="row">
@@ -286,114 +340,133 @@ export const DoubleSlider = ({
           </Stack>
         </Stack>
       ) : null}
-
-      {direction === 'column' ? (
-        <Stack justifyContent="space-between" direction="row">
-          {styledValue(valueToShow[0], 'left')}
-          {styledValue(valueToShow[1], 'right')}
-        </Stack>
-      ) : null}
-
-      {direction === 'row' ? styledValue(valueToShow[0], 'left') : null}
-      <DoubleSliderWrapper>
-        <CustomRail>
-          <InnerRail
-            style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
-            data-error={!!error}
-            aria-disabled={!!disabled}
-          />
-        </CustomRail>
-        <StyledTooltip
-          text={tooltipText[0]}
-          placement="top"
-          left={placementTooltip[0]}
-        >
-          <SliderElement
-            className="input"
-            name={name}
-            data-tooltip={!!labelTooltip}
-            id={`${id}-left`}
-            disabled={!!disabled}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            data-error={error}
-            data-direction={direction}
-            type="range"
-            value={computedValue[0]}
-            min={min}
-            aria-label={ariaLabel}
-            max={max}
-            step={step}
-            data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
-            onChange={event => {
-              event.preventDefault()
-              handleMinChange(parseFloat(event.target.value))
-            }}
-            themeSlider={theme}
-            ref={refSlider}
-          />
-        </StyledTooltip>
-        <StyledTooltip
-          text={tooltipText[1]}
-          placement="top"
-          left={placementTooltip[1]}
-        >
-          <SliderElement
-            className="input"
-            type="range"
-            value={computedValue[1]}
-            name={name}
-            disabled={!!disabled}
-            data-tooltip={!!labelTooltip}
-            id={`${id}-right`}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            data-error={error}
-            data-direction={direction}
-            aria-label={ariaLabel}
-            data-testid={dataTestId ? `${dataTestId}-right` : 'handle-right'}
-            min={min}
-            max={max}
-            step={step}
-            onChange={event => {
-              event.preventDefault()
-              handleMaxChange(parseFloat(event.target.value))
-            }}
-            themeSlider={theme}
-          />
-        </StyledTooltip>
-        {options ? (
-          <StyledDataList>
-            {options.map(element => {
-              const offsetElement = element.value === min ? 0 : 4
-              const left =
-                ((element.value - min) / (max - min)) *
-                  (sliderWidth - THUMB_SIZE) +
-                offsetElement
-
-              return (
-                <Option key={element.value} left={left}>
-                  <Text
-                    as="p"
-                    variant={
-                      value.includes(element.value)
-                        ? 'captionStrong'
-                        : 'caption'
-                    }
-                    sentiment={
-                      value.includes(element.value) ? 'primary' : 'neutral'
-                    }
-                  >
-                    {element.label ?? element.value}
-                  </Text>
-                </Option>
-              )
-            })}
-          </StyledDataList>
+      <Stack direction={direction} gap={1} width="100%">
+        {direction === 'column' ? (
+          <Stack justifyContent="space-between" direction="row">
+            {styledValue(customValue ? customValue[0] : valueToShow[0], 'left')}
+            {styledValue(
+              customValue ? customValue[1] : valueToShow[1],
+              'right',
+            )}
+          </Stack>
         ) : null}
-      </DoubleSliderWrapper>
+        {direction === 'row'
+          ? styledValue(customValue ? customValue[0] : valueToShow[0], 'left')
+          : null}
 
-      {direction === 'row' ? styledValue(valueToShow[1], 'right') : null}
+        <DoubleSliderWrapper>
+          <CustomRail>
+            <InnerRail
+              style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
+              data-error={!!error}
+              aria-disabled={!!disabled}
+            />
+          </CustomRail>
+          <StyledTooltip
+            text={tooltipText[0]}
+            placement={tooltipPosition}
+            left={placementTooltip[0]}
+          >
+            <SliderElement
+              className={className}
+              name={name}
+              data-tooltip={!!tooltip}
+              id={finalId}
+              disabled={!!disabled}
+              onBlur={onBlur}
+              onFocus={onFocus}
+              data-error={error}
+              data-direction={direction}
+              type="range"
+              value={computedValue[0]}
+              min={min}
+              suffix={!!(suffix || unit)}
+              aria-label={ariaLabel ?? name}
+              max={max}
+              step={step}
+              data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
+              onChange={event => {
+                event.preventDefault()
+                handleMinChange(parseFloat(event.target.value))
+              }}
+              themeSlider={theme}
+              ref={refSlider}
+            />
+          </StyledTooltip>
+          <StyledTooltip
+            text={tooltipText[1]}
+            placement={tooltipPosition}
+            left={placementTooltip[1]}
+          >
+            <SliderElement
+              className={className}
+              type="range"
+              value={computedValue[1]}
+              name={name}
+              disabled={!!disabled}
+              data-tooltip={!!tooltip}
+              suffix={!!(suffix || unit)}
+              id={finalId}
+              onBlur={onBlur}
+              onFocus={onFocus}
+              data-error={error}
+              data-direction={direction}
+              aria-label={ariaLabel ?? name}
+              data-testid={dataTestId ? `${dataTestId}-right` : 'handle-right'}
+              min={min}
+              max={max}
+              step={step}
+              onChange={event => {
+                event.preventDefault()
+                handleMaxChange(parseFloat(event.target.value))
+              }}
+              themeSlider={theme}
+            />
+          </StyledTooltip>
+          {options || possibleValues ? (
+            <StyledDataList>
+              {ticks.map((element, index, { length }) => {
+                const offsetElement = index === 0 ? 0 : 4
+                const left =
+                  ((element.value - min) / (max - min)) *
+                    (sliderWidth - THUMB_SIZE) +
+                  offsetElement
+
+                const formatedElement =
+                  optionsUnit && (index === 0 || index === length - 1)
+                    ? (element.label ?? String(element.value)).concat(
+                        optionsUnit,
+                      )
+                    : element.label ?? String(element.value)
+
+                return (
+                  <Option key={element.value} left={left}>
+                    <Text
+                      as="p"
+                      variant={
+                        computedValue.includes(element.value)
+                          ? 'captionStrong'
+                          : 'caption'
+                      }
+                      sentiment={
+                        computedValue.includes(element.value)
+                          ? 'primary'
+                          : 'neutral'
+                      }
+                    >
+                      {formatedElement}
+                    </Text>
+                  </Option>
+                )
+              })}
+            </StyledDataList>
+          ) : null}
+        </DoubleSliderWrapper>
+
+        {direction === 'row'
+          ? styledValue(customValue ? customValue[1] : valueToShow[1], 'right')
+          : null}
+      </Stack>
     </Stack>
   )
 }

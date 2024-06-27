@@ -26,17 +26,28 @@ const SliderElement = styled('input', {
   shouldForwardProp: prop => !['themeSlider'].includes(prop),
 })<{ themeSlider: string; disabled: boolean }>`
     appearance: none;
-    -webkit-appearance: none;
     height: ${({ theme }) => theme.space[1]};
     width:100%;
     min-width: ${SLIDER_WIDTH.min}px;
     background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
-    outline: none;
+
     border-radius: ${({ theme }) => theme.radii.default};
     background-image:linear-gradient(${({ theme }) => theme.colors.primary.border}, ${({ theme }) => theme.colors.primary.border});
     background-repeat: no-repeat;
     align-self: center;
+    outline: none;
+ 
+    &:focus {
+      &::-moz-range-thumb {
+        border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
+        box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
+        }
 
+        &::-webkit-slider-thumb {
+          border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
+          box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
+        }
+  }
     &[data-error='true']{
         background-image:linear-gradient(${({ theme }) => theme.colors.danger.backgroundStrong}, ${({ theme }) => theme.colors.danger.backgroundStrong});
     }
@@ -68,7 +79,7 @@ const SliderElement = styled('input', {
 
 export const SingleSlider = ({
   name,
-  labelTooltip,
+  tooltip,
   direction,
   disabled,
   error,
@@ -80,7 +91,10 @@ export const SingleSlider = ({
   step = 1,
   id,
   onBlur,
+  optionsUnit,
+  unit,
   options,
+  possibleValues,
   onFocus,
   className,
   label,
@@ -89,6 +103,7 @@ export const SingleSlider = ({
   suffix,
   required,
   'aria-label': ariaLabel,
+  tooltipPosition,
 }: SingleSliderProps) => {
   const localId = useId()
   const { theme } = useTheme()
@@ -99,87 +114,45 @@ export const SingleSlider = ({
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
   )
-  const getBackgroundSize = useMemo(
-    () => ({
-      backgroundSize: `${((computedValue - min) * 100) / (max - min)}% 100%`,
-    }),
-    [computedValue, min, max],
-  )
-  useEffect(() => {
-    // Make sure that min <= value <= max
-    if (typeof computedValue === 'number') {
-      if (computedValue < min) {
-        setValues(min)
-      }
-      if (computedValue > max) {
-        setValues(max)
-      }
-    }
-  }, [computedValue, max, min, onChange, step])
+  const [customValue, setCustomValue] = useState<undefined | number>(undefined)
 
+  const ticks = useMemo(() => {
+    if (options === true) {
+      return Array.from({ length: max - min + 1 }, (_, index) => ({
+        value: min + index * step,
+        label: String(min + index * step),
+      })).filter(element => element.value <= max && element.value >= min)
+    }
+    if (options) return options
+    if (possibleValues) {
+      return possibleValues.map((element, index) => ({
+        value: index,
+        label: String(element),
+      }))
+    }
+
+    return []
+  }, [max, min, options, possibleValues, step])
+
+  // Make sure that min <= value <= max
+  useEffect(() => {
+    console.log('coucou1')
+
+    if (value < min) {
+      setValuesToShow(min)
+      onChange?.(min)
+    }
+    if (value > max) {
+      onChange?.(max)
+      setValuesToShow(max)
+    }
+  }, [value, max, min, onChange, step])
+
+  // Sync values with valuesToShow
   useEffect(() => {
     setValues(valueToShow ?? min)
     onChange?.(valueToShow ?? min)
   }, [max, min, onChange, valueToShow])
-
-  const handleChange = useCallback(
-    (newValue: typeof computedValue) => {
-      onChange?.(newValue)
-      setValuesToShow(newValue)
-    },
-    [onChange],
-  )
-  const handleChangeInput = (val: number) => {
-    if (val) {
-      setValuesToShow(val)
-    }
-  }
-
-  const handleBlur = (val: number) => {
-    if (val) {
-      if (val > max) {
-        setValuesToShow(max)
-      } else {
-        setValuesToShow(Math.max(val, min))
-      }
-    }
-  }
-
-  const styledValue = (valueNumber: number | null) =>
-    input ? (
-      <StyledNumberInput
-        value={valueNumber}
-        size="small"
-        min={min}
-        max={max}
-        step={step}
-        controls={false}
-        data-testid="slider-input"
-        unit={typeof suffix === 'string' ? suffix : undefined}
-        onChange={newVal => {
-          if (newVal) {
-            handleChangeInput(newVal)
-          } else setValuesToShow(null)
-        }}
-        onBlur={event => {
-          const valueToCompute = parseFloat(event.target.value)
-          handleBlur(valueToCompute)
-        }}
-      />
-    ) : (
-      <StyledTextValue
-        as="span"
-        variant="bodySmall"
-        sentiment="neutral"
-        placement="center"
-        double={false}
-        isColumn={direction === 'column'}
-      >
-        {prefix}
-        {valueNumber}
-        {suffix}
-      </StyledTextValue>
-    )
 
   // Get slider size
   useEffect(() => {
@@ -192,16 +165,87 @@ export const SingleSlider = ({
       window.removeEventListener('resize', setWidthResize)
     }
   }, [])
+
+  const handleChange = useCallback(
+    (newValue: number) => {
+      console.log('coucou2')
+
+      if (possibleValues) {
+        // Custom scale
+        const optionLabel = possibleValues[newValue ?? min]
+        setCustomValue(optionLabel)
+        setValuesToShow(newValue)
+      } else {
+        setValuesToShow(newValue)
+      }
+      console.log('coucou3')
+    },
+    [min, possibleValues],
+  )
+
+  const getBackgroundSize = useMemo(
+    () => ({
+      backgroundSize: `${((computedValue - min) * 100) / (max - min)}% 100%`,
+    }),
+    [computedValue, min, max],
+  )
+
+  const styledValue = (valueNumber: string | number | null) =>
+    input && (!options || options === true) && !possibleValues ? (
+      <StyledNumberInput
+        value={
+          typeof valueNumber === 'string'
+            ? parseFloat(valueNumber)
+            : valueNumber
+        }
+        size="small"
+        min={min}
+        aria-label="input"
+        max={max}
+        step={step}
+        controls={false}
+        data-testid="slider-input"
+        unit={typeof suffix === 'string' ? suffix : unit}
+        onChange={newVal => {
+          console.log('coucou3')
+
+          if (newVal) {
+            setValuesToShow(newVal)
+          } else setValuesToShow(null)
+
+          console.log('coucou4')
+        }}
+        onBlur={event => {
+          console.log('coucou5')
+
+          if (!event.target.value) setValuesToShow(min)
+        }}
+      />
+    ) : (
+      <StyledTextValue
+        as="span"
+        variant="bodySmall"
+        sentiment="neutral"
+        placement={direction === 'column' ? 'right' : 'center'}
+        double={false}
+        isColumn={direction === 'column'}
+      >
+        {prefix}
+        {valueNumber}
+        {suffix ?? unit}
+      </StyledTextValue>
+    )
+
   const tooltipText = useMemo(() => {
-    if (typeof labelTooltip === 'boolean') {
+    if (tooltip === true) {
       return computedValue
     }
-    if (labelTooltip) {
-      return labelTooltip
+    if (tooltip) {
+      return tooltip
     }
 
     return null
-  }, [labelTooltip, computedValue])
+  }, [tooltip, computedValue])
 
   const placementTooltip =
     ((computedValue - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
@@ -226,15 +270,19 @@ export const SingleSlider = ({
             ) : null}
           </Stack>
 
-          {direction === 'column' ? styledValue(valueToShow) : null}
+          {direction === 'column'
+            ? styledValue(customValue ?? valueToShow)
+            : null}
         </Stack>
       ) : null}
 
-      {direction === 'column' && !label ? styledValue(valueToShow) : null}
+      {direction === 'column' && !label
+        ? styledValue(customValue ?? valueToShow)
+        : null}
       <Stack direction="column" width="100%" gap={1} justifyContent="center">
         <StyledTooltip
           text={tooltipText}
-          placement="top"
+          placement={tooltipPosition}
           left={placementTooltip}
         >
           <SliderElement
@@ -245,18 +293,17 @@ export const SingleSlider = ({
             }}
             min={min}
             max={max}
+            tabIndex={0}
             step={step}
             name={name}
             disabled={!!disabled}
             aria-disabled={disabled}
             data-testid={dataTestId}
-            id={id}
+            id={finalId}
             onBlur={onBlur}
             onFocus={onFocus}
-            role="slider"
-            aria-label={ariaLabel}
+            aria-label={ariaLabel ?? name}
             className={className}
-            data-tooltip={labelTooltip}
             style={getBackgroundSize}
             data-error={!!error}
             data-direction={direction}
@@ -264,17 +311,26 @@ export const SingleSlider = ({
             ref={refSlider}
           />
         </StyledTooltip>
-        {options ? (
+        {options || possibleValues ? (
           <DataList>
-            {options.map(element => {
-              const offsetElement = element.value === min ? 0 : 4
+            {ticks.map((element, index, { length }) => {
+              const offsetElement = index === 0 ? 0 : 4
               const left =
                 ((element.value - min) / (max - min)) *
                   (sliderWidth - THUMB_SIZE) +
                 offsetElement
+              const formatedElement =
+                optionsUnit && (index === 0 || index === length - 1)
+                  ? (element.label ?? String(element.value)).concat(optionsUnit)
+                  : element.label ?? String(element.value)
 
               return (
-                <Option key={element.value} left={left}>
+                <Option
+                  key={element.value}
+                  left={left}
+                  /*                   onClick={() => setValuesToShow(element.value)}
+                   */
+                >
                   <Text
                     as="p"
                     variant={
@@ -286,7 +342,7 @@ export const SingleSlider = ({
                       element.value === computedValue ? 'primary' : 'neutral'
                     }
                   >
-                    {element.label ?? element.value}
+                    {formatedElement}
                   </Text>
                 </Option>
               )
@@ -294,7 +350,7 @@ export const SingleSlider = ({
           </DataList>
         ) : null}
       </Stack>
-      {direction === 'row' ? styledValue(valueToShow) : null}
+      {direction === 'row' ? styledValue(customValue ?? valueToShow) : null}
     </Stack>
   )
 }

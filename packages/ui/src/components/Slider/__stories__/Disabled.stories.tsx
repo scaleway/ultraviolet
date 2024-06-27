@@ -7,7 +7,7 @@ export const Disabled: StoryFn<typeof Slider> = () => (
     <Slider
       value={75}
       disabled
-      labelTooltip="Disabled"
+      tooltip="Disabled"
       label="Disabled with tooltip"
       name="name"
     />

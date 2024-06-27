@@ -7,10 +7,18 @@ export const Error: StoryFn<typeof Slider> = args => (
     <Slider
       {...args}
       value={75}
-      labelTooltip="Disabled"
+      tooltip="Disabled"
       label="Error"
       error
       onChange={() => {}}
+    />
+    <Slider
+      name="slider"
+      data-testid="slider"
+      value={1}
+      input
+      double={false}
+      onChange={(value: number) => console.log(value)}
     />
     <Slider
       {...args}
@@ -18,14 +26,16 @@ export const Error: StoryFn<typeof Slider> = args => (
       label="Error message"
       error="This field is required"
       onChange={() => {}}
+      tooltip={false}
     />
     <Slider
-      {...args}
+      name="Name"
       value={[13, 75]}
       label="Error message"
       error="Something occured"
       double
       onChange={() => {}}
+      tooltip={false}
     />
   </Stack>
 )

@@ -25,21 +25,22 @@ type DefaultProps = {
   step?: number
   required?: boolean
   /**
-   * Whether to show a tooltip when hovering the handle
+   * Where to position the tooltip
    */
-  labelTooltip?: boolean | string[] | string
+  tooltipPosition?: 'bottom' | 'top'
   /**
    * Whether user can change the value with an input
    */
   input?: boolean
   /**
-   * Prefix of the value
+   * Prefix of the value - only visible when prop `input = false`
    */
   prefix?: ReactNode
+
   /**
-   * Suffix of the value
+   * Unit of the value
    */
-  suffix?: ReactNode
+  unit?: string
   /**
    * Whether the slider is disabled
    */
@@ -49,9 +50,19 @@ type DefaultProps = {
    */
   error?: string | boolean
   /**
-   * The labels/ticks to show
+   * The labels/ticks to show, which will *not* impact the scale
    */
-  options?: { value: number; label?: string }[]
+  options?: { value: number; label?: string }[] | boolean
+  /**
+   * Possible values for a non-linear scale
+   */
+  possibleValues?: number[]
+
+  /**
+   * Unit of the option on the upper and lower bond
+   */
+  optionsUnit?: string
+
   'data-testid'?: string
 } & Pick<
   HTMLAttributes<HTMLInputElement>,
@@ -64,6 +75,11 @@ type SingleProps = {
    */
   value: number
   onChange?: (value: number) => void
+  tooltip?: boolean | string
+  /**
+   * Suffix of the value - only visible when prop `input = false` and overrides prop `unit` when visible
+   */
+  suffix?: ReactNode
 }
 
 type DoubleProps = {
@@ -72,6 +88,11 @@ type DoubleProps = {
    */
   value: number[]
   onChange?: (value: number[]) => void
+  tooltip?: boolean | string[]
+  /**
+   * Suffix of the value - only visible when prop `input = false` and overrides prop `unit` when visible
+   */
+  suffix?: string | ReactNode[]
 }
 
 export type SliderProps = DefaultProps &
