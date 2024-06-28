@@ -20,7 +20,11 @@ export type SearchInputProps = {
   onSearch: (value: string) => void
   onClose?: () => void
   ['data-testid']?: string
+  /**
+   * If set to true images will be shown with key shortcut to focus the input on the right of the search bar
+   */
+  shortcut?: boolean
 } & Pick<
   ComponentProps<typeof TextInputV2>,
-  'placeholder' | 'size' | 'label' | 'loading' | 'suffix'
+  'placeholder' | 'size' | 'label' | 'loading' | 'error' | 'disabled'
 >
