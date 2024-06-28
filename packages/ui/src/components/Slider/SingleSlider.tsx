@@ -136,8 +136,6 @@ export const SingleSlider = ({
 
   // Make sure that min <= value <= max
   useEffect(() => {
-    console.log('coucou1')
-
     if (value < min) {
       setValuesToShow(min)
       onChange?.(min)
@@ -168,8 +166,6 @@ export const SingleSlider = ({
 
   const handleChange = useCallback(
     (newValue: number) => {
-      console.log('coucou2')
-
       if (possibleValues) {
         // Custom scale
         const optionLabel = possibleValues[newValue ?? min]
@@ -178,7 +174,6 @@ export const SingleSlider = ({
       } else {
         setValuesToShow(newValue)
       }
-      console.log('coucou3')
     },
     [min, possibleValues],
   )
@@ -207,17 +202,11 @@ export const SingleSlider = ({
         data-testid="slider-input"
         unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
-          console.log('coucou3')
-
           if (newVal) {
             setValuesToShow(newVal)
           } else setValuesToShow(null)
-
-          console.log('coucou4')
         }}
         onBlur={event => {
-          console.log('coucou5')
-
           if (!event.target.value) setValuesToShow(min)
         }}
       />
