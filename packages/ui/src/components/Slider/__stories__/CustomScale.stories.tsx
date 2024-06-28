@@ -18,7 +18,7 @@ const options = [
 export const CustomScale: StoryFn<typeof Slider> = args => {
   const [value, setValue] = useState(1)
   const [value2, setValue2] = useState(1)
-  const [values, setValues] = useState([2, 3])
+  const [values, setValues] = useState([2, 7])
 
   return (
     <Stack gap={4}>

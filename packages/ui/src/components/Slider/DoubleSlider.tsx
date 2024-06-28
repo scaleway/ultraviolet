@@ -48,7 +48,7 @@ const SliderElement = styled('input', {
      
       }
   }
-  &[data-tooltip = "true"] {
+  &[data-tooltip = 'true'] {
     margin-top: -${({ theme }) => theme.space[1]};
   }
   /* Mozilla */
@@ -69,12 +69,7 @@ const SliderElement = styled('input', {
   }
 
   &::-webkit-slider-thumb {
-    &[data-tooltip = "true"] {
-      margin-top: -${({ theme, suffix }) => (suffix ? theme.space[2] : 0)};  }
-    
     ${({ theme, themeSlider, disabled }) => thumbStyle(theme, themeSlider, disabled)}
-   
-   
   }
 `
 const DoubleSliderWrapper = styled.div`
@@ -82,6 +77,7 @@ const DoubleSliderWrapper = styled.div`
   display: flex;
   align-items: center;
   width: -webkit-fill-available;
+  width: -moz-available;
   height: ${({ theme }) => theme.space[2]};
   align-self: center;
   `
@@ -175,6 +171,16 @@ export const DoubleSlider = ({
     return []
   }, [max, min, options, possibleValues, step])
 
+  // Default value to be coherent with a custom scale when one is defined
+  useEffect(() => {
+    if (possibleValues) {
+      setCustomValue([
+        possibleValues[computedValue[0]],
+        possibleValues[computedValue[1]],
+      ])
+    }
+  }, [possibleValues, computedValue])
+
   // Update the values to be correct
   useEffect(() => {
     const newMinValue = !valueToShow[0] ? min : valueToShow[0]
@@ -241,8 +247,17 @@ export const DoubleSlider = ({
   }
 
   const handleChangeInput = (val: number, side?: 'left' | 'right') => {
-    if (side === 'left') setValuesToShow([val, valueToShow[1]])
-    else if (side === 'right') setValuesToShow([valueToShow[0], val])
+    if (side === 'left') {
+      setValuesToShow([
+        Math.min((valueToShow[1] ?? max) - step, val),
+        valueToShow[1],
+      ])
+    } else if (side === 'right') {
+      setValuesToShow([
+        valueToShow[0],
+        Math.max(val, (valueToShow[0] ?? min) + step),
+      ])
+    }
   }
 
   const styledValue = (
@@ -292,6 +307,9 @@ export const DoubleSlider = ({
         placement={direction !== 'row' ? 'right' : 'center'}
         double
         isColumn={direction === 'column'}
+        data-testid={
+          dataTestId ? `${dataTestId}-value-${side}` : `value-${side}`
+        }
       >
         {prefix}
         {valueNumber}

@@ -27,8 +27,60 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 220px;
+  max-width: 640px;
+}
+
+.emotion-0[data-options='true'] {
+  margin-bottom: 16px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-2 {
@@ -75,10 +127,83 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  min-width: 44px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  width: 60px;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 60px;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-7:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-7[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-7[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-7:hover {
+  border-color: #792dd4;
+}
+
+.emotion-7[data-readonly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+}
+
+.emotion-7[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-7[data-controls='false']>.emotion-9 {
+  border-width: 0;
 }
 
 .emotion-7 {
@@ -148,6 +273,111 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   border-color: inherit;
   background: inherit;
   width: 100%;
+}
+
+.emotion-10 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+  width: 100%;
+}
+
+.emotion-12 {
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: Regular;
+  line-height: 24px;
+  text-align: center;
+  padding: 8px;
+  background: none;
+}
+
+.emotion-12[data-has-unit='true'] {
+  text-align: left;
+  padding: 8px 0 8px 8px;
+}
+
+.emotion-12::-webkit-outer-spin-button,
+.emotion-12::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-12 {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -ms-appearance: textfield;
+  appearance: textfield;
+}
+
+.emotion-12[data-size='small'] {
+  height: 30px;
+}
+
+.emotion-12[data-size='medium'] {
+  height: 38px;
+}
+
+.emotion-12[data-size='large'] {
+  height: 46px;
+  font-size: 16px;
+}
+
+.emotion-12:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.emotion-12:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.emotion-12:-moz-read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.emotion-12:read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.emotion-12:disabled {
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-12:disabled~.e1b9qdjy2 {
+  background: #f3f3f4;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-12:placeholder-shown~.e1b9qdjy2 {
+  color: #727683;
+}
+
+.emotion-12[data-controls='false'] {
+  text-align: left;
 }
 
 .emotion-12 {
@@ -260,6 +490,158 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-16 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  height: 8px;
+  width: 100%;
+  min-width: 220px;
+  background-color: #e9eaeb;
+  border-radius: 4px;
+  background-image: linear-gradient(#8c40ef, #8c40ef);
+  background-repeat: no-repeat;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  outline: none;
+}
+
+.emotion-16:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-16:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-16[data-error='true'] {
+  background-image: linear-gradient(#e51963, #e51963);
+}
+
+.emotion-16[data-direction='column'] {
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+.emotion-16[aria-disabled='true'] {
+  background-image: linear-gradient(#d8c5fc, #d8c5fc);
+}
+
+.emotion-16::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-16::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.emotion-16::-moz-range-thumb:hover,
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-16::-moz-range-thumb:active,
+.emotion-16::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-16::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-16::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.emotion-16::-webkit-slider-thumb:hover,
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-16::-webkit-slider-thumb:active,
+.emotion-16::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .emotion-16 {
@@ -428,7 +810,7 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
                   placeholder=""
                   step="1"
                   type="number"
-                  value="2"
+                  value="3"
                 />
               </div>
             </div>
@@ -448,11 +830,717 @@ exports[`Single slider > handles correctly onChange with min and max 1`] = `
             min="2"
             name="slider"
             step="1"
-            style="background-size: 0% 100%;"
+            style="background-size: 12.5% 100%;"
+            tabindex="0"
+            type="range"
+            value="3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Single slider > handles correctly with custom scale 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 220px;
+  max-width: 640px;
+}
+
+.emotion-0[data-options='true'] {
+  margin-bottom: 16px;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 220px;
+  max-width: 640px;
+}
+
+.emotion-0[data-options='true'] {
+  margin-bottom: 16px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+  min-width: 40px;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+  min-width: 40px;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-9 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  height: 8px;
+  width: 100%;
+  min-width: 220px;
+  background-color: #e9eaeb;
+  border-radius: 4px;
+  background-image: linear-gradient(#8c40ef, #8c40ef);
+  background-repeat: no-repeat;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  outline: none;
+}
+
+.emotion-9:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-error='true'] {
+  background-image: linear-gradient(#e51963, #e51963);
+}
+
+.emotion-9[data-direction='column'] {
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+.emotion-9[aria-disabled='true'] {
+  background-image: linear-gradient(#d8c5fc, #d8c5fc);
+}
+
+.emotion-9::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-9::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.emotion-9::-moz-range-thumb:hover,
+.emotion-9::-moz-range-thumb:active,
+.emotion-9::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-9::-moz-range-thumb:active,
+.emotion-9::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-9::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-9::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.emotion-9::-webkit-slider-thumb:hover,
+.emotion-9::-webkit-slider-thumb:active,
+.emotion-9::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-9::-webkit-slider-thumb:active,
+.emotion-9::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-9 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  height: 8px;
+  width: 100%;
+  min-width: 220px;
+  background-color: #e9eaeb;
+  border-radius: 4px;
+  background-image: linear-gradient(#8c40ef, #8c40ef);
+  background-repeat: no-repeat;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  outline: none;
+}
+
+.emotion-9:focus::-moz-range-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9:focus::-webkit-slider-thumb {
+  border: 1.5px solid #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-9[data-error='true'] {
+  background-image: linear-gradient(#e51963, #e51963);
+}
+
+.emotion-9[data-direction='column'] {
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+.emotion-9[aria-disabled='true'] {
+  background-image: linear-gradient(#d8c5fc, #d8c5fc);
+}
+
+.emotion-9::-moz-range-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-9::-moz-range-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.emotion-9::-moz-range-thumb:hover,
+.emotion-9::-moz-range-thumb:active,
+.emotion-9::-moz-range-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-9::-moz-range-thumb:active,
+.emotion-9::-moz-range-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-9::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: transparent;
+  background: transparent;
+}
+
+.emotion-9::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  box-shadow: 0px 0px 2px 0px #22263829,0px 2px 4px 0px #2226381f;
+  border-radius: 100%;
+  border: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.emotion-9::-webkit-slider-thumb:hover,
+.emotion-9::-webkit-slider-thumb:active,
+.emotion-9::-webkit-slider-thumb:focus {
+  border: 1.5px solid #8c40ef;
+}
+
+.emotion-9::-webkit-slider-thumb:active,
+.emotion-9::-webkit-slider-thumb:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.emotion-13 {
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.emotion-13 {
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.emotion-15 {
+  color: #3f4250;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-15 {
+  color: #3f4250;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-17 {
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  -webkit-transform: translateX(212px);
+  -moz-transform: translateX(212px);
+  -ms-transform: translateX(212px);
+  transform: translateX(212px);
+}
+
+.emotion-21 {
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  -webkit-transform: translateX(420px);
+  -moz-transform: translateX(420px);
+  -ms-transform: translateX(420px);
+  transform: translateX(420px);
+}
+
+.emotion-23 {
+  color: #641cb3;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-23 {
+  color: #641cb3;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-25 {
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  -webkit-transform: translateX(628px);
+  -moz-transform: translateX(628px);
+  -ms-transform: translateX(628px);
+  transform: translateX(628px);
+}
+
+.emotion-25 {
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: absolute;
+  -webkit-transform: translateX(628px);
+  -moz-transform: translateX(628px);
+  -ms-transform: translateX(628px);
+  transform: translateX(628px);
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-options="false"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <span
+          class="emotion-4 emotion-5 emotion-6"
+          data-testid="slider-value"
+        >
+          6
+        </span>
+        <div
+          class="emotion-7 emotion-3"
+        >
+          <input
+            aria-label="slider"
+            class="emotion-9 emotion-10"
+            data-direction="column"
+            data-error="false"
+            data-testid="slider"
+            id=":r6k:"
+            max="3"
+            min="0"
+            name="slider"
+            step="1"
+            style="background-size: 66.66666666666667% 100%;"
             tabindex="0"
             type="range"
             value="2"
           />
+          <datalist
+            class="emotion-11 emotion-12"
+          >
+            <span
+              class="emotion-13 emotion-14"
+            >
+              <p
+                class="emotion-15 emotion-6"
+              >
+                3
+              </p>
+            </span>
+            <span
+              class="emotion-17 emotion-14"
+            >
+              <p
+                class="emotion-15 emotion-6"
+              >
+                5
+              </p>
+            </span>
+            <span
+              class="emotion-21 emotion-14"
+            >
+              <p
+                class="emotion-23 emotion-6"
+              >
+                6
+              </p>
+            </span>
+            <span
+              class="emotion-25 emotion-14"
+            >
+              <p
+                class="emotion-15 emotion-6"
+              >
+                10
+              </p>
+            </span>
+          </datalist>
         </div>
       </div>
     </div>
@@ -487,7 +1575,7 @@ exports[`Single slider > renders correctly 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -777,6 +1865,7 @@ exports[`Single slider > renders correctly 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -838,7 +1927,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -1124,6 +2213,7 @@ exports[`Single slider > renders correctly custom tooltip 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -1187,7 +2277,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -1473,6 +2563,7 @@ exports[`Single slider > renders correctly default tooltip 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -1536,7 +2627,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -1834,6 +2925,7 @@ exports[`Single slider > renders correctly direction row 1`] = `
         </div>
         <span
           class="emotion-14 emotion-15 emotion-9"
+          data-testid="slider-value"
         >
           1
         </span>
@@ -1870,7 +2962,7 @@ exports[`Single slider > renders correctly disabled 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -2134,6 +3226,7 @@ exports[`Single slider > renders correctly disabled 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -2192,7 +3285,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -2482,6 +3575,7 @@ exports[`Single slider > renders correctly error boolean 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -2543,7 +3637,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -2833,6 +3927,7 @@ exports[`Single slider > renders correctly error boolean and helper 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -2894,7 +3989,7 @@ exports[`Single slider > renders correctly error string 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -3184,6 +4279,7 @@ exports[`Single slider > renders correctly error string 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -3245,7 +4341,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -3535,6 +4631,7 @@ exports[`Single slider > renders correctly error string and helper 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -3596,7 +4693,7 @@ exports[`Single slider > renders correctly input 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -3701,10 +4798,7 @@ exports[`Single slider > renders correctly input 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  min-width: 44px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  width: 60px;
 }
 
 .emotion-13 {
@@ -4126,7 +5220,7 @@ exports[`Single slider > renders correctly min max 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -4404,6 +5498,7 @@ exports[`Single slider > renders correctly min max 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -4460,7 +5555,7 @@ exports[`Single slider > renders correctly prefix 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -4738,6 +5833,7 @@ exports[`Single slider > renders correctly prefix 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             %1
           </span>
@@ -4794,7 +5890,7 @@ exports[`Single slider > renders correctly required 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -5095,6 +6191,7 @@ exports[`Single slider > renders correctly required 1`] = `
           </div>
           <span
             class="emotion-12 emotion-13 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -5151,7 +6248,7 @@ exports[`Single slider > renders correctly step 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -5429,6 +6526,7 @@ exports[`Single slider > renders correctly step 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -5485,7 +6583,7 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -5763,6 +6861,7 @@ exports[`Single slider > renders correctly suffix complex 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
             <button
@@ -5824,7 +6923,7 @@ exports[`Single slider > renders correctly suffix string 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -6102,6 +7201,7 @@ exports[`Single slider > renders correctly suffix string 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1%
           </span>
@@ -6158,7 +7258,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -6263,10 +7363,7 @@ exports[`Single slider > renders correctly suffix string input 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  min-width: 44px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+  width: 60px;
 }
 
 .emotion-13 {
@@ -6716,7 +7813,7 @@ exports[`Single slider > renders correctly with custom scale 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -7180,8 +8277,9 @@ exports[`Single slider > renders correctly with custom scale 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
-            1
+            2
           </span>
         </div>
         <div
@@ -7321,7 +8419,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -7673,6 +8771,7 @@ exports[`Single slider > renders correctly with custom ticks 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -7751,7 +8850,7 @@ exports[`Single slider > renders correctly with default ticks 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -9687,6 +10786,7 @@ exports[`Single slider > renders correctly with default ticks 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             1
           </span>
@@ -10656,7 +11756,7 @@ exports[`Single slider > renders correctly with value < min 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -10934,6 +12034,7 @@ exports[`Single slider > renders correctly with value < min 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             10
           </span>
@@ -10990,7 +12091,7 @@ exports[`Single slider > renders correctly with value > max 1`] = `
   max-width: 640px;
 }
 
-.emotion-0[data-options="true"] {
+.emotion-0[data-options='true'] {
   margin-bottom: 16px;
 }
 
@@ -11268,6 +12369,7 @@ exports[`Single slider > renders correctly with value > max 1`] = `
           </div>
           <span
             class="emotion-10 emotion-11 emotion-9"
+            data-testid="slider-value"
           >
             10
           </span>

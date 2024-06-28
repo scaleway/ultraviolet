@@ -13,14 +13,6 @@ export const Error: StoryFn<typeof Slider> = args => (
       onChange={() => {}}
     />
     <Slider
-      name="slider"
-      data-testid="slider"
-      value={1}
-      input
-      double={false}
-      onChange={(value: number) => console.log(value)}
-    />
-    <Slider
       {...args}
       value={0}
       label="Error message"

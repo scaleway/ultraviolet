@@ -27,14 +27,13 @@ export const SliderContainer = styled(Stack)<{ 'data-options': boolean }>`
     min-width: ${SLIDER_WIDTH.min}px;
     max-width: ${SLIDER_WIDTH.max}px;
 
-    &[data-options="true"]{ 
+    &[data-options='true']{ 
       margin-bottom: ${({ theme }) => theme.space[2]}
       }
 `
 
 export const StyledNumberInput = styled(NumberInputV2)`
-  min-width: 44px;
-  max-width: fit-content;
+  width: 60px;
 `
 
 export const StyledTooltip = styled(Tooltip, {

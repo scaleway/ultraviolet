@@ -134,6 +134,13 @@ export const SingleSlider = ({
     return []
   }, [max, min, options, possibleValues, step])
 
+  // Default value to be coherent with a custom scale when one is defined
+  useEffect(() => {
+    if (possibleValues) {
+      setCustomValue(possibleValues[computedValue])
+    }
+  }, [possibleValues, computedValue])
+
   // Make sure that min <= value <= max
   useEffect(() => {
     if (value < min) {
@@ -199,7 +206,7 @@ export const SingleSlider = ({
         max={max}
         step={step}
         controls={false}
-        data-testid="slider-input"
+        data-testid={dataTestId ? `${dataTestId}-input` : 'slider-input'}
         unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
           if (newVal) {
@@ -218,6 +225,7 @@ export const SingleSlider = ({
         placement={direction === 'column' ? 'right' : 'center'}
         double={false}
         isColumn={direction === 'column'}
+        data-testid={dataTestId ? `${dataTestId}-value` : 'slider-value'}
       >
         {prefix}
         {valueNumber}
@@ -314,12 +322,7 @@ export const SingleSlider = ({
                   : element.label ?? String(element.value)
 
               return (
-                <Option
-                  key={element.value}
-                  left={left}
-                  /*                   onClick={() => setValuesToShow(element.value)}
-                   */
-                >
+                <Option key={element.value} left={left}>
                   <Text
                     as="p"
                     variant={

@@ -1,6 +1,6 @@
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { renderWithTheme } from '@utils/test'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Slider } from '..'
 
@@ -23,28 +23,25 @@ describe('Single slider', () => {
   })
 
   test('renders correctly', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" helper="helper" />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly required', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" required />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly suffix string', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" suffix="%" />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly suffix complex', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider
         value={1}
         name="Name"
@@ -52,73 +49,63 @@ describe('Single slider', () => {
         suffix={<button type="button">suffix</button>}
       />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly suffix string input', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" suffix="%" input />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly prefix', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" prefix="%" />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly direction row', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" direction="row" />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly with value < min', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={-1} name="Name" label="Label" min={10} />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly with value > max', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={90} name="Name" label="Label" max={10} />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly disabled', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" disabled />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly error boolean', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" error helper="helper" />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly error boolean and helper', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" error helper="helper" />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly error string', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" error="error" />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
   test('renders correctly error string and helper', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider
         value={1}
         name="Name"
@@ -127,66 +114,54 @@ describe('Single slider', () => {
         helper="helper"
       />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly input', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" input />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly custom tooltip', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" tooltip="tooltip" />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly default tooltip', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" tooltip />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly with default ticks', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" options />,
     )
-
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly with custom ticks', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" options={options} />,
     )
-
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly with custom scale', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" possibleValues={scale} />,
     )
-
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly min max', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" min={1} max={10} />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('renders correctly step', () => {
-    const { asFragment } = renderWithTheme(
+    shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" step={0.5} />,
     )
-    expect(asFragment()).toMatchSnapshot()
   })
 
   test('handles correctly onChange with min and max', async () => {
@@ -217,6 +192,34 @@ describe('Single slider', () => {
     await userEvent.type(input, '1')
     await userEvent.tab()
     expect(slider.value).toBe('2')
+
+    fireEvent.change(slider, { target: { value: '3' } })
+    expect(slider.value).toBe('3')
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('handles correctly with custom scale', () => {
+    const onChange: (value: number) => void = vi.fn()
+
+    const { asFragment } = renderWithTheme(
+      <Slider
+        name="slider"
+        onChange={onChange}
+        data-testid="slider"
+        value={3}
+        input
+        possibleValues={[3, 5, 6, 10]}
+      />,
+    )
+    const slider = screen.getByRole<HTMLInputElement>('slider')
+    const value = screen.getByTestId('slider-value')
+    expect(slider.value).toBe('3')
+    expect(value).toHaveTextContent('10')
+
+    fireEvent.change(slider, { target: { value: '2' } })
+    expect(slider.value).toBe('2')
+    expect(value).toHaveTextContent('6')
 
     expect(asFragment()).toMatchSnapshot()
   })
