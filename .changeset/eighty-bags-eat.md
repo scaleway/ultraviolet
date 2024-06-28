@@ -1,5 +1,7 @@
 ---
-"@ultraviolet/illustrations": patch
+"@ultraviolet/illustrations": major
 ---
 
-Change "dediboxVPS" to "dediboxVps" to be aligned with illustrations name
+⚠️ MAJOR UPDATE:
+
+Update "dediboxVPS" to "dediboxVps" to be aligned with illustrations name.
