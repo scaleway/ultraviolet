@@ -1,5 +1,5 @@
 ---
-"@ultraviolet/illustrations": patch
+"@ultraviolet/illustrations": minor
 ---
 
 New illustration `ipam`
