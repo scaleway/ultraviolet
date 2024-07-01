@@ -47,7 +47,6 @@ import { ReactComponent as restore } from './assets/small/restore.svg'
 import { ReactComponent as revoke } from './assets/small/revoke.svg'
 import { ReactComponent as rss } from './assets/small/rss.svg'
 import { ReactComponent as search } from './assets/small/search.svg'
-import { ReactComponent as send } from './assets/small/send.svg'
 import { ReactComponent as slack } from './assets/small/slack.svg'
 import { ReactComponent as sort } from './assets/small/sort.svg'
 import { ReactComponent as southShort } from './assets/small/south-short.svg'
@@ -97,6 +96,7 @@ import { ReactComponent as playOutline } from './assets/small-outline/play.svg'
 import { ReactComponent as privacyOutline } from './assets/small-outline/privacy.svg'
 import { ReactComponent as profileOutline } from './assets/small-outline/profile.svg'
 import { ReactComponent as rocketOutline } from './assets/small-outline/rocket.svg'
+import { ReactComponent as sendOutline } from './assets/small-outline/send.svg'
 import { ReactComponent as settingsOutline } from './assets/small-outline/settings.svg'
 import { ReactComponent as sunOutline } from './assets/small-outline/sun.svg'
 import { ReactComponent as supportOutline } from './assets/small-outline/support.svg'
@@ -141,6 +141,7 @@ import { ReactComponent as play } from './assets/small-solid/play.svg'
 import { ReactComponent as privacy } from './assets/small-solid/privacy.svg'
 import { ReactComponent as profile } from './assets/small-solid/profile.svg'
 import { ReactComponent as rocket } from './assets/small-solid/rocket.svg'
+import { ReactComponent as send } from './assets/small-solid/send.svg'
 import { ReactComponent as settings } from './assets/small-solid/settings.svg'
 import { ReactComponent as sun } from './assets/small-solid/sun.svg'
 import { ReactComponent as support } from './assets/small-solid/support.svg'
@@ -306,7 +307,7 @@ export const SMALL_ICONS = {
     revoke,
     rss,
     search,
-    send,
+    send: sendOutline,
     slack,
     sort,
     'south-short': southShort,

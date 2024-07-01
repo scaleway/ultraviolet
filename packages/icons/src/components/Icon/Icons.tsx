@@ -47,7 +47,6 @@ import { ReactComponent as restore } from './assets/default/restore.svg'
 import { ReactComponent as revoke } from './assets/default/revoke.svg'
 import { ReactComponent as rss } from './assets/default/rss.svg'
 import { ReactComponent as search } from './assets/default/search.svg'
-import { ReactComponent as send } from './assets/default/send.svg'
 import { ReactComponent as slack } from './assets/default/slack.svg'
 import { ReactComponent as sort } from './assets/default/sort.svg'
 import { ReactComponent as southShort } from './assets/default/south-short.svg'
@@ -97,6 +96,7 @@ import { ReactComponent as playOutline } from './assets/default-outline/play.svg
 import { ReactComponent as privacyOutline } from './assets/default-outline/privacy.svg'
 import { ReactComponent as profileOutline } from './assets/default-outline/profile.svg'
 import { ReactComponent as rocketOutline } from './assets/default-outline/rocket.svg'
+import { ReactComponent as sendOutline } from './assets/default-outline/send.svg'
 import { ReactComponent as settingsOutline } from './assets/default-outline/settings.svg'
 import { ReactComponent as sunOutline } from './assets/default-outline/sun.svg'
 import { ReactComponent as supportOutline } from './assets/default-outline/support.svg'
@@ -141,6 +141,7 @@ import { ReactComponent as play } from './assets/default-solid/play.svg'
 import { ReactComponent as privacy } from './assets/default-solid/privacy.svg'
 import { ReactComponent as profile } from './assets/default-solid/profile.svg'
 import { ReactComponent as rocket } from './assets/default-solid/rocket.svg'
+import { ReactComponent as send } from './assets/default-solid/send.svg'
 import { ReactComponent as settings } from './assets/default-solid/settings.svg'
 import { ReactComponent as sun } from './assets/default-solid/sun.svg'
 import { ReactComponent as support } from './assets/default-solid/support.svg'
@@ -306,7 +307,7 @@ export const ICONS = {
     revoke,
     rss,
     search,
-    send,
+    send: sendOutline,
     slack,
     sort,
     'south-short': southShort,
