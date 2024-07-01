@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.12.1
+
+### Patch Changes
+
+- [#3937](https://github.com/scaleway/ultraviolet/pull/3937) [`bc58d97`](https://github.com/scaleway/ultraviolet/commit/bc58d97033e2028b69ca5d284bef88fff16e50ba) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Update font name to include first letter uppercase
+
 ## 1.12.0
 
 ### Minor Changes

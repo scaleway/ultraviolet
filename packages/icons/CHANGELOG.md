@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.12.17
+
+### Patch Changes
+
+- [#3938](https://github.com/scaleway/ultraviolet/pull/3938) [`10da1f6`](https://github.com/scaleway/ultraviolet/commit/10da1f6cebdc09d2f902e606f27f9797903660a4) Thanks [@lisalupi](https://github.com/lisalupi)! - - New `<CategoryIcon />` : "partners"
+  - Updated `<Icon />` : "send"
+- Updated dependencies [[`bc58d97`](https://github.com/scaleway/ultraviolet/commit/bc58d97033e2028b69ca5d284bef88fff16e50ba)]:
+  - @ultraviolet/themes@1.12.1
+
 ## 2.12.16
 
 ### Patch Changes
