@@ -43,18 +43,47 @@ describe('Navigation', () => {
   test('render without pinnedFeature', () =>
     shouldMatchEmotionSnapshot(<BasicNavigation pinnedFeature={false} />))
 
-  test('click on expand / collapse button', () => {
+  test('click on expand / collapse button', async () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)
 
     expect(asFragment()).toMatchSnapshot()
 
+    const collapseButton = screen.getByRole('button', {
+      name: 'Collapse navigation',
+    })
+    collapseButton.click()
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', { name: 'Expand navigation' }),
+      ).toBeInTheDocument()
+    })
+    expect(asFragment()).toMatchSnapshot()
+
     const expandButton = screen.getByRole('button', {
-      name: 'Toggle navigation expand/collapse',
+      name: 'Expand navigation',
     })
     expandButton.click()
-
-    expect(asFragment()).toMatchSnapshot()
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', { name: 'Collapse navigation' }),
+      ).toBeInTheDocument()
+    })
   })
+
+  // test('click on collapse button and menu item', () => {
+  //   const { asFragment } = renderWithTheme(<BasicNavigation />)
+
+  //   const expandButton = screen.getByRole('button', {
+  //     name: 'Toggle navigation expand/collapse',
+  //   })
+  //   expandButton.click()
+
+  //   expect(asFragment()).toMatchSnapshot()
+  //   const item = screen.getAllByText('item1')[0]
+
+  //   item.click()
+  //   expect(asFragment()).toMatchSnapshot()
+  // })
 
   test('resize manually the navigation using slider', () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)
