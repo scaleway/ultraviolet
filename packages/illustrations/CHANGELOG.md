@@ -1,5 +1,17 @@
 # @ultraviolet/illustrations
 
+## 3.0.0
+
+### Major Changes
+
+- [#3925](https://github.com/scaleway/ultraviolet/pull/3925) [`43546da`](https://github.com/scaleway/ultraviolet/commit/43546dac7ecfd96b72a7fcef2226ce125a869219) Thanks [@rachidBensaid](https://github.com/rachidBensaid)! - ⚠️ MAJOR UPDATE:
+
+  Update "dediboxVPS" to "dediboxVps" to be aligned with illustrations name.
+
+### Patch Changes
+
+- [#3921](https://github.com/scaleway/ultraviolet/pull/3921) [`e90989a`](https://github.com/scaleway/ultraviolet/commit/e90989a7971c8f965434ac1695eed7d648b76a83) Thanks [@matthprost](https://github.com/matthprost)! - Fix `costManagerWire` to have correct fill color
+
 ## 2.0.0
 
 ### Major Changes
