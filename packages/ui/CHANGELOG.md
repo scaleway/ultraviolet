@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.57.0
+
+### Minor Changes
+
+- [#3927](https://github.com/scaleway/ultraviolet/pull/3927) [`561e001`](https://github.com/scaleway/ultraviolet/commit/561e00184740f825927d3bb6191cbd07c7d96c15) Thanks [@matthprost](https://github.com/matthprost)! - Design update and new features on `<SearchInput />`:
+  - New design for the input with a simpler and cleaner look.
+  - New prop `shortcut`, when set to true the input will be focusable with `Ctrl + K` on Windows and Linux and `Cmd + K` on macOS. It also add the shortcut into the input placeholder.
+
+### Patch Changes
+
+- [#3916](https://github.com/scaleway/ultraviolet/pull/3916) [`9d6a957`](https://github.com/scaleway/ultraviolet/commit/9d6a9571440c2af81ffd8f0feafae51a845df17f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextArea />` component to have correct error icon variant
+
+- Updated dependencies [[`bc58d97`](https://github.com/scaleway/ultraviolet/commit/bc58d97033e2028b69ca5d284bef88fff16e50ba), [`10da1f6`](https://github.com/scaleway/ultraviolet/commit/10da1f6cebdc09d2f902e606f27f9797903660a4)]:
+  - @ultraviolet/themes@1.12.1
+  - @ultraviolet/icons@2.12.17
+
 ## 1.56.1
 
 ### Patch Changes
