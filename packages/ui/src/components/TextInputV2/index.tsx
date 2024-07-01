@@ -16,7 +16,7 @@ export const TEXTINPUT_SIZE_HEIGHT = {
 } as const
 type TextInputSize = keyof typeof TEXTINPUT_SIZE_HEIGHT
 
-const BasicPrefixStack = styled(Stack)`
+export const BasicPrefixStack = styled(Stack)`
   padding: ${({ theme }) => theme.space['2']};
   border-right: 1px solid;
   border-color: inherit;
@@ -26,7 +26,7 @@ const StateStack = styled(Stack)`
   padding: ${({ theme }) => `0 ${theme.space['2']}`};
 `
 
-const BasicSuffixStack = styled(Stack)`
+export const BasicSuffixStack = styled(Stack)`
   padding: ${({ theme }) => `0 ${theme.space['2']}`};
   border-left: 1px solid;
   border-color: inherit;
@@ -38,7 +38,7 @@ const CTASuffixStack = styled(Stack)`
   border-color: inherit;
 `
 
-const StyledInput = styled.input<{
+export const StyledInput = styled.input<{
   'data-size': TextInputSize
 }>`
   flex: 1;

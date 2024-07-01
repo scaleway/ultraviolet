@@ -1,9 +1,23 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { Ref } from 'react'
-import { forwardRef, useEffect, useReducer, useRef, useState } from 'react'
+import {
+  forwardRef,
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useReducer,
+  useRef,
+  useState,
+} from 'react'
 import { Popup } from '../Popup'
-import { TextInputV2 } from '../TextInputV2'
+import {
+  BasicPrefixStack,
+  BasicSuffixStack,
+  StyledInput,
+  TextInputV2,
+} from '../TextInputV2'
+import { KeyGroup } from './KeyGroup'
 import type { SearchInputProps } from './types'
 
 const StyledPopup = styled(Popup)`
@@ -11,8 +25,22 @@ const StyledPopup = styled(Popup)`
   text-align: initial;
   min-width: 610px;
   padding: ${({ theme }) => `${theme.space['2']} ${theme.space['1']}`};
-  background: ${({ theme }) => theme.colors.neutral.background};
-  box-shadow: ${({ theme }) => theme.shadows.modal};
+  background: ${({ theme }) => theme.colors.other.elevation.background.raised};
+  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
+`
+
+const StyledTextInputV2 = styled(TextInputV2)`
+  ${BasicPrefixStack} {
+    border: none;
+  }
+
+  ${StyledInput} {
+    padding: 0;
+  }
+
+  ${BasicSuffixStack} {
+    border: none;
+  }
 `
 
 /**
@@ -29,13 +57,15 @@ export const SearchInput = forwardRef(
       label,
       loading,
       size,
-      suffix,
       popupPlacement,
       threshold = 0,
       children,
       onSearch,
       onClose,
       'data-testid': dataTestId,
+      shortcut = false,
+      error,
+      disabled,
     }: SearchInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -44,6 +74,11 @@ export const SearchInput = forwardRef(
     const [containerWidth, setContainerWidth] = useState(0)
     const [searchTerms, setSearchTerms] = useState('')
     const [isOpen, toggleIsOpen] = useReducer(state => !state, false)
+    const innerSearchInputRef = useRef<HTMLInputElement>(null)
+    useImperativeHandle(
+      ref,
+      () => innerSearchInputRef.current as HTMLInputElement,
+    )
 
     const content =
       typeof children === 'function'
@@ -118,6 +153,33 @@ export const SearchInput = forwardRef(
       }
     }
 
+    const isMacOS = navigator.userAgent.includes('Mac')
+
+    const handleShortcut = useCallback(
+      (event: KeyboardEvent) => {
+        const { ctrlKey, metaKey, key } = event
+
+        if (
+          (key === 'k' || key === 'K') &&
+          ((!isMacOS && ctrlKey) || (isMacOS && metaKey))
+        ) {
+          event.preventDefault()
+          innerSearchInputRef.current?.focus()
+        }
+      },
+      [isMacOS, innerSearchInputRef],
+    )
+
+    useEffect(() => {
+      if (shortcut && !disabled) {
+        document.body.addEventListener('keydown', handleShortcut)
+      }
+
+      return () => {
+        document.body.removeEventListener('keydown', handleShortcut)
+      }
+    }, [handleShortcut, shortcut, disabled])
+
     return (
       <div>
         <StyledPopup
@@ -134,11 +196,21 @@ export const SearchInput = forwardRef(
           maxHeight={410}
           debounceDelay={0}
         >
-          <TextInputV2
-            ref={ref}
-            prefix={<Icon name="search" />}
-            suffix={suffix}
+          <StyledTextInputV2
+            ref={innerSearchInputRef}
+            prefix={
+              <Icon name="search" disabled={disabled} sentiment="neutral" />
+            }
+            suffix={
+              shortcut && searchTerms.length === 0 ? (
+                <KeyGroup
+                  disabled={disabled}
+                  keys={[isMacOS ? '⌘' : 'Ctrl', 'K']}
+                />
+              ) : undefined
+            }
             data-testid={dataTestId}
+            error={error}
             value={searchTerms}
             size={size}
             label={label}
@@ -146,6 +218,7 @@ export const SearchInput = forwardRef(
             loading={loading}
             onChange={onSearchCallback}
             clearable
+            disabled={disabled}
           />
         </StyledPopup>
       </div>
