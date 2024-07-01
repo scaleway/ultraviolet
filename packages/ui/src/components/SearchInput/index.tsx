@@ -155,7 +155,7 @@ export const SearchInput = forwardRef(
 
     const isMacOS = navigator.userAgent.includes('Mac')
 
-    const handleShortCut = useCallback(
+    const handleShortcut = useCallback(
       (event: KeyboardEvent) => {
         const { ctrlKey, metaKey, key } = event
 
@@ -172,13 +172,13 @@ export const SearchInput = forwardRef(
 
     useEffect(() => {
       if (shortcut && !disabled) {
-        document.body.addEventListener('keydown', handleShortCut)
+        document.body.addEventListener('keydown', handleShortcut)
       }
 
       return () => {
-        document.body.removeEventListener('keydown', handleShortCut)
+        document.body.removeEventListener('keydown', handleShortcut)
       }
-    }, [handleShortCut, shortcut, disabled])
+    }, [handleShortcut, shortcut, disabled])
 
     return (
       <div>
