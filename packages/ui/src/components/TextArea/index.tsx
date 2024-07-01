@@ -251,7 +251,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                 />
               ) : null}
               {error ? (
-                <Icon name="alert" color="danger" variant="outlined" />
+                <Icon name="alert" color="danger" variant="filled" />
               ) : null}
             </StyledTextAreaAbsoluteStack>
           </StyledTextAreaWrapper>
