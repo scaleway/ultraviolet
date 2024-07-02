@@ -2,7 +2,6 @@ import type { Preview, StoryFn } from '@storybook/react'
 import { css, ThemeProvider, Global } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
 import { themes } from '@storybook/theming'
-import seedrandom from 'seedrandom'
 import { light, dark } from './storybookThemes'
 import {
   consoleDarkTheme as darkTheme,
@@ -11,15 +10,12 @@ import {
 } from '@ultraviolet/themes'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
-import isChromatic from 'chromatic/isChromatic'
 import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
 import InterSemiBoldWoff2 from './assets/fonts/inter/Inter-SemiBold.woff2'
 import InterMediumWoff2 from './assets/fonts/inter/Inter-Medium.woff2'
 import InterRegularWoff2 from './assets/fonts/inter/Inter-Regular.woff2'
 import SpaceGrotesk from './assets/fonts/space-grotesk/SpaceGrotesk.woff2'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
-
-if (isChromatic()) seedrandom('manual-seed', { global: true })
 
 const parameters: Preview['parameters'] = {
   darkMode: {

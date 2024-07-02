@@ -3,7 +3,7 @@ name: CI
 on:
   merge_group:
   pull_request:
-    types: ['opened', 'edited', 'reopened', 'synchronize']
+    types: ["opened", "edited", "reopened", "synchronize"]
   push:
     branches:
       - main
@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
       - run: pnpm install
       - run: pnpm run build
       - run: pnpm install
@@ -32,7 +32,7 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
       - run: pnpm install
       - run: pnpm run build
       - run: pnpm install
@@ -46,7 +46,7 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
       - run: pnpm install
       - run: pnpm run build
       - run: pnpm install
@@ -56,17 +56,17 @@ jobs:
     needs: [lint, typecheck, format]
     strategy:
       matrix:
-        node: ['20']
+        node: ["20"]
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: '0'
+          fetch-depth: "0"
       - uses: pnpm/action-setup@v4.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.2
         with:
           node-version: ${{ matrix.node }}
-          cache: 'pnpm'
+          cache: "pnpm"
       - run: pnpm install
       - run: pnpm run build
       - run: pnpm install
@@ -96,7 +96,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node: ['20']
+        node: ["20"]
     runs-on: ubuntu-22.04
     needs: [lint, typecheck, format]
     steps:
@@ -111,7 +111,7 @@ jobs:
   build-examples: # This will build all projects in the examples folder, it assures that all examples are working
     strategy:
       matrix:
-        node: ['20']
+        node: ["20"]
     runs-on: ubuntu-22.04
     needs: [lint, test, format]
     steps:
@@ -125,52 +125,3 @@ jobs:
       - run: pnpm build
       - run: pnpm install
       - run: pnpm run build:examples
-  chromatic-deployment:
-    runs-on: ubuntu-22.04
-    env:
-      DEPLOYMENT_NAME: 'storybook'
-    steps:
-      - uses: actions/checkout@v4 # v4.1.4
-        with:
-          fetch-depth: 0
-
-      - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@v4
-      - name: Export custom variables
-        run: |
-          SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL-$DEPLOYMENT_NAME | rev | cut -c-37 | rev | sed 's/^-//g')
-          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
-
-      - name: Start deployment
-        uses: bobheadxi/deployments@v1.5.0
-        id: deployment
-        with:
-          step: start
-          token: ${{ secrets.GH_TOKEN }}
-          env: ${{ env.BRANCH_SLUG }}
-          ref: ${{ github.head_ref }}
-
-      - uses: pnpm/action-setup@v4.0.0
-      - name: Install dependencies
-        run: pnpm install
-      - name: Publish to Chromatic
-        uses: chromaui/action@v11
-        id: chromatic
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: build:storybook:stats
-          onlyChanged: true
-          forceRebuild: true
-
-      - name: Update deployment
-        uses: bobheadxi/deployments@v1.5.0
-        with:
-          step: finish
-          env: ${{ env.BRANCH_SLUG }}
-          token: ${{ secrets.GH_TOKEN }}
-          auto_inactive: true
-          # This will now be automatically handled by github with the auto_inactive
-          override: false
-          status: ${{ job.status }}
-          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-          env_url: ${{ steps.chromatic.outputs.storybookUrl }}

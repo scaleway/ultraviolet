@@ -3,9 +3,9 @@ name: Generate changeset for Renovate
 on:
   pull_request_target:
     paths:
-      - '.github/workflows/changesets-renovate.yml'
-      - '**/pnpm-lock.yaml'
-      - '**/package.json'
+      - ".github/workflows/changesets-renovate.yml"
+      - "**/pnpm-lock.yaml"
+      - "**/package.json"
 
 jobs:
   generate-changeset:
