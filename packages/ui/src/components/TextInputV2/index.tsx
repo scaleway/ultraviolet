@@ -137,6 +137,7 @@ type TextInputProps = {
   tooltip?: string
   type?: 'text' | 'password' | 'url' | 'email'
   value?: string
+  defaultValue?: string
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'
@@ -159,7 +160,9 @@ type TextInputProps = {
 >
 
 /**
- * This component offers an extended input HTML
+ * This component offers an extended input HTML. The component can be controlled or uncontrolled.
+ * To control the component, you need to pass the value and the `onChange` function.
+ * If you don't pass the `onChange` function, the component will be uncontrolled and you can set the default value using `defaultValue`
  */
 export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
   (
@@ -200,6 +203,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       role,
       'aria-live': ariaLive,
       'aria-atomic': ariaAtomic,
+      defaultValue,
     },
     ref,
   ) => {
@@ -287,10 +291,9 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 autoFocus={autoFocus}
                 disabled={disabled}
                 ref={ref}
-                value={value === null || value === undefined ? '' : value}
-                onChange={event => {
-                  onChange?.(event.currentTarget.value)
-                }}
+                value={value}
+                defaultValue={defaultValue}
+                onChange={event => onChange?.(event.currentTarget.value)}
                 data-size={size}
                 placeholder={placeholder}
                 data-testid={dataTestId}

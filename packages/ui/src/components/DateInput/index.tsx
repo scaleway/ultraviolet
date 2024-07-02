@@ -303,7 +303,10 @@ export const DateInput = ({
               id={localId}
               label={label}
               labelDescription={labelDescription}
-              value={valueFormat || ''}
+              value={valueFormat}
+              onChange={event => {
+                console.log(event)
+              }}
               disabled={disabled}
               size={size}
               suffix={
