@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import { useForm } from 'react-hook-form'
 import { SelectableCardField } from '..'
+import { useForm } from '../../..'
 import type { FormErrors } from '../../../types'
 import { Form } from '../../Form'
 

@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import { useFormContext } from 'react-hook-form'
 import { CheckboxGroupField } from '..'
+import { useFormContext } from '../../..'
 
 export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
   const { watch } = useFormContext()

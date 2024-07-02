@@ -1,7 +1,7 @@
 import type { Meta } from '@storybook/react'
-import { useForm } from 'react-hook-form'
 import { TextAreaField } from '..'
 import { Form } from '../..'
+import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
 export default {

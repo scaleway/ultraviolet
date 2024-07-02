@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react'
-import { useForm } from 'react-hook-form'
 import { CheckboxField } from '..'
+import { useForm } from '../../..'
 import type { FormErrors } from '../../../types'
 import { Form } from '../../Form'
 

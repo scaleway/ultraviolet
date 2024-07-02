@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react'
-import { useForm } from 'react-hook-form'
 import { Submit } from '..'
+import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
 
