@@ -8,6 +8,8 @@ const options = [
   { label: '1 Mb', value: 1 },
   { label: '30MB', value: 30 },
 ]
+
+const options2 = [{ value: 1 }, { value: 30 }]
 const scale = [1, 2, 3, 4, 5, 10, 15, 20, 25]
 
 describe('Single slider', () => {
@@ -66,6 +68,12 @@ describe('Single slider', () => {
   test('renders correctly direction row', () => {
     shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" direction="row" />,
+    )
+  })
+
+  test('renders correctly direction row with input', () => {
+    shouldMatchEmotionSnapshot(
+      <Slider value={1} name="Name" label="Label" direction="row" input />,
     )
   })
 
@@ -139,13 +147,23 @@ describe('Single slider', () => {
       <Slider value={1} name="Name" label="Label" options />,
     )
   })
-
   test('renders correctly with custom ticks', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" options={options} />,
+      <Slider value={1} name="Name" label="Label" options={options} unit="%" />,
     )
   })
 
+  test('renders correctly with default ticks without label', () => {
+    shouldMatchEmotionSnapshot(
+      <Slider
+        value={1}
+        name="Name"
+        label="Label"
+        options={options2}
+        unit="%"
+      />,
+    )
+  })
   test('renders correctly with custom scale', () => {
     shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" possibleValues={scale} />,

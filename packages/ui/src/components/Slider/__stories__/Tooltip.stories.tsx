@@ -4,11 +4,12 @@ import { Slider } from '..'
 import { Stack } from '../../Stack'
 
 export const Tooltip: StoryFn<typeof Slider> = args => {
-  const [value, setValue] = useState<number>(3)
-  const [values, setValues] = useState<number[]>([2, 4])
+  const [value, setValue] = useState(3)
+  const [values, setValues] = useState([2, 4])
+  const [values2, setValues2] = useState([2, 4])
   const labels = [`Current min: ${values[0]}`, `Current max: ${values[1]}`]
   const label = `Current value: ${value}`
-  const onChangeSingle = (val: number) => setValue(val)
+  const labels2 = `${values2[0]} MB - ${values2[1]} MB`
 
   return (
     <Stack gap={4}>
@@ -33,7 +34,7 @@ export const Tooltip: StoryFn<typeof Slider> = args => {
         value={value}
         label="Custom"
         tooltip={label}
-        onChange={onChangeSingle}
+        onChange={setValue}
         double={false}
       />
       <Slider
@@ -44,6 +45,16 @@ export const Tooltip: StoryFn<typeof Slider> = args => {
         tooltip={labels}
         onChange={setValues}
         suffix={undefined}
+      />
+      <Slider
+        {...args}
+        value={values2}
+        double
+        label="Single tooltip"
+        tooltip={labels2}
+        onChange={setValues2}
+        suffix={undefined}
+        tooltipPosition="bottom"
       />
       <Slider
         {...args}

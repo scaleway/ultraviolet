@@ -16,6 +16,19 @@ const options = [
   { label: '9', value: 9 },
   { label: '10!', value: 10 },
 ]
+const options2 = [
+  { label: '0MB', value: 0 },
+  { label: '1MB', value: 1 },
+  { label: '2MB', value: 2 },
+  { label: '3MB', value: 3 },
+  { label: '4MB', value: 4 },
+  { label: '5MB', value: 5 },
+  { label: '6MB', value: 6 },
+  { label: '7MB', value: 7 },
+  { label: '8MB', value: 8 },
+  { label: '9MB', value: 9 },
+  { label: '10MB', value: 10 },
+]
 
 export const Options: StoryFn<typeof Slider> = args => {
   const [value, setValue] = useState(30)
@@ -25,14 +38,13 @@ export const Options: StoryFn<typeof Slider> = args => {
       <Slider
         {...args}
         options
-        optionsUnit="%"
+        unit="%"
         max={100}
         min={0}
         value={value}
         onChange={setValue}
         tooltip={false}
         label="Default options with unit and option unit"
-        unit="%"
         step={10}
       />
       Current value: {value}
@@ -48,7 +60,7 @@ export const Options: StoryFn<typeof Slider> = args => {
       />
       <Slider
         {...args}
-        options={options}
+        options={options2}
         min={0}
         max={10}
         value={3}
@@ -77,7 +89,7 @@ Options.parameters = {
   docs: {
     description: {
       story:
-        'Specify ticks to show using the `options` prop. This prop does *not* impact the step: use instead prop `possibleValues`. \n Default options will add ticks to every single value, taking into account the step. With prop `optionsUnit` it is possible to add unit to the first and last value.',
+        'Specify ticks to show using the `options` prop. This prop does *not* impact the step: use instead prop `possibleValues`. \n Default options will add ticks to every single value, taking into account the step. Prop `unit` will add the unit to the first and last value.',
     },
   },
 }

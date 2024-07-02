@@ -1,8 +1,8 @@
-import type { ReactNode } from 'react'
+import { type ReactNode, useMemo } from 'react'
 import { Text } from '../Text'
 import { DoubleSlider } from './DoubleSlider'
 import { SingleSlider } from './SingleSlider'
-import { SliderContainer } from './SliderDecoration'
+import { SliderContainer } from './styles'
 import type { SliderProps } from './types'
 
 /**
@@ -17,7 +17,6 @@ export const Slider = ({
   tooltip,
   direction = 'column',
   input,
-  optionsUnit,
   prefix,
   unit,
   suffix,
@@ -43,13 +42,15 @@ export const Slider = ({
   const correctedBounds = possibleValues
     ? { min: 0, max: possibleValues.length - 1 }
     : { min, max }
+  const gap = useMemo(() => {
+    if (options) return 3
+    if (input && double) return 0
+
+    return 1
+  }, [options, input, double])
 
   return (
-    <SliderContainer
-      aria-label={ariaLabel}
-      data-options={!!options}
-      gap={options ? 3 : 1}
-    >
+    <SliderContainer aria-label={ariaLabel} data-options={!!options} gap={gap}>
       {double ? (
         <DoubleSlider
           name={name}
@@ -64,7 +65,6 @@ export const Slider = ({
           onChange={onChange as (value: number[]) => void}
           data-testid={dataTestId}
           id={id}
-          optionsUnit={optionsUnit}
           onBlur={onBlur}
           tooltipPosition={tooltipPosition}
           onFocus={onFocus}
@@ -98,7 +98,6 @@ export const Slider = ({
           onFocus={onFocus}
           className={className}
           direction={direction}
-          optionsUnit={optionsUnit}
           input={input}
           prefix={prefix}
           label={label}

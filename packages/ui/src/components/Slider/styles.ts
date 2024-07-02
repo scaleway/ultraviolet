@@ -11,16 +11,28 @@ flex-direction: row;
 justify-content: space-between;
 width: 100%;
 align-items: stretch;
+
+&[data-double='true'] {
+  margin-top: ${({ theme }) => theme.space['3']};
+}
 `
 
 export const Option = styled('span', {
-  shouldForwardProp: prop => !['left'].includes(prop),
-})<{ left: number }>`
-text-align: left;
+  shouldForwardProp: prop => !['left', 'width'].includes(prop),
+})<{ left: number; width: number }>`
 display: flex;
 justify-content: space-between;
 position: absolute;
 transform: translateX(${({ left }) => left}px);
+width: ${({ width }) => width}px;
+text-align: center;
+justify-content: center;
+
+
+&[data-first-element='true'] {
+text-align: left;
+justify-content: left;
+}
 `
 
 export const SliderContainer = styled(Stack)<{ 'data-options': boolean }>`
@@ -28,7 +40,7 @@ export const SliderContainer = styled(Stack)<{ 'data-options': boolean }>`
     max-width: ${SLIDER_WIDTH.max}px;
 
     &[data-options='true']{ 
-      margin-bottom: ${({ theme }) => theme.space[2]}
+      margin-bottom: ${({ theme }) => theme.space['2']}
       }
 `
 

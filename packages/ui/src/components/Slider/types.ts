@@ -58,11 +58,6 @@ type DefaultProps = {
    */
   possibleValues?: number[]
 
-  /**
-   * Unit of the option on the upper and lower bond
-   */
-  optionsUnit?: string
-
   'data-testid'?: string
 } & Pick<
   HTMLAttributes<HTMLInputElement>,
@@ -88,7 +83,7 @@ type DoubleProps = {
    */
   value: number[]
   onChange?: (value: number[]) => void
-  tooltip?: boolean | string[]
+  tooltip?: boolean | string[] | string
   /**
    * Suffix of the value - only visible when prop `input = false` and overrides prop `unit` when visible
    */
@@ -106,3 +101,24 @@ export type SliderProps = DefaultProps &
 export type SingleSliderProps = DefaultProps & SingleProps
 
 export type DoubleSliderProps = DefaultProps & DoubleProps
+
+export type LabelProps = {
+  direction?: 'row' | 'column'
+  input?: boolean
+  required?: boolean
+  label?: string
+  finalId: string
+}
+
+export type OptionsProps = {
+  ticks: {
+    value: number
+    label?: string | undefined
+  }[]
+  min: number
+  max: number
+  sliderWidth: number
+  unit?: string
+  value: number | number[]
+  step: number
+}

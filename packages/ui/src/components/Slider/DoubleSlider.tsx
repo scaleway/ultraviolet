@@ -1,24 +1,23 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
 import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { Label } from './Label'
+import { Options } from './Options'
+import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
 import {
-  DataList,
-  Option,
   StyledNumberInput,
   StyledTooltip,
   thumbStyle,
   trackStyle,
-} from './SliderDecoration'
-import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
+} from './styles'
 import type { DoubleSliderProps } from './types'
 
 const StyledTextValue = styled(Text, {
   shouldForwardProp: prop => !['double', 'isColumn'].includes(prop),
 })<{ double: boolean; isColumn: boolean }>`
-  min-width: ${({ theme, double, isColumn }) => (double && isColumn ? null : theme.space[5])};
+  min-width: ${({ theme, double, isColumn }) => (double && isColumn ? null : theme.space['5'])};
   align-self: ${({ double }) => (double ? 'center' : 'end')};
 `
 
@@ -30,7 +29,6 @@ const SliderElement = styled('input', {
   pointer-events: none;
   appearance: none;
   height: 100%;
-  opacity: 1;
   padding: 0;
   background: transparent;
   outline: none;
@@ -49,7 +47,7 @@ const SliderElement = styled('input', {
       }
   }
   &[data-tooltip = 'true'] {
-    margin-top: -${({ theme }) => theme.space[1]};
+    margin-top: -${({ theme }) => theme.space['1']};
   }
   /* Mozilla */
   &::-moz-range-track {
@@ -78,7 +76,7 @@ const DoubleSliderWrapper = styled.div`
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: ${({ theme }) => theme.space[2]};
+  height: ${({ theme }) => theme.space['2']};
   align-self: center;
   `
 
@@ -86,7 +84,7 @@ const CustomRail = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: ${({ theme }) => theme.space[1]};
+  height: ${({ theme }) => theme.space['1']};
   width:100%;
   min-width: 220px;  
   border-radius: ${({ theme }) => theme.radii.default};
@@ -107,9 +105,6 @@ const InnerRail = styled.div`
     background-color: ${({ theme }) => theme.colors.primary.borderDisabled};
   }
 `
-const StyledDataList = styled(DataList)`
-margin-top: ${({ theme }) => theme.space[3]};
-`
 
 export const DoubleSlider = ({
   name,
@@ -128,7 +123,6 @@ export const DoubleSlider = ({
   onFocus,
   possibleValues,
   options,
-  optionsUnit,
   unit,
   label,
   className,
@@ -322,12 +316,11 @@ export const DoubleSlider = ({
   const maxPos = ((computedValue[1] - min) * 100) / (max - min)
 
   const tooltipText = useMemo(() => {
-    if (tooltip === true) {
-      return computedValue
-    }
-    if (Array.isArray(tooltip)) {
-      return tooltip
-    }
+    if (tooltip === true) return computedValue
+
+    if (Array.isArray(tooltip)) return tooltip
+
+    if (typeof tooltip === 'string') return tooltip
 
     return [null, null]
   }, [tooltip, computedValue])
@@ -343,19 +336,13 @@ export const DoubleSlider = ({
     <Stack gap={1} direction="column" justifyContent="left">
       {label ? (
         <Stack justifyContent="space-between" direction="row">
-          <Stack gap={0.5} direction="row">
-            <Text
-              as="label"
-              variant="bodyStrong"
-              htmlFor={finalId}
-              placement="left"
-            >
-              {label}
-            </Text>
-            {required ? (
-              <Icon name="asterisk" sentiment="danger" size={8} />
-            ) : null}
-          </Stack>
+          <Label
+            direction={direction}
+            input={input}
+            finalId={finalId}
+            label={label}
+            required={required}
+          />
         </Stack>
       ) : null}
       <Stack direction={direction} gap={1} width="100%">
@@ -373,111 +360,93 @@ export const DoubleSlider = ({
           : null}
 
         <DoubleSliderWrapper>
-          <CustomRail>
-            <InnerRail
-              style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
-              data-error={!!error}
-              aria-disabled={!!disabled}
-            />
-          </CustomRail>
           <StyledTooltip
-            text={tooltipText[0]}
+            text={typeof tooltipText === 'string' ? tooltipText : undefined}
             placement={tooltipPosition}
-            left={placementTooltip[0]}
+            left={(placementTooltip[0] + placementTooltip[1]) / 2}
           >
-            <SliderElement
-              className={className}
-              name={name}
-              data-tooltip={!!tooltip}
-              id={finalId}
-              disabled={!!disabled}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              data-error={error}
-              data-direction={direction}
-              type="range"
-              value={computedValue[0]}
-              min={min}
-              suffix={!!(suffix || unit)}
-              aria-label={ariaLabel ?? name}
-              max={max}
-              step={step}
-              data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
-              onChange={event => {
-                event.preventDefault()
-                handleMinChange(parseFloat(event.target.value))
-              }}
-              themeSlider={theme}
-              ref={refSlider}
-            />
-          </StyledTooltip>
-          <StyledTooltip
-            text={tooltipText[1]}
-            placement={tooltipPosition}
-            left={placementTooltip[1]}
-          >
-            <SliderElement
-              className={className}
-              type="range"
-              value={computedValue[1]}
-              name={name}
-              disabled={!!disabled}
-              data-tooltip={!!tooltip}
-              suffix={!!(suffix || unit)}
-              id={finalId}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              data-error={error}
-              data-direction={direction}
-              aria-label={ariaLabel ?? name}
-              data-testid={dataTestId ? `${dataTestId}-right` : 'handle-right'}
-              min={min}
-              max={max}
-              step={step}
-              onChange={event => {
-                event.preventDefault()
-                handleMaxChange(parseFloat(event.target.value))
-              }}
-              themeSlider={theme}
-            />
+            <CustomRail>
+              <InnerRail
+                style={{ left: `${minPos}%`, right: `${100 - maxPos}%` }}
+                data-error={!!error}
+                aria-disabled={!!disabled}
+              />
+            </CustomRail>
+
+            <StyledTooltip
+              text={Array.isArray(tooltipText) ? tooltipText[0] : undefined}
+              placement={tooltipPosition}
+              left={placementTooltip[0]}
+            >
+              <SliderElement
+                className={className}
+                name={name}
+                data-tooltip={!!tooltip}
+                id={finalId}
+                disabled={!!disabled}
+                onBlur={onBlur}
+                onFocus={onFocus}
+                data-error={error}
+                data-direction={direction}
+                type="range"
+                value={computedValue[0]}
+                min={min}
+                suffix={!!(suffix || unit)}
+                aria-label={ariaLabel ?? name}
+                max={max}
+                step={step}
+                data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
+                onChange={event => {
+                  event.preventDefault()
+                  handleMinChange(parseFloat(event.target.value))
+                }}
+                themeSlider={theme}
+                ref={refSlider}
+              />
+            </StyledTooltip>
+            <StyledTooltip
+              text={Array.isArray(tooltipText) ? tooltipText[1] : undefined}
+              placement={tooltipPosition}
+              left={placementTooltip[1]}
+            >
+              <SliderElement
+                className={className}
+                type="range"
+                value={computedValue[1]}
+                name={name}
+                disabled={!!disabled}
+                data-tooltip={!!tooltip}
+                suffix={!!(suffix || unit)}
+                id={finalId}
+                onBlur={onBlur}
+                onFocus={onFocus}
+                data-error={error}
+                data-direction={direction}
+                aria-label={ariaLabel ?? name}
+                data-testid={
+                  dataTestId ? `${dataTestId}-right` : 'handle-right'
+                }
+                min={min}
+                max={max}
+                step={step}
+                onChange={event => {
+                  event.preventDefault()
+                  handleMaxChange(parseFloat(event.target.value))
+                }}
+                themeSlider={theme}
+              />
+            </StyledTooltip>
           </StyledTooltip>
           {options || possibleValues ? (
-            <StyledDataList>
-              {ticks.map((element, index, { length }) => {
-                const offsetElement = index === 0 ? 0 : 4
-                const left =
-                  ((element.value - min) / (max - min)) *
-                    (sliderWidth - THUMB_SIZE) +
-                  offsetElement
-
-                const formatedElement =
-                  optionsUnit && (index === 0 || index === length - 1)
-                    ? (element.label ?? String(element.value)).concat(
-                        optionsUnit,
-                      )
-                    : element.label ?? String(element.value)
-
-                return (
-                  <Option key={element.value} left={left}>
-                    <Text
-                      as="p"
-                      variant={
-                        computedValue.includes(element.value)
-                          ? 'captionStrong'
-                          : 'caption'
-                      }
-                      sentiment={
-                        computedValue.includes(element.value)
-                          ? 'primary'
-                          : 'neutral'
-                      }
-                    >
-                      {formatedElement}
-                    </Text>
-                  </Option>
-                )
-              })}
-            </StyledDataList>
+            <Options
+              ticks={ticks}
+              min={min}
+              max={max}
+              sliderWidth={sliderWidth}
+              unit={unit}
+              value={computedValue}
+              step={step}
+            />
           ) : null}
         </DoubleSliderWrapper>
 

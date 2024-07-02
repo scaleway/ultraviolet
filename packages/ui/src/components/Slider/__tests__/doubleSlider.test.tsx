@@ -33,6 +33,18 @@ describe('Double slider', () => {
       />,
     )
   })
+  test('renders correctly direction row double with input', () => {
+    shouldMatchEmotionSnapshot(
+      <Slider
+        value={[1, 14]}
+        name="Name"
+        label="Label"
+        direction="row"
+        double
+        input
+      />,
+    )
+  })
 
   test('renders correctly double ', () => {
     shouldMatchEmotionSnapshot(
@@ -105,10 +117,28 @@ describe('Double slider', () => {
       <Slider value={[12, 14]} name="Name" label="Label" tooltip double />,
     )
   })
+  test('renders correctly double with single tooltip', () => {
+    shouldMatchEmotionSnapshot(
+      <Slider
+        value={[12, 14]}
+        name="Name"
+        label="Label"
+        tooltip="tooltip"
+        double
+      />,
+    )
+  })
 
   test('renders correctly double with default ticks', () => {
     shouldMatchEmotionSnapshot(
-      <Slider value={[12, 14]} name="Name" label="Label" options double />,
+      <Slider
+        value={[12, 14]}
+        name="Name"
+        label="Label"
+        options
+        double
+        unit="%"
+      />,
     )
   })
 

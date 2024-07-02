@@ -10,8 +10,8 @@ const options = [
   { label: '3', value: 2 },
   { label: 'Four', value: 3 },
   { label: '5', value: 4 },
-  { label: '6?', value: 5 },
-  { label: '7', value: 6 },
+  { label: '10?', value: 5 },
+  { label: '15', value: 6 },
   { label: '20 Gps', value: 7 },
   { label: '25!', value: 8 },
 ]
@@ -25,12 +25,11 @@ export const CustomScale: StoryFn<typeof Slider> = args => {
       <Slider
         {...args}
         possibleValues={scale}
-        optionsUnit="Gps"
         value={value}
         onChange={setValue}
         tooltip={false}
         label="Label"
-        unit="%"
+        unit="Gbps"
       />
       Current value: {scale[value]}
       <Slider

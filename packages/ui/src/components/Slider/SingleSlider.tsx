@@ -1,32 +1,31 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { Label } from './Label'
+import { Options } from './Options'
+import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
 import {
-  DataList,
-  Option,
   StyledNumberInput,
   StyledTooltip,
   thumbStyle,
   trackStyle,
-} from './SliderDecoration'
-import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
+} from './styles'
 import type { SingleSliderProps } from './types'
 
 const StyledTextValue = styled(Text, {
   shouldForwardProp: prop => !['double', 'isColumn'].includes(prop),
 })<{ double: boolean; isColumn: boolean }>`
-  min-width: ${({ theme, double, isColumn }) => (double && isColumn ? null : theme.space[5])};
-  align-self: ${({ double }) => (double ? 'center' : 'end')};
+  min-width: ${({ theme, double, isColumn }) => (double && isColumn ? null : theme.space['5'])};
+  align-self: ${({ double, isColumn }) => (double || !isColumn ? 'center' : 'end')};
 `
 
 const SliderElement = styled('input', {
   shouldForwardProp: prop => !['themeSlider'].includes(prop),
 })<{ themeSlider: string; disabled: boolean }>`
     appearance: none;
-    height: ${({ theme }) => theme.space[1]};
+    height: ${({ theme }) => theme.space['1']};
     width:100%;
     min-width: ${SLIDER_WIDTH.min}px;
     background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
@@ -91,7 +90,6 @@ export const SingleSlider = ({
   step = 1,
   id,
   onBlur,
-  optionsUnit,
   unit,
   options,
   possibleValues,
@@ -241,7 +239,7 @@ export const SingleSlider = ({
       return tooltip
     }
 
-    return null
+    return undefined
   }, [tooltip, computedValue])
 
   const placementTooltip =
@@ -253,20 +251,13 @@ export const SingleSlider = ({
     <Stack gap={1} direction={direction} justifyContent="left">
       {label ? (
         <Stack justifyContent="space-between" direction="row">
-          <Stack gap={0.5} direction="row">
-            <Text
-              as="label"
-              variant="bodyStrong"
-              htmlFor={finalId}
-              placement="left"
-            >
-              {label}
-            </Text>
-            {required ? (
-              <Icon name="asterisk" sentiment="danger" size={8} />
-            ) : null}
-          </Stack>
-
+          <Label
+            direction={direction}
+            input={input}
+            finalId={finalId}
+            label={label}
+            required={required}
+          />
           {direction === 'column'
             ? styledValue(customValue ?? valueToShow)
             : null}
@@ -309,37 +300,15 @@ export const SingleSlider = ({
           />
         </StyledTooltip>
         {options || possibleValues ? (
-          <DataList>
-            {ticks.map((element, index, { length }) => {
-              const offsetElement = index === 0 ? 0 : 4
-              const left =
-                ((element.value - min) / (max - min)) *
-                  (sliderWidth - THUMB_SIZE) +
-                offsetElement
-              const formatedElement =
-                optionsUnit && (index === 0 || index === length - 1)
-                  ? (element.label ?? String(element.value)).concat(optionsUnit)
-                  : element.label ?? String(element.value)
-
-              return (
-                <Option key={element.value} left={left}>
-                  <Text
-                    as="p"
-                    variant={
-                      element.value === computedValue
-                        ? 'captionStrong'
-                        : 'caption'
-                    }
-                    sentiment={
-                      element.value === computedValue ? 'primary' : 'neutral'
-                    }
-                  >
-                    {formatedElement}
-                  </Text>
-                </Option>
-              )
-            })}
-          </DataList>
+          <Options
+            ticks={ticks}
+            min={min}
+            max={max}
+            sliderWidth={sliderWidth}
+            unit={unit}
+            value={computedValue}
+            step={step}
+          />
         ) : null}
       </Stack>
       {direction === 'row' ? styledValue(customValue ?? valueToShow) : null}
