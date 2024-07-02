@@ -12,7 +12,13 @@ const locales = [
 
 export const Localized = (props: ComponentProps<typeof DateInput>) =>
   locales.map(({ label, locale }) => (
-    <DateInput {...props} onChange={() => {}} label={label} locale={locale} />
+    <DateInput
+      {...props}
+      key={label}
+      onChange={() => {}}
+      label={label}
+      locale={locale}
+    />
   ))
 
 Localized.args = Template.args

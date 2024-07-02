@@ -1,7 +1,14 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { InputHTMLAttributes, ReactNode } from 'react'
-import { forwardRef, useId, useMemo, useState } from 'react'
+import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react'
+import {
+  forwardRef,
+  useId,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Stack } from '../Stack'
@@ -129,7 +136,6 @@ type TextInputProps = {
   minLength?: number
   maxLength?: number
   onRandomize?: () => void
-  onChange?: (newValue: string) => void
   prefix?: ReactNode
   size?: TextInputSize
   success?: string | boolean
@@ -157,6 +163,7 @@ type TextInputProps = {
   | 'role'
   | 'aria-live'
   | 'aria-atomic'
+  | 'onChange'
 >
 
 /**
@@ -209,6 +216,8 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
   ) => {
     const localId = useId()
     const [hasFocus, setHasFocus] = useState(false)
+    const inputRef = useRef<HTMLInputElement>(null)
+    useImperativeHandle(ref, () => inputRef.current as HTMLInputElement)
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(false)
     const computedType =
@@ -250,7 +259,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                   {label}
                 </Text>
                 {required ? (
-                  <Icon name="asterisk" color="danger" size={8} />
+                  <Icon name="asterisk" sentiment="danger" size={8} />
                 ) : null}
               </Stack>
             ) : null}
@@ -290,10 +299,10 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 tabIndex={tabIndex}
                 autoFocus={autoFocus}
                 disabled={disabled}
-                ref={ref}
+                ref={inputRef}
                 value={value}
                 defaultValue={defaultValue}
-                onChange={event => onChange?.(event.currentTarget.value)}
+                onChange={onChange}
                 data-size={size}
                 placeholder={placeholder}
                 data-testid={dataTestId}
@@ -325,7 +334,13 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                       size={size === 'small' ? 'xsmall' : 'small'}
                       icon="close"
                       onClick={() => {
-                        onChange?.('')
+                        if (inputRef?.current) {
+                          inputRef.current.value = ''
+                          onChange?.({
+                            target: { value: '' },
+                            currentTarget: { value: '' },
+                          } as ChangeEvent<HTMLInputElement>)
+                        }
                       }}
                       sentiment="neutral"
                     />

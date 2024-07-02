@@ -287,7 +287,7 @@ export const SearchInput = forwardRef(
             label={label}
             placeholder={placeholder}
             loading={loading}
-            onChange={onSearchCallback}
+            onChange={event => onSearchCallback(event.target.value)}
             clearable
             disabled={disabled}
             className={className}

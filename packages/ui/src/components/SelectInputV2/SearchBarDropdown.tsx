@@ -143,7 +143,7 @@ export const SearchBarDropdown = ({
   return (
     <StyledInput
       value={searchInput}
-      onChange={event => handleChange(event)}
+      onChange={event => handleChange(event.target.value)}
       placeholder={placeholder}
       onFocus={() => setSearchBarActive(true)}
       onBlur={() => setSearchBarActive(false)}

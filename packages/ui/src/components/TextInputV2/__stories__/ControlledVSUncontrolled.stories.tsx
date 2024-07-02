@@ -14,7 +14,7 @@ export const ControlledVSUncontrolled: StoryFn<typeof TextInputV2> = props => {
         <TextInputV2
           label="Controlled"
           value={value}
-          onChange={setValue}
+          onChange={event => setValue(event.target.value)}
           {...props}
         />
         <Text as="p" variant="body" sentiment="neutral">

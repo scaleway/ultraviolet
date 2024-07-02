@@ -1,4 +1,4 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
@@ -10,7 +10,7 @@ describe('TextInputV2', () => {
       <TextInputV2 label="Test" value="test" onChange={() => {}} />,
     ))
 
-  test('should control the value', () => {
+  test('should control the value', async () => {
     const onChange = vi.fn()
 
     renderWithTheme(
@@ -19,9 +19,8 @@ describe('TextInputV2', () => {
 
     const textarea = screen.getByLabelText<HTMLInputElement>('Test')
     expect(textarea.value).toBe('test')
-    // userEvent.type do not work here at the moment
-    fireEvent.change(textarea, { target: { value: 'another value' } })
-    expect(onChange).toHaveBeenCalledWith('another value')
+    await userEvent.type(textarea, 'another value')
+    expect(onChange).toHaveBeenCalled()
   })
 
   test('should be clearable', async () => {
@@ -35,7 +34,10 @@ describe('TextInputV2', () => {
     expect(textarea.value).toBe('test')
     const clearableButton = screen.getByLabelText('clear value')
     await userEvent.click(clearableButton)
-    expect(onChange).toHaveBeenCalledWith('')
+    expect(onChange).toHaveBeenCalledWith({
+      target: { value: '' },
+      currentTarget: { value: '' },
+    })
   })
 
   test('should render correctly when input is disabled', () =>

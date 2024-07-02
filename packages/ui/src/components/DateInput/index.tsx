@@ -304,9 +304,6 @@ export const DateInput = ({
               label={label}
               labelDescription={labelDescription}
               value={valueFormat}
-              onChange={event => {
-                console.log(event)
-              }}
               disabled={disabled}
               size={size}
               suffix={
