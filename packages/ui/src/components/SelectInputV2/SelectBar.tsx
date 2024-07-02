@@ -6,6 +6,7 @@ import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Tag } from '../Tag'
 import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
 import { useSelectInput } from './SelectInputProvider'
 import { findOptionInOptions } from './findOptionInOptions'
 import type { DataType, OptionType } from './types'
@@ -24,6 +25,7 @@ type SelectBarProps = {
   id?: string
   'data-testid': string
   label?: string
+  tooltip?: string
 }
 
 type DisplayValuesProps = {
@@ -57,6 +59,7 @@ const StyledInputWrapper = styled(Stack)<{
   box-shadow: none;
   background: ${({ theme }) => theme.colors.neutral.background};
   border-radius: ${({ theme }) => theme.radii.default};
+  width: 100%;
 
   &[data-readonly='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -196,6 +199,7 @@ export const SelectBar = ({
   success,
   error,
   autoFocus,
+  tooltip,
   innerRef,
   id,
   'data-testid': dataTestId,
@@ -285,97 +289,101 @@ export const SelectBar = ({
   }, [setSelectedData, options])
 
   return (
-    <StyledInputWrapper
-      role="combobox"
-      id={id}
-      data-disabled={disabled}
-      data-readonly={readOnly}
-      data-size={size}
-      data-dropdownvisible={isDropdownVisible}
-      data-state={state}
-      direction="row"
-      wrap="nowrap"
-      gap="1"
-      justifyContent="space-between"
-      alignItems="center"
-      onClick={
-        openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined
-      }
-      data-testid={dataTestId}
-      autoFocus={autoFocus}
-      onKeyDown={event => {
-        if (event.key === 'ArrowDown') {
-          if (!isDropdownVisible) {
-            setIsDropdownVisible(true)
-          } else {
-            document.getElementById(`option-0`)?.focus()
-          }
+    <Tooltip text={tooltip}>
+      <StyledInputWrapper
+        role="combobox"
+        id={id}
+        data-disabled={disabled}
+        data-readonly={readOnly}
+        data-size={size}
+        data-dropdownvisible={isDropdownVisible}
+        data-state={state}
+        direction="row"
+        wrap="nowrap"
+        gap="1"
+        justifyContent="space-between"
+        alignItems="center"
+        onClick={
+          openable ? () => setIsDropdownVisible(!isDropdownVisible) : undefined
         }
+        data-testid={dataTestId}
+        autoFocus={autoFocus}
+        onKeyDown={event => {
+          if (event.key === 'ArrowDown') {
+            if (!isDropdownVisible) {
+              setIsDropdownVisible(true)
+            } else {
+              document.getElementById(`option-0`)?.focus()
+            }
+          }
 
-        return ['Enter', ' '].includes(event.key) && openable
-          ? setIsDropdownVisible(!isDropdownVisible)
-          : null
-      }}
-      ref={innerRef}
-      aria-haspopup="listbox"
-      aria-expanded={isDropdownVisible}
-      tabIndex={0}
-      aria-label={label}
-    >
-      {selectedData.selectedValues.length > 0 ? (
-        <DisplayValues
-          refTag={refTag}
-          nonOverflowedValues={nonOverflowedValues}
-          disabled={disabled}
-          readOnly={readOnly}
-          overflowed={overflowed}
-          overflowAmount={overflowAmount}
-          size={size}
-        />
-      ) : (
-        <Text
-          as="p"
-          variant={size === 'large' ? 'body' : 'bodySmall'}
-          sentiment="neutral"
-          disabled={disabled}
-          prominence="weak"
-        >
-          {placeholder}
-        </Text>
-      )}
-      <StateStack direction="row" gap={1} alignItems="center">
-        {error ? <Icon name="alert" sentiment="danger" /> : null}
-        {success && !error ? (
-          <Icon name="checkbox-circle-outline" sentiment="success" />
-        ) : null}
-        {clearable && selectedData.selectedValues.length > 0 ? (
-          <Button
-            aria-label="clear value"
-            disabled={disabled || ![selectedData.selectedValues[0]] || readOnly}
-            variant="ghost"
-            size="small"
-            icon="close"
-            onClick={event => {
-              event.stopPropagation()
-              setSelectedData({ type: 'clearAll' })
-              if (multiselect) {
-                onChange?.([])
-              } else {
-                onChange?.('')
-              }
-            }}
-            sentiment="neutral"
-            data-testid="clear-all"
+          return ['Enter', ' '].includes(event.key) && openable
+            ? setIsDropdownVisible(!isDropdownVisible)
+            : null
+        }}
+        ref={innerRef}
+        aria-haspopup="listbox"
+        aria-expanded={isDropdownVisible}
+        tabIndex={0}
+        aria-label={label}
+      >
+        {selectedData.selectedValues.length > 0 ? (
+          <DisplayValues
+            refTag={refTag}
+            nonOverflowedValues={nonOverflowedValues}
+            disabled={disabled}
+            readOnly={readOnly}
+            overflowed={overflowed}
+            overflowAmount={overflowAmount}
+            size={size}
           />
-        ) : null}
-        <Icon
-          aria-label="show dropdown"
-          size="small"
-          name="arrow-down"
-          sentiment="neutral"
-          disabled={disabled || readOnly}
-        />
-      </StateStack>
-    </StyledInputWrapper>
+        ) : (
+          <Text
+            as="p"
+            variant={size === 'large' ? 'body' : 'bodySmall'}
+            sentiment="neutral"
+            disabled={disabled}
+            prominence="weak"
+          >
+            {placeholder}
+          </Text>
+        )}
+        <StateStack direction="row" gap={1} alignItems="center">
+          {error ? <Icon name="alert" sentiment="danger" /> : null}
+          {success && !error ? (
+            <Icon name="checkbox-circle-outline" sentiment="success" />
+          ) : null}
+          {clearable && selectedData.selectedValues.length > 0 ? (
+            <Button
+              aria-label="clear value"
+              disabled={
+                disabled || ![selectedData.selectedValues[0]] || readOnly
+              }
+              variant="ghost"
+              size="small"
+              icon="close"
+              onClick={event => {
+                event.stopPropagation()
+                setSelectedData({ type: 'clearAll' })
+                if (multiselect) {
+                  onChange?.([])
+                } else {
+                  onChange?.('')
+                }
+              }}
+              sentiment="neutral"
+              data-testid="clear-all"
+            />
+          ) : null}
+          <Icon
+            aria-label="show dropdown"
+            size="small"
+            name="arrow-down"
+            sentiment="neutral"
+            disabled={disabled || readOnly}
+          />
+        </StateStack>
+      </StyledInputWrapper>
+    </Tooltip>
   )
 }

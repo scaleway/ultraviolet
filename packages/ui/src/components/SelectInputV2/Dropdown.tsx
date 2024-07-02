@@ -95,7 +95,6 @@ const DropdownGroup = styled.button<{ 'data-selectgroup': boolean }>`
   &[data-selectgroup='true']:focus {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
   }
-}
 `
 const DropdownGroupWrapper = styled.div`
   position: sticky;
@@ -141,8 +140,6 @@ const DropdownItem = styled.button<{
     color: ${({ theme }) => theme.colors.neutral.textStrongDisabled};
     cursor: not-allowed;
     outline: none;
-  }
-
   }
 `
 const PopupFooter = styled.div`
