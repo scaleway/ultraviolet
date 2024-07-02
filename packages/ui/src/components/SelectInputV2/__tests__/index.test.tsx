@@ -46,6 +46,18 @@ describe('SelectInputV2', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('renders correctly with tooltip', () => {
+    const { asFragment } = renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataUnGrouped}
+        label="label"
+        tooltip="tooltip"
+      />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly required', () => {
     const { asFragment } = renderWithTheme(
       <SelectInputV2
