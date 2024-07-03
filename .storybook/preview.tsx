@@ -16,8 +16,7 @@ import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
 import InterSemiBoldWoff2 from './assets/fonts/inter/Inter-SemiBold.woff2'
 import InterMediumWoff2 from './assets/fonts/inter/Inter-Medium.woff2'
 import InterRegularWoff2 from './assets/fonts/inter/Inter-Regular.woff2'
-import SpaceGroteskMediumWoff2 from './assets/fonts/space-grotesk/SpaceGrotesk-Medium.woff2'
-import SpaceGroteskRegularWoff2 from './assets/fonts/space-grotesk/SpaceGrotesk-Regular.woff2'
+import SpaceGrotesk from './assets/fonts/space-grotesk/SpaceGrotesk.woff2'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 
 if (isChromatic()) seedrandom('manual-seed', { global: true })
@@ -122,19 +121,10 @@ export const globalStyles = css`
     font-weight: 400;
     font-display: swap;
   }
-  @font-face {
+@font-face {
     font-family: 'Space Grotesk';
     font-style: normal;
-    src: url(${SpaceGroteskMediumWoff2}) format('woff2');
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    src: url(${SpaceGroteskRegularWoff2}) format('woff2');
-    font-weight: 400;
-    font-display: swap;
+    src: url(${SpaceGrotesk}) format('woff2');
   }
 `
 

@@ -5,7 +5,7 @@ type DialogTextProps = {
 }
 
 export const DialogText = ({ children }: DialogTextProps) => (
-  <Text as="p" variant="body">
+  <Text as="p" variant="body" sentiment="neutral">
     {children}
   </Text>
 )
