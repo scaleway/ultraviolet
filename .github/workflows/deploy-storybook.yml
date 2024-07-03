@@ -1,7 +1,6 @@
 name: Deploy Storybook
 
 on:
-  merge_group:
   pull_request:
     types: ["opened", "edited", "reopened", "synchronize"]
   push:
