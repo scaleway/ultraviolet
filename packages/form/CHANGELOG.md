@@ -1,5 +1,80 @@
 # Change Log
 
+## 3.0.0
+
+### Major Changes
+
+- [#3780](https://github.com/scaleway/ultraviolet/pull/3780) [`64af9b3`](https://github.com/scaleway/ultraviolet/commit/64af9b3f3344b9c637db4a93968119db35ec2677) Thanks [@johnrazeur](https://github.com/johnrazeur)! - ## Accept control prop
+
+  Field can accept a `control` prop. When this prop is provided, the `name` prop must be present in the form and the `onChange` callback is typed.
+
+  ## Remove defaultValues
+
+  You must use the `useForm` hook to provide initial values:
+
+  ```tsx
+  // Old
+  <Form defaultValues={{ foo: 'bar' }}>
+    // ...
+  </Form>
+
+  // New
+  const methods = useForm({ defaultValues: { foo: 'bar' }})
+
+  <Form methods={methods}>
+    // ...
+  </Form>
+  ```
+
+  ## Remove function as child component
+
+  Function as child component must be remove:
+
+  ```tsx
+  // Old
+  <Form>
+    {({ isSubmitting }) => (
+    <Button disabled={isSubmitting}>Submit</Button>
+    )}
+  </Form>
+
+  // New
+  const methods = useForm()
+
+  const { isSubmitting } = methods.formState
+
+  <Form methods={methods}>
+    <Button disabled={isSubmitting}>Submit</Button>
+  </Form>
+  ```
+
+  ## onRawSubmit renamed to onSubmit
+
+  The `onRawSubmit` is renamed to `onSubmit`.
+
+  The return of the function is now a string if an error occurred.
+
+  ```tsx
+  // Old
+  <Form onRawSubmit={(values) => {
+    return { [FORM_ERROR]: 'ERROR' }
+  }}>
+    // ...
+  </Form>
+
+  // New
+  <Form onSubmit={(values) => {
+      return 'ERROR'
+  }}>
+    // ...
+  </Form>
+  ```
+
+### Patch Changes
+
+- Updated dependencies [[`7dee114`](https://github.com/scaleway/ultraviolet/commit/7dee114d97f7e7e0758eabc5e301ddc716ceea40), [`b1e5948`](https://github.com/scaleway/ultraviolet/commit/b1e59486cc336527871fc211faa8ea73c6b59fa6)]:
+  - @ultraviolet/ui@1.57.1
+
 ## 2.14.7
 
 ### Patch Changes
