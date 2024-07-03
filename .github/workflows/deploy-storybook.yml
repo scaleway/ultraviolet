@@ -14,7 +14,7 @@ jobs:
       IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
       DEPLOYMENT_NAME: "storybook"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
       - name: Export custom variables
