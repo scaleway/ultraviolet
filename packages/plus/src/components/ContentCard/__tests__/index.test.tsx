@@ -19,6 +19,13 @@ describe('ContentCard', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('renders correctly with disabled', () => {
+    const { asFragment } = renderWithTheme(
+      <ContentCard title="test" disabled />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('renders correctly with empty string title', () => {
     const { asFragment } = renderWithTheme(<ContentCard title="" />)
     expect(asFragment()).toMatchSnapshot()
