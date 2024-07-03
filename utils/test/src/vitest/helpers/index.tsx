@@ -50,7 +50,7 @@ export const mockFormErrors: FormErrors = {
 }
 
 /**
- * use `asFragment()` from the `render` directly
+ * @deprecated use `asFragment()` from the `render` directly
  *
  * @example
  * ```tsx
@@ -60,7 +60,6 @@ export const mockFormErrors: FormErrors = {
  * ```
  *
  */
-
 export const shouldMatchEmotionSnapshotWithPortal = (
   component: ReactElement,
   theme?: typeof consoleLightTheme,
@@ -72,7 +71,7 @@ export const shouldMatchEmotionSnapshotWithPortal = (
   })
 
 /**
- * use `asFragment()` from the `render` directly
+ * @deprecated use `asFragment()` from the `render` directly
  *
  * @example
  * ```tsx
