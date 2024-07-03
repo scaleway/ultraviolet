@@ -22,7 +22,7 @@ You will also need to import fonts in your project by adding:
   rel="stylesheet"
 />
 <link
-  href="https://fonts.cdnfonts.com/css/space-grotesk?styles=24816,24815"
+  href="https://fonts.cdnfonts.com/css/space-grotesk?styles=24816,24815,24817"
   rel="stylesheet"
 />
 ```

@@ -64,7 +64,11 @@ export const BaseDialog = ({
             : 'check'
         }
       />
-      <StyledTextTitle as="h2" variant="headingSmallStronger">
+      <StyledTextTitle
+        as="h2"
+        variant="headingSmallStronger"
+        sentiment="neutral"
+      >
         {title}
       </StyledTextTitle>
     </>
