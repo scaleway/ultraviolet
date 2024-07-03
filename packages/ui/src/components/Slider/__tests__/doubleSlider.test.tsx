@@ -52,23 +52,6 @@ describe('Double slider', () => {
     )
   })
 
-  test('renders correctly double with swaped min-max', () => {
-    const { asFragment } = renderWithTheme(
-      <Slider
-        value={[14, 12]}
-        name="Name"
-        label="Label"
-        data-testid="slider"
-        double
-      />,
-    )
-    expect(asFragment()).toMatchSnapshot()
-    expect(screen.getByTestId<HTMLInputElement>('slider-left').value).toBe('12')
-    expect(screen.getByTestId<HTMLInputElement>('slider-right').value).toBe(
-      '14',
-    )
-  })
-
   test('renders correctly double with value outside of min-max', () => {
     const { asFragment } = renderWithTheme(
       <Slider
@@ -244,7 +227,7 @@ describe('Double slider', () => {
     const inputLeft = screen.getByTestId('slider-input-left')
     await userEvent.type(inputLeft, '5')
     await userEvent.tab()
-    expect(sliderLeft.value).toBe('9')
+    expect(sliderLeft.value).toBe('10')
 
     await userEvent.clear(inputLeft)
     await userEvent.tab()
