@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.18.0
+
+### Minor Changes
+
+- [#3949](https://github.com/scaleway/ultraviolet/pull/3949) [`ed752cc`](https://github.com/scaleway/ultraviolet/commit/ed752cc2c2afa92e26cca8999cecac6de93eee07) Thanks [@matthprost](https://github.com/matthprost)! - Add new prop `disabled` on `<ContentCard />` component
+
+### Patch Changes
+
+- Updated dependencies [[`7dee114`](https://github.com/scaleway/ultraviolet/commit/7dee114d97f7e7e0758eabc5e301ddc716ceea40), [`b1e5948`](https://github.com/scaleway/ultraviolet/commit/b1e59486cc336527871fc211faa8ea73c6b59fa6)]:
+  - @ultraviolet/ui@1.57.1
+
 ## 0.17.11
 
 ### Patch Changes

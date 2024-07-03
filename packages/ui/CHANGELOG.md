@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.57.1
+
+### Patch Changes
+
+- [#3928](https://github.com/scaleway/ultraviolet/pull/3928) [`7dee114`](https://github.com/scaleway/ultraviolet/commit/7dee114d97f7e7e0758eabc5e301ddc716ceea40) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Dialog />` title to have the correct neutral color
+
+- [#3943](https://github.com/scaleway/ultraviolet/pull/3943) [`b1e5948`](https://github.com/scaleway/ultraviolet/commit/b1e59486cc336527871fc211faa8ea73c6b59fa6) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />`: New prop `tooltip`
+
 ## 1.57.0
 
 ### Minor Changes

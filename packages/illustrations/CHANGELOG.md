@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 3.1.0
+
+### Minor Changes
+
+- [#3939](https://github.com/scaleway/ultraviolet/pull/3939) [`204bcb1`](https://github.com/scaleway/ultraviolet/commit/204bcb129499c026dba9281931e5bc34feb67afd) Thanks [@lisalupi](https://github.com/lisalupi)! - New illustration `ipam`
+
 ## 3.0.1
 
 ### Patch Changes
