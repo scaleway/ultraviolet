@@ -1,7 +1,8 @@
 import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon, Stack, Text } from '@ultraviolet/ui'
+import { Icon } from '@ultraviolet/icons'
+import { Stack, Text } from '@ultraviolet/ui'
 import type { MouseEventHandler, ReactNode } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import { Skeleton } from './Skeleton'
@@ -17,6 +18,7 @@ const activeStyle = (theme: Theme) => css`
 const Card = styled.div<{
   onClick?: ContentCardProps['onClick']
   href?: ContentCardProps['href']
+  disabled?: ContentCardProps['disabled']
 }>`
   display: block;
   text-align: left;
@@ -28,6 +30,14 @@ const Card = styled.div<{
   background: ${({ theme }) => theme.colors.neutral.background};
   ${({ onClick, href, theme }) => (onClick || href ? activeStyle(theme) : null)};
   overflow-wrap: break-word;
+
+  &[disabled] {
+    cursor: not-allowed;
+    &:hover {
+      border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+      box-shadow: none;
+    }
+  }
 `
 
 const IconContainer = styled.div`
@@ -77,6 +87,10 @@ const Image = styled('img', {
     }`};
   ${({ direction, subContainerHeight }) =>
     direction === 'row' ? `max-height: ${subContainerHeight}px` : null}
+
+  &[data-disabled] {
+    filter: grayscale(1);
+  }
 `
 
 const FullHeightStack = styled(Stack)`
@@ -105,6 +119,7 @@ type ContentCardProps = {
   href?: HTMLAnchorElement['href']
   target?: HTMLAnchorElement['target']
   onClick?: MouseEventHandler<HTMLElement>
+  disabled?: boolean
   loading?: boolean
   className?: string
 }
@@ -130,6 +145,7 @@ export const ContentCard = forwardRef<
       href,
       target = '_blank',
       onClick,
+      disabled,
       loading,
       className,
     },
@@ -159,11 +175,12 @@ export const ContentCard = forwardRef<
     return (
       <Container
         target={target}
-        onClick={onClick}
-        href={href}
+        onClick={!disabled ? onClick : undefined}
+        href={!disabled ? href : undefined}
         role={onClick && !href ? 'button' : undefined}
         ref={ref}
         className={className}
+        disabled={disabled}
       >
         {loading ? (
           <Skeleton direction={direction} />
@@ -177,6 +194,7 @@ export const ContentCard = forwardRef<
                 width={direction === 'row' ? 220 : undefined}
                 direction={direction}
                 subContainerHeight={subContainerHeight}
+                data-disabled={disabled}
               />
             ) : null}
             <Stack gap={2} direction={direction} flex={1}>
@@ -196,16 +214,27 @@ export const ContentCard = forwardRef<
                           variant="caption"
                           prominence="weak"
                           sentiment="neutral"
+                          disabled={disabled}
                         >
                           {subtitle}
                         </Text>
                       ) : null}
-                      <Text as="h3" variant="bodyStrong" sentiment="neutral">
+                      <Text
+                        as="h3"
+                        variant="bodyStrong"
+                        sentiment="neutral"
+                        disabled={disabled}
+                      >
                         {title}
                       </Text>
                     </Stack>
                     {description ? (
-                      <Text as="p" variant="bodySmall" sentiment="neutral">
+                      <Text
+                        as="p"
+                        variant="bodySmall"
+                        sentiment="neutral"
+                        disabled={disabled}
+                      >
                         {description}
                       </Text>
                     ) : null}
@@ -221,7 +250,11 @@ export const ContentCard = forwardRef<
                   direction={direction}
                 >
                   <IconContainer>
-                    <Icon name="open-in-new" color="neutral" />
+                    <Icon
+                      name="open-in-new"
+                      sentiment="neutral"
+                      disabled={disabled}
+                    />
                   </IconContainer>
                 </StyledIconStack>
               ) : null}
