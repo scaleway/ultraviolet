@@ -1,19 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Form > renders correctly  1`] = `
-<DocumentFragment>
-  <div
-    data-testid="testing"
-  >
-    <form
-      novalidate=""
-    >
-      Test
-    </form>
-  </div>
-</DocumentFragment>
-`;
-
 exports[`Form > renders correctly with node children 1`] = `
 <DocumentFragment>
   <div
@@ -28,7 +14,7 @@ exports[`Form > renders correctly with node children 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Form > renders correctly with onRawSubmit 1`] = `
+exports[`Form > renders correctly with onSubmit 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"

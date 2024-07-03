@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 type RadioFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TName>, 'label'> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Partial<
     Pick<
       ComponentProps<typeof Radio>,
@@ -29,9 +29,10 @@ type RadioFieldProps<
  */
 export const RadioField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   className,
+  control,
   'data-testid': dataTestId,
   disabled,
   id,
@@ -42,20 +43,21 @@ export const RadioField = <
   onFocus,
   required,
   value,
-  rules,
   tooltip,
   shouldUnregister = false,
-}: RadioFieldProps<TFieldValues, TName>) => {
+  validate,
+}: RadioFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
       required,
-      ...rules,
+      validate,
     },
   })
 

@@ -33,7 +33,7 @@ describe('SelectableCardField', () => {
           data-testid="checked"
         />
       </SelectableCardGroupField>,
-      { initialValues: { test: 'checked' } },
+      { defaultValues: { test: 'checked' } },
     )
     const input = screen.getByLabelText('Radio 1')
     expect(input).toBeChecked()
@@ -54,7 +54,7 @@ describe('SelectableCardField', () => {
           data-testid="checked"
         />
       </SelectableCardGroupField>,
-      { initialValues: { test: 'checked' } },
+      { defaultValues: { test: 'checked' } },
     )
     const input = screen.getByLabelText('Checkbox 1')
     expect(input).toBeChecked()

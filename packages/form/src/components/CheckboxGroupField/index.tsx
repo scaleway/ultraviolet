@@ -16,8 +16,8 @@ const arraysContainSameValues = (array1: string[], array2: string[]) => {
 
 type CheckboxGroupFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Partial<
     Pick<
       ComponentProps<typeof CheckboxGroup>,
@@ -40,10 +40,11 @@ type ElementProps = {
 
 export const CheckboxGroupField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   legend,
   className,
+  control,
   helper,
   direction,
   children,
@@ -53,10 +54,10 @@ export const CheckboxGroupField = <
   name,
   required = false,
   shouldUnregister = false,
-  rules,
-}: CheckboxGroupFieldProps<TFieldValues, TName>) => {
+  validate,
+}: CheckboxGroupFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
-  const validate = useCallback(
+  const checkboxValid = useCallback(
     (value: string[]) => {
       const requiredChildren =
         Children.map(children, child => {
@@ -87,12 +88,15 @@ export const CheckboxGroupField = <
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
-      validate,
-      ...rules,
+      validate: {
+        checkboxValid,
+        ...validate,
+      },
     },
   })
 

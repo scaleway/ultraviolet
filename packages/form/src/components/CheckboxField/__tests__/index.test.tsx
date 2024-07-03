@@ -1,6 +1,7 @@
-import { act, screen } from '@testing-library/react'
+import { act, renderHook, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
+import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
 import { CheckboxField } from '../..'
 import { Form } from '../../Form'
@@ -24,7 +25,7 @@ describe('CheckboxField', () => {
 
   test('should render correctly checked without value', () => {
     const { asFragment } = renderWithForm(<CheckboxField name="checked" />, {
-      initialValues: {
+      defaultValues: {
         checked: true,
       },
     })
@@ -36,7 +37,7 @@ describe('CheckboxField', () => {
 
   test('should render correctly not checked without value', () => {
     const { asFragment } = renderWithForm(<CheckboxField name="checked" />, {
-      initialValues: {},
+      defaultValues: {},
     })
 
     const input = screen.getByRole('checkbox', { hidden: true })
@@ -71,8 +72,13 @@ describe('CheckboxField', () => {
   })
 
   test('should render correctly with errors', async () => {
+    const { result } = renderHook(() => useForm({ mode: 'onChange' }))
     const { asFragment } = renderWithTheme(
-      <Form onRawSubmit={() => {}} errors={mockFormErrors}>
+      <Form
+        onSubmit={() => {}}
+        errors={mockFormErrors}
+        methods={result.current}
+      >
         <CheckboxField name="test" required>
           Checkbox field error
         </CheckboxField>

@@ -7,21 +7,22 @@ import type { BaseFieldProps } from '../../types'
 
 type ToggleGroupFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Partial<
     Pick<
       ComponentProps<typeof ToggleGroup>,
       'className' | 'helper' | 'direction' | 'children' | 'error' | 'legend'
     >
   > &
-  Required<Pick<ComponentProps<typeof ToggleGroup>, 'legend' | 'name'>>
+  Required<Pick<ComponentProps<typeof ToggleGroup>, 'legend'>>
 
 export const ToggleGroupField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   legend,
+  control,
   className,
   helper,
   direction,
@@ -32,16 +33,21 @@ export const ToggleGroupField = <
   name,
   required = false,
   shouldUnregister = false,
-}: ToggleGroupFieldProps<TFieldValues, TName>) => {
+  validate,
+}: ToggleGroupFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
-      validate: required ? value => value.length > 0 : undefined,
+      validate: {
+        ...(required ? { required: value => value.length > 0 } : undefined),
+        ...validate,
+      },
     },
   })
 

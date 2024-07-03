@@ -2,9 +2,7 @@ import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
-import { Form, Submit, SubmitErrorAlert } from '../..'
-import { FORM_ERROR } from '../../../constants'
-import { mockErrors } from '../../../mocks'
+import { Submit, SubmitErrorAlert } from '../..'
 
 describe('SubmitErrorAlert', () => {
   test('should render nothing if no error', () => {
@@ -13,14 +11,15 @@ describe('SubmitErrorAlert', () => {
   })
 
   test('should display an alert when submitError is present', async () => {
-    const onSubmit = vi.fn(() => ({ [FORM_ERROR]: 'hello' }))
+    const onSubmit = vi.fn(() => 'hello')
 
     const { asFragment } = renderWithForm(
-      <Form errors={mockErrors} onRawSubmit={onSubmit}>
+      <>
         <Submit>Submit</Submit>
         <SubmitErrorAlert />,
-      </Form>,
-      { onRawSubmit: onSubmit },
+      </>,
+      {},
+      { onSubmit },
     )
     await userEvent.click(
       // eslint-disable-next-line testing-library/no-node-access

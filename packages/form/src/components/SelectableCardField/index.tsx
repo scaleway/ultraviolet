@@ -6,8 +6,8 @@ import type { BaseFieldProps } from '../../types'
 
 type SelectableCardFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TName>, 'label' | 'onChange'> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label' | 'onChange'> &
   Partial<
     Pick<
       ComponentProps<typeof SelectableCard>,
@@ -29,9 +29,10 @@ type SelectableCardFieldProps<
 
 export const SelectableCardField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   name,
+  control,
   value,
   onChange,
   showTick,
@@ -45,19 +46,20 @@ export const SelectableCardField = <
   tooltip,
   id,
   label,
-  rules,
   shouldUnregister = false,
+  validate,
   'data-testid': dataTestId,
-}: SelectableCardFieldProps<TFieldValues, TName>) => {
+}: SelectableCardFieldProps<TFieldValues, TFieldName>) => {
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
       required,
-      ...rules,
+      validate,
     },
   })
 

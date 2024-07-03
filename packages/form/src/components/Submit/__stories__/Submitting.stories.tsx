@@ -1,21 +1,27 @@
 import type { StoryFn } from '@storybook/react'
 import { Submit } from '..'
+import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
 
-export const Submitting: StoryFn = () => (
-  <Form
-    errors={mockErrors}
-    onRawSubmit={() =>
-      new Promise(resolve => {
-        setTimeout(() => resolve(undefined), 5000)
-      })
-    }
-  >
-    {({ submitting }) => (
+export const Submitting: StoryFn = () => {
+  const methods = useForm()
+
+  const { isSubmitting } = methods.formState
+
+  return (
+    <Form
+      errors={mockErrors}
+      onSubmit={() =>
+        new Promise(resolve => {
+          setTimeout(() => resolve(undefined), 5000)
+        })
+      }
+      methods={methods}
+    >
       <Submit>
-        {submitting ? 'This form is submitting' : 'Click to submit for 5sec'}
+        {isSubmitting ? 'This form is submitting' : 'Click to submit for 5sec'}
       </Submit>
-    )}
-  </Form>
-)
+    </Form>
+  )
+}

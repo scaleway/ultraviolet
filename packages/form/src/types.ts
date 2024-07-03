@@ -1,4 +1,5 @@
 import type {
+  Control,
   FieldError,
   FieldPath,
   FieldPathValue,
@@ -38,22 +39,22 @@ export type FormErrors = {
 }
 
 export type BaseFieldProps<
-  TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
+  TFieldValues extends FieldValues = FieldValues,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 > = {
-  name: TName
+  name: TFieldName
   required?: boolean
   validate?: Record<
     string,
-    Validate<FieldPathValue<TFieldValues, TName>, TFieldValues>
+    Validate<FieldPathValue<TFieldValues, TFieldName>, TFieldValues>
   >
-  /**
-   * @deprecated Use individual props instead
-   */
-  rules?: UseControllerProps<TFieldValues>['rules']
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
   label?: string
   value?: PathValue<TFieldValues, Path<TFieldValues>>
-  onChange?: (value?: PathValue<TFieldValues, TName>) => void
-  shouldUnregister?: UseControllerProps<TFieldValues, TName>['shouldUnregister']
+  onChange?: (value?: PathValue<TFieldValues, TFieldName>) => void
+  shouldUnregister?: UseControllerProps<
+    TFieldValues,
+    TFieldName
+  >['shouldUnregister']
+  control?: Control<TFieldValues>
 }

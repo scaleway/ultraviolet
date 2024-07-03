@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 type NumberInputValueFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Partial<
     Pick<
       ComponentProps<typeof NumberInput>,
@@ -32,7 +32,7 @@ type NumberInputValueFieldProps<
  */
 export const NumberInputField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   disabled,
   maxValue,
@@ -47,23 +47,25 @@ export const NumberInputField = <
   size,
   step,
   text,
-  rules,
   className,
   label,
   shouldUnregister = false,
-}: NumberInputValueFieldProps<TFieldValues, TName>) => {
+  validate,
+  control,
+}: NumberInputValueFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
     shouldUnregister,
+    control,
     rules: {
       max: maxValue,
       min: minValue,
       required,
-      ...rules,
+      validate,
     },
   })
 

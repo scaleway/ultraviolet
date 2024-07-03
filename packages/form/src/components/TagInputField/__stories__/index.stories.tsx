@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { useForm } from 'react-hook-form'
 import { TagInputField } from '..'
 import { Form } from '../..'
+import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
 export default {
@@ -27,7 +27,7 @@ export default {
       } = methods.formState
 
       return (
-        <Form onRawSubmit={() => {}} errors={mockErrors} methods={methods}>
+        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
             <ChildStory />
             <Stack gap={1}>

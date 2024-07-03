@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import { useWatch } from 'react-hook-form'
 import { ToggleGroupField } from '..'
 import { Submit } from '../..'
+import { useWatch } from '../../..'
 
 export const RequiredStory: StoryFn<typeof ToggleGroupField> = args => {
   const values = useWatch()

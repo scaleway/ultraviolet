@@ -28,7 +28,7 @@ describe('RadioField', () => {
   test('should render correctly checked', () => {
     const { asFragment } = renderWithForm(
       <RadioField name="test" value="checked" label="Radio field checked" />,
-      { initialValues: { test: 'checked' } },
+      { defaultValues: { test: 'checked' } },
     )
     const input = screen.getByRole('radio', { hidden: true })
     expect(input).toBeChecked()

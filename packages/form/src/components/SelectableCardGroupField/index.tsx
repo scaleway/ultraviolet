@@ -7,9 +7,9 @@ import type { BaseFieldProps } from '../../types'
 
 type SelectableCardGroupFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
-  Omit<BaseFieldProps<TFieldValues, TName>, 'label' | 'onChange'> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
+  Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label' | 'onChange'> &
   Partial<
     Pick<
       ComponentProps<typeof SelectableCardGroup>,
@@ -27,14 +27,14 @@ type SelectableCardGroupFieldProps<
 
 export const SelectableCardGroupField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   className,
   legend,
+  control,
   name,
   onChange,
   required = false,
-  rules,
   children,
   label = '',
   error: customError,
@@ -43,17 +43,19 @@ export const SelectableCardGroupField = <
   showTick,
   type = 'radio',
   shouldUnregister = false,
-}: SelectableCardGroupFieldProps<TFieldValues, TName>): JSX.Element => {
+  validate,
+}: SelectableCardGroupFieldProps<TFieldValues, TFieldName>): JSX.Element => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
       required,
-      ...rules,
+      validate,
     },
   })
 

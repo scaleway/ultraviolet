@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 export type TagInputFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Partial<
     Pick<
       ComponentProps<typeof TagInput>,
@@ -30,16 +30,16 @@ export type TagInputFieldProps<
 
 export const TagInputField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   className,
   disabled,
   id,
+  control,
   name,
   onChange,
   placeholder,
   required,
-  rules,
   variant,
   shouldUnregister = false,
   'data-testid': dataTestId,
@@ -50,17 +50,19 @@ export const TagInputField = <
   success,
   readOnly,
   tooltip,
-}: TagInputFieldProps<TFieldValues, TName>) => {
+  validate,
+}: TagInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     rules: {
       required,
       shouldUnregister,
-      ...rules,
+      validate,
     },
   })
 

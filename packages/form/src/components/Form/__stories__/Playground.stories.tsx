@@ -1,11 +1,10 @@
 import type { StoryFn } from '@storybook/react'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
-import { useForm } from 'react-hook-form'
 import {
   CheckboxField,
   DateField,
   Form,
-  NumberInputField,
+  NumberInputFieldV2,
   RadioField,
   SelectInputFieldV2,
   SelectableCardField,
@@ -13,10 +12,17 @@ import {
   SubmitErrorAlert,
   TagInputField,
   TextInputField,
+  TextInputFieldV2,
   TimeField,
   ToggleField,
 } from '../..'
+import { useForm } from '../../..'
 import { emailRegex, mockErrors } from '../../../mocks/mockErrors'
+
+const data = [
+  { value: '1', label: '1', disabled: false },
+  { value: '2', label: '2', disabled: false },
+]
 
 type FormValues = {
   receiveEmailUpdates: boolean
@@ -25,14 +31,16 @@ type FormValues = {
   selectableCard: string
   disableName: boolean
   email: string
+  date: Date
+  time: Date
+  name: string
+  age: number
+  select: (typeof data)[number]['value']
+  taginput: string[]
 }
-const data = [
-  { value: '1', label: '1', disabled: false },
-  { value: '2', label: '2', disabled: false },
-]
 
 export const Playground: StoryFn<typeof Form> = () => {
-  const methods = useForm({
+  const methods = useForm<FormValues>({
     mode: 'onChange',
     defaultValues: {
       receiveEmailUpdates: true,
@@ -60,65 +68,102 @@ export const Playground: StoryFn<typeof Form> = () => {
   } = methods.formState
 
   return (
-    <Form<FormValues>
+    <Form
       errors={mockErrors}
       methods={methods}
-      onRawSubmit={() =>
+      onSubmit={() =>
         new Promise(rejects => {
-          setTimeout(
-            () => rejects({ 'FINAL_FORM/form-error': 'SERVER ERROR' }),
-            5000,
-          )
+          setTimeout(() => rejects('SERVER ERROR'), 5000)
         })
       }
     >
       <Stack gap={3}>
-        <CheckboxField name="disableName">
+        <CheckboxField name="disableName" control={methods.control}>
           I&apos;m disabling the field name to remove validation
         </CheckboxField>
         <Stack gap={2} direction="row">
-          <RadioField name="choice" value="1" required label="1" />
-          <RadioField name="choice" value="2" required label="2" />
-          <RadioField name="choice" value="3" required label="3" />
+          <RadioField
+            name="choice"
+            value="1"
+            required
+            label="1"
+            control={methods.control}
+          />
+          <RadioField
+            name="choice"
+            value="2"
+            required
+            label="2"
+            control={methods.control}
+          />
+          <RadioField
+            name="choice"
+            value="3"
+            required
+            label="3"
+            control={methods.control}
+          />
         </Stack>
         <Stack gap={2} direction="row">
-          <DateField name="date" label="Date" required />
-          <TimeField name="time" required />
+          <DateField
+            name="date"
+            label="Date"
+            required
+            control={methods.control}
+          />
+          <TimeField name="time" required control={methods.control} />
         </Stack>
 
         <Stack gap={2} direction="row">
-          <SelectableCardField name="selectableCard" value="1" required>
+          <SelectableCardField
+            name="selectableCard"
+            value="1"
+            required
+            control={methods.control}
+          >
             Selectable Card 1
           </SelectableCardField>
-          <SelectableCardField name="selectableCard" value="2" required>
+          <SelectableCardField
+            name="selectableCard"
+            value="2"
+            required
+            control={methods.control}
+          >
             Selectable Card 2
           </SelectableCardField>
-          <SelectableCardField name="selectableCard" value="3" required>
+          <SelectableCardField
+            name="selectableCard"
+            value="3"
+            required
+            control={methods.control}
+          >
             Selectable Card 3
           </SelectableCardField>
         </Stack>
 
-        <TextInputField
+        <TextInputFieldV2
           name="name"
           label="Name"
           placeholder="John"
           autoComplete="given-name"
           required={!disableName}
           disabled={disableName}
+          control={methods.control}
         />
-        <NumberInputField name="age" minValue={1} maxValue={99} />
+        <NumberInputFieldV2
+          name="age"
+          control={methods.control}
+          min={1}
+          max={99}
+        />
         <TextInputField
           name="email"
           label="Email"
           type="email"
           placeholder="john.smith@email.com"
           required
-          rules={{
-            pattern: {
-              value: emailRegex,
-              message: 'Must be an email',
-            },
-          }}
+          regex={[emailRegex]}
+          control={methods.control}
         />
 
         <SelectInputFieldV2
@@ -126,16 +171,25 @@ export const Playground: StoryFn<typeof Form> = () => {
           required
           options={data}
           searchable={false}
+          control={methods.control}
         />
 
-        <TagInputField name="taginput" placeholder="TagInput..." />
+        <TagInputField
+          name="tags"
+          placeholder="TagInput..."
+          control={methods.control}
+        />
 
         <Stack gap={2} direction="row" justifyContent="center">
-          <CheckboxField name="receiveEmailUpdates">
+          <CheckboxField name="receiveEmailUpdates" control={methods.control}>
             I&apos;d like to receive news updates
           </CheckboxField>
 
-          <ToggleField name="receiveEmailUpdates" label="Toggle" />
+          <ToggleField
+            name="receiveEmailUpdates"
+            label="Toggle"
+            control={methods.control}
+          />
         </Stack>
 
         <SubmitErrorAlert />
@@ -180,7 +234,7 @@ export const Playground: StoryFn<typeof Form> = () => {
 }
 
 Playground.args = {
-  onRawSubmit: values => {
+  onSubmit: values => {
     console.log('Submit', values)
   },
 }

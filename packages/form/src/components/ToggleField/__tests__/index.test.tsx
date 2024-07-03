@@ -16,7 +16,7 @@ describe('ToggleField', () => {
 
   test('should render correctly checked', () => {
     const { asFragment } = renderWithForm(<ToggleField name="test" />, {
-      initialValues: {
+      defaultValues: {
         test: true,
       },
     })
@@ -29,7 +29,7 @@ describe('ToggleField', () => {
     const { asFragment } = renderWithForm(
       <ToggleField name="test" label="test" />,
       {
-        initialValues: {
+        defaultValues: {
           test: true,
         },
       },

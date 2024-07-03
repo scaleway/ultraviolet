@@ -1,11 +1,14 @@
 import createCache from '@emotion/cache'
 import { CacheProvider, ThemeProvider } from '@emotion/react'
-import { render } from '@testing-library/react'
+import { render, renderHook } from '@testing-library/react'
 import type { RenderOptions } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
-import { Form } from '../../../../../packages/form/src/index'
-import type { FormErrors } from '../../../../../packages/form/src/index'
+import type {
+  FormErrors,
+  UseFormProps,
+} from '../../../../../packages/form/src/index'
+import { Form, useForm } from '../../../../../packages/form/src/index'
 import { makeShouldMatchEmotionSnapshot } from './shouldMatchEmotionSnapshot'
 import { makeShouldMatchEmotionSnapshotWithPortal } from './shouldMatchEmotionSnapshotWithPortal'
 
@@ -108,14 +111,25 @@ export const renderWithTheme = (
 
 export const renderWithForm = (
   compoment: ReactElement,
-  formOptions?: Partial<ComponentProps<typeof Form>>,
+  useFormProps?: UseFormProps,
+  formProps?: Partial<ComponentProps<typeof Form>>,
   theme?: typeof consoleLightTheme,
-) =>
-  renderWithTheme(
-    <Form onRawSubmit={() => {}} errors={mockFormErrors} {...formOptions}>
+) => {
+  const { result } = renderHook(() =>
+    useForm({ mode: 'onChange', ...useFormProps }),
+  )
+
+  return renderWithTheme(
+    <Form
+      onSubmit={() => {}}
+      errors={mockFormErrors}
+      methods={result.current}
+      {...formProps}
+    >
       {compoment}
     </Form>,
     theme,
   )
+}
 
 export const defaultError = new Error('Default error message')

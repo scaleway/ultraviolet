@@ -15,7 +15,7 @@ type FormValues = {
 
 type Wrapers = {
   children: ReactNode
-  initialValues: FormValues
+  defaultValues: FormValues
 }
 
 const initial = {
@@ -28,9 +28,9 @@ const updated = {
   check: false,
 }
 
-const Wrapper = ({ children, initialValues }: Wrapers) => {
+const Wrapper = ({ children, defaultValues }: Wrapers) => {
   const methods = useForm({
-    values: initialValues,
+    values: defaultValues,
   })
 
   return (
@@ -38,7 +38,7 @@ const Wrapper = ({ children, initialValues }: Wrapers) => {
       <Form<FormValues>
         methods={methods}
         errors={mockErrors}
-        onRawSubmit={() => {}}
+        onSubmit={() => {}}
       >
         {children}
         <CheckboxField name="check" />
@@ -55,7 +55,7 @@ describe('useOnFieldChange', () => {
       expect(values).toStrictEqual(updated)
     })
 
-    let initialValues = initial
+    let defaultValues = initial
 
     const { result, rerender } = renderHook(
       () =>
@@ -65,7 +65,7 @@ describe('useOnFieldChange', () => {
         ),
       {
         wrapper: ({ children }) => (
-          <Wrapper initialValues={initialValues}>{children}</Wrapper>
+          <Wrapper defaultValues={defaultValues}>{children}</Wrapper>
         ),
       },
     )
@@ -74,7 +74,7 @@ describe('useOnFieldChange', () => {
 
     expect(callback).toHaveBeenCalledTimes(0)
 
-    initialValues = updated
+    defaultValues = updated
 
     rerender()
 
@@ -84,7 +84,7 @@ describe('useOnFieldChange', () => {
   test('should render when condition change', () => {
     const callback = vi.fn()
 
-    let initialValues = initial
+    let defaultValues = initial
 
     const { result, rerender } = renderHook(
       ({ enabled }) => {
@@ -97,7 +97,7 @@ describe('useOnFieldChange', () => {
       },
       {
         wrapper: ({ children }) => (
-          <Wrapper initialValues={initialValues}>{children}</Wrapper>
+          <Wrapper defaultValues={defaultValues}>{children}</Wrapper>
         ),
 
         initialProps: {
@@ -110,7 +110,7 @@ describe('useOnFieldChange', () => {
 
     expect(callback).toHaveBeenCalledTimes(0)
 
-    initialValues = updated
+    defaultValues = updated
 
     rerender({ enabled: true })
 

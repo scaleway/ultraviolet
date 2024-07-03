@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 type ToggleFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TName>, 'label'> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Pick<
     ComponentProps<typeof Toggle>,
     | 'disabled'
@@ -26,32 +26,34 @@ type ToggleFieldProps<
 
 export const ToggleField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   className,
   disabled,
   label,
   name,
+  control,
   onChange,
   required,
   size,
   tooltip,
-  rules,
   labelPosition,
   parse,
   format,
   'data-testid': dataTestId,
   shouldUnregister = false,
-}: ToggleFieldProps<TFieldValues, TName>) => {
+  validate,
+}: ToggleFieldProps<TFieldValues, TFieldName>) => {
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
       required,
-      ...rules,
+      validate,
     },
   })
   const { getError } = useErrors()

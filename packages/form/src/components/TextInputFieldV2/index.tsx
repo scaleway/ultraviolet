@@ -4,11 +4,12 @@ import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
+import { validateRegex } from '../../utils/validateRegex'
 
 type TextInputFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Omit<
     ComponentProps<typeof TextInputV2>,
     'value' | 'error' | 'name' | 'onChange'
@@ -21,9 +22,8 @@ type TextInputFieldProps<
  */
 export const TextInputField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  validate,
   regex: regexes,
   id,
   className,
@@ -56,29 +56,24 @@ export const TextInputField = <
   'aria-label': ariaLabel,
   autoComplete,
   shouldUnregister,
-}: TextInputFieldProps<TFieldValues, TName>) => {
+  validate,
+  control,
+}: TextInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
     shouldUnregister,
+    control,
     rules: {
       required,
       validate: {
         ...(regexes
           ? {
-              pattern: value =>
-                regexes.every(
-                  regex =>
-                    value === undefined ||
-                    value === '' ||
-                    (Array.isArray(regex)
-                      ? regex.some(regexOr => regexOr.test(value))
-                      : regex.test(value)),
-                ),
+              pattern: value => validateRegex(value, regexes),
             }
           : {}),
         ...validate,

@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 type UnitInputFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
   Pick<
     ComponentProps<typeof UnitInput>,
     | 'id'
@@ -36,7 +36,7 @@ type UnitInputFieldProps<
 
 export const UnitInputField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   id,
   name,
@@ -55,10 +55,10 @@ export const UnitInputField = <
   width,
   selectInputWidth,
   helper,
-  rules,
   shouldUnregister = false,
   validate,
-}: UnitInputFieldProps<TFieldValues, TName>) => {
+  control,
+}: UnitInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const { field: unitField } = useController({
     name: `${name}-unit`,
@@ -66,18 +66,20 @@ export const UnitInputField = <
     rules: { required },
   })
 
-  const { field: valueField, fieldState: valueFieldState } =
-    useController<TFieldValues>({
-      name,
-      shouldUnregister,
-      rules: {
-        required,
-        min,
-        max,
-        ...rules,
-        ...validate,
-      },
-    })
+  const { field: valueField, fieldState: valueFieldState } = useController<
+    TFieldValues,
+    TFieldName
+  >({
+    name,
+    shouldUnregister,
+    control,
+    rules: {
+      required,
+      min,
+      max,
+      validate,
+    },
+  })
 
   return (
     <UnitInput

@@ -23,7 +23,7 @@ describe('TextInputFieldV2', () => {
 
     const { asFragment } = renderWithTheme(
       <Form
-        onRawSubmit={onSubmit}
+        onSubmit={onSubmit}
         errors={mockFormErrors}
         methods={result.current}
       >

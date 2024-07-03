@@ -1,22 +1,25 @@
 import type { Meta } from '@storybook/react'
 import { TextAreaField } from '..'
 import { Form } from '../..'
+import { useForm } from '../../..'
 import { mockErrors } from '../../../mocks'
 
 export default {
   component: TextAreaField,
   decorators: [
-    ChildStory => (
-      <Form
-        onRawSubmit={() => {}}
-        errors={mockErrors}
-        initialValues={{
+    ChildStory => {
+      const methods = useForm({
+        defaultValues: {
           textarea: 'A long time ago in a galaxy far, far away',
-        }}
-      >
-        <ChildStory />
-      </Form>
-    ),
+        },
+      })
+
+      return (
+        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
+          <ChildStory />
+        </Form>
+      )
+    },
   ],
   title: 'Form/Components/Fields/TextAreaField',
 } as Meta

@@ -1,6 +1,7 @@
-import { screen, waitFor } from '@testing-library/react'
+import { renderHook, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm, renderWithTheme } from '@utils/test'
+import { useForm } from 'react-hook-form'
 import { describe, expect, test, vi } from 'vitest'
 import { TextAreaField } from '..'
 import { Submit } from '../..'
@@ -16,9 +17,14 @@ describe('TextAreaField', () => {
 
   test('should render correctly generated', async () => {
     const onSubmit = vi.fn<[values: { test: string }], void>()
+    const { result } = renderHook(() => useForm<{ test: string }>())
 
     const { asFragment } = renderWithTheme(
-      <Form onRawSubmit={onSubmit} errors={mockFormErrors}>
+      <Form
+        onSubmit={onSubmit}
+        errors={mockFormErrors}
+        methods={result.current}
+      >
         <TextAreaField label="Test" name="test" required clearable />
         <Submit>Submit</Submit>
       </Form>,

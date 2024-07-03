@@ -7,8 +7,8 @@ import type { BaseFieldProps } from '../../types'
 
 type CheckboxFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TName>, 'value'> &
+  TFieldName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'value'> &
   Partial<
     Pick<
       ComponentProps<typeof Checkbox>,
@@ -29,9 +29,10 @@ type CheckboxFieldProps<
 
 export const CheckboxField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   id,
+  control,
   name,
   label,
   size,
@@ -43,23 +44,24 @@ export const CheckboxField = <
   onChange,
   onBlur,
   onFocus,
-  rules,
   helper,
   tooltip,
   'data-testid': dataTestId,
   shouldUnregister = false,
-}: CheckboxFieldProps<TFieldValues, TName>) => {
+  validate,
+}: CheckboxFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
     disabled,
     shouldUnregister,
+    control,
     rules: {
       required,
-      ...rules,
+      validate,
     },
   })
 

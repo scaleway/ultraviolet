@@ -18,18 +18,17 @@ const parseTime = (date?: Date | string): { label: string; value: string } => {
 
 type TimeFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues>,
-> = BaseFieldProps<TFieldValues, TName> &
-  Omit<ComponentProps<typeof TimeInput>, 'onChange'> & {
-    name: string
-  }
+  TFieldName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TFieldName> &
+  Omit<ComponentProps<typeof TimeInput>, 'onChange'>
 
 export const TimeField = <
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   required,
   name,
+  control,
   schedule,
   placeholder,
   disabled,
@@ -46,21 +45,22 @@ export const TimeField = <
   animationOnChange,
   className,
   isSearchable,
-  rules,
   options,
   'data-testid': dataTestId,
   shouldUnregister = false,
   noTopLabel,
-}: TimeFieldProps<TFieldValues, TName>) => {
+  validate,
+}: TimeFieldProps<TFieldValues, TFieldName>) => {
   const {
     field,
     fieldState: { error },
-  } = useController<TFieldValues>({
+  } = useController<TFieldValues, TFieldName>({
     name,
+    control,
     shouldUnregister,
     rules: {
       required,
-      ...rules,
+      validate,
     },
   })
 

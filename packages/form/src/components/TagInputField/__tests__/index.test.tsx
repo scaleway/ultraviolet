@@ -14,14 +14,14 @@ describe('TagInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should works with initialValues', async () => {
+  test('should works with defaultValues', async () => {
     const onSubmit = vi.fn<[{ test: string[] }], void>()
     const { result } = renderHook(() =>
       useForm<{ test: string[] }>({ defaultValues: { test: ['First'] } }),
     )
 
     const { asFragment } = renderWithTheme(
-      <Form onRawSubmit={onSubmit} errors={mockErrors} methods={result.current}>
+      <Form onSubmit={onSubmit} errors={mockErrors} methods={result.current}>
         <TagInputField label="Test" name="test" required clearable />
         <Submit>Submit</Submit>
       </Form>,

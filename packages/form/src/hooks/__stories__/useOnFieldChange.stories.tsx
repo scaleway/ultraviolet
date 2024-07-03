@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from '@storybook/react'
 import { Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
-import { Form, useOnFieldChange } from '../..'
+import { Form, useForm, useOnFieldChange } from '../..'
 import { TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
 
@@ -83,12 +83,12 @@ const FormContent = () => {
   )
 }
 
-export const Usage: StoryFn = () => (
-  <Form
-    initialValues={{ email: 'test@test.com' }}
-    onRawSubmit={() => {}}
-    errors={mockErrors}
-  >
-    <FormContent />
-  </Form>
-)
+export const Usage: StoryFn = () => {
+  const methods = useForm({ defaultValues: { email: 'test@test.com' } })
+
+  return (
+    <Form methods={methods} onSubmit={() => {}} errors={mockErrors}>
+      <FormContent />
+    </Form>
+  )
+}

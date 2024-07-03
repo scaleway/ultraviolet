@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import { useWatch } from 'react-hook-form'
 import { ToggleGroupField } from '..'
+import { useWatch } from '../../..'
 
 const ToggleGroupFieldStory: StoryFn<typeof ToggleGroupField> = args => {
   const values = useWatch()
