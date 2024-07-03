@@ -1,0 +1,95 @@
+name: Deploy Storybook
+
+on:
+  merge_group:
+  pull_request:
+    types: ["opened", "edited", "reopened", "synchronize"]
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    env:
+      IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
+      DEPLOYMENT_NAME: "storybook"
+    steps:
+      - uses: actions/checkout@v3
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v4
+      - name: Export custom variables
+        run: |
+          SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL-$DEPLOYMENT_NAME | rev | cut -c-37 | rev)
+          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
+
+      - name: Start deployment
+        uses: bobheadxi/deployments@v1.3.0
+        id: deployment
+        with:
+          step: start
+          token: ${{ secrets.GH_TOKEN }}
+          env: ${{ env.DEPLOYMENT_NAME }}
+          ref: ${{ github.head_ref }}
+
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Registry
+        uses: docker/login-action@v3
+        with:
+          registry: rg.fr-par.scw.cloud/ultraviolet
+          username: nologin
+          password: ${{ secrets.SCW_SECRET_KEY }}
+      - name: Build
+        uses: docker/build-push-action@v6
+        env:
+          IMAGE: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
+          SOURCE_DATE_EPOCH: 0
+        with:
+          push: true
+          tags: ${{ env.IMAGE }}
+          file: Dockerfile
+          cache-from: type=local,src=/tmp/docs/.buildx-cache
+          cache-to: type=local,dest=/tmp/docs/.buildx-cache-new,mode=max
+
+      - name: Deploy Serverless Container Scaleway
+        uses: philibea/scaleway-containers-deploy@v1.1.3
+        id: deploy
+        with:
+          type: "deploy"
+          # scw_dns: ${{ secrets.SCW_DNS }}
+          scw_dns: storybook.ultraviolet.scaleway.com
+          root_zone: ${{ env.BRANCH_SLUG == 'main' }}
+          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
+          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_environment_variables: "GITHUB=DEPLOY"
+          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
+          scw_min_scale: 0
+
+      - name: Update deployment status
+        uses: bobheadxi/deployments@v1.3.0
+        if: always()
+        with:
+          step: finish
+          env: ${{ env.DEPLOYMENT_NAME }}
+          token: ${{ secrets.GH_TOKEN }}
+          auto_inactive: true
+          # This will now be automatically handled by github with the auto_inactive
+          override: false
+          status: ${{ job.status }}
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+          env_url: ${{ steps.deploy.outputs.url }}
+      - name: Move cache
+        run: |
+          rm -rf /tmp/docs/.buildx-cache
+          mv /tmp/docs/.buildx-cache-new /tmp/docs/.buildx-cache

@@ -8,7 +8,7 @@ jobs:
   teardown:
     runs-on: ubuntu-22.04
     env:
-      IMAGE_NAME: rg.fr-par.scw.cloud/console-scw/ultraviolet
+      IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
       STORYBOOK_DEPLOYMENT_NAME: storybook
 
     steps:
@@ -20,6 +20,18 @@ jobs:
         run: |
           SAFE_STORYBOOK_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$STORYBOOK_DEPLOYMENT_NAME | rev | cut -c-37 | rev | sed 's/^-//g')
           echo "STORYBOOK_BRANCH_SLUG=$SAFE_STORYBOOK_HEAD_REF" >> $GITHUB_ENV
+
+      - name: Deploy Serverless Container Scaleway
+        uses: philibea/scaleway-containers-deploy@v1.1.3
+        id: deploy
+        with:
+          type: "teardown"
+          scw_dns: ${{ secrets.SCW_DNS }}
+          root_zone: ${{ env.BRANCH_SLUG == 'main' }}
+          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
+          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
 
       - name: Remove storybook deployment
         uses: bobheadxi/deployments@v1.5.0

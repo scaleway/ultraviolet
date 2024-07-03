@@ -3,7 +3,7 @@ name: Design tokens
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 9 * * 1-5'
+    - cron: "30 9 * * 1-5"
 
 jobs:
   synchronise:
@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
       - run: pnpm install
       - name: Generate json files
         run: pnpm run tokens:update
@@ -28,10 +28,10 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           base: main
           author: Scaleway Design <github@scaleway.com>
-          commit-message: 'fix(theme): synchronise design tokens'
+          commit-message: "fix(theme): synchronise design tokens"
           branch: fix/design-tokens-synchronise
           delete-branch: true
-          title: 'fix(theme): synchronise design tokens'
+          title: "fix(theme): synchronise design tokens"
           body: |
             Design system tokens update. This MR is created automatically when a change is detected in design tokens.
           team-reviewers: console

@@ -25,14 +25,14 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
       - run: pnpm install
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          commit: 'chore: release'
-          title: 'chore: release'
+          commit: "chore: release"
+          title: "chore: release"
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
