@@ -141,7 +141,7 @@ export const EstimateCostContent = ({
 
   const totalValue = useMemo(
     () =>
-      formatNumber(totalPrice.total, {
+      formatNumber(totalPrice.total < 0 ? 0 : totalPrice.total, {
         maximumFractionDigits: isLongFractionDigits
           ? maximumFractionDigitsLong[iteration.unit]
           : maximumFractionDigits[iteration.unit],
@@ -151,7 +151,7 @@ export const EstimateCostContent = ({
 
   const totalMaxValue = useMemo(
     () =>
-      formatNumber(totalPrice.maxTotal, {
+      formatNumber(totalPrice.maxTotal < 0 ? 0 : totalPrice.maxTotal, {
         maximumFractionDigits: isLongFractionDigits
           ? maximumFractionDigitsLong[iteration.unit]
           : maximumFractionDigits[iteration.unit],

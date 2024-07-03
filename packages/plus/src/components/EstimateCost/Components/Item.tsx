@@ -273,7 +273,7 @@ export const Item = ({
   }
 
   const price = useMemo(() => {
-    if (monthlyPrice > 0 && basePrice === 0) {
+    if (monthlyPrice && basePrice === 0) {
       return monthlyPrice / multiplier.months
     }
 
