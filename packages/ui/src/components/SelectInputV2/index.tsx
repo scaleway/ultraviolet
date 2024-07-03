@@ -95,6 +95,10 @@ type SelectInputV2Props<IsMulti extends undefined | boolean = false> = {
    */
   isLoading?: boolean
   /**
+   * Add a tooltip around the select bar
+   */
+  tooltip?: string
+  /**
    * Adds an option to select every selectable options
    */
   selectAll?: { label: ReactNode; description?: string }
@@ -148,6 +152,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
   error,
   'data-testid': dataTestId,
   className,
+  tooltip,
   footer,
   placeholderSearch = 'Search in list',
   placeholder = 'Select item',
@@ -234,6 +239,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
               innerRef={ref}
               id={finalId}
               label={label}
+              tooltip={tooltip}
             />
           </Stack>
         </Dropdown>

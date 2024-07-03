@@ -23,6 +23,7 @@ import * as iam from './iam'
 import * as inference from './inference'
 import * as instance from './instance'
 import * as iotHub from './iotHub'
+import * as ipam from './ipam'
 import * as ipfsNaming from './ipfsNaming'
 import * as ipfsPinning from './ipfsPinning'
 import * as jero from './jero'
@@ -70,6 +71,7 @@ export {
   inference,
   instance,
   iotHub,
+  ipam,
   ipfsNaming,
   ipfsPinning,
   jero,
