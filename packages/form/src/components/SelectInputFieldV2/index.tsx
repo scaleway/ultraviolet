@@ -41,6 +41,7 @@ type SelectInputFieldV2Props<
     | 'onFocus'
     | 'optionalInfoPlacement'
     | 'disabled'
+    | 'tooltip'
   >
 
 export const SelectInputFieldV2 = <
@@ -81,6 +82,7 @@ export const SelectInputFieldV2 = <
   shouldUnregister = false,
   control,
   validate,
+  tooltip,
 }: SelectInputFieldV2Props<TFieldValues, TFieldName>) => {
   const {
     field,
@@ -145,6 +147,7 @@ export const SelectInputFieldV2 = <
       optionalInfoPlacement={optionalInfoPlacement}
       aria-label={ariaLabel}
       onChange={handleChange}
+      tooltip={tooltip}
     />
   )
 }
