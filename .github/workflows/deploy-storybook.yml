@@ -60,6 +60,34 @@ jobs:
           cache-from: type=local,src=/tmp/docs/.buildx-cache
           cache-to: type=local,dest=/tmp/docs/.buildx-cache-new,mode=max
 
+      - name: Set scw_max_concurrency
+        id: set-min-scale
+        run: |
+          if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
+            echo "SCW_MAX_CONCURRENCY=30" >> $GITHUB_ENV
+          else
+            echo "SCW_MAX_CONCURRENCY=10" >> $GITHUB_ENV
+          fi
+
+
+      - name: Set scw_min_scale
+        id: set-min-scale
+        run: |
+          if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
+            echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
+          else
+            echo "SCW_MIN_SCALE=0" >> $GITHUB_ENV
+          fi
+
+      - name: Set scw_cpu_limit
+        id: set-cpu-limit
+        run: |
+          if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
+            echo "SCW_CPU_LIMIT=560" >> $GITHUB_ENV
+          else
+            echo "SCW_CPU_LIMIT=140" >> $GITHUB_ENV
+          fi
+
       - name: Deploy Serverless Container Scaleway
         uses: philibea/scaleway-containers-deploy@v1.1.3
         id: deploy
@@ -73,7 +101,9 @@ jobs:
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
           scw_environment_variables: "GITHUB=DEPLOY"
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
-          scw_min_scale: 0
+          scw_min_scale: ${{ env.SCW_MIN_SCALE }}
+          scw_cpu_limit: ${{ env.SCW_CPU_LIMIT }}
+          scw_max_concurrency: ${{ env.SCW_MAX_CONCURRENCY }}
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v1.5.0
