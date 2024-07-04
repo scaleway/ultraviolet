@@ -41,6 +41,7 @@ export type DisclosureProps = {
   visible: ModalState['visible']
   toggle: ModalState['toggle']
   id: string
+  disclosureRef: React.RefObject<HTMLElement>
 }
 
 export type DialogProps = {

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ReactElement, ReactNode } from 'react'
 import type React from 'react'
-import { useCallback, useId, useState } from 'react'
+import { useCallback, useId, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Dialog } from './Dialog'
 import { Disclosure } from './Disclosure'
@@ -77,6 +77,7 @@ export const Modal = ({
   // Used for disclosure usage only
   const [visible, setVisible] = useState(false)
   const controlId = useId()
+  const disclosureRef = useRef<HTMLElement>(null)
 
   const handleOpen = useCallback(() => {
     setVisible(true)
@@ -92,7 +93,8 @@ export const Modal = ({
       }
       setVisible(false)
     }
-  }, [onBeforeClose, onClose])
+    disclosureRef.current?.focus()
+  }, [disclosureRef, onBeforeClose, onClose])
 
   const handleToggle = useCallback(() => {
     setVisible(current => !current)
@@ -111,6 +113,7 @@ export const Modal = ({
           handleClose={handleClose}
           visible={visible}
           toggle={handleToggle}
+          disclosureRef={disclosureRef}
         />
       ) : null}
       <Dialog
