@@ -1,27 +1,40 @@
+import type { StoryFn } from '@storybook/react'
+import { useState } from 'react'
 import { List } from '..'
-import { Template } from './Template.stories'
-import { data } from './resources'
+import { Button } from '../../Button'
+import { Stack } from '../../Stack'
+import { columns, data } from './resources'
 
-export const Expandable = Template.bind({})
+export const Expandable: StoryFn<typeof List> = props => {
+  const [expanded, setExpanded] = useState(false)
 
-Expandable.args = {
-  ...Template.args,
-  expandable: true,
-  children: data.map(planet => (
-    <List.Row
-      key={planet.id}
-      id={planet.id}
-      expandable="Planet description"
-      disabled={planet.id === 'mercury'}
-    >
-      <List.Cell>
-        {planet.name}{' '}
-        {planet.id === 'mercury' ? ' (A disabled row cannot be expanded)' : ''}
-      </List.Cell>
-      <List.Cell>{planet.perihelion}AU</List.Cell>
-      <List.Cell>{planet.aphelion}AU</List.Cell>
-    </List.Row>
-  )),
+  return (
+    <Stack gap={1}>
+      <Button sentiment="primary" onClick={() => setExpanded(!expanded)}>
+        {expanded ? 'Collapse' : 'Expand'} all row
+      </Button>
+      <List {...props} columns={columns}>
+        {data.map(planet => (
+          <List.Row
+            key={planet.id}
+            id={planet.id}
+            expandable="Planet description"
+            expanded={expanded}
+            disabled={planet.id === 'mercury'}
+          >
+            <List.Cell>
+              {planet.name}{' '}
+              {planet.id === 'mercury'
+                ? ' (A disabled row cannot be expanded)'
+                : ''}
+            </List.Cell>
+            <List.Cell>{planet.perihelion}AU</List.Cell>
+            <List.Cell>{planet.aphelion}AU</List.Cell>
+          </List.Row>
+        ))}
+      </List>
+    </Stack>
+  )
 }
 
 Expandable.parameters = {
