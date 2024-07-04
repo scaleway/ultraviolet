@@ -44,6 +44,7 @@ const RadioGroupRadio = ({
   className,
   autoFocus,
   onKeyDown,
+  tooltip,
   'data-testid': dataTestId,
 }: RadioGroupRadioProps) => {
   const context = useContext(RadioGroupContext)
@@ -70,6 +71,7 @@ const RadioGroupRadio = ({
       autoFocus={autoFocus}
       onKeyDown={onKeyDown}
       data-testid={dataTestId}
+      tooltip={tooltip}
     />
   )
 }
