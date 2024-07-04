@@ -61,14 +61,13 @@ jobs:
           cache-to: type=local,dest=/tmp/docs/.buildx-cache-new,mode=max
 
       - name: Set scw_max_concurrency
-        id: set-min-scale
+        id: set-max-concurrency
         run: |
           if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
             echo "SCW_MAX_CONCURRENCY=30" >> $GITHUB_ENV
           else
             echo "SCW_MAX_CONCURRENCY=10" >> $GITHUB_ENV
           fi
-
 
       - name: Set scw_min_scale
         id: set-min-scale
