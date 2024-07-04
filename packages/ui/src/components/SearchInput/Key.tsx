@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { useMemo } from 'react'
 import { Text } from '../Text'
 
 const Container = styled.div`
@@ -22,18 +23,43 @@ const Container = styled.div`
   }
 `
 
+export const KEYS_MATCH = {
+  Enter: '↵',
+  ' ': '␣',
+  Meta: '⌘',
+  Control: 'Ctrl',
+  Alt: 'Alt',
+  ArrowUp: '↑',
+  ArrowDown: '↓',
+  ArrowLeft: '←',
+  ArrowRight: '→',
+  Backspace: '⌫',
+  Delete: '⌦',
+  Escape: 'Esc',
+  CapsLock: 'Caps',
+} as const
+
 type KeyProps = {
-  children: string
+  children: KeyboardEvent['key']
   disabled?: boolean
 }
 
-export const Key = ({ children, disabled }: KeyProps) => (
-  <Container
-    data-disabled={disabled}
-    data-children-length={children.length > 1}
-  >
-    <Text as="span" variant="caption" sentiment="neutral" disabled={disabled}>
-      {children}
-    </Text>
-  </Container>
-)
+export const Key = ({ children, disabled }: KeyProps) => {
+  const isSpecialKey = useMemo(
+    () => Object.keys(KEYS_MATCH).find(key => key === children),
+    [children],
+  )
+
+  return (
+    <Container
+      data-disabled={disabled}
+      data-children-length={children.length > 1}
+    >
+      <Text as="span" variant="caption" sentiment="neutral" disabled={disabled}>
+        {isSpecialKey
+          ? KEYS_MATCH[children as keyof typeof KEYS_MATCH]
+          : children}
+      </Text>
+    </Container>
+  )
+}
