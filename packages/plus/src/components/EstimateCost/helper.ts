@@ -24,10 +24,5 @@ export const calculatePrice = ({
     (nonNanTimeAmount * multiplier[`${timeUnit}`]) *
     Math.max(amount - amountFree, 0)
 
-  // Avoid having negative price in any cases
-  if (value < 0) {
-    return 0
-  }
-
   return value
 }

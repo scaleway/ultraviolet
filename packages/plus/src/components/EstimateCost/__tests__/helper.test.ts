@@ -21,7 +21,7 @@ describe('EstimateCost - helper', () => {
         timeUnit: 'hours',
         timeAmount: 24,
       }),
-    ).toEqual(0)
+    ).toEqual(-24)
   })
 
   it('should calculate price of 0.004, amount 5, amountFree 2 for 3 months', () => {
