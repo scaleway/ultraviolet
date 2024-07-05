@@ -115,6 +115,10 @@ exports[`RadioField > should render correctly 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
+}
+
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
@@ -334,6 +338,10 @@ exports[`RadioField > should render correctly checked 1`] = `
 
 .emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
+}
+
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
 }
 
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
@@ -558,6 +566,10 @@ exports[`RadioField > should render correctly disabled 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
+}
+
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
@@ -778,6 +790,10 @@ exports[`RadioField > should trigger events correctly 1`] = `
 
 .emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
+}
+
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
 }
 
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {

@@ -178,6 +178,10 @@ exports[`RadioField > should render correctly checked 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+  fill: #d8c5fc;
+}
+
 .emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
   fill: #e51963;
 }
@@ -531,6 +535,10 @@ exports[`RadioField > should trigger events correctly 1`] = `
 
 .emotion-14:checked[aria-disabled='false'][aria-invalid='false']+.emotion-17 {
   fill: #8c40ef;
+}
+
+.emotion-14:checked[aria-disabled='true'][aria-invalid='false']+.emotion-17 {
+  fill: #d8c5fc;
 }
 
 .emotion-14[aria-invalid='true']:not([aria-disabled='true'])+.emotion-17 {
