@@ -10,6 +10,8 @@ const SIZE = 24
 const InnerCircleRing = styled.circle``
 const RadioMark = styled.circle``
 
+export const RadioStack = styled(Stack)``
+
 const RadioMarkedIcon = () => (
   <g>
     <circle cx="12" cy="12" r="10" strokeWidth="2" />
@@ -200,7 +202,7 @@ export const Radio = forwardRef(
 
     return (
       <Tooltip text={tooltip}>
-        <Stack gap={0.5}>
+        <RadioStack gap={0.5}>
           <RadioContainer
             aria-disabled={disabled}
             className={className}
@@ -244,7 +246,7 @@ export const Radio = forwardRef(
               {helper}
             </MargedText>
           ) : null}
-        </Stack>
+        </RadioStack>
       </Tooltip>
     )
   },

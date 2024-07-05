@@ -6,8 +6,8 @@ import type {
   ReactNode,
 } from 'react'
 import { forwardRef, useCallback, useRef } from 'react'
-import { Checkbox } from '../Checkbox'
-import { Radio } from '../Radio'
+import { Checkbox, CheckboxContainer } from '../Checkbox'
+import { Radio, RadioStack } from '../Radio'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
@@ -55,6 +55,10 @@ const Container = styled(Stack)`
         box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
       }
     }
+  }
+
+  ${RadioStack}, ${CheckboxContainer} {
+    width: 100%;
   }
 `
 
