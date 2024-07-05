@@ -121,7 +121,7 @@ const CheckboxInput = styled('input', {
   }
 `
 
-const CheckboxContainer = styled.div`
+export const CheckboxContainer = styled.div`
   position: relative;
   display: inline-flex;
   align-items: start;
