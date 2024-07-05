@@ -181,7 +181,6 @@ describe('Double slider', () => {
         input
       />,
     )
-    // plutot getAllByRole('slider') ou truc du genre
     const sliderRight = screen.getByTestId<HTMLInputElement>('slider-right')
     const sliderLeft = screen.getByTestId<HTMLInputElement>('slider-left')
 
