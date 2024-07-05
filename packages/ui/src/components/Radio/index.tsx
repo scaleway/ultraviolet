@@ -56,6 +56,10 @@ const RadioInput = styled.input`
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
   }
 
+  &:checked[aria-disabled='true'][aria-invalid='false'] + ${Ring} {
+    fill: ${({ theme }) => theme.colors.primary.borderDisabled};
+  }
+
   &[aria-invalid='true']:not([aria-disabled='true']) + ${Ring} {
     fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
   }
@@ -124,6 +128,7 @@ const RadioContainer = styled.div`
     ${Ring} {
       fill: ${({ theme }) => theme.colors.neutral.borderDisabled};
       cursor: not-allowed;
+      
       ${InnerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
       }

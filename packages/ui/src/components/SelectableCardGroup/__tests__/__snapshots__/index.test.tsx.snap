@@ -893,6 +893,10 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-17:checked[aria-disabled='true'][aria-invalid='false']+.emotion-20 {
+  fill: #d8c5fc;
+}
+
 .emotion-17[aria-invalid='true']:not([aria-disabled='true'])+.emotion-20 {
   fill: #e51963;
 }
