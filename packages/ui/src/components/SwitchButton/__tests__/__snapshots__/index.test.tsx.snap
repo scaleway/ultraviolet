@@ -375,6 +375,10 @@ exports[`SwitchButton > renders correctly 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
+  fill: #d8c5fc;
+}
+
 .emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
   fill: #e51963;
 }
@@ -816,6 +820,10 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
+  fill: #d8c5fc;
+}
+
 .emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
   fill: #e51963;
 }
@@ -1255,6 +1263,10 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
 
 .emotion-10:checked[aria-disabled='false'][aria-invalid='false']+.emotion-13 {
   fill: #8c40ef;
+}
+
+.emotion-10:checked[aria-disabled='true'][aria-invalid='false']+.emotion-13 {
+  fill: #d8c5fc;
 }
 
 .emotion-10[aria-invalid='true']:not([aria-disabled='true'])+.emotion-13 {
@@ -1704,6 +1716,10 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 
 .emotion-12:checked[aria-disabled='false'][aria-invalid='false']+.emotion-15 {
   fill: #8c40ef;
+}
+
+.emotion-12:checked[aria-disabled='true'][aria-invalid='false']+.emotion-15 {
+  fill: #d8c5fc;
 }
 
 .emotion-12[aria-invalid='true']:not([aria-disabled='true'])+.emotion-15 {

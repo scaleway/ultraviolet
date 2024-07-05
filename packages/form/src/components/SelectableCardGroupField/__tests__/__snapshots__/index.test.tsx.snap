@@ -281,6 +281,10 @@ exports[`SelectableCardField > should render correctly 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-17:checked[aria-disabled='true'][aria-invalid='false']+.emotion-20 {
+  fill: #d8c5fc;
+}
+
 .emotion-17[aria-invalid='true']:not([aria-disabled='true'])+.emotion-20 {
   fill: #e51963;
 }
@@ -1304,6 +1308,10 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
 
 .emotion-17:checked[aria-disabled='false'][aria-invalid='false']+.emotion-20 {
   fill: #8c40ef;
+}
+
+.emotion-17:checked[aria-disabled='true'][aria-invalid='false']+.emotion-20 {
+  fill: #d8c5fc;
 }
 
 .emotion-17[aria-invalid='true']:not([aria-disabled='true'])+.emotion-20 {

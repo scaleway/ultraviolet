@@ -115,6 +115,10 @@ exports[`Radio > renders correctly 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
+}
+
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
@@ -330,6 +334,10 @@ exports[`Radio > renders correctly when checked 1`] = `
 
 .emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
+}
+
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
 }
 
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
@@ -550,6 +558,10 @@ exports[`Radio > renders correctly when disabled 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
+}
+
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
@@ -768,6 +780,10 @@ exports[`Radio > renders correctly when error 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
+}
+
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
   fill: #e51963;
 }
@@ -984,6 +1000,10 @@ exports[`Radio > renders correctly when helper 1`] = `
 
 .emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
+}
+
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
 }
 
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
@@ -1229,6 +1249,10 @@ exports[`Radio > renders correctly with tooltip 1`] = `
   fill: #8c40ef;
 }
 
+.emotion-6:checked[aria-disabled='true'][aria-invalid='false']+.emotion-9 {
+  fill: #d8c5fc;
+}
+
 .emotion-6[aria-invalid='true']:not([aria-disabled='true'])+.emotion-9 {
   fill: #e51963;
 }
@@ -1451,6 +1475,10 @@ exports[`Radio > renders without name 1`] = `
 
 .emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
   fill: #8c40ef;
+}
+
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
 }
 
 .emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
