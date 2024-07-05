@@ -36,7 +36,7 @@ type StyledDialogProps = {
   'data-placement': ModalPlacement
 }
 
-const StyledDialog = styled.dialog<StyledDialogProps>`
+export const StyledDialog = styled.dialog<StyledDialogProps>`
   background-color: ${({ theme }) =>
     theme.colors.neutral.backgroundWeakElevated};
   position: relative;
