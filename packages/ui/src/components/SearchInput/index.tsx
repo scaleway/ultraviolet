@@ -233,7 +233,7 @@ export const SearchInput = forwardRef(
     }, [isMacOS, shortcut])
 
     return (
-      <div>
+      <div style={{ width: '100%' }}>
         <StyledPopup
           data-testid={`popup-${dataTestId}`}
           role="dialog"
