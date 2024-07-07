@@ -201,8 +201,8 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       esbuild-plugin-browserslist:
-        specifier: 0.12.1
-        version: 0.12.1(browserslist@4.23.1)(esbuild@0.20.2)
+        specifier: 0.13.0
+        version: 0.13.0(browserslist@4.23.1)(esbuild@0.20.2)
       eslint:
         specifier: 9.6.0
         version: 9.6.0
@@ -4997,12 +4997,12 @@ packages:
   esbuild-plugin-alias@0.2.1:
     resolution: {integrity: sha512-jyfL/pwPqaFXyKnj8lP8iLk6Z0m099uXR45aSN8Av1XD4vhvQutxxPzgA2bTcAwQpa1zCXDcWOlhFgyP3GKqhQ==}
 
-  esbuild-plugin-browserslist@0.12.1:
-    resolution: {integrity: sha512-DtAnJCCFwsM2az26wXh1lisc+pyXIDS3Fr0v5+m4OolALmhtl1AnY/SIZb/QqzNGMQrm7HAgWiO2IwCw9i3JqA==}
+  esbuild-plugin-browserslist@0.13.0:
+    resolution: {integrity: sha512-jjiIiFT1Hrp3CPcKucZcqC8BSkWet/baVLtxN4Vy7yiTXk2PrAiQiVlgMaFc82JCAidOH1FCghvIkL8Z5HWhEQ==}
     engines: {node: '>=18'}
     peerDependencies:
       browserslist: ^4.21.8
-      esbuild: ~0.21.4
+      esbuild: ~0.22.0
 
   esbuild-register@3.5.0:
     resolution: {integrity: sha512-+4G/XmakeBAsvJuDugJvtyF1x+XJT4FMocynNpxrvEBViirpfUn2PgNpCHedfWhF4WokNsO/OvMKrmJOIJsI5A==}
@@ -14701,7 +14701,7 @@ snapshots:
 
   esbuild-plugin-alias@0.2.1: {}
 
-  esbuild-plugin-browserslist@0.12.1(browserslist@4.23.1)(esbuild@0.20.2):
+  esbuild-plugin-browserslist@0.13.0(browserslist@4.23.1)(esbuild@0.20.2):
     dependencies:
       browserslist: 4.23.1
       debug: 4.3.5
