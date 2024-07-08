@@ -1,5 +1,22 @@
 # Change Log
 
+## 1.59.0
+
+### Minor Changes
+
+- [#3968](https://github.com/scaleway/ultraviolet/pull/3968) [`fe71811`](https://github.com/scaleway/ultraviolet/commit/fe71811b58f7b4e28d861073d6a6a7dcb8807251) Thanks [@matthprost](https://github.com/matthprost)! - Improve `<SearchInput />`:
+  - prop `shortcut` now takes an array of string in addition to boolean. This way you can define multiple shortcuts for the same input: `shortcut={['/', 's']` for example.
+  - prop `children` is now optional. If not provided the popup will not be displayed and the input will behave like a regular input.
+  - new prop `className`
+
+### Patch Changes
+
+- [#3984](https://github.com/scaleway/ultraviolet/pull/3984) [`e0eced0`](https://github.com/scaleway/ultraviolet/commit/e0eced00f577edb115e4175f297b7f1cff771113) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<List />` prop `expanded` not working properly
+
+- [#3958](https://github.com/scaleway/ultraviolet/pull/3958) [`61f8b22`](https://github.com/scaleway/ultraviolet/commit/61f8b228f4e7c9ede64cd0f3326ad68dd7ce0f1a) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat(TextInputV2): add accessibility props
+
+- [#3972](https://github.com/scaleway/ultraviolet/pull/3972) [`e0a9f60`](https://github.com/scaleway/ultraviolet/commit/e0a9f602cfa77843ed9789c1809ac3a06c8d5ecc) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Dialog />` component width to be 440px instead of 400px
+
 ## 1.58.0
 
 ### Minor Changes
