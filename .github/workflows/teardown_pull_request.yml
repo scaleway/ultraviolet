@@ -37,5 +37,5 @@ jobs:
         uses: bobheadxi/deployments@v1.5.0
         with:
           step: delete-env
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           env: ${{ env.STORYBOOK_BRANCH_SLUG }}
