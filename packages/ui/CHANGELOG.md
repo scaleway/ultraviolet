@@ -1,5 +1,26 @@
 # Change Log
 
+## 1.58.0
+
+### Minor Changes
+
+- [#3963](https://github.com/scaleway/ultraviolet/pull/3963) [`16f59dd`](https://github.com/scaleway/ultraviolet/commit/16f59dde7261f341301f0da0bfe1ff37a167d94a) Thanks [@matthprost](https://github.com/matthprost)! - Add `expanded` prop on `<List.Row />` allowing the user to add an external button to expand or collapse rows
+
+- [#3970](https://github.com/scaleway/ultraviolet/pull/3970) [`2b5efd1`](https://github.com/scaleway/ultraviolet/commit/2b5efd127c776174e7a092b9cac57fa49e8d9096) Thanks [@matthprost](https://github.com/matthprost)! - `<SelectableCard />` component to have label taking 100% width while using radio and checkbox
+
+### Patch Changes
+
+- [#3969](https://github.com/scaleway/ultraviolet/pull/3969) [`3630184`](https://github.com/scaleway/ultraviolet/commit/363018420c9bb43831ca4dda4f78d200908a5914) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Radio />`: fix selected disabled color
+
+- [#3966](https://github.com/scaleway/ultraviolet/pull/3966) [`745c278`](https://github.com/scaleway/ultraviolet/commit/745c2781442663469f8d02caecdb6e496d408998) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(RadioGroup): add tooltip prop
+
+- [#3967](https://github.com/scaleway/ultraviolet/pull/3967) [`3a97e74`](https://github.com/scaleway/ultraviolet/commit/3a97e744a0a955eae9dc0e9c831a98647e0be068) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Modal />`: when a modal is closed, focus should be on disclosure
+
+- [#3918](https://github.com/scaleway/ultraviolet/pull/3918) [`8b1cc9e`](https://github.com/scaleway/ultraviolet/commit/8b1cc9e24ddb5b40ec0688254f2bd8526292f083) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<Slider />`
+
+- Updated dependencies [[`1ab8aca`](https://github.com/scaleway/ultraviolet/commit/1ab8acafb7edf5cd73373e22ad37359fb4da0ff4)]:
+  - @ultraviolet/icons@2.12.18
+
 ## 1.57.1
 
 ### Patch Changes
