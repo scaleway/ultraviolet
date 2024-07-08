@@ -6,10 +6,12 @@ import {
   useCallback,
   useEffect,
   useImperativeHandle,
+  useMemo,
   useReducer,
   useRef,
   useState,
 } from 'react'
+import { isClientSide } from '../../helpers/isClientSide'
 import { Popup } from '../Popup'
 import {
   BasicPrefixStack,
@@ -66,6 +68,7 @@ export const SearchInput = forwardRef(
       shortcut = false,
       error,
       disabled,
+      className,
     }: SearchInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -73,6 +76,8 @@ export const SearchInput = forwardRef(
     const popupRef = useRef<HTMLDivElement>(null)
     const [containerWidth, setContainerWidth] = useState(0)
     const [searchTerms, setSearchTerms] = useState('')
+    const [isMacOS, setIsMacOS] = useState(false)
+    const [keyPressed, setKeyPressed] = useState<string[]>([])
     const [isOpen, toggleIsOpen] = useReducer(state => !state, false)
     const innerSearchInputRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(
@@ -133,12 +138,12 @@ export const SearchInput = forwardRef(
       return () => window.removeEventListener('resize', resizeSearchBar)
     }, [])
 
-    const onSearchCallback = (value: string) => {
-      setSearchTerms(value)
+    const onSearchCallback = (localValue: string) => {
+      setSearchTerms(localValue)
 
       try {
-        onSearch(value)
-        if (value.length >= threshold && !isOpen) {
+        onSearch(localValue)
+        if (localValue.length >= threshold && !isOpen) {
           toggleIsOpen()
         }
       } catch {
@@ -153,35 +158,83 @@ export const SearchInput = forwardRef(
       }
     }
 
-    const isMacOS = navigator.userAgent.includes('Mac')
+    useEffect(() => {
+      if (isClientSide) {
+        // We need to check if window is defined to avoid SSR issues
+        setIsMacOS(navigator.userAgent.includes('Mac'))
+      }
+    }, [])
 
-    const handleShortcut = useCallback(
+    const handleKeyPressed = useCallback(
       (event: KeyboardEvent) => {
         const { ctrlKey, metaKey, key } = event
+        setKeyPressed([...keyPressed, key.toUpperCase()])
 
-        if (
-          (key === 'k' || key === 'K') &&
-          ((!isMacOS && ctrlKey) || (isMacOS && metaKey))
-        ) {
-          event.preventDefault()
-          innerSearchInputRef.current?.focus()
+        if (typeof shortcut === 'boolean') {
+          if (
+            (key === 'k' || key === 'K') &&
+            ((!isMacOS && ctrlKey) || (isMacOS && metaKey))
+          ) {
+            event.preventDefault()
+            innerSearchInputRef.current?.focus()
+          }
+        } else {
+          const uppercaseShortcut = shortcut.map(s => s.toUpperCase())
+
+          if (
+            JSON.stringify([...keyPressed, key.toUpperCase()]) ===
+            JSON.stringify(uppercaseShortcut)
+          ) {
+            event.preventDefault()
+            innerSearchInputRef.current?.focus()
+          }
         }
       },
-      [isMacOS, innerSearchInputRef],
+      [keyPressed, shortcut, isMacOS],
+    )
+
+    const handleKeyReleased = useCallback(
+      (event: KeyboardEvent) => {
+        const { key } = event
+        setKeyPressed(keyPressed.filter(k => k !== key.toUpperCase()))
+      },
+      [keyPressed],
     )
 
     useEffect(() => {
       if (shortcut && !disabled) {
-        document.body.addEventListener('keydown', handleShortcut)
+        document.body.addEventListener('keydown', handleKeyPressed)
+        document.body.addEventListener('keyup', handleKeyReleased)
       }
 
       return () => {
-        document.body.removeEventListener('keydown', handleShortcut)
+        document.body.removeEventListener('keydown', handleKeyPressed)
+        document.body.removeEventListener('keyup', handleKeyReleased)
       }
-    }, [handleShortcut, shortcut, disabled])
+    }, [shortcut, disabled, handleKeyPressed, handleKeyReleased])
+
+    const keys = useMemo(() => {
+      if (typeof shortcut === 'boolean') {
+        return [isMacOS ? '⌘' : 'Ctrl', 'K']
+      }
+
+      const filteredKey = shortcut.map(key => {
+        if (key === 'Meta') {
+          return '⌘'
+        }
+
+        if (key === 'Control') {
+          return 'Ctrl'
+        }
+
+        return key
+      })
+
+      return filteredKey
+    }, [isMacOS, shortcut])
 
     return (
-      <div>
+      <div style={{ width: '100%' }}>
         <StyledPopup
           data-testid={`popup-${dataTestId}`}
           role="dialog"
@@ -203,10 +256,7 @@ export const SearchInput = forwardRef(
             }
             suffix={
               shortcut && searchTerms.length === 0 ? (
-                <KeyGroup
-                  disabled={disabled}
-                  keys={[isMacOS ? '⌘' : 'Ctrl', 'K']}
-                />
+                <KeyGroup disabled={disabled} keys={keys} />
               ) : undefined
             }
             data-testid={dataTestId}
@@ -219,6 +269,7 @@ export const SearchInput = forwardRef(
             onChange={onSearchCallback}
             clearable
             disabled={disabled}
+            className={className}
           />
         </StyledPopup>
       </div>

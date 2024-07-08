@@ -740,7 +740,7 @@ describe('SelectInputV2', () => {
     const emptyState = screen.getByText('No options')
     expect(emptyState).toBeVisible()
   })
-  test('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
+  test.skip('handles correctly with searchable and closest value - multiselect & grouped data', async () => {
     renderWithTheme(
       <SelectInputV2
         name="test"

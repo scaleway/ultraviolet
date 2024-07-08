@@ -3,7 +3,7 @@ import { SearchInput } from '..'
 import { Text } from '../../Text'
 
 export const Template: StoryFn<typeof SearchInput> = ({ ...args }) => (
-  <div style={{ height: '500px' }}>
+  <div style={{ height: '120px' }}>
     <SearchInput
       {...args}
       placeholder="Type something"

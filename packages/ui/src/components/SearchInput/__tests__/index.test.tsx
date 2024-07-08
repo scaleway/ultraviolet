@@ -3,15 +3,14 @@ import userEvent from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { SearchInput } from '..'
-import { Key } from '../Key'
+import { KEYS_MATCH, Key } from '../Key'
 
 describe('SearchInput', () => {
   describe('Key', () => {
-    test('renders correctly with single key', () =>
-      shouldMatchEmotionSnapshot(<Key>K</Key>))
-
-    test('renders correctly with long key', () =>
-      shouldMatchEmotionSnapshot(<Key>Ctrl</Key>))
+    Object.keys(KEYS_MATCH).forEach(key => {
+      test(`renders correctly with special ${key} key`, () =>
+        shouldMatchEmotionSnapshot(<Key>{key}</Key>))
+    })
 
     test('renders correctly with disabled', () =>
       shouldMatchEmotionSnapshot(<Key disabled>K</Key>))
@@ -42,19 +41,32 @@ describe('SearchInput', () => {
       </SearchInput>,
     ))
 
-  test('renders with disabled and shortcut prop', () =>
-    shouldMatchEmotionSnapshot(
-      <SearchInput
-        placeholder="Type something"
-        popupPlacement="bottom"
-        onSearch={() => {}}
-        onClose={() => {}}
-        disabled
-        shortcut
-      >
-        <div />
-      </SearchInput>,
-    ))
+  describe('renders with shortcut prop', () => {
+    test('as boolean', () =>
+      shouldMatchEmotionSnapshot(
+        <SearchInput
+          placeholder="Type something"
+          popupPlacement="bottom"
+          onSearch={() => {}}
+          onClose={() => {}}
+          shortcut
+        >
+          <div />
+        </SearchInput>,
+      ))
+    test('as array of string', () =>
+      shouldMatchEmotionSnapshot(
+        <SearchInput
+          placeholder="Type something"
+          popupPlacement="bottom"
+          onSearch={() => {}}
+          onClose={() => {}}
+          shortcut={['Control', 'Shift', 'A']}
+        >
+          <div />
+        </SearchInput>,
+      ))
+  })
 
   test('renders with error prop', () =>
     shouldMatchEmotionSnapshot(
@@ -164,8 +176,8 @@ describe('SearchInput', () => {
     })
   })
 
-  test('render correctly with shortcut and check if it works', async () => {
-    const { asFragment } = renderWithTheme(
+  test('check if shortcut as boolean works', async () => {
+    renderWithTheme(
       <SearchInput
         size="large"
         placeholder="Type something"
@@ -185,15 +197,38 @@ describe('SearchInput', () => {
         </div>
       </SearchInput>,
     )
-    expect(asFragment()).toMatchSnapshot()
-
     const SearchInputElement = screen.getByTestId('search-bar')
-    console.log(navigator.userAgent)
 
     await userEvent.keyboard('{Control>}k')
     await userEvent.keyboard('{Meta>}k')
     expect(SearchInputElement).toHaveFocus()
+  })
 
-    expect(asFragment()).toMatchSnapshot()
+  test('check if custom shortcut works', async () => {
+    renderWithTheme(
+      <SearchInput
+        size="large"
+        placeholder="Type something"
+        label="input-label"
+        data-testid="search-bar"
+        popupPlacement="bottom"
+        onSearch={() => {}}
+        shortcut={['Control', 'Shift', 'A']}
+      >
+        <div>
+          <a href="/" data-testid="children-1">
+            Result 1
+          </a>
+          <a href="/" data-testid="children-2">
+            Result 2
+          </a>
+        </div>
+      </SearchInput>,
+    )
+
+    const SearchInputElement = screen.getByTestId('search-bar')
+
+    await userEvent.keyboard('{Control>}{Shift>}a')
+    expect(SearchInputElement).toHaveFocus()
   })
 })

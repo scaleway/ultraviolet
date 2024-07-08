@@ -1,5 +1,6 @@
 import type { Popup, TextInputV2 } from '@ultraviolet/ui'
 import type { ComponentProps, DispatchWithoutAction, ReactNode } from 'react'
+import type { KeyGroup } from './KeyGroup'
 
 type ChildrenProps = {
   searchTerms: string
@@ -16,14 +17,16 @@ export type SearchBarChildrenFunctionProps = ({
 export type SearchInputProps = {
   popupPlacement?: ComponentProps<typeof Popup>['placement']
   threshold?: number
-  children: SearchBarChildrenFunctionProps | ReactNode
+  children?: SearchBarChildrenFunctionProps | ReactNode
   onSearch: (value: string) => void
   onClose?: () => void
   ['data-testid']?: string
   /**
-   * If set to true images will be shown with key shortcut to focus the input on the right of the search bar
+   * If set to true images will be shown with key shortcut to focus the input on the right of the search bar.
+   * If set to an array of strings, the strings will be used as the key shortcuts.
    */
-  shortcut?: boolean
+  shortcut?: boolean | ComponentProps<typeof KeyGroup>['keys']
+  className?: string
 } & Pick<
   ComponentProps<typeof TextInputV2>,
   'placeholder' | 'size' | 'label' | 'loading' | 'error' | 'disabled'
