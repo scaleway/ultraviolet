@@ -12,9 +12,17 @@ import { DialogCancelButton } from './subComponents/CancelButton'
 import { DialogStack } from './subComponents/Stack'
 import { DialogText } from './subComponents/Text'
 
+const DIALOG_SIZE = 'xsmall'
+
 const StyledTextTitle = styled(Text)`
   margin-top: ${({ theme }) => theme.space['2']};
   margin-bottom: ${({ theme }) => theme.space['1']};
+`
+
+const StyledModal = styled(Modal)`
+    &[data-size="${DIALOG_SIZE}"] {
+      width: 440px; // size is on purpose different than a modal
+    }
 `
 
 type DialogProps = Pick<
@@ -82,7 +90,7 @@ export const BaseDialog = ({
   )
 
   return (
-    <Modal
+    <StyledModal
       ariaLabel={ariaLabel}
       className={className}
       data-testid={dataTestId}
@@ -95,7 +103,7 @@ export const BaseDialog = ({
       onClose={onClose}
       open={open}
       placement={placement}
-      size="xsmall"
+      size={DIALOG_SIZE}
     >
       {typeof children === 'function' ? (
         modalProps => (
@@ -110,7 +118,7 @@ export const BaseDialog = ({
           {children}
         </DialogContext.Provider>
       )}
-    </Modal>
+    </StyledModal>
   )
 }
 
