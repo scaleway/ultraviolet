@@ -1,5 +1,12 @@
 # @ultraviolet/plus
 
+## 0.19.1
+
+### Patch Changes
+
+- Updated dependencies [[`fe71811`](https://github.com/scaleway/ultraviolet/commit/fe71811b58f7b4e28d861073d6a6a7dcb8807251), [`e0eced0`](https://github.com/scaleway/ultraviolet/commit/e0eced00f577edb115e4175f297b7f1cff771113), [`61f8b22`](https://github.com/scaleway/ultraviolet/commit/61f8b228f4e7c9ede64cd0f3326ad68dd7ce0f1a), [`e0a9f60`](https://github.com/scaleway/ultraviolet/commit/e0a9f602cfa77843ed9789c1809ac3a06c8d5ecc)]:
+  - @ultraviolet/ui@1.59.0
+
 ## 0.19.0
 
 ### Minor Changes
