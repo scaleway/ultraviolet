@@ -37,4 +37,11 @@ describe('Expandable', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
+
+  test('renders correctly with animationDuration set to 0', () => {
+    const { asFragment } = renderWithTheme(
+      <Expandable animationDuration={0}>Sample Expandable</Expandable>,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

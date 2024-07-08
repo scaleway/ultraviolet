@@ -270,9 +270,12 @@ exports[`TimeInput > renders correctly with base props 1`] = `
 }
 
 .emotion-21 {
+  height: auto;
+}
+
+.emotion-21[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-23 {
@@ -381,6 +384,7 @@ exports[`TimeInput > renders correctly with base props 1`] = `
       />
       <div
         class="emotion-21 emotion-22"
+        data-is-animated="true"
       >
         <div
           class="emotion-23 emotion-24"

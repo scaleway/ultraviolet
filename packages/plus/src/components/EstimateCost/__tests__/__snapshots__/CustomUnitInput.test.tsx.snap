@@ -120,9 +120,12 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
 }
 
 .emotion-8 {
+  height: auto;
+}
+
+.emotion-8[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-10 {
@@ -429,6 +432,7 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
         </div>
         <div
           class="emotion-8 emotion-9"
+          data-is-animated="true"
         >
           <div
             class="emotion-10 emotion-11"
@@ -527,6 +531,7 @@ exports[`EstimateCost - CustomUnitInput > render default values 1`] = `
         />
         <div
           class="emotion-8 emotion-9"
+          data-is-animated="true"
         >
           <div
             class="emotion-10 emotion-34"

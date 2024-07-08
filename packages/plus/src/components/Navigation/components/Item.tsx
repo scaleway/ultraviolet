@@ -368,6 +368,7 @@ export const Item = ({
     pinLimit,
     animation,
     registerItem,
+    shouldAnimate,
   } = context
 
   useEffect(
@@ -391,16 +392,18 @@ export const Item = ({
   )
 
   useEffect(() => {
-    if (animation === 'collapse') {
-      setToggle(false)
-    }
+    if (shouldAnimate) {
+      if (animation === 'collapse') {
+        setToggle(false)
+      }
 
-    if (animation === 'expand') {
-      setTimeout(() => {
-        setToggle(toggle ?? true)
-      }, 1)
+      if (animation === 'expand') {
+        setTimeout(() => {
+          setToggle(toggle ?? true)
+        }, 1)
+      }
     }
-  }, [animation, toggle])
+  }, [animation, toggle, shouldAnimate])
 
   const PaddedStack = noExpand || type === 'pinnedGroup' ? Stack : PaddingStack
 
@@ -489,6 +492,13 @@ export const Item = ({
     event.currentTarget.style.opacity = '1'
   }
 
+  const expandableAnimationDuration = useMemo(() => {
+    if (shouldAnimate === false) return 0
+    if (animation) return ANIMATION_DURATION / 2
+
+    return undefined
+  }, [animation, shouldAnimate])
+
   // This content is when the navigation is expanded
   if (expanded || (!expanded && animation === 'expand')) {
     const renderChildren = Children.map(children, child =>
@@ -519,7 +529,7 @@ export const Item = ({
           target={href ? '_blank' : undefined}
           data-is-pinnable={shouldShowPinnedButton}
           data-is-active={active}
-          data-animation={animation}
+          data-animation={shouldAnimate ? animation : undefined}
           data-has-children={!!children}
           data-has-active-children={hasActiveChildren}
           data-has-no-expand={noExpand}
@@ -676,9 +686,7 @@ export const Item = ({
             {!noExpand ? (
               <Expandable
                 opened={internalToggle}
-                animationDuration={
-                  animation ? ANIMATION_DURATION / 2 : undefined
-                }
+                animationDuration={expandableAnimationDuration}
               >
                 <PaddedStack>{renderChildren}</PaddedStack>
               </Expandable>

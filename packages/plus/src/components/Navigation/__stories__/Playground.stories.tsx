@@ -11,11 +11,11 @@ const fadeIn = keyframes`
   0% {
     opacity: 0;
   }
-  
+
   50% {
     opacity: 0;
   }
-  
+
   100% {
     opacity: 1;
   }
@@ -358,6 +358,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         initialWidth={navigationWidth}
         initialPinned={pinnedItems}
         pinnedFeature
+        animation={false}
       >
         <PlaygroundContent {...props} />
       </NavigationProvider>
