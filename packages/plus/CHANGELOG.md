@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 0.19.0
+
+### Minor Changes
+
+- [#3959](https://github.com/scaleway/ultraviolet/pull/3959) [`0dad65d`](https://github.com/scaleway/ultraviolet/commit/0dad65da862fc404ec47c2771bcd60c244732af4) Thanks [@matthprost](https://github.com/matthprost)! - Allow negative values on prop `monthlyPrice` and `price` from `<EstimateCost.Item />`. The total value will always be 0 or higher.
+
+### Patch Changes
+
+- Updated dependencies [[`3630184`](https://github.com/scaleway/ultraviolet/commit/363018420c9bb43831ca4dda4f78d200908a5914), [`16f59dd`](https://github.com/scaleway/ultraviolet/commit/16f59dde7261f341301f0da0bfe1ff37a167d94a), [`745c278`](https://github.com/scaleway/ultraviolet/commit/745c2781442663469f8d02caecdb6e496d408998), [`3a97e74`](https://github.com/scaleway/ultraviolet/commit/3a97e744a0a955eae9dc0e9c831a98647e0be068), [`8b1cc9e`](https://github.com/scaleway/ultraviolet/commit/8b1cc9e24ddb5b40ec0688254f2bd8526292f083), [`1ab8aca`](https://github.com/scaleway/ultraviolet/commit/1ab8acafb7edf5cd73373e22ad37359fb4da0ff4), [`2b5efd1`](https://github.com/scaleway/ultraviolet/commit/2b5efd127c776174e7a092b9cac57fa49e8d9096)]:
+  - @ultraviolet/ui@1.58.0
+  - @ultraviolet/icons@2.12.18
+
 ## 0.18.0
 
 ### Minor Changes
