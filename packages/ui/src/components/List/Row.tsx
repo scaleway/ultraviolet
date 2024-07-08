@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ForwardedRef, ReactNode } from 'react'
-import { forwardRef, useEffect } from 'react'
+import { forwardRef, useCallback, useEffect } from 'react'
 import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -123,29 +123,19 @@ export const Row = forwardRef(
       expandButton,
     } = useListContext()
 
-    useEffect(() => {
-      if (expanded !== undefined || expanded !== null) {
-        if (expanded) {
-          expandRow(id)
-        } else {
-          collapseRow(id)
-        }
-      }
-    }, [expanded, expandRow, collapseRow, id])
-
     const isSelectDisabled =
       disabled || (selectDisabled !== undefined && selectDisabled !== false)
 
     const hasExpandable = !!expandable
     useEffect(() => {
       if (hasExpandable) {
-        const unregisterCallback = registerExpandableRow(id)
+        const unregisterCallback = registerExpandableRow(id, expanded)
 
         return unregisterCallback
       }
 
       return undefined
-    }, [id, hasExpandable, registerExpandableRow])
+    }, [id, hasExpandable, registerExpandableRow, expanded, expandRow])
 
     useEffect(() => {
       if (!isSelectDisabled) {
@@ -157,13 +147,13 @@ export const Row = forwardRef(
       return undefined
     }, [id, registerSelectableRow, isSelectDisabled])
 
-    const toggleRowExpand = () => {
+    const toggleRowExpand = useCallback(() => {
       if (expandedRowIds[id]) {
         collapseRow(id)
       } else {
         expandRow(id)
       }
-    }
+    }, [collapseRow, expandRow, expandedRowIds, id])
 
     const canClickRowToExpand = !disabled && !!expandable && !expandButton
 
