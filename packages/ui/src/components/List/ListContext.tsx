@@ -15,7 +15,7 @@ type ListContextValue = {
   /**
    * @returns an unregister function
    * */
-  registerExpandableRow: (rowId: string) => () => void
+  registerExpandableRow: (rowId: string, expanded?: boolean) => () => void
   expandedRowIds: RowState
   expandRow: (rowId: string) => void
   collapseRow: (rowId: string) => void
@@ -54,17 +54,20 @@ export const ListProvider = ({
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
 
-  const registerExpandableRow = useCallback((rowId: string) => {
-    setExpandedRowIds(current => ({ ...current, [rowId]: false }))
+  const registerExpandableRow = useCallback(
+    (rowId: string, expanded = false) => {
+      setExpandedRowIds(current => ({ ...current, [rowId]: expanded }))
 
-    return () => {
-      setExpandedRowIds(current => {
-        const { [rowId]: relatedId, ...otherIds } = current
+      return () => {
+        setExpandedRowIds(current => {
+          const { [rowId]: relatedId, ...otherIds } = current
 
-        return otherIds
-      })
-    }
-  }, [])
+          return otherIds
+        })
+      }
+    },
+    [],
+  )
 
   const registerSelectableRow = useCallback((rowId: string) => {
     setSelectedRowIds(current => ({ ...current, [rowId]: false }))

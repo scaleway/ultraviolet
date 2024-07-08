@@ -13,12 +13,12 @@ export const Expandable: StoryFn<typeof List> = props => {
       <Button sentiment="primary" onClick={() => setExpanded(!expanded)}>
         {expanded ? 'Collapse' : 'Expand'} all row
       </Button>
-      <List {...props} columns={columns}>
+      <List {...props} columns={columns} expandable>
         {data.map(planet => (
           <List.Row
             key={planet.id}
             id={planet.id}
-            expandable="Planet description"
+            expandable={<p>Test</p>}
             expanded={expanded}
             disabled={planet.id === 'mercury'}
           >
