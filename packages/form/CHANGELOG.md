@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.0.1
+
+### Patch Changes
+
+- [#3946](https://github.com/scaleway/ultraviolet/pull/3946) [`d009358`](https://github.com/scaleway/ultraviolet/commit/d009358a9c4be8a682a328889eb1af04693c43dd) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.52.1`.
+
+- [#3965](https://github.com/scaleway/ultraviolet/pull/3965) [`e20f2be`](https://github.com/scaleway/ultraviolet/commit/e20f2be9daa18c677c50f8eb288893eeac39e536) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(SelectInputFieldV2): add tooltip
+
+- Updated dependencies [[`3630184`](https://github.com/scaleway/ultraviolet/commit/363018420c9bb43831ca4dda4f78d200908a5914), [`16f59dd`](https://github.com/scaleway/ultraviolet/commit/16f59dde7261f341301f0da0bfe1ff37a167d94a), [`745c278`](https://github.com/scaleway/ultraviolet/commit/745c2781442663469f8d02caecdb6e496d408998), [`3a97e74`](https://github.com/scaleway/ultraviolet/commit/3a97e744a0a955eae9dc0e9c831a98647e0be068), [`8b1cc9e`](https://github.com/scaleway/ultraviolet/commit/8b1cc9e24ddb5b40ec0688254f2bd8526292f083), [`2b5efd1`](https://github.com/scaleway/ultraviolet/commit/2b5efd127c776174e7a092b9cac57fa49e8d9096)]:
+  - @ultraviolet/ui@1.58.0
+
 ## 3.0.0
 
 ### Major Changes

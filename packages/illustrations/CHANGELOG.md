@@ -1,5 +1,12 @@
 # @ultraviolet/illustrations
 
+## 3.1.1
+
+### Patch Changes
+
+- [#3962](https://github.com/scaleway/ultraviolet/pull/3962) [`1ab8aca`](https://github.com/scaleway/ultraviolet/commit/1ab8acafb7edf5cd73373e22ad37359fb4da0ff4) Thanks [@lisalupi](https://github.com/lisalupi)! - - `<ProductIcon />` : update icon `edgeServices`
+  - `<Illustrations />`: fix illustration `costManagerWire`
+
 ## 3.1.0
 
 ### Minor Changes
