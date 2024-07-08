@@ -11,4 +11,7 @@ export const Template: StoryFn<typeof TextInputV2> = ({ ...args }) => {
 Template.args = {
   placeholder: 'Placeholder',
   value: 'Text',
+  role: 'status',
+  'aria-live': 'polite',
+  'aria-atomic': 'true',
 }

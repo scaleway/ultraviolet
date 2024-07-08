@@ -16,4 +16,7 @@ export const Template: StoryFn<
 Template.args = {
   label: 'Label',
   name: 'example',
+  role: 'status',
+  'aria-live': 'polite',
+  'aria-atomic': 'true',
 }

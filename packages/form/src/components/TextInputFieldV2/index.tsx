@@ -58,6 +58,9 @@ export const TextInputField = <
   shouldUnregister,
   validate,
   control,
+  role,
+  'aria-live': ariaLive,
+  'aria-atomic': ariaAtomic,
 }: TextInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
@@ -134,6 +137,9 @@ export const TextInputField = <
       aria-label={ariaLabel}
       aria-labelledby={ariaLabelledBy}
       autoComplete={autoComplete}
+      role={role}
+      aria-live={ariaLive}
+      aria-atomic={ariaAtomic}
     />
   )
 }

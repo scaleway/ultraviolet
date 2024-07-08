@@ -153,6 +153,9 @@ type TextInputProps = {
   | 'tabIndex'
   | 'autoComplete'
   | 'onKeyDown'
+  | 'role'
+  | 'aria-live'
+  | 'aria-atomic'
 >
 
 /**
@@ -194,6 +197,9 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       'aria-label': ariaLabel,
       autoComplete,
       onKeyDown,
+      role,
+      'aria-live': ariaLive,
+      'aria-atomic': ariaAtomic,
     },
     ref,
   ) => {
@@ -219,13 +225,20 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
     const computedClearable = clearable && !!value
 
     return (
-      <Stack gap={0.5} className={className}>
+      <Stack
+        gap={0.5}
+        className={className}
+        role={role}
+        aria-live={ariaLive}
+        aria-atomic={ariaAtomic}
+      >
         {label || labelDescription ? (
           <Stack direction="row" gap="1" alignItems="center">
             {label ? (
               <Stack direction="row" gap="0.5" alignItems="start">
                 <Text
                   as="label"
+                  id={ariaLabelledBy}
                   variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                   sentiment="neutral"
                   htmlFor={id ?? localId}
