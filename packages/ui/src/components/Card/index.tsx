@@ -14,6 +14,10 @@ type CardProps = {
    * isActive enable a primary style on Card component for when you need to highlight it.
    */
   isActive?: boolean
+  /**
+   * Remove the default padding outside content
+   */
+  noPadding?: boolean
   disabled?: boolean
   className?: string
   'data-testid'?: string
@@ -21,6 +25,7 @@ type CardProps = {
 
 const StyledStack = styled(Stack)`
   &[data-disabled='true'] {
+    background: blue;
     cursor: not-allowed;
   }
 `
@@ -28,7 +33,10 @@ const StyledStack = styled(Stack)`
 const BorderedBox = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => theme.space['3']};
+
+  &:not[data-no-padding='true'] {
+    padding: ${({ theme }) => theme.space['3']};
+  }
 
   &[data-is-active='true'] {
     border: 1px solid ${({ theme }) => theme.colors.primary.border};
@@ -48,6 +56,7 @@ export const Card = forwardRef(
       header,
       disabled = false,
       isActive = false,
+      noPadding = false,
       children,
       className,
       'data-testid': dataTestId,
@@ -77,6 +86,7 @@ export const Card = forwardRef(
       <BorderedBox
         data-is-active={isActive}
         data-disabled={disabled}
+        data-no-padding={noPadding}
         className={className}
         data-testid={dataTestId}
         ref={ref}
