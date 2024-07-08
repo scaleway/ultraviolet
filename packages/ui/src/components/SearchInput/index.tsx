@@ -158,10 +158,12 @@ export const SearchInput = forwardRef(
       }
     }
 
-    if (isClientSide) {
-      // We need to check if window is defined to avoid SSR issues
-      setIsMacOS(navigator.userAgent.includes('Mac'))
-    }
+    useEffect(() => {
+      if (isClientSide) {
+        // We need to check if window is defined to avoid SSR issues
+        setIsMacOS(navigator.userAgent.includes('Mac'))
+      }
+    }, [])
 
     const handleKeyPressed = useCallback(
       (event: KeyboardEvent) => {
