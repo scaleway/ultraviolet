@@ -107,6 +107,21 @@ describe('List', () => {
       </List>,
     ))
 
+  test('Should render correctly with row expanded', () =>
+    shouldMatchEmotionSnapshot(
+      <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id} expanded>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    ))
+
   test('Should render correctly with selectable', () =>
     shouldMatchEmotionSnapshot(
       <List columns={columns} selectable>

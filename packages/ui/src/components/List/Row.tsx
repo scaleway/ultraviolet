@@ -90,6 +90,7 @@ type RowProps = {
   selectDisabled?: boolean | string
   disabled?: boolean
   sentiment?: (typeof SENTIMENTS)[number]
+  expanded?: boolean
   className?: string
   'data-testid'?: string
 }
@@ -103,6 +104,7 @@ export const Row = forwardRef(
       disabled,
       selectDisabled,
       sentiment = 'neutral',
+      expanded,
       className,
       'data-testid': dataTestid,
     }: RowProps,
@@ -120,6 +122,16 @@ export const Row = forwardRef(
       unselectRow,
       expandButton,
     } = useListContext()
+
+    useEffect(() => {
+      if (expanded !== undefined || expanded !== null) {
+        if (expanded) {
+          expandRow(id)
+        } else {
+          collapseRow(id)
+        }
+      }
+    }, [expanded, expandRow, collapseRow, id])
 
     const isSelectDisabled =
       disabled || (selectDisabled !== undefined && selectDisabled !== false)
