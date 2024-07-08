@@ -20,6 +20,7 @@ import {
   useState,
 } from 'react'
 import { createPortal } from 'react-dom'
+import { isClientSide } from '../../helpers/isClientSide'
 import type { PositionsType } from './animations'
 import { animation, exitAnimation } from './animations'
 import type { PopupPlacement } from './helpers'
@@ -223,7 +224,7 @@ export const Popup = forwardRef(
 
       if (role === 'dialog') {
         if (childrenRef.current) return childrenRef.current
-        if (typeof window !== 'undefined') return document.body
+        if (isClientSide) return document.body
 
         return null
       }

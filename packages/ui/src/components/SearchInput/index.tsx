@@ -11,6 +11,7 @@ import {
   useRef,
   useState,
 } from 'react'
+import { isClientSide } from '../../helpers/isClientSide'
 import { Popup } from '../Popup'
 import {
   BasicPrefixStack,
@@ -157,12 +158,10 @@ export const SearchInput = forwardRef(
       }
     }
 
-    useEffect(() => {
-      if (typeof window !== 'undefined') {
-        // We need to check if window is defined to avoid SSR issues
-        setIsMacOS(navigator.userAgent.includes('Mac'))
-      }
-    }, [])
+    if (isClientSide) {
+      // We need to check if window is defined to avoid SSR issues
+      setIsMacOS(navigator.userAgent.includes('Mac'))
+    }
 
     const handleKeyPressed = useCallback(
       (event: KeyboardEvent) => {
