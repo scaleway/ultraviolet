@@ -27,7 +27,14 @@ export type SearchInputProps = {
    */
   shortcut?: boolean | ComponentProps<typeof KeyGroup>['keys']
   className?: string
-} & Pick<
+} & Exclude<
   ComponentProps<typeof TextInputV2>,
-  'placeholder' | 'size' | 'label' | 'loading' | 'error' | 'disabled'
+  | 'prefix'
+  | 'suffix'
+  | 'clearable'
+  | 'success'
+  | 'onRandomize'
+  | 'onChange'
+  | 'type'
+  | 'value'
 >
