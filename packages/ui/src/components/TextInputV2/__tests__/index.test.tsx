@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
@@ -10,17 +10,24 @@ describe('TextInputV2', () => {
       <TextInputV2 label="Test" value="test" onChange={() => {}} />,
     ))
 
-  test('should control the value', async () => {
+  test('should control the value', () => {
     const onChange = vi.fn()
+    const onChangeValue = vi.fn()
 
     renderWithTheme(
-      <TextInputV2 label="Test" value="test" onChange={onChange} />,
+      <TextInputV2
+        label="Test"
+        value="test"
+        onChange={onChange}
+        onChangeValue={onChangeValue}
+      />,
     )
 
     const textarea = screen.getByLabelText<HTMLInputElement>('Test')
     expect(textarea.value).toBe('test')
-    await userEvent.type(textarea, 'another value')
+    fireEvent.change(textarea, { target: { value: 'another value' } })
     expect(onChange).toHaveBeenCalled()
+    expect(onChangeValue).toHaveBeenCalledWith('another value')
   })
 
   test('should be clearable', async () => {

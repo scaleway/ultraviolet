@@ -1,8 +1,14 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ChangeEvent, InputHTMLAttributes, ReactNode } from 'react'
+import type {
+  ChangeEvent,
+  ChangeEventHandler,
+  InputHTMLAttributes,
+  ReactNode,
+} from 'react'
 import {
   forwardRef,
+  useCallback,
   useId,
   useImperativeHandle,
   useMemo,
@@ -144,6 +150,7 @@ type TextInputProps = {
   type?: 'text' | 'password' | 'url' | 'email'
   value?: string
   defaultValue?: string
+  onChangeValue?: (value: string) => void
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'
@@ -179,6 +186,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       tabIndex,
       value,
       onChange,
+      onChangeValue,
       placeholder,
       disabled = false,
       readOnly = false,
@@ -234,6 +242,14 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
 
       return 'neutral'
     }, [error, success])
+
+    const onChangeCallback: ChangeEventHandler<HTMLInputElement> = useCallback(
+      event => {
+        onChange?.(event)
+        onChangeValue?.(event.target.value)
+      },
+      [onChange, onChangeValue],
+    )
 
     const computedClearable = clearable && !!value
 
@@ -302,7 +318,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 ref={inputRef}
                 value={value}
                 defaultValue={defaultValue}
-                onChange={onChange}
+                onChange={onChangeCallback}
                 data-size={size}
                 placeholder={placeholder}
                 data-testid={dataTestId}
@@ -336,7 +352,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                       onClick={() => {
                         if (inputRef?.current) {
                           inputRef.current.value = ''
-                          onChange?.({
+                          onChangeCallback({
                             target: { value: '' },
                             currentTarget: { value: '' },
                           } as ChangeEvent<HTMLInputElement>)
