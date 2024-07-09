@@ -29,8 +29,8 @@ export const Header: StoryFn<typeof ExpandableCard> = () => (
               sentiment="danger"
               icon="delete"
               size="small"
-              onClick={event => {
-                event.stopPropagation()
+              onClick={() => {
+                console.log('clicked')
               }}
             />
             <MenuV2
@@ -40,7 +40,6 @@ export const Header: StoryFn<typeof ExpandableCard> = () => (
                   sentiment="neutral"
                   variant="ghost"
                   size="small"
-                  onClick={event => event.stopPropagation()}
                 />
               }
             >
@@ -60,7 +59,7 @@ Header.parameters = {
   docs: {
     description: {
       story:
-        'Use the `header` prop to change the header content. You can provide a simply string which is automatically formatted. For more complexe usage you can do your own rendering which can use `Expandable.Title` to stay consistent with component guidelines. If you add clickable elements on the header, mind to `stopPropagation` of event to avoid conflict with header behavior (only for click, ExpandableCard can handle conflicts between key interactions).',
+        'Use the `header` prop to change the header content. You can provide a simply string which is automatically formatted. For more complexe usage you can do your own rendering which can use `Expandable.Title` to stay consistent with component guidelines.',
     },
   },
 }

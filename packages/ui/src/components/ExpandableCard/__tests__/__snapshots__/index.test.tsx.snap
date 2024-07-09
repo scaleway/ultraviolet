@@ -7,16 +7,12 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   border-radius: 4px;
 }
 
-.emotion-0:not[data-no-padding='true'] {
-  padding: 24px;
+.emotion-0[open] {
+  border-color: #8c40ef;
 }
 
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
+.emotion-0[open]>.emotion-11 {
+  border-color: #8c40ef;
 }
 
 .emotion-2 {
@@ -24,7 +20,6 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -32,16 +27,9 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  gap: 16px;
   padding: 24px;
+  list-style-type: none;
   cursor: pointer;
 }
 
@@ -89,28 +77,19 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
 }
 
 .emotion-10 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
-}
-
-.emotion-12 {
+  border-top: 1px solid #d9dadd;
   padding: 24px;
 }
 
 <div
     data-testid="testing"
   >
-    <div
+    <details
       class="emotion-0 emotion-1"
-      data-disabled="false"
-      data-is-active="false"
-      data-no-padding="true"
     >
-      <div
+      <summary
         class="emotion-2 emotion-3"
         data-disabled="false"
-        tabindex="0"
       >
         <svg
           class="emotion-4 emotion-5"
@@ -119,7 +98,7 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
         >
           <path
             clip-rule="evenodd"
-            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+            d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
             fill-rule="evenodd"
           />
         </svg>
@@ -135,17 +114,13 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
             Description
           </p>
         </div>
-      </div>
+      </summary>
       <div
         class="emotion-10 emotion-11"
       >
-        <div
-          class="emotion-12 emotion-13"
-        >
-          Content
-        </div>
+        Content
       </div>
-    </div>
+    </details>
   </div>
 </DocumentFragment>
 `;
@@ -157,16 +132,12 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   border-radius: 4px;
 }
 
-.emotion-0:not[data-no-padding='true'] {
-  padding: 24px;
+.emotion-0[open] {
+  border-color: #8c40ef;
 }
 
-.emotion-0[data-is-active='true'] {
-  border: 1px solid #8c40ef;
-}
-
-.emotion-0[data-disabled='true'] {
-  border: 1px solid #e9eaeb;
+.emotion-0[open]>.emotion-9 {
+  border-color: #8c40ef;
 }
 
 .emotion-2 {
@@ -174,7 +145,6 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -182,16 +152,9 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
+  gap: 16px;
   padding: 24px;
+  list-style-type: none;
   cursor: pointer;
 }
 
@@ -228,28 +191,19 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
 }
 
 .emotion-8 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
-}
-
-.emotion-10 {
+  border-top: 1px solid #d9dadd;
   padding: 24px;
 }
 
 <div
     data-testid="testing"
   >
-    <div
+    <details
       class="emotion-0 emotion-1"
-      data-disabled="false"
-      data-is-active="false"
-      data-no-padding="true"
     >
-      <div
+      <summary
         class="emotion-2 emotion-3"
         data-disabled="false"
-        tabindex="0"
       >
         <svg
           class="emotion-4 emotion-5"
@@ -258,7 +212,7 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
         >
           <path
             clip-rule="evenodd"
-            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+            d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
             fill-rule="evenodd"
           />
         </svg>
@@ -267,17 +221,13 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
         >
           Title
         </h2>
-      </div>
+      </summary>
       <div
         class="emotion-8 emotion-9"
       >
-        <div
-          class="emotion-10 emotion-11"
-        >
-          Content
-        </div>
+        Content
       </div>
-    </div>
+    </details>
   </div>
 </DocumentFragment>
 `;

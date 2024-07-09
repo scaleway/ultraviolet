@@ -1,7 +1,7 @@
 import type { ComponentProps } from 'react'
-import { Text } from '../Text'
+import { Text } from '../../Text'
 
-type ExpandableCardTitleProps = {
+export type ExpandableCardTitleProps = {
   size?: 'medium' | 'large'
   disabled?: boolean
 } & Partial<Pick<ComponentProps<typeof Text>, 'as'>> &

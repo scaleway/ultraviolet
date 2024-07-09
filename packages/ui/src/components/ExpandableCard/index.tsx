@@ -1,16 +1,17 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { ForwardedRef, ReactNode } from 'react'
-import { forwardRef, useReducer, useRef } from 'react'
+import { forwardRef, useRef } from 'react'
 import type { XOR } from '../../types'
-import { Card } from '../Card'
-import { Expandable } from '../Expandable'
-import { Separator } from '../Separator'
-import { Stack } from '../Stack'
-import { ExpandableCardTitle } from './Title'
+import { ExpandableCardTitle } from './subComponents/Title'
 
-const StyledHeaderStack = styled(Stack)`
+const StyledSummary = styled.summary`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:  ${({ theme }) => theme.space['2']};
   padding: ${({ theme }) => theme.space['3']};
+  list-style-type: none;
 
   cursor: pointer;
   &[data-disabled="true"] {
@@ -21,7 +22,21 @@ const StyledHeaderStack = styled(Stack)`
 `
 
 const StyledContent = styled.div`
+  border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
   padding: ${({ theme }) => theme.space['3']}
+`
+
+const StyledDetails = styled.details`
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  border-radius: ${({ theme }) => theme.radii.default};
+
+  &[open] {
+    border-color: ${({ theme }) => theme.colors.primary.border};
+
+    & > ${StyledContent} {
+      border-color: ${({ theme }) => theme.colors.primary.border};
+    }
+  }
 `
 
 export const EXPANDABLE_CARD_SIZE = ['medium', 'large'] as const
@@ -30,6 +45,7 @@ type ExpandableCardSize = (typeof EXPANDABLE_CARD_SIZE)[number]
 type CommonProps = {
   header: ReactNode
   size?: ExpandableCardSize
+  name?: string
   children: ReactNode
   disabled?: boolean
 }
@@ -43,57 +59,45 @@ const BaseExpandableCard = forwardRef(
   (
     {
       header,
+      name,
       size = 'medium',
       children,
       disabled,
       expanded,
       onToggleExpanded,
     }: ExpandableCardProps,
-    ref: ForwardedRef<HTMLDivElement>,
+    ref: ForwardedRef<HTMLDetailsElement>,
   ) => {
-    const [isExpanded, toggleExpanded] = useReducer(
-      prevState => !prevState,
-      false,
-    )
-
-    const computedExpanded = expanded !== undefined ? expanded : isExpanded
-    const onToggle =
-      onToggleExpanded !== undefined ? onToggleExpanded : toggleExpanded
-
     const headerRef = useRef<HTMLDivElement>(null)
 
     return (
-      <Card
+      <StyledDetails
+        tabIndex={disabled ? -1 : undefined}
+        name={name}
+        open={expanded !== undefined ? expanded : undefined}
         ref={ref}
-        noPadding
-        aria-label={computedExpanded ? 'collapse' : 'expand'}
-        isActive={computedExpanded}
       >
-        <StyledHeaderStack
+        <StyledSummary
           data-disabled={!!disabled}
           ref={headerRef}
-          direction="row"
-          alignItems="center"
-          width="100%"
-          gap={2}
-          tabIndex={!disabled ? 0 : undefined}
-          onClick={!disabled ? onToggle : undefined}
-          onKeyDown={
-            !disabled
-              ? event => {
-                  if (event.key === ' ' && event.target === headerRef.current) {
-                    onToggle()
-                    event.preventDefault()
-                  }
-                }
-              : undefined
-          }
+          onClick={event => {
+            if (disabled || onToggleExpanded) {
+              onToggleExpanded?.()
+              event.preventDefault()
+            }
+          }}
+          onKeyDown={event => {
+            if (
+              onToggleExpanded &&
+              event.key === ' ' &&
+              event.target === headerRef.current
+            ) {
+              onToggleExpanded()
+              event.preventDefault()
+            }
+          }}
         >
-          <Icon
-            sentiment="neutral"
-            disabled={disabled}
-            name={computedExpanded ? 'arrow-up' : 'arrow-down'}
-          />
+          <Icon sentiment="neutral" disabled={disabled} name="arrow-up" />
           {typeof header === 'string' ? (
             <ExpandableCardTitle size={size} disabled={disabled}>
               {header}
@@ -101,19 +105,16 @@ const BaseExpandableCard = forwardRef(
           ) : (
             header
           )}
-        </StyledHeaderStack>
-        {computedExpanded ? <Separator /> : null}
-        <Expandable opened={computedExpanded}>
-          <StyledContent>{children}</StyledContent>
-        </Expandable>
-      </Card>
+        </StyledSummary>
+        <StyledContent>{children}</StyledContent>
+      </StyledDetails>
     )
   },
 )
 
-/**
- * List is a card that can be collapsed and expanded to reveal more content.
- */
+// /**
+//  * ExpandableCard is a card that can be collapsed and expanded to reveal more content.
+//  */
 export const ExpandableCard = Object.assign(BaseExpandableCard, {
   Title: ExpandableCardTitle,
 })
