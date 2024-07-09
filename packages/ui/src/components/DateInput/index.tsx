@@ -37,12 +37,14 @@ const StyledWrapper = styled.div`
     font-family: ${({ theme }) => theme.typography.body.fontFamily};
     border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
     background-color: ${({ theme }) =>
-      theme.colors.neutral.backgroundWeakElevated};
+      theme.colors.other.elevation.background.raised};
+    box-shadows: ${({ theme }) => theme.shadows.raised};
+
 
     ${PREFIX}__header {
       color: ${({ theme }) => theme.colors.neutral.text};
       background-color: ${({ theme }) =>
-        theme.colors.neutral.backgroundWeakElevated};
+        theme.colors.other.elevation.background.raised};
       border-bottom: none;
       text-align: inherit;
       display: block;

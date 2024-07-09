@@ -34,10 +34,10 @@ const styles = {
     border-radius: ${theme.radii.default};
 
     &${PREFIX}__toast {
-      background-color: ${theme.colors.neutral.background};
+      background-color: ${theme.colors.other.elevation.background.raised};
       color: ${theme.colors.neutral.text};
       padding: ${theme.space['2']};
-      box-shadow: ${theme.shadows.defaultShadow};
+      box-shadow: ${theme.shadows.raised[0]}, ${theme.shadows.raised[1]};
     }
 
     &${PREFIX}__toast-container {
