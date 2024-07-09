@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.59.1
+
+### Patch Changes
+
+- [#3987](https://github.com/scaleway/ultraviolet/pull/3987) [`1cc1b37`](https://github.com/scaleway/ultraviolet/commit/1cc1b37cca324b3261053184a8ba86b5eb348156) Thanks [@matthprost](https://github.com/matthprost)! - Hotfix of `<Modal />` component not working properly with disclosure
+
 ## 1.59.0
 
 ### Minor Changes
