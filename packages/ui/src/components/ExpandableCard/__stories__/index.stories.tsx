@@ -4,6 +4,9 @@ import { ExpandableCard } from '..'
 export default {
   component: ExpandableCard,
   title: 'Components/Layout/ExpandableCard',
+  subcomponents: {
+    'ExpandableCard.Title': ExpandableCard.Title,
+  },
 } as Meta
 
 export { Playground } from './Playground.stories'

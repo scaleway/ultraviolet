@@ -3,7 +3,9 @@ import { Icon } from '@ultraviolet/icons'
 import type { ForwardedRef, ReactNode } from 'react'
 import { forwardRef, useRef } from 'react'
 import type { XOR } from '../../types'
-import { ExpandableCardTitle } from './subComponents/Title'
+import { ExpandableCardTitle } from './components/Title'
+
+const ArrowIcon = styled(Icon)``
 
 const StyledSummary = styled.summary`
   display: flex;
@@ -36,6 +38,10 @@ const StyledDetails = styled.details`
     & > ${StyledContent} {
       border-color: ${({ theme }) => theme.colors.primary.border};
     }
+
+   ${ArrowIcon} {
+      transform: rotate(180deg);
+    }
   }
 `
 
@@ -48,12 +54,11 @@ type CommonProps = {
   name?: string
   children: ReactNode
   disabled?: boolean
+  'data-testid'?: string
+  className?: string
 }
 type ExpandableCardProps = XOR<
-  [
-    CommonProps & { expanded: boolean; onToggleExpanded: () => void },
-    CommonProps,
-  ]
+  [CommonProps & { expanded: boolean; onToggleExpand: () => void }, CommonProps]
 >
 const BaseExpandableCard = forwardRef(
   (
@@ -64,7 +69,9 @@ const BaseExpandableCard = forwardRef(
       children,
       disabled,
       expanded,
-      onToggleExpanded,
+      onToggleExpand,
+      className,
+      'data-testid': dataTestId,
     }: ExpandableCardProps,
     ref: ForwardedRef<HTMLDetailsElement>,
   ) => {
@@ -72,32 +79,39 @@ const BaseExpandableCard = forwardRef(
 
     return (
       <StyledDetails
+        className={className}
+        data-testid={dataTestId}
         tabIndex={disabled ? -1 : undefined}
         name={name}
-        open={expanded !== undefined ? expanded : undefined}
+        open={expanded}
         ref={ref}
       >
         <StyledSummary
           data-disabled={!!disabled}
+          data-testid={dataTestId ? `${dataTestId}-summary` : undefined}
           ref={headerRef}
           onClick={event => {
-            if (disabled || onToggleExpanded) {
-              onToggleExpanded?.()
+            if (disabled || onToggleExpand) {
+              onToggleExpand?.()
               event.preventDefault()
             }
           }}
-          onKeyDown={event => {
-            if (
-              onToggleExpanded &&
-              event.key === ' ' &&
-              event.target === headerRef.current
-            ) {
-              onToggleExpanded()
-              event.preventDefault()
-            }
-          }}
+          onKeyDown={
+            onToggleExpand
+              ? event => {
+                  if (event.key === ' ' && event.target === headerRef.current) {
+                    onToggleExpand()
+                    event.preventDefault()
+                  }
+                }
+              : undefined
+          }
         >
-          <Icon sentiment="neutral" disabled={disabled} name="arrow-up" />
+          <ArrowIcon
+            sentiment="neutral"
+            disabled={disabled}
+            name="arrow-down"
+          />
           {typeof header === 'string' ? (
             <ExpandableCardTitle size={size} disabled={disabled}>
               {header}

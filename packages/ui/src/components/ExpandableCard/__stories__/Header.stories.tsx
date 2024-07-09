@@ -1,4 +1,4 @@
-import type { StoryFn } from '@storybook/react'
+import type { Decorator, StoryFn } from '@storybook/react'
 import { ProductIcon } from '@ultraviolet/icons'
 import { ExpandableCard } from '..'
 import { Button, MenuV2, Stack, Text } from '../..'
@@ -25,14 +25,7 @@ export const Header: StoryFn<typeof ExpandableCard> = () => (
             </div>
           </Stack>
           <Stack direction="row" gap={1} alignItems="center">
-            <Button
-              sentiment="danger"
-              icon="delete"
-              size="small"
-              onClick={() => {
-                console.log('clicked')
-              }}
-            />
+            <Button sentiment="danger" icon="delete" size="small" />
             <MenuV2
               disclosure={
                 <Button
@@ -63,3 +56,11 @@ Header.parameters = {
     },
   },
 }
+
+Header.decorators = [
+  Story => (
+    <div style={{ minHeight: '220px' }}>
+      <Story />
+    </div>
+  ),
+] as Decorator[]

@@ -11,8 +11,15 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-0[open]>.emotion-11 {
+.emotion-0[open]>.emotion-12 {
   border-color: #8c40ef;
+}
+
+.emotion-0[open] .emotion-4 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .emotion-2 {
@@ -39,7 +46,7 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-4 {
+.emotion-5 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -48,12 +55,12 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   min-height: 1em;
 }
 
-.emotion-4 .fillStroke {
+.emotion-5 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
@@ -65,7 +72,7 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -76,7 +83,7 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
   text-decoration: none;
 }
 
-.emotion-10 {
+.emotion-11 {
   border-top: 1px solid #d9dadd;
   padding: 24px;
 }
@@ -92,31 +99,31 @@ exports[`ExpandableCard > renders correctly with complex header 1`] = `
         data-disabled="false"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
-            d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
+            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
             fill-rule="evenodd"
           />
         </svg>
         <div>
           <h2
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
           >
             Title
           </h2>
           <p
-            class="emotion-8 emotion-7"
+            class="emotion-9 emotion-8"
           >
             Description
           </p>
         </div>
       </summary>
       <div
-        class="emotion-10 emotion-11"
+        class="emotion-11 emotion-12"
       >
         Content
       </div>
@@ -136,8 +143,15 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   border-color: #8c40ef;
 }
 
-.emotion-0[open]>.emotion-9 {
+.emotion-0[open]>.emotion-10 {
   border-color: #8c40ef;
+}
+
+.emotion-0[open] .emotion-4 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .emotion-2 {
@@ -164,7 +178,7 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-4 {
+.emotion-5 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -173,12 +187,12 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   min-height: 1em;
 }
 
-.emotion-4 .fillStroke {
+.emotion-5 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
@@ -190,7 +204,7 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-9 {
   border-top: 1px solid #d9dadd;
   padding: 24px;
 }
@@ -206,24 +220,24 @@ exports[`ExpandableCard > renders correctly with default values 1`] = `
         data-disabled="false"
       >
         <svg
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-5 emotion-6"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             clip-rule="evenodd"
-            d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
+            d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
             fill-rule="evenodd"
           />
         </svg>
         <h2
-          class="emotion-6 emotion-7"
+          class="emotion-7 emotion-8"
         >
           Title
         </h2>
       </summary>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-9 emotion-10"
       >
         Content
       </div>

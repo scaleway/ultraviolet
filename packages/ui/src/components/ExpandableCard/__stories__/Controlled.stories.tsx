@@ -4,21 +4,18 @@ import { ExpandableCard } from '..'
 import { Button, Stack } from '../..'
 
 export const Controlled: StoryFn<typeof ExpandableCard> = args => {
-  const [expanded, onToggleExpanded] = useReducer(
-    prevState => !prevState,
-    false,
-  )
+  const [expanded, onToggleExpand] = useReducer(prevState => !prevState, false)
 
   return (
     <Stack gap={1}>
-      <Button onClick={onToggleExpanded}>
+      <Button onClick={onToggleExpand}>
         Click me to {expanded ? 'collapse' : 'expanded'} the card
       </Button>
       <ExpandableCard
         {...args}
         header="Controlled"
         expanded={expanded}
-        onToggleExpanded={onToggleExpanded}
+        onToggleExpand={onToggleExpand}
       >
         A nice content
       </ExpandableCard>

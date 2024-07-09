@@ -1,7 +1,7 @@
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import { ExpandableCard } from '..'
 import { Text } from '../../Text'
 
@@ -45,7 +45,35 @@ describe('ExpandableCard', () => {
       </ExpandableCard>,
     )
 
-    // await userEvent.click(screen.getByText('Title'))
+    await userEvent.click(screen.getByText('Title'))
     expect(screen.getByText('Content')).not.toBeVisible()
+  })
+
+  test('works properly when clicked', async () => {
+    renderWithTheme(<ExpandableCard header="Title">Content</ExpandableCard>)
+
+    await userEvent.click(screen.getByText('Title'))
+    expect(screen.getByText('Content')).toBeVisible()
+  })
+
+  test('works properly when controlled and open with key interaction', async () => {
+    const onToggleExpand = vi.fn()
+    renderWithTheme(
+      <ExpandableCard
+        header="Title"
+        expanded={false}
+        onToggleExpand={onToggleExpand}
+        data-testid="expandablecard"
+      >
+        Content
+      </ExpandableCard>,
+    )
+
+    await userEvent.click(screen.getByText('Title'))
+    screen.getByTestId('expandablecard-summary').focus()
+    await userEvent.keyboard('[Space]')
+    await waitFor(() => {
+      expect(onToggleExpand).toHaveBeenCalled()
+    })
   })
 })
