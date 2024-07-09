@@ -7,10 +7,10 @@ const HEIGHT = 56
 const SPACING = 20
 
 const StyledDiv = styled.div<{ rank: number }>`
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
+  background: ${({ theme }) => theme.colors.other.elevation.background.fixed};
   border-radius: ${({ theme }) => theme.radii.default};
   bottom: ${({ rank }) => SPACING + rank * (HEIGHT + SPACING)}px;
-  box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
+  box-shadow: ${({ theme }) => `${theme.shadows.fixed[0]}, ${theme.shadows.fixed[1]}`};
   height: ${HEIGHT}px;
   left: 50%;
   position: fixed;

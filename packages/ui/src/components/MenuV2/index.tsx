@@ -40,13 +40,13 @@ type DisclosureElement =
 const StyledPopup = styled(Popup, {
   shouldForwardProp: prop => !['size'].includes(prop),
 })<{ size: keyof typeof SIZES }>`
-  background-color: ${({ theme }) => theme.colors.neutral.background};
-  box-shadow: ${({ theme }) => theme.shadows.menu};
+  background-color: ${({ theme }) => theme.colors.other.elevation.background.raised};
+  box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: 0;
 
   &[data-has-arrow='true'] {
     &::after {
-      border-color: ${({ theme }) => theme.colors.neutral.background}
+      border-color: ${({ theme }) => theme.colors.other.elevation.background.raised}
         transparent transparent transparent;
     }
   }
@@ -77,7 +77,7 @@ const MenuList = styled(Stack)`
     border-color: transparent;
   }
   background-color: ${({ theme }) =>
-    theme.colors.neutral.backgroundWeakElevated};
+    theme.colors.other.elevation.background.raised};
   color: ${({ theme }) => theme.colors.neutral.text};
   border-radius: ${({ theme }) => theme.radii.default};
   position: relative;
