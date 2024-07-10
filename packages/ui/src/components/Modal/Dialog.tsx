@@ -38,13 +38,14 @@ type StyledDialogProps = {
 
 export const StyledDialog = styled.dialog<StyledDialogProps>`
   background-color: ${({ theme }) =>
-    theme.colors.neutral.backgroundWeakElevated};
+    theme.colors.other.elevation.background.overlay};
   position: relative;
   border-radius: ${({ theme }) => theme.radii.default};
   border: 0;
   padding: ${({ theme }) => theme.space['3']};
   width: ${MODAL_WIDTH.medium}px;
-  box-shadow: ${({ theme }) => theme.shadows.modal};
+  box-shadow: ${({ theme }) => `${theme.shadows.overlay[0]}, ${theme.shadows.overlay[1]}`};
+
 
   ${Object.entries(MODAL_WIDTH).map(
     ([size, value]) => `
