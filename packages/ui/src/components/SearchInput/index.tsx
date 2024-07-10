@@ -57,6 +57,7 @@ export const SearchInput = forwardRef(
     {
       placeholder,
       label,
+      labelDescription,
       loading,
       size,
       popupPlacement,
@@ -69,6 +70,22 @@ export const SearchInput = forwardRef(
       error,
       disabled,
       className,
+      minLength,
+      maxLength,
+      tooltip,
+      onFocus,
+      onBlur,
+      name,
+      id,
+      'aria-live': ariaLive,
+      'aria-atomic': ariaAtomic,
+      'aria-labelledby': ariaLabelledby,
+      readOnly,
+      required,
+      autoFocus,
+      autoComplete,
+      onKeyDown,
+      role,
     }: SearchInputProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -270,6 +287,23 @@ export const SearchInput = forwardRef(
             clearable
             disabled={disabled}
             className={className}
+            aria-atomic={ariaAtomic}
+            autoComplete={autoComplete}
+            aria-labelledby={ariaLabelledby}
+            aria-live={ariaLive}
+            id={id}
+            name={name}
+            readOnly={readOnly}
+            required={required}
+            autoFocus={autoFocus}
+            maxLength={maxLength}
+            minLength={minLength}
+            onBlur={onBlur}
+            onFocus={onFocus}
+            onKeyDown={onKeyDown}
+            role={role}
+            tooltip={tooltip}
+            labelDescription={labelDescription}
           />
         </StyledPopup>
       </div>
