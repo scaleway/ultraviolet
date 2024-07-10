@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.60.0
+
+### Minor Changes
+
+- [#3920](https://github.com/scaleway/ultraviolet/pull/3920) [`f2fd03e`](https://github.com/scaleway/ultraviolet/commit/f2fd03e4b97bd36bb86d2242efbd9c3558f91bd8) Thanks [@matthprost](https://github.com/matthprost)! - Update elevation tokens on many components to have a better render in dark and darker themes
+
+### Patch Changes
+
+- [#3990](https://github.com/scaleway/ultraviolet/pull/3990) [`43324e7`](https://github.com/scaleway/ultraviolet/commit/43324e7abdf8d8877ad2f86ee90cd4ac0fc12b21) Thanks [@matthprost](https://github.com/matthprost)! - Add missing props on `<SearchInput />`
+
 ## 1.59.1
 
 ### Patch Changes
