@@ -98,6 +98,7 @@ import { ReactComponent as profileOutline } from './assets/default-outline/profi
 import { ReactComponent as rocketOutline } from './assets/default-outline/rocket.svg'
 import { ReactComponent as sendOutline } from './assets/default-outline/send.svg'
 import { ReactComponent as settingsOutline } from './assets/default-outline/settings.svg'
+import { ReactComponent as sparklesOutline } from './assets/default-outline/sparkles.svg'
 import { ReactComponent as sunOutline } from './assets/default-outline/sun.svg'
 import { ReactComponent as supportOutline } from './assets/default-outline/support.svg'
 import { ReactComponent as unlockOutline } from './assets/default-outline/unlock.svg'
@@ -143,6 +144,7 @@ import { ReactComponent as profile } from './assets/default-solid/profile.svg'
 import { ReactComponent as rocket } from './assets/default-solid/rocket.svg'
 import { ReactComponent as send } from './assets/default-solid/send.svg'
 import { ReactComponent as settings } from './assets/default-solid/settings.svg'
+import { ReactComponent as sparkles } from './assets/default-solid/sparkles.svg'
 import { ReactComponent as sun } from './assets/default-solid/sun.svg'
 import { ReactComponent as support } from './assets/default-solid/support.svg'
 import { ReactComponent as unlock } from './assets/default-solid/unlock.svg'
@@ -256,6 +258,7 @@ export const ICONS = {
     'weather-night': weatherNight,
     pin,
     unpin,
+    sparkles,
   },
   outlined: {
     anchor,
@@ -363,5 +366,6 @@ export const ICONS = {
     'weather-night': weatherNightOutline,
     pin: pinOutline,
     unpin: unpinOutline,
+    sparkles: sparklesOutline,
   },
 } as const
