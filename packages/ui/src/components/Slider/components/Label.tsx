@@ -1,7 +1,7 @@
 import { Icon } from '@ultraviolet/icons'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
-import type { LabelProps } from './types'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+import type { LabelProps } from '../types'
 
 export const Label = ({
   direction,
