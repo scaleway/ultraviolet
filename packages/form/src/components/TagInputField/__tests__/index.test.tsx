@@ -6,10 +6,29 @@ import { describe, expect, test, vi } from 'vitest'
 import { Form, Submit, TagInputField } from '../..'
 import { mockErrors } from '../../../mocks'
 
+const alpha = /^[a-zA-Z]*$/
+
 describe('TagInputField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
       <TagInputField name="test" placeholder="placeholder" />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should render correctly with regex', () => {
+    const { asFragment } = renderWithForm(
+      <>
+        <TagInputField
+          label="Test"
+          name="test"
+          required
+          clearable
+          regex={[alpha]}
+        />
+        <Submit>Test</Submit>
+      </>,
+      { defaultValues: { test: ['4'] } },
     )
     expect(asFragment()).toMatchSnapshot()
   })
