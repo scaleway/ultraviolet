@@ -26,12 +26,15 @@ export type TagInputFieldProps<
       | 'readOnly'
       | 'tooltip'
     >
-  >
+  > & {
+    regex?: (RegExp | RegExp[])[]
+  }
 
 export const TagInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
+  regex: regexes,
   className,
   disabled,
   id,
@@ -62,7 +65,22 @@ export const TagInputField = <
     rules: {
       required,
       shouldUnregister,
-      validate,
+      validate: {
+        ...(regexes
+          ? {
+              pattern: value =>
+                regexes.every(
+                  regex =>
+                    value === undefined ||
+                    value === '' ||
+                    (Array.isArray(regex)
+                      ? regex.some(regexOr => regexOr.test(value))
+                      : regex.test(value)),
+                ),
+            }
+          : {}),
+        ...validate,
+      },
     },
   })
 
@@ -85,7 +103,7 @@ export const TagInputField = <
       labelDescription={labelDescription}
       size={size}
       success={success}
-      error={getError({ label: label ?? '' }, error)}
+      error={getError({ regex: regexes, label: label ?? '' }, error)}
       readOnly={readOnly}
       tooltip={tooltip}
     />
