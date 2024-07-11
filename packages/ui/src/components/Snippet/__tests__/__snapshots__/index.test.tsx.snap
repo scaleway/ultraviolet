@@ -257,9 +257,12 @@ exports[`Snippet > renders correctly in multiline  1`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-7 {
@@ -444,6 +447,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+          data-is-animated="true"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -589,9 +593,12 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-7 {
@@ -791,6 +798,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+          data-is-animated="true"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -936,9 +944,12 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-7 {
@@ -1139,6 +1150,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
       >
         <div
           class="emotion-4 emotion-5"
+          data-is-animated="true"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -1712,9 +1724,12 @@ exports[`Snippet > renders correctly with hideText 1`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-7 {
@@ -1899,6 +1914,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+          data-is-animated="true"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -2084,15 +2100,21 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-4 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-4 {
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-4 {
   height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-7 {
@@ -2422,6 +2444,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+          data-is-animated="true"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -2607,15 +2630,21 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-4 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-4 {
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-4 {
   height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-7 {
@@ -2971,6 +3000,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
       >
         <div
           class="emotion-4 emotion-5"
+          data-is-animated="true"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"
@@ -3615,15 +3645,21 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-4 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-4 {
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-4 {
   height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-7 {
@@ -3953,6 +3989,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
       >
         <div
           class="emotion-4 emotion-5"
+          data-is-animated="true"
         >
           <pre
             class="emotion-6 emotion-7 emotion-8"

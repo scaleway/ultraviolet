@@ -184,6 +184,10 @@ export const SearchInput = forwardRef(
 
     const handleKeyPressed = useCallback(
       (event: KeyboardEvent) => {
+        if (!(event instanceof KeyboardEvent)) {
+          return
+        }
+
         const { ctrlKey, metaKey, key } = event
         setKeyPressed([...keyPressed, key.toUpperCase()])
 

@@ -112,7 +112,7 @@ export type IconName = keyof typeof ICONS.filled
 
 type IconProps = {
   /**
-   * ⚠️`string` and `number` are deprecated. Use `small` and `large` only.
+   * !`string` and `number` are deprecated. Use `small` and `large` only.
    */
   size?: number | string | 'small' | 'large'
   name?: IconName
@@ -136,7 +136,7 @@ type IconProps = {
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
-      name = 'alert',
+      name = 'sparkles',
       color = 'currentColor',
       sentiment,
       size = '1em',

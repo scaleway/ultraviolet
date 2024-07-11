@@ -10,6 +10,7 @@ jobs:
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
       STORYBOOK_DEPLOYMENT_NAME: storybook
+      SCW_DNS: ${{ github.ref_name == 'main' && 'storybook.ultraviolet.scaleway.com' || '' }}
 
     steps:
       - uses: actions/checkout@v4 # v4.1.4
@@ -26,7 +27,7 @@ jobs:
         id: deploy
         with:
           type: "teardown"
-          scw_dns: ${{ secrets.SCW_DNS }}
+          scw_dns: ${{ env.SCW_DNS }}
           root_zone: ${{ env.BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}

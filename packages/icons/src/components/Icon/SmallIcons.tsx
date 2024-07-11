@@ -98,6 +98,7 @@ import { ReactComponent as profileOutline } from './assets/small-outline/profile
 import { ReactComponent as rocketOutline } from './assets/small-outline/rocket.svg'
 import { ReactComponent as sendOutline } from './assets/small-outline/send.svg'
 import { ReactComponent as settingsOutline } from './assets/small-outline/settings.svg'
+import { ReactComponent as sparklesOutline } from './assets/small-outline/sparkles.svg'
 import { ReactComponent as sunOutline } from './assets/small-outline/sun.svg'
 import { ReactComponent as supportOutline } from './assets/small-outline/support.svg'
 import { ReactComponent as unlockOutline } from './assets/small-outline/unlock.svg'
@@ -143,6 +144,7 @@ import { ReactComponent as profile } from './assets/small-solid/profile.svg'
 import { ReactComponent as rocket } from './assets/small-solid/rocket.svg'
 import { ReactComponent as send } from './assets/small-solid/send.svg'
 import { ReactComponent as settings } from './assets/small-solid/settings.svg'
+import { ReactComponent as sparkles } from './assets/small-solid/sparkles.svg'
 import { ReactComponent as sun } from './assets/small-solid/sun.svg'
 import { ReactComponent as support } from './assets/small-solid/support.svg'
 import { ReactComponent as unlock } from './assets/small-solid/unlock.svg'
@@ -256,6 +258,7 @@ export const SMALL_ICONS = {
     'weather-night': weatherNight,
     pin,
     unpin,
+    sparkles,
   },
   outlined: {
     anchor,
@@ -363,5 +366,6 @@ export const SMALL_ICONS = {
     'weather-night': weatherNightOutline,
     pin: pinOutline,
     unpin: unpinOutline,
+    sparkles: sparklesOutline,
   },
 } as const

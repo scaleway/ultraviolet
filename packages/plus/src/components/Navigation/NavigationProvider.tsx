@@ -54,6 +54,7 @@ type ContextProps = {
   setPinnedItems: (value: string[]) => void
   allowNavigationResize: boolean
   setAllowNavigationResize: (value: boolean) => void
+  shouldAnimate?: boolean
 }
 
 export const NavigationContext = createContext<ContextProps>({
@@ -78,6 +79,7 @@ export const NavigationContext = createContext<ContextProps>({
   setPinnedItems: () => {},
   allowNavigationResize: true,
   setAllowNavigationResize: () => {},
+  shouldAnimate: false,
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -114,6 +116,10 @@ type NavigationProviderProps = {
    * This boolean will define if the navigation can be resized or not.
    */
   initialAllowNavigationResize?: boolean
+  /**
+   * Enable or disable the animation of the navigation
+   */
+  animation?: boolean
 }
 
 export const NavigationProvider = ({
@@ -126,6 +132,7 @@ export const NavigationProvider = ({
   onExpandChange,
   initialWidth = NAVIGATION_WIDTH,
   initialAllowNavigationResize = true,
+  animation: shouldAnimate = false,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
@@ -166,14 +173,18 @@ export const NavigationProvider = ({
         navigationRef.current.style.width = ''
       }
 
-      setAnimation(expanded ? 'collapse' : 'expand')
+      if (shouldAnimate) {
+        setAnimation(expanded ? 'collapse' : 'expand')
 
-      setTimeout(() => {
+        setTimeout(() => {
+          setExpanded(toggle !== undefined ? toggle : !expanded)
+          setAnimation(false)
+        }, ANIMATION_DURATION)
+      } else {
         setExpanded(toggle !== undefined ? toggle : !expanded)
-        setAnimation(false)
-      }, ANIMATION_DURATION)
+      }
     },
-    [expanded, onExpandChange, setAnimation, setExpanded],
+    [expanded, onExpandChange, shouldAnimate],
   )
 
   const pinItem = useCallback(
@@ -229,6 +240,7 @@ export const NavigationProvider = ({
       setPinnedItems,
       allowNavigationResize,
       setAllowNavigationResize,
+      shouldAnimate,
     }),
     [
       expanded,
@@ -244,6 +256,7 @@ export const NavigationProvider = ({
       reorderItems,
       items,
       allowNavigationResize,
+      shouldAnimate,
     ],
   )
 

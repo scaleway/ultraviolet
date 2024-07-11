@@ -3,9 +3,12 @@
 exports[`Expandable > renders correctly opened 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  height: auto;
+}
+
+.emotion-0[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 <div
@@ -13,6 +16,7 @@ exports[`Expandable > renders correctly opened 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
+      data-is-animated="true"
     >
       Sample Expandable
     </div>
@@ -23,9 +27,12 @@ exports[`Expandable > renders correctly opened 1`] = `
 exports[`Expandable > renders correctly with animationDuration 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  height: auto;
+}
+
+.emotion-0[data-is-animated="true"] {
   -webkit-transition: max-height 500ms ease-out,opacity 500ms ease-out;
   transition: max-height 500ms ease-out,opacity 500ms ease-out;
-  height: auto;
 }
 
 <div
@@ -33,6 +40,31 @@ exports[`Expandable > renders correctly with animationDuration 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
+      data-is-animated="true"
+    >
+      Sample Expandable
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Expandable > renders correctly with animationDuration set to 0 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  height: auto;
+}
+
+.emotion-0[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-is-animated="false"
     >
       Sample Expandable
     </div>
@@ -43,9 +75,12 @@ exports[`Expandable > renders correctly with animationDuration 1`] = `
 exports[`Expandable > renders correctly with className 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  height: auto;
+}
+
+.emotion-0[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 <div
@@ -53,6 +88,7 @@ exports[`Expandable > renders correctly with className 1`] = `
   >
     <div
       class="test emotion-0 emotion-1"
+      data-is-animated="true"
     >
       Sample Expandable
     </div>
@@ -63,9 +99,12 @@ exports[`Expandable > renders correctly with className 1`] = `
 exports[`Expandable > renders correctly with default values 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  height: auto;
+}
+
+.emotion-0[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 <div
@@ -73,6 +112,7 @@ exports[`Expandable > renders correctly with default values 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
+      data-is-animated="true"
     >
       Sample Expandable
     </div>
@@ -83,9 +123,12 @@ exports[`Expandable > renders correctly with default values 1`] = `
 exports[`Expandable > renders correctly with minHeight 1`] = `
 <DocumentFragment>
   .emotion-0 {
+  height: auto;
+}
+
+.emotion-0[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 <div
@@ -93,6 +136,7 @@ exports[`Expandable > renders correctly with minHeight 1`] = `
   >
     <div
       class="emotion-0 emotion-1"
+      data-is-animated="true"
     >
       Sample Expandable
     </div>
