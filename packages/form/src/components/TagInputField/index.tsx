@@ -4,6 +4,7 @@ import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
+import { validateRegex } from '../../utils/validateRegex'
 
 export type TagInputFieldProps<
   TFieldValues extends FieldValues,
@@ -68,15 +69,7 @@ export const TagInputField = <
       validate: {
         ...(regexes
           ? {
-              pattern: value =>
-                regexes.every(
-                  regex =>
-                    value === undefined ||
-                    value === '' ||
-                    (Array.isArray(regex)
-                      ? regex.some(regexOr => regexOr.test(value))
-                      : regex.test(value)),
-                ),
+              pattern: value => validateRegex(value, regexes),
             }
           : {}),
         ...validate,
