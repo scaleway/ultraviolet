@@ -33,6 +33,26 @@ describe('Double slider', () => {
       />,
     )
   })
+
+  test('renders correctly with value empty', () => {
+    shouldMatchEmotionSnapshot(
+      /* @ts-expect-error testing purpose */
+      <Slider name="Name" label="Label" double />,
+    )
+  })
+
+  test('renders correctly with value empty array and no min max', () => {
+    shouldMatchEmotionSnapshot(
+      <Slider value={[]} name="Name" label="Label" double />,
+    )
+  })
+
+  test('renders correctly with value empty array with min max', () => {
+    shouldMatchEmotionSnapshot(
+      <Slider value={[]} name="Name" label="Label" double min={0} max={10} />,
+    )
+  })
+
   test('renders correctly direction row double with input', () => {
     shouldMatchEmotionSnapshot(
       <Slider
