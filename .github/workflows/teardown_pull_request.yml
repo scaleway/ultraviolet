@@ -37,6 +37,6 @@ jobs:
       - name: Remove storybook deployment
         uses: bobheadxi/deployments@v1.5.0
         with:
-          step: delete-env
+          step: deactivate-env
           token: ${{ secrets.GITHUB_TOKEN }}
           env: ${{ env.STORYBOOK_BRANCH_SLUG }}
