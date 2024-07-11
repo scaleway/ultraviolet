@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.13.0
+
+### Minor Changes
+
+- [#3994](https://github.com/scaleway/ultraviolet/pull/3994) [`52a83f4`](https://github.com/scaleway/ultraviolet/commit/52a83f4da9c7025c3b04056e3209ee705aa92f53) Thanks [@matthprost](https://github.com/matthprost)! - New icon `sparkles` in `<Icon />` component
+
 ## 2.12.18
 
 ### Patch Changes

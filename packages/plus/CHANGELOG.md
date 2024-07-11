@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 0.20.0
+
+### Minor Changes
+
+- [#3983](https://github.com/scaleway/ultraviolet/pull/3983) [`200a99b`](https://github.com/scaleway/ultraviolet/commit/200a99b1a0731d09332d7496dcf8f8590e212f0a) Thanks [@matthprost](https://github.com/matthprost)! - Add `animation` prop on `<NavigationProvider />` to disable all animations on Navigation
+
+### Patch Changes
+
+- Updated dependencies [[`200a99b`](https://github.com/scaleway/ultraviolet/commit/200a99b1a0731d09332d7496dcf8f8590e212f0a), [`52a83f4`](https://github.com/scaleway/ultraviolet/commit/52a83f4da9c7025c3b04056e3209ee705aa92f53), [`14f8d15`](https://github.com/scaleway/ultraviolet/commit/14f8d15ce7a6e0fe4ae55aa4982d5357226bbf30)]:
+  - @ultraviolet/ui@1.61.0
+  - @ultraviolet/icons@2.13.0
+
 ## 0.19.3
 
 ### Patch Changes
