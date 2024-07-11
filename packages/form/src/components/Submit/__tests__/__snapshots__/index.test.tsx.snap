@@ -82,9 +82,12 @@ exports[`Submit > form is invalid 1`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-6 {
@@ -159,6 +162,7 @@ exports[`Submit > form is invalid 1`] = `
         </div>
         <div
           class="emotion-4 emotion-5"
+          data-is-animated="true"
         >
           <div
             class="emotion-6 emotion-7"

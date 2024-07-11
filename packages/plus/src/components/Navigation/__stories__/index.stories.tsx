@@ -1,10 +1,11 @@
 import type { Meta } from '@storybook/react'
-import { Navigation } from '..'
+import { Navigation, NavigationProvider } from '..'
 
 export default {
   component: Navigation,
   title: 'Plus/Compositions/Navigation',
   subcomponents: {
+    NavigationProvider,
     'Navigation.Group': Navigation.Group,
     'Navigation.Item': Navigation.Item,
     'Navigation.PinnedItems': Navigation.PinnedItems,

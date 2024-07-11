@@ -468,9 +468,12 @@ exports[`EstimateCost - Region > render region component 1`] = `
 }
 
 .emotion-59 {
+  height: auto;
+}
+
+.emotion-59[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-61 {
@@ -998,6 +1001,7 @@ exports[`EstimateCost - Region > render region component 1`] = `
                       </div>
                       <div
                         class="emotion-59 emotion-60"
+                        data-is-animated="true"
                       >
                         <div
                           class="emotion-61 emotion-62"
@@ -1096,6 +1100,7 @@ exports[`EstimateCost - Region > render region component 1`] = `
                       />
                       <div
                         class="emotion-59 emotion-60"
+                        data-is-animated="true"
                       >
                         <div
                           class="emotion-61 emotion-85"

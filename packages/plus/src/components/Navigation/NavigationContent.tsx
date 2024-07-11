@@ -141,6 +141,7 @@ export const NavigationContent = ({
     locales,
     navigationRef,
     allowNavigationResize,
+    shouldAnimate,
   } = context
 
   const sliderRef = useRef<HTMLDivElement>(null)
@@ -276,7 +277,7 @@ export const NavigationContent = ({
     <StyledNav className={className} id={id}>
       <Container
         ref={navigationRef}
-        data-animation={animation}
+        data-animation={shouldAnimate ? animation : undefined}
         data-expanded={expanded}
         width={width}
       >
@@ -297,7 +298,7 @@ export const NavigationContent = ({
             ref={contentRef}
             gap={0.25}
             data-is-expanded={expanded}
-            data-animation={animation}
+            data-animation={shouldAnimate ? animation : undefined}
           >
             {children}
           </Content>

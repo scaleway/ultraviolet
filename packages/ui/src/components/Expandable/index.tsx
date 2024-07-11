@@ -19,15 +19,20 @@ type ExpandableProps = {
   minHeight?: number
   className?: string
   'data-testid'?: string
+  /**
+   * The duration of the animation in ms. If set to 0, the animation will be disabled.
+   */
   animationDuration?: number
 }
 
 export const StyledExpandable = styled('div', {
   shouldForwardProp: prop => !['animationDuration'].includes(prop),
 })<{ animationDuration: number }>`
-  transition:
-    max-height ${({ animationDuration }) => animationDuration}ms ease-out,
-    opacity ${({ animationDuration }) => animationDuration}ms ease-out;
+  &[data-is-animated="true"] {
+    transition:
+      max-height ${({ animationDuration }) => animationDuration}ms ease-out,
+      opacity ${({ animationDuration }) => animationDuration}ms ease-out;
+    }
   height: auto;
 `
 
@@ -47,6 +52,7 @@ export const Expandable = ({
   const [height, setHeight] = useState<number | null>(null)
   const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
   const ref = useRef<HTMLDivElement>(null)
+  const shouldBeAnimated = animationDuration > 0
 
   /**
    * At mount, we set the height variable to the height of the content only if the component is closed.
@@ -67,36 +73,50 @@ export const Expandable = ({
     if (opened && ref.current && height) {
       ref.current.style.maxHeight = `${height}px`
       ref.current.style.visibility = ''
-      transitionTimer.current = setTimeout(() => {
-        if (ref.current) {
-          ref.current.style.maxHeight = 'initial'
-          ref.current.style.overflow = 'visible'
-          ref.current.style.visibility = ''
-        }
-      }, ANIMATION_DURATION)
+      if (shouldBeAnimated) {
+        transitionTimer.current = setTimeout(() => {
+          if (ref.current) {
+            ref.current.style.maxHeight = 'initial'
+            ref.current.style.overflow = 'visible'
+            ref.current.style.visibility = ''
+          }
+        }, ANIMATION_DURATION)
+      } else {
+        ref.current.style.maxHeight = 'initial'
+        ref.current.style.overflow = 'visible'
+        ref.current.style.visibility = ''
+      }
     } else {
       clearTimeout(transitionTimer.current)
 
       if (ref.current && height) {
         ref.current.style.maxHeight = `${height}px`
-        transitionTimer.current = setTimeout(() => {
-          if (ref.current) {
-            ref.current.style.maxHeight = `${minHeight}px`
-            ref.current.style.overflow = 'hidden'
-            setTimeout(() => {
-              if (ref.current && !minHeight) {
-                ref.current.style.visibility = 'hidden'
-              }
-            }, ANIMATION_DURATION)
+        if (shouldBeAnimated) {
+          transitionTimer.current = setTimeout(() => {
+            if (ref.current) {
+              ref.current.style.maxHeight = `${minHeight}px`
+              ref.current.style.overflow = 'hidden'
+              setTimeout(() => {
+                if (ref.current && !minHeight) {
+                  ref.current.style.visibility = 'hidden'
+                }
+              }, ANIMATION_DURATION)
+            }
+          }, 0)
+        } else {
+          ref.current.style.maxHeight = `${minHeight}px`
+          ref.current.style.overflow = 'hidden'
+          if (!minHeight) {
+            ref.current.style.visibility = 'hidden'
           }
-        }, 0)
+        }
       }
     }
 
     return () => {
       clearTimeout(transitionTimer.current)
     }
-  }, [height, minHeight, opened])
+  }, [animationDuration, height, minHeight, opened, shouldBeAnimated])
 
   return (
     <StyledExpandable
@@ -104,6 +124,7 @@ export const Expandable = ({
       ref={ref}
       className={className}
       animationDuration={animationDuration}
+      data-is-animated={shouldBeAnimated}
     >
       {children}
     </StyledExpandable>

@@ -407,15 +407,21 @@ exports[`TextInput > should handle events on random button 1`] = `
 }
 
 .emotion-12 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-12 {
+.emotion-12[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-12 {
   height: auto;
+}
+
+.emotion-12[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-14 {
@@ -472,6 +478,7 @@ exports[`TextInput > should handle events on random button 1`] = `
       </div>
       <div
         class="emotion-12 emotion-13"
+        data-is-animated="true"
       >
         <div
           class="emotion-14 emotion-15"
@@ -889,15 +896,21 @@ exports[`TextInput > should handle events on toggleable password 1`] = `
 }
 
 .emotion-12 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-12 {
+.emotion-12[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-12 {
   height: auto;
+}
+
+.emotion-12[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-14 {
@@ -959,6 +972,7 @@ exports[`TextInput > should handle events on toggleable password 1`] = `
       </div>
       <div
         class="emotion-12 emotion-13"
+        data-is-animated="true"
       >
         <div
           class="emotion-14 emotion-15"
@@ -1051,9 +1065,12 @@ exports[`TextInput > should render correctly 1`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-6 {
@@ -1078,6 +1095,7 @@ exports[`TextInput > should render correctly 1`] = `
       </div>
       <div
         class="emotion-4 emotion-5"
+        data-is-animated="true"
       >
         <div
           class="emotion-6 emotion-7"
@@ -1211,9 +1229,12 @@ exports[`TextInput > should render correctly disabled true 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -1247,6 +1268,7 @@ exports[`TextInput > should render correctly disabled true 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -1386,9 +1408,12 @@ exports[`TextInput > should render correctly error string 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -1420,6 +1445,7 @@ exports[`TextInput > should render correctly error string 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -1514,9 +1540,12 @@ exports[`TextInput > should render correctly label and noTopLabel 1`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-6 {
@@ -1542,6 +1571,7 @@ exports[`TextInput > should render correctly label and noTopLabel 1`] = `
       </div>
       <div
         class="emotion-4 emotion-5"
+        data-is-animated="true"
       >
         <div
           class="emotion-6 emotion-7"
@@ -1634,9 +1664,12 @@ exports[`TextInput > should render correctly label and noTopLabel 2`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-6 {
@@ -1661,6 +1694,7 @@ exports[`TextInput > should render correctly label and noTopLabel 2`] = `
       </div>
       <div
         class="emotion-4 emotion-5"
+        data-is-animated="true"
       >
         <div
           class="emotion-6 emotion-7"
@@ -1788,9 +1822,12 @@ exports[`TextInput > should render correctly label and noTopLabel 3`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -1822,6 +1859,7 @@ exports[`TextInput > should render correctly label and noTopLabel 3`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -1918,9 +1956,12 @@ exports[`TextInput > should render correctly multiline true 1`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-6 {
@@ -1943,6 +1984,7 @@ exports[`TextInput > should render correctly multiline true 1`] = `
       </div>
       <div
         class="emotion-4 emotion-5"
+        data-is-animated="true"
       >
         <div
           class="emotion-6 emotion-7"
@@ -2111,9 +2153,12 @@ exports[`TextInput > should render correctly required true 1`] = `
 }
 
 .emotion-10 {
+  height: auto;
+}
+
+.emotion-10[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-12 {
@@ -2159,6 +2204,7 @@ exports[`TextInput > should render correctly required true 1`] = `
       </div>
       <div
         class="emotion-10 emotion-11"
+        data-is-animated="true"
       >
         <div
           class="emotion-12 emotion-13"
@@ -2266,9 +2312,12 @@ exports[`TextInput > should render correctly with ariaControls 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -2304,6 +2353,7 @@ exports[`TextInput > should render correctly with ariaControls 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -2431,9 +2481,12 @@ exports[`TextInput > should render correctly with basic props 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -2468,6 +2521,7 @@ exports[`TextInput > should render correctly with basic props 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -2575,9 +2629,12 @@ exports[`TextInput > should render correctly with defaultValue true 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -2610,6 +2667,7 @@ exports[`TextInput > should render correctly with defaultValue true 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -2737,9 +2795,12 @@ exports[`TextInput > should render correctly with edit true 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -2772,6 +2833,7 @@ exports[`TextInput > should render correctly with edit true 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -2879,9 +2941,12 @@ exports[`TextInput > should render correctly with fillAvailable true 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -2914,6 +2979,7 @@ exports[`TextInput > should render correctly with fillAvailable true 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -3041,9 +3107,12 @@ exports[`TextInput > should render correctly with generated true 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -3076,6 +3145,7 @@ exports[`TextInput > should render correctly with generated true 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -3203,9 +3273,12 @@ exports[`TextInput > should render correctly with height prop 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -3238,6 +3311,7 @@ exports[`TextInput > should render correctly with height prop 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -3738,15 +3812,21 @@ exports[`TextInput > should render correctly with multiple right components 1`] 
 }
 
 .emotion-28 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-28 {
+.emotion-28[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-28 {
   height: auto;
+}
+
+.emotion-28[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-30 {
@@ -3858,6 +3938,7 @@ exports[`TextInput > should render correctly with multiple right components 1`] 
       </div>
       <div
         class="emotion-28 emotion-29"
+        data-is-animated="true"
       >
         <div
           class="emotion-30 emotion-31"
@@ -3985,9 +4066,12 @@ exports[`TextInput > should render correctly with notice 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -4055,6 +4139,7 @@ exports[`TextInput > should render correctly with notice 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -4229,9 +4314,12 @@ exports[`TextInput > should render correctly with null right component 1`] = `
 }
 
 .emotion-8 {
+  height: auto;
+}
+
+.emotion-8[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-10 {
@@ -4267,6 +4355,7 @@ exports[`TextInput > should render correctly with null right component 1`] = `
       </div>
       <div
         class="emotion-8 emotion-9"
+        data-is-animated="true"
       >
         <div
           class="emotion-10 emotion-11"
@@ -4378,9 +4467,12 @@ exports[`TextInput > should render correctly with readOnly true 1`] = `
 }
 
 .emotion-6 {
+  height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-8 {
@@ -4415,6 +4507,7 @@ exports[`TextInput > should render correctly with readOnly true 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -4600,9 +4693,12 @@ exports[`TextInput > should render correctly with unit is px 1`] = `
 }
 
 .emotion-16 {
+  height: auto;
+}
+
+.emotion-16[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-18 {
@@ -4653,6 +4749,7 @@ exports[`TextInput > should render correctly with unit is px 1`] = `
       </div>
       <div
         class="emotion-16 emotion-17"
+        data-is-animated="true"
       >
         <div
           class="emotion-18 emotion-19"
@@ -4852,9 +4949,12 @@ exports[`TextInput > should render correctly with unit is px and required 1`] = 
 }
 
 .emotion-18 {
+  height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-20 {
@@ -4915,6 +5015,7 @@ exports[`TextInput > should render correctly with unit is px and required 1`] = 
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -5086,9 +5187,12 @@ exports[`TextInput > should render correctly with valid false 1`] = `
 }
 
 .emotion-12 {
+  height: auto;
+}
+
+.emotion-12[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-14 {
@@ -5138,6 +5242,7 @@ exports[`TextInput > should render correctly with valid false 1`] = `
       </div>
       <div
         class="emotion-12 emotion-13"
+        data-is-animated="true"
       >
         <div
           class="emotion-14 emotion-15"
@@ -5467,15 +5572,21 @@ exports[`TextInput > should render correctly with valid false 2`] = `
 }
 
 .emotion-12 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-12 {
+.emotion-12[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-12 {
   height: auto;
+}
+
+.emotion-12[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-14 {
@@ -5531,6 +5642,7 @@ exports[`TextInput > should render correctly with valid false 2`] = `
       </div>
       <div
         class="emotion-12 emotion-13"
+        data-is-animated="true"
       >
         <div
           class="emotion-14 emotion-15"
@@ -5702,9 +5814,12 @@ exports[`TextInput > should render correctly with valid true 1`] = `
 }
 
 .emotion-12 {
+  height: auto;
+}
+
+.emotion-12[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-14 {
@@ -5756,6 +5871,7 @@ exports[`TextInput > should render correctly with valid true 1`] = `
       </div>
       <div
         class="emotion-12 emotion-13"
+        data-is-animated="true"
       >
         <div
           class="emotion-14 emotion-15"
@@ -6085,15 +6201,21 @@ exports[`TextInput > should render correctly with valid true 2`] = `
 }
 
 .emotion-12 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-12 {
+.emotion-12[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-12 {
   height: auto;
+}
+
+.emotion-12[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-14 {
@@ -6151,6 +6273,7 @@ exports[`TextInput > should render correctly with valid true 2`] = `
       </div>
       <div
         class="emotion-12 emotion-13"
+        data-is-animated="true"
       >
         <div
           class="emotion-14 emotion-15"
@@ -6247,9 +6370,12 @@ exports[`TextInput > should render multiline with props 1`] = `
 }
 
 .emotion-4 {
+  height: auto;
+}
+
+.emotion-4[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-6 {
@@ -6274,6 +6400,7 @@ exports[`TextInput > should render multiline with props 1`] = `
       </div>
       <div
         class="emotion-4 emotion-5"
+        data-is-animated="true"
       >
         <div
           class="emotion-6 emotion-7"
@@ -6444,15 +6571,21 @@ exports[`TextInput > should render on focus 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-6 {
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-6 {
   height: auto;
+}
+
+.emotion-6[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-8 {
@@ -6492,6 +6625,7 @@ exports[`TextInput > should render on focus 1`] = `
       </div>
       <div
         class="emotion-6 emotion-7"
+        data-is-animated="true"
       >
         <div
           class="emotion-8 emotion-9"
@@ -6909,15 +7043,21 @@ exports[`TextInput > should render random 1`] = `
 }
 
 .emotion-12 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-12 {
+.emotion-12[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-12 {
   height: auto;
+}
+
+.emotion-12[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-14 {
@@ -6972,6 +7112,7 @@ exports[`TextInput > should render random 1`] = `
       </div>
       <div
         class="emotion-12 emotion-13"
+        data-is-animated="true"
       >
         <div
           class="emotion-14 emotion-15"
@@ -7272,15 +7413,21 @@ exports[`TextInput > should render random 2`] = `
 }
 
 .emotion-14 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-14 {
+.emotion-14[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-14 {
   height: auto;
+}
+
+.emotion-14[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-16 {
@@ -7345,6 +7492,7 @@ exports[`TextInput > should render random 2`] = `
       </div>
       <div
         class="emotion-14 emotion-15"
+        data-is-animated="true"
       >
         <div
           class="emotion-16 emotion-17"
@@ -7744,15 +7892,21 @@ exports[`TextInput > should render random with required 1`] = `
 }
 
 .emotion-17 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-17 {
+.emotion-17[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-17 {
   height: auto;
+}
+
+.emotion-17[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-19 {
@@ -7822,6 +7976,7 @@ exports[`TextInput > should render random with required 1`] = `
       </div>
       <div
         class="emotion-17 emotion-18"
+        data-is-animated="true"
       >
         <div
           class="emotion-19 emotion-20"
@@ -8041,15 +8196,21 @@ exports[`TextInput > should render toggleable password 1`] = `
 }
 
 .emotion-12 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-12 {
+.emotion-12[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-12 {
   height: auto;
+}
+
+.emotion-12[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-14 {
@@ -8109,6 +8270,7 @@ exports[`TextInput > should render toggleable password 1`] = `
       </div>
       <div
         class="emotion-12 emotion-13"
+        data-is-animated="true"
       >
         <div
           class="emotion-14 emotion-15"
@@ -8508,15 +8670,21 @@ exports[`TextInput > should render toggleable password with required 1`] = `
 }
 
 .emotion-17 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-17 {
+.emotion-17[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-17 {
   height: auto;
+}
+
+.emotion-17[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-19 {
@@ -8591,6 +8759,7 @@ exports[`TextInput > should render toggleable password with required 1`] = `
       </div>
       <div
         class="emotion-17 emotion-18"
+        data-is-animated="true"
       >
         <div
           class="emotion-19 emotion-20"
@@ -8976,15 +9145,21 @@ exports[`TextInput > should render unit with required 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -9051,6 +9226,7 @@ exports[`TextInput > should render unit with required 1`] = `
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"

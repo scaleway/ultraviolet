@@ -331,15 +331,21 @@ exports[`SelectInput > renders correctly animated 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -451,6 +457,7 @@ exports[`SelectInput > renders correctly animated 1`] = `
       />
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -703,9 +710,12 @@ exports[`SelectInput > renders correctly controlled 1`] = `
 }
 
 .emotion-18 {
+  height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-20 {
@@ -811,6 +821,7 @@ exports[`SelectInput > renders correctly controlled 1`] = `
       />
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -1202,15 +1213,21 @@ exports[`SelectInput > renders correctly default values with click 1`] = `
 }
 
 .emotion-22 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-22 {
+.emotion-22[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-22 {
   height: auto;
+}
+
+.emotion-22[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-24 {
@@ -1378,6 +1395,7 @@ exports[`SelectInput > renders correctly default values with click 1`] = `
       />
       <div
         class="emotion-22 emotion-23"
+        data-is-animated="true"
       >
         <div
           class="emotion-24 emotion-25"
@@ -1624,9 +1642,12 @@ exports[`SelectInput > renders correctly disabled 1`] = `
 }
 
 .emotion-18 {
+  height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-20 {
@@ -1729,6 +1750,7 @@ exports[`SelectInput > renders correctly disabled 1`] = `
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -2040,15 +2062,21 @@ exports[`SelectInput > renders correctly disabled with click 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -2157,6 +2185,7 @@ exports[`SelectInput > renders correctly disabled with click 1`] = `
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -2466,15 +2495,21 @@ exports[`SelectInput > renders correctly multi 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -2588,6 +2623,7 @@ exports[`SelectInput > renders correctly multi 1`] = `
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -2951,15 +2987,21 @@ exports[`SelectInput > renders correctly multi disabled 1`] = `
 }
 
 .emotion-22 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-22 {
+.emotion-22[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-22 {
   height: auto;
+}
+
+.emotion-22[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-24 {
@@ -3085,6 +3127,7 @@ exports[`SelectInput > renders correctly multi disabled 1`] = `
       </div>
       <div
         class="emotion-22 emotion-23"
+        data-is-animated="true"
       >
         <div
           class="emotion-24 emotion-25"
@@ -3361,9 +3404,12 @@ exports[`SelectInput > renders correctly required 1`] = `
 }
 
 .emotion-21 {
+  height: auto;
+}
+
+.emotion-21[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-23 {
@@ -3482,6 +3528,7 @@ exports[`SelectInput > renders correctly required 1`] = `
       />
       <div
         class="emotion-21 emotion-22"
+        data-is-animated="true"
       >
         <div
           class="emotion-23 emotion-24"
@@ -3796,15 +3843,21 @@ exports[`SelectInput > renders correctly timed 1`] = `
 }
 
 .emotion-21 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-21 {
+.emotion-21[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-21 {
   height: auto;
+}
+
+.emotion-21[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-23 {
@@ -3921,6 +3974,7 @@ exports[`SelectInput > renders correctly timed 1`] = `
       />
       <div
         class="emotion-21 emotion-22"
+        data-is-animated="true"
       >
         <div
           class="emotion-23 emotion-24"
@@ -4235,15 +4289,21 @@ exports[`SelectInput > renders correctly timed with error 1`] = `
 }
 
 .emotion-21 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-21 {
+.emotion-21[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-21 {
   height: auto;
+}
+
+.emotion-21[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-23 {
@@ -4360,6 +4420,7 @@ exports[`SelectInput > renders correctly timed with error 1`] = `
       />
       <div
         class="emotion-21 emotion-22"
+        data-is-animated="true"
       >
         <div
           class="emotion-23 emotion-24"
@@ -4688,9 +4749,12 @@ exports[`SelectInput > renders correctly uncontrolled 1`] = `
 }
 
 .emotion-22 {
+  height: auto;
+}
+
+.emotion-22[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-24 {
@@ -4852,6 +4916,7 @@ exports[`SelectInput > renders correctly uncontrolled 1`] = `
       />
       <div
         class="emotion-22 emotion-23"
+        data-is-animated="true"
       >
         <div
           class="emotion-24 emotion-25"
@@ -5229,15 +5294,21 @@ exports[`SelectInput > renders correctly with click 1`] = `
 }
 
 .emotion-22 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-22 {
+.emotion-22[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-22 {
   height: auto;
+}
+
+.emotion-22[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-24 {
@@ -5405,6 +5476,7 @@ exports[`SelectInput > renders correctly with click 1`] = `
       />
       <div
         class="emotion-22 emotion-23"
+        data-is-animated="true"
       >
         <div
           class="emotion-24 emotion-25"
@@ -5808,15 +5880,21 @@ exports[`SelectInput > renders correctly with click and option disabled 1`] = `
 }
 
 .emotion-23 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-23 {
+.emotion-23[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-23 {
   height: auto;
+}
+
+.emotion-23[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-25 {
@@ -5998,6 +6076,7 @@ exports[`SelectInput > renders correctly with click and option disabled 1`] = `
       />
       <div
         class="emotion-23 emotion-24"
+        data-is-animated="true"
       >
         <div
           class="emotion-25 emotion-26"
@@ -6401,15 +6480,21 @@ exports[`SelectInput > renders correctly with click and options 1`] = `
 }
 
 .emotion-23 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-23 {
+.emotion-23[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-23 {
   height: auto;
+}
+
+.emotion-23[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-25 {
@@ -6591,6 +6676,7 @@ exports[`SelectInput > renders correctly with click and options 1`] = `
       />
       <div
         class="emotion-23 emotion-24"
+        data-is-animated="true"
       >
         <div
           class="emotion-25 emotion-26"
@@ -6843,9 +6929,12 @@ exports[`SelectInput > renders correctly with custom styles 1`] = `
 }
 
 .emotion-18 {
+  height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-20 {
@@ -6951,6 +7040,7 @@ exports[`SelectInput > renders correctly with custom styles 1`] = `
       />
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -7234,9 +7324,12 @@ exports[`SelectInput > renders correctly with emptyState 1`] = `
 }
 
 .emotion-21 {
+  height: auto;
+}
+
+.emotion-21[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-23 {
@@ -7373,6 +7466,7 @@ exports[`SelectInput > renders correctly with emptyState 1`] = `
       />
       <div
         class="emotion-21 emotion-22"
+        data-is-animated="true"
       >
         <div
           class="emotion-23 emotion-24"
@@ -7827,21 +7921,30 @@ exports[`SelectInput > renders with undefined children 1`] = `
 }
 
 .emotion-22 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-22 {
+.emotion-22[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-22 {
+  height: auto;
+}
+
+.emotion-22[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-22 {
   height: auto;
+}
+
+.emotion-22[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-24 {
@@ -8015,6 +8118,7 @@ exports[`SelectInput > renders with undefined children 1`] = `
       />
       <div
         class="emotion-22 emotion-23"
+        data-is-animated="true"
       >
         <div
           class="emotion-24 emotion-25"
@@ -8393,21 +8497,30 @@ exports[`SelectInput > should render correctly custom isLoading 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-18 {
+  height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -8528,6 +8641,7 @@ exports[`SelectInput > should render correctly custom isLoading 1`] = `
       />
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -8906,21 +9020,30 @@ exports[`SelectInput > should render correctly description and inlineDescription
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-18 {
+  height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -9038,6 +9161,7 @@ exports[`SelectInput > should render correctly description and inlineDescription
       />
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -9438,15 +9562,21 @@ exports[`SelectInput > should render correctly isLoading 1`] = `
 }
 
 .emotion-22 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-22 {
+.emotion-22[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-22 {
   height: auto;
+}
+
+.emotion-22[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-24 {
@@ -9572,6 +9702,7 @@ exports[`SelectInput > should render correctly isLoading 1`] = `
       />
       <div
         class="emotion-22 emotion-23"
+        data-is-animated="true"
       >
         <div
           class="emotion-24 emotion-25"
@@ -9901,15 +10032,21 @@ exports[`SelectInput > should render correctly multi isClearable 1`] = `
 }
 
 .emotion-21 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-21 {
+.emotion-21[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-21 {
   height: auto;
+}
+
+.emotion-21[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-23 {
@@ -10034,6 +10171,7 @@ exports[`SelectInput > should render correctly multi isClearable 1`] = `
       />
       <div
         class="emotion-21 emotion-22"
+        data-is-animated="true"
       >
         <div
           class="emotion-23 emotion-24"
@@ -10346,15 +10484,21 @@ exports[`SelectInput > should render correctly multi isClearable disabled 1`] = 
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -10461,6 +10605,7 @@ exports[`SelectInput > should render correctly multi isClearable disabled 1`] = 
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -10776,15 +10921,21 @@ exports[`SelectInput > should render correctly multi isSearchable 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -10894,6 +11045,7 @@ exports[`SelectInput > should render correctly multi isSearchable 1`] = `
       />
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -11206,15 +11358,21 @@ exports[`SelectInput > should render correctly multi isSearchable disabled 1`] =
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -11321,6 +11479,7 @@ exports[`SelectInput > should render correctly multi isSearchable disabled 1`] =
       </div>
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -11699,21 +11858,30 @@ exports[`SelectInput > should render correctly with portal 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-18 {
+  height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -11831,6 +11999,7 @@ exports[`SelectInput > should render correctly with portal 1`] = `
       />
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
@@ -12212,21 +12381,30 @@ exports[`SelectInput > should render correctly without children 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
-.emotion-18 {
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  height: auto;
 }
 
 .emotion-18 {
+  height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
+}
+
+.emotion-18 {
   height: auto;
+}
+
+.emotion-18[data-is-animated="true"] {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
 .emotion-20 {
@@ -12344,6 +12522,7 @@ exports[`SelectInput > should render correctly without children 1`] = `
       />
       <div
         class="emotion-18 emotion-19"
+        data-is-animated="true"
       >
         <div
           class="emotion-20 emotion-21"
