@@ -127,11 +127,14 @@ $ # If you do some changes into your package
 $ pnpm run build && yalc publish --push --sig # --push will automatically update the package on projects where it have been added, --sig updates the signature hash to trigger webpack update
 ```
 
-You can redo the same with `@ultraviolet/form` if you want to test it.
+You can redo the same with `@ultraviolet/form` if you want to test it
 
 > :warning: since [1.0.0.pre.51 (2021-04-23)](https://github.com/wclr/yalc/blob/master/CHANGELOG.md#100pre51-2021-04-23), `yalc publish` needs the `--sig` option to trigger webpack module actual update.
 
 > :warning: `yalc` create a `yalc.lock` and updates the `package.json` in the target project. **Make sure to not commit these changes**
+
+> :warning: if you are trying to yalc @ultraviolet/ui & @ultraviolet/form in your application and hope to see the change of @ultraviolet/ui into the component used by @ultraviolet/form you should be sure to not have any peerDeps of @ultraviolet/ui installed as it's will be resolve. If your are using pnpm and vite you can add `pnpm.override: { "@ultraviolet/ui": "$@ultraviolet/ui" }`. If this rfc is accepted this will solve our issue https://github.com/pnpm/rfcs/blob/main/text/0001-catalogs.md 
+
 
 ---
 
