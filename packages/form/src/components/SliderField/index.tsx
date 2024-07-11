@@ -82,7 +82,6 @@ export const SliderField = <
         onBlur?.(event)
       }}
       onChange={(newValue: number | number[]) => {
-        // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
         field.onChange(newValue)
         onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
