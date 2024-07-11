@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.2.0
+
+### Minor Changes
+
+- [#4002](https://github.com/scaleway/ultraviolet/pull/4002) [`15c85b4`](https://github.com/scaleway/ultraviolet/commit/15c85b446cbd3d62f6c023786374c11959df00b8) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `regex` on `<TagInputField />` component
+
 ## 3.1.1
 
 ### Patch Changes
