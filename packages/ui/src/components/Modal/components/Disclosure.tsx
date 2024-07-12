@@ -6,7 +6,7 @@ import {
   useEffect,
   useMemo,
 } from 'react'
-import type { DisclosureProps } from './types'
+import type { DisclosureProps } from '../types'
 
 export const Disclosure = ({
   disclosure,
