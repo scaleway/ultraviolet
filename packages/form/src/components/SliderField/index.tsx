@@ -9,33 +9,7 @@ type SliderFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Pick<
-    ComponentProps<typeof Slider>,
-    | 'name'
-    | 'label'
-    | 'helper'
-    | 'tooltip'
-    | 'direction'
-    | 'input'
-    | 'prefix'
-    | 'unit'
-    | 'required'
-    | 'possibleValues'
-    | 'disabled'
-    | 'error'
-    | 'options'
-    | 'data-testid'
-    | 'min'
-    | 'double'
-    | 'max'
-    | 'step'
-    | 'id'
-    | 'onBlur'
-    | 'onFocus'
-    | 'className'
-    | 'tooltipPosition'
-    | 'aria-label'
-  > & {
+  Omit<ComponentProps<typeof Slider>, 'value' | 'onChange'> & {
     suffix?: string | ReactNode[]
   }
 

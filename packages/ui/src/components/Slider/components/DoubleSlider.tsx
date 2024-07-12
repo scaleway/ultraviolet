@@ -138,7 +138,7 @@ export const DoubleSlider = ({
   const finalId = id ?? localId
   const refSlider = useRef<HTMLInputElement>(null)
   const safeValue =
-    value && typeof value === 'object' && value.length === 2
+    value && Array.isArray(value) && value.length === 2
       ? value
       : [min ?? 0, max ?? 1]
   const [computedValues, setComputedValues] = useState(safeValue)
