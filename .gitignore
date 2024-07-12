@@ -35,3 +35,10 @@ out
 #vite
 vite.config.ts.*
 vitest.config.ts.*
+
+# turbo
+.turbo
+!.turbo/config.json
+examples/*/.turbo
+packages/*/.turbo
+tools/*/.turbo

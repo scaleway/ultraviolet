@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Stack } from '@ultraviolet/ui'
+import { Stack } from '../../Stack'
 import { CheckboxGroup } from '../index'
 
 export const Required: StoryFn<typeof CheckboxGroup> = props => (

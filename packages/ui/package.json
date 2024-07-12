@@ -16,7 +16,7 @@
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "typecheck": "tsc --noEmit",
-    "size": "pnpm run build && size-limit",
+    "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vite.config.ts",
     "test:unit:coverage": "pnpm test:unit --coverage"
   },
