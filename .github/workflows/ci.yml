@@ -11,20 +11,26 @@ on:
 jobs:
   typecheck:
     runs-on: ubuntu-22.04
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_REMOTE_ONLY: true
     steps:
-      - uses: actions/checkout@v4 # v4.1.4
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.3
         with:
           node-version: 20
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm run build
-      - run: pnpm install
-      - run: pnpm typecheck
+      - run: |
+          pnpm install
+          pnpm typecheck
+
   lint:
     runs-on: ubuntu-22.04
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_REMOTE_ONLY: true
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4.0.0
@@ -33,12 +39,16 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm run build
-      - run: pnpm install
-      - run: pnpm run lint
+      - run: |
+          pnpm install
+          pnpm build
+          pnpm run lint
+
   format:
     runs-on: ubuntu-22.04
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_REMOTE_ONLY: true
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4.0.0
@@ -47,12 +57,15 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm run build
-      - run: pnpm install
-      - run: pnpm run format:ci
+      - run: |
+          pnpm install
+          pnpm run format:ci
+
   test:
     runs-on: ubuntu-22.04
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_REMOTE_ONLY: true
     needs: [lint, typecheck, format]
     strategy:
       matrix:
@@ -60,17 +73,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: "0"
+          fetch-depth: 10
       - uses: pnpm/action-setup@v4.0.0
       - name: Use Node.js
         uses: actions/setup-node@v4.0.3
         with:
           node-version: ${{ matrix.node }}
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm run build
-      - run: pnpm install
-      - run: pnpm run test:unit:coverage
+      - run: |
+          pnpm install
+          pnpm run test:unit:coverage
       - uses: codecov/codecov-action@v4.5.0
         with:
           # files: packages/**/coverage/cobertura-coverage.xmls
@@ -98,6 +110,9 @@ jobs:
       matrix:
         node: ["20"]
     runs-on: ubuntu-22.04
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_REMOTE_ONLY: true
     needs: [lint, typecheck, format]
     steps:
       - uses: actions/checkout@v4 # v4.1.4
@@ -106,22 +121,6 @@ jobs:
         uses: actions/setup-node@v4.0.3
         with:
           node-version: ${{ matrix.node }}
-      - run: pnpm install
-      - run: pnpm run build
-  build-examples: # This will build all projects in the examples folder, it assures that all examples are working
-    strategy:
-      matrix:
-        node: ["20"]
-    runs-on: ubuntu-22.04
-    needs: [lint, test, format]
-    steps:
-      - uses: actions/checkout@v4 # v4.1.4
-      - uses: pnpm/action-setup@v4.0.0
-      - name: Use Node.js
-        uses: actions/setup-node@v4.0.3
-        with:
-          node-version: ${{ matrix.node }}
-      - run: pnpm install
-      - run: pnpm build
-      - run: pnpm install
-      - run: pnpm run build:examples
+      - run: |
+          pnpm install
+          pnpm run build

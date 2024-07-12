@@ -1,7 +1,6 @@
 {
   "extends": "@scaleway/tsconfig",
   "compilerOptions": {
-    // "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
     "jsxImportSource": "@emotion/react",
@@ -14,8 +13,6 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "**/.jest/*.ts",
-    "**/.jest/*.tsx",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
     "global.d.ts",

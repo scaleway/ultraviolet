@@ -1,7 +1,9 @@
 .git
 
 # dependencies
+node_modules
 **/node_modules
+npm-debug.log
 
 # we are using pnpm here
 **/package-lock.json
@@ -17,5 +19,3 @@ dist/
 coverage
 # storybook-static
 .reports
-
-
