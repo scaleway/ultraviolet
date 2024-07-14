@@ -78,8 +78,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 6.1.9
-        version: 6.1.9(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 6.1.10
+        version: 6.1.10(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@size-limit/file':
         specifier: 11.1.4
         version: 11.1.4(size-limit@11.1.4)
@@ -2895,8 +2895,8 @@ packages:
   '@scaleway/tsconfig@1.1.1':
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
 
-  '@scaleway/use-i18n@6.1.9':
-    resolution: {integrity: sha512-/vowBs0WpIMdoKtJqq8GrMfhN872Rq4tDvge5vEz3jHNTIgQ/n/6A6moNmy/wnG5ldyhx/3VcBo1hY6YksTCPw==}
+  '@scaleway/use-i18n@6.1.10':
+    resolution: {integrity: sha512-ZUj8Ukd4/cLwNsDPMm/S1Gb+FI7S87/+QByd08QGZS63zfmNrhBsUqbewrhyz6NqcDeLQYj9W9ZkZXa+ecp/Cw==}
     engines: {node: '>=18.x'}
     peerDependencies:
       date-fns: 3.x
@@ -5329,8 +5329,8 @@ packages:
   filelist@1.0.4:
     resolution: {integrity: sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==}
 
-  filesize@10.1.2:
-    resolution: {integrity: sha512-Dx770ai81ohflojxhU+oG+Z2QGvKdYxgEr9OSA8UVrqhwNHjfH9A8f5NKfg83fEH8ZFA5N5llJo5T3PIoZ4CRA==}
+  filesize@10.1.4:
+    resolution: {integrity: sha512-ryBwPIIeErmxgPnm6cbESAzXjuEFubs+yKYLBZvg3CaiNcmkJChoOGcBSrZ6IwkMwPABwPpVXE6IlNdGJJrvEg==}
     engines: {node: '>= 10.4.0'}
 
   fill-range@7.0.1:
@@ -11796,12 +11796,12 @@ snapshots:
 
   '@scaleway/tsconfig@1.1.1': {}
 
-  '@scaleway/use-i18n@6.1.9(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@scaleway/use-i18n@6.1.10(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@formatjs/ecma402-abstract': 2.0.0
       '@formatjs/fast-memoize': 2.2.0
       date-fns: 3.6.0
-      filesize: 10.1.2
+      filesize: 10.1.4
       international-types: 0.8.1
       intl-messageformat: 10.5.14
       react: 18.3.1
@@ -15240,7 +15240,7 @@ snapshots:
     dependencies:
       minimatch: 5.1.6
 
-  filesize@10.1.2: {}
+  filesize@10.1.4: {}
 
   fill-range@7.0.1:
     dependencies:
