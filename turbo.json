@@ -1,0 +1,48 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["tsconfig.json"],
+  "ui": "stream",
+  "globalEnv": ["STORYBOOK_ENVIRONMENT", "ENVIRONMENT"],
+  "tasks": {
+    "//#format": {},
+    "//#lint:fix": {
+      "cache": false
+    },
+    "//#storybook:build": {
+      "dependsOn": ["^build"],
+      "passThroughEnv": ["STORYBOOK_ENVIRONMENT"],
+      "outputs": ["build/**", "dist/**", "storybook-static/**"]
+    },
+    "//#storybook:build:stats": {
+      "dependsOn": ["^build"],
+      "passThroughEnv": ["STORYBOOK_ENVIRONMENT"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!**/*.stories.{tsx,jsx}"],
+      "outputs": [
+        "build/**",
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**",
+        "out/**",
+        "storybook-static/**"
+      ]
+    },
+    "size": {
+      "dependsOn": ["build"]
+    },
+    "typecheck": {
+      "dependsOn": ["build"],
+      "inputs": ["**/*.{ts,tsx}"]
+    },
+    "test:unit": {
+      "dependsOn": ["build"],
+      "passThroughEnv": ["VITEST_*"]
+    },
+    "test:unit:coverage": {
+      "dependsOn": ["build"],
+      "passThroughEnv": ["VITEST_*"]
+    }
+  }
+}

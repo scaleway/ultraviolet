@@ -1,5 +1,6 @@
-import type { Popup, TextInputV2 } from '@ultraviolet/ui'
 import type { ComponentProps, DispatchWithoutAction, ReactNode } from 'react'
+import type { Popup } from '../Popup'
+import type { TextInputV2 } from '../TextInputV2'
 import type { KeyGroup } from './KeyGroup'
 
 type ChildrenProps = {

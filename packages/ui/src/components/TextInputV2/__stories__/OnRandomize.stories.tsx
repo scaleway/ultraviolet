@@ -9,7 +9,7 @@ export const OnRandomize: StoryFn<typeof TextInputV2> = ({ ...args }) => {
     <TextInputV2
       {...args}
       value={value}
-      onChange={setValue}
+      onChange={event => setValue(event.target.value)}
       onRandomize={() => {
         setValue(`randomValue-${Math.round(Math.random() * 1000)}`)
       }}

@@ -1,7 +1,7 @@
 import { type ReactNode, useMemo } from 'react'
 import { Text } from '../Text'
-import { DoubleSlider } from './DoubleSlider'
-import { SingleSlider } from './SingleSlider'
+import { DoubleSlider } from './components/DoubleSlider'
+import { SingleSlider } from './components/SingleSlider'
 import { SliderContainer } from './styles'
 import type { SliderProps } from './types'
 

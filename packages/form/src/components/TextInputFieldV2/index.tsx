@@ -1,6 +1,6 @@
 import { TextInputV2 } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -10,10 +10,7 @@ type TextInputFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<
-    ComponentProps<typeof TextInputV2>,
-    'value' | 'error' | 'name' | 'onChange'
-  > & {
+  Omit<ComponentProps<typeof TextInputV2>, 'value' | 'error' | 'name'> & {
     regex?: (RegExp | RegExp[])[]
   }
 
@@ -116,7 +113,7 @@ export const TextInputField = <
       }}
       onChange={event => {
         field.onChange(event)
-        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
+        onChange?.(event)
       }}
       onFocus={event => {
         onFocus?.(event)
@@ -128,7 +125,7 @@ export const TextInputField = <
       tabIndex={tabIndex}
       tooltip={tooltip}
       type={type}
-      value={field.value}
+      value={field.value === undefined ? '' : field.value}
       id={id}
       prefix={prefix}
       suffix={suffix}

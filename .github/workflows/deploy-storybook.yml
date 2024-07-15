@@ -13,7 +13,8 @@ jobs:
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
       DEPLOYMENT_NAME: "storybook"
-      SCW_DNS: ${{ github.ref_name == 'main' && 'storybook.ultraviolet.scaleway.com' || '' }}
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_REMOTE_ONLY: true
     steps:
       - uses: actions/checkout@v4
       - name: Inject slug/short variables
@@ -54,6 +55,7 @@ jobs:
         env:
           IMAGE: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
           SOURCE_DATE_EPOCH: 0
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
         with:
           push: true
           tags: ${{ env.IMAGE }}
@@ -79,13 +81,22 @@ jobs:
             echo "SCW_MIN_SCALE=0" >> $GITHUB_ENV
           fi
 
-      - name: Set scw_cpu_limit
+      - name: Set scw_limit
         id: set-cpu-limit
         run: |
           if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
-            echo "SCW_CPU_LIMIT=560" >> $GITHUB_ENV
+            echo "SCW_CPU_LIMIT=1120" >> $GITHUB_ENV
+            echo "SCW_MEMORY_LIMIT=1024" >> $GITHUB_ENV
           else
             echo "SCW_CPU_LIMIT=140" >> $GITHUB_ENV
+            echo "SCW_MEMORY_LIMIT=256" >> $GITHUB_ENV
+          fi
+
+      - name: Set scw_dns
+        id: set-scw-dns
+        run: |
+          if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
+            echo "SCW_DNS=storybook.ultraviolet.scaleway.com" >> $GITHUB_ENV
           fi
 
       - name: Deploy Serverless Container Scaleway
@@ -93,7 +104,6 @@ jobs:
         id: deploy
         with:
           type: "deploy"
-          # scw_dns: ${{ secrets.SCW_DNS }}
           scw_dns: ${{ env.SCW_DNS }}
           root_zone: ${{ env.BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
@@ -105,6 +115,7 @@ jobs:
           scw_cpu_limit: ${{ env.SCW_CPU_LIMIT }}
           scw_max_concurrency: ${{ env.SCW_MAX_CONCURRENCY }}
           scw_sandbox: "v2"
+          scw_memory_limit: ${{ env.SCW_MEMORY_LIMIT }}
 
       - name: Update deployment status
         uses: bobheadxi/deployments@v1.5.0

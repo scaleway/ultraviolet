@@ -16,14 +16,14 @@ export const Examples: StoryFn<typeof TextInputV2> = args => {
         label="With prefix"
         prefix="https://"
         value={value}
-        onChange={setValue}
+        onChange={event => setValue(event.target.value)}
       />
       <TextInputV2
         {...args}
         label="Text input with random hook"
         prefix="https://"
         value={value}
-        onChange={setValue}
+        onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
       />
       <TextInputV2
@@ -31,7 +31,7 @@ export const Examples: StoryFn<typeof TextInputV2> = args => {
         label="Password input with random hook"
         prefix="https://"
         value={value}
-        onChange={setValue}
+        onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
         type="password"
       />
@@ -41,7 +41,7 @@ export const Examples: StoryFn<typeof TextInputV2> = args => {
         prefix="https://"
         suffix=".com"
         value={value}
-        onChange={setValue}
+        onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
         success="Field has been updated!"
         loading
@@ -53,7 +53,7 @@ export const Examples: StoryFn<typeof TextInputV2> = args => {
         disabled
         helper="Notice to fill the field"
         value={value}
-        onChange={setValue}
+        onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
         loading
       />
@@ -69,7 +69,7 @@ export const Examples: StoryFn<typeof TextInputV2> = args => {
           </Text>
         }
         value={value}
-        onChange={setValue}
+        onChange={event => setValue(event.target.value)}
         onRandomize={() => setValue(randomName())}
         loading
       />

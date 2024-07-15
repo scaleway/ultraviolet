@@ -1,7 +1,20 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { InputHTMLAttributes, ReactNode } from 'react'
-import { forwardRef, useId, useMemo, useState } from 'react'
+import type {
+  ChangeEvent,
+  ChangeEventHandler,
+  InputHTMLAttributes,
+  ReactNode,
+} from 'react'
+import {
+  forwardRef,
+  useCallback,
+  useId,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { Stack } from '../Stack'
@@ -129,7 +142,6 @@ type TextInputProps = {
   minLength?: number
   maxLength?: number
   onRandomize?: () => void
-  onChange?: (newValue: string) => void
   prefix?: ReactNode
   size?: TextInputSize
   success?: string | boolean
@@ -137,6 +149,8 @@ type TextInputProps = {
   tooltip?: string
   type?: 'text' | 'password' | 'url' | 'email'
   value?: string
+  defaultValue?: string
+  onChangeValue?: (value: string) => void
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onFocus'
@@ -156,10 +170,13 @@ type TextInputProps = {
   | 'role'
   | 'aria-live'
   | 'aria-atomic'
+  | 'onChange'
 >
 
 /**
- * This component offers an extended input HTML
+ * This component offers an extended input HTML. The component can be controlled or uncontrolled.
+ * To control the component, you need to pass the value and the `onChange` function.
+ * If you don't pass the `onChange` function, the component will be uncontrolled and you can set the default value using `defaultValue`
  */
 export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
   (
@@ -169,6 +186,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       tabIndex,
       value,
       onChange,
+      onChangeValue,
       placeholder,
       disabled = false,
       readOnly = false,
@@ -200,11 +218,14 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       role,
       'aria-live': ariaLive,
       'aria-atomic': ariaAtomic,
+      defaultValue,
     },
     ref,
   ) => {
     const localId = useId()
     const [hasFocus, setHasFocus] = useState(false)
+    const inputRef = useRef<HTMLInputElement>(null)
+    useImperativeHandle(ref, () => inputRef.current as HTMLInputElement)
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(false)
     const computedType =
@@ -221,6 +242,14 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
 
       return 'neutral'
     }, [error, success])
+
+    const onChangeCallback: ChangeEventHandler<HTMLInputElement> = useCallback(
+      event => {
+        onChange?.(event)
+        onChangeValue?.(event.target.value)
+      },
+      [onChange, onChangeValue],
+    )
 
     const computedClearable = clearable && !!value
 
@@ -246,7 +275,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                   {label}
                 </Text>
                 {required ? (
-                  <Icon name="asterisk" color="danger" size={8} />
+                  <Icon name="asterisk" sentiment="danger" size={8} />
                 ) : null}
               </Stack>
             ) : null}
@@ -286,11 +315,10 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 tabIndex={tabIndex}
                 autoFocus={autoFocus}
                 disabled={disabled}
-                ref={ref}
-                value={value === null || value === undefined ? '' : value}
-                onChange={event => {
-                  onChange?.(event.currentTarget.value)
-                }}
+                ref={inputRef}
+                value={value}
+                defaultValue={defaultValue}
+                onChange={onChangeCallback}
                 data-size={size}
                 placeholder={placeholder}
                 data-testid={dataTestId}
@@ -322,7 +350,13 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                       size={size === 'small' ? 'xsmall' : 'small'}
                       icon="close"
                       onClick={() => {
-                        onChange?.('')
+                        if (inputRef?.current) {
+                          inputRef.current.value = ''
+                          onChangeCallback({
+                            target: { value: '' },
+                            currentTarget: { value: '' },
+                          } as ChangeEvent<HTMLInputElement>)
+                        }
                       }}
                       sentiment="neutral"
                     />

@@ -15,10 +15,11 @@ export const Size: StoryFn<typeof TextInputV2> = args => {
       ).map(size => (
         <TextInputV2
           {...args}
+          key={size}
           label={size}
           size={size}
           value={value}
-          onChange={setValue}
+          onChange={event => setValue(event.target.value)}
           placeholder="Placeholder"
         />
       ))}

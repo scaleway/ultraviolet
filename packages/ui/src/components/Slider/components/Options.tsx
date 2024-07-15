@@ -1,7 +1,7 @@
-import { Text } from '../Text'
-import { THUMB_SIZE } from './constant'
-import { DataList, Option } from './styles'
-import type { OptionsProps } from './types'
+import { Text } from '../../Text'
+import { THUMB_SIZE } from '../constant'
+import { DataList, Option } from '../styles'
+import type { OptionsProps } from '../types'
 
 export const Options = ({
   ticks,

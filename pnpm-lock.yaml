@@ -66,8 +66,8 @@ importers:
         specifier: 11.11.5
         version: 11.11.5(@emotion/react@11.11.4(@types/react@18.3.3)(react@18.3.1))(@types/react@18.3.3)(react@18.3.1)
       '@eslint/compat':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 1.1.1
+        version: 1.1.1
       '@eslint/eslintrc':
         specifier: 3.1.0
         version: 3.1.0
@@ -78,8 +78,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 6.1.9
-        version: 6.1.9(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 6.1.10
+        version: 6.1.10(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@size-limit/file':
         specifier: 11.1.4
         version: 11.1.4(size-limit@11.1.4)
@@ -201,8 +201,8 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       esbuild-plugin-browserslist:
-        specifier: 0.13.0
-        version: 0.13.0(browserslist@4.23.2)(esbuild@0.20.2)
+        specifier: 0.14.0
+        version: 0.14.0(browserslist@4.23.2)(esbuild@0.20.2)
       eslint:
         specifier: 9.6.0
         version: 9.6.0
@@ -266,6 +266,9 @@ importers:
       timekeeper:
         specifier: 2.3.1
         version: 2.3.1
+      turbo:
+        specifier: 2.0.6
+        version: 2.0.6
       typescript:
         specifier: 5.5.3
         version: 5.5.3
@@ -2137,6 +2140,10 @@ packages:
     resolution: {integrity: sha512-s9Wi/p25+KbzxKlDm3VshQdImhWk+cbdblhwGNnyCU5lpSwtWa4v7VQCxSki0FAUrGA3s8nCWgYzAH41mwQVKQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@eslint/compat@1.1.1':
+    resolution: {integrity: sha512-lpHyRyplhGPL5mGEh6M9O5nnKk0Gz4bFI+Zu6tKlPpDUN7XshWvH9C/px4UVm87IAANE0W81CEsNGbS1KlzXpA==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
   '@eslint/config-array@0.17.0':
     resolution: {integrity: sha512-A68TBu6/1mHHuc5YJL0U0VVeGNiklLAL6rRmhTCP2B5XjWLMnrX+HkO+IAXyHvks5cyyY1jjK5ITPQ1HGS2EVA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2888,8 +2895,8 @@ packages:
   '@scaleway/tsconfig@1.1.1':
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
 
-  '@scaleway/use-i18n@6.1.9':
-    resolution: {integrity: sha512-/vowBs0WpIMdoKtJqq8GrMfhN872Rq4tDvge5vEz3jHNTIgQ/n/6A6moNmy/wnG5ldyhx/3VcBo1hY6YksTCPw==}
+  '@scaleway/use-i18n@6.1.10':
+    resolution: {integrity: sha512-ZUj8Ukd4/cLwNsDPMm/S1Gb+FI7S87/+QByd08QGZS63zfmNrhBsUqbewrhyz6NqcDeLQYj9W9ZkZXa+ecp/Cw==}
     engines: {node: '>=18.x'}
     peerDependencies:
       date-fns: 3.x
@@ -4997,12 +5004,12 @@ packages:
   esbuild-plugin-alias@0.2.1:
     resolution: {integrity: sha512-jyfL/pwPqaFXyKnj8lP8iLk6Z0m099uXR45aSN8Av1XD4vhvQutxxPzgA2bTcAwQpa1zCXDcWOlhFgyP3GKqhQ==}
 
-  esbuild-plugin-browserslist@0.13.0:
-    resolution: {integrity: sha512-jjiIiFT1Hrp3CPcKucZcqC8BSkWet/baVLtxN4Vy7yiTXk2PrAiQiVlgMaFc82JCAidOH1FCghvIkL8Z5HWhEQ==}
+  esbuild-plugin-browserslist@0.14.0:
+    resolution: {integrity: sha512-z/3nq4yIgeRiABXj1pdCz3NvYyAgny070hYjJsML7ag0VogZeE6M0TXg66EloNpzg9rBXOkKQgwHBQ7qz2ZC4g==}
     engines: {node: '>=18'}
     peerDependencies:
       browserslist: ^4.21.8
-      esbuild: ~0.22.0
+      esbuild: ~0.23.0
 
   esbuild-register@3.5.0:
     resolution: {integrity: sha512-+4G/XmakeBAsvJuDugJvtyF1x+XJT4FMocynNpxrvEBViirpfUn2PgNpCHedfWhF4WokNsO/OvMKrmJOIJsI5A==}
@@ -5322,8 +5329,8 @@ packages:
   filelist@1.0.4:
     resolution: {integrity: sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==}
 
-  filesize@10.1.2:
-    resolution: {integrity: sha512-Dx770ai81ohflojxhU+oG+Z2QGvKdYxgEr9OSA8UVrqhwNHjfH9A8f5NKfg83fEH8ZFA5N5llJo5T3PIoZ4CRA==}
+  filesize@10.1.4:
+    resolution: {integrity: sha512-ryBwPIIeErmxgPnm6cbESAzXjuEFubs+yKYLBZvg3CaiNcmkJChoOGcBSrZ6IwkMwPABwPpVXE6IlNdGJJrvEg==}
     engines: {node: '>= 10.4.0'}
 
   fill-range@7.0.1:
@@ -8468,6 +8475,40 @@ packages:
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
 
+  turbo-darwin-64@2.0.6:
+    resolution: {integrity: sha512-XpgBwWj3Ggmz/gQVqXdMKXHC1iFPMDiuwugLwSzE7Ih0O13JuNtYZKhQnopvbDQnFQCeRq2Vsm5OTWabg/oB/g==}
+    cpu: [x64]
+    os: [darwin]
+
+  turbo-darwin-arm64@2.0.6:
+    resolution: {integrity: sha512-RfeZYXIAkiA21E8lsvfptGTqz/256YD+eI1x37fedfvnHFWuIMFZGAOwJxtZc6QasQunDZ9TRRREbJNI68tkIw==}
+    cpu: [arm64]
+    os: [darwin]
+
+  turbo-linux-64@2.0.6:
+    resolution: {integrity: sha512-92UDa0xNQQbx0HdSp9ag3YSS3xPdavhc7q9q9mxIAcqyjjD6VElA4Y85m4F/DDGE5SolCrvBz2sQhVmkOd6Caw==}
+    cpu: [x64]
+    os: [linux]
+
+  turbo-linux-arm64@2.0.6:
+    resolution: {integrity: sha512-eQKu6utCVUkIH2kqOzD8OS6E0ba6COjWm6PRDTNCHQRljZW503ycaTUIdMOiJrVg1MkEjDyOReUg8s8D18aJ4Q==}
+    cpu: [arm64]
+    os: [linux]
+
+  turbo-windows-64@2.0.6:
+    resolution: {integrity: sha512-+9u4EPrpoeHYCQ46dRcou9kbkSoelhOelHNcbs2d86D6ruYD/oIAHK9qgYK8LeARRz0jxhZIA/dWYdYsxJJWkw==}
+    cpu: [x64]
+    os: [win32]
+
+  turbo-windows-arm64@2.0.6:
+    resolution: {integrity: sha512-rdrKL+p+EjtdDVg0wQ/7yTbzkIYrnb0Pw4IKcjsy3M0RqUM9UcEi67b94XOAyTa5a0GqJL1+tUj2ebsFGPgZbg==}
+    cpu: [arm64]
+    os: [win32]
+
+  turbo@2.0.6:
+    resolution: {integrity: sha512-/Ftmxd5Mq//a9yMonvmwENNUN65jOVTwhhBPQjEtNZutYT9YKyzydFGLyVM1nzhpLWahQSMamRc/RDBv5EapzA==}
+    hasBin: true
+
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -10779,6 +10820,8 @@ snapshots:
 
   '@eslint/compat@1.1.0': {}
 
+  '@eslint/compat@1.1.1': {}
+
   '@eslint/config-array@0.17.0':
     dependencies:
       '@eslint/object-schema': 2.1.4
@@ -11753,12 +11796,12 @@ snapshots:
 
   '@scaleway/tsconfig@1.1.1': {}
 
-  '@scaleway/use-i18n@6.1.9(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@scaleway/use-i18n@6.1.10(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@formatjs/ecma402-abstract': 2.0.0
       '@formatjs/fast-memoize': 2.2.0
       date-fns: 3.6.0
-      filesize: 10.1.2
+      filesize: 10.1.4
       international-types: 0.8.1
       intl-messageformat: 10.5.14
       react: 18.3.1
@@ -14701,7 +14744,7 @@ snapshots:
 
   esbuild-plugin-alias@0.2.1: {}
 
-  esbuild-plugin-browserslist@0.13.0(browserslist@4.23.2)(esbuild@0.20.2):
+  esbuild-plugin-browserslist@0.14.0(browserslist@4.23.2)(esbuild@0.20.2):
     dependencies:
       browserslist: 4.23.2
       debug: 4.3.5
@@ -15197,7 +15240,7 @@ snapshots:
     dependencies:
       minimatch: 5.1.6
 
-  filesize@10.1.2: {}
+  filesize@10.1.4: {}
 
   fill-range@7.0.1:
     dependencies:
@@ -18929,6 +18972,33 @@ snapshots:
     dependencies:
       tslib: 1.14.1
       typescript: 5.5.3
+
+  turbo-darwin-64@2.0.6:
+    optional: true
+
+  turbo-darwin-arm64@2.0.6:
+    optional: true
+
+  turbo-linux-64@2.0.6:
+    optional: true
+
+  turbo-linux-arm64@2.0.6:
+    optional: true
+
+  turbo-windows-64@2.0.6:
+    optional: true
+
+  turbo-windows-arm64@2.0.6:
+    optional: true
+
+  turbo@2.0.6:
+    optionalDependencies:
+      turbo-darwin-64: 2.0.6
+      turbo-darwin-arm64: 2.0.6
+      turbo-linux-64: 2.0.6
+      turbo-linux-arm64: 2.0.6
+      turbo-windows-64: 2.0.6
+      turbo-windows-arm64: 2.0.6
 
   type-check@0.4.0:
     dependencies:
