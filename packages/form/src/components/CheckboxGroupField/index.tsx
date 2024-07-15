@@ -18,19 +18,7 @@ type CheckboxGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Partial<
-    Pick<
-      ComponentProps<typeof CheckboxGroup>,
-      | 'className'
-      | 'helper'
-      | 'required'
-      | 'direction'
-      | 'children'
-      | 'error'
-      | 'legend'
-    >
-  > &
-  Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend'>>
+  Omit<ComponentProps<typeof CheckboxGroup>, 'value' | 'onChange'>
 
 type ElementProps = {
   name: string
@@ -42,11 +30,7 @@ export const CheckboxGroupField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  legend,
-  className,
   control,
-  helper,
-  direction,
   children,
   onChange,
   label = '',
@@ -55,6 +39,7 @@ export const CheckboxGroupField = <
   required = false,
   shouldUnregister = false,
   validate,
+  ...props
 }: CheckboxGroupFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const checkboxValid = useCallback(
@@ -102,8 +87,7 @@ export const CheckboxGroupField = <
 
   return (
     <CheckboxGroup
-      legend={legend}
-      name={name}
+      {...props}
       value={field.value}
       onChange={event => {
         const fieldValue = field.value as string[]
@@ -125,10 +109,7 @@ export const CheckboxGroupField = <
         )
       }}
       error={getError({ label }, error) ?? customError}
-      className={className}
-      direction={direction}
-      helper={helper}
-      required={required}
+      name={name}
     >
       {children}
     </CheckboxGroup>
