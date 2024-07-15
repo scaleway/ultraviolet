@@ -1,18 +1,18 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
-import { Label } from './Label'
-import { Options } from './Options'
-import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+import { SLIDER_WIDTH, THUMB_SIZE } from '../constant'
 import {
   StyledNumberInput,
   StyledTooltip,
   thumbStyle,
   trackStyle,
-} from './styles'
-import type { SingleSliderProps } from './types'
+} from '../styles'
+import type { SingleSliderProps } from '../types'
+import { Label } from './Label'
+import { Options } from './Options'
 
 const StyledTextValue = styled(Text, {
   shouldForwardProp: prop => !['double', 'isColumn'].includes(prop),
@@ -35,7 +35,7 @@ const SliderElement = styled('input', {
     background-repeat: no-repeat;
     align-self: center;
     outline: none;
- 
+
     &:focus {
       &::-moz-range-thumb {
         border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
@@ -106,8 +106,9 @@ export const SingleSlider = ({
   const localId = useId()
   const { theme } = useTheme()
   const finalId = id ?? localId
-  const [computedValue, setValues] = useState(value)
-  const [valueToShow, setValuesToShow] = useState<number | null>(value)
+  const safeValue = value ?? min
+  const [computedValue, setComputedValue] = useState(safeValue)
+  const [valueToShow, setValueToShow] = useState<number | null>(safeValue)
   const refSlider = useRef<HTMLInputElement>(null)
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
@@ -132,6 +133,15 @@ export const SingleSlider = ({
     return []
   }, [max, min, options, possibleValues, step])
 
+  const onChangeCallback = useCallback(
+    (newValue: number | null) => {
+      setValueToShow(newValue)
+      setComputedValue(newValue ?? min)
+      onChange?.(newValue ?? min)
+    },
+    [min, onChange],
+  )
+
   // Default value to be coherent with a custom scale when one is defined
   useEffect(() => {
     if (possibleValues) {
@@ -142,20 +152,12 @@ export const SingleSlider = ({
   // Make sure that min <= value <= max
   useEffect(() => {
     if (value < min) {
-      setValuesToShow(min)
-      onChange?.(min)
+      onChangeCallback(min)
     }
     if (value > max) {
-      onChange?.(max)
-      setValuesToShow(max)
+      onChangeCallback(max)
     }
-  }, [value, max, min, onChange, step])
-
-  // Sync values with valuesToShow
-  useEffect(() => {
-    setValues(valueToShow ?? min)
-    onChange?.(valueToShow ?? min)
-  }, [max, min, onChange, valueToShow])
+  }, [value, max, min, onChange, step, onChangeCallback])
 
   // Get slider size
   useEffect(() => {
@@ -175,12 +177,12 @@ export const SingleSlider = ({
         // Custom scale
         const optionLabel = possibleValues[newValue ?? min]
         setCustomValue(optionLabel)
-        setValuesToShow(newValue)
+        onChangeCallback(newValue)
       } else {
-        setValuesToShow(newValue)
+        onChangeCallback(newValue)
       }
     },
-    [min, possibleValues],
+    [min, onChangeCallback, possibleValues],
   )
 
   const getBackgroundSize = useMemo(
@@ -208,11 +210,11 @@ export const SingleSlider = ({
         unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
           if (newVal) {
-            setValuesToShow(newVal)
-          } else setValuesToShow(null)
+            onChangeCallback(newVal)
+          } else onChangeCallback(null)
         }}
         onBlur={event => {
-          if (!event.target.value) setValuesToShow(min)
+          if (!event.target.value) onChangeCallback(min)
         }}
       />
     ) : (
