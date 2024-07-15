@@ -80,7 +80,7 @@ export const StyledDialog = styled('dialog', {
     position > 0
       ? `
     width: ${MODAL_WIDTH[size] - position * 50}px !important;
-    transform: translate3d(0, -${position * 50}px, 0);
+    transform: translate3d(0, -${position * 24}px, 0);
   `
       : undefined}
 `
