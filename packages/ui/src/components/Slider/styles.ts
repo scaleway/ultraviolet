@@ -5,7 +5,7 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
 
-export const DataList = styled.datalist`  
+export const DataList = styled.datalist`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -39,7 +39,7 @@ export const SliderContainer = styled(Stack)<{ 'data-options': boolean }>`
     min-width: ${SLIDER_WIDTH.min}px;
     max-width: ${SLIDER_WIDTH.max}px;
 
-    &[data-options='true']{ 
+    &[data-options='true']{
       margin-bottom: ${({ theme }) => theme.space['2']}
       }
 `
@@ -56,12 +56,12 @@ position: absolute;
 left: ${({ left }) => left}px;
 `
 
-export const trackStyle = ` 
+export const trackStyle = `
     appearance: none;
-    -webkit-appearance: none; 
-    box-shadow: none; 
-    border: transparent; 
-    background: transparent; 
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: transparent;
+    background: transparent;
 `
 
 export const thumbStyle = (
@@ -80,11 +80,11 @@ export const thumbStyle = (
       border: none;
       cursor: ${disabled ? 'not-allowed' : 'grab'};
       transition: background 0.3s ease-in-out;
-  
+
       &:hover, :active, :focus {
       border: ${disabled ? null : `1.5px solid ${theme.colors.primary.border}`};
       }
-  
+
       &:active, :focus {
       box-shadow: ${disabled ? null : theme.shadows.focusPrimary};
       cursor: ${disabled ? 'not-allowed' : 'grabbing'};

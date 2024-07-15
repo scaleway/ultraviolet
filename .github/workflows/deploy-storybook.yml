@@ -13,7 +13,6 @@ jobs:
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/ultraviolet/storybook
       DEPLOYMENT_NAME: "storybook"
-      SCW_DNS: ${{ github.ref_name == 'main' && 'storybook.ultraviolet.scaleway.com' || '' }}
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_REMOTE_ONLY: true
     steps:
@@ -93,12 +92,18 @@ jobs:
             echo "SCW_MEMORY_LIMIT=256" >> $GITHUB_ENV
           fi
 
+      - name: Set scw_dns
+        id: set-scw-dns
+        run: |
+          if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
+            echo "SCW_DNS=storybook.ultraviolet.scaleway.com" >> $GITHUB_ENV
+          fi
+
       - name: Deploy Serverless Container Scaleway
         uses: philibea/scaleway-containers-deploy@v1.1.4
         id: deploy
         with:
           type: "deploy"
-          # scw_dns: ${{ secrets.SCW_DNS }}
           scw_dns: ${{ env.SCW_DNS }}
           root_zone: ${{ env.BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
