@@ -22,13 +22,12 @@ const StyledTextValue = styled(Text, {
 `
 
 const SliderElement = styled('input', {
-  shouldForwardProp: prop => !['themeSlider', 'suffix'].includes(prop),
-})<{ themeSlider: string; disabled: boolean; suffix: boolean }>`
+  shouldForwardProp: prop => !['themeSlider', 'suffix', 'left'].includes(prop),
+})<{ themeSlider: string; disabled: boolean; suffix: boolean; left: number }>`
   position: absolute;
   width: 100%;
   pointer-events: none;
   appearance: none;
-  height: 100%;
   padding: 0;
   background: transparent;
   outline: none;
@@ -46,15 +45,13 @@ const SliderElement = styled('input', {
 
       }
   }
-  &[data-tooltip = 'true'] {
-    margin-top: -${({ theme }) => theme.space['1']};
-  }
+
   /* Mozilla */
   &::-moz-range-track {
     ${trackStyle}
   }
   &::-moz-range-thumb {
-    ${({ theme, themeSlider, disabled }) => thumbStyle(theme, themeSlider, disabled)}
+    ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, true)}
     }
 
   /* Other browsers */
@@ -67,7 +64,7 @@ const SliderElement = styled('input', {
   }
 
   &::-webkit-slider-thumb {
-    ${({ theme, themeSlider, disabled }) => thumbStyle(theme, themeSlider, disabled)}
+    ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, true)}
   }
 `
 const DoubleSliderWrapper = styled.div`
@@ -76,7 +73,7 @@ const DoubleSliderWrapper = styled.div`
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: ${({ theme }) => theme.space['2']};
+  height: 8px;
   align-self: center;
   `
 
@@ -84,7 +81,7 @@ const CustomRail = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: ${({ theme }) => theme.space['1']};
+  height: 8px;
   width:100%;
   min-width: 220px;
   border-radius: ${({ theme }) => theme.radii.default};
@@ -415,7 +412,6 @@ export const DoubleSlider = ({
               <SliderElement
                 className={className}
                 name={name}
-                data-tooltip={!!tooltip}
                 id={finalId}
                 disabled={!!disabled}
                 onBlur={onBlur}
@@ -436,6 +432,7 @@ export const DoubleSlider = ({
                 }}
                 themeSlider={theme}
                 ref={refSlider}
+                left={((computedValues[0] - min) * 100) / (max - min)}
               />
             </StyledTooltip>
             <StyledTooltip
@@ -449,7 +446,6 @@ export const DoubleSlider = ({
                 value={computedValues[1]}
                 name={name}
                 disabled={!!disabled}
-                data-tooltip={!!tooltip}
                 suffix={!!(suffix || unit)}
                 id={finalId}
                 onBlur={onBlur}
@@ -468,6 +464,7 @@ export const DoubleSlider = ({
                   handleMaxChange(parseFloat(event.target.value))
                 }}
                 themeSlider={theme}
+                left={((computedValues[1] - min) * 100) / (max - min)}
               />
             </StyledTooltip>
           </StyledTooltip>

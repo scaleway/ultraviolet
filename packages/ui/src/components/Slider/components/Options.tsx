@@ -1,7 +1,35 @@
+import styled from '@emotion/styled'
 import { Text } from '../../Text'
 import { THUMB_SIZE } from '../constant'
-import { DataList, Option } from '../styles'
 import type { OptionsProps } from '../types'
+
+export const DataList = styled.datalist`
+  width: 100%;
+  display: flex;
+  position: relative;
+  height: ${({ theme }) => theme.typography.caption.lineHeight};
+
+  &[data-double='true'] {
+    margin-top: ${({ theme }) => theme.space['5']};
+  }
+`
+
+export const Option = styled('span', {
+  shouldForwardProp: prop => !['left', 'width'].includes(prop),
+})<{ left: number; width: number }>`
+  display: flex;
+  left: ${({ left }) => left}%;
+  position: absolute;
+  transform: translateX(-50%);
+
+  &[data-element-left='true'] {
+    transform: none;
+  }
+
+  &[data-element-right='true'] {
+    transform: translateX(-100%);
+  }
+`
 
 export const Options = ({
   ticks,
@@ -17,12 +45,7 @@ export const Options = ({
   return (
     <DataList data-double={Array.isArray(value)}>
       {ticks.map((element, index, { length }) => {
-        const offsetElement = index === length - 1 ? 0 : 4
-
-        const left =
-          index === 0
-            ? ((element.value - min) / (max - min)) * (sliderWidth - THUMB_SIZE)
-            : index * optionWidth - optionWidth / 2 + offsetElement
+        const left = ((index * step - min) * 100) / (max - min)
 
         const formatedElement =
           unit && (index === 0 || index === length - 1)
@@ -40,7 +63,8 @@ export const Options = ({
             left={left}
             width={optionWidth}
             data-value={element.value}
-            data-first-element={index === 0}
+            data-element-left={index === 0}
+            data-element-right={index === length - 1}
           >
             <Text
               as="p"
