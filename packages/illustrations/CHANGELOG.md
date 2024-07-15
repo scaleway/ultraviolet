@@ -1,5 +1,14 @@
 # @ultraviolet/illustrations
 
+## 3.1.2
+
+### Patch Changes
+
+- [#4006](https://github.com/scaleway/ultraviolet/pull/4006) [`e011345`](https://github.com/scaleway/ultraviolet/commit/e0113459832a0c026164344fc7efd6a3ab490df7) Thanks [@philibea](https://github.com/philibea)! - Add turborepo
+
+- Updated dependencies [[`e011345`](https://github.com/scaleway/ultraviolet/commit/e0113459832a0c026164344fc7efd6a3ab490df7)]:
+  - @ultraviolet/themes@1.12.2
+
 ## 3.1.1
 
 ### Patch Changes
