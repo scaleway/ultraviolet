@@ -3,4 +3,4 @@
 "@ultraviolet/ui": patch
 ---
 
-`readonly` props becomes `readOnly` and fix `data-readonly` case
+`KeyValueField` : `readonly` props becomes `readOnly`
