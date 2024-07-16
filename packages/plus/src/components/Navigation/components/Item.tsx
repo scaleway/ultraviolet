@@ -327,6 +327,7 @@ type ItemProps = {
    */
   noExpand?: boolean
   disabled?: boolean
+  'data-testid'?: string
 }
 
 export const Item = ({
@@ -350,6 +351,7 @@ export const Item = ({
   noExpand = false,
   index,
   id,
+  'data-testid': dataTestId,
 }: ItemProps) => {
   const context = useNavigation()
   if (!context) {
@@ -542,6 +544,7 @@ export const Item = ({
             expanded ? onDragStopTrigger(event) : undefined
           }
           id={id}
+          data-testId={dataTestId}
         >
           <Stack
             direction="row"
@@ -625,6 +628,7 @@ export const Item = ({
                     <RelativeDiv>
                       <PinnedButton
                         role="button"
+                        aria-label={isItemPinned ? 'unpin' : 'pin'}
                         size="xsmall"
                         variant="ghost"
                         sentiment={active ? 'primary' : 'neutral'}
@@ -822,6 +826,7 @@ export const Item = ({
                   <PinnedButton
                     role="button"
                     size="xsmall"
+                    aria-label={isItemPinned ? 'unpin' : 'pin'}
                     variant="ghost"
                     sentiment={active ? 'primary' : 'neutral'}
                     onClick={(event: MouseEvent<HTMLDivElement>) => {
