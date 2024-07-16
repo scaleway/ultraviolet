@@ -102,6 +102,7 @@ exports[`SliderField > should render correctly 1`] = `
   appearance: none;
   height: 8px;
   width: 100%;
+  position: relative;
   min-width: 220px;
   background-color: #e9eaeb;
   border-radius: 4px;
@@ -165,6 +166,9 @@ exports[`SliderField > should render correctly 1`] = `
   cursor: grab;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -4px;
 }
 
 .emotion-9::-moz-range-thumb:hover,
@@ -208,6 +212,9 @@ exports[`SliderField > should render correctly 1`] = `
   cursor: grab;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -4px;
 }
 
 .emotion-9::-webkit-slider-thumb:hover,
@@ -370,6 +377,7 @@ exports[`SliderField > should render correctly disabled 1`] = `
   appearance: none;
   height: 8px;
   width: 100%;
+  position: relative;
   min-width: 220px;
   background-color: #e9eaeb;
   border-radius: 4px;
@@ -422,6 +430,9 @@ exports[`SliderField > should render correctly disabled 1`] = `
   cursor: not-allowed;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -4px;
 }
 
 .emotion-9::-moz-range-thumb:hover,
@@ -463,6 +474,9 @@ exports[`SliderField > should render correctly disabled 1`] = `
   cursor: not-allowed;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -4px;
 }
 
 .emotion-9::-webkit-slider-thumb:hover,
@@ -863,6 +877,7 @@ exports[`SliderField > should trigger events correctly 1`] = `
   appearance: none;
   height: 8px;
   width: 100%;
+  position: relative;
   min-width: 220px;
   background-color: #e9eaeb;
   border-radius: 4px;
@@ -926,6 +941,9 @@ exports[`SliderField > should trigger events correctly 1`] = `
   cursor: grab;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -4px;
 }
 
 .emotion-24::-moz-range-thumb:hover,
@@ -969,6 +987,9 @@ exports[`SliderField > should trigger events correctly 1`] = `
   cursor: grab;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
+  position: absolute;
+  left: calc(0% - 8px);
+  top: -4px;
 }
 
 .emotion-24::-webkit-slider-thumb:hover,

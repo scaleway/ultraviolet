@@ -22,11 +22,12 @@ const StyledTextValue = styled(Text, {
 `
 
 const SliderElement = styled('input', {
-  shouldForwardProp: prop => !['themeSlider'].includes(prop),
-})<{ themeSlider: string; disabled: boolean }>`
+  shouldForwardProp: prop => !['themeSlider', 'left'].includes(prop),
+})<{ themeSlider: string; disabled: boolean; left: number }>`
     appearance: none;
     height: ${({ theme }) => theme.space['1']};
-    width:100%;
+    width: 100%;
+    position: relative;
     min-width: ${SLIDER_WIDTH.min}px;
     background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
 
@@ -37,9 +38,9 @@ const SliderElement = styled('input', {
     outline: none;
 
     &:focus {
-      &::-moz-range-thumb {
-        border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
-        box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
+        &::-moz-range-thumb {
+          border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
+          box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
         }
 
         &::-webkit-slider-thumb {
@@ -64,7 +65,7 @@ const SliderElement = styled('input', {
         ${trackStyle}
     }
     ::-moz-range-thumb {
-        ${({ theme, themeSlider, disabled }) => thumbStyle(theme, themeSlider, disabled)}
+        ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, false)}
     }
 
     /* Other browsers */
@@ -72,7 +73,7 @@ const SliderElement = styled('input', {
         ${trackStyle}
     }
     ::-webkit-slider-thumb {
-        ${({ theme, themeSlider, disabled }) => thumbStyle(theme, themeSlider, disabled)}
+        ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, false)}
     }
 `
 
@@ -185,11 +186,16 @@ export const SingleSlider = ({
     [min, onChangeCallback, possibleValues],
   )
 
+  const leftPosition = useMemo(
+    () => ((computedValue - min) * 100) / (max - min),
+    [computedValue, max, min],
+  )
+
   const getBackgroundSize = useMemo(
     () => ({
-      backgroundSize: `${((computedValue - min) * 100) / (max - min)}% 100%`,
+      backgroundSize: `${leftPosition}% 100%`,
     }),
-    [computedValue, min, max],
+    [leftPosition],
   )
 
   const styledValue = (valueNumber: string | number | null) =>
@@ -299,6 +305,7 @@ export const SingleSlider = ({
             data-direction={direction}
             themeSlider={theme}
             ref={refSlider}
+            left={leftPosition}
           />
         </StyledTooltip>
         {options || possibleValues ? (

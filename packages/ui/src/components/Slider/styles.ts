@@ -5,36 +5,6 @@ import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 import { SLIDER_WIDTH, THUMB_SIZE } from './constant'
 
-export const DataList = styled.datalist`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-width: 100%;
-align-items: stretch;
-
-&[data-double='true'] {
-  margin-top: ${({ theme }) => theme.space['3']};
-}
-`
-
-export const Option = styled('span', {
-  shouldForwardProp: prop => !['left', 'width'].includes(prop),
-})<{ left: number; width: number }>`
-display: flex;
-justify-content: space-between;
-position: absolute;
-transform: translateX(${({ left }) => left}px);
-width: ${({ width }) => width}px;
-text-align: center;
-justify-content: center;
-
-
-&[data-first-element='true'] {
-text-align: left;
-justify-content: left;
-}
-`
-
 export const SliderContainer = styled(Stack)<{ 'data-options': boolean }>`
     min-width: ${SLIDER_WIDTH.min}px;
     max-width: ${SLIDER_WIDTH.max}px;
@@ -68,6 +38,8 @@ export const thumbStyle = (
   theme: Theme,
   themeSlider: string,
   disabled: boolean,
+  left: number,
+  isDouble: boolean,
 ) => `
       -webkit-appearance: none;
       appearance: none;
@@ -82,11 +54,15 @@ export const thumbStyle = (
       transition: background 0.3s ease-in-out;
 
       &:hover, :active, :focus {
-      border: ${disabled ? null : `1.5px solid ${theme.colors.primary.border}`};
+        border: ${disabled ? null : `1.5px solid ${theme.colors.primary.border}`};
       }
 
       &:active, :focus {
-      box-shadow: ${disabled ? null : theme.shadows.focusPrimary};
-      cursor: ${disabled ? 'not-allowed' : 'grabbing'};
+        box-shadow: ${disabled ? null : theme.shadows.focusPrimary};
+        cursor: ${disabled ? 'not-allowed' : 'grabbing'};
       }
+
+      position: absolute;
+      left: calc(${left}% - ${THUMB_SIZE / 2}px);
+      top: -${THUMB_SIZE / (isDouble ? 2 : 4)}px;
   `

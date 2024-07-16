@@ -1,6 +1,8 @@
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { Slider } from '..'
+import { Button } from '../../Button'
+import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
 
 const scale = [1, 2, 3, 4, 5, 10, 15, 20, 25]
@@ -32,6 +34,20 @@ export const CustomScale: StoryFn<typeof Slider> = args => {
         unit="Gbps"
       />
       Current value: {scale[value]}
+      <Stack width="25%">
+        <Modal disclosure={<Button>Open modal</Button>}>
+          <Slider
+            {...args}
+            possibleValues={scale}
+            value={value}
+            onChange={setValue}
+            tooltip={false}
+            label="Label"
+            unit="Gbps"
+          />
+          Current value: {scale[value]}
+        </Modal>
+      </Stack>
       <Slider
         possibleValues={scale}
         value={values}
