@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { screen } from '@testing-library/react'
+import { renderHook, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import {
@@ -8,6 +8,7 @@ import {
 } from '@utils/test'
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Modal } from '..'
+import { useModal } from '../ModalProvider'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
@@ -25,6 +26,12 @@ describe('Modal', () => {
 
   afterAll(() => {
     vi.restoreAllMocks()
+  })
+
+  test(`useModal() should throw error if not rendered in provider`, () => {
+    expect(() => renderHook(() => useModal())).toThrow(
+      'useModal must be used within a ModalProvider',
+    )
   })
 
   test(`renders with default Props`, () =>
