@@ -1,10 +1,9 @@
-import styled from '@emotion/styled'
 import type { ReactElement, ReactNode } from 'react'
 import type React from 'react'
-import { useCallback, useId, useState } from 'react'
-import { Button } from '../Button'
-import { Dialog } from './Dialog'
-import { Disclosure } from './Disclosure'
+import { useCallback, useContext, useId, useState } from 'react'
+import { ModalContent } from './ModalContent'
+import { ModalContext, ModalProvider } from './ModalProvider'
+import { Disclosure } from './components/Disclosure'
 import type { ModalPlacement, ModalSize, ModalState } from './types'
 
 export type ModalProps = {
@@ -41,12 +40,6 @@ export type ModalProps = {
    */
   customDialogStyles?: React.JSX.IntrinsicAttributes['css']
 }
-
-const StyledContainer = styled.div`
-  position: absolute;
-  top: ${({ theme }) => theme.space['2']};
-  right: ${({ theme }) => theme.space['2']};
-`
 
 /**
  * Modal is a component that allows you to display content on top of other content.
@@ -101,6 +94,10 @@ export const Modal = ({
   const finalId = id ?? controlId
   const finalSize = size ?? width
 
+  // using context we can check if the modal is being used inside another modal
+  // the first modal to render will create the context, and the others will use it.
+  const context = useContext(ModalContext)
+
   return (
     <>
       {disclosure ? (
@@ -113,52 +110,57 @@ export const Modal = ({
           toggle={handleToggle}
         />
       ) : null}
-      <Dialog
-        open={visible || open || opened}
-        placement={placement}
-        size={finalSize}
-        ariaLabel={ariaLabel}
-        hideOnClickOutside={hideOnClickOutside}
-        hideOnEsc={hideOnEsc}
-        preventBodyScroll={preventBodyScroll}
-        onClose={handleClose}
-        className={className}
-        backdropClassName={backdropClassName}
-        data-testid={dataTestId}
-        id={finalId}
-        dialogCss={customDialogStyles}
-        backdropCss={customDialogBackdropStyles}
-      >
-        <>
-          {typeof children === 'function'
-            ? children({
-                visible,
-                onClose: handleClose,
-                onOpen: handleOpen,
-                toggle: handleToggle,
-                modalId: finalId,
-                hide: handleClose,
-                close: handleClose,
-                show: handleOpen,
-              })
-            : children}
-          <StyledContainer>
-            {isClosable ? (
-              <Button
-                data-testid={
-                  dataTestId ? `${dataTestId}-close-button` : undefined
-                }
-                onClick={handleClose}
-                variant="ghost"
-                size="small"
-                icon="close"
-                sentiment="neutral"
-                aria-label="close"
-              />
-            ) : null}
-          </StyledContainer>
-        </>
-      </Dialog>
+      {!context ? (
+        <ModalProvider>
+          <ModalContent
+            open={open}
+            opened={opened}
+            visible={visible}
+            placement={placement}
+            finalSize={finalSize}
+            ariaLabel={ariaLabel}
+            hideOnClickOutside={hideOnClickOutside}
+            hideOnEsc={hideOnEsc}
+            preventBodyScroll={preventBodyScroll}
+            handleClose={handleClose}
+            className={className}
+            backdropClassName={backdropClassName}
+            dataTestId={dataTestId}
+            customDialogStyles={customDialogStyles}
+            customDialogBackdropStyles={customDialogBackdropStyles}
+            isClosable={isClosable}
+            handleOpen={handleOpen}
+            handleToggle={handleToggle}
+            finalId={finalId}
+          >
+            {children}
+          </ModalContent>
+        </ModalProvider>
+      ) : (
+        <ModalContent
+          open={open}
+          opened={opened}
+          visible={visible}
+          placement={placement}
+          finalSize={finalSize}
+          ariaLabel={ariaLabel}
+          hideOnClickOutside={hideOnClickOutside}
+          hideOnEsc={hideOnEsc}
+          preventBodyScroll={preventBodyScroll}
+          handleClose={handleClose}
+          className={className}
+          backdropClassName={backdropClassName}
+          dataTestId={dataTestId}
+          customDialogStyles={customDialogStyles}
+          customDialogBackdropStyles={customDialogBackdropStyles}
+          isClosable={isClosable}
+          handleOpen={handleOpen}
+          handleToggle={handleToggle}
+          finalId={finalId}
+        >
+          {children}
+        </ModalContent>
+      )}
     </>
   )
 }

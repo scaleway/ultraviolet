@@ -7,8 +7,10 @@ import type {
 } from 'react'
 import { useCallback, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
-import type { DialogProps, ModalPlacement, ModalSize } from './types'
+import { slideFromBottom } from '../../../utils/animations'
+import { useModal } from '../ModalProvider'
+import { MODAL_PLACEMENT, MODAL_WIDTH } from '../constants'
+import type { DialogProps, ModalPlacement, ModalSize } from '../types'
 
 const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
   position: fixed;
@@ -34,9 +36,14 @@ const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
 type StyledDialogProps = {
   'data-size': ModalSize
   'data-placement': ModalPlacement
+  position: number
+  size: ModalSize
 }
 
-export const StyledDialog = styled.dialog<StyledDialogProps>`
+export const StyledDialog = styled('dialog', {
+  shouldForwardProp: prop =>
+    !['position', 'size', 'openedModals'].includes(prop),
+})<StyledDialogProps>`
   background-color: ${({ theme }) =>
     theme.colors.other.elevation.background.overlay};
   position: relative;
@@ -62,11 +69,24 @@ export const StyledDialog = styled.dialog<StyledDialogProps>`
         }
         `,
   )}
+
+  &[data-animation='true'] {
+    animation: ${slideFromBottom} 0.3s ease-in-out;
+  }
+
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  ${({ position, size }) =>
+    position > 0
+      ? `
+    width: ${MODAL_WIDTH[size] - position * 50}px !important;
+    transform: translate3d(0, -${position * 24}px, 0);
+  `
+      : undefined}
 `
 
 export const Dialog = ({
   children,
-  open,
   placement,
   onClose,
   hideOnClickOutside,
@@ -84,20 +104,33 @@ export const Dialog = ({
   const containerRef = useRef(document.createElement('div'))
   const dialogRef = useRef<HTMLDialogElement>(null)
   const onCloseRef = useRef(onClose)
+  const {
+    registerModal,
+    unregisterModal,
+    openedModals,
+    previsousOpenedModales,
+  } = useModal()
+
+  // register/unregister the modal to handle nested modals
+  useEffect(() => {
+    registerModal(id)
+
+    return () => {
+      unregisterModal(id)
+    }
+  }, [id, registerModal, unregisterModal])
 
   // Portal to put the modal in
   useEffect(() => {
     const element = containerRef.current
-    if (open) {
-      document.body.appendChild(element)
-    }
+    document.body.appendChild(element)
 
     return () => {
       if (document.body.contains(element)) {
         document.body.removeChild(element)
       }
     }
-  }, [open])
+  }, [])
 
   // Save the reassignment of eventHandler in the useEffect below
   useEffect(() => {
@@ -106,23 +139,21 @@ export const Dialog = ({
 
   // On open focus the modal
   useEffect(() => {
-    if (open) {
-      dialogRef.current?.focus()
-    }
-  }, [open])
+    dialogRef.current?.focus()
+  }, [])
 
   // Handle body scroll
   useEffect(() => {
     const previousOverflow = document.body.style.overflow
 
-    if (open && preventBodyScroll) {
+    if (preventBodyScroll) {
       document.body.style.overflow = 'hidden'
     }
 
     return () => {
       document.body.style.overflow = previousOverflow
     }
-  }, [preventBodyScroll, open])
+  }, [preventBodyScroll])
 
   // Stop focus to prevent unexpected body loose focus
   const stopFocus: FocusEventHandler = useCallback(event => {
@@ -209,38 +240,47 @@ export const Dialog = ({
     event.stopPropagation()
   }
 
-  return open
-    ? createPortal(
-        <StyledBackdrop
-          data-open={open}
-          onClick={handleClose}
-          className={backdropClassName}
-          css={backdropCss}
-          data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
-          onFocus={stopFocus}
-        >
-          <StyledDialog
-            css={dialogCss}
-            onKeyUp={handleKeyUp}
-            onKeyDown={handleFocusTrap}
-            className={className}
-            id={id}
-            data-testid={dataTestId}
-            aria-label={ariaLabel}
-            data-placement={placement}
-            data-size={size}
-            open={open}
-            onClick={stopClick}
-            onCancel={stopCancel}
-            onClose={stopCancel}
-            aria-modal
-            ref={dialogRef}
-            tabIndex={0}
-          >
-            {open ? children : null}
-          </StyledDialog>
-        </StyledBackdrop>,
-        containerRef.current,
-      )
-    : null
+  // We need to reverse the array as the last opened modal should be the first to be with normal size
+  // while the first opened modal should shrink
+  const position = [...openedModals].reverse().indexOf(id) // reverse method mutate array so we need to create a new array
+
+  return createPortal(
+    <StyledBackdrop
+      data-open
+      onClick={handleClose}
+      className={backdropClassName}
+      css={backdropCss}
+      data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
+      onFocus={stopFocus}
+    >
+      <StyledDialog
+        css={dialogCss}
+        onKeyUp={handleKeyUp}
+        onKeyDown={handleFocusTrap}
+        className={className}
+        id={id}
+        data-testid={dataTestId}
+        aria-label={ariaLabel}
+        data-placement={placement}
+        data-size={size}
+        open
+        onClick={stopClick}
+        onCancel={stopCancel}
+        onClose={stopCancel}
+        aria-modal
+        ref={dialogRef}
+        tabIndex={0}
+        position={position}
+        data-animation={
+          openedModals.length > 1 &&
+          position === 0 &&
+          previsousOpenedModales.length < openedModals.length
+        }
+        size={size}
+      >
+        {children}
+      </StyledDialog>
+    </StyledBackdrop>,
+    containerRef.current,
+  )
 }
