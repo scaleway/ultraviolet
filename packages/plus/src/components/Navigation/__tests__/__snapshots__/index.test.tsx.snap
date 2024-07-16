@@ -1001,15 +1001,21 @@ exports[`Navigation > click on expand / collapse button 1`] = `
 }
 
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
+}
+
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
+}
+
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
 }
 
 .emotion-36 {
@@ -1616,7 +1622,6 @@ exports[`Navigation > click on expand / collapse button 1`] = `
     >
       <div
         class="emotion-2 emotion-3"
-        data-animation="false"
         data-expanded="true"
       >
         <div
@@ -1635,13 +1640,11 @@ exports[`Navigation > click on expand / collapse button 1`] = `
         >
           <div
             class="emotion-10 emotion-11"
-            data-animation="false"
             data-is-expanded="true"
           >
             <div>
               <button
                 class="emotion-12 emotion-13"
-                data-animation="false"
                 data-has-active-children="false"
                 data-has-children="true"
                 data-has-no-expand="false"
@@ -1715,6 +1718,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
               </button>
               <div
                 class="emotion-32 emotion-33"
+                data-is-animated="false"
               >
                 <div
                   class="emotion-20 emotion-15"
@@ -1759,7 +1763,6 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                 </span>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -1821,7 +1824,6 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                 </button>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -1925,7 +1927,7 @@ exports[`Navigation > click on expand / collapse button 1`] = `
               tabindex="0"
             >
               <button
-                aria-label="Collapse navigation"
+                aria-label="Collapse sidebar"
                 class="emotion-97 emotion-98"
                 type="button"
               >
@@ -2794,7 +2796,6 @@ exports[`Navigation > click on expand / collapse button 2`] = `
     >
       <div
         class="emotion-2 emotion-3"
-        data-animation="false"
         data-expanded="false"
       >
         <div
@@ -2813,7 +2814,6 @@ exports[`Navigation > click on expand / collapse button 2`] = `
         >
           <div
             class="emotion-10 emotion-11"
-            data-animation="false"
             data-is-expanded="false"
           >
             <div>
@@ -2995,7 +2995,7 @@ exports[`Navigation > click on expand / collapse button 2`] = `
               tabindex="0"
             >
               <button
-                aria-label="Expand navigation"
+                aria-label="Expand sidebar"
                 class="emotion-53 emotion-17"
                 type="button"
               >
@@ -4025,15 +4025,21 @@ exports[`Navigation > pin and unpin an item 1`] = `
 }
 
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
+}
+
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
+}
+
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
 }
 
 .emotion-36 {
@@ -4640,7 +4646,6 @@ exports[`Navigation > pin and unpin an item 1`] = `
     >
       <div
         class="emotion-2 emotion-3"
-        data-animation="false"
         data-expanded="true"
       >
         <div
@@ -4659,13 +4664,11 @@ exports[`Navigation > pin and unpin an item 1`] = `
         >
           <div
             class="emotion-10 emotion-11"
-            data-animation="false"
             data-is-expanded="true"
           >
             <div>
               <button
                 class="emotion-12 emotion-13"
-                data-animation="false"
                 data-has-active-children="false"
                 data-has-children="true"
                 data-has-no-expand="false"
@@ -4739,6 +4742,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
               </button>
               <div
                 class="emotion-32 emotion-33"
+                data-is-animated="false"
               >
                 <div
                   class="emotion-20 emotion-15"
@@ -4783,7 +4787,6 @@ exports[`Navigation > pin and unpin an item 1`] = `
                 </span>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -4845,7 +4848,6 @@ exports[`Navigation > pin and unpin an item 1`] = `
                 </button>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -4949,7 +4951,7 @@ exports[`Navigation > pin and unpin an item 1`] = `
               tabindex="0"
             >
               <button
-                aria-label="Collapse navigation"
+                aria-label="Collapse sidebar"
                 class="emotion-97 emotion-98"
                 type="button"
               >
@@ -5979,15 +5981,21 @@ exports[`Navigation > pin and unpin an item 2`] = `
 }
 
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
+}
+
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
+}
+
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
 }
 
 .emotion-36 {
@@ -6594,7 +6602,6 @@ exports[`Navigation > pin and unpin an item 2`] = `
     >
       <div
         class="emotion-2 emotion-3"
-        data-animation="false"
         data-expanded="true"
       >
         <div
@@ -6613,13 +6620,11 @@ exports[`Navigation > pin and unpin an item 2`] = `
         >
           <div
             class="emotion-10 emotion-11"
-            data-animation="false"
             data-is-expanded="true"
           >
             <div>
               <button
                 class="emotion-12 emotion-13"
-                data-animation="false"
                 data-has-active-children="false"
                 data-has-children="true"
                 data-has-no-expand="false"
@@ -6693,6 +6698,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
               </button>
               <div
                 class="emotion-32 emotion-33"
+                data-is-animated="false"
               >
                 <div
                   class="emotion-20 emotion-15"
@@ -6737,7 +6743,6 @@ exports[`Navigation > pin and unpin an item 2`] = `
                 </span>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -6799,7 +6804,6 @@ exports[`Navigation > pin and unpin an item 2`] = `
                 </button>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -6903,7 +6907,7 @@ exports[`Navigation > pin and unpin an item 2`] = `
               tabindex="0"
             >
               <button
-                aria-label="Collapse navigation"
+                aria-label="Collapse sidebar"
                 class="emotion-97 emotion-98"
                 type="button"
               >
@@ -7933,15 +7937,21 @@ exports[`Navigation > pin and unpin an item 3`] = `
 }
 
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
+}
+
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
+}
+
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
 }
 
 .emotion-36 {
@@ -8543,7 +8553,6 @@ exports[`Navigation > pin and unpin an item 3`] = `
     >
       <div
         class="emotion-2 emotion-3"
-        data-animation="false"
         data-expanded="true"
       >
         <div
@@ -8562,13 +8571,11 @@ exports[`Navigation > pin and unpin an item 3`] = `
         >
           <div
             class="emotion-10 emotion-11"
-            data-animation="false"
             data-is-expanded="true"
           >
             <div>
               <button
                 class="emotion-12 emotion-13"
-                data-animation="false"
                 data-has-active-children="false"
                 data-has-children="true"
                 data-has-no-expand="false"
@@ -8642,6 +8649,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
               </button>
               <div
                 class="emotion-32 emotion-33"
+                data-is-animated="false"
               >
                 <div
                   class="emotion-20 emotion-15"
@@ -8654,7 +8662,6 @@ exports[`Navigation > pin and unpin an item 3`] = `
                     />
                     <button
                       class="emotion-12 emotion-13"
-                      data-animation="false"
                       data-has-active-children="false"
                       data-has-children="false"
                       data-has-no-expand="false"
@@ -8751,7 +8758,6 @@ exports[`Navigation > pin and unpin an item 3`] = `
                 </span>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -8813,7 +8819,6 @@ exports[`Navigation > pin and unpin an item 3`] = `
                 </button>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -8916,7 +8921,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
               tabindex="0"
             >
               <button
-                aria-label="Collapse navigation"
+                aria-label="Collapse sidebar"
                 class="emotion-118 emotion-119"
                 type="button"
               >
@@ -9447,9 +9452,12 @@ exports[`Navigation > render with basic content 1`] = `
 }
 
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
+}
+
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
 }
 
 .emotion-36 {
@@ -9758,7 +9766,6 @@ exports[`Navigation > render with basic content 1`] = `
     >
       <div
         class="emotion-2 emotion-3"
-        data-animation="false"
         data-expanded="true"
       >
         <div
@@ -9777,13 +9784,11 @@ exports[`Navigation > render with basic content 1`] = `
         >
           <div
             class="emotion-10 emotion-11"
-            data-animation="false"
             data-is-expanded="true"
           >
             <div>
               <button
                 class="emotion-12 emotion-13"
-                data-animation="false"
                 data-has-active-children="false"
                 data-has-children="true"
                 data-has-no-expand="false"
@@ -9857,6 +9862,7 @@ exports[`Navigation > render with basic content 1`] = `
               </button>
               <div
                 class="emotion-32 emotion-33"
+                data-is-animated="false"
               >
                 <div
                   class="emotion-20 emotion-15"
@@ -9901,7 +9907,6 @@ exports[`Navigation > render with basic content 1`] = `
                 </span>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -9963,7 +9968,6 @@ exports[`Navigation > render with basic content 1`] = `
                 </button>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -10067,7 +10071,7 @@ exports[`Navigation > render with basic content 1`] = `
               tabindex="0"
             >
               <button
-                aria-label="Collapse navigation"
+                aria-label="Collapse sidebar"
                 class="emotion-97 emotion-98"
                 type="button"
               >
@@ -10778,7 +10782,6 @@ exports[`Navigation > render without pinnedFeature 1`] = `
     >
       <div
         class="emotion-2 emotion-3"
-        data-animation="false"
         data-expanded="true"
       >
         <div
@@ -10797,7 +10800,6 @@ exports[`Navigation > render without pinnedFeature 1`] = `
         >
           <div
             class="emotion-10 emotion-11"
-            data-animation="false"
             data-is-expanded="true"
           >
             <hr
@@ -10819,7 +10821,6 @@ exports[`Navigation > render without pinnedFeature 1`] = `
                 </span>
                 <button
                   class="emotion-22 emotion-23"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -10881,7 +10882,6 @@ exports[`Navigation > render without pinnedFeature 1`] = `
                 </button>
                 <button
                   class="emotion-22 emotion-23"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -10954,7 +10954,7 @@ exports[`Navigation > render without pinnedFeature 1`] = `
               tabindex="0"
             >
               <button
-                aria-label="Collapse navigation"
+                aria-label="Collapse sidebar"
                 class="emotion-56 emotion-57"
                 type="button"
               >
@@ -11984,15 +11984,21 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
 }
 
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
 }
 
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
+}
+
 .emotion-32 {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
   height: auto;
+}
+
+.emotion-32[data-is-animated="true"] {
+  -webkit-transition: max-height 0ms ease-out,opacity 0ms ease-out;
+  transition: max-height 0ms ease-out,opacity 0ms ease-out;
 }
 
 .emotion-36 {
@@ -12599,7 +12605,6 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
     >
       <div
         class="emotion-2 emotion-3"
-        data-animation="false"
         data-expanded="true"
       >
         <div
@@ -12618,13 +12623,11 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
         >
           <div
             class="emotion-10 emotion-11"
-            data-animation="false"
             data-is-expanded="true"
           >
             <div>
               <button
                 class="emotion-12 emotion-13"
-                data-animation="false"
                 data-has-active-children="false"
                 data-has-children="true"
                 data-has-no-expand="false"
@@ -12698,6 +12701,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
               </button>
               <div
                 class="emotion-32 emotion-33"
+                data-is-animated="false"
               >
                 <div
                   class="emotion-20 emotion-15"
@@ -12742,7 +12746,6 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                 </span>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -12804,7 +12807,6 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                 </button>
                 <button
                   class="emotion-12 emotion-13"
-                  data-animation="false"
                   data-has-active-children="false"
                   data-has-children="false"
                   data-has-no-expand="false"
@@ -12908,7 +12910,7 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
               tabindex="0"
             >
               <button
-                aria-label="Collapse navigation"
+                aria-label="Collapse sidebar"
                 class="emotion-97 emotion-98"
                 type="button"
               >

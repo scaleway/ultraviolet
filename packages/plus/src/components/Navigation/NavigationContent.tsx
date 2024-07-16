@@ -318,7 +318,9 @@ export const NavigationContent = ({
                   size="small"
                   icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
                   aria-label={
-                    expanded ? 'Collapse navigation' : 'Expand navigation'
+                    expanded
+                      ? locales['navigation.collapse.button']
+                      : locales['navigation.expand.button']
                   }
                   onClick={() => {
                     toggleExpand()

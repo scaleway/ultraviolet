@@ -49,41 +49,26 @@ describe('Navigation', () => {
     expect(asFragment()).toMatchSnapshot()
 
     const collapseButton = screen.getByRole('button', {
-      name: 'Collapse navigation',
+      name: 'Collapse sidebar',
     })
     collapseButton.click()
     await waitFor(() => {
       expect(
-        screen.getByRole('button', { name: 'Expand navigation' }),
-      ).toBeInTheDocument()
+        screen.getByRole('button', { name: 'Expand sidebar' }),
+      ).toBeVisible()
     })
     expect(asFragment()).toMatchSnapshot()
 
     const expandButton = screen.getByRole('button', {
-      name: 'Expand navigation',
+      name: 'Expand sidebar',
     })
     expandButton.click()
     await waitFor(() => {
       expect(
-        screen.getByRole('button', { name: 'Collapse navigation' }),
-      ).toBeInTheDocument()
+        screen.getByRole('button', { name: 'Collapse sidebar' }),
+      ).toBeVisible()
     })
   })
-
-  // test('click on collapse button and menu item', () => {
-  //   const { asFragment } = renderWithTheme(<BasicNavigation />)
-
-  //   const expandButton = screen.getByRole('button', {
-  //     name: 'Toggle navigation expand/collapse',
-  //   })
-  //   expandButton.click()
-
-  //   expect(asFragment()).toMatchSnapshot()
-  //   const item = screen.getAllByText('item1')[0]
-
-  //   item.click()
-  //   expect(asFragment()).toMatchSnapshot()
-  // })
 
   test('resize manually the navigation using slider', () => {
     const { asFragment } = renderWithTheme(<BasicNavigation />)
