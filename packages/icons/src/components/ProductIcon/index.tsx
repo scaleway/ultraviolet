@@ -5,6 +5,7 @@ import { PRODUCT_ICONS } from './Icons'
 type Variants = 'primary' | 'danger' | 'warning' | 'original'
 
 const SIZES = {
+  xsmall: 24,
   small: 32,
   medium: 40,
   large: 48,
