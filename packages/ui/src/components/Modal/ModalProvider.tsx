@@ -8,7 +8,7 @@ import {
 } from 'react'
 
 type ModalContextValues = {
-  openedModales: string[]
+  openedModals: string[]
   registerModal: (id: string) => void
   unregisterModal: (id: string) => void
   previsousOpenedModales: string[] // This will be usefull for animation, we will trigger when the modal appear but not when it's closing
@@ -32,13 +32,13 @@ type ModalProviderProps = {
 }
 
 export const ModalProvider = ({ children }: ModalProviderProps) => {
-  const [openedModales, setOpenedModales] = useState<string[]>([])
+  const [openedModals, setOpenedModals] = useState<string[]>([])
   const [previsousOpenedModales, setPreviousOpenedModales] = useState<string[]>(
     [],
   )
 
   const registerModal = useCallback((id: string) => {
-    setOpenedModales(prev => {
+    setOpenedModals(prev => {
       setPreviousOpenedModales(prev)
 
       return [...prev, id]
@@ -46,7 +46,7 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
   }, [])
 
   const unregisterModal = useCallback((id: string) => {
-    setOpenedModales(prev => {
+    setOpenedModals(prev => {
       setPreviousOpenedModales(prev)
 
       return prev.filter(modalId => modalId !== id)
@@ -55,12 +55,12 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
 
   const value = useMemo(
     () => ({
-      openedModales,
+      openedModals,
       registerModal,
       unregisterModal,
       previsousOpenedModales,
     }),
-    [openedModales, registerModal, unregisterModal, previsousOpenedModales],
+    [openedModals, registerModal, unregisterModal, previsousOpenedModales],
   )
 
   return <ModalContext.Provider value={value}>{children}</ModalContext.Provider>

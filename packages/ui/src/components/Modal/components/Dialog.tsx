@@ -42,7 +42,7 @@ type StyledDialogProps = {
 
 export const StyledDialog = styled('dialog', {
   shouldForwardProp: prop =>
-    !['position', 'size', 'openedModales'].includes(prop),
+    !['position', 'size', 'openedModals'].includes(prop),
 })<StyledDialogProps>`
   background-color: ${({ theme }) =>
     theme.colors.other.elevation.background.overlay};
@@ -107,7 +107,7 @@ export const Dialog = ({
   const {
     registerModal,
     unregisterModal,
-    openedModales,
+    openedModals,
     previsousOpenedModales,
   } = useModal()
 
@@ -240,7 +240,9 @@ export const Dialog = ({
     event.stopPropagation()
   }
 
-  const position = [...openedModales].reverse().indexOf(id) // reverse method mutate array so we need to create a new array
+  // We need to reverse the array as the last opened modal should be the first to be with normal size
+  // while the first opened modal should shrink
+  const position = [...openedModals].reverse().indexOf(id) // reverse method mutate array so we need to create a new array
 
   return createPortal(
     <StyledBackdrop
@@ -270,9 +272,9 @@ export const Dialog = ({
         tabIndex={0}
         position={position}
         data-animation={
-          openedModales.length > 1 &&
+          openedModals.length > 1 &&
           position === 0 &&
-          previsousOpenedModales.length < openedModales.length
+          previsousOpenedModales.length < openedModals.length
         }
         size={size}
       >
