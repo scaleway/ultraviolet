@@ -72,7 +72,7 @@ describe('KeyValueField', () => {
           maxSizeReachedTooltip:
             'This is a tooltip when the max size is reached',
         }}
-        readonly
+        readOnly
       />,
     )
     const addButton = screen.getByTestId('add-button')
