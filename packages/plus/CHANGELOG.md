@@ -1,5 +1,20 @@
 # @ultraviolet/plus
 
+## 0.20.2
+
+### Patch Changes
+
+- [#4024](https://github.com/scaleway/ultraviolet/pull/4024) [`5d66ca7`](https://github.com/scaleway/ultraviolet/commit/5d66ca70bede877a080ba770fa532e4b6be9eb7a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.24.9`.
+  Updated dependency `@babel/runtime` to `7.24.8`.
+  Updated dependency `@babel/eslint-parser` to `7.24.8`.
+  Updated dependency `@babel/preset-env` to `7.24.8`.
+
+- [#4020](https://github.com/scaleway/ultraviolet/pull/4020) [`0f63141`](https://github.com/scaleway/ultraviolet/commit/0f631410d0eda3d8f6c2f9051c8c850ddc41761c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-intersection-observer` to `9.13.0`.
+
+- Updated dependencies [[`0d0833c`](https://github.com/scaleway/ultraviolet/commit/0d0833c0b370f2c5dab6c633b2e8ce83f89437c4), [`5d66ca7`](https://github.com/scaleway/ultraviolet/commit/5d66ca70bede877a080ba770fa532e4b6be9eb7a), [`a0e0a95`](https://github.com/scaleway/ultraviolet/commit/a0e0a95a56f4882e6099e5d9a88264a27ff0c0c1), [`f17223e`](https://github.com/scaleway/ultraviolet/commit/f17223e5d2f3033932ce37eb6bbfbc32ebd931db)]:
+  - @ultraviolet/ui@1.62.0
+  - @ultraviolet/icons@2.13.2
+
 ## 0.20.1
 
 ### Patch Changes
