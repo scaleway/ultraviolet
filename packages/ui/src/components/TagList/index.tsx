@@ -28,14 +28,14 @@ const TagsWrapper = styled.span`
 `
 
 const StyledTagContainer = styled.div<{
-  elementsGap: string
+  gap: string
   multiline?: boolean
   popoverTriggerWidth?: number
 }>`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.neutral.text};
-  gap: ${({ elementsGap }) => elementsGap};
+  gap: ${({ gap }) => gap};
   ${({ multiline }) => multiline && `flex-wrap: wrap;`};
 
   // to handle the case where we have one tag and we need to ellipsis it
@@ -247,7 +247,7 @@ export const TagList = ({
   return (
     <StyledContainer className={className} data-testid={dataTestId}>
       <StyledTagContainer
-        elementsGap={TAGS_GAP}
+        gap={TAGS_GAP}
         multiline={multiline}
         popoverTriggerWidth={popoverTriggerWidth}
         ref={containerRef}
@@ -270,7 +270,7 @@ export const TagList = ({
             whiteSpace: 'nowrap',
           }}
         >
-          <StyledTagContainer elementsGap={TAGS_GAP}>
+          <StyledTagContainer gap={TAGS_GAP}>
             {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
           </StyledTagContainer>
         </div>,
@@ -284,7 +284,7 @@ export const TagList = ({
           onClose={() => setIsPopoverVisible(false)}
           placement={popoverPlacement}
           content={
-            <StyledTagContainer multiline elementsGap={TAGS_GAP}>
+            <StyledTagContainer multiline gap={TAGS_GAP}>
               {hiddenTags.map((tag, index) => renderTag(tag, index))}
             </StyledTagContainer>
           }
