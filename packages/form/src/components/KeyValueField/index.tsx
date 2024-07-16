@@ -31,7 +31,7 @@ type KeyValueFieldProps<
   inputValue: InputValueProps
   addButton: AddButtonProps
   maxSize?: number
-  readonly?: boolean
+  readOnly?: boolean
   control?: Control<TFieldValues>
 }
 
@@ -48,7 +48,7 @@ export const KeyValueField = <
   inputValue,
   addButton,
   maxSize = 100,
-  readonly = false,
+  readOnly = false,
   control,
 }: KeyValueFieldProps<TFieldValues, TFieldArrayName>) => {
   const { fields, append, remove } = useFieldArray({
@@ -73,14 +73,14 @@ export const KeyValueField = <
               alignItems="end"
             >
               <TextInputFieldV2
-                readOnly={readonly}
+                readOnly={readOnly}
                 required={inputKey.required}
                 name={`${name}.${index}.key`}
                 label={inputKey.label}
                 regex={inputKey.regex}
               />
               <TextInputFieldV2
-                readOnly={readonly}
+                readOnly={readOnly}
                 required={inputValue.required}
                 name={`${name}.${index}.value`}
                 label={inputValue.label}
@@ -91,7 +91,7 @@ export const KeyValueField = <
               />
 
               <Button
-                disabled={readonly}
+                disabled={readOnly}
                 data-testid={`remove-button-${index}`}
                 icon="delete"
                 variant="outlined"
@@ -110,7 +110,7 @@ export const KeyValueField = <
           variant="filled"
           sentiment="neutral"
           fullWidth={addButton.fullWidth}
-          disabled={!canAdd || readonly}
+          disabled={!canAdd || readOnly}
           tooltip={!canAdd ? maxSizeReachedTooltip : addButton.tooltip}
           // @ts-expect-error can't infer properly
           onClick={() => append({ key: '', value: '' })}

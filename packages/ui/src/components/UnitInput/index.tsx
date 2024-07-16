@@ -287,7 +287,6 @@ export const UnitInput = ({
             aria-invalid={!!error}
             autoFocus={autoFocus}
             disabled={disabled}
-            data-readOnly={readOnly}
             name={`${name}-value`}
             id={id ? `${id}-value` : undefined}
             value={val}
