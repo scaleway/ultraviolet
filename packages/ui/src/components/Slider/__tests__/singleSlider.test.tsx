@@ -10,7 +10,6 @@ const options = [
 ]
 
 const options2 = [{ value: 1 }, { value: 30 }]
-const scale = [1, 2, 3, 4, 5, 10, 15, 20, 25]
 
 describe('Single slider', () => {
   beforeEach(() => {
@@ -142,11 +141,6 @@ describe('Single slider', () => {
     )
   })
 
-  test('renders correctly with default ticks', () => {
-    shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" options />,
-    )
-  })
   test('renders correctly with custom ticks', () => {
     shouldMatchEmotionSnapshot(
       <Slider value={1} name="Name" label="Label" options={options} unit="%" />,
@@ -162,11 +156,6 @@ describe('Single slider', () => {
         options={options2}
         unit="%"
       />,
-    )
-  })
-  test('renders correctly with custom scale', () => {
-    shouldMatchEmotionSnapshot(
-      <Slider value={1} name="Name" label="Label" possibleValues={scale} />,
     )
   })
 
@@ -227,7 +216,12 @@ describe('Single slider', () => {
         data-testid="slider"
         value={3}
         input
-        possibleValues={[3, 5, 6, 10]}
+        options={[
+          { label: '3', value: 3 },
+          { label: '5', value: 5 },
+          { label: '6', value: 6 },
+          { label: '10', value: 10 },
+        ]}
       />,
     )
     const slider = screen.getByRole<HTMLInputElement>('slider')

@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import { Text } from '../../Text'
 import { THUMB_SIZE } from '../constant'
-import type { OptionsProps } from '../types'
 
 export const DataList = styled.datalist`
   width: 100%;
@@ -31,12 +30,23 @@ export const Option = styled('span', {
   }
 `
 
+export type OptionsProps = {
+  ticks: {
+    value: number
+    label?: string | undefined
+  }[]
+  min: number
+  max: number
+  sliderWidth: number
+  value: number | number[]
+  step: number
+}
+
 export const Options = ({
   ticks,
   min,
   max,
   sliderWidth,
-  unit,
   value,
   step,
 }: OptionsProps) => {
@@ -47,10 +57,7 @@ export const Options = ({
       {ticks.map((element, index, { length }) => {
         const left = ((index * step - min) * 100) / (max - min)
 
-        const formatedElement =
-          unit && (index === 0 || index === length - 1)
-            ? (element.label ?? String(element.value)).concat(unit)
-            : element.label ?? String(element.value)
+        const formatedElement = element.label ?? String(element.value)
 
         const isSelected =
           typeof value === 'number'

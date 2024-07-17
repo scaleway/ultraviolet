@@ -6,6 +6,16 @@ import { describe, expect, test, vi } from 'vitest'
 import { SliderField, Submit } from '../..'
 import { Form } from '../../Form'
 
+const options = [
+  { label: '1Mb', value: 1 },
+  { label: '3Mb', value: 3 },
+  { label: '5Mb', value: 5 },
+  { label: '10Mb', value: 10 },
+  { label: '50Mb', value: 50 },
+  { label: '100Mb', value: 100 },
+  { label: '500Mb', value: 500 },
+]
+
 describe('SliderField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(<SliderField name="test" value={0} />)
@@ -14,18 +24,14 @@ describe('SliderField', () => {
 
   test('should render correctly with possible values', () => {
     const { asFragment } = renderWithForm(
-      <SliderField name="test" possibleValues={[1, 3, 5, 10, 50, 100, 500]} />,
+      <SliderField name="test" options={options} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
 
   test('should render correctly with possible values and double', () => {
     const { asFragment } = renderWithForm(
-      <SliderField
-        name="test"
-        double
-        possibleValues={[1, 3, 5, 10, 50, 100, 500]}
-      />,
+      <SliderField name="test" double options={options} />,
     )
     expect(asFragment()).toMatchSnapshot()
   })
@@ -118,11 +124,7 @@ describe('SliderField', () => {
         errors={mockFormErrors}
         methods={result.current}
       >
-        <SliderField
-          label="Test"
-          name="test"
-          possibleValues={[1, 3, 5, 10, 50, 100, 500]}
-        />
+        <SliderField label="Test" name="test" options={options} />
       </Form>,
     )
 
@@ -146,12 +148,7 @@ describe('SliderField', () => {
         errors={mockFormErrors}
         methods={result.current}
       >
-        <SliderField
-          label="Test"
-          name="test"
-          double
-          possibleValues={[1, 3, 5, 10, 50, 100, 500]}
-        />
+        <SliderField label="Test" name="test" double options={options} />
       </Form>,
     )
 

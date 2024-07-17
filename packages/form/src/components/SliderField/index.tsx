@@ -34,7 +34,7 @@ export const SliderField = <
   label,
   value,
   defaultValue,
-  possibleValues,
+  options,
   ...props
 }: SliderFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -54,18 +54,26 @@ export const SliderField = <
   })
 
   const finalValue = useMemo(() => {
-    if (possibleValues) {
-      const processedValue = Array.isArray(field.value)
-        ? (field.value as number[]).map((val: number) =>
-            possibleValues.indexOf(val),
-          )
-        : possibleValues.indexOf(field.value)
+    if (options && field.value) {
+      if (!Array.isArray(field.value)) {
+        const processedValue = options
+          .map(option => option.value)
+          .indexOf(field.value)
 
-      return processedValue
+        return processedValue
+      }
+
+      if (Array.isArray(field.value)) {
+        const processedValue = (field.value as number[]).map(val =>
+          options.map(option => option.value).indexOf(val),
+        )
+
+        return processedValue
+      }
     }
 
-    return field.value as number
-  }, [field.value, possibleValues])
+    return field.value as number | number[]
+  }, [field.value, options])
 
   return (
     <Slider
@@ -76,10 +84,12 @@ export const SliderField = <
         onBlur?.(event)
       }}
       onChange={(newValue: number | number[]) => {
-        if (possibleValues) {
-          const processedValue = Array.isArray(newValue)
-            ? newValue.map(val => possibleValues[val])
-            : possibleValues[newValue]
+        if (options) {
+          const processedValue = !Array.isArray(newValue)
+            ? options[newValue].value
+            : newValue.map((val: number) =>
+                val ? options[val].value : options[0].value,
+              )
 
           field.onChange(processedValue)
           onChange?.(
@@ -95,7 +105,7 @@ export const SliderField = <
       error={getError({ label: label ?? '', max, min }, error)}
       label={label}
       required={required}
-      possibleValues={possibleValues}
+      options={options}
       {...props}
     />
   )

@@ -76,11 +76,12 @@ export default {
         component: 'A Slider field',
       },
     },
+    experimental: true,
   },
   title: 'Form/Components/Fields/SliderField',
 } as Meta
 
 export { Playground } from './Playground.stories'
 export { Double } from './Double.stories'
-export { PossibleValues } from './PossibleValues.stories'
+export { Options } from './Options.stories'
 export { Required } from './Required.stories'
