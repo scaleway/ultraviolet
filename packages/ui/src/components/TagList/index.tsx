@@ -54,7 +54,7 @@ const StyledTagContainer = styled.div<{
   `};
 `
 
-type TagType =
+export type TagType =
   | string
   | { label: string; icon: NonNullable<ComponentProps<typeof Tag>['icon']> }
 
@@ -111,6 +111,12 @@ export const TagList = ({
   const measureRef = useRef<HTMLDivElement>(null)
   const popoverTriggerRef = useRef<HTMLDivElement>(null)
 
+  // a flag to keep of when we show the component as we we might update the visible tags list
+  // after the first render ( to know if we should add ellipsis to the first tag or readjust
+  // the tags when joined with the popover trigger might overflow the parent ) and this causes
+  // some flickering
+  const [isReady, setIsReady] = useState(false)
+
   const [isPopoverVisible, setIsPopoverVisible] = useState(false)
   const [popoverTriggerWidth, setPopoverTriggerWidth] = useState(0)
   const [visibleTags, setVisibleTags] = useState<TagType[]>([])
@@ -154,11 +160,12 @@ export const TagList = ({
     if (multiline) {
       setVisibleTags(potentiallyVisibleTags)
       setHiddenTags(surelyHiddenTags)
+      setIsReady(true)
 
       return
     }
 
-    const parentWidth = containerRef.current.parentElement?.clientWidth || 0
+    const parentWidth = containerRef.current.parentElement?.offsetWidth || 0
 
     const measureElements: HTMLCollection =
       measureRef.current.children[0].children
@@ -203,16 +210,29 @@ export const TagList = ({
       },
     )
 
-    setVisibleTags(measuredVisibleTags)
-    setHiddenTags(measuredHiddenTags.concat(surelyHiddenTags))
-  }, [multiline, potentiallyVisibleTags, surelyHiddenTags, tags, tmpThreshold])
+    const finalHiddenTags = measuredHiddenTags.concat(surelyHiddenTags)
 
-  // get the popover trigger ref when we show it to be able to:
+    setVisibleTags(measuredVisibleTags)
+    setHiddenTags(finalHiddenTags)
+
+    if (!finalHiddenTags.length) {
+      setIsReady(true)
+    }
+  }, [
+    multiline,
+    potentiallyVisibleTags,
+    surelyHiddenTags,
+    tags,
+    threshold,
+    tmpThreshold,
+  ])
+
+  // Once the popover trigger is available we have to:
   // - add a first tag with ellipsis when the first tag does not fit in the parent container
   // - adjust the size of the first tag we do this only when we show one tag and we have more hidden ones
   useEffect(() => {
-    if (popoverTriggerRef.current?.clientWidth) {
-      const newPopoverTriggerWidth = popoverTriggerRef.current.clientWidth
+    if (!isReady && popoverTriggerRef.current?.offsetWidth) {
+      const newPopoverTriggerWidth = popoverTriggerRef.current.offsetWidth
 
       // a check to know if we need to ellipsis the first tag when needed
       if (visibleTags.length === 1 && hiddenTags.length > 0) {
@@ -221,20 +241,22 @@ export const TagList = ({
 
       // add a first tag with ellipsis when the first tag does not fit in the parent container
       if (visibleTags.length === 0 && hiddenTags.length > 0) {
-        const [tagToMove, ...hiddenTagsRest] = hiddenTags
+        const [tagToMove, ...hiddenTagsCopy] = hiddenTags
 
         setVisibleTags([tagToMove])
-        setHiddenTags(hiddenTagsRest)
+        setHiddenTags(hiddenTagsCopy)
+        setIsReady(true)
 
         return
       }
 
       // remove the last tag if we have a popover and add it to the hidden tags
       const tagsContainer = containerRef.current
-      const tagsContainerWidth = containerRef.current?.clientWidth || 0
-      const parentWidth = tagsContainer?.parentElement?.clientWidth || 0
+      const tagsContainerWidth = containerRef.current?.offsetWidth || 0
+      const parentWidth = tagsContainer?.parentElement?.offsetWidth || 0
 
       if (
+        visibleTags.length > 1 &&
         hiddenTags.length > 0 &&
         tagsContainerWidth + newPopoverTriggerWidth > parentWidth
       ) {
@@ -245,15 +267,14 @@ export const TagList = ({
 
         setVisibleTags(visibleTagsCopy)
         setHiddenTags([tagToMove, ...hiddenTags])
+        setIsReady(true)
+
+        return
       }
+
+      setIsReady(true)
     }
-  }, [
-    popoverTriggerRef,
-    hiddenTags,
-    threshold,
-    visibleTags,
-    visibleTags.length,
-  ])
+  }, [hiddenTags, isReady, threshold, visibleTags, visibleTags.length])
 
   if (!tags.length) {
     return null
@@ -274,7 +295,13 @@ export const TagList = ({
   )
 
   return (
-    <StyledContainer className={className} data-testid={dataTestId}>
+    <StyledContainer
+      className={className}
+      data-testid={dataTestId}
+      style={{
+        visibility: isReady ? 'visible' : 'hidden',
+      }}
+    >
       <StyledTagContainer
         gap={TAGS_GAP}
         multiline={multiline}
@@ -286,7 +313,7 @@ export const TagList = ({
             tag,
             index,
             // add ellipsis to first tag when it's the only that could fit in the parent container
-            index === 0 && visibleTags.length === 1 && hiddenTags.length > 0,
+            index === 0 && visibleTags.length === 1,
           ),
         )}
       </StyledTagContainer>
