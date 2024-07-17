@@ -82,4 +82,5 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Double } from './Double.stories'
+export { PossibleValues } from './PossibleValues.stories'
 export { Required } from './Required.stories'
