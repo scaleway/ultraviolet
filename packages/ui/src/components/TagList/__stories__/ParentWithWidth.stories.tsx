@@ -5,13 +5,11 @@ import { Stack } from '../../Stack'
 export const ParentWithDefinedWidth: StoryFn<typeof TagList> = args => (
   <Stack gap={2}>
     <div style={{ width: '250px', border: '1px solid gray', padding: '10px' }}>
-      {/* @ts-expect-error we want to set a default title */}
-      <TagList popoverTitle="Additional" {...args} />
+      <TagList {...args} />
     </div>
 
     <div style={{ width: '100px', border: '1px solid gray', padding: '10px' }}>
-      {/* @ts-expect-error we want to set a default title */}
-      <TagList popoverTitle="Additional" {...args} />
+      <TagList {...args} />
     </div>
   </Stack>
 )
@@ -28,4 +26,5 @@ ParentWithDefinedWidth.parameters = {
 ParentWithDefinedWidth.args = {
   tags: ['smooth', 'code', 'hello', 'world', 'please', 'work'],
   threshold: 5,
+  popoverTitle: 'Additional',
 }

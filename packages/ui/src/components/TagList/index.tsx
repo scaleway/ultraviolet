@@ -159,21 +159,49 @@ export const TagList = ({
     }
 
     const parentWidth = containerRef.current.parentElement?.clientWidth || 0
-    let accumulatedWidth = 0
-    const measuredVisibleTags = []
-    const measuredHiddenTags = []
 
-    const measureElements = measureRef.current.children[0].children
-    for (let i = 0; i < measureElements.length; i += 1) {
-      accumulatedWidth +=
-        (measureElements[i] as HTMLDivElement).offsetWidth +
-        parseInt(TAGS_GAP, 10)
-      if (accumulatedWidth <= parentWidth) {
-        measuredVisibleTags.push(tags[i])
-      } else {
-        measuredHiddenTags.push(tags[i])
-      }
-    }
+    const measureElements: HTMLCollection =
+      measureRef.current.children[0].children
+
+    const { measuredVisibleTags, measuredHiddenTags } = [
+      ...measureElements,
+    ].reduce(
+      (
+        accumulator: {
+          measuredVisibleTags: TagType[]
+          measuredHiddenTags: TagType[]
+          accumulatedWidth: number
+        },
+        currentValue,
+        index,
+      ): {
+        measuredVisibleTags: TagType[]
+        measuredHiddenTags: TagType[]
+        accumulatedWidth: number
+      } => {
+        const newAccumulatedWidth =
+          accumulator.accumulatedWidth +
+          (currentValue as HTMLDivElement).offsetWidth +
+          parseInt(TAGS_GAP, 10)
+
+        return {
+          measuredVisibleTags: [
+            ...accumulator.measuredVisibleTags,
+            newAccumulatedWidth <= parentWidth && tags[index],
+          ].filter(Boolean) as TagType[],
+          measuredHiddenTags: [
+            ...accumulator.measuredHiddenTags,
+            newAccumulatedWidth > parentWidth && tags[index],
+          ].filter(Boolean) as TagType[],
+          accumulatedWidth: newAccumulatedWidth,
+        }
+      },
+      {
+        measuredVisibleTags: [],
+        measuredHiddenTags: [],
+        accumulatedWidth: 0,
+      },
+    )
 
     setVisibleTags(measuredVisibleTags)
     setHiddenTags(measuredHiddenTags.concat(surelyHiddenTags))
@@ -193,14 +221,10 @@ export const TagList = ({
 
       // add a first tag with ellipsis when the first tag does not fit in the parent container
       if (visibleTags.length === 0 && hiddenTags.length > 0) {
-        const visibleTagsCopy = [...visibleTags]
-        const hiddenTagsCopy = [...hiddenTags]
+        const [tagToMove, ...hiddenTagsRest] = hiddenTags
 
-        const tagToMove = hiddenTagsCopy.pop()
-        visibleTagsCopy.push(tagToMove as TagType)
-
-        setVisibleTags(visibleTagsCopy)
-        setHiddenTags(hiddenTagsCopy)
+        setVisibleTags([tagToMove])
+        setHiddenTags(hiddenTagsRest)
 
         return
       }
@@ -214,17 +238,22 @@ export const TagList = ({
         hiddenTags.length > 0 &&
         tagsContainerWidth + newPopoverTriggerWidth > parentWidth
       ) {
-        const visibleTagsCopy = [...visibleTags]
-        const hiddenTagsCopy = [...hiddenTags]
-
-        const tagToMove = visibleTagsCopy.pop()
-        hiddenTagsCopy.unshift(tagToMove as TagType)
+        const visibleTagsCopy = visibleTags.filter(
+          (_, index) => index < visibleTags.length - 1,
+        )
+        const tagToMove = visibleTags[visibleTags.length - 1]
 
         setVisibleTags(visibleTagsCopy)
-        setHiddenTags(hiddenTagsCopy)
+        setHiddenTags([tagToMove, ...hiddenTags])
       }
     }
-  }, [hiddenTags, threshold, visibleTags, visibleTags.length])
+  }, [
+    popoverTriggerRef,
+    hiddenTags,
+    threshold,
+    visibleTags,
+    visibleTags.length,
+  ])
 
   if (!tags.length) {
     return null

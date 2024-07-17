@@ -2,4 +2,4 @@
 "@ultraviolet/ui": minor
 ---
 
-refactor: improve tagslist component
+Refactoring of `<TagsList />` component to improve display of long text elements
