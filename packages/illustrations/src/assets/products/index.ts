@@ -17,6 +17,7 @@ import * as dediboxVps from './dediboxVps'
 import * as distributedDataLab from './distributedDataLab'
 import * as documentDB from './documentDB'
 import * as domainsAndDns from './domainsAndDns'
+import * as edgeServices from './edgeServices'
 import * as elasticMetal from './elasticMetal'
 import * as functions from './functions'
 import * as iam from './iam'
@@ -32,11 +33,13 @@ import * as k8sKosmos from './k8sKosmos'
 import * as kms from './kms'
 import * as loadBalancers from './loadBalancers'
 import * as managedDatabase from './managedDatabase'
+import * as managedSearchDatabase from './managedSearchDatabase'
 import * as nabu from './nabu'
 import * as nats from './nats'
 import * as objectStorage from './objectStorage'
 import * as publicGateway from './publicGateway'
 import * as quantum from './quantum'
+import * as quantumApplication from './quantumApplication'
 import * as redis from './redis'
 import * as savingsPlan from './savingsPlan'
 import * as secretManager from './secretManager'
@@ -65,6 +68,7 @@ export {
   distributedDataLab,
   documentDB,
   domainsAndDns,
+  edgeServices,
   elasticMetal,
   functions,
   iam,
@@ -80,11 +84,13 @@ export {
   kms,
   loadBalancers,
   managedDatabase,
+  managedSearchDatabase,
   nabu,
   nats,
   objectStorage,
   publicGateway,
   quantum,
+  quantumApplication,
   redis,
   savingsPlan,
   secretManager,

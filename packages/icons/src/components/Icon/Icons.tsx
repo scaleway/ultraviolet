@@ -84,6 +84,7 @@ import { ReactComponent as folderOutline } from './assets/default-outline/folder
 import { ReactComponent as helpCircleOutline } from './assets/default-outline/help-circle.svg'
 import { ReactComponent as idOutline } from './assets/default-outline/id.svg'
 import { ReactComponent as informationOutline } from './assets/default-outline/information.svg'
+import { ReactComponent as lightBulbOutline } from './assets/default-outline/light-bulb.svg'
 import { ReactComponent as lockOutline } from './assets/default-outline/lock.svg'
 import { ReactComponent as membersOutline } from './assets/default-outline/members.svg'
 import { ReactComponent as moonOutline } from './assets/default-outline/moon.svg'
@@ -130,6 +131,7 @@ import { ReactComponent as folder } from './assets/default-solid/folder.svg'
 import { ReactComponent as helpCircle } from './assets/default-solid/help-circle.svg'
 import { ReactComponent as id } from './assets/default-solid/id.svg'
 import { ReactComponent as information } from './assets/default-solid/information.svg'
+import { ReactComponent as lightBulb } from './assets/default-solid/light-bulb.svg'
 import { ReactComponent as lock } from './assets/default-solid/lock.svg'
 import { ReactComponent as members } from './assets/default-solid/members.svg'
 import { ReactComponent as moon } from './assets/default-solid/moon.svg'
@@ -259,6 +261,7 @@ export const ICONS = {
     pin,
     unpin,
     sparkles,
+    'light-bulb': lightBulb,
   },
   outlined: {
     anchor,
@@ -367,5 +370,6 @@ export const ICONS = {
     pin: pinOutline,
     unpin: unpinOutline,
     sparkles: sparklesOutline,
+    'light-bulb': lightBulbOutline,
   },
 } as const

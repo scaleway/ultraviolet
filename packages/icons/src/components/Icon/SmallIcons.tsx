@@ -84,6 +84,7 @@ import { ReactComponent as folderOutline } from './assets/small-outline/folder.s
 import { ReactComponent as helpCircleOutline } from './assets/small-outline/help-circle.svg'
 import { ReactComponent as idOutline } from './assets/small-outline/id.svg'
 import { ReactComponent as informationOutline } from './assets/small-outline/information.svg'
+import { ReactComponent as lightBubleOutline } from './assets/small-outline/light-bulb.svg'
 import { ReactComponent as lockOutline } from './assets/small-outline/lock.svg'
 import { ReactComponent as membersOutline } from './assets/small-outline/members.svg'
 import { ReactComponent as moonOutline } from './assets/small-outline/moon.svg'
@@ -130,6 +131,7 @@ import { ReactComponent as folder } from './assets/small-solid/folder.svg'
 import { ReactComponent as helpCircle } from './assets/small-solid/help-circle.svg'
 import { ReactComponent as id } from './assets/small-solid/id.svg'
 import { ReactComponent as information } from './assets/small-solid/information.svg'
+import { ReactComponent as lightBulb } from './assets/small-solid/light-bulb.svg'
 import { ReactComponent as lock } from './assets/small-solid/lock.svg'
 import { ReactComponent as members } from './assets/small-solid/members.svg'
 import { ReactComponent as moon } from './assets/small-solid/moon.svg'
@@ -259,6 +261,7 @@ export const SMALL_ICONS = {
     pin,
     unpin,
     sparkles,
+    'light-bulb': lightBulb,
   },
   outlined: {
     anchor,
@@ -367,5 +370,6 @@ export const SMALL_ICONS = {
     pin: pinOutline,
     unpin: unpinOutline,
     sparkles: sparklesOutline,
+    'light-bulb': lightBubleOutline,
   },
 } as const
