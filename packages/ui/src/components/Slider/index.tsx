@@ -38,6 +38,7 @@ export const Slider = ({
   tooltipPosition = 'top',
   'aria-label': ariaLabel,
 }: SliderProps) => {
+  // we check if options exists if so we set the bounds to the length of the options
   const correctedBounds = options
     ? { min: 0, max: Array.isArray(options) ? options.length - 1 : max }
     : { min, max }

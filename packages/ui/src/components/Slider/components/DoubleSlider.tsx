@@ -135,7 +135,7 @@ export const DoubleSlider = ({
       : [min ?? 0, max ?? 1]
   const [computedValues, setComputedValues] = useState(safeValue)
   const [valueToShow, setValuesToShow] = useState<(number | null)[]>(
-    options ? safeValue.map(val => options[val].value) : safeValue,
+    options ? safeValue.map(val => options[val].value) : safeValue, // if options are provided, we use the value from the options
   )
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
@@ -172,6 +172,7 @@ export const DoubleSlider = ({
 
   const onChangeCallback = useCallback(
     (localValue: (number | null)[]) => {
+      // If the option exists we will search into it to get the value
       setValuesToShow(
         options
           ? localValue?.map(val => (val ? options[val]?.value : val))

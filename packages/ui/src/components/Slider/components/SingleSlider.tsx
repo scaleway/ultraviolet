@@ -105,7 +105,7 @@ export const SingleSlider = ({
   const safeValue = value ?? min
   const [computedValue, setComputedValue] = useState(safeValue)
   const [valueToShow, setValueToShow] = useState<number | null>(
-    options ? options[safeValue].value : safeValue,
+    options ? options[safeValue].value : safeValue, // if option exists we get the index of the current value in the options array and get the value of it
   )
   const refSlider = useRef<HTMLInputElement>(null)
   const [sliderWidth, setWidth] = useState(
@@ -159,7 +159,7 @@ export const SingleSlider = ({
     (newValue: number) => {
       if (options) {
         // Custom scale
-        const optionLabel = options[newValue].value
+        const optionLabel = options[newValue].value // we use the index of the option to get the value
         setCustomValue(optionLabel)
       }
       onChangeCallback(newValue)
