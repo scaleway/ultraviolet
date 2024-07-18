@@ -12,6 +12,8 @@ import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { ToastButton } from './components/Button'
+import { ToastLink } from './components/Link'
 import style from './react-toastify.css?inline'
 
 const PREFIX = '.Toastify'
@@ -66,9 +68,12 @@ type CloseButtonProps = {
 const StyledButton = styled(Button)`
   background: none;
   margin: auto;
+  margin-left: ${({ theme }) => theme.space['1']};
   &:hover,
   &:active {
     background: none;
+    box-shadow: none;
+    border: none;
   }
 `
 
@@ -90,10 +95,14 @@ type ContentProps = {
 }
 
 const Content = ({ children }: ContentProps) => (
-  <Stack gap={2} direction="row">
-    <Text variant="bodySmallStrong" as="span">
-      {children}
-    </Text>
+  <Stack gap={2} direction="row" width="100%">
+    {typeof children === 'string' ? (
+      <Text variant="bodySmallStrong" as="span">
+        {children}
+      </Text>
+    ) : (
+      children
+    )}
   </Stack>
 )
 
@@ -214,4 +223,9 @@ export const ToastContainer = ({
       </ClassNames>
     </>
   )
+}
+
+export const Toast = {
+  Button: ToastButton,
+  Link: ToastLink,
 }
