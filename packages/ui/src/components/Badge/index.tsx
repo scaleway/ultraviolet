@@ -29,6 +29,12 @@ export const PROMINENCES = {
   strong: 'strong',
 }
 
+export const TEXT_VARIANT = {
+  large: 'bodySmall',
+  medium: 'caption',
+  small: 'captionSmall',
+} as const
+
 /**
  * Generate all styles available for badge based on prominence and sentiments
  */
@@ -105,8 +111,6 @@ const StyledSpan = styled(Text, {
   width: fit-content;
   height: ${({ size }) => size}px;
   text-transform: uppercase;
-  font-size: ${({ fontSize }) => fontSize}px;
-  color: inherit;
   ${({ sentimentStyles }) => sentimentStyles}
 `
 
@@ -164,7 +168,7 @@ export const Badge = ({
         disabled ? generatedStyles['disabled'] : generatedStyles[sentiment]
       }
       size={sizeValue}
-      variant="bodyStrong"
+      variant={TEXT_VARIANT[size]}
       as="span"
       fontSize={TEXT_SIZES[size]}
       prominence={disabled ? 'weak' : 'default'}
