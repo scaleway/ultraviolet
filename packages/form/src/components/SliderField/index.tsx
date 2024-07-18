@@ -1,5 +1,10 @@
 import { Slider } from '@ultraviolet/ui'
-import type { ComponentProps, FocusEvent, ReactNode } from 'react'
+import {
+  type ComponentProps,
+  type FocusEvent,
+  type ReactNode,
+  useMemo,
+} from 'react'
 import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -29,6 +34,7 @@ export const SliderField = <
   label,
   value,
   defaultValue,
+  options,
   ...props
 }: SliderFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -47,23 +53,59 @@ export const SliderField = <
     },
   })
 
+  const finalValue = useMemo(() => {
+    if (options && field.value) {
+      if (!Array.isArray(field.value)) {
+        const processedValue = options
+          .map(option => option.value)
+          .indexOf(field.value)
+
+        return processedValue
+      }
+
+      if (Array.isArray(field.value)) {
+        const processedValue = (field.value as number[]).map(val =>
+          options.map(option => option.value).indexOf(val),
+        )
+
+        return processedValue
+      }
+    }
+
+    return field.value as number | number[]
+  }, [field.value, options])
+
   return (
     <Slider
       name={field.name}
-      value={field.value}
+      value={finalValue as PathValue<TFieldValues, Path<TFieldValues>>}
       onBlur={(event: FocusEvent<HTMLInputElement>) => {
         field.onBlur()
         onBlur?.(event)
       }}
       onChange={(newValue: number | number[]) => {
-        field.onChange(newValue)
-        onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
+        if (options) {
+          const processedValue = !Array.isArray(newValue)
+            ? options[newValue].value
+            : newValue.map((val: number) =>
+                val ? options[val].value : options[0].value,
+              )
+
+          field.onChange(processedValue)
+          onChange?.(
+            processedValue as PathValue<TFieldValues, Path<TFieldValues>>,
+          )
+        } else {
+          field.onChange(newValue)
+          onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
+        }
       }}
       max={max}
       min={min}
       error={getError({ label: label ?? '', max, min }, error)}
       label={label}
       required={required}
+      options={options}
       {...props}
     />
   )

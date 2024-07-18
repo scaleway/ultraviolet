@@ -1,15 +1,11 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { SLIDER_WIDTH, THUMB_SIZE } from '../constant'
-import {
-  StyledNumberInput,
-  StyledTooltip,
-  thumbStyle,
-  trackStyle,
-} from '../styles'
+import { StyledTooltip, thumbStyle, trackStyle } from '../styles'
 import type { DoubleSliderProps } from '../types'
 import { Label } from './Label'
 import { Options } from './Options'
@@ -118,7 +114,6 @@ export const DoubleSlider = ({
   id,
   onBlur,
   onFocus,
-  possibleValues,
   options,
   unit,
   label,
@@ -139,7 +134,9 @@ export const DoubleSlider = ({
       ? value
       : [min ?? 0, max ?? 1]
   const [computedValues, setComputedValues] = useState(safeValue)
-  const [valueToShow, setValuesToShow] = useState<(number | null)[]>(safeValue)
+  const [valueToShow, setValuesToShow] = useState<(number | null)[]>(
+    options ? safeValue.map(val => options[val].value) : safeValue, // if options are provided, we use the value from the options
+  )
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
   )
@@ -163,36 +160,24 @@ export const DoubleSlider = ({
   }
 
   const ticks = useMemo(() => {
-    if (options === true) {
-      return Array.from({ length: max - min + 1 }, (_, index) => ({
-        value: min + index * step,
-        label: String(min + index * step),
-      })).filter(element => element.value <= max && element.value >= min)
-    }
-    if (options) return options
-    if (possibleValues) {
-      return possibleValues.map((element, index) => ({
+    if (options) {
+      return options.map((element, index) => ({
         value: index,
-        label: String(element),
+        label: element.label,
       }))
     }
 
     return []
-  }, [max, min, options, possibleValues, step])
-
-  // Default value to be coherent with a custom scale when one is defined
-  useEffect(() => {
-    if (possibleValues) {
-      setCustomValue([
-        possibleValues[Math.min(...computedValues)],
-        possibleValues[Math.max(...computedValues)],
-      ])
-    }
-  }, [possibleValues, computedValues])
+  }, [options])
 
   const onChangeCallback = useCallback(
     (localValue: (number | null)[]) => {
-      setValuesToShow(localValue)
+      // If the option exists we will search into it to get the value
+      setValuesToShow(
+        options
+          ? localValue?.map(val => (val ? options[val]?.value : val))
+          : localValue,
+      )
 
       const leftSliderValue = localValue[0] === null ? min : localValue[0]
       const rightSliderValue = localValue[1] === null ? max : localValue[1]
@@ -201,7 +186,7 @@ export const DoubleSlider = ({
       setComputedValues(newValues)
       onChange?.([Math.min(...newValues), Math.max(...newValues)])
     },
-    [max, min, onChange],
+    [max, min, onChange, options],
   )
 
   // Get slider size (for options)
@@ -216,42 +201,28 @@ export const DoubleSlider = ({
     }
   }, [])
 
-  const handleMinChange = (newVal: number) => {
-    if (possibleValues) {
-      // Custom scale
-      const optionLabel = possibleValues[newVal]
+  const handleMinChange = (newValue: number) => {
+    if (options) {
+      const optionLabel = options[newValue].value
       const newCustomValue = [
         optionLabel,
-        customValue ? customValue[1] : computedValues[1],
+        customValue ? customValue[1] : options[computedValues[1]].value,
       ]
       setCustomValue(newCustomValue)
-      onChange?.([Math.min(...newCustomValue), Math.max(...newCustomValue)])
-    } else {
-      onChange?.([
-        Math.min(newVal, computedValues[1]),
-        Math.max(newVal, computedValues[1]),
-      ])
     }
-    onChangeCallback([newVal, computedValues[1]])
+    onChangeCallback([newValue, computedValues[1]])
   }
 
-  const handleMaxChange = (newVal: number) => {
-    if (possibleValues) {
-      // Custom scale
-      const optionLabel = possibleValues[newVal]
+  const handleMaxChange = (newValue: number) => {
+    if (options) {
+      const optionLabel = options[newValue].value
       const newCustomValue = [
-        customValue ? customValue[0] : computedValues[0],
+        customValue ? customValue[0] : options[computedValues[0]].value,
         optionLabel,
       ]
       setCustomValue(newCustomValue)
-      onChange?.([Math.min(...newCustomValue), Math.max(...newCustomValue)])
-    } else {
-      onChange?.([
-        Math.min(newVal, computedValues[0]),
-        Math.max(newVal, computedValues[0]),
-      ])
     }
-    onChangeCallback([computedValues[0], newVal])
+    onChangeCallback([computedValues[0], newValue])
   }
 
   const handleChangeInput = (val: number, side?: 'left' | 'right') => {
@@ -276,8 +247,8 @@ export const DoubleSlider = ({
     valueNumber: string | number | null,
     side?: 'left' | 'right',
   ) =>
-    input && (!options || options === true) && !possibleValues ? (
-      <StyledNumberInput
+    input && !options ? (
+      <NumberInputV2
         value={
           typeof valueNumber === 'string'
             ? parseFloat(valueNumber)
@@ -389,7 +360,6 @@ export const DoubleSlider = ({
               'left',
             )
           : null}
-
         <DoubleSliderWrapper>
           <StyledTooltip
             text={typeof tooltipText === 'string' ? tooltipText : undefined}
@@ -468,19 +438,17 @@ export const DoubleSlider = ({
               />
             </StyledTooltip>
           </StyledTooltip>
-          {options || possibleValues ? (
+          {options ? (
             <Options
               ticks={ticks}
               min={min}
               max={max}
               sliderWidth={sliderWidth}
-              unit={unit}
               value={computedValues}
               step={step}
             />
           ) : null}
         </DoubleSliderWrapper>
-
         {direction === 'row'
           ? styledValue(
               customValue ? customValue[1] : valueToShow[activeValue('right')],

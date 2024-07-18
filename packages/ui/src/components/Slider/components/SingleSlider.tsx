@@ -1,15 +1,11 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { SLIDER_WIDTH, THUMB_SIZE } from '../constant'
-import {
-  StyledNumberInput,
-  StyledTooltip,
-  thumbStyle,
-  trackStyle,
-} from '../styles'
+import { StyledTooltip, thumbStyle, trackStyle } from '../styles'
 import type { SingleSliderProps } from '../types'
 import { Label } from './Label'
 import { Options } from './Options'
@@ -93,7 +89,6 @@ export const SingleSlider = ({
   onBlur,
   unit,
   options,
-  possibleValues,
   onFocus,
   className,
   label,
@@ -109,7 +104,9 @@ export const SingleSlider = ({
   const finalId = id ?? localId
   const safeValue = value ?? min
   const [computedValue, setComputedValue] = useState(safeValue)
-  const [valueToShow, setValueToShow] = useState<number | null>(safeValue)
+  const [valueToShow, setValueToShow] = useState<number | null>(
+    options ? options[safeValue].value : safeValue, // if option exists we get the index of the current value in the options array and get the value of it
+  )
   const refSlider = useRef<HTMLInputElement>(null)
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
@@ -117,38 +114,24 @@ export const SingleSlider = ({
   const [customValue, setCustomValue] = useState<undefined | number>(undefined)
 
   const ticks = useMemo(() => {
-    if (options === true) {
-      return Array.from({ length: max - min + 1 }, (_, index) => ({
-        value: min + index * step,
-        label: String(min + index * step),
-      })).filter(element => element.value <= max && element.value >= min)
-    }
-    if (options) return options
-    if (possibleValues) {
-      return possibleValues.map((element, index) => ({
+    if (options) {
+      return options.map((element, index) => ({
         value: index,
-        label: String(element),
+        label: element.label,
       }))
     }
 
     return []
-  }, [max, min, options, possibleValues, step])
+  }, [options])
 
   const onChangeCallback = useCallback(
-    (newValue: number | null) => {
-      setValueToShow(newValue)
+    (newValue: number) => {
+      setValueToShow(options ? options[newValue].value : newValue)
       setComputedValue(newValue ?? min)
       onChange?.(newValue ?? min)
     },
-    [min, onChange],
+    [min, onChange, options],
   )
-
-  // Default value to be coherent with a custom scale when one is defined
-  useEffect(() => {
-    if (possibleValues) {
-      setCustomValue(possibleValues[computedValue])
-    }
-  }, [possibleValues, computedValue])
 
   // Make sure that min <= value <= max
   useEffect(() => {
@@ -174,16 +157,14 @@ export const SingleSlider = ({
 
   const handleChange = useCallback(
     (newValue: number) => {
-      if (possibleValues) {
+      if (options) {
         // Custom scale
-        const optionLabel = possibleValues[newValue ?? min]
+        const optionLabel = options[newValue].value // we use the index of the option to get the value
         setCustomValue(optionLabel)
-        onChangeCallback(newValue)
-      } else {
-        onChangeCallback(newValue)
       }
+      onChangeCallback(newValue)
     },
-    [min, onChangeCallback, possibleValues],
+    [onChangeCallback, options],
   )
 
   const leftPosition = useMemo(
@@ -199,8 +180,8 @@ export const SingleSlider = ({
   )
 
   const styledValue = (valueNumber: string | number | null) =>
-    input && (!options || options === true) && !possibleValues ? (
-      <StyledNumberInput
+    input && !options ? (
+      <NumberInputV2
         value={
           typeof valueNumber === 'string'
             ? parseFloat(valueNumber)
@@ -217,7 +198,7 @@ export const SingleSlider = ({
         onChange={newVal => {
           if (newVal) {
             onChangeCallback(newVal)
-          } else onChangeCallback(null)
+          } else onChangeCallback(0)
         }}
         onBlur={event => {
           if (!event.target.value) onChangeCallback(min)
@@ -308,13 +289,12 @@ export const SingleSlider = ({
             left={leftPosition}
           />
         </StyledTooltip>
-        {options || possibleValues ? (
+        {options ? (
           <Options
             ticks={ticks}
             min={min}
             max={max}
             sliderWidth={sliderWidth}
-            unit={unit}
             value={computedValue}
             step={step}
           />

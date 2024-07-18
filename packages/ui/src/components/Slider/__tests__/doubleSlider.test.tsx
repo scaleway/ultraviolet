@@ -5,10 +5,11 @@ import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Slider } from '..'
 
 const options = [
-  { label: '1 Mb', value: 1 },
-  { label: '30MB', value: 30 },
+  { label: '1Mb', value: 1 },
+  { label: '10MB', value: 10 },
+  { label: '100Mb', value: 100 },
+  { label: '200Mb', value: 200 },
 ]
-const scale = [1, 2, 3, 4, 5, 10, 15, 20, 25]
 
 describe('Double slider', () => {
   beforeEach(() => {
@@ -134,21 +135,14 @@ describe('Double slider', () => {
 
   test('renders correctly double with default ticks', () => {
     shouldMatchEmotionSnapshot(
-      <Slider
-        value={[12, 14]}
-        name="Name"
-        label="Label"
-        options
-        double
-        unit="%"
-      />,
+      <Slider value={[12, 14]} name="Name" label="Label" double unit="%" />,
     )
   })
 
   test('renders correctly double with custom ticks', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[12, 14]}
+        value={[0, 3]}
         name="Name"
         label="Label"
         options={options}
@@ -160,10 +154,10 @@ describe('Double slider', () => {
   test('renders correctly double with custom scale', () => {
     shouldMatchEmotionSnapshot(
       <Slider
-        value={[12, 14]}
+        value={[0, 3]}
         name="Name"
         label="Label"
-        possibleValues={scale}
+        options={options}
         double
       />,
     )
@@ -265,9 +259,10 @@ describe('Double slider', () => {
         name="slider"
         onChange={onChange}
         data-testid="slider"
-        value={[2, 4]}
+        value={[1, 3]}
         double
-        possibleValues={[1, 3, 5, 6, 10]}
+        unit="Mb"
+        options={options}
       />,
     )
     const sliderRight = screen.getByTestId<HTMLInputElement>('slider-right')
@@ -276,19 +271,19 @@ describe('Double slider', () => {
     const valueRight = screen.getByTestId('slider-value-right')
     const valueLeft = screen.getByTestId('slider-value-left')
 
-    expect(sliderRight.value).toBe('4')
-    expect(valueRight).toHaveTextContent('10')
-
-    fireEvent.change(sliderRight, { target: { value: '3' } })
     expect(sliderRight.value).toBe('3')
-    expect(valueRight).toHaveTextContent('6')
+    expect(valueRight).toHaveTextContent('200Mb')
 
-    expect(sliderLeft.value).toBe('2')
-    expect(valueLeft).toHaveTextContent('5')
+    fireEvent.change(sliderRight, { target: { value: '2' } })
+    expect(sliderRight.value).toBe('2')
+    expect(valueRight).toHaveTextContent('100Mb')
 
-    fireEvent.change(sliderLeft, { target: { value: '1' } })
     expect(sliderLeft.value).toBe('1')
-    expect(valueLeft).toHaveTextContent('3')
+    expect(valueLeft).toHaveTextContent('10Mb')
+
+    fireEvent.change(sliderLeft, { target: { value: '0' } })
+    expect(sliderLeft.value).toBe('0')
+    expect(valueLeft).toHaveTextContent('1Mb')
     expect(asFragment()).toMatchSnapshot()
   })
 })

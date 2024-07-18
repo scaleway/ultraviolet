@@ -50,13 +50,9 @@ type DefaultProps = {
    */
   error?: string | boolean
   /**
-   * The labels/ticks to show, which will *not* impact the scale
+   * Options for a non-linear scale, overrides `min`, `max`. This is usefull if step is not enough to get the desired granularity.
    */
-  options?: { value: number; label?: string }[] | boolean
-  /**
-   * Possible values for a non-linear scale
-   */
-  possibleValues?: number[]
+  options?: { value: number; label?: string }[]
 
   'data-testid'?: string
 } & Pick<
@@ -108,17 +104,4 @@ export type LabelProps = {
   required?: boolean
   label?: string
   finalId: string
-}
-
-export type OptionsProps = {
-  ticks: {
-    value: number
-    label?: string | undefined
-  }[]
-  min: number
-  max: number
-  sliderWidth: number
-  unit?: string
-  value: number | number[]
-  step: number
 }

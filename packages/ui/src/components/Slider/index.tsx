@@ -21,7 +21,6 @@ export const Slider = ({
   unit,
   suffix,
   required,
-  possibleValues,
   disabled,
   error,
   options,
@@ -39,8 +38,9 @@ export const Slider = ({
   tooltipPosition = 'top',
   'aria-label': ariaLabel,
 }: SliderProps) => {
-  const correctedBounds = possibleValues
-    ? { min: 0, max: possibleValues.length - 1 }
+  // we check if options exists if so we set the bounds to the length of the options
+  const correctedBounds = options
+    ? { min: 0, max: Array.isArray(options) ? options.length - 1 : max }
     : { min, max }
   const gap = useMemo(() => {
     if (options) return 3
@@ -50,7 +50,12 @@ export const Slider = ({
   }, [options, input, double])
 
   return (
-    <SliderContainer aria-label={ariaLabel} data-options={!!options} gap={gap}>
+    <SliderContainer
+      aria-label={ariaLabel}
+      data-options={!!options}
+      data-double={double}
+      gap={gap}
+    >
       {double ? (
         <DoubleSlider
           name={name}
@@ -75,7 +80,6 @@ export const Slider = ({
           prefix={prefix}
           suffix={suffix as ReactNode[]}
           required={required}
-          possibleValues={possibleValues}
           direction={direction}
           aria-label={ariaLabel}
         />
@@ -104,7 +108,6 @@ export const Slider = ({
           unit={unit}
           suffix={suffix as ReactNode}
           required={required}
-          possibleValues={possibleValues}
           aria-label={ariaLabel}
         />
       )}
