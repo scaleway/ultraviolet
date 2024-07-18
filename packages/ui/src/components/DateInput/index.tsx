@@ -74,14 +74,24 @@ const StyledWrapper = styled.div`
       text-transform: capitalize;
     }
 
-    ${PREFIX}__day {
+    ${PREFIX}__day, ${PREFIX}__month {
       color: ${({ theme }) => theme.colors.neutral.textWeak};
       font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
       font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
-      width: 26px;
-      height: 26px;
       margin-left: 3px;
       margin-right: 3px;
+    }
+
+    ${PREFIX}__day {
+      width: 26px;
+      height: 26px;
+    }
+
+    ${PREFIX}__month-text {
+      height: 26px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
     }
 
     ${PREFIX}__day--outside-month {
@@ -90,7 +100,7 @@ const StyledWrapper = styled.div`
       font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
     }
 
-    ${PREFIX}__day--selected {
+    ${PREFIX}__day--selected, ${PREFIX}__month-text--selected {
       color: ${({ theme }) => theme.colors.primary.textStrong};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
@@ -150,12 +160,12 @@ const StyledWrapper = styled.div`
       }
     }
 
-    ${PREFIX}__day--keyboard-selected {
+    ${PREFIX}__day--keyboard-selected, ${PREFIX}__month-text--keyboard-selected {
       color: ${({ theme }) => theme.colors.primary.textStrong};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
     }
 
-    ${PREFIX}__day:hover {
+    ${PREFIX}__day:hover, ${PREFIX}__month-text:hover {
       color: ${({ theme }) => theme.colors.neutral.textHover};
       background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
     }
@@ -177,7 +187,7 @@ const StyledText = styled(Text)`
 
 type DateInputProps = Pick<
   ReactDatePickerProps<boolean | undefined, boolean>,
-  'locale' | 'onChange'
+  'locale' | 'onChange' | 'showMonthYearPicker'
 > & {
   autoFocus?: boolean
   disabled?: boolean
@@ -243,6 +253,7 @@ export const DateInput = ({
   size = 'large',
   readOnly = false,
   tooltip,
+  showMonthYearPicker,
   'data-testid': dataTestId,
 }: DateInputProps) => {
   const uniqueId = useId()
@@ -323,6 +334,8 @@ export const DateInput = ({
           maxDate={maxDate}
           startDate={startDate}
           endDate={endDate}
+          showMonthYearPicker={showMonthYearPicker}
+          dateFormat={showMonthYearPicker ? 'MM/yyyy' : undefined}
           renderCustomHeader={({
             date,
             decreaseMonth,
