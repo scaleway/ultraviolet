@@ -2,7 +2,7 @@ import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { afterAll, beforeAll, describe, expect, test, vi } from 'vitest'
-import { Alert } from '..'
+import { ALERT_SENTIMENTS, Alert } from '..'
 
 describe('Alert', () => {
   beforeAll(() => {
@@ -41,7 +41,7 @@ describe('Alert', () => {
     ))
 
   describe(`renders correctly with all sentiments`, () => {
-    ;(['info', 'warning', 'danger', 'success'] as const).forEach(sentiment => {
+    ALERT_SENTIMENTS.forEach(sentiment => {
       test(`renders correctly sentiment ${sentiment}`, () =>
         shouldMatchEmotionSnapshot(
           <Alert sentiment={sentiment}>Sample Alert</Alert>,

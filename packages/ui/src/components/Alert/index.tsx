@@ -13,6 +13,7 @@ export const ALERT_SENTIMENTS = [
   'info',
   'success',
   'warning',
+  'neutral',
 ] as const
 type AlertSentiment = (typeof ALERT_SENTIMENTS)[number]
 
@@ -23,6 +24,14 @@ const alertStyles = ({
   theme: Theme
   sentiment: AlertSentiment
 }): SerializedStyles => {
+  if (sentiment === 'neutral') {
+    return css`
+        background-color: ${theme.colors.neutral.backgroundWeak};
+        color: ${theme.colors.neutral.text};
+        border-left: 4px solid ${theme.colors.neutral.borderStronger};
+      `
+  }
+
   const sentimentColor = theme.colors[sentiment]
 
   return css`
@@ -40,6 +49,7 @@ const typesDefaultIcons: Record<
   info: 'information-outline',
   success: 'checkbox-circle-outline',
   danger: 'alert',
+  neutral: 'light-bulb',
 }
 
 const StyledStackContainer = styled(Stack, {
@@ -125,6 +135,8 @@ export const Alert = ({
             name={typesDefaultIcons[sentiment]}
             size={24}
             aria-hidden="true"
+            prominence={sentiment === 'neutral' ? 'strong' : undefined}
+            sentiment={sentiment}
           />
           <TextStack gap={0.5} direction="row">
             {title ? (
