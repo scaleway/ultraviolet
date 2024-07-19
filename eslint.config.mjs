@@ -133,4 +133,11 @@ export default [
       'import/no-extraneous-dependencies': 'off',
     },
   },
+
+  {
+    files: ['packages/form/**'],
+    rules: {
+      'react/jsx-props-no-spreading': 'off',
+    },
+  },
 ]

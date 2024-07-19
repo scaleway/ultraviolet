@@ -9,20 +9,7 @@ type RadioFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
-  Partial<
-    Pick<
-      ComponentProps<typeof Radio>,
-      | 'disabled'
-      | 'id'
-      | 'onBlur'
-      | 'onFocus'
-      | 'data-testid'
-      | 'tooltip'
-      | 'label'
-    >
-  > & {
-    className?: string
-  }
+  Omit<ComponentProps<typeof Radio>, 'value' | 'onChange' | 'aria-label'>
 
 /**
  * @deprecated This component is deprecated, use `RadioGroupField` instead.
@@ -31,11 +18,9 @@ export const RadioField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
-  className,
   control,
   'data-testid': dataTestId,
   disabled,
-  id,
   name,
   onBlur,
   label = '',
@@ -43,9 +28,9 @@ export const RadioField = <
   onFocus,
   required,
   value,
-  tooltip,
   shouldUnregister = false,
   validate,
+  ...props
 }: RadioFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
@@ -63,13 +48,12 @@ export const RadioField = <
 
   return (
     <Radio
+      {...props}
       name={field.name}
       checked={field.value === value}
-      className={className}
       data-testid={dataTestId}
       disabled={disabled}
       error={getError({ label: typeof label === 'string' ? label : '' }, error)}
-      id={id}
       onChange={() => {
         field.onChange(value)
         onChange?.(value)
@@ -82,7 +66,6 @@ export const RadioField = <
       required={required}
       value={value ?? ''}
       label={label}
-      tooltip={tooltip}
     />
   )
 }
