@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.14.0
+
+### Minor Changes
+
+- [#4030](https://github.com/scaleway/ultraviolet/pull/4030) [`02c7d1e`](https://github.com/scaleway/ultraviolet/commit/02c7d1e6d106e2748d0acefdc72bab61adcd1396) Thanks [@matthprost](https://github.com/matthprost)! - - New system icon `light-bulb`
+  - `<ProductIcon />` component can now have `xsmall` size
+
 ## 2.13.2
 
 ### Patch Changes

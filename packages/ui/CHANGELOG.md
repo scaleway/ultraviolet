@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.63.0
+
+### Minor Changes
+
+- [#3985](https://github.com/scaleway/ultraviolet/pull/3985) [`6e576df`](https://github.com/scaleway/ultraviolet/commit/6e576df73521ede5b4ee1d714aeb8ed0bfe619ba) Thanks [@fabienhebert](https://github.com/fabienhebert)! - new component `ExpandableCard`
+
+### Patch Changes
+
+- [#4038](https://github.com/scaleway/ultraviolet/pull/4038) [`122b8b9`](https://github.com/scaleway/ultraviolet/commit/122b8b9aa2ea085e3e78b4888c1827a5d9e12de5) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Badge />` font weight on each sizes
+
+- [#4032](https://github.com/scaleway/ultraviolet/pull/4032) [`e797379`](https://github.com/scaleway/ultraviolet/commit/e797379928682b812130a4092ed29d951faa3909) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring on `<Slider />`:
+  - Prop `possibleValues` no longer exists and has been regroupped under `options` prop.
+- Updated dependencies [[`02c7d1e`](https://github.com/scaleway/ultraviolet/commit/02c7d1e6d106e2748d0acefdc72bab61adcd1396)]:
+  - @ultraviolet/icons@2.14.0
+
 ## 1.62.0
 
 ### Minor Changes
