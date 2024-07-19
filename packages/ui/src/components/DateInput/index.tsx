@@ -28,6 +28,7 @@ const StyledWrapper = styled.div`
 
   div${PREFIX}__month-container {
     padding: 16px;
+    width: 264px;
   }
 
   ${PREFIX}-popper {
@@ -347,7 +348,6 @@ export const DateInput = ({
               direction="row"
               alignItems="center"
               justifyContent="space-between"
-              gap={3}
             >
               <Button
                 size="small"
