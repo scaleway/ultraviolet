@@ -1,5 +1,17 @@
 # Change Log
 
+## 3.4.0
+
+### Minor Changes
+
+- [#4032](https://github.com/scaleway/ultraviolet/pull/4032) [`e797379`](https://github.com/scaleway/ultraviolet/commit/e797379928682b812130a4092ed29d951faa3909) Thanks [@matthprost](https://github.com/matthprost)! - `<SliderField />` now accepts a `options` prop instead of `possibleValues`.
+  The component will automatically set the value of each options in the form values so you don't have to do the matching on submit.
+
+### Patch Changes
+
+- Updated dependencies [[`122b8b9`](https://github.com/scaleway/ultraviolet/commit/122b8b9aa2ea085e3e78b4888c1827a5d9e12de5), [`e797379`](https://github.com/scaleway/ultraviolet/commit/e797379928682b812130a4092ed29d951faa3909), [`6e576df`](https://github.com/scaleway/ultraviolet/commit/6e576df73521ede5b4ee1d714aeb8ed0bfe619ba)]:
+  - @ultraviolet/ui@1.63.0
+
 ## 3.3.1
 
 ### Patch Changes

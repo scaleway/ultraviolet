@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 3.2.0
+
+### Minor Changes
+
+- [#4030](https://github.com/scaleway/ultraviolet/pull/4030) [`02c7d1e`](https://github.com/scaleway/ultraviolet/commit/02c7d1e6d106e2748d0acefdc72bab61adcd1396) Thanks [@matthprost](https://github.com/matthprost)! - New illustrations `edgeServices`, `managedSearchDatabase` and `quantumApplication`
+
 ## 3.1.2
 
 ### Patch Changes
