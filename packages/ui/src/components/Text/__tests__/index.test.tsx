@@ -55,7 +55,7 @@ describe('Text', () => {
       </div>,
     ))
 
-  test(`with multiple nested chidldren renders correctly`, () =>
+  test(`with multiple nested children renders correctly`, () =>
     shouldMatchEmotionSnapshot(
       <Text as="div" variant="body">
         Lorem
