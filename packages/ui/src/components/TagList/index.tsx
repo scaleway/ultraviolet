@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ComponentProps } from 'react'
-import { createPortal } from 'react-dom'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 
@@ -46,9 +45,9 @@ const StyledTagContainer = styled.div<{
         width: calc(100% - ${popoverTriggerWidth}px); // to let space for the +X button
         max-width: fit-content;
       }
-    
-      & * {
-        width: 100% !important;
+
+      & span, div {
+        width: 100%;
         max-width: fit-content;
       }
   `};
@@ -111,10 +110,10 @@ export const TagList = ({
   const measureRef = useRef<HTMLDivElement>(null)
   const popoverTriggerRef = useRef<HTMLDivElement>(null)
 
-  // a flag to keep of when we show the component as we we might update the visible tags list
-  // after the first render ( to know if we should add ellipsis to the first tag or readjust
-  // the tags when joined with the popover trigger might overflow the parent ) and this causes
-  // some flickering
+  // A flag to keep of when we show the component as we we might update the visible tags list
+  // after the first render ( to know if we should add ellipsis to the last visible tag
+  // or readjust the tags when joined with the popover trigger might overflow the parent )
+  // and this causes some flickering
   const [isReady, setIsReady] = useState(false)
 
   const [isPopoverVisible, setIsPopoverVisible] = useState(false)
@@ -150,7 +149,7 @@ export const TagList = ({
   const { tmpThreshold, potentiallyVisibleTags, surelyHiddenTags } =
     memoizedResult
 
-  // compute visible tags and hidden ones based on the container width and
+  // Compute visible tags and hidden ones based on the container width and
   // what can fit into it from the potentially visible tags
   useEffect(() => {
     if (!tags.length || !containerRef.current || !measureRef.current) {
@@ -167,48 +166,50 @@ export const TagList = ({
 
     const parentWidth = containerRef.current.parentElement?.offsetWidth || 0
 
-    const measureElements: HTMLCollection =
+    const toMeasureElements: HTMLCollection =
       measureRef.current.children[0].children
 
-    const { measuredVisibleTags, measuredHiddenTags } = [
-      ...measureElements,
-    ].reduce(
-      (
-        accumulator: {
+    const [firstTag, ...restOfToMeasureElements] = [...toMeasureElements]
+
+    const { measuredVisibleTags, measuredHiddenTags } =
+      restOfToMeasureElements.reduce(
+        (
+          accumulator: {
+            measuredVisibleTags: TagType[]
+            measuredHiddenTags: TagType[]
+            accumulatedWidth: number
+          },
+          currentValue,
+          index,
+        ): {
           measuredVisibleTags: TagType[]
           measuredHiddenTags: TagType[]
           accumulatedWidth: number
-        },
-        currentValue,
-        index,
-      ): {
-        measuredVisibleTags: TagType[]
-        measuredHiddenTags: TagType[]
-        accumulatedWidth: number
-      } => {
-        const newAccumulatedWidth =
-          accumulator.accumulatedWidth +
-          (currentValue as HTMLDivElement).offsetWidth +
-          parseInt(TAGS_GAP, 10)
+        } => {
+          const newAccumulatedWidth =
+            accumulator.accumulatedWidth +
+            (currentValue as HTMLDivElement).offsetWidth +
+            parseInt(TAGS_GAP, 10)
 
-        return {
-          measuredVisibleTags: [
-            ...accumulator.measuredVisibleTags,
-            newAccumulatedWidth <= parentWidth && tags[index],
-          ].filter(Boolean) as TagType[],
-          measuredHiddenTags: [
-            ...accumulator.measuredHiddenTags,
-            newAccumulatedWidth > parentWidth && tags[index],
-          ].filter(Boolean) as TagType[],
-          accumulatedWidth: newAccumulatedWidth,
-        }
-      },
-      {
-        measuredVisibleTags: [],
-        measuredHiddenTags: [],
-        accumulatedWidth: 0,
-      },
-    )
+          return {
+            measuredVisibleTags: [
+              ...accumulator.measuredVisibleTags,
+              newAccumulatedWidth <= parentWidth && tags[index + 1],
+            ].filter(Boolean) as TagType[],
+            measuredHiddenTags: [
+              ...accumulator.measuredHiddenTags,
+              newAccumulatedWidth > parentWidth && tags[index + 1],
+            ].filter(Boolean) as TagType[],
+            accumulatedWidth: newAccumulatedWidth,
+          }
+        },
+        {
+          measuredVisibleTags: [tags[0]], // we need to always show one tag
+          measuredHiddenTags: [],
+          accumulatedWidth:
+            (firstTag as HTMLDivElement).offsetWidth + parseInt(TAGS_GAP, 10),
+        },
+      )
 
     const finalHiddenTags = measuredHiddenTags.concat(surelyHiddenTags)
 
@@ -228,29 +229,16 @@ export const TagList = ({
   ])
 
   // Once the popover trigger is available we have to:
-  // - add a first tag with ellipsis when the first tag does not fit in the parent container
-  // - adjust the size of the first tag we do this only when we show one tag and we have more hidden ones
+  // - to get the popover trigger width so the last visible tags can have ellipsis if needed
+  // - remove the last tag if the popover have no place and push it in to the hidden tags list
   useEffect(() => {
     if (!isReady && popoverTriggerRef.current?.offsetWidth) {
       const newPopoverTriggerWidth = popoverTriggerRef.current.offsetWidth
 
-      // a check to know if we need to ellipsis the first tag when needed
-      if (visibleTags.length === 1 && hiddenTags.length > 0) {
-        setPopoverTriggerWidth(newPopoverTriggerWidth)
-      }
+      // Set popover trigger width
+      setPopoverTriggerWidth(newPopoverTriggerWidth)
 
-      // add a first tag with ellipsis when the first tag does not fit in the parent container
-      if (visibleTags.length === 0 && hiddenTags.length > 0) {
-        const [tagToMove, ...hiddenTagsCopy] = hiddenTags
-
-        setVisibleTags([tagToMove])
-        setHiddenTags(hiddenTagsCopy)
-        setIsReady(true)
-
-        return
-      }
-
-      // remove the last tag if we have a popover and add it to the hidden tags
+      // Remove the last tag if we have a popover and add it to the hidden tags
       const tagsContainer = containerRef.current
       const tagsContainerWidth = containerRef.current?.offsetWidth || 0
       const parentWidth = tagsContainer?.parentElement?.offsetWidth || 0
@@ -267,14 +255,18 @@ export const TagList = ({
 
         setVisibleTags(visibleTagsCopy)
         setHiddenTags([tagToMove, ...hiddenTags])
-        setIsReady(true)
-
-        return
       }
 
       setIsReady(true)
     }
   }, [hiddenTags, isReady, threshold, visibleTags, visibleTags.length])
+
+  // Remove the hidden div that served to measure the rendered tags
+  useEffect(() => {
+    if (isReady && measureRef.current?.parentNode) {
+      measureRef.current.remove()
+    }
+  }, [isReady])
 
   if (!tags.length) {
     return null
@@ -312,26 +304,24 @@ export const TagList = ({
           renderTag(
             tag,
             index,
-            // add ellipsis to first tag when it's the only that could fit in the parent container
-            index === 0 && visibleTags.length === 1,
+            // add ellipsis to last tag
+            index === visibleTags.length - 1,
           ),
         )}
       </StyledTagContainer>
-      {createPortal(
-        <div
-          ref={measureRef}
-          style={{
-            visibility: 'hidden',
-            position: 'absolute',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          <StyledTagContainer gap={TAGS_GAP}>
-            {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
-          </StyledTagContainer>
-        </div>,
-        document.body,
-      )}
+      {/* A hidden div which renders the tags so we can measure them */}
+      <div
+        ref={measureRef}
+        style={{
+          visibility: 'hidden',
+          position: 'absolute',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        <StyledTagContainer gap={TAGS_GAP}>
+          {potentiallyVisibleTags.map((tag, index) => renderTag(tag, index))}
+        </StyledTagContainer>
+      </div>
       {hiddenTags.length > 0 && (
         <Popover
           title={popoverTitle}

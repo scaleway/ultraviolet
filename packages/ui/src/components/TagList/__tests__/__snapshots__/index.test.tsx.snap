@@ -29,8 +29,9 @@ exports[`TagList > renders correctly 1`] = `
   max-width: fit-content;
 }
 
-.emotion-2 * {
-  width: 100%!important;
+.emotion-2 span,
+.emotion-2 div {
+  width: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -257,8 +258,9 @@ exports[`TagList > renders correctly and ignore custom threshold as it does not 
   max-width: fit-content;
 }
 
-.emotion-2 * {
-  width: 100%!important;
+.emotion-2 span,
+.emotion-2 div {
+  width: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -461,8 +463,8 @@ exports[`TagList > renders correctly with copiable 1`] = `
         class="emotion-2 emotion-3"
       >
         <div
-          aria-controls=":r12:"
-          aria-describedby=":r12:"
+          aria-controls=":r11:"
+          aria-describedby=":r11:"
           class="emotion-4 emotion-5"
           tabindex="0"
         >
@@ -477,13 +479,13 @@ exports[`TagList > renders correctly with copiable 1`] = `
           </button>
         </div>
         <div
-          aria-controls=":r14:"
-          aria-describedby=":r14:"
+          aria-controls=":r13:"
+          aria-describedby=":r13:"
           class="emotion-4 emotion-5"
           tabindex="0"
         >
           <button
-            class=" emotion-6 emotion-7"
+            class="ellipsed emotion-6 emotion-7"
           >
             <span
               class="emotion-8 emotion-9 emotion-10"
@@ -581,7 +583,7 @@ exports[`TagList > renders correctly with custom threshold 1`] = `
           </span>
         </span>
         <span
-          class=" emotion-4 emotion-5"
+          class="ellipsed emotion-4 emotion-5"
         >
           <span
             class="emotion-6 emotion-7 emotion-8"
@@ -615,6 +617,21 @@ exports[`TagList > renders correctly with custom threshold and extra tags 1`] = 
   align-items: center;
   color: #3f4250;
   gap: 8px;
+}
+
+.emotion-2:has(.ellipsed) {
+  width: calc(100% - 50px);
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.emotion-2 span,
+.emotion-2 div {
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .emotion-4 {
@@ -703,7 +720,7 @@ exports[`TagList > renders correctly with custom threshold and extra tags 1`] = 
           </span>
         </span>
         <span
-          class=" emotion-4 emotion-5"
+          class="ellipsed emotion-4 emotion-5"
         >
           <span
             class="emotion-6 emotion-7 emotion-8"
@@ -759,8 +776,9 @@ exports[`TagList > renders correctly with custom threshold and extra tags and ma
   max-width: fit-content;
 }
 
-.emotion-2 * {
-  width: 100%!important;
+.emotion-2 span,
+.emotion-2 div {
+  width: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -853,8 +871,8 @@ exports[`TagList > renders correctly with custom threshold and extra tags and ma
         </span>
       </div>
       <div
-        aria-controls=":ro:"
-        aria-describedby=":ro:"
+        aria-controls=":rn:"
+        aria-describedby=":rn:"
         class="emotion-9 emotion-10"
         tabindex="-1"
       >
@@ -963,8 +981,8 @@ exports[`TagList > renders correctly with icons 1`] = `
         class="emotion-2 emotion-3"
       >
         <div
-          aria-controls=":r1c:"
-          aria-describedby=":r1c:"
+          aria-controls=":r1b:"
+          aria-describedby=":r1b:"
           class="emotion-4 emotion-5"
           tabindex="0"
         >
@@ -979,13 +997,13 @@ exports[`TagList > renders correctly with icons 1`] = `
           </button>
         </div>
         <div
-          aria-controls=":r1e:"
-          aria-describedby=":r1e:"
+          aria-controls=":r1d:"
+          aria-describedby=":r1d:"
           class="emotion-4 emotion-5"
           tabindex="0"
         >
           <button
-            class=" emotion-6 emotion-7"
+            class="ellipsed emotion-6 emotion-7"
           >
             <span
               class="emotion-8 emotion-9 emotion-10"
@@ -1112,7 +1130,7 @@ exports[`TagList > renders correctly with multiline 1`] = `
           </span>
         </span>
         <span
-          class=" emotion-4 emotion-5"
+          class="ellipsed emotion-4 emotion-5"
         >
           <span
             class="emotion-6 emotion-7 emotion-8"
@@ -1122,8 +1140,8 @@ exports[`TagList > renders correctly with multiline 1`] = `
         </span>
       </div>
       <div
-        aria-controls=":rt:"
-        aria-describedby=":rt:"
+        aria-controls=":rs:"
+        aria-describedby=":rs:"
         class="emotion-14 emotion-15"
         tabindex="-1"
       >
@@ -1176,8 +1194,9 @@ exports[`TagList > renders correctly with placement 1`] = `
   max-width: fit-content;
 }
 
-.emotion-2 * {
-  width: 100%!important;
+.emotion-2 span,
+.emotion-2 div {
+  width: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
