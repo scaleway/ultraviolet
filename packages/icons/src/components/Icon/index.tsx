@@ -136,7 +136,7 @@ type IconProps = {
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
-      name = 'sparkles',
+      name = 'alert',
       color = 'currentColor',
       sentiment,
       size = '1em',
