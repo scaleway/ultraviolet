@@ -342,6 +342,7 @@ export const darkTheme = {
     none: '0',
     small: '2px',
     xlarge: '16px',
+    xxlarge: '24px',
   },
   shadows: {
     bulk: '0px 4px 32px 8px #0c0f1a66',
