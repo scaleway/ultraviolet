@@ -79,7 +79,7 @@ export const NavigationContext = createContext<ContextProps>({
   setPinnedItems: () => {},
   allowNavigationResize: true,
   setAllowNavigationResize: () => {},
-  shouldAnimate: false,
+  shouldAnimate: true,
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -132,7 +132,7 @@ export const NavigationProvider = ({
   onExpandChange,
   initialWidth = NAVIGATION_WIDTH,
   initialAllowNavigationResize = true,
-  animation: shouldAnimate = false,
+  animation: shouldAnimate = true,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
