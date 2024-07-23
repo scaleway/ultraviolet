@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.64.0
+
+### Minor Changes
+
+- [#4019](https://github.com/scaleway/ultraviolet/pull/4019) [`45e975e`](https://github.com/scaleway/ultraviolet/commit/45e975e3276c7f3164f2fd28d7563d3a170e0879) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - Refactoring of `<TagsList />` component to improve display of long text elements
+
 ## 1.63.0
 
 ### Minor Changes

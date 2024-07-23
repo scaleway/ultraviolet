@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.20.4
+
+### Patch Changes
+
+- [#4047](https://github.com/scaleway/ultraviolet/pull/4047) [`8e433f7`](https://github.com/scaleway/ultraviolet/commit/8e433f7a9352e161a2f375a78350d6eb4a6ef2bd) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` to have animation set to `true` by default
+
+- Updated dependencies [[`45e975e`](https://github.com/scaleway/ultraviolet/commit/45e975e3276c7f3164f2fd28d7563d3a170e0879)]:
+  - @ultraviolet/ui@1.64.0
+
 ## 0.20.3
 
 ### Patch Changes

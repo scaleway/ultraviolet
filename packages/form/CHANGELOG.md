@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.5.0
+
+### Minor Changes
+
+- [#4018](https://github.com/scaleway/ultraviolet/pull/4018) [`5399b74`](https://github.com/scaleway/ultraviolet/commit/5399b740fcba6450589e0322a1ca2a521e902cdb) Thanks [@matthprost](https://github.com/matthprost)! - refactor: spread props for `RadioField`, `RadioGroupField`, `CheckboxField`, `CheckboxGroupField`
+
+### Patch Changes
+
+- Updated dependencies [[`45e975e`](https://github.com/scaleway/ultraviolet/commit/45e975e3276c7f3164f2fd28d7563d3a170e0879)]:
+  - @ultraviolet/ui@1.64.0
+
 ## 3.4.0
 
 ### Minor Changes
