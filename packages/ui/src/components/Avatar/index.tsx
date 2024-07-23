@@ -93,6 +93,8 @@ const AvatarContainer = styled.div<{ size: number }>`
 `
 
 /**
+ * @deprecated This component is deprecated, please use `AvatarV2`.
+ *
  * Avatar component is used to display a user's profile picture or initials.
  */
 export const Avatar = ({

@@ -27,7 +27,7 @@ export const RADIUS_SIZES = {
   small: 'large',
   medium: 'xlarge',
   large: 'xxlarge',
-}
+} as const
 
 // Defines all available sentiments for the eligible variants
 export const SENTIMENTS = ['primary', 'neutral'] as const

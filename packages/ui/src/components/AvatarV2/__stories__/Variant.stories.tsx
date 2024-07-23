@@ -27,7 +27,7 @@ Variant.parameters = {
   docs: {
     description: {
       story:
-        'Avatar has different variants like `text`, `image`, `icon`, and `colors`.\n\n- `text` variant is used to display initials of the user.\n- `image` variant is used to display user profile image.\n- `icon` variant is used to display icons.\n- `colors` variant is used to display a set of 1 or 2 colors.\n\nYou can change the variant using the `variant` prop.',
+        "Avatar has different variants like `text`, `image`, `icon`, and `colors`.\n\n- `text` variant is used to display initials of the user.\n- `user` variant is used to display a user product icon. **Only the shape can be changed**.\n- `image` variant is used to display user profile image.\n- `icon` variant is used to display icons.\n- `colors` variant is used to display a set of 1 or 2 colors. You can define those colors passing prop `colors=['#ffffff', '#000000']`.\n\nYou can change the variant using the `variant` prop.",
     },
   },
 }

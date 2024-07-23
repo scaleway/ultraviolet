@@ -5,13 +5,16 @@ import { Text } from '../Text'
 import {
   DEFAULT_COLORS,
   ICON_SIZES,
+  RADIUS_SIZES,
   SENTIMENTS,
   SIZES,
   TEXT_VARIANT_BY_SIZE,
 } from './constants'
 import type { AvatarV2Props, Colors, SentimentColors, Shape } from './types'
 
-const UploadContainer = styled.div`
+const UploadContainer = styled('div', {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})<{ size: keyof typeof SIZES }>`
   position: absolute;
   opacity: 0;
   top: 0;
@@ -28,20 +31,20 @@ const UploadContainer = styled.div`
   }
 
   &[data-shape='square'] {
-    border-radius: ${({ theme }) => theme.radii.xlarge}
+    border-radius: ${({ theme, size }) => theme.radii[RADIUS_SIZES[size]]}
   }
 `
 
 const Container = styled('div', {
-  shouldForwardProp: prop => !['image'].includes(prop),
-})<{ image?: string }>`
+  shouldForwardProp: prop => !['image', 'size'].includes(prop),
+})<{ image?: string; size: keyof typeof SIZES }>`
     position: relative;
     &[data-shape='circle'] {
       border-radius: ${({ theme }) => theme.radii.circle}
     }
 
     &[data-shape='square'] {
-      border-radius: ${({ theme }) => theme.radii.xlarge}
+      border-radius: ${({ theme, size }) => theme.radii[RADIUS_SIZES[size]]}
     }
 
     ${Object.entries(SIZES)
@@ -58,7 +61,7 @@ const Container = styled('div', {
     ${({ theme }) =>
       SENTIMENTS.map(
         sentiment => `
-          &[data-is-user='false'][data-sentiment="${sentiment}"] {
+          &[data-has-background='true'][data-sentiment="${sentiment}"] {
             background-color: ${theme.colors[sentiment].backgroundStrong};
           }
       `,
@@ -102,7 +105,7 @@ const bordersStyles = ({
   theme,
   shape,
 }: {
-  size: number
+  size: keyof typeof SIZES
   colors: Colors
   theme: Theme
   shape: Shape
@@ -113,20 +116,22 @@ const bordersStyles = ({
       theme.colors[bgColor as SentimentColors]?.backgroundStrong ?? bgColor,
   )
 
+  const finalSize = SIZES[size]
+
   return css`
-    border-left: ${size / 2}px solid ${finalColors[0]};
-    border-top: ${size / 2}px solid ${finalColors[0]};
-    border-right: ${size / 2}px solid
+    border-left: ${finalSize / 2}px solid ${finalColors[0]};
+    border-top: ${finalSize / 2}px solid ${finalColors[0]};
+    border-right: ${finalSize / 2}px solid
       ${isHalved ? finalColors[1] : finalColors[0]};
-    border-bottom: ${size / 2}px solid
+    border-bottom: ${finalSize / 2}px solid
       ${isHalved ? finalColors[1] : finalColors[0]};
-    border-radius: ${shape === 'circle' ? theme.radii.circle : theme.radii.xlarge};
+    border-radius: ${shape === 'circle' ? theme.radii.circle : theme.radii[RADIUS_SIZES[size]]}};
   `
 }
 
 const StyledColors = styled('span', {
   shouldForwardProp: prop => !['size', 'colors', 'shape'].includes(prop),
-})<{ size: number; colors: Colors; shape: Shape }>`
+})<{ size: keyof typeof SIZES; colors: Colors; shape: Shape }>`
   align-items: center;
   display: flex;
   height: 100%;
@@ -134,7 +139,9 @@ const StyledColors = styled('span', {
   ${bordersStyles}
 `
 
-const ProductIconContainer = styled.div`
+const ProductIconContainer = styled('div', {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})<{ size: keyof typeof SIZES }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,7 +154,7 @@ const ProductIconContainer = styled.div`
   }
 
   &[data-shape='square'] {
-    border-radius: ${({ theme }) => theme.radii.xlarge}
+    border-radius: ${({ theme, size }) => theme.radii[RADIUS_SIZES[size]]}
   }
 
   ${Object.entries(SIZES)
@@ -167,6 +174,9 @@ const ProductIconContainer = styled.div`
     .join('')}
 `
 
+/**
+ * The AvatarV2 component is used to represent a user, product, or entity. It can be used to display an image, an icon, a text or a set of colors.
+ */
 export const AvatarV2 = ({
   shape,
   variant,
@@ -178,18 +188,24 @@ export const AvatarV2 = ({
   colors = DEFAULT_COLORS,
   upload,
   onClick,
+  className,
+  'data-testid': dataTestId,
 }: AvatarV2Props) => (
   <Container
     data-shape={shape}
     data-size={size}
     data-sentiment={sentiment}
     data-upload={upload}
-    data-is-user={variant === 'user'}
+    data-has-background={!['user', 'image'].includes(variant)}
     image={image}
     onClick={onClick}
+    role={onClick ? 'button' : undefined}
+    size={size}
+    className={className}
+    data-testid={dataTestId}
   >
     {upload ? (
-      <UploadContainer data-shape={shape}>
+      <UploadContainer data-shape={shape} size={size}>
         <Icon
           name="upload"
           size="large"
@@ -199,7 +215,7 @@ export const AvatarV2 = ({
       </UploadContainer>
     ) : null}
     {variant === 'user' ? (
-      <ProductIconContainer data-shape={shape} data-size={size}>
+      <ProductIconContainer data-shape={shape} data-size={size} size={size}>
         <ProductIcon name="user" />
       </ProductIconContainer>
     ) : null}
@@ -227,7 +243,7 @@ export const AvatarV2 = ({
     ) : null}
     {variant === 'colors' ? (
       <StyledColors
-        size={SIZES[size]}
+        size={size}
         colors={colors}
         shape={shape}
         style={{

@@ -26,6 +26,8 @@ type CommonProps = {
   size?: keyof typeof SIZES
   upload?: boolean
   onClick?: (event?: MouseEvent<HTMLDivElement>) => void
+  className?: string
+  'data-testid'?: string
 }
 
 type VariantUser = {

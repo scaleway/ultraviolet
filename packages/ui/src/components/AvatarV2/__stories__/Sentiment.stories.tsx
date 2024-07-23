@@ -7,12 +7,7 @@ export const Sentiment: StoryFn<typeof AvatarV2> = props => (
     <AvatarV2 {...props} />
     <AvatarV2 variant="text" text="UV" shape="circle" sentiment="neutral" />
     <AvatarV2 variant="icon" shape="circle" icon="mosaic" />
-    <AvatarV2
-      variant="icon"
-      shape="circle"
-      icon="profile"
-      sentiment="neutral"
-    />
+    <AvatarV2 variant="icon" shape="circle" icon="mosaic" sentiment="neutral" />
   </>
 )
 
