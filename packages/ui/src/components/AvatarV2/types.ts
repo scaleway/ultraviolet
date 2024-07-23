@@ -1,7 +1,8 @@
 import type { Icon } from '@ultraviolet/icons'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, MouseEvent } from 'react'
 import type { SENTIMENTS, SIZES } from './constants'
 
+// This type defines an array of string that should have a length of 0, 1, or 2
 export type Colors =
   | []
   | [string]
@@ -10,9 +11,30 @@ export type Colors =
   | readonly [string]
   | readonly []
 
+export type SentimentColors =
+  | 'primary'
+  | 'neutral'
+  | 'success'
+  | 'danger'
+  | 'warning'
+  | 'info'
+
+export type Shape = 'circle' | 'square'
+
 type CommonProps = {
-  shape: 'circle' | 'square'
+  shape: Shape
   size?: keyof typeof SIZES
+  upload?: boolean
+  onClick?: (event?: MouseEvent<HTMLDivElement>) => void
+}
+
+type VariantUser = {
+  variant: 'user'
+  image?: never
+  icon?: never
+  text?: never
+  sentiment?: never
+  colors?: never
 }
 
 type VariantImage = {
@@ -58,4 +80,4 @@ type VariantColors = {
 }
 
 export type AvatarV2Props = CommonProps &
-  (VariantImage | VariantIcon | VariantText | VariantColors)
+  (VariantImage | VariantIcon | VariantText | VariantColors | VariantUser)

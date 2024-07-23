@@ -6,13 +6,9 @@ import avatar from './assets/avatar.svg'
 export const Variant: StoryFn<typeof AvatarV2> = props => (
   <>
     <AvatarV2 {...props} />
+    <AvatarV2 variant="user" shape="circle" />
     <AvatarV2 variant="image" shape="circle" image={avatar} />
-    <AvatarV2
-      variant="icon"
-      shape="circle"
-      sentiment="primary"
-      icon="profile"
-    />
+    <AvatarV2 variant="icon" shape="circle" sentiment="primary" icon="mosaic" />
     <AvatarV2
       variant="colors"
       shape="circle"

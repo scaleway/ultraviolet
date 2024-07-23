@@ -12,13 +12,6 @@ const SIZES = {
   xlarge: 64,
 }
 
-type ProductIconProps = {
-  name: keyof typeof PRODUCT_ICONS
-  variant?: Variants
-  disabled?: boolean
-  size?: keyof typeof SIZES
-}
-
 const StyledIcon = (
   component: FunctionComponent<SVGProps<SVGSVGElement>>,
 ) => styled(component, {
@@ -64,6 +57,14 @@ const StyledIcon = (
   }
 `
 
+type ProductIconProps = {
+  name: keyof typeof PRODUCT_ICONS
+  variant?: Variants
+  disabled?: boolean
+  size?: keyof typeof SIZES
+  className?: string
+}
+
 /**
  * ProductIcon component is used to render a set of icons that are linked to a product or service.
  * Those icons are made of multiple colors that changes automatically based on the current theme.
@@ -73,6 +74,7 @@ export const ProductIcon = ({
   variant = 'primary',
   disabled,
   size = 'small',
+  className,
 }: ProductIconProps) => {
   const Icon = StyledIcon(PRODUCT_ICONS[name])
 
@@ -82,6 +84,7 @@ export const ProductIcon = ({
       disabled={disabled}
       size={size}
       viewBox="0 0 64 64"
+      className={className}
     />
   )
 }

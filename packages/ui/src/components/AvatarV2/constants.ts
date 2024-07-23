@@ -14,6 +14,21 @@ export const SIZES = {
   large: 112,
 } as const
 
+// Match the avatar sizes with the icon sizes
+export const ICON_SIZES = {
+  xsmall: 'small',
+  small: 'large',
+  medium: 'xlarge',
+  large: 'xxlarge',
+} as const
+
+export const RADIUS_SIZES = {
+  xsmall: 'default',
+  small: 'large',
+  medium: 'xlarge',
+  large: 'xxlarge',
+}
+
 // Defines all available sentiments for the eligible variants
 export const SENTIMENTS = ['primary', 'neutral'] as const
 
