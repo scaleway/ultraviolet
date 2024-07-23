@@ -3,8 +3,6 @@ import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { Icon } from '..'
 
-const sizes: ComponentProps<typeof Icon>['size'][] = [40, 50, 60]
-
 export const Size = (args: ComponentProps<typeof Icon>) => (
   <Stack>
     <Stack direction="row" gap={3}>
@@ -13,11 +11,6 @@ export const Size = (args: ComponentProps<typeof Icon>) => (
     <Stack direction="row" gap={3}>
       <Icon name="eye" size="large" {...args} /> large
     </Stack>
-    {sizes.map(size => (
-      <Stack direction="row" gap={3}>
-        <Icon key={size} name="eye" size={size} {...args} /> {size}px
-      </Stack>
-    ))}
   </Stack>
 )
 
