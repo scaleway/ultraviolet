@@ -67,6 +67,7 @@ export const DateField = <
   size,
   'data-testid': dataTestId,
   shouldUnregister = false,
+  showMonthYearPicker,
 }: DateFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
@@ -126,6 +127,7 @@ export const DateField = <
       autoFocus={autoFocus}
       excludeDates={excludeDates}
       selectsRange={selectsRange}
+      showMonthYearPicker={showMonthYearPicker}
       data-testid={dataTestId}
       startDate={
         selectsRange && Array.isArray(field.value)
