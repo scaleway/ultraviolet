@@ -41,12 +41,11 @@ describe('Alert', () => {
     ))
 
   describe(`renders correctly with all sentiments`, () => {
-    ALERT_SENTIMENTS.forEach(sentiment => {
-      test(`renders correctly sentiment ${sentiment}`, () =>
-        shouldMatchEmotionSnapshot(
-          <Alert sentiment={sentiment}>Sample Alert</Alert>,
-        ))
-    })
+    test.each(ALERT_SENTIMENTS)(`renders correctly sentiment %o`, sentiment =>
+      shouldMatchEmotionSnapshot(
+        <Alert sentiment={sentiment}>Sample Alert</Alert>,
+      ),
+    )
   })
 
   test(`should render alert and then close it`, async () => {
