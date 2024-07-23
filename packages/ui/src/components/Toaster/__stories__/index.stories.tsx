@@ -1,11 +1,16 @@
-import type { Meta } from '@storybook/react'
-import { ToastContainer } from '..'
+import { Toast, ToastContainer } from '..'
 
 export default {
   component: ToastContainer,
   title: 'Components/Feedback/Toaster',
-} as Meta<typeof ToastContainer>
+  subcomponents: {
+    ToastContainer,
+    'Toast.Button': Toast.Button,
+    'Toast.Link': Toast.Link,
+  },
+}
 
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'
-export { ContainerId } from './ContainerId'
+export { ContainerId } from './ContainerId.stories'
+export { ComplexChildren } from './ComplexChildren.stories'

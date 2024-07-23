@@ -2,7 +2,7 @@ import { act, screen } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import { renderWithTheme } from '@utils/test'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-import { ToastContainer, toast } from '..'
+import { Toast, ToastContainer, toast } from '..'
 
 describe('Toaster', () => {
   beforeEach(() => {
@@ -11,6 +11,30 @@ describe('Toaster', () => {
 
   afterEach(() => {
     vi.clearAllTimers()
+  })
+
+  describe('components', () => {
+    test('renders correctly Toast.Button', () => {
+      const { asFragment } = renderWithTheme(<Toast.Button>Test</Toast.Button>)
+
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    test('renders correctly Toast.Button and variant ghost', () => {
+      const { asFragment } = renderWithTheme(
+        <Toast.Button variant="ghost">Test</Toast.Button>,
+      )
+
+      expect(asFragment()).toMatchSnapshot()
+    })
+
+    test('renders correctly Toast.Link', () => {
+      const { asFragment } = renderWithTheme(
+        <Toast.Link href="scaleway.com">Test</Toast.Link>,
+      )
+
+      expect(asFragment()).toMatchSnapshot()
+    })
   })
 
   test('renders correctly with all kind of toast', async () => {
