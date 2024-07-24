@@ -61,7 +61,7 @@ describe('Dialog', () => {
   })
 
   it('[CancelButton] : should handle click', async () => {
-    const onClick = vi.fn<[], () => string>()
+    const onClick = vi.fn()
 
     renderWithTheme(
       <Dialog.CancelButton onClick={onClick}>Cancel</Dialog.CancelButton>,

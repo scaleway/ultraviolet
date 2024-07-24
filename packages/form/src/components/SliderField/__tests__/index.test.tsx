@@ -71,7 +71,7 @@ describe('SliderField', () => {
   })
 
   test('should work fine with form setValue', async () => {
-    const onSubmit = vi.fn<[{ test: number | null }], void>()
+    const onSubmit = vi.fn()
     const onBlur = vi.fn(() => {})
     const { result } = renderHook(() =>
       useForm<{ test: number | null }>({

@@ -16,7 +16,7 @@ describe('TextInputFieldV2', () => {
   })
 
   test('should render correctly generated', async () => {
-    const onSubmit = vi.fn<[values: { test: string | null }], void>()
+    const onSubmit = vi.fn()
     const { result } = renderHook(() =>
       useForm<{ test: string | null }>({ defaultValues: { test: null } }),
     )
