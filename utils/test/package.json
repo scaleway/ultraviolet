@@ -6,6 +6,11 @@
   "license": "MIT",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scaleway/ultraviolet",
+    "directory": "utils/test"
+  },
   "files": [
     "src/*"
   ],
@@ -15,10 +20,10 @@
     }
   },
   "dependencies": {
-    "@emotion/cache": "11.11.0",
-    "@emotion/jest": "11.11.0",
-    "@emotion/react": "11.11.4",
-    "@emotion/styled": "11.11.5",
+    "@emotion/cache": "11.13.0",
+    "@emotion/jest": "11.13.0",
+    "@emotion/react": "11.13.0",
+    "@emotion/styled": "11.13.0",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "15.0.7",
     "@types/react": "18.3.3",
