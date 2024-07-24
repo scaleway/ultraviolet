@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.65.1
+
+### Patch Changes
+
+- [#4064](https://github.com/scaleway/ultraviolet/pull/4064) [`2f7fa0d`](https://github.com/scaleway/ultraviolet/commit/2f7fa0d2c4066210754b3be8a05c0ccf59018776) Thanks [@matthprost](https://github.com/matthprost)! - Missing export of `<AvatarV2 />`
+
 ## 1.65.0
 
 ### Minor Changes
