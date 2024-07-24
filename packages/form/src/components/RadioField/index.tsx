@@ -19,7 +19,6 @@ export const RadioField = <
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   control,
-  'data-testid': dataTestId,
   disabled,
   name,
   onBlur,
@@ -51,7 +50,6 @@ export const RadioField = <
       {...props}
       name={field.name}
       checked={field.value === value}
-      data-testid={dataTestId}
       disabled={disabled}
       error={getError({ label: typeof label === 'string' ? label : '' }, error)}
       onChange={() => {

@@ -26,7 +26,6 @@ export const CheckboxField = <
   children,
   onChange,
   onBlur,
-  'data-testid': dataTestId,
   shouldUnregister = false,
   validate,
   ...props
