@@ -32,7 +32,7 @@ describe('UnitInputField', () => {
   })
 
   test('should handles onChange and selection', async () => {
-    const onSubmit = vi.fn<[values: { test: number | null }], void>()
+    const onSubmit = vi.fn()
     const { result } = renderHook(() =>
       useForm<{ test: number | null }>({
         defaultValues: {

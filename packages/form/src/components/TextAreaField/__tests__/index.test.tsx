@@ -16,7 +16,7 @@ describe('TextAreaField', () => {
   })
 
   test('should render correctly generated', async () => {
-    const onSubmit = vi.fn<[values: { test: string }], void>()
+    const onSubmit = vi.fn()
     const { result } = renderHook(() => useForm<{ test: string }>())
 
     const { asFragment } = renderWithTheme(

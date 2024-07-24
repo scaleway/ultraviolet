@@ -35,7 +35,7 @@ describe('NumberInputFieldV2', () => {
   })
 
   test('should work fine with form setValue', async () => {
-    const onSubmit = vi.fn<[{ test: number | null }], void>()
+    const onSubmit = vi.fn()
     const { result } = renderHook(() =>
       useForm<{ test: number | null }>({
         defaultValues: {

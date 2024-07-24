@@ -11,7 +11,7 @@ describe('TextArea', () => {
     ))
 
   test('should control the value', () => {
-    const onChange = vi.fn<[], () => string>()
+    const onChange = vi.fn()
 
     renderWithTheme(<TextArea label="Test" value="test" onChange={onChange} />)
 
@@ -23,7 +23,7 @@ describe('TextArea', () => {
   })
 
   test('should be clearable', async () => {
-    const onChange = vi.fn<[], () => string>()
+    const onChange = vi.fn()
 
     renderWithTheme(
       <TextArea label="Test" value="test" onChange={onChange} clearable />,
@@ -67,7 +67,7 @@ describe('TextArea', () => {
     ))
 
   test('should display success message', () => {
-    const onChange = vi.fn<[], () => string>()
+    const onChange = vi.fn()
     const successMessage = 'success message'
 
     renderWithTheme(
@@ -83,7 +83,7 @@ describe('TextArea', () => {
   })
 
   test('should display error message', () => {
-    const onChange = vi.fn<[], () => string>()
+    const onChange = vi.fn()
     const errorMessage = 'error!'
 
     renderWithTheme(
@@ -99,7 +99,7 @@ describe('TextArea', () => {
   })
 
   test('should display helper message', () => {
-    const onChange = vi.fn<[], () => string>()
+    const onChange = vi.fn()
     const helperMessage = 'helper'
 
     renderWithTheme(
@@ -115,7 +115,7 @@ describe('TextArea', () => {
   })
 
   test('should not display helper message when success is displayed', () => {
-    const onChange = vi.fn<[], () => string>()
+    const onChange = vi.fn()
     const successMessage = 'success message'
     const helperMessage = 'helper'
 
@@ -134,7 +134,7 @@ describe('TextArea', () => {
   })
 
   test('should not display helper message when error is displayed', () => {
-    const onChange = vi.fn<[], () => string>()
+    const onChange = vi.fn()
     const error = 'error!'
     const helperMessage = 'helper'
 

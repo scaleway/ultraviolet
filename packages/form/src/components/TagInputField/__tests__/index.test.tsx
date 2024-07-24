@@ -34,7 +34,7 @@ describe('TagInputField', () => {
   })
 
   test('should works with defaultValues', async () => {
-    const onSubmit = vi.fn<[{ test: string[] }], void>()
+    const onSubmit = vi.fn()
     const { result } = renderHook(() =>
       useForm<{ test: string[] }>({ defaultValues: { test: ['First'] } }),
     )
