@@ -138,7 +138,7 @@ export const Alert = ({
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
           />
-          <TextStack gap={0.5} direction="row">
+          <TextStack gap={1.5} direction="row">
             {title ? (
               <Text variant="bodyStronger" as="span" sentiment={sentiment}>
                 {title}
