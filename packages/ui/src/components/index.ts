@@ -1,6 +1,7 @@
 export { ActionBar } from './ActionBar'
 export { Alert } from './Alert'
 export { Avatar } from './Avatar'
+export { AvatarV2 } from './AvatarV2'
 export { Badge } from './Badge'
 export { Banner } from './Banner'
 export { BarChart } from './BarChart'
