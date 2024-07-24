@@ -7,6 +7,13 @@ import capitalize from '../../utils/capitalize'
 import { ICONS } from './Icons'
 import { SMALL_ICONS } from './SmallIcons'
 
+const SIZES = {
+  small: 16,
+  large: 20,
+  xlarge: 32,
+  xxlarge: 56,
+} as const
+
 type Color = Extract<
   keyof typeof theme.colors,
   | 'primary'
@@ -23,24 +30,17 @@ export const icons = Object.keys(ICONS.filled) as IconName[]
 const sizeStyles = ({
   size,
 }: {
-  size: number | string | 'small' | 'large'
+  size: keyof typeof SIZES | number | string
 }) => {
-  if (size === 'small' || size === 16) {
+  if (typeof size === 'string' && size in SIZES) {
     return css`
-      height: 16px;
-      width: 16px;
-      min-width: 16px;
-      min-height: 16px;
+        height: ${SIZES[size as keyof typeof SIZES]}px;
+        width: ${SIZES[size as keyof typeof SIZES]}px;
+        min-width: ${SIZES[size as keyof typeof SIZES]}px;
+        min-height: ${SIZES[size as keyof typeof SIZES]}px;
     `
   }
-  if (size === 'large') {
-    return css`
-      height: 20px;
-      width: 20px;
-      min-width: 20px;
-      min-height: 20px;
-    `
-  }
+
   const pxSize =
     typeof size === 'number' && !Number.isNaN(size) ? `${size}px` : size
 
@@ -112,7 +112,7 @@ export type IconName = keyof typeof ICONS.filled
 
 type IconProps = {
   /**
-   * !`string` and `number` are deprecated. Use `small` and `large` only.
+   * **! IMPORTANT:** `string` and `number` are deprecated. Use `small`, `large`, `xlarge`, `xxlarge` only.
    */
   size?: number | string | 'small' | 'large'
   name?: IconName
