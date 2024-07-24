@@ -1,5 +1,25 @@
 # Change Log
 
+## 3.6.0
+
+### Minor Changes
+
+- [#4040](https://github.com/scaleway/ultraviolet/pull/4040) [`e8ed01e`](https://github.com/scaleway/ultraviolet/commit/e8ed01e38dce351ef105e05180c7dead4cc97f96) Thanks [@matthprost](https://github.com/matthprost)! - New prop `showMonthYearPicker` in `<DateInput />` component
+
+### Patch Changes
+
+- [#4061](https://github.com/scaleway/ultraviolet/pull/4061) [`e9e60eb`](https://github.com/scaleway/ultraviolet/commit/e9e60eb12c7016b206c120f737b874d4f01120d0) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CheckboxField />` and `<RadioField />` to spread correctly the data-testid
+
+- [#4059](https://github.com/scaleway/ultraviolet/pull/4059) [`2f08079`](https://github.com/scaleway/ultraviolet/commit/2f08079fd4207eeffbafd1924ff1cd92af45cad5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.13.0`.
+  Updated dependency `@emotion/styled` to `11.13.0`.
+  Updated dependency `@emotion/babel-plugin` to `11.12.0`.
+  Updated dependency `@emotion/cache` to `11.13.0`.
+  Updated dependency `@emotion/eslint-plugin` to `11.12.0`.
+  Updated dependency `@emotion/jest` to `11.13.0`.
+  Updated dependency `@emotion/serialize` to `1.3.0`.
+- Updated dependencies [[`2f211e3`](https://github.com/scaleway/ultraviolet/commit/2f211e31a4f455df94425f190c807b75eee33a29), [`8588cde`](https://github.com/scaleway/ultraviolet/commit/8588cde71dd3a18b9593f3f367b7f5f5722ba0b0), [`2f1b211`](https://github.com/scaleway/ultraviolet/commit/2f1b211af846a3f973b20166e041a1ce193d28dd), [`e8ed01e`](https://github.com/scaleway/ultraviolet/commit/e8ed01e38dce351ef105e05180c7dead4cc97f96), [`2f08079`](https://github.com/scaleway/ultraviolet/commit/2f08079fd4207eeffbafd1924ff1cd92af45cad5)]:
+  - @ultraviolet/ui@1.65.0
+
 ## 3.5.0
 
 ### Minor Changes
