@@ -211,12 +211,12 @@ jobs:
           fi
 
       - name: Deploy Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.1.4
+        uses: philibea/scaleway-containers-deploy@v1.1.5
         id: deploy
         with:
           type: "deploy"
           scw_dns: "storybook.ultraviolet.scaleway.com"
-          # root_zone: ${{ env.BRANCH_SLUG == 'main' }} # setting a root alias in the DNS zone doesn't work as it already exists. It needs to be fixed in the script of the action.
+          root_zone: ${{ env.BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
