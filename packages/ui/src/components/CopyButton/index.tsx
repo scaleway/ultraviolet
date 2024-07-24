@@ -16,6 +16,7 @@ type CopyButtonProps = {
   bordered?: boolean
   className?: string
   'data-testid'?: string
+  children?: string
 }
 
 /**
@@ -30,6 +31,7 @@ export const CopyButton = ({
   noBorder,
   bordered,
   className,
+  children,
   'data-testid': dataTestId,
 }: CopyButtonProps) => {
   const [isCopied, setCopied] = useClipboard(value, {
@@ -48,6 +50,8 @@ export const CopyButton = ({
       aria-label="Copy"
       icon={isCopied ? 'check' : 'copy-content'}
       tooltip={isCopied ? copiedText : copyText}
-    />
+    >
+      {children}
+    </Button>
   )
 }
