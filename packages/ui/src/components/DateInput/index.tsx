@@ -188,7 +188,7 @@ const StyledText = styled(Text)`
 
 type DateInputProps = Pick<
   ReactDatePickerProps<boolean | undefined, boolean>,
-  'locale' | 'onChange' | 'showMonthYearPicker'
+  'locale' | 'onChange'
 > & {
   autoFocus?: boolean
   disabled?: boolean
@@ -218,6 +218,7 @@ type DateInputProps = Pick<
   size?: 'small' | 'medium' | 'large'
   readOnly?: boolean
   tooltip?: string
+  showMonthYearPicker?: boolean
 }
 
 const DEFAULT_FORMAT: DateInputProps['format'] = value =>
