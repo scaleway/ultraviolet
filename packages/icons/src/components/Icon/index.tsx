@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
 import type { FunctionComponent, SVGProps } from 'react'
-import { forwardRef, useMemo } from 'react'
+import { forwardRef, useEffect, useId, useMemo } from 'react'
 import capitalize from '../../utils/capitalize'
 import { ICONS } from './Icons'
 import { SMALL_ICONS } from './SmallIcons'
@@ -125,6 +125,10 @@ type IconProps = {
   variant?: 'outlined' | 'filled'
   'data-testid'?: string
   disabled?: boolean
+  /**
+   * A title to be used by the SCG for accessibility purpose.
+   */
+  title?: string
 } & Pick<
   SVGProps<SVGSVGElement>,
   'className' | 'stroke' | 'cursor' | 'strokeWidth'
@@ -148,9 +152,12 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       cursor,
       strokeWidth,
       disabled,
+      title,
     },
     ref,
   ) => {
+    const uniqueId = useId()
+
     const computedSentiment = sentiment ?? color
     const SystemIcon = useMemo(() => {
       if (size === 'small' || size === 16) {
@@ -183,9 +190,34 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       return '0 0 20 20'
     }, [name, size])
 
+    useEffect(() => {
+      if (title) {
+        const svgElement = document.getElementById(uniqueId)
+
+        if (svgElement) {
+          const titleTag = svgElement.querySelector('title')
+
+          // if a title already exist, update it
+          if (titleTag) {
+            titleTag.textContent = title
+          }
+          // insert the title
+          else {
+            const newTitleTag = document.createElementNS(
+              'http://www.w3.org/2000/svg',
+              'title',
+            )
+            svgElement.insertBefore(newTitleTag, svgElement.firstChild)
+            newTitleTag.textContent = title
+          }
+        }
+      }
+    }, [title, uniqueId])
+
     return (
       <SystemIcon
         ref={ref}
+        id={uniqueId}
         sentiment={computedSentiment}
         prominence={prominence}
         size={size}
