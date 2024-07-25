@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.12.4
+
+### Patch Changes
+
+- [#4075](https://github.com/scaleway/ultraviolet/pull/4075) [`f2fd9ed`](https://github.com/scaleway/ultraviolet/commit/f2fd9ed168062e709ca68b6c456149a33eea3e22) Thanks [@matthprost](https://github.com/matthprost)! - Fix update
+
 ## 1.12.2
 
 ### Patch Changes

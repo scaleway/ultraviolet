@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.66.0
+
+### Minor Changes
+
+- [#4063](https://github.com/scaleway/ultraviolet/pull/4063) [`cf076da`](https://github.com/scaleway/ultraviolet/commit/cf076da9abeea8bd91450a5f94ceb2921be30e2c) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `children` to `<CopyButton />` component to set a text into the button
+
+### Patch Changes
+
+- Updated dependencies [[`f2fd9ed`](https://github.com/scaleway/ultraviolet/commit/f2fd9ed168062e709ca68b6c456149a33eea3e22)]:
+  - @ultraviolet/themes@1.12.4
+  - @ultraviolet/icons@2.15.1
+
 ## 1.65.2
 
 ### Patch Changes
