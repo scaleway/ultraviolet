@@ -23,7 +23,7 @@ jobs:
           echo "STORYBOOK_BRANCH_SLUG=$SAFE_STORYBOOK_HEAD_REF" >> $GITHUB_ENV
 
       - name: Deploy Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.1.4
+        uses: philibea/scaleway-containers-deploy@v1.1.5
         id: deploy
         with:
           type: "teardown"
