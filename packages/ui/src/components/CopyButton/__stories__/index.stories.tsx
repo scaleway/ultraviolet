@@ -15,6 +15,7 @@ export default {
 } as Meta<typeof CopyButton>
 
 export { Playground } from './Playground.stories'
+export { Children } from './Children.stories'
 export { Sentiments } from './Sentiments.stories'
 export { Sizes } from './Sizes.stories'
 export { NoBorder } from './NoBorder.stories'
