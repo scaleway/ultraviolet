@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.65.2
+
+### Patch Changes
+
+- [#4071](https://github.com/scaleway/ultraviolet/pull/4071) [`e506708`](https://github.com/scaleway/ultraviolet/commit/e5067086fea4385c430f2905034ee39d35d30300) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<DateInput />` type
+
 ## 1.65.1
 
 ### Patch Changes
