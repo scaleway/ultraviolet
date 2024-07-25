@@ -74,6 +74,7 @@ const StyledInputWrapper = styled(Stack)<{
   }
   &[data-size='small'] {
     height: ${INPUT_SIZE_HEIGHT.small}px;
+    padding-left: ${({ theme }) => theme.space[1]};
   }
   &[data-size='medium'] {
     height: ${INPUT_SIZE_HEIGHT.medium}px;

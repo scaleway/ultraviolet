@@ -42,7 +42,7 @@ const TagInputContainer = styled('div', {
 
   padding: ${({ theme, size }) =>
     `calc(${theme.space[TAGINPUT_SIZE_PADDING[size]]} - 1px) ${
-      theme.space['2']
+      size === 'small' ? theme.space['1'] : theme.space['2']
     }`};
   cursor: text;
 

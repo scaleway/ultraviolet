@@ -31,6 +31,10 @@ type TextInputSize = keyof typeof TEXTINPUT_SIZE_HEIGHT
 
 export const BasicPrefixStack = styled(Stack)`
   padding: ${({ theme }) => theme.space['2']};
+
+  &[data-size="small"] {
+    padding: ${({ theme }) => theme.space['1']};
+  }
   border-right: 1px solid;
   border-color: inherit;
 `
@@ -65,6 +69,10 @@ export const StyledInput = styled.input<{
 
   &[data-size='large'] {
     font-size: ${({ theme }) => theme.typography.body.fontSize};
+  }
+
+  &[data-size='small'] {
+    padding-left: ${({ theme }) => theme.space['1']};
   }
 `
 
@@ -293,7 +301,11 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
               size={size}
             >
               {prefix ? (
-                <BasicPrefixStack direction="row" alignItems="center">
+                <BasicPrefixStack
+                  direction="row"
+                  alignItems="center"
+                  data-size={size}
+                >
                   {typeof prefix === 'string' ? (
                     <Text
                       as="span"
