@@ -127,7 +127,7 @@ type IconProps = {
   disabled?: boolean
 } & Pick<
   SVGProps<SVGSVGElement>,
-  'className' | 'stroke' | 'cursor' | 'strokeWidth'
+  'className' | 'stroke' | 'cursor' | 'strokeWidth' | 'aria-label'
 >
 
 /**
@@ -148,6 +148,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       cursor,
       strokeWidth,
       disabled,
+      'aria-label': ariaLabel,
     },
     ref,
   ) => {
@@ -196,6 +197,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         cursor={cursor}
         strokeWidth={strokeWidth}
         disabled={disabled}
+        aria-label={ariaLabel}
       />
     )
   },
