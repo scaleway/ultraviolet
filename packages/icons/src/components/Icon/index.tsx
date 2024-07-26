@@ -126,7 +126,7 @@ type IconProps = {
   'data-testid'?: string
   disabled?: boolean
   /**
-   * A title to be used by the SCG for accessibility purpose.
+   * A title to be used by the SVG for accessibility purpose.
    */
   title?: string
 } & Pick<
