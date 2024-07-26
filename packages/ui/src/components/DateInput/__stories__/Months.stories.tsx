@@ -3,22 +3,16 @@ import { useState } from 'react'
 import { DateInput } from '..'
 
 export const Months: StoryFn = args => {
-  const [startDate, setStartDate] = useState<Date | null>(null)
-  const [endDate, setEndDate] = useState<Date | null>(null)
-  const onChange = (dates: [Date | null, Date | null]) => {
-    const [start, end] = dates
-    setStartDate(start)
-    setEndDate(end)
-  }
+  const [date, setDate] = useState<
+    Date | Date[] | [Date | null, Date | null] | null
+  >(new Date('December 17, 1995 03:24:00'))
 
   return (
     <DateInput
       label="Date"
-      startDate={startDate}
-      endDate={endDate}
-      onChange={onChange}
+      onChange={setDate}
+      value={date as Date}
       showMonthYearPicker
-      selectsRange
       {...args}
     />
   )
