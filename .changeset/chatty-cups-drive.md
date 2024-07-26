@@ -3,4 +3,4 @@
 "@ultraviolet/ui": minor
 ---
 
-feat: add title tag to SVG for accessibility purpose
+feat: add aria-label to SVG for accessibility purpose
