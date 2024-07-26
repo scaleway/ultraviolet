@@ -173,7 +173,6 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
           'close-circle-outline',
           'drag-variant',
           'expand-more',
-          'send',
           'switch_orga',
         ].includes(name)
       ) {
