@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.16.0
+
+### Minor Changes
+
+- [#4084](https://github.com/scaleway/ultraviolet/pull/4084) [`1d751f1`](https://github.com/scaleway/ultraviolet/commit/1d751f1a81482561541df983f51b651bd2623e38) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat: add `aria-label` to `SVG` for accessibility purpose
+
 ## 2.15.1
 
 ### Patch Changes
