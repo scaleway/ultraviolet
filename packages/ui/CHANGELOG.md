@@ -1,5 +1,26 @@
 # Change Log
 
+## 1.67.0
+
+### Minor Changes
+
+- [#4084](https://github.com/scaleway/ultraviolet/pull/4084) [`1d751f1`](https://github.com/scaleway/ultraviolet/commit/1d751f1a81482561541df983f51b651bd2623e38) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat: add `aria-label` to `SVG` for accessibility purpose
+
+- [#4062](https://github.com/scaleway/ultraviolet/pull/4062) [`6012d08`](https://github.com/scaleway/ultraviolet/commit/6012d083018aefd7e9d8c44c0a2920dd4c6f2d7a) Thanks [@matthprost](https://github.com/matthprost)! - Update `<Alert />` title to have gap of `12px` instead of `4px`
+
+- [#4074](https://github.com/scaleway/ultraviolet/pull/4074) [`c9e19a6`](https://github.com/scaleway/ultraviolet/commit/c9e19a62d20f33c5ba9321723e55357888d30994) Thanks [@matthprost](https://github.com/matthprost)! - Refactor all inputs to have `8px` padding in `small` size instead of `16px`
+
+### Patch Changes
+
+- [#4080](https://github.com/scaleway/ultraviolet/pull/4080) [`89583b1`](https://github.com/scaleway/ultraviolet/commit/89583b1a056acf5ad01fc122c38506ffe0a1adb3) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<SelectInput />` helper color
+
+  - Fix `<Slider />` helper color and options not to wrap
+
+- [#4081](https://github.com/scaleway/ultraviolet/pull/4081) [`c3ec2dd`](https://github.com/scaleway/ultraviolet/commit/c3ec2dde045ed93bbc68b36d888364e243913ec0) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<DateInput />` colors when having both props `selectsRange` and `showMonthYearPicker`
+
+- Updated dependencies [[`1d751f1`](https://github.com/scaleway/ultraviolet/commit/1d751f1a81482561541df983f51b651bd2623e38)]:
+  - @ultraviolet/icons@2.16.0
+
 ## 1.66.0
 
 ### Minor Changes
