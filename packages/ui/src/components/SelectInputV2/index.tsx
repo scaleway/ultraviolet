@@ -248,7 +248,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
             variant="caption"
             as="p"
             sentiment="neutral"
-            prominence="default"
+            prominence="weak"
           >
             {helper}
           </HelperText>
