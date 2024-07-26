@@ -113,7 +113,7 @@ const StyledWrapper = styled.div`
       }
     }
 
-    ${PREFIX}__day--in-selecting-range {
+    ${PREFIX}__day--in-selecting-range,  ${PREFIX}__month-text--in-selecting-range {
       color: ${({ theme }) => theme.colors.primary.text};
       background-color: ${({ theme }) => theme.colors.primary.background};
 
@@ -125,7 +125,7 @@ const StyledWrapper = styled.div`
       }
     }
 
-    ${PREFIX}__day--in-range {
+    ${PREFIX}__day--in-range, ${PREFIX}__month-text--in-range {
       color: ${({ theme }) => theme.colors.primary.text};
       background-color: ${({ theme }) => theme.colors.primary.background};
 
@@ -137,7 +137,7 @@ const StyledWrapper = styled.div`
       }
     }
 
-    ${PREFIX}__day--range-start {
+    ${PREFIX}__day--range-start, ${PREFIX}__month-text--range-start {
       color: ${({ theme }) => theme.colors.primary.textStrong};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
@@ -149,7 +149,7 @@ const StyledWrapper = styled.div`
       }
     }
 
-    ${PREFIX}__day--range-end {
+    ${PREFIX}__day--range-end, ${PREFIX}__month-text--range-end {
       color: ${({ theme }) => theme.colors.primary.textStrong};
       background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
@@ -171,11 +171,11 @@ const StyledWrapper = styled.div`
       background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
     }
 
-    ${PREFIX}__day--disabled {
+    ${PREFIX}__day--disabled, ${PREFIX}__month-text--disabled {
       color: ${({ theme }) => theme.colors.neutral.textDisabled};
     }
 
-    ${PREFIX}__day--disabled:hover {
+    ${PREFIX}__day--disabled:hover, ${PREFIX}__month-text--disabled:hover {
       color: ${({ theme }) => theme.colors.neutral.textDisabled};
       background-color: transparent;
     }
