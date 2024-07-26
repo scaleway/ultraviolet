@@ -217,7 +217,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
     return (
       <SystemIcon
         ref={ref}
-        id={uniqueId}
+        id={title ? uniqueId : undefined}
         sentiment={computedSentiment}
         prominence={prominence}
         size={size}
