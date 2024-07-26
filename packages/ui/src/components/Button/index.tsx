@@ -251,7 +251,6 @@ type CommonProps = {
   disabled?: boolean
   iconPosition?: 'left' | 'right'
   iconVariant?: ComponentProps<typeof Icon>['variant']
-  iconTitle?: string
   fullWidth?: boolean
   isLoading?: boolean
   'aria-label'?: string
@@ -325,7 +324,6 @@ export const Button = forwardRef<Element, FinalProps>(
       icon,
       iconPosition = 'left',
       iconVariant,
-      iconTitle,
       fullWidth = false,
       isLoading = false,
       children,
@@ -353,12 +351,7 @@ export const Button = forwardRef<Element, FinalProps>(
     const content = (
       <>
         {!isLoading && icon ? (
-          <Icon
-            name={icon}
-            size="small"
-            variant={iconVariant}
-            title={iconTitle}
-          />
+          <Icon name={icon} size="small" variant={iconVariant} />
         ) : null}
         {isLoading ? (
           <Loader
