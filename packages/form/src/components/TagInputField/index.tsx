@@ -69,7 +69,8 @@ export const TagInputField = <
       validate: {
         ...(regexes
           ? {
-              pattern: value => validateRegex(value, regexes),
+              pattern: value =>
+                (value as string[]).every(val => validateRegex(val, regexes)),
             }
           : {}),
         ...validate,
