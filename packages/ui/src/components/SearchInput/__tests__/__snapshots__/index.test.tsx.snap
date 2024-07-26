@@ -1002,6 +1002,10 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   border-color: inherit;
 }
 
+.emotion-7[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-9 {
   vertical-align: middle;
   fill: #3f4250;
@@ -1033,6 +1037,10 @@ exports[`SearchInput > renders correctly without children props 1`] = `
   font-size: 16px;
 }
 
+.emotion-11[data-size='small'] {
+  padding-left: 8px;
+}
+
 <div
     data-testid="testing"
   >
@@ -1058,6 +1066,7 @@ exports[`SearchInput > renders correctly without children props 1`] = `
             >
               <div
                 class="emotion-7 emotion-8"
+                data-size="large"
               >
                 <svg
                   class="emotion-9 emotion-10"
@@ -1236,6 +1245,10 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   border-color: inherit;
 }
 
+.emotion-7[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-9 {
   vertical-align: middle;
   fill: #b5b7bd;
@@ -1267,6 +1280,10 @@ exports[`SearchInput > renders with disabled prop 1`] = `
   font-size: 16px;
 }
 
+.emotion-11[data-size='small'] {
+  padding-left: 8px;
+}
+
 <div
     data-testid="testing"
   >
@@ -1292,6 +1309,7 @@ exports[`SearchInput > renders with disabled prop 1`] = `
             >
               <div
                 class="emotion-7 emotion-8"
+                data-size="large"
               >
                 <svg
                   class="emotion-9 emotion-10"
@@ -1471,6 +1489,10 @@ exports[`SearchInput > renders with error prop 1`] = `
   border-color: inherit;
 }
 
+.emotion-7[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-9 {
   vertical-align: middle;
   fill: #3f4250;
@@ -1500,6 +1522,10 @@ exports[`SearchInput > renders with error prop 1`] = `
 
 .emotion-11[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-11[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-13 {
@@ -1577,6 +1603,7 @@ exports[`SearchInput > renders with error prop 1`] = `
             >
               <div
                 class="emotion-7 emotion-8"
+                data-size="large"
               >
                 <svg
                   class="emotion-9 emotion-10"
@@ -1775,6 +1802,10 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
   border-color: inherit;
 }
 
+.emotion-7[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-9 {
   vertical-align: middle;
   fill: #3f4250;
@@ -1804,6 +1835,10 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
 
 .emotion-11[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-11[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-13 {
@@ -1922,6 +1957,7 @@ exports[`SearchInput > renders with shortcut prop > as array of string 1`] = `
             >
               <div
                 class="emotion-7 emotion-8"
+                data-size="large"
               >
                 <svg
                   class="emotion-9 emotion-10"
@@ -2138,6 +2174,10 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
   border-color: inherit;
 }
 
+.emotion-7[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-9 {
   vertical-align: middle;
   fill: #3f4250;
@@ -2167,6 +2207,10 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
 
 .emotion-11[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-11[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-13 {
@@ -2285,6 +2329,7 @@ exports[`SearchInput > renders with shortcut prop > as boolean 1`] = `
             >
               <div
                 class="emotion-7 emotion-8"
+                data-size="large"
               >
                 <svg
                   class="emotion-9 emotion-10"

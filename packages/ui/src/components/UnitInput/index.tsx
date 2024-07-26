@@ -31,6 +31,10 @@ const StyledInput = styled.input`
   padding-left: ${({ theme }) => theme.space['2']};
   background: transparent;
   color: ${({ theme }) => theme.colors.neutral.text};
+  &[data-size="small"] {
+    padding-left: ${({ theme }) => theme.space['1']};
+  }
+
   &::placeholder {
     color: ${({ theme }) => theme.colors.neutral.textWeak};
   }
@@ -313,6 +317,7 @@ export const UnitInput = ({
             data-testid="unit-input"
             required={required}
             className={className}
+            data-size={size}
           />
           {error ? <Icon name="alert" sentiment="danger" /> : null}
           {success && !error ? (

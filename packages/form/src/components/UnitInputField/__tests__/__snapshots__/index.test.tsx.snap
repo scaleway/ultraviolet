@@ -241,6 +241,10 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   color: #3f4250;
 }
 
+.emotion-12[data-size="small"] {
+  padding-left: 8px;
+}
+
 .emotion-12::-webkit-input-placeholder {
   color: #727683;
 }
@@ -348,6 +352,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
 
 .emotion-21[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-21[data-size='medium'] {
@@ -538,6 +543,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
             <input
               aria-invalid="false"
               class="emotion-12 emotion-13"
+              data-size="large"
               data-testid="unit-input"
               max="9007199254740991"
               min="0"
@@ -841,6 +847,10 @@ exports[`UnitInputField > should render correctly 1`] = `
   color: #3f4250;
 }
 
+.emotion-10[data-size="small"] {
+  padding-left: 8px;
+}
+
 .emotion-10::-webkit-input-placeholder {
   color: #727683;
 }
@@ -948,6 +958,7 @@ exports[`UnitInputField > should render correctly 1`] = `
 
 .emotion-19[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-19[data-size='medium'] {
@@ -1076,6 +1087,7 @@ exports[`UnitInputField > should render correctly 1`] = `
             <input
               aria-invalid="false"
               class="emotion-10 emotion-11"
+              data-size="large"
               data-testid="unit-input"
               max="9007199254740991"
               min="0"
