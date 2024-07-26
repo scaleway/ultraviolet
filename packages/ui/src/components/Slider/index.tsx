@@ -116,7 +116,7 @@ export const Slider = ({
           as="p"
           variant="caption"
           sentiment={error ? 'danger' : 'neutral'}
-          prominence="default"
+          prominence="weak"
         >
           {typeof error === 'string' ? error : helper}
         </Text>

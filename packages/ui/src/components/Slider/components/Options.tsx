@@ -17,6 +17,7 @@ export const Option = styled('span', {
   shouldForwardProp: prop => !['left', 'width'].includes(prop),
 })<{ left: number; width: number }>`
   display: flex;
+  white-space: nowrap;
   left: ${({ left }) => left}%;
   position: absolute;
   transform: translateX(-50%);

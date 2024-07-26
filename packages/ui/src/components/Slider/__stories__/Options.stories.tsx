@@ -6,10 +6,12 @@ import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
 
 const options = [
-  { label: '1Mb', value: 1 },
-  { label: '10MB', value: 10 },
-  { label: '100Mb', value: 100 },
-  { label: '200Mb', value: 200 },
+  { label: '1 Mbps', value: 1 },
+  { label: '10', value: 10 },
+  { label: '100', value: 100 },
+  { label: '200', value: 200 },
+  { label: '500', value: 500 },
+  { label: '1 Gbps', value: 1000 },
 ]
 
 export const Options: StoryFn<typeof Slider> = args => {
