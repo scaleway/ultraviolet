@@ -1,12 +1,14 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { AnchorHTMLAttributes, ReactNode } from 'react'
+import type { AnchorHTMLAttributes, ElementType, ReactNode } from 'react'
 import { forwardRef } from 'react'
 
 type CardProps = {
   title?: string
+  titleAs?: ElementType
   subtitle?: string
+  subtitleAs?: ElementType
   description?: string
   children?: ReactNode
   href: string
@@ -62,7 +64,16 @@ const FullHeightStack = styled(Stack)`
 
 export const Card = forwardRef<HTMLAnchorElement, CardProps>(
   (
-    { title, subtitle, description, children, href, target = '_blank' },
+    {
+      title,
+      titleAs,
+      subtitle,
+      subtitleAs,
+      description,
+      children,
+      href,
+      target = '_blank',
+    },
     ref,
   ) => (
     <StyledWrapper href={href} target={target} ref={ref}>
@@ -76,7 +87,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
           <div>
             {subtitle ? (
               <Text
-                as="h5"
+                as={subtitleAs || 'h5'}
                 variant="caption"
                 prominence="weak"
                 sentiment="neutral"
@@ -85,7 +96,12 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
                 {subtitle}
               </Text>
             ) : null}
-            <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
+            <Text
+              as={titleAs || 'h3'}
+              variant="bodyStrong"
+              sentiment="neutral"
+              oneLine
+            >
               {title}
             </Text>
           </div>
