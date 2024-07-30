@@ -68,4 +68,19 @@ describe('ContentCardGroup', () => {
         </ContentCardGroup.Card>
       </ContentCardGroup>,
     ))
+
+  test('renders correctly with different title and subtitle and with custom titleAs and subtitleAs', () =>
+    shouldMatchEmotionSnapshot(
+      <ContentCardGroup>
+        <ContentCardGroup.Card
+          title="title"
+          titleAs="h1"
+          subtitle="subtitle"
+          subtitleAs="h2"
+          href="http://scaleway.com"
+        >
+          <div>test</div>
+        </ContentCardGroup.Card>
+      </ContentCardGroup>,
+    ))
 })
