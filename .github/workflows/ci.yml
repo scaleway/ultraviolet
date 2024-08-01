@@ -206,12 +206,12 @@ jobs:
             echo "SCW_CPU_LIMIT=1120" >> $GITHUB_ENV
             echo "SCW_MEMORY_LIMIT=1024" >> $GITHUB_ENV
           else
-            echo "SCW_CPU_LIMIT=2240" >> $GITHUB_ENV
-            echo "SCW_MEMORY_LIMIT=1024" >> $GITHUB_ENV
+            echo "SCW_CPU_LIMIT=560" >> $GITHUB_ENV
+            echo "SCW_MEMORY_LIMIT=256" >> $GITHUB_ENV
           fi
 
       - name: Deploy Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.1.5
+        uses: philibea/scaleway-containers-deploy@v1.1.4
         id: deploy
         with:
           type: "deploy"
