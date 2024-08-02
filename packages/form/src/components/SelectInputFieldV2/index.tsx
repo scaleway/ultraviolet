@@ -33,7 +33,6 @@ type SelectInputFieldV2Props<
     | 'selectAllGroup'
     | 'autofocus'
     | 'data-testid'
-    | 'onChange'
     | 'id'
     | 'onBlur'
     | 'aria-label'
