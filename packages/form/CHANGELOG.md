@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.7.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @ultraviolet/ui@1.67.1
+
 ## 3.7.0
 
 ### Minor Changes
