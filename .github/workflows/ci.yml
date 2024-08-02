@@ -203,15 +203,15 @@ jobs:
         id: set-cpu-limit
         run: |
           if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
-            echo "SCW_CPU_LIMIT=1120" >> $GITHUB_ENV
+            echo "SCW_CPU_LIMIT=500" >> $GITHUB_ENV
             echo "SCW_MEMORY_LIMIT=1024" >> $GITHUB_ENV
           else
-            echo "SCW_CPU_LIMIT=560" >> $GITHUB_ENV
+            echo "SCW_CPU_LIMIT=250" >> $GITHUB_ENV
             echo "SCW_MEMORY_LIMIT=256" >> $GITHUB_ENV
           fi
 
       - name: Deploy Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.1.4
+        uses: philibea/scaleway-containers-deploy@v1.1.5
         id: deploy
         with:
           type: "deploy"
@@ -223,7 +223,7 @@ jobs:
           scw_environment_variables: "GITHUB=DEPLOY"
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
           scw_min_scale: ${{ env.SCW_MIN_SCALE }}
-          # scw_cpu_limit: ${{ env.SCW_CPU_LIMIT }}
+          scw_cpu_limit: ${{ env.SCW_CPU_LIMIT }}
           scw_max_concurrency: ${{ env.SCW_MAX_CONCURRENCY }}
           scw_sandbox: "v2"
           scw_memory_limit: ${{ env.SCW_MEMORY_LIMIT }}
