@@ -211,7 +211,7 @@ jobs:
           fi
 
       - name: Deploy Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.1.5
+        uses: philibea/scaleway-containers-deploy@v1.1.4
         id: deploy
         with:
           type: "deploy"
@@ -223,7 +223,7 @@ jobs:
           scw_environment_variables: "GITHUB=DEPLOY"
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
           scw_min_scale: ${{ env.SCW_MIN_SCALE }}
-          scw_cpu_limit: ${{ env.SCW_CPU_LIMIT }}
+          # scw_cpu_limit: ${{ env.SCW_CPU_LIMIT }}
           scw_max_concurrency: ${{ env.SCW_MAX_CONCURRENCY }}
           scw_sandbox: "v2"
           scw_memory_limit: ${{ env.SCW_MEMORY_LIMIT }}
