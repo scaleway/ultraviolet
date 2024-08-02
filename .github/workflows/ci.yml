@@ -196,7 +196,7 @@ jobs:
           if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
             echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
           else
-            echo "SCW_MIN_SCALE=0" >> $GITHUB_ENV
+            echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
           fi
 
       - name: Set scw_limit
