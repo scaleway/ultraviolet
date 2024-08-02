@@ -196,7 +196,7 @@ jobs:
           if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
             echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
           else
-            echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
+            echo "SCW_MIN_SCALE=0" >> $GITHUB_ENV
           fi
 
       - name: Set scw_limit
@@ -217,6 +217,7 @@ jobs:
           type: "deploy"
           scw_dns: "storybook.ultraviolet.scaleway.com"
           root_zone: ${{ env.BRANCH_SLUG == 'main' }}
+          scw_dns_prefix: ""
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
