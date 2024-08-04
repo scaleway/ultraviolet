@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.16.1
+
+### Patch Changes
+
+- [#4087](https://github.com/scaleway/ultraviolet/pull/4087) [`f19fe83`](https://github.com/scaleway/ultraviolet/commit/f19fe83f78235813532ec199808d0e52567dcfc5) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Icon />` with name `send`
+
 ## 2.16.0
 
 ### Minor Changes

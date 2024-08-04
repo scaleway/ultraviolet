@@ -203,10 +203,10 @@ jobs:
         id: set-cpu-limit
         run: |
           if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
-            echo "SCW_CPU_LIMIT=1120" >> $GITHUB_ENV
+            echo "SCW_CPU_LIMIT=500" >> $GITHUB_ENV
             echo "SCW_MEMORY_LIMIT=1024" >> $GITHUB_ENV
           else
-            echo "SCW_CPU_LIMIT=560" >> $GITHUB_ENV
+            echo "SCW_CPU_LIMIT=250" >> $GITHUB_ENV
             echo "SCW_MEMORY_LIMIT=256" >> $GITHUB_ENV
           fi
 

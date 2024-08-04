@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 0.21.0
+
+### Minor Changes
+
+- [#4091](https://github.com/scaleway/ultraviolet/pull/4091) [`e0facac`](https://github.com/scaleway/ultraviolet/commit/e0facac731dc579988402b8ce26201745ed23224) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat: add `titleAs` and `subtitleAs` to `ContentCardGroup`
+
+### Patch Changes
+
+- Updated dependencies [[`f19fe83`](https://github.com/scaleway/ultraviolet/commit/f19fe83f78235813532ec199808d0e52567dcfc5)]:
+  - @ultraviolet/icons@2.16.1
+  - @ultraviolet/ui@1.67.1
+
 ## 0.20.9
 
 ### Patch Changes
