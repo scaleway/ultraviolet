@@ -146,15 +146,20 @@ export const DoubleSlider = ({
       if (
         selectedIndexes[1] !== null &&
         selectedIndexes[1] < selectedIndexes[0]
-      )
-        {return 1}
+      ) {
+        return 1
+      }
 
       return 0
     }
 
     if (selectedIndexes[1] === null) return 1
-    if (selectedIndexes[0] !== null && selectedIndexes[1] < selectedIndexes[0])
-      {return 0}
+    if (
+      selectedIndexes[0] !== null &&
+      selectedIndexes[1] < selectedIndexes[0]
+    ) {
+      return 0
+    }
 
     return 1
   }
@@ -252,16 +257,16 @@ export const DoubleSlider = ({
           if (!event.target.value) {
             if (side === 'left') {
               const index = activeValue('left')
-              if (index === 0)
-                {internalOnChangeRef.current([min, selectedIndexes[1]])}
-              else internalOnChangeRef.current([selectedIndexes[0], max])
+              if (index === 0) {
+                internalOnChangeRef.current([min, selectedIndexes[1]])
+              } else internalOnChangeRef.current([selectedIndexes[0], max])
             }
 
             if (side === 'right') {
               const index = activeValue('right')
-              if (index === 0)
-                {internalOnChangeRef.current([min, selectedIndexes[1]])}
-              else internalOnChangeRef.current([selectedIndexes[0], max])
+              if (index === 0) {
+                internalOnChangeRef.current([min, selectedIndexes[1]])
+              } else internalOnChangeRef.current([selectedIndexes[0], max])
             }
           }
         }}
