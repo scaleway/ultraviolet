@@ -45,7 +45,7 @@ type ColumnProps = Pick<
   ComponentProps<typeof HeaderCell>,
   'isOrdered' | 'onOrder' | 'orderDirection'
 > & {
-  label?: string
+  label?: ReactNode
   width?: string
   minWidth?: string
   maxWidth?: string
