@@ -18,6 +18,8 @@ export const Options: StoryFn<typeof Slider> = args => {
   const [value, setValue] = useState(3)
   const [doubleValue, setDoubleValue] = useState([1, 3])
 
+  console.log(value)
+
   return (
     <Stack gap={4}>
       <Stack gap={1}>
