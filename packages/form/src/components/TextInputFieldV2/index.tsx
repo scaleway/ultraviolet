@@ -93,8 +93,8 @@ export const TextInputField = <
       error={getError(
         {
           regex: regexes,
-          // minLength,
-          // maxLength,
+          minLength,
+          maxLength,
           label: label ?? '',
           value: field.value,
         },
