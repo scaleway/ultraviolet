@@ -216,6 +216,10 @@ export const SearchInput = forwardRef(
 
     const handleKeyReleased = useCallback(
       (event: KeyboardEvent) => {
+        if (!(event instanceof KeyboardEvent)) {
+          return
+        }
+
         const { key } = event
         setKeyPressed(keyPressed.filter(k => k !== key.toUpperCase()))
       },
