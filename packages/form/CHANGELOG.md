@@ -1,5 +1,25 @@
 # Change Log
 
+## 3.7.2
+
+### Patch Changes
+
+- [#4097](https://github.com/scaleway/ultraviolet/pull/4097) [`9d1b597`](https://github.com/scaleway/ultraviolet/commit/9d1b59723fe60e599b5d705677416c671258874c) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(SelectInputFieldV2): fix onChange type
+
+- [#4108](https://github.com/scaleway/ultraviolet/pull/4108) [`8b799d1`](https://github.com/scaleway/ultraviolet/commit/8b799d13dafcc4354b8643eb78ebcf7de73560d3) Thanks [@vincentaudebert](https://github.com/vincentaudebert)! - fix(textinputv2): reset minLength in errors
+
+- [#4106](https://github.com/scaleway/ultraviolet/pull/4106) [`18372bf`](https://github.com/scaleway/ultraviolet/commit/18372bfdd03691a14674507e1b6b83bf5970cc82) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.2`.
+  Updated dependency `@babel/eslint-parser` to `7.25.1`.
+  Updated dependency `@babel/preset-env` to `7.25.3`.
+
+- [#4100](https://github.com/scaleway/ultraviolet/pull/4100) [`76a9f1a`](https://github.com/scaleway/ultraviolet/commit/76a9f1ababc7019d684d014a975f3d662093e406) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.52.2`.
+
+- [#4094](https://github.com/scaleway/ultraviolet/pull/4094) [`0670dae`](https://github.com/scaleway/ultraviolet/commit/0670dae04d54fff3a99f62c9f0f9ac36d0325213) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/eslint-parser` to `7.25.0`.
+  Updated dependency `@babel/preset-env` to `7.25.0`.
+  Updated dependency `@babel/runtime` to `7.25.0`.
+- Updated dependencies [[`b3b8fe5`](https://github.com/scaleway/ultraviolet/commit/b3b8fe544f097368e3477272697259d938ab85d5), [`3bcfb9a`](https://github.com/scaleway/ultraviolet/commit/3bcfb9a57c82e0b733fc8eb635544a204ba21aa7), [`18372bf`](https://github.com/scaleway/ultraviolet/commit/18372bfdd03691a14674507e1b6b83bf5970cc82)]:
+  - @ultraviolet/ui@1.67.2
+
 ## 3.7.1
 
 ### Patch Changes

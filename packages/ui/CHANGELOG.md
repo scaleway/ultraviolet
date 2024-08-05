@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.67.2
+
+### Patch Changes
+
+- [#4098](https://github.com/scaleway/ultraviolet/pull/4098) [`b3b8fe5`](https://github.com/scaleway/ultraviolet/commit/b3b8fe544f097368e3477272697259d938ab85d5) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(SearchInput): only handle keyboard event
+
+- [#4067](https://github.com/scaleway/ultraviolet/pull/4067) [`3bcfb9a`](https://github.com/scaleway/ultraviolet/commit/3bcfb9a57c82e0b733fc8eb635544a204ba21aa7) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Table: add documentation (story) to have checkbox inside column
+
+- [#4106](https://github.com/scaleway/ultraviolet/pull/4106) [`18372bf`](https://github.com/scaleway/ultraviolet/commit/18372bfdd03691a14674507e1b6b83bf5970cc82) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.2`.
+  Updated dependency `@babel/eslint-parser` to `7.25.1`.
+  Updated dependency `@babel/preset-env` to `7.25.3`.
+- Updated dependencies [[`18372bf`](https://github.com/scaleway/ultraviolet/commit/18372bfdd03691a14674507e1b6b83bf5970cc82)]:
+  - @ultraviolet/icons@2.16.2
+
 ## 1.67.1
 
 ### Patch Changes

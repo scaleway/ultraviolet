@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.16.2
+
+### Patch Changes
+
+- [#4106](https://github.com/scaleway/ultraviolet/pull/4106) [`18372bf`](https://github.com/scaleway/ultraviolet/commit/18372bfdd03691a14674507e1b6b83bf5970cc82) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.2`.
+  Updated dependency `@babel/eslint-parser` to `7.25.1`.
+  Updated dependency `@babel/preset-env` to `7.25.3`.
+
 ## 2.16.1
 
 ### Patch Changes
