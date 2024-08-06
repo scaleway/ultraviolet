@@ -99,10 +99,6 @@ const RadioContainer = styled.div`
     cursor: pointer;
   }
 
-  &[aria-disabled='true'][data-checked='false'] {
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-  }
-
   :hover[aria-disabled='false'] {
     ${RadioInput} + ${Ring} {
       fill: ${({ theme }) => theme.colors.primary.border};
@@ -121,6 +117,7 @@ const RadioContainer = styled.div`
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
 
     & > label,
     ${RadioInput} {
@@ -130,7 +127,7 @@ const RadioContainer = styled.div`
     ${Ring} {
       fill: ${({ theme }) => theme.colors.neutral.borderDisabled};
       cursor: not-allowed;
-      
+
       ${InnerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
       }

@@ -65,6 +65,29 @@ exports[`RadioGroup > renders correctly 1`] = `
   text-decoration: none;
 }
 
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -109,10 +132,6 @@ exports[`RadioGroup > renders correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-12[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
@@ -131,6 +150,7 @@ exports[`RadioGroup > renders correctly 1`] = `
 
 .emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-12[aria-disabled='true']>label,
@@ -245,7 +265,7 @@ exports[`RadioGroup > renders correctly 1`] = `
             Label 
           </legend>
           <div
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-1"
           >
             <div
               class="emotion-10 emotion-11"
@@ -430,10 +450,10 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -488,10 +508,6 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
   cursor: pointer;
 }
 
-.emotion-12[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
@@ -510,6 +526,7 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
 
 .emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-12[aria-disabled='true']>label,
@@ -800,6 +817,29 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
   text-decoration: none;
 }
 
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -844,10 +884,6 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
   cursor: pointer;
 }
 
-.emotion-12[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
@@ -866,6 +902,7 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
 
 .emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-12[aria-disabled='true']>label,
@@ -992,7 +1029,7 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
             Label 
           </legend>
           <div
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-1"
           >
             <div
               class="emotion-10 emotion-11"
@@ -1173,6 +1210,29 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
   text-decoration: none;
 }
 
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1217,10 +1277,6 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
   cursor: pointer;
 }
 
-.emotion-12[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-12:hover[aria-disabled='false'] .emotion-15+.emotion-17 {
   fill: #8c40ef;
 }
@@ -1239,6 +1295,7 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
 
 .emotion-12[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-12[aria-disabled='true']>label,
@@ -1365,7 +1422,7 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
             Label 
           </legend>
           <div
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-1"
           >
             <div
               class="emotion-10 emotion-11"

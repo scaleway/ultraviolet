@@ -124,10 +124,6 @@ exports[`SelectableCardField > should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-5[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
   fill: #8c40ef;
 }
@@ -146,6 +142,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
 
 .emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-5[aria-disabled='true']>label,
@@ -483,10 +480,6 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-5[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
   fill: #8c40ef;
 }
@@ -505,6 +498,7 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
 
 .emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-5[aria-disabled='true']>label,
@@ -843,10 +837,6 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   cursor: pointer;
 }
 
-.emotion-5[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
   fill: #8c40ef;
 }
@@ -865,6 +855,7 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
 
 .emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-5[aria-disabled='true']>label,
@@ -1203,10 +1194,6 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   cursor: pointer;
 }
 
-.emotion-5[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
   fill: #8c40ef;
 }
@@ -1225,6 +1212,7 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
 
 .emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-5[aria-disabled='true']>label,
@@ -1567,10 +1555,6 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-5[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-5:hover[aria-disabled='false'] .emotion-8+.emotion-10 {
   fill: #8c40ef;
 }
@@ -1589,6 +1573,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
 
 .emotion-5[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-5[aria-disabled='true']>label,
