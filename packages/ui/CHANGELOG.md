@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.67.3
+
+### Patch Changes
+
+- [#4112](https://github.com/scaleway/ultraviolet/pull/4112) [`3de4a9c`](https://github.com/scaleway/ultraviolet/commit/3de4a9c635422e603843db2305d4358e9f4ff7d7) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(Modal): stop propagation on mousedown
+
+- [#4113](https://github.com/scaleway/ultraviolet/pull/4113) [`f6a7aae`](https://github.com/scaleway/ultraviolet/commit/f6a7aaea5e56e1d377239a27875d7f83b855ab3d) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix(RadioGroup): tooltip placement and disabled text color
+
 ## 1.67.2
 
 ### Patch Changes
