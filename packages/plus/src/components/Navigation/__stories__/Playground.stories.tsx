@@ -41,6 +41,8 @@ const Image = styled.img`
 
 const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   const [active, setActive] = useState('Instance')
+  const [instanceExpanded, setInstanceExpanded] = useState(false)
+  const [pinnedItemsExpanded, setPinnedItemsExpanded] = useState(false)
   const [expanded, setExpanded] = useState(true)
 
   const { pinnedItems } = useNavigation()
@@ -96,7 +98,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         noPinButton
         active={active === 'Organization Dashboard'}
         onClickPinUnpin={onClickPinUnpin}
-        onClick={() => setActive('Organization Dashboard')}
+        onToggle={() => setActive('Organization Dashboard')}
       />
       <Navigation.Item
         label="Project Dashboard"
@@ -106,9 +108,12 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
         noPinButton
         active={active === 'Project Dashboard'}
         onClickPinUnpin={onClickPinUnpin}
-        onClick={() => setActive('Project Dashboard')}
+        onToggle={() => setActive('Project Dashboard')}
       />
-      <Navigation.PinnedItems />
+      <Navigation.PinnedItems
+        toggle={pinnedItemsExpanded}
+        onToggle={toggle => setPinnedItemsExpanded(!!toggle)}
+      />
       <Navigation.Separator />
       <Navigation.Group label="Products">
         <Navigation.Item
@@ -116,7 +121,8 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           id="compute"
           subLabel="All compute ressources"
           categoryIcon="baremetal"
-          toggle={false}
+          toggle={instanceExpanded}
+          onToggle={toggle => setInstanceExpanded(!!toggle)}
         >
           <Navigation.Item
             label="Instance"
@@ -125,7 +131,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             badgeSentiment="success"
             active={active === 'Instance'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Instance')}
+            onToggle={() => setActive('Instance')}
           />
           <Navigation.Item
             label="Elastic Metal"
@@ -133,7 +139,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             disabled
             active={active === 'Elastic Metal'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Elastic Metal')}
+            onToggle={() => setActive('Elastic Metal')}
           />
           <Navigation.Item
             label="Dedibox"
@@ -141,7 +147,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             href="https://scaleway.com"
             active={active === 'Dedibox'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Dedibox')}
+            onToggle={() => setActive('Dedibox')}
           />
           <Navigation.Item
             label="Very long product name with spaces"
@@ -150,7 +156,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             badgeSentiment="danger"
             active={active === 'Very long product name with spaces'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Very long product name with spaces')}
+            onToggle={() => setActive('Very long product name with spaces')}
           />
           <Navigation.Item
             label="Verylongproductnamewithoutspace"
@@ -159,7 +165,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             badgeSentiment="danger"
             active={active === 'Verylongproductnamewithoutspace'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Verylongproductnamewithoutspace')}
+            onToggle={() => setActive('Verylongproductnamewithoutspace')}
           />
           <Navigation.Item id="advanced" label="Advanced">
             <Navigation.Item
@@ -167,14 +173,14 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
               id="kubernetes"
               active={active === 'Kubernetes'}
               onClickPinUnpin={onClickPinUnpin}
-              onClick={() => setActive('Kubernetes')}
+              onToggle={() => setActive('Kubernetes')}
             />
             <Navigation.Item
               label="OpenStack"
               id="openstack"
               active={active === 'OpenStack'}
               onClickPinUnpin={onClickPinUnpin}
-              onClick={() => setActive('OpenStack')}
+              onToggle={() => setActive('OpenStack')}
             />
           </Navigation.Item>
         </Navigation.Item>
@@ -188,7 +194,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             id="block-storage"
             active={active === 'Block Storage'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Block Storage')}
+            onToggle={() => setActive('Block Storage')}
           />
           <Navigation.Item
             label="Object Storage"
@@ -197,7 +203,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             badgeSentiment="warning"
             active={active === 'Object Storage'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Object Storage')}
+            onToggle={() => setActive('Object Storage')}
           />
         </Navigation.Item>
         <Navigation.Item label="Network" id="network" categoryIcon="network">
@@ -206,21 +212,21 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             id="load-balancer"
             active={active === 'Load Balancer'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Load Balancer')}
+            onToggle={() => setActive('Load Balancer')}
           />
           <Navigation.Item
             label="IP"
             id="ip"
             active={active === 'IP'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('IP')}
+            onToggle={() => setActive('IP')}
           />
           <Navigation.Item
             label="VPC"
             id="vpc"
             active={active === 'VPC'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('VPC')}
+            onToggle={() => setActive('VPC')}
           />
         </Navigation.Item>
         <Navigation.Item id="database" label="Database" categoryIcon="database">
@@ -229,21 +235,21 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             id="managed-database"
             active={active === 'Managed Database'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Managed Database')}
+            onToggle={() => setActive('Managed Database')}
           />
           <Navigation.Item
             label="Redis"
             id="redis"
             active={active === 'Redis'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Redis')}
+            onToggle={() => setActive('Redis')}
           />
           <Navigation.Item
             label="Elasticsearch"
             id="elasticsearch"
             active={active === 'Elasticsearch'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Elasticsearch')}
+            onToggle={() => setActive('Elasticsearch')}
           />
         </Navigation.Item>
         <Navigation.Item
@@ -256,21 +262,21 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             id="logs"
             active={active === 'Logs'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Logs')}
+            onToggle={() => setActive('Logs')}
           />
           <Navigation.Item
             label="Metrics"
             id="metrics"
             active={active === 'Metrics'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Metrics')}
+            onToggle={() => setActive('Metrics')}
           />
           <Navigation.Item
             label="Alerts"
             id="alerts"
             active={active === 'Alerts'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Alerts')}
+            onToggle={() => setActive('Alerts')}
           />
         </Navigation.Item>
         <Navigation.Item label="Security" id="security" categoryIcon="security">
@@ -279,21 +285,21 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
             id="firewall"
             active={active === 'Firewall'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Firewall')}
+            onToggle={() => setActive('Firewall')}
           />
           <Navigation.Item
             label="Certificate"
             id="certificate"
             active={active === 'Certificate'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('Certificate')}
+            onToggle={() => setActive('Certificate')}
           />
           <Navigation.Item
             label="VPN"
             id="vpn"
             active={active === 'VPN'}
             onClickPinUnpin={onClickPinUnpin}
-            onClick={() => setActive('VPN')}
+            onToggle={() => setActive('VPN')}
           />
         </Navigation.Item>
       </Navigation.Group>
@@ -305,7 +311,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           noPinButton
           active={active === 'Support'}
           onClickPinUnpin={onClickPinUnpin}
-          onClick={() => setActive('Support')}
+          onToggle={() => setActive('Support')}
         />
         <Navigation.Item
           label="Abuse"
@@ -313,7 +319,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           noPinButton
           active={active === 'Abuse'}
           onClickPinUnpin={onClickPinUnpin}
-          onClick={() => setActive('Abuse')}
+          onToggle={() => setActive('Abuse')}
         />
         <Navigation.Item
           label="Documentation"
@@ -323,7 +329,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           href="http://scaleway.com"
           active={active === 'Documentation'}
           onClickPinUnpin={onClickPinUnpin}
-          onClick={() => setActive('Documentation')}
+          onToggle={() => setActive('Documentation')}
         />
         <Navigation.Item
           label="Feature Request"
@@ -331,7 +337,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
           href="http://scaleway.com"
           active={active === 'Feature Request'}
           onClickPinUnpin={onClickPinUnpin}
-          onClick={() => setActive('Feature Request')}
+          onToggle={() => setActive('Feature Request')}
         />
       </Navigation.Item>
     </Navigation>
@@ -357,6 +363,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         initialExpanded={navigationExpanded}
         initialWidth={navigationWidth}
         initialPinned={pinnedItems}
+        animationType="simple"
         pinnedFeature
       >
         <PlaygroundContent {...props} />

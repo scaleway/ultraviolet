@@ -26,13 +26,13 @@ const StyledStack = styled(Stack)`
 `
 
 const Container = styled.div`
-  &[data-animation='expand'] {
+  &[data-animation='expand'][data-animation-type="complex"] {
     ${StyledText} {
       animation: ${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out;
     }
   }
 
-  &[data-animation='collapse'] {
+  &[data-animation='collapse'][data-animation-type="complex"] {
     ${StyledText} {
       animation: ${groupAnimation} ${ANIMATION_DURATION}ms ease-in-out reverse;
     }
@@ -48,13 +48,15 @@ export const Group = ({ children, label }: GroupProps) => {
     )
   }
 
-  const { expanded, animation } = context
+  const { expanded, animation, animationType } = context
+
+  const isDiplay = animation === 'expand' || expanded
 
   if (Children.count(children) > 0) {
     return (
-      <Container data-animation={animation}>
+      <Container data-animation={animation} data-animation-type={animationType}>
         <StyledStack direction="column">
-          {expanded || animation === 'expand' ? (
+          {isDiplay ? (
             <StyledText
               as="span"
               variant="bodySmallStrong"

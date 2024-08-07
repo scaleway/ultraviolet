@@ -49,12 +49,21 @@ type PinnedItemsProps = {
    */
   toggle?: boolean
   /**
+   * This function will be triggered on click of the item. If the item is expandable
+   * toggle will be passed with it.
+   */
+  onToggle?: (toggle: boolean) => void
+  /**
    * This function will be called when the user reorder the pinned items
    */
   onReorder?: (pinnedItems: string[]) => void
 }
 
-export const PinnedItems = ({ toggle = true, onReorder }: PinnedItemsProps) => {
+export const PinnedItems = ({
+  toggle = true,
+  onReorder,
+  onToggle,
+}: PinnedItemsProps) => {
   const context = useNavigation()
 
   if (!context) {
@@ -115,25 +124,21 @@ export const PinnedItems = ({ toggle = true, onReorder }: PinnedItemsProps) => {
           label={locales['navigation.pinned.item.group.label']}
           categoryIcon="pin"
           categoryIconVariant="neutral"
-          toggle={toggle}
           type="pinnedGroup"
           id="pinned-group"
           data-testid="pinned-group"
+          toggle={toggle}
+          onToggle={onToggle}
         >
           {pinnedItems.length > 0 ? (
             pinnedItems.map((itemId, index) =>
               items[itemId]?.label ? (
-                <div
-                  style={{ position: expanded ? 'relative' : undefined }}
-                  key={itemId}
-                >
-                  {expanded ? (
-                    <DropableArea
-                      onDragOver={onDragOver}
-                      onDragLeave={onDragLeave}
-                      onDrop={event => onDrop(event, index)}
-                    />
-                  ) : null}
+                <RelativeDiv key={itemId}>
+                  <DropableArea
+                    onDragOver={onDragOver}
+                    onDragLeave={onDragLeave}
+                    onDrop={event => onDrop(event, index)}
+                  />
                   <Item
                     label={items[itemId].label}
                     type="pinned"
@@ -141,13 +146,12 @@ export const PinnedItems = ({ toggle = true, onReorder }: PinnedItemsProps) => {
                     toggle={toggle}
                     id={itemId}
                     active={items[itemId]?.active ?? false}
-                    onClick={items[itemId]?.onClick ?? undefined}
                     onClickPinUnpin={
                       items[itemId]?.onClickPinUnpin ?? undefined
                     }
                     hasParents
                   />
-                </div>
+                </RelativeDiv>
               ) : null,
             )
           ) : (
@@ -162,15 +166,14 @@ export const PinnedItems = ({ toggle = true, onReorder }: PinnedItemsProps) => {
               </Text>
             </TextContainer>
           )}
-          {expanded ? (
-            <RelativeDiv style={{ position: 'relative' }}>
-              <DropableArea
-                onDragOver={onDragOver}
-                onDragLeave={onDragLeave}
-                onDrop={event => onDrop(event, pinnedItems.length)}
-              />
-            </RelativeDiv>
-          ) : null}
+
+          <RelativeDiv>
+            <DropableArea
+              onDragOver={onDragOver}
+              onDragLeave={onDragLeave}
+              onDrop={event => onDrop(event, pinnedItems.length)}
+            />
+          </RelativeDiv>
         </Item>
       </div>
     )
