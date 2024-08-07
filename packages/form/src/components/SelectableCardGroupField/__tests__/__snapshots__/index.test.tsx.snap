@@ -201,10 +201,6 @@ exports[`SelectableCardField > should render correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-15[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-15:hover[aria-disabled='false'] .emotion-18+.emotion-20 {
   fill: #8c40ef;
 }
@@ -223,6 +219,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
 
 .emotion-15[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-15[aria-disabled='true']>label,
@@ -1240,10 +1237,6 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
   cursor: pointer;
 }
 
-.emotion-15[aria-disabled='true'][data-checked='false'] {
-  color: #b5b7bd;
-}
-
 .emotion-15:hover[aria-disabled='false'] .emotion-18+.emotion-20 {
   fill: #8c40ef;
 }
@@ -1262,6 +1255,7 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
 
 .emotion-15[aria-disabled='true'] {
   cursor: not-allowed;
+  color: #b5b7bd;
 }
 
 .emotion-15[aria-disabled='true']>label,

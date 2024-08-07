@@ -133,7 +133,11 @@ export const RadioGroup = ({
                 <StyledRequiredIcon name="asterisk" color="danger" size={8} />
               ) : null}
             </Text>
-            <Stack gap={direction === 'column' ? 1 : 2} direction={direction}>
+            <Stack
+              gap={direction === 'column' ? 1 : 2}
+              direction={direction}
+              alignItems="start"
+            >
               {children}
             </Stack>
           </Stack>
