@@ -7,8 +7,9 @@ export const NAVIGATION_MAX_WIDTH = 320 // in px
 
 /**
  * ANIMATIONS
+ * collapse and expand animation duration of the whole nav in ms
  */
-export const ANIMATION_DURATION = 700 // collapse and expand animation duration of the whole nav in ms
+export const ANIMATION_DURATION = 250
 
 export const shrinkHeight = keyframes`
     0% {

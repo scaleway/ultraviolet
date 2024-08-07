@@ -44,7 +44,6 @@ const Container = styled('div', {
 
   &[data-animation="collapse"] {
     transition: width ${ANIMATION_DURATION}ms ease-in-out;
-
     width: ${NAVIGATION_COLLASPED_WIDTH}px;
   }
 `

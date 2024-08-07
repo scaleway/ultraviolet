@@ -184,14 +184,14 @@ exports[`Navigation > click on expand / collapse button 1`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -217,14 +217,14 @@ exports[`Navigation > click on expand / collapse button 1`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -513,31 +513,31 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -658,31 +658,31 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -1005,8 +1005,8 @@ exports[`Navigation > click on expand / collapse button 1`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-32 {
@@ -1014,8 +1014,8 @@ exports[`Navigation > click on expand / collapse button 1`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-36 {
@@ -1138,24 +1138,24 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   margin: 16px -16px;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
 .emotion-49 {
@@ -1218,8 +1218,8 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -1235,8 +1235,8 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -1399,8 +1399,8 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -1424,8 +1424,8 @@ exports[`Navigation > click on expand / collapse button 1`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -1738,7 +1738,6 @@ exports[`Navigation > click on expand / collapse button 1`] = `
                   </div>
                   <div
                     class="emotion-40 emotion-41"
-                    style="position: relative;"
                   >
                     <div
                       class="emotion-42 emotion-43"
@@ -2065,14 +2064,14 @@ exports[`Navigation > click on expand / collapse button 2`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -2098,14 +2097,14 @@ exports[`Navigation > click on expand / collapse button 2`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -2431,24 +2430,24 @@ exports[`Navigation > click on expand / collapse button 2`] = `
   margin: 16px -16px;
 }
 
-.emotion-25[data-animation='expand'] .eh4zgrv2 {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-25[data-animation='expand'][data-animation-type="complex"] .eh4zgrv2 {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-25[data-animation='collapse'] .eh4zgrv2 {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-25[data-animation='collapse'][data-animation-type="complex"] .eh4zgrv2 {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-25[data-animation='expand'] .eh4zgrv2 {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-25[data-animation='expand'][data-animation-type="complex"] .eh4zgrv2 {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-25[data-animation='collapse'] .eh4zgrv2 {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-25[data-animation='collapse'][data-animation-type="complex"] .eh4zgrv2 {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
 .emotion-27 {
@@ -2578,8 +2577,8 @@ exports[`Navigation > click on expand / collapse button 2`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -2603,8 +2602,8 @@ exports[`Navigation > click on expand / collapse button 2`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -3215,14 +3214,14 @@ exports[`Navigation > pin and unpin an item 1`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -3248,14 +3247,14 @@ exports[`Navigation > pin and unpin an item 1`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -3544,31 +3543,31 @@ exports[`Navigation > pin and unpin an item 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -3689,31 +3688,31 @@ exports[`Navigation > pin and unpin an item 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -4036,8 +4035,8 @@ exports[`Navigation > pin and unpin an item 1`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-32 {
@@ -4045,8 +4044,8 @@ exports[`Navigation > pin and unpin an item 1`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-36 {
@@ -4169,24 +4168,24 @@ exports[`Navigation > pin and unpin an item 1`] = `
   margin: 16px -16px;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
 .emotion-49 {
@@ -4249,8 +4248,8 @@ exports[`Navigation > pin and unpin an item 1`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -4266,8 +4265,8 @@ exports[`Navigation > pin and unpin an item 1`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -4430,8 +4429,8 @@ exports[`Navigation > pin and unpin an item 1`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -4455,8 +4454,8 @@ exports[`Navigation > pin and unpin an item 1`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -4769,7 +4768,6 @@ exports[`Navigation > pin and unpin an item 1`] = `
                   </div>
                   <div
                     class="emotion-40 emotion-41"
-                    style="position: relative;"
                   >
                     <div
                       class="emotion-42 emotion-43"
@@ -5176,14 +5174,14 @@ exports[`Navigation > pin and unpin an item 2`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -5209,14 +5207,14 @@ exports[`Navigation > pin and unpin an item 2`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -5505,31 +5503,31 @@ exports[`Navigation > pin and unpin an item 2`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -5650,31 +5648,31 @@ exports[`Navigation > pin and unpin an item 2`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -5997,8 +5995,8 @@ exports[`Navigation > pin and unpin an item 2`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-32 {
@@ -6006,8 +6004,8 @@ exports[`Navigation > pin and unpin an item 2`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-36 {
@@ -6130,24 +6128,24 @@ exports[`Navigation > pin and unpin an item 2`] = `
   margin: 16px -16px;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
 .emotion-49 {
@@ -6210,8 +6208,8 @@ exports[`Navigation > pin and unpin an item 2`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -6227,8 +6225,8 @@ exports[`Navigation > pin and unpin an item 2`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -6391,8 +6389,8 @@ exports[`Navigation > pin and unpin an item 2`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -6416,8 +6414,8 @@ exports[`Navigation > pin and unpin an item 2`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -6730,7 +6728,6 @@ exports[`Navigation > pin and unpin an item 2`] = `
                   </div>
                   <div
                     class="emotion-40 emotion-41"
-                    style="position: relative;"
                   >
                     <div
                       class="emotion-42 emotion-43"
@@ -7137,14 +7134,14 @@ exports[`Navigation > pin and unpin an item 3`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -7170,14 +7167,14 @@ exports[`Navigation > pin and unpin an item 3`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -7412,7 +7409,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    ) .emotion-57 {
+    ) .emotion-59 {
   opacity: 1;
 }
 
@@ -7422,12 +7419,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-57,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-57,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-57,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-42,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-42,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-42 {
+.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-59,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-59,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-59,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-44,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-44,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-44 {
   opacity: 1;
 }
 
@@ -7466,31 +7463,31 @@ exports[`Navigation > pin and unpin an item 3`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -7557,7 +7554,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
 
 .emotion-12[data-has-active-children="true"][data-has-no-expand="false"]:not(
       [disabled][data-is-active="true"]
-    ) .emotion-57 {
+    ) .emotion-59 {
   opacity: 1;
 }
 
@@ -7567,12 +7564,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   opacity: 0;
 }
 
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-57,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-57,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-57,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-42,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-42,
-.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-42 {
+.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-59,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-59,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-59,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):hover .emotion-44,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):focus .emotion-44,
+.emotion-12[data-has-no-expand="false"]:not([disabled]):active .emotion-44 {
   opacity: 1;
 }
 
@@ -7611,31 +7608,31 @@ exports[`Navigation > pin and unpin an item 3`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -7958,8 +7955,8 @@ exports[`Navigation > pin and unpin an item 3`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-32 {
@@ -7967,11 +7964,19 @@ exports[`Navigation > pin and unpin an item 3`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-36 {
+  position: relative;
+}
+
+.emotion-36 {
+  position: relative;
+}
+
+.emotion-38 {
   position: absolute;
   right: 0;
   left: 0;
@@ -7982,7 +7987,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding: 4px 0;
 }
 
-.emotion-36::before {
+.emotion-38::before {
   content: '';
   position: absolute;
   left: 0;
@@ -7994,7 +7999,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   border-radius: 100%;
 }
 
-.emotion-36 {
+.emotion-38 {
   position: absolute;
   right: 0;
   left: 0;
@@ -8005,7 +8010,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding: 4px 0;
 }
 
-.emotion-36::before {
+.emotion-38::before {
   content: '';
   position: absolute;
   left: 0;
@@ -8017,7 +8022,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   border-radius: 100%;
 }
 
-.emotion-43 {
+.emotion-45 {
   vertical-align: middle;
   fill: #727683;
   height: 16px;
@@ -8030,12 +8035,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   cursor: grab;
 }
 
-.emotion-43 .fillStroke {
+.emotion-45 .fillStroke {
   stroke: #727683;
   fill: none;
 }
 
-.emotion-48 {
+.emotion-50 {
   color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -8054,31 +8059,23 @@ exports[`Navigation > pin and unpin an item 3`] = `
   white-space: pre-wrap;
 }
 
-.emotion-52 {
+.emotion-54 {
   display: inherit;
 }
 
-.emotion-52[data-container-full-width="true"] {
-  width: 100%;
-}
-
-.emotion-52 {
-  display: inherit;
-}
-
-.emotion-52[data-container-full-width="true"] {
+.emotion-54[data-container-full-width="true"] {
   width: 100%;
 }
 
 .emotion-54 {
-  position: relative;
+  display: inherit;
 }
 
-.emotion-54 {
-  position: relative;
+.emotion-54[data-container-full-width="true"] {
+  width: 100%;
 }
 
-.emotion-56 {
+.emotion-58 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -8088,13 +8085,13 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: auto;
 }
 
-.emotion-56:hover,
-.emotion-56:focus,
-.emotion-56:active {
+.emotion-58:hover,
+.emotion-58:focus,
+.emotion-58:active {
   opacity: 1;
 }
 
-.emotion-56 {
+.emotion-58 {
   opacity: 0;
   right: 0;
   position: absolute;
@@ -8104,13 +8101,13 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: auto;
 }
 
-.emotion-56:hover,
-.emotion-56:focus,
-.emotion-56:active {
+.emotion-58:hover,
+.emotion-58:focus,
+.emotion-58:active {
   opacity: 1;
 }
 
-.emotion-59 {
+.emotion-61 {
   vertical-align: middle;
   fill: #3f4250;
   height: 20px;
@@ -8125,16 +8122,16 @@ exports[`Navigation > pin and unpin an item 3`] = `
   border-radius: 4px;
 }
 
-.emotion-59 .fillStroke {
+.emotion-61 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-59:hover {
+.emotion-61:hover {
   background: #e9eaeb;
 }
 
-.emotion-59 {
+.emotion-61 {
   vertical-align: middle;
   fill: #3f4250;
   height: 20px;
@@ -8149,16 +8146,16 @@ exports[`Navigation > pin and unpin an item 3`] = `
   border-radius: 4px;
 }
 
-.emotion-59 .fillStroke {
+.emotion-61 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-59:hover {
+.emotion-61:hover {
   background: #e9eaeb;
 }
 
-.emotion-66 {
+.emotion-68 {
   margin: 0;
   border: 0;
   width: auto;
@@ -8170,7 +8167,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: 16px -16px;
 }
 
-.emotion-66 {
+.emotion-68 {
   margin: 0;
   border: 0;
   width: auto;
@@ -8182,27 +8179,27 @@ exports[`Navigation > pin and unpin an item 3`] = `
   margin: 16px -16px;
 }
 
-.emotion-68[data-animation='expand'] .emotion-72 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-70[data-animation='expand'][data-animation-type="complex"] .emotion-74 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-68[data-animation='collapse'] .emotion-72 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-70[data-animation='collapse'][data-animation-type="complex"] .emotion-74 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-68[data-animation='expand'] .emotion-72 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-70[data-animation='expand'][data-animation-type="complex"] .emotion-74 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-68[data-animation='collapse'] .emotion-72 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-70[data-animation='collapse'][data-animation-type="complex"] .emotion-74 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-70 {
+.emotion-72 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8226,7 +8223,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding-top: 8px;
 }
 
-.emotion-70 {
+.emotion-72 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8250,7 +8247,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   padding-top: 8px;
 }
 
-.emotion-73 {
+.emotion-75 {
   color: #727683;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -8262,12 +8259,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
-.emotion-73 {
+.emotion-75 {
   color: #727683;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -8279,28 +8276,28 @@ exports[`Navigation > pin and unpin an item 3`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
-.emotion-81 .fill {
+.emotion-83 .fill {
   fill: #521094;
 }
 
-.emotion-81 .fillStrong {
+.emotion-83 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-81 .fill {
+.emotion-83 .fill {
   fill: #521094;
 }
 
-.emotion-81 .fillStrong {
+.emotion-83 .fillStrong {
   fill: #a060f6;
 }
 
-.emotion-86 {
+.emotion-88 {
   color: #641cb3;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -8319,7 +8316,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   white-space: pre-wrap;
 }
 
-.emotion-86 {
+.emotion-88 {
   color: #641cb3;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -8338,7 +8335,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   white-space: pre-wrap;
 }
 
-.emotion-114 {
+.emotion-116 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8347,8 +8344,8 @@ exports[`Navigation > pin and unpin an item 3`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -8358,12 +8355,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   justify-content: flex-end;
 }
 
-.emotion-114[data-has-overflow-style="false"] {
+.emotion-116[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-114 {
+.emotion-116 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8372,8 +8369,8 @@ exports[`Navigation > pin and unpin an item 3`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -8383,12 +8380,12 @@ exports[`Navigation > pin and unpin an item 3`] = `
   justify-content: flex-end;
 }
 
-.emotion-114[data-has-overflow-style="false"] {
+.emotion-116[data-has-overflow-style="false"] {
   box-shadow: none;
   border: none;
 }
 
-.emotion-118 {
+.emotion-120 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8427,22 +8424,22 @@ exports[`Navigation > pin and unpin an item 3`] = `
   color: #3f4250;
 }
 
-.emotion-118:hover {
+.emotion-120:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-118:active {
+.emotion-120:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-118:hover,
-.emotion-118:active {
+.emotion-120:hover,
+.emotion-120:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-118 {
+.emotion-120 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8481,22 +8478,22 @@ exports[`Navigation > pin and unpin an item 3`] = `
   color: #3f4250;
 }
 
-.emotion-118:hover {
+.emotion-120:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-118:active {
+.emotion-120:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-118:hover,
-.emotion-118:active {
+.emotion-120:hover,
+.emotion-120:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-120 {
+.emotion-122 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -8505,26 +8502,26 @@ exports[`Navigation > pin and unpin an item 3`] = `
   min-height: 16px;
 }
 
-.emotion-120 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-120 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-120 .fillStroke {
+.emotion-122 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
 .emotion-122 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-122 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-124 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -8539,11 +8536,11 @@ exports[`Navigation > pin and unpin an item 3`] = `
   display: flex;
 }
 
-.emotion-122:hover {
+.emotion-124:hover {
   border-color: #8c40ef;
 }
 
-.emotion-122 {
+.emotion-124 {
   background: transparent;
   position: absolute;
   top: 0;
@@ -8558,7 +8555,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
   display: flex;
 }
 
-.emotion-122:hover {
+.emotion-124:hover {
   border-color: #8c40ef;
 }
 
@@ -8675,10 +8672,10 @@ exports[`Navigation > pin and unpin an item 3`] = `
                   class="emotion-20 emotion-15"
                 >
                   <div
-                    style="position: relative;"
+                    class="emotion-36 emotion-37"
                   >
                     <div
-                      class="emotion-36 emotion-37"
+                      class="emotion-38 emotion-39"
                     />
                     <button
                       class="emotion-12 emotion-13"
@@ -8696,7 +8693,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                         class="emotion-14 emotion-15"
                       >
                         <svg
-                          class="emotion-42 emotion-43 emotion-31"
+                          class="emotion-44 emotion-45 emotion-31"
                           viewBox="0 0 16 16"
                           xmlns="http://www.w3.org/2000/svg"
                         >
@@ -8708,7 +8705,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                           class="emotion-20 emotion-15"
                         >
                           <span
-                            class="emotion-22 emotion-48 emotion-24"
+                            class="emotion-22 emotion-50 emotion-24"
                           >
                             item1
                           </span>
@@ -8720,19 +8717,19 @@ exports[`Navigation > pin and unpin an item 3`] = `
                         <div
                           aria-controls=":r1k:"
                           aria-describedby=":r1k:"
-                          class="emotion-52 emotion-53"
+                          class="emotion-54 emotion-55"
                           tabindex="0"
                         >
                           <div
-                            class="emotion-54 emotion-55"
+                            class="emotion-36 emotion-57"
                           >
                             <div
                               aria-label="unpin"
-                              class="emotion-56 emotion-57"
+                              class="emotion-58 emotion-59"
                               role="button"
                             >
                               <svg
-                                class="emotion-58 emotion-59 emotion-31"
+                                class="emotion-60 emotion-61 emotion-31"
                                 fill="none"
                                 height="20"
                                 viewBox="0 0 20 20"
@@ -8750,11 +8747,10 @@ exports[`Navigation > pin and unpin an item 3`] = `
                     </button>
                   </div>
                   <div
-                    class="emotion-54 emotion-62"
-                    style="position: relative;"
+                    class="emotion-36 emotion-37"
                   >
                     <div
-                      class="emotion-36 emotion-37"
+                      class="emotion-38 emotion-39"
                     />
                   </div>
                 </div>
@@ -8762,18 +8758,18 @@ exports[`Navigation > pin and unpin an item 3`] = `
             </div>
             <hr
               aria-orientation="horizontal"
-              class="emotion-65 emotion-66 emotion-67"
+              class="emotion-67 emotion-68 emotion-69"
               role="separator"
             />
             <div
-              class="emotion-68 emotion-69"
+              class="emotion-70 emotion-71"
               data-animation="false"
             >
               <div
-                class="emotion-70 emotion-71"
+                class="emotion-72 emotion-73"
               >
                 <span
-                  class="emotion-72 emotion-73 emotion-24"
+                  class="emotion-74 emotion-75 emotion-24"
                 >
                   Products
                 </span>
@@ -8796,7 +8792,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       class="emotion-16 emotion-17"
                     >
                       <svg
-                        class="emotion-81 emotion-19"
+                        class="emotion-83 emotion-19"
                         height="20"
                         viewBox="0 0 20 20"
                         width="20"
@@ -8829,7 +8825,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
                       class="emotion-20 emotion-15"
                     >
                       <span
-                        class="emotion-22 emotion-86 emotion-24"
+                        class="emotion-22 emotion-88 emotion-24"
                       >
                         item1
                       </span>
@@ -8902,19 +8898,19 @@ exports[`Navigation > pin and unpin an item 3`] = `
                     <div
                       aria-controls=":r1e:"
                       aria-describedby=":r1e:"
-                      class="emotion-52 emotion-53"
+                      class="emotion-54 emotion-55"
                       tabindex="0"
                     >
                       <div
-                        class="emotion-54 emotion-55"
+                        class="emotion-36 emotion-57"
                       >
                         <div
                           aria-label="unpin"
-                          class="emotion-56 emotion-57"
+                          class="emotion-58 emotion-59"
                           role="button"
                         >
                           <svg
-                            class="emotion-58 emotion-59 emotion-31"
+                            class="emotion-60 emotion-61 emotion-31"
                             fill="none"
                             height="20"
                             viewBox="0 0 20 20"
@@ -8934,22 +8930,22 @@ exports[`Navigation > pin and unpin an item 3`] = `
             </div>
           </div>
           <div
-            class="emotion-114 emotion-115"
+            class="emotion-116 emotion-117"
             data-has-overflow-style="false"
           >
             <div
               aria-controls=":r1f:"
               aria-describedby=":r1f:"
-              class="emotion-52 emotion-53"
+              class="emotion-54 emotion-55"
               tabindex="0"
             >
               <button
                 aria-label="Collapse sidebar"
-                class="emotion-118 emotion-119"
+                class="emotion-120 emotion-121"
                 type="button"
               >
                 <svg
-                  class="emotion-120 emotion-31"
+                  class="emotion-122 emotion-31"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -8965,7 +8961,7 @@ exports[`Navigation > pin and unpin an item 3`] = `
         </div>
       </div>
       <div
-        class="emotion-122 emotion-123"
+        class="emotion-124 emotion-125"
         data-testid="slider"
       />
     </nav>
@@ -9077,14 +9073,14 @@ exports[`Navigation > render with basic content 1`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -9289,31 +9285,31 @@ exports[`Navigation > render with basic content 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -9479,8 +9475,8 @@ exports[`Navigation > render with basic content 1`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-36 {
@@ -9543,14 +9539,14 @@ exports[`Navigation > render with basic content 1`] = `
   margin: 16px -16px;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
 .emotion-49 {
@@ -9589,8 +9585,8 @@ exports[`Navigation > render with basic content 1`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -9678,8 +9674,8 @@ exports[`Navigation > render with basic content 1`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -9905,7 +9901,6 @@ exports[`Navigation > render with basic content 1`] = `
                   </div>
                   <div
                     class="emotion-40 emotion-41"
-                    style="position: relative;"
                   >
                     <div
                       class="emotion-42 emotion-43"
@@ -10232,14 +10227,14 @@ exports[`Navigation > render without pinnedFeature 1`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -10339,14 +10334,14 @@ exports[`Navigation > render without pinnedFeature 1`] = `
   margin: 16px -16px;
 }
 
-.emotion-15[data-animation='expand'] .emotion-19 {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-15[data-animation='expand'][data-animation-type="complex"] .emotion-19 {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-15[data-animation='collapse'] .emotion-19 {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-15[data-animation='collapse'][data-animation-type="complex"] .emotion-19 {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
 .emotion-17 {
@@ -10385,8 +10380,8 @@ exports[`Navigation > render without pinnedFeature 1`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -10507,31 +10502,31 @@ exports[`Navigation > render without pinnedFeature 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-22[data-animation="collapse"] {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-22[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-22[data-animation="collapse"] .emotion-32,
-.emotion-22[data-animation="collapse"] .e134hokc5,
-.emotion-22[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-22[data-animation="collapse"][data-animation-type="complex"] .emotion-32,
+.emotion-22[data-animation="collapse"][data-animation-type="complex"] .e134hokc5,
+.emotion-22[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-22[data-animation="expand"] {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-22[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-22[data-animation="expand"] .emotion-32,
-.emotion-22[data-animation="expand"] .e134hokc5,
-.emotion-22[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-22[data-animation="expand"][data-animation-type="complex"] .emotion-32,
+.emotion-22[data-animation="expand"][data-animation-type="complex"] .e134hokc5,
+.emotion-22[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-22[data-animation="expand"] .e134hokc3 {
+.emotion-22[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -10691,8 +10686,8 @@ exports[`Navigation > render without pinnedFeature 1`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -11199,14 +11194,14 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -11232,14 +11227,14 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
 }
 
 .emotion-2[data-animation="expand"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 280px;
 }
 
 .emotion-2[data-animation="collapse"] {
-  -webkit-transition: width 700ms ease-in-out;
-  transition: width 700ms ease-in-out;
+  -webkit-transition: width 250ms ease-in-out;
+  transition: width 250ms ease-in-out;
   width: 67px;
 }
 
@@ -11528,31 +11523,31 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -11673,31 +11668,31 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-12[data-animation="collapse"] {
-  -webkit-animation: animation-0 700ms ease-in-out;
-  animation: animation-0 700ms ease-in-out;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out;
+  animation: animation-0 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="collapse"] .emotion-22,
-.emotion-12[data-animation="collapse"] .emotion-29,
-.emotion-12[data-animation="collapse"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out reverse;
-  animation: animation-1 700ms ease-in-out reverse;
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="collapse"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out reverse;
+  animation: animation-1 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] {
-  -webkit-animation: animation-0 700ms ease-in-out reverse;
-  animation: animation-0 700ms ease-in-out reverse;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] {
+  -webkit-animation: animation-0 250ms ease-in-out reverse;
+  animation: animation-0 250ms ease-in-out reverse;
 }
 
-.emotion-12[data-animation="expand"] .emotion-22,
-.emotion-12[data-animation="expand"] .emotion-29,
-.emotion-12[data-animation="expand"] .e134hokc9 {
-  -webkit-animation: animation-1 700ms ease-in-out;
-  animation: animation-1 700ms ease-in-out;
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-22,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .emotion-29,
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc9 {
+  -webkit-animation: animation-1 250ms ease-in-out;
+  animation: animation-1 250ms ease-in-out;
 }
 
-.emotion-12[data-animation="expand"] .e134hokc3 {
+.emotion-12[data-animation="expand"][data-animation-type="complex"] .e134hokc3 {
   display: none;
 }
 
@@ -12020,8 +12015,8 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-32 {
@@ -12029,8 +12024,8 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
 }
 
 .emotion-32[data-is-animated="true"] {
-  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  -webkit-transition: max-height 250ms ease-out,opacity 250ms ease-out;
+  transition: max-height 250ms ease-out,opacity 250ms ease-out;
 }
 
 .emotion-36 {
@@ -12153,24 +12148,24 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   margin: 16px -16px;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
-.emotion-47[data-animation='expand'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out;
-  animation: animation-2 700ms ease-in-out;
+.emotion-47[data-animation='expand'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out;
+  animation: animation-2 250ms ease-in-out;
 }
 
-.emotion-47[data-animation='collapse'] .emotion-51 {
-  -webkit-animation: animation-2 700ms ease-in-out reverse;
-  animation: animation-2 700ms ease-in-out reverse;
+.emotion-47[data-animation='collapse'][data-animation-type="complex"] .emotion-51 {
+  -webkit-animation: animation-2 250ms ease-in-out reverse;
+  animation: animation-2 250ms ease-in-out reverse;
 }
 
 .emotion-49 {
@@ -12233,8 +12228,8 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -12250,8 +12245,8 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   text-decoration: none;
   padding-bottom: 8px;
   padding-left: 8px;
-  -webkit-transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
-  transition: opacity 700ms ease-in-out,height 700ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out,height 250ms ease-in-out;
   height: calc(20px + 8px);
 }
 
@@ -12414,8 +12409,8 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -12439,8 +12434,8 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
   background: #ffffff;
   border-top: 1px solid #e9eaeb;
   padding: 8px 16px;
-  -webkit-transition: justify-content 700ms ease-in-out;
-  transition: justify-content 700ms ease-in-out;
+  -webkit-transition: justify-content 250ms ease-in-out;
+  transition: justify-content 250ms ease-in-out;
   box-shadow: 0px 0px 8px 2px #d9dadd66;
   -webkit-transition: box-shadow 230ms ease-in-out;
   transition: box-shadow 230ms ease-in-out;
@@ -12753,7 +12748,6 @@ exports[`Navigation > resize manually the navigation using slider 1`] = `
                   </div>
                   <div
                     class="emotion-40 emotion-41"
-                    style="position: relative;"
                   >
                     <div
                       class="emotion-42 emotion-43"

@@ -25,7 +25,7 @@ import {
   useCallback,
   useEffect,
   useMemo,
-  useState,
+  useReducer,
 } from 'react'
 import { useNavigation } from '../NavigationProvider'
 import { ANIMATION_DURATION, shrinkHeight } from '../constants'
@@ -223,14 +223,14 @@ const StyledContainer = styled(Stack)`
     }
   }
 
-  &[data-animation="collapse"] {
+  &[data-animation="collapse"][data-animation-type="complex"] {
     animation: ${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out;
     ${WrapText}, ${AnimatedIcon}, ${StyledBadge} {
       animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out reverse;
     }
   }
 
-  &[data-animation="expand"] {
+  &[data-animation="expand"][data-animation-type="complex"] {
     animation: ${shrinkHeight} ${ANIMATION_DURATION}ms ease-in-out reverse;
     ${WrapText}, ${AnimatedIcon}, ${StyledBadge} {
       animation: ${fadeIn} ${ANIMATION_DURATION}ms ease-in-out;
@@ -288,7 +288,7 @@ type ItemProps = {
    * This function will be triggered on click of the item. If the item is expandable
    * toggle will be passed with it.
    */
-  onClick?: (toggle?: true | false) => void
+  onToggle?: (toggle: boolean) => void
   onClickPinUnpin?: (parameters: PinUnPinType) => void
   /**
    * This prop is used to control if the item is expanded or collapsed
@@ -339,7 +339,7 @@ export const Item = ({
   badgeText,
   badgeSentiment,
   href,
-  onClick,
+  onToggle,
   onClickPinUnpin,
   toggle,
   active,
@@ -371,41 +371,28 @@ export const Item = ({
     animation,
     registerItem,
     shouldAnimate,
+    animationType,
   } = context
 
   useEffect(
     () => {
       if (type !== 'pinnedGroup') {
-        registerItem({ [id]: { label, active, onClick, onClickPinUnpin } })
+        registerItem({ [id]: { label, active, onToggle, onClickPinUnpin } })
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [active, id, label, registerItem],
   )
 
-  const [internalToggle, setToggle] = useState(toggle !== false)
-
-  const triggerToggle = useCallback(
-    (value: boolean) => {
-      setToggle(value)
-      onClick?.(internalToggle)
-    },
-    [internalToggle, onClick],
+  const [internalExpanded, onToggleExpand] = useReducer(
+    prevState => !prevState,
+    Boolean(toggle),
   )
 
-  useEffect(() => {
-    if (shouldAnimate) {
-      if (animation === 'collapse') {
-        setToggle(false)
-      }
-
-      if (animation === 'expand') {
-        setTimeout(() => {
-          setToggle(toggle ?? true)
-        }, 1)
-      }
-    }
-  }, [animation, toggle, shouldAnimate])
+  const triggerToggle = useCallback(() => {
+    onToggleExpand()
+    onToggle?.(internalExpanded)
+  }, [internalExpanded, onToggle])
 
   const PaddedStack = noExpand || type === 'pinnedGroup' ? Stack : PaddingStack
 
@@ -459,16 +446,16 @@ export const Item = ({
   )
 
   const ariaExpanded = useMemo(() => {
-    if (hasHrefAndNoChildren && internalToggle) {
+    if (hasHrefAndNoChildren && internalExpanded) {
       return true
     }
 
-    if (hasHrefAndNoChildren && !internalToggle) {
+    if (hasHrefAndNoChildren && !internalExpanded) {
       return false
     }
 
     return undefined
-  }, [hasHrefAndNoChildren, internalToggle])
+  }, [hasHrefAndNoChildren, internalExpanded])
 
   const isPinDisabled = pinnedItems.length >= pinLimit
   const pinTooltipLocale = useMemo(() => {
@@ -495,11 +482,15 @@ export const Item = ({
   }
 
   const expandableAnimationDuration = useMemo(() => {
-    if (shouldAnimate === false) return 0
-    if (animation) return ANIMATION_DURATION / 2
+    if (!shouldAnimate || animationType === 'simple') return 0
 
-    return undefined
-  }, [animation, shouldAnimate])
+    // Avoid animation of all expendable Item during collapse, expend of the Navigation
+    if (shouldAnimate && typeof animation !== 'string') {
+      return ANIMATION_DURATION
+    }
+
+    return 0
+  }, [animation, shouldAnimate, animationType])
 
   // This content is when the navigation is expanded
   if (expanded || (!expanded && animation === 'expand')) {
@@ -519,19 +510,14 @@ export const Item = ({
           alignItems="center"
           justifyContent="space-between"
           data-has-sub-label={!!subLabel}
-          onClick={() => {
-            if (children) {
-              return triggerToggle(!internalToggle)
-            }
-
-            return onClick?.()
-          }}
+          onClick={triggerToggle}
           aria-expanded={ariaExpanded}
           href={href}
           target={href ? '_blank' : undefined}
           data-is-pinnable={shouldShowPinnedButton}
           data-is-active={active}
           data-animation={shouldAnimate ? animation : undefined}
+          data-animation-type={animationType}
           data-has-children={!!children}
           data-has-active-children={hasActiveChildren}
           data-has-no-expand={noExpand}
@@ -676,7 +662,7 @@ export const Item = ({
               <Stack gap={1} direction="row" alignItems="center">
                 {!animation && !noExpand ? (
                   <AnimatedIcon
-                    name={internalToggle ? 'arrow-down' : 'arrow-right'}
+                    name={internalExpanded ? 'arrow-down' : 'arrow-right'}
                     sentiment="neutral"
                     prominence="weak"
                   />
@@ -689,7 +675,7 @@ export const Item = ({
           <>
             {!noExpand ? (
               <Expandable
-                opened={internalToggle}
+                opened={internalExpanded}
                 animationDuration={expandableAnimationDuration}
               >
                 <PaddedStack>{renderChildren}</PaddedStack>
@@ -749,7 +735,6 @@ export const Item = ({
               sentiment="neutral"
               variant={active ? 'filled' : 'ghost'}
               size="small"
-              onClick={() => onClick?.()}
             >
               <Stack
                 direction="row"
@@ -774,9 +759,6 @@ export const Item = ({
     return (
       <StyledMenuItem
         href={href}
-        onClick={() => {
-          onClick?.()
-        }}
         borderless
         active={active}
         disabled={disabled}

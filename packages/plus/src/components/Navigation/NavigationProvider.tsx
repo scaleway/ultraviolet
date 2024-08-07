@@ -15,11 +15,13 @@ import type { PinUnPinType } from './types'
 type Item = {
   label: string
   active?: boolean
-  onClick?: (toggle?: true | false) => void
+  onToggle?: (toggle: boolean) => void
   onClickPinUnpin?: (parameters: PinUnPinType) => void
 }
 
 type Items = Record<string, Item>
+
+type AnimationType = 'simple' | 'complex'
 
 type ContextProps = {
   expanded: boolean
@@ -55,6 +57,7 @@ type ContextProps = {
   allowNavigationResize: boolean
   setAllowNavigationResize: (value: boolean) => void
   shouldAnimate?: boolean
+  animationType?: AnimationType
 }
 
 export const NavigationContext = createContext<ContextProps>({
@@ -80,6 +83,7 @@ export const NavigationContext = createContext<ContextProps>({
   allowNavigationResize: true,
   setAllowNavigationResize: () => {},
   shouldAnimate: true,
+  animationType: 'simple',
 })
 
 export const useNavigation = () => useContext(NavigationContext)
@@ -120,6 +124,10 @@ type NavigationProviderProps = {
    * Enable or disable the animation of the navigation
    */
   animation?: boolean
+  /**
+   * type of animation
+   */
+  animationType?: AnimationType
 }
 
 export const NavigationProvider = ({
@@ -133,9 +141,11 @@ export const NavigationProvider = ({
   initialWidth = NAVIGATION_WIDTH,
   initialAllowNavigationResize = true,
   animation: shouldAnimate = true,
+  animationType,
 }: NavigationProviderProps) => {
   const [expanded, setExpanded] = useState(initialExpanded)
   const [pinnedItems, setPinnedItems] = useState<string[]>(initialPinned ?? [])
+
   const [animation, setAnimation] = useState<boolean | 'expand' | 'collapse'>(
     false,
   )
@@ -241,6 +251,7 @@ export const NavigationProvider = ({
       allowNavigationResize,
       setAllowNavigationResize,
       shouldAnimate,
+      animationType,
     }),
     [
       expanded,
@@ -257,6 +268,7 @@ export const NavigationProvider = ({
       items,
       allowNavigationResize,
       shouldAnimate,
+      animationType,
     ],
   )
 
