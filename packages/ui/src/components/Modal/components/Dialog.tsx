@@ -267,6 +267,7 @@ export const Dialog = ({
         onClick={stopClick}
         onCancel={stopCancel}
         onClose={stopCancel}
+        onMouseDown={stopClick}
         aria-modal
         ref={dialogRef}
         tabIndex={0}
