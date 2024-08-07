@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.21.3
+
+### Patch Changes
+
+- [#4117](https://github.com/scaleway/ultraviolet/pull/4117) [`8847e65`](https://github.com/scaleway/ultraviolet/commit/8847e65888712bd73fff26ab07b8c3ceb9e40715) Thanks [@philibea](https://github.com/philibea)! - update animation on navigation component
+
 ## 0.21.2
 
 ### Patch Changes
