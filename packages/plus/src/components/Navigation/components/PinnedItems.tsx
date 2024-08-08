@@ -144,6 +144,7 @@ export const PinnedItems = ({
                     type="pinned"
                     index={index}
                     toggle={toggle}
+                    onToggle={items[itemId]?.onToggle}
                     id={itemId}
                     active={items[itemId]?.active ?? false}
                     onClickPinUnpin={
