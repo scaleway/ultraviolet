@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.21.4
+
+### Patch Changes
+
+- [#4120](https://github.com/scaleway/ultraviolet/pull/4120) [`131b607`](https://github.com/scaleway/ultraviolet/commit/131b607a1060a38b98099c418a60e112ea381d66) Thanks [@philibea](https://github.com/philibea)! - fix pinned items click
+
 ## 0.21.3
 
 ### Patch Changes
