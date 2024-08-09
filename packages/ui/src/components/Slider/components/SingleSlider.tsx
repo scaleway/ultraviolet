@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
@@ -103,15 +103,11 @@ export const SingleSlider = ({
   const { theme } = useTheme()
   const finalId = id ?? localId
   const safeValue = value ?? min
-  const [computedValue, setComputedValue] = useState(safeValue)
-  const [valueToShow, setValueToShow] = useState<number | null>(
-    options ? options[safeValue].value : safeValue, // if option exists we get the index of the current value in the options array and get the value of it
-  )
+  const [selectedIndex, setSelectedIndex] = useState(safeValue)
   const refSlider = useRef<HTMLInputElement>(null)
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
   )
-  const [customValue, setCustomValue] = useState<undefined | number>(undefined)
 
   const ticks = useMemo(() => {
     if (options) {
@@ -124,24 +120,21 @@ export const SingleSlider = ({
     return []
   }, [options])
 
-  const onChangeCallback = useCallback(
-    (newValue: number) => {
-      setValueToShow(options ? options[newValue].value : newValue)
-      setComputedValue(newValue ?? min)
-      onChange?.(newValue ?? min)
-    },
-    [min, onChange, options],
-  )
+  const internalOnChangeRef = useRef((newValue: number) => {
+    setSelectedIndex(newValue ?? min)
+    onChange?.(newValue ?? min)
+  })
 
   // Make sure that min <= value <= max
   useEffect(() => {
     if (value < min) {
-      onChangeCallback(min)
+      internalOnChangeRef.current(min)
+    } else if (value > max) {
+      internalOnChangeRef.current(max)
+    } else {
+      setSelectedIndex(() => value ?? min)
     }
-    if (value > max) {
-      onChangeCallback(max)
-    }
-  }, [value, max, min, onChange, step, onChangeCallback])
+  }, [value, max, min])
 
   // Get slider size
   useEffect(() => {
@@ -155,21 +148,9 @@ export const SingleSlider = ({
     }
   }, [])
 
-  const handleChange = useCallback(
-    (newValue: number) => {
-      if (options) {
-        // Custom scale
-        const optionLabel = options[newValue].value // we use the index of the option to get the value
-        setCustomValue(optionLabel)
-      }
-      onChangeCallback(newValue)
-    },
-    [onChangeCallback, options],
-  )
-
   const leftPosition = useMemo(
-    () => ((computedValue - min) * 100) / (max - min),
-    [computedValue, max, min],
+    () => ((selectedIndex - min) * 100) / (max - min),
+    [selectedIndex, max, min],
   )
 
   const getBackgroundSize = useMemo(
@@ -197,11 +178,11 @@ export const SingleSlider = ({
         unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
           if (newVal) {
-            onChangeCallback(newVal)
-          } else onChangeCallback(0)
+            internalOnChangeRef.current(newVal)
+          } else internalOnChangeRef.current(0)
         }}
         onBlur={event => {
-          if (!event.target.value) onChangeCallback(min)
+          if (!event.target.value) internalOnChangeRef.current(min)
         }}
       />
     ) : (
@@ -222,19 +203,21 @@ export const SingleSlider = ({
 
   const tooltipText = useMemo(() => {
     if (tooltip === true) {
-      return computedValue
+      return selectedIndex
     }
     if (tooltip) {
       return tooltip
     }
 
     return undefined
-  }, [tooltip, computedValue])
+  }, [tooltip, selectedIndex])
 
   const placementTooltip =
-    ((computedValue - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
+    ((selectedIndex - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
     THUMB_SIZE / 2 -
     sliderWidth / 2
+
+  const valueToShow = options ? options[selectedIndex]?.value : selectedIndex
 
   return (
     <Stack gap={1} direction={direction} justifyContent="left">
@@ -247,15 +230,11 @@ export const SingleSlider = ({
             label={label}
             required={required}
           />
-          {direction === 'column'
-            ? styledValue(customValue ?? valueToShow)
-            : null}
+          {direction === 'column' ? styledValue(valueToShow) : null}
         </Stack>
       ) : null}
 
-      {direction === 'column' && !label
-        ? styledValue(customValue ?? valueToShow)
-        : null}
+      {direction === 'column' && !label ? styledValue(valueToShow) : null}
       <Stack direction="column" width="100%" gap={1} justifyContent="center">
         <StyledTooltip
           text={tooltipText}
@@ -264,9 +243,9 @@ export const SingleSlider = ({
         >
           <SliderElement
             type="range"
-            value={computedValue}
+            value={selectedIndex}
             onChange={event => {
-              handleChange(parseFloat(event.target.value))
+              internalOnChangeRef.current(parseFloat(event.target.value))
             }}
             min={min}
             max={max}
@@ -295,12 +274,12 @@ export const SingleSlider = ({
             min={min}
             max={max}
             sliderWidth={sliderWidth}
-            value={computedValue}
+            value={selectedIndex}
             step={step}
           />
         ) : null}
       </Stack>
-      {direction === 'row' ? styledValue(customValue ?? valueToShow) : null}
+      {direction === 'row' ? styledValue(valueToShow) : null}
     </Stack>
   )
 }
