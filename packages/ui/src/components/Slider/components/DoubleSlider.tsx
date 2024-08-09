@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
@@ -129,32 +129,37 @@ export const DoubleSlider = ({
   const localId = useId()
   const finalId = id ?? localId
   const refSlider = useRef<HTMLInputElement>(null)
+
   const safeValue =
     value && Array.isArray(value) && value.length === 2
       ? value
       : [min ?? 0, max ?? 1]
-  const [computedValues, setComputedValues] = useState(safeValue)
-  const [valueToShow, setValuesToShow] = useState<(number | null)[]>(
-    options ? safeValue.map(val => options[val].value) : safeValue, // if options are provided, we use the value from the options
-  )
+  const [selectedIndexes, setSelectedIndexes] = useState(safeValue)
   const [sliderWidth, setWidth] = useState(
     refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
-  )
-  const [customValue, setCustomValue] = useState<undefined | number[]>(
-    undefined,
   )
 
   const activeValue = (side: 'left' | 'right') => {
     // Find the index of the min value (if side="left") and max value (side="right")
     if (side === 'left') {
-      if (valueToShow[0] === null) return 0
-      if (valueToShow[1] !== null && valueToShow[1] < valueToShow[0]) return 1
+      if (selectedIndexes[0] === null) return 0
+      if (
+        selectedIndexes[1] !== null &&
+        selectedIndexes[1] < selectedIndexes[0]
+      ) {
+        return 1
+      }
 
       return 0
     }
 
-    if (valueToShow[1] === null) return 1
-    if (valueToShow[0] !== null && valueToShow[1] < valueToShow[0]) return 0
+    if (selectedIndexes[1] === null) return 1
+    if (
+      selectedIndexes[0] !== null &&
+      selectedIndexes[1] < selectedIndexes[0]
+    ) {
+      return 0
+    }
 
     return 1
   }
@@ -170,24 +175,14 @@ export const DoubleSlider = ({
     return []
   }, [options])
 
-  const onChangeCallback = useCallback(
-    (localValue: (number | null)[]) => {
-      // If the option exists we will search into it to get the value
-      setValuesToShow(
-        options
-          ? localValue?.map(val => (val ? options[val]?.value : val))
-          : localValue,
-      )
+  const internalOnChangeRef = useRef((localValue: (number | null)[]) => {
+    const leftSliderValue = localValue[0] === null ? min : localValue[0]
+    const rightSliderValue = localValue[1] === null ? max : localValue[1]
+    const newValues = [leftSliderValue, rightSliderValue]
 
-      const leftSliderValue = localValue[0] === null ? min : localValue[0]
-      const rightSliderValue = localValue[1] === null ? max : localValue[1]
-      const newValues = [leftSliderValue, rightSliderValue]
-
-      setComputedValues(newValues)
-      onChange?.([Math.min(...newValues), Math.max(...newValues)])
-    },
-    [max, min, onChange, options],
-  )
+    setSelectedIndexes(newValues)
+    onChange?.([Math.min(...newValues), Math.max(...newValues)])
+  })
 
   // Get slider size (for options)
   useEffect(() => {
@@ -202,44 +197,30 @@ export const DoubleSlider = ({
   }, [])
 
   const handleMinChange = (newValue: number) => {
-    if (options) {
-      const optionLabel = options[newValue].value
-      const newCustomValue = [
-        optionLabel,
-        customValue ? customValue[1] : options[computedValues[1]].value,
-      ]
-      setCustomValue(newCustomValue)
-    }
-    onChangeCallback([newValue, computedValues[1]])
+    internalOnChangeRef.current([newValue, selectedIndexes[1]])
   }
 
   const handleMaxChange = (newValue: number) => {
-    if (options) {
-      const optionLabel = options[newValue].value
-      const newCustomValue = [
-        customValue ? customValue[0] : options[computedValues[0]].value,
-        optionLabel,
-      ]
-      setCustomValue(newCustomValue)
-    }
-    onChangeCallback([computedValues[0], newValue])
+    internalOnChangeRef.current([selectedIndexes[0], newValue])
   }
 
   const handleChangeInput = (val: number, side?: 'left' | 'right') => {
     if (side === 'left') {
-      if (valueToShow[1]) {
-        onChangeCallback([
-          Math.min(val, valueToShow[1]),
-          Math.max(val, valueToShow[1]),
+      const newValue = Math.max(val, min)
+      if (selectedIndexes[1]) {
+        internalOnChangeRef.current([
+          Math.min(newValue, selectedIndexes[1]),
+          Math.max(newValue, selectedIndexes[1]),
         ])
-      } else onChangeCallback([val, valueToShow[1]])
+      } else internalOnChangeRef.current([newValue, selectedIndexes[1]])
     } else if (side === 'right') {
-      if (valueToShow[0]) {
-        onChangeCallback([
-          Math.min(val, valueToShow[0]),
-          Math.max(val, valueToShow[0]),
+      const newValue = Math.min(val, max)
+      if (selectedIndexes[0]) {
+        internalOnChangeRef.current([
+          Math.min(newValue, selectedIndexes[0]),
+          Math.max(newValue, selectedIndexes[0]),
         ])
-      } else onChangeCallback([valueToShow[0], val])
+      } else internalOnChangeRef.current([selectedIndexes[0], newValue])
     }
   }
 
@@ -266,9 +247,9 @@ export const DoubleSlider = ({
           if (newVal !== null) {
             handleChangeInput(newVal, side)
           } else if (side === 'left') {
-            onChangeCallback([null, computedValues[1]])
+            internalOnChangeRef.current([null, selectedIndexes[1]])
           } else if (side === 'right') {
-            onChangeCallback([computedValues[0], null])
+            internalOnChangeRef.current([selectedIndexes[0], null])
           }
         }}
         onBlur={event => {
@@ -276,14 +257,16 @@ export const DoubleSlider = ({
           if (!event.target.value) {
             if (side === 'left') {
               const index = activeValue('left')
-              if (index === 0) onChangeCallback([min, computedValues[1]])
-              else onChangeCallback([computedValues[0], max])
+              if (index === 0) {
+                internalOnChangeRef.current([min, selectedIndexes[1]])
+              } else internalOnChangeRef.current([selectedIndexes[0], max])
             }
 
             if (side === 'right') {
               const index = activeValue('right')
-              if (index === 0) onChangeCallback([min, computedValues[1]])
-              else onChangeCallback([computedValues[0], max])
+              if (index === 0) {
+                internalOnChangeRef.current([min, selectedIndexes[1]])
+              } else internalOnChangeRef.current([selectedIndexes[0], max])
             }
           }
         }}
@@ -307,26 +290,46 @@ export const DoubleSlider = ({
     )
 
   // Position of the sliders to look like one range slider
-  const minPos = ((Math.min(...computedValues) - min) * 100) / (max - min)
-  const maxPos = ((Math.max(...computedValues) - min) * 100) / (max - min)
+  const minPos = ((Math.min(...selectedIndexes) - min) * 100) / (max - min)
+  const maxPos = ((Math.max(...selectedIndexes) - min) * 100) / (max - min)
 
   const tooltipText = useMemo(() => {
     if (tooltip === true) {
-      return [Math.min(...computedValues), Math.max(...computedValues)]
+      return [Math.min(...selectedIndexes), Math.max(...selectedIndexes)]
     }
     if (Array.isArray(tooltip)) return tooltip
 
     if (typeof tooltip === 'string') return tooltip
 
     return [null, null]
-  }, [tooltip, computedValues])
+  }, [tooltip, selectedIndexes])
 
   const placementTooltip = [
-    ((computedValues[0] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
+    ((selectedIndexes[0] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
       THUMB_SIZE / 2,
-    ((computedValues[1] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
+    ((selectedIndexes[1] - min) / (max - min)) * (sliderWidth - THUMB_SIZE) +
       THUMB_SIZE / 2,
   ]
+
+  const [leftToShow, rightToShow] = options
+    ? [options[selectedIndexes[0]].value, options[selectedIndexes[1]].value]
+    : selectedIndexes
+
+  // Make the component controllable
+  useEffect(() => {
+    setSelectedIndexes(() => {
+      const newSafeValue =
+        value && Array.isArray(value) && value.length === 2 ? value : [min, max]
+      if (min > newSafeValue[0]) {
+        newSafeValue[0] = min
+      }
+      if (max < newSafeValue[1]) {
+        newSafeValue[1] = max
+      }
+
+      return newSafeValue
+    })
+  }, [min, max, value])
 
   return (
     <Stack gap={1} direction="column" justifyContent="left">
@@ -344,22 +347,11 @@ export const DoubleSlider = ({
       <Stack direction={direction} gap={1} width="100%">
         {direction === 'column' ? (
           <Stack justifyContent="space-between" direction="row">
-            {styledValue(
-              customValue ? customValue[0] : valueToShow[activeValue('left')],
-              'left',
-            )}
-            {styledValue(
-              customValue ? customValue[1] : valueToShow[activeValue('right')],
-              'right',
-            )}
+            {styledValue(leftToShow, 'left')}
+            {styledValue(rightToShow, 'right')}
           </Stack>
         ) : null}
-        {direction === 'row'
-          ? styledValue(
-              customValue ? customValue[0] : valueToShow[activeValue('left')],
-              'left',
-            )
-          : null}
+        {direction === 'row' ? styledValue(leftToShow, 'left') : null}
         <DoubleSliderWrapper>
           <StyledTooltip
             text={typeof tooltipText === 'string' ? tooltipText : undefined}
@@ -389,7 +381,7 @@ export const DoubleSlider = ({
                 data-error={error}
                 data-direction={direction}
                 type="range"
-                value={computedValues[0]}
+                value={selectedIndexes[0]}
                 min={min}
                 suffix={!!(suffix || unit)}
                 aria-label={ariaLabel ?? name}
@@ -402,7 +394,7 @@ export const DoubleSlider = ({
                 }}
                 themeSlider={theme}
                 ref={refSlider}
-                left={((computedValues[0] - min) * 100) / (max - min)}
+                left={((selectedIndexes[0] - min) * 100) / (max - min)}
               />
             </StyledTooltip>
             <StyledTooltip
@@ -413,7 +405,7 @@ export const DoubleSlider = ({
               <SliderElement
                 className={className}
                 type="range"
-                value={computedValues[1]}
+                value={selectedIndexes[1]}
                 name={name}
                 disabled={!!disabled}
                 suffix={!!(suffix || unit)}
@@ -434,7 +426,7 @@ export const DoubleSlider = ({
                   handleMaxChange(parseFloat(event.target.value))
                 }}
                 themeSlider={theme}
-                left={((computedValues[1] - min) * 100) / (max - min)}
+                left={((selectedIndexes[1] - min) * 100) / (max - min)}
               />
             </StyledTooltip>
           </StyledTooltip>
@@ -444,17 +436,12 @@ export const DoubleSlider = ({
               min={min}
               max={max}
               sliderWidth={sliderWidth}
-              value={computedValues}
+              value={selectedIndexes}
               step={step}
             />
           ) : null}
         </DoubleSliderWrapper>
-        {direction === 'row'
-          ? styledValue(
-              customValue ? customValue[1] : valueToShow[activeValue('right')],
-              'right',
-            )
-          : null}
+        {direction === 'row' ? styledValue(rightToShow, 'right') : null}
       </Stack>
     </Stack>
   )

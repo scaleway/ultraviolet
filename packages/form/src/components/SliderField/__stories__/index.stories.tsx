@@ -24,7 +24,13 @@ export default {
       } = methods.formState
 
       return (
-        <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
+        <Form
+          onSubmit={() => {
+            methods.reset({})
+          }}
+          errors={mockErrors}
+          methods={methods}
+        >
           <Stack gap={2}>
             <div
               style={{

@@ -39,7 +39,7 @@ export type OptionsProps = {
   min: number
   max: number
   sliderWidth: number
-  value: number | number[]
+  value?: number | number[]
   step: number
 }
 
@@ -60,10 +60,17 @@ export const Options = ({
 
         const formatedElement = element.label ?? String(element.value)
 
-        const isSelected =
-          typeof value === 'number'
+        const getIsSelected = () => {
+          if (!value) {
+            return false
+          }
+
+          return typeof value === 'number'
             ? element.value === value
             : value.includes(element.value)
+        }
+
+        const isSelected = getIsSelected()
 
         return (
           <Option
