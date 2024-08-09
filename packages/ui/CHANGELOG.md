@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.68.0
+
+### Minor Changes
+
+- [#4124](https://github.com/scaleway/ultraviolet/pull/4124) [`bd3700e`](https://github.com/scaleway/ultraviolet/commit/bd3700e52ffc8c12962635185ad016681956d434) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - TabMenu: Fix the type of the button for the Menu disclosure
+
+- [#4109](https://github.com/scaleway/ultraviolet/pull/4109) [`5da5215`](https://github.com/scaleway/ultraviolet/commit/5da52153666ec49345010ede3de476489c3bee36) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - Slider: Component can be controllable or not
+
 ## 1.67.3
 
 ### Patch Changes
