@@ -65,6 +65,7 @@ export const TabMenu = forwardRef(
             disabled={disabled}
             aria-haspopup="menu"
             className={className}
+            type="button"
             {...props}
           >
             {disclosure}
