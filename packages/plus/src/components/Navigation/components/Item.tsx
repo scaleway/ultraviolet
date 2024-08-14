@@ -374,6 +374,10 @@ export const Item = ({
     animationType,
   } = context
 
+  if (type === 'pinned') {
+    console.debug('onToggle', onToggle)
+  }
+
   useEffect(
     () => {
       if (type !== 'pinnedGroup') {
@@ -390,6 +394,7 @@ export const Item = ({
   )
 
   const triggerToggle = useCallback(() => {
+    console.debug('triggerToggle')
     onToggleExpand()
     onToggle?.(internalExpanded)
   }, [internalExpanded, onToggle])
@@ -764,6 +769,7 @@ export const Item = ({
         disabled={disabled}
         sentiment={active ? 'primary' : 'neutral'}
         isPinnable={shouldShowPinnedButton}
+        onClick={() => onToggle?.(!!active)}
       >
         <Stack
           gap={1}
@@ -815,7 +821,7 @@ export const Item = ({
                       event.preventDefault()
                       event.stopPropagation() // This is to avoid click spread to the parent and change the routing
 
-                      let newValue
+                      let newValue: string
                       if (isItemPinned) {
                         newValue = unpinItem(id)
                       } else {

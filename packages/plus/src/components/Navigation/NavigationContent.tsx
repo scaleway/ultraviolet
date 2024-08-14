@@ -90,7 +90,8 @@ const Content = styled(Stack)`
   flex-grow: 1;
 
   &[data-is-expanded="false"] {
-    padding: ${({ theme }) => theme.space['2']} 0;
+    align-items: center;
+    padding: ${({ theme }) => theme.space['2']};
   }
 
   &[data-is-expanded="true"],
@@ -178,19 +179,14 @@ export const NavigationContent = ({
     }
 
     return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       contentRef.current?.removeEventListener('scroll', scroll)
     }
   }, [footerHasOverflowStyle, isScrollAtBottom])
 
   // This will set the shadow on the footer when the component is mounted
-  useEffect(
-    () => {
-      setFooterHasOverflowStyle(isScrollAtBottom())
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [contentRef.current],
-  )
+  useEffect(() => {
+    setFooterHasOverflowStyle(isScrollAtBottom())
+  }, [isScrollAtBottom])
 
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {

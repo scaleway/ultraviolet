@@ -170,7 +170,7 @@ export const NavigationProvider = ({
     (toggle?: boolean) => {
       if (typeof toggle !== 'boolean' && toggle !== undefined) {
         throw new Error(
-          `toggleExpand only accepts boolean or undefined as parameter. You most likely did <button onClick={toggleExpand}> instead of <button onClick={() => toggleExpand()}>`,
+          'toggleExpand only accepts boolean or undefined as parameter. You most likely did <button onClick={toggleExpand}> instead of <button onClick={() => toggleExpand()}>',
         )
       }
 
