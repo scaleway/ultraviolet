@@ -1,41 +1,16 @@
-import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
-import { Stack } from '@ultraviolet/ui'
+import { Stack, fadeIn, fadeOut } from '@ultraviolet/ui'
 import { type ComponentProps, useCallback, useEffect, useState } from 'react'
 import { Navigation, NavigationProvider, useNavigation } from '..'
 import logoSmall from './assets/logo-small.svg'
 import logo from './assets/logo.svg'
 
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-`
-
-const fadeOut = keyframes`
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-`
-
 const Image = styled.img`
-  animation: ${fadeIn} 530ms ease-in-out;
+  animation: ${fadeIn} 300ms ease-in-out;
 
   &[data-expanded='false'] {
-    animation: ${fadeOut} 300ms linear forwards;
+    animation: ${fadeOut} 250ms linear forwards;
   }
 `
 

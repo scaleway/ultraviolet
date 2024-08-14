@@ -47,8 +47,9 @@ const StyledIcon = styled(Icon, {
   &:hover {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeakHover};
 
-    ${({ active, theme }) => (active ? `background: ${theme.colors.primary.backgroundHover};` : null)}
-    }
+    ${({ active, theme }) =>
+      active ? `background: ${theme.colors.primary.backgroundHover};` : null}
+  }
 `
 
 const NeutralButtonLink = css`
@@ -374,10 +375,6 @@ export const Item = ({
     animationType,
   } = context
 
-  if (type === 'pinned') {
-    console.debug('onToggle', onToggle)
-  }
-
   useEffect(
     () => {
       if (type !== 'pinnedGroup') {
@@ -394,7 +391,6 @@ export const Item = ({
   )
 
   const triggerToggle = useCallback(() => {
-    console.debug('triggerToggle')
     onToggleExpand()
     onToggle?.(internalExpanded)
   }, [internalExpanded, onToggle])
@@ -626,7 +622,7 @@ export const Item = ({
                         onClick={(event: MouseEvent<HTMLDivElement>) => {
                           event.preventDefault()
                           event.stopPropagation() // This is to avoid click spread to the parent and change the routing
-                          let newValue
+                          let newValue: string[] | undefined
                           if (isItemPinned) {
                             newValue = unpinItem(id)
                           } else {
@@ -821,7 +817,7 @@ export const Item = ({
                       event.preventDefault()
                       event.stopPropagation() // This is to avoid click spread to the parent and change the routing
 
-                      let newValue: string
+                      let newValue: string[] | undefined
                       if (isItemPinned) {
                         newValue = unpinItem(id)
                       } else {

@@ -166,6 +166,8 @@ export const NavigationContent = ({
 
   // This is for detecting if there is scroll on the content and set the shadow on the footer
   useEffect(() => {
+    const currentContentRef = contentRef.current
+
     const scroll = () => {
       const hasOverflow = isScrollAtBottom()
 
@@ -174,12 +176,12 @@ export const NavigationContent = ({
       }
     }
 
-    if (contentRef.current) {
-      contentRef.current.addEventListener('scroll', scroll)
+    if (currentContentRef) {
+      currentContentRef.addEventListener('scroll', scroll)
     }
 
     return () => {
-      contentRef.current?.removeEventListener('scroll', scroll)
+      currentContentRef?.removeEventListener('scroll', scroll)
     }
   }, [footerHasOverflowStyle, isScrollAtBottom])
 
