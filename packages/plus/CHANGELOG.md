@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.21.6
+
+### Patch Changes
+
+- [#4131](https://github.com/scaleway/ultraviolet/pull/4131) [`512495d`](https://github.com/scaleway/ultraviolet/commit/512495da6c84abe69641df32266e3286723f87c9) Thanks [@philibea](https://github.com/philibea)! - forward toggle props to MenuItem
+
 ## 0.21.5
 
 ### Patch Changes
