@@ -47,8 +47,9 @@ const StyledIcon = styled(Icon, {
   &:hover {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeakHover};
 
-    ${({ active, theme }) => (active ? `background: ${theme.colors.primary.backgroundHover};` : null)}
-    }
+    ${({ active, theme }) =>
+      active ? `background: ${theme.colors.primary.backgroundHover};` : null}
+  }
 `
 
 const NeutralButtonLink = css`
@@ -621,7 +622,7 @@ export const Item = ({
                         onClick={(event: MouseEvent<HTMLDivElement>) => {
                           event.preventDefault()
                           event.stopPropagation() // This is to avoid click spread to the parent and change the routing
-                          let newValue
+                          let newValue: string[] | undefined
                           if (isItemPinned) {
                             newValue = unpinItem(id)
                           } else {
@@ -764,6 +765,7 @@ export const Item = ({
         disabled={disabled}
         sentiment={active ? 'primary' : 'neutral'}
         isPinnable={shouldShowPinnedButton}
+        onClick={() => onToggle?.(!!active)}
       >
         <Stack
           gap={1}
@@ -815,7 +817,7 @@ export const Item = ({
                       event.preventDefault()
                       event.stopPropagation() // This is to avoid click spread to the parent and change the routing
 
-                      let newValue
+                      let newValue: string[] | undefined
                       if (isItemPinned) {
                         newValue = unpinItem(id)
                       } else {
