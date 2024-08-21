@@ -81,8 +81,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 6.1.10
-        version: 6.1.10(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 7.0.0
+        version: 7.0.0(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@size-limit/file':
         specifier: 11.1.4
         version: 11.1.4(size-limit@11.1.4)
@@ -2603,8 +2603,8 @@ packages:
   '@scaleway/tsconfig@1.1.1':
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
 
-  '@scaleway/use-i18n@6.1.10':
-    resolution: {integrity: sha512-ZUj8Ukd4/cLwNsDPMm/S1Gb+FI7S87/+QByd08QGZS63zfmNrhBsUqbewrhyz6NqcDeLQYj9W9ZkZXa+ecp/Cw==}
+  '@scaleway/use-i18n@7.0.0':
+    resolution: {integrity: sha512-nhEqF6MzgEFQQHOkr7OLFxGm4qiKLdnMsed7p+FXsR+5p4svMh9BBmf6d39xSbqBw8u/GXFLHpSYagW/B6JFxg==}
     engines: {node: '>=18.x'}
     peerDependencies:
       date-fns: 3.x
@@ -11210,7 +11210,7 @@ snapshots:
 
   '@scaleway/tsconfig@1.1.1': {}
 
-  '@scaleway/use-i18n@6.1.10(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@scaleway/use-i18n@7.0.0(date-fns@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@formatjs/ecma402-abstract': 2.0.0
       '@formatjs/fast-memoize': 2.2.0
