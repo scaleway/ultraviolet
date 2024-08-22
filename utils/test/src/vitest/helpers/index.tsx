@@ -23,7 +23,6 @@ export const ComponentWrapper = ({
   theme?: typeof consoleLightTheme
 }) => (
   <ThemeProvider theme={theme}>
-    {console.debug('ThemeProvider', theme.theme)}
     <div data-testid="testing">{children}</div>
   </ThemeProvider>
 )
