@@ -9,6 +9,22 @@ on:
       - main
 
 jobs:
+  manypkg:
+    runs-on: ubuntu-22.04
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_REMOTE_ONLY: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4.0.0
+      - name: Use Node.js
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 20
+          cache: "pnpm"
+      - run: |
+          pnpm install
+          pnpm exec manypkg check
   typecheck:
     runs-on: ubuntu-22.04
     env:

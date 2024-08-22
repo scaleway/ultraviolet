@@ -1,11 +1,6 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "examples/*",
-    "utils/*"
-  ],
   "packageManager": "pnpm@9.7.1",
   "engines": {
     "node": ">=18.x",
@@ -53,6 +48,9 @@
     ],
     ".md?(x)": [
       "pnpm dlx prettier --write '**/*.{md,mdx}'"
+    ],
+    "**/pnpm-lock.yaml, **/package.json": [
+      "pnpm exec manypkg check"
     ]
   },
   "config": {
@@ -63,6 +61,11 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "manypkg": {
+    "ignoredRules": [
+      "INTERNAL_MISMATCH"
     ]
   },
   "pnpm": {
@@ -97,6 +100,7 @@
     "@emotion/styled": "11.13.0",
     "@eslint/compat": "1.1.1",
     "@eslint/eslintrc": "3.1.0",
+    "@manypkg/cli": "0.21.4",
     "@scaleway/eslint-config-react": "4.0.3",
     "@scaleway/tsconfig": "1.1.1",
     "@scaleway/use-i18n": "6.1.10",

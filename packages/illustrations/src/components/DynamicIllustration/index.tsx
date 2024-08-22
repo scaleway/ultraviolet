@@ -30,6 +30,8 @@ export const DynamicIllustration = ({
 }: DynamicIllustrationProps) => {
   const theme = useTheme()
 
+  console.debug('theme', theme.theme)
+
   return (
     <img
       className={className}
