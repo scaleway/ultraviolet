@@ -99,7 +99,7 @@ const ProgressiveLine = styled.span<{ isFocused: boolean }>`
 type LegendsProps = {
   data?: Data[]
   focused?: string
-  onFocusChange(index?: string): void
+  onFocusChange: (index?: string) => void
   colors: string[]
 }
 
