@@ -4,10 +4,7 @@ import { render, renderHook } from '@testing-library/react'
 import type { RenderOptions } from '@testing-library/react'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import type { ComponentProps, ReactElement, ReactNode } from 'react'
-import type {
-  FormErrors,
-  UseFormProps,
-} from '../../../../../packages/form/src/index'
+import type { FormErrors, UseFormProps } from '../../../../../packages/form/src'
 import { Form, useForm } from '../../../../../packages/form/src/index'
 import { makeShouldMatchEmotionSnapshot } from './shouldMatchEmotionSnapshot'
 import { makeShouldMatchEmotionSnapshotWithPortal } from './shouldMatchEmotionSnapshotWithPortal'

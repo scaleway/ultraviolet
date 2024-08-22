@@ -1,11 +1,6 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "examples/*",
-    "utils/*"
-  ],
   "packageManager": "pnpm@9.7.1",
   "engines": {
     "node": ">=18.x",
@@ -53,6 +48,9 @@
     ],
     ".md?(x)": [
       "pnpm dlx prettier --write '**/*.{md,mdx}'"
+    ],
+    "pnpm-lock.yaml, package.json, **/pnpm-lock.yaml, **/package.json": [
+      "pnpm exec manypkg check"
     ]
   },
   "config": {
@@ -63,6 +61,11 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
+    ]
+  },
+  "manypkg": {
+    "ignoredRules": [
+      "INTERNAL_MISMATCH"
     ]
   },
   "pnpm": {
@@ -79,11 +82,11 @@
   "dependencies": {
     "@babel/core": "7.25.2",
     "@babel/eslint-parser": "7.25.1",
-    "@babel/plugin-transform-runtime": "7.24.7",
+    "@babel/plugin-transform-runtime": "7.25.4",
     "@babel/preset-env": "7.25.3",
     "@babel/preset-react": "7.24.7",
     "@babel/preset-typescript": "7.24.7",
-    "@babel/runtime": "7.25.0",
+    "@babel/runtime": "7.25.4",
     "@biomejs/biome": "1.8.3",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.7",
@@ -93,10 +96,11 @@
     "@emotion/cache": "11.13.1",
     "@emotion/eslint-plugin": "11.12.0",
     "@emotion/jest": "11.13.0",
-    "@emotion/react": "11.13.0",
+    "@emotion/react": "11.13.3",
     "@emotion/styled": "11.13.0",
     "@eslint/compat": "1.1.1",
     "@eslint/eslintrc": "3.1.0",
+    "@manypkg/cli": "0.21.4",
     "@scaleway/eslint-config-react": "4.0.3",
     "@scaleway/tsconfig": "1.1.1",
     "@scaleway/use-i18n": "6.1.10",
@@ -123,7 +127,7 @@
     "@testing-library/react": "16.0.0",
     "@testing-library/user-event": "14.5.2",
     "@types/node": "20.15.0",
-    "@types/react": "18.3.3",
+    "@types/react": "18.3.4",
     "@types/react-datepicker": "6.2.0",
     "@types/react-dom": "18.3.0",
     "@types/zxcvbn": "4.4.4",

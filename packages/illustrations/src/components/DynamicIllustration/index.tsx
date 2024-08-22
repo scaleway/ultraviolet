@@ -28,13 +28,13 @@ export const DynamicIllustration = ({
   'data-testid': dataTestId,
   className,
 }: DynamicIllustrationProps) => {
-  const theme = useTheme()
+  const { theme } = useTheme()
 
   return (
     <img
       className={className}
       data-testid={dataTestId}
-      src={ILLUSTRATIONS[theme.theme === 'light' ? 'light' : 'dark'][name]}
+      src={ILLUSTRATIONS[theme === 'light' ? 'light' : 'dark'][name]}
       alt={name}
       width={width}
       height={height}
