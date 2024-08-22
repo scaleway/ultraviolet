@@ -340,7 +340,9 @@ export const DateInput = ({
           dateFormat={showMonthYearPicker ? 'MM/yyyy' : undefined}
           renderCustomHeader={({
             date,
+            /* eslint-disable-next-line @typescript-eslint/unbound-method */
             decreaseMonth,
+            /* eslint-disable-next-line @typescript-eslint/unbound-method */
             increaseMonth,
             prevMonthButtonDisabled,
             nextMonthButtonDisabled,

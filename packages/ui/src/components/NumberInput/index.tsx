@@ -136,8 +136,8 @@ type NumberInputProps = {
   minValue?: number
   name?: string
   onChange?: (input: number | undefined) => void
-  onMaxCrossed?(): void
-  onMinCrossed?(): void
+  onMaxCrossed?: () => void
+  onMinCrossed?: () => void
   size?: ContainerSizesType
   /**
    * Define how much will stepper increase / decrease each time you click on + / - button.

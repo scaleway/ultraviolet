@@ -204,6 +204,7 @@ export const ToastContainer = ({
     <>
       <Global styles={style} />
       <ClassNames>
+        {/* eslint-disable-next-line @typescript-eslint/unbound-method */}
         {({ css: localCss }) => (
           <BaseToastContainer
             data-testid={dataTestId}
