@@ -1,9 +1,9 @@
 import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { FocusEvent, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { useId } from 'react'
-import type { ReactDatePickerProps } from 'react-datepicker'
+import type { DatePickerProps } from 'react-datepicker'
 import DatePicker, { registerLocale } from 'react-datepicker'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
@@ -187,16 +187,25 @@ const StyledText = styled(Text)`
 `
 
 type DateInputProps = Pick<
-  ReactDatePickerProps<boolean | undefined, boolean>,
-  'locale' | 'onChange'
+  DatePickerProps,
+  | 'locale'
+  | 'maxDate'
+  | 'minDate'
+  | 'excludeDates'
+  | 'startDate'
+  | 'endDate'
+  | 'value'
+  | 'showMonthYearPicker'
+  | 'onBlur'
+  | 'onFocus'
+  | 'disabled'
+  | 'autoFocus'
+  // XOR props
+  // | 'selectsRange'
+  // | 'onChange'
+  // | 'selectsMultiple'
 > & {
-  autoFocus?: boolean
-  disabled?: boolean
-  maxDate?: Date | null
-  minDate?: Date | null
   name?: string
-  onBlur?: (event: FocusEvent<HTMLInputElement>) => void
-  onFocus?: (event: FocusEvent<HTMLInputElement>) => void
   error?: string
   required?: boolean
   format?: (value?: Date | string) => string | undefined
@@ -204,13 +213,9 @@ type DateInputProps = Pick<
    * Label of the field
    */
   label?: string
-  value?: Date | string | [Date | null, Date | null]
+  // value?: Date | string | [Date | null, Date | null]
   className?: string
   'data-testid'?: string
-  selectsRange?: boolean
-  startDate?: Date | null
-  endDate?: Date | null
-  excludeDates?: Date[]
   id?: string
   labelDescription?: ReactNode
   success?: string | boolean
@@ -218,8 +223,12 @@ type DateInputProps = Pick<
   size?: 'small' | 'medium' | 'large'
   readOnly?: boolean
   tooltip?: string
-  showMonthYearPicker?: boolean
 }
+
+type DatePicker = Pick<
+  DatePickerProps,
+  'selectsRange' | 'onChange' | 'selectsMultiple'
+>
 
 const DEFAULT_FORMAT: DateInputProps['format'] = value =>
   value instanceof Date ? value.toISOString() : value
@@ -256,20 +265,16 @@ export const DateInput = ({
   readOnly = false,
   tooltip,
   showMonthYearPicker,
+  selectsMultiple,
   'data-testid': dataTestId,
-}: DateInputProps) => {
+}: DateInputProps & DatePicker) => {
   const uniqueId = useId()
   const localId = id ?? uniqueId
 
-  // Linked to: https://github.com/Hacker0x01/react-datepicker/issues/3834
-  const ReactDatePicker =
-    (DatePicker as unknown as { default: typeof DatePicker }).default ??
-    DatePicker
-
-  const localeCode =
-    (typeof locale === 'string' ? locale : locale?.code) ?? 'en-GB'
+  const localeCode = (typeof locale === 'string' ? locale : locale) ?? 'en-GB'
 
   if (typeof locale === 'object') {
+    // TODO: ask why locale type is pick and remove localCode of date-fns
     registerLocale(localeCode, locale)
   }
 
@@ -282,15 +287,20 @@ export const DateInput = ({
     endDate !== undefined && endDate !== null ? format(endDate) : ''
   }`
 
-  const valueFormat = selectsRange
-    ? `${valueStart} ${valueEnd}`
-    : format(value as Date)
+  const valueFormat = selectsRange ? `${valueStart} ${valueEnd}` : format(value)
 
   return (
     <>
       <Global styles={style} />
       <StyledWrapper>
-        <ReactDatePicker
+        {/*  */}
+        <DatePicker
+          // ts-expect-error https://github.com/Hacker0x01/react-datepicker/issues/4924
+          selectsMultiple={selectsMultiple}
+          // ts-expect-error https://github.com/Hacker0x01/react-datepicker/issues/4924
+          onChange={onChange}
+          // ts-expect-error https://github.com/Hacker0x01/react-datepicker/issues/4924
+          selectsRange={selectsRange}
           required={required}
           data-testid={dataTestId}
           className={className}
@@ -299,12 +309,8 @@ export const DateInput = ({
           name={name}
           locale={localeCode}
           onBlur={onBlur}
-          onChange={onChange}
           onFocus={onFocus}
-          selected={
-            value && !selectsRange ? new Date(value as Date) : undefined
-          }
-          selectsRange={selectsRange}
+          selected={value && !selectsRange ? new Date(value) : undefined}
           excludeDates={excludeDates}
           showPopperArrow={false}
           popperPlacement="bottom-start"
@@ -322,7 +328,7 @@ export const DateInput = ({
               suffix={
                 <Icon
                   name="calendar-range"
-                  color="neutral"
+                  sentiment="neutral"
                   disabled={disabled}
                 />
               }
@@ -340,9 +346,9 @@ export const DateInput = ({
           dateFormat={showMonthYearPicker ? 'MM/yyyy' : undefined}
           renderCustomHeader={({
             date,
-            /* eslint-disable-next-line @typescript-eslint/unbound-method */
+
             decreaseMonth,
-            /* eslint-disable-next-line @typescript-eslint/unbound-method */
+
             increaseMonth,
             prevMonthButtonDisabled,
             nextMonthButtonDisabled,

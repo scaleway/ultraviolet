@@ -152,9 +152,6 @@ importers:
       '@types/react':
         specifier: 18.3.5
         version: 18.3.5
-      '@types/react-datepicker':
-        specifier: 6.2.0
-        version: 6.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@types/react-dom':
         specifier: 18.3.0
         version: 18.3.0
@@ -640,8 +637,8 @@ importers:
         specifier: 4.3.1
         version: 4.3.1
       react-datepicker:
-        specifier: 7.1.0
-        version: 7.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 7.3.0
+        version: 7.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-select:
         specifier: 5.8.0
         version: 5.8.0(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -667,9 +664,6 @@ importers:
       '@types/react':
         specifier: 18.3.5
         version: 18.3.5
-      '@types/react-datepicker':
-        specifier: 6.2.0
-        version: 6.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@types/react-dom':
         specifier: 18.3.0
         version: 18.3.0
@@ -3155,9 +3149,6 @@ packages:
 
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
-
-  '@types/react-datepicker@6.2.0':
-    resolution: {integrity: sha512-+JtO4Fm97WLkJTH8j8/v3Ldh7JCNRwjMYjRaKh4KHH0M3jJoXtwiD3JBCsdlg3tsFIw9eQSqyAPeVDN2H2oM9Q==}
 
   '@types/react-dom@18.3.0':
     resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
@@ -7158,8 +7149,8 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
-  react-datepicker@7.1.0:
-    resolution: {integrity: sha512-Z91n5ybhmzI+YChj1ZG7ntPPOmHR2Dh4jbIl+mNgKXKoxyzUQBh7M3eQaFOwrBCVdKy5vsj370/ocQlGu1qsGA==}
+  react-datepicker@7.3.0:
+    resolution: {integrity: sha512-EqRKLAtLZUTztiq6a+tjSjQX9ES0Xd229JPckAtyZZ4GoY3rtvNWAzkYZnQUf6zTWT50Ki0+t+W9VRQIkSJLfg==}
     peerDependencies:
       react: ^16.9.0 || ^17 || ^18
       react-dom: ^16.9.0 || ^17 || ^18
@@ -11929,15 +11920,6 @@ snapshots:
   '@types/qs@6.9.15': {}
 
   '@types/range-parser@1.2.7': {}
-
-  '@types/react-datepicker@6.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@floating-ui/react': 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@types/react': 18.3.5
-      date-fns: 3.6.0
-    transitivePeerDependencies:
-      - react
-      - react-dom
 
   '@types/react-dom@18.3.0':
     dependencies:
@@ -16841,7 +16823,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  react-datepicker@7.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-datepicker@7.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@floating-ui/react': 0.26.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx: 2.1.1
