@@ -3,6 +3,9 @@ import { SelectInputV2 } from '..'
 
 export default {
   component: SelectInputV2,
+  parameters: {
+    experimental: true,
+  },
   decorators: [
     StoryComponent => (
       <div style={{ marginBottom: 400 }}>
