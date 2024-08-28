@@ -54,6 +54,7 @@ import { ReactComponent as flexibleIp } from './assets/flexible-ip.svg'
 import { ReactComponent as folder } from './assets/folder.svg'
 import { ReactComponent as frontends } from './assets/front-ends.svg'
 import { ReactComponent as functions } from './assets/functions.svg'
+import { ReactComponent as generativeApi } from './assets/generative-api.svg'
 import { ReactComponent as goldSupport } from './assets/gold-support.svg'
 import { ReactComponent as hubNetworks } from './assets/hub-networks.svg'
 import { ReactComponent as hubRoutes } from './assets/hub-routes.svg'
@@ -296,4 +297,5 @@ export const PRODUCT_ICONS = {
   quantumApplication,
   ipam,
   deleteMarker,
+  generativeApi,
 } as const
