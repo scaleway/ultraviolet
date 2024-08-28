@@ -2,9 +2,11 @@ import { isValidElement, cloneElement, ReactNode } from 'react'
 import {
   DocsContainer as BaseContainer,
   DocsContainerProps as BaseContainerProps,
+  Unstyled,
 } from '@storybook/blocks'
-import { ThemeProvider } from '@emotion/react'
+import { Global, ThemeProvider } from '@emotion/react'
 import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
+import { GlobalStyles } from './GlobalStyle'
 
 type ExtraProps = {
   /**
@@ -42,19 +44,22 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const isPlusLibrary = scope?.title?.includes('Plus/') ?? false
 
   return (
-    <ThemeProvider theme={lightTheme}>
-      <BaseContainer context={context}>
-        {isValidElement<ExtraProps>(children)
-          ? cloneElement(children, {
-              deprecated: parameters?.deprecated,
-              deprecatedReason: parameters?.deprecatedReason,
-              migrationLink: parameters?.migrationLink,
-              hideArgsTable: parameters?.hideArgsTable,
-              experimental: isPlusLibrary ? true : parameters?.experimental,
-            })
-          : children}
-      </BaseContainer>
-    </ThemeProvider>
+    <Unstyled>
+      <ThemeProvider theme={lightTheme}>
+        <Global styles={[GlobalStyles]} />,
+        <BaseContainer context={context}>
+          {isValidElement<ExtraProps>(children)
+            ? cloneElement(children, {
+                deprecated: parameters?.deprecated,
+                deprecatedReason: parameters?.deprecatedReason,
+                migrationLink: parameters?.migrationLink,
+                hideArgsTable: parameters?.hideArgsTable,
+                experimental: isPlusLibrary ? true : parameters?.experimental,
+              })
+            : children}
+        </BaseContainer>
+      </ThemeProvider>
+    </Unstyled>
   )
 }
 

@@ -1,6 +1,5 @@
 import type { Preview, StoryFn } from '@storybook/react'
-import { css, ThemeProvider, Global } from '@emotion/react'
-import { normalize } from '@ultraviolet/ui'
+import { ThemeProvider, Global } from '@emotion/react'
 import { themes } from '@storybook/theming'
 import { light, dark } from './storybookThemes'
 import {
@@ -10,12 +9,8 @@ import {
 } from '@ultraviolet/themes'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
-import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
-import InterSemiBoldWoff2 from './assets/fonts/inter/Inter-SemiBold.woff2'
-import InterMediumWoff2 from './assets/fonts/inter/Inter-Medium.woff2'
-import InterRegularWoff2 from './assets/fonts/inter/Inter-Regular.woff2'
-import SpaceGrotesk from './assets/fonts/space-grotesk/SpaceGrotesk.woff2'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
+import { GlobalStyles } from './components/GlobalStyle'
 
 const parameters: Preview['parameters'] = {
   darkMode: {
@@ -82,48 +77,6 @@ const parameters: Preview['parameters'] = {
   },
 }
 
-export const globalStyles = css`
-  ${normalize()}
-
-  p {
-    margin: 0;
-  }
-
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    src: url(${InterRegularWoff2}) format('woff2');
-    font-weight: 400;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    src: url(${InterMediumWoff2}) format('woff2');
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    src: url(${InterSemiBoldWoff2}) format('woff2');
-    font-weight: 600;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'JetBrains';
-    font-style: normal;
-    src: url(${JetBrains}) format('woff2');
-    font-weight: 400;
-    font-display: swap;
-  }
-@font-face {
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    src: url(${SpaceGrotesk}) format('woff2');
-  }
-`
-
 const getThemeColor = (theme: string) => {
   const { value: backgroundColor, textColor } =
     parameters['backgrounds'].values.find(
@@ -162,7 +115,7 @@ const decorators = [
     },
     defaultTheme: 'light',
     Provider: ThemeProvider,
-    GlobalStyles: () => <Global styles={[globalStyles]} />,
+    GlobalStyles: () => <Global styles={[GlobalStyles]} />,
   }),
   withThemeProvider,
 ]
