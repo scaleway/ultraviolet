@@ -100,6 +100,7 @@ import { ReactComponent as rocketOutline } from './assets/small-outline/rocket.s
 import { ReactComponent as sendOutline } from './assets/small-outline/send.svg'
 import { ReactComponent as settingsOutline } from './assets/small-outline/settings.svg'
 import { ReactComponent as sparklesOutline } from './assets/small-outline/sparkles.svg'
+import { ReactComponent as stopOutline } from './assets/small-outline/stop.svg'
 import { ReactComponent as sunOutline } from './assets/small-outline/sun.svg'
 import { ReactComponent as supportOutline } from './assets/small-outline/support.svg'
 import { ReactComponent as unlockOutline } from './assets/small-outline/unlock.svg'
@@ -147,6 +148,7 @@ import { ReactComponent as rocket } from './assets/small-solid/rocket.svg'
 import { ReactComponent as send } from './assets/small-solid/send.svg'
 import { ReactComponent as settings } from './assets/small-solid/settings.svg'
 import { ReactComponent as sparkles } from './assets/small-solid/sparkles.svg'
+import { ReactComponent as stop } from './assets/small-solid/stop.svg'
 import { ReactComponent as sun } from './assets/small-solid/sun.svg'
 import { ReactComponent as support } from './assets/small-solid/support.svg'
 import { ReactComponent as unlock } from './assets/small-solid/unlock.svg'
@@ -262,6 +264,7 @@ export const SMALL_ICONS = {
     unpin,
     sparkles,
     'light-bulb': lightBulb,
+    stop,
   },
   outlined: {
     anchor,
@@ -371,5 +374,6 @@ export const SMALL_ICONS = {
     unpin: unpinOutline,
     sparkles: sparklesOutline,
     'light-bulb': lightBubleOutline,
+    stop: stopOutline,
   },
 } as const
