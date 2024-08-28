@@ -156,7 +156,7 @@ jobs:
       - name: Export custom variables
         run: |
           SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL-$DEPLOYMENT_NAME | rev | cut -c-37 | rev)
-          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
+          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "STORYBOOK_BRANCH_SLUG=main" || echo "STORYBOOK_BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
 
       - name: Start deployment
         uses: bobheadxi/deployments@v1.5.0
@@ -187,7 +187,7 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v6
         env:
-          IMAGE: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
+          IMAGE: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
           SOURCE_DATE_EPOCH: 0
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
         with:
@@ -200,7 +200,7 @@ jobs:
       - name: Set scw_max_concurrency
         id: set-max-concurrency
         run: |
-          if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
+          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" ]]; then
             echo "SCW_MAX_CONCURRENCY=30" >> $GITHUB_ENV
           else
             echo "SCW_MAX_CONCURRENCY=10" >> $GITHUB_ENV
@@ -209,7 +209,7 @@ jobs:
       - name: Set scw_min_scale
         id: set-min-scale
         run: |
-          if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
+          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" ]]; then
             echo "SCW_MIN_SCALE=1" >> $GITHUB_ENV
           else
             echo "SCW_MIN_SCALE=0" >> $GITHUB_ENV
@@ -218,7 +218,7 @@ jobs:
       - name: Set scw_limit
         id: set-cpu-limit
         run: |
-          if [[ "${{ env.BRANCH_SLUG }}" == "main" ]]; then
+          if [[ "${{ env.STORYBOOK_BRANCH_SLUG }}" == "main" ]]; then
             echo "SCW_CPU_LIMIT=500" >> $GITHUB_ENV
             echo "SCW_MEMORY_LIMIT=1024" >> $GITHUB_ENV
           else
@@ -232,12 +232,12 @@ jobs:
         with:
           type: "deploy"
           scw_dns: "storybook.ultraviolet.scaleway.com"
-          root_zone: ${{ env.BRANCH_SLUG == 'main' }}
+          root_zone: ${{ env.STORYBOOK_BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
           scw_environment_variables: "GITHUB=DEPLOY"
-          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
+          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
           scw_min_scale: ${{ env.SCW_MIN_SCALE }}
           scw_cpu_limit: ${{ env.SCW_CPU_LIMIT }}
           scw_max_concurrency: ${{ env.SCW_MAX_CONCURRENCY }}
