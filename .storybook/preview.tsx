@@ -10,7 +10,7 @@ import {
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
-import { GlobalStyles } from './components/GlobalStyle'
+import { globalStyles } from './components/globalStyle'
 
 const parameters: Preview['parameters'] = {
   darkMode: {
@@ -115,7 +115,7 @@ const decorators = [
     },
     defaultTheme: 'light',
     Provider: ThemeProvider,
-    GlobalStyles: () => <Global styles={[GlobalStyles]} />,
+    GlobalStyles: () => <Global styles={[globalStyles]} />,
   }),
   withThemeProvider,
 ]

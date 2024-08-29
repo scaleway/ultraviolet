@@ -7,7 +7,7 @@ import { normalize } from '@ultraviolet/ui'
 import { css } from '@emotion/react'
 import lightTheme from '../../packages/ui/src/theme'
 
-export const GlobalStyles = css`
+export const globalStyles = css`
   ${normalize()}
 
   p {
