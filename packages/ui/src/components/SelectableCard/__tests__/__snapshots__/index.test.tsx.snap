@@ -56,13 +56,11 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -420,6 +418,8 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
       data-disabled="false"
       data-has-label="false"
       data-type="checkbox"
+      role="button"
+      tabindex="0"
     >
       <div
         aria-disabled="false"
@@ -539,13 +539,11 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -903,6 +901,8 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
       data-disabled="false"
       data-has-label="false"
       data-type="checkbox"
+      role="button"
+      tabindex="0"
     >
       <div
         aria-disabled="false"
@@ -1023,13 +1023,11 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -1387,6 +1385,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
       data-disabled="true"
       data-has-label="false"
       data-type="checkbox"
+      role="button"
     >
       <div
         aria-disabled="true"
@@ -1507,13 +1506,11 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -1885,6 +1882,8 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
       data-error="true"
       data-has-label="false"
       data-type="checkbox"
+      role="button"
+      tabindex="0"
     >
       <div
         aria-disabled="false"
@@ -2042,13 +2041,11 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
 }
 
 .emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-4:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-4:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-4:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-4:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-4:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -2415,6 +2412,8 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
           data-disabled="false"
           data-has-label="false"
           data-type="checkbox"
+          role="button"
+          tabindex="0"
         >
           <div
             aria-disabled="false"
@@ -2536,13 +2535,11 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -2900,6 +2897,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
       data-disabled="true"
       data-has-label="false"
       data-type="checkbox"
+      role="button"
     >
       <div
         aria-disabled="true"
@@ -3024,13 +3022,11 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -3262,6 +3258,8 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
       data-disabled="false"
       data-has-label="false"
       data-type="radio"
+      role="button"
+      tabindex="0"
     >
       <div
         class="emotion-2 emotion-3"
@@ -3277,6 +3275,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
             class="emotion-7 emotion-8"
             id="radio-choice"
             name="radio"
+            tabindex="-1"
             type="radio"
             value="choice"
           />
@@ -3374,13 +3373,11 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -3612,6 +3609,8 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
       data-disabled="false"
       data-has-label="false"
       data-type="radio"
+      role="button"
+      tabindex="0"
     >
       <div
         class="emotion-2 emotion-3"
@@ -3628,6 +3627,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
             class="emotion-7 emotion-8"
             id="radio-choice"
             name="radio"
+            tabindex="-1"
             type="radio"
             value="choice"
           />
@@ -3725,13 +3725,11 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -3963,6 +3961,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
       data-disabled="true"
       data-has-label="false"
       data-type="radio"
+      role="button"
     >
       <div
         class="emotion-2 emotion-3"
@@ -3979,6 +3978,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
             disabled=""
             id="radio-choice"
             name="radio"
+            tabindex="-1"
             type="radio"
             value="choice"
           />
@@ -4076,13 +4076,11 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -4315,6 +4313,8 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
       data-error="true"
       data-has-label="false"
       data-type="radio"
+      role="button"
+      tabindex="0"
     >
       <div
         class="emotion-2 emotion-3"
@@ -4331,6 +4331,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
             class="emotion-7 emotion-8"
             id="radio-choice"
             name="radio"
+            tabindex="-1"
             type="radio"
             value="choice"
           />
@@ -4462,13 +4463,11 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
 }
 
 .emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-4:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-4:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-4:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-4:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-4:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -4709,6 +4708,8 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
           data-disabled="false"
           data-has-label="false"
           data-type="radio"
+          role="button"
+          tabindex="0"
         >
           <div
             class="emotion-6 emotion-7"
@@ -4724,6 +4725,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
                 class="emotion-11 emotion-12"
                 id="radio-choice"
                 name="radio"
+                tabindex="-1"
                 type="radio"
                 value="choice"
               />
@@ -4823,13 +4825,11 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -5179,6 +5179,8 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
       data-disabled="false"
       data-has-label="false"
       data-type="checkbox"
+      role="button"
+      tabindex="0"
     >
       <div
         aria-disabled="false"
@@ -5298,13 +5300,11 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -5528,6 +5528,8 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
       data-disabled="false"
       data-has-label="false"
       data-type="radio"
+      role="button"
+      tabindex="0"
     >
       <div
         class="emotion-2 emotion-3"

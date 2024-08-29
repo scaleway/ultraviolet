@@ -20,7 +20,6 @@ const StyledSelectableCard = styled(SelectableCard)`
   white-space: nowrap;
 
   &:hover,
-  &:focus-within,
   &:active {
     box-shadow: none;
     border: none;

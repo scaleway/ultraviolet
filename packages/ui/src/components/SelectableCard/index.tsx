@@ -3,6 +3,7 @@ import type {
   ChangeEventHandler,
   FocusEventHandler,
   ForwardedRef,
+  KeyboardEventHandler,
   ReactNode,
 } from 'react'
 import { forwardRef, useCallback, useRef } from 'react'
@@ -46,7 +47,6 @@ const Container = styled(Stack)`
   }
 
   &:hover,
-  &:focus-within,
   &:active {
     &:not([data-error='true']):not([data-disabled='true']) {
       border: 1px solid ${({ theme }) => theme.colors.primary.border};
@@ -177,6 +177,18 @@ export const SelectableCard = forwardRef(
       [tooltip],
     )
 
+    const onKeyDown: KeyboardEventHandler = useCallback(
+      event => {
+        if (event.key === ' ') {
+          if (innerRef?.current) {
+            event.preventDefault()
+            innerRef.current.click()
+          }
+        }
+      },
+      [innerRef],
+    )
+
     return (
       <ParentContainer>
         <Container
@@ -185,6 +197,7 @@ export const SelectableCard = forwardRef(
               innerRef.current.click()
             }
           }}
+          onKeyDown={onKeyDown}
           className={className}
           data-checked={checked}
           data-disabled={disabled}
@@ -197,6 +210,8 @@ export const SelectableCard = forwardRef(
           direction="column"
           gap={0.5}
           flex={1}
+          tabIndex={disabled ? undefined : 0}
+          role="button"
         >
           {type === 'radio' ? (
             <StyledRadio
@@ -214,6 +229,7 @@ export const SelectableCard = forwardRef(
               ref={innerRef}
               data-error={isError}
               label={label}
+              tabIndex={!showTick ? -1 : undefined}
             />
           ) : (
             <StyledCheckbox
