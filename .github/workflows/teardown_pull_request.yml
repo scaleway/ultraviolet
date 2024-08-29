@@ -20,7 +20,7 @@ jobs:
       - name: Export custom variables
         run: |
           SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL-$DEPLOYMENT_NAME | rev | cut -c-37 | rev)
-          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "STORYBOOK_BRANCH_SLUG=main" || echo "STORYBOOK_BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
+          echo "STORYBOOK_BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL" >> $GITHUB_ENV
 
       - name: Deploy Serverless Container Scaleway
         uses: philibea/scaleway-containers-deploy@v1.1.5
@@ -28,7 +28,6 @@ jobs:
         with:
           type: "teardown"
           scw_dns: ${{ env.SCW_DNS }}
-          root_zone: ${{ env.STORYBOOK_BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
