@@ -21,7 +21,7 @@ const TitleDecorator = styled.div`
     line-height: ${({ theme }) => theme.typography.headingLargeStronger.lineHeight};
     text-transform: ${({ theme }) => theme.typography.headingLargeStronger.textCase};
     text-decoration: ${({ theme }) => theme.typography.headingLargeStronger.textDecoration};
-    padding: 40px 24px;
+    padding: ${({ theme }) => theme.space[5]} ${({ theme }) => theme.space[3]};
     border-radius: ${({ theme }) => theme.radii.default};
     background-image: url(${background});
     background-size: cover;
