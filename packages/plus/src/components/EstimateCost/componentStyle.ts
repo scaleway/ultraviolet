@@ -149,7 +149,7 @@ export const OverlayRow = styled('li', {
     border: 0;
   }
 
-  @media (max-width: 1420px) {
+  @media (max-width: 1600px) {
     ${({ shouldBeHidden }) => shouldBeHidden && 'display: none;'}
   }
 
