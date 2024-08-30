@@ -20,5 +20,4 @@ Template.args = {
   role: 'status',
   'aria-live': 'polite',
   'aria-atomic': 'true',
-  prefix: 'test',
 }
