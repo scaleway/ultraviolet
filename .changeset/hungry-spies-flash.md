@@ -11,7 +11,9 @@ import { Icon } from '@ultraviolet/icons';
 const MyComponent = () => (
   <Icon name="address" sentiment="danger" size="small" />
 );
+```
 
+```tsx
 // Now
 import { Address } from '@ultraviolet/icons';
 
