@@ -1,5 +1,7 @@
-import { shouldMatchEmotionSnapshot } from '@utils/test'
-import { describe, test } from 'vitest'
+import { act, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { describe, test, vi } from 'vitest'
 import { SelectableCard } from '..'
 
 describe('SelectableCard', () => {
@@ -173,4 +175,19 @@ describe('SelectableCard', () => {
         )}
       </SelectableCard>,
     ))
+
+  test('accessibility working with space key pressed to select', async () => {
+    const onChange = vi.fn()
+
+    renderWithTheme(
+      <SelectableCard onChange={onChange} name="radio" value="choice">
+        Radio card
+      </SelectableCard>,
+    )
+
+    const button = screen.getByRole('button')
+    act(() => button.focus())
+
+    await userEvent.keyboard('{Space}')
+  })
 })
