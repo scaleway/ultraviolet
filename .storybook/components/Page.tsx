@@ -49,7 +49,7 @@ const StoriesDecorator = styled(Stack)`
     text-decoration: ${({ theme }) => theme.typography.headingStrong.textDecoration};
     padding-bottom: ${({ theme }) => theme.space[1]};
     border-bottom: 2px solid ${({ theme }) => theme.colors.neutral.borderStronger};
-    margin-bottom: ${({ theme }) => theme.space[4]};
+    margin-bottom: ${({ theme }) => theme.space[2]};
   }
 `
 
@@ -79,7 +79,7 @@ const Page = ({
   experimental,
 }: PageProps) => (
   <StoriesThemes>
-    <Stack gap={4}>
+    <Stack gap={1}>
       <div>
         <TitleDecorator>
           <Title />
@@ -124,7 +124,7 @@ const Page = ({
             </>
           ) : null}
         </div>
-        <StoriesDecorator gap={1}>
+        <StoriesDecorator>
           <Stories />
         </StoriesDecorator>
       </Stack>

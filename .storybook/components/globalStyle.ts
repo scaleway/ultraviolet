@@ -58,7 +58,13 @@ export const globalStyles = css`
     line-height: ${lightTheme.typography.heading.lineHeight};
     text-transform: ${lightTheme.typography.heading.textCase};
     text-decoration: ${lightTheme.typography.heading.textDecoration};
-    margin-bottom: ${lightTheme.space[2]};
+    margin-top: ${lightTheme.space[2]};
+    margin-bottom: ${lightTheme.space[1]};
+  }
+
+  h4 {
+    margin-top: ${lightTheme.space[2]};
+    margin-bottom: ${lightTheme.space[1]};
   }
 
   @font-face {
