@@ -149,7 +149,7 @@ export const OverlayRow = styled('li', {
     border: 0;
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.xlarge}) {
     ${({ shouldBeHidden }) => shouldBeHidden && 'display: none;'}
   }
 
