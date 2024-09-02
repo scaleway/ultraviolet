@@ -6,7 +6,9 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const QuantumApplication = ({ ...props }: IconProps) => (
+export const QuantumApplication = ({
+  ...props
+}: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="quantum-application">
@@ -20,7 +22,12 @@ export const QuantumApplication = ({ ...props }: IconProps) => (
           />
         </g>
       </g>
-      <g fill="#521094" fillRule="evenodd" className="fill" clipRule="evenodd">
+      <g
+        fill="#521094"
+        fillRule="evenodd"
+        className="fill"
+        clipRule="evenodd"
+      >
         <path d="M23.987 21.556a1 1 0 0 1-.452 1.34l-7.284 3.612 15.926 7.898 15.608-7.898-6.875-3.479a1 1 0 0 1 .903-1.784l8.639 4.37a1 1 0 0 1 .548.893v19.836a1 1 0 0 1-.563.9L32.619 55.9a1 1 0 0 1-.867.003L13.57 47.247a1 1 0 0 1-.57-.903V26.508a1 1 0 0 1 .556-.896l9.09-4.508a1 1 0 0 1 1.34.452ZM49 28.135l-15.818 8.004v17.264L49 45.718zM31.182 53.416V36.145L15 28.12v17.593z" />
         <path d="M32 16a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-4 2a4 4 0 1 1 8 0 4 4 0 0 1-8 0" />
       </g>

@@ -1,6 +1,7 @@
 import { type Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon, ProductIcon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
+import { User } from '@ultraviolet/icons/product/User'
 import { Text } from '../Text'
 import {
   DEFAULT_COLORS,
@@ -216,7 +217,7 @@ export const AvatarV2 = ({
     ) : null}
     {variant === 'user' ? (
       <ProductIconContainer data-shape={shape} data-size={size} size={size}>
-        <ProductIcon name="user" />
+        <User />
       </ProductIconContainer>
     ) : null}
     {variant === 'icon' ? (

@@ -6,7 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const MacMiniM2 = ({ ...props }: IconProps) => (
+export const MacMiniM2 = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="MacMini-M2">

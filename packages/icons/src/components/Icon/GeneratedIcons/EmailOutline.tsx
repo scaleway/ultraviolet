@@ -6,7 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const EmailOutline = ({ ...props }: IconProps) => (
+export const EmailOutline = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <path

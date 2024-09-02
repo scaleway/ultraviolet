@@ -6,7 +6,9 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const AccountExperience = ({ ...props }: IconProps) => (
+export const AccountExperience = ({
+  ...props
+}: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="account-experience">
@@ -20,7 +22,12 @@ export const AccountExperience = ({ ...props }: IconProps) => (
           />
         </g>
       </g>
-      <g fill="#521094" fillRule="evenodd" className="fill" clipRule="evenodd">
+      <g
+        fill="#521094"
+        fillRule="evenodd"
+        className="fill"
+        clipRule="evenodd"
+      >
         <path d="M32 31a5.895 5.895 0 1 0 0-11.79A5.895 5.895 0 0 0 32 31m0 2a7.895 7.895 0 1 0 0-15.79A7.895 7.895 0 0 0 32 33m-3 4.158a6 6 0 0 0-6 6v5.631a1 1 0 1 1-2 0v-5.631a8 8 0 0 1 8-8h10.5a1 1 0 1 1 0 2z" />
         <path d="M32 11c-11.046 0-20 8.954-20 20s8.954 20 20 20q1.144 0 2.254-.126l.223 1.988Q33.256 52.999 32 53c-12.15 0-22-9.85-22-22S19.85 9 32 9s22 9.85 22 22c0 2.345-.367 4.605-1.048 6.727l-1.904-.61A20 20 0 0 0 52 31c0-11.046-8.954-20-20-20" />
       </g>

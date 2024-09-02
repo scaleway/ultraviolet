@@ -6,7 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const Sns = ({ ...props }: IconProps) => (
+export const Sns = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="SNS" clipPath="url(#a)">

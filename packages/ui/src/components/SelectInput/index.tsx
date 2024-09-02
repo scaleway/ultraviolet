@@ -1,7 +1,7 @@
 import type { CSSObject, Theme, keyframes } from '@emotion/react'
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type {
   ComponentProps,
   ForwardRefExoticComponent,

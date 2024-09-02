@@ -1,4 +1,4 @@
-import type { Icon } from '@ultraviolet/icons'
+import type { Icon } from '@ultraviolet/icons/legacy'
 import type { ComponentProps, MouseEvent } from 'react'
 import type { SENTIMENTS, SIZES } from './constants'
 

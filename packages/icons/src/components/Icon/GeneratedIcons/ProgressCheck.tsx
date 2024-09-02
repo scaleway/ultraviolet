@@ -6,7 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ProgressCheck = ({ ...props }: IconProps) => (
+export const ProgressCheck = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <path d="M8.991 2a7.94 7.94 0 0 0-3.909 1.63l1.04 1.047a6.5 6.5 0 0 1 2.87-1.197zm2.002 1.48c3.144.485 5.551 3.22 5.551 6.52s-2.407 6.035-5.55 6.52V18c3.95-.496 7.006-3.889 7.006-8s-3.057-7.504-7.007-8zM5.545 14.844a6.5 6.5 0 0 0 3.446 1.676V18a7.96 7.96 0 0 1-4.476-2.119zm-1.253-1.589a6.6 6.6 0 0 1-.833-2.751H2a8.05 8.05 0 0 0 1.232 3.819zM2.125 8.488a8.05 8.05 0 0 1 1.541-3.432l1.04 1.047a6.6 6.6 0 0 0-1.093 2.385z" />

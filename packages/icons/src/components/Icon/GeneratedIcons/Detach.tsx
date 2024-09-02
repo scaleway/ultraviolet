@@ -6,7 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const Detach = ({ ...props }: IconProps) => (
+export const Detach = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <path d="M2.195 2.195c.26-.26.683-.26.943 0l14.667 14.667a.667.667 0 1 1-.943.943L2.195 3.138a.667.667 0 0 1 0-.943" />

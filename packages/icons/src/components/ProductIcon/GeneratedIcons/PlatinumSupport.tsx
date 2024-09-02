@@ -6,7 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const PlatinumSupport = ({ ...props }: IconProps) => (
+export const PlatinumSupport = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="Platinum-Support" clipPath="url(#b)">

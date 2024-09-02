@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type { ComponentProps } from 'react'
 import { Children, useReducer } from 'react'
 import { CopyButton } from '../CopyButton'

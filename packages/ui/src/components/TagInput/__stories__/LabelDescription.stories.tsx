@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type { ComponentProps } from 'react'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'

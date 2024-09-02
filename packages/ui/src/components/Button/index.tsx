@@ -1,6 +1,6 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type {
   AriaRole,
   ButtonHTMLAttributes,

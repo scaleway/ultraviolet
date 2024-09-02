@@ -6,7 +6,9 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const DistributedDataLab = ({ ...props }: IconProps) => (
+export const DistributedDataLab = ({
+  ...props
+}: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="Distributed Data Lab">

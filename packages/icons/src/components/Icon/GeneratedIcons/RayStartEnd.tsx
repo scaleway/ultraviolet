@@ -6,7 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const RayStartEnd = ({ ...props }: IconProps) => (
+export const RayStartEnd = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <path d="M8 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0m8 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0" />

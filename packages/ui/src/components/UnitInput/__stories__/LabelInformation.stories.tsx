@@ -1,4 +1,4 @@
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import { Tooltip } from '../../Tooltip'
 import { Template } from './Template.stories'
 

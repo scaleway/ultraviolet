@@ -1,5 +1,5 @@
 import { Text, Stack, Alert } from '@ultraviolet/ui'
-import { Icon } from '@ultraviolet/icons'
+import { Profile } from '@ultraviolet/icons'
 import {
   Form,
   TextInputFieldV2,
@@ -94,7 +94,7 @@ const SignUp = () => {
         onSubmit={handleSubmit}
       >
         <Stack gap={1} alignItems="center">
-          <Icon name="profile" size="1.7em" />
+          <Profile size="1.7em" />
           <Text as="div" placement="center" variant="heading">
             Sign up form
           </Text>

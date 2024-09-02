@@ -1,4 +1,4 @@
-import { CategoryIcon } from '@ultraviolet/icons'
+import { CategoryIcon } from '@ultraviolet/icons/legacy'
 import { Badge } from '../../Badge'
 import { Bullet } from '../../Bullet'
 import { Text } from '../../Text'

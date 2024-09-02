@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { ProductIcon } from '@ultraviolet/icons'
+import { ProductIcon } from '@ultraviolet/icons/legacy'
 import { NotificationContainer, notification } from '..'
 import { Button, Stack, Text } from '../../index'
 

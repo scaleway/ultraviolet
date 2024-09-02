@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import type { ReactNode } from 'react'
 
 const StyledIcon = styled('svg', {
   shouldForwardProp: prop => !['variant', 'disabled'].includes(prop),
@@ -21,18 +22,25 @@ const StyledIcon = styled('svg', {
 export type IconProps = {
   variant?: 'primary' | 'neutral'
   disabled?: boolean
+  children: ReactNode
 }
 
 /**
  * CategoryIcon component is used to render category icons, those icons are more complex than system icons
  * as they involve multiple colors that changes depending on theme.
  */
-export const Icon = ({ variant = 'primary', disabled }: IconProps) => (
+export const Icon = ({
+  variant = 'primary',
+  disabled,
+  children,
+}: IconProps) => (
   <StyledIcon
     width="20"
     height="20"
     viewBox="0 0 20 20"
     variant={variant}
     disabled={disabled}
-  />
+  >
+    {children}
+  </StyledIcon>
 )

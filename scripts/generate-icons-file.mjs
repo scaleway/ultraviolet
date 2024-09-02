@@ -32,7 +32,7 @@ import type { IconProps } from '../Icon'
 
 export const ${iconName} = ({
   ...props
-}: IconProps) => (
+}: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>${svg}</Icon>
 )
@@ -75,7 +75,10 @@ const readSvg = async filePath => {
   const svgContent = await fs.readFile(filePath, 'utf-8')
   const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/g, '') // Remove <svg ...> and </svg> tags
 
-  return innerSvgContent.replace(/`/g, '\\`') // Escape backticks
+  // Replace class with className
+  const updatedSvgContent = innerSvgContent.replace(/class=/g, 'className=')
+
+  return updatedSvgContent.replace(/`/g, '\\`') // Escape backticks
 }
 
 const appendExportToIndex = async (output, iconName) => {

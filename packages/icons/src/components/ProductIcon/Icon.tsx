@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import type { ReactNode } from 'react'
 
 type Variants = 'primary' | 'danger' | 'warning' | 'original'
 
@@ -58,6 +59,7 @@ export type IconProps = {
   disabled?: boolean
   size?: keyof typeof SIZES
   className?: string
+  children: ReactNode
 }
 
 /**
@@ -69,6 +71,7 @@ export const Icon = ({
   disabled,
   size = 'small',
   className,
+  children,
 }: IconProps) => (
   <StyledIcon
     variant={variant}
@@ -76,5 +79,7 @@ export const Icon = ({
     size={size}
     viewBox="0 0 64 64"
     className={className}
-  />
+  >
+    {children}
+  </StyledIcon>
 )

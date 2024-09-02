@@ -6,7 +6,9 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const EnvironmentalFootprintCalculator = ({ ...props }: IconProps) => (
+export const EnvironmentalFootprintCalculator = ({
+  ...props
+}: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="environmental-footprint-calculator">

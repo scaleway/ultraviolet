@@ -6,7 +6,9 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const ManagedSearchDatabase = ({ ...props }: IconProps) => (
+export const ManagedSearchDatabase = ({
+  ...props
+}: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="managed-search-database">
@@ -20,7 +22,12 @@ export const ManagedSearchDatabase = ({ ...props }: IconProps) => (
           />
         </g>
       </g>
-      <g fill="#521094" fillRule="evenodd" className="fill" clipRule="evenodd">
+      <g
+        fill="#521094"
+        fillRule="evenodd"
+        className="fill"
+        clipRule="evenodd"
+      >
         <path
           d="M18 16.107a1 1 0 0 1 1 1v8.56a1 1 0 1 1-2 0v-8.56a1 1 0 0 1 1-1m28 0a1 1 0 0 1 1 1v8.56a1 1 0 1 1-2 0v-8.56a1 1 0 0 1 1-1"
           className="fill"

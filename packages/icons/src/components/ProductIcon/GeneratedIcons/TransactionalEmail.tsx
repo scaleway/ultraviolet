@@ -6,7 +6,9 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const TransactionalEmail = ({ ...props }: IconProps) => (
+export const TransactionalEmail = ({
+  ...props
+}: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="Transactional-Email" clipPath="url(#b)">

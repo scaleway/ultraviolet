@@ -6,7 +6,7 @@
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
-export const EdgeServices = ({ ...props }: IconProps) => (
+export const EdgeServices = ({ ...props }: Omit<IconProps, 'children'>) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Icon {...props}>
     <g className="edge-services" clipPath="url(#a)">
@@ -20,7 +20,12 @@ export const EdgeServices = ({ ...props }: IconProps) => (
           />
         </g>
       </g>
-      <g fill="#521094" fillRule="evenodd" className="fill" clipRule="evenodd">
+      <g
+        fill="#521094"
+        fillRule="evenodd"
+        className="fill"
+        clipRule="evenodd"
+      >
         <path d="M38 26a2 2 0 0 1 2-2h3.385a2 2 0 0 1 2 2v3.385a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2zm5.385 0H40v3.385h3.385zm3.23 0a2 2 0 0 1 2-2H52a2 2 0 0 1 2 2v3.385a2 2 0 0 1-2 2h-3.385a2 2 0 0 1-2-2zM52 26h-3.385v3.385H52zm-5.385 8.615a2 2 0 0 1 2-2H52a2 2 0 0 1 2 2V38a2 2 0 0 1-2 2h-3.385a2 2 0 0 1-2-2zm5.385 0h-3.385V38H52zm-14 0a2 2 0 0 1 2-2h3.385a2 2 0 0 1 2 2V38a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2zm5.385 0H40V38h3.385zM15 41a9 9 0 1 0 0-18 9 9 0 0 0 0 18m0 2c6.075 0 11-4.925 11-11s-4.925-11-11-11S4 25.925 4 32s4.925 11 11 11" />
         <path d="M14 42.22V21.87h2v20.35z" />
         <path d="M17.772 38.776c.947-1.635 1.596-4.026 1.596-6.776s-.65-5.141-1.596-6.776C16.795 23.537 15.744 23 15 23s-1.796.537-2.773 2.224c-.946 1.635-1.596 4.026-1.596 6.776s.65 5.141 1.596 6.776C13.204 40.463 14.256 41 15 41s1.795-.537 2.772-2.224M15 43c3.517 0 6.368-4.925 6.368-11S18.518 21 15 21c-3.517 0-6.369 4.925-6.369 11S11.483 43 15 43" />

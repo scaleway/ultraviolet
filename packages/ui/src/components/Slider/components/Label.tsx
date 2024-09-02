@@ -1,4 +1,4 @@
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import type { LabelProps } from '../types'

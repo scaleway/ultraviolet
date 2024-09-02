@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type { ComponentProps, MouseEventHandler, ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
