@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.13.0
+
+### Minor Changes
+
+- [#4161](https://github.com/scaleway/ultraviolet/pull/4161) [`49a5b17`](https://github.com/scaleway/ultraviolet/commit/49a5b179c1f934c6123689fa365c3f13fc30dcb8) Thanks [@matthprost](https://github.com/matthprost)! - Update of gradient colors
+
 ## 1.12.4
 
 ### Patch Changes
