@@ -1,5 +1,22 @@
 # Change Log
 
+## 3.7.5
+
+### Patch Changes
+
+- [#4166](https://github.com/scaleway/ultraviolet/pull/4166) [`9b90494`](https://github.com/scaleway/ultraviolet/commit/9b904940338f64f3588413bd2effc94a8755a4d3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.53.0`.
+
+- [#4142](https://github.com/scaleway/ultraviolet/pull/4142) [`6642dec`](https://github.com/scaleway/ultraviolet/commit/6642dec9fb12bf1812ab4c0c3acfaa6efdc3fd65) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.13.3`.
+  Updated dependency `@emotion/serialize` to `1.3.1`.
+
+- [#4175](https://github.com/scaleway/ultraviolet/pull/4175) [`099858b`](https://github.com/scaleway/ultraviolet/commit/099858bf2b24d52a09f854d20bc1d7d24b351442) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/runtime` to `7.25.6`.
+
+- [#4176](https://github.com/scaleway/ultraviolet/pull/4176) [`eab247e`](https://github.com/scaleway/ultraviolet/commit/eab247efca5e2412de7b5343e9f72f70fba27bf9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.5`.
+
+- Updated dependencies [[`49a5b17`](https://github.com/scaleway/ultraviolet/commit/49a5b179c1f934c6123689fa365c3f13fc30dcb8), [`6642dec`](https://github.com/scaleway/ultraviolet/commit/6642dec9fb12bf1812ab4c0c3acfaa6efdc3fd65), [`eab247e`](https://github.com/scaleway/ultraviolet/commit/eab247efca5e2412de7b5343e9f72f70fba27bf9)]:
+  - @ultraviolet/themes@1.13.0
+  - @ultraviolet/ui@1.68.1
+
 ## 3.7.4
 
 ### Patch Changes

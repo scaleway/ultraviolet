@@ -1,5 +1,14 @@
 # @ultraviolet/illustrations
 
+## 3.2.3
+
+### Patch Changes
+
+- [#4142](https://github.com/scaleway/ultraviolet/pull/4142) [`6642dec`](https://github.com/scaleway/ultraviolet/commit/6642dec9fb12bf1812ab4c0c3acfaa6efdc3fd65) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.13.3`.
+  Updated dependency `@emotion/serialize` to `1.3.1`.
+- Updated dependencies [[`49a5b17`](https://github.com/scaleway/ultraviolet/commit/49a5b179c1f934c6123689fa365c3f13fc30dcb8)]:
+  - @ultraviolet/themes@1.13.0
+
 ## 3.2.2
 
 ### Patch Changes

@@ -1,5 +1,23 @@
 # Change Log
 
+## 2.17.0
+
+### Minor Changes
+
+- [#4160](https://github.com/scaleway/ultraviolet/pull/4160) [`a0a3ec9`](https://github.com/scaleway/ultraviolet/commit/a0a3ec9c5ead1b0ce2d5b70444e36bcca5a3d0b8) Thanks [@matthprost](https://github.com/matthprost)! - New icon `stop` in `<Icon />` component
+
+- [#4162](https://github.com/scaleway/ultraviolet/pull/4162) [`0faa36e`](https://github.com/scaleway/ultraviolet/commit/0faa36e357a6c60fb1875114ef5a7ca5714e5297) Thanks [@matthprost](https://github.com/matthprost)! - New `<ProductIcon />` named `generativeApi` has been added
+
+### Patch Changes
+
+- [#4142](https://github.com/scaleway/ultraviolet/pull/4142) [`6642dec`](https://github.com/scaleway/ultraviolet/commit/6642dec9fb12bf1812ab4c0c3acfaa6efdc3fd65) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.13.3`.
+  Updated dependency `@emotion/serialize` to `1.3.1`.
+
+- [#4176](https://github.com/scaleway/ultraviolet/pull/4176) [`eab247e`](https://github.com/scaleway/ultraviolet/commit/eab247efca5e2412de7b5343e9f72f70fba27bf9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.5`.
+
+- Updated dependencies [[`49a5b17`](https://github.com/scaleway/ultraviolet/commit/49a5b179c1f934c6123689fa365c3f13fc30dcb8)]:
+  - @ultraviolet/themes@1.13.0
+
 ## 2.16.2
 
 ### Patch Changes
