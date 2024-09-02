@@ -78,4 +78,4 @@ export {
    * The component is the same but has been moved to another package.
    */
   Icon,
-} from '@ultraviolet/icons'
+} from '@ultraviolet/icons/legacy'

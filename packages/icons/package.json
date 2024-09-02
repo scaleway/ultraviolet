@@ -45,6 +45,36 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/components/Icon/GeneratedIcons/*.d.ts",
+      "require": "./dist/components/Icon/GeneratedIcons/*.cjs",
+      "default": "./dist/components/Icon/GeneratedIcons/*.js"
+    },
+    "./product": {
+      "types": "./dist/components/ProductIcons/index.d.ts",
+      "require": "./dist/components/ProductIcons/index.cjs",
+      "default": "./dist/components/ProductIcons/index.js"
+    },
+    "./product/*": {
+      "types": "./dist/components/ProductIcons/GeneratedIcon/*.d.ts",
+      "require": "./dist/components/ProductIcons/GeneratedIcon/*.cjs",
+      "default": "./dist/components/ProductIcons/GeneratedIcon/*.js"
+    },
+    "./category": {
+      "types": "./dist/components/CategoryIcon/index.d.ts",
+      "require": "./dist/components/CategoryIcon/index.cjs",
+      "default": "./dist/components/CategoryIcon/index.js"
+    },
+    "./category/*": {
+      "types": "./dist/components/CategoryIcon/GeneratedIcon/*.d.ts",
+      "require": "./dist/components/CategoryIcon/GeneratedIcon/*.cjs",
+      "default": "./dist/components/CategoryIcon/GeneratedIcon/*.js"
+    },
+    "./legacy": {
+      "types": "./dist/components/Icon/legacy/index.d.ts",
+      "require": "./dist/components/Icon/legacy/index.cjs",
+      "default": "./dist/components/Icon/legacy/index.js"
     }
   },
   "size-limit": [

@@ -1,3 +1,2 @@
-import Icon from './components'
-
-export Icon
+// eslint-disable-next-line no-restricted-syntax
+export * from './components/Icon'

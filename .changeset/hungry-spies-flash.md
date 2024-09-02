@@ -18,6 +18,8 @@ const MyComponent = () => (
 ```tsx
 // Now
 import { Address } from '@ultraviolet/icons';
+// OR
+import { Address } from '@ultraviolet/icons/Address';
 
 const MyComponent = () => (
   <Address sentiment="danger" size="small" />
@@ -25,5 +27,24 @@ const MyComponent = () => (
 ```
 
 This change will make it easier to use icons in your project and reduce the bundle size.
-Both system will continue to work, but we recommend using the new way to import icons.
+Exact same pattern is changed for `<CategoryIcon />` and `<ProductIcon />`:
+
+```tsx
+// Before
+import { CategoryIcon } from '@ultraviolet/icons';
+
+// Now
+import { Baremetal } from '@ultraviolet/icons/category';
+// OR
+import { Baremetal } from '@ultraviolet/icons/category/Baremetal';
+```
+
+```tsx
+// Before
+import { ProductIcon } from '@ultraviolet/icons';
+
+// Now
+import { Instance } from '@ultraviolet/icons/product';
+// OR
+import { Instance } from '@ultraviolet/icons/product/Instance';
 ```

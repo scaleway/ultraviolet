@@ -1,6 +1,4 @@
 import styled from '@emotion/styled'
-import type { FunctionComponent, SVGProps } from 'react'
-import { PRODUCT_ICONS } from './Icons'
 
 type Variants = 'primary' | 'danger' | 'warning' | 'original'
 
@@ -12,9 +10,7 @@ const SIZES = {
   xlarge: 64,
 }
 
-const StyledIcon = (
-  component: FunctionComponent<SVGProps<SVGSVGElement>>,
-) => styled(component, {
+const StyledIcon = styled('svg', {
   shouldForwardProp: prop => !['variant', 'disabled'].includes(prop),
 })<{ variant: Variants; disabled?: boolean; size: keyof typeof SIZES }>`
   & {
@@ -57,8 +53,7 @@ const StyledIcon = (
   }
 `
 
-type ProductIconProps = {
-  name: keyof typeof PRODUCT_ICONS
+export type IconProps = {
   variant?: Variants
   disabled?: boolean
   size?: keyof typeof SIZES
@@ -69,22 +64,17 @@ type ProductIconProps = {
  * ProductIcon component is used to render a set of icons that are linked to a product or service.
  * Those icons are made of multiple colors that changes automatically based on the current theme.
  */
-export const ProductIcon = ({
-  name,
+export const Icon = ({
   variant = 'primary',
   disabled,
   size = 'small',
   className,
-}: ProductIconProps) => {
-  const Icon = StyledIcon(PRODUCT_ICONS[name])
-
-  return (
-    <Icon
-      variant={variant}
-      disabled={disabled}
-      size={size}
-      viewBox="0 0 64 64"
-      className={className}
-    />
-  )
-}
+}: IconProps) => (
+  <StyledIcon
+    variant={variant}
+    disabled={disabled}
+    size={size}
+    viewBox="0 0 64 64"
+    className={className}
+  />
+)
