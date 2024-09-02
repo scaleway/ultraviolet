@@ -6,21 +6,50 @@ import {
   Controls,
   Stories,
 } from '@storybook/blocks'
-import { Badge, Button, Text, Stack, Link, Row } from '@ultraviolet/ui'
+import { Alert, Text, Stack } from '@ultraviolet/ui'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
-import { useMemo } from 'react'
+import background from '../assets/brand-background.png'
 
-const StyledHeaderContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+const TitleDecorator = styled.div`
+  h1 {
+    color: ${({ theme }) => theme.colors.neutral.text};
+    font-size: ${({ theme }) => theme.typography.headingLargeStronger.fontSize};
+    font-family: ${({ theme }) => theme.typography.headingLargeStronger.fontFamily};
+    font-weight: ${({ theme }) => theme.typography.headingLargeStronger.weight};
+    letter-spacing: ${({ theme }) => theme.typography.headingLargeStronger.letterSpacing};
+    line-height: ${({ theme }) => theme.typography.headingLargeStronger.lineHeight};
+    text-transform: ${({ theme }) => theme.typography.headingLargeStronger.textCase};
+    text-decoration: ${({ theme }) => theme.typography.headingLargeStronger.textDecoration};
+    padding: ${({ theme }) => theme.space[5]} ${({ theme }) => theme.space[3]};
+    border-radius: ${({ theme }) => theme.radii.default};
+    background-image: url(${background});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
 `
 
-const StyledTitle = styled.div`
-  &[data-state='deprecated'] h1 {
-    text-decoration: line-through;
-    text-decoration-color: ${({ theme }) => theme.colors.danger.text};
+const StyledH2 = styled(Text)`
+  padding-bottom: ${({ theme }) => theme.space[1]};
+  margin-bottom: ${({ theme }) => theme.space[2]};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.neutral.borderStronger};
+`
+
+const StoriesDecorator = styled(Stack)`
+  #stories {
+    color: ${({ theme }) => theme.colors.neutral.text};
+    font-size: ${({ theme }) => theme.typography.headingStrong.fontSize};
+    font-family: ${({ theme }) => theme.typography.headingStrong.fontFamily};
+    font-weight: ${({ theme }) => theme.typography.headingStrong.weight};
+    letter-spacing: ${({ theme }) => theme.typography.headingStrong.letterSpacing};
+    line-height: ${({ theme }) => theme.typography.headingStrong.lineHeight};
+    text-transform: ${({ theme }) => theme.typography.headingStrong.textCase};
+    text-decoration: ${({ theme }) => theme.typography.headingStrong.textDecoration};
+    padding-bottom: ${({ theme }) => theme.space[1]};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.neutral.borderStronger};
+    margin-bottom: ${({ theme }) => theme.space[2]};
   }
 `
 
@@ -48,80 +77,59 @@ const Page = ({
   migrationLink,
   hideArgsTable,
   experimental,
-}: PageProps) => {
-  const state = useMemo(() => {
-    if (deprecated) {
-      return 'deprecated'
-    }
-    if (experimental) {
-      return 'experimental'
-    }
-    return 'stable'
-  }, [])
-
-  return (
-    <StoriesThemes>
-      <StyledHeaderContainer>
-        <StyledTitle data-state={state}>
+}: PageProps) => (
+  <StoriesThemes>
+    <Stack gap={1}>
+      <div>
+        <TitleDecorator>
           <Title />
-        </StyledTitle>
+        </TitleDecorator>
         {deprecated ? (
-          <Badge sentiment="danger" size="large" icon="alert">
-            Deprecated
-          </Badge>
-        ) : null}
-        {experimental ? (
-          <Badge sentiment="warning" size="large">
-            <Stack direction="row" alignItems="center" gap={1}>
-              <svg viewBox="0 0 100 100" role="img" width="18px">
-                <path
-                  d="M90.72 82.34c4.4 7 1.29 12.66-7 12.66H16.25C8 95 4.88 89.31 9.28 82.34l29.47-46.46V12.5H35A3.75 3.75 0 0135 5h30a3.75 3.75 0 010 7.5h-3.75v23.38zM45.08 39.86L29.14 65h41.72L54.92 39.86l-1.17-1.81V12.5h-7.5v25.55z"
-                  fill="currentColor"
-                />
-              </svg>{' '}
-              Experimental
-            </Stack>
-          </Badge>
-        ) : null}
-      </StyledHeaderContainer>
-      {deprecated ? (
-        <Row templateColumns="1fr auto" justifyContent="top">
-          <Text as="h3" variant="bodyStronger" sentiment="danger">
+          <Alert
+            title="Deprecated component"
+            buttonText={migrationLink ? 'How to migrate?' : undefined}
+            onClickButton={migrationLink ? linkTo(migrationLink) : undefined}
+          >
             {deprecatedReason
               ? deprecatedReason
-              : 'This component is deprecated please do not use it any more.'}
-          </Text>
-          {migrationLink ? (
-            <Button
-              onClick={linkTo(migrationLink)}
-              variant="ghost"
-              size="small"
-            >
-              How to migrate?
-            </Button>
-          ) : null}
-        </Row>
-      ) : (
-        <Subtitle />
-      )}
-      {experimental ? (
-        <Text as="h3" variant="bodyStronger" sentiment="warning">
-          This component is at an unstable stage and is subject to change in
-          future releases.&nbsp;
-          <Link
-            href="/?path=/docs/state-components-state--docs"
-            iconPosition="right"
+              : 'This component is deprecated and should not be used in new projects.'}
+          </Alert>
+        ) : null}
+        {experimental ? (
+          <Alert
+            sentiment="warning"
+            title="Experimental component"
+            buttonText="Learn more about component states"
+            onClickButton={linkTo('state-components-state--docs')}
           >
-            Learn more about component states
-          </Link>
-        </Text>
-      ) : null}
-      <Description />
-      <Primary />
-      {!hideArgsTable ? <Controls /> : null}
-      <Stories />
-    </StoriesThemes>
-  )
-}
+            This component is at an unstable stage and is subject to change in
+            future releases.
+          </Alert>
+        ) : null}
+      </div>
+      <Stack gap={2}>
+        <StyledH2 as="h2" variant="headingStrong">
+          Overview
+        </StyledH2>
+        <Subtitle />
+        <div>
+          <Description />
+          <Primary />
+          {!hideArgsTable ? (
+            <>
+              <StyledH2 as="h2" variant="headingStrong">
+                Props
+              </StyledH2>
+              <Controls />
+            </>
+          ) : null}
+        </div>
+        <StoriesDecorator>
+          <Stories />
+        </StoriesDecorator>
+      </Stack>
+    </Stack>
+  </StoriesThemes>
+)
 
 export default Page
