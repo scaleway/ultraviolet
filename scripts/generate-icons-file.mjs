@@ -2,7 +2,23 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 
-const INDEX_PATH = 'packages/icons/src/components/Icon/GeneratedIcons/index.ts'
+const COMPONENTS = [
+  {
+    name: 'System Icons',
+    input: 'packages/icons/src/components/Icon/assets',
+    output: 'packages/icons/src/components/Icon/GeneratedIcons',
+  },
+  {
+    name: 'Product Icons',
+    input: 'packages/icons/src/components/ProductIcon/assets',
+    output: 'packages/icons/src/components/ProductIcon/GeneratedIcons',
+  },
+  {
+    name: 'Category Icons',
+    input: 'packages/icons/src/components/CategoryIcon/assets',
+    output: 'packages/icons/src/components/CategoryIcon/GeneratedIcons',
+  },
+]
 
 const COMMENT_HEADER = `/**
 * Provide the icon component for the icon name.
@@ -11,14 +27,14 @@ const COMMENT_HEADER = `/**
 */`
 
 const templateIcon = (iconName, svg) => `${COMMENT_HEADER}
-import { IconV2 } from '../IconV2'
-import type { IconProps } from '../IconV2'
+import { Icon } from '../Icon'
+import type { IconProps } from '../Icon'
 
 export const ${iconName} = ({
   ...props
 }: IconProps) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <IconV2 {...props}>${svg}</IconV2>
+  <Icon {...props}>${svg}</Icon>
 )
 `
 
@@ -62,63 +78,62 @@ const readSvg = async filePath => {
   return innerSvgContent.replace(/`/g, '\\`') // Escape backticks
 }
 
-const appendExportToIndex = async iconName => {
+const appendExportToIndex = async (output, iconName) => {
   const exportStatement = `export { ${iconName} } from './${iconName}'\n`
 
   try {
-    await fs.appendFile(INDEX_PATH, exportStatement)
+    await fs.appendFile(`${output}/index.ts`, exportStatement)
   } catch (error) {
     console.error('Error appending to index file:', error)
   }
 }
 
-const resetIconsFolder = async () => {
-  const iconsFolderPath = 'packages/icons/src/components/Icon/GeneratedIcons'
-
+const resetIconsFolder = async folderPath => {
   try {
-    const files = await fs.readdir(iconsFolderPath)
+    const files = await fs.readdir(folderPath)
     const deletePromises = files.map(file =>
-      fs.unlink(path.join(iconsFolderPath, file)),
+      fs.unlink(path.join(folderPath, file)),
     )
     await Promise.all(deletePromises)
-    console.log(`Deleted all files in ${iconsFolderPath}`)
+    console.log(`Deleted all files in ${folderPath}`)
   } catch (error) {
     console.error('Error deleting files in icons folder:', error)
   }
 }
 
 const main = async () => {
-  const directoryPath = 'packages/icons/src/components/Icon/assets'
+  for (const component of COMPONENTS) {
+    console.log(`Generating ${component.name}...`)
+    await resetIconsFolder(component.output) // we clean the folder before generating the new icons
 
-  await resetIconsFolder() // we clean the folder before generating the new icons
-
-  try {
-    await fs.appendFile(INDEX_PATH, COMMENT_HEADER)
-  } catch (error) {
-    console.error('Error appending to index file:', error)
-  }
-
-  try {
-    const files = await readDirectoryRecursive(directoryPath)
-    for (const file of files) {
-      if (file.includes('small')) {
-        break
-      }
-      const svgContent = await readSvg(file, '')
-      const generatedName = generateVariableName(file)
-      const generatedComponent = templateIcon(generatedName, svgContent)
-      const filePath = `packages/icons/src/components/Icon/GeneratedIcons/${generatedName}.tsx`
-
-      try {
-        await fs.writeFile(filePath, generatedComponent)
-        console.log(`File has been written to ${filePath}`)
-        await appendExportToIndex(generatedName)
-      } catch (error) {
-        console.error('Error writing to file:', error)
-      }
+    try {
+      await fs.appendFile(`${component.output}/index.ts`, COMMENT_HEADER)
+    } catch (error) {
+      console.error('Error appending to index file:', error)
     }
-  } catch (error) {
-    console.error('Error reading directory:', error)
+
+    try {
+      const files = await readDirectoryRecursive(component.input)
+      for (const file of files) {
+        if (file.includes('small')) {
+          break
+        }
+        const svgContent = await readSvg(file, '')
+        const generatedName = generateVariableName(file)
+        const generatedComponent = templateIcon(generatedName, svgContent)
+        const filePath = `${component.output}/${generatedName}.tsx`
+
+        try {
+          await fs.writeFile(filePath, generatedComponent)
+          console.log(`File has been written to ${filePath}`)
+          await appendExportToIndex(component.output, generatedName)
+        } catch (error) {
+          console.error('Error writing to file:', error)
+        }
+      }
+    } catch (error) {
+      console.error('Error reading directory:', error)
+    }
   }
 }
 

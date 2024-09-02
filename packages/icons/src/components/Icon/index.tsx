@@ -1,1 +1,2 @@
-export { Icon } from './legacy'
+// eslint-disable-next-line no-restricted-syntax
+export * from './GeneratedIcons'

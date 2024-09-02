@@ -1,6 +1,8 @@
 ---
-"@ultraviolet/icons": minor
+"@ultraviolet/icons": major
 ---
+
+! BREAKING CHANGES !
 
 New big change in icons, we added a new way to import icons. You can now directly import the icon name through `@ultraviolet/icons`.
 
