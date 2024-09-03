@@ -202,13 +202,11 @@ exports[`SwitchButton > renders correctly 1`] = `
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -219,14 +217,12 @@ exports[`SwitchButton > renders correctly 1`] = `
 }
 
 .emotion-3:hover,
-.emotion-3:focus-within,
 .emotion-3:active {
   box-shadow: none;
   border: none;
 }
 
 .emotion-3:hover:not([data-error='true'][data-disabled='true']),
-.emotion-3:focus-within:not([data-error='true'][data-disabled='true']),
 .emotion-3:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
@@ -442,6 +438,8 @@ exports[`SwitchButton > renders correctly 1`] = `
           data-disabled="false"
           data-has-label="true"
           data-type="radio"
+          role="button"
+          tabindex="0"
         >
           <div
             class="emotion-5 emotion-6"
@@ -457,6 +455,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 class="emotion-10 emotion-11"
                 id="test-left"
                 name="test"
+                tabindex="-1"
                 type="radio"
                 value="left"
               />
@@ -500,6 +499,8 @@ exports[`SwitchButton > renders correctly 1`] = `
           data-disabled="false"
           data-has-label="true"
           data-type="radio"
+          role="button"
+          tabindex="0"
         >
           <div
             class="emotion-5 emotion-6"
@@ -516,6 +517,7 @@ exports[`SwitchButton > renders correctly 1`] = `
                 class="emotion-10 emotion-11"
                 id="test-right"
                 name="test"
+                tabindex="-1"
                 type="radio"
                 value="right"
               />
@@ -649,13 +651,11 @@ exports[`SwitchButton > renders correctly medium 1`] = `
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -666,14 +666,12 @@ exports[`SwitchButton > renders correctly medium 1`] = `
 }
 
 .emotion-3:hover,
-.emotion-3:focus-within,
 .emotion-3:active {
   box-shadow: none;
   border: none;
 }
 
 .emotion-3:hover:not([data-error='true'][data-disabled='true']),
-.emotion-3:focus-within:not([data-error='true'][data-disabled='true']),
 .emotion-3:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
@@ -889,6 +887,8 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           data-disabled="false"
           data-has-label="true"
           data-type="radio"
+          role="button"
+          tabindex="0"
         >
           <div
             class="emotion-5 emotion-6"
@@ -904,6 +904,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 class="emotion-10 emotion-11"
                 id="test-left"
                 name="test"
+                tabindex="-1"
                 type="radio"
                 value="left"
               />
@@ -947,6 +948,8 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           data-disabled="false"
           data-has-label="true"
           data-type="radio"
+          role="button"
+          tabindex="0"
         >
           <div
             class="emotion-5 emotion-6"
@@ -963,6 +966,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 class="emotion-10 emotion-11"
                 id="test-right"
                 name="test"
+                tabindex="-1"
                 type="radio"
                 value="right"
               />
@@ -1096,13 +1100,11 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-3:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-3:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -1113,14 +1115,12 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
 }
 
 .emotion-3:hover,
-.emotion-3:focus-within,
 .emotion-3:active {
   box-shadow: none;
   border: none;
 }
 
 .emotion-3:hover:not([data-error='true'][data-disabled='true']),
-.emotion-3:focus-within:not([data-error='true'][data-disabled='true']),
 .emotion-3:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
@@ -1336,6 +1336,8 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           data-disabled="false"
           data-has-label="true"
           data-type="radio"
+          role="button"
+          tabindex="0"
         >
           <div
             class="emotion-5 emotion-6"
@@ -1351,6 +1353,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 class="emotion-10 emotion-11"
                 id="test-left"
                 name="test"
+                tabindex="-1"
                 type="radio"
                 value="left"
               />
@@ -1394,6 +1397,8 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           data-disabled="false"
           data-has-label="true"
           data-type="radio"
+          role="button"
+          tabindex="0"
         >
           <div
             class="emotion-5 emotion-6"
@@ -1410,6 +1415,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 class="emotion-10 emotion-11"
                 id="test-right"
                 name="test"
+                tabindex="-1"
                 type="radio"
                 value="right"
               />
@@ -1551,13 +1557,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 }
 
 .emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-5:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-5:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-5:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-5:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-5:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -1568,14 +1572,12 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 }
 
 .emotion-5:hover,
-.emotion-5:focus-within,
 .emotion-5:active {
   box-shadow: none;
   border: none;
 }
 
 .emotion-5:hover:not([data-error='true'][data-disabled='true']),
-.emotion-5:focus-within:not([data-error='true'][data-disabled='true']),
 .emotion-5:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
@@ -1797,6 +1799,8 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             data-disabled="false"
             data-has-label="true"
             data-type="radio"
+            role="button"
+            tabindex="0"
           >
             <div
               class="emotion-7 emotion-8"
@@ -1812,6 +1816,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   class="emotion-12 emotion-13"
                   id="test-left"
                   name="test"
+                  tabindex="-1"
                   type="radio"
                   value="left"
                 />
@@ -1855,6 +1860,8 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             data-disabled="false"
             data-has-label="true"
             data-type="radio"
+            role="button"
+            tabindex="0"
           >
             <div
               class="emotion-7 emotion-8"
@@ -1871,6 +1878,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   class="emotion-12 emotion-13"
                   id="test-right"
                   name="test"
+                  tabindex="-1"
                   type="radio"
                   value="right"
                 />

@@ -162,6 +162,7 @@ type RadioProps = {
     | 'id'
     | 'name'
     | 'required'
+    | 'tabIndex'
   > &
   (
     | {
@@ -196,6 +197,7 @@ export const Radio = forwardRef(
       tooltip,
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
+      tabIndex,
     }: RadioProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -228,6 +230,7 @@ export const Radio = forwardRef(
               name={computedName}
               autoFocus={autoFocus}
               ref={ref}
+              tabIndex={tabIndex}
             />
             <Ring viewBox="0 0 24 24">
               <RadioMarkedIcon />

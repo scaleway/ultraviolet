@@ -56,13 +56,11 @@ exports[`SelectableCardField > should render correctly 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -298,6 +296,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
         data-error="false"
         data-has-label="false"
         data-type="radio"
+        role="button"
+        tabindex="0"
       >
         <div
           class="emotion-2 emotion-3"
@@ -314,6 +314,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
               class="emotion-7 emotion-8"
               id="test-test"
               name="test"
+              tabindex="-1"
               type="radio"
               value="test"
             />
@@ -412,13 +413,11 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -654,6 +653,8 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
         data-error="false"
         data-has-label="false"
         data-type="radio"
+        role="button"
+        tabindex="0"
       >
         <div
           class="emotion-2 emotion-3"
@@ -671,6 +672,7 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
               class="emotion-7 emotion-8"
               id="test-checked"
               name="test"
+              tabindex="-1"
               type="radio"
               value="checked"
             />
@@ -769,13 +771,11 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -1011,6 +1011,7 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
         data-error="false"
         data-has-label="false"
         data-type="radio"
+        role="button"
       >
         <div
           class="emotion-2 emotion-3"
@@ -1028,6 +1029,7 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
               disabled=""
               id="test-disabled"
               name="test"
+              tabindex="-1"
               type="radio"
               value="disabled"
             />
@@ -1126,13 +1128,11 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -1368,6 +1368,8 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
         data-error="true"
         data-has-label="false"
         data-type="radio"
+        role="button"
+        tabindex="0"
       >
         <div
           class="emotion-2 emotion-3"
@@ -1384,6 +1386,7 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
               class="emotion-7 emotion-8"
               id="test-checked"
               name="test"
+              tabindex="-1"
               type="radio"
               value="checked"
             />
@@ -1487,13 +1490,11 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.emotion-0:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
 .emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -1729,6 +1730,8 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
         data-error="false"
         data-has-label="false"
         data-type="radio"
+        role="button"
+        tabindex="0"
       >
         <div
           class="emotion-2 emotion-3"
@@ -1745,6 +1748,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
               class="emotion-7 emotion-8"
               id="test-events"
               name="test"
+              tabindex="-1"
               type="radio"
               value="events"
             />
