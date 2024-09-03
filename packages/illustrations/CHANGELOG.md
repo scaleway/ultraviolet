@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 3.3.0
+
+### Minor Changes
+
+- [#4184](https://github.com/scaleway/ultraviolet/pull/4184) [`a69284b`](https://github.com/scaleway/ultraviolet/commit/a69284bb79c292e7ae19b6402f78e208707db5cd) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Add `PartnerSpace` illustration
+
 ## 3.2.3
 
 ### Patch Changes
