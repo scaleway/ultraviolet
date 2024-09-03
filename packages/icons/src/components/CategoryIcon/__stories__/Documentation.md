@@ -1,13 +1,16 @@
 CategoryIcon defines a sets of icons that are linked to Scaleway products. They are used to represent this product with a simple icon.
 
-### ➕ How to add a new one?
+## + How to add a new one?
 
-Simply add the `.svg` file `packages/icons/src/components/ProductIcon/assets` then you need to export it in file `Icons.ts` and that's all!
+1. Add the `.svg` file into `packages/icons/src/components/CategoryIcon/assets`
+2. Then run the following command:
+`pnpm run icons:update` at root of the project. The icons component will be generated automatically using this command.
+<br />
+<br />
+** IMPORTANT: ** Make sure that the icon name is unique, otherwise it will override the existing one.
+The name of the svg should be snake-case.
 
-> ** IMPORTANT: ** Make sure that the icon name is unique, otherwise it will override the existing one.\
-> The name should be camelCase and should not contain any special characters while svg file name should be kebab-case.
-
-### ⚙️ How does it works?
+## ⚙ How does it works?
 
 Those icons have 3 sets of colors that changes depending on theme. It is all automatic but here is how it works:
 Let's take an example with our AI category icon SVG:

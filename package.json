@@ -12,12 +12,12 @@
     "linux"
   ],
   "scripts": {
-    "build": "turbo run build",
     "size": "turbo run size",
     "typecheck": "turbo run typecheck",
+    "build": "turbo run build",
     "build:examples": "turbo run build --filter '@examples/*' ",
-    "storybook:build": "STORYBOOK_ENVIRONMENT=production storybook build",
-    "storybook:build:stats": "pnpm turbo storybook:build -- --webpack-stats-json",
+    "build:storybook": "STORYBOOK_ENVIRONMENT=production storybook build",
+    "build:storybook:stats": "pnpm turbo build:storybook -- --webpack-stats-json",
     "test:unit": "turbo run test:unit",
     "test:unit:coverage": "turbo run test:unit:coverage",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,vite,jest,husky,@commitlint/*,@babel/*,babel-*'",

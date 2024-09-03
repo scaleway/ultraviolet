@@ -46,7 +46,7 @@ export const globalStyles = css`
     padding-bottom: ${lightTheme.space[1]};
     border-bottom: 2px solid ${lightTheme.colors.neutral.borderStronger};
     margin-bottom: ${lightTheme.space[2]};
-    margin-top: ${lightTheme.space[3]};
+    margin-top: ${lightTheme.space[4]};
   }
 
   h3 {

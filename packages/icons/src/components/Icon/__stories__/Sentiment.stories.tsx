@@ -1,13 +1,13 @@
 import type { Decorator } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { Icon } from '..'
+import { Eye } from '..'
 
 const COLORS = ['primary', 'success', 'warning'] as const
 
-export const Sentiment = (args: ComponentProps<typeof Icon>) =>
+export const Sentiment = (args: ComponentProps<typeof Eye>) =>
   COLORS.map(sentiment => (
-    <Icon key={sentiment} name="eye" sentiment={sentiment} {...args} />
+    <Eye key={sentiment} sentiment={sentiment} {...args} />
   ))
 
 Sentiment.parameters = {

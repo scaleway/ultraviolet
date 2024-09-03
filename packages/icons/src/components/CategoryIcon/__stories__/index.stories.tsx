@@ -1,9 +1,9 @@
 import type { Meta } from '@storybook/react'
-import { CategoryIcon } from '..'
+import { Baremetal } from '..'
 import Documentation from './Documentation.md?raw'
 
 export default {
-  component: CategoryIcon,
+  component: Baremetal,
   title: 'Icons/CategoryIcon',
   parameters: {
     docs: {
