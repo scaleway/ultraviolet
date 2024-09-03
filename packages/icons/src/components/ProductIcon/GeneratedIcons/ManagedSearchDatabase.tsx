@@ -22,12 +22,7 @@ export const ManagedSearchDatabase = ({
           />
         </g>
       </g>
-      <g
-        fill="#521094"
-        fillRule="evenodd"
-        className="fill"
-        clipRule="evenodd"
-      >
+      <g fill="#521094" fillRule="evenodd" className="fill" clipRule="evenodd">
         <path
           d="M18 16.107a1 1 0 0 1 1 1v8.56a1 1 0 1 1-2 0v-8.56a1 1 0 0 1 1-1m28 0a1 1 0 0 1 1 1v8.56a1 1 0 1 1-2 0v-8.56a1 1 0 0 1 1-1"
           className="fill"
