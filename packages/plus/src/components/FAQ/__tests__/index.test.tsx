@@ -13,7 +13,7 @@ describe('FAQ', () => {
     shouldMatchEmotionSnapshot(
       <FAQ title="Title" description="Description" illustrationText={1} />,
     ))
-  it('should work with illustration', () =>
+  it('should work with productIconName', () =>
     shouldMatchEmotionSnapshot(
       <FAQ title="Title" description="Description" productIconName="support" />,
     ))

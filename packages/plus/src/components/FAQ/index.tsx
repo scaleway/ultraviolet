@@ -23,12 +23,12 @@ export const FAQ = ({
   description,
   notes,
 }: FAQProps) => {
-  const ProductIconUsed =
-    ProductIcon[
-      (productIconName ?? '')
-        .charAt(0)
-        .toUpperCase() as keyof typeof ProductIcon
-    ]
+  const ProductIconUsed = productIconName
+    ? ProductIcon[
+        (productIconName.charAt(0).toUpperCase() +
+          productIconName.slice(1)) as keyof typeof ProductIcon
+      ]
+    : null
 
   return (
     <StyledCard>
@@ -37,7 +37,7 @@ export const FAQ = ({
           {!productIconName && illustrationText ? (
             <Bullet sentiment="primary" text={illustrationText.toString()} />
           ) : null}
-          {productIconName ? <ProductIconUsed size="xlarge" /> : null}
+          {ProductIconUsed ? <ProductIconUsed size="xlarge" /> : null}
         </div>
         <div>
           <Text as="p" variant="bodyStronger" prominence="strong">

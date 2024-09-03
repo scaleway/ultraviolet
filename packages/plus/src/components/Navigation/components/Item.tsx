@@ -451,10 +451,12 @@ export const Item = ({
     [containerTag],
   )
 
-  const CategoryIconUsed =
-    CategoryIcon[
-      (categoryIcon ?? '').charAt(0).toUpperCase() as keyof typeof CategoryIcon
-    ]
+  const CategoryIconUsed = categoryIcon
+    ? CategoryIcon[
+        (categoryIcon.charAt(0).toUpperCase() +
+          categoryIcon.slice(1)) as keyof typeof CategoryIcon
+      ]
+    : null
 
   const ariaExpanded = useMemo(() => {
     if (hasHrefAndNoChildren && internalExpanded) {
@@ -549,7 +551,7 @@ export const Item = ({
             alignItems="center"
             justifyContent="center"
           >
-            {categoryIcon ? (
+            {CategoryIconUsed ? (
               <ContainerCategoryIcon
                 alignItems="center"
                 justifyContent="center"
@@ -714,7 +716,7 @@ export const Item = ({
                 size="small"
                 icon={!categoryIcon ? 'dots-horizontal' : undefined}
               >
-                {categoryIcon ? (
+                {CategoryIconUsed ? (
                   <Stack
                     direction="row"
                     gap={1}
@@ -751,7 +753,7 @@ export const Item = ({
                 alignItems="center"
                 justifyContent="center"
               >
-                {categoryIcon ? (
+                {CategoryIconUsed ? (
                   <CategoryIconUsed
                     variant={active ? 'primary' : categoryIconVariant}
                   />

@@ -47,9 +47,9 @@
       "default": "./dist/index.js"
     },
     "./*": {
-      "types": "./dist/components/Icon/GeneratedIcons/*.d.ts",
-      "require": "./dist/components/Icon/GeneratedIcons/*.cjs",
-      "default": "./dist/components/Icon/GeneratedIcons/*.js"
+      "types": "./dist/components/Icon/__generatedIcons__/*.d.ts",
+      "require": "./dist/components/Icon/__generatedIcons__/*.cjs",
+      "default": "./dist/components/Icon/__generatedIcons__/*.js"
     },
     "./product": {
       "types": "./dist/components/ProductIcon/index.d.ts",
@@ -57,9 +57,9 @@
       "default": "./dist/components/ProductIcon/index.js"
     },
     "./product/*": {
-      "types": "./dist/components/ProductIcon/GeneratedIcons/*.d.ts",
-      "require": "./dist/components/ProductIcon/GeneratedIcons/*.cjs",
-      "default": "./dist/components/ProductIcon/GeneratedIcons/*.js"
+      "types": "./dist/components/ProductIcon/__generatedIcons__/*.d.ts",
+      "require": "./dist/components/ProductIcon/__generatedIcons__/*.cjs",
+      "default": "./dist/components/ProductIcon/__generatedIcons__/*.js"
     },
     "./category": {
       "types": "./dist/components/CategoryIcon/index.d.ts",
@@ -67,9 +67,9 @@
       "default": "./dist/components/CategoryIcon/index.js"
     },
     "./category/*": {
-      "types": "./dist/components/CategoryIcon/GeneratedIcons/*.d.ts",
-      "require": "./dist/components/CategoryIcon/GeneratedIcons/*.cjs",
-      "default": "./dist/components/CategoryIcon/GeneratedIcons/*.js"
+      "types": "./dist/components/CategoryIcon/__generatedIcons__/*.d.ts",
+      "require": "./dist/components/CategoryIcon/__generatedIcons__/*.cjs",
+      "default": "./dist/components/CategoryIcon/__generatedIcons__/*.js"
     },
     "./legacy": {
       "types": "./dist/components/Icon/legacy/index.d.ts",
