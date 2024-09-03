@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'node:fs'
 import { generateThemeCss } from './create-css-variables.mjs'
 
 const themesMatches = [
@@ -230,7 +230,6 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
       )}`,
       {},
       () => {
-        // eslint-disable-next-line no-console
         console.log(`File written ${filePath}`)
       },
     )

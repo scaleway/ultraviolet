@@ -93,6 +93,14 @@ export default [
     },
   },
 
+  {
+    files: ['**/scripts/**'],
+    rules: {
+      'no-await-in-loop': 'off',
+      'no-console': 'off',
+    },
+  },
+
   ...scwTypescript.map(config => ({
     ...config,
 

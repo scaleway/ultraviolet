@@ -62,11 +62,9 @@ If needed you can import all icons at once:
 ```tsx
 import * as Icons from '@ultraviolet/icons';
 
-const MyComponent = () => {
-  const MyIcon = Icons['Address']
-
-  return (
-    <MyIcon sentiment="danger" size="small" />
-  )
-}
+const MyComponent = ({ iconName }) => (
+  <div>
+    {Icons[iconName]}
+  </div>
+)
 ```

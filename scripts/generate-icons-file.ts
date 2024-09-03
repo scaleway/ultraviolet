@@ -1,6 +1,5 @@
-/* eslint-disable no-await-in-loop */
-import { promises as fs } from 'fs'
-import path from 'path'
+import { promises as fs } from 'node:fs'
+import path from 'node:path'
 
 const COMPONENTS = [
   {
@@ -26,7 +25,7 @@ const COMMENT_HEADER = `/**
 * PLEASE DO NOT EDIT HERE
 */`
 
-const templateIcon = (iconName, svg) => `${COMMENT_HEADER}
+const templateIcon = (iconName: string, svg: string) => `${COMMENT_HEADER}
 import { Icon } from '../Icon'
 import type { IconProps } from '../Icon'
 
@@ -38,10 +37,10 @@ export const ${iconName} = ({
 )
 `
 
-const toPascalCase = str =>
+const toPascalCase = (str: string) =>
   str.replace(/(^\w|-\w)/g, match => match.replace('-', '').toUpperCase())
 
-const generateVariableName = filePath => {
+const generateVariableName = (filePath: string) => {
   const parsedPath = path.parse(filePath)
   const fileName = toPascalCase(parsedPath.name)
   const parentDir = path.basename(path.dirname(filePath))
@@ -52,8 +51,8 @@ const generateVariableName = filePath => {
   return iconName
 }
 
-const readDirectoryRecursive = async dir => {
-  let results = []
+const readDirectoryRecursive = async (dir: string) => {
+  let results: string[] = []
 
   const list = await fs.readdir(dir, { withFileTypes: true })
 
@@ -71,7 +70,7 @@ const readDirectoryRecursive = async dir => {
   return results
 }
 
-const readSvg = async filePath => {
+const readSvg = async (filePath: string) => {
   const svgContent = await fs.readFile(filePath, 'utf-8')
   const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/g, '') // Remove <svg ...> and </svg> tags
 
@@ -81,7 +80,7 @@ const readSvg = async filePath => {
   return updatedSvgContent.replace(/`/g, '\\`') // Escape backticks
 }
 
-const appendExportToIndex = async (output, iconName) => {
+const appendExportToIndex = async (output: string, iconName: string) => {
   const exportStatement = `export { ${iconName} } from './${iconName}'\n`
 
   try {
@@ -91,7 +90,7 @@ const appendExportToIndex = async (output, iconName) => {
   }
 }
 
-const resetIconsFolder = async folderPath => {
+const resetIconsFolder = async (folderPath: string) => {
   try {
     const files = await fs.readdir(folderPath)
     const deletePromises = files.map(file =>
@@ -121,7 +120,7 @@ const main = async () => {
         if (file.includes('small')) {
           break
         }
-        const svgContent = await readSvg(file, '')
+        const svgContent = await readSvg(file)
         const generatedName = generateVariableName(file)
         const generatedComponent = templateIcon(generatedName, svgContent)
         const filePath = `${component.output}/${generatedName}.tsx`
@@ -140,6 +139,4 @@ const main = async () => {
   }
 }
 
-main()
-
-/* eslint-enable no-await-in-loop */
+await main()
