@@ -37,7 +37,8 @@ Options are now only passed as a prop, not children. They can be of two types, o
 * `value` (string): value of the option. *This prop is required*.
 * `label` (ReactNode): label to display in the dropdown and on the selectBar when the option is selected. *This prop is required*.
 * `disabled` (boolean): whether the option is disabled. *This prop is optional*.
-* `description` (ReactNode): more information on the option. The description can be placed at the right or beneath the option label in the dropdown with the prop `direction`, which is **global**. *This prop is optional*.
+* `description` (ReactNode): more information on the option. The description can be placed at the right or beneath the option label in the dropdown with the prop `direction`, which is **global**. When description is a string, it is also used when searching an option. *This prop is optional*.
 * `optionalInfo` (ReactNode): if there is badges or icons to add next to the label (left or right) which are not meant to be visible when the option is selected. Its position is **globally** set using the prop `optionalInfoPlacement`. *This prop is optional*.
-* `searchText` (string): define here what should the user search to get this option. *This prop is optional*.
+* `searchText` (string): define here what should the user search to get this option. This prop is optional when the label is a string, required otherwise.
 * `tooltip` (string): If defined, a tooltip with the string defined will be shown when hovering the option in the dropdown. *This prop is optional*.
+

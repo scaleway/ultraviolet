@@ -6,7 +6,9 @@ import { OptionalInfo4, dataGrouped } from './resources'
 
 export const OnChange: StoryFn<typeof SelectInputV2> = args => {
   const [values, setValues] = useState<string[]>([])
-
+  const [values2, setValues2] = useState<
+    (typeof OptionalInfo4)[number]['value'][]
+  >(['par'])
   const defaultOptions = [
     {
       label: 'Create a new city',
@@ -29,6 +31,7 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
       })
 
       setOptions(newOptions)
+      setValues2(['new city'])
     } else {
       const newOptions = options.map(option => {
         const newOption = option
@@ -40,6 +43,9 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
       })
 
       setOptions(newOptions)
+      if (vals.length > 0) {
+        setValues2(vals.filter(value => typeof value === 'string'))
+      } else setValues2([])
     }
   }
 
@@ -53,10 +59,6 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
           onChange={setValues}
           options={dataGrouped}
           label="Simple onChange to get the selected value"
-          selectAll={{
-            label: 'Select All',
-            description: 'You can click here to select every option',
-          }}
         />
         Selected values:
         <ul>
@@ -64,10 +66,11 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
             ? values.map(val => <li key={val}>{val}</li>)
             : null}
         </ul>
-      </Stack>
+      </Stack>{' '}
+      values; {values2}
       <SelectInputV2
         {...args}
-        value={undefined}
+        value={values2}
         multiselect
         options={options}
         onChange={onChange}

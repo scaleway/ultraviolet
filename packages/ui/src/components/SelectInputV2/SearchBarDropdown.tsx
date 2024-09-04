@@ -78,21 +78,47 @@ export const SearchBarDropdown = ({
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
-          filteredOptions[group] = filteredOptions[group].filter(option =>
-            option.searchText
-              ? option.searchText.match(regex)
-              : option.value.match(regex),
-          )
+          filteredOptions[group] = filteredOptions[group].filter(option => {
+            if (option.searchText) {
+              if (option.searchText.match(regex)) return true
+            }
+
+            if (typeof option.label === 'string' && option.label.match(regex)) {
+              return true
+            }
+
+            if (
+              typeof option.description === 'string' &&
+              option.description.match(regex)
+            ) {
+              return true
+            }
+
+            return false
+          })
 
           return null
         })
         onSearch(filteredOptions)
       } else {
-        const filteredOptions = [...options].filter(option =>
-          option.searchText
-            ? option.searchText.match(regex)
-            : option.value.match(regex),
-        )
+        const filteredOptions = [...options].filter(option => {
+          if (option.searchText) {
+            if (option.searchText.match(regex)) return true
+          }
+
+          if (typeof option.label === 'string' && option.label.match(regex)) {
+            return true
+          }
+
+          if (
+            typeof option.description === 'string' &&
+            option.description.match(regex)
+          ) {
+            return true
+          }
+
+          return false
+        })
         onSearch(filteredOptions)
       }
     } else {
@@ -120,7 +146,6 @@ export const SearchBarDropdown = ({
               ? selectedData.selectedValues
               : [...selectedData.selectedValues, closestOption.value],
           )
-          setSearchInput(closestOption.searchText ?? closestOption.value)
         } else {
           setSelectedData({
             type: 'selectOption',

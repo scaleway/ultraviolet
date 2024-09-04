@@ -32,17 +32,14 @@ export const dataUnGrouped = [
   {
     value: 'mercury',
     label: 'Mercury',
-    disabled: false,
   },
   {
     value: 'venus',
     label: 'Venus',
-    disabled: false,
   },
   {
     value: 'earth',
     label: 'Earth',
-    disabled: false,
     description: 'Our home planet',
     searchText: 'earth',
   },
@@ -55,24 +52,21 @@ export const dataUnGrouped = [
   {
     value: 'jupiter',
     label: 'Jupiter',
-    disabled: false,
     description:
       'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
   },
   {
     value: 'saturn',
     label: 'Saturn',
-    disabled: false,
   },
   {
     value: 'uranus',
     label: 'Uranus',
-    disabled: false,
   },
   {
     value: 'neptune',
     label: reactNeptune,
-    disabled: false,
+    searchText: 'neptune',
   },
 ]
 
@@ -81,17 +75,14 @@ export const dataGrouped = {
     {
       value: 'mercury',
       label: 'Mercury',
-      disabled: false,
     },
     {
       value: 'venus',
       label: 'Venus',
-      disabled: false,
     },
     {
       value: 'earth',
       label: 'Earth',
-      disabled: false,
       description: 'Our home planet',
       searchText: 'earth',
     },
@@ -103,7 +94,6 @@ export const dataGrouped = {
     {
       value: 'pluto',
       label: 'Pluto',
-      disabled: false,
       description:
         'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
     },
@@ -113,25 +103,22 @@ export const dataGrouped = {
     {
       value: 'jupiter',
       label: 'Jupiter',
-      disabled: false,
       description:
         'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
     },
     {
       value: 'saturn',
       label: 'Saturn',
-      disabled: false,
     },
     {
       value: 'uranus',
       label: 'Uranus',
-      disabled: false,
     },
 
     {
       value: 'neptune',
       label: reactNeptune,
-      disabled: false,
+      searchText: 'neptune',
     },
   ],
 }
@@ -141,25 +128,21 @@ export const OptionalInfo = {
     {
       value: 'mercury',
       label: 'Mercury',
-      disabled: false,
       optionalInfo: optionalInfo1,
     },
     {
       value: 'venus',
       label: 'Venus',
-      disabled: false,
       optionalInfo: optionalInfo1,
     },
     {
       value: 'earth',
       label: 'Earth',
-      disabled: false,
       description: 'Our home planet',
     },
     {
       value: 'mars',
       label: 'Mars',
-      disabled: false,
     },
     {
       value: 'pluto',
@@ -171,6 +154,7 @@ export const OptionalInfo = {
       disabled: false,
       description:
         'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      searchText: 'pluto',
     },
   ],
 
@@ -178,7 +162,6 @@ export const OptionalInfo = {
     {
       value: 'jupiter',
       label: 'Jupiter',
-      disabled: false,
       description:
         'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
 
@@ -188,19 +171,16 @@ export const OptionalInfo = {
     {
       value: 'saturn',
       label: 'Saturn',
-      disabled: false,
     },
     {
       value: 'uranus',
       label: 'Uranus',
-      disabled: false,
       optionalInfo: optionalInfo1,
     },
 
     {
       value: 'neptune',
       label: 'Neptune',
-      disabled: false,
     },
   ],
 }
@@ -209,7 +189,6 @@ export const OptionalInfo2 = [
   {
     value: 'par',
     label: 'Paris',
-    disabled: false,
     optionalInfo: optionalInfo2,
     description: 'France',
     searchText: 'paris',
@@ -217,14 +196,12 @@ export const OptionalInfo2 = [
   {
     value: 'ams',
     label: 'Amsterdam',
-    disabled: false,
     optionalInfo: optionalInfo2,
     searcText: 'amsterdam',
   },
   {
     value: 'waw',
     label: 'Warsaw',
-    disabled: false,
     optionalInfo: optionalInfo2,
     searchText: 'warsaw',
   },
@@ -234,7 +211,6 @@ export const OptionalInfo3 = [
   {
     value: 'par',
     label: 'Paris',
-    disabled: false,
     optionalInfo: optionalInfo3,
     description: 'France',
     searchText: 'paris',
@@ -242,14 +218,12 @@ export const OptionalInfo3 = [
   {
     value: 'ams',
     label: 'Amsterdam',
-    disabled: false,
     optionalInfo: optionalInfo3,
     searcText: 'amsterdam',
   },
   {
     value: 'waw',
     label: 'Warsaw',
-    disabled: false,
     optionalInfo: optionalInfo3,
     searchText: 'warsaw',
   },
@@ -259,23 +233,20 @@ export const OptionalInfo4 = [
   {
     value: 'par',
     label: 'Paris',
-    disabled: false,
     optionalInfo: optionalInfo41,
     description: 'France',
-    searchText: 'paris',
+    disabled: false,
   },
   {
     value: 'ams',
     label: 'Amsterdam',
-    disabled: false,
     optionalInfo: optionalInfo42,
-    searcText: 'amsterdam',
+    disabled: false,
   },
   {
     value: 'waw',
     label: 'Warsaw',
-    disabled: false,
     optionalInfo: optionalInfo43,
-    searchText: 'warsaw',
+    disabled: false,
   },
 ]
