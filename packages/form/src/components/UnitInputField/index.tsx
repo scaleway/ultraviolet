@@ -1,7 +1,7 @@
 import { UnitInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
-import type { FieldPath, FieldValues } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -29,7 +29,6 @@ type UnitInputFieldProps<
     | 'helper'
     | 'selectInputWidth'
   > & {
-    onChange?: ComponentProps<typeof UnitInput>['onChange']
     onChangeUnitValue?: ComponentProps<typeof UnitInput>['onChangeUnitValue']
     label: string
   }
@@ -94,7 +93,7 @@ export const UnitInputField = <
       helper={helper}
       onChange={event => {
         valueField.onChange(event)
-        onChange?.(event)
+        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       onChangeUnitValue={event => {
         unitField.onChange(event)

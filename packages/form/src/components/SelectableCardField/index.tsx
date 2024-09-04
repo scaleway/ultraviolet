@@ -1,19 +1,18 @@
 import { SelectableCard } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldPath, FieldValues } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
 type SelectableCardFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
-> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label' | 'onChange'> &
+> = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Partial<
     Pick<
       ComponentProps<typeof SelectableCard>,
       | 'disabled'
       | 'onBlur'
-      | 'onChange'
       | 'onFocus'
       | 'showTick'
       | 'type'
@@ -90,7 +89,12 @@ export const SelectableCardField = <
         } else {
           field.onChange(event)
         }
-        onChange?.(event)
+        onChange?.(
+          event.currentTarget.value as PathValue<
+            TFieldValues,
+            Path<TFieldValues>
+          >,
+        )
       }}
       onBlur={event => {
         field.onBlur()
