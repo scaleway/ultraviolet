@@ -16,6 +16,17 @@ export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (
         This text uses {sentiment} sentiment.
       </Text>
     ))}
+
+    <div style={{ background: 'white' }}>
+      <Text {...args} as="div" variant="body" sentiment="black">
+        Use black sentiment to make text black no matter the theme.
+      </Text>
+    </div>
+    <div style={{ background: 'black' }}>
+      <Text {...args} as="div" variant="body" sentiment="white">
+        Use white sentiment to make text white no matter the theme.
+      </Text>
+    </div>
   </div>
 )
 Sentiments.parameters = {

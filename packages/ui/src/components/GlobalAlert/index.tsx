@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { useReducer } from 'react'
@@ -10,7 +9,7 @@ import { GlobalAlertLink } from './GlobalAlertLink'
 const CloseButton = styled(Button)`
   background: none;
   position: absolute;
-  right: ${SIZE_HEIGHT.xsmall}px;
+  right: ${SIZE_HEIGHT.large}px;
 
   &:hover,
   &:focus,
@@ -63,7 +62,6 @@ export const GlobalAlert = ({
   className,
   'data-testid': dataTestId,
 }: GlobalAlertProps) => {
-  const { theme } = useTheme()
   const [opened, toggleOpened] = useReducer(value => !value, true)
 
   if (!opened) return null
@@ -83,19 +81,14 @@ export const GlobalAlert = ({
         justifyContent="center"
         alignItems="center"
       >
-        <Text
-          variant="bodySmall"
-          as="p"
-          sentiment="neutral"
-          prominence={theme === 'light' ? 'stronger' : 'strong'}
-        >
+        <Text variant="bodySmall" as="p" sentiment="white">
           {children}
         </Text>
         {onClickButton && buttonText ? (
           <Button
             onClick={onClickButton}
             variant="filled"
-            sentiment="neutral"
+            sentiment="white"
             size="small"
           >
             {buttonText}

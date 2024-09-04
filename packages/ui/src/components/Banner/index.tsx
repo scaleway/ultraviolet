@@ -162,11 +162,7 @@ export const Banner = ({
           <Text
             as="p"
             variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
-            sentiment={
-              variant === 'promotional' && theme !== 'light'
-                ? 'neutral'
-                : 'primary'
-            }
+            sentiment={variant === 'promotional' ? 'white' : 'primary'}
             prominence={variant === 'intro' ? 'default' : 'strong'}
           >
             {title}
@@ -174,12 +170,10 @@ export const Banner = ({
           <Text
             as="p"
             variant="body"
-            sentiment="neutral"
-            prominence={
-              variant === 'intro' ||
-              (variant === 'promotional' && theme !== 'light')
-                ? 'default'
-                : 'stronger'
+            sentiment={
+              variant === 'promotional' || theme !== 'light'
+                ? 'white'
+                : 'neutral'
             }
           >
             {children}
@@ -190,7 +184,7 @@ export const Banner = ({
             {buttonText ? (
               <Button
                 size="medium"
-                sentiment={variant === 'intro' ? 'primary' : 'neutral'}
+                sentiment={variant === 'intro' ? 'primary' : 'white'}
                 variant="filled"
                 onClick={onClickButton}
               >
@@ -199,15 +193,14 @@ export const Banner = ({
             ) : null}
             {linkText ? (
               <Link
-                sentiment={theme !== 'light' ? 'neutral' : 'primary'}
+                sentiment={
+                  theme !== 'light' || variant === 'promotional'
+                    ? 'white'
+                    : 'primary'
+                }
                 size="small"
                 target="_blank"
                 href={linkHref ?? ''}
-                prominence={
-                  variant === 'intro' || theme !== 'light'
-                    ? 'default'
-                    : 'strong'
-                }
               >
                 {linkText}
               </Link>

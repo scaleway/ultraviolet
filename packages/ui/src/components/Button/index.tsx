@@ -10,11 +10,9 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef } from 'react'
-import type { SENTIMENTS } from '../../theme'
+import type { ExtendedColor } from '../../theme'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
-
-type SENTIMENT = (typeof SENTIMENTS)[number]
 
 // SIZE
 export const SIZE_HEIGHT = {
@@ -48,7 +46,12 @@ const FOCUS_RING_KEY = {
   secondary: 'focusPrimary',
   success: 'focusSuccess',
   warning: 'focusWarning',
+  white: 'focusNeutral',
+  black: 'focusNeutral',
 } as const
+
+const isMonochrome = (sentiment: ExtendedColor) =>
+  sentiment === 'white' || sentiment === 'black'
 
 // VARIANTS
 type StyledButtonProps = Required<
@@ -127,23 +130,25 @@ const StyledFilledButton = styled('button', {
   ${args => coreStyle(args)}
 
   background: ${({ theme, sentiment }) =>
-    theme.colors[sentiment].backgroundStrong};
+    !isMonochrome(sentiment)
+      ? theme.colors[sentiment].backgroundStrong
+      : theme.colors.other.monochrome[sentiment].background};
   border: none;
-  color: ${({ theme, sentiment }) => theme.colors[sentiment].textStrong};
+  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].textStrong : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].text)};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
-            background: ${theme.colors[sentiment].backgroundStrongDisabled};
+            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundStrongDisabled : theme.colors.other.monochrome[sentiment].backgroundDisabled};
             color:
-              ${theme.colors[sentiment].textStrongDisabled};
+              ${!isMonochrome(sentiment) ? theme.colors[sentiment].textStrongDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
         `
       : `
             &:hover, &:active
             {
-                background: ${theme.colors[sentiment].backgroundStrongHover};
+                background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundStrongHover : theme.colors.other.monochrome[sentiment].backgroundHover};
                 color:
-                ${theme.colors[sentiment].textStrongHover};
+                ${!isMonochrome(sentiment) ? theme.colors[sentiment].textStrongHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
             }
   `}
 `
@@ -159,33 +164,43 @@ const StyledOutlinedButton = styled('button', {
   background: none;
   border: 1px solid
     ${({ theme, sentiment }) =>
-      theme.colors[sentiment][
-        sentiment === 'neutral' ? 'borderStrong' : 'border'
-      ]};
-  color: ${({ theme, sentiment }) => theme.colors[sentiment].text};
+      !isMonochrome(sentiment)
+        ? theme.colors[sentiment][
+            sentiment === 'neutral' ? 'borderStrong' : 'border'
+          ]
+        : theme.colors.other.monochrome[sentiment].border};
+  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].text : theme.colors.other.monochrome[sentiment].text)};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
         color:
-          ${theme.colors[sentiment].textDisabled};
+          ${!isMonochrome(sentiment) ? theme.colors[sentiment].textDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
         border: 1px solid ${
-          theme.colors[sentiment][
-            sentiment === 'neutral' ? 'borderStrongDisabled' : 'borderDisabled'
-          ]
+          !isMonochrome(sentiment)
+            ? theme.colors[sentiment][
+                sentiment === 'neutral'
+                  ? 'borderStrongDisabled'
+                  : 'borderDisabled'
+              ]
+            : theme.colors.other.monochrome[sentiment].borderDisabled
         };
 
     `
       : `
         &:hover, &:active
        {
-            background: ${theme.colors[sentiment].backgroundHover};
+            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundHover : theme.colors.other.monochrome[sentiment].backgroundHover};
             color:
-            ${theme.colors[sentiment].textHover};
+            ${!isMonochrome(sentiment) ? theme.colors[sentiment].textHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
             border: 1px solid ${
-              theme.colors[sentiment][
-                sentiment === 'neutral' ? 'borderStrongHover' : 'borderHover'
-              ]
+              !isMonochrome(sentiment)
+                ? theme.colors[sentiment][
+                    sentiment === 'neutral'
+                      ? 'borderStrongHover'
+                      : 'borderHover'
+                  ]
+                : theme.colors.other.monochrome[sentiment].borderHover
             };
 
         }
@@ -202,20 +217,20 @@ const StyledGhostButton = styled('button', {
 
   background: none;
   border: none;
-  color: ${({ theme, sentiment }) => theme.colors[sentiment].text};
+  color: ${({ theme, sentiment }) => (!isMonochrome(sentiment) ? theme.colors[sentiment].text : theme.colors.other.monochrome[sentiment].text)};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
         color:
-          ${theme.colors[sentiment].textDisabled};
+          ${!isMonochrome(sentiment) ? theme.colors[sentiment].textDisabled : theme.colors.other.monochrome[sentiment].textDisabled};
       `
       : `
         &:hover, &:active
         {
-            background: ${theme.colors[sentiment].backgroundHover};
+            background: ${!isMonochrome(sentiment) ? theme.colors[sentiment].backgroundHover : theme.colors.other.monochrome[sentiment].backgroundHover};
             color:
-              ${theme.colors[sentiment].textHover};
+              ${!isMonochrome(sentiment) ? theme.colors[sentiment].textHover : theme.colors.other.monochrome[sentiment === 'white' ? 'black' : 'white'].textHover};
         }
 `}
 `
@@ -247,7 +262,7 @@ type CommonProps = {
   size?: ButtonSize
   className?: string
   'data-testid'?: string
-  sentiment?: SENTIMENT
+  sentiment?: ExtendedColor
   disabled?: boolean
   iconPosition?: 'left' | 'right'
   iconVariant?: ComponentProps<typeof Icon>['variant']
