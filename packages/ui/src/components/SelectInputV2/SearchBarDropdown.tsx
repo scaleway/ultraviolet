@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
 import { TextInputV2 } from '../TextInputV2'

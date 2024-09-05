@@ -1,6 +1,8 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { CategoryIcon, Icon } from '@ultraviolet/icons'
+import * as CategoryIcon from '@ultraviolet/icons/category'
+import { Console } from '@ultraviolet/icons/category'
+import { Icon } from '@ultraviolet/icons/legacy'
 import {
   Badge,
   Button,
@@ -27,6 +29,7 @@ import {
   useMemo,
   useReducer,
 } from 'react'
+import type { PascalToCamelCase } from '../../../types'
 import { useNavigation } from '../NavigationProvider'
 import { ANIMATION_DURATION, shrinkHeight } from '../constants'
 import type { PinUnPinType } from '../types'
@@ -259,8 +262,10 @@ type ItemProps = {
   /**
    * Sets a category icon on the left of the item
    */
-  categoryIcon?: ComponentProps<typeof CategoryIcon>['name']
-  categoryIconVariant?: ComponentProps<typeof CategoryIcon>['variant']
+  categoryIcon?: PascalToCamelCase<keyof typeof CategoryIcon>
+  categoryIconVariant?: ComponentProps<
+    (typeof CategoryIcon)['Baremetal']
+  >['variant']
   /**
    * The label of the item that will be shown.
    * It is also used as the key for pinning.
@@ -446,6 +451,13 @@ export const Item = ({
     [containerTag],
   )
 
+  const CategoryIconUsed = categoryIcon
+    ? CategoryIcon[
+        (categoryIcon.charAt(0).toUpperCase() +
+          categoryIcon.slice(1)) as keyof typeof CategoryIcon
+      ]
+    : null
+
   const ariaExpanded = useMemo(() => {
     if (hasHrefAndNoChildren && internalExpanded) {
       return true
@@ -539,13 +551,12 @@ export const Item = ({
             alignItems="center"
             justifyContent="center"
           >
-            {categoryIcon ? (
+            {CategoryIconUsed ? (
               <ContainerCategoryIcon
                 alignItems="center"
                 justifyContent="center"
               >
-                <CategoryIcon
-                  name={categoryIcon}
+                <CategoryIconUsed
                   variant={active ? 'primary' : categoryIconVariant}
                   disabled={disabled}
                 />
@@ -705,15 +716,14 @@ export const Item = ({
                 size="small"
                 icon={!categoryIcon ? 'dots-horizontal' : undefined}
               >
-                {categoryIcon ? (
+                {CategoryIconUsed ? (
                   <Stack
                     direction="row"
                     gap={1}
                     alignItems="center"
                     justifyContent="center"
                   >
-                    <CategoryIcon
-                      name={categoryIcon}
+                    <CategoryIconUsed
                       variant={active ? 'primary' : categoryIconVariant}
                     />
                   </Stack>
@@ -743,10 +753,13 @@ export const Item = ({
                 alignItems="center"
                 justifyContent="center"
               >
-                <CategoryIcon
-                  name={categoryIcon ?? 'console'}
-                  variant={active ? 'primary' : categoryIconVariant}
-                />
+                {CategoryIconUsed ? (
+                  <CategoryIconUsed
+                    variant={active ? 'primary' : categoryIconVariant}
+                  />
+                ) : (
+                  <Console variant={active ? 'primary' : categoryIconVariant} />
+                )}
               </Stack>
             </Button>
           </Tooltip>

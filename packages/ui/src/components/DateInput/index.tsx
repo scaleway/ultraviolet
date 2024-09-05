@@ -1,6 +1,6 @@
 import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type { FocusEvent, ReactNode } from 'react'
 import { useId } from 'react'
 import type { ReactDatePickerProps } from 'react-datepicker'

@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { ProductIcon } from '@ultraviolet/icons'
+import { Cockpit } from '@ultraviolet/icons/product'
 import type { ComponentProps } from 'react'
 import { ContentCard } from '..'
 import illustration from '../assets/illustration.png'
@@ -16,7 +16,7 @@ export const Template: StoryFn<ComponentProps<typeof ContentCard>> = ({
 Template.args = {
   direction: 'column',
   image: illustration,
-  icon: <ProductIcon name="cockpit" size="large" />,
+  icon: <Cockpit size="large" />,
   subtitle: 'New update',
   title: 'Create your first function',
   description:

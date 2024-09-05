@@ -1,9 +1,9 @@
 import type { Meta } from '@storybook/react'
-import { ProductIcon } from '..'
+import { Console } from '..'
 import Documentation from './Documentation.md?raw'
 
 export default {
-  component: ProductIcon,
+  component: Console,
   title: 'Icons/ProductIcon',
   parameters: {
     docs: {

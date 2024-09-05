@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import { Popover } from '..'
 
 export const Template: StoryFn<typeof Popover> = props => (

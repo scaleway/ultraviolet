@@ -1,7 +1,7 @@
 import type { SerializedStyles, Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type { ComponentProps, ReactNode } from 'react'
 import { useState } from 'react'
 import { Button } from '../Button'

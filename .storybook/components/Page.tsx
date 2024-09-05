@@ -108,12 +108,14 @@ const Page = ({
         ) : null}
       </div>
       <Stack gap={2}>
-        <StyledH2 as="h2" variant="headingStrong">
-          Overview
-        </StyledH2>
-        <Subtitle />
-        <div>
+        <Stack>
+          <StyledH2 as="h2" variant="headingStrong">
+            Overview
+          </StyledH2>
+          <Subtitle />
           <Description />
+        </Stack>
+        <div>
           <Primary />
           {!hideArgsTable ? (
             <>

@@ -12,12 +12,12 @@
     "linux"
   ],
   "scripts": {
-    "build": "turbo run build",
     "size": "turbo run size",
     "typecheck": "turbo run typecheck",
+    "build": "turbo run build",
     "build:examples": "turbo run build --filter '@examples/*' ",
-    "storybook:build": "STORYBOOK_ENVIRONMENT=production storybook build",
-    "storybook:build:stats": "pnpm turbo storybook:build -- --webpack-stats-json",
+    "build:storybook": "STORYBOOK_ENVIRONMENT=production storybook build",
+    "build:storybook:stats": "pnpm turbo build:storybook -- --webpack-stats-json",
     "test:unit": "turbo run test:unit",
     "test:unit:coverage": "turbo run test:unit:coverage",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,vite,jest,husky,@commitlint/*,@babel/*,babel-*'",
@@ -30,6 +30,7 @@
     "lint": "eslint --report-unused-disable-directives --cache .",
     "prepare": "husky",
     "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm run format packages/themes/src/themes/console",
+    "icons:update": "tsx ./scripts/generate-icons-file.ts && biome format --write packages/icons",
     "release": "pnpm build && pnpm changeset publish",
     "svg": "npx svgo --pretty --multipass",
     "svg:all": "pnpm run svg -r -f .",
@@ -37,8 +38,8 @@
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
-      "biome format --write .",
-      "eslint --fix"
+      "eslint --fix",
+      "biome format --write ."
     ],
     "*.svg": [
       "pnpm run svg"
@@ -166,6 +167,7 @@
     "size-limit": "11.1.4",
     "storybook": "8.2.9",
     "timekeeper": "2.3.1",
+    "tsx": "4.19.0",
     "turbo": "2.1.1",
     "typescript": "5.5.4",
     "vite": "5.4.3",

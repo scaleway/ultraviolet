@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { ProductIcon } from '@ultraviolet/icons'
+import { Cockpit } from '@ultraviolet/icons/product'
 import { Row, Stack, Text } from '@ultraviolet/ui'
 import illustration from '../assets/illustration.png'
 import { ContentCard } from '../index'
@@ -15,7 +15,7 @@ export const Disabled: StoryFn<typeof ContentCard> = args => (
           {...args}
           direction="column"
           image={illustration}
-          icon={<ProductIcon name="cockpit" size="large" disabled />}
+          icon={<Cockpit size="large" disabled />}
           subtitle="New update"
           title="Create your first function"
           description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."

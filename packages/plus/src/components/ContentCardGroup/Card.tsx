@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import { Stack, Text } from '@ultraviolet/ui'
 import type { AnchorHTMLAttributes, ElementType, ReactNode } from 'react'
 import { forwardRef } from 'react'

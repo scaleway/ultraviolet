@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons'
+import { Icon } from '@ultraviolet/icons/legacy'
 import type { DOMAttributes, ReactNode } from 'react'
 import { forwardRef, useId, useMemo } from 'react'
 import { Button, SIZE_HEIGHT as ButtonSizeHeight } from '../Button'

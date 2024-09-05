@@ -5,7 +5,7 @@
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scaleway/ultraviolet",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
     "directory": "packages/icons"
   },
   "scripts": {
@@ -44,7 +44,44 @@
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
       "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/components/Icon/__generatedIcons__/*.d.ts",
+      "require": "./dist/components/Icon/__generatedIcons__/*.cjs",
+      "import": "./dist/components/Icon/__generatedIcons__/*.js",
+      "default": "./dist/components/Icon/__generatedIcons__/*.js"
+    },
+    "./product": {
+      "types": "./dist/components/ProductIcon/index.d.ts",
+      "require": "./dist/components/ProductIcon/index.cjs",
+      "import": "./dist/components/ProductIcon/index.js",
+      "default": "./dist/components/ProductIcon/index.js"
+    },
+    "./product/*": {
+      "types": "./dist/components/ProductIcon/__generatedIcons__/*.d.ts",
+      "require": "./dist/components/ProductIcon/__generatedIcons__/*.cjs",
+      "import": "./dist/components/ProductIcon/__generatedIcons__/*.js",
+      "default": "./dist/components/ProductIcon/__generatedIcons__/*.js"
+    },
+    "./category": {
+      "types": "./dist/components/CategoryIcon/index.d.ts",
+      "require": "./dist/components/CategoryIcon/index.cjs",
+      "import": "./dist/components/CategoryIcon/index.js",
+      "default": "./dist/components/CategoryIcon/index.js"
+    },
+    "./category/*": {
+      "types": "./dist/components/CategoryIcon/__generatedIcons__/*.d.ts",
+      "require": "./dist/components/CategoryIcon/__generatedIcons__/*.cjs",
+      "import": "./dist/components/CategoryIcon/__generatedIcons__/*.js",
+      "default": "./dist/components/CategoryIcon/__generatedIcons__/*.js"
+    },
+    "./legacy": {
+      "types": "./dist/components/Icon/legacy/index.d.ts",
+      "require": "./dist/components/Icon/legacy/index.cjs",
+      "import": "./dist/components/Icon/legacy/index.js",
+      "default": "./dist/components/Icon/legacy/index.js"
     }
   },
   "size-limit": [
@@ -54,7 +91,7 @@
         "!*.d.ts",
         "!*.cjs"
       ],
-      "limit": "400 kB",
+      "limit": "500 kB",
       "webpack": false,
       "brotli": true,
       "running": false
