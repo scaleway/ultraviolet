@@ -11,7 +11,7 @@ import type {
 } from 'react-hook-form'
 
 export type MetaField = {
-  step?: number | string
+  isInteger?: number | string
   min?: number | string
   max?: number | string
   minLength?: number
@@ -30,7 +30,7 @@ export type RequiredErrors = {
 export type FormErrors = {
   [key in
     | 'required'
-    | 'step'
+    | 'isInteger'
     | 'min'
     | 'max'
     | 'minLength'

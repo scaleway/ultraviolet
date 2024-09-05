@@ -17,4 +17,5 @@ Required.args = {
   name: 'value',
   required: true,
   label: 'This field is required',
+  step: 1,
 }
