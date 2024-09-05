@@ -13,4 +13,5 @@ export const mockErrors: FormErrors = {
   required: () => 'This field is required',
   max: ({ max }) => `This field is too high (maximum is : ${max})`,
   min: ({ min }) => `This field is too low (minimum is: ${min})`,
+  step: ({ step }) => `This field should be a multiple of ${step}`,
 }
