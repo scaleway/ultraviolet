@@ -78,47 +78,25 @@ export const SearchBarDropdown = ({
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
-          filteredOptions[group] = filteredOptions[group].filter(option => {
-            if (option.searchText) {
-              if (option.searchText.match(regex)) return true
-            }
-
-            if (typeof option.label === 'string' && option.label.match(regex)) {
-              return true
-            }
-
-            if (
-              typeof option.description === 'string' &&
-              option.description.match(regex)
-            ) {
-              return true
-            }
-
-            return false
-          })
+          filteredOptions[group] = filteredOptions[group].filter(
+            option =>
+              (option.searchText && !!option.searchText.match(regex)) ||
+              (typeof option.label === 'string' && option.label.match(regex)) ||
+              (typeof option.description === 'string' &&
+                option.description.match(regex)),
+          )
 
           return null
         })
         onSearch(filteredOptions)
       } else {
-        const filteredOptions = [...options].filter(option => {
-          if (option.searchText) {
-            if (option.searchText.match(regex)) return true
-          }
-
-          if (typeof option.label === 'string' && option.label.match(regex)) {
-            return true
-          }
-
-          if (
-            typeof option.description === 'string' &&
-            option.description.match(regex)
-          ) {
-            return true
-          }
-
-          return false
-        })
+        const filteredOptions = [...options].filter(
+          option =>
+            (option.searchText && !!option.searchText.match(regex)) ||
+            (typeof option.label === 'string' && option.label.match(regex)) ||
+            (typeof option.description === 'string' &&
+              option.description.match(regex)),
+        )
         onSearch(filteredOptions)
       }
     } else {

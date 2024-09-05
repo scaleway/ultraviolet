@@ -66,8 +66,7 @@ export const OnChange: StoryFn<typeof SelectInputV2> = args => {
             ? values.map(val => <li key={val}>{val}</li>)
             : null}
         </ul>
-      </Stack>{' '}
-      values; {values2}
+      </Stack>
       <SelectInputV2
         {...args}
         value={values2}

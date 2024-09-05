@@ -120,6 +120,7 @@ exports[`SelectInputV2 > renders correctly 1`] = `
 
 .emotion-10[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-10[data-size='medium'] {
@@ -264,6 +265,7 @@ exports[`SelectInputV2 > renders correctly 1`] = `
               class="emotion-14 emotion-15"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-16 emotion-17"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -368,6 +370,7 @@ exports[`SelectInputV2 > renders correctly disabled 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -470,8 +473,8 @@ exports[`SelectInputV2 > renders correctly disabled 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r8u:"
-        aria-describedby=":r8u:"
+        aria-controls=":ran:"
+        aria-describedby=":ran:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -489,7 +492,7 @@ exports[`SelectInputV2 > renders correctly disabled 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r8t:"
+            id=":ram:"
             role="combobox"
             tabindex="0"
           >
@@ -502,6 +505,7 @@ exports[`SelectInputV2 > renders correctly disabled 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -624,6 +628,7 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -921,6 +926,10 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
   border-color: inherit;
 }
 
+.emotion-24[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-28 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -936,6 +945,10 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
 
 .emotion-28[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-28[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-30 {
@@ -1146,11 +1159,11 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
 }
 
 .emotion-133 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1175,8 +1188,6 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -1190,8 +1201,8 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":rp:"
-        aria-describedby=":rp:"
+        aria-controls=":r1j:"
+        aria-describedby=":r1j:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -1209,7 +1220,7 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":ro:"
+            id=":r1i:"
             role="combobox"
             tabindex="0"
           >
@@ -1222,6 +1233,7 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1239,7 +1251,7 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":rp:"
+          id=":r1j:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -1259,6 +1271,7 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
                 >
                   <div
                     class="emotion-24 emotion-25"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-12 emotion-13"
@@ -1278,7 +1291,7 @@ exports[`SelectInputV2 > renders correctly grouped 1`] = `
                     class="emotion-28 emotion-29"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":rs:"
+                    id=":r1m:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -1681,6 +1694,7 @@ exports[`SelectInputV2 > renders correctly loadMore 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -1783,8 +1797,8 @@ exports[`SelectInputV2 > renders correctly loadMore 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r8k:"
-        aria-describedby=":r8k:"
+        aria-controls=":rad:"
+        aria-describedby=":rad:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -1802,7 +1816,7 @@ exports[`SelectInputV2 > renders correctly loadMore 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r8j:"
+            id=":rac:"
             role="combobox"
             tabindex="0"
           >
@@ -1815,6 +1829,7 @@ exports[`SelectInputV2 > renders correctly loadMore 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1947,6 +1962,7 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -2241,8 +2257,8 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1lm:"
-        aria-describedby=":r1lm:"
+        aria-controls=":r1tk:"
+        aria-describedby=":r1tk:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -2260,7 +2276,7 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r1ll:"
+            id=":r1tj:"
             role="combobox"
             tabindex="0"
           >
@@ -2273,6 +2289,7 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2290,7 +2307,7 @@ exports[`SelectInputV2 > renders correctly loading - grouped data 1`] = `
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":r1lm:"
+          id=":r1tk:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -2468,6 +2485,7 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -2785,8 +2803,8 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1lq:"
-        aria-describedby=":r1lq:"
+        aria-controls=":r1to:"
+        aria-describedby=":r1to:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -2804,7 +2822,7 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r1lp:"
+            id=":r1tn:"
             role="combobox"
             tabindex="0"
           >
@@ -2817,6 +2835,7 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -2834,7 +2853,7 @@ exports[`SelectInputV2 > renders correctly loading - ungrouped data 1`] = `
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":r1lq:"
+          id=":r1to:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -3007,6 +3026,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -3491,6 +3511,10 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   border-color: inherit;
 }
 
+.emotion-39[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-43 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -3506,6 +3530,10 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
 
 .emotion-43[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-43[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-45 {
@@ -4002,11 +4030,11 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
 }
 
 .emotion-283 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4031,8 +4059,6 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -4046,8 +4072,8 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r2p:"
-        aria-describedby=":r2p:"
+        aria-controls=":r4i:"
+        aria-describedby=":r4i:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -4065,7 +4091,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r2o:"
+            id=":r4h:"
             role="combobox"
             tabindex="0"
           >
@@ -4119,6 +4145,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                 </svg>
               </button>
               <svg
+                aria-label="show dropdown"
                 class="emotion-27 emotion-20"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -4136,7 +4163,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
           class="emotion-29 emotion-30 emotion-31"
           data-animated="false"
           data-has-arrow="false"
-          id=":r2p:"
+          id=":r4i:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -4156,6 +4183,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                 >
                   <div
                     class="emotion-39 emotion-40"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-27 emotion-20"
@@ -4175,7 +4203,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                     class="emotion-43 emotion-44"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":r2u:"
+                    id=":r4n:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -4233,7 +4261,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-checked="false"
                         aria-invalid="false"
                         class="emotion-62 emotion-63"
-                        id=":r31:"
+                        id=":r4q:"
                         tabindex="-1"
                         type="checkbox"
                         value="mercury"
@@ -4274,7 +4302,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r31:"
+                            for=":r4q:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -4314,7 +4342,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-checked="false"
                         aria-invalid="false"
                         class="emotion-62 emotion-63"
-                        id=":r35:"
+                        id=":r4u:"
                         tabindex="-1"
                         type="checkbox"
                         value="venus"
@@ -4355,7 +4383,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r35:"
+                            for=":r4u:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -4395,7 +4423,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-checked="false"
                         aria-invalid="false"
                         class="emotion-62 emotion-63"
-                        id=":r39:"
+                        id=":r52:"
                         tabindex="-1"
                         type="checkbox"
                         value="earth"
@@ -4436,7 +4464,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r39:"
+                            for=":r52:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -4483,7 +4511,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-invalid="false"
                         class="emotion-62 emotion-63"
                         disabled=""
-                        id=":r3e:"
+                        id=":r57:"
                         tabindex="-1"
                         type="checkbox"
                         value="mars"
@@ -4524,7 +4552,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r3e:"
+                            for=":r57:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -4565,7 +4593,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-invalid="false"
                         checked=""
                         class="emotion-62 emotion-63"
-                        id=":r3i:"
+                        id=":r5b:"
                         tabindex="-1"
                         type="checkbox"
                         value="pluto"
@@ -4606,7 +4634,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r3i:"
+                            for=":r5b:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -4678,7 +4706,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-checked="false"
                         aria-invalid="false"
                         class="emotion-62 emotion-63"
-                        id=":r3o:"
+                        id=":r5h:"
                         tabindex="-1"
                         type="checkbox"
                         value="jupiter"
@@ -4719,7 +4747,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r3o:"
+                            for=":r5h:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -4764,7 +4792,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-checked="false"
                         aria-invalid="false"
                         class="emotion-62 emotion-63"
-                        id=":r3t:"
+                        id=":r5m:"
                         tabindex="-1"
                         type="checkbox"
                         value="saturn"
@@ -4805,7 +4833,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r3t:"
+                            for=":r5m:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -4845,7 +4873,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-checked="false"
                         aria-invalid="false"
                         class="emotion-62 emotion-63"
-                        id=":r41:"
+                        id=":r5q:"
                         tabindex="-1"
                         type="checkbox"
                         value="uranus"
@@ -4886,7 +4914,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r41:"
+                            for=":r5q:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -4926,7 +4954,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         aria-checked="false"
                         aria-invalid="false"
                         class="emotion-62 emotion-63"
-                        id=":r45:"
+                        id=":r5u:"
                         tabindex="-1"
                         type="checkbox"
                         value="neptune"
@@ -4967,7 +4995,7 @@ exports[`SelectInputV2 > renders correctly multiselect 1`] = `
                         >
                           <label
                             class="emotion-72 emotion-73"
-                            for=":r45:"
+                            for=":r5u:"
                           >
                             <div
                               class="emotion-4 emotion-5"
@@ -5093,6 +5121,7 @@ exports[`SelectInputV2 > renders correctly not clearable 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -5226,6 +5255,7 @@ exports[`SelectInputV2 > renders correctly not clearable 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -5330,6 +5360,7 @@ exports[`SelectInputV2 > renders correctly readOnly 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -5432,8 +5463,8 @@ exports[`SelectInputV2 > renders correctly readOnly 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r9s:"
-        aria-describedby=":r9s:"
+        aria-controls=":rbl:"
+        aria-describedby=":rbl:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -5451,7 +5482,7 @@ exports[`SelectInputV2 > renders correctly readOnly 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r9r:"
+            id=":rbk:"
             role="combobox"
             tabindex="0"
           >
@@ -5464,6 +5495,7 @@ exports[`SelectInputV2 > renders correctly readOnly 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -5617,6 +5649,7 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
 
 .emotion-12[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-12[data-size='medium'] {
@@ -5770,6 +5803,7 @@ exports[`SelectInputV2 > renders correctly required 1`] = `
               class="emotion-16 emotion-17"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-18 emotion-11"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -5892,6 +5926,7 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -6189,6 +6224,10 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
   border-color: inherit;
 }
 
+.emotion-24[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-28 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -6204,6 +6243,10 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
 
 .emotion-28[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-28[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-30 {
@@ -6356,11 +6399,11 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
 }
 
 .emotion-107 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6385,8 +6428,6 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -6400,8 +6441,8 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r92:"
-        aria-describedby=":r92:"
+        aria-controls=":rar:"
+        aria-describedby=":rar:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -6419,7 +6460,7 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r91:"
+            id=":raq:"
             role="combobox"
             tabindex="0"
           >
@@ -6432,6 +6473,7 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -6449,7 +6491,7 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":r92:"
+          id=":rar:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -6469,6 +6511,7 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
                 >
                   <div
                     class="emotion-24 emotion-25"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-12 emotion-13"
@@ -6488,7 +6531,7 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
                     class="emotion-28 emotion-29"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":r95:"
+                    id=":rau:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -6594,8 +6637,8 @@ exports[`SelectInputV2 > renders correctly required 2`] = `
                   type="button"
                 >
                   <div
-                    aria-controls=":r9e:"
-                    aria-describedby=":r9e:"
+                    aria-controls=":rb7:"
+                    aria-describedby=":rb7:"
                     class="emotion-2 emotion-3"
                     tabindex="0"
                   >
@@ -6855,6 +6898,7 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
 
 .emotion-10[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-10[data-size='medium'] {
@@ -6999,6 +7043,7 @@ exports[`SelectInputV2 > renders correctly small 1`] = `
               class="emotion-14 emotion-15"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-16 emotion-17"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -7103,6 +7148,7 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -7322,8 +7368,8 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":ri9:"
-        aria-describedby=":ri9:"
+        aria-controls=":rk2:"
+        aria-describedby=":rk2:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -7341,7 +7387,7 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":ri8:"
+            id=":rk1:"
             role="combobox"
             tabindex="0"
           >
@@ -7380,6 +7426,7 @@ exports[`SelectInputV2 > renders correctly unclosable tags when readonly 1`] = `
                 </svg>
               </button>
               <svg
+                aria-label="show dropdown"
                 class="emotion-22 emotion-21"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -7502,6 +7549,7 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -7709,6 +7757,8 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
 }
 
 .emotion-22>.emotion-29 {
@@ -7799,6 +7849,10 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
   border-color: inherit;
 }
 
+.emotion-24[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-28 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -7814,6 +7868,10 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
 
 .emotion-28[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-28[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-30 {
@@ -7966,11 +8024,11 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
 }
 
 .emotion-107 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7995,8 +8053,6 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -8042,6 +8098,7 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -8079,6 +8136,7 @@ exports[`SelectInputV2 > renders correctly ungrouped 1`] = `
                 >
                   <div
                     class="emotion-24 emotion-25"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-12 emotion-13"
@@ -8448,6 +8506,7 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -8812,6 +8871,10 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
   border-color: inherit;
 }
 
+.emotion-28[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-32 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -8827,6 +8890,10 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
 
 .emotion-32[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-32[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-34 {
@@ -9026,11 +9093,11 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
 }
 
 .emotion-137 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -9055,8 +9122,6 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -9070,8 +9135,8 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":rp:"
-        aria-describedby=":rp:"
+        aria-controls=":r2i:"
+        aria-describedby=":r2i:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -9089,7 +9154,7 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":ro:"
+            id=":r2h:"
             role="combobox"
             tabindex="0"
           >
@@ -9118,6 +9183,7 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
                 </svg>
               </button>
               <svg
+                aria-label="show dropdown"
                 class="emotion-16 emotion-15"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -9135,7 +9201,7 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
           class="emotion-18 emotion-19 emotion-20"
           data-animated="false"
           data-has-arrow="false"
-          id=":rp:"
+          id=":r2i:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -9155,6 +9221,7 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
                 >
                   <div
                     class="emotion-28 emotion-29"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-16 emotion-15"
@@ -9174,7 +9241,7 @@ exports[`SelectInputV2 > renders correctly with default value 1`] = `
                     class="emotion-32 emotion-33"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":rt:"
+                    id=":r2m:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -9595,6 +9662,7 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -9892,6 +9960,10 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
   border-color: inherit;
 }
 
+.emotion-24[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-28 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -9907,6 +9979,10 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
 
 .emotion-28[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-28[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-30 {
@@ -9941,8 +10017,8 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r8o:"
-        aria-describedby=":r8o:"
+        aria-controls=":rah:"
+        aria-describedby=":rah:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -9960,7 +10036,7 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-emptystate"
-            id=":r8n:"
+            id=":rag:"
             role="combobox"
             tabindex="0"
           >
@@ -9973,6 +10049,7 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -9990,7 +10067,7 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":r8o:"
+          id=":rah:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -10010,6 +10087,7 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
                 >
                   <div
                     class="emotion-24 emotion-25"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-12 emotion-13"
@@ -10029,7 +10107,7 @@ exports[`SelectInputV2 > renders correctly with emptyState 1`] = `
                     class="emotion-28 emotion-29"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":r8r:"
+                    id=":rak:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -10153,6 +10231,7 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -10464,6 +10543,10 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
   border-color: inherit;
 }
 
+.emotion-26[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-30 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -10479,6 +10562,10 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
 
 .emotion-30[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-30[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-32 {
@@ -10631,11 +10718,11 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
 }
 
 .emotion-109 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -10660,8 +10747,6 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -10688,8 +10773,8 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":ra0:"
-        aria-describedby=":ra0:"
+        aria-controls=":rbp:"
+        aria-describedby=":rbp:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -10707,7 +10792,7 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
             data-size="large"
             data-state="danger"
             data-testid="select-input-test"
-            id=":r9v:"
+            id=":rbo:"
             role="combobox"
             tabindex="0"
           >
@@ -10731,6 +10816,7 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
                 />
               </svg>
               <svg
+                aria-label="show dropdown"
                 class="emotion-14 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -10748,7 +10834,7 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
           class="emotion-16 emotion-17 emotion-18"
           data-animated="false"
           data-has-arrow="false"
-          id=":ra0:"
+          id=":rbp:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -10768,6 +10854,7 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
                 >
                   <div
                     class="emotion-26 emotion-27"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-14 emotion-13"
@@ -10787,7 +10874,7 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
                     class="emotion-30 emotion-31"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":ra4:"
+                    id=":rbt:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -10893,8 +10980,8 @@ exports[`SelectInputV2 > renders correctly with error 1`] = `
                   type="button"
                 >
                   <div
-                    aria-controls=":rad:"
-                    aria-describedby=":rad:"
+                    aria-controls=":rc6:"
+                    aria-describedby=":rc6:"
                     class="emotion-2 emotion-3"
                     tabindex="0"
                   >
@@ -11142,6 +11229,7 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -11506,6 +11594,10 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
   border-color: inherit;
 }
 
+.emotion-28[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-32 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -11521,6 +11613,10 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
 
 .emotion-32[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-32[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-34 {
@@ -11720,11 +11816,11 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
 }
 
 .emotion-137 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11749,8 +11845,6 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -11770,8 +11864,8 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r1p:"
-        aria-describedby=":r1p:"
+        aria-controls=":r3i:"
+        aria-describedby=":r3i:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -11789,7 +11883,7 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r1o:"
+            id=":r3h:"
             role="combobox"
             tabindex="0"
           >
@@ -11818,6 +11912,7 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
                 </svg>
               </button>
               <svg
+                aria-label="show dropdown"
                 class="emotion-16 emotion-15"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -11835,7 +11930,7 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
           class="emotion-18 emotion-19 emotion-20"
           data-animated="false"
           data-has-arrow="false"
-          id=":r1p:"
+          id=":r3i:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -11855,6 +11950,7 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
                 >
                   <div
                     class="emotion-28 emotion-29"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-16 emotion-15"
@@ -11874,7 +11970,7 @@ exports[`SelectInputV2 > renders correctly with footer 1`] = `
                     class="emotion-32 emotion-33"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":r1t:"
+                    id=":r3m:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -12300,6 +12396,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -12597,6 +12694,10 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
   border-color: inherit;
 }
 
+.emotion-24[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-28 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -12612,6 +12713,10 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
 
 .emotion-28[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-28[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-30 {
@@ -12787,11 +12892,11 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
 }
 
 .emotion-47 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -12816,8 +12921,6 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -12890,8 +12993,8 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r6g:"
-        aria-describedby=":r6g:"
+        aria-controls=":r89:"
+        aria-describedby=":r89:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -12909,7 +13012,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r6f:"
+            id=":r88:"
             role="combobox"
             tabindex="0"
           >
@@ -12922,6 +13025,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -12939,7 +13043,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":r6g:"
+          id=":r89:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -12959,6 +13063,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
                 >
                   <div
                     class="emotion-24 emotion-25"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-12 emotion-13"
@@ -12978,7 +13083,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
                     class="emotion-28 emotion-29"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":r6j:"
+                    id=":r8c:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -13413,6 +13518,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -13710,6 +13816,10 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
   border-color: inherit;
 }
 
+.emotion-24[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-28 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -13725,6 +13835,10 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
 
 .emotion-28[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-28[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-30 {
@@ -13917,11 +14031,11 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
 }
 
 .emotion-53 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -13946,8 +14060,6 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -13986,8 +14098,8 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r7i:"
-        aria-describedby=":r7i:"
+        aria-controls=":r9b:"
+        aria-describedby=":r9b:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -14005,7 +14117,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r7h:"
+            id=":r9a:"
             role="combobox"
             tabindex="0"
           >
@@ -14018,6 +14130,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -14035,7 +14148,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":r7i:"
+          id=":r9b:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -14055,6 +14168,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
                 >
                   <div
                     class="emotion-24 emotion-25"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-12 emotion-13"
@@ -14074,7 +14188,7 @@ exports[`SelectInputV2 > renders correctly with label on the bottom and optional
                     class="emotion-28 emotion-29"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":r7l:"
+                    id=":r9e:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -14525,6 +14639,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -14822,6 +14937,10 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
   border-color: inherit;
 }
 
+.emotion-24[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-28 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -14837,6 +14956,10 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
 
 .emotion-28[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-28[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-30 {
@@ -15052,11 +15175,11 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
 }
 
 .emotion-53 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -15081,8 +15204,6 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -15121,8 +15242,8 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r4c:"
-        aria-describedby=":r4c:"
+        aria-controls=":r65:"
+        aria-describedby=":r65:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -15140,7 +15261,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r4b:"
+            id=":r64:"
             role="combobox"
             tabindex="0"
           >
@@ -15153,6 +15274,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -15170,7 +15292,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":r4c:"
+          id=":r65:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -15190,6 +15312,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
                 >
                   <div
                     class="emotion-24 emotion-25"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-12 emotion-13"
@@ -15209,7 +15332,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
                     class="emotion-28 emotion-29"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":r4f:"
+                    id=":r68:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -15660,6 +15783,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -15957,6 +16081,10 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
   border-color: inherit;
 }
 
+.emotion-24[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-28 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -15972,6 +16100,10 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
 
 .emotion-28[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-28[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-30 {
@@ -16187,11 +16319,11 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
 }
 
 .emotion-53 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -16216,8 +16348,6 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -16256,8 +16386,8 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r5e:"
-        aria-describedby=":r5e:"
+        aria-controls=":r77:"
+        aria-describedby=":r77:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -16275,7 +16405,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":r5d:"
+            id=":r76:"
             role="combobox"
             tabindex="0"
           >
@@ -16288,6 +16418,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -16305,7 +16436,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":r5e:"
+          id=":r77:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -16325,6 +16456,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
                 >
                   <div
                     class="emotion-24 emotion-25"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-12 emotion-13"
@@ -16344,7 +16476,7 @@ exports[`SelectInputV2 > renders correctly with label on the right and optional 
                     class="emotion-28 emotion-29"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":r5h:"
+                    id=":r7a:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -16795,6 +16927,7 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -17113,11 +17246,11 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
 }
 
 .emotion-96 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -17142,8 +17275,6 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -17157,8 +17288,8 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":rbm:"
-        aria-describedby=":rbm:"
+        aria-controls=":rdf:"
+        aria-describedby=":rdf:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -17176,7 +17307,7 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
             data-size="large"
             data-state="neutral"
             data-testid="select-input-test"
-            id=":rbl:"
+            id=":rde:"
             role="combobox"
             tabindex="0"
           >
@@ -17189,6 +17320,7 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
               class="emotion-10 emotion-11"
             >
               <svg
+                aria-label="show dropdown"
                 class="emotion-12 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -17206,7 +17338,7 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
           class="emotion-14 emotion-15 emotion-16"
           data-animated="false"
           data-has-arrow="false"
-          id=":rbm:"
+          id=":rdf:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -17311,8 +17443,8 @@ exports[`SelectInputV2 > renders correctly with not searchable 1`] = `
                   type="button"
                 >
                   <div
-                    aria-controls=":rc0:"
-                    aria-describedby=":rc0:"
+                    aria-controls=":rdp:"
+                    aria-describedby=":rdp:"
                     class="emotion-2 emotion-3"
                     tabindex="0"
                   >
@@ -17555,6 +17687,7 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
 
 .emotion-6[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-6[data-size='medium'] {
@@ -17866,6 +17999,10 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
   border-color: inherit;
 }
 
+.emotion-26[data-size="small"] {
+  padding: 8px;
+}
+
 .emotion-30 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -17881,6 +18018,10 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
 
 .emotion-30[data-size='large'] {
   font-size: 16px;
+}
+
+.emotion-30[data-size='small'] {
+  padding-left: 8px;
 }
 
 .emotion-32 {
@@ -18033,11 +18174,11 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
 }
 
 .emotion-109 {
-  font-size: 16px;
+  font-size: 12px;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 16px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -18062,8 +18203,6 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
   width: fit-content;
   height: 24px;
   text-transform: uppercase;
-  font-size: 12px;
-  color: inherit;
   color: #3f4250;
   background: #f9f9fa;
   border: 1px solid #d9dadd;
@@ -18090,8 +18229,8 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":rar:"
-        aria-describedby=":rar:"
+        aria-controls=":rck:"
+        aria-describedby=":rck:"
         class="emotion-2 emotion-3"
         data-container-full-width="true"
         tabindex="0"
@@ -18109,7 +18248,7 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
             data-size="large"
             data-state="success"
             data-testid="select-input-test"
-            id=":raq:"
+            id=":rcj:"
             role="combobox"
             tabindex="0"
           >
@@ -18133,6 +18272,7 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
                 />
               </svg>
               <svg
+                aria-label="show dropdown"
                 class="emotion-14 emotion-13"
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -18150,7 +18290,7 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
           class="emotion-16 emotion-17 emotion-18"
           data-animated="false"
           data-has-arrow="false"
-          id=":rar:"
+          id=":rck:"
           role="dialog"
           style="opacity: 1;"
         >
@@ -18170,6 +18310,7 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
                 >
                   <div
                     class="emotion-26 emotion-27"
+                    data-size="medium"
                   >
                     <svg
                       class="emotion-14 emotion-13"
@@ -18189,7 +18330,7 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
                     class="emotion-30 emotion-31"
                     data-size="medium"
                     data-testid="search-bar"
-                    id=":rav:"
+                    id=":rco:"
                     placeholder="placeholdersearch"
                     type="text"
                     value=""
@@ -18295,8 +18436,8 @@ exports[`SelectInputV2 > renders correctly with success 1`] = `
                   type="button"
                 >
                   <div
-                    aria-controls=":rb8:"
-                    aria-describedby=":rb8:"
+                    aria-controls=":rd1:"
+                    aria-describedby=":rd1:"
                     class="emotion-2 emotion-3"
                     tabindex="0"
                   >
@@ -18561,6 +18702,7 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
 
 .emotion-12[data-size='small'] {
   height: 32px;
+  padding-left: 8px;
 }
 
 .emotion-12[data-size='medium'] {
@@ -18711,6 +18853,7 @@ exports[`SelectInputV2 > renders correctly with tooltip 1`] = `
                 class="emotion-16 emotion-17"
               >
                 <svg
+                  aria-label="show dropdown"
                   class="emotion-18 emotion-19"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
