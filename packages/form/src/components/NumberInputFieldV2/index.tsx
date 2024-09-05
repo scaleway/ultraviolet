@@ -84,7 +84,13 @@ export const NumberInputFieldV2 = <
       max,
       min,
       required,
-      validate,
+      validate: {
+        ...validate,
+        step: value =>
+          Number.isInteger(step)
+            ? Number.isInteger(value) && Number.isInteger(value)
+            : !Number.isInteger(value) && !Number.isInteger(value),
+      },
     },
   })
 
@@ -112,7 +118,7 @@ export const NumberInputFieldV2 = <
       label={label}
       labelDescription={labelDescription}
       placeholder={placeholder}
-      error={getError({ label: label ?? '', max, min }, error)}
+      error={getError({ label: label ?? '', max, min, step }, error)}
       success={success}
       helper={helper}
       tooltip={tooltip}
