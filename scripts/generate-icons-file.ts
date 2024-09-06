@@ -4,16 +4,19 @@ import path from 'node:path'
 const COMPONENTS = [
   {
     name: 'System Icons',
+    suffix: 'Icon',
     input: 'packages/icons/src/components/Icon/assets',
     output: 'packages/icons/src/components/Icon/__generatedIcons__',
   },
   {
     name: 'Product Icons',
+    suffix: 'ProductIcon',
     input: 'packages/icons/src/components/ProductIcon/assets',
     output: 'packages/icons/src/components/ProductIcon/__generatedIcons__',
   },
   {
     name: 'Category Icons',
+    suffix: 'CategoryIcon',
     input: 'packages/icons/src/components/CategoryIcon/assets',
     output: 'packages/icons/src/components/CategoryIcon/__generatedIcons__',
   },
@@ -121,7 +124,7 @@ const main = async () => {
           break
         }
         const svgContent = await readSvg(file)
-        const generatedName = generateVariableName(file)
+        const generatedName = `${generateVariableName(file)}${component.suffix}`
         const generatedComponent = templateIcon(generatedName, svgContent)
         const filePath = `${component.output}/${generatedName}.tsx`
 

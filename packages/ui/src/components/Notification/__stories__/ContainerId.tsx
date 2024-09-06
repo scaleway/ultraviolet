@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { VerifyCard } from '@ultraviolet/icons/product'
+import { VerifyCardProductIcon } from '@ultraviolet/icons/product'
 import { NotificationContainer, notification } from '..'
 import { Button, Stack, Text } from '../../index'
 
@@ -13,7 +13,7 @@ export const ContainerId: StoryFn<typeof NotificationContainer> = args => (
             Default position (top-right)
           </Text>,
           'Notification 1',
-          <VerifyCard size="medium" variant="primary" />,
+          <VerifyCardProductIcon size="medium" variant="primary" />,
           true,
           'notification1',
         )
@@ -33,7 +33,7 @@ export const ContainerId: StoryFn<typeof NotificationContainer> = args => (
             Notification at the bottom-left
           </Text>,
           'Notification 2',
-          <VerifyCard size="medium" variant="primary" />,
+          <VerifyCardProductIcon size="medium" variant="primary" />,
           true,
           'notification2',
         )

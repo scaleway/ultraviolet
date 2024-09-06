@@ -17,9 +17,9 @@ const MyComponent = () => (
 
 ```tsx
 // Now
-import { Address } from '@ultraviolet/icons';
+import { AddressIcon } from '@ultraviolet/icons';
 // OR
-import { Address } from '@ultraviolet/icons/Address';
+import { AddressIcon } from '@ultraviolet/icons/AddressIcon';
 
 const MyComponent = () => (
   <Address sentiment="danger" size="small" />
@@ -34,9 +34,9 @@ Exact same pattern is changed for `<CategoryIcon />` and `<ProductIcon />`:
 import { CategoryIcon } from '@ultraviolet/icons';
 
 // Now
-import { Baremetal } from '@ultraviolet/icons/category';
+import { BaremetalCategoryIcon } from '@ultraviolet/icons/category';
 // OR
-import { Baremetal } from '@ultraviolet/icons/category/Baremetal';
+import { BaremetalCategoryIcon } from '@ultraviolet/icons/category/BaremetalCategoryIcon';
 ```
 
 ```tsx
@@ -44,7 +44,7 @@ import { Baremetal } from '@ultraviolet/icons/category/Baremetal';
 import { ProductIcon } from '@ultraviolet/icons';
 
 // Now
-import { Instance } from '@ultraviolet/icons/product';
+import { InstanceProductIcon } from '@ultraviolet/icons/product';
 // OR
-import { Instance } from '@ultraviolet/icons/product/Instance';
+import { InstanceProductIcon } from '@ultraviolet/icons/product/InstanceProductIcon';
 ```
