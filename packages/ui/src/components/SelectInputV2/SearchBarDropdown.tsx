@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { Search } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
 import { TextInputV2 } from '../TextInputV2'
@@ -83,7 +83,8 @@ export const SearchBarDropdown = ({
               (option.searchText && !!option.searchText.match(regex)) ||
               (typeof option.label === 'string' && option.label.match(regex)) ||
               (typeof option.description === 'string' &&
-                option.description.match(regex)),
+                option.description.match(regex)) ||
+              option.value.match(regex),
           )
 
           return null
@@ -95,7 +96,8 @@ export const SearchBarDropdown = ({
             (option.searchText && !!option.searchText.match(regex)) ||
             (typeof option.label === 'string' && option.label.match(regex)) ||
             (typeof option.description === 'string' &&
-              option.description.match(regex)),
+              option.description.match(regex)) ||
+            option.value.match(regex),
         )
         onSearch(filteredOptions)
       }
@@ -151,7 +153,7 @@ export const SearchBarDropdown = ({
       onFocus={() => setSearchBarActive(true)}
       onBlur={() => setSearchBarActive(false)}
       data-testid="search-bar"
-      prefix={<Icon name="search" size="small" sentiment="neutral" />}
+      prefix={<Search size="small" sentiment="neutral" />}
       onKeyDown={event => handleKeyDown(event.key, searchInput)}
       size="medium"
       aria-label="search-bar"
