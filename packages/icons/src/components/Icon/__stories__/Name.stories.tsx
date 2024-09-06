@@ -3,7 +3,7 @@ import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import * as Icon from '..'
 
-export const Name = (args: ComponentProps<(typeof Icon)['Address']>) =>
+export const Name = (args: ComponentProps<(typeof Icon)['AddressIcon']>) =>
   Object.keys(Icon).map(name => {
     const FoundIcon = Icon[name as keyof typeof Icon]
 

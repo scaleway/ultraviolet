@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import { Instance } from '../__generatedIcons__'
+import { InstanceProductIcon } from '../__generatedIcons__'
 
-export const Template: StoryFn<ComponentProps<typeof Instance>> = ({
+export const Template: StoryFn<ComponentProps<typeof InstanceProductIcon>> = ({
   ...props
-}) => <Instance {...props} />
+}) => <InstanceProductIcon {...props} />

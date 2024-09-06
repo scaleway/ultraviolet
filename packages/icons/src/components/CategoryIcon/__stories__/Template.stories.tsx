@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import { Baremetal } from '..'
+import { BaremetalCategoryIcon } from '..'
 
-export const Template: StoryFn<ComponentProps<typeof Baremetal>> = ({
-  ...props
-}) => <Baremetal {...props} />
+export const Template: StoryFn<
+  ComponentProps<typeof BaremetalCategoryIcon>
+> = ({ ...props }) => <BaremetalCategoryIcon {...props} />

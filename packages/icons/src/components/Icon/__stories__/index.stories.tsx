@@ -1,9 +1,9 @@
 import type { Meta } from '@storybook/react'
-import { Address } from '..'
+import { AddressIcon } from '..'
 import Documentation from './Documentation.md?raw'
 
 export default {
-  component: Address,
+  component: AddressIcon,
   parameters: {
     docs: {
       description: {

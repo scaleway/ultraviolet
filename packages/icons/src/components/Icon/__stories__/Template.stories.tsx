@@ -1,4 +1,6 @@
 import type { StoryFn } from '@storybook/react'
-import { Address } from '..'
+import { AddressIcon } from '..'
 
-export const Template: StoryFn<typeof Address> = args => <Address {...args} />
+export const Template: StoryFn<typeof AddressIcon> = args => (
+  <AddressIcon {...args} />
+)

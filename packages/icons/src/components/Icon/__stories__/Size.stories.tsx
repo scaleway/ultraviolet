@@ -1,21 +1,21 @@
 import type { Decorator } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { Eye } from '..'
+import { EyeIcon } from '..'
 
-export const Size = (args: ComponentProps<typeof Eye>) => (
+export const Size = (args: ComponentProps<typeof EyeIcon>) => (
   <Stack>
     <Stack direction="row" alignItems="center" gap={3}>
-      <Eye size="small" {...args} /> small
+      <EyeIcon size="small" {...args} /> small
     </Stack>
     <Stack direction="row" gap={3} alignItems="center">
-      <Eye size="large" {...args} /> large
+      <EyeIcon size="large" {...args} /> large
     </Stack>
     <Stack direction="row" gap={3} alignItems="center">
-      <Eye size="xlarge" {...args} /> xlarge
+      <EyeIcon size="xlarge" {...args} /> xlarge
     </Stack>
     <Stack direction="row" gap={3} alignItems="center">
-      <Eye size="xxlarge" {...args} /> xxlarge
+      <EyeIcon size="xxlarge" {...args} /> xxlarge
     </Stack>
   </Stack>
 )
