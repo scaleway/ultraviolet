@@ -1,5 +1,5 @@
 import type { Decorator } from '@storybook/react'
-import { Stack } from '@ultraviolet/ui'
+import { Snippet, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import * as Icon from '..'
 
@@ -8,10 +8,10 @@ export const Name = (args: ComponentProps<(typeof Icon)['AddressIcon']>) =>
     const FoundIcon = Icon[name as keyof typeof Icon]
 
     return (
-      <div>
+      <Stack direction="row" gap={1} alignItems="center">
         <FoundIcon {...args} key={name} />
-        &nbsp;{name}
-      </div>
+        <Snippet>{`import { ${name} } from '@ultraviolet/icons'`}</Snippet>
+      </Stack>
     )
   })
 
