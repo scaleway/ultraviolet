@@ -143,6 +143,7 @@ export const ThemeGenerator = () => {
               required: () => '',
               maxDate: () => '',
               minDate: () => '',
+              isInteger: () => '',
             }}
           >
             <FormContent />

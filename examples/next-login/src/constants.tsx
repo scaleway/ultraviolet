@@ -13,4 +13,15 @@ export const mockErrors: FormErrors = {
   required: () => 'This field is required',
   max: ({ max }) => `This field is too high (maximum is : ${max})`,
   min: ({ min }) => `This field is too low (minimum is: ${min})`,
+  isInteger: ({ isInteger }) => {
+    if (typeof isInteger === 'number') {
+      if (Number.isInteger(isInteger)) {
+        return 'This field should be a decimal number'
+      }
+
+      return 'This field should be a whole number'
+    }
+
+    return 'This field should be a number'
+  },
 }
