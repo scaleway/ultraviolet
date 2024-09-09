@@ -12,7 +12,7 @@ type FAQProps = {
   description: string
   productIconName?: PascalToCamelCaseWithoutSuffix<
     keyof typeof ProductIcon,
-    'Icon'
+    'ProductIcon'
   >
   illustrationText?: number | string
   notes?: string

@@ -11,6 +11,8 @@ export type RemoveSuffix<
  * Their names being `AddressIcon` but we might need to have `address` as the prop name.
  */
 export type PascalToCamelCaseWithoutSuffix<
-  S extends string,
+  T extends string,
   Suffix extends string,
-> = PascalToCamelCase<RemoveSuffix<S, Suffix>>
+> = T extends `${infer Prefix}${Suffix}`
+  ? `${PascalToCamelCase<Prefix extends `${infer First}${infer Rest}` ? `${First}${Rest}` : never>}`
+  : never
