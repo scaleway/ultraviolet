@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.8.0
+
+### Minor Changes
+
+- [#4172](https://github.com/scaleway/ultraviolet/pull/4172) [`919cbd0`](https://github.com/scaleway/ultraviolet/commit/919cbd0e1e3c7d5050b09fd63347d7c2f621152c) Thanks [@matthprost](https://github.com/matthprost)! - Improve accessibility focus for `<SelectableCard />` and `<SwitchButton />`
+
+### Patch Changes
+
+- [#4202](https://github.com/scaleway/ultraviolet/pull/4202) [`d7c6363`](https://github.com/scaleway/ultraviolet/commit/d7c6363215f76c6e1be9b6aa6b2cedcc65f7e7f1) Thanks [@matthprost](https://github.com/matthprost)! - Improve validation of `<NumberInputFieldV2 />` by checking if the step is an integer and so the value
+
+- Updated dependencies [[`919cbd0`](https://github.com/scaleway/ultraviolet/commit/919cbd0e1e3c7d5050b09fd63347d7c2f621152c)]:
+  - @ultraviolet/ui@1.69.0
+
 ## 3.7.5
 
 ### Patch Changes
