@@ -4,6 +4,7 @@ import { useController } from 'react-hook-form'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
+import { isInteger } from '../../validators/isInteger'
 
 type NumberInputV2Props<
   TFieldValues extends FieldValues,
@@ -86,10 +87,7 @@ export const NumberInputFieldV2 = <
       required,
       validate: {
         ...validate,
-        isInteger: value =>
-          Number.isInteger(step)
-            ? Number.isInteger(value) && Number.isInteger(value)
-            : !Number.isInteger(value) && !Number.isInteger(value),
+        isInteger: isInteger(step),
       },
     },
   })
