@@ -1,4 +1,4 @@
-import { Network } from '@ultraviolet/icons/category'
+import { NetworkCategoryIcon } from '@ultraviolet/icons/category'
 import { Badge } from '../../Badge'
 import { Bullet } from '../../Bullet'
 import { Text } from '../../Text'
@@ -11,7 +11,7 @@ const reactNeptune = (
 
 const optionalInfo1 = <Badge>Optional info</Badge>
 const optionalInfo2 = <Bullet text="1" />
-const optionalInfo3 = <Network />
+const optionalInfo3 = <NetworkCategoryIcon />
 const optionalInfo41 = (
   <Text as="span" variant="caption">
     12

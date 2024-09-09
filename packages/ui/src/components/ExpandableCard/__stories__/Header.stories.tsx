@@ -1,5 +1,5 @@
 import type { Decorator, StoryFn } from '@storybook/react'
-import { Kubernetes } from '@ultraviolet/icons/product/Kubernetes'
+import { KubernetesProductIcon } from '@ultraviolet/icons/product'
 import { ExpandableCard } from '..'
 import { Button, MenuV2, Stack, Text } from '../..'
 
@@ -16,7 +16,7 @@ export const Header: StoryFn<typeof ExpandableCard> = () => (
           width="100%"
         >
           <Stack direction="row" gap={1} alignItems="center">
-            <Kubernetes />
+            <KubernetesProductIcon />
             <div>
               <ExpandableCard.Title>A more complex header</ExpandableCard.Title>
               <Text as="p" variant="caption">

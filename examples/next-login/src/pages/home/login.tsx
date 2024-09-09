@@ -1,5 +1,5 @@
 import { Text, Link, Stack } from '@ultraviolet/ui'
-import { Id } from '@ultraviolet/icons'
+import { IdIcon } from '@ultraviolet/icons'
 import {
   Form,
   TextInputField,
@@ -56,7 +56,7 @@ const LogIn = () => {
     <StyledLoginContainer>
       <Form methods={methods} errors={mockErrors} onSubmit={handleSubmit}>
         <Stack gap={1} alignItems="center">
-          <Id size="1.7em" />
+          <IdIcon size="1.7em" />
           <Text as="h1" variant="heading">
             Login form
           </Text>

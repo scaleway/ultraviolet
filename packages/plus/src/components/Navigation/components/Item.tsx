@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import * as CategoryIcon from '@ultraviolet/icons/category'
-import { Console } from '@ultraviolet/icons/category'
+import { ConsoleCategoryIcon } from '@ultraviolet/icons/category'
 import { Icon } from '@ultraviolet/icons/legacy'
 import {
   Badge,
@@ -29,7 +29,7 @@ import {
   useMemo,
   useReducer,
 } from 'react'
-import type { PascalToCamelCase } from '../../../types'
+import type { PascalToCamelCaseWithoutSuffix } from '../../../types'
 import { useNavigation } from '../NavigationProvider'
 import { ANIMATION_DURATION, shrinkHeight } from '../constants'
 import type { PinUnPinType } from '../types'
@@ -262,9 +262,12 @@ type ItemProps = {
   /**
    * Sets a category icon on the left of the item
    */
-  categoryIcon?: PascalToCamelCase<keyof typeof CategoryIcon>
+  categoryIcon?: PascalToCamelCaseWithoutSuffix<
+    keyof typeof CategoryIcon,
+    'CategoryIcon'
+  >
   categoryIconVariant?: ComponentProps<
-    (typeof CategoryIcon)['Baremetal']
+    (typeof CategoryIcon)['BaremetalCategoryIcon']
   >['variant']
   /**
    * The label of the item that will be shown.
@@ -453,8 +456,9 @@ export const Item = ({
 
   const CategoryIconUsed = categoryIcon
     ? CategoryIcon[
-        (categoryIcon.charAt(0).toUpperCase() +
-          categoryIcon.slice(1)) as keyof typeof CategoryIcon
+        `${
+          categoryIcon.charAt(0).toUpperCase() + categoryIcon.slice(1)
+        }CategoryIcon` as keyof typeof CategoryIcon
       ]
     : null
 
@@ -758,7 +762,9 @@ export const Item = ({
                     variant={active ? 'primary' : categoryIconVariant}
                   />
                 ) : (
-                  <Console variant={active ? 'primary' : categoryIconVariant} />
+                  <ConsoleCategoryIcon
+                    variant={active ? 'primary' : categoryIconVariant}
+                  />
                 )}
               </Stack>
             </Button>

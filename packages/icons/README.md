@@ -16,12 +16,12 @@ You can then add `ThemeProvider` to your applications and use the provided theme
 
 ```tsx
 import { ThemeProvider } from '@emotion/react'
-import { ProductIcon } from '@ultraviolet/icons'
+import { SdkGoProductIcon } from '@ultraviolet/icons/product'
 import { consoleLightTheme } from '@ultraviolet/themes'
 
 const App = () => (
   <ThemeProvider theme={consoleLightTheme}>
-    <ProductIcon name="sdkGo" size="medium" variant="primary"/>
+    <SdkGoProductIcon size="medium" variant="primary"/>
   </ThemeProvider>
 )
 ```

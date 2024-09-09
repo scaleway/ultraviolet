@@ -1,10 +1,13 @@
-import { Support } from '@ultraviolet/icons/product'
+import { SupportProductIcon } from '@ultraviolet/icons/product'
 import { Avatar, Text } from '@ultraviolet/ui'
 import { Conversation } from '..'
 
 export const Message = () => (
   <>
-    <Conversation.Message avatar={<Support size="medium" />} align="left">
+    <Conversation.Message
+      avatar={<SupportProductIcon size="medium" />}
+      align="left"
+    >
       <Text variant="body" sentiment="neutral" as="div">
         Message left
       </Text>

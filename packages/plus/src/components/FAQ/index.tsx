@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import * as ProductIcon from '@ultraviolet/icons/product'
 import { Bullet, Card, Stack, Text } from '@ultraviolet/ui'
-import type { PascalToCamelCase } from '../../types'
+import type { PascalToCamelCaseWithoutSuffix } from '../../types'
 
 const StyledCard = styled(Card)`
   padding: ${({ theme }) => theme.space['2']};
@@ -10,7 +10,10 @@ const StyledCard = styled(Card)`
 
 type FAQProps = {
   description: string
-  productIconName?: PascalToCamelCase<keyof typeof ProductIcon>
+  productIconName?: PascalToCamelCaseWithoutSuffix<
+    keyof typeof ProductIcon,
+    'ProductIcon'
+  >
   illustrationText?: number | string
   notes?: string
   title: string
@@ -25,8 +28,9 @@ export const FAQ = ({
 }: FAQProps) => {
   const ProductIconUsed = productIconName
     ? ProductIcon[
-        (productIconName.charAt(0).toUpperCase() +
-          productIconName.slice(1)) as keyof typeof ProductIcon
+        `${
+          productIconName.charAt(0).toUpperCase() + productIconName.slice(1)
+        }Icon` as keyof typeof ProductIcon
       ]
     : null
 
