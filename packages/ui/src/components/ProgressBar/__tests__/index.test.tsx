@@ -19,7 +19,7 @@ describe('ProgressBar', () => {
   it(`renders correctly when value < 0`, () =>
     shouldMatchEmotionSnapshot(<ProgressBar value={-250} />))
 
-  it(`renders correctly with label, label description and showprogress, direction column`, () =>
+  it(`renders correctly with label, labelDescription and showProgress, direction column`, () =>
     shouldMatchEmotionSnapshot(
       <ProgressBar
         value={40}
@@ -29,7 +29,7 @@ describe('ProgressBar', () => {
       />,
     ))
 
-  it(`renders correctly with label, label description and showprogress, direction row`, () =>
+  it(`renders correctly with label, labelDescription and showProgress, direction row`, () =>
     shouldMatchEmotionSnapshot(
       <ProgressBar
         value={40}
@@ -40,12 +40,12 @@ describe('ProgressBar', () => {
       />,
     ))
 
-  it(`renders correctly with only showprogress, direction row`, () =>
+  it(`renders correctly with only showProgress, direction row`, () =>
     shouldMatchEmotionSnapshot(
       <ProgressBar value={40} showProgress direction="row" />,
     ))
 
-  it(`renders correctly with only showprogress, direction column`, () =>
+  it(`renders correctly with only showProgress, direction column`, () =>
     shouldMatchEmotionSnapshot(
       <ProgressBar value={40} showProgress direction="column" />,
     ))

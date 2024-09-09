@@ -114,7 +114,14 @@ export const ProgressBar = ({
               {label}
             </Text>
           ) : null}
-          {labelDescription ?? null}
+          {typeof labelDescription === 'string' ? (
+            <Text as="label" variant="bodySmall">
+              {labelDescription}
+            </Text>
+          ) : null}
+          {labelDescription && typeof labelDescription !== 'string'
+            ? labelDescription
+            : null}
         </Stack>
         {showProgress ? (
           <Text
@@ -123,7 +130,7 @@ export const ProgressBar = ({
             sentiment="neutral"
             placement="right"
           >
-            {value} %
+            {`${Math.max(0, Math.min(100, value))}%`}
           </Text>
         ) : null}
       </Stack>
@@ -133,7 +140,13 @@ export const ProgressBar = ({
         <Text as="label" variant="bodySmallStrong" sentiment="neutral">
           {label}
         </Text>
-        {labelDescription}
+        {typeof labelDescription === 'string' ? (
+          <Text as="label" variant="bodySmall">
+            {labelDescription}
+          </Text>
+        ) : (
+          labelDescription
+        )}
       </Stack>
     ) : null}
     {label && direction === 'row' && !labelDescription ? (

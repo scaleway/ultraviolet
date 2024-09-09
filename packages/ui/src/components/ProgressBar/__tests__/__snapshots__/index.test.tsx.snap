@@ -140,7 +140,7 @@ exports[`ProgressBar > renders correctly when value > 100 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ProgressBar > renders correctly with label, label description and showprogress, direction column 1`] = `
+exports[`ProgressBar > renders correctly with label, labelDescription and showProgress, direction column 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -224,6 +224,17 @@ exports[`ProgressBar > renders correctly with label, label description and showp
 }
 
 .emotion-8 {
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-10 {
   color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -236,7 +247,7 @@ exports[`ProgressBar > renders correctly with label, label description and showp
   text-align: right;
 }
 
-.emotion-10 {
+.emotion-12 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -247,7 +258,7 @@ exports[`ProgressBar > renders correctly with label, label description and showp
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-14 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -276,23 +287,27 @@ exports[`ProgressBar > renders correctly with label, label description and showp
           >
             Label
           </label>
-          Label
+          <label
+            class="emotion-8 emotion-7"
+          >
+            Label
+          </label>
         </div>
         <label
-          class="emotion-8 emotion-7"
+          class="emotion-10 emotion-7"
         >
-          40 %
+          40%
         </label>
       </div>
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-10 emotion-11"
+        class="emotion-12 emotion-13"
         role="progressbar"
       >
         <div
-          class="emotion-12 emotion-13"
+          class="emotion-14 emotion-15"
         />
       </div>
     </div>
@@ -300,7 +315,7 @@ exports[`ProgressBar > renders correctly with label, label description and showp
 </DocumentFragment>
 `;
 
-exports[`ProgressBar > renders correctly with label, label description and showprogress, direction row 1`] = `
+exports[`ProgressBar > renders correctly with label, labelDescription and showProgress, direction row 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -361,6 +376,17 @@ exports[`ProgressBar > renders correctly with label, label description and showp
 }
 
 .emotion-6 {
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -371,7 +397,7 @@ exports[`ProgressBar > renders correctly with label, label description and showp
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-10 {
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -383,7 +409,7 @@ exports[`ProgressBar > renders correctly with label, label description and showp
   width: 40%;
 }
 
-.emotion-10 {
+.emotion-12 {
   color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -409,21 +435,25 @@ exports[`ProgressBar > renders correctly with label, label description and showp
         >
           Label
         </label>
-        Label
+        <label
+          class="emotion-6 emotion-5"
+        >
+          Label
+        </label>
       </div>
       <div
         aria-valuemax="100"
         aria-valuemin="0"
         aria-valuenow="40"
-        class="emotion-6 emotion-7"
+        class="emotion-8 emotion-9"
         role="progressbar"
       >
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
         />
       </div>
       <label
-        class="emotion-10 emotion-5"
+        class="emotion-12 emotion-5"
       >
         40%
       </label>
@@ -573,7 +603,7 @@ exports[`ProgressBar > renders correctly with only label, direction column 1`] =
 </DocumentFragment>
 `;
 
-exports[`ProgressBar > renders correctly with only showprogress, direction column 1`] = `
+exports[`ProgressBar > renders correctly with only showProgress, direction column 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -696,7 +726,7 @@ exports[`ProgressBar > renders correctly with only showprogress, direction colum
         <label
           class="emotion-6 emotion-7"
         >
-          40 %
+          40%
         </label>
       </div>
       <div
@@ -715,7 +745,7 @@ exports[`ProgressBar > renders correctly with only showprogress, direction colum
 </DocumentFragment>
 `;
 
-exports[`ProgressBar > renders correctly with only showprogress, direction row 1`] = `
+exports[`ProgressBar > renders correctly with only showProgress, direction row 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
