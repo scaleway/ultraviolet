@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.69.0
+
+### Minor Changes
+
+- [#4172](https://github.com/scaleway/ultraviolet/pull/4172) [`919cbd0`](https://github.com/scaleway/ultraviolet/commit/919cbd0e1e3c7d5050b09fd63347d7c2f621152c) Thanks [@matthprost](https://github.com/matthprost)! - Improve accessibility focus for `<SelectableCard />` and `<SwitchButton />`
+
+### Patch Changes
+
+- Updated dependencies [[`5dcee9d`](https://github.com/scaleway/ultraviolet/commit/5dcee9def0850a6395bd2bcc69fe92143c8b53c4)]:
+  - @ultraviolet/icons@3.0.0
+
 ## 1.68.1
 
 ### Patch Changes

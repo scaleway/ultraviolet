@@ -1,5 +1,54 @@
 # Change Log
 
+## 3.0.0
+
+### Major Changes
+
+- [#4177](https://github.com/scaleway/ultraviolet/pull/4177) [`5dcee9d`](https://github.com/scaleway/ultraviolet/commit/5dcee9def0850a6395bd2bcc69fe92143c8b53c4) Thanks [@matthprost](https://github.com/matthprost)! - ! BREAKING CHANGES !
+
+  New big change in icons, we added a new way to import icons. You can now directly import the icon name through `@ultraviolet/icons`.
+
+  ```tsx
+  // Before
+  import { Icon } from "@ultraviolet/icons";
+
+  const MyComponent = () => (
+    <Icon name="address" sentiment="danger" size="small" />
+  );
+  ```
+
+  ```tsx
+  // Now
+  import { AddressIcon } from "@ultraviolet/icons";
+  // OR
+  import { AddressIcon } from "@ultraviolet/icons/AddressIcon";
+
+  const MyComponent = () => <Address sentiment="danger" size="small" />;
+  ```
+
+  This change will make it easier to use icons in your project and reduce the bundle size.
+  Exact same pattern is changed for `<CategoryIcon />` and `<ProductIcon />`:
+
+  ```tsx
+  // Before
+  import { CategoryIcon } from "@ultraviolet/icons";
+
+  // Now
+  import { BaremetalCategoryIcon } from "@ultraviolet/icons/category";
+  // OR
+  import { BaremetalCategoryIcon } from "@ultraviolet/icons/category/BaremetalCategoryIcon";
+  ```
+
+  ```tsx
+  // Before
+  import { ProductIcon } from "@ultraviolet/icons";
+
+  // Now
+  import { InstanceProductIcon } from "@ultraviolet/icons/product";
+  // OR
+  import { InstanceProductIcon } from "@ultraviolet/icons/product/InstanceProductIcon";
+  ```
+
 ## 2.17.0
 
 ### Minor Changes
