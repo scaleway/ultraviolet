@@ -30,7 +30,7 @@ export const FAQ = ({
     ? ProductIcon[
         `${
           productIconName.charAt(0).toUpperCase() + productIconName.slice(1)
-        }Icon` as keyof typeof ProductIcon
+        }ProductIcon` as keyof typeof ProductIcon
       ]
     : null
 
