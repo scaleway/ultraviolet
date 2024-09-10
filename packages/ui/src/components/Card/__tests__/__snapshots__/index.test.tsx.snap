@@ -1,5 +1,65 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Card > renders correctly with active 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.emotion-0[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-disabled="false"
+      data-is-active="true"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card > renders correctly with active and disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.emotion-0[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-disabled="true"
+      data-is-active="true"
+    >
+      Hello
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Card > renders correctly with advanced header 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -58,6 +118,161 @@ exports[`Card > renders correctly with advanced header 1`] = `
         data-disabled="false"
         data-is-active="false"
       >
+        Hello
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card > renders correctly with advanced header and subHeader 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.emotion-2[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-2[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-disabled="false"
+    >
+      <h2>
+        Advanced Title
+      </h2>
+      <div
+        class="emotion-2 emotion-3"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <h2>
+            Advanced subHeader
+          </h2>
+          Hello
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card > renders correctly with advanced subHeader 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.emotion-0[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-disabled="false"
+      data-is-active="false"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <h2>
+          Advanced subHeader
+        </h2>
         Hello
       </div>
     </div>
@@ -186,6 +401,7 @@ exports[`Card > renders correctly with disabled and header 1`] = `
 }
 
 .emotion-2 {
+  color: #b5b7bd;
   font-size: 25px;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
@@ -217,11 +433,11 @@ exports[`Card > renders correctly with disabled and header 1`] = `
       class="emotion-0 emotion-1"
       data-disabled="true"
     >
-      <h2
+      <h4
         class="emotion-2 emotion-3"
       >
         Title
-      </h2>
+      </h4>
       <div
         class="emotion-4 emotion-5"
         data-disabled="true"
@@ -264,6 +480,7 @@ exports[`Card > renders correctly with header 1`] = `
 }
 
 .emotion-2 {
+  color: #222638;
   font-size: 25px;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
@@ -295,11 +512,11 @@ exports[`Card > renders correctly with header 1`] = `
       class="emotion-0 emotion-1"
       data-disabled="false"
     >
-      <h2
+      <h4
         class="emotion-2 emotion-3"
       >
         Title
-      </h2>
+      </h4>
       <div
         class="emotion-4 emotion-5"
         data-disabled="false"
@@ -312,7 +529,130 @@ exports[`Card > renders correctly with header 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Card > renders correctly with isActive 1`] = `
+exports[`Card > renders correctly with header and subHeader 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  color: #222638;
+  font-size: 25px;
+  font-family: Space Grotesk,Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.emotion-4[data-is-active='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-4[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  color: #3f4250;
+  font-size: 21px;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-disabled="false"
+    >
+      <h4
+        class="emotion-2 emotion-3"
+      >
+        Main title
+      </h4>
+      <div
+        class="emotion-4 emotion-5"
+        data-disabled="false"
+        data-is-active="false"
+      >
+        <div
+          class="emotion-6 emotion-7"
+        >
+          <h5
+            class="emotion-8 emotion-3"
+          >
+            Title
+          </h5>
+          Hello
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card > renders correctly with subHeader 1`] = `
 <DocumentFragment>
   .emotion-0 {
   border: 1px solid #d9dadd;
@@ -328,15 +668,59 @@ exports[`Card > renders correctly with isActive 1`] = `
   border: 1px solid #e9eaeb;
 }
 
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  color: #3f4250;
+  font-size: 21px;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
     <div
       class="emotion-0 emotion-1"
       data-disabled="false"
-      data-is-active="true"
+      data-is-active="false"
     >
-      Hello
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <h5
+          class="emotion-4 emotion-5"
+        >
+          Title
+        </h5>
+        Hello
+      </div>
     </div>
   </div>
 </DocumentFragment>

@@ -8,6 +8,7 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Header } from './Header.stories'
+export { SubHeader } from './SubHeader.stories'
 export { AdvancedHeader } from './AdvancedHeader.stories'
-export { IsActive } from './IsActive.stories'
+export { Active } from './Active.stories'
 export { Disabled } from './Disabled.stories'

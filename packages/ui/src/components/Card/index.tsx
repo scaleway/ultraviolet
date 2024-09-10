@@ -10,10 +10,15 @@ type CardProps = {
    * Header can be a string but also a component if you need more complex header.
    */
   header?: ReactNode
+  subHeader?: ReactNode
   /**
-   * isActive enable a primary style on Card component for when you need to highlight it.
+   * @deprecated use `active` property instead
    */
   isActive?: boolean
+  /**
+   * active enable a primary style on Card component for when you need to highlight it.
+   */
+  active?: boolean
   disabled?: boolean
   className?: string
   'data-testid'?: string
@@ -46,8 +51,10 @@ export const Card = forwardRef(
   (
     {
       header,
+      subHeader,
       disabled = false,
       isActive = false,
+      active = false,
       children,
       className,
       'data-testid': dataTestId,
@@ -63,25 +70,70 @@ export const Card = forwardRef(
         ref={ref}
       >
         {typeof header === 'string' ? (
-          <Text variant="heading" as="h2" disabled={disabled}>
+          <Text
+            variant="heading"
+            as="h4"
+            disabled={disabled}
+            sentiment="neutral"
+            prominence="strong"
+          >
             {header}
           </Text>
         ) : (
           header
         )}
-        <BorderedBox data-is-active={isActive} data-disabled={disabled}>
-          {children}
+        <BorderedBox
+          data-is-active={isActive || active}
+          data-disabled={disabled}
+        >
+          {subHeader ? (
+            <Stack gap={2}>
+              {typeof subHeader === 'string' ? (
+                <Text
+                  as="h5"
+                  variant="headingSmallStrong"
+                  sentiment="neutral"
+                  disabled={disabled}
+                >
+                  {subHeader}
+                </Text>
+              ) : (
+                subHeader
+              )}
+              {children}
+            </Stack>
+          ) : (
+            children
+          )}
         </BorderedBox>
       </StyledStack>
     ) : (
       <BorderedBox
-        data-is-active={isActive}
+        data-is-active={active || isActive}
         data-disabled={disabled}
         className={className}
         data-testid={dataTestId}
         ref={ref}
       >
-        {children}
+        {subHeader ? (
+          <Stack gap={2}>
+            {typeof subHeader === 'string' ? (
+              <Text
+                as="h5"
+                variant="headingSmallStrong"
+                sentiment="neutral"
+                disabled={disabled}
+              >
+                {subHeader}
+              </Text>
+            ) : (
+              subHeader
+            )}
+            {children}
+          </Stack>
+        ) : (
+          children
+        )}
       </BorderedBox>
     ),
 )
