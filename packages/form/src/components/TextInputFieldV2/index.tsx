@@ -26,6 +26,7 @@ export const TextInputField = <
   className,
   tabIndex,
   onChange,
+  onChangeValue,
   placeholder,
   disabled = false,
   readOnly = false,
@@ -114,6 +115,7 @@ export const TextInputField = <
       onChange={event => {
         field.onChange(event)
         onChange?.(event)
+        onChangeValue?.(event.target.value)
       }}
       onFocus={event => {
         onFocus?.(event)
