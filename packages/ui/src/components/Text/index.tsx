@@ -5,7 +5,7 @@ import type { ElementType, ReactNode } from 'react'
 import { useRef } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
-import type { Color } from '../../theme'
+import type { Color, ExtendedColor } from '../../theme'
 import { typography } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
@@ -40,7 +40,7 @@ const generateStyles = ({
   prominence: ProminenceProps
   theme: Theme
   variant: TextVariant
-  sentiment?: Color
+  sentiment?: ExtendedColor
   oneLine: boolean
   disabled: boolean
   italic: boolean
@@ -52,14 +52,22 @@ const generateStyles = ({
       ? capitalize(PROMINENCES.default)
       : capitalize(PROMINENCES[prominence])
 
-  const themeColor = sentiment ? theme.colors[sentiment] : undefined
+  const isSentimentMonochrome = sentiment === 'black' || sentiment === 'white'
+
+  const themeColor =
+    sentiment && !isSentimentMonochrome ? theme.colors[sentiment] : undefined
+
   const text = `text${definedProminence}${
     disabled ? 'Disabled' : ''
   }` as keyof typeof themeColor
-  const textColor = sentiment ? theme.colors[sentiment][text] : undefined
+
+  const textColor =
+    sentiment && !isSentimentMonochrome
+      ? theme.colors[sentiment][text]
+      : undefined
 
   return `
-    ${sentiment ? `color: ${textColor};` : ''}
+    ${sentiment ? `color: ${!isSentimentMonochrome ? textColor : theme.colors.other.monochrome[sentiment].text};` : ''}
 
     font-size: ${theme.typography[variant].fontSize};
     font-family: ${theme.typography[variant].fontFamily};
@@ -91,7 +99,7 @@ type TextProps = {
    * @deprecated use `sentiment` property instead
    */
   color?: Color
-  sentiment?: Color
+  sentiment?: ExtendedColor
   prominence?: ProminenceProps
   as: ElementType
   oneLine?: boolean
@@ -119,7 +127,7 @@ const StyledText = styled('div', {
     ].includes(prop),
 })<{
   placement?: PlacementProps
-  sentiment?: Color
+  sentiment?: ExtendedColor
   prominence: ProminenceProps
   variant: TextVariant
   oneLine: boolean

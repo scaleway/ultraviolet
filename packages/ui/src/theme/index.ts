@@ -35,6 +35,8 @@ type Color = Extract<
   | 'info'
 >
 
+type ExtendedColor = Color | 'white' | 'black'
+
 const SENTIMENTS = [
   'primary',
   'secondary',
@@ -49,7 +51,7 @@ const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(
   sentiment => sentiment !== 'neutral',
 )
 
-export type { SCWUITheme, UltravioletUITheme, Color }
+export type { SCWUITheme, UltravioletUITheme, Color, ExtendedColor }
 
 export {
   colors,

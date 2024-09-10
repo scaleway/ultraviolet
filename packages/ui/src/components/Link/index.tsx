@@ -10,7 +10,7 @@ import type {
 } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import type { Color } from '../../theme'
+import type { ExtendedColor } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
 
@@ -31,7 +31,7 @@ type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
-  sentiment?: Color
+  sentiment?: ExtendedColor
   prominence?: ProminenceProps
   size?: LinkSizes
   iconPosition?: LinkIconPosition
@@ -59,7 +59,7 @@ const StyledLink = styled('a', {
   shouldForwardProp: prop =>
     !['sentiment', 'iconPosition', 'as', 'oneLine'].includes(prop),
 })<{
-  sentiment: Color
+  sentiment: ExtendedColor
   prominence?: ProminenceProps
   variant: 'captionStrong' | 'bodySmallStrong' | 'bodyStrong'
   iconPosition?: LinkIconPosition
@@ -69,11 +69,17 @@ const StyledLink = styled('a', {
   border: none;
   padding: 0;
   color: ${({ theme, sentiment, prominence }) => {
-    const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
-    const themeColor = theme.colors[sentiment]
-    const text = `text${definedProminence}` as keyof typeof themeColor
+    const isMonochrome = sentiment === 'white' || sentiment === 'black'
 
-    return theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
+    if (!isMonochrome) {
+      const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
+      const themeColor = theme.colors[sentiment]
+      const text = `text${definedProminence}` as keyof typeof themeColor
+
+      return theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
+    }
+
+    return theme.colors.other.monochrome[sentiment].text
   }};
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -127,17 +133,30 @@ const StyledLink = styled('a', {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     ${({ theme, sentiment, prominence }) => {
-      const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
-      const themeColor = theme.colors[sentiment]
-      const text = `text${definedProminence}Hover` as keyof typeof themeColor
+      const isMonochrome = sentiment === 'white' || sentiment === 'black'
 
-      return `
+      if (!isMonochrome) {
+        const definedProminence = capitalize(
+          PROMINENCES[prominence ?? 'default'],
+        )
+
+        const themeColor = theme.colors[sentiment]
+
+        const text = `text${definedProminence}Hover` as keyof typeof themeColor
+
+        return `
         color: ${
           theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
         };
         text-decoration-color: ${
           theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
         };`
+      }
+
+      return `
+        color: ${theme.colors.other.monochrome[sentiment].textHover};
+        text-decoration-color: ${theme.colors.other.monochrome[sentiment].textHover};
+      `
     }}
   }
 
@@ -148,8 +167,15 @@ const StyledLink = styled('a', {
 
   &:hover::after,
   &:focus::after {
-    background-color: ${({ theme, sentiment }) =>
-      theme.colors[sentiment]?.text ?? theme.colors.neutral.text};
+    background-color: ${({ theme, sentiment }) => {
+      const isMonochrome = sentiment === 'white' || sentiment === 'black'
+
+      if (!isMonochrome) {
+        return theme.colors[sentiment]?.text ?? theme.colors.neutral.text
+      }
+
+      return theme.colors.other.monochrome[sentiment].text
+    }};
   }
 
   &:active {

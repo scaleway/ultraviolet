@@ -1,7 +1,20 @@
+import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { Button, buttonVariants } from '..'
 import { Stack, Table, Text } from '../..'
+import type { ExtendedColor } from '../../../theme'
 import { SENTIMENTS } from '../../../theme'
+
+const StyledRow = styled(Table.Row, {
+  shouldForwardProp: prop => !['sentiment'].includes(prop),
+})<{ sentiment: ExtendedColor }>`
+  background: ${({ sentiment }) => {
+    if (sentiment === 'white') return 'black'
+    if (sentiment === 'black') return 'white'
+
+    return 'none'
+  }};
+`
 
 const COLUMNS = [
   { label: '' },
@@ -16,10 +29,18 @@ export const Showcase: StoryFn<typeof Button> = args => {
   return (
     <Table columns={COLUMNS}>
       <Table.Body>
-        {SENTIMENTS.map(sentiment => (
-          <Table.Row key={sentiment} id={sentiment}>
+        {([...SENTIMENTS, 'white', 'black'] as const).map(sentiment => (
+          <StyledRow key={sentiment} id={sentiment} sentiment={sentiment}>
             <Table.Cell>
-              <Text as="span" variant="bodyStrong">
+              <Text
+                as="span"
+                variant="bodyStrong"
+                sentiment={
+                  sentiment === 'white' || sentiment === 'black'
+                    ? sentiment
+                    : undefined
+                }
+              >
                 {sentiment.toUpperCase()}
               </Text>
             </Table.Cell>
@@ -37,9 +58,18 @@ export const Showcase: StoryFn<typeof Button> = args => {
                 </Stack>
               </Table.Cell>
             ))}
-          </Table.Row>
+          </StyledRow>
         ))}
       </Table.Body>
     </Table>
   )
+}
+
+Showcase.parameters = {
+  docs: {
+    description: {
+      story:
+        "Button can take different `variant` and `sentiment` props creating all those variations.\n\n **Note that `white` and `black` sentiments will always have those colors no matter the theme**. Those are meant to be used on a background that doesn't change based on the theme.",
+    },
+  },
 }
