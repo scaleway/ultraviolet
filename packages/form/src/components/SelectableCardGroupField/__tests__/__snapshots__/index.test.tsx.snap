@@ -132,6 +132,15 @@ exports[`SelectableCardField > should render correctly 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-10[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-10[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
 .emotion-10:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
@@ -357,6 +366,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
                 class="emotion-10 emotion-11"
                 data-checked="false"
                 data-disabled="false"
+                data-has-icon="false"
+                data-has-illustration="false"
                 data-has-label="true"
                 data-type="radio"
                 role="button"
@@ -418,6 +429,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
                 class="emotion-10 emotion-11"
                 data-checked="false"
                 data-disabled="false"
+                data-has-icon="false"
+                data-has-illustration="false"
                 data-has-label="true"
                 data-type="radio"
                 role="button"
@@ -614,6 +627,15 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-10[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-10[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
@@ -965,6 +987,8 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
                 class="emotion-10 emotion-11"
                 data-checked="true"
                 data-disabled="false"
+                data-has-icon="false"
+                data-has-illustration="false"
                 data-has-label="true"
                 data-testid="checked"
                 data-type="checkbox"
@@ -1172,6 +1196,15 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
   cursor: not-allowed;
 }
 
+.emotion-10[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-10[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
 .emotion-10:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
@@ -1397,6 +1430,8 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
                 class="emotion-10 emotion-11"
                 data-checked="true"
                 data-disabled="false"
+                data-has-icon="false"
+                data-has-illustration="false"
                 data-has-label="true"
                 data-testid="checked"
                 data-type="radio"
@@ -1595,6 +1630,15 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-10[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-10[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1946,6 +1990,8 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                 class="emotion-10 emotion-11"
                 data-checked="false"
                 data-disabled="false"
+                data-has-icon="false"
+                data-has-illustration="false"
                 data-has-label="true"
                 data-type="checkbox"
                 role="button"
@@ -2014,6 +2060,8 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                 class="emotion-10 emotion-11"
                 data-checked="false"
                 data-disabled="false"
+                data-has-icon="false"
+                data-has-illustration="false"
                 data-has-label="true"
                 data-type="checkbox"
                 role="button"

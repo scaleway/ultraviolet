@@ -55,6 +55,15 @@ exports[`SelectableCardField > should render correctly 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
@@ -294,6 +303,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
         data-checked="false"
         data-disabled="false"
         data-error="false"
+        data-has-icon="false"
+        data-has-illustration="false"
         data-has-label="false"
         data-type="radio"
         role="button"
@@ -410,6 +421,15 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -651,6 +671,8 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
         data-checked="true"
         data-disabled="false"
         data-error="false"
+        data-has-icon="false"
+        data-has-illustration="false"
         data-has-label="false"
         data-type="radio"
         role="button"
@@ -768,6 +790,15 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1009,6 +1040,8 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
         data-checked="false"
         data-disabled="true"
         data-error="false"
+        data-has-icon="false"
+        data-has-illustration="false"
         data-has-label="false"
         data-type="radio"
         role="button"
@@ -1125,6 +1158,15 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1366,6 +1408,8 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
         data-checked="false"
         data-disabled="false"
         data-error="true"
+        data-has-icon="false"
+        data-has-illustration="false"
         data-has-label="false"
         data-type="radio"
         role="button"
@@ -1487,6 +1531,15 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1728,6 +1781,8 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
         data-checked="true"
         data-disabled="false"
         data-error="false"
+        data-has-icon="false"
+        data-has-illustration="false"
         data-has-label="false"
         data-type="radio"
         role="button"
