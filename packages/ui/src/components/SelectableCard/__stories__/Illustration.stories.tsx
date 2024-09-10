@@ -1,8 +1,8 @@
 import type { StoryFn } from '@storybook/react'
-// @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
 import {
   appleSiliconM2Wire,
   appleSiliconWire,
+  // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
 } from '@ultraviolet/illustrations/products/appleSilicon'
 import { useState } from 'react'
 import { SelectableCard } from '..'
