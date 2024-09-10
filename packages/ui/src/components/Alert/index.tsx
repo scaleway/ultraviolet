@@ -130,7 +130,7 @@ export const Alert = ({
         justifyContent="space-between"
         gap={2}
       >
-        <Stack alignItems="start" direction="row" gap={2}>
+        <Stack alignItems="start" direction="row" gap={2} flex="1 1 auto">
           <Icon
             name={typesDefaultIcons[sentiment]}
             size={24}
@@ -138,7 +138,7 @@ export const Alert = ({
             prominence={sentiment === 'neutral' ? 'strong' : undefined}
             sentiment={sentiment}
           />
-          <TextStack gap={1.5} direction="row">
+          <TextStack gap={1.5} direction="row" flex="1 1 auto">
             {title ? (
               <Text variant="bodyStronger" as="span" sentiment={sentiment}>
                 {title}

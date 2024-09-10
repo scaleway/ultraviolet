@@ -1,20 +1,25 @@
+import { Link as UVLink } from '../../Link'
+import { Stack } from '../../Stack'
 import { Template } from './Template.stories'
 
-export const Button = Template.bind({})
+export const Link = Template.bind({})
 
-Button.args = {
+Link.args = {
   sentiment: 'info',
-  buttonText: 'More info',
-  onClickButton: () => alert('Button clicked'),
   title: 'Information',
-  children: 'This is an alert content.',
+  children: (
+    <Stack direction="row" justifyContent="space-between" flex="1 1 auto">
+      <p>You cannot create a ressource here</p>
+      <UVLink href="scaleway.com">Read more</UVLink>
+    </Stack>
+  ),
 }
 
-Button.parameters = {
+Link.parameters = {
   docs: {
     description: {
       story:
-        'Using `Button` prop you can add a custom Button and use `onClickButton` prop to handle the click event.',
+        'If you need you can add a link into the Alert component. You will need to add a Stack as children of the Alert component to align the link at the end.',
     },
   },
 }
