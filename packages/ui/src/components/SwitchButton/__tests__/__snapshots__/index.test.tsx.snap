@@ -201,6 +201,15 @@ exports[`SwitchButton > renders correctly 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-3[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-3[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
 .emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
@@ -436,6 +445,8 @@ exports[`SwitchButton > renders correctly 1`] = `
           class="emotion-2 emotion-3 emotion-4"
           data-checked="false"
           data-disabled="false"
+          data-has-icon="false"
+          data-has-illustration="false"
           data-has-label="true"
           data-type="radio"
           role="button"
@@ -497,6 +508,8 @@ exports[`SwitchButton > renders correctly 1`] = `
           class="emotion-2 emotion-3 emotion-4"
           data-checked="true"
           data-disabled="false"
+          data-has-icon="false"
+          data-has-illustration="false"
           data-has-label="true"
           data-type="radio"
           role="button"
@@ -648,6 +661,15 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-3[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-3[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
@@ -885,6 +907,8 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           class="emotion-2 emotion-3 emotion-4"
           data-checked="false"
           data-disabled="false"
+          data-has-icon="false"
+          data-has-illustration="false"
           data-has-label="true"
           data-type="radio"
           role="button"
@@ -946,6 +970,8 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           class="emotion-2 emotion-3 emotion-4"
           data-checked="true"
           data-disabled="false"
+          data-has-icon="false"
+          data-has-illustration="false"
           data-has-label="true"
           data-type="radio"
           role="button"
@@ -1097,6 +1123,15 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-3[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-3[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1334,6 +1369,8 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           class="emotion-2 emotion-3 emotion-4"
           data-checked="false"
           data-disabled="false"
+          data-has-icon="false"
+          data-has-illustration="false"
           data-has-label="true"
           data-type="radio"
           role="button"
@@ -1395,6 +1432,8 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           class="emotion-2 emotion-3 emotion-4"
           data-checked="true"
           data-disabled="false"
+          data-has-icon="false"
+          data-has-illustration="false"
           data-has-label="true"
           data-type="radio"
           role="button"
@@ -1554,6 +1593,15 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-5[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-5[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1797,6 +1845,8 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             class="emotion-4 emotion-5 emotion-6"
             data-checked="false"
             data-disabled="false"
+            data-has-icon="false"
+            data-has-illustration="false"
             data-has-label="true"
             data-type="radio"
             role="button"
@@ -1858,6 +1908,8 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             class="emotion-4 emotion-5 emotion-6"
             data-checked="true"
             data-disabled="false"
+            data-has-icon="false"
+            data-has-illustration="false"
             data-has-label="true"
             data-type="radio"
             role="button"

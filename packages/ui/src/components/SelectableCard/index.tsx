@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import * as ProductIcon from '@ultraviolet/icons/product'
 import type {
   ChangeEventHandler,
   FocusEventHandler,
@@ -7,6 +8,7 @@ import type {
   ReactNode,
 } from 'react'
 import { forwardRef, useCallback, useRef } from 'react'
+import type { PascalToCamelCaseWithoutSuffix } from '../../types'
 import { Checkbox, CheckboxContainer } from '../Checkbox'
 import { Radio, RadioStack } from '../Radio'
 import { Stack } from '../Stack'
@@ -46,6 +48,14 @@ const Container = styled(Stack)`
     cursor: not-allowed;
   }
 
+  &[data-has-illustration="true"] {
+    padding: ${({ theme }) => theme.space[0]};
+  }
+  &[data-has-icon="true"] {
+    padding: ${({ theme }) => theme.space[0]};
+    padding-right: ${({ theme }) => theme.space['2']};
+  }
+
   &:hover,
   &:active {
     &:not([data-error='true']):not([data-disabled='true']) {
@@ -60,6 +70,29 @@ const Container = styled(Stack)`
   ${RadioStack}, ${CheckboxContainer} {
     width: 100%;
   }
+`
+const StyledDiv = styled.div`
+flex:1 1 220px;
+height: auto;
+overflow: hidden;
+display: flex;
+position: relative;
+align-items: center;
+`
+
+const StyledImg = styled.img`
+object-fit: cover;
+position: absolute;
+min-width:220px;
+height: auto;
+left: ${({ theme }) => theme.space[1]};
+
+`
+
+const IllustrationStack = styled(Stack)`
+padding: ${({ theme }) => theme.space[2]};
+max-width:  calc(100% - 160px);
+flex: 0 1 auto;
 `
 
 const StyledStack = styled(Stack)`
@@ -132,6 +165,11 @@ export type SelectableCardProps = {
   tooltip?: string
   label?: ReactNode
   'data-testid'?: string
+  productIcon?: PascalToCamelCaseWithoutSuffix<
+    keyof typeof ProductIcon,
+    'ProductIcon'
+  >
+  illustration?: string
 }
 
 /**
@@ -157,10 +195,19 @@ export const SelectableCard = forwardRef(
       id,
       label,
       'data-testid': dataTestId,
+      productIcon,
+      illustration,
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const innerRef = useRef<HTMLInputElement>(null)
+    const ProductIconUsed = productIcon
+      ? ProductIcon[
+          `${
+            productIcon.charAt(0).toUpperCase() + productIcon.slice(1)
+          }ProductIcon` as keyof typeof ProductIcon
+        ]
+      : null
 
     const ParentContainer = useCallback(
       ({ children: subChildren }: { children: ReactNode }) => {
@@ -175,6 +222,39 @@ export const SelectableCard = forwardRef(
         return <Tooltip>{subChildren}</Tooltip>
       },
       [tooltip],
+    )
+    const IllustrationContainer = useCallback(
+      ({ children: subChildren }: { children: ReactNode }) => {
+        if (ProductIconUsed || illustration) {
+          return (
+            <Stack
+              flex={1}
+              direction="row"
+              justifyContent="space-between"
+              width="100%"
+              alignItems="stretch"
+            >
+              <IllustrationStack>{subChildren}</IllustrationStack>
+              <Stack justifyContent="center">
+                {ProductIconUsed ? <ProductIconUsed size="large" /> : null}{' '}
+              </Stack>
+
+              {illustration ? (
+                <StyledDiv>
+                  <StyledImg
+                    src={illustration}
+                    alt="illustration"
+                    width={220}
+                  />
+                </StyledDiv>
+              ) : null}
+            </Stack>
+          )
+        }
+
+        return subChildren
+      },
+      [ProductIconUsed, illustration],
     )
 
     const onKeyDown: KeyboardEventHandler = useCallback(
@@ -205,6 +285,8 @@ export const SelectableCard = forwardRef(
           data-testid={dataTestId}
           data-type={type}
           data-has-label={!!label}
+          data-has-illustration={!!illustration}
+          data-has-icon={!!productIcon && !illustration}
           ref={ref}
           alignItems="start"
           direction="column"
@@ -213,50 +295,52 @@ export const SelectableCard = forwardRef(
           tabIndex={disabled ? undefined : 0}
           role="button"
         >
-          {type === 'radio' ? (
-            <StyledRadio
-              name={name}
-              value={value}
-              onChange={onChange}
-              showTick={showTick}
-              checked={checked}
-              disabled={disabled}
-              error={isError}
-              onFocus={onFocus}
-              onBlur={onBlur}
-              hasLabel={!!label}
-              id={id}
-              ref={innerRef}
-              data-error={isError}
-              label={label}
-              tabIndex={!showTick ? -1 : undefined}
-            />
-          ) : (
-            <StyledCheckbox
-              name={name}
-              value={value}
-              onChange={onChange}
-              showTick={showTick}
-              checked={checked}
-              disabled={disabled}
-              error={isError}
-              onFocus={onFocus}
-              onBlur={onBlur}
-              hasLabel={!!label}
-              id={id}
-              ref={innerRef}
-              data-error={isError}
-            >
-              {label}
-            </StyledCheckbox>
-          )}
-          {children ? (
-            <StyledStack data-has-label={!!label && showTick} width="100%">
-              {typeof children === 'function'
-                ? children({ checked, disabled })
-                : children}
-            </StyledStack>
-          ) : null}
+          <IllustrationContainer>
+            {type === 'radio' ? (
+              <StyledRadio
+                name={name}
+                value={value}
+                onChange={onChange}
+                showTick={showTick}
+                checked={checked}
+                disabled={disabled}
+                error={isError}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                hasLabel={!!label}
+                id={id}
+                ref={innerRef}
+                data-error={isError}
+                label={label}
+                tabIndex={!showTick ? -1 : undefined}
+              />
+            ) : (
+              <StyledCheckbox
+                name={name}
+                value={value}
+                onChange={onChange}
+                showTick={showTick}
+                checked={checked}
+                disabled={disabled}
+                error={isError}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                hasLabel={!!label}
+                id={id}
+                ref={innerRef}
+                data-error={isError}
+              >
+                {label}
+              </StyledCheckbox>
+            )}
+            {children ? (
+              <StyledStack data-has-label={!!label && showTick} width="100%">
+                {typeof children === 'function'
+                  ? children({ checked, disabled })
+                  : children}
+              </StyledStack>
+            ) : null}
+          </IllustrationContainer>
         </Container>
       </ParentContainer>
     )

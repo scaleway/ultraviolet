@@ -4,6 +4,9 @@ import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test, vi } from 'vitest'
 import { SelectableCard } from '..'
 
+const illustration =
+  'https://ultraviolet.s3.fr-par.scw.cloud/illustrations/products/appleSilicon/apple-silicon-wire.svg'
+
 describe('SelectableCard', () => {
   test('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(
@@ -190,4 +193,51 @@ describe('SelectableCard', () => {
 
     await userEvent.keyboard('{Space}')
   })
+
+  test('renders correctly with illustration', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        name="label-14"
+        value="label-14"
+        type="radio"
+        label="label"
+        showTick
+        onChange={() => {}}
+        illustration={illustration}
+      >
+        Offer the best experience to your Mac, iPhone and iPad users with VNC,
+        the remote desktop-sharing protocol. Learn more
+      </SelectableCard>,
+    ))
+  test('renders correctly with productIcon', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        name="label-14"
+        value="label-14"
+        type="radio"
+        label="label"
+        productIcon="macMini"
+        showTick
+        onChange={() => {}}
+      >
+        Offer the best experience to your Mac, iPhone and iPad users with VNC,
+        the remote desktop-sharing protocol. Learn more
+      </SelectableCard>,
+    ))
+  test('renders correctly with illustration and productIcon', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        name="label-14"
+        value="label-14"
+        type="radio"
+        label="label"
+        illustration={illustration}
+        showTick
+        productIcon="macMini"
+        onChange={() => {}}
+      >
+        Offer the best experience to your Mac, iPhone and iPad users with VNC,
+        the remote desktop-sharing protocol. Learn more
+      </SelectableCard>,
+    ))
 })

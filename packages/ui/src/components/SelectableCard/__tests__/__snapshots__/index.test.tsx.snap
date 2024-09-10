@@ -55,6 +55,15 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
 .emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
@@ -416,6 +425,8 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
       role="button"
@@ -536,6 +547,15 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -899,6 +919,8 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
       class="emotion-0 emotion-1"
       data-checked="true"
       data-disabled="false"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
       role="button"
@@ -1020,6 +1042,15 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1383,6 +1414,8 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
       role="button"
@@ -1503,6 +1536,15 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1880,6 +1922,8 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
       data-checked="false"
       data-disabled="false"
       data-error="true"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
       role="button"
@@ -2038,6 +2082,15 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-4[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-4[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
@@ -2410,6 +2463,8 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
           class="emotion-4 emotion-5"
           data-checked="false"
           data-disabled="false"
+          data-has-icon="false"
+          data-has-illustration="false"
           data-has-label="false"
           data-type="checkbox"
           role="button"
@@ -2532,6 +2587,15 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -2895,6 +2959,8 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
       role="button"
@@ -3019,6 +3085,15 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -3256,6 +3331,8 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
       role="button"
@@ -3317,6 +3394,2193 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
 </DocumentFragment>
 `;
 
+exports[`SelectableCard > renders correctly with illustration 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+}
+
+.emotion-0[data-has-label='false']>:first-child {
+  margin-bottom: -4px;
+}
+
+.emotion-0[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-0 .emotion-7,
+.emotion-0 .eqr7bqq1 {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+}
+
+.emotion-0[data-has-label='false']>:first-child {
+  margin-bottom: -4px;
+}
+
+.emotion-0[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-0 .emotion-7,
+.emotion-0 .eqr7bqq1 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 16px;
+  max-width: calc(100% - 160px);
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-9 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-9[aria-disabled='false'],
+.emotion-9[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 .emotion-16 {
+  fill: #e5dbfd;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 {
+  fill: #b3144d;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 .emotion-16 {
+  fill: #ffd3e3;
+}
+
+.emotion-9[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-9[aria-disabled='true']>label,
+.emotion-9[aria-disabled='true'] .emotion-12 {
+  cursor: not-allowed;
+}
+
+.emotion-9[aria-disabled='true'] .emotion-14 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-9[aria-disabled='true'] .emotion-14 .emotion-16 {
+  fill: #f3f3f4;
+}
+
+.emotion-9[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-9[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-9[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-11 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-11+.emotion-14 .emotion-18 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-11:checked+svg .emotion-18 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-11:checked[aria-disabled='false'][aria-invalid='false']+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-11:checked[aria-disabled='true'][aria-invalid='false']+.emotion-14 {
+  fill: #d8c5fc;
+}
+
+.emotion-11[aria-invalid='true']:not([aria-disabled='true'])+.emotion-14 {
+  fill: #e51963;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 .emotion-16 {
+  fill: #f1eefc;
+}
+
+.emotion-11[aria-disabled='false']:focus-visible+.emotion-14 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 .emotion-16 {
+  fill: #ffebf2;
+}
+
+.emotion-11 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-11+.emotion-14 .emotion-18 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-11:checked+svg .emotion-18 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-11:checked[aria-disabled='false'][aria-invalid='false']+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-11:checked[aria-disabled='true'][aria-invalid='false']+.emotion-14 {
+  fill: #d8c5fc;
+}
+
+.emotion-11[aria-invalid='true']:not([aria-disabled='true'])+.emotion-14 {
+  fill: #e51963;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 .emotion-16 {
+  fill: #f1eefc;
+}
+
+.emotion-11[aria-disabled='false']:focus-visible+.emotion-14 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 .emotion-16 {
+  fill: #ffebf2;
+}
+
+.emotion-13 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-13 .emotion-16 {
+  fill: #ffffff;
+}
+
+.emotion-13 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-13 .emotion-16 {
+  fill: #ffffff;
+}
+
+.emotion-19 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-21[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.emotion-21[data-has-label='false'] {
+  display: contents;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-21[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.emotion-21[data-has-label='false'] {
+  display: contents;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-25 {
+  -webkit-flex: 1 1 220px;
+  -ms-flex: 1 1 220px;
+  flex: 1 1 220px;
+  height: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-27 {
+  object-fit: cover;
+  position: absolute;
+  min-width: 220px;
+  height: auto;
+  left: 8px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-checked="false"
+      data-disabled="false"
+      data-has-icon="false"
+      data-has-illustration="true"
+      data-has-label="true"
+      data-type="radio"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-8 emotion-9 emotion-10"
+              data-checked="false"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="emotion-11 emotion-12"
+                id="label-14-label-14"
+                name="label-14"
+                type="radio"
+                value="label-14"
+              />
+              <svg
+                class="emotion-13 emotion-14"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-15 emotion-16"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-17 emotion-18"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-19 emotion-20"
+                for="label-14-label-14"
+              >
+                label
+              </label>
+            </div>
+          </div>
+          <div
+            class="emotion-21 emotion-22"
+            data-has-label="true"
+          >
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
+          </div>
+        </div>
+        <div
+          class="emotion-23 emotion-3"
+        >
+                        
+        </div>
+        <div
+          class="emotion-25 emotion-26"
+        >
+          <img
+            alt="illustration"
+            class="emotion-27 emotion-28"
+            src="https://ultraviolet.s3.fr-par.scw.cloud/illustrations/products/appleSilicon/apple-silicon-wire.svg"
+            width="220"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectableCard > renders correctly with illustration and productIcon 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+}
+
+.emotion-0[data-has-label='false']>:first-child {
+  margin-bottom: -4px;
+}
+
+.emotion-0[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-0 .emotion-7,
+.emotion-0 .eqr7bqq1 {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+}
+
+.emotion-0[data-has-label='false']>:first-child {
+  margin-bottom: -4px;
+}
+
+.emotion-0[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-0 .emotion-7,
+.emotion-0 .eqr7bqq1 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 16px;
+  max-width: calc(100% - 160px);
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-9 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-9[aria-disabled='false'],
+.emotion-9[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 .emotion-16 {
+  fill: #e5dbfd;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 {
+  fill: #b3144d;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 .emotion-16 {
+  fill: #ffd3e3;
+}
+
+.emotion-9[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-9[aria-disabled='true']>label,
+.emotion-9[aria-disabled='true'] .emotion-12 {
+  cursor: not-allowed;
+}
+
+.emotion-9[aria-disabled='true'] .emotion-14 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-9[aria-disabled='true'] .emotion-14 .emotion-16 {
+  fill: #f3f3f4;
+}
+
+.emotion-9[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-9[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-9[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-11 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-11+.emotion-14 .emotion-18 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-11:checked+svg .emotion-18 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-11:checked[aria-disabled='false'][aria-invalid='false']+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-11:checked[aria-disabled='true'][aria-invalid='false']+.emotion-14 {
+  fill: #d8c5fc;
+}
+
+.emotion-11[aria-invalid='true']:not([aria-disabled='true'])+.emotion-14 {
+  fill: #e51963;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 .emotion-16 {
+  fill: #f1eefc;
+}
+
+.emotion-11[aria-disabled='false']:focus-visible+.emotion-14 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 .emotion-16 {
+  fill: #ffebf2;
+}
+
+.emotion-11 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-11+.emotion-14 .emotion-18 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-11:checked+svg .emotion-18 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-11:checked[aria-disabled='false'][aria-invalid='false']+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-11:checked[aria-disabled='true'][aria-invalid='false']+.emotion-14 {
+  fill: #d8c5fc;
+}
+
+.emotion-11[aria-invalid='true']:not([aria-disabled='true'])+.emotion-14 {
+  fill: #e51963;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 .emotion-16 {
+  fill: #f1eefc;
+}
+
+.emotion-11[aria-disabled='false']:focus-visible+.emotion-14 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 .emotion-16 {
+  fill: #ffebf2;
+}
+
+.emotion-13 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-13 .emotion-16 {
+  fill: #ffffff;
+}
+
+.emotion-13 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-13 .emotion-16 {
+  fill: #ffffff;
+}
+
+.emotion-19 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-21[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.emotion-21[data-has-label='false'] {
+  display: contents;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-21[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.emotion-21[data-has-label='false'] {
+  display: contents;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-25 {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+}
+
+.emotion-25 path[fill].fill,
+.emotion-25 g[fill].fill>*,
+.emotion-25 g.fill>* {
+  fill: #521094;
+}
+
+.emotion-25 path[fill].fillStrong,
+.emotion-25 g[fill].fillStrong>*,
+.emotion-25 g.fillStrong>* {
+  fill: #a060f6;
+}
+
+.emotion-25 path[fill].fillWeak,
+.emotion-25 g[fill].fillWeak>*,
+.emotion-25 g.fillWeak>* {
+  fill: #f1eefc;
+}
+
+.emotion-27 {
+  -webkit-flex: 1 1 220px;
+  -ms-flex: 1 1 220px;
+  flex: 1 1 220px;
+  height: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-29 {
+  object-fit: cover;
+  position: absolute;
+  min-width: 220px;
+  height: auto;
+  left: 8px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-checked="false"
+      data-disabled="false"
+      data-has-icon="false"
+      data-has-illustration="true"
+      data-has-label="true"
+      data-type="radio"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-8 emotion-9 emotion-10"
+              data-checked="false"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="emotion-11 emotion-12"
+                id="label-14-label-14"
+                name="label-14"
+                type="radio"
+                value="label-14"
+              />
+              <svg
+                class="emotion-13 emotion-14"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-15 emotion-16"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-17 emotion-18"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-19 emotion-20"
+                for="label-14-label-14"
+              >
+                label
+              </label>
+            </div>
+          </div>
+          <div
+            class="emotion-21 emotion-22"
+            data-has-label="true"
+          >
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
+          </div>
+        </div>
+        <div
+          class="emotion-23 emotion-3"
+        >
+          <svg
+            class="emotion-25 emotion-26"
+            viewBox="0 0 64 64"
+          >
+            <g
+              class="MacMini"
+            >
+              <g
+                class=".Square"
+              >
+                <path
+                  class="fillWeak"
+                  d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
+                  fill="#F1EEFC"
+                />
+              </g>
+              <g
+                class="Icon MacMini"
+              >
+                <g
+                  class="MacMini"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    class="fill"
+                    d="M40 8.5c5.523 0 10 4.477 10 10v16c0 5.523-4.477 10-10 10h-7v5.17a3 3 0 0 1 1.83 1.83h13.334a1 1 0 0 1 .117 1.993l-.117.007H34.83a3.001 3.001 0 0 1-5.658 0H15a1 1 0 0 1-.117-1.993L15 51.5h14.171A3 3 0 0 1 31 49.67V44.5h-7c-5.523 0-10-4.477-10-10v-16c0-5.523 4.477-10 10-10zm-8 34h-8l-.25-.004A8 8 0 0 1 16 34.5v-16l.004-.25A8 8 0 0 1 24 10.5h16l.25.004A8 8 0 0 1 48 18.5v16l-.004.25A8 8 0 0 1 40 42.5zm0 9a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                    fill="#521094"
+                  />
+                  <path
+                    class="fillStrong"
+                    d="M45 18.5a5 5 0 0 0-5-5H24a5 5 0 0 0-5 5v16a5 5 0 0 0 5 5h16a5 5 0 0 0 5-5zm-21-3h16l.176.005A3 3 0 0 1 43 18.5v16l-.005.176A3 3 0 0 1 40 37.5H24l-.176-.005A3 3 0 0 1 21 34.5v-16l.005-.176A3 3 0 0 1 24 15.5"
+                    fill="#A060F6"
+                  />
+                  <path
+                    class="fillStrong"
+                    d="M34.5 24h-5v5h5zm-5-2a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2z"
+                    fill="#A060F6"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+                        
+        </div>
+        <div
+          class="emotion-27 emotion-28"
+        >
+          <img
+            alt="illustration"
+            class="emotion-29 emotion-30"
+            src="https://ultraviolet.s3.fr-par.scw.cloud/illustrations/products/appleSilicon/apple-silicon-wire.svg"
+            width="220"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectableCard > renders correctly with productIcon 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+}
+
+.emotion-0[data-has-label='false']>:first-child {
+  margin-bottom: -4px;
+}
+
+.emotion-0[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-0 .emotion-7,
+.emotion-0 .eqr7bqq1 {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+}
+
+.emotion-0[data-has-label='false']>:first-child {
+  margin-bottom: -4px;
+}
+
+.emotion-0[data-checked='true'] {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-0[data-disabled='true'] {
+  border: 1px solid #e9eaeb;
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
+.emotion-0:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
+}
+
+.emotion-0:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.emotion-0:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #f6f3ffcc;
+}
+
+.emotion-0 .emotion-7,
+.emotion-0 .eqr7bqq1 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 16px;
+  max-width: calc(100% - 160px);
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-9 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-9[aria-disabled='false'],
+.emotion-9[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12+.emotion-14 .emotion-16 {
+  fill: #e5dbfd;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 {
+  fill: #b3144d;
+}
+
+.emotion-9:hover[aria-disabled='false'] .emotion-12[aria-invalid='true']+.emotion-14 .emotion-16 {
+  fill: #ffd3e3;
+}
+
+.emotion-9[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-9[aria-disabled='true']>label,
+.emotion-9[aria-disabled='true'] .emotion-12 {
+  cursor: not-allowed;
+}
+
+.emotion-9[aria-disabled='true'] .emotion-14 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-9[aria-disabled='true'] .emotion-14 .emotion-16 {
+  fill: #f3f3f4;
+}
+
+.emotion-9[data-checked='true'] {
+  color: #641cb3;
+}
+
+.emotion-9[data-error='true'] {
+  color: #b3144d;
+}
+
+.emotion-9[aria-disabled='true'] {
+  color: #b5b7bd;
+}
+
+.emotion-11 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-11+.emotion-14 .emotion-18 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-11:checked+svg .emotion-18 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-11:checked[aria-disabled='false'][aria-invalid='false']+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-11:checked[aria-disabled='true'][aria-invalid='false']+.emotion-14 {
+  fill: #d8c5fc;
+}
+
+.emotion-11[aria-invalid='true']:not([aria-disabled='true'])+.emotion-14 {
+  fill: #e51963;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 .emotion-16 {
+  fill: #f1eefc;
+}
+
+.emotion-11[aria-disabled='false']:focus-visible+.emotion-14 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 .emotion-16 {
+  fill: #ffebf2;
+}
+
+.emotion-11 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-11+.emotion-14 .emotion-18 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-11:checked+svg .emotion-18 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-11:checked[aria-disabled='false'][aria-invalid='false']+.emotion-14 {
+  fill: #8c40ef;
+}
+
+.emotion-11:checked[aria-disabled='true'][aria-invalid='false']+.emotion-14 {
+  fill: #d8c5fc;
+}
+
+.emotion-11[aria-invalid='true']:not([aria-disabled='true'])+.emotion-14 {
+  fill: #e51963;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-11[aria-disabled='false']:active+.emotion-14 .emotion-16 {
+  fill: #f1eefc;
+}
+
+.emotion-11[aria-disabled='false']:focus-visible+.emotion-14 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-11[aria-invalid='true']:focus+.emotion-14 .emotion-16 {
+  fill: #ffebf2;
+}
+
+.emotion-13 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-13 .emotion-16 {
+  fill: #ffffff;
+}
+
+.emotion-13 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-13 .emotion-16 {
+  fill: #ffffff;
+}
+
+.emotion-19 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-21[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.emotion-21[data-has-label='false'] {
+  display: contents;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-21[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.emotion-21[data-has-label='false'] {
+  display: contents;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-25 {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+}
+
+.emotion-25 path[fill].fill,
+.emotion-25 g[fill].fill>*,
+.emotion-25 g.fill>* {
+  fill: #521094;
+}
+
+.emotion-25 path[fill].fillStrong,
+.emotion-25 g[fill].fillStrong>*,
+.emotion-25 g.fillStrong>* {
+  fill: #a060f6;
+}
+
+.emotion-25 path[fill].fillWeak,
+.emotion-25 g[fill].fillWeak>*,
+.emotion-25 g.fillWeak>* {
+  fill: #f1eefc;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+      data-checked="false"
+      data-disabled="false"
+      data-has-icon="true"
+      data-has-illustration="false"
+      data-has-label="true"
+      data-type="radio"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-7"
+          >
+            <div
+              aria-disabled="false"
+              class="emotion-8 emotion-9 emotion-10"
+              data-checked="false"
+            >
+              <input
+                aria-disabled="false"
+                aria-invalid="false"
+                class="emotion-11 emotion-12"
+                id="label-14-label-14"
+                name="label-14"
+                type="radio"
+                value="label-14"
+              />
+              <svg
+                class="emotion-13 emotion-14"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke-width="2"
+                  />
+                  <circle
+                    class="emotion-15 emotion-16"
+                    cx="12"
+                    cy="12"
+                    r="8"
+                  />
+                  <circle
+                    class="emotion-17 emotion-18"
+                    cx="12"
+                    cy="12"
+                    r="5"
+                  />
+                </g>
+              </svg>
+              <label
+                class="emotion-19 emotion-20"
+                for="label-14-label-14"
+              >
+                label
+              </label>
+            </div>
+          </div>
+          <div
+            class="emotion-21 emotion-22"
+            data-has-label="true"
+          >
+            Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
+          </div>
+        </div>
+        <div
+          class="emotion-23 emotion-3"
+        >
+          <svg
+            class="emotion-25 emotion-26"
+            viewBox="0 0 64 64"
+          >
+            <g
+              class="MacMini"
+            >
+              <g
+                class=".Square"
+              >
+                <path
+                  class="fillWeak"
+                  d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48z"
+                  fill="#F1EEFC"
+                />
+              </g>
+              <g
+                class="Icon MacMini"
+              >
+                <g
+                  class="MacMini"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    class="fill"
+                    d="M40 8.5c5.523 0 10 4.477 10 10v16c0 5.523-4.477 10-10 10h-7v5.17a3 3 0 0 1 1.83 1.83h13.334a1 1 0 0 1 .117 1.993l-.117.007H34.83a3.001 3.001 0 0 1-5.658 0H15a1 1 0 0 1-.117-1.993L15 51.5h14.171A3 3 0 0 1 31 49.67V44.5h-7c-5.523 0-10-4.477-10-10v-16c0-5.523 4.477-10 10-10zm-8 34h-8l-.25-.004A8 8 0 0 1 16 34.5v-16l.004-.25A8 8 0 0 1 24 10.5h16l.25.004A8 8 0 0 1 48 18.5v16l-.004.25A8 8 0 0 1 40 42.5zm0 9a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                    fill="#521094"
+                  />
+                  <path
+                    class="fillStrong"
+                    d="M45 18.5a5 5 0 0 0-5-5H24a5 5 0 0 0-5 5v16a5 5 0 0 0 5 5h16a5 5 0 0 0 5-5zm-21-3h16l.176.005A3 3 0 0 1 43 18.5v16l-.005.176A3 3 0 0 1 40 37.5H24l-.176-.005A3 3 0 0 1 21 34.5v-16l.005-.176A3 3 0 0 1 24 15.5"
+                    fill="#A060F6"
+                  />
+                  <path
+                    class="fillStrong"
+                    d="M34.5 24h-5v5h5zm-5-2a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2z"
+                    fill="#A060F6"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+                        
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`SelectableCard > renders correctly with radio type and checked prop 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -3370,6 +5634,15 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -3607,6 +5880,8 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
       class="emotion-0 emotion-1"
       data-checked="true"
       data-disabled="false"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
       role="button"
@@ -3722,6 +5997,15 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -3959,6 +6243,8 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
       role="button"
@@ -4073,6 +6359,15 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -4311,6 +6606,8 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
       data-checked="false"
       data-disabled="false"
       data-error="true"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
       role="button"
@@ -4460,6 +6757,15 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-4[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-4[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
@@ -4706,6 +7012,8 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
           class="emotion-4 emotion-5"
           data-checked="false"
           data-disabled="false"
+          data-has-icon="false"
+          data-has-illustration="false"
           data-has-label="false"
           data-type="radio"
           role="button"
@@ -4822,6 +7130,15 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -5177,6 +7494,8 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
       role="button"
@@ -5297,6 +7616,15 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-0[data-has-illustration="true"] {
+  padding: 0;
+}
+
+.emotion-0[data-has-icon="true"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -5526,6 +7854,8 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
+      data-has-icon="false"
+      data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
       role="button"
