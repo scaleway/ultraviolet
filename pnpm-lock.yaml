@@ -84,8 +84,8 @@ importers:
         specifier: 11.1.5
         version: 11.1.5(size-limit@11.1.4)
       '@size-limit/preset-big-lib':
-        specifier: 11.1.4
-        version: 11.1.4(esbuild@0.21.5)(size-limit@11.1.4)
+        specifier: 11.1.5
+        version: 11.1.5(esbuild@0.21.5)(size-limit@11.1.4)
       '@storybook/addon-a11y':
         specifier: 8.2.9
         version: 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.4(@babel/core@7.25.2)))
@@ -178,7 +178,7 @@ importers:
         version: 2.0.5(vitest@2.0.5)
       babel-loader:
         specifier: 9.1.3
-        version: 9.1.3(@babel/core@7.25.2)(webpack@5.91.0(esbuild@0.21.5))
+        version: 9.1.3(@babel/core@7.25.2)(webpack@5.94.0(esbuild@0.21.5))
       babel-plugin-annotate-pure-calls:
         specifier: 0.4.0
         version: 0.4.0(@babel/core@7.25.2)
@@ -214,7 +214,7 @@ importers:
         version: 29.7.0
       file-loader:
         specifier: 6.2.0
-        version: 6.2.0(webpack@5.91.0(esbuild@0.21.5))
+        version: 6.2.0(webpack@5.94.0(esbuild@0.21.5))
       globals:
         specifier: 15.9.0
         version: 15.9.0
@@ -2784,34 +2784,28 @@ packages:
     resolution: {integrity: sha512-dNZafjM93Y+F+sfwTO5gTpsGXlnc/0Q+c2+62ViqP3gkMWvHEMSKkaEHgVJLcLg3i/g19GSIPziiKpgyne07Bw==}
     engines: {node: '>=8'}
 
-  '@size-limit/file@11.1.4':
-    resolution: {integrity: sha512-QxnGj9cxhCEuqMAV01gqonXIKcc+caZqFHZpV51oL2ZJNGSPP9Q/yyf+7HbVe00faOFd1dZZwMwzZmX7HQ9LbA==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    peerDependencies:
-      size-limit: 11.1.4
-
   '@size-limit/file@11.1.5':
     resolution: {integrity: sha512-oz/XBVUJh95GpzDb9/f4sEQD/ACJ9zEKSRgBtvMUTN0c+O/9uq+RzvFeXFN2Kjpx3Dmur1ta+oZsp3zQFxlb3Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       size-limit: 11.1.5
 
-  '@size-limit/preset-big-lib@11.1.4':
-    resolution: {integrity: sha512-bejHzQXW+RkWNmCRsny/MmmjshQsU0/vVKSYnZKiu8J2zWIpxZ2pFT79ud+pCQoXeH11rI/YObItcaPf+URAng==}
+  '@size-limit/preset-big-lib@11.1.5':
+    resolution: {integrity: sha512-sjfWmXE1qU418afX8ZGlUK+NlovuSG0yFDXzj4noU/I1o5riM/oOFX8YyL4SxzH3y935VIH4Gw9JIIohz3+GGg==}
     peerDependencies:
-      size-limit: 11.1.4
+      size-limit: 11.1.5
 
-  '@size-limit/time@11.1.4':
-    resolution: {integrity: sha512-TxEeDZrNWQ1uwFjQT0d4NHUG7MGGrjnKSn9CwuF+Wb4AeZWy1nb93HjPCfe8LbQedV7xRY6dV/oSiARYvReuYg==}
+  '@size-limit/time@11.1.5':
+    resolution: {integrity: sha512-5nNkTuafGZplkrzLWUgobx2xZtyDnwau3kQLRMQbcme6M3LtDWpFZj4FMU0+a4zRQLWgBHdFkOMYpMgQ7IUiSA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.1.4
+      size-limit: 11.1.5
 
-  '@size-limit/webpack@11.1.4':
-    resolution: {integrity: sha512-ikkvhPID8smxuBpO0VO2cgTutHcY3INPtVO4z9Qzb/ZdLV4zQ0MwtxWA9mZz92p+wLvTBKkMrewCdUYO2CIIaQ==}
+  '@size-limit/webpack@11.1.5':
+    resolution: {integrity: sha512-h4uJINq5/Y8qJ2oiATg4SGDgszn07b4TFWWT/w58OGt2+avrLSWgUfVM+ghkhplzKWLJK/UtvcqTg6ym2XnU9w==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.1.4
+      size-limit: 11.1.5
 
   '@storybook/addon-a11y@8.2.9':
     resolution: {integrity: sha512-9zm0Ecn2KUUKZbRsQM5l2KcQ8RHK6a9eqdQtOMjGagrdUvUstcf7XjBmV1W6PQE2Urj93ciz1cgx4T1AYQyKtA==}
@@ -3209,12 +3203,6 @@ packages:
 
   '@types/escodegen@0.0.6':
     resolution: {integrity: sha512-AjwI4MvWx3HAOaZqYsjKWyEObT9lcVV0Y0V8nXo6cXzN8ZiMxVhf6F3d/UNvXVGKrEzL/Dluc5p+y9GkzlTWig==}
-
-  '@types/eslint-scope@3.7.7':
-    resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
-
-  '@types/eslint@8.56.10':
-    resolution: {integrity: sha512-Shavhk87gCtY2fhXDctcfS3e6FdxWkCx1iUZ9eEUbh7rTqlZT0/IzOkCOVt0fCjcFuZ9FPYfuezTBImfHCDBGQ==}
 
   '@types/estree@0.0.51':
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
@@ -3626,8 +3614,8 @@ packages:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
 
-  acorn-import-assertions@1.9.0:
-    resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+  acorn-import-attributes@1.9.5:
+    resolution: {integrity: sha512-n02Vykv5uA3eHGM/Z2dQrcD56kL8TyDb2p1+0P83PClMnC/nc+anbQRhIOWnSq4Ke/KvDPrY3C9hDtC/A3eHnQ==}
     peerDependencies:
       acorn: ^8
 
@@ -4730,6 +4718,10 @@ packages:
 
   enhanced-resolve@5.16.0:
     resolution: {integrity: sha512-O+QWCviPNSSLAD9Ucn8Awv+poAkqn3T1XY5/N7kR7rQO9yfSGWkYZDwpJ+iKF7B8rxaQKWngSqACpgzeapSyoA==}
+    engines: {node: '>=10.13.0'}
+
+  enhanced-resolve@5.17.1:
+    resolution: {integrity: sha512-LMHl3dXhTcfv8gM4kEzIUeTQ+7fpdA0l2tUf34BddXPkz2A5xJ5L/Pchd5BL6rdccM9QGvu0sWZzK1Z1t4wwyg==}
     engines: {node: '>=10.13.0'}
 
   enquirer@2.4.1:
@@ -8549,8 +8541,8 @@ packages:
   webpack-virtual-modules@0.6.1:
     resolution: {integrity: sha512-poXpCylU7ExuvZK8z+On3kX+S8o/2dQ/SVYueKA0D4WEMXROXgY8Ez50/bQEUmvoSMMrWcrJqCHuhAbsiwg7Dg==}
 
-  webpack@5.91.0:
-    resolution: {integrity: sha512-rzVwlLeBWHJbmgTC/8TvAcu5vpJNII+MelQpylD4jNERPwpBJOE2lEcko1zJX3QJeLjTTAnQxn/OJ8bjDzVQaw==}
+  webpack@5.94.0:
+    resolution: {integrity: sha512-KcsGn50VT+06JH/iunZJedYGUJS5FGjow8wb9c0v5n1Om8O1g4L6LjtfxwlXIATopoQu+vOXXa7gYisWxCoPyg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -11450,19 +11442,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@size-limit/file@11.1.4(size-limit@11.1.4)':
-    dependencies:
-      size-limit: 11.1.4
-
   '@size-limit/file@11.1.5(size-limit@11.1.4)':
     dependencies:
       size-limit: 11.1.4
 
-  '@size-limit/preset-big-lib@11.1.4(esbuild@0.21.5)(size-limit@11.1.4)':
+  '@size-limit/preset-big-lib@11.1.5(esbuild@0.21.5)(size-limit@11.1.4)':
     dependencies:
-      '@size-limit/file': 11.1.4(size-limit@11.1.4)
-      '@size-limit/time': 11.1.4(size-limit@11.1.4)
-      '@size-limit/webpack': 11.1.4(esbuild@0.21.5)(size-limit@11.1.4)
+      '@size-limit/file': 11.1.5(size-limit@11.1.4)
+      '@size-limit/time': 11.1.5(size-limit@11.1.4)
+      '@size-limit/webpack': 11.1.5(esbuild@0.21.5)(size-limit@11.1.4)
       size-limit: 11.1.4
     transitivePeerDependencies:
       - '@swc/core'
@@ -11473,7 +11461,7 @@ snapshots:
       - utf-8-validate
       - webpack-cli
 
-  '@size-limit/time@11.1.4(size-limit@11.1.4)':
+  '@size-limit/time@11.1.5(size-limit@11.1.4)':
     dependencies:
       estimo: 3.0.3
       size-limit: 11.1.4
@@ -11482,11 +11470,11 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@size-limit/webpack@11.1.4(esbuild@0.21.5)(size-limit@11.1.4)':
+  '@size-limit/webpack@11.1.5(esbuild@0.21.5)(size-limit@11.1.4)':
     dependencies:
       nanoid: 5.0.7
       size-limit: 11.1.4
-      webpack: 5.91.0(esbuild@0.21.5)
+      webpack: 5.94.0(esbuild@0.21.5)
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
@@ -12053,16 +12041,6 @@ snapshots:
   '@types/emscripten@1.39.11': {}
 
   '@types/escodegen@0.0.6': {}
-
-  '@types/eslint-scope@3.7.7':
-    dependencies:
-      '@types/eslint': 8.56.10
-      '@types/estree': 1.0.5
-
-  '@types/eslint@8.56.10':
-    dependencies:
-      '@types/estree': 1.0.5
-      '@types/json-schema': 7.0.15
 
   '@types/estree@0.0.51': {}
 
@@ -12652,7 +12630,7 @@ snapshots:
       mime-types: 2.1.35
       negotiator: 0.6.3
 
-  acorn-import-assertions@1.9.0(acorn@8.12.0):
+  acorn-import-attributes@1.9.5(acorn@8.12.0):
     dependencies:
       acorn: 8.12.0
 
@@ -12877,12 +12855,12 @@ snapshots:
       - supports-color
     optional: true
 
-  babel-loader@9.1.3(@babel/core@7.25.2)(webpack@5.91.0(esbuild@0.21.5)):
+  babel-loader@9.1.3(@babel/core@7.25.2)(webpack@5.94.0(esbuild@0.21.5)):
     dependencies:
       '@babel/core': 7.25.2
       find-cache-dir: 4.0.0
       schema-utils: 4.2.0
-      webpack: 5.91.0(esbuild@0.21.5)
+      webpack: 5.94.0(esbuild@0.21.5)
 
   babel-plugin-annotate-pure-calls@0.4.0(@babel/core@7.25.2):
     dependencies:
@@ -13875,6 +13853,11 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.2.1
 
+  enhanced-resolve@5.17.1:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.2.1
+
   enquirer@2.4.1:
     dependencies:
       ansi-colors: 4.1.3
@@ -14486,11 +14469,11 @@ snapshots:
     dependencies:
       flat-cache: 4.0.1
 
-  file-loader@6.2.0(webpack@5.91.0(esbuild@0.21.5)):
+  file-loader@6.2.0(webpack@5.94.0(esbuild@0.21.5)):
     dependencies:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
-      webpack: 5.91.0(esbuild@0.21.5)
+      webpack: 5.94.0(esbuild@0.21.5)
 
   fill-range@7.0.1:
     dependencies:
@@ -18025,14 +18008,14 @@ snapshots:
 
   term-size@2.2.1: {}
 
-  terser-webpack-plugin@5.3.10(esbuild@0.21.5)(webpack@5.91.0(esbuild@0.21.5)):
+  terser-webpack-plugin@5.3.10(esbuild@0.21.5)(webpack@5.94.0(esbuild@0.21.5)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
       terser: 5.31.0
-      webpack: 5.91.0(esbuild@0.21.5)
+      webpack: 5.94.0(esbuild@0.21.5)
     optionalDependencies:
       esbuild: 0.21.5
 
@@ -18501,18 +18484,17 @@ snapshots:
 
   webpack-virtual-modules@0.6.1: {}
 
-  webpack@5.91.0(esbuild@0.21.5):
+  webpack@5.94.0(esbuild@0.21.5):
     dependencies:
-      '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.5
       '@webassemblyjs/ast': 1.12.1
       '@webassemblyjs/wasm-edit': 1.12.1
       '@webassemblyjs/wasm-parser': 1.12.1
       acorn: 8.12.0
-      acorn-import-assertions: 1.9.0(acorn@8.12.0)
+      acorn-import-attributes: 1.9.5(acorn@8.12.0)
       browserslist: 4.23.3
       chrome-trace-event: 1.0.3
-      enhanced-resolve: 5.16.0
+      enhanced-resolve: 5.17.1
       es-module-lexer: 1.5.2
       eslint-scope: 5.1.1
       events: 3.3.0
@@ -18524,7 +18506,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(esbuild@0.21.5)(webpack@5.91.0(esbuild@0.21.5))
+      terser-webpack-plugin: 5.3.10(esbuild@0.21.5)(webpack@5.94.0(esbuild@0.21.5))
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:
