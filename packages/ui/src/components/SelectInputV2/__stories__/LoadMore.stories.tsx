@@ -13,7 +13,6 @@ export const LoadMore: StoryFn<typeof SelectInputV2> = args => {
     const newPlanet = {
       value: `planet-${counter}`,
       label: `Planet ${counter}`,
-      disabled: false,
     }
     setLoading(true)
 

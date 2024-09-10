@@ -54,6 +54,7 @@ export const dataUnGrouped = [
     value: 'neptune',
     label: reactNeptune,
     disabled: false,
+    searchText: 'neptune',
   },
 ]
 
@@ -113,6 +114,7 @@ export const dataGrouped = {
       value: 'neptune',
       label: reactNeptune,
       disabled: false,
+      searchText: 'neptune',
     },
   ],
 }
@@ -152,6 +154,7 @@ export const OptionalInfo = {
       disabled: false,
       description:
         'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+      searchText: 'pluto',
     },
   ],
 

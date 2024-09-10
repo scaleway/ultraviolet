@@ -2,13 +2,17 @@ import type { ReactNode } from 'react'
 
 export type OptionType = {
   value: string
-  label: ReactNode
   disabled?: boolean
   description?: ReactNode
   optionalInfo?: ReactNode
-  searchText?: string
   tooltip?: string
-}
+} & (
+  | { label: string; searchText?: string }
+  | {
+      label: ReactNode
+      searchText: string
+    }
+)
 
 export type DataType = Record<string, OptionType[]> | OptionType[]
 

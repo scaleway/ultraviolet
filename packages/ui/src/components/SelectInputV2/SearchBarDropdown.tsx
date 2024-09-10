@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { SearchIcon } from '@ultraviolet/icons'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useRef } from 'react'
 import { TextInputV2 } from '../TextInputV2'
 import { useSelectInput } from './SelectInputProvider'
-import type { DataType } from './types'
+import type { DataType, OptionType } from './types'
 
 type SearchBarProps = {
   placeholder: string
@@ -18,7 +18,15 @@ const StyledInput = styled(TextInputV2)`
   padding-left: ${({ theme }) => theme.space[2]};
   padding-right: ${({ theme }) => theme.space[2]};
 `
-
+const matchRegex = (data: OptionType[], regex: RegExp) =>
+  data.filter(
+    option =>
+      (option.searchText && !!option.searchText.match(regex)) ||
+      (typeof option.label === 'string' && option.label.match(regex)) ||
+      (typeof option.description === 'string' &&
+        option.description.match(regex)) ||
+      option.value.match(regex),
+  )
 const findClosestOption = (
   options: DataType,
   searchInput: string | undefined,
@@ -78,21 +86,13 @@ export const SearchBarDropdown = ({
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {
-          filteredOptions[group] = filteredOptions[group].filter(option =>
-            option.searchText
-              ? option.searchText.match(regex)
-              : option.value.match(regex),
-          )
+          filteredOptions[group] = matchRegex(filteredOptions[group], regex)
 
           return null
         })
         onSearch(filteredOptions)
       } else {
-        const filteredOptions = [...options].filter(option =>
-          option.searchText
-            ? option.searchText.match(regex)
-            : option.value.match(regex),
-        )
+        const filteredOptions = matchRegex([...options], regex)
         onSearch(filteredOptions)
       }
     } else {
@@ -120,7 +120,6 @@ export const SearchBarDropdown = ({
               ? selectedData.selectedValues
               : [...selectedData.selectedValues, closestOption.value],
           )
-          setSearchInput(closestOption.searchText ?? closestOption.value)
         } else {
           setSelectedData({
             type: 'selectOption',
@@ -148,7 +147,7 @@ export const SearchBarDropdown = ({
       onFocus={() => setSearchBarActive(true)}
       onBlur={() => setSearchBarActive(false)}
       data-testid="search-bar"
-      prefix={<Icon name="search" size="small" sentiment="neutral" />}
+      prefix={<SearchIcon size="small" sentiment="neutral" />}
       onKeyDown={event => handleKeyDown(event.key, searchInput)}
       size="medium"
       aria-label="search-bar"
