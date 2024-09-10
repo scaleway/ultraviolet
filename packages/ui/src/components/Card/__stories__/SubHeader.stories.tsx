@@ -32,6 +32,7 @@ export const SubHeader: StoryFn = args => (
 )
 
 SubHeader.args = {
+  header: 'Simple Header',
   subHeader: 'subHeader',
 }
 

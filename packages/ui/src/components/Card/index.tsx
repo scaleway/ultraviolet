@@ -72,7 +72,7 @@ export const Card = forwardRef(
         {typeof header === 'string' ? (
           <Text
             variant="heading"
-            as="h4"
+            as="h2"
             disabled={disabled}
             sentiment="neutral"
             prominence="strong"
@@ -90,7 +90,7 @@ export const Card = forwardRef(
             <Stack gap={2}>
               {typeof subHeader === 'string' ? (
                 <Text
-                  as="h5"
+                  as="h3"
                   variant="headingSmallStrong"
                   sentiment="neutral"
                   disabled={disabled}
@@ -119,7 +119,7 @@ export const Card = forwardRef(
           <Stack gap={2}>
             {typeof subHeader === 'string' ? (
               <Text
-                as="h5"
+                as="h3"
                 variant="headingSmallStrong"
                 sentiment="neutral"
                 disabled={disabled}
