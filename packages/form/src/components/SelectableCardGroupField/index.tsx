@@ -1,6 +1,6 @@
 import { SelectableCardGroup } from '@ultraviolet/ui'
 import type { ComponentProps, JSX } from 'react'
-import type { FieldPath, FieldValues } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -9,7 +9,7 @@ type SelectableCardGroupFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label' | 'onChange'> &
+  Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
   Partial<
     Pick<
       ComponentProps<typeof SelectableCardGroup>,
@@ -20,7 +20,6 @@ type SelectableCardGroupFieldProps<
       | 'showTick'
       | 'type'
       | 'className'
-      | 'onChange'
     >
   > &
   Pick<ComponentProps<typeof SelectableCardGroup>, 'legend'>
@@ -81,7 +80,12 @@ export const SelectableCardGroupField = <
         } else {
           field.onChange(event)
         }
-        onChange?.(event)
+        onChange?.(
+          event.currentTarget.value as PathValue<
+            TFieldValues,
+            Path<TFieldValues>
+          >,
+        )
       }}
       error={getError({ label }, error) ?? customError}
       className={className}

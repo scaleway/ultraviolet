@@ -1,6 +1,6 @@
 import { Toggle } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldPath, FieldValues } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -13,7 +13,6 @@ type ToggleFieldProps<
     ComponentProps<typeof Toggle>,
     | 'disabled'
     | 'label'
-    | 'onChange'
     | 'size'
     | 'tooltip'
     | 'labelPosition'
@@ -78,7 +77,9 @@ export const ToggleField = <
         } else {
           field.onChange(event)
         }
-        onChange?.(event)
+        onChange?.(
+          event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
+        )
       }}
       label={label}
       size={size}
