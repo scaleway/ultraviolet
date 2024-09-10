@@ -2,4 +2,4 @@
 "@ultraviolet/form": patch
 ---
 
-`TextInputValue`: the prop/callback `onChangeValue` is now called
+`<TextInputFieldV2 />`: the prop/callback `onChangeValue` is now called
