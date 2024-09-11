@@ -198,7 +198,8 @@ export const Snippet = ({
     initiallyExpanded ?? false,
   )
 
-  const lines = children.split(LINES_BREAK_REGEX).filter(Boolean)
+  const lines = children.split(LINES_BREAK_REGEX)
+
   const numberOfLines = lines.length
   const multiline = numberOfLines > 1
   const hasShowMoreButton = numberOfLines > 4 && multiline
