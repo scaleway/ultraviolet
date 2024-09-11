@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons/legacy'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { MouseEventHandler, ReactNode } from 'react'
+import type { ElementType, MouseEventHandler, ReactNode } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import { Skeleton } from './Skeleton'
 
@@ -111,6 +111,11 @@ type ContentCardProps = {
   icon?: ReactNode
   subtitle?: string
   title: string
+  /*
+   * Define the HTML Section Heading element level (h1 - h6) to use for the header
+   */
+  headingTag?: ElementType
+
   description?: string
   children?: ReactNode
   /**
@@ -140,6 +145,7 @@ export const ContentCard = forwardRef<
       icon,
       subtitle,
       title,
+      headingTag = 'h3',
       description,
       children,
       href,
@@ -220,7 +226,7 @@ export const ContentCard = forwardRef<
                         </Text>
                       ) : null}
                       <Text
-                        as="h3"
+                        as={headingTag}
                         variant="bodyStrong"
                         sentiment="neutral"
                         disabled={disabled}
