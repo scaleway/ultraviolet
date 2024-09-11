@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Stack, Text } from '@ultraviolet/ui'
+import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import * as ProductIcon from '..'
 
 export const List: StoryFn = props => (
@@ -11,7 +11,7 @@ export const List: StoryFn = props => (
         <Stack direction="row" gap={1} alignItems="center">
           <FoundProductIcon size="large" {...props} />
           <Text as="span" variant="bodyStrong">
-            {iconName}
+            <Snippet>{`import { ${iconName} } from '@ultraviolet/icons/product'`}</Snippet>
           </Text>
         </Stack>
       )
