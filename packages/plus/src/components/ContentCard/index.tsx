@@ -111,6 +111,11 @@ type ContentCardProps = {
   icon?: ReactNode
   subtitle?: string
   title: string
+  /*
+   * Define the HTML Section Heading element level (h1 - h6) to use for the header
+   */
+  headingTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+
   description?: string
   children?: ReactNode
   /**
@@ -140,6 +145,7 @@ export const ContentCard = forwardRef<
       icon,
       subtitle,
       title,
+      headingTag = 'h3',
       description,
       children,
       href,
@@ -220,7 +226,7 @@ export const ContentCard = forwardRef<
                         </Text>
                       ) : null}
                       <Text
-                        as="h3"
+                        as={headingTag}
                         variant="bodyStrong"
                         sentiment="neutral"
                         disabled={disabled}
