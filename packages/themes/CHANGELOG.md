@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.14.0
+
+### Minor Changes
+
+- [#4196](https://github.com/scaleway/ultraviolet/pull/4196) [`ee3c0b5`](https://github.com/scaleway/ultraviolet/commit/ee3c0b5a35758d3920506cdfaca2bc06409a96c6) Thanks [@matthprost](https://github.com/matthprost)! - New monochrome tokens
+
 ## 1.13.0
 
 ### Minor Changes

@@ -1,5 +1,31 @@
 # Change Log
 
+## 1.70.0
+
+### Minor Changes
+
+- [#4201](https://github.com/scaleway/ultraviolet/pull/4201) [`84cab43`](https://github.com/scaleway/ultraviolet/commit/84cab43c806f1753ab052b0b622d075eb02dd1bd) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />`:
+
+  - prop `searchText` is now mandatory if the label of an option is not a string
+  - search will look for matches in the description if it is of type string
+  - fixed stories
+
+- [#4196](https://github.com/scaleway/ultraviolet/pull/4196) [`ee3c0b5`](https://github.com/scaleway/ultraviolet/commit/ee3c0b5a35758d3920506cdfaca2bc06409a96c6) Thanks [@matthprost](https://github.com/matthprost)! - New monochrome color into components:
+  - New sentiment `black` and `white` in `<Button />` component
+  - New sentiment `black` and `white` in `<Link />` component
+  - New sentiment `black` and `white` in `<Text />` component
+  - Update of `<Banner />` and `<GlobalAlert />` to use new monochrome colors
+
+### Patch Changes
+
+- [#4223](https://github.com/scaleway/ultraviolet/pull/4223) [`75a5de6`](https://github.com/scaleway/ultraviolet/commit/75a5de629394e862c69165aaf0fcae6c2191cdce) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Snippet />` component to respect carriage return
+
+- [#4218](https://github.com/scaleway/ultraviolet/pull/4218) [`ac11dc5`](https://github.com/scaleway/ultraviolet/commit/ac11dc5f4a2934b8ae70051c9f09408c4bb9657c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Alert />` to take full width when available allowing usage of link
+
+- Updated dependencies [[`ee3c0b5`](https://github.com/scaleway/ultraviolet/commit/ee3c0b5a35758d3920506cdfaca2bc06409a96c6)]:
+  - @ultraviolet/themes@1.14.0
+  - @ultraviolet/icons@3.0.1
+
 ## 1.69.0
 
 ### Minor Changes

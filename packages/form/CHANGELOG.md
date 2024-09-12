@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.8.1
+
+### Patch Changes
+
+- [#4195](https://github.com/scaleway/ultraviolet/pull/4195) [`c8fc49c`](https://github.com/scaleway/ultraviolet/commit/c8fc49cd446a7cd0e496753beae6cd512ab02c4c) Thanks [@johnrazeur](https://github.com/johnrazeur)! - fix: onChange type and value for some fields
+
+- Updated dependencies [[`75a5de6`](https://github.com/scaleway/ultraviolet/commit/75a5de629394e862c69165aaf0fcae6c2191cdce), [`ac11dc5`](https://github.com/scaleway/ultraviolet/commit/ac11dc5f4a2934b8ae70051c9f09408c4bb9657c), [`84cab43`](https://github.com/scaleway/ultraviolet/commit/84cab43c806f1753ab052b0b622d075eb02dd1bd), [`ee3c0b5`](https://github.com/scaleway/ultraviolet/commit/ee3c0b5a35758d3920506cdfaca2bc06409a96c6), [`ee3c0b5`](https://github.com/scaleway/ultraviolet/commit/ee3c0b5a35758d3920506cdfaca2bc06409a96c6)]:
+  - @ultraviolet/ui@1.70.0
+  - @ultraviolet/themes@1.14.0
+
 ## 3.8.0
 
 ### Minor Changes
