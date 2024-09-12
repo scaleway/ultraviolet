@@ -1,5 +1,2 @@
-export {
-  consoleLightTheme,
-  consoleDarkTheme,
-  consoleDarkerTheme,
-} from './themes'
+// eslint-disable-next-line no-restricted-syntax
+export * from './themes'
