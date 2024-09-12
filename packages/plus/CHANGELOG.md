@@ -1,5 +1,24 @@
 # @ultraviolet/plus
 
+## 0.21.9
+
+### Patch Changes
+
+- [#4224](https://github.com/scaleway/ultraviolet/pull/4224) [`35d68a8`](https://github.com/scaleway/ultraviolet/commit/35d68a8f4ee9a2c4fd729beaf47c5206d7519771) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.23.2`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.23.2`.
+  Updated dependency `@uiw/react-codemirror` to `4.23.2`.
+
+- [#4210](https://github.com/scaleway/ultraviolet/pull/4210) [`23f38b8`](https://github.com/scaleway/ultraviolet/commit/23f38b85602bf57ff1562868a920e9698ebbfa01) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.23.1`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.23.1`.
+  Updated dependency `@uiw/react-codemirror` to `4.23.1`.
+
+- [#4219](https://github.com/scaleway/ultraviolet/pull/4219) [`2c6e8ad`](https://github.com/scaleway/ultraviolet/commit/2c6e8ad1879913fc676486f768862c5fa7bdadfe) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<FAQ />` component, `productIconName` not working properly
+
+- Updated dependencies [[`75a5de6`](https://github.com/scaleway/ultraviolet/commit/75a5de629394e862c69165aaf0fcae6c2191cdce), [`ac11dc5`](https://github.com/scaleway/ultraviolet/commit/ac11dc5f4a2934b8ae70051c9f09408c4bb9657c), [`84cab43`](https://github.com/scaleway/ultraviolet/commit/84cab43c806f1753ab052b0b622d075eb02dd1bd), [`ee3c0b5`](https://github.com/scaleway/ultraviolet/commit/ee3c0b5a35758d3920506cdfaca2bc06409a96c6), [`ee3c0b5`](https://github.com/scaleway/ultraviolet/commit/ee3c0b5a35758d3920506cdfaca2bc06409a96c6)]:
+  - @ultraviolet/ui@1.70.0
+  - @ultraviolet/themes@1.14.0
+  - @ultraviolet/icons@3.0.1
+
 ## 0.21.8
 
 ### Patch Changes
