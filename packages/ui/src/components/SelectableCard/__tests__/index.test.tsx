@@ -222,20 +222,4 @@ describe('SelectableCard', () => {
         the remote desktop-sharing protocol. Learn more
       </SelectableCard>,
     ))
-  test('renders correctly with illustration and productIcon', () =>
-    shouldMatchEmotionSnapshot(
-      <SelectableCard
-        name="label-14"
-        value="label-14"
-        type="radio"
-        label="label"
-        illustration={illustration}
-        showTick
-        productIcon="macMini"
-        onChange={() => {}}
-      >
-        Offer the best experience to your Mac, iPhone and iPad users with VNC,
-        the remote desktop-sharing protocol. Learn more
-      </SelectableCard>,
-    ))
 })

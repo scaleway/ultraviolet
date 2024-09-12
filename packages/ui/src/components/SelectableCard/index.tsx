@@ -165,12 +165,19 @@ export type SelectableCardProps = {
   tooltip?: string
   label?: ReactNode
   'data-testid'?: string
-  productIcon?: PascalToCamelCaseWithoutSuffix<
-    keyof typeof ProductIcon,
-    'ProductIcon'
-  >
-  illustration?: string
-}
+} & (
+  | {
+      illustration?: string
+      productIcon?: never
+    }
+  | {
+      productIcon?: PascalToCamelCaseWithoutSuffix<
+        keyof typeof ProductIcon,
+        'ProductIcon'
+      >
+      illustration?: never
+    }
+)
 
 /**
  * SelectableCard is a component that can be used to create a radio or checkbox card.
