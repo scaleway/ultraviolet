@@ -1,6 +1,9 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
+import type { ReactNode } from 'react'
 import type { Color } from '../../theme'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 const shineAnimation = keyframes`
   from {
@@ -28,6 +31,7 @@ const StyledProgressContainer = styled.div`
   margin-right: 0;
   border-radius: ${({ theme }) => theme.radii.default};
   background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  width: 100%;
 `
 
 const StyledProgress = styled.div`
@@ -65,10 +69,16 @@ const StyledFilled = styled('div', {
 type ProgressBarProps = {
   sentiment?: (typeof progressBarSentiments)[number]
   value?: number
+  showProgress?: boolean
+  label?: string
+  labelDescription?: ReactNode
+  direction?: 'column' | 'row'
   /** Put ProgressBar in a loading state */
   progress?: boolean
   className?: string
   'data-testid'?: string
+  'aria-labelledby'?: string
+  'aria-label'?: string
 }
 
 /**
@@ -80,19 +90,90 @@ export const ProgressBar = ({
   sentiment = 'primary',
   className,
   'data-testid': dataTestId,
+  showProgress = false,
+  label,
+  labelDescription,
+  direction = 'column',
+  'aria-labelledby': ariaLabelledBy,
+  'aria-label': ariaLabel,
 }: ProgressBarProps) => (
-  <StyledProgressContainer
-    role="progressbar"
-    aria-valuenow={value}
-    aria-valuemin={0}
-    aria-valuemax={100}
-    className={className}
-    data-testid={dataTestId}
+  <Stack
+    gap={direction === 'column' ? 1 : 2}
+    direction={direction}
+    alignItems="center"
   >
-    {progress ? (
-      <StyledProgress />
-    ) : (
-      <StyledFilled sentiment={sentiment} value={value} />
-    )}
-  </StyledProgressContainer>
+    {direction === 'column' && (label || showProgress) ? (
+      <Stack
+        direction="row"
+        justifyContent={!label && showProgress ? 'right' : 'space-between'}
+        width="100%"
+      >
+        <Stack gap={1} direction="row" alignItems="center">
+          {label ? (
+            <Text as="label" variant="bodySmallStrong" sentiment="neutral">
+              {label}
+            </Text>
+          ) : null}
+          {typeof labelDescription === 'string' ? (
+            <Text as="label" variant="bodySmall">
+              {labelDescription}
+            </Text>
+          ) : null}
+          {labelDescription && typeof labelDescription !== 'string'
+            ? labelDescription
+            : null}
+        </Stack>
+        {showProgress ? (
+          <Text
+            as="label"
+            variant="bodySmall"
+            sentiment="neutral"
+            placement="right"
+          >
+            {`${Math.max(0, Math.min(100, value))}%`}
+          </Text>
+        ) : null}
+      </Stack>
+    ) : null}
+    {label && direction === 'row' && labelDescription ? (
+      <Stack direction="row" gap={1}>
+        <Text as="label" variant="bodySmallStrong" sentiment="neutral">
+          {label}
+        </Text>
+        {typeof labelDescription === 'string' ? (
+          <Text as="label" variant="bodySmall">
+            {labelDescription}
+          </Text>
+        ) : (
+          labelDescription
+        )}
+      </Stack>
+    ) : null}
+    {label && direction === 'row' && !labelDescription ? (
+      <Text as="label" variant="bodySmallStrong" sentiment="neutral">
+        {label}
+      </Text>
+    ) : null}
+    <StyledProgressContainer
+      role="progressbar"
+      aria-valuenow={value}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      className={className}
+      data-testid={dataTestId}
+      aria-labelledby={ariaLabelledBy}
+      aria-label={ariaLabel}
+    >
+      {progress ? (
+        <StyledProgress />
+      ) : (
+        <StyledFilled sentiment={sentiment} value={value} />
+      )}
+    </StyledProgressContainer>
+    {showProgress && direction === 'row' ? (
+      <Text as="label" variant="bodySmall" sentiment="neutral">
+        {`${Math.max(0, Math.min(100, value))}%`}
+      </Text>
+    ) : null}
+  </Stack>
 )
