@@ -425,7 +425,6 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
@@ -919,7 +918,6 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
       class="emotion-0 emotion-1"
       data-checked="true"
       data-disabled="false"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
@@ -1414,7 +1412,6 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
@@ -1922,7 +1919,6 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
       data-checked="false"
       data-disabled="false"
       data-error="true"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
@@ -2463,7 +2459,6 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
           class="emotion-4 emotion-5"
           data-checked="false"
           data-disabled="false"
-          data-has-icon="false"
           data-has-illustration="false"
           data-has-label="false"
           data-type="checkbox"
@@ -2959,7 +2954,6 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
@@ -3331,7 +3325,6 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
@@ -3999,7 +3992,6 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
-      data-has-icon="false"
       data-has-illustration="true"
       data-has-label="true"
       data-type="radio"
@@ -4071,16 +4063,14 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
         </div>
         <div
           class="emotion-23 emotion-3"
-        >
-           
-        </div>
+        />
         <div
           class="emotion-25 emotion-26"
         >
           <img
             alt="illustration"
             class="emotion-27 emotion-28"
-            src="https://ultraviolet.s3.fr-par.scw.cloud/illustrations/products/appleSilicon/apple-silicon-wire.svg"
+            src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
             width="220"
           />
         </div>
@@ -4835,7 +4825,6 @@ exports[`SelectableCard > renders correctly with illustration and productIcon 1`
               </g>
             </g>
           </svg>
-           
         </div>
         <div
           class="emotion-27 emotion-28"
@@ -4843,7 +4832,7 @@ exports[`SelectableCard > renders correctly with illustration and productIcon 1`
           <img
             alt="illustration"
             class="emotion-29 emotion-30"
-            src="https://ultraviolet.s3.fr-par.scw.cloud/illustrations/products/appleSilicon/apple-silicon-wire.svg"
+            src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
             width="220"
           />
         </div>
@@ -5573,7 +5562,6 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
               </g>
             </g>
           </svg>
-           
         </div>
       </div>
     </div>
@@ -5880,7 +5868,6 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
       class="emotion-0 emotion-1"
       data-checked="true"
       data-disabled="false"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
@@ -6243,7 +6230,6 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
@@ -6606,7 +6592,6 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
       data-checked="false"
       data-disabled="false"
       data-error="true"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="radio"
@@ -7012,7 +6997,6 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
           class="emotion-4 emotion-5"
           data-checked="false"
           data-disabled="false"
-          data-has-icon="false"
           data-has-illustration="false"
           data-has-label="false"
           data-type="radio"
@@ -7494,7 +7478,6 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="checkbox"
@@ -7854,7 +7837,6 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="false"
-      data-has-icon="false"
       data-has-illustration="false"
       data-has-label="false"
       data-type="radio"

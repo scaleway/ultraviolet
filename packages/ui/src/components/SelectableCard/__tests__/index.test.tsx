@@ -3,9 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test, vi } from 'vitest'
 import { SelectableCard } from '..'
-
-const illustration =
-  'https://ultraviolet.s3.fr-par.scw.cloud/illustrations/products/appleSilicon/apple-silicon-wire.svg'
+import illustration from './illustrationTest.svg'
 
 describe('SelectableCard', () => {
   test('renders correctly with default props', () =>

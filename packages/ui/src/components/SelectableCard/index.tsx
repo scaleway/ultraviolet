@@ -236,7 +236,7 @@ export const SelectableCard = forwardRef(
             >
               <IllustrationStack>{subChildren}</IllustrationStack>
               <Stack justifyContent="center">
-                {ProductIconUsed ? <ProductIconUsed size="large" /> : null}{' '}
+                {ProductIconUsed ? <ProductIconUsed size="large" /> : null}
               </Stack>
 
               {illustration ? (
@@ -286,7 +286,7 @@ export const SelectableCard = forwardRef(
           data-type={type}
           data-has-label={!!label}
           data-has-illustration={!!illustration}
-          data-has-icon={!!productIcon && !illustration}
+          data-has-icon={productIcon && !illustration}
           ref={ref}
           alignItems="start"
           direction="column"
