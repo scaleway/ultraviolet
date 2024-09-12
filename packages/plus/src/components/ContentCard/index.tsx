@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons/legacy'
 import { Stack, Text } from '@ultraviolet/ui'
-import type { ElementType, MouseEventHandler, ReactNode } from 'react'
+import type { MouseEventHandler, ReactNode } from 'react'
 import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import { Skeleton } from './Skeleton'
 
@@ -114,7 +114,7 @@ type ContentCardProps = {
   /*
    * Define the HTML Section Heading element level (h1 - h6) to use for the header
    */
-  headingTag?: ElementType
+  headingTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
   description?: string
   children?: ReactNode
