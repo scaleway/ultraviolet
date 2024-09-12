@@ -2,4 +2,4 @@
 "@ultraviolet/icons": patch
 ---
 
-`Icon`: new icon `leaf`
+New components `<LeafIcon />` and `<LeafOutlineIcon />`
