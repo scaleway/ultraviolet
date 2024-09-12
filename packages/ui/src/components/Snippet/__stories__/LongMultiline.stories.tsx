@@ -3,8 +3,7 @@ import { Template } from './Template.stories'
 export const LongMultiline = Template.bind({})
 
 LongMultiline.args = {
-  children: `
-# Install the package and start it
+  children: `# Install the package and start it
 pnpm add @ultraviolet/ui
 pnpm install
 pnpm start
@@ -23,6 +22,5 @@ pnpm start
 pnpm build
 
 # Test
-pnpm test:unit
-`,
+pnpm test:unit`,
 }
