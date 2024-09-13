@@ -5,11 +5,11 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Card } from '../index'
 
-export const IsActive: StoryFn = args => {
+export const Active: StoryFn = args => {
   const [active, setActive] = useState(true)
 
   return (
-    <Card {...args} header="Active Card" isActive={active}>
+    <Card {...args} header="Active Card" active={active}>
       <Stack gap={6} direction="row" justifyContent="space-between">
         <Text as="p" variant="body" sentiment={active ? 'primary' : 'neutral'}>
           This card is currently highlighted through isActive prop. In this
@@ -43,7 +43,7 @@ export const IsActive: StoryFn = args => {
   )
 }
 
-IsActive.parameters = {
+Active.parameters = {
   docs: {
     description: {
       story: 'You can highlight a Card by passing the `isActive` prop.',

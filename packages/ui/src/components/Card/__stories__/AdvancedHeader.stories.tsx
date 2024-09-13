@@ -9,7 +9,7 @@ export const AdvancedHeader: StoryFn = args => {
   const CustomHeader = (
     <Stack gap={1}>
       <Stack gap={1} direction="row" alignItems="center">
-        <Text variant="heading" as="h2">
+        <Text variant="heading" as="h4" sentiment="neutral" prominence="strong">
           Advanced Header
         </Text>
         <Badge sentiment="success" size="small">

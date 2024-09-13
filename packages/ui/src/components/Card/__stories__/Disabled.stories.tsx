@@ -7,7 +7,7 @@ import { Card } from '../index'
 export const Disabled: StoryFn = args => (
   <Card {...args} header="Disabled Card" disabled>
     <Stack gap={1}>
-      <Text as="p" variant="body" disabled>
+      <Text as="p" variant="body" disabled sentiment="neutral">
         This is a disabled card children.
       </Text>
       <Button sentiment="neutral" disabled>
