@@ -82,6 +82,18 @@
       "require": "./dist/components/Icon/legacy/index.cjs",
       "import": "./dist/components/Icon/legacy/index.js",
       "default": "./dist/components/Icon/legacy/index.js"
+    },
+    "./logo": {
+      "types": "./dist/components/Logo/index.d.ts",
+      "require": "./dist/components/Logo/index.cjs",
+      "import": "./dist/components/Logo/index.js",
+      "default": "./dist/components/Logo/index.js"
+    },
+    "./logo/*": {
+      "types": "./dist/components/Logo/__generatedIcons__/*.d.ts",
+      "require": "./dist/components/Logo/__generatedIcons__/*.cjs",
+      "import": "./dist/components/Logo/__generatedIcons__/*.js",
+      "default": "./dist/components/Logo/__generatedIcons__/*.js"
     }
   },
   "size-limit": [
