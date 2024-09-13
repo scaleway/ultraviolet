@@ -25,8 +25,7 @@ export type IconProps = {
 }
 
 /**
- * ProductIcon component is used to render a set of icons that are linked to a product or service.
- * Those icons are made of multiple colors that changes automatically based on the current theme.
+ * Logo component is used to render a set of logos. Their style cannot be changed
  */
 export const Icon = ({ size = 'small', className, children }: IconProps) => (
   <StyledIcon size={size} viewBox="0 0 20 20" className={className}>
