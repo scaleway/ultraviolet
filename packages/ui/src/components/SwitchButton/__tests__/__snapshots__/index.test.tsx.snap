@@ -431,6 +431,17 @@ exports[`SwitchButton > renders correctly 1`] = `
   flex: 1;
 }
 
+.emotion-20 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -498,7 +509,11 @@ exports[`SwitchButton > renders correctly 1`] = `
                 class="emotion-18 emotion-19"
                 for="test-left"
               >
-                Left
+                <label
+                  class="emotion-20 emotion-21"
+                >
+                   Left 
+                </label>
               </label>
             </div>
           </div>
@@ -561,7 +576,11 @@ exports[`SwitchButton > renders correctly 1`] = `
                 class="emotion-18 emotion-19"
                 for="test-right"
               >
-                Right
+                <label
+                  class="emotion-20 emotion-21"
+                >
+                   Right 
+                </label>
               </label>
             </div>
           </div>
@@ -891,6 +910,17 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   flex: 1;
 }
 
+.emotion-20 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -958,7 +988,11 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 class="emotion-18 emotion-19"
                 for="test-left"
               >
-                Left
+                <label
+                  class="emotion-20 emotion-21"
+                >
+                   Left 
+                </label>
               </label>
             </div>
           </div>
@@ -1021,7 +1055,11 @@ exports[`SwitchButton > renders correctly medium 1`] = `
                 class="emotion-18 emotion-19"
                 for="test-right"
               >
-                Right
+                <label
+                  class="emotion-20 emotion-21"
+                >
+                   Right 
+                </label>
               </label>
             </div>
           </div>
@@ -1351,6 +1389,17 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   flex: 1;
 }
 
+.emotion-20 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -1418,7 +1467,11 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 class="emotion-18 emotion-19"
                 for="test-left"
               >
-                Left
+                <label
+                  class="emotion-20 emotion-21"
+                >
+                   Left 
+                </label>
               </label>
             </div>
           </div>
@@ -1481,7 +1534,11 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
                 class="emotion-18 emotion-19"
                 for="test-right"
               >
-                Right
+                <label
+                  class="emotion-20 emotion-21"
+                >
+                   Right 
+                </label>
               </label>
             </div>
           </div>
@@ -1819,12 +1876,23 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   flex: 1;
 }
 
+.emotion-22 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
     <div
-      aria-controls=":rl:"
-      aria-describedby=":rl:"
+      aria-controls=":rr:"
+      aria-describedby=":rr:"
       class="emotion-0 emotion-1"
       tabindex="0"
     >
@@ -1892,7 +1960,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   class="emotion-20 emotion-21"
                   for="test-left"
                 >
-                  Left
+                  <label
+                    class="emotion-22 emotion-23"
+                  >
+                     Left 
+                  </label>
                 </label>
               </div>
             </div>
@@ -1955,7 +2027,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
                   class="emotion-20 emotion-21"
                   for="test-right"
                 >
-                  Right
+                  <label
+                    class="emotion-22 emotion-23"
+                  >
+                     Right 
+                  </label>
                 </label>
               </div>
             </div>

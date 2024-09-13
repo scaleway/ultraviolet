@@ -412,7 +412,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -461,6 +461,18 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 
 .emotion-25 {
   width: 100%;
+}
+
+.emotion-27 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -547,7 +559,11 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
                       class="emotion-25 emotion-26"
                       for=":r2:"
                     >
-                      Checkbox 1
+                      <label
+                        class="emotion-27 emotion-7"
+                      >
+                        Checkbox 1
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -573,7 +589,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
                   aria-checked="false"
                   aria-invalid="false"
                   class="emotion-15 emotion-16"
-                  id=":r5:"
+                  id=":r6:"
                   name="checkbox"
                   type="checkbox"
                   value="value-2"
@@ -614,9 +630,13 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
                   >
                     <label
                       class="emotion-25 emotion-26"
-                      for=":r5:"
+                      for=":r6:"
                     >
-                      Checkbox 2
+                      <label
+                        class="emotion-27 emotion-7"
+                      >
+                        Checkbox 2
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -969,7 +989,18 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   flex: 1;
 }
 
-.emotion-44 {
+.emotion-27 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-48 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1059,7 +1090,11 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
                     class="emotion-25 emotion-26"
                     for="radio-value-1"
                   >
-                    Radio 1
+                    <label
+                      class="emotion-27 emotion-7"
+                    >
+                       Radio 1 
+                    </label>
                   </label>
                 </div>
               </div>
@@ -1121,7 +1156,11 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
                     class="emotion-25 emotion-26"
                     for="radio-value-2"
                   >
-                    Radio 2
+                    <label
+                      class="emotion-27 emotion-7"
+                    >
+                       Radio 2 
+                    </label>
                   </label>
                 </div>
               </div>
@@ -1130,7 +1169,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
         </div>
       </fieldset>
       <span
-        class="emotion-44 emotion-7"
+        class="emotion-48 emotion-7"
       >
         Error content
       </span>
@@ -1562,7 +1601,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1611,6 +1650,18 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 
 .emotion-28 {
   width: 100%;
+}
+
+.emotion-30 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -1663,7 +1714,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   aria-invalid="false"
                   checked=""
                   class="emotion-18 emotion-19"
-                  id=":ro:"
+                  id=":ru:"
                   name="checkbox"
                   type="checkbox"
                   value="value-1"
@@ -1704,9 +1755,13 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   >
                     <label
                       class="emotion-28 emotion-29"
-                      for=":ro:"
+                      for=":ru:"
                     >
-                      Checkbox 1
+                      <label
+                        class="emotion-30 emotion-7"
+                      >
+                        Checkbox 1
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -1732,7 +1787,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   aria-checked="false"
                   aria-invalid="false"
                   class="emotion-18 emotion-19"
-                  id=":rr:"
+                  id=":r12:"
                   name="checkbox"
                   type="checkbox"
                   value="value-2"
@@ -1773,9 +1828,13 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                   >
                     <label
                       class="emotion-28 emotion-29"
-                      for=":rr:"
+                      for=":r12:"
                     >
-                      Checkbox 2
+                      <label
+                        class="emotion-30 emotion-7"
+                      >
+                        Checkbox 2
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -2201,7 +2260,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2252,6 +2311,18 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   width: 100%;
 }
 
+.emotion-27 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -2293,7 +2364,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
                   aria-invalid="false"
                   checked=""
                   class="emotion-15 emotion-16"
-                  id=":r9:"
+                  id=":rb:"
                   name="checkbox"
                   type="checkbox"
                   value="value-1"
@@ -2334,9 +2405,13 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
                   >
                     <label
                       class="emotion-25 emotion-26"
-                      for=":r9:"
+                      for=":rb:"
                     >
-                      Checkbox 1
+                      <label
+                        class="emotion-27 emotion-7"
+                      >
+                        Checkbox 1
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -2362,7 +2437,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
                   aria-checked="false"
                   aria-invalid="false"
                   class="emotion-15 emotion-16"
-                  id=":rc:"
+                  id=":rf:"
                   name="checkbox"
                   type="checkbox"
                   value="value-2"
@@ -2403,9 +2478,13 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
                   >
                     <label
                       class="emotion-25 emotion-26"
-                      for=":rc:"
+                      for=":rf:"
                     >
-                      Checkbox 2
+                      <label
+                        class="emotion-27 emotion-7"
+                      >
+                        Checkbox 2
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -2831,7 +2910,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2882,7 +2961,19 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   width: 100%;
 }
 
-.emotion-44 {
+.emotion-27 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-48 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -2935,7 +3026,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                   aria-invalid="false"
                   checked=""
                   class="emotion-15 emotion-16"
-                  id=":rv:"
+                  id=":r17:"
                   name="checkbox"
                   type="checkbox"
                   value="value-1"
@@ -2976,9 +3067,13 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                   >
                     <label
                       class="emotion-25 emotion-26"
-                      for=":rv:"
+                      for=":r17:"
                     >
-                      Checkbox 1
+                      <label
+                        class="emotion-27 emotion-7"
+                      >
+                        Checkbox 1
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -3004,7 +3099,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                   aria-checked="false"
                   aria-invalid="false"
                   class="emotion-15 emotion-16"
-                  id=":r12:"
+                  id=":r1b:"
                   name="checkbox"
                   type="checkbox"
                   value="value-2"
@@ -3045,9 +3140,13 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                   >
                     <label
                       class="emotion-25 emotion-26"
-                      for=":r12:"
+                      for=":r1b:"
                     >
-                      Checkbox 2
+                      <label
+                        class="emotion-27 emotion-7"
+                      >
+                        Checkbox 2
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -3057,7 +3156,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
         </div>
       </fieldset>
       <span
-        class="emotion-44 emotion-7"
+        class="emotion-48 emotion-7"
       >
         Error content
       </span>
@@ -3478,7 +3577,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3529,7 +3628,19 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   width: 100%;
 }
 
-.emotion-44 {
+.emotion-27 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-48 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -3582,7 +3693,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
                   aria-invalid="false"
                   checked=""
                   class="emotion-15 emotion-16"
-                  id=":rg:"
+                  id=":rk:"
                   name="checkbox"
                   type="checkbox"
                   value="value-1"
@@ -3623,9 +3734,13 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
                   >
                     <label
                       class="emotion-25 emotion-26"
-                      for=":rg:"
+                      for=":rk:"
                     >
-                      Checkbox 1
+                      <label
+                        class="emotion-27 emotion-7"
+                      >
+                        Checkbox 1
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -3651,7 +3766,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
                   aria-checked="false"
                   aria-invalid="false"
                   class="emotion-15 emotion-16"
-                  id=":rj:"
+                  id=":ro:"
                   name="checkbox"
                   type="checkbox"
                   value="value-2"
@@ -3692,9 +3807,13 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
                   >
                     <label
                       class="emotion-25 emotion-26"
-                      for=":rj:"
+                      for=":ro:"
                     >
-                      Checkbox 2
+                      <label
+                        class="emotion-27 emotion-7"
+                      >
+                        Checkbox 2
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -3704,7 +3823,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
         </div>
       </fieldset>
       <span
-        class="emotion-44 emotion-7"
+        class="emotion-48 emotion-7"
       >
         Helper content
       </span>

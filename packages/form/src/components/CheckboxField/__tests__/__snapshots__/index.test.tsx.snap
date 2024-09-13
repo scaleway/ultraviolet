@@ -229,7 +229,7 @@ exports[`CheckboxField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -567,7 +567,7 @@ exports[`CheckboxField > should render correctly checked without value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -906,7 +906,7 @@ exports[`CheckboxField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1245,7 +1245,7 @@ exports[`CheckboxField > should render correctly not checked without value 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1583,7 +1583,7 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1634,7 +1634,19 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-17 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1661,10 +1673,10 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
       >
         <input
           aria-checked="false"
-          aria-describedby=":ra:-hint"
+          aria-describedby=":rb:-hint"
           aria-invalid="true"
           class="emotion-2 emotion-3"
-          id=":ra:"
+          id=":rb:"
           name="test"
           type="checkbox"
           value=""
@@ -1705,13 +1717,17 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
           >
             <label
               class="emotion-12 emotion-13"
-              for=":ra:"
+              for=":rb:"
             >
-              Checkbox field error
+              <label
+                class="emotion-14 emotion-15"
+              >
+                Checkbox field error
+              </label>
             </label>
           </div>
           <span
-            class="emotion-14 emotion-15 emotion-16"
+            class="emotion-16 emotion-17 emotion-15"
           >
             This field is required
           </span>
@@ -1954,7 +1970,7 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2003,6 +2019,18 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
 
 .emotion-12 {
   width: 100%;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -2064,7 +2092,11 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
               class="emotion-12 emotion-13"
               for=":r8:"
             >
-              Checkbox field events
+              <label
+                class="emotion-14 emotion-15"
+              >
+                Checkbox field events
+              </label>
             </label>
           </div>
         </div>

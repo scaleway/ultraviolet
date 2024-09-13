@@ -1,5 +1,9 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  AlertCircleIcon,
+  AsteriskIcon,
+  CheckCircleIcon,
+} from '@ultraviolet/icons'
 import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { useId, useMemo, useState } from 'react'
 import { SelectInputV2 } from '../SelectInputV2'
@@ -262,12 +266,12 @@ export const UnitInput = ({
             variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
             disabled={disabled}
             htmlFor={id ?? localId}
+            prominence="strong"
+            sentiment="neutral"
           >
             {label}
           </Text>
-          {required ? (
-            <Icon name="asterisk" sentiment="danger" size={8} />
-          ) : null}
+          {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
           {labelInformation ?? null}
         </Stack>
       ) : null}
@@ -319,10 +323,8 @@ export const UnitInput = ({
             className={className}
             data-size={size}
           />
-          {error ? <Icon name="alert" sentiment="danger" /> : null}
-          {success && !error ? (
-            <Icon name="checkbox-circle-outline" sentiment="success" />
-          ) : null}
+          {error ? <AlertCircleIcon sentiment="danger" /> : null}
+          {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
         </StyledNumberInputWrapper>
         <CustomSelectInput
           width={selectInputWidth}

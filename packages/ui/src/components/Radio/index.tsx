@@ -237,7 +237,14 @@ export const Radio = forwardRef(
             </Ring>
             {label ? (
               <StyledLabel htmlFor={`${computedName}-${value}`}>
-                {label}
+                {typeof label === 'string' ? (
+                  <Text as="label" variant="body" prominence="default">
+                    {' '}
+                    {label}{' '}
+                  </Text>
+                ) : (
+                  label
+                )}
               </StyledLabel>
             ) : null}
           </RadioContainer>

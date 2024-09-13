@@ -1,5 +1,9 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  AlertCircleIcon,
+  AsteriskIcon,
+  CheckCircleIcon,
+} from '@ultraviolet/icons'
 import type { DOMAttributes, ReactNode } from 'react'
 import { forwardRef, useId, useMemo } from 'react'
 import { Button, SIZE_HEIGHT as ButtonSizeHeight } from '../Button'
@@ -189,12 +193,11 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                   variant="bodyStrong"
                   sentiment="neutral"
                   htmlFor={id ?? localId}
+                  prominence="strong"
                 >
                   {label}
                 </Text>
-                {required ? (
-                  <Icon name="asterisk" color="danger" size={8} />
-                ) : null}
+                {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
               </Stack>
             ) : null}
             {labelDescription ?? null}
@@ -247,15 +250,9 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                 />
               ) : null}
               {success ? (
-                <Icon
-                  name="checkbox-circle-outline"
-                  color="success"
-                  size={STATE_ICON_SIZE}
-                />
+                <CheckCircleIcon sentiment="success" size={STATE_ICON_SIZE} />
               ) : null}
-              {error ? (
-                <Icon name="alert" color="danger" variant="filled" />
-              ) : null}
+              {error ? <AlertCircleIcon sentiment="danger" /> : null}
             </StyledTextAreaAbsoluteStack>
           </StyledTextAreaWrapper>
         </Tooltip>

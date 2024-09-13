@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { AsteriskIcon } from '@ultraviolet/icons'
 import { useId, useRef } from 'react'
 import type { HTMLAttributes, ReactNode } from 'react'
 import { Stack } from '../Stack'
@@ -217,12 +217,11 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
                   as="label"
                   variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                   sentiment="neutral"
+                  prominence="strong"
                 >
                   {label}
                 </Text>
-                {required ? (
-                  <Icon name="asterisk" sentiment="danger" size={8} />
-                ) : null}
+                {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
                 {labelDescription ?? null}
               </Stack>
             ) : null}

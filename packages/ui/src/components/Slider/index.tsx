@@ -44,10 +44,10 @@ export const Slider = ({
     : { min, max }
   const gap = useMemo(() => {
     if (options) return 3
-    if (input && double) return 0
+    if (input && double && !helper) return 0
 
     return 1
-  }, [options, input, double])
+  }, [options, input, double, helper])
 
   return (
     <SliderContainer

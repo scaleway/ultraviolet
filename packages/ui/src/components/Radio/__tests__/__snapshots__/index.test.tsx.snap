@@ -161,6 +161,17 @@ exports[`Radio > renders correctly 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -210,7 +221,11 @@ exports[`Radio > renders correctly 1`] = `
           class="emotion-12 emotion-13"
           for="radio-choice"
         >
-          Choice
+          <label
+            class="emotion-14 emotion-15"
+          >
+             Choice 
+          </label>
         </label>
       </div>
     </div>
@@ -379,6 +394,17 @@ exports[`Radio > renders correctly when checked 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -429,7 +455,11 @@ exports[`Radio > renders correctly when checked 1`] = `
           class="emotion-12 emotion-13"
           for="radio-choice"
         >
-          Choice
+          <label
+            class="emotion-14 emotion-15"
+          >
+             Choice 
+          </label>
         </label>
       </div>
     </div>
@@ -598,6 +628,17 @@ exports[`Radio > renders correctly when disabled 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -648,7 +689,11 @@ exports[`Radio > renders correctly when disabled 1`] = `
           class="emotion-12 emotion-13"
           for="radio-choice"
         >
-          Choice
+          <label
+            class="emotion-14 emotion-15"
+          >
+             Choice 
+          </label>
         </label>
       </div>
     </div>
@@ -817,6 +862,17 @@ exports[`Radio > renders correctly when error 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -867,7 +923,11 @@ exports[`Radio > renders correctly when error 1`] = `
           class="emotion-12 emotion-13"
           for="radio-choice"
         >
-          Choice
+          <label
+            class="emotion-14 emotion-15"
+          >
+             Choice 
+          </label>
         </label>
       </div>
     </div>
@@ -1036,7 +1096,18 @@ exports[`Radio > renders correctly when helper 1`] = `
   flex: 1;
 }
 
-.emotion-15 {
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-17 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1098,11 +1169,15 @@ exports[`Radio > renders correctly when helper 1`] = `
           class="emotion-12 emotion-13"
           for="radio-choice"
         >
-          Choice
+          <label
+            class="emotion-14 emotion-15"
+          >
+             Choice 
+          </label>
         </label>
       </div>
       <span
-        class="emotion-14 emotion-15 emotion-16"
+        class="emotion-16 emotion-17 emotion-15"
       >
         Helper
       </span>
@@ -1280,12 +1355,23 @@ exports[`Radio > renders correctly with tooltip 1`] = `
   flex: 1;
 }
 
+.emotion-16 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
     <div
-      aria-controls=":r5:"
-      aria-describedby=":r5:"
+      aria-controls=":r7:"
+      aria-describedby=":r7:"
       class="emotion-0 emotion-1"
       tabindex="0"
     >
@@ -1335,7 +1421,11 @@ exports[`Radio > renders correctly with tooltip 1`] = `
             class="emotion-14 emotion-15"
             for="radio-choice"
           >
-            Choice
+            <label
+              class="emotion-16 emotion-17"
+            >
+               Choice 
+            </label>
           </label>
         </div>
       </div>
@@ -1505,6 +1595,17 @@ exports[`Radio > renders without name 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -1521,8 +1622,8 @@ exports[`Radio > renders without name 1`] = `
           aria-invalid="false"
           class="emotion-4 emotion-5"
           disabled=""
-          id=":r6:-choice"
-          name=":r6:"
+          id=":r9:-choice"
+          name=":r9:"
           type="radio"
           value="choice"
         />
@@ -1553,9 +1654,13 @@ exports[`Radio > renders without name 1`] = `
         </svg>
         <label
           class="emotion-12 emotion-13"
-          for=":r6:-choice"
+          for=":r9:-choice"
         >
-          Choice
+          <label
+            class="emotion-14 emotion-15"
+          >
+             Choice 
+          </label>
         </label>
       </div>
     </div>

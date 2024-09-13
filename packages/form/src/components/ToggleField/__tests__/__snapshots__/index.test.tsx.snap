@@ -623,7 +623,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-9[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -670,6 +670,18 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 }
 
 .emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -691,11 +703,11 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   height: 24px;
 }
 
-.emotion-6:hover {
+.emotion-8:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-8:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -708,25 +720,25 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-8:focus-within,
+.emotion-8:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-8[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-6[data-checked="true"] {
+.emotion-8[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6[data-checked="true"]:hover {
+.emotion-8[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-6[data-checked="true"]:after {
+.emotion-8[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -734,41 +746,41 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6[data-checked="true"]:focus-within,
-.emotion-6[data-checked="true"]:focus {
+.emotion-8[data-checked="true"]:focus-within,
+.emotion-8[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-8[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"][data-checked="true"] {
+.emotion-8[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-8[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-8[data-error="true"]:focus-within,
+.emotion-8[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-8[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-10 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -778,7 +790,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-10[disabled] {
   cursor: not-allowed;
 }
 
@@ -798,11 +810,15 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
           <div
             class="emotion-4 emotion-5"
           >
-            test
+            <label
+              class="emotion-6 emotion-7"
+            >
+              test
+            </label>
           </div>
         </div>
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-9"
           data-checked="true"
           data-disabled="false"
           data-error="false"
@@ -810,7 +826,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
           <input
             aria-checked="true"
             checked=""
-            class="emotion-8 emotion-9"
+            class="emotion-10 emotion-11"
             id=":r6:"
             name="test"
             type="checkbox"

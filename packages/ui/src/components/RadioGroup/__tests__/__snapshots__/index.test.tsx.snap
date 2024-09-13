@@ -55,6 +55,7 @@ exports[`RadioGroup > renders correctly 1`] = `
 }
 
 .emotion-6 {
+  color: #222638;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -247,6 +248,17 @@ exports[`RadioGroup > renders correctly 1`] = `
   flex: 1;
 }
 
+.emotion-24 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -314,7 +326,11 @@ exports[`RadioGroup > renders correctly 1`] = `
                   class="emotion-22 emotion-23"
                   for="radio-value-1"
                 >
-                  Radio 1
+                  <label
+                    class="emotion-24 emotion-7"
+                  >
+                     Radio 1 
+                  </label>
                 </label>
               </div>
             </div>
@@ -364,7 +380,11 @@ exports[`RadioGroup > renders correctly 1`] = `
                   class="emotion-22 emotion-23"
                   for="radio-value-2"
                 >
-                  Radio 2
+                  <label
+                    class="emotion-24 emotion-7"
+                  >
+                     Radio 2 
+                  </label>
                 </label>
               </div>
             </div>
@@ -431,6 +451,7 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
 }
 
 .emotion-6 {
+  color: #222638;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -623,6 +644,17 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
   flex: 1;
 }
 
+.emotion-24 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -690,7 +722,11 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
                   class="emotion-22 emotion-23"
                   for="radio-value-1"
                 >
-                  Radio 1
+                  <label
+                    class="emotion-24 emotion-7"
+                  >
+                     Radio 1 
+                  </label>
                 </label>
               </div>
             </div>
@@ -740,7 +776,11 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
                   class="emotion-22 emotion-23"
                   for="radio-value-2"
                 >
-                  Radio 2
+                  <label
+                    class="emotion-24 emotion-7"
+                  >
+                     Radio 2 
+                  </label>
                 </label>
               </div>
             </div>
@@ -807,6 +847,7 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
 }
 
 .emotion-6 {
+  color: #222638;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -999,7 +1040,18 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
   flex: 1;
 }
 
-.emotion-38 {
+.emotion-24 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-42 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1078,7 +1130,11 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
                   class="emotion-22 emotion-23"
                   for="radio-value-1"
                 >
-                  Radio 1
+                  <label
+                    class="emotion-24 emotion-7"
+                  >
+                     Radio 1 
+                  </label>
                 </label>
               </div>
             </div>
@@ -1128,7 +1184,11 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
                   class="emotion-22 emotion-23"
                   for="radio-value-2"
                 >
-                  Radio 2
+                  <label
+                    class="emotion-24 emotion-7"
+                  >
+                     Radio 2 
+                  </label>
                 </label>
               </div>
             </div>
@@ -1136,7 +1196,7 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
         </div>
       </fieldset>
       <span
-        class="emotion-38 emotion-7"
+        class="emotion-42 emotion-7"
       >
         Eror content
       </span>
@@ -1200,6 +1260,7 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
 }
 
 .emotion-6 {
+  color: #222638;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1392,7 +1453,18 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
   flex: 1;
 }
 
-.emotion-38 {
+.emotion-24 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-42 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1471,7 +1543,11 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
                   class="emotion-22 emotion-23"
                   for="radio-value-1"
                 >
-                  Radio 1
+                  <label
+                    class="emotion-24 emotion-7"
+                  >
+                     Radio 1 
+                  </label>
                 </label>
               </div>
             </div>
@@ -1521,7 +1597,11 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
                   class="emotion-22 emotion-23"
                   for="radio-value-2"
                 >
-                  Radio 2
+                  <label
+                    class="emotion-24 emotion-7"
+                  >
+                     Radio 2 
+                  </label>
                 </label>
               </div>
             </div>
@@ -1529,7 +1609,7 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
         </div>
       </fieldset>
       <span
-        class="emotion-38 emotion-7"
+        class="emotion-42 emotion-7"
       >
         Helper content
       </span>

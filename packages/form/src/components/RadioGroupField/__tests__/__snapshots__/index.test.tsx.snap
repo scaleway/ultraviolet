@@ -55,6 +55,7 @@ exports[`RadioField > should render correctly checked 1`] = `
 }
 
 .emotion-6 {
+  color: #222638;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -245,6 +246,17 @@ exports[`RadioField > should render correctly checked 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.emotion-24 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -316,7 +328,11 @@ exports[`RadioField > should render correctly checked 1`] = `
                     class="emotion-22 emotion-23"
                     for="radio-value-1"
                   >
-                    Radio 1
+                    <label
+                      class="emotion-24 emotion-7"
+                    >
+                       Radio 1 
+                    </label>
                   </label>
                 </div>
               </div>
@@ -366,7 +382,11 @@ exports[`RadioField > should render correctly checked 1`] = `
                     class="emotion-22 emotion-23"
                     for="radio-value-2"
                   >
-                    Radio 2
+                    <label
+                      class="emotion-24 emotion-7"
+                    >
+                       Radio 2 
+                    </label>
                   </label>
                 </div>
               </div>
@@ -434,6 +454,7 @@ exports[`RadioField > should trigger events correctly 1`] = `
 }
 
 .emotion-6 {
+  color: #222638;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -626,6 +647,17 @@ exports[`RadioField > should trigger events correctly 1`] = `
   flex: 1;
 }
 
+.emotion-24 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -695,7 +727,11 @@ exports[`RadioField > should trigger events correctly 1`] = `
                     class="emotion-22 emotion-23"
                     for="test-value-1"
                   >
-                    Radio 1
+                    <label
+                      class="emotion-24 emotion-7"
+                    >
+                       Radio 1 
+                    </label>
                   </label>
                 </div>
               </div>
@@ -745,7 +781,11 @@ exports[`RadioField > should trigger events correctly 1`] = `
                     class="emotion-22 emotion-23"
                     for="test-value-2"
                   >
-                    Radio 2
+                    <label
+                      class="emotion-24 emotion-7"
+                    >
+                       Radio 2 
+                    </label>
                   </label>
                 </div>
               </div>
