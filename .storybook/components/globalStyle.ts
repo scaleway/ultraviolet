@@ -5,7 +5,7 @@ import InterRegularWoff2 from '../assets/fonts/inter/Inter-Regular.woff2'
 import SpaceGrotesk from '../assets/fonts/space-grotesk/SpaceGrotesk.woff2'
 import { normalize } from '@ultraviolet/ui'
 import { css } from '@emotion/react'
-import lightTheme from '../../packages/ui/src/theme'
+import { lightTheme } from '../../packages/ui/src/theme'
 
 export const globalStyles = css`
   ${normalize()}

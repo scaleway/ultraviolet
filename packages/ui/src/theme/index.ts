@@ -59,11 +59,10 @@ export {
   space,
   radii,
   screens,
+  consoleLightTheme as lightTheme,
   consoleDarkTheme as darkTheme,
   extendTheme,
   SENTIMENTS,
   SENTIMENTS_WITHOUT_NEUTRAL,
   typography,
 }
-
-export default consoleLightTheme

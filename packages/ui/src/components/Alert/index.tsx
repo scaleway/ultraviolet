@@ -15,6 +15,7 @@ export const ALERT_SENTIMENTS = [
   'warning',
   'neutral',
 ] as const
+
 type AlertSentiment = (typeof ALERT_SENTIMENTS)[number]
 
 const alertStyles = ({
