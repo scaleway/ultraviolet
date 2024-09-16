@@ -55,11 +55,11 @@ exports[`SelectableCardField > should render correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0[data-has-illustration="true"] {
+.emotion-0[data-image="illustration"] {
   padding: 0;
 }
 
-.emotion-0[data-has-icon="true"] {
+.emotion-0[data-image="icon"] {
   padding: 0;
   padding-right: 16px;
 }
@@ -303,8 +303,8 @@ exports[`SelectableCardField > should render correctly 1`] = `
         data-checked="false"
         data-disabled="false"
         data-error="false"
-        data-has-illustration="false"
         data-has-label="false"
+        data-image="none"
         data-type="radio"
         role="button"
         tabindex="0"
@@ -422,11 +422,11 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0[data-has-illustration="true"] {
+.emotion-0[data-image="illustration"] {
   padding: 0;
 }
 
-.emotion-0[data-has-icon="true"] {
+.emotion-0[data-image="icon"] {
   padding: 0;
   padding-right: 16px;
 }
@@ -670,8 +670,8 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
         data-checked="true"
         data-disabled="false"
         data-error="false"
-        data-has-illustration="false"
         data-has-label="false"
+        data-image="none"
         data-type="radio"
         role="button"
         tabindex="0"
@@ -790,11 +790,11 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0[data-has-illustration="true"] {
+.emotion-0[data-image="illustration"] {
   padding: 0;
 }
 
-.emotion-0[data-has-icon="true"] {
+.emotion-0[data-image="icon"] {
   padding: 0;
   padding-right: 16px;
 }
@@ -1038,8 +1038,8 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
         data-checked="false"
         data-disabled="true"
         data-error="false"
-        data-has-illustration="false"
         data-has-label="false"
+        data-image="none"
         data-type="radio"
         role="button"
       >
@@ -1157,11 +1157,11 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0[data-has-illustration="true"] {
+.emotion-0[data-image="illustration"] {
   padding: 0;
 }
 
-.emotion-0[data-has-icon="true"] {
+.emotion-0[data-image="icon"] {
   padding: 0;
   padding-right: 16px;
 }
@@ -1405,8 +1405,8 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
         data-checked="false"
         data-disabled="false"
         data-error="true"
-        data-has-illustration="false"
         data-has-label="false"
+        data-image="none"
         data-type="radio"
         role="button"
         tabindex="0"
@@ -1529,11 +1529,11 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-0[data-has-illustration="true"] {
+.emotion-0[data-image="illustration"] {
   padding: 0;
 }
 
-.emotion-0[data-has-icon="true"] {
+.emotion-0[data-image="icon"] {
   padding: 0;
   padding-right: 16px;
 }
@@ -1777,8 +1777,8 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
         data-checked="true"
         data-disabled="false"
         data-error="false"
-        data-has-illustration="false"
         data-has-label="false"
+        data-image="none"
         data-type="radio"
         role="button"
         tabindex="0"

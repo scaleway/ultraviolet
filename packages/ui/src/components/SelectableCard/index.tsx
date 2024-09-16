@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import * as ProductIcon from '@ultraviolet/icons/product'
 import type {
@@ -7,7 +8,14 @@ import type {
   KeyboardEventHandler,
   ReactNode,
 } from 'react'
-import { forwardRef, useCallback, useRef } from 'react'
+import {
+  forwardRef,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import type { PascalToCamelCaseWithoutSuffix } from '../../types'
 import { Checkbox, CheckboxContainer } from '../Checkbox'
 import { Radio, RadioStack } from '../Radio'
@@ -48,14 +56,14 @@ const Container = styled(Stack)`
     cursor: not-allowed;
   }
 
-  &[data-has-illustration="true"] {
+  &[data-image="illustration"] {
     padding: ${({ theme }) => theme.space[0]};
-  }
-  &[data-has-icon="true"] {
+  } 
+
+  &[data-image="icon"] {
     padding: ${({ theme }) => theme.space[0]};
     padding-right: ${({ theme }) => theme.space['2']};
   }
-
   &:hover,
   &:active {
     &:not([data-error='true']):not([data-disabled='true']) {
@@ -86,7 +94,14 @@ position: absolute;
 min-width:220px;
 height: auto;
 left: ${({ theme }) => theme.space[1]};
+`
 
+const StyledSVG = styled.div`
+object-fit: cover;
+position: absolute;
+min-width:220px;
+height: auto;
+left: ${({ theme }) => theme.space[1]};
 `
 
 const IllustrationStack = styled(Stack)`
@@ -207,7 +222,36 @@ export const SelectableCard = forwardRef(
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
+    const theme = useTheme()
     const innerRef = useRef<HTMLInputElement>(null)
+    const [svgContent, setSvgContent] = useState<string | null>(null)
+    const image = useMemo(() => {
+      if (illustration) return 'illustration'
+      if (productIcon) return 'productIcon'
+
+      return 'none'
+    }, [illustration, productIcon])
+
+    useEffect(() => {
+      // Check if the illustration ends with .svg to handle it as an SVG to ensure the 'fill' property and "width" are correct by changing them directly to what we want
+      if (illustration?.endsWith('.svg')) {
+        fetch(illustration)
+          .then(response => response.text())
+          .then(svg => {
+            const updatedSvg = svg
+              .replace(
+                /fill="[^"]*"/g,
+                `fill="${theme.colors.neutral.backgroundStronger}"`,
+              ) // adapt fill property to theme
+              .replace(/width="[^"]*"/g, `width="220px"`) // fixed width
+              .replace(/height="[^"]*"/g, `height="220px"`) // fixed height
+
+            setSvgContent(updatedSvg)
+          })
+          .catch(() => null)
+      }
+    })
+
     const ProductIconUsed = productIcon
       ? ProductIcon[
           `${
@@ -248,11 +292,17 @@ export const SelectableCard = forwardRef(
 
               {illustration ? (
                 <StyledDiv>
-                  <StyledImg
-                    src={illustration}
-                    alt="illustration"
-                    width={220}
-                  />
+                  {illustration.endsWith('.svg') && svgContent ? (
+                    <StyledSVG
+                      dangerouslySetInnerHTML={{ __html: svgContent }}
+                    />
+                  ) : (
+                    <StyledImg
+                      src={illustration}
+                      alt="illustration"
+                      width={220}
+                    />
+                  )}
                 </StyledDiv>
               ) : null}
             </Stack>
@@ -261,7 +311,7 @@ export const SelectableCard = forwardRef(
 
         return subChildren
       },
-      [ProductIconUsed, illustration],
+      [ProductIconUsed, illustration, svgContent],
     )
 
     const onKeyDown: KeyboardEventHandler = useCallback(
@@ -292,8 +342,7 @@ export const SelectableCard = forwardRef(
           data-testid={dataTestId}
           data-type={type}
           data-has-label={!!label}
-          data-has-illustration={!!illustration}
-          data-has-icon={productIcon && !illustration}
+          data-image={image}
           ref={ref}
           alignItems="start"
           direction="column"
