@@ -123,6 +123,61 @@ export const dataGrouped = {
   ],
 }
 
+export const dataGroupedWithEmptyName = {
+  '': [
+    {
+      value: 'mercury',
+      label: 'Mercury',
+    },
+    {
+      value: 'venus',
+      label: 'Venus',
+    },
+  ],
+  'Three planets': [
+    {
+      value: 'earth',
+      label: 'Earth',
+      description: 'Our home planet',
+      searchText: 'earth',
+    },
+    {
+      value: 'mars',
+      label: 'Mars',
+      disabled: true,
+    },
+    {
+      value: 'pluto',
+      label: 'Pluto',
+      description:
+        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+    },
+  ],
+
+  'jovian planets': [
+    {
+      value: 'jupiter',
+      label: 'Jupiter',
+      description:
+        'Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.',
+    },
+    {
+      value: 'saturn',
+      label: 'Saturn',
+    },
+    {
+      value: 'uranus',
+      label: 'Uranus',
+    },
+
+    {
+      value: 'neptune',
+      label: reactNeptune,
+      searchText: 'neptune',
+    },
+  ],
+}
+
 export const OptionalInfo = {
   'terrestrial planets': [
     {

@@ -42,6 +42,9 @@ const StateStack = styled(Stack)`
   padding-right: ${({ theme }) => theme.space['2']};
   display: flex;
 `
+const Placeholder = styled(Text)`
+user-select: none;
+`
 
 const StyledInputWrapper = styled(Stack)<{
   'data-readonly': boolean
@@ -60,18 +63,8 @@ const StyledInputWrapper = styled(Stack)<{
   background: ${({ theme }) => theme.colors.neutral.background};
   border-radius: ${({ theme }) => theme.radii.default};
   width: 100%;
+  overflow: hidden;
 
-  &[data-readonly='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-    border-color: ${({ theme }) => theme.colors.neutral.border};
-    cursor: default;
-  }
-
-  &[data-disabled='true'] {
-    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    cursor: not-allowed;
-  }
   &[data-size='small'] {
     height: ${INPUT_SIZE_HEIGHT.small}px;
     padding-left: ${({ theme }) => theme.space[1]};
@@ -84,35 +77,70 @@ const StyledInputWrapper = styled(Stack)<{
   }
   &[data-state='neutral'] {
     border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+
+    &:not([data-disabled="true"]):not([data-readonly="true"]):active {
+      border-color: ${({ theme }) => theme.colors.primary.borderHover};
+      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+    }
+    &:not([data-disabled='true']):hover,
+    :not([data-disabled='true']):focus {
+      border-color: ${({ theme }) => theme.colors.primary.borderHover};
+      outline: none;
+    }
+
+    &[data-dropdownvisible='true'] {
+    border-color: ${({ theme }) => theme.colors.primary.borderHover};
   }
+  }
+
   &[data-state='success'] {
     border: 1px solid ${({ theme }) => theme.colors.success.border};
+    &:not([data-disabled="true"]):not([data-readonly="true"]):active {
+      border-color: ${({ theme }) => theme.colors.success.borderHover};
+      box-shadow: ${({ theme }) => theme.shadows.focusSuccess};
+    }
+  
+    &[data-dropdownvisible='true'] {
+      border-color: ${({ theme }) => theme.colors.success.borderHover};
+    }
   }
+
   &[data-state='danger'] {
     border: 1px solid ${({ theme }) => theme.colors.danger.border};
+
+    &:not([data-disabled="true"]):not([data-readonly="true"]):active {
+      border-color: ${({ theme }) => theme.colors.danger.borderHover};
+      box-shadow: ${({ theme }) => theme.shadows.focusDanger};
+    }
+  
+    &[data-dropdownvisible='true'] {
+      border-color: ${({ theme }) => theme.colors.danger.borderHover};
+    }
   }
 
   &:not([data-disabled='true']):not([data-readonly]):hover {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
-  &:not([data-disabled='true']):not([data-readonly]):active {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+  &[data-readonly='true'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    border-color: ${({ theme }) => theme.colors.neutral.border};
+    cursor: default;
   }
 
-  &:not([data-disabled='true']):hover,
-  :not([data-disabled='true']):focus {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    outline: none;
-  }
-
-  &[data-dropdownvisible='true'] {
-    border-color: ${({ theme }) => theme.colors.primary.borderHover};
+  &[data-disabled='true'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+    cursor: not-allowed;
   }
 `
 const CustomTag = styled(Tag)`
   height: fit-content;
   width: fit-content;
+`
+const SelectedValues = styled(Text)`
+text-overflow: ellipsis;
+overflow: hidden; 
 `
 
 const isValidSelectedValue = (selectedValue: string, options: DataType) =>
@@ -183,11 +211,11 @@ const DisplayValues = ({
       ) : null}
     </Stack>
   ) : (
-    <Text as="p" variant={size === 'large' ? 'body' : 'bodySmall'}>
+    <SelectedValues as="div" variant={size === 'large' ? 'body' : 'bodySmall'}>
       {selectedData.selectedValues[0]
         ? findOptionInOptions(options, selectedData.selectedValues[0])?.label
         : null}
-    </Text>
+    </SelectedValues>
   )
 }
 
@@ -339,7 +367,7 @@ export const SelectBar = ({
             size={size}
           />
         ) : (
-          <Text
+          <Placeholder
             as="p"
             variant={size === 'large' ? 'body' : 'bodySmall'}
             sentiment="neutral"
@@ -347,7 +375,7 @@ export const SelectBar = ({
             prominence="weak"
           >
             {placeholder}
-          </Text>
+          </Placeholder>
         )}
         <StateStack direction="row" gap={1} alignItems="center">
           {error ? <Icon name="alert" sentiment="danger" /> : null}

@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
@@ -142,6 +143,7 @@ const DropdownItem = styled.button<{
     outline: none;
   }
 `
+
 const PopupFooter = styled.div`
   width: 100%;
   padding: ${({ theme }) => theme.space[1.5]} ${({ theme }) => theme.space[2]}
@@ -430,43 +432,51 @@ const CreateDropdown = ({
           ) : null}
           {Object.keys(displayedOptions).map((group, index) => (
             <Stack key={group} gap={0.25}>
-              {displayedOptions[group].length > 0 ? (
+              {displayedOptions[group].length > 0 ||
+              (!Array.isArray(options) && options[group].length === 0) ? (
                 <DropdownGroupWrapper id={selectAllGroup ? 'items' : undefined}>
-                  <DropdownGroup
-                    key={group}
-                    type="button"
-                    tabIndex={selectAllGroup ? 0 : -1}
-                    onKeyDown={event => {
-                      if ([' ', 'Enter'].includes(event.key)) {
-                        event.preventDefault()
-                        handleSelectGroup(group)
+                  {group ? (
+                    <DropdownGroup
+                      key={group}
+                      type="button"
+                      tabIndex={selectAllGroup ? 0 : -1}
+                      onKeyDown={event => {
+                        if ([' ', 'Enter'].includes(event.key)) {
+                          event.preventDefault()
+                          handleSelectGroup(group)
+                        }
+                      }}
+                      data-selectgroup={selectAllGroup}
+                      role="group"
+                      data-testid={`group-${index}`}
+                      onClick={() =>
+                        selectAllGroup ? handleSelectGroup(group) : null
                       }
-                    }}
-                    data-selectgroup={selectAllGroup}
-                    role="group"
-                    data-testid={`group-${index}`}
-                    onClick={() =>
-                      selectAllGroup ? handleSelectGroup(group) : null
-                    }
-                  >
-                    {selectAllGroup ? (
-                      <StyledCheckbox
-                        checked={selectedData.selectedGroups.includes(group)}
-                        disabled={false}
-                        value={group}
-                        data-testid="select-group"
-                        tabIndex={-1}
-                      >
-                        <Text variant="caption" as="span" placement="left">
+                    >
+                      {selectAllGroup ? (
+                        <StyledCheckbox
+                          checked={selectedData.selectedGroups.includes(group)}
+                          disabled={false}
+                          value={group}
+                          data-testid="select-group"
+                          tabIndex={-1}
+                        >
+                          <Text variant="caption" as="span" placement="left">
+                            {group.toUpperCase()}
+                          </Text>
+                        </StyledCheckbox>
+                      ) : (
+                        <Text
+                          variant="caption"
+                          as="span"
+                          placement="left"
+                          sentiment="neutral"
+                        >
                           {group.toUpperCase()}
                         </Text>
-                      </StyledCheckbox>
-                    ) : (
-                      <Text variant="caption" as="span" placement="left">
-                        {group.toUpperCase()}
-                      </Text>
-                    )}
-                  </DropdownGroup>
+                      )}
+                    </DropdownGroup>
+                  ) : null}
                 </DropdownGroupWrapper>
               ) : null}
               <Stack id="items" gap="0.25">
@@ -525,12 +535,12 @@ const CreateDropdown = ({
                     )}
                   </DropdownItem>
                 ))}
-                {loadMore ? <LoadMore>{loadMore}</LoadMore> : null}
               </Stack>
             </Stack>
           ))}
         </>
       )}
+      {loadMore ? <LoadMore>{loadMore}</LoadMore> : null}
     </DropdownContainer>
   ) : (
     <DropdownContainer
@@ -665,11 +675,30 @@ export const Dropdown = ({
     options,
     displayedOptions,
   } = useSelectInput()
+  const theme = useTheme()
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
-  const maxWidth = refSelect.current?.offsetWidth
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
+  const [maxWidth, setWidth] = useState(refSelect.current?.offsetWidth)
+
+  useEffect(() => {
+    if (refSelect.current) {
+      const observer = new ResizeObserver(entries => {
+        setWidth(entries[0].contentRect.width + parseInt(theme.space['2'], 10))
+      })
+
+      observer.observe(refSelect.current)
+
+      return () => {
+        observer.disconnect()
+      }
+    }
+
+    return () => null
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   useEffect(() => {
     if (!searchInput) {
       onSearch(options)
@@ -783,7 +812,6 @@ export const Dropdown = ({
         </Stack>
       }
       placement="bottom"
-      containerFullWidth
       disableAnimation
       maxWidth={maxWidth}
       hasArrow={false}
@@ -791,6 +819,7 @@ export const Dropdown = ({
       tabIndex={0}
       role="dialog"
       debounceDelay={0}
+      containerFullWidth
     >
       {children}
     </StyledPopup>

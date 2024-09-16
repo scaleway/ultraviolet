@@ -336,18 +336,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   background: #ffffff;
   border-radius: 4px;
   width: 100%;
-}
-
-.emotion-21[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-21[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
+  overflow: hidden;
 }
 
 .emotion-21[data-size='small'] {
@@ -367,33 +356,64 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   border: 1px solid #d9dadd;
 }
 
+.emotion-21[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-21[data-state='neutral']:not([data-disabled='true']):hover,
+.emotion-21[data-state='neutral']:not([data-disabled='true']):focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-21[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
 .emotion-21[data-state='success'] {
   border: 1px solid #22674e;
+}
+
+.emotion-21[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-21[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
 }
 
 .emotion-21[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
+.emotion-21[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-21[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
 .emotion-21:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-21:not([data-disabled='true']):not([data-readonly]):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.emotion-21[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
 }
 
-.emotion-21:not([data-disabled='true']):hover,
-.emotion-21:not([data-disabled='true']):focus {
-  border-color: #792dd4;
-  outline: none;
+.emotion-21[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
 }
 
-.emotion-21[data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-23 {
+.emotion-24 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -402,9 +422,11 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-.emotion-25 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -432,7 +454,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: flex;
 }
 
-.emotion-27 {
+.emotion-28 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -441,12 +463,12 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   min-height: 16px;
 }
 
-.emotion-27 .fillStroke {
+.emotion-28 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-29 {
+.emotion-30 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -485,17 +507,17 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   color: #ffffff;
 }
 
-.emotion-29:hover {
+.emotion-30:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-29:active {
+.emotion-30:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-29:hover,
-.emotion-29:active {
+.emotion-30:hover,
+.emotion-30:active {
   background: #792dd4;
   color: #f9f9fa;
 }
@@ -583,17 +605,17 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
                   role="combobox"
                   tabindex="0"
                 >
-                  <p
-                    class="emotion-23 emotion-5"
+                  <div
+                    class="emotion-23 emotion-24 emotion-5"
                   >
                     Days
-                  </p>
+                  </div>
                   <div
-                    class="emotion-25 emotion-26"
+                    class="emotion-26 emotion-27"
                   >
                     <svg
                       aria-label="show dropdown"
-                      class="emotion-27 emotion-7"
+                      class="emotion-28 emotion-7"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -611,7 +633,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
         </div>
       </div>
       <button
-        class="emotion-29 emotion-30"
+        class="emotion-30 emotion-31"
         type="submit"
       >
         Submit
@@ -943,18 +965,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   background: #ffffff;
   border-radius: 4px;
   width: 100%;
-}
-
-.emotion-19[data-readonly='true'] {
-  background: #f9f9fa;
-  border-color: #d9dadd;
-  cursor: default;
-}
-
-.emotion-19[data-disabled='true'] {
-  background: #f3f3f4;
-  border-color: #e9eaeb;
-  cursor: not-allowed;
+  overflow: hidden;
 }
 
 .emotion-19[data-size='small'] {
@@ -974,33 +985,64 @@ exports[`UnitInputField > should render correctly 1`] = `
   border: 1px solid #d9dadd;
 }
 
+.emotion-19[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-19[data-state='neutral']:not([data-disabled='true']):hover,
+.emotion-19[data-state='neutral']:not([data-disabled='true']):focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-19[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
 .emotion-19[data-state='success'] {
   border: 1px solid #22674e;
+}
+
+.emotion-19[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-19[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
 }
 
 .emotion-19[data-state='danger'] {
   border: 1px solid #b3144d;
 }
 
+.emotion-19[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-19[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
 .emotion-19:not([data-disabled='true']):not([data-readonly]):hover {
   border-color: #8c40ef;
 }
 
-.emotion-19:not([data-disabled='true']):not([data-readonly]):active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+.emotion-19[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
 }
 
-.emotion-19:not([data-disabled='true']):hover,
-.emotion-19:not([data-disabled='true']):focus {
-  border-color: #792dd4;
-  outline: none;
+.emotion-19[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
 }
 
-.emotion-19[data-dropdownvisible='true'] {
-  border-color: #792dd4;
-}
-
-.emotion-21 {
+.emotion-22 {
   color: #727683;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
@@ -1010,9 +1052,13 @@ exports[`UnitInputField > should render correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.emotion-23 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1040,7 +1086,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: flex;
 }
 
-.emotion-25 {
+.emotion-26 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -1049,7 +1095,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   min-height: 16px;
 }
 
-.emotion-25 .fillStroke {
+.emotion-26 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -1128,16 +1174,16 @@ exports[`UnitInputField > should render correctly 1`] = `
                   tabindex="0"
                 >
                   <p
-                    class="emotion-21 emotion-5"
+                    class="emotion-21 emotion-22 emotion-5"
                   >
                     Select item
                   </p>
                   <div
-                    class="emotion-23 emotion-24"
+                    class="emotion-24 emotion-25"
                   >
                     <svg
                       aria-label="show dropdown"
-                      class="emotion-25 emotion-26"
+                      class="emotion-26 emotion-27"
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
                     >

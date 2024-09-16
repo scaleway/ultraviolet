@@ -54,6 +54,7 @@ export const EmptyState: StoryFn<typeof SelectInputV2> = args => (
 EmptyState.args = {
   ...Template.args,
   options: {},
+  searchable: false,
 }
 EmptyState.decorators = [
   StoryComponent => (
