@@ -227,7 +227,7 @@ export const SelectableCard = forwardRef(
     const [svgContent, setSvgContent] = useState<string | null>(null)
     const image = useMemo(() => {
       if (illustration) return 'illustration'
-      if (productIcon) return 'productIcon'
+      if (productIcon) return 'icon'
 
       return 'none'
     }, [illustration, productIcon])
