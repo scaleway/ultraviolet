@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 0.21.10
+
+### Patch Changes
+
+- [#4226](https://github.com/scaleway/ultraviolet/pull/4226) [`656db57`](https://github.com/scaleway/ultraviolet/commit/656db574ac43b2f92c13facca733a5c6cfec4ac8) Thanks [@lisalupi](https://github.com/lisalupi)! - `<ContentCard />`: new prop `headingTag` to change tag of header
+
+- Updated dependencies [[`408dade`](https://github.com/scaleway/ultraviolet/commit/408dade64b06994f2de8fdd3b999b6d966b57e2f), [`1152b39`](https://github.com/scaleway/ultraviolet/commit/1152b3945df7420d300d2c6f2976e57af520082a), [`92fc208`](https://github.com/scaleway/ultraviolet/commit/92fc208384c24126f4a5ea37d4c6f0248267205d), [`6fae267`](https://github.com/scaleway/ultraviolet/commit/6fae2676176e2a7479e3a07b2e80d9ae126bc019)]:
+  - @ultraviolet/ui@1.70.1
+  - @ultraviolet/icons@3.0.2
+
 ## 0.21.9
 
 ### Patch Changes

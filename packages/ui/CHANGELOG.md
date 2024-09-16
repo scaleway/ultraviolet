@@ -1,5 +1,22 @@
 # Change Log
 
+## 1.70.1
+
+### Patch Changes
+
+- [#4205](https://github.com/scaleway/ultraviolet/pull/4205) [`408dade`](https://github.com/scaleway/ultraviolet/commit/408dade64b06994f2de8fdd3b999b6d966b57e2f) Thanks [@lisalupi](https://github.com/lisalupi)! - `<ProgressBar />`:
+
+  - new prop `label`
+  - new prop `showProgress`: show/hide percentage of progress
+  - new prop `direction`: defines the position of the label & percentage
+
+- [#4221](https://github.com/scaleway/ultraviolet/pull/4221) [`1152b39`](https://github.com/scaleway/ultraviolet/commit/1152b3945df7420d300d2c6f2976e57af520082a) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Card />`: new prop `subHeader`, deprecated prop `isActive` (use instead prop `active`) and various enhancements
+
+- [#4239](https://github.com/scaleway/ultraviolet/pull/4239) [`92fc208`](https://github.com/scaleway/ultraviolet/commit/92fc208384c24126f4a5ea37d4c6f0248267205d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/random-name` to `5.1.1`.
+
+- Updated dependencies [[`6fae267`](https://github.com/scaleway/ultraviolet/commit/6fae2676176e2a7479e3a07b2e80d9ae126bc019)]:
+  - @ultraviolet/icons@3.0.2
+
 ## 1.70.0
 
 ### Minor Changes
