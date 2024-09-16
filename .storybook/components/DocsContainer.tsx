@@ -46,7 +46,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   return (
     <Unstyled>
       <ThemeProvider theme={lightTheme}>
-        <Global styles={[globalStyles]} />,
+        <Global styles={[globalStyles]} />
         <BaseContainer context={context}>
           {isValidElement<ExtraProps>(children)
             ? cloneElement(children, {
