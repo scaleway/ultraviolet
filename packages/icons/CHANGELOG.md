@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#4231](https://github.com/scaleway/ultraviolet/pull/4231) [`6fae267`](https://github.com/scaleway/ultraviolet/commit/6fae2676176e2a7479e3a07b2e80d9ae126bc019) Thanks [@lisalupi](https://github.com/lisalupi)! - New components `<LeafIcon />` and `<LeafOutlineIcon />`
+
 ## 3.0.1
 
 ### Patch Changes
