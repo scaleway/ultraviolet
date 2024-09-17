@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ArrowDownIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
@@ -8,7 +9,6 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const LINES_BREAK_REGEX = /\r\n|\r|\n/
-const LINE_HEIGHT = 20
 
 type Prefixes = 'lines' | 'command'
 
@@ -33,17 +33,18 @@ const PreText = styled(Text, {
   padding-right: ${({ theme }) => theme.space['9']};
   overflow-x: ${({ hasShowMoreButton, showMore }) =>
     hasShowMoreButton && !showMore ? 'hidden' : 'auto'};
-  overflow-y: hidden;
   ${({ multiline }) => (!multiline ? 'white-space: nowrap;' : '')}
   height: auto;
   counter-reset: section;
 
+
   ${({ theme, noExpandable, rows }) =>
     noExpandable
       ? `
-    max-height: calc(${LINE_HEIGHT * rows}px + ${theme.space['3']});
+    max-height: calc(${theme.typography.code.lineHeight} * ${rows} + ${theme.space['3']});
     overflow-y: scroll;`
-      : ''}
+      : `overflow-y: hidden;
+`}
 `
 
 const StyledSpan = styled('span', {
@@ -220,11 +221,11 @@ export const Snippet = ({
   rows = 4,
   noExpandable = false,
 }: SnippetProps) => {
+  const theme = useTheme()
   const [showMore, setShowMore] = useReducer(
     value => !value,
     initiallyExpanded ?? false,
   )
-
   const lines = children.split(LINES_BREAK_REGEX)
 
   const numberOfLines = lines.length
@@ -240,7 +241,13 @@ export const Snippet = ({
       <StyledStack>
         {hasShowMoreButton ? (
           // Height = number of rows * height of a line + padding
-          <Expandable minHeight={rows * LINE_HEIGHT + 32} opened={showMore}>
+          <Expandable
+            minHeight={
+              rows * parseInt(theme.typography.code.lineHeight, 10) +
+              parseInt(theme.space[4], 10)
+            }
+            opened={showMore}
+          >
             <CodeContent
               prefix={prefix}
               multiline={multiline}
@@ -267,7 +274,6 @@ export const Snippet = ({
             value={children}
             copyText={copyText}
             copiedText={copiedText}
-            noBorder
             sentiment="neutral"
           />
         </ButtonContainer>
