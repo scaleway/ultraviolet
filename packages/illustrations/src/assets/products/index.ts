@@ -23,6 +23,7 @@ import * as functions from './functions'
 import * as iam from './iam'
 import * as inference from './inference'
 import * as instance from './instance'
+import * as interlink from './interlink'
 import * as iotHub from './iotHub'
 import * as ipam from './ipam'
 import * as ipfsNaming from './ipfsNaming'
@@ -74,6 +75,7 @@ export {
   iam,
   inference,
   instance,
+  interlink,
   iotHub,
   ipam,
   ipfsNaming,
