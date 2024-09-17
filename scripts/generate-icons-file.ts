@@ -20,6 +20,12 @@ const COMPONENTS = [
     input: 'packages/icons/src/components/CategoryIcon/assets',
     output: 'packages/icons/src/components/CategoryIcon/__generatedIcons__',
   },
+  {
+    name: 'Logo',
+    suffix: 'Logo',
+    input: 'packages/icons/src/components/Logo/assets',
+    output: 'packages/icons/src/components/Logo/__generatedIcons__',
+  },
 ]
 
 const COMMENT_HEADER = `/**

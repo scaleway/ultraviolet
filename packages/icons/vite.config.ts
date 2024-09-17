@@ -19,6 +19,10 @@ export default mergeConfig(defineConfig(defaultConfig), {
           __dirname,
           'src/components/CategoryIcon/index.ts',
         ),
+        'components/Logo/index': resolve(
+          __dirname,
+          'src/components/Logo/index.ts',
+        ),
         'components/Icon/legacy/index': resolve(
           __dirname,
           'src/components/Icon/legacy/index.tsx',
