@@ -3874,6 +3874,17 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-21 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3897,47 +3908,47 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   width: 100%;
 }
 
-.emotion-21[data-has-label='true'] {
+.emotion-23[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-21[data-has-label='false'] {
-  display: contents;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.emotion-21[data-has-label='true'] {
-  padding-left: 32px;
-}
-
-.emotion-21[data-has-label='false'] {
+.emotion-23[data-has-label='false'] {
   display: contents;
 }
 
 .emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-23[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.emotion-23[data-has-label='false'] {
+  display: contents;
+}
+
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3960,7 +3971,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-25 {
+.emotion-27 {
   -webkit-flex: 1 1 220px;
   -ms-flex: 1 1 220px;
   flex: 1 1 220px;
@@ -3977,7 +3988,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   align-items: center;
 }
 
-.emotion-27 {
+.emotion-29 {
   object-fit: cover;
   position: absolute;
   min-width: 220px;
@@ -4050,26 +4061,30 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
                 class="emotion-19 emotion-20"
                 for="label-14-label-14"
               >
-                label
+                <label
+                  class="emotion-21 emotion-22"
+                >
+                   label 
+                </label>
               </label>
             </div>
           </div>
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-23 emotion-24"
             data-has-label="true"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
         </div>
         <div
-          class="emotion-23 emotion-3"
+          class="emotion-25 emotion-3"
         />
         <div
-          class="emotion-25 emotion-26"
+          class="emotion-27 emotion-28"
         >
           <img
             alt="illustration"
-            class="emotion-27 emotion-28"
+            class="emotion-29 emotion-30"
             src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
             width="220"
           />
@@ -4567,6 +4582,17 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-21 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4590,47 +4616,47 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   width: 100%;
 }
 
-.emotion-21[data-has-label='true'] {
+.emotion-23[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-21[data-has-label='false'] {
-  display: contents;
-}
-
-.emotion-21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.emotion-21[data-has-label='true'] {
-  padding-left: 32px;
-}
-
-.emotion-21[data-has-label='false'] {
+.emotion-23[data-has-label='false'] {
   display: contents;
 }
 
 .emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-23[data-has-label='true'] {
+  padding-left: 32px;
+}
+
+.emotion-23[data-has-label='false'] {
+  display: contents;
+}
+
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4653,27 +4679,27 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-25 {
+.emotion-27 {
   width: 48px;
   min-width: 48px;
   height: 48px;
 }
 
-.emotion-25 path[fill].fill,
-.emotion-25 g[fill].fill>*,
-.emotion-25 g.fill>* {
+.emotion-27 path[fill].fill,
+.emotion-27 g[fill].fill>*,
+.emotion-27 g.fill>* {
   fill: #521094;
 }
 
-.emotion-25 path[fill].fillStrong,
-.emotion-25 g[fill].fillStrong>*,
-.emotion-25 g.fillStrong>* {
+.emotion-27 path[fill].fillStrong,
+.emotion-27 g[fill].fillStrong>*,
+.emotion-27 g.fillStrong>* {
   fill: #a060f6;
 }
 
-.emotion-25 path[fill].fillWeak,
-.emotion-25 g[fill].fillWeak>*,
-.emotion-25 g.fillWeak>* {
+.emotion-27 path[fill].fillWeak,
+.emotion-27 g[fill].fillWeak>*,
+.emotion-27 g.fillWeak>* {
   fill: #f1eefc;
 }
 
@@ -4742,22 +4768,26 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
                 class="emotion-19 emotion-20"
                 for="label-14-label-14"
               >
-                label
+                <label
+                  class="emotion-21 emotion-22"
+                >
+                   label 
+                </label>
               </label>
             </div>
           </div>
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-23 emotion-24"
             data-has-label="true"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
         </div>
         <div
-          class="emotion-23 emotion-3"
+          class="emotion-25 emotion-3"
         >
           <svg
-            class="emotion-25 emotion-26"
+            class="emotion-27 emotion-28"
             viewBox="0 0 64 64"
           >
             <g

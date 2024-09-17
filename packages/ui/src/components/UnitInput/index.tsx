@@ -352,6 +352,7 @@ export const UnitInput = ({
           variant="caption"
           sentiment={sentiment}
           disabled={disabled}
+          prominence={sentiment === 'neutral' ? 'weak' : 'default'}
         >
           {error || success || helper}
         </Text>

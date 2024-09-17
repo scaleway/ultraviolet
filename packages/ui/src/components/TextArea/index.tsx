@@ -66,6 +66,7 @@ const StyledTextArea = styled('textarea', {
   &[data-disabled='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
 
     &::placeholder {
       color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
