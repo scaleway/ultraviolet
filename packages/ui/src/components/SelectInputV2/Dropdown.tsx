@@ -1,6 +1,5 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { Checkbox } from '../Checkbox'
 import { Popup } from '../Popup'
@@ -675,29 +674,25 @@ export const Dropdown = ({
     options,
     displayedOptions,
   } = useSelectInput()
-  const theme = useTheme()
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
   const [maxWidth, setWidth] = useState(refSelect.current?.offsetWidth)
 
-  useEffect(() => {
+  const resizeDropdown = useCallback(() => {
     if (refSelect.current) {
-      const observer = new ResizeObserver(entries => {
-        setWidth(entries[0].contentRect.width + parseInt(theme.space['2'], 10))
-      })
-
-      observer.observe(refSelect.current)
-
-      return () => {
-        observer.disconnect()
-      }
+      setWidth(refSelect.current.getBoundingClientRect().width)
     }
+  }, [refSelect])
 
-    return () => null
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  useEffect(() => {
+    resizeDropdown()
+
+    window.addEventListener('resize', resizeDropdown)
+
+    return () => window.removeEventListener('resize', resizeDropdown)
+  }, [resizeDropdown])
 
   useEffect(() => {
     if (!searchInput) {
