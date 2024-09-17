@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { ReactNode, Ref } from 'react'
 import {
   createContext,
   useCallback,
@@ -7,11 +7,16 @@ import {
   useState,
 } from 'react'
 
+type ModalObject = {
+  id: string
+  ref: Ref<HTMLDialogElement>
+}
+
 type ModalContextValues = {
-  openedModals: string[]
-  registerModal: (id: string) => void
+  openedModals: ModalObject[]
+  registerModal: (object: ModalObject) => void
   unregisterModal: (id: string) => void
-  previsousOpenedModales: string[] // This will be usefull for animation, we will trigger when the modal appear but not when it's closing
+  previsousOpenedModales: ModalObject[] // This will be usefull for animation, we will trigger when the modal appear but not when it's closing
 }
 
 export const ModalContext = createContext<ModalContextValues | undefined>(
@@ -32,16 +37,16 @@ type ModalProviderProps = {
 }
 
 export const ModalProvider = ({ children }: ModalProviderProps) => {
-  const [openedModals, setOpenedModals] = useState<string[]>([])
-  const [previsousOpenedModales, setPreviousOpenedModales] = useState<string[]>(
-    [],
-  )
+  const [openedModals, setOpenedModals] = useState<ModalObject[]>([])
+  const [previsousOpenedModales, setPreviousOpenedModales] = useState<
+    ModalObject[]
+  >([])
 
-  const registerModal = useCallback((id: string) => {
+  const registerModal = useCallback((object: ModalObject) => {
     setOpenedModals(prev => {
       setPreviousOpenedModales(prev)
 
-      return [...prev, id]
+      return [...prev, object]
     })
   }, [])
 
@@ -49,7 +54,7 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
     setOpenedModals(prev => {
       setPreviousOpenedModales(prev)
 
-      return prev.filter(modalId => modalId !== id)
+      return prev.filter(modalId => modalId.id !== id)
     })
   }, [])
 
