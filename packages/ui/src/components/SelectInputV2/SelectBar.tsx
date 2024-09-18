@@ -357,9 +357,7 @@ export const SelectBar = ({
           {clearable && selectedData.selectedValues.length > 0 ? (
             <Button
               aria-label="clear value"
-              disabled={
-                disabled || ![selectedData.selectedValues[0]] || readOnly
-              }
+              disabled={disabled || !selectedData.selectedValues[0] || readOnly}
               variant="ghost"
               size="small"
               icon="close"
