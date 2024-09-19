@@ -201,6 +201,15 @@ exports[`SwitchButton > renders correctly 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-3[data-image="illustration"] {
+  padding: 0;
+}
+
+.emotion-3[data-image="icon"] {
+  padding: 0;
+  padding-right: 16px;
+}
+
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
 .emotion-3:active:not([data-error='true']):not([data-disabled='true']) {
   border: 1px solid #8c40ef;
@@ -437,6 +446,7 @@ exports[`SwitchButton > renders correctly 1`] = `
           data-checked="false"
           data-disabled="false"
           data-has-label="true"
+          data-image="none"
           data-type="radio"
           role="button"
           tabindex="0"
@@ -498,6 +508,7 @@ exports[`SwitchButton > renders correctly 1`] = `
           data-checked="true"
           data-disabled="false"
           data-has-label="true"
+          data-image="none"
           data-type="radio"
           role="button"
           tabindex="0"
@@ -648,6 +659,15 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-3[data-image="illustration"] {
+  padding: 0;
+}
+
+.emotion-3[data-image="icon"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
@@ -886,6 +906,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           data-checked="false"
           data-disabled="false"
           data-has-label="true"
+          data-image="none"
           data-type="radio"
           role="button"
           tabindex="0"
@@ -947,6 +968,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
           data-checked="true"
           data-disabled="false"
           data-has-label="true"
+          data-image="none"
           data-type="radio"
           role="button"
           tabindex="0"
@@ -1097,6 +1119,15 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-3[data-image="illustration"] {
+  padding: 0;
+}
+
+.emotion-3[data-image="icon"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1335,6 +1366,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           data-checked="false"
           data-disabled="false"
           data-has-label="true"
+          data-image="none"
           data-type="radio"
           role="button"
           tabindex="0"
@@ -1396,6 +1428,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
           data-checked="true"
           data-disabled="false"
           data-has-label="true"
+          data-image="none"
           data-type="radio"
           role="button"
           tabindex="0"
@@ -1554,6 +1587,15 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
+}
+
+.emotion-5[data-image="illustration"] {
+  padding: 0;
+}
+
+.emotion-5[data-image="icon"] {
+  padding: 0;
+  padding-right: 16px;
 }
 
 .emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1798,6 +1840,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             data-checked="false"
             data-disabled="false"
             data-has-label="true"
+            data-image="none"
             data-type="radio"
             role="button"
             tabindex="0"
@@ -1859,6 +1902,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
             data-checked="true"
             data-disabled="false"
             data-has-label="true"
+            data-image="none"
             data-type="radio"
             role="button"
             tabindex="0"

@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test, vi } from 'vitest'
 import { SelectableCard } from '..'
+import illustration from './illustrationTest.svg'
 
 describe('SelectableCard', () => {
   test('renders correctly with default props', () =>
@@ -190,4 +191,35 @@ describe('SelectableCard', () => {
 
     await userEvent.keyboard('{Space}')
   })
+
+  test('renders correctly with illustration', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        name="label-14"
+        value="label-14"
+        type="radio"
+        label="label"
+        showTick
+        onChange={() => {}}
+        illustration={illustration}
+      >
+        Offer the best experience to your Mac, iPhone and iPad users with VNC,
+        the remote desktop-sharing protocol. Learn more
+      </SelectableCard>,
+    ))
+  test('renders correctly with productIcon', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        name="label-14"
+        value="label-14"
+        type="radio"
+        label="label"
+        productIcon="macMini"
+        showTick
+        onChange={() => {}}
+      >
+        Offer the best experience to your Mac, iPhone and iPad users with VNC,
+        the remote desktop-sharing protocol. Learn more
+      </SelectableCard>,
+    ))
 })
