@@ -1,5 +1,5 @@
 import { TextInput } from '@ultraviolet/ui'
-import type { ComponentProps, Ref } from 'react'
+import type { ComponentProps, FocusEvent, Ref } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -178,14 +178,14 @@ export const TextInputField = <
       multiline={multiline}
       notice={notice}
       required={required}
-      onBlur={event => {
+      onBlur={(event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         field.onBlur()
         onBlur?.(event)
         if (formatOnBlur && format) {
           field.onChange(format(field.value))
         }
       }}
-      onChange={event => {
+      onChange={(event: string) => {
         if (parse) {
           field.onChange(parse(event))
           onChange?.(parse(event))
@@ -194,7 +194,7 @@ export const TextInputField = <
           onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
         }
       }}
-      onFocus={event => {
+      onFocus={(event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         onFocus?.(event)
       }}
       onKeyUp={onKeyUp}
