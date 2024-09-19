@@ -1,9 +1,19 @@
-import { Template } from './Template.stories'
-import { dataGrouped } from './resources'
+import type { StoryFn } from '@storybook/react'
+import { SelectInputV2 } from '..'
+import { Stack } from '../../Stack'
+import { dataGrouped, dataGroupedWithEmptyName } from './resources'
 
-export const Grouped = Template.bind({})
+export const Grouped: StoryFn<typeof SelectInputV2> = args => (
+  <Stack gap={8}>
+    <SelectInputV2 label="Label" {...args} options={dataGrouped} />
+    <SelectInputV2
+      {...args}
+      options={dataGroupedWithEmptyName}
+      label="Grouped with empty group name"
+    />
+  </Stack>
+)
 
-Grouped.args = { ...Template.args, options: dataGrouped }
 Grouped.decorators = [
   StoryComponent => (
     <div style={{ height: '80px' }}>

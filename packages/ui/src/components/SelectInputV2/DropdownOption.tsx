@@ -7,6 +7,16 @@ import type { OptionType } from './types'
 const StyledInfo = styled.div`
   align-content: center;
 `
+const TextItem = styled(Text)`
+  overflow: auto;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  max-width: 100%;
+`
+const CustomStack = styled(Stack)`
+overflow: hidden;
+`
 
 type DisplayOptionProps = {
   option: OptionType
@@ -28,11 +38,11 @@ export const DisplayOption = ({
           justifyContent="left"
           data-testid={`option-stack-${option.value}`}
         >
-          <Stack gap={0.5} direction="row" alignItems="center">
+          <CustomStack gap={0.5} direction="row" alignItems="center">
             {option.optionalInfo ?? null}
-            <Text as="span" variant="body" placement="left">
+            <TextItem as="span" variant="body" placement="left">
               {option.label}
-            </Text>
+            </TextItem>
             {option.description ? (
               <Text
                 as="span"
@@ -44,7 +54,7 @@ export const DisplayOption = ({
                 {option.description}
               </Text>
             ) : null}
-          </Stack>
+          </CustomStack>
         </Stack>
       </Tooltip>
     )
@@ -60,10 +70,10 @@ export const DisplayOption = ({
           alignItems="baseline"
           data-testid={`option-stack-${option.value}`}
         >
-          <Stack gap={0.5} direction="row" alignItems="baseline">
-            <Text as="span" variant="body" placement="left">
+          <CustomStack gap={0.5} direction="row" alignItems="baseline">
+            <TextItem as="span" variant="body" placement="left">
               {option.label}
-            </Text>
+            </TextItem>
             {option.description ? (
               <Text
                 as="span"
@@ -75,7 +85,7 @@ export const DisplayOption = ({
                 {option.description}
               </Text>
             ) : null}
-          </Stack>
+          </CustomStack>
           {option.optionalInfo ? (
             <StyledInfo>{option.optionalInfo}</StyledInfo>
           ) : null}
@@ -95,14 +105,14 @@ export const DisplayOption = ({
         >
           {option.optionalInfo ?? null}
 
-          <Stack
+          <CustomStack
             gap={0.5}
             direction="column"
             data-testid={`option-stack-${option.value}`}
           >
-            <Text as="span" variant="body" placement="left">
+            <TextItem as="span" variant="body" placement="left">
               {option.label}
-            </Text>
+            </TextItem>
             {option.description ? (
               <Text
                 as="span"
@@ -114,7 +124,7 @@ export const DisplayOption = ({
                 {option.description}
               </Text>
             ) : null}
-          </Stack>
+          </CustomStack>
         </Stack>
       </Tooltip>
     )
@@ -128,14 +138,14 @@ export const DisplayOption = ({
         alignItems="normal"
         data-testid={`option-stack-${option.value}`}
       >
-        <Stack gap={0.5} direction="row" justifyContent="space-between">
-          <Text as="span" variant="body" placement="left">
+        <CustomStack gap={0.5} direction="row" justifyContent="space-between">
+          <TextItem as="span" variant="body" placement="left">
             {option.label}
-          </Text>
+          </TextItem>
           {option.optionalInfo ? (
             <StyledInfo>{option.optionalInfo}</StyledInfo>
           ) : null}
-        </Stack>
+        </CustomStack>
         {option.description ? (
           <Text
             as="span"
