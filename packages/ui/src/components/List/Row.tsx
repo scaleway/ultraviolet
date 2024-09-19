@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ForwardedRef, ReactNode } from 'react'
+import type { CSSProperties, ForwardedRef, ReactNode } from 'react'
 import { forwardRef, useCallback, useEffect } from 'react'
 import type { SENTIMENTS } from '../../theme'
 import { Button } from '../Button'
@@ -8,16 +8,17 @@ import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
 import { useListContext } from './ListContext'
 
-const ExpandableWrapper = styled.div`
+const ExpandableWrapper = styled('div', {
+  shouldForwardProp: prop => !['padding'].includes(prop),
+})<{ padding?: CSSProperties['padding'] }>`
   grid-column: 1 / -1;
   grid-column-start: 1;
   border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
   margin: 0 -${({ theme }) => theme.space['2']};
-  padding: ${({ theme }) => theme.space['2']};
+  padding: ${({ theme, padding }) => padding ?? theme.space['2']};
   cursor: auto;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: 0 0 ${({ theme }) => theme.radii.default}
-    ${({ theme }) => theme.radii.default};
+  border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
 `
 
 export const StyledRow = styled('div', {
@@ -92,6 +93,10 @@ type RowProps = {
   sentiment?: (typeof SENTIMENTS)[number]
   expanded?: boolean
   className?: string
+  /**
+   * Define a custom padding for the content in the expandable
+   */
+  paddingExpandable?: CSSProperties['padding']
   'data-testid'?: string
 }
 
@@ -106,6 +111,7 @@ export const Row = forwardRef(
       sentiment = 'neutral',
       expanded,
       className,
+      paddingExpandable,
       'data-testid': dataTestid,
     }: RowProps,
     ref: ForwardedRef<HTMLDivElement>,
@@ -240,6 +246,7 @@ export const Row = forwardRef(
                   }
                 : undefined
             }
+            padding={paddingExpandable}
           >
             {expandable}
           </ExpandableWrapper>

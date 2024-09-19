@@ -97,3 +97,37 @@ exports[`Row > renders correctly with specific gap 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Row > renders correctly with specific padding 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  padding: 10px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div>
+        First col
+      </div>
+      <div>
+        Second col
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

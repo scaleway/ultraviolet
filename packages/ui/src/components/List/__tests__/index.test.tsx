@@ -187,7 +187,12 @@ describe('List', () => {
       <List columns={columns}>
         {data.map(
           ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-            <List.Row key={id} id={id} expandable={columnF}>
+            <List.Row
+              key={id}
+              id={id}
+              expandable={columnF}
+              paddingExpandable="10px"
+            >
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
               <List.Cell>{columnC}</List.Cell>
