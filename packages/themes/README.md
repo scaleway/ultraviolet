@@ -18,7 +18,8 @@ $ pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
 
 ```js
 import { normalize, Button } from '@ultraviolet/ui'
-import { consoleDarkTheme } from '@ultraviolet/themes' // << Here we import the theme we want to use
+import { consoleDarkTheme } from '@ultraviolet/themes' // Here we import the theme we want to use
+// import { consoleLightTheme } from "@ultraviolet/themes/console/light" // Alternatively you can directly import the light theme if your bundler doesn't have tree-shaking capabilities
 import { Global, css, ThemeProvider } from '@emotion/react'
 
 const App = () => (

@@ -46,6 +46,11 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "default": "./dist/index.js"
+    },
+    "./console/*": {
+      "types": "./dist/themes/console/index.d.ts",
+      "require": "./dist/themes/console/index.cjs",
+      "default": "./dist/themes/console/index.js"
     }
   },
   "dependencies": {
