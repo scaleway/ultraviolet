@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.70.2
+
+### Patch Changes
+
+- [#4214](https://github.com/scaleway/ultraviolet/pull/4214) [`801e1d8`](https://github.com/scaleway/ultraviolet/commit/801e1d87d292235837045c2157d423f49cd7db5c) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectableCard />`: New props `productIcon` & `illustration` to add an icon/illustration on the right of the card
+
+- [#4248](https://github.com/scaleway/ultraviolet/pull/4248) [`3c11e91`](https://github.com/scaleway/ultraviolet/commit/3c11e9184afd8ac1e2478c5d6a9056c4a85591b0) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />` bug fixes:
+  - No empty group name
+  - Dropdown positioning
+  - LoadMore appear at the end of the dropdown - not at the end of every group
+  - Truncation in dropdown and select bar
+- Updated dependencies [[`7ff9bfb`](https://github.com/scaleway/ultraviolet/commit/7ff9bfbb4eed93daab03c36bdd927994e3bab5b1)]:
+  - @ultraviolet/icons@3.1.0
+
 ## 1.70.1
 
 ### Patch Changes

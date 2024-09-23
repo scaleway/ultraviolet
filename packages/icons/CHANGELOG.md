@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.0
+
+### Minor Changes
+
+- [#4236](https://github.com/scaleway/ultraviolet/pull/4236) [`7ff9bfb`](https://github.com/scaleway/ultraviolet/commit/7ff9bfbb4eed93daab03c36bdd927994e3bab5b1) Thanks [@lisalupi](https://github.com/lisalupi)! - New kind of Icons : `Logo`, which can be imported and used the same way as `ProductIcon` and `CategoryIcon`.
+
 ## 3.0.2
 
 ### Patch Changes
