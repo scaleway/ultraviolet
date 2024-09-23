@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 3.3.2
+
+### Patch Changes
+
+- [#4253](https://github.com/scaleway/ultraviolet/pull/4253) [`f29bf66`](https://github.com/scaleway/ultraviolet/commit/f29bf66eb5447ba3029ae150c7ae5ae3cdcc2f87) Thanks [@lisalupi](https://github.com/lisalupi)! - New product illustration `Interlink`
+
 ## 3.3.1
 
 ### Patch Changes
