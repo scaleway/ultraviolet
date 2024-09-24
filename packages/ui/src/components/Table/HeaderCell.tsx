@@ -40,13 +40,22 @@ const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) => (
   </StyledIconContainer>
 )
 
-type StyledHeaderCellProps = {
+type StyledHeaderCellProps = Pick<
+  HeaderCellProps,
+  'width' | 'maxWidth' | 'minWidth'
+> & {
   align?: 'left' | 'center' | 'right'
 }
 
 const StyledHeaderCell = styled('th', {
-  shouldForwardProp: prop => !['align'].includes(prop),
+  shouldForwardProp: prop =>
+    !['align', 'width', 'maxWidth', 'minWidth'].includes(prop),
 })<StyledHeaderCellProps>`
+${({ width, maxWidth, minWidth }) => `
+    ${width ? `width: ${width};` : ''}
+    ${maxWidth ? `max-width: ${maxWidth};` : ''}
+    ${minWidth ? `min-width: ${minWidth};` : ''}
+  `}
   display: flex;
   align-items: center;
   justify-content: ${({ align }) => (align ? AlignementFlex[align] : null)};
@@ -73,6 +82,9 @@ type HeaderCellProps = {
   onOrder?: (newOrder: 'asc' | 'desc') => void
   info?: string
   align?: 'left' | 'center' | 'right'
+  width?: string
+  maxWidth?: string
+  minWidth?: string
 }
 
 export const HeaderCell = ({
@@ -83,6 +95,9 @@ export const HeaderCell = ({
   orderDirection,
   info,
   align,
+  width,
+  maxWidth,
+  minWidth,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -116,6 +131,9 @@ export const HeaderCell = ({
       tabIndex={handleOrder ? 0 : -1}
       aria-sort={order}
       align={align}
+      width={width}
+      maxWidth={maxWidth}
+      minWidth={minWidth}
     >
       <StyledText
         as="div"

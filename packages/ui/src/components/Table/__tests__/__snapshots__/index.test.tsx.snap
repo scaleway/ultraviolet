@@ -24,6 +24,9 @@ exports[`Table > Should render correctly 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,6 +86,10 @@ exports[`Table > Should render correctly 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 <div
@@ -501,6 +508,9 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -521,6 +531,9 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -609,6 +622,10 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-31 {
@@ -622,6 +639,10 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 <div
@@ -1142,6 +1163,52 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   fill: none;
 }
 
+.emotion-13 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-13[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-13 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-13[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .emotion-23 {
   -webkit-animation: animation-0 3s linear;
   animation: animation-0 3s linear;
@@ -1158,6 +1225,10 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-25 {
@@ -1171,6 +1242,10 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 <div
@@ -1213,7 +1288,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-13 emotion-5"
             tabindex="-1"
           >
             <div
@@ -1223,7 +1298,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-13 emotion-5"
             tabindex="-1"
           >
             <div
@@ -1686,6 +1761,52 @@ exports[`Table > Should render correctly with info 1`] = `
   fill: none;
 }
 
+.emotion-13 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-13[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-13 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-13[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .emotion-23 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
@@ -1707,6 +1828,10 @@ exports[`Table > Should render correctly with info 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-25 {
@@ -1720,6 +1845,10 @@ exports[`Table > Should render correctly with info 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 <div
@@ -1762,7 +1891,7 @@ exports[`Table > Should render correctly with info 1`] = `
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-13 emotion-5"
             tabindex="-1"
           >
             <div
@@ -1772,7 +1901,7 @@ exports[`Table > Should render correctly with info 1`] = `
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-13 emotion-5"
             tabindex="-1"
           >
             <div
@@ -2124,6 +2253,9 @@ exports[`Table > Should render correctly with loading 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2182,6 +2314,10 @@ exports[`Table > Should render correctly with loading 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-34 {
@@ -2783,6 +2919,9 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2803,6 +2942,9 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2891,6 +3033,10 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-31 {
@@ -2904,6 +3050,10 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 <div
@@ -3324,26 +3474,6 @@ exports[`Table > Should render correctly with selectable then click on first row
   user-select: none;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 8px;
-}
-
-.emotion-4[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .emotion-7 {
   color: #3f4250;
   font-size: 14px;
@@ -3666,6 +3796,52 @@ exports[`Table > Should render correctly with selectable then click on first row
   flex: 1;
 }
 
+.emotion-21 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-21[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-21 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-21[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .emotion-46 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
@@ -3687,6 +3863,10 @@ exports[`Table > Should render correctly with selectable then click on first row
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-48 {
@@ -3700,6 +3880,10 @@ exports[`Table > Should render correctly with selectable then click on first row
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-50 {
@@ -3784,7 +3968,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-21 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3794,7 +3978,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-21 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3804,7 +3988,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-21 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3814,7 +3998,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-21 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3824,7 +4008,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-4 emotion-5"
+            class="emotion-21 emotion-5"
             tabindex="-1"
           >
             <div
@@ -4787,6 +4971,9 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4807,6 +4994,9 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4989,6 +5179,10 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-52 {
@@ -5002,6 +5196,10 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 <div
@@ -5508,6 +5706,9 @@ exports[`Table > Should render correctly with stipped 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5528,6 +5729,9 @@ exports[`Table > Should render correctly with stipped 1`] = `
 }
 
 .emotion-4 {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5616,6 +5820,10 @@ exports[`Table > Should render correctly with stipped 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 .emotion-31 {
@@ -5629,6 +5837,10 @@ exports[`Table > Should render correctly with stipped 1`] = `
   align-items: center;
   padding: 8px;
   font-size: 14px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
 }
 
 <div

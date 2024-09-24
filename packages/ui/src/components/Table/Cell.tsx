@@ -32,7 +32,7 @@ export const Cell = ({
   colSpan,
   rowSpan,
   sentiment,
-  align = 'start',
+  align = 'left',
 }: CellProps) => (
   <StyledCell
     className={className}
