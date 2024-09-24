@@ -222,7 +222,7 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
   // For each theme
   themesMatches.map(async themeMatch => {
     const output = generatePalette(figmaTokensJson, themeMatch)
-    const filePath = `packages/themes/src/themes/console/${themeMatch.outputTheme}.ts`
+    const filePath = `packages/themes/src/themes/console/${themeMatch.outputTheme}/__generated__/index.ts`
     await fs.writeFile(
       filePath,
       `${header}export const ${themeMatch.outputTheme}Theme = ${JSON.stringify(

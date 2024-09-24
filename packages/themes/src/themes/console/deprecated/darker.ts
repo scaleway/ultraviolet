@@ -2,6 +2,13 @@
  * @deprecated Those are old tokens usages and will be removed in the next major version.
  */
 export const deprecatedDarkerTokens = {
+  screens: {
+    xsmall: 0,
+    small: 576,
+    medium: 768,
+    large: 992,
+    xlarge: 1200,
+  },
   colors: {
     danger: {
       backgroundWeak: '#000000',
