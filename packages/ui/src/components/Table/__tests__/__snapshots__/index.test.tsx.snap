@@ -8,14 +8,30 @@ exports[`Table > Should render correctly 1`] = `
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-2 {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -57,6 +73,14 @@ exports[`Table > Should render correctly 1`] = `
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -70,7 +94,9 @@ exports[`Table > Should render correctly 1`] = `
       <thead
         class="emotion-2 emotion-3"
       >
-        <tr>
+        <tr
+          role="row"
+        >
           <th
             class="emotion-4 emotion-5"
             tabindex="-1"
@@ -126,6 +152,7 @@ exports[`Table > Should render correctly 1`] = `
       <tbody>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -155,6 +182,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -184,6 +212,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -213,6 +242,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -242,6 +272,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -271,6 +302,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -300,6 +332,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -329,6 +362,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -358,6 +392,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -387,6 +422,7 @@ exports[`Table > Should render correctly 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -428,12 +464,34 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-0 {
   width: 100%;
   box-sizing: content-box;
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-2 {
   border-bottom: 1px solid #d9dadd;
 }
@@ -443,9 +501,14 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -458,9 +521,14 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -531,11 +599,27 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -549,7 +633,9 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
       <thead
         class="emotion-2 emotion-3"
       >
-        <tr>
+        <tr
+          role="row"
+        >
           <th
             class="emotion-4 emotion-5"
             tabindex="-1"
@@ -605,6 +691,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
       <tbody>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -634,6 +721,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -663,6 +751,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -692,6 +781,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -721,6 +811,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -750,6 +841,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -779,6 +871,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -808,6 +901,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -837,6 +931,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -866,6 +961,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -917,10 +1013,15 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   border-collapse: collapse;
 }
 
-.emotion-0 {
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
   width: 100%;
-  box-sizing: content-box;
-  border-collapse: collapse;
+  grid-template-columns: minmax(0, 1fr) 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2 {
@@ -932,6 +1033,34 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 }
 
 .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-4[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -1013,47 +1142,33 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   fill: none;
 }
 
-.emotion-13 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.emotion-13[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-13 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.emotion-13[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .emotion-23 {
   -webkit-animation: animation-0 3s linear;
   animation: animation-0 3s linear;
 }
 
 .emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
 
 .emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -1067,7 +1182,9 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
       <thead
         class="emotion-2 emotion-3"
       >
-        <tr>
+        <tr
+          role="row"
+        >
           <th
             class="emotion-4 emotion-5"
             tabindex="-1"
@@ -1085,7 +1202,6 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
                 <svg
                   class="emotion-11 emotion-12"
                   viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -1097,7 +1213,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
             </div>
           </th>
           <th
-            class="emotion-13 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -1107,7 +1223,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
             </div>
           </th>
           <th
-            class="emotion-13 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -1121,6 +1237,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
       <tbody>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1150,6 +1267,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1179,6 +1297,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1208,6 +1327,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1237,6 +1357,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1266,6 +1387,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1295,6 +1417,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1324,6 +1447,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1353,6 +1477,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1382,6 +1507,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1423,6 +1549,17 @@ exports[`Table > Should render correctly with info 1`] = `
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-0 tbody tr:nth-of-type(even) {
   background: #f9f9fa;
 }
@@ -1440,6 +1577,34 @@ exports[`Table > Should render correctly with info 1`] = `
 }
 
 .emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-4[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -1521,36 +1686,6 @@ exports[`Table > Should render correctly with info 1`] = `
   fill: none;
 }
 
-.emotion-13 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.emotion-13[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-13 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.emotion-13[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .emotion-23 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
@@ -1562,11 +1697,27 @@ exports[`Table > Should render correctly with info 1`] = `
 }
 
 .emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
 
 .emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -1580,7 +1731,9 @@ exports[`Table > Should render correctly with info 1`] = `
       <thead
         class="emotion-2 emotion-3"
       >
-        <tr>
+        <tr
+          role="row"
+        >
           <th
             class="emotion-4 emotion-5"
             tabindex="-1"
@@ -1598,7 +1751,6 @@ exports[`Table > Should render correctly with info 1`] = `
                 <svg
                   class="emotion-11 emotion-12"
                   viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     clip-rule="evenodd"
@@ -1610,7 +1762,7 @@ exports[`Table > Should render correctly with info 1`] = `
             </div>
           </th>
           <th
-            class="emotion-13 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -1620,7 +1772,7 @@ exports[`Table > Should render correctly with info 1`] = `
             </div>
           </th>
           <th
-            class="emotion-13 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -1634,6 +1786,7 @@ exports[`Table > Should render correctly with info 1`] = `
       <tbody>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1663,6 +1816,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1692,6 +1846,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1721,6 +1876,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1750,6 +1906,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1779,6 +1936,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1808,6 +1966,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1837,6 +1996,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1866,6 +2026,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1895,6 +2056,7 @@ exports[`Table > Should render correctly with info 1`] = `
         </tr>
         <tr
           class="emotion-23 emotion-24"
+          role="row"
         >
           <td
             class="emotion-25 emotion-26"
@@ -1946,14 +2108,30 @@ exports[`Table > Should render correctly with loading 1`] = `
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-2 {
   border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -1994,6 +2172,14 @@ exports[`Table > Should render correctly with loading 1`] = `
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -2060,7 +2246,9 @@ exports[`Table > Should render correctly with loading 1`] = `
       <thead
         class="emotion-2 emotion-3"
       >
-        <tr>
+        <tr
+          role="row"
+        >
           <th
             class="emotion-4 emotion-5"
             tabindex="-1"
@@ -2558,12 +2746,34 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-0 {
   width: 100%;
   box-sizing: content-box;
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-2 {
   border-bottom: 1px solid #d9dadd;
 }
@@ -2573,9 +2783,14 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -2588,9 +2803,14 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -2661,11 +2881,27 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -2679,7 +2915,9 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
       <thead
         class="emotion-2 emotion-3"
       >
-        <tr>
+        <tr
+          role="row"
+        >
           <th
             class="emotion-4 emotion-5"
             tabindex="-1"
@@ -2735,6 +2973,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
       <tbody>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2764,6 +3003,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2793,6 +3033,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2822,6 +3063,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2851,6 +3093,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2880,6 +3123,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2909,6 +3153,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2938,6 +3183,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2967,6 +3213,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -2996,6 +3243,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -3037,10 +3285,15 @@ exports[`Table > Should render correctly with selectable then click on first row
   border-collapse: collapse;
 }
 
-.emotion-0 {
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
   width: 100%;
-  box-sizing: content-box;
-  border-collapse: collapse;
+  grid-template-columns: 40px 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2 {
@@ -3052,7 +3305,34 @@ exports[`Table > Should render correctly with selectable then click on first row
 }
 
 .emotion-4 {
-  width: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.emotion-4[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -3386,36 +3666,6 @@ exports[`Table > Should render correctly with selectable then click on first row
   flex: 1;
 }
 
-.emotion-21 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.emotion-21[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-21 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.emotion-21[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .emotion-46 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
@@ -3427,11 +3677,27 @@ exports[`Table > Should render correctly with selectable then click on first row
 }
 
 .emotion-48 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
 
 .emotion-48 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -3441,6 +3707,7 @@ exports[`Table > Should render correctly with selectable then click on first row
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 40px;
 }
 
 <div
@@ -3452,7 +3719,9 @@ exports[`Table > Should render correctly with selectable then click on first row
       <thead
         class="emotion-2 emotion-3"
       >
-        <tr>
+        <tr
+          role="row"
+        >
           <th
             class="emotion-4 emotion-5"
             tabindex="-1"
@@ -3515,7 +3784,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-21 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3525,7 +3794,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-21 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3535,7 +3804,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-21 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3545,7 +3814,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-21 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3555,7 +3824,7 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </th>
           <th
-            class="emotion-21 emotion-5"
+            class="emotion-4 emotion-5"
             tabindex="-1"
           >
             <div
@@ -3569,6 +3838,7 @@ exports[`Table > Should render correctly with selectable then click on first row
       <tbody>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -3658,6 +3928,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -3747,6 +4018,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -3836,6 +4108,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -3925,6 +4198,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -4014,6 +4288,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -4103,6 +4378,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -4192,6 +4468,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -4281,6 +4558,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -4370,6 +4648,7 @@ exports[`Table > Should render correctly with selectable then click on first row
         </tr>
         <tr
           class="emotion-46 emotion-47"
+          role="row"
         >
           <td
             class="emotion-48 emotion-49"
@@ -4471,10 +4750,32 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-0 {
   width: 100%;
   box-sizing: content-box;
   border-collapse: collapse;
+}
+
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2 {
@@ -4486,9 +4787,14 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -4501,9 +4807,14 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -4601,19 +4912,19 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 
 .emotion-11 {
   vertical-align: middle;
-  fill: #727683;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
+  fill: #3f4250;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
 }
 
 .emotion-11 .fillStroke {
-  stroke: #727683;
+  stroke: #3f4250;
   fill: none;
 }
 
-.emotion-18 {
+.emotion-16 {
   color: #641cb3;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -4637,36 +4948,58 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   gap: 8px;
 }
 
-.emotion-22 {
+.emotion-21 {
   vertical-align: middle;
-  fill: #521094;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
+  fill: #641cb3;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
-.emotion-22 .fillStroke {
-  stroke: #521094;
+.emotion-21 .fillStroke {
+  stroke: #641cb3;
   fill: none;
 }
 
-.emotion-59 {
+.emotion-50 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-59 {
+.emotion-50 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-61 {
+.emotion-52 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
 
-.emotion-61 {
+.emotion-52 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -4681,7 +5014,9 @@ exports[`Table > Should render correctly with sort then click 1`] = `
         <thead
           class="emotion-2 emotion-3"
         >
-          <tr>
+          <tr
+            role="row"
+          >
             <th
               class="emotion-4 emotion-5"
               role="button columnheader"
@@ -4697,22 +5032,15 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                   <svg
                     class="emotion-11 emotion-12"
                     viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
+                      d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
                       fill-rule="evenodd"
                     />
-                  </svg>
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
                     <path
                       clip-rule="evenodd"
-                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4726,32 +5054,19 @@ exports[`Table > Should render correctly with sort then click 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-6 emotion-18 emotion-8"
+                class="emotion-6 emotion-16 emotion-8"
               >
                 Column 2
                 <div
                   class="emotion-9 emotion-10"
                 >
                   <svg
-                    class="emotion-22 emotion-12"
+                    class="emotion-20 emotion-21 emotion-12"
                     viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
-                      fill-rule="evenodd"
+                      d="M9.792 2a.75.75 0 0 1 .75.75v12.69l4.761-4.762a.75.75 0 0 1 1.06 1.06l-6.041 6.042a.75.75 0 0 1-1.06 0L3.22 11.74a.75.75 0 0 1 1.06-1.061l4.762 4.761V2.75a.75.75 0 0 1 .75-.75"
                     />
                   </svg>
                 </div>
@@ -4772,22 +5087,15 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                   <svg
                     class="emotion-11 emotion-12"
                     viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
+                      d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
                       fill-rule="evenodd"
                     />
-                  </svg>
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
                     <path
                       clip-rule="evenodd"
-                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4809,22 +5117,15 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                   <svg
                     class="emotion-11 emotion-12"
                     viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
+                      d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
                       fill-rule="evenodd"
                     />
-                  </svg>
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
                     <path
                       clip-rule="evenodd"
-                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4846,22 +5147,15 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                   <svg
                     class="emotion-11 emotion-12"
                     viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       clip-rule="evenodd"
-                      d="M9.72 7.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06l-3.72-3.72-3.72 3.72a.75.75 0 0 1-1.06-1.06z"
+                      d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
                       fill-rule="evenodd"
                     />
-                  </svg>
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
                     <path
                       clip-rule="evenodd"
-                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
                       fill-rule="evenodd"
                     />
                   </svg>
@@ -4872,291 +5166,301 @@ exports[`Table > Should render correctly with sort then click 1`] = `
         </thead>
         <tbody>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 1 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 1 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 1 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 1 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 1 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 2 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 2 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 2 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 2 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 2 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 3 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 3 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 3 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 3 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 3 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 4 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 4 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 4 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 4 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 4 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 5 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 5 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 5 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 5 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 5 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 6 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 6 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 6 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 6 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 6 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 7 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 7 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 7 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 7 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 7 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 8 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 8 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 8 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 8 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 8 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 9 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 9 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 9 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 9 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 9 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-59 emotion-60"
+            class="emotion-50 emotion-51"
+            role="row"
           >
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 10 Column 1
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 10 Column 2
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 10 Column 3
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 10 Column 4
             </td>
             <td
-              class="emotion-61 emotion-62"
+              class="emotion-52 emotion-53"
             >
               Row 10 Column 5
             </td>
@@ -5176,6 +5480,17 @@ exports[`Table > Should render correctly with stipped 1`] = `
   border-collapse: collapse;
 }
 
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .emotion-0 tbody tr:nth-of-type(even) {
   background: #f9f9fa;
 }
@@ -5193,9 +5508,14 @@ exports[`Table > Should render correctly with stipped 1`] = `
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -5208,9 +5528,14 @@ exports[`Table > Should render correctly with stipped 1`] = `
 }
 
 .emotion-4 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
 }
 
@@ -5281,11 +5606,27 @@ exports[`Table > Should render correctly with stipped 1`] = `
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
 
 .emotion-31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 8px;
   font-size: 14px;
 }
@@ -5299,7 +5640,9 @@ exports[`Table > Should render correctly with stipped 1`] = `
       <thead
         class="emotion-2 emotion-3"
       >
-        <tr>
+        <tr
+          role="row"
+        >
           <th
             class="emotion-4 emotion-5"
             tabindex="-1"
@@ -5355,6 +5698,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
       <tbody>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5384,6 +5728,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5413,6 +5758,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5442,6 +5788,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5471,6 +5818,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5500,6 +5848,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5529,6 +5878,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5558,6 +5908,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5587,6 +5938,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"
@@ -5616,6 +5968,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
         </tr>
         <tr
           class="emotion-29 emotion-30"
+          role="row"
         >
           <td
             class="emotion-31 emotion-32"

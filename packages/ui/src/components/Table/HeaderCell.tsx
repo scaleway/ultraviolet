@@ -1,9 +1,14 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  InformationIcon,
+  SortIcon as SortIconUV,
+  SouthShortIcon,
+} from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
+import { AlignementFlex } from './constants'
 
 const StyledIconContainer = styled(Stack)`
   color: ${({ theme }) => theme.colors.neutral.textWeak};
@@ -18,35 +23,33 @@ const StyledIconContainer = styled(Stack)`
   }
 `
 
+const StyledSortIcon = styled(SouthShortIcon, {
+  shouldForwardProp: prop => !['order'].includes(prop),
+})<{ order: 'ascending' | 'descending' }>`
+    transform: ${({ order }) => (order === 'ascending' ? 'rotate(-180deg)' : 'none')};
+    transition: transform 0.2s;
+`
+
 const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) => (
   <StyledIconContainer>
-    <Icon
-      name="arrow-up"
-      size={10}
-      color={order === 'ascending' ? 'primary' : 'neutral'}
-      prominence="weak"
-    />
-    <Icon
-      name="arrow-down"
-      size={10}
-      color={order === 'descending' ? 'primary' : 'neutral'}
-      prominence="weak"
-    />
+    {order ? (
+      <StyledSortIcon order={order} sentiment="primary" />
+    ) : (
+      <SortIconUV sentiment="neutral" />
+    )}
   </StyledIconContainer>
 )
 
-type StyledHeaderCellProps = Pick<
-  HeaderCellProps,
-  'width' | 'maxWidth' | 'minWidth'
->
+type StyledHeaderCellProps = {
+  align?: 'left' | 'center' | 'right'
+}
+
 const StyledHeaderCell = styled('th', {
-  shouldForwardProp: prop => !['width', 'maxWidth', 'minWidth'].includes(prop),
+  shouldForwardProp: prop => !['align'].includes(prop),
 })<StyledHeaderCellProps>`
-  ${({ width, maxWidth, minWidth }) => `
-    ${width ? `width: ${width};` : ''}
-    ${maxWidth ? `max-width: ${maxWidth};` : ''}
-    ${minWidth ? `min-width: ${minWidth};` : ''}
-  `}
+  display: flex;
+  align-items: center;
+  justify-content: ${({ align }) => (align ? AlignementFlex[align] : null)};
   padding: ${({ theme }) => theme.space['1']};
 
   &[role*='button'] {
@@ -68,10 +71,8 @@ type HeaderCellProps = {
   isOrdered?: boolean
   orderDirection?: 'asc' | 'desc' | 'none'
   onOrder?: (newOrder: 'asc' | 'desc') => void
-  width?: string
-  minWidth?: string
-  maxWidth?: string
   info?: string
+  align?: 'left' | 'center' | 'right'
 }
 
 export const HeaderCell = ({
@@ -80,10 +81,8 @@ export const HeaderCell = ({
   isOrdered,
   onOrder,
   orderDirection,
-  width,
-  maxWidth,
-  minWidth,
   info,
+  align,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -114,11 +113,9 @@ export const HeaderCell = ({
           : undefined
       }
       role={onOrder ? 'button columnheader' : undefined}
-      width={width}
-      maxWidth={maxWidth}
-      minWidth={minWidth}
       tabIndex={handleOrder ? 0 : -1}
       aria-sort={order}
+      align={align}
     >
       <StyledText
         as="div"
@@ -128,11 +125,10 @@ export const HeaderCell = ({
         {children}
         {info ? (
           <Tooltip text={info}>
-            <Icon
-              name="information-outline"
-              size={20}
+            <InformationIcon
+              size="large"
               prominence="weak"
-              color="neutral"
+              sentiment="neutral"
             />
           </Tooltip>
         ) : null}

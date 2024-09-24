@@ -9,7 +9,7 @@ export const ColumnInfo: StoryFn<typeof Table> = ({ ...props }) => (
 ColumnInfo.args = {
   columns: [
     { label: 'Name', info: 'This column is important' },
-    ...columns.slice(1, 3),
+    ...columns.slice(1, 4),
   ],
   children: (
     <Table.Body>

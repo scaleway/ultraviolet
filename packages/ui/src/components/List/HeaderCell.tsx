@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  InformationIcon,
+  SortIcon as SortIconUV,
+  SouthShortIcon,
+} from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
-const ArrowDownIcon = styled(Icon)``
-const ArrowUpIcon = styled(Icon)``
 
 const StyledIconContainer = styled(Stack)`
   color: ${({ theme }) => theme.colors.neutral.text};
@@ -15,10 +16,20 @@ const StyledIconContainer = styled(Stack)`
   }
 `
 
-const SortIcon = () => (
+const StyledSortIcon = styled(SouthShortIcon, {
+  shouldForwardProp: prop => !['order'].includes(prop),
+})<{ order: 'ascending' | 'descending' }>`
+  transform: ${({ order }) => (order === 'ascending' ? 'rotate(-180deg)' : 'none')};
+  transition: transform 0.2s ease-in-out;
+`
+
+const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) => (
   <StyledIconContainer>
-    <ArrowUpIcon name="arrow-up" size={10} />
-    <ArrowDownIcon name="arrow-down" size={10} />
+    {order ? (
+      <StyledSortIcon order={order} sentiment="primary" />
+    ) : (
+      <SortIconUV sentiment="neutral" />
+    )}
   </StyledIconContainer>
 )
 
@@ -39,14 +50,6 @@ const StyledHeaderCell = styled.div`
   }
 
   &[aria-sort] {
-    color: ${({ theme }) => theme.colors.primary.text};
-  }
-
-  &[aria-sort='ascending'] ${ArrowUpIcon} {
-    color: ${({ theme }) => theme.colors.primary.text};
-  }
-
-  &[aria-sort='descending'] ${ArrowDownIcon} {
     color: ${({ theme }) => theme.colors.primary.text};
   }
 `
@@ -103,16 +106,11 @@ export const HeaderCell = ({
       {children}
       {info ? (
         <Tooltip text={info}>
-          <Icon
-            name="information-outline"
-            size={20}
-            prominence="weak"
-            color="neutral"
-          />
+          <InformationIcon size="large" prominence="weak" sentiment="neutral" />
         </Tooltip>
       ) : null}
       {orderDirection !== undefined && isOrdered !== undefined ? (
-        <SortIcon data-sorted={order !== undefined} />
+        <SortIcon order={order} />
       ) : null}
     </StyledHeaderCell>
   )

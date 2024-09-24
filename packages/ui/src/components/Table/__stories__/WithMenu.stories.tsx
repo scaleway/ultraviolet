@@ -11,8 +11,8 @@ export const WithMenu: StoryFn<typeof Table> = ({ ...props }) => (
 WithMenu.args = {
   columns: [
     { label: 'Name', info: 'This column is important' },
-    ...columns.slice(1, 3),
-    { label: '', width: '32px' },
+    ...columns.slice(1, 4),
+    { label: '', width: '42px' },
   ],
   children: (
     <Table.Body>
