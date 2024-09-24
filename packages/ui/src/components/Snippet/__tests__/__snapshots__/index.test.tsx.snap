@@ -54,10 +54,10 @@ exports[`Snippet > renders correctly 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-7 {
@@ -278,9 +278,9 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-9 {
@@ -393,6 +393,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -534,9 +535,8 @@ exports[`Snippet > renders correctly in multiline  1`] = `
             >
               Show 
               <svg
-                class="emotion-38 emotion-39 emotion-30"
+                class="emotion-38 emotion-39 emotion-40"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -617,9 +617,9 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-9 {
@@ -747,6 +747,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -888,9 +889,8 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
             >
               Show 
               <svg
-                class="emotion-38 emotion-39 emotion-30"
+                class="emotion-38 emotion-39 emotion-40"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -971,9 +971,9 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-9 {
@@ -1102,6 +1102,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -1243,9 +1244,8 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
             >
               Show 
               <svg
-                class="emotion-38 emotion-39 emotion-30"
+                class="emotion-38 emotion-39 emotion-40"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -1316,10 +1316,10 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-7 {
@@ -1530,10 +1530,10 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-7 {
@@ -1690,6 +1690,400 @@ exports[`Snippet > renders correctly with copyText 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Snippet > renders correctly with custom number of rows 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-5 {
+  font-size: 14px;
+  font-family: JetBrains,monospace;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  height: auto;
+  counter-reset: section;
+  overflow-y: hidden;
+}
+
+.emotion-5 {
+  font-size: 14px;
+  font-family: JetBrains,monospace;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  height: auto;
+  counter-reset: section;
+  overflow-y: hidden;
+}
+
+.emotion-7 {
+  display: block;
+}
+
+.emotion-7:after {
+  content: "";
+  padding: 32px;
+}
+
+.emotion-7 {
+  display: block;
+}
+
+.emotion-7:after {
+  content: "";
+  padding: 32px;
+}
+
+.emotion-21 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.emotion-21 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.emotion-23 {
+  display: inherit;
+}
+
+.emotion-23[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-23 {
+  display: inherit;
+}
+
+.emotion-23[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-25:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-25:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25:hover,
+.emotion-25:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-25:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-25:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25:hover,
+.emotion-25:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-27 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-27 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-27 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-27 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <pre
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          />
+        </pre>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":r10:"
+            aria-describedby=":r10:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Snippet > renders correctly with hideText 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -1754,9 +2148,9 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-9 {
@@ -1869,6 +2263,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2010,9 +2405,8 @@ exports[`Snippet > renders correctly with hideText 1`] = `
             >
               Show 
               <svg
-                class="emotion-38 emotion-39 emotion-30"
+                class="emotion-38 emotion-39 emotion-40"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -2142,9 +2536,9 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-7 {
@@ -2160,9 +2554,9 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-9 {
@@ -2379,6 +2773,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2402,6 +2797,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2543,9 +2939,8 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
             >
               Hide 
               <svg
-                class="emotion-38 emotion-39 emotion-30"
+                class="emotion-38 emotion-39 emotion-40"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -2555,6 +2950,383 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
               </svg>
             </span>
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Snippet > renders correctly with noExpandable 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-5 {
+  font-size: 14px;
+  font-family: JetBrains,monospace;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  height: auto;
+  counter-reset: section;
+  max-height: calc(20px * 4 + 24px);
+  overflow-y: scroll;
+}
+
+.emotion-7 {
+  display: block;
+}
+
+.emotion-7:after {
+  content: "";
+  padding: 32px;
+}
+
+.emotion-7 {
+  display: block;
+}
+
+.emotion-7:after {
+  content: "";
+  padding: 32px;
+}
+
+.emotion-21 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.emotion-21 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.emotion-23 {
+  display: inherit;
+}
+
+.emotion-23[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-23 {
+  display: inherit;
+}
+
+.emotion-23[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-25:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-25:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25:hover,
+.emotion-25:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-25:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-25:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-25:hover,
+.emotion-25:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-27 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-27 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-27 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-27 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <pre
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="emotion-7 emotion-8"
+          />
+        </pre>
+        <div
+          class="emotion-21 emotion-22"
+        >
+          <div
+            aria-controls=":r12:"
+            aria-describedby=":r12:"
+            class="emotion-23 emotion-24"
+            data-container-full-width="false"
+            tabindex="0"
+          >
+            <button
+              aria-label="Copy"
+              class="emotion-25 emotion-26"
+              type="button"
+            >
+              <svg
+                class="emotion-27 emotion-28"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M6.026 5.007A.1.1 0 0 0 6 5.084v8.333a.1.1 0 0 0 .026.076l.008.007h6.765l.008-.007a.1.1 0 0 0 .026-.076V5.084a.1.1 0 0 0-.026-.077L12.799 5H6.034zM4.5 5.084c0-.828.64-1.584 1.531-1.584h6.77c.891 0 1.532.756 1.532 1.584v8.333c0 .828-.64 1.583-1.531 1.583H6.03c-.89 0-1.531-.755-1.531-1.583z"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M3.526 2.507a.1.1 0 0 0-.026.076v8.333a.75.75 0 0 1-1.5 0V2.583C2 1.755 2.64 1 3.531 1h6.77c.891 0 1.532.755 1.532 1.583a.75.75 0 0 1-1.5 0 .1.1 0 0 0-.026-.076L10.3 2.5H3.534z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -2675,9 +3447,9 @@ exports[`Snippet > renders correctly with showText 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-7 {
@@ -2693,9 +3465,9 @@ exports[`Snippet > renders correctly with showText 1`] = `
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-9 {
@@ -2917,6 +3689,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -2940,6 +3713,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -3102,9 +3876,8 @@ exports[`Snippet > renders correctly with showText 1`] = `
             >
               Test 
               <svg
-                class="emotion-38 emotion-39 emotion-30"
+                class="emotion-38 emotion-39 emotion-40"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"
@@ -3175,10 +3948,10 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-7 {
@@ -3404,10 +4177,10 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   white-space: nowrap;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-7 {
@@ -3693,9 +4466,9 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-7 {
@@ -3711,9 +4484,9 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   padding: 16px;
   padding-right: 72px;
   overflow-x: auto;
-  overflow-y: hidden;
   height: auto;
   counter-reset: section;
+  overflow-y: hidden;
 }
 
 .emotion-9 {
@@ -3930,6 +4703,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -3953,6 +4727,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-36 {
+  color: #3f4250;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -4094,9 +4869,8 @@ exports[`Snippet > should click on extend button to display full content on  1`]
             >
               Hide 
               <svg
-                class="emotion-38 emotion-39 emotion-30"
+                class="emotion-38 emotion-39 emotion-40"
                 viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   clip-rule="evenodd"

@@ -1,5 +1,6 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { ArrowDownIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Children, useReducer } from 'react'
 import { CopyButton } from '../CopyButton'
@@ -13,21 +14,37 @@ type Prefixes = 'lines' | 'command'
 
 const PreText = styled(Text, {
   shouldForwardProp: prop =>
-    !['multiline', 'hasShowMoreButton', 'showMore'].includes(prop),
+    ![
+      'multiline',
+      'hasShowMoreButton',
+      'showMore',
+      'rows',
+      'noExpandable',
+    ].includes(prop),
 })<{
   multiline?: boolean
   hasShowMoreButton?: boolean
   showMore?: boolean
+  rows: number
+  noExpandable: boolean
 }>`
   margin: 0;
   padding: ${({ theme }) => theme.space['2']};
   padding-right: ${({ theme }) => theme.space['9']};
   overflow-x: ${({ hasShowMoreButton, showMore }) =>
     hasShowMoreButton && !showMore ? 'hidden' : 'auto'};
-  overflow-y: hidden;
   ${({ multiline }) => (!multiline ? 'white-space: nowrap;' : '')}
   height: auto;
   counter-reset: section;
+
+
+  ${({ theme, noExpandable, rows }) =>
+    noExpandable
+      ? `
+    max-height: calc(${theme.typography.code.lineHeight} * ${rows} + ${theme.space['3']});
+    overflow-y: scroll;`
+      : `overflow-y: hidden;
+`}
 `
 
 const StyledSpan = styled('span', {
@@ -35,6 +52,7 @@ const StyledSpan = styled('span', {
     !['linePrefix', 'multiline', 'prefix'].includes(prop),
 })<{ linePrefix?: string; multiline?: boolean; prefix?: Prefixes }>`
   display: block;
+
 
   &:after {
     content: "";
@@ -119,7 +137,7 @@ const AlignCenterText = styled(Text)`
   align-items: center;
 `
 
-const AnimatedArrowIcon = styled(Icon, {
+const AnimatedArrowIcon = styled(ArrowDownIcon, {
   shouldForwardProp: prop => !['showMore'].includes(prop),
 })<{ showMore?: boolean }>`
   transform: ${({ showMore }) => (showMore ? 'rotate(180deg)' : 'rotate(0deg)')};
@@ -134,6 +152,8 @@ type CodeContentProps = {
   showMore?: boolean
   hasShowMoreButton?: boolean
   lines?: string[]
+  noExpandable: boolean
+  rows: number
 }
 
 const CodeContent = ({
@@ -143,6 +163,8 @@ const CodeContent = ({
   showMore,
   hasShowMoreButton,
   lines,
+  noExpandable,
+  rows,
 }: CodeContentProps) => (
   <PreText
     as="pre"
@@ -150,6 +172,8 @@ const CodeContent = ({
     multiline={multiline}
     hasShowMoreButton={hasShowMoreButton}
     showMore={showMore}
+    noExpandable={noExpandable}
+    rows={rows}
   >
     {multiline ? (
       Children.map(lines, child => (
@@ -176,6 +200,8 @@ type SnippetProps = {
   hideText?: string
   'data-testid'?: string
   initiallyExpanded?: boolean
+  rows?: number
+  noExpandable?: boolean
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 /**
@@ -192,17 +218,19 @@ export const Snippet = ({
   className,
   'data-testid': dataTestId,
   initiallyExpanded,
+  rows = 4,
+  noExpandable = false,
 }: SnippetProps) => {
+  const theme = useTheme()
   const [showMore, setShowMore] = useReducer(
     value => !value,
     initiallyExpanded ?? false,
   )
-
   const lines = children.split(LINES_BREAK_REGEX)
 
   const numberOfLines = lines.length
   const multiline = numberOfLines > 1
-  const hasShowMoreButton = numberOfLines > 4 && multiline
+  const hasShowMoreButton = numberOfLines > rows && multiline && !noExpandable
 
   return (
     <Container
@@ -212,13 +240,32 @@ export const Snippet = ({
     >
       <StyledStack>
         {hasShowMoreButton ? (
-          <Expandable minHeight={120} opened={showMore}>
-            <CodeContent prefix={prefix} multiline={multiline} lines={lines}>
+          // Height = number of rows * height of a line + padding
+          <Expandable
+            minHeight={
+              rows * parseInt(theme.typography.code.lineHeight, 10) +
+              parseInt(theme.space[4], 10)
+            }
+            opened={showMore}
+          >
+            <CodeContent
+              prefix={prefix}
+              multiline={multiline}
+              lines={lines}
+              noExpandable={noExpandable}
+              rows={rows}
+            >
               {children}
             </CodeContent>
           </Expandable>
         ) : (
-          <CodeContent prefix={prefix} multiline={multiline} lines={lines}>
+          <CodeContent
+            prefix={prefix}
+            multiline={multiline}
+            lines={lines}
+            noExpandable={noExpandable}
+            rows={rows}
+          >
             {children}
           </CodeContent>
         )}
@@ -227,7 +274,6 @@ export const Snippet = ({
             value={children}
             copyText={copyText}
             copiedText={copiedText}
-            noBorder
             sentiment="neutral"
           />
         </ButtonContainer>
@@ -238,10 +284,14 @@ export const Snippet = ({
               onClick={setShowMore}
               aria-expanded={showMore}
             >
-              <AlignCenterText as="span" variant="bodySmallStrong">
+              <AlignCenterText
+                as="span"
+                variant="bodySmallStrong"
+                sentiment="neutral"
+              >
                 {showMore ? hideText : showText}
                 &nbsp;
-                <AnimatedArrowIcon name="arrow-down" showMore={showMore} />
+                <AnimatedArrowIcon showMore={showMore} />
               </AlignCenterText>
             </StyledButton>
           </ShowMoreContainer>

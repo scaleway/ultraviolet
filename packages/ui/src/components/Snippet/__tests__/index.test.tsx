@@ -82,4 +82,18 @@ describe('Snippet', () => {
 
     expect(asFragment()).toMatchSnapshot()
   })
+
+  test('renders correctly with custom number of rows', () => {
+    const { asFragment } = renderWithTheme(
+      <Snippet rows={12}>{TEST_VALUE_MULTILINE}</Snippet>,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('renders correctly with noExpandable', () => {
+    const { asFragment } = renderWithTheme(
+      <Snippet noExpandable>{TEST_VALUE_MULTILINE}</Snippet>,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
 })
