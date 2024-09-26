@@ -14,7 +14,9 @@ import type { ExtendedColor } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
 
-const StyledIcon = styled(Icon)``
+const StyledIcon = styled(Icon)`
+  margin-left: ${({ theme }) => theme.space['1']};
+`
 
 export const PROMINENCES = {
   default: '',
@@ -85,9 +87,6 @@ const StyledLink = styled('a', {
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
   text-decoration-color: transparent;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
   transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
 
   ${StyledIcon} {
