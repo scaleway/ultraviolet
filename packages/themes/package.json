@@ -45,11 +45,13 @@
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
     "./console/*": {
       "types": "./dist/themes/console/index.d.ts",
       "require": "./dist/themes/console/index.cjs",
+      "import": "./dist/themes/console/index.js",
       "default": "./dist/themes/console/index.js"
     }
   },
