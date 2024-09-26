@@ -293,6 +293,7 @@ export const Dialog = ({
       onFocus={stopFocus}
       data-animation={animation}
       data-visible={isVisible}
+      id="backdrop-modal"
     >
       <StyledDialog
         css={dialogCss}
