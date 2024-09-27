@@ -1,5 +1,5 @@
 import { TextArea } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, KeyboardEvent } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -15,6 +15,7 @@ export type TextAreaFieldProps<
     'value' | 'error' | 'name' | 'onChange'
   > & {
     regex?: (RegExp | RegExp[])[]
+    submitOnEnter?: boolean
   }
 
 /**
@@ -40,6 +41,7 @@ export const TextAreaField = <
   name,
   onFocus,
   onBlur,
+  onKeyDown,
   placeholder,
   readOnly,
   required,
@@ -47,6 +49,7 @@ export const TextAreaField = <
   success,
   tooltip,
   regex: regexes,
+  submitOnEnter,
   validate,
 }: TextAreaFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -71,6 +74,23 @@ export const TextAreaField = <
       maxLength,
     },
   })
+
+  const onKeyDownHandler = (event: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (submitOnEnter && event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault()
+      event.stopPropagation()
+      const { form } = event.currentTarget
+      if (form) {
+        const submitEvent = new Event('submit', {
+          bubbles: true,
+          cancelable: true,
+        })
+        form.dispatchEvent(submitEvent)
+      }
+    } else {
+      onKeyDown?.(event)
+    }
+  }
 
   return (
     <TextArea
@@ -103,9 +123,8 @@ export const TextAreaField = <
         field.onChange(event)
         onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
-      onFocus={event => {
-        onFocus?.(event)
-      }}
+      onFocus={onFocus}
+      onKeyDown={onKeyDownHandler}
       placeholder={placeholder}
       readOnly={readOnly}
       required={required}

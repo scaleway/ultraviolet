@@ -1,4 +1,5 @@
 import type { Meta } from '@storybook/react'
+import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import { TextAreaField } from '..'
 import { Form } from '../..'
 import { useForm } from '../../..'
@@ -8,15 +9,58 @@ export default {
   component: TextAreaField,
   decorators: [
     ChildStory => {
-      const methods = useForm({
-        defaultValues: {
-          textarea: 'A long time ago in a galaxy far, far away',
-        },
-      })
+      const methods = useForm()
+      const {
+        errors,
+        isDirty,
+        isSubmitting,
+        touchedFields,
+        submitCount,
+        dirtyFields,
+        isValid,
+        isLoading,
+        isSubmitted,
+        isValidating,
+        isSubmitSuccessful,
+      } = methods.formState
 
       return (
         <Form onSubmit={() => {}} errors={mockErrors} methods={methods}>
-          <ChildStory />
+          <Stack gap={2}>
+            <ChildStory />
+            <Stack gap={1}>
+              <Text variant="bodyStrong" as="p">
+                Form input values:
+              </Text>
+              <Snippet prefix="lines" initiallyExpanded>
+                {JSON.stringify(methods.watch(), null, 1)}
+              </Snippet>
+            </Stack>
+            <Stack gap={1}>
+              <Text variant="bodyStrong" as="p">
+                Form values:
+              </Text>
+              <Snippet prefix="lines">
+                {JSON.stringify(
+                  {
+                    errors,
+                    isDirty,
+                    isSubmitting,
+                    touchedFields,
+                    submitCount,
+                    dirtyFields,
+                    isValid,
+                    isLoading,
+                    isSubmitted,
+                    isValidating,
+                    isSubmitSuccessful,
+                  },
+                  null,
+                  1,
+                )}
+              </Snippet>
+            </Stack>
+          </Stack>
         </Form>
       )
     },
@@ -25,4 +69,5 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
+export { SubmitOnEnter } from './SubmitOnEnter.stories'
 export { Required } from './Required.stories'
