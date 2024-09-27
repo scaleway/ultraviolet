@@ -122,6 +122,7 @@ type TextAreaProps = {
   name?: string
   onFocus?: DOMAttributes<HTMLTextAreaElement>['onFocus']
   onBlur?: DOMAttributes<HTMLTextAreaElement>['onBlur']
+  onKeyDown?: DOMAttributes<HTMLTextAreaElement>['onKeyDown']
   clearable?: boolean
   labelDescription?: ReactNode
 }
@@ -154,6 +155,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       name,
       onFocus,
       onBlur,
+      onKeyDown,
       clearable = false,
       labelDescription,
     },
@@ -225,6 +227,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               name={name}
               onFocus={onFocus}
               onBlur={onBlur}
+              onKeyDown={onKeyDown}
             />
             <StyledTextAreaAbsoluteStack
               direction="row"
