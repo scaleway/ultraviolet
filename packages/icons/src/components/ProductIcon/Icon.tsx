@@ -3,13 +3,13 @@ import type { ReactNode } from 'react'
 
 type Variants = 'primary' | 'danger' | 'warning' | 'original'
 
-const SIZES = {
+export const SIZES = {
   xsmall: 24,
   small: 32,
   medium: 40,
   large: 48,
   xlarge: 64,
-}
+} as const
 
 const StyledIcon = styled('svg', {
   shouldForwardProp: prop => !['variant', 'disabled'].includes(prop),
