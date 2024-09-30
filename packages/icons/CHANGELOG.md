@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.1.1
+
+### Patch Changes
+
+- [#4250](https://github.com/scaleway/ultraviolet/pull/4250) [`84f639e`](https://github.com/scaleway/ultraviolet/commit/84f639e5de8822995b0f228943e21d981028265f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.8`.
+
+- [#4277](https://github.com/scaleway/ultraviolet/pull/4277) [`012095b`](https://github.com/scaleway/ultraviolet/commit/012095b790f99c9f98022370fb2468c4c74bface) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.9`.
+
+- Updated dependencies [[`b55a6e6`](https://github.com/scaleway/ultraviolet/commit/b55a6e68626dc2891fbd9cfaca918e423a09978c)]:
+  - @ultraviolet/themes@1.14.1
+
 ## 3.1.0
 
 ### Minor Changes
