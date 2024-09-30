@@ -1,5 +1,21 @@
 # @ultraviolet/plus
 
+## 0.21.12
+
+### Patch Changes
+
+- [#4250](https://github.com/scaleway/ultraviolet/pull/4250) [`84f639e`](https://github.com/scaleway/ultraviolet/commit/84f639e5de8822995b0f228943e21d981028265f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.8`.
+
+- [#4277](https://github.com/scaleway/ultraviolet/pull/4277) [`012095b`](https://github.com/scaleway/ultraviolet/commit/012095b790f99c9f98022370fb2468c4c74bface) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.9`.
+
+- [#4271](https://github.com/scaleway/ultraviolet/pull/4271) [`3d07599`](https://github.com/scaleway/ultraviolet/commit/3d07599de8804fee5041f84bdb2d23837df88527) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.23.3`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.23.3`.
+  Updated dependency `@uiw/react-codemirror` to `4.23.3`.
+- Updated dependencies [[`9c722d7`](https://github.com/scaleway/ultraviolet/commit/9c722d7c003f49c05909e8166627e824f08e4fb2), [`b55a6e6`](https://github.com/scaleway/ultraviolet/commit/b55a6e68626dc2891fbd9cfaca918e423a09978c), [`59df043`](https://github.com/scaleway/ultraviolet/commit/59df04313458c8e38ff434deacaf9131828fe998), [`4e2e5b5`](https://github.com/scaleway/ultraviolet/commit/4e2e5b5218f098bac558651c0fbc004ceb33b4b9), [`820c5d4`](https://github.com/scaleway/ultraviolet/commit/820c5d4876310c695709ae484086bae29216ed7c), [`9a859d9`](https://github.com/scaleway/ultraviolet/commit/9a859d989cd8ef3a0c0befa8c326ab62707b749a), [`84f639e`](https://github.com/scaleway/ultraviolet/commit/84f639e5de8822995b0f228943e21d981028265f), [`37fbbca`](https://github.com/scaleway/ultraviolet/commit/37fbbca9d45ab6ed184cb7257f99c78f7ad4b225), [`012095b`](https://github.com/scaleway/ultraviolet/commit/012095b790f99c9f98022370fb2468c4c74bface)]:
+  - @ultraviolet/ui@1.71.0
+  - @ultraviolet/themes@1.14.1
+  - @ultraviolet/icons@3.1.1
+
 ## 0.21.11
 
 ### Patch Changes

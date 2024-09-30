@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.14.1
+
+### Patch Changes
+
+- [#4230](https://github.com/scaleway/ultraviolet/pull/4230) [`b55a6e6`](https://github.com/scaleway/ultraviolet/commit/b55a6e68626dc2891fbd9cfaca918e423a09978c) Thanks [@matthprost](https://github.com/matthprost)! - Improve bundle size by removing barrel file for exporting themes
+
 ## 1.14.0
 
 ### Minor Changes
