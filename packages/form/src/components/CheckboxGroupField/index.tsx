@@ -57,6 +57,10 @@ export const CheckboxGroupField = <
           return null
         })?.filter(Boolean) ?? []
 
+      if (requiredChildren.length === 0 && !required) {
+        return true
+      }
+
       if (!required && arraysContainSameValues(value, requiredChildren)) {
         return true
       }
@@ -110,6 +114,7 @@ export const CheckboxGroupField = <
       }}
       error={getError({ label }, error) ?? customError}
       name={name}
+      required={required}
     >
       {children}
     </CheckboxGroup>
