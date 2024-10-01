@@ -678,10 +678,13 @@ export const Dropdown = ({
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
-  const [maxWidth, setWidth] = useState(refSelect.current?.offsetWidth)
+  const [maxWidth, setWidth] = useState<string | number>()
 
   const resizeDropdown = useCallback(() => {
-    if (refSelect.current) {
+    if (
+      refSelect.current &&
+      refSelect.current.getBoundingClientRect().width > 0
+    ) {
       setWidth(refSelect.current.getBoundingClientRect().width)
     }
   }, [refSelect])
@@ -808,7 +811,7 @@ export const Dropdown = ({
       }
       placement="bottom"
       disableAnimation
-      maxWidth={maxWidth}
+      maxWidth={maxWidth ?? refSelect.current?.offsetWidth}
       hasArrow={false}
       ref={ref}
       tabIndex={0}

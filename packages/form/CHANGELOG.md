@@ -1,5 +1,23 @@
 # Change Log
 
+## 3.9.0
+
+### Minor Changes
+
+- [#4285](https://github.com/scaleway/ultraviolet/pull/4285) [`820c5d4`](https://github.com/scaleway/ultraviolet/commit/820c5d4876310c695709ae484086bae29216ed7c) Thanks [@matthprost](https://github.com/matthprost)! - Add props `onKeyDown` and `submitOnEnter` on `<TextAreaField />`
+
+### Patch Changes
+
+- [#4264](https://github.com/scaleway/ultraviolet/pull/4264) [`9a859d9`](https://github.com/scaleway/ultraviolet/commit/9a859d989cd8ef3a0c0befa8c326ab62707b749a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.8.1`.
+
+- [#4250](https://github.com/scaleway/ultraviolet/pull/4250) [`84f639e`](https://github.com/scaleway/ultraviolet/commit/84f639e5de8822995b0f228943e21d981028265f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.8`.
+
+- [#4277](https://github.com/scaleway/ultraviolet/pull/4277) [`012095b`](https://github.com/scaleway/ultraviolet/commit/012095b790f99c9f98022370fb2468c4c74bface) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.9`.
+
+- Updated dependencies [[`9c722d7`](https://github.com/scaleway/ultraviolet/commit/9c722d7c003f49c05909e8166627e824f08e4fb2), [`b55a6e6`](https://github.com/scaleway/ultraviolet/commit/b55a6e68626dc2891fbd9cfaca918e423a09978c), [`59df043`](https://github.com/scaleway/ultraviolet/commit/59df04313458c8e38ff434deacaf9131828fe998), [`4e2e5b5`](https://github.com/scaleway/ultraviolet/commit/4e2e5b5218f098bac558651c0fbc004ceb33b4b9), [`820c5d4`](https://github.com/scaleway/ultraviolet/commit/820c5d4876310c695709ae484086bae29216ed7c), [`9a859d9`](https://github.com/scaleway/ultraviolet/commit/9a859d989cd8ef3a0c0befa8c326ab62707b749a), [`84f639e`](https://github.com/scaleway/ultraviolet/commit/84f639e5de8822995b0f228943e21d981028265f), [`37fbbca`](https://github.com/scaleway/ultraviolet/commit/37fbbca9d45ab6ed184cb7257f99c78f7ad4b225), [`012095b`](https://github.com/scaleway/ultraviolet/commit/012095b790f99c9f98022370fb2468c4c74bface)]:
+  - @ultraviolet/ui@1.71.0
+  - @ultraviolet/themes@1.14.1
+
 ## 3.8.3
 
 ### Patch Changes

@@ -15,6 +15,34 @@ describe('TextAreaField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('should submit with onSubmitEnter prop', async () => {
+    const onSubmit = vi.fn()
+    const { result } = renderHook(() => useForm<{ test: string }>())
+
+    const { asFragment } = renderWithTheme(
+      <Form
+        onSubmit={onSubmit}
+        errors={mockFormErrors}
+        methods={result.current}
+      >
+        <TextAreaField label="Test" name="test" submitOnEnter />
+        <Submit>Submit</Submit>
+      </Form>,
+    )
+
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenCalledTimes(0)
+    })
+    const textareaInput = screen.getByLabelText('Test')
+    await userEvent.type(textareaInput, 'This is an example{Enter}')
+    await waitFor(() => {
+      expect(onSubmit.mock.calls[0][0]).toEqual({
+        test: 'This is an example',
+      })
+    })
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('should render correctly generated', async () => {
     const onSubmit = vi.fn()
     const { result } = renderHook(() => useForm<{ test: string }>())
