@@ -49,10 +49,10 @@
       "default": "./dist/index.js"
     },
     "./console/*": {
-      "types": "./dist/themes/console/index.d.ts",
-      "require": "./dist/themes/console/index.cjs",
-      "import": "./dist/themes/console/index.js",
-      "default": "./dist/themes/console/index.js"
+      "types": "./dist/themes/console/*/index.d.ts",
+      "require": "./dist/themes/console/*/index.cjs",
+      "import": "./dist/themes/console/*/index.js",
+      "default": "./dist/themes/console/*/index.js"
     }
   },
   "dependencies": {
