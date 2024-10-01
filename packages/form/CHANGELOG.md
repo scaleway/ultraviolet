@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.9.1
+
+### Patch Changes
+
+- [#4297](https://github.com/scaleway/ultraviolet/pull/4297) [`8a254ea`](https://github.com/scaleway/ultraviolet/commit/8a254eada2860d2bc722f1f7c2a7ce42fec8e1e2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CheckboxGroupField />` missing required prop and making not required group required
+
+- Updated dependencies [[`2ba5a34`](https://github.com/scaleway/ultraviolet/commit/2ba5a34a6c4eaf6237544d83d534dd1d8f629a85)]:
+  - @ultraviolet/themes@1.14.2
+  - @ultraviolet/ui@1.71.1
+
 ## 3.9.0
 
 ### Minor Changes

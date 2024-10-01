@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.14.2
+
+### Patch Changes
+
+- [#4280](https://github.com/scaleway/ultraviolet/pull/4280) [`2ba5a34`](https://github.com/scaleway/ultraviolet/commit/2ba5a34a6c4eaf6237544d83d534dd1d8f629a85) Thanks [@matthprost](https://github.com/matthprost)! - Fix `package.json` of theme
+
 ## 1.14.1
 
 ### Patch Changes
