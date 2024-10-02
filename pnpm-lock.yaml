@@ -84,8 +84,8 @@ importers:
         specifier: 11.1.6
         version: 11.1.6(size-limit@11.1.5)
       '@size-limit/preset-big-lib':
-        specifier: 11.1.5
-        version: 11.1.5(esbuild@0.23.1)(size-limit@11.1.5)
+        specifier: 11.1.6
+        version: 11.1.6(esbuild@0.23.1)(size-limit@11.1.5)
       '@storybook/addon-a11y':
         specifier: 8.3.4
         version: 8.3.4(storybook@8.3.4)
@@ -178,7 +178,7 @@ importers:
         version: 2.1.1(vitest@2.1.1)
       babel-loader:
         specifier: 9.2.1
-        version: 9.2.1(@babel/core@7.25.2)(webpack@5.94.0(esbuild@0.23.1))
+        version: 9.2.1(@babel/core@7.25.2)(webpack@5.95.0(esbuild@0.23.1))
       babel-plugin-annotate-pure-calls:
         specifier: 0.4.0
         version: 0.4.0(@babel/core@7.25.2)
@@ -214,7 +214,7 @@ importers:
         version: 29.7.0
       file-loader:
         specifier: 6.2.0
-        version: 6.2.0(webpack@5.94.0(esbuild@0.23.1))
+        version: 6.2.0(webpack@5.95.0(esbuild@0.23.1))
       globals:
         specifier: 15.9.0
         version: 15.9.0
@@ -2708,34 +2708,28 @@ packages:
     resolution: {integrity: sha512-dNZafjM93Y+F+sfwTO5gTpsGXlnc/0Q+c2+62ViqP3gkMWvHEMSKkaEHgVJLcLg3i/g19GSIPziiKpgyne07Bw==}
     engines: {node: '>=8'}
 
-  '@size-limit/file@11.1.5':
-    resolution: {integrity: sha512-oz/XBVUJh95GpzDb9/f4sEQD/ACJ9zEKSRgBtvMUTN0c+O/9uq+RzvFeXFN2Kjpx3Dmur1ta+oZsp3zQFxlb3Q==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    peerDependencies:
-      size-limit: 11.1.5
-
   '@size-limit/file@11.1.6':
     resolution: {integrity: sha512-ojzzJMrTfcSECRnaTjGy0wNIolTCRdyqZTSWG9sG5XEoXG6PNgHXDDS6gf6YNxnqb+rWfCfVe93u6aKi3wEocQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       size-limit: 11.1.6
 
-  '@size-limit/preset-big-lib@11.1.5':
-    resolution: {integrity: sha512-sjfWmXE1qU418afX8ZGlUK+NlovuSG0yFDXzj4noU/I1o5riM/oOFX8YyL4SxzH3y935VIH4Gw9JIIohz3+GGg==}
+  '@size-limit/preset-big-lib@11.1.6':
+    resolution: {integrity: sha512-GE93qIW9C3+8MXOsYgV0QcLfKv6B+Q8u/Jjb5rLfetDHBKoZV7HmedM/bv0vrbdcZlT8elk5P18Jo6L6yeV/8Q==}
     peerDependencies:
-      size-limit: 11.1.5
+      size-limit: 11.1.6
 
-  '@size-limit/time@11.1.5':
-    resolution: {integrity: sha512-5nNkTuafGZplkrzLWUgobx2xZtyDnwau3kQLRMQbcme6M3LtDWpFZj4FMU0+a4zRQLWgBHdFkOMYpMgQ7IUiSA==}
+  '@size-limit/time@11.1.6':
+    resolution: {integrity: sha512-NIlJEPvUIxw87gHjriHpPhvd9fIC94S9wq7OW25K7Ctn14FZ2NlOTezPCfVViPmdlXjBYdi8vjsbc7kLCF1EpA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.1.5
+      size-limit: 11.1.6
 
-  '@size-limit/webpack@11.1.5':
-    resolution: {integrity: sha512-h4uJINq5/Y8qJ2oiATg4SGDgszn07b4TFWWT/w58OGt2+avrLSWgUfVM+ghkhplzKWLJK/UtvcqTg6ym2XnU9w==}
+  '@size-limit/webpack@11.1.6':
+    resolution: {integrity: sha512-PTZCgwJsgdzdEj2wPFuLm0cCge8N2WbswMcKWNwMJibxQxPAmiF+sZ2F6GYBS7G7K3Fb4ovCliuN+wnnRACPNg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 11.1.5
+      size-limit: 11.1.6
 
   '@storybook/addon-a11y@8.3.4':
     resolution: {integrity: sha512-mbLAJ9vW879Fq66zTUp7Gn7GQ9ZieYDj90ngMsZIjX42SsJEkeIrwbpkwbHlJBlWm2cm7hcF+BrULI0CmTIFpQ==}
@@ -7967,8 +7961,8 @@ packages:
   webpack-virtual-modules@0.6.1:
     resolution: {integrity: sha512-poXpCylU7ExuvZK8z+On3kX+S8o/2dQ/SVYueKA0D4WEMXROXgY8Ez50/bQEUmvoSMMrWcrJqCHuhAbsiwg7Dg==}
 
-  webpack@5.94.0:
-    resolution: {integrity: sha512-KcsGn50VT+06JH/iunZJedYGUJS5FGjow8wb9c0v5n1Om8O1g4L6LjtfxwlXIATopoQu+vOXXa7gYisWxCoPyg==}
+  webpack@5.95.0:
+    resolution: {integrity: sha512-2t3XstrKULz41MNMBF+cJ97TyHdyQ8HCt//pqErqDvNjU9YQBnZxIHa11VXsi7F3mb5/aO2tuDxdeTPdU7xu9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -10676,19 +10670,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@size-limit/file@11.1.5(size-limit@11.1.5)':
-    dependencies:
-      size-limit: 11.1.5
-
   '@size-limit/file@11.1.6(size-limit@11.1.5)':
     dependencies:
       size-limit: 11.1.5
 
-  '@size-limit/preset-big-lib@11.1.5(esbuild@0.23.1)(size-limit@11.1.5)':
+  '@size-limit/preset-big-lib@11.1.6(esbuild@0.23.1)(size-limit@11.1.5)':
     dependencies:
-      '@size-limit/file': 11.1.5(size-limit@11.1.5)
-      '@size-limit/time': 11.1.5(size-limit@11.1.5)
-      '@size-limit/webpack': 11.1.5(esbuild@0.23.1)(size-limit@11.1.5)
+      '@size-limit/file': 11.1.6(size-limit@11.1.5)
+      '@size-limit/time': 11.1.6(size-limit@11.1.5)
+      '@size-limit/webpack': 11.1.6(esbuild@0.23.1)(size-limit@11.1.5)
       size-limit: 11.1.5
     transitivePeerDependencies:
       - '@swc/core'
@@ -10699,7 +10689,7 @@ snapshots:
       - utf-8-validate
       - webpack-cli
 
-  '@size-limit/time@11.1.5(size-limit@11.1.5)':
+  '@size-limit/time@11.1.6(size-limit@11.1.5)':
     dependencies:
       estimo: 3.0.3
       size-limit: 11.1.5
@@ -10708,11 +10698,11 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@size-limit/webpack@11.1.5(esbuild@0.23.1)(size-limit@11.1.5)':
+  '@size-limit/webpack@11.1.6(esbuild@0.23.1)(size-limit@11.1.5)':
     dependencies:
       nanoid: 5.0.7
       size-limit: 11.1.5
-      webpack: 5.94.0(esbuild@0.23.1)
+      webpack: 5.95.0(esbuild@0.23.1)
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
@@ -11966,12 +11956,12 @@ snapshots:
 
   b4a@1.6.6: {}
 
-  babel-loader@9.2.1(@babel/core@7.25.2)(webpack@5.94.0(esbuild@0.23.1)):
+  babel-loader@9.2.1(@babel/core@7.25.2)(webpack@5.95.0(esbuild@0.23.1)):
     dependencies:
       '@babel/core': 7.25.2
       find-cache-dir: 4.0.0
       schema-utils: 4.2.0
-      webpack: 5.94.0(esbuild@0.23.1)
+      webpack: 5.95.0(esbuild@0.23.1)
 
   babel-plugin-annotate-pure-calls@0.4.0(@babel/core@7.25.2):
     dependencies:
@@ -13442,11 +13432,11 @@ snapshots:
     dependencies:
       flat-cache: 4.0.1
 
-  file-loader@6.2.0(webpack@5.94.0(esbuild@0.23.1)):
+  file-loader@6.2.0(webpack@5.95.0(esbuild@0.23.1)):
     dependencies:
       loader-utils: 2.0.4
       schema-utils: 3.3.0
-      webpack: 5.94.0(esbuild@0.23.1)
+      webpack: 5.95.0(esbuild@0.23.1)
 
   fill-range@7.0.1:
     dependencies:
@@ -16423,14 +16413,14 @@ snapshots:
 
   term-size@2.2.1: {}
 
-  terser-webpack-plugin@5.3.10(esbuild@0.23.1)(webpack@5.94.0(esbuild@0.23.1)):
+  terser-webpack-plugin@5.3.10(esbuild@0.23.1)(webpack@5.95.0(esbuild@0.23.1)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
       terser: 5.31.0
-      webpack: 5.94.0(esbuild@0.23.1)
+      webpack: 5.95.0(esbuild@0.23.1)
     optionalDependencies:
       esbuild: 0.23.1
 
@@ -16928,7 +16918,7 @@ snapshots:
 
   webpack-virtual-modules@0.6.1: {}
 
-  webpack@5.94.0(esbuild@0.23.1):
+  webpack@5.95.0(esbuild@0.23.1):
     dependencies:
       '@types/estree': 1.0.6
       '@webassemblyjs/ast': 1.12.1
@@ -16950,7 +16940,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(esbuild@0.23.1)(webpack@5.94.0(esbuild@0.23.1))
+      terser-webpack-plugin: 5.3.10(esbuild@0.23.1)(webpack@5.95.0(esbuild@0.23.1))
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:
