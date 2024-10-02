@@ -9,15 +9,20 @@ type HeaderRowProps = {
 }
 
 export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
-  const { allRowSelectValue, selectAll, unselectAll, selectedRowIds } =
-    useTableContext()
+  const {
+    allRowSelectValue,
+    selectAll,
+    unselectAll,
+    selectedRowIds,
+    expandButton,
+  } = useTableContext()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
 
   return (
-    <tr>
+    <tr role="row">
       {hasSelectAllColumn ? (
-        <HeaderCell width="24px">
+        <HeaderCell>
           <Checkbox
             name="table-select-all-checkbox"
             value="all"
@@ -28,6 +33,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
           />
         </HeaderCell>
       ) : null}
+      {expandButton ? <HeaderCell>{null}</HeaderCell> : null}
       {children}
     </tr>
   )

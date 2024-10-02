@@ -25,6 +25,12 @@ type TableContextValue = {
    * @returns an unregister function
    * */
   registerSelectableRow: (rowId: string) => () => void
+  // ============ Expandable logic ============
+  expandedRowIds: RowState
+  expandRow: (rowId: string) => void
+  collapseRow: (rowId: string) => void
+  expandButton: boolean
+  registerExpandableRow: (rowId: string, expanded?: boolean) => () => void
 }
 
 const TableContext = createContext<TableContextValue | undefined>(undefined)
@@ -34,6 +40,8 @@ type TableProviderProps = {
   selectable: boolean
   bordered: boolean
   stripped: boolean
+  expandButton: boolean
+  autoCollapse: boolean
 }
 
 export const TableProvider = ({
@@ -41,8 +49,43 @@ export const TableProvider = ({
   selectable,
   bordered,
   stripped,
+  expandButton,
+  autoCollapse,
 }: TableProviderProps) => {
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
+  const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
+
+  const registerExpandableRow = useCallback(
+    (rowId: string, expanded = false) => {
+      setExpandedRowIds(current => ({ ...current, [rowId]: expanded }))
+
+      return () => {
+        setExpandedRowIds(current => {
+          const { [rowId]: relatedId, ...otherIds } = current
+
+          return otherIds
+        })
+      }
+    },
+    [],
+  )
+
+  const expandRow = useCallback(
+    (rowId: string) => {
+      setExpandedRowIds(current => ({
+        ...(autoCollapse ? {} : current),
+        [rowId]: true,
+      }))
+    },
+    [autoCollapse],
+  )
+
+  const collapseRow = useCallback((rowId: string) => {
+    setExpandedRowIds(current => ({
+      ...current,
+      [rowId]: false,
+    }))
+  }, [])
 
   const registerSelectableRow = useCallback((rowId: string) => {
     setSelectedRowIds(current => ({ ...current, [rowId]: false }))
@@ -122,6 +165,11 @@ export const TableProvider = ({
       allRowSelectValue,
       bordered,
       stripped,
+      expandButton,
+      expandRow,
+      expandedRowIds,
+      collapseRow,
+      registerExpandableRow,
     }),
     [
       registerSelectableRow,
@@ -134,6 +182,11 @@ export const TableProvider = ({
       allRowSelectValue,
       bordered,
       stripped,
+      expandedRowIds,
+      expandRow,
+      expandButton,
+      collapseRow,
+      registerExpandableRow,
     ],
   )
 

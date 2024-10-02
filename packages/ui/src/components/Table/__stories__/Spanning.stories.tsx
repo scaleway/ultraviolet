@@ -1,19 +1,6 @@
-import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
 import { Table } from '..'
 import { columns, data } from './resources'
-
-const StyledTrilogyCell = styled(Table.Cell)`
-  background: ${({ theme }) => theme.colors.warning.background};
-`
-
-const StyledDirectorCell = styled(Table.Cell)`
-  background: ${({ theme }) => theme.colors.success.background};
-`
-
-const StyledStoryByCell = styled(Table.Cell)`
-  background: ${({ theme }) => theme.colors.info.background};
-`
 
 export const Spanning: StoryFn = args => (
   <Table
@@ -31,15 +18,18 @@ export const Spanning: StoryFn = args => (
           <Table.Cell>{movie.name}</Table.Cell>
           <Table.Cell>{movie.releaseYear}</Table.Cell>
           {index % 3 === 0 ? (
-            <StyledTrilogyCell rowSpan={3}>{movie.trilogy}</StyledTrilogyCell>
+            <Table.Cell sentiment="warning" rowSpan={3}>
+              {movie.trilogy}
+            </Table.Cell>
           ) : null}
-          <StyledDirectorCell
+          <Table.Cell
+            sentiment="success"
             colSpan={movie.director === movie.storyBy ? 2 : 1}
           >
             {movie.director}
-          </StyledDirectorCell>
+          </Table.Cell>
           {movie.director !== movie.storyBy ? (
-            <StyledStoryByCell>{movie.storyBy}</StyledStoryByCell>
+            <Table.Cell sentiment="info">{movie.storyBy}</Table.Cell>
           ) : null}
         </Table.Row>
       ))}

@@ -24,10 +24,19 @@ export const Style: StoryFn = args => (
           columns={columns}
           bordered={combo.bordered}
           stripped={combo.stripped}
+          expandable
         >
           <Table.Body>
             {data.slice(0, 3).map(movie => (
-              <Table.Row key={movie.id} id={movie.id}>
+              <Table.Row
+                key={movie.id}
+                id={movie.id}
+                expandable={
+                  <Text as="p" variant="bodySmall">
+                    A movie to watch
+                  </Text>
+                }
+              >
                 <Table.Cell>{movie.name}</Table.Cell>
                 <Table.Cell>{movie.releaseYear}</Table.Cell>
                 <Table.Cell>{movie.trilogy}</Table.Cell>
