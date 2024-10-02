@@ -1,6 +1,6 @@
 import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { CalendarRangeIcon } from '@ultraviolet/icons'
 import type { FocusEvent, ReactNode } from 'react'
 import { useId } from 'react'
 import type { ReactDatePickerProps } from 'react-datepicker'
@@ -39,7 +39,7 @@ const StyledWrapper = styled.div`
     border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
     background-color: ${({ theme }) =>
       theme.colors.other.elevation.background.raised};
-    box-shadows: ${({ theme }) => theme.shadows.raised};
+    box-shadow: ${({ theme }) => theme.shadows.raised};
 
 
     ${PREFIX}__header {
@@ -320,11 +320,7 @@ export const DateInput = ({
               disabled={disabled}
               size={size}
               suffix={
-                <Icon
-                  name="calendar-range"
-                  color="neutral"
-                  disabled={disabled}
-                />
+                <CalendarRangeIcon sentiment="neutral" disabled={disabled} />
               }
               readOnly={readOnly}
               tooltip={tooltip}

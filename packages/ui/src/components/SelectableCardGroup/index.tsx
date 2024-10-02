@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { AsteriskIcon } from '@ultraviolet/icons'
 import {
   type ComponentProps,
   type InputHTMLAttributes,
@@ -86,7 +86,7 @@ const FieldSet = styled.fieldset`
   margin: 0;
 `
 
-const StyledRequiredIcon = styled(Icon)`
+const StyledRequiredIcon = styled(AsteriskIcon)`
   vertical-align: super;
 `
 
@@ -138,10 +138,10 @@ export const SelectableCardGroup = ({
         <FieldSet className={className}>
           <Stack gap={1.5}>
             {legend ? (
-              <Text as="legend" variant="bodyStrong">
+              <Text as="legend" variant="bodyStrong" prominence="strong">
                 {legend && <>{legend} &nbsp;</>}
                 {required ? (
-                  <StyledRequiredIcon name="asterisk" color="danger" size={8} />
+                  <StyledRequiredIcon sentiment="danger" size={8} />
                 ) : null}
               </Text>
             ) : null}

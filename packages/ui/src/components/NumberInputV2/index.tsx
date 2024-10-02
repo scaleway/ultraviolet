@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { AsteriskIcon } from '@ultraviolet/icons'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import {
   forwardRef,
@@ -68,9 +68,9 @@ const Input = styled.input`
   width: 100%;
   color: ${({ theme }) => theme.colors.neutral.text};
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  font-family: ${({ theme }) => theme.typography.body.fontFamily};
-  font-weight: ${({ theme }) => theme.typography.body.fontWeight};
-  line-height: ${({ theme }) => theme.typography.body.lineHeight};
+  font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
+  font-weight: ${({ theme }) => theme.typography.bodySmall.fontWeight};
+  line-height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
   text-align: center;
   padding: ${({ theme }) => theme.space['1']};
   background: none;
@@ -82,7 +82,6 @@ const Input = styled.input`
   }
 
   // Remove native arrows from input[type=number]
-
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -105,6 +104,10 @@ const Input = styled.input`
   &[data-size='large'] {
     height: ${SIZES.large};
     font-size: ${({ theme }) => theme.typography.body.fontSize};
+  font-family: ${({ theme }) => theme.typography.body.fontFamily};
+  font-weight: ${({ theme }) => theme.typography.body.fontWeight};
+  line-height: ${({ theme }) => theme.typography.body.lineHeight};
+
   }
 
   &:read-only {
@@ -130,6 +133,7 @@ const Input = styled.input`
 
   &:placeholder-shown ~ ${Unit} {
     color: ${({ theme }) => theme.colors.neutral.textWeak};
+    font-size: ${({ theme }) => theme.typography.body.fontSize}
   }
 
   &[data-controls='false'] {
@@ -336,12 +340,11 @@ export const NumberInputV2 = forwardRef(
                   variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                   sentiment="neutral"
                   htmlFor={id ?? localId}
+                  prominence="strong"
                 >
                   {label}
                 </Text>
-                {required ? (
-                  <Icon name="asterisk" sentiment="danger" size={8} />
-                ) : null}
+                {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
               </Stack>
             ) : null}
             {labelDescription ?? null}
@@ -385,6 +388,7 @@ export const NumberInputV2 = forwardRef(
                   name={name}
                   id={localId}
                   placeholder={placeholder}
+                  data-size={size}
                   onChange={
                     onChange
                       ? event => {
@@ -403,7 +407,6 @@ export const NumberInputV2 = forwardRef(
                     }
                     onBlur?.(event)
                   }}
-                  data-size={size}
                   step={step}
                   disabled={disabled}
                   aria-label={ariaLabel}
@@ -452,7 +455,7 @@ export const NumberInputV2 = forwardRef(
           <Text
             variant="caption"
             as="span"
-            prominence={!error && !success ? 'weak' : undefined}
+            prominence={!error && !success ? 'weak' : 'default'}
             sentiment={helperSentiment}
             disabled={disabled || readOnly}
           >

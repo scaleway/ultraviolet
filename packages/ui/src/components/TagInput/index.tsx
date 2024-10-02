@@ -1,5 +1,9 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  AlertCircleIcon,
+  AsteriskIcon,
+  CheckCircleOutlineIcon,
+} from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
@@ -321,12 +325,11 @@ export const TagInput = ({
                 variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                 sentiment="neutral"
                 htmlFor={id ?? localId}
+                prominence="strong"
               >
                 {label}
               </Text>
-              {required ? (
-                <Icon name="asterisk" sentiment="danger" size={8} />
-              ) : null}
+              {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
             </Stack>
           ) : null}
           {labelDescription ?? null}
@@ -395,17 +398,15 @@ export const TagInput = ({
                   />
                 ) : null}
                 {success ? (
-                  <Icon
-                    name="checkbox-circle-outline"
-                    color="success"
+                  <CheckCircleOutlineIcon
+                    sentiment="success"
                     size={16}
                     disabled={disabled}
                   />
                 ) : null}
                 {error ? (
-                  <Icon
-                    name="alert"
-                    color="danger"
+                  <AlertCircleIcon
+                    sentiment="danger"
                     size={16}
                     disabled={disabled}
                   />

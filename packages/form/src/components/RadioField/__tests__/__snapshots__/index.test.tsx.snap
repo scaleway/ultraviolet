@@ -161,6 +161,17 @@ exports[`RadioField > should render correctly 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -213,7 +224,11 @@ exports[`RadioField > should render correctly 1`] = `
             class="emotion-12 emotion-13"
             for="test-test"
           >
-            Radio field
+            <label
+              class="emotion-14 emotion-15"
+            >
+               Radio field 
+            </label>
           </label>
         </div>
       </div>
@@ -383,6 +398,17 @@ exports[`RadioField > should render correctly checked 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -436,7 +462,11 @@ exports[`RadioField > should render correctly checked 1`] = `
             class="emotion-12 emotion-13"
             for="test-checked"
           >
-            Radio field checked
+            <label
+              class="emotion-14 emotion-15"
+            >
+               Radio field checked 
+            </label>
           </label>
         </div>
       </div>
@@ -606,6 +636,17 @@ exports[`RadioField > should render correctly disabled 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -659,7 +700,11 @@ exports[`RadioField > should render correctly disabled 1`] = `
             class="emotion-12 emotion-13"
             for="test-disabled"
           >
-            Radio field disabled
+            <label
+              class="emotion-14 emotion-15"
+            >
+               Radio field disabled 
+            </label>
           </label>
         </div>
       </div>
@@ -829,6 +874,17 @@ exports[`RadioField > should trigger events correctly 1`] = `
   flex: 1;
 }
 
+.emotion-14 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -881,7 +937,11 @@ exports[`RadioField > should trigger events correctly 1`] = `
             class="emotion-12 emotion-13"
             for="test-events"
           >
-            Radio field events
+            <label
+              class="emotion-14 emotion-15"
+            >
+               Radio field events 
+            </label>
           </label>
         </div>
       </div>

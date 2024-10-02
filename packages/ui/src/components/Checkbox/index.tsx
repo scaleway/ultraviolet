@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { AsteriskIcon } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ForwardedRef,
@@ -407,14 +407,27 @@ export const Checkbox = forwardRef(
             </StyledIcon>
           ) : null}
 
-          <Stack gap={0.25} flex={1}>
+          <Stack gap={0.5} flex={1}>
             <Stack gap={0.5} direction="row" alignItems="center" flex={1}>
               {children ? (
-                <StyledLabel htmlFor={localId}>{children}</StyledLabel>
+                <StyledLabel htmlFor={localId}>
+                  {typeof children === 'string' ? (
+                    <Text
+                      as="label"
+                      variant="body"
+                      sentiment="neutral"
+                      prominence="default"
+                    >
+                      {children}
+                    </Text>
+                  ) : (
+                    children
+                  )}
+                </StyledLabel>
               ) : null}
               {required ? (
                 <sup>
-                  <Icon name="asterisk" size={10} color="danger" />
+                  <AsteriskIcon size={8} sentiment="danger" />
                 </sup>
               ) : null}
             </Stack>

@@ -1,4 +1,4 @@
-import { Icon } from '@ultraviolet/icons/legacy'
+import { AsteriskIcon } from '@ultraviolet/icons'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import type { LabelProps } from '../types'
@@ -21,9 +21,10 @@ export const Label = ({
       htmlFor={finalId}
       placement="left"
       sentiment="neutral"
+      prominence="strong"
     >
       {label}
     </Text>
-    {required ? <Icon name="asterisk" sentiment="danger" size={8} /> : null}
+    {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
   </Stack>
 )

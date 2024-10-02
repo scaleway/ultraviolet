@@ -55,6 +55,7 @@ exports[`CheckboxField > should render correctly checked 1`] = `
 }
 
 .emotion-6 {
+  color: #222638;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -298,7 +299,7 @@ exports[`CheckboxField > should render correctly checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -347,6 +348,18 @@ exports[`CheckboxField > should render correctly checked 1`] = `
 
 .emotion-23 {
   width: 100%;
+}
+
+.emotion-25 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -425,7 +438,11 @@ exports[`CheckboxField > should render correctly checked 1`] = `
                       class="emotion-23 emotion-24"
                       for=":r1:"
                     >
-                      Checkbox 1
+                      <label
+                        class="emotion-25 emotion-7"
+                      >
+                        Checkbox 1
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -440,7 +457,7 @@ exports[`CheckboxField > should render correctly checked 1`] = `
                   aria-checked="true"
                   aria-invalid="false"
                   class="emotion-13 emotion-14"
-                  id=":r3:"
+                  id=":r4:"
                   name="Checkbox.value-2"
                   type="checkbox"
                   value="value-2"
@@ -481,9 +498,13 @@ exports[`CheckboxField > should render correctly checked 1`] = `
                   >
                     <label
                       class="emotion-23 emotion-24"
-                      for=":r3:"
+                      for=":r4:"
                     >
-                      Checkbox 2
+                      <label
+                        class="emotion-25 emotion-7"
+                      >
+                        Checkbox 2
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -552,6 +573,7 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
 }
 
 .emotion-6 {
+  color: #222638;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
@@ -810,7 +832,7 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -861,6 +883,18 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
   width: 100%;
 }
 
+.emotion-28 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -882,8 +916,7 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
               CheckboxGroupField events 
               <svg
                 class="emotion-8 emotion-9 emotion-10"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
               >
                 <path
                   d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
@@ -903,7 +936,7 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
                   aria-checked="false"
                   aria-invalid="false"
                   class="emotion-16 emotion-17"
-                  id=":r6:"
+                  id=":r8:"
                   name="test.value-1"
                   type="checkbox"
                   value="value-1"
@@ -944,9 +977,13 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
                   >
                     <label
                       class="emotion-26 emotion-27"
-                      for=":r6:"
+                      for=":r8:"
                     >
-                      Checkbox 1
+                      <label
+                        class="emotion-28 emotion-7"
+                      >
+                        Checkbox 1
+                      </label>
                     </label>
                   </div>
                 </div>
@@ -961,7 +998,7 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
                   aria-checked="false"
                   aria-invalid="false"
                   class="emotion-16 emotion-17"
-                  id=":r8:"
+                  id=":rb:"
                   name="test.value-2"
                   type="checkbox"
                   value="value-2"
@@ -1002,9 +1039,13 @@ exports[`CheckboxField > should trigger events correctly with required prop 1`] 
                   >
                     <label
                       class="emotion-26 emotion-27"
-                      for=":r8:"
+                      for=":rb:"
                     >
-                      Checkbox 2
+                      <label
+                        class="emotion-28 emotion-7"
+                      >
+                        Checkbox 2
+                      </label>
                     </label>
                   </div>
                 </div>

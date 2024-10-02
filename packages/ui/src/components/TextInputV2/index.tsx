@@ -1,5 +1,9 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  AlertCircleIcon,
+  AsteriskIcon,
+  CheckCircleIcon,
+} from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ChangeEventHandler,
@@ -279,12 +283,11 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                   variant={size === 'large' ? 'bodyStrong' : 'bodySmallStrong'}
                   sentiment="neutral"
                   htmlFor={id ?? localId}
+                  prominence="strong"
                 >
                   {label}
                 </Text>
-                {required ? (
-                  <Icon name="asterisk" sentiment="danger" size={8} />
-                ) : null}
+                {required ? <AsteriskIcon sentiment="danger" size={8} /> : null}
               </Stack>
             ) : null}
             {labelDescription ?? null}
@@ -374,16 +377,14 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                     />
                   ) : null}
                   {success ? (
-                    <Icon
-                      name="checkbox-circle-outline"
+                    <CheckCircleIcon
                       sentiment="success"
                       size="small"
                       disabled={disabled}
                     />
                   ) : null}
                   {error ? (
-                    <Icon
-                      name="alert"
+                    <AlertCircleIcon
                       sentiment="danger"
                       size="small"
                       disabled={disabled}

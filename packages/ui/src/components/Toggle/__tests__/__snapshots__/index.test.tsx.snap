@@ -217,7 +217,7 @@ exports[`Toggle > renders correctly label 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-9[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -264,6 +264,18 @@ exports[`Toggle > renders correctly label 1`] = `
 }
 
 .emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -285,11 +297,11 @@ exports[`Toggle > renders correctly label 1`] = `
   height: 24px;
 }
 
-.emotion-6:hover {
+.emotion-8:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-8:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -302,25 +314,25 @@ exports[`Toggle > renders correctly label 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-8:focus-within,
+.emotion-8:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-8[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-6[data-checked="true"] {
+.emotion-8[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6[data-checked="true"]:hover {
+.emotion-8[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-6[data-checked="true"]:after {
+.emotion-8[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -328,41 +340,41 @@ exports[`Toggle > renders correctly label 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6[data-checked="true"]:focus-within,
-.emotion-6[data-checked="true"]:focus {
+.emotion-8[data-checked="true"]:focus-within,
+.emotion-8[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-8[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"][data-checked="true"] {
+.emotion-8[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-8[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-8[data-error="true"]:focus-within,
+.emotion-8[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-8[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-10 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -372,7 +384,7 @@ exports[`Toggle > renders correctly label 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-10[disabled] {
   cursor: not-allowed;
 }
 
@@ -389,19 +401,23 @@ exports[`Toggle > renders correctly label 1`] = `
         <div
           class="emotion-4 emotion-5"
         >
-          This is a label
+          <label
+            class="emotion-6 emotion-7"
+          >
+            This is a label
+          </label>
         </div>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-8 emotion-9"
         data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-checked="false"
-          class="emotion-8 emotion-9"
-          id=":rc:"
+          class="emotion-10 emotion-11"
+          id=":re:"
           name="test"
           type="checkbox"
           value=""
@@ -827,7 +843,7 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-9[data-disabled='false']:after {
+.emotion-0:active .emotion-11[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -874,20 +890,32 @@ exports[`Toggle > renders correctly when required with label 1`] = `
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-6 .fillStroke {
+.emotion-8 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 8px;
+  width: 8px;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.emotion-8 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -909,11 +937,11 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   height: 24px;
 }
 
-.emotion-8:hover {
+.emotion-10:hover {
   background-color: #d9dadd;
 }
 
-.emotion-8:after {
+.emotion-10:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -926,25 +954,25 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   transition: all 300ms;
 }
 
-.emotion-8:focus-within,
-.emotion-8:focus {
+.emotion-10:focus-within,
+.emotion-10:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-8[data-disabled="false"]:active:after {
+.emotion-10[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-8[data-checked="true"] {
+.emotion-10[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-8[data-checked="true"]:hover {
+.emotion-10[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-8[data-checked="true"]:after {
+.emotion-10[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -952,41 +980,41 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
+.emotion-10[data-checked="true"]:focus-within,
+.emotion-10[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="true"] {
+.emotion-10[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-8[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-8[data-error="true"] {
+.emotion-10[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-8[data-error="true"]:focus-within,
-.emotion-8[data-error="true"]:focus {
+.emotion-10[data-error="true"]:focus-within,
+.emotion-10[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"] {
+.emotion-10[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -996,7 +1024,7 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   cursor: pointer;
 }
 
-.emotion-10[disabled] {
+.emotion-12[disabled] {
   cursor: not-allowed;
 }
 
@@ -1013,12 +1041,15 @@ exports[`Toggle > renders correctly when required with label 1`] = `
         <div
           class="emotion-4 emotion-5"
         >
-          test
+          <label
+            class="emotion-6 emotion-7"
+          >
+            test
+          </label>
           <sup>
             <svg
-              class="emotion-6 emotion-7"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+              class="emotion-8 emotion-9"
+              viewBox="0 0 20 20"
             >
               <path
                 d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
@@ -1028,14 +1059,14 @@ exports[`Toggle > renders correctly when required with label 1`] = `
         </div>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-10 emotion-11"
         data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-checked="false"
-          class="emotion-10 emotion-11"
+          class="emotion-12 emotion-13"
           id=":r6:"
           name="test"
           type="checkbox"
@@ -1068,7 +1099,7 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   flex-direction: row;
 }
 
-.emotion-0:active .emotion-9[data-disabled='false']:after {
+.emotion-0:active .emotion-11[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -1115,20 +1146,32 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
 }
 
 .emotion-6 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-6 .fillStroke {
+.emotion-8 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 8px;
+  width: 8px;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.emotion-8 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1150,11 +1193,11 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   height: 24px;
 }
 
-.emotion-8:hover {
+.emotion-10:hover {
   background-color: #d9dadd;
 }
 
-.emotion-8:after {
+.emotion-10:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -1167,25 +1210,25 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   transition: all 300ms;
 }
 
-.emotion-8:focus-within,
-.emotion-8:focus {
+.emotion-10:focus-within,
+.emotion-10:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-8[data-disabled="false"]:active:after {
+.emotion-10[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-8[data-checked="true"] {
+.emotion-10[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-8[data-checked="true"]:hover {
+.emotion-10[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-8[data-checked="true"]:after {
+.emotion-10[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1193,41 +1236,41 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
+.emotion-10[data-checked="true"]:focus-within,
+.emotion-10[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="true"] {
+.emotion-10[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-8[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-8[data-error="true"] {
+.emotion-10[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-8[data-error="true"]:focus-within,
-.emotion-8[data-error="true"]:focus {
+.emotion-10[data-error="true"]:focus-within,
+.emotion-10[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"] {
+.emotion-10[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1237,7 +1280,7 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   cursor: pointer;
 }
 
-.emotion-10[disabled] {
+.emotion-12[disabled] {
   cursor: not-allowed;
 }
 
@@ -1254,12 +1297,15 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
         <div
           class="emotion-4 emotion-5"
         >
-          test
+          <label
+            class="emotion-6 emotion-7"
+          >
+            test
+          </label>
           <sup>
             <svg
-              class="emotion-6 emotion-7"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+              class="emotion-8 emotion-9"
+              viewBox="0 0 20 20"
             >
               <path
                 d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
@@ -1269,15 +1315,15 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
         </div>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-10 emotion-11"
         data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-checked="false"
-          class="emotion-10 emotion-11"
-          id=":r8:"
+          class="emotion-12 emotion-13"
+          id=":r9:"
           name="test"
           type="checkbox"
           value=""
@@ -1495,7 +1541,7 @@ exports[`Toggle > renders correctly with complex label 1`] = `
         <input
           aria-checked="false"
           class="emotion-8 emotion-9"
-          id=":rk:"
+          id=":rq:"
           name="test"
           type="checkbox"
           value=""
@@ -1527,7 +1573,7 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-7[data-disabled='false']:after {
+.emotion-0:active .emotion-9[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -1574,6 +1620,18 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
 }
 
 .emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1595,11 +1653,11 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   height: 24px;
 }
 
-.emotion-6:hover {
+.emotion-8:hover {
   background-color: #d9dadd;
 }
 
-.emotion-6:after {
+.emotion-8:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -1612,25 +1670,25 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   transition: all 300ms;
 }
 
-.emotion-6:focus-within,
-.emotion-6:focus {
+.emotion-8:focus-within,
+.emotion-8:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-6[data-disabled="false"]:active:after {
+.emotion-8[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-6[data-checked="true"] {
+.emotion-8[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-6[data-checked="true"]:hover {
+.emotion-8[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-6[data-checked="true"]:after {
+.emotion-8[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1638,41 +1696,41 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-6[data-checked="true"]:focus-within,
-.emotion-6[data-checked="true"]:focus {
+.emotion-8[data-checked="true"]:focus-within,
+.emotion-8[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-6[data-disabled="true"] {
+.emotion-8[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-6[data-disabled="true"][data-checked="true"] {
+.emotion-8[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-6[data-error="true"] {
+.emotion-8[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
+.emotion-8[data-error="true"]:focus-within,
+.emotion-8[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-6[data-error="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"] {
+.emotion-8[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
+.emotion-10 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1682,7 +1740,7 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   cursor: pointer;
 }
 
-.emotion-8[disabled] {
+.emotion-10[disabled] {
   cursor: not-allowed;
 }
 
@@ -1699,19 +1757,23 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
         <div
           class="emotion-4 emotion-5"
         >
-          This is a label
+          <label
+            class="emotion-6 emotion-7"
+          >
+            This is a label
+          </label>
         </div>
       </div>
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-8 emotion-9"
         data-checked="false"
         data-disabled="false"
         data-error="false"
       >
         <input
           aria-checked="false"
-          class="emotion-8 emotion-9"
-          id=":ri:"
+          class="emotion-10 emotion-11"
+          id=":rn:"
           name="test"
           type="checkbox"
           value=""
@@ -1743,7 +1805,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-9[data-disabled='false']:after {
+.emotion-0:active .emotion-11[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -1771,7 +1833,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-9[data-disabled='false']:after {
+.emotion-0:active .emotion-11[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -1855,6 +1917,30 @@ exports[`Toggle > renders correctly with error 1`] = `
 }
 
 .emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
   color: #b3144d;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -1866,7 +1952,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   text-decoration: none;
 }
 
-.emotion-8 {
+.emotion-10 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1888,11 +1974,11 @@ exports[`Toggle > renders correctly with error 1`] = `
   height: 24px;
 }
 
-.emotion-8:hover {
+.emotion-10:hover {
   background-color: #d9dadd;
 }
 
-.emotion-8:after {
+.emotion-10:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -1905,25 +1991,25 @@ exports[`Toggle > renders correctly with error 1`] = `
   transition: all 300ms;
 }
 
-.emotion-8:focus-within,
-.emotion-8:focus {
+.emotion-10:focus-within,
+.emotion-10:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-8[data-disabled="false"]:active:after {
+.emotion-10[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-8[data-checked="true"] {
+.emotion-10[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-8[data-checked="true"]:hover {
+.emotion-10[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-8[data-checked="true"]:after {
+.emotion-10[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1931,140 +2017,140 @@ exports[`Toggle > renders correctly with error 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
+.emotion-10[data-checked="true"]:focus-within,
+.emotion-10[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="true"] {
+.emotion-10[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-8[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-8[data-error="true"] {
+.emotion-10[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-8[data-error="true"]:focus-within,
-.emotion-8[data-error="true"]:focus {
+.emotion-10[data-error="true"]:focus-within,
+.emotion-10[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"] {
+.emotion-10[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
-  background-color: #ffd3e3;
-}
-
-.emotion-8 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
-}
-
-.emotion-8:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-8:after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 5px;
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-8:focus-within,
-.emotion-8:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-8[data-disabled="false"]:active:after {
-  width: 22.04px;
-}
-
-.emotion-8[data-checked="true"] {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-8[data-checked="true"]:hover {
-  background-color: #792dd4;
-}
-
-.emotion-8[data-checked="true"]:after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-8[data-disabled="true"][data-checked="true"] {
-  background: #e5dbfd;
-}
-
-.emotion-8[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-8[data-error="true"]:focus-within,
-.emotion-8[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-error="true"][data-checked="true"] {
-  background-color: #e51963;
-}
-
-.emotion-8[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
 .emotion-10 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.emotion-10:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-10:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-10:focus-within,
+.emotion-10:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-10[data-disabled="false"]:active:after {
+  width: 22.04px;
+}
+
+.emotion-10[data-checked="true"] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-10[data-checked="true"]:hover {
+  background-color: #792dd4;
+}
+
+.emotion-10[data-checked="true"]:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-10[data-checked="true"]:focus-within,
+.emotion-10[data-checked="true"]:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-10[data-disabled="true"] {
+  background: #f3f3f4;
+}
+
+.emotion-10[data-disabled="true"][data-checked="true"] {
+  background: #e5dbfd;
+}
+
+.emotion-10[data-error="true"] {
+  background-color: #ffebf2;
+}
+
+.emotion-10[data-error="true"]:focus-within,
+.emotion-10[data-error="true"]:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error="true"][data-checked="true"] {
+  background-color: #e51963;
+}
+
+.emotion-10[data-error="true"][data-disabled="true"] {
+  background-color: #fff3f7;
+}
+
+.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+  background-color: #ffd3e3;
+}
+
+.emotion-12 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2074,11 +2160,11 @@ exports[`Toggle > renders correctly with error 1`] = `
   cursor: pointer;
 }
 
-.emotion-10[disabled] {
+.emotion-12[disabled] {
   cursor: not-allowed;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -2088,7 +2174,7 @@ exports[`Toggle > renders correctly with error 1`] = `
   cursor: pointer;
 }
 
-.emotion-10[disabled] {
+.emotion-12[disabled] {
   cursor: not-allowed;
 }
 
@@ -2105,24 +2191,28 @@ exports[`Toggle > renders correctly with error 1`] = `
         <div
           class="emotion-4 emotion-5"
         >
-          This is a label
+          <label
+            class="emotion-6 emotion-7"
+          >
+            This is a label
+          </label>
         </div>
         <p
-          class="emotion-6 emotion-7"
+          class="emotion-8 emotion-7"
         >
           error text
         </p>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-10 emotion-11"
         data-checked="false"
         data-disabled="false"
         data-error="true"
       >
         <input
           aria-checked="false"
-          class="emotion-10 emotion-11"
-          id=":rr:"
+          class="emotion-12 emotion-13"
+          id=":r13:"
           name="test"
           type="checkbox"
           value=""
@@ -2154,7 +2244,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-9[data-disabled='false']:after {
+.emotion-0:active .emotion-11[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -2182,7 +2272,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-0:active .emotion-9[data-disabled='false']:after {
+.emotion-0:active .emotion-11[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -2266,11 +2356,386 @@ exports[`Toggle > renders correctly with helper 1`] = `
 }
 
 .emotion-6 {
-  font-size: 14px;
+  color: #3f4250;
+  font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  color: #727683;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-10 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.emotion-10:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-10:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-10:focus-within,
+.emotion-10:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-10[data-disabled="false"]:active:after {
+  width: 22.04px;
+}
+
+.emotion-10[data-checked="true"] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-10[data-checked="true"]:hover {
+  background-color: #792dd4;
+}
+
+.emotion-10[data-checked="true"]:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-10[data-checked="true"]:focus-within,
+.emotion-10[data-checked="true"]:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-10[data-disabled="true"] {
+  background: #f3f3f4;
+}
+
+.emotion-10[data-disabled="true"][data-checked="true"] {
+  background: #e5dbfd;
+}
+
+.emotion-10[data-error="true"] {
+  background-color: #ffebf2;
+}
+
+.emotion-10[data-error="true"]:focus-within,
+.emotion-10[data-error="true"]:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error="true"][data-checked="true"] {
+  background-color: #e51963;
+}
+
+.emotion-10[data-error="true"][data-disabled="true"] {
+  background-color: #fff3f7;
+}
+
+.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+  background-color: #ffd3e3;
+}
+
+.emotion-10 {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.emotion-10:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-10:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.emotion-10:focus-within,
+.emotion-10:focus {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-10[data-disabled="false"]:active:after {
+  width: 22.04px;
+}
+
+.emotion-10[data-checked="true"] {
+  color: #222638;
+  background-color: #8c40ef;
+}
+
+.emotion-10[data-checked="true"]:hover {
+  background-color: #792dd4;
+}
+
+.emotion-10[data-checked="true"]:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.emotion-10[data-checked="true"]:focus-within,
+.emotion-10[data-checked="true"]:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-10[data-disabled="true"] {
+  background: #f3f3f4;
+}
+
+.emotion-10[data-disabled="true"][data-checked="true"] {
+  background: #e5dbfd;
+}
+
+.emotion-10[data-error="true"] {
+  background-color: #ffebf2;
+}
+
+.emotion-10[data-error="true"]:focus-within,
+.emotion-10[data-error="true"]:focus {
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-10[data-error="true"][data-checked="true"] {
+  background-color: #e51963;
+}
+
+.emotion-10[data-error="true"][data-disabled="true"] {
+  background-color: #fff3f7;
+}
+
+.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
+  background-color: #ffd3e3;
+}
+
+.emotion-12 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.emotion-12[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-12 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.emotion-12[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    data-testid="testing"
+  >
+    <label
+      aria-disabled="false"
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <label
+            class="emotion-6 emotion-7"
+          >
+            This is a label
+          </label>
+        </div>
+        <p
+          class="emotion-8 emotion-7"
+        >
+          This is a helper
+        </p>
+      </div>
+      <div
+        class="emotion-10 emotion-11"
+        data-checked="false"
+        data-disabled="false"
+        data-error="false"
+      >
+        <input
+          aria-checked="false"
+          class="emotion-12 emotion-13"
+          id=":rv:"
+          name="test"
+          type="checkbox"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders correctly with labels on left 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.emotion-0:active .emotion-9[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.emotion-0[aria-disabled="true"] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-6 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2375,119 +2840,6 @@ exports[`Toggle > renders correctly with helper 1`] = `
   background-color: #ffd3e3;
 }
 
-.emotion-8 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
-}
-
-.emotion-8:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-8:after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 5px;
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-8:focus-within,
-.emotion-8:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-8[data-disabled="false"]:active:after {
-  width: 22.04px;
-}
-
-.emotion-8[data-checked="true"] {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-8[data-checked="true"]:hover {
-  background-color: #792dd4;
-}
-
-.emotion-8[data-checked="true"]:after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-8[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-8[data-disabled="true"][data-checked="true"] {
-  background: #e5dbfd;
-}
-
-.emotion-8[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-8[data-error="true"]:focus-within,
-.emotion-8[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-8[data-error="true"][data-checked="true"] {
-  background-color: #e51963;
-}
-
-.emotion-8[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
-  background-color: #ffd3e3;
-}
-
-.emotion-10 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-10[disabled] {
-  cursor: not-allowed;
-}
-
 .emotion-10 {
   position: absolute;
   opacity: 0;
@@ -2515,13 +2867,12 @@ exports[`Toggle > renders correctly with helper 1`] = `
         <div
           class="emotion-4 emotion-5"
         >
-          This is a label
+          <label
+            class="emotion-6 emotion-7"
+          >
+            This is a label
+          </label>
         </div>
-        <p
-          class="emotion-6 emotion-7"
-        >
-          This is a helper
-        </p>
       </div>
       <div
         class="emotion-8 emotion-9"
@@ -2532,223 +2883,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
         <input
           aria-checked="false"
           class="emotion-10 emotion-11"
-          id=":ro:"
-          name="test"
-          type="checkbox"
-          value=""
-        />
-      </div>
-    </label>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Toggle > renders correctly with labels on left 1`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.emotion-0:active .emotion-7[data-disabled='false']:after {
-  width: 22.04px;
-}
-
-.emotion-0[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2px;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-4 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
-.emotion-6 {
-  box-sizing: content-box;
-  outline: none;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  border-radius: 16px;
-  position: relative;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
-}
-
-.emotion-6:hover {
-  background-color: #d9dadd;
-}
-
-.emotion-6:after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 5px;
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.emotion-6:focus-within,
-.emotion-6:focus {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-6[data-disabled="false"]:active:after {
-  width: 22.04px;
-}
-
-.emotion-6[data-checked="true"] {
-  color: #222638;
-  background-color: #8c40ef;
-}
-
-.emotion-6[data-checked="true"]:hover {
-  background-color: #792dd4;
-}
-
-.emotion-6[data-checked="true"]:after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.emotion-6[data-checked="true"]:focus-within,
-.emotion-6[data-checked="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.emotion-6[data-disabled="true"] {
-  background: #f3f3f4;
-}
-
-.emotion-6[data-disabled="true"][data-checked="true"] {
-  background: #e5dbfd;
-}
-
-.emotion-6[data-error="true"] {
-  background-color: #ffebf2;
-}
-
-.emotion-6[data-error="true"]:focus-within,
-.emotion-6[data-error="true"]:focus {
-  box-shadow: 0px 0px 0px 3px #f91b6c40;
-}
-
-.emotion-6[data-error="true"][data-checked="true"] {
-  background-color: #e51963;
-}
-
-.emotion-6[data-error="true"][data-disabled="true"] {
-  background-color: #fff3f7;
-}
-
-.emotion-6[data-error="true"][data-disabled="true"][data-checked="true"] {
-  background-color: #ffd3e3;
-}
-
-.emotion-8 {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.emotion-8[disabled] {
-  cursor: not-allowed;
-}
-
-<div
-    data-testid="testing"
-  >
-    <label
-      aria-disabled="false"
-      class="emotion-0 emotion-1"
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5"
-        >
-          This is a label
-        </div>
-      </div>
-      <div
-        class="emotion-6 emotion-7"
-        data-checked="false"
-        data-disabled="false"
-        data-error="false"
-      >
-        <input
-          aria-checked="false"
-          class="emotion-8 emotion-9"
-          id=":rg:"
+          id=":rk:"
           name="test"
           type="checkbox"
           value=""
@@ -2944,7 +3079,7 @@ exports[`Toggle > renders correctly with non default size 1`] = `
         <input
           aria-checked="false"
           class="emotion-6 emotion-7"
-          id=":ra:"
+          id=":rc:"
           name="test"
           type="checkbox"
           value=""
@@ -2984,7 +3119,7 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   flex-direction: row-reverse;
 }
 
-.emotion-2:active .emotion-9[data-disabled='false']:after {
+.emotion-2:active .emotion-11[data-disabled='false']:after {
   width: 22.04px;
 }
 
@@ -3031,6 +3166,18 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
 }
 
 .emotion-8 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-10 {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -3052,11 +3199,11 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   height: 24px;
 }
 
-.emotion-8:hover {
+.emotion-10:hover {
   background-color: #d9dadd;
 }
 
-.emotion-8:after {
+.emotion-10:after {
   content: "";
   position: absolute;
   top: 4px;
@@ -3069,25 +3216,25 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   transition: all 300ms;
 }
 
-.emotion-8:focus-within,
-.emotion-8:focus {
+.emotion-10:focus-within,
+.emotion-10:focus {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-8[data-disabled="false"]:active:after {
+.emotion-10[data-disabled="false"]:active:after {
   width: 22.04px;
 }
 
-.emotion-8[data-checked="true"] {
+.emotion-10[data-checked="true"] {
   color: #222638;
   background-color: #8c40ef;
 }
 
-.emotion-8[data-checked="true"]:hover {
+.emotion-10[data-checked="true"]:hover {
   background-color: #792dd4;
 }
 
-.emotion-8[data-checked="true"]:after {
+.emotion-10[data-checked="true"]:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -3095,41 +3242,41 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   transform: translateX(-100%);
 }
 
-.emotion-8[data-checked="true"]:focus-within,
-.emotion-8[data-checked="true"]:focus {
+.emotion-10[data-checked="true"]:focus-within,
+.emotion-10[data-checked="true"]:focus {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-8[data-disabled="true"] {
+.emotion-10[data-disabled="true"] {
   background: #f3f3f4;
 }
 
-.emotion-8[data-disabled="true"][data-checked="true"] {
+.emotion-10[data-disabled="true"][data-checked="true"] {
   background: #e5dbfd;
 }
 
-.emotion-8[data-error="true"] {
+.emotion-10[data-error="true"] {
   background-color: #ffebf2;
 }
 
-.emotion-8[data-error="true"]:focus-within,
-.emotion-8[data-error="true"]:focus {
+.emotion-10[data-error="true"]:focus-within,
+.emotion-10[data-error="true"]:focus {
   box-shadow: 0px 0px 0px 3px #f91b6c40;
 }
 
-.emotion-8[data-error="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-checked="true"] {
   background-color: #e51963;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"] {
+.emotion-10[data-error="true"][data-disabled="true"] {
   background-color: #fff3f7;
 }
 
-.emotion-8[data-error="true"][data-disabled="true"][data-checked="true"] {
+.emotion-10[data-error="true"][data-disabled="true"][data-checked="true"] {
   background-color: #ffd3e3;
 }
 
-.emotion-10 {
+.emotion-12 {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -3139,7 +3286,7 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   cursor: pointer;
 }
 
-.emotion-10[disabled] {
+.emotion-12[disabled] {
   cursor: not-allowed;
 }
 
@@ -3147,8 +3294,8 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls=":rf:"
-      aria-describedby=":rf:"
+      aria-controls=":ri:"
+      aria-describedby=":ri:"
       class="emotion-0 emotion-1"
       tabindex="0"
     >
@@ -3162,19 +3309,23 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
           <div
             class="emotion-6 emotion-7"
           >
-            This is a label
+            <label
+              class="emotion-8 emotion-9"
+            >
+              This is a label
+            </label>
           </div>
         </div>
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           data-checked="false"
           data-disabled="false"
           data-error="false"
         >
           <input
             aria-checked="false"
-            class="emotion-10 emotion-11"
-            id=":re:"
+            class="emotion-12 emotion-13"
+            id=":rh:"
             name="test"
             type="checkbox"
             value=""

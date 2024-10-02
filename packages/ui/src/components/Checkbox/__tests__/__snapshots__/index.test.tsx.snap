@@ -229,7 +229,7 @@ exports[`Checkbox > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -278,6 +278,18 @@ exports[`Checkbox > renders correctly 1`] = `
 
 .emotion-12 {
   width: 100%;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -336,7 +348,11 @@ exports[`Checkbox > renders correctly 1`] = `
             class="emotion-12 emotion-13"
             for=":r0:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -574,7 +590,7 @@ exports[`Checkbox > renders correctly checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -625,6 +641,18 @@ exports[`Checkbox > renders correctly checked 1`] = `
   width: 100%;
 }
 
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -639,7 +667,7 @@ exports[`Checkbox > renders correctly checked 1`] = `
         aria-invalid="false"
         checked=""
         class="emotion-2 emotion-3"
-        id=":ra:"
+        id=":re:"
         type="checkbox"
         value=""
       />
@@ -679,9 +707,13 @@ exports[`Checkbox > renders correctly checked 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":ra:"
+            for=":re:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -919,7 +951,7 @@ exports[`Checkbox > renders correctly checked and disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -970,6 +1002,18 @@ exports[`Checkbox > renders correctly checked and disabled 1`] = `
   width: 100%;
 }
 
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -985,7 +1029,7 @@ exports[`Checkbox > renders correctly checked and disabled 1`] = `
         checked=""
         class="emotion-2 emotion-3"
         disabled=""
-        id=":rh:"
+        id=":ro:"
         type="checkbox"
         value=""
       />
@@ -1025,9 +1069,13 @@ exports[`Checkbox > renders correctly checked and disabled 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":rh:"
+            for=":ro:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -1265,7 +1313,7 @@ exports[`Checkbox > renders correctly checked with helper 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1317,6 +1365,18 @@ exports[`Checkbox > renders correctly checked with helper 1`] = `
 }
 
 .emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-16 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1342,7 +1402,7 @@ exports[`Checkbox > renders correctly checked with helper 1`] = `
         aria-invalid="false"
         checked=""
         class="emotion-2 emotion-3"
-        id=":rc:"
+        id=":rh:"
         type="checkbox"
         value=""
       />
@@ -1382,13 +1442,17 @@ exports[`Checkbox > renders correctly checked with helper 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":rc:"
+            for=":rh:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
         <span
-          class="emotion-14 emotion-15"
+          class="emotion-16 emotion-15"
         >
           helper
         </span>
@@ -1627,7 +1691,7 @@ exports[`Checkbox > renders correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1678,6 +1742,18 @@ exports[`Checkbox > renders correctly disabled 1`] = `
   width: 100%;
 }
 
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -1692,7 +1768,7 @@ exports[`Checkbox > renders correctly disabled 1`] = `
         aria-invalid="false"
         class="emotion-2 emotion-3"
         disabled=""
-        id=":r4:"
+        id=":r5:"
         type="checkbox"
         value=""
       />
@@ -1732,9 +1808,13 @@ exports[`Checkbox > renders correctly disabled 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":r4:"
+            for=":r5:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -1972,7 +2052,7 @@ exports[`Checkbox > renders correctly indeterminate 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2023,6 +2103,18 @@ exports[`Checkbox > renders correctly indeterminate 1`] = `
   width: 100%;
 }
 
+.emotion-16 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -2036,7 +2128,7 @@ exports[`Checkbox > renders correctly indeterminate 1`] = `
         aria-checked="mixed"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id=":rf:"
+        id=":rl:"
         type="checkbox"
         value=""
       />
@@ -2074,9 +2166,13 @@ exports[`Checkbox > renders correctly indeterminate 1`] = `
         >
           <label
             class="emotion-14 emotion-15"
-            for=":rf:"
+            for=":rl:"
           >
-            Checkbox Label
+            <label
+              class="emotion-16 emotion-17"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -2314,7 +2410,7 @@ exports[`Checkbox > renders correctly indeterminate and disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2365,6 +2461,18 @@ exports[`Checkbox > renders correctly indeterminate and disabled 1`] = `
   width: 100%;
 }
 
+.emotion-16 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -2379,7 +2487,7 @@ exports[`Checkbox > renders correctly indeterminate and disabled 1`] = `
         aria-invalid="false"
         class="emotion-2 emotion-3"
         disabled=""
-        id=":rj:"
+        id=":rr:"
         type="checkbox"
         value=""
       />
@@ -2417,9 +2525,13 @@ exports[`Checkbox > renders correctly indeterminate and disabled 1`] = `
         >
           <label
             class="emotion-14 emotion-15"
-            for=":rj:"
+            for=":rr:"
           >
-            Checkbox Label
+            <label
+              class="emotion-16 emotion-17"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -2657,7 +2769,7 @@ exports[`Checkbox > renders correctly invisible 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2708,6 +2820,18 @@ exports[`Checkbox > renders correctly invisible 1`] = `
   width: 100%;
 }
 
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -2722,7 +2846,7 @@ exports[`Checkbox > renders correctly invisible 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id=":rl:"
+        id=":ru:"
         type="checkbox"
         value=""
       />
@@ -2762,9 +2886,13 @@ exports[`Checkbox > renders correctly invisible 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":rl:"
+            for=":ru:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -3002,7 +3130,7 @@ exports[`Checkbox > renders correctly no child 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3063,7 +3191,7 @@ exports[`Checkbox > renders correctly no child 1`] = `
         aria-invalid="false"
         aria-label="check"
         class="emotion-2 emotion-3"
-        id=":r2:"
+        id=":r3:"
         type="checkbox"
         value=""
       />
@@ -3336,7 +3464,7 @@ exports[`Checkbox > renders correctly required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3388,15 +3516,27 @@ exports[`Checkbox > renders correctly required 1`] = `
 }
 
 .emotion-14 {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.emotion-14 .fillStroke {
+.emotion-16 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 8px;
+  width: 8px;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.emotion-16 .fillStroke {
   stroke: #b3144d;
   fill: none;
 }
@@ -3414,7 +3554,7 @@ exports[`Checkbox > renders correctly required 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id=":r6:"
+        id=":r8:"
         required=""
         type="checkbox"
         value=""
@@ -3455,15 +3595,18 @@ exports[`Checkbox > renders correctly required 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":r6:"
+            for=":r8:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
           <sup>
             <svg
-              class="emotion-14 emotion-15"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+              class="emotion-16 emotion-17"
+              viewBox="0 0 20 20"
             >
               <path
                 d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
@@ -3706,7 +3849,7 @@ exports[`Checkbox > renders correctly with a value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3757,6 +3900,18 @@ exports[`Checkbox > renders correctly with a value 1`] = `
   width: 100%;
 }
 
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -3770,7 +3925,7 @@ exports[`Checkbox > renders correctly with a value 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id=":ru:"
+        id=":r1a:"
         type="checkbox"
         value="test"
       />
@@ -3810,9 +3965,13 @@ exports[`Checkbox > renders correctly with a value 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":ru:"
+            for=":r1a:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -4050,7 +4209,7 @@ exports[`Checkbox > renders correctly with an error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4101,7 +4260,19 @@ exports[`Checkbox > renders correctly with an error 1`] = `
   width: 100%;
 }
 
-.emotion-15 {
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-17 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -4125,10 +4296,10 @@ exports[`Checkbox > renders correctly with an error 1`] = `
     >
       <input
         aria-checked="false"
-        aria-describedby=":rn:-hint"
+        aria-describedby=":r11:-hint"
         aria-invalid="true"
         class="emotion-2 emotion-3"
-        id=":rn:"
+        id=":r11:"
         type="checkbox"
         value=""
       />
@@ -4168,13 +4339,17 @@ exports[`Checkbox > renders correctly with an error 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":rn:"
+            for=":r11:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
         <span
-          class="emotion-14 emotion-15 emotion-16"
+          class="emotion-16 emotion-17 emotion-15"
         >
           test error
         </span>
@@ -4413,7 +4588,7 @@ exports[`Checkbox > renders correctly with indeterminate state 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4464,6 +4639,18 @@ exports[`Checkbox > renders correctly with indeterminate state 1`] = `
   width: 100%;
 }
 
+.emotion-16 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
@@ -4477,7 +4664,7 @@ exports[`Checkbox > renders correctly with indeterminate state 1`] = `
         aria-checked="mixed"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id=":r14:"
+        id=":r1j:"
         type="checkbox"
         value=""
       />
@@ -4515,9 +4702,13 @@ exports[`Checkbox > renders correctly with indeterminate state 1`] = `
         >
           <label
             class="emotion-14 emotion-15"
-            for=":r14:"
+            for=":r1j:"
           >
-            Checkbox Label
+            <label
+              class="emotion-16 emotion-17"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -4747,7 +4938,7 @@ exports[`Checkbox > renders correctly with progress 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4796,6 +4987,18 @@ exports[`Checkbox > renders correctly with progress 1`] = `
 
 .emotion-13 {
   width: 100%;
+}
+
+.emotion-15 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -4847,7 +5050,7 @@ exports[`Checkbox > renders correctly with progress 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-7 emotion-8"
-        id=":rq:"
+        id=":r15:"
         type="checkbox"
         value=""
       />
@@ -4859,9 +5062,13 @@ exports[`Checkbox > renders correctly with progress 1`] = `
         >
           <label
             class="emotion-13 emotion-14"
-            for=":rq:"
+            for=":r15:"
           >
-            Checkbox Label
+            <label
+              class="emotion-15 emotion-16"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -5091,7 +5298,7 @@ exports[`Checkbox > renders correctly with progress and no child 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5188,7 +5395,7 @@ exports[`Checkbox > renders correctly with progress and no child 1`] = `
         aria-invalid="false"
         aria-label="check"
         class="emotion-7 emotion-8"
-        id=":rs:"
+        id=":r18:"
         type="checkbox"
         value=""
       />
@@ -5433,7 +5640,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5484,19 +5691,31 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
   width: 100%;
 }
 
-.emotion-16 {
+.emotion-14 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-18 {
+.emotion-20 {
   -webkit-animation: spin 0.75s linear infinite;
   animation: spin 0.75s linear infinite;
 }
 
-.emotion-20 {
+.emotion-22 {
   -webkit-transition: stroke-dashoffset 0.5s ease 0s;
   transition: stroke-dashoffset 0.5s ease 0s;
 }
@@ -5514,7 +5733,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id=":r10:"
+        id=":r1d:"
         type="checkbox"
         value="test"
       />
@@ -5554,9 +5773,13 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":r10:"
+            for=":r1d:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -5568,7 +5791,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
       data-error="false"
     >
       <div
-        class="emotion-16 emotion-17"
+        class="emotion-18 emotion-19"
       >
         <svg
           aria-label="Loading"
@@ -5576,7 +5799,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
           aria-valuemin="0"
           aria-valuenow="20"
           aria-valuetext="20%"
-          class="emotion-18 emotion-19"
+          class="emotion-20 emotion-21"
           role="progressbar"
           style="height: 37px; width: 37px;"
           viewBox="0 0 100 100"
@@ -5590,7 +5813,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
             stroke-width="16"
           />
           <circle
-            class="emotion-20"
+            class="emotion-22"
             cx="50"
             cy="50"
             fill="none"
@@ -5607,7 +5830,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
-        id=":r12:"
+        id=":r1g:"
         type="checkbox"
         value="test"
       />
@@ -5619,9 +5842,13 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         >
           <label
             class="emotion-12 emotion-13"
-            for=":r12:"
+            for=":r1g:"
           >
-            Checkbox Label
+            <label
+              class="emotion-14 emotion-15"
+            >
+              Checkbox Label
+            </label>
           </label>
         </div>
       </div>
@@ -5867,7 +6094,7 @@ exports[`Checkbox > renders correctly with tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5918,12 +6145,24 @@ exports[`Checkbox > renders correctly with tooltip 1`] = `
   width: 100%;
 }
 
+.emotion-16 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     data-testid="testing"
   >
     <div
-      aria-controls=":r9:"
-      aria-describedby=":r9:"
+      aria-controls=":rc:"
+      aria-describedby=":rc:"
       class="emotion-0 emotion-1"
       tabindex="0"
     >
@@ -5937,7 +6176,7 @@ exports[`Checkbox > renders correctly with tooltip 1`] = `
           aria-checked="false"
           aria-invalid="false"
           class="emotion-4 emotion-5"
-          id=":r8:"
+          id=":rb:"
           type="checkbox"
           value=""
         />
@@ -5977,9 +6216,13 @@ exports[`Checkbox > renders correctly with tooltip 1`] = `
           >
             <label
               class="emotion-14 emotion-15"
-              for=":r8:"
+              for=":rb:"
             >
-              Checkbox Label
+              <label
+                class="emotion-16 emotion-17"
+              >
+                Checkbox Label
+              </label>
             </label>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { AsteriskIcon } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ChangeEventHandler,
@@ -161,7 +161,7 @@ const StyledLabel = styled.label<{
 
 const RequiredIcon = () => (
   <sup>
-    <Icon name="asterisk" size={10} color="danger" />
+    <AsteriskIcon size={8} sentiment="danger" />
   </sup>
 )
 
@@ -237,7 +237,18 @@ export const Toggle = forwardRef(
           <Stack gap={0.25} alignItems="baseline">
             {label ? (
               <Row templateColumns="auto 1fr" gap={1} alignItems="center">
-                {label}
+                {typeof label === 'string' ? (
+                  <Text
+                    as="label"
+                    variant={size === 'large' ? 'body' : 'bodySmall'}
+                    prominence="default"
+                    sentiment="neutral"
+                  >
+                    {label}
+                  </Text>
+                ) : (
+                  label
+                )}
                 {required ? <RequiredIcon /> : null}
               </Row>
             ) : null}
@@ -253,7 +264,12 @@ export const Toggle = forwardRef(
               </Text>
             ) : null}
             {helper && !error ? (
-              <Text as="p" variant="bodySmall" prominence="weak">
+              <Text
+                as="p"
+                variant="caption"
+                prominence="weak"
+                sentiment="neutral"
+              >
                 {helper}
               </Text>
             ) : null}

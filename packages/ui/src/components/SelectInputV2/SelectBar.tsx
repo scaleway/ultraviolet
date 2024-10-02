@@ -1,5 +1,10 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  AlertCircleIcon,
+  ArrowDownIcon,
+  CheckCircleIcon,
+  PlusIcon,
+} from '@ultraviolet/icons'
 import type { RefObject } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
@@ -205,13 +210,19 @@ const DisplayValues = ({
           data-testid="plus-tag"
           aria-label="Plus tag"
         >
-          <Icon name="plus" />
+          <PlusIcon />
           {overflowAmount}
         </Tag>
       ) : null}
     </Stack>
   ) : (
-    <SelectedValues as="div" variant={size === 'large' ? 'body' : 'bodySmall'}>
+    <SelectedValues
+      as="div"
+      variant={size === 'large' ? 'body' : 'bodySmall'}
+      disabled={disabled}
+      prominence="default"
+      sentiment="neutral"
+    >
       {selectedData.selectedValues[0]
         ? findOptionInOptions(options, selectedData.selectedValues[0])?.label
         : null}
@@ -378,10 +389,8 @@ export const SelectBar = ({
           </Placeholder>
         )}
         <StateStack direction="row" gap={1} alignItems="center">
-          {error ? <Icon name="alert" sentiment="danger" /> : null}
-          {success && !error ? (
-            <Icon name="checkbox-circle-outline" sentiment="success" />
-          ) : null}
+          {error ? <AlertCircleIcon sentiment="danger" /> : null}
+          {success && !error ? <CheckCircleIcon sentiment="success" /> : null}
           {clearable && selectedData.selectedValues.length > 0 ? (
             <Button
               aria-label="clear value"
@@ -402,10 +411,9 @@ export const SelectBar = ({
               data-testid="clear-all"
             />
           ) : null}
-          <Icon
+          <ArrowDownIcon
             aria-label="show dropdown"
             size="small"
-            name="arrow-down"
             sentiment="neutral"
             disabled={disabled || readOnly}
           />
