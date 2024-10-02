@@ -5,16 +5,7 @@ import {
   SouthShortIcon,
 } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
-import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
-
-const StyledIconContainer = styled(Stack)`
-  color: ${({ theme }) => theme.colors.neutral.text};
-
-  &[aria-disabled='true'] {
-    cursor: not-allowed;
-  }
-`
 
 const StyledSortIcon = styled(SouthShortIcon, {
   shouldForwardProp: prop => !['order'].includes(prop),
@@ -23,15 +14,12 @@ const StyledSortIcon = styled(SouthShortIcon, {
   transition: transform 0.2s ease-in-out;
 `
 
-const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) => (
-  <StyledIconContainer>
-    {order ? (
-      <StyledSortIcon order={order} sentiment="primary" />
-    ) : (
-      <SortIconUV sentiment="neutral" />
-    )}
-  </StyledIconContainer>
-)
+const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
+  order ? (
+    <StyledSortIcon order={order} sentiment="primary" />
+  ) : (
+    <SortIconUV sentiment="neutral" />
+  )
 
 const StyledHeaderCell = styled.div`
   display: flex;

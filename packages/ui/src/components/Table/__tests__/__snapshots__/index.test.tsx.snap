@@ -5065,42 +5065,6 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  color: #727683;
-}
-
-.emotion-9[aria-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-9[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-11 {
   vertical-align: middle;
   fill: #3f4250;
   height: 1em;
@@ -5109,12 +5073,12 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   min-height: 1em;
 }
 
-.emotion-11 .fillStroke {
+.emotion-9 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-16 {
+.emotion-14 {
   color: #641cb3;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -5138,7 +5102,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   gap: 8px;
 }
 
-.emotion-21 {
+.emotion-17 {
   vertical-align: middle;
   fill: #641cb3;
   height: 1em;
@@ -5153,22 +5117,22 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-21 .fillStroke {
+.emotion-17 .fillStroke {
   stroke: #641cb3;
   fill: none;
 }
 
-.emotion-50 {
+.emotion-40 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-50 {
+.emotion-40 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
 }
 
-.emotion-52 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5185,7 +5149,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   justify-content: start;
 }
 
-.emotion-52 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5224,25 +5188,21 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 class="emotion-6 emotion-7 emotion-8"
               >
                 Column 1
-                <div
+                <svg
                   class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
                 >
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
             </th>
             <th
@@ -5252,22 +5212,18 @@ exports[`Table > Should render correctly with sort then click 1`] = `
               tabindex="0"
             >
               <div
-                class="emotion-6 emotion-16 emotion-8"
+                class="emotion-6 emotion-14 emotion-8"
               >
                 Column 2
-                <div
-                  class="emotion-9 emotion-10"
+                <svg
+                  class="emotion-16 emotion-17 emotion-10"
+                  viewBox="0 0 20 20"
                 >
-                  <svg
-                    class="emotion-20 emotion-21 emotion-12"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M9.792 2a.75.75 0 0 1 .75.75v12.69l4.761-4.762a.75.75 0 0 1 1.06 1.06l-6.041 6.042a.75.75 0 0 1-1.06 0L3.22 11.74a.75.75 0 0 1 1.06-1.061l4.762 4.761V2.75a.75.75 0 0 1 .75-.75"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    clip-rule="evenodd"
+                    d="M9.792 2a.75.75 0 0 1 .75.75v12.69l4.761-4.762a.75.75 0 0 1 1.06 1.06l-6.041 6.042a.75.75 0 0 1-1.06 0L3.22 11.74a.75.75 0 0 1 1.06-1.061l4.762 4.761V2.75a.75.75 0 0 1 .75-.75"
+                  />
+                </svg>
               </div>
             </th>
             <th
@@ -5279,25 +5235,21 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 class="emotion-6 emotion-7 emotion-8"
               >
                 Column 3
-                <div
+                <svg
                   class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
                 >
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
             </th>
             <th
@@ -5309,25 +5261,21 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 class="emotion-6 emotion-7 emotion-8"
               >
                 Column 4
-                <div
+                <svg
                   class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
                 >
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
             </th>
             <th
@@ -5339,326 +5287,322 @@ exports[`Table > Should render correctly with sort then click 1`] = `
                 class="emotion-6 emotion-7 emotion-8"
               >
                 Column 5
-                <div
+                <svg
                   class="emotion-9 emotion-10"
+                  viewBox="0 0 20 20"
                 >
-                  <svg
-                    class="emotion-11 emotion-12"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
-                      fill-rule="evenodd"
-                    />
-                    <path
-                      clip-rule="evenodd"
-                      d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.28653 13.3952C6.66856 13.0132 7.28796 13.0132 7.67 13.3952L9.91304 15.6383L12.1561 13.3952C12.5381 13.0132 13.1575 13.0132 13.5396 13.3952C13.9216 13.7773 13.9216 14.3967 13.5396 14.7787L10.6048 17.7135C10.2227 18.0955 9.60334 18.0955 9.22131 17.7135L6.28653 14.7787C5.90449 14.3967 5.90449 13.7773 6.28653 13.3952Z"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M13.5396 7.60478C13.1575 7.98681 12.5381 7.98681 12.1561 7.60478L9.91304 5.36173L7.67 7.60478C7.28796 7.98681 6.66856 7.98681 6.28653 7.60478C5.90449 7.22274 5.90449 6.60334 6.28653 6.22131L9.22131 3.28653C9.60334 2.90449 10.2227 2.90449 10.6048 3.28653L13.5396 6.22131C13.9216 6.60334 13.9216 7.22274 13.5396 7.60478Z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
               </div>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 1 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 1 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 1 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 1 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 1 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 2 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 2 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 2 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 2 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 2 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 3 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 3 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 3 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 3 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 3 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 4 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 4 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 4 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 4 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 4 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 5 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 5 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 5 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 5 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 5 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 6 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 6 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 6 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 6 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 6 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 7 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 7 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 7 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 7 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 7 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 8 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 8 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 8 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 8 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 8 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 9 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 9 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 9 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 9 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 9 Column 5
             </td>
           </tr>
           <tr
-            class="emotion-50 emotion-51"
+            class="emotion-40 emotion-41"
             role="row"
           >
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 10 Column 1
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 10 Column 2
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 10 Column 3
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 10 Column 4
             </td>
             <td
-              class="emotion-52 emotion-53"
+              class="emotion-42 emotion-43"
             >
               Row 10 Column 5
             </td>
