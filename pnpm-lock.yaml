@@ -10753,21 +10753,12 @@ snapshots:
 
   '@storybook/addon-docs@8.3.5(storybook@8.3.5)':
     dependencies:
-<<<<<<< HEAD
-      '@mdx-js/react': 3.0.1(@types/react@18.3.10)(react@18.3.1)
+      '@mdx-js/react': 3.0.1(@types/react@18.3.11)(react@18.3.1)
       '@storybook/blocks': 8.3.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.5)
       '@storybook/csf-plugin': 8.3.5(storybook@8.3.5)
       '@storybook/global': 5.0.0
       '@storybook/react-dom-shim': 8.3.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.5)
-      '@types/react': 18.3.10
-=======
-      '@mdx-js/react': 3.0.1(@types/react@18.3.11)(react@18.3.1)
-      '@storybook/blocks': 8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)
-      '@storybook/csf-plugin': 8.3.4(storybook@8.3.4)
-      '@storybook/global': 5.0.0
-      '@storybook/react-dom-shim': 8.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.3.4)
       '@types/react': 18.3.11
->>>>>>> 2d00d33ce (fix(deps): update dependency @types/react to v18.3.11)
       fs-extra: 11.2.0
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -11631,14 +11622,6 @@ snapshots:
     optionalDependencies:
       vite: 5.4.8(@types/node@20.16.10)(terser@5.31.0)
 
-  '@vitest/mocker@2.1.2(@vitest/spy@2.1.2)(vite@5.4.8(@types/node@22.5.5)(terser@5.31.0))':
-    dependencies:
-      '@vitest/spy': 2.1.2
-      estree-walker: 3.0.3
-      magic-string: 0.30.11
-    optionalDependencies:
-      vite: 5.4.8(@types/node@22.5.5)(terser@5.31.0)
-
   '@vitest/pretty-format@2.0.5':
     dependencies:
       tinyrainbow: 1.2.0
@@ -11675,7 +11658,7 @@ snapshots:
       sirv: 2.0.4
       tinyglobby: 0.2.9
       tinyrainbow: 1.2.0
-      vitest: 2.1.2(@types/node@22.5.5)(@vitest/ui@2.1.2)(happy-dom@15.7.4)(jsdom@25.0.1)(terser@5.31.0)
+      vitest: 2.1.2(@types/node@20.16.10)(@vitest/ui@2.1.2)(happy-dom@15.7.4)(jsdom@25.0.1)(terser@5.31.0)
 
   '@vitest/utils@2.0.5':
     dependencies:
@@ -16895,7 +16878,7 @@ snapshots:
   vitest@2.1.2(@types/node@22.5.5)(@vitest/ui@2.1.2)(happy-dom@15.7.4)(jsdom@25.0.1)(terser@5.31.0):
     dependencies:
       '@vitest/expect': 2.1.2
-      '@vitest/mocker': 2.1.2(@vitest/spy@2.1.2)(vite@5.4.8(@types/node@22.5.5)(terser@5.31.0))
+      '@vitest/mocker': 2.1.2(@vitest/spy@2.1.2)(vite@5.4.8(@types/node@20.16.10)(terser@5.31.0))
       '@vitest/pretty-format': 2.1.2
       '@vitest/runner': 2.1.2
       '@vitest/snapshot': 2.1.2
