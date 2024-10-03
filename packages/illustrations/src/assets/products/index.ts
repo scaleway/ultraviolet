@@ -20,6 +20,7 @@ import * as domainsAndDns from './domainsAndDns'
 import * as edgeServices from './edgeServices'
 import * as elasticMetal from './elasticMetal'
 import * as functions from './functions'
+import * as generativeApi from './generativeApi'
 import * as iam from './iam'
 import * as inference from './inference'
 import * as instance from './instance'
@@ -72,6 +73,7 @@ export {
   edgeServices,
   elasticMetal,
   functions,
+  generativeApi,
   iam,
   inference,
   instance,
