@@ -63,10 +63,7 @@ const StyledPopup = styled(Popup)`
   color: ${({ theme }) => theme.colors.neutral.text};
   box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: ${({ theme }) => theme.space[0]};
-  
-  &[data-margin-bottom="true"]{
-    margin-bottom: ${({ theme }) => theme.space[10]}
-  }
+  margin-bottom: ${({ theme }) => theme.space[10]};
 `
 
 const DropdownContainer = styled(Stack)<{ 'data-grouped': boolean }>`
@@ -692,16 +689,9 @@ export const Dropdown = ({
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
   const [maxWidth, setWidth] = useState<string | number>()
-  const [marginBottom, setMarginBottom] = useState(false)
 
   useEffect(() => {
     if (refSelect.current && isDropdownVisible) {
-      setWidth(refSelect.current.offsetWidth)
-    }
-  }, [isDropdownVisible, refSelect])
-
-  useEffect(() => {
-    if (refSelect.current && ref.current && isDropdownVisible) {
       const position =
         refSelect.current.getBoundingClientRect().bottom +
         DROPDOWN_MAX_HEIGHT +
@@ -709,13 +699,12 @@ export const Dropdown = ({
         parseInt(theme.space['5'], 10)
       const overflow = position - window.innerHeight
       if (overflow > 0) {
-        setMarginBottom(true)
         const modalElement = document.getElementById('backdrop-modal')
 
         if (modalElement) {
           modalElement.scrollBy({ top: overflow, behavior: 'smooth' })
         } else window.scrollBy({ top: overflow, behavior: 'smooth' })
-      } else setMarginBottom(false)
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDropdownVisible, refSelect, size, ref.current])
@@ -858,7 +847,6 @@ export const Dropdown = ({
       role="dialog"
       debounceDelay={0}
       containerFullWidth
-      data-margin-bottom={marginBottom}
     >
       {children}
     </StyledPopup>
