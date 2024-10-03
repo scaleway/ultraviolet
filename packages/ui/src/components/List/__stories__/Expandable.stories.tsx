@@ -18,7 +18,7 @@ export const Expandable: StoryFn<typeof List> = props => {
           <List.Row
             key={planet.id}
             id={planet.id}
-            paddingExpandable="10px 10px 10px 10px"
+            expandablePadding="2"
             expandable={<p>Test</p>}
             expanded={expanded}
             disabled={planet.id === 'mercury'}

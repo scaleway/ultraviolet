@@ -191,7 +191,7 @@ describe('List', () => {
               key={id}
               id={id}
               expandable={columnF}
-              paddingExpandable="10px"
+              expandablePadding="10"
             >
               <List.Cell>{columnA}</List.Cell>
               <List.Cell>{columnB}</List.Cell>
