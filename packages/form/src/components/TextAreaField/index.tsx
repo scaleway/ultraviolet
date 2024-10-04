@@ -51,6 +51,7 @@ export const TextAreaField = <
   regex: regexes,
   submitOnEnter,
   validate,
+  'aria-label': ariaLabel,
 }: TextAreaFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
@@ -104,13 +105,12 @@ export const TextAreaField = <
           regex: regexes,
           minLength,
           maxLength,
-          label,
+          label: label ?? (ariaLabel as string),
           value: field.value,
         },
         error,
       )}
       helper={helper}
-      label={label}
       labelDescription={labelDescription}
       minLength={minLength}
       maxLength={maxLength}
@@ -133,6 +133,7 @@ export const TextAreaField = <
       tabIndex={tabIndex}
       tooltip={tooltip}
       value={field.value}
+      {...(label ? { label } : { 'aria-label': ariaLabel as string })}
     />
   )
 }
