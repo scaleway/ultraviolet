@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.9.2
+
+### Patch Changes
+
+- [#4292](https://github.com/scaleway/ultraviolet/pull/4292) [`f093375`](https://github.com/scaleway/ultraviolet/commit/f093375341d13bbfda03272b6f1554eb133ed2fc) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.10`.
+
+- [#4238](https://github.com/scaleway/ultraviolet/pull/4238) [`875bbed`](https://github.com/scaleway/ultraviolet/commit/875bbed19ace07fc96178c861b8891a5f2700bfa) Thanks [@lisalupi](https://github.com/lisalupi)! - Form components: homogenize styling for all form components
+
+- Updated dependencies [[`8300d7b`](https://github.com/scaleway/ultraviolet/commit/8300d7be46c0bb6ae4b7ea437f4c407a856307c3), [`f093375`](https://github.com/scaleway/ultraviolet/commit/f093375341d13bbfda03272b6f1554eb133ed2fc), [`875bbed`](https://github.com/scaleway/ultraviolet/commit/875bbed19ace07fc96178c861b8891a5f2700bfa), [`04e9273`](https://github.com/scaleway/ultraviolet/commit/04e9273a02fd00f8334e03bee97e5408d61f163b)]:
+  - @ultraviolet/ui@1.72.0
+
 ## 3.9.1
 
 ### Patch Changes

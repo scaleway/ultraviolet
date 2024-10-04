@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.1.3
+
+### Patch Changes
+
+- [#4292](https://github.com/scaleway/ultraviolet/pull/4292) [`f093375`](https://github.com/scaleway/ultraviolet/commit/f093375341d13bbfda03272b6f1554eb133ed2fc) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.10`.
+
+- [#4273](https://github.com/scaleway/ultraviolet/pull/4273) [`04e9273`](https://github.com/scaleway/ultraviolet/commit/04e9273a02fd00f8334e03bee97e5408d61f163b) Thanks [@matthprost](https://github.com/matthprost)! - Fix `sort` system icon to follow correct view box
+
 ## 3.1.2
 
 ### Patch Changes
