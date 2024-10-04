@@ -86,12 +86,21 @@ const StyledTextArea = styled('textarea', {
   }
 `
 
+type LabelProps =
+  | {
+      label: string
+      'aria-label'?: never
+    }
+  | {
+      label?: never
+      'aria-label': string
+    }
+
 type TextAreaProps = {
   id?: string
   className?: string
   tabIndex?: number
   autoFocus?: boolean
-  label: string
   value?: string
   onChange: (newValue: string) => void
   placeholder?: string
@@ -130,7 +139,7 @@ type TextAreaProps = {
   onKeyDown?: DOMAttributes<HTMLTextAreaElement>['onKeyDown']
   clearable?: boolean
   labelDescription?: ReactNode
-}
+} & LabelProps
 
 /**
  * This component offers an extended textarea HTML
@@ -163,6 +172,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       onKeyDown,
       clearable = false,
       labelDescription,
+      'aria-label': ariaLabel,
     },
     ref,
   ) => {
@@ -232,6 +242,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               onFocus={onFocus}
               onBlur={onBlur}
               onKeyDown={onKeyDown}
+              aria-label={ariaLabel}
             />
             <StyledTextAreaAbsoluteStack
               direction="row"
