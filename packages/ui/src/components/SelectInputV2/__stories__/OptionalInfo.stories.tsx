@@ -6,6 +6,7 @@ import {
   OptionalInfo2,
   OptionalInfo3,
   OptionalInfo4,
+  OptionalInfo5,
 } from './resources'
 
 export const AdditionalInfo: StoryFn<typeof SelectInputV2> = args => (
@@ -33,6 +34,12 @@ export const AdditionalInfo: StoryFn<typeof SelectInputV2> = args => (
       options={OptionalInfo4}
       optionalInfoPlacement="right"
       label="Right"
+    />
+    <SelectInputV2
+      {...args}
+      options={OptionalInfo5}
+      optionalInfoPlacement="right"
+      label="With option disabled and button"
     />
   </Stack>
 )

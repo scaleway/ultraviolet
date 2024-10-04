@@ -685,14 +685,14 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     class="emotion-26 emotion-5"
                     id="items"
                   >
-                    <button
+                    <div
                       aria-label="mercury"
                       class="emotion-36 emotion-37"
                       data-selected="true"
                       data-testid="option-mercury"
                       id="option-0"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -708,15 +708,15 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           </span>
                         </div>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="venus"
                       class="emotion-36 emotion-37"
                       data-selected="false"
                       data-testid="option-venus"
                       id="option-1"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -732,15 +732,15 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           </span>
                         </div>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="earth"
                       class="emotion-36 emotion-37"
                       data-selected="false"
                       data-testid="option-earth"
                       id="option-2"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -761,8 +761,8 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           Our home planet
                         </span>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="mars"
                       class="emotion-36 emotion-37"
                       data-selected="false"
@@ -770,7 +770,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       disabled=""
                       id="option-3"
                       role="option"
-                      type="button"
+                      tabindex="-1"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -786,15 +786,15 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           </span>
                         </div>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="pluto"
                       class="emotion-36 emotion-37"
                       data-selected="false"
                       data-testid="option-pluto"
                       id="option-4"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -815,7 +815,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
                         </span>
                       </div>
-                    </button>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -843,14 +843,14 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     class="emotion-26 emotion-5"
                     id="items"
                   >
-                    <button
+                    <div
                       aria-label="jupiter"
                       class="emotion-36 emotion-37"
                       data-selected="false"
                       data-testid="option-jupiter"
                       id="option-0"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -871,15 +871,15 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
                         </span>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="saturn"
                       class="emotion-36 emotion-37"
                       data-selected="false"
                       data-testid="option-saturn"
                       id="option-1"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -895,15 +895,15 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           </span>
                         </div>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="uranus"
                       class="emotion-36 emotion-37"
                       data-selected="false"
                       data-testid="option-uranus"
                       id="option-2"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -919,15 +919,15 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           </span>
                         </div>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="neptune"
                       class="emotion-36 emotion-37"
                       data-selected="false"
                       data-testid="option-neptune"
                       id="option-3"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-4 emotion-5"
@@ -943,7 +943,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                           </span>
                         </div>
                       </div>
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
