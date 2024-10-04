@@ -1,5 +1,31 @@
 # Change Log
 
+## 1.72.0
+
+### Minor Changes
+
+- [#4273](https://github.com/scaleway/ultraviolet/pull/4273) [`04e9273`](https://github.com/scaleway/ultraviolet/commit/04e9273a02fd00f8334e03bee97e5408d61f163b) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring on `<Table />`:
+
+  - Update of sort icons
+  - Added `expandable` on `<Table />` and `<Table.Row />`
+  - Refactoring of grid system
+  - Added `align` and `sentiment` prop on `<Table.Cell />`
+
+  Refactoring on `<List />`:
+
+  - Update of sort icons
+
+### Patch Changes
+
+- [#4312](https://github.com/scaleway/ultraviolet/pull/4312) [`8300d7b`](https://github.com/scaleway/ultraviolet/commit/8300d7be46c0bb6ae4b7ea437f4c407a856307c3) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextArea />` to have either label or aria-label as required prop
+
+- [#4292](https://github.com/scaleway/ultraviolet/pull/4292) [`f093375`](https://github.com/scaleway/ultraviolet/commit/f093375341d13bbfda03272b6f1554eb133ed2fc) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.10`.
+
+- [#4238](https://github.com/scaleway/ultraviolet/pull/4238) [`875bbed`](https://github.com/scaleway/ultraviolet/commit/875bbed19ace07fc96178c861b8891a5f2700bfa) Thanks [@lisalupi](https://github.com/lisalupi)! - Form components: homogenize styling for all form components
+
+- Updated dependencies [[`f093375`](https://github.com/scaleway/ultraviolet/commit/f093375341d13bbfda03272b6f1554eb133ed2fc), [`04e9273`](https://github.com/scaleway/ultraviolet/commit/04e9273a02fd00f8334e03bee97e5408d61f163b)]:
+  - @ultraviolet/icons@3.1.3
+
 ## 1.71.1
 
 ### Patch Changes
