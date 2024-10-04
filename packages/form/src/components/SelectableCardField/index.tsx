@@ -22,6 +22,7 @@ type SelectableCardFieldProps<
       | 'label'
       | 'data-testid'
       | 'productIcon'
+      | 'illustration'
     >
   > & {
     className?: string
@@ -49,6 +50,7 @@ export const SelectableCardField = <
   shouldUnregister = false,
   validate,
   productIcon,
+  illustration,
   'data-testid': dataTestId,
 }: SelectableCardFieldProps<TFieldValues, TFieldName>) => {
   const {
@@ -72,6 +74,7 @@ export const SelectableCardField = <
   return (
     <SelectableCard
       productIcon={productIcon}
+      illustration={illustration}
       isError={!!error}
       showTick={showTick}
       checked={isChecked}
