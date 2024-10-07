@@ -21,11 +21,11 @@ type SelectableCardFieldProps<
       | 'tooltip'
       | 'label'
       | 'data-testid'
-      | 'productIcon'
-      | 'illustration'
     >
   > & {
     className?: string
+    illustration?: string
+    productIcon?: never
   }
 
 export const SelectableCardField = <
