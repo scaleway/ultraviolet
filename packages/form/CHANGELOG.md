@@ -1,5 +1,24 @@
 # Change Log
 
+## 3.9.3
+
+### Patch Changes
+
+- [#4310](https://github.com/scaleway/ultraviolet/pull/4310) [`b69aa0e`](https://github.com/scaleway/ultraviolet/commit/b69aa0e1031f6f813427ef690f6fffdf015ae5c3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.11`.
+
+- [#4308](https://github.com/scaleway/ultraviolet/pull/4308) [`b40d079`](https://github.com/scaleway/ultraviolet/commit/b40d0798711639d9cad2510aa32d34d6feb3a72f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.7`.
+  Updated dependency `@babel/runtime` to `7.25.7`.
+  Updated dependency `@babel/eslint-parser` to `7.25.7`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.25.7`.
+  Updated dependency `@babel/preset-env` to `7.25.7`.
+
+- [#4316](https://github.com/scaleway/ultraviolet/pull/4316) [`f34617d`](https://github.com/scaleway/ultraviolet/commit/f34617d067c4894b03653c322ffa15fec2a63cde) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - add illustration to selecatble card field
+
+- [#4314](https://github.com/scaleway/ultraviolet/pull/4314) [`22621fd`](https://github.com/scaleway/ultraviolet/commit/22621fd79888c022ebb5b8c363f31ecf773ba141) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - add producticon to selectableCardField
+
+- Updated dependencies [[`b69aa0e`](https://github.com/scaleway/ultraviolet/commit/b69aa0e1031f6f813427ef690f6fffdf015ae5c3), [`b40d079`](https://github.com/scaleway/ultraviolet/commit/b40d0798711639d9cad2510aa32d34d6feb3a72f)]:
+  - @ultraviolet/ui@1.72.1
+
 ## 3.9.2
 
 ### Patch Changes
