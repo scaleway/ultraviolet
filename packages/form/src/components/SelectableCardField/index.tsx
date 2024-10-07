@@ -21,10 +21,11 @@ type SelectableCardFieldProps<
       | 'tooltip'
       | 'label'
       | 'data-testid'
-      | 'productIcon'
     >
   > & {
     className?: string
+    illustration?: string
+    productIcon?: never
   }
 
 export const SelectableCardField = <
@@ -49,6 +50,7 @@ export const SelectableCardField = <
   shouldUnregister = false,
   validate,
   productIcon,
+  illustration,
   'data-testid': dataTestId,
 }: SelectableCardFieldProps<TFieldValues, TFieldName>) => {
   const {
@@ -72,6 +74,7 @@ export const SelectableCardField = <
   return (
     <SelectableCard
       productIcon={productIcon}
+      illustration={illustration}
       isError={!!error}
       showTick={showTick}
       checked={isChecked}
