@@ -1,6 +1,12 @@
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
+import type {
+  Dispatch,
+  KeyboardEvent,
+  ReactNode,
+  RefObject,
+  SetStateAction,
+} from 'react'
 import { Checkbox } from '../Checkbox'
 import { Popup } from '../Popup'
 import { Skeleton } from '../Skeleton'
@@ -100,7 +106,7 @@ const DropdownGroupWrapper = styled.div`
   position: sticky;
   top: 0px;
 `
-const DropdownItem = styled.button<{
+const DropdownItem = styled.div<{
   'data-selected': boolean
   disabled: boolean
 }>`
@@ -131,7 +137,6 @@ const DropdownItem = styled.button<{
   &[disabled] {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
-
   }
 
   &[disabled]:hover, [disabled]:focus {
@@ -166,7 +171,7 @@ const LoadMore = styled(Stack)`
 
 const moveFocusDown = () => {
   const options = document.querySelectorAll(
-    '#items > button[role="option"]:not([disabled])',
+    '#items > div[role="option"]:not([disabled])',
   )
   const activeItem = document.activeElement
   if (options) {
@@ -180,7 +185,7 @@ const moveFocusDown = () => {
 }
 const moveFocusUp = () => {
   const options = document.querySelectorAll(
-    '#items > button[role="option"]:not([disabled])',
+    '#items > div[role="option"]:not([disabled])',
   )
   const activeItem = document.activeElement
 
@@ -192,11 +197,14 @@ const moveFocusUp = () => {
     }
   }
 }
-const handleKeyDownSelect = (key: string) => {
-  if (key === 'ArrowDown') {
+const handleKeyDownSelect = (event: KeyboardEvent<HTMLDivElement>) => {
+  if (event.key === 'ArrowDown') {
+    event.preventDefault()
     moveFocusDown()
   }
-  if (key === 'ArrowUp') {
+
+  if (event.key === 'ArrowUp') {
+    event.preventDefault()
     moveFocusUp()
   }
 }
@@ -219,7 +227,7 @@ const handleClickOutside = (
 }
 
 const handleKeyDown = (
-  event: KeyboardEvent,
+  event: globalThis.KeyboardEvent,
   ref: RefObject<HTMLDivElement>,
   options: DataType,
   searchBarActive: boolean,
@@ -288,7 +296,7 @@ const CreateDropdown = ({
     setSelectedData,
     selectedData,
   } = useSelectInput()
-  const focusedItemRef = useRef<HTMLButtonElement>(null)
+  const focusedItemRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (defaultSearchValue && focusedItemRef?.current) {
@@ -379,10 +387,7 @@ const CreateDropdown = ({
     <DropdownContainer
       role="listbox"
       id="select-dropdown"
-      onKeyDown={event => {
-        event.preventDefault()
-        handleKeyDownSelect(event.key)
-      }}
+      onKeyDown={handleKeyDownSelect}
       data-grouped
     >
       {isLoading ? (
@@ -397,7 +402,7 @@ const CreateDropdown = ({
                 aria-label="select-all"
                 data-testid="select-all"
                 id="select-all"
-                type="button"
+                tabIndex={0}
                 role="option"
                 onKeyDown={event =>
                   [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
@@ -483,7 +488,7 @@ const CreateDropdown = ({
                   <DropdownItem
                     key={option.value}
                     disabled={!!option.disabled}
-                    type="button"
+                    tabIndex={!option.disabled ? 0 : -1}
                     data-selected={
                       selectedData.selectedValues.includes(option.value) &&
                       !option.disabled
@@ -544,22 +549,20 @@ const CreateDropdown = ({
   ) : (
     <DropdownContainer
       role="listbox"
+      tabIndex={-1}
       id="select-dropdown"
-      onKeyDown={event => {
-        event.preventDefault()
-        handleKeyDownSelect(event.key)
-      }}
+      onKeyDown={handleKeyDownSelect}
       gap={0.25}
       data-grouped={false}
     >
       {selectAll && multiselect ? (
-        <Stack id="items" gap={0.25}>
+        <Stack id="items" gap={0.25} tabIndex={-1}>
           <DropdownItem
             disabled={false}
             data-selected={selectedData.allSelected}
             aria-label="select-all"
             data-testid="select-all"
-            type="button"
+            tabIndex={0}
             role="option"
             onKeyDown={event =>
               [' ', 'Enter'].includes(event.key) ? selectAllOptions() : null
@@ -612,7 +615,7 @@ const CreateDropdown = ({
               data-testid={`option-${option.value}`}
               id={`option-${index}`}
               role="option"
-              type="button"
+              tabIndex={!option.disabled ? 0 : -1}
               ref={
                 option.value === defaultSearchValue ||
                 option.searchText === defaultSearchValue

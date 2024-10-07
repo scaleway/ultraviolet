@@ -1170,19 +1170,20 @@ exports[`UnitInput > renders click 1`] = `
                   data-grouped="false"
                   id="select-dropdown"
                   role="listbox"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-31 emotion-1"
                     id="items"
                   >
-                    <button
+                    <div
                       aria-label="kb"
                       class="emotion-33 emotion-34"
                       data-selected="false"
                       data-testid="option-kb"
                       id="option-0"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-0 emotion-1"
@@ -1198,15 +1199,15 @@ exports[`UnitInput > renders click 1`] = `
                           </span>
                         </div>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="mb"
                       class="emotion-33 emotion-34"
                       data-selected="false"
                       data-testid="option-mb"
                       id="option-1"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-0 emotion-1"
@@ -1222,15 +1223,15 @@ exports[`UnitInput > renders click 1`] = `
                           </span>
                         </div>
                       </div>
-                    </button>
-                    <button
+                    </div>
+                    <div
                       aria-label="gb"
                       class="emotion-33 emotion-34"
                       data-selected="false"
                       data-testid="option-gb"
                       id="option-2"
                       role="option"
-                      type="button"
+                      tabindex="0"
                     >
                       <div
                         class="emotion-0 emotion-1"
@@ -1246,7 +1247,7 @@ exports[`UnitInput > renders click 1`] = `
                           </span>
                         </div>
                       </div>
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>

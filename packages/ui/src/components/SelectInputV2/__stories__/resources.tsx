@@ -1,6 +1,7 @@
 import { NetworkCategoryIcon } from '@ultraviolet/icons/category'
 import { Badge } from '../../Badge'
 import { Bullet } from '../../Bullet'
+import { Button } from '../../Button'
 import { Text } from '../../Text'
 
 const reactNeptune = (
@@ -303,5 +304,36 @@ export const OptionalInfo4 = [
     label: 'Warsaw',
     optionalInfo: optionalInfo43,
     disabled: false,
+  },
+]
+
+export const OptionalInfo5 = [
+  {
+    value: 'par',
+    label: 'Paris',
+    optionalInfo: optionalInfo41,
+    description: 'France',
+    disabled: false,
+  },
+  {
+    value: 'ams',
+    label: 'Amsterdam',
+    optionalInfo: optionalInfo42,
+    disabled: false,
+  },
+  {
+    value: 'waw',
+    label: 'Warsaw',
+    disabled: true,
+    optionalInfo: (
+      <Button
+        size="xsmall"
+        sentiment="neutral"
+        icon="email-outline"
+        onClick={() => alert('We will enable Warsaw soon!')}
+      >
+        Contact us
+      </Button>
+    ),
   },
 ]
