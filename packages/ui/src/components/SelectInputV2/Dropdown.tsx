@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type {
@@ -15,7 +16,9 @@ import { Text } from '../Text'
 import { DisplayOption } from './DropdownOption'
 import { SearchBarDropdown } from './SearchBarDropdown'
 import { useSelectInput } from './SelectInputProvider'
-import type { DataType, OptionType } from './types'
+import { type DataType, INPUT_SIZE_HEIGHT, type OptionType } from './types'
+
+const DROPDOWN_MAX_HEIGHT = 256
 
 export type DropdownProps = {
   children: ReactNode
@@ -28,6 +31,7 @@ export type DropdownProps = {
   loadMore?: ReactNode
   optionalInfoPlacement: 'left' | 'right'
   isLoading?: boolean
+  size: 'small' | 'medium' | 'large'
 }
 
 export type CreateDropdownProps = {
@@ -59,10 +63,11 @@ const StyledPopup = styled(Popup)`
   color: ${({ theme }) => theme.colors.neutral.text};
   box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};
   padding: ${({ theme }) => theme.space[0]};
+  margin-bottom: ${({ theme }) => theme.space[10]};
 `
 
 const DropdownContainer = styled(Stack)<{ 'data-grouped': boolean }>`
-  max-height: 256px;
+  max-height: ${DROPDOWN_MAX_HEIGHT}px;
   overflow-y: scroll;
   padding: ${({ theme }) => theme.space[0]};
   padding-bottom: ${({ theme }) => theme.space[0.5]};
@@ -668,6 +673,7 @@ export const Dropdown = ({
   loadMore,
   optionalInfoPlacement,
   isLoading,
+  size,
 }: DropdownProps) => {
   const {
     setIsDropdownVisible,
@@ -677,11 +683,31 @@ export const Dropdown = ({
     options,
     displayedOptions,
   } = useSelectInput()
+  const theme = useTheme()
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [defaultSearchValue, setDefaultSearch] = useState<string | null>(null)
   const ref = useRef<HTMLDivElement>(null)
   const [search, setSearch] = useState<string>('')
   const [maxWidth, setWidth] = useState<string | number>()
+
+  useEffect(() => {
+    if (refSelect.current && isDropdownVisible) {
+      const position =
+        refSelect.current.getBoundingClientRect().bottom +
+        DROPDOWN_MAX_HEIGHT +
+        INPUT_SIZE_HEIGHT[size] +
+        parseInt(theme.space['5'], 10)
+      const overflow = position - window.innerHeight
+      if (overflow > 0) {
+        const modalElement = document.getElementById('backdrop-modal')
+
+        if (modalElement) {
+          modalElement.scrollBy({ top: overflow, behavior: 'smooth' })
+        } else window.scrollBy({ top: overflow, behavior: 'smooth' })
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isDropdownVisible, refSelect, size, ref.current])
 
   const resizeDropdown = useCallback(() => {
     if (

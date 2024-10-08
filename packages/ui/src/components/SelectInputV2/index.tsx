@@ -209,6 +209,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
           loadMore={loadMore}
           optionalInfoPlacement={optionalInfoPlacement}
           isLoading={isLoading}
+          size={size}
         >
           <Stack gap={0.5} aria-label={ariaLabel}>
             {label ? (
