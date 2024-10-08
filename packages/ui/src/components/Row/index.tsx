@@ -4,11 +4,18 @@ import type { UltravioletUITheme } from '../../theme'
 
 type StyledRowProps = Pick<
   RowProps,
-  'gap' | 'templateColumns' | 'alignItems' | 'justifyContent'
+  'gap' | 'templateColumns' | 'alignItems' | 'justifyContent' | 'padding'
 >
+
 export const StyledRow = styled('div', {
   shouldForwardProp: prop =>
-    !['templateColumns', 'gap', 'alignItems', 'justifyContent'].includes(prop),
+    ![
+      'templateColumns',
+      'gap',
+      'alignItems',
+      'justifyContent',
+      'padding',
+    ].includes(prop),
 })<StyledRowProps>`
   display: grid;
   ${({
@@ -17,6 +24,7 @@ export const StyledRow = styled('div', {
     alignItems = 'normal',
     templateColumns,
     justifyContent = 'normal',
+    padding,
   }) => `
     grid-template-columns: ${templateColumns};
     ${
@@ -26,6 +34,7 @@ export const StyledRow = styled('div', {
     }
     align-items: ${alignItems};
     justify-content: ${justifyContent};
+    ${padding ? `padding: ${padding};` : ''}
   `}
 `
 
@@ -37,6 +46,7 @@ type RowProps = {
   gap?: keyof UltravioletUITheme['space'] | number
   alignItems?: CSSProperties['alignItems']
   justifyContent?: CSSProperties['justifyContent']
+  padding?: CSSProperties['padding']
 }
 
 /**
@@ -51,6 +61,7 @@ export const Row = ({
   alignItems,
   justifyContent,
   gap,
+  padding,
 }: RowProps) => (
   <StyledRow
     className={className}
@@ -59,6 +70,7 @@ export const Row = ({
     templateColumns={templateColumns}
     alignItems={alignItems}
     justifyContent={justifyContent}
+    padding={padding}
   >
     {children}
   </StyledRow>

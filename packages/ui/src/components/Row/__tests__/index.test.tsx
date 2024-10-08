@@ -26,4 +26,12 @@ describe('Row', () => {
         <div>Second col</div>
       </Row>,
     ))
+
+  test('renders correctly with specific padding', () =>
+    shouldMatchEmotionSnapshot(
+      <Row templateColumns="repeat(2, 1fr)" gap={1} padding="10px">
+        <div>First col</div>
+        <div>Second col</div>
+      </Row>,
+    ))
 })

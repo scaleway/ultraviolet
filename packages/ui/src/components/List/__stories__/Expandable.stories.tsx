@@ -18,12 +18,13 @@ export const Expandable: StoryFn<typeof List> = props => {
           <List.Row
             key={planet.id}
             id={planet.id}
+            expandablePadding="2"
             expandable={<p>Test</p>}
             expanded={expanded}
             disabled={planet.id === 'mercury'}
           >
             <List.Cell>
-              {planet.name}{' '}
+              {planet.name}
               {planet.id === 'mercury'
                 ? ' (A disabled row cannot be expanded)'
                 : ''}
@@ -41,7 +42,7 @@ Expandable.parameters = {
   docs: {
     description: {
       story:
-        'The Row supports the prop `expandable` which expect a ReactNode. This content will be visible if user click on the row.\n\nProviding `disabled` on the row will prevent the expanding on click.',
+        'The Row supports the prop `expandable` which expect a ReactNode. This content will be visible if user click on the row.\n\nProviding `disabled` on the row will prevent the expanding on click.\n\nIt is possible to provide a custom padding to the container of the expandable content using prop `expandablePadding`',
     },
   },
 }
