@@ -5,7 +5,7 @@ import type {
   MouseEventHandler,
   ReactEventHandler,
 } from 'react'
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { slideFromBottom } from '../../../utils/animations'
 import { useModal } from '../ModalProvider'
@@ -21,6 +21,7 @@ const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.overlay};
   z-index: 1;
+  opacity: 0;
 
   &[data-open='true'] {
     padding: ${({ theme }) => theme.space['2']};
@@ -31,6 +32,14 @@ const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
     height: 100%;
     width: 100%;
   }
+
+  &[data-visible='true'] {
+    opacity: 1;
+  }
+
+  &[data-animation] {
+    overflow: hidden;
+  }
 `
 
 type StyledDialogProps = {
@@ -38,11 +47,12 @@ type StyledDialogProps = {
   'data-placement': ModalPlacement
   position: number
   size: ModalSize
+  top?: number
 }
 
 export const StyledDialog = styled('dialog', {
   shouldForwardProp: prop =>
-    !['position', 'size', 'openedModals'].includes(prop),
+    !['position', 'size', 'openedModals', 'top'].includes(prop),
 })<StyledDialogProps>`
   background-color: ${({ theme }) =>
     theme.colors.other.elevation.background.overlay};
@@ -71,16 +81,16 @@ export const StyledDialog = styled('dialog', {
   )}
 
   &[data-animation='true'] {
-    animation: ${slideFromBottom} 0.3s ease-in-out;
+    animation: ${slideFromBottom} 0.3s ease-in-out forwards;
   }
 
   transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
 
-  ${({ position, size }) =>
+  ${({ position, size, top }) =>
     position > 0
       ? `
     width: ${MODAL_WIDTH[size] - position * 50}px !important;
-    transform: translate3d(0, -${position * 24}px, 0);
+    transform: translate3d(0, -${top}px, 0);
   `
       : undefined}
 `
@@ -101,6 +111,8 @@ export const Dialog = ({
   dialogCss,
   backdropCss,
 }: DialogProps) => {
+  const [isVisible, setIsVisible] = useState(false)
+
   const containerRef = useRef(document.createElement('div'))
   const dialogRef = useRef<HTMLDialogElement>(null)
   const onCloseRef = useRef(onClose)
@@ -111,9 +123,13 @@ export const Dialog = ({
     previsousOpenedModales,
   } = useModal()
 
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
   // register/unregister the modal to handle nested modals
   useEffect(() => {
-    registerModal(id)
+    registerModal({ id, ref: dialogRef })
 
     return () => {
       unregisterModal(id)
@@ -242,7 +258,30 @@ export const Dialog = ({
 
   // We need to reverse the array as the last opened modal should be the first to be with normal size
   // while the first opened modal should shrink
-  const position = [...openedModals].reverse().indexOf(id) // reverse method mutate array so we need to create a new array
+  const realPosition = [...openedModals].findIndex(object => object.id === id)
+  const position = [...openedModals]
+    .reverse()
+    .findIndex(object => object.id === id) // reverse method mutate array so we need to create a new array
+  const modalAbove = openedModals[realPosition + 1]
+  const currentModalHeight = dialogRef.current?.offsetHeight
+  let top = 0
+
+  if (
+    modalAbove?.ref &&
+    typeof modalAbove.ref === 'object' &&
+    'current' in modalAbove.ref &&
+    currentModalHeight
+  ) {
+    top =
+      (modalAbove?.ref?.current?.offsetHeight ?? 0) / 2 -
+      currentModalHeight / 2 +
+      20
+  }
+
+  const animation =
+    openedModals.length > 1 &&
+    position === 0 &&
+    previsousOpenedModales.length < openedModals.length
 
   return createPortal(
     <StyledBackdrop
@@ -252,6 +291,8 @@ export const Dialog = ({
       css={backdropCss}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
       onFocus={stopFocus}
+      data-animation={animation}
+      data-visible={isVisible}
     >
       <StyledDialog
         css={dialogCss}
@@ -272,11 +313,8 @@ export const Dialog = ({
         ref={dialogRef}
         tabIndex={0}
         position={position}
-        data-animation={
-          openedModals.length > 1 &&
-          position === 0 &&
-          previsousOpenedModales.length < openedModals.length
-        }
+        top={top > 0 ? top : 0}
+        data-animation={animation}
         size={size}
       >
         {children}
