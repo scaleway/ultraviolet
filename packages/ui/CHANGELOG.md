@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.72.2
+
+### Patch Changes
+
+- [#4252](https://github.com/scaleway/ultraviolet/pull/4252) [`e637068`](https://github.com/scaleway/ultraviolet/commit/e637068fe15b7c6d0792a1d05e1791d3e3b958ab) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Modal />` component to always display the one behind and fix flacky animation
+
+- [#4282](https://github.com/scaleway/ultraviolet/pull/4282) [`a26d439`](https://github.com/scaleway/ultraviolet/commit/a26d439c494ad24dbb857196f4430e657838bd8e) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />`: auto scroll when the component is at the bottom of the page
+
+- [#4262](https://github.com/scaleway/ultraviolet/pull/4262) [`3c0ac55`](https://github.com/scaleway/ultraviolet/commit/3c0ac55291796453035a1c1c3aa0e0f07e0afd8d) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Row />` and `<List.Row />`: new props, respectively `padding` and `paddingExpandable`, to define a custom padding
+
+- [#4328](https://github.com/scaleway/ultraviolet/pull/4328) [`ed8f35a`](https://github.com/scaleway/ultraviolet/commit/ed8f35aae233ee795311030aab81936ce99d2585) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` when using illustration
+
+- Updated dependencies [[`b1739f1`](https://github.com/scaleway/ultraviolet/commit/b1739f1238d347060f5da85f71971009ba6478f0)]:
+  - @ultraviolet/icons@3.2.0
+
 ## 1.72.1
 
 ### Patch Changes

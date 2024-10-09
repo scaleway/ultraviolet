@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.2.0
+
+### Minor Changes
+
+- [#4325](https://github.com/scaleway/ultraviolet/pull/4325) [`b1739f1`](https://github.com/scaleway/ultraviolet/commit/b1739f1238d347060f5da85f71971009ba6478f0) Thanks [@matthprost](https://github.com/matthprost)! - Add `interlink` as product icon
+
 ## 3.1.4
 
 ### Patch Changes
