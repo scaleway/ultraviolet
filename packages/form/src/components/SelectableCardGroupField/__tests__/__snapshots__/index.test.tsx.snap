@@ -333,13 +333,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
   fill: #ffffff;
 }
 
-.emotion-25 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-27 {
+.emotion-26 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -348,6 +342,10 @@ exports[`SelectableCardField > should render correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 <div
@@ -427,14 +425,10 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       </g>
                     </svg>
                     <label
-                      class="emotion-25 emotion-26"
+                      class="emotion-25 emotion-26 emotion-7"
                       for="test-radio 1"
                     >
-                      <label
-                        class="emotion-27 emotion-7"
-                      >
-                         Radio 1 
-                      </label>
+                       Radio 1 
                     </label>
                   </div>
                 </div>
@@ -493,14 +487,10 @@ exports[`SelectableCardField > should render correctly 1`] = `
                       </g>
                     </svg>
                     <label
-                      class="emotion-25 emotion-26"
+                      class="emotion-25 emotion-26 emotion-7"
                       for="test-radio 2"
                     >
-                      <label
-                        class="emotion-27 emotion-7"
-                      >
-                         Radio 2 
-                      </label>
+                       Radio 2 
                     </label>
                   </div>
                 </div>
@@ -665,7 +655,7 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .ehkrmld5,
+.emotion-10 .ehkrmld6,
 .emotion-10 .emotion-14 {
   width: 100%;
 }
@@ -692,7 +682,7 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
   pointer-events: none;
 }
 
-.emotion-13 .emotion-26 {
+.emotion-13 .eqr7bqq4 {
   cursor: pointer;
 }
 
@@ -701,7 +691,7 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
   color: #b5b7bd;
 }
 
-.emotion-13[aria-disabled='true'] .emotion-26 {
+.emotion-13[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
@@ -774,7 +764,7 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
   stroke: #e51963;
 }
 
-.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .eqr7bqq5 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .eqr7bqq6 {
   fill: #ffffff;
 }
 
@@ -973,11 +963,7 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
   flex: 1;
 }
 
-.emotion-25 {
-  width: 100%;
-}
-
-.emotion-27 {
+.emotion-26 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
@@ -987,6 +973,8 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  width: 100%;
+  cursor: pointer;
 }
 
 <div
@@ -1074,14 +1062,10 @@ exports[`SelectableCardField > should render correctly checked as a checkbox 1`]
                       class="emotion-23 emotion-1"
                     >
                       <label
-                        class="emotion-25 emotion-26"
+                        class="emotion-25 emotion-26 emotion-7"
                         for=":rg:"
                       >
-                        <label
-                          class="emotion-27 emotion-7"
-                        >
-                          Checkbox 1
-                        </label>
+                        Checkbox 1
                       </label>
                     </div>
                   </div>
@@ -1429,13 +1413,7 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
   fill: #ffffff;
 }
 
-.emotion-25 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-27 {
+.emotion-26 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -1444,6 +1422,10 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 <div
@@ -1525,14 +1507,10 @@ exports[`SelectableCardField > should render correctly checked as radiofield 1`]
                       </g>
                     </svg>
                     <label
-                      class="emotion-25 emotion-26"
+                      class="emotion-25 emotion-26 emotion-7"
                       for="test-checked"
                     >
-                      <label
-                        class="emotion-27 emotion-7"
-                      >
-                         Radio 1 
-                      </label>
+                       Radio 1 
                     </label>
                   </div>
                 </div>
@@ -1697,7 +1675,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.emotion-10 .ehkrmld5,
+.emotion-10 .ehkrmld6,
 .emotion-10 .emotion-14 {
   width: 100%;
 }
@@ -1724,7 +1702,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   pointer-events: none;
 }
 
-.emotion-13 .emotion-26 {
+.emotion-13 .eqr7bqq4 {
   cursor: pointer;
 }
 
@@ -1733,7 +1711,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-13[aria-disabled='true'] .emotion-26 {
+.emotion-13[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
@@ -1806,7 +1784,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   stroke: #e51963;
 }
 
-.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .eqr7bqq5 {
+.emotion-13 .emotion-16[aria-checked="mixed"]+.emotion-18 .eqr7bqq6 {
   fill: #ffffff;
 }
 
@@ -2005,11 +1983,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   flex: 1;
 }
 
-.emotion-25 {
-  width: 100%;
-}
-
-.emotion-27 {
+.emotion-26 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
@@ -2019,6 +1993,8 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  width: 100%;
+  cursor: pointer;
 }
 
 <div
@@ -2104,14 +2080,10 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                       class="emotion-23 emotion-1"
                     >
                       <label
-                        class="emotion-25 emotion-26"
+                        class="emotion-25 emotion-26 emotion-7"
                         for=":rl:"
                       >
-                        <label
-                          class="emotion-27 emotion-7"
-                        >
-                          Radio 1
-                        </label>
+                        Radio 1
                       </label>
                     </div>
                   </div>
@@ -2177,14 +2149,10 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                       class="emotion-23 emotion-1"
                     >
                       <label
-                        class="emotion-25 emotion-26"
+                        class="emotion-25 emotion-26 emotion-7"
                         for=":rp:"
                       >
-                        <label
-                          class="emotion-27 emotion-7"
-                        >
-                          Radio 2
-                        </label>
+                        Radio 2
                       </label>
                     </div>
                   </div>

@@ -15,7 +15,7 @@ exports[`CheckboxField > should render correctly 1`] = `
   gap: 8px;
 }
 
-.emotion-0 .eqr7bqq3 {
+.emotion-0 .eqr7bqq4 {
   cursor: pointer;
 }
 
@@ -24,7 +24,7 @@ exports[`CheckboxField > should render correctly 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
+.emotion-0[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
@@ -97,7 +97,7 @@ exports[`CheckboxField > should render correctly 1`] = `
   stroke: #e51963;
 }
 
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq6 {
   fill: #ffffff;
 }
 
@@ -353,7 +353,7 @@ exports[`CheckboxField > should render correctly checked without value 1`] = `
   gap: 8px;
 }
 
-.emotion-0 .eqr7bqq3 {
+.emotion-0 .eqr7bqq4 {
   cursor: pointer;
 }
 
@@ -362,7 +362,7 @@ exports[`CheckboxField > should render correctly checked without value 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
+.emotion-0[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
@@ -435,7 +435,7 @@ exports[`CheckboxField > should render correctly checked without value 1`] = `
   stroke: #e51963;
 }
 
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq6 {
   fill: #ffffff;
 }
 
@@ -692,7 +692,7 @@ exports[`CheckboxField > should render correctly disabled 1`] = `
   gap: 8px;
 }
 
-.emotion-0 .eqr7bqq3 {
+.emotion-0 .eqr7bqq4 {
   cursor: pointer;
 }
 
@@ -701,7 +701,7 @@ exports[`CheckboxField > should render correctly disabled 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
+.emotion-0[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
@@ -774,7 +774,7 @@ exports[`CheckboxField > should render correctly disabled 1`] = `
   stroke: #e51963;
 }
 
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq6 {
   fill: #ffffff;
 }
 
@@ -1031,7 +1031,7 @@ exports[`CheckboxField > should render correctly not checked without value 1`] =
   gap: 8px;
 }
 
-.emotion-0 .eqr7bqq3 {
+.emotion-0 .eqr7bqq4 {
   cursor: pointer;
 }
 
@@ -1040,7 +1040,7 @@ exports[`CheckboxField > should render correctly not checked without value 1`] =
   color: #b5b7bd;
 }
 
-.emotion-0[aria-disabled='true'] .eqr7bqq3 {
+.emotion-0[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
@@ -1113,7 +1113,7 @@ exports[`CheckboxField > should render correctly not checked without value 1`] =
   stroke: #e51963;
 }
 
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq6 {
   fill: #ffffff;
 }
 
@@ -1369,7 +1369,7 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
   gap: 8px;
 }
 
-.emotion-0 .emotion-13 {
+.emotion-0 .eqr7bqq4 {
   cursor: pointer;
 }
 
@@ -1378,7 +1378,7 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-0[aria-disabled='true'] .emotion-13 {
+.emotion-0[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
@@ -1451,7 +1451,7 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
   stroke: #e51963;
 }
 
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq6 {
   fill: #ffffff;
 }
 
@@ -1630,11 +1630,7 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
   flex: 1;
 }
 
-.emotion-12 {
-  width: 100%;
-}
-
-.emotion-14 {
+.emotion-13 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
@@ -1644,9 +1640,11 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  width: 100%;
+  cursor: pointer;
 }
 
-.emotion-17 {
+.emotion-16 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1716,18 +1714,14 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
             class="emotion-10 emotion-9"
           >
             <label
-              class="emotion-12 emotion-13"
+              class="emotion-12 emotion-13 emotion-14"
               for=":rb:"
             >
-              <label
-                class="emotion-14 emotion-15"
-              >
-                Checkbox field error
-              </label>
+              Checkbox field error
             </label>
           </div>
           <span
-            class="emotion-16 emotion-17 emotion-15"
+            class="emotion-15 emotion-16 emotion-14"
           >
             This field is required
           </span>
@@ -1756,7 +1750,7 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
   gap: 8px;
 }
 
-.emotion-0 .emotion-13 {
+.emotion-0 .eqr7bqq4 {
   cursor: pointer;
 }
 
@@ -1765,7 +1759,7 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
   color: #b5b7bd;
 }
 
-.emotion-0[aria-disabled='true'] .emotion-13 {
+.emotion-0[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
@@ -1838,7 +1832,7 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
   stroke: #e51963;
 }
 
-.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq5 {
+.emotion-0 .emotion-3[aria-checked="mixed"]+.emotion-5 .eqr7bqq6 {
   fill: #ffffff;
 }
 
@@ -2017,11 +2011,7 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
   flex: 1;
 }
 
-.emotion-12 {
-  width: 100%;
-}
-
-.emotion-14 {
+.emotion-13 {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
@@ -2031,6 +2021,8 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  width: 100%;
+  cursor: pointer;
 }
 
 <div
@@ -2089,14 +2081,10 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
             class="emotion-10 emotion-9"
           >
             <label
-              class="emotion-12 emotion-13"
+              class="emotion-12 emotion-13 emotion-14"
               for=":r8:"
             >
-              <label
-                class="emotion-14 emotion-15"
-              >
-                Checkbox field events
-              </label>
+              Checkbox field events
             </label>
           </div>
         </div>

@@ -137,6 +137,12 @@ const RadioContainer = styled.div`
 
 const StyledLabel = styled.label`
   flex: 1;
+  cursor: pointer;
+`
+
+const StyledTextLabel = styled(Text)`
+  flex: 1;
+  cursor: pointer;
 `
 
 const MargedText = styled(Text)`
@@ -236,16 +242,23 @@ export const Radio = forwardRef(
               <RadioMarkedIcon />
             </Ring>
             {label ? (
-              <StyledLabel htmlFor={`${computedName}-${value}`}>
+              <>
                 {typeof label === 'string' ? (
-                  <Text as="label" variant="body" prominence="default">
+                  <StyledTextLabel
+                    as="label"
+                    variant="body"
+                    prominence="default"
+                    htmlFor={`${computedName}-${value}`}
+                  >
                     {' '}
                     {label}{' '}
-                  </Text>
+                  </StyledTextLabel>
                 ) : (
-                  label
+                  <StyledLabel htmlFor={`${computedName}-${value}`}>
+                    {label}
+                  </StyledLabel>
                 )}
-              </StyledLabel>
+              </>
             ) : null}
           </RadioContainer>
           {helper ? (
