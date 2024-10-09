@@ -65,8 +65,7 @@ export const Illustration: StoryFn = args => {
           productIcon="macMiniM2"
           showTick
         >
-          Offer the best experience to your Mac, iPhone and iPad users with VNC,
-          the remote desktop-sharing protocol.
+          Offer the best experience to your Mac
           <Link target="_blank" href="scaleway.com">
             Learn more
           </Link>
@@ -120,8 +119,7 @@ export const Illustration: StoryFn = args => {
           illustration={appleSiliconM2Wire as string}
           showTick
         >
-          Offer the best experience to your Mac, iPhone and iPad users with VNC,
-          the remote desktop-sharing protocol.
+          Offer the best experience to your Mac
           <Link target="_blank" href="scaleway.com">
             Learn more
           </Link>

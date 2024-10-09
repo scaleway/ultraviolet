@@ -58,7 +58,7 @@ const Container = styled(Stack)`
 
   &[data-image="illustration"] {
     padding: ${({ theme }) => theme.space[0]};
-  } 
+  }
 
   &[data-image="icon"] {
     padding: ${({ theme }) => theme.space[0]};
@@ -80,34 +80,36 @@ const Container = styled(Stack)`
   }
 `
 const StyledDiv = styled.div`
-flex:1 1 220px;
-height: auto;
-overflow: hidden;
-display: flex;
-position: relative;
-align-items: center;
+  display: flex;
+  gap: 0px;
+  flex-flow: column;
+  align-items: normal;
+  justify-content: center;
+  min-width: 180px;
+  position: relative;
+  overflow: hidden;
 `
 
 const StyledImg = styled.img`
-object-fit: cover;
-position: absolute;
-min-width:220px;
-height: auto;
-left: ${({ theme }) => theme.space[1]};
+  object-fit: cover;
+  position: absolute;
+  min-width: 220px;
+  height: auto;
+  left: ${({ theme }) => theme.space[1]};
 `
 
 const StyledSVG = styled.div`
-object-fit: cover;
-position: absolute;
-min-width:220px;
-height: auto;
-left: ${({ theme }) => theme.space[1]};
+  object-fit: cover;
+  position: absolute;
+  min-width:220px;
+  height: auto;
+  left: ${({ theme }) => theme.space[1]};
 `
 
 const IllustrationStack = styled(Stack)`
-padding: ${({ theme }) => theme.space[2]};
-max-width:  calc(100% - 160px);
-flex: 0 1 auto;
+  padding: ${({ theme }) => theme.space[2]};
+  max-width:  calc(100% - 160px);
+  flex: 0 1 auto;
 `
 
 const StyledStack = styled(Stack)`
