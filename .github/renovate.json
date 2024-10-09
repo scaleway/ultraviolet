@@ -76,12 +76,14 @@
     {
       "labels": ["UPDATE-MINOR"],
       "stabilityDays": 5,
-      "matchUpdateTypes": ["minor"]
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
     },
     {
       "labels": ["UPDATE-PATCH"],
       "stabilityDays": 1,
-      "matchUpdateTypes": ["patch"]
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
     },
     {
       "matchDepTypes": ["engines"],
