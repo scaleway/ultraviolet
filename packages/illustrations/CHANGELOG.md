@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 3.3.5
+
+### Patch Changes
+
+- [#4309](https://github.com/scaleway/ultraviolet/pull/4309) [`cbfa90a`](https://github.com/scaleway/ultraviolet/commit/cbfa90a305ff80695d287dd7b84e4ec172220cae) Thanks [@lisalupi](https://github.com/lisalupi)! - New product illustration: `generativeAPI`
+
 ## 3.3.4
 
 ### Patch Changes
