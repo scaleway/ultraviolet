@@ -3972,20 +3972,26 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-27 {
-  -webkit-flex: 1 1 220px;
-  -ms-flex: 1 1 220px;
-  flex: 1 1 220px;
-  height: auto;
-  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0px;
+  -webkit-box-flex-flow: column;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 180px;
   position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  overflow: hidden;
 }
 
 .emotion-29 {
