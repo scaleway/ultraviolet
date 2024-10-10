@@ -26,7 +26,7 @@ export type DropdownProps = {
   descriptionDirection: 'row' | 'column'
   searchable: boolean
   placeholder: string
-  footer?: ReactNode
+  footer?: ((closeDropdown: () => void) => ReactNode) | ReactNode
   refSelect: RefObject<HTMLDivElement>
   loadMore?: ReactNode
   optionalInfoPlacement: 'left' | 'right'
@@ -221,14 +221,23 @@ const handleClickOutside = (
   refSelect: RefObject<HTMLDivElement>,
   onSearch: Dispatch<SetStateAction<DataType>>,
   options: DataType,
+  isInsideModal: boolean,
 ) => {
   if (
     ref.current &&
     !ref.current.contains(event.target as Node) &&
     !refSelect.current?.contains(event.target as Node)
   ) {
-    setIsDropdownVisibile(false) // hide dropdown when clicking outside of the dropdown
-    onSearch(options) // reset displayed options to default when dropdown is hidden
+    if (isInsideModal) {
+      // Timeout when the selectInput is inside a modal to not close both the modal and the dropdown if it scrolls
+      setTimeout(() => {
+        setIsDropdownVisibile(false) // hide dropdown when clicking outside of the dropdown
+        onSearch(options) // reset displayed options to default when dropdown is hidden
+      }, 100)
+    } else {
+      setIsDropdownVisibile(false)
+      onSearch(options)
+    }
   }
 }
 
@@ -682,6 +691,7 @@ export const Dropdown = ({
     searchInput,
     options,
     displayedOptions,
+    numberOfOptions,
   } = useSelectInput()
   const theme = useTheme()
   const [searchBarActive, setSearchBarActive] = useState(false)
@@ -738,16 +748,33 @@ export const Dropdown = ({
       setSearch('')
     }
 
-    document.addEventListener('mousedown', event =>
-      handleClickOutside(
-        event,
-        ref,
-        setIsDropdownVisible,
-        refSelect,
-        onSearch,
-        options,
-      ),
-    )
+    const modalElement = document.getElementById('backdrop-modal')
+
+    if (modalElement) {
+      modalElement.addEventListener('mousedown', event =>
+        handleClickOutside(
+          event,
+          ref,
+          setIsDropdownVisible,
+          refSelect,
+          onSearch,
+          options,
+          true,
+        ),
+      )
+    } else {
+      document.addEventListener('mousedown', event =>
+        handleClickOutside(
+          event,
+          ref,
+          setIsDropdownVisible,
+          refSelect,
+          onSearch,
+          options,
+          false,
+        ),
+      )
+    }
 
     if (!searchable) {
       document.addEventListener('keydown', event =>
@@ -764,16 +791,32 @@ export const Dropdown = ({
     }
 
     return () => {
-      document.removeEventListener('mousedown', event =>
-        handleClickOutside(
-          event,
-          ref,
-          setIsDropdownVisible,
-          refSelect,
-          onSearch,
-          options,
-        ),
-      )
+      if (!modalElement) {
+        document.removeEventListener('mousedown', event =>
+          handleClickOutside(
+            event,
+            ref,
+            setIsDropdownVisible,
+            refSelect,
+            onSearch,
+            options,
+            false,
+          ),
+        )
+      } else {
+        modalElement.addEventListener('mousedown', event =>
+          handleClickOutside(
+            event,
+            ref,
+            setIsDropdownVisible,
+            refSelect,
+            onSearch,
+            options,
+            true,
+          ),
+        )
+      }
+
       if (!searchable) {
         document.removeEventListener('keydown', event =>
           handleKeyDown(
@@ -800,7 +843,10 @@ export const Dropdown = ({
     searchable,
   ])
 
+  // No data is displayed (because of the search or because no data is provided)
+  // Set to true when noData by default
   const isEmpty = useMemo(() => {
+    if (numberOfOptions === 0) return true
     if (Array.isArray(displayedOptions)) {
       return !(displayedOptions.length > 0)
     }
@@ -812,14 +858,28 @@ export const Dropdown = ({
     }
 
     return true
-  }, [displayedOptions])
+  }, [displayedOptions, numberOfOptions])
+
+  const computedFooter = useMemo(() => {
+    if (footer) {
+      if (typeof footer === 'function') {
+        return (
+          <PopupFooter>{footer(() => setIsDropdownVisible(false))}</PopupFooter>
+        )
+      }
+
+      return <PopupFooter>{footer}</PopupFooter>
+    }
+
+    return null
+  }, [footer, setIsDropdownVisible])
 
   return (
     <StyledPopup
       visible={isDropdownVisible}
       text={
         <Stack>
-          {searchable && !isLoading ? (
+          {searchable && !isLoading && numberOfOptions >= 6 ? (
             <SearchBarDropdown
               placeholder={placeholder}
               displayedOptions={displayedOptions}
@@ -835,7 +895,7 @@ export const Dropdown = ({
             defaultSearchValue={defaultSearchValue}
             isLoading={isLoading}
           />
-          {footer ? <PopupFooter>{footer}</PopupFooter> : null}
+          {computedFooter}
         </Stack>
       }
       placement="bottom"
