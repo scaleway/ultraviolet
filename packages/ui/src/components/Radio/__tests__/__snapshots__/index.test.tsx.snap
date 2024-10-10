@@ -155,13 +155,7 @@ exports[`Radio > renders correctly 1`] = `
   fill: #ffffff;
 }
 
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-14 {
+.emotion-13 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -170,6 +164,10 @@ exports[`Radio > renders correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 <div
@@ -218,14 +216,10 @@ exports[`Radio > renders correctly 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13"
+          class="emotion-12 emotion-13 emotion-14"
           for="radio-choice"
         >
-          <label
-            class="emotion-14 emotion-15"
-          >
-             Choice 
-          </label>
+          Choice
         </label>
       </div>
     </div>
@@ -388,13 +382,7 @@ exports[`Radio > renders correctly when checked 1`] = `
   fill: #ffffff;
 }
 
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-14 {
+.emotion-13 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -403,6 +391,10 @@ exports[`Radio > renders correctly when checked 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 <div
@@ -452,14 +444,10 @@ exports[`Radio > renders correctly when checked 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13"
+          class="emotion-12 emotion-13 emotion-14"
           for="radio-choice"
         >
-          <label
-            class="emotion-14 emotion-15"
-          >
-             Choice 
-          </label>
+          Choice
         </label>
       </div>
     </div>
@@ -622,13 +610,7 @@ exports[`Radio > renders correctly when disabled 1`] = `
   fill: #ffffff;
 }
 
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-14 {
+.emotion-13 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -637,6 +619,10 @@ exports[`Radio > renders correctly when disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 <div
@@ -686,14 +672,10 @@ exports[`Radio > renders correctly when disabled 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13"
+          class="emotion-12 emotion-13 emotion-14"
           for="radio-choice"
         >
-          <label
-            class="emotion-14 emotion-15"
-          >
-             Choice 
-          </label>
+          Choice
         </label>
       </div>
     </div>
@@ -856,13 +838,7 @@ exports[`Radio > renders correctly when error 1`] = `
   fill: #ffffff;
 }
 
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-14 {
+.emotion-13 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -871,6 +847,10 @@ exports[`Radio > renders correctly when error 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 <div
@@ -920,14 +900,10 @@ exports[`Radio > renders correctly when error 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13"
+          class="emotion-12 emotion-13 emotion-14"
           for="radio-choice"
         >
-          <label
-            class="emotion-14 emotion-15"
-          >
-             Choice 
-          </label>
+          Choice
         </label>
       </div>
     </div>
@@ -1090,13 +1066,7 @@ exports[`Radio > renders correctly when helper 1`] = `
   fill: #ffffff;
 }
 
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-14 {
+.emotion-13 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -1105,9 +1075,13 @@ exports[`Radio > renders correctly when helper 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
-.emotion-17 {
+.emotion-16 {
   color: #727683;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1166,18 +1140,14 @@ exports[`Radio > renders correctly when helper 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13"
+          class="emotion-12 emotion-13 emotion-14"
           for="radio-choice"
         >
-          <label
-            class="emotion-14 emotion-15"
-          >
-             Choice 
-          </label>
+          Choice
         </label>
       </div>
       <span
-        class="emotion-16 emotion-17 emotion-15"
+        class="emotion-15 emotion-16 emotion-14"
       >
         Helper
       </span>
@@ -1349,13 +1319,7 @@ exports[`Radio > renders correctly with tooltip 1`] = `
   fill: #ffffff;
 }
 
-.emotion-14 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-16 {
+.emotion-15 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -1364,6 +1328,10 @@ exports[`Radio > renders correctly with tooltip 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 <div
@@ -1418,14 +1386,10 @@ exports[`Radio > renders correctly with tooltip 1`] = `
             </g>
           </svg>
           <label
-            class="emotion-14 emotion-15"
+            class="emotion-14 emotion-15 emotion-16"
             for="radio-choice"
           >
-            <label
-              class="emotion-16 emotion-17"
-            >
-               Choice 
-            </label>
+            Choice
           </label>
         </div>
       </div>
@@ -1589,13 +1553,7 @@ exports[`Radio > renders without name 1`] = `
   fill: #ffffff;
 }
 
-.emotion-12 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-14 {
+.emotion-13 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -1604,6 +1562,10 @@ exports[`Radio > renders without name 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 <div
@@ -1653,14 +1615,10 @@ exports[`Radio > renders without name 1`] = `
           </g>
         </svg>
         <label
-          class="emotion-12 emotion-13"
+          class="emotion-12 emotion-13 emotion-14"
           for=":r9:-choice"
         >
-          <label
-            class="emotion-14 emotion-15"
-          >
-             Choice 
-          </label>
+          Choice
         </label>
       </div>
     </div>

@@ -57,6 +57,12 @@ const StyledIcon = styled('svg')<{ size: number }>`
 `
 const StyledLabel = styled('label')`
   width: 100%;
+  cursor: pointer;
+`
+
+const StyledTextLabel = styled(Text)`
+  width: 100%;
+  cursor: pointer;
 `
 
 const CheckboxInput = styled('input', {
@@ -410,20 +416,21 @@ export const Checkbox = forwardRef(
           <Stack gap={0.5} flex={1}>
             <Stack gap={0.5} direction="row" alignItems="center" flex={1}>
               {children ? (
-                <StyledLabel htmlFor={localId}>
+                <>
                   {typeof children === 'string' ? (
-                    <Text
+                    <StyledTextLabel
                       as="label"
                       variant="body"
                       sentiment="neutral"
                       prominence="default"
+                      htmlFor={localId}
                     >
                       {children}
-                    </Text>
+                    </StyledTextLabel>
                   ) : (
-                    children
+                    <StyledLabel htmlFor={localId}>{children}</StyledLabel>
                   )}
-                </StyledLabel>
+                </>
               ) : null}
               {required ? (
                 <sup>

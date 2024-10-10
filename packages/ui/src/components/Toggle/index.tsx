@@ -239,7 +239,7 @@ export const Toggle = forwardRef(
               <Row templateColumns="auto 1fr" gap={1} alignItems="center">
                 {typeof label === 'string' ? (
                   <Text
-                    as="label"
+                    as="span"
                     variant={size === 'large' ? 'body' : 'bodySmall'}
                     prominence="default"
                     sentiment="neutral"
