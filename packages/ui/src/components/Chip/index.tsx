@@ -59,7 +59,7 @@ const StyledContainer = styled(Stack)`
     text-transform: ${theme.typography.caption.textCase};
     text-decoration: ${theme.typography.caption.textDecoration};
     height: ${theme.space[3]};
-`}
+    padding: ${theme.space['0.5']} ${theme.space['1.5']};`}
   }
 
   &[data-size='large']{
@@ -71,7 +71,9 @@ const StyledContainer = styled(Stack)`
     line-height: ${theme.typography.bodySmall.lineHeight};
     text-transform: ${theme.typography.bodySmall.textCase};
     text-decoration: ${theme.typography.bodySmall.textDecoration};
-    height: ${theme.space[4]}`}
+    height: ${theme.space[4]};
+    padding: ${theme.space['0.5']} ${theme.space['2']};`}
+
   }
   `
 type ChipType = {
@@ -103,7 +105,10 @@ export const Chip = ({
 
     return 'default'
   }, [isActive, disabled])
-  const value = useMemo(() => ({ isActive, disabled }), [isActive, disabled])
+  const value = useMemo(
+    () => ({ isActive, disabled, chipContext: true }),
+    [isActive, disabled],
+  )
   useEffect(() => {
     setIsActive(active)
   }, [active])

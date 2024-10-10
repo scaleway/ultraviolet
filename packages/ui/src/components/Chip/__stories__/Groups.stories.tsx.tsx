@@ -7,7 +7,6 @@ import { Text } from '../../Text'
 export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
   const [singleSelected, setSingleSelected] = useState(-1)
   const [multiSelected, setMultiSelected] = useState<number[]>([])
-  console.log(multiSelected)
 
   return (
     <Stack direction="column" gap={3}>

@@ -83,6 +83,7 @@ exports[`Checkbox > renders correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 24px;
+  padding: 4px 12px;
 }
 
 .emotion-0[data-size='large'] {
@@ -95,6 +96,7 @@ exports[`Checkbox > renders correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 32px;
+  padding: 4px 16px;
 }
 
 <div
@@ -196,6 +198,7 @@ exports[`Checkbox > renders correctly active 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 24px;
+  padding: 4px 12px;
 }
 
 .emotion-0[data-size='large'] {
@@ -208,6 +211,7 @@ exports[`Checkbox > renders correctly active 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 32px;
+  padding: 4px 16px;
 }
 
 .emotion-2 {
@@ -218,11 +222,15 @@ exports[`Checkbox > renders correctly active 1`] = `
   border-radius: 4px;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="false"]:hover {
+.emotion-2[data-type="trailing"] {
+  margin-right: -4px;
+}
+
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
@@ -255,12 +263,12 @@ exports[`Checkbox > renders correctly active 1`] = `
       data-size="medium"
     >
       test 
-      <button
+      <div
         class="emotion-2 emotion-3"
         data-active="true"
         data-disabled="false"
         data-has-onclick="false"
-        type="button"
+        data-type="trailing"
       >
         <svg
           class="emotion-4 emotion-5"
@@ -272,7 +280,7 @@ exports[`Checkbox > renders correctly active 1`] = `
             fill-rule="evenodd"
           />
         </svg>
-      </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -361,6 +369,7 @@ exports[`Checkbox > renders correctly active disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 24px;
+  padding: 4px 12px;
 }
 
 .emotion-0[data-size='large'] {
@@ -373,6 +382,7 @@ exports[`Checkbox > renders correctly active disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 32px;
+  padding: 4px 16px;
 }
 
 .emotion-2 {
@@ -383,11 +393,15 @@ exports[`Checkbox > renders correctly active disabled 1`] = `
   border-radius: 4px;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="false"]:hover {
+.emotion-2[data-type="trailing"] {
+  margin-right: -4px;
+}
+
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
@@ -420,12 +434,12 @@ exports[`Checkbox > renders correctly active disabled 1`] = `
       data-size="medium"
     >
       test 
-      <button
+      <div
         class="emotion-2 emotion-3"
         data-active="true"
         data-disabled="true"
         data-has-onclick="false"
-        type="button"
+        data-type="trailing"
       >
         <svg
           class="emotion-4 emotion-5"
@@ -437,7 +451,7 @@ exports[`Checkbox > renders correctly active disabled 1`] = `
             fill-rule="evenodd"
           />
         </svg>
-      </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -526,6 +540,7 @@ exports[`Checkbox > renders correctly disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 24px;
+  padding: 4px 12px;
 }
 
 .emotion-0[data-size='large'] {
@@ -538,6 +553,7 @@ exports[`Checkbox > renders correctly disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 32px;
+  padding: 4px 16px;
 }
 
 .emotion-2 {
@@ -548,11 +564,15 @@ exports[`Checkbox > renders correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="false"]:hover {
+.emotion-2[data-type="trailing"] {
+  margin-right: -4px;
+}
+
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
@@ -585,12 +605,12 @@ exports[`Checkbox > renders correctly disabled 1`] = `
       data-size="medium"
     >
       test 
-      <button
+      <div
         class="emotion-2 emotion-3"
         data-active="false"
         data-disabled="true"
         data-has-onclick="false"
-        type="button"
+        data-type="trailing"
       >
         <svg
           class="emotion-4 emotion-5"
@@ -602,7 +622,7 @@ exports[`Checkbox > renders correctly disabled 1`] = `
             fill-rule="evenodd"
           />
         </svg>
-      </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -691,6 +711,7 @@ exports[`Checkbox > renders correctly large 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 24px;
+  padding: 4px 12px;
 }
 
 .emotion-0[data-size='large'] {
@@ -703,6 +724,7 @@ exports[`Checkbox > renders correctly large 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 32px;
+  padding: 4px 16px;
 }
 
 .emotion-2 {
@@ -713,11 +735,15 @@ exports[`Checkbox > renders correctly large 1`] = `
   border-radius: 4px;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="false"]:hover {
+.emotion-2[data-type="trailing"] {
+  margin-right: -4px;
+}
+
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
@@ -750,12 +776,12 @@ exports[`Checkbox > renders correctly large 1`] = `
       data-size="large"
     >
       test 
-      <button
+      <div
         class="emotion-2 emotion-3"
         data-active="false"
         data-disabled="false"
         data-has-onclick="false"
-        type="button"
+        data-type="trailing"
       >
         <svg
           class="emotion-4 emotion-5"
@@ -767,7 +793,7 @@ exports[`Checkbox > renders correctly large 1`] = `
             fill-rule="evenodd"
           />
         </svg>
-      </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -856,6 +882,7 @@ exports[`Checkbox > renders correctly wiht icon 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 24px;
+  padding: 4px 12px;
 }
 
 .emotion-0[data-size='large'] {
@@ -868,6 +895,7 @@ exports[`Checkbox > renders correctly wiht icon 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 32px;
+  padding: 4px 16px;
 }
 
 .emotion-2 {
@@ -878,11 +906,15 @@ exports[`Checkbox > renders correctly wiht icon 1`] = `
   border-radius: 4px;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="false"]:hover {
+.emotion-2[data-type="trailing"] {
+  margin-right: -4px;
+}
+
+.emotion-2[data-has-onclick="true"][data-active="false"]:hover {
   background-color: #d9dadd;
 }
 
-.emotion-2[data-has-onclick='true'][data-active="true"]:hover {
+.emotion-2[data-has-onclick="true"][data-active="true"]:hover {
   background-color: #8c40ef;
 }
 
@@ -914,13 +946,12 @@ exports[`Checkbox > renders correctly wiht icon 1`] = `
       data-prominence="default"
       data-size="medium"
     >
-      test
       <button
         class="emotion-2 emotion-3"
         data-active="false"
         data-disabled="false"
         data-has-onclick="true"
-        type="button"
+        data-type="leading"
       >
         <svg
           class="emotion-4 emotion-5"
@@ -933,6 +964,7 @@ exports[`Checkbox > renders correctly wiht icon 1`] = `
           />
         </svg>
       </button>
+      test
     </div>
   </div>
 </DocumentFragment>
