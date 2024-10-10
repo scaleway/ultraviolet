@@ -104,7 +104,7 @@ const StyledInputWrapper = styled(Stack)<{
       border-color: ${({ theme }) => theme.colors.success.borderHover};
       box-shadow: ${({ theme }) => theme.shadows.focusSuccess};
     }
-  
+
     &[data-dropdownvisible='true'] {
       border-color: ${({ theme }) => theme.colors.success.borderHover};
     }
@@ -117,7 +117,7 @@ const StyledInputWrapper = styled(Stack)<{
       border-color: ${({ theme }) => theme.colors.danger.borderHover};
       box-shadow: ${({ theme }) => theme.shadows.focusDanger};
     }
-  
+
     &[data-dropdownvisible='true'] {
       border-color: ${({ theme }) => theme.colors.danger.borderHover};
     }
@@ -145,7 +145,7 @@ const CustomTag = styled(Tag)`
 `
 const SelectedValues = styled(Text)`
 text-overflow: ellipsis;
-overflow: hidden; 
+overflow: hidden;
 `
 
 const isValidSelectedValue = (selectedValue: string, options: DataType) =>
@@ -367,7 +367,7 @@ export const SelectBar = ({
         tabIndex={0}
         aria-label={label}
       >
-        {selectedData.selectedValues.length > 0 ? (
+        {nonOverflowedValues.length > 0 ? (
           <DisplayValues
             refTag={refTag}
             nonOverflowedValues={nonOverflowedValues}
