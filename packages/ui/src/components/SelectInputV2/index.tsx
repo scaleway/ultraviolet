@@ -77,7 +77,7 @@ type SelectInputV2Props<IsMulti extends undefined | boolean = false> = {
   /**
    * To add custom fixed elements at the bottom of the dropdown
    */
-  footer?: ReactNode
+  footer?: ((closeDropdown: () => void) => ReactNode) | ReactNode
   /**
    * Display an error message under the select bar
    */
@@ -159,7 +159,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
   searchable = true,
   disabled = false,
   readOnly = false,
-  clearable = true,
+  clearable = false,
   multiselect = false,
   required = false,
   labelDescription,
