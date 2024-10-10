@@ -250,7 +250,7 @@ export const Radio = forwardRef(
                     prominence="default"
                     htmlFor={`${computedName}-${value}`}
                   >
-                    &nbsp;{label}&nbsp;
+                    {label}
                   </StyledTextLabel>
                 ) : (
                   <StyledLabel htmlFor={`${computedName}-${value}`}>
