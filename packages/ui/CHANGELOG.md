@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.72.3
+
+### Patch Changes
+
+- [#4334](https://github.com/scaleway/ultraviolet/pull/4334) [`501e353`](https://github.com/scaleway/ultraviolet/commit/501e3532f3dc8e0ddecd58e3d30d63c9776a524d) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Checkbox />`, `<Radio />` and `<Toggle />`, cannot click on label to check
+
 ## 1.72.2
 
 ### Patch Changes
