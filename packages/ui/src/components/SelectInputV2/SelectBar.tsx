@@ -328,6 +328,28 @@ export const SelectBar = ({
     setSelectedData({ type: 'update' })
   }, [setSelectedData, options])
 
+  const shouldDisplayValues = useMemo(() => {
+    if (multiselect) {
+      return (
+        nonOverflowedValues.length > 0 ||
+        selectedData.selectedValues.some(
+          selectedValue =>
+            findOptionInOptions(options, selectedValue) !== undefined,
+        )
+      )
+    }
+
+    return (
+      selectedData.selectedValues[0] !== undefined &&
+      findOptionInOptions(options, selectedData.selectedValues[0]) !== undefined
+    )
+  }, [
+    multiselect,
+    nonOverflowedValues.length,
+    options,
+    selectedData.selectedValues,
+  ])
+
   return (
     <Tooltip text={tooltip}>
       <StyledInputWrapper
@@ -367,7 +389,7 @@ export const SelectBar = ({
         tabIndex={0}
         aria-label={label}
       >
-        {nonOverflowedValues.length > 0 ? (
+        {shouldDisplayValues ? (
           <DisplayValues
             refTag={refTag}
             nonOverflowedValues={nonOverflowedValues}
