@@ -441,8 +441,7 @@ const CreateDropdown = ({
           ) : null}
           {Object.keys(displayedOptions).map((group, index) => (
             <Stack key={group} gap={0.25}>
-              {displayedOptions[group].length > 0 ||
-              (!Array.isArray(options) && options[group].length === 0) ? (
+              {displayedOptions[group].length > 0 ? (
                 <DropdownGroupWrapper id={selectAllGroup ? 'items' : undefined}>
                   {group ? (
                     <DropdownGroup
