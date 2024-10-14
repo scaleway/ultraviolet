@@ -504,6 +504,7 @@ describe('SelectInputV2', () => {
         placeholder="placeholder"
         placeholderSearch="placeholdersearch"
         searchable={false}
+        clearable
         value={dataUnGrouped[4].value}
       />,
     )
@@ -1232,6 +1233,45 @@ describe('SelectInputV2', () => {
     )
     const input = screen.getByText('placeholder')
     await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test.skip('renders correctly with function footer', async () => {
+    const f = vi.fn(() => {})
+
+    const { asFragment } = renderWithTheme(
+      <SelectInputV2
+        name="test"
+        options={dataGrouped}
+        placeholder="placeholder"
+        placeholderSearch="placeholdersearch"
+        value={dataGrouped['terrestrial planets'][4].value}
+        footer={closeDropdown => (
+          <button
+            onClick={() => {
+              f()
+              closeDropdown()
+            }}
+            type="button"
+            data-testid="buttonclose"
+          >
+            click
+          </button>
+        )}
+      />,
+    )
+    const input = screen.getByText('Pluto')
+    await userEvent.click(input)
+
+    const footer = screen.getByTestId('buttonclose')
+    const dropdown = screen.getByRole('dialog')
+    expect(dropdown).toBeVisible()
+
+    await userEvent.click(footer)
+
+    expect(f).toHaveBeenCalledOnce()
+    setTimeout(() => expect(dropdown).not.toBeVisible(), 500)
+
     expect(asFragment()).toMatchSnapshot()
   })
 })

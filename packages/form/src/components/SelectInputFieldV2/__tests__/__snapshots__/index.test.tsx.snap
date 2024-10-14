@@ -207,74 +207,6 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
 }
 
 .emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-13:hover,
-.emotion-13:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-15 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-17 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -283,12 +215,12 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   min-height: 16px;
 }
 
-.emotion-17 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
 
-.emotion-20 {
+.emotion-16 {
   background: #151a2d;
   color: #ffffff;
   border-radius: 4px;
@@ -315,12 +247,12 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 80px;
 }
 
-.emotion-20[data-animated="true"] {
+.emotion-16[data-animated="true"] {
   -webkit-animation: 0ms animation-0 forwards;
   animation: 0ms animation-0 forwards;
 }
 
-.emotion-20[data-has-arrow="true"]::after {
+.emotion-16[data-has-arrow="true"]::after {
   content: " ";
   position: absolute;
   top: -5px;
@@ -336,11 +268,11 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   pointer-events: none;
 }
 
-.emotion-20[data-visible-in-dom="false"] {
+.emotion-16[data-visible-in-dom="false"] {
   display: none;
 }
 
-.emotion-22 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -363,7 +295,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   flex-wrap: nowrap;
 }
 
-.emotion-24 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -391,11 +323,11 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   padding-top: 4px;
 }
 
-.emotion-24[data-grouped="true"] {
+.emotion-20[data-grouped="true"] {
   padding-top: 0;
 }
 
-.emotion-26 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -418,13 +350,13 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   flex-wrap: nowrap;
 }
 
-.emotion-28 {
+.emotion-24 {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
 }
 
-.emotion-30 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -450,21 +382,21 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   margin-bottom: 2px;
 }
 
-.emotion-30:focus {
+.emotion-26:focus {
   background-color: #f9f9fa;
   outline: none;
 }
 
-.emotion-30[data-selectgroup='true'] {
+.emotion-26[data-selectgroup='true'] {
   padding-left: 16px;
   border-left: 4px solid #f9f9fa;
 }
 
-.emotion-30[data-selectgroup='true']:focus {
+.emotion-26[data-selectgroup='true']:focus {
   background-color: #e9eaeb;
 }
 
-.emotion-32 {
+.emotion-28 {
   color: #3f4250;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -477,7 +409,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   text-align: left;
 }
 
-.emotion-36 {
+.emotion-32 {
   text-align: left;
   border: none;
   background-color: #ffffff;
@@ -488,32 +420,32 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   border-radius: 4px;
 }
 
-.emotion-36:hover,
-.emotion-36:focus {
+.emotion-32:hover,
+.emotion-32:focus {
   background-color: #f1eefc;
   color: #641cb3;
   cursor: pointer;
   outline: none;
 }
 
-.emotion-36[data-selected='true'] {
+.emotion-32[data-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-36[disabled] {
+.emotion-32[disabled] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-36[disabled]:hover,
-.emotion-36 [disabled]:focus {
+.emotion-32[disabled]:hover,
+.emotion-32 [disabled]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
   outline: none;
 }
 
-.emotion-40 {
+.emotion-36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -536,7 +468,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   overflow: hidden;
 }
 
-.emotion-43 {
+.emotion-39 {
   font-size: 16px;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -558,7 +490,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   max-width: 100%;
 }
 
-.emotion-63 {
+.emotion-59 {
   color: #727683;
   font-size: 14px;
   font-family: Inter,Asap,sans-serif;
@@ -614,25 +546,9 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
               <div
                 class="emotion-11 emotion-12"
               >
-                <button
-                  aria-label="clear value"
-                  class="emotion-13 emotion-14"
-                  data-testid="clear-all"
-                  type="button"
-                >
-                  <svg
-                    class="emotion-15 emotion-16"
-                    viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-                    />
-                  </svg>
-                </button>
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-17 emotion-18"
+                  class="emotion-13 emotion-14"
                   viewBox="0 0 20 20"
                 >
                   <path
@@ -645,7 +561,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
             </div>
           </div>
           <div
-            class="emotion-19 emotion-20 emotion-21"
+            class="emotion-15 emotion-16 emotion-17"
             data-animated="false"
             data-has-arrow="false"
             id=":rh:"
@@ -653,22 +569,22 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
             style="opacity: 1;"
           >
             <div
-              class="emotion-22 emotion-5"
+              class="emotion-18 emotion-5"
             >
               <div
-                class="emotion-24 emotion-25"
+                class="emotion-20 emotion-21"
                 data-grouped="true"
                 id="select-dropdown"
                 role="listbox"
               >
                 <div
-                  class="emotion-26 emotion-5"
+                  class="emotion-22 emotion-5"
                 >
                   <div
-                    class="emotion-28 emotion-29"
+                    class="emotion-24 emotion-25"
                   >
                     <button
-                      class="emotion-30 emotion-31"
+                      class="emotion-26 emotion-27"
                       data-selectgroup="false"
                       data-testid="group-0"
                       role="group"
@@ -676,19 +592,19 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       type="button"
                     >
                       <span
-                        class="emotion-32 emotion-10"
+                        class="emotion-28 emotion-10"
                       >
                         TERRESTRIAL PLANETS
                       </span>
                     </button>
                   </div>
                   <div
-                    class="emotion-26 emotion-5"
+                    class="emotion-22 emotion-5"
                     id="items"
                   >
                     <div
                       aria-label="mercury"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="true"
                       data-testid="option-mercury"
                       id="option-0"
@@ -700,10 +616,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-mercury"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Mercury
                           </span>
@@ -712,7 +628,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     </div>
                     <div
                       aria-label="venus"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="false"
                       data-testid="option-venus"
                       id="option-1"
@@ -724,10 +640,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-venus"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Venus
                           </span>
@@ -736,7 +652,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     </div>
                     <div
                       aria-label="earth"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="false"
                       data-testid="option-earth"
                       id="option-2"
@@ -748,16 +664,16 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-earth"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Earth
                           </span>
                         </div>
                         <span
-                          class="emotion-63 emotion-10"
+                          class="emotion-59 emotion-10"
                         >
                           Our home planet
                         </span>
@@ -765,7 +681,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     </div>
                     <div
                       aria-label="mars"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="false"
                       data-testid="option-mars"
                       disabled=""
@@ -778,10 +694,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-mars"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Mars
                           </span>
@@ -790,7 +706,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     </div>
                     <div
                       aria-label="pluto"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="false"
                       data-testid="option-pluto"
                       id="option-4"
@@ -802,16 +718,16 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-pluto"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Pluto
                           </span>
                         </div>
                         <span
-                          class="emotion-63 emotion-10"
+                          class="emotion-59 emotion-10"
                         >
                           Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky
                         </span>
@@ -820,13 +736,13 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                   </div>
                 </div>
                 <div
-                  class="emotion-26 emotion-5"
+                  class="emotion-22 emotion-5"
                 >
                   <div
-                    class="emotion-28 emotion-29"
+                    class="emotion-24 emotion-25"
                   >
                     <button
-                      class="emotion-30 emotion-31"
+                      class="emotion-26 emotion-27"
                       data-selectgroup="false"
                       data-testid="group-1"
                       role="group"
@@ -834,19 +750,19 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       type="button"
                     >
                       <span
-                        class="emotion-32 emotion-10"
+                        class="emotion-28 emotion-10"
                       >
                         JOVIAN PLANETS
                       </span>
                     </button>
                   </div>
                   <div
-                    class="emotion-26 emotion-5"
+                    class="emotion-22 emotion-5"
                     id="items"
                   >
                     <div
                       aria-label="jupiter"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="false"
                       data-testid="option-jupiter"
                       id="option-0"
@@ -858,16 +774,16 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-jupiter"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Jupiter
                           </span>
                         </div>
                         <span
-                          class="emotion-63 emotion-10"
+                          class="emotion-59 emotion-10"
                         >
                           Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets in the Solar System combined, and slightly less than one one-thousandth the mass of the Sun.
                         </span>
@@ -875,7 +791,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     </div>
                     <div
                       aria-label="saturn"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="false"
                       data-testid="option-saturn"
                       id="option-1"
@@ -887,10 +803,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-saturn"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Saturn
                           </span>
@@ -899,7 +815,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     </div>
                     <div
                       aria-label="uranus"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="false"
                       data-testid="option-uranus"
                       id="option-2"
@@ -911,10 +827,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-uranus"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Uranus
                           </span>
@@ -923,7 +839,7 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     </div>
                     <div
                       aria-label="neptune"
-                      class="emotion-36 emotion-37"
+                      class="emotion-32 emotion-33"
                       data-selected="false"
                       data-testid="option-neptune"
                       id="option-3"
@@ -935,10 +851,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                         data-testid="option-stack-neptune"
                       >
                         <div
-                          class="emotion-40 emotion-41"
+                          class="emotion-36 emotion-37"
                         >
                           <span
-                            class="emotion-42 emotion-43 emotion-10"
+                            class="emotion-38 emotion-39 emotion-10"
                           >
                             Neptune
                           </span>
@@ -2218,74 +2134,6 @@ exports[`SelectInputField > should trigger events 1`] = `
 }
 
 .emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-13:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-13:hover,
-.emotion-13:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-15 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-15 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-17 {
   vertical-align: middle;
   fill: #3f4250;
   height: 16px;
@@ -2294,7 +2142,7 @@ exports[`SelectInputField > should trigger events 1`] = `
   min-height: 16px;
 }
 
-.emotion-17 .fillStroke {
+.emotion-13 .fillStroke {
   stroke: #3f4250;
   fill: none;
 }
@@ -2310,8 +2158,8 @@ exports[`SelectInputField > should trigger events 1`] = `
         class="emotion-0 emotion-1"
       >
         <div
-          aria-controls=":r1e:"
-          aria-describedby=":r1e:"
+          aria-controls=":r1d:"
+          aria-describedby=":r1d:"
           class="emotion-2 emotion-3"
           data-container-full-width="true"
           tabindex="0"
@@ -2330,7 +2178,7 @@ exports[`SelectInputField > should trigger events 1`] = `
               data-size="large"
               data-state="neutral"
               data-testid="select-input-test"
-              id=":r1d:"
+              id=":r1c:"
               role="combobox"
               tabindex="0"
             >
@@ -2342,25 +2190,9 @@ exports[`SelectInputField > should trigger events 1`] = `
               <div
                 class="emotion-11 emotion-12"
               >
-                <button
-                  aria-label="clear value"
-                  class="emotion-13 emotion-14"
-                  data-testid="clear-all"
-                  type="button"
-                >
-                  <svg
-                    class="emotion-15 emotion-16"
-                    viewBox="0 0 16 16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
-                    />
-                  </svg>
-                </button>
                 <svg
                   aria-label="show dropdown"
-                  class="emotion-17 emotion-18"
+                  class="emotion-13 emotion-14"
                   viewBox="0 0 20 20"
                 >
                   <path
