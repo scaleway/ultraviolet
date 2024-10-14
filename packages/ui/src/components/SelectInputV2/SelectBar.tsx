@@ -104,7 +104,7 @@ const StyledInputWrapper = styled(Stack)<{
       border-color: ${({ theme }) => theme.colors.success.borderHover};
       box-shadow: ${({ theme }) => theme.shadows.focusSuccess};
     }
-  
+
     &[data-dropdownvisible='true'] {
       border-color: ${({ theme }) => theme.colors.success.borderHover};
     }
@@ -117,7 +117,7 @@ const StyledInputWrapper = styled(Stack)<{
       border-color: ${({ theme }) => theme.colors.danger.borderHover};
       box-shadow: ${({ theme }) => theme.shadows.focusDanger};
     }
-  
+
     &[data-dropdownvisible='true'] {
       border-color: ${({ theme }) => theme.colors.danger.borderHover};
     }
@@ -145,7 +145,7 @@ const CustomTag = styled(Tag)`
 `
 const SelectedValues = styled(Text)`
 text-overflow: ellipsis;
-overflow: hidden; 
+overflow: hidden;
 `
 
 const isValidSelectedValue = (selectedValue: string, options: DataType) =>
@@ -328,6 +328,28 @@ export const SelectBar = ({
     setSelectedData({ type: 'update' })
   }, [setSelectedData, options])
 
+  const shouldDisplayValues = useMemo(() => {
+    if (multiselect) {
+      return (
+        nonOverflowedValues.length > 0 ||
+        selectedData.selectedValues.some(
+          selectedValue =>
+            findOptionInOptions(options, selectedValue) !== undefined,
+        )
+      )
+    }
+
+    return (
+      selectedData.selectedValues[0] !== undefined &&
+      findOptionInOptions(options, selectedData.selectedValues[0]) !== undefined
+    )
+  }, [
+    multiselect,
+    nonOverflowedValues.length,
+    options,
+    selectedData.selectedValues,
+  ])
+
   return (
     <Tooltip text={tooltip}>
       <StyledInputWrapper
@@ -367,7 +389,7 @@ export const SelectBar = ({
         tabIndex={0}
         aria-label={label}
       >
-        {selectedData.selectedValues.length > 0 ? (
+        {shouldDisplayValues ? (
           <DisplayValues
             refTag={refTag}
             nonOverflowedValues={nonOverflowedValues}
