@@ -1631,20 +1631,6 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
 }
 
 .emotion-13 {
-  color: #3f4250;
-  font-size: 16px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-16 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1671,10 +1657,10 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
       >
         <input
           aria-checked="false"
-          aria-describedby=":rb:-hint"
+          aria-describedby=":ra:-hint"
           aria-invalid="true"
           class="emotion-2 emotion-3"
-          id=":rb:"
+          id=":ra:"
           name="test"
           type="checkbox"
           value=""
@@ -1712,16 +1698,9 @@ exports[`CheckboxField > should render correctly with errors 1`] = `
         >
           <div
             class="emotion-10 emotion-9"
-          >
-            <label
-              class="emotion-12 emotion-13 emotion-14"
-              for=":rb:"
-            >
-              Checkbox field error
-            </label>
-          </div>
+          />
           <span
-            class="emotion-15 emotion-16 emotion-14"
+            class="emotion-12 emotion-13 emotion-14"
           >
             This field is required
           </span>
@@ -2011,20 +1990,6 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
   flex: 1;
 }
 
-.emotion-13 {
-  color: #3f4250;
-  font-size: 16px;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 100%;
-  cursor: pointer;
-}
-
 <div
     data-testid="testing"
   >
@@ -2079,14 +2044,7 @@ exports[`CheckboxField > should trigger events correctly 1`] = `
         >
           <div
             class="emotion-10 emotion-9"
-          >
-            <label
-              class="emotion-12 emotion-13 emotion-14"
-              for=":r8:"
-            >
-              Checkbox field events
-            </label>
-          </div>
+          />
         </div>
       </div>
     </form>

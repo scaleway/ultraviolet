@@ -8,7 +8,6 @@ import type {
   ReactNode,
 } from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
-import type { XOR } from '../../types'
 import { Loader } from '../Loader'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -265,6 +264,16 @@ const StyledActivityContainer = styled.div`
   display: flex;
 `
 
+type LabelProp =
+  | {
+      children: ReactNode
+      'aria-label'?: never
+    }
+  | {
+      children?: never
+      'aria-label': string
+    }
+
 type CheckboxProps = {
   error?: string | ReactNode
   /**
@@ -294,19 +303,7 @@ type CheckboxProps = {
   | 'onChange'
   | 'tabIndex'
 > &
-  XOR<
-    [
-      {
-        /**
-         * **`children` or `aria-label` property is required**
-         */
-        'aria-label': string
-      },
-      {
-        children: ReactNode
-      },
-    ]
-  >
+  LabelProp
 
 /**
  * Checkbox is an input component used to select or deselect an option.

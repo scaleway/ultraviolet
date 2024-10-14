@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import type {
   Control,
   FieldError,
@@ -60,3 +61,36 @@ export type BaseFieldProps<
   >['shouldUnregister']
   control?: Control<TFieldValues>
 }
+
+/**
+ * Classic prop type where label is a ReactNode and aria-label is a string.
+ * One or another is required.
+ */
+export type LabelProp =
+  | {
+      label: ReactNode
+      'aria-label'?: never
+    }
+  | {
+      label?: never
+      'aria-label': string
+    }
+
+export type PascalToCamelCase<S extends string> =
+  S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
+
+export type RemoveSuffix<
+  S extends string,
+  Suffix extends string,
+> = S extends `${infer Prefix}${Suffix}` ? Prefix : S
+
+/**
+ * This type removes the suffix from a PascalCase string and converts it to camelCase. Pretty useful for Icon, CategoryIcon and ProductIcon components.
+ * Their names being `AddressIcon` but we might need to have `address` as the prop name.
+ */
+export type PascalToCamelCaseWithoutSuffix<
+  T extends string,
+  Suffix extends string,
+> = T extends `${infer Prefix}${Suffix}`
+  ? `${PascalToCamelCase<Prefix extends `${infer First}${infer Rest}` ? `${First}${Rest}` : never>}`
+  : never

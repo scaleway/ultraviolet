@@ -9,7 +9,7 @@ type CheckboxFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'value'> &
-  Omit<ComponentProps<typeof Checkbox>, 'value' | 'onChange' | 'aria-label'> & {
+  Omit<ComponentProps<typeof Checkbox>, 'value' | 'onChange'> & {
     className?: string
     children?: ReactNode
   }
@@ -28,6 +28,7 @@ export const CheckboxField = <
   onBlur,
   shouldUnregister = false,
   validate,
+  'aria-label': ariaLabel,
   ...props
 }: CheckboxFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -61,10 +62,11 @@ export const CheckboxField = <
       }}
       disabled={field.disabled}
       checked={!!field.value}
-      error={getError({ label: label ?? '' }, error)}
+      error={getError({ label: label ?? ariaLabel ?? name }, error)}
       ref={field.ref}
-    >
-      {children}
-    </Checkbox>
+      {...(label
+        ? { children: label, 'aria-label': undefined }
+        : { 'aria-label': ariaLabel as string })}
+    />
   )
 }

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
+import type { LabelProp } from '../../types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -170,16 +171,7 @@ type RadioProps = {
     | 'required'
     | 'tabIndex'
   > &
-  (
-    | {
-        'aria-label': string
-        label?: never
-      }
-    | {
-        'aria-label'?: never
-        label: ReactNode
-      }
-  )
+  LabelProp
 
 /**
  * Radio component is used to select a single option from a list of options. It is a type of input component.
