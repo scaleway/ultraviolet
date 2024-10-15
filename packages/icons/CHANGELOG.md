@@ -1,5 +1,19 @@
 # Change Log
 
+## 3.3.0
+
+### Minor Changes
+
+- [#4340](https://github.com/scaleway/ultraviolet/pull/4340) [`9df8735`](https://github.com/scaleway/ultraviolet/commit/9df87355da947078dc607e411aafdd47c1fc82dc) Thanks [@matthprost](https://github.com/matthprost)! - New system icon `doc`
+
+### Patch Changes
+
+- [#4345](https://github.com/scaleway/ultraviolet/pull/4345) [`ac4ea15`](https://github.com/scaleway/ultraviolet/commit/ac4ea155936387e3a75b68c44f3cd6934ceaa8d0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `18.3.1`.
+
+- [#4344](https://github.com/scaleway/ultraviolet/pull/4344) [`d8ed9af`](https://github.com/scaleway/ultraviolet/commit/d8ed9afe748371891745e619f1d91eb10cd23c8f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.8`.
+  Updated dependency `@babel/eslint-parser` to `7.25.8`.
+  Updated dependency `@babel/preset-env` to `7.25.8`.
+
 ## 3.2.0
 
 ### Minor Changes
