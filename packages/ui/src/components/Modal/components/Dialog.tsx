@@ -37,7 +37,7 @@ const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
     opacity: 1;
   }
 
-  &[data-animation] {
+  &[data-animation='true'] {
     overflow: hidden;
   }
 `
