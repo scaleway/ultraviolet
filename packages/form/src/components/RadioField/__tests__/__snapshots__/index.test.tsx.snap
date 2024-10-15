@@ -695,6 +695,217 @@ exports[`RadioField > should render correctly disabled 1`] = `
 </DocumentFragment>
 `;
 
+exports[`RadioField > should render correctly with aria-label 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.emotion-2[aria-disabled='false'],
+.emotion-2[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 {
+  fill: #8c40ef;
+}
+
+.emotion-2:hover[aria-disabled='false'] .emotion-5+.emotion-7 .emotion-9 {
+  fill: #e5dbfd;
+}
+
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 {
+  fill: #b3144d;
+}
+
+.emotion-2:hover[aria-disabled='false'] .emotion-5[aria-invalid='true']+.emotion-7 .emotion-9 {
+  fill: #ffd3e3;
+}
+
+.emotion-2[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.emotion-2[aria-disabled='true']>label,
+.emotion-2[aria-disabled='true'] .emotion-5 {
+  cursor: not-allowed;
+}
+
+.emotion-2[aria-disabled='true'] .emotion-7 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-2[aria-disabled='true'] .emotion-7 .emotion-9 {
+  fill: #f3f3f4;
+}
+
+.emotion-4 {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.emotion-4+.emotion-7 .emotion-11 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.emotion-4:checked+svg .emotion-11 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.emotion-4:checked[aria-disabled='false'][aria-invalid='false']+.emotion-7 {
+  fill: #8c40ef;
+}
+
+.emotion-4:checked[aria-disabled='true'][aria-invalid='false']+.emotion-7 {
+  fill: #d8c5fc;
+}
+
+.emotion-4[aria-invalid='true']:not([aria-disabled='true'])+.emotion-7 {
+  fill: #e51963;
+}
+
+.emotion-4[aria-disabled='false']:active+.emotion-7 {
+  background-color: #5e127e40;
+  fill: #8c40ef;
+}
+
+.emotion-4[aria-disabled='false']:active+.emotion-7 .emotion-9 {
+  fill: #f1eefc;
+}
+
+.emotion-4[aria-disabled='false']:focus-visible+.emotion-7 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.emotion-4[aria-invalid='true']:focus+.emotion-7 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.emotion-4[aria-invalid='true']:focus+.emotion-7 .emotion-9 {
+  fill: #ffebf2;
+}
+
+.emotion-6 {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.emotion-6 .emotion-9 {
+  fill: #ffffff;
+}
+
+<div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+    >
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <div
+          aria-disabled="false"
+          class="emotion-2 emotion-3"
+          data-checked="false"
+        >
+          <input
+            aria-disabled="false"
+            aria-invalid="false"
+            aria-label="Radio field"
+            class="emotion-4 emotion-5"
+            id="test-test"
+            name="test"
+            type="radio"
+            value="test"
+          />
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke-width="2"
+              />
+              <circle
+                class="emotion-8 emotion-9"
+                cx="12"
+                cy="12"
+                r="8"
+              />
+              <circle
+                class="emotion-10 emotion-11"
+                cx="12"
+                cy="12"
+                r="5"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`RadioField > should trigger events correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {

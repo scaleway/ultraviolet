@@ -12,6 +12,18 @@ describe('SelectableCard', () => {
         onChange={() => {}}
         name="radio"
         value="choice"
+        label="test"
+      >
+        Radio card
+      </SelectableCard>,
+    ))
+
+  test('renders correctly with aria label', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        onChange={() => {}}
+        name="radio"
+        value="choice"
         aria-label="test"
       >
         Radio card

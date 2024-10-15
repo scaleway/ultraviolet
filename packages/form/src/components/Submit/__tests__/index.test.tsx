@@ -24,7 +24,7 @@ describe('Submit', () => {
   test('form is invalid', () => {
     const { asFragment } = renderWithForm(
       <>
-        <TextInputField name="toto" regex={[alpha]} />
+        <TextInputField name="toto" regex={[alpha]} label="test" />
         <Submit>Test</Submit>
       </>,
       { defaultValues: { toto: '4' } },
