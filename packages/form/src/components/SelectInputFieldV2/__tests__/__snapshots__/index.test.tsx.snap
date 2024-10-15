@@ -496,17 +496,17 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
   outline: none;
 }
 
-.emotion-36[data-selected='true'] {
+.emotion-36[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-36[disabled] {
+.emotion-36[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-36[disabled]:hover,
-.emotion-36 [disabled]:focus {
+.emotion-36[aria-disabled="true"]:hover,
+.emotion-36 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -687,9 +687,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     id="items"
                   >
                     <div
+                      aria-disabled="false"
                       aria-label="mercury"
+                      aria-selected="true"
                       class="emotion-36 emotion-37"
-                      data-selected="true"
                       data-testid="option-mercury"
                       id="option-0"
                       role="option"
@@ -711,9 +712,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       </div>
                     </div>
                     <div
+                      aria-disabled="false"
                       aria-label="venus"
+                      aria-selected="false"
                       class="emotion-36 emotion-37"
-                      data-selected="false"
                       data-testid="option-venus"
                       id="option-1"
                       role="option"
@@ -735,9 +737,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       </div>
                     </div>
                     <div
+                      aria-disabled="false"
                       aria-label="earth"
+                      aria-selected="false"
                       class="emotion-36 emotion-37"
-                      data-selected="false"
                       data-testid="option-earth"
                       id="option-2"
                       role="option"
@@ -764,11 +767,11 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       </div>
                     </div>
                     <div
+                      aria-disabled="true"
                       aria-label="mars"
+                      aria-selected="false"
                       class="emotion-36 emotion-37"
-                      data-selected="false"
                       data-testid="option-mars"
-                      disabled=""
                       id="option-3"
                       role="option"
                       tabindex="-1"
@@ -789,9 +792,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       </div>
                     </div>
                     <div
+                      aria-disabled="false"
                       aria-label="pluto"
+                      aria-selected="false"
                       class="emotion-36 emotion-37"
-                      data-selected="false"
                       data-testid="option-pluto"
                       id="option-4"
                       role="option"
@@ -845,9 +849,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                     id="items"
                   >
                     <div
+                      aria-disabled="false"
                       aria-label="jupiter"
+                      aria-selected="false"
                       class="emotion-36 emotion-37"
-                      data-selected="false"
                       data-testid="option-jupiter"
                       id="option-0"
                       role="option"
@@ -874,9 +879,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       </div>
                     </div>
                     <div
+                      aria-disabled="false"
                       aria-label="saturn"
+                      aria-selected="false"
                       class="emotion-36 emotion-37"
-                      data-selected="false"
                       data-testid="option-saturn"
                       id="option-1"
                       role="option"
@@ -898,9 +904,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       </div>
                     </div>
                     <div
+                      aria-disabled="false"
                       aria-label="uranus"
+                      aria-selected="false"
                       class="emotion-36 emotion-37"
-                      data-selected="false"
                       data-testid="option-uranus"
                       id="option-2"
                       role="option"
@@ -922,9 +929,10 @@ exports[`SelectInputField > should display right value on grouped options 1`] = 
                       </div>
                     </div>
                     <div
+                      aria-disabled="false"
                       aria-label="neptune"
+                      aria-selected="false"
                       class="emotion-36 emotion-37"
-                      data-selected="false"
                       data-testid="option-neptune"
                       id="option-3"
                       role="option"
