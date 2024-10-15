@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.73.1
+
+### Patch Changes
+
+- [#4351](https://github.com/scaleway/ultraviolet/pull/4351) [`123daed`](https://github.com/scaleway/ultraviolet/commit/123daed9b671db0a1a12afe88e589bbe526c2009) Thanks [@matthprost](https://github.com/matthprost)! - Fix modal scroll bug
+
 ## 1.73.0
 
 ### Minor Changes
