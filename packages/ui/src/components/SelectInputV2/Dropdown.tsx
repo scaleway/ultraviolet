@@ -112,8 +112,8 @@ const DropdownGroupWrapper = styled.div`
   top: 0px;
 `
 const DropdownItem = styled.div<{
-  'data-selected': boolean
-  disabled: boolean
+  'aria-selected': boolean
+  'aria-disabled': boolean
 }>`
   text-align:left;
   border: none;
@@ -135,16 +135,16 @@ const DropdownItem = styled.div<{
     outline: none;
   }
 
-  &[data-selected='true'] {
+  &[aria-selected='true'] {
     background-color: ${({ theme }) => theme.colors.primary.background};
   }
 
-  &[disabled] {
+  &[aria-disabled="true"] {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
   }
 
-  &[disabled]:hover, [disabled]:focus {
+  &[aria-disabled="true"]:hover, [aria-disabled="true"]:focus {
     background-color: ${({ theme }) =>
       theme.colors.neutral.backgroundStrongDisabled};
     color: ${({ theme }) => theme.colors.neutral.textStrongDisabled};
@@ -402,8 +402,8 @@ const CreateDropdown = ({
           {selectAll && multiselect ? (
             <Stack id="items">
               <DropdownItem
-                disabled={false}
-                data-selected={selectedData.allSelected}
+                aria-disabled={false}
+                aria-selected={selectedData.allSelected}
                 aria-label="select-all"
                 data-testid="select-all"
                 id="select-all"
@@ -491,9 +491,9 @@ const CreateDropdown = ({
                 {displayedOptions[group].map((option, indexOption) => (
                   <DropdownItem
                     key={option.value}
-                    disabled={!!option.disabled}
+                    aria-disabled={!!option.disabled}
                     tabIndex={!option.disabled ? 0 : -1}
-                    data-selected={
+                    aria-selected={
                       selectedData.selectedValues.includes(option.value) &&
                       !option.disabled
                     }
@@ -562,8 +562,8 @@ const CreateDropdown = ({
       {selectAll && multiselect ? (
         <Stack id="items" gap={0.25} tabIndex={-1}>
           <DropdownItem
-            disabled={false}
-            data-selected={selectedData.allSelected}
+            aria-disabled={false}
+            aria-selected={selectedData.allSelected}
             aria-label="select-all"
             data-testid="select-all"
             tabIndex={0}
@@ -605,8 +605,8 @@ const CreateDropdown = ({
           displayedOptions.map((option, index) => (
             <DropdownItem
               key={option.value}
-              disabled={!!option.disabled}
-              data-selected={
+              aria-disabled={!!option.disabled}
+              aria-selected={
                 selectedData.selectedValues.includes(option.value) &&
                 !option.disabled
               }
