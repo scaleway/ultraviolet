@@ -8,7 +8,12 @@ import illustration from './illustrationTest.svg'
 describe('SelectableCard', () => {
   test('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(
-      <SelectableCard onChange={() => {}} name="radio" value="choice">
+      <SelectableCard
+        onChange={() => {}}
+        name="radio"
+        value="choice"
+        aria-label="test"
+      >
         Radio card
       </SelectableCard>,
     ))
@@ -20,6 +25,7 @@ describe('SelectableCard', () => {
         name="checkbox"
         value="choice"
         type="checkbox"
+        aria-label="test"
       >
         Checkbox card
       </SelectableCard>,
@@ -32,6 +38,7 @@ describe('SelectableCard', () => {
         name="checkbox"
         value="choice"
         type="radio"
+        aria-label="test"
         showTick
       >
         Checkbox card
@@ -46,6 +53,7 @@ describe('SelectableCard', () => {
         value="choice"
         type="checkbox"
         showTick
+        aria-label="test"
       >
         Checkbox card
       </SelectableCard>,
@@ -58,6 +66,7 @@ describe('SelectableCard', () => {
         name="radio"
         type="radio"
         value="choice"
+        aria-label="test"
         checked
       >
         Radio card
@@ -70,6 +79,7 @@ describe('SelectableCard', () => {
         onChange={() => {}}
         name="radio"
         type="checkbox"
+        aria-label="test"
         value="choice"
         checked
       >
@@ -83,6 +93,7 @@ describe('SelectableCard', () => {
         onChange={() => {}}
         name="radio"
         type="radio"
+        aria-label="test"
         value="choice"
         disabled
       >
@@ -96,6 +107,7 @@ describe('SelectableCard', () => {
         onChange={() => {}}
         name="radio"
         type="checkbox"
+        aria-label="test"
         value="choice"
         disabled
       >
@@ -108,6 +120,7 @@ describe('SelectableCard', () => {
       <SelectableCard
         onChange={() => {}}
         name="radio"
+        label="test"
         type="checkbox"
         value="choice"
         isError
@@ -123,6 +136,7 @@ describe('SelectableCard', () => {
         name="radio"
         type="radio"
         value="choice"
+        label="test"
         isError
       >
         Radio card
@@ -136,6 +150,7 @@ describe('SelectableCard', () => {
         name="radio"
         type="radio"
         value="choice"
+        label="test"
         tooltip="test"
       >
         Radio card
@@ -148,6 +163,7 @@ describe('SelectableCard', () => {
         onChange={() => {}}
         name="checkbox"
         type="checkbox"
+        label="test"
         value="choice"
         tooltip="test"
       >
@@ -160,6 +176,7 @@ describe('SelectableCard', () => {
       <SelectableCard
         onChange={() => {}}
         name="radio"
+        label="test"
         type="checkbox"
         value="choice"
         disabled
@@ -181,7 +198,12 @@ describe('SelectableCard', () => {
     const onChange = vi.fn()
 
     renderWithTheme(
-      <SelectableCard onChange={onChange} name="radio" value="choice">
+      <SelectableCard
+        onChange={onChange}
+        name="radio"
+        value="choice"
+        label="test"
+      >
         Radio card
       </SelectableCard>,
     )

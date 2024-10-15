@@ -117,6 +117,7 @@ export const Playground: StoryFn<typeof Form> = () => {
         <Stack gap={2} direction="row">
           <SelectableCardField
             name="selectableCard"
+            aria-label="Select"
             value="1"
             required
             control={methods.control}
@@ -125,6 +126,7 @@ export const Playground: StoryFn<typeof Form> = () => {
           </SelectableCardField>
           <SelectableCardField
             name="selectableCard"
+            aria-label="Select"
             value="2"
             required
             control={methods.control}
@@ -133,6 +135,7 @@ export const Playground: StoryFn<typeof Form> = () => {
           </SelectableCardField>
           <SelectableCardField
             name="selectableCard"
+            aria-label="Select"
             value="3"
             required
             control={methods.control}

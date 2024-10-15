@@ -440,6 +440,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
         <input
           aria-checked="false"
           aria-invalid="false"
+          aria-label="test"
           class="emotion-5 emotion-6"
           id=":r4:"
           name="checkbox"
@@ -933,6 +934,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
         <input
           aria-checked="true"
           aria-invalid="false"
+          aria-label="test"
           checked=""
           class="emotion-5 emotion-6"
           id=":rg:"
@@ -1426,6 +1428,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
         <input
           aria-checked="false"
           aria-invalid="false"
+          aria-label="test"
           class="emotion-5 emotion-6"
           disabled=""
           id=":rm:"
@@ -1723,10 +1726,6 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 }
 
 .emotion-3 label {
-  display: none;
-}
-
-.emotion-3 label {
   width: 100%;
 }
 
@@ -1867,6 +1866,20 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 }
 
 .emotion-16 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.emotion-19 {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap,sans-serif;
@@ -1879,7 +1892,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   padding-top: 4px;
 }
 
-.emotion-18 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1903,11 +1916,11 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   width: 100%;
 }
 
-.emotion-18[data-has-label='true'] {
+.emotion-21[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-18[data-has-label='false'] {
+.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
@@ -1919,7 +1932,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
       data-checked="false"
       data-disabled="false"
       data-error="true"
-      data-has-label="false"
+      data-has-label="true"
       data-image="none"
       data-type="checkbox"
       role="button"
@@ -1974,14 +1987,21 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
         >
           <div
             class="emotion-13 emotion-12"
-          />
+          >
+            <label
+              class="emotion-15 emotion-16 emotion-17"
+              for=":rp:"
+            >
+              test
+            </label>
+          </div>
           <span
-            class="emotion-15 emotion-16 emotion-17"
+            class="emotion-18 emotion-19 emotion-17"
           />
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-21 emotion-22"
         data-has-label="false"
       >
         Radio card
@@ -2268,10 +2288,6 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
 }
 
 .emotion-7 label {
-  display: none;
-}
-
-.emotion-7 label {
   width: 100%;
 }
 
@@ -2411,7 +2427,21 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   flex: 1;
 }
 
-.emotion-19 {
+.emotion-20 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2435,11 +2465,11 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   width: 100%;
 }
 
-.emotion-19[data-has-label='true'] {
+.emotion-22[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-19[data-has-label='false'] {
+.emotion-22[data-has-label='false'] {
   display: contents;
 }
 
@@ -2450,8 +2480,8 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r12:"
-        aria-describedby=":r12:"
+        aria-controls=":r15:"
+        aria-describedby=":r15:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -2459,7 +2489,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
           class="emotion-4 emotion-5"
           data-checked="false"
           data-disabled="false"
-          data-has-label="false"
+          data-has-label="true"
           data-image="none"
           data-type="checkbox"
           role="button"
@@ -2475,7 +2505,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id=":r13:"
+              id=":r16:"
               name="checkbox"
               type="checkbox"
               value="choice"
@@ -2513,11 +2543,18 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
             >
               <div
                 class="emotion-17 emotion-1"
-              />
+              >
+                <label
+                  class="emotion-19 emotion-20 emotion-21"
+                  for=":r16:"
+                >
+                  test
+                </label>
+              </div>
             </div>
           </div>
           <div
-            class="emotion-19 emotion-20"
+            class="emotion-22 emotion-23"
             data-has-label="false"
           >
             Checkbox card
@@ -2772,10 +2809,6 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
 }
 
 .emotion-3 label {
-  display: none;
-}
-
-.emotion-3 label {
   width: 100%;
 }
 
@@ -2915,7 +2948,21 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   flex: 1;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2939,11 +2986,11 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-18[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -2954,7 +3001,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
       class="emotion-0 emotion-1"
       data-checked="false"
       data-disabled="true"
-      data-has-label="false"
+      data-has-label="true"
       data-image="none"
       data-type="checkbox"
       role="button"
@@ -2970,7 +3017,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
           aria-invalid="false"
           class="emotion-5 emotion-6"
           disabled=""
-          id=":r16:"
+          id=":r1a:"
           name="radio"
           type="checkbox"
           value="choice"
@@ -3008,11 +3055,18 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
         >
           <div
             class="emotion-13 emotion-12"
-          />
+          >
+            <label
+              class="emotion-15 emotion-16 emotion-17"
+              for=":r1a:"
+            >
+              test
+            </label>
+          </div>
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-18 emotion-19"
         data-has-label="false"
       >
         <div
@@ -3342,6 +3396,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
           <input
             aria-disabled="false"
             aria-invalid="false"
+            aria-label="test"
             class="emotion-7 emotion-8"
             id="radio-choice"
             name="radio"
@@ -3865,6 +3920,21 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 
 .emotion-13 .emotion-16 {
   fill: #ffffff;
+}
+
+.emotion-20 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
 }
 
 .emotion-20 {
@@ -4590,6 +4660,21 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   cursor: pointer;
 }
 
+.emotion-20 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
 .emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5146,6 +5231,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
           <input
             aria-disabled="false"
             aria-invalid="false"
+            aria-label="test"
             checked=""
             class="emotion-7 emotion-8"
             id="radio-choice"
@@ -5507,6 +5593,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
           <input
             aria-disabled="true"
             aria-invalid="false"
+            aria-label="test"
             class="emotion-7 emotion-8"
             disabled=""
             id="radio-choice"
@@ -5735,10 +5822,6 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   display: none;
 }
 
-.emotion-5 label {
-  display: none;
-}
-
 .emotion-7 {
   cursor: pointer;
   position: absolute;
@@ -5813,7 +5896,22 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5837,11 +5935,11 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-18[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -5853,7 +5951,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
       data-checked="false"
       data-disabled="false"
       data-error="true"
-      data-has-label="false"
+      data-has-label="true"
       data-image="none"
       data-type="radio"
       role="button"
@@ -5903,10 +6001,16 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
               />
             </g>
           </svg>
+          <label
+            class="emotion-15 emotion-16 emotion-17"
+            for="radio-choice"
+          >
+            test
+          </label>
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-18 emotion-19"
         data-has-label="false"
       >
         Radio card
@@ -6132,10 +6236,6 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   display: none;
 }
 
-.emotion-9 label {
-  display: none;
-}
-
 .emotion-11 {
   cursor: pointer;
   position: absolute;
@@ -6210,7 +6310,22 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   fill: #ffffff;
 }
 
-.emotion-19 {
+.emotion-20 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6234,11 +6349,11 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   width: 100%;
 }
 
-.emotion-19[data-has-label='true'] {
+.emotion-22[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-19[data-has-label='false'] {
+.emotion-22[data-has-label='false'] {
   display: contents;
 }
 
@@ -6249,8 +6364,8 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":rv:"
-        aria-describedby=":rv:"
+        aria-controls=":r11:"
+        aria-describedby=":r11:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -6258,7 +6373,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
           class="emotion-4 emotion-5"
           data-checked="false"
           data-disabled="false"
-          data-has-label="false"
+          data-has-label="true"
           data-image="none"
           data-type="radio"
           role="button"
@@ -6307,10 +6422,16 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
                   />
                 </g>
               </svg>
+              <label
+                class="emotion-19 emotion-20 emotion-21"
+                for="radio-choice"
+              >
+                test
+              </label>
             </div>
           </div>
           <div
-            class="emotion-19 emotion-20"
+            class="emotion-22 emotion-23"
             data-has-label="false"
           >
             Radio card
@@ -6754,6 +6875,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
         <input
           aria-checked="false"
           aria-invalid="false"
+          aria-label="test"
           class="emotion-5 emotion-6"
           id=":ra:"
           name="checkbox"
@@ -7115,6 +7237,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
           <input
             aria-disabled="false"
             aria-invalid="false"
+            aria-label="test"
             class="emotion-7 emotion-8"
             id="checkbox-choice"
             name="checkbox"

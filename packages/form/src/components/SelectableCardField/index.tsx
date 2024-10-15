@@ -19,11 +19,7 @@ type SelectableCardFieldProps<
       | 'id'
       | 'children'
       | 'tooltip'
-      | 'label'
       | 'data-testid'
-      | 'aria-label'
-      | 'illustration'
-      | 'productIcon'
     >
   > & {
     className?: string

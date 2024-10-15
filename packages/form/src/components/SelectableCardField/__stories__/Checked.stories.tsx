@@ -11,10 +11,10 @@ export const Checked: StoryFn<{ errors: FormErrors }> = ({ errors }) => {
   return (
     <Form onSubmit={() => {}} errors={errors} methods={methods}>
       <Stack gap={2}>
-        <SelectableCardField name="foo" value="bar">
+        <SelectableCardField name="foo" value="bar" label="Radio Left">
           Radio left
         </SelectableCardField>
-        <SelectableCardField name="foo" value="barbar">
+        <SelectableCardField name="foo" value="barbar" label="Radio Right">
           Radio right
         </SelectableCardField>
       </Stack>
