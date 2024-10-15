@@ -1011,17 +1011,17 @@ exports[`UnitInput > renders click 1`] = `
   outline: none;
 }
 
-.emotion-33[data-selected='true'] {
+.emotion-33[aria-selected='true'] {
   background-color: #f1eefc;
 }
 
-.emotion-33[disabled] {
+.emotion-33[aria-disabled="true"] {
   background-color: #f3f3f4;
   color: #b5b7bd;
 }
 
-.emotion-33[disabled]:hover,
-.emotion-33 [disabled]:focus {
+.emotion-33[aria-disabled="true"]:hover,
+.emotion-33 [aria-disabled="true"]:focus {
   background-color: #f3f3f4;
   color: #b5b7bd;
   cursor: not-allowed;
@@ -1178,9 +1178,10 @@ exports[`UnitInput > renders click 1`] = `
                     id="items"
                   >
                     <div
+                      aria-disabled="false"
                       aria-label="kb"
+                      aria-selected="false"
                       class="emotion-33 emotion-34"
-                      data-selected="false"
                       data-testid="option-kb"
                       id="option-0"
                       role="option"
@@ -1202,9 +1203,10 @@ exports[`UnitInput > renders click 1`] = `
                       </div>
                     </div>
                     <div
+                      aria-disabled="false"
                       aria-label="mb"
+                      aria-selected="false"
                       class="emotion-33 emotion-34"
-                      data-selected="false"
                       data-testid="option-mb"
                       id="option-1"
                       role="option"
@@ -1226,9 +1228,10 @@ exports[`UnitInput > renders click 1`] = `
                       </div>
                     </div>
                     <div
+                      aria-disabled="false"
                       aria-label="gb"
+                      aria-selected="false"
                       class="emotion-33 emotion-34"
-                      data-selected="false"
                       data-testid="option-gb"
                       id="option-2"
                       role="option"
