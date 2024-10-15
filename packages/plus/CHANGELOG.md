@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.21.18
+
+### Patch Changes
+
+- [#4345](https://github.com/scaleway/ultraviolet/pull/4345) [`ac4ea15`](https://github.com/scaleway/ultraviolet/commit/ac4ea155936387e3a75b68c44f3cd6934ceaa8d0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `18.3.1`.
+
+- [#4344](https://github.com/scaleway/ultraviolet/pull/4344) [`d8ed9af`](https://github.com/scaleway/ultraviolet/commit/d8ed9afe748371891745e619f1d91eb10cd23c8f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.8`.
+  Updated dependency `@babel/eslint-parser` to `7.25.8`.
+  Updated dependency `@babel/preset-env` to `7.25.8`.
+- Updated dependencies [[`543f8e1`](https://github.com/scaleway/ultraviolet/commit/543f8e1d7bbae941434652ca5c8141d15cc77825), [`7f996a2`](https://github.com/scaleway/ultraviolet/commit/7f996a20050cc044b6b64599b802949c700cbbae), [`ac4ea15`](https://github.com/scaleway/ultraviolet/commit/ac4ea155936387e3a75b68c44f3cd6934ceaa8d0), [`d8ed9af`](https://github.com/scaleway/ultraviolet/commit/d8ed9afe748371891745e619f1d91eb10cd23c8f), [`a150eaa`](https://github.com/scaleway/ultraviolet/commit/a150eaa31523355521468fe412409d24630f9285), [`9df8735`](https://github.com/scaleway/ultraviolet/commit/9df87355da947078dc607e411aafdd47c1fc82dc), [`7a47067`](https://github.com/scaleway/ultraviolet/commit/7a47067b94292fa23be258a85a3b48cca7c9cdba)]:
+  - @ultraviolet/ui@1.73.0
+  - @ultraviolet/icons@3.3.0
+
 ## 0.21.17
 
 ### Patch Changes
