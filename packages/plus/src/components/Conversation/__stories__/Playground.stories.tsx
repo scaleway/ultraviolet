@@ -1,4 +1,4 @@
-import { Avatar } from '@ultraviolet/ui'
+import { AvatarV2 } from '@ultraviolet/ui'
 import { Conversation } from '..'
 import { Template } from './Template.stories'
 
@@ -9,27 +9,35 @@ Playground.args = {
     <>
       <Conversation.Date>2022-03-02</Conversation.Date>
       <Conversation.Message
-        avatar={
-          <Avatar image="static/media/packages/ui/src/components/Avatar/__stories__/avatar.svg" />
-        }
-        align="left"
+        avatar={<AvatarV2 shape="circle" variant="text" text="MC" />}
+        align="right"
       >
-        Message 1
-      </Conversation.Message>
-      <Conversation.MessageInfos align="left">
-        <Conversation.Tag>tag</Conversation.Tag>
-        info message
-      </Conversation.MessageInfos>
-      <Conversation.Message
-        avatar={
-          <Avatar image="static/media/packages/ui/src/components/Avatar/__stories__/avatar.svg" />
-        }
-      >
-        Message 2
+        I finally tried that new café downtown. Their coffee is amazing!
       </Conversation.Message>
       <Conversation.MessageInfos align="right">
-        <Conversation.Tag>tag</Conversation.Tag>
-        info message
+        <Conversation.Tag>3 minutes ago</Conversation.Tag>
+        sent
+      </Conversation.MessageInfos>
+      <Conversation.Message
+        avatar={<AvatarV2 shape="circle" variant="text" text="TM" />}
+        align="left"
+      >
+        Oh really? I&#39;ve heard good things. Did you get one of those fancy
+        lattes with the art on top?
+      </Conversation.Message>
+      <Conversation.MessageInfos align="left">
+        <Conversation.Tag>2 minutes ago</Conversation.Tag>
+        read
+      </Conversation.MessageInfos>
+      <Conversation.Message
+        avatar={<AvatarV2 shape="circle" variant="text" text="TM" />}
+      >
+        Yeah, they made a leaf pattern. I almost didn’t want to drink it, but I
+        couldn’t resist!
+      </Conversation.Message>
+      <Conversation.MessageInfos align="right">
+        <Conversation.Tag>few seconds ago</Conversation.Tag>
+        sent
       </Conversation.MessageInfos>
     </>,
   ],
