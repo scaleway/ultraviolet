@@ -9,7 +9,7 @@ describe('Checkbox', () => {
   test('renders correctly wiht icon', () =>
     shouldMatchEmotionSnapshot(
       <Chip>
-        <Chip.Icon name="address" onClick={() => {}} type="leading" />
+        <Chip.Icon name="address" onClick={() => {}} />
         test
       </Chip>,
     ))
@@ -17,35 +17,35 @@ describe('Checkbox', () => {
   test('renders correctly active', () =>
     shouldMatchEmotionSnapshot(
       <Chip active>
-        test <Chip.Icon name="address" type="trailing" />
+        test <Chip.Icon name="address" />
       </Chip>,
     ))
 
   test('renders correctly large', () =>
     shouldMatchEmotionSnapshot(
       <Chip size="large">
-        test <Chip.Icon name="address" type="trailing" />
+        test <Chip.Icon name="address" />
       </Chip>,
     ))
 
   test('renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
       <Chip disabled>
-        test <Chip.Icon name="address" type="trailing" />
+        test <Chip.Icon name="address" />
       </Chip>,
     ))
 
   test('renders correctly active disabled', () =>
     shouldMatchEmotionSnapshot(
       <Chip active disabled>
-        test <Chip.Icon name="address" type="trailing" />
+        test <Chip.Icon name="address" />
       </Chip>,
     ))
 
   test('throw error when using Chip.Icon outside of Chip', () => {
-    expect(() =>
-      renderWithTheme(<Chip.Icon name="address" type="leading" />),
-    ).toThrowError('Chip.Icon can only be used inside a Chip component.')
+    expect(() => renderWithTheme(<Chip.Icon name="address" />)).toThrowError(
+      'Chip.Icon can only be used inside a Chip component',
+    )
   })
 
   test('renders correctly onClick', async () => {
@@ -62,7 +62,6 @@ describe('Checkbox', () => {
             name="arrowDown"
             onClick={mockOnClickIcon1}
             data-testid="test-icon"
-            type="trailing"
           />
         </Chip>
         <Chip onClick={mockOnClick2} data-testid="test-disabled" disabled>
@@ -71,7 +70,6 @@ describe('Checkbox', () => {
             name="arrowDown"
             onClick={mockOnClickIcon2}
             data-testid="test-icon-disabled"
-            type="trailing"
           />
         </Chip>
       </>,

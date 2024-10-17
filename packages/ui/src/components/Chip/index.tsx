@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
-import { type ReactNode, useEffect, useMemo, useState } from 'react'
+import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { ChipContext } from './ChipContext'
 import { ChipIcon } from './ChipIcon'
 
@@ -15,6 +16,7 @@ const StyledContainer = styled(Stack)`
   text-align: center;
   color: ${({ theme }) => theme.colors.neutral.text};
   user-select: none;
+
 
   &[data-disabled="false"]:hover {
     background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
@@ -50,30 +52,19 @@ const StyledContainer = styled(Stack)`
   }
 
   &[data-size='medium']{
-    ${({ theme }) =>
-      `font-size: ${theme.typography.caption.fontSize};
-    font-family: ${theme.typography.caption.fontFamily};
-    font-weight: ${theme.typography.caption.weight};
-    letter-spacing: ${theme.typography.caption.letterSpacing};
-    line-height: ${theme.typography.caption.lineHeight};
-    text-transform: ${theme.typography.caption.textCase};
-    text-decoration: ${theme.typography.caption.textDecoration};
+    ${({ theme }) => `
     height: ${theme.space[3]};
     padding: ${theme.space['0.5']} ${theme.space['1.5']};`}
   }
 
   &[data-size='large']{
-    ${({ theme }) =>
-      `font-size: ${theme.typography.bodySmall.fontSize};
-    font-family: ${theme.typography.bodySmall.fontFamily};
-    font-weight: ${theme.typography.bodySmall.weight};
-    letter-spacing: ${theme.typography.bodySmall.letterSpacing};
-    line-height: ${theme.typography.bodySmall.lineHeight};
-    text-transform: ${theme.typography.bodySmall.textCase};
-    text-decoration: ${theme.typography.bodySmall.textDecoration};
+    ${({ theme }) => `
     height: ${theme.space[4]};
     padding: ${theme.space['0.5']} ${theme.space['2']};`}
+  }
 
+  &[data-trailing-icon="true"] {
+    padding-right: ${({ theme }) => theme.space[1]}
   }
   `
 type ChipType = {
@@ -99,6 +90,9 @@ export const Chip = ({
   onClick,
 }: ChipType) => {
   const [isActive, setIsActive] = useState(active)
+  const [hasTrailingIcon, setTrailingIcon] = useState(false)
+  const chipRef = useRef<HTMLDivElement>(null) // ref to the parent container
+  const iconRef = useRef<HTMLButtonElement>(null)
   const prominence = useMemo(() => {
     if (isActive) return 'stronger'
     if (disabled) return 'weak'
@@ -106,35 +100,54 @@ export const Chip = ({
     return 'default'
   }, [isActive, disabled])
   const value = useMemo(
-    () => ({ isActive, disabled, chipContext: true }),
-    [isActive, disabled],
+    () => ({ isActive, disabled, iconRef }),
+    [isActive, disabled, iconRef],
   )
   useEffect(() => {
     setIsActive(active)
   }, [active])
 
+  useEffect(() => {
+    if (chipRef.current && iconRef.current) {
+      const lastChildNode = chipRef.current.lastChild
+
+      // Compare the last child element with iconRef.current to check if the last element is an Icon
+      // This will mean that there is a trailing icon
+      if (lastChildNode === iconRef.current) {
+        setTrailingIcon(true)
+      } else setTrailingIcon(false)
+    }
+  }, [children, iconRef])
+
   return (
     <ChipContext.Provider value={value}>
-      <StyledContainer
-        data-size={size}
-        onClick={() => {
-          if (!disabled) {
-            setIsActive(!isActive)
-            onClick?.(!isActive)
-          }
-        }}
-        className={className}
-        data-active={isActive}
-        data-testid={dataTestId}
-        alignItems="center"
-        justifyContent="center"
-        data-disabled={disabled}
-        data-prominence={prominence}
-        direction="row"
-        gap={1}
+      <Text
+        as={typeof children === 'string' ? 'text' : 'div'}
+        variant={size === 'large' ? 'bodySmall' : 'caption'}
       >
-        {children}
-      </StyledContainer>
+        <StyledContainer
+          data-size={size}
+          onClick={() => {
+            if (!disabled) {
+              setIsActive(!isActive)
+              onClick?.(!isActive)
+            }
+          }}
+          className={className}
+          data-active={isActive}
+          data-testid={dataTestId}
+          alignItems="center"
+          justifyContent="center"
+          data-disabled={disabled}
+          data-prominence={prominence}
+          direction="row"
+          gap={1}
+          ref={chipRef}
+          data-trailing-icon={hasTrailingIcon}
+        >
+          {children}
+        </StyledContainer>
+      </Text>
     </ChipContext.Provider>
   )
 }

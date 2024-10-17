@@ -1,10 +1,9 @@
+import type { RefObject } from 'react'
 import { createContext } from 'react'
 
-export const ChipContext = createContext<{
+type ContextType = {
   isActive: boolean
   disabled: boolean
-  /**
-   * Set to true when the context is correctly defined
-   */
-  chipContext: boolean
-}>({ isActive: false, disabled: false, chipContext: false })
+  iconRef?: RefObject<HTMLButtonElement>
+}
+export const ChipContext = createContext<ContextType | undefined>(undefined)

@@ -6,14 +6,10 @@ export const Icons: StoryFn<typeof Chip> = ({ ...args }) => (
   <Stack direction="row" gap={1}>
     <Chip {...args}>
       Trailing icon
-      <Chip.Icon
-        name="close"
-        type="trailing"
-        onClick={() => alert('Deleted')}
-      />
+      <Chip.Icon name="close" onClick={() => alert('Deleted')} />
     </Chip>
     <Chip {...args}>
-      <Chip.Icon name="filter" type="leading" />
+      <Chip.Icon name="filter" />
       Leading icon
     </Chip>
   </Stack>

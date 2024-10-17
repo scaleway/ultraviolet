@@ -72,7 +72,7 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
             active={multiSelected.includes(0)}
             onClick={() =>
               multiSelected.includes(0)
-                ? setMultiSelected(multiSelected.filter(id => id !== 0))
+                ? setMultiSelected([])
                 : setMultiSelected([...multiSelected, 0])
             }
           >
@@ -80,7 +80,7 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           </Chip>
           <Chip
             {...args}
-            active={multiSelected.includes(1)}
+            active={multiSelected.includes(1) || multiSelected.includes(0)}
             onClick={() =>
               multiSelected.includes(1)
                 ? setMultiSelected(multiSelected.filter(id => id !== 1))
@@ -91,7 +91,7 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           </Chip>
           <Chip
             {...args}
-            active={multiSelected.includes(2)}
+            active={multiSelected.includes(0) || multiSelected.includes(2)}
             onClick={() =>
               multiSelected.includes(2)
                 ? setMultiSelected(multiSelected.filter(id => id !== 2))
@@ -102,7 +102,7 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           </Chip>
           <Chip
             {...args}
-            active={multiSelected.includes(3)}
+            active={multiSelected.includes(3) || multiSelected.includes(0)}
             onClick={() =>
               multiSelected.includes(3)
                 ? setMultiSelected(multiSelected.filter(id => id !== 3))
@@ -113,7 +113,9 @@ export const Groups: StoryFn<typeof Chip> = ({ ...args }) => {
           </Chip>
         </Stack>
         Selected chip{multiSelected.length > 1 ? 's' : null}:{' '}
-        {multiSelected.map(id => `${id} `)}
+        {multiSelected.includes(0)
+          ? `1 2 3`
+          : multiSelected.map(id => `${id} `)}
       </Stack>
     </Stack>
   )

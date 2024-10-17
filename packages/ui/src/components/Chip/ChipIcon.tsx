@@ -6,14 +6,10 @@ import { ChipContext } from './ChipContext'
 
 const Container = styled.button`
   background: none;
-  border:none;
+  border: none;
   cursor: pointer;
-  padding:0;
+  padding: 0;
   border-radius: ${({ theme }) => theme.radii.default};
-
-  &[data-type="trailing"]{
-    margin-right: -${({ theme }) => theme.space['0.5']};
-  }
 
   &[data-has-onclick="true"][data-active="false"]:hover{
       background-color: ${({ theme }) => theme.colors.neutral.backgroundStrongHover};
@@ -35,22 +31,20 @@ type ChipIconType = {
    * Add an icon in the chip
    */
   name: IconType
-  type: 'trailing' | 'leading'
   onClick?: () => void
   'data-testid'?: string
 }
 
 export const ChipIcon = ({
   name,
-  type,
   onClick,
   'data-testid': dataTestId,
 }: ChipIconType) => {
-  const { isActive, disabled, chipContext } = useContext(ChipContext)
-
-  if (!chipContext) {
-    throw new Error('Chip.Icon can only be used inside a Chip component.')
+  const context = useContext(ChipContext)
+  if (!context) {
+    throw new Error('Chip.Icon can only be used inside a Chip component')
   }
+
   const IconUsed =
     Icon[
       `${
@@ -61,23 +55,23 @@ export const ChipIcon = ({
   return (
     <Container
       onClick={event => {
-        if (!disabled && onClick) {
+        if (!context.disabled && onClick) {
           event.stopPropagation()
           onClick()
         }
       }}
       data-testid={dataTestId}
-      data-disabled={disabled}
-      data-active={isActive}
-      data-type={type}
-      data-has-onclick={!!onClick && !disabled}
+      data-disabled={context.disabled}
+      data-active={context.isActive}
+      data-has-onclick={!!onClick && !context.disabled}
       as={onClick ? 'button' : 'div'}
+      ref={context.iconRef}
     >
       <IconUsed
         size="small"
-        prominence={isActive ? 'stronger' : 'default'}
+        prominence={context.isActive ? 'stronger' : 'default'}
         sentiment="neutral"
-        disabled={disabled}
+        disabled={context.disabled}
       />
     </Container>
   )
