@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import { Button } from '../Button'
 
@@ -16,7 +17,7 @@ type CopyButtonProps = {
   bordered?: boolean
   className?: string
   'data-testid'?: string
-  children?: string
+  children?: ReactNode
 }
 
 /**
