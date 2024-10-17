@@ -7,7 +7,7 @@ import { SelectableCardField } from '../..'
 describe('SelectableCardField', () => {
   test('should render correctly', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardField name="test" value="test">
+      <SelectableCardField name="test" value="test" label="test">
         Radio field
       </SelectableCardField>,
     )
@@ -16,7 +16,7 @@ describe('SelectableCardField', () => {
 
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardField name="test" value="disabled" disabled>
+      <SelectableCardField name="test" value="disabled" disabled label="test">
         Radio field disabled
       </SelectableCardField>,
     )
@@ -27,7 +27,7 @@ describe('SelectableCardField', () => {
 
   test('should render correctly checked', () => {
     const { asFragment } = renderWithForm(
-      <SelectableCardField name="test" value="checked">
+      <SelectableCardField name="test" value="checked" label="test">
         Radio field checked
       </SelectableCardField>,
       { defaultValues: { test: 'checked' } },
@@ -49,6 +49,7 @@ describe('SelectableCardField', () => {
         onChange={onChange}
         onFocus={onFocus}
         onBlur={onBlur}
+        label="test"
       >
         Radio field events
       </SelectableCardField>,
@@ -67,7 +68,7 @@ describe('SelectableCardField', () => {
   test('should render correctly with errors', async () => {
     const { asFragment } = renderWithForm(
       <>
-        <SelectableCardField name="test" value="checked" required>
+        <SelectableCardField name="test" value="checked" required label="test">
           Radio field error
         </SelectableCardField>
         <button type="submit">Submit</button>

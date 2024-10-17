@@ -16,7 +16,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import type { PascalToCamelCaseWithoutSuffix } from '../../types'
+import type { LabelProp, PascalToCamelCaseWithoutSuffix } from '../../types'
 import { Checkbox, CheckboxContainer } from '../Checkbox'
 import { Radio, RadioStack } from '../Radio'
 import { Stack } from '../Stack'
@@ -180,7 +180,6 @@ export type SelectableCardProps = {
   onBlur?: FocusEventHandler<HTMLInputElement>
   id?: string
   tooltip?: string
-  label?: ReactNode
   'data-testid'?: string
 } & (
   | {
@@ -194,7 +193,8 @@ export type SelectableCardProps = {
       >
       illustration?: never
     }
-)
+) &
+  LabelProp
 
 /**
  * SelectableCard is a component that can be used to create a radio or checkbox card.
@@ -221,6 +221,7 @@ export const SelectableCard = forwardRef(
       'data-testid': dataTestId,
       productIcon,
       illustration,
+      'aria-label': ariaLabel,
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -369,8 +370,8 @@ export const SelectableCard = forwardRef(
                 id={id}
                 ref={innerRef}
                 data-error={isError}
-                label={label}
                 tabIndex={!showTick ? -1 : undefined}
+                {...(label ? { label } : { 'aria-label': ariaLabel as string })}
               />
             ) : (
               <StyledCheckbox
@@ -387,9 +388,10 @@ export const SelectableCard = forwardRef(
                 id={id}
                 ref={innerRef}
                 data-error={isError}
-              >
-                {label}
-              </StyledCheckbox>
+                {...(label
+                  ? { children: label, 'aria-label': undefined }
+                  : { 'aria-label': ariaLabel as string })}
+              />
             )}
             {children ? (
               <StyledStack data-has-label={!!label && showTick} width="100%">

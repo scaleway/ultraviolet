@@ -35,6 +35,7 @@ export const SliderField = <
   value,
   defaultValue,
   options,
+  'aria-label': ariaLabel,
   ...props
 }: SliderFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -102,10 +103,11 @@ export const SliderField = <
       }}
       max={max}
       min={min}
-      error={getError({ label: label ?? '', max, min }, error)}
+      error={getError({ label: label ?? ariaLabel ?? name, max, min }, error)}
       label={label}
       required={required}
       options={options}
+      aria-label={ariaLabel}
       {...props}
     />
   )

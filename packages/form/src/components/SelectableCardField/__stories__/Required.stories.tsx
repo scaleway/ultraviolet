@@ -8,8 +8,8 @@ export const Required: StoryFn<
   ComponentProps<typeof SelectableCardField>
 > = args => (
   <Stack gap={1}>
-    <SelectableCardField {...args} value="option 1" label="Radio 1" />
-    <SelectableCardField {...args} value="option 2" label="Radio 2" />
+    <SelectableCardField {...args} value="option 1" />
+    <SelectableCardField {...args} value="option 2" />
     <Submit>Submit</Submit>
   </Stack>
 )

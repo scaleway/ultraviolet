@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 type Without<T, U> = { [P in Exclude<keyof T, keyof U>]?: never }
 type SingleXOR<T, U> = T | U extends object
   ? (Without<T, U> & U) | (Without<U, T> & T)
@@ -8,6 +10,7 @@ export type XOR<T extends unknown[]> = T extends [infer Only]
   : T extends [infer A, infer B, ...infer Rest]
     ? XOR<[SingleXOR<A, B>, ...Rest]>
     : never
+
 export type PascalToCamelCase<S extends string> =
   S extends `${infer P1}${infer P2}` ? `${Lowercase<P1>}${P2}` : S
 
@@ -26,3 +29,17 @@ export type PascalToCamelCaseWithoutSuffix<
 > = T extends `${infer Prefix}${Suffix}`
   ? `${PascalToCamelCase<Prefix extends `${infer First}${infer Rest}` ? `${First}${Rest}` : never>}`
   : never
+
+/**
+ * Classic prop type where label is a ReactNode and aria-label is a string.
+ * One or another is required.
+ */
+export type LabelProp =
+  | {
+      label: ReactNode
+      'aria-label'?: never
+    }
+  | {
+      label?: never
+      'aria-label': string
+    }

@@ -26,6 +26,7 @@ export type TagInputFieldProps<
       | 'success'
       | 'readOnly'
       | 'tooltip'
+      | 'aria-label'
     >
   > & {
     regex?: (RegExp | RegExp[])[]
@@ -55,6 +56,7 @@ export const TagInputField = <
   readOnly,
   tooltip,
   validate,
+  'aria-label': ariaLabel,
 }: TagInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
   const {
@@ -97,7 +99,10 @@ export const TagInputField = <
       labelDescription={labelDescription}
       size={size}
       success={success}
-      error={getError({ regex: regexes, label: label ?? '' }, error)}
+      error={getError(
+        { regex: regexes, label: label ?? ariaLabel ?? name },
+        error,
+      )}
       readOnly={readOnly}
       tooltip={tooltip}
     />

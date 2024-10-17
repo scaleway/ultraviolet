@@ -11,6 +11,13 @@ describe('RadioField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('should render correctly with aria-label', () => {
+    const { asFragment } = renderWithForm(
+      <RadioField name="test" value="test" aria-label="Radio field" />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <RadioField

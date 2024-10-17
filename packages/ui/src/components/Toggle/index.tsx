@@ -177,6 +177,7 @@ type ToggleProps = {
   size?: 'large' | 'small'
   labelPosition?: 'left' | 'right'
   label?: ReactNode
+  'aria-label'?: string
   helper?: ReactNode
   disabled?: boolean
   className?: string
@@ -206,6 +207,7 @@ export const Toggle = forwardRef(
       'data-testid': dataTestId,
       value,
       error,
+      'aria-label': ariaLabel,
     }: ToggleProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -290,6 +292,7 @@ export const Toggle = forwardRef(
               type="checkbox"
               ref={ref}
               value={value}
+              aria-label={ariaLabel}
             />
           </StyledToggle>
         </StyledLabel>

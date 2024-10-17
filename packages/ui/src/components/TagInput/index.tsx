@@ -158,6 +158,7 @@ type TagInputProps = {
    * Label description displayed right next to the label. It allows you to customize the label content.
    */
   labelDescription?: ReactNode
+  'aria-label'?: string
   required?: boolean
   size?: TagInputSize
   error?: string
@@ -181,6 +182,7 @@ export const TagInput = ({
   value,
   className,
   'data-testid': dataTestId,
+  'aria-label': ariaLabel,
   label,
   labelDescription,
   required = false,
@@ -370,7 +372,7 @@ export const TagInput = ({
                 <StyledInput
                   id={localId}
                   name={name}
-                  aria-label={name}
+                  aria-label={ariaLabel}
                   type="text"
                   placeholder={!tagInputState.length ? placeholder : ''}
                   value={input}

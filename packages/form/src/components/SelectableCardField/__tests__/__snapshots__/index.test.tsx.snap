@@ -182,10 +182,6 @@ exports[`SelectableCardField > should render correctly 1`] = `
   display: none;
 }
 
-.emotion-5 label {
-  display: none;
-}
-
 .emotion-7 {
   cursor: pointer;
   position: absolute;
@@ -260,7 +256,22 @@ exports[`SelectableCardField > should render correctly 1`] = `
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -284,11 +295,11 @@ exports[`SelectableCardField > should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-18[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -303,7 +314,7 @@ exports[`SelectableCardField > should render correctly 1`] = `
         data-checked="false"
         data-disabled="false"
         data-error="false"
-        data-has-label="false"
+        data-has-label="true"
         data-image="none"
         data-type="radio"
         role="button"
@@ -353,10 +364,16 @@ exports[`SelectableCardField > should render correctly 1`] = `
                 />
               </g>
             </svg>
+            <label
+              class="emotion-15 emotion-16 emotion-17"
+              for="test-test"
+            >
+              test
+            </label>
           </div>
         </div>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-18 emotion-19"
           data-has-label="false"
         >
           Radio field
@@ -549,10 +566,6 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   display: none;
 }
 
-.emotion-5 label {
-  display: none;
-}
-
 .emotion-7 {
   cursor: pointer;
   position: absolute;
@@ -627,7 +640,22 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -651,11 +679,11 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-18[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -670,7 +698,7 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
         data-checked="true"
         data-disabled="false"
         data-error="false"
-        data-has-label="false"
+        data-has-label="true"
         data-image="none"
         data-type="radio"
         role="button"
@@ -721,10 +749,16 @@ exports[`SelectableCardField > should render correctly checked 1`] = `
                 />
               </g>
             </svg>
+            <label
+              class="emotion-15 emotion-16 emotion-17"
+              for="test-checked"
+            >
+              test
+            </label>
           </div>
         </div>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-18 emotion-19"
           data-has-label="false"
         >
           Radio field checked
@@ -917,10 +951,6 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   display: none;
 }
 
-.emotion-5 label {
-  display: none;
-}
-
 .emotion-7 {
   cursor: pointer;
   position: absolute;
@@ -995,7 +1025,22 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1019,11 +1064,11 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-18[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -1038,7 +1083,7 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
         data-checked="false"
         data-disabled="true"
         data-error="false"
-        data-has-label="false"
+        data-has-label="true"
         data-image="none"
         data-type="radio"
         role="button"
@@ -1088,10 +1133,16 @@ exports[`SelectableCardField > should render correctly disabled 1`] = `
                 />
               </g>
             </svg>
+            <label
+              class="emotion-15 emotion-16 emotion-17"
+              for="test-disabled"
+            >
+              test
+            </label>
           </div>
         </div>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-18 emotion-19"
           data-has-label="false"
         >
           Radio field disabled
@@ -1284,10 +1335,6 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   display: none;
 }
 
-.emotion-5 label {
-  display: none;
-}
-
 .emotion-7 {
   cursor: pointer;
   position: absolute;
@@ -1362,7 +1409,22 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1386,11 +1448,11 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-18[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -1405,7 +1467,7 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
         data-checked="false"
         data-disabled="false"
         data-error="true"
-        data-has-label="false"
+        data-has-label="true"
         data-image="none"
         data-type="radio"
         role="button"
@@ -1455,10 +1517,16 @@ exports[`SelectableCardField > should render correctly with errors 1`] = `
                 />
               </g>
             </svg>
+            <label
+              class="emotion-15 emotion-16 emotion-17"
+              for="test-checked"
+            >
+              test
+            </label>
           </div>
         </div>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-18 emotion-19"
           data-has-label="false"
         >
           Radio field error
@@ -1656,10 +1724,6 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   display: none;
 }
 
-.emotion-5 label {
-  display: none;
-}
-
 .emotion-7 {
   cursor: pointer;
   position: absolute;
@@ -1734,7 +1798,22 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+}
+
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1758,11 +1837,11 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
   width: 100%;
 }
 
-.emotion-15[data-has-label='true'] {
+.emotion-18[data-has-label='true'] {
   padding-left: 32px;
 }
 
-.emotion-15[data-has-label='false'] {
+.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -1777,7 +1856,7 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
         data-checked="true"
         data-disabled="false"
         data-error="false"
-        data-has-label="false"
+        data-has-label="true"
         data-image="none"
         data-type="radio"
         role="button"
@@ -1827,10 +1906,16 @@ exports[`SelectableCardField > should trigger events correctly 1`] = `
                 />
               </g>
             </svg>
+            <label
+              class="emotion-15 emotion-16 emotion-17"
+              for="test-events"
+            >
+              test
+            </label>
           </div>
         </div>
         <div
-          class="emotion-15 emotion-16"
+          class="emotion-18 emotion-19"
           data-has-label="false"
         >
           Radio field events

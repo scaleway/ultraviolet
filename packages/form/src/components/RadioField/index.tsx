@@ -1,5 +1,5 @@
 import { Radio } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
+import { type ComponentProps, useMemo } from 'react'
 import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
@@ -9,7 +9,7 @@ type RadioFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = Omit<BaseFieldProps<TFieldValues, TFieldName>, 'label'> &
-  Omit<ComponentProps<typeof Radio>, 'value' | 'onChange' | 'aria-label'>
+  Omit<ComponentProps<typeof Radio>, 'value' | 'onChange'>
 
 /**
  * @deprecated This component is deprecated, use `RadioGroupField` instead.
@@ -29,6 +29,7 @@ export const RadioField = <
   value,
   shouldUnregister = false,
   validate,
+  'aria-label': ariaLabel,
   ...props
 }: RadioFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
@@ -45,13 +46,25 @@ export const RadioField = <
     },
   })
 
+  const errorLabel = useMemo(() => {
+    if (label && typeof label === 'string') {
+      return label
+    }
+
+    if (ariaLabel) {
+      return ariaLabel
+    }
+
+    return name
+  }, [label, name, ariaLabel])
+
   return (
     <Radio
       {...props}
       name={field.name}
       checked={field.value === value}
       disabled={disabled}
-      error={getError({ label: typeof label === 'string' ? label : '' }, error)}
+      error={getError({ label: errorLabel }, error)}
       onChange={() => {
         field.onChange(value)
         onChange?.(value)
@@ -63,7 +76,7 @@ export const RadioField = <
       onFocus={onFocus}
       required={required}
       value={value ?? ''}
-      label={label}
+      {...(label ? { label } : { 'aria-label': ariaLabel as string })}
     />
   )
 }

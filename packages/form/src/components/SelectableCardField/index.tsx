@@ -2,7 +2,7 @@ import { SelectableCard } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
-import type { BaseFieldProps } from '../../types'
+import type { BaseFieldProps, LabelProp } from '../../types'
 
 type SelectableCardFieldProps<
   TFieldValues extends FieldValues,
@@ -19,14 +19,21 @@ type SelectableCardFieldProps<
       | 'id'
       | 'children'
       | 'tooltip'
-      | 'label'
       | 'data-testid'
     >
   > & {
     className?: string
-    illustration?: string
-    productIcon?: never
-  }
+  } & (
+    | {
+        illustration?: ComponentProps<typeof SelectableCard>['illustration']
+        productIcon?: never
+      }
+    | {
+        productIcon?: ComponentProps<typeof SelectableCard>['productIcon']
+        illustration?: never
+      }
+  ) &
+  LabelProp
 
 export const SelectableCardField = <
   TFieldValues extends FieldValues,
@@ -52,6 +59,7 @@ export const SelectableCardField = <
   productIcon,
   illustration,
   'data-testid': dataTestId,
+  'aria-label': ariaLabel,
 }: SelectableCardFieldProps<TFieldValues, TFieldName>) => {
   const {
     field,
@@ -73,8 +81,8 @@ export const SelectableCardField = <
 
   return (
     <SelectableCard
-      productIcon={productIcon}
-      illustration={illustration}
+      {...(productIcon ? { productIcon } : { illustration })}
+      {...(label ? { label } : { 'aria-label': ariaLabel as string })}
       isError={!!error}
       showTick={showTick}
       checked={isChecked}
@@ -112,7 +120,6 @@ export const SelectableCardField = <
       type={type}
       id={id}
       tooltip={tooltip}
-      label={label}
       value={value ?? ''}
       name={field.name}
       data-testid={dataTestId}

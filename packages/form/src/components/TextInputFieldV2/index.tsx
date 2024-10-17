@@ -98,7 +98,7 @@ export const TextInputField = <
           regex: regexes,
           minLength,
           maxLength,
-          label: label ?? '',
+          label: label ?? ariaLabel ?? name,
           value: field.value,
         },
         error,

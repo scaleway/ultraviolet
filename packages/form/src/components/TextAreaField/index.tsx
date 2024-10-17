@@ -105,7 +105,7 @@ export const TextAreaField = <
           regex: regexes,
           minLength,
           maxLength,
-          label: label ?? (ariaLabel as string),
+          label: label ?? ariaLabel ?? name,
           value: field.value,
         },
         error,

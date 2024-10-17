@@ -12,6 +12,13 @@ describe('CheckboxField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
+  test('should render correctly with aria-label', () => {
+    const { asFragment } = renderWithForm(
+      <CheckboxField name="test" aria-label="test" />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   test('should render correctly disabled', () => {
     const { asFragment } = renderWithForm(
       <CheckboxField name="test" disabled />,

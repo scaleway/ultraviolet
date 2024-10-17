@@ -32,7 +32,6 @@ exports[`Submit > form is invalid 1`] = `
   padding-left: 8px;
   padding-right: 20px;
   padding-top: 14px;
-  padding: 8px;
 }
 
 .emotion-2::-webkit-input-placeholder {
@@ -82,21 +81,57 @@ exports[`Submit > form is invalid 1`] = `
 }
 
 .emotion-4 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #727683;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size:font-family: Inter,Asap,sans-serif;
+  font-size: 14px;
+  font-weight: Regular;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  weight: 400;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+  -webkit-transform: translate(-9.6%, -3px) scale(0.8);
+  -moz-transform: translate(-9.6%, -3px) scale(0.8);
+  -ms-transform: translate(-9.6%, -3px) scale(0.8);
+  transform: translate(-9.6%, -3px) scale(0.8);
+}
+
+.emotion-6 {
   height: auto;
 }
 
-.emotion-4[data-is-animated="true"] {
+.emotion-6[data-is-animated="true"] {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
 }
 
-.emotion-6 {
+.emotion-8 {
   font-size: 12px;
   color: #b3144d;
   padding-top: 2px;
 }
 
-.emotion-8 {
+.emotion-10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -137,7 +172,7 @@ exports[`Submit > form is invalid 1`] = `
   color: #ffffff;
 }
 
-.emotion-8:hover {
+.emotion-10:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -153,24 +188,31 @@ exports[`Submit > form is invalid 1`] = `
           class="emotion-0 emotion-1"
         >
           <input
+            aria-label="test"
             autocomplete="on"
             class="emotion-2 emotion-3"
             name="toto"
             type="text"
             value="4"
           />
+          <label
+            aria-live="assertive"
+            class="emotion-4 emotion-5"
+          >
+            test
+          </label>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-6 emotion-7"
           data-is-animated="true"
         >
           <div
-            class="emotion-6 emotion-7"
+            class="emotion-8 emotion-9"
           />
         </div>
       </div>
       <button
-        class="emotion-8 emotion-9"
+        class="emotion-10 emotion-11"
         disabled=""
         type="submit"
       >

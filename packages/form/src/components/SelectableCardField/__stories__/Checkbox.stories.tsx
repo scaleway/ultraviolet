@@ -12,7 +12,6 @@ export const Checkbox: StoryFn<
       id="option1"
       name="option1"
       showTick
-      label="Option 1"
       value="value1"
       type="checkbox"
     />
@@ -21,7 +20,6 @@ export const Checkbox: StoryFn<
       id="option2"
       name="option1"
       showTick
-      label="Option 2"
       value="value2"
       type="checkbox"
     />

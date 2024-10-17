@@ -18,6 +18,7 @@ type ToggleFieldProps<
     | 'labelPosition'
     | 'className'
     | 'data-testid'
+    | 'aria-label'
   > & {
     parse?: (value: boolean) => any
     format?: (value: any) => boolean
@@ -42,6 +43,7 @@ export const ToggleField = <
   'data-testid': dataTestId,
   shouldUnregister = false,
   validate,
+  'aria-label': ariaLabel,
 }: ToggleFieldProps<TFieldValues, TFieldName>) => {
   const {
     field,
@@ -88,7 +90,10 @@ export const ToggleField = <
       className={className}
       required={required}
       data-testid={dataTestId}
-      error={getError({ label: name }, error)}
+      error={getError(
+        { label: typeof label === 'string' ? label : (ariaLabel ?? name) },
+        error,
+      )}
     />
   )
 }

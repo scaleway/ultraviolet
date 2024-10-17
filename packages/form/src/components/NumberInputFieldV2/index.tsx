@@ -21,6 +21,7 @@ type NumberInputV2Props<
       | 'value'
       | 'data-testid'
       | 'label'
+      | 'aria-label'
       | 'tooltip'
       | 'unit'
       | 'size'
@@ -31,7 +32,6 @@ type NumberInputV2Props<
       | 'success'
       | 'helper'
       | 'labelDescription'
-      | 'aria-label'
       | 'autoFocus'
       | 'readOnly'
       | 'min'
@@ -116,7 +116,10 @@ export const NumberInputFieldV2 = <
       label={label}
       labelDescription={labelDescription}
       placeholder={placeholder}
-      error={getError({ label: label ?? '', max, min, isInteger: step }, error)}
+      error={getError(
+        { label: label ?? ariaLabel ?? name, max, min, isInteger: step },
+        error,
+      )}
       success={success}
       helper={helper}
       tooltip={tooltip}
