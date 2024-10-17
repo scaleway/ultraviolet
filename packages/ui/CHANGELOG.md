@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.73.2
+
+### Patch Changes
+
+- [#4348](https://github.com/scaleway/ultraviolet/pull/4348) [`705a52d`](https://github.com/scaleway/ultraviolet/commit/705a52db708a91a66af83f5e1684bd9e00d09a72) Thanks [@matthprost](https://github.com/matthprost)! - - Fix inputs to use `ariaLabel` when no `label` is provided for errors: CheckboxField, RadioField, NumberInputFieldV2, SelectInputFieldV2, SliderField, TagInputField, TextAreaField, TextInputFieldV2, ToggleField
+  - Fix `<Checkbox />`, `<Radio />` and `<SelectableCard />` to required either `label` or `aria-label`
+  - Add `aria-label` on `<TagInput />` and `<Toggle />`
+
 ## 1.73.1
 
 ### Patch Changes
