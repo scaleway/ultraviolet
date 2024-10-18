@@ -1,7 +1,9 @@
-import type { BaseFieldProps, FieldPath, FieldValues } from '@ultraviolet/form'
-import { useController, useErrors } from '@ultraviolet/form'
 import { Stack, Text, VerificationCode } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useController } from 'react-hook-form'
+import { useErrors } from '../../providers'
+import type { BaseFieldProps } from '../../types'
 
 type VerificationCodeFieldProps<
   TFieldValues extends FieldValues,
