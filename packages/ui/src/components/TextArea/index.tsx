@@ -197,7 +197,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       if (textArea && rows === 'auto') {
         textArea.style.height = 'auto'
         textArea.style.resize = 'none'
-        textArea.style.height = `calc(${textArea.scrollHeight}px + ${theme.space['1']})`
+        textArea.style.height = `${textArea.scrollHeight === 61 ? 46 : textArea.scrollHeight + 2}px`
       }
     }, [value, rows, theme])
 
