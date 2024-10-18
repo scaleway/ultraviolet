@@ -131,33 +131,33 @@ exports[`TextAreaField > should render correctly 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -218,7 +218,6 @@ exports[`TextAreaField > should render correctly 1`] = `
           <textarea
             aria-invalid="false"
             class="emotion-10 emotion-11"
-            data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"
@@ -381,33 +380,33 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-12[data-disabled='true'] {
+.emotion-12:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-12[data-disabled='true']::-webkit-input-placeholder {
+.emotion-12:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12[data-disabled='true']::-moz-placeholder {
+.emotion-12:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12[data-disabled='true']:-ms-input-placeholder {
+.emotion-12:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12[data-disabled='true']::placeholder {
+.emotion-12:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-12:not([data-disabled='true']):hover:hover {
+.emotion-12:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-12:not([data-disabled='true']):hover:focus {
+.emotion-12:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -598,7 +597,6 @@ exports[`TextAreaField > should render correctly generated 1`] = `
           <textarea
             aria-invalid="false"
             class="emotion-12 emotion-13"
-            data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"
@@ -771,33 +769,33 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -912,7 +910,6 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
           <textarea
             aria-invalid="false"
             class="emotion-10 emotion-11"
-            data-disabled="false"
             data-error="false"
             data-readonly="false"
             data-success="false"

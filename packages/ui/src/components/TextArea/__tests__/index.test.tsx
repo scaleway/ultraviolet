@@ -66,6 +66,17 @@ describe('TextArea', () => {
       />,
     ))
 
+  test('should render with auto rows', () =>
+    shouldMatchEmotionSnapshot(
+      <TextArea
+        label="Test"
+        value="test"
+        onChange={() => {}}
+        error="success"
+        rows="auto"
+      />,
+    ))
+
   test('should display success message', () => {
     const onChange = vi.fn()
     const successMessage = 'success message'
