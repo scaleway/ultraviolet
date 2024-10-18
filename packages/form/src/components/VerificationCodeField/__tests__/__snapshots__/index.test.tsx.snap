@@ -1,0 +1,159 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VerificationCodeField > should render correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  background: #ffffff;
+  border: solid 1px #d9dadd;
+  color: #3f4250;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 40px;
+  height: 48px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+}
+
+.emotion-4:hover,
+.emotion-4:focus {
+  border-color: #792dd4;
+}
+
+.emotion-4:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-4:last-child {
+  margin-right: 0;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-4::placeholder {
+  color: #727683;
+}
+
+<div
+    data-testid="testing"
+  >
+    <form
+      novalidate=""
+    >
+      <div
+        aria-label="verification-code-field"
+        class="emotion-0 emotion-1"
+      >
+        <label
+          for="verification-code-input-0"
+          id="verification-code-input-label"
+          style="cursor: pointer; flex-shrink: 0;"
+        >
+          <p
+            class="emotion-2 emotion-3"
+          >
+            Code
+          </p>
+        </label>
+        <div>
+          <input
+            aria-invalid="false"
+            aria-label="Verification code 0"
+            class="emotion-4 emotion-5"
+            data-testid="0"
+            id="verification-code-input-0"
+            pattern="[0-9]*"
+            placeholder="0"
+            required=""
+            type="tel"
+            value=""
+          />
+          <input
+            aria-invalid="false"
+            aria-label="Verification code 1"
+            class="emotion-4 emotion-5"
+            data-testid="1"
+            id="verification-code-input-1"
+            pattern="[0-9]*"
+            placeholder=""
+            required=""
+            type="tel"
+            value=""
+          />
+          <input
+            aria-invalid="false"
+            aria-label="Verification code 2"
+            class="emotion-4 emotion-5"
+            data-testid="2"
+            id="verification-code-input-2"
+            pattern="[0-9]*"
+            placeholder=""
+            required=""
+            type="tel"
+            value=""
+          />
+          <input
+            aria-invalid="false"
+            aria-label="Verification code 3"
+            class="emotion-4 emotion-5"
+            data-testid="3"
+            id="verification-code-input-3"
+            pattern="[0-9]*"
+            placeholder=""
+            required=""
+            type="tel"
+            value=""
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
