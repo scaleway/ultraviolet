@@ -53,9 +53,12 @@ describe('CopyButton', () => {
     ))
 
   it('should renders correctly with a complex children', async () => {
-    renderWithTheme(<CopyButton value="test" />)
+    const onCopy = vi.fn(() => {})
+
+    renderWithTheme(<CopyButton value="test" onCopy={onCopy} />)
 
     await userEvent.click(screen.getByRole('button'))
+    expect(onCopy).toBeCalledTimes(1)
     // @ts-expect-error we are voluntarily based on an older browser spec
 
     expect(window.clipboardData.getData()).toBe('test')

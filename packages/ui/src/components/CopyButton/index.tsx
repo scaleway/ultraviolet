@@ -17,6 +17,7 @@ type CopyButtonProps = {
   className?: string
   'data-testid'?: string
   children?: string
+  onCopy?: () => void
 }
 
 /**
@@ -33,6 +34,7 @@ export const CopyButton = ({
   className,
   children,
   'data-testid': dataTestId,
+  onCopy,
 }: CopyButtonProps) => {
   const [isCopied, setCopied] = useClipboard(value, {
     successDuration: COPY_DURATION,
@@ -41,7 +43,10 @@ export const CopyButton = ({
   return (
     <Button
       type="button"
-      onClick={setCopied}
+      onClick={() => {
+        setCopied()
+        onCopy?.()
+      }}
       size={size}
       sentiment={sentiment}
       variant={noBorder || !bordered ? 'ghost' : 'outlined'}
