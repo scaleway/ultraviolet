@@ -6,7 +6,7 @@ export const Playground = Template.bind({})
 Playground.args = { ...Template.args, options: dataUnGrouped, helper: 'helper' }
 Playground.decorators = [
   StoryComponent => (
-    <div style={{ height: '80px' }}>
+    <div style={{ height: '80px', width: '200px' }}>
       <StoryComponent />
     </div>
   ),
