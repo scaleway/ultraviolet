@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import {
   AlertCircleIcon,
@@ -5,7 +6,14 @@ import {
   CheckCircleIcon,
 } from '@ultraviolet/icons'
 import type { DOMAttributes, ReactNode } from 'react'
-import { forwardRef, useId, useMemo } from 'react'
+import {
+  forwardRef,
+  useEffect,
+  useId,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+} from 'react'
 import { Button, SIZE_HEIGHT as ButtonSizeHeight } from '../Button'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
@@ -63,7 +71,7 @@ const StyledTextArea = styled('textarea', {
     border-color: ${({ theme }) => theme.colors.neutral.border};
   }
 
-  &[data-disabled='true'] {
+  &:disabled {
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
@@ -73,7 +81,7 @@ const StyledTextArea = styled('textarea', {
     }
   }
 
-  &:not([data-disabled='true']):hover {
+  &:not(:disabled) {
     &:hover {
       border-color: ${({ theme }) => theme.colors.primary.border};
     }
@@ -127,7 +135,10 @@ type TextAreaProps = {
    * Ignored if following props are provided : readyOnly, success.
    */
   helper?: ReactNode
-  rows?: number
+  /**
+   * Number of rows to display. If 'auto', the textarea will grow with the content and won't be resizable.
+   */
+  rows?: number | 'auto'
   minLength?: number
   maxLength?: number
   tooltip?: string
@@ -177,6 +188,18 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     ref,
   ) => {
     const localId = useId()
+    const theme = useTheme()
+    const textAreaRef = useRef<HTMLTextAreaElement>(null)
+    useImperativeHandle(ref, () => textAreaRef.current as HTMLTextAreaElement)
+
+    useEffect(() => {
+      const textArea = textAreaRef.current
+      if (textArea && rows === 'auto') {
+        textArea.style.height = 'auto'
+        textArea.style.resize = 'none'
+        textArea.style.height = `${textArea.scrollHeight === 61 ? 46 : textArea.scrollHeight + 2}px`
+      }
+    }, [value, rows, theme])
 
     const sentiment = useMemo(() => {
       if (error) {
@@ -222,14 +245,13 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               tabIndex={tabIndex}
               autoFocus={autoFocus}
               disabled={disabled}
-              rows={rows}
-              ref={ref}
+              rows={rows !== 'auto' ? rows : undefined}
+              ref={textAreaRef}
               value={value}
               onChange={event => {
                 onChange(event.currentTarget.value)
               }}
               hasSentimentIcon={!!success || !!error}
-              data-disabled={disabled}
               data-readonly={readOnly}
               data-success={!!success}
               data-error={!!error}

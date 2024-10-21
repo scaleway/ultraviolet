@@ -220,33 +220,33 @@ exports[`TextArea > should render correctly when input  has a error sentiment 1`
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -370,7 +370,6 @@ exports[`TextArea > should render correctly when input  has a error sentiment 1`
         <textarea
           aria-invalid="true"
           class="emotion-10 emotion-11"
-          data-disabled="false"
           data-error="true"
           data-readonly="false"
           data-success="false"
@@ -630,33 +629,33 @@ exports[`TextArea > should render correctly when input has a success sentiment 1
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -780,7 +779,6 @@ exports[`TextArea > should render correctly when input has a success sentiment 1
         <textarea
           aria-invalid="false"
           class="emotion-10 emotion-11"
-          data-disabled="false"
           data-error="false"
           data-readonly="false"
           data-success="true"
@@ -1040,33 +1038,33 @@ exports[`TextArea > should render correctly when input is disabled 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -1112,33 +1110,33 @@ exports[`TextArea > should render correctly when input is disabled 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -1222,7 +1220,6 @@ exports[`TextArea > should render correctly when input is disabled 1`] = `
         <textarea
           aria-invalid="false"
           class="emotion-10 emotion-11"
-          data-disabled="true"
           data-error="false"
           data-readonly="false"
           data-success="false"
@@ -1461,33 +1458,33 @@ exports[`TextArea > should render correctly when input is readOnly 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -1533,33 +1530,33 @@ exports[`TextArea > should render correctly when input is readOnly 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -1643,7 +1640,6 @@ exports[`TextArea > should render correctly when input is readOnly 1`] = `
         <textarea
           aria-invalid="false"
           class="emotion-10 emotion-11"
-          data-disabled="false"
           data-error="false"
           data-readonly="true"
           data-success="false"
@@ -1792,33 +1788,33 @@ exports[`TextArea > should render correctly with basic props 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-10[data-disabled='true'] {
+.emotion-10:disabled {
   background: #f3f3f4;
   border-color: #e9eaeb;
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-webkit-input-placeholder {
+.emotion-10:disabled::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::-moz-placeholder {
+.emotion-10:disabled::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']:-ms-input-placeholder {
+.emotion-10:disabled:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10[data-disabled='true']::placeholder {
+.emotion-10:disabled::placeholder {
   color: #b5b7bd;
 }
 
-.emotion-10:not([data-disabled='true']):hover:hover {
+.emotion-10:not(:disabled):hover {
   border-color: #8c40ef;
 }
 
-.emotion-10:not([data-disabled='true']):hover:focus {
+.emotion-10:not(:disabled):focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -1876,7 +1872,6 @@ exports[`TextArea > should render correctly with basic props 1`] = `
         <textarea
           aria-invalid="false"
           class="emotion-10 emotion-11"
-          data-disabled="false"
           data-error="false"
           data-readonly="false"
           data-success="false"
@@ -1888,6 +1883,415 @@ exports[`TextArea > should render correctly with basic props 1`] = `
         <div
           class="emotion-12 emotion-13"
         />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TextArea > should render with auto rows 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
+  width: 100%;
+  resize: vertical;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border-radius: 4px;
+  padding: 12px 8px 12px 16px;
+  padding-right: calc(24px + 0px + 16px);
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-10::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-10::placeholder {
+  color: #727683;
+}
+
+.emotion-10[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-10[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-10[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-10:disabled {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  color: #b5b7bd;
+}
+
+.emotion-10:disabled::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10:disabled::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10:disabled:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10:disabled::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-10:not(:disabled):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-10:not(:disabled):focus {
+  outline: none;
+  border-color: #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+.emotion-14 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.emotion-14 .fillStroke {
+  stroke: #b3144d;
+  fill: none;
+}
+
+.emotion-16 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min-content;
+  gap: 8px;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-18 {
+  color: #b3144d;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <div
+          class="emotion-4 emotion-1"
+        >
+          <label
+            class="emotion-6 emotion-7"
+            for=":ro:"
+          >
+            Test
+          </label>
+        </div>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <textarea
+          aria-invalid="true"
+          class="emotion-10 emotion-11"
+          data-error="true"
+          data-readonly="false"
+          data-success="false"
+          id=":ro:"
+          style="height: 2px; resize: none;"
+        >
+          test
+        </textarea>
+        <div
+          class="emotion-12 emotion-13"
+        >
+          <svg
+            class="emotion-14 emotion-15"
+            viewBox="0 0 20 20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="emotion-16 emotion-17"
+      >
+        <div>
+          <p
+            class="emotion-18 emotion-7"
+          >
+            success
+          </p>
+        </div>
       </div>
     </div>
   </div>
