@@ -1,41 +1,34 @@
 import { SupportProductIcon } from '@ultraviolet/icons/product'
-import { Avatar, Text } from '@ultraviolet/ui'
+import { AvatarV2, Text } from '@ultraviolet/ui'
 import { Conversation } from '..'
 
 export const Message = () => (
   <>
     <Conversation.Message
-      avatar={<SupportProductIcon size="medium" />}
-      align="left"
-    >
-      <Text variant="body" sentiment="neutral" as="div">
-        Message left
-      </Text>
-    </Conversation.Message>
-    <Conversation.MessageInfos align="left">
-      <Conversation.Tag>tag</Conversation.Tag>
-      <Text as="p" variant="bodySmall" prominence="weak">
-        info
-      </Text>
-    </Conversation.MessageInfos>
-
-    <Conversation.Message
-      avatar={
-        <Avatar
-          size={40}
-          image="static/media/packages/ui/src/components/Avatar/__stories__/avatar.svg"
-        />
-      }
+      avatar={<AvatarV2 shape="circle" variant="text" text="MC" size="small" />}
       align="right"
     >
       <Text variant="body" sentiment="neutral" as="div">
-        Message right
+        Hi, I’m having trouble logging into my account. It keeps saying invalid
+        password, but I’m sure it’s correct.
       </Text>
     </Conversation.Message>
     <Conversation.MessageInfos align="right">
-      <Conversation.Tag>tag</Conversation.Tag>
+      <Conversation.Tag>1 day ago</Conversation.Tag>
       <Text as="p" variant="bodySmall" prominence="weak">
-        info
+        sent
+      </Text>
+    </Conversation.MessageInfos>
+    <Conversation.Message avatar={<SupportProductIcon />} align="left">
+      <Text variant="body" sentiment="neutral" as="div">
+        Hello! I recommend resetting your password using the Forgot Password
+        link. If that doesn’t work, let me know, and I’ll assist further.
+      </Text>
+    </Conversation.Message>
+    <Conversation.MessageInfos align="left">
+      <Conversation.Tag>10 minutes ago</Conversation.Tag>
+      <Text as="p" variant="bodySmall" prominence="weak">
+        read
       </Text>
     </Conversation.MessageInfos>
   </>
