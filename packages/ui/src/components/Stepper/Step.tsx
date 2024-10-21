@@ -147,7 +147,9 @@ const StyledStepContainer = styled(Stack)<{
         left: calc(50% + 25px);
         order: -1;
         height: ${({ size }) =>
-          size === 'small' ? LINE_HEIGHT_SIZES.small : LINE_HEIGHT_SIZES.medium}px;
+          size === 'small'
+            ? LINE_HEIGHT_SIZES.small
+            : LINE_HEIGHT_SIZES.medium}px;
       }
 
       &[data-done="true"]:after {
@@ -175,7 +177,9 @@ const StyledStepContainer = styled(Stack)<{
         left: calc(50% + 25px);
         order: -1;
         height: ${({ size }) =>
-          size === 'small' ? LINE_HEIGHT_SIZES.small : LINE_HEIGHT_SIZES.medium}px;
+          size === 'small'
+            ? LINE_HEIGHT_SIZES.small
+            : LINE_HEIGHT_SIZES.medium}px;
       }
     }
 
