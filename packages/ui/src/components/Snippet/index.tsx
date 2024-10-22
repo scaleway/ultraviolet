@@ -202,6 +202,7 @@ type SnippetProps = {
   initiallyExpanded?: boolean
   rows?: number
   noExpandable?: boolean
+  onCopy?: () => void
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 /**
@@ -220,6 +221,7 @@ export const Snippet = ({
   initiallyExpanded,
   rows = 4,
   noExpandable = false,
+  onCopy,
 }: SnippetProps) => {
   const theme = useTheme()
   const [showMore, setShowMore] = useReducer(
@@ -274,6 +276,7 @@ export const Snippet = ({
             value={children}
             copyText={copyText}
             copiedText={copiedText}
+            onCopy={onCopy}
             sentiment="neutral"
           />
         </ButtonContainer>
