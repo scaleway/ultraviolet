@@ -4,7 +4,7 @@ import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { SLIDER_WIDTH, THUMB_SIZE } from '../constant'
+import { THUMB_SIZE } from '../constant'
 import { StyledTooltip, thumbStyle, trackStyle } from '../styles'
 import type { DoubleSliderProps } from '../types'
 import { Label } from './Label'
@@ -135,9 +135,11 @@ export const DoubleSlider = ({
       ? value
       : [min ?? 0, max ?? 1]
   const [selectedIndexes, setSelectedIndexes] = useState(safeValue)
-  const [sliderWidth, setWidth] = useState(
-    refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
-  )
+  const [sliderWidth, setWidth] = useState(0)
+
+  useEffect(() => {
+    setWidth(refSlider.current?.offsetWidth ?? 0)
+  }, [refSlider])
 
   const activeValue = (side: 'left' | 'right') => {
     // Find the index of the min value (if side="left") and max value (side="right")
@@ -187,7 +189,7 @@ export const DoubleSlider = ({
   // Get slider size (for options)
   useEffect(() => {
     const setWidthResize = () => {
-      setWidth(refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max)
+      setWidth(refSlider.current?.offsetWidth ?? 0)
     }
     window.addEventListener('resize', setWidthResize)
 
