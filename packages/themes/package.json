@@ -16,7 +16,7 @@
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "typecheck": "tsc --noEmit",
-    "publint": "pnpm dlx publint"
+    "publint": "pnpm publint"
   },
   "keywords": [
     "themes",
