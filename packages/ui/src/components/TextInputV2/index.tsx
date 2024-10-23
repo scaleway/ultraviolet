@@ -179,6 +179,7 @@ type TextInputProps = {
   | 'tabIndex'
   | 'autoComplete'
   | 'onKeyDown'
+  | 'onKeyUp'
   | 'role'
   | 'aria-live'
   | 'aria-atomic'
@@ -227,6 +228,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       'aria-label': ariaLabel,
       autoComplete,
       onKeyDown,
+      onKeyUp,
       role,
       'aria-live': ariaLive,
       'aria-atomic': ariaAtomic,
@@ -354,6 +356,7 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 autoComplete={autoComplete}
                 required={required}
                 onKeyDown={onKeyDown}
+                onKeyUp={onKeyUp}
               />
               {success || error || loading || computedClearable ? (
                 <StateStack direction="row" gap={1} alignItems="center">
