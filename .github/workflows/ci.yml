@@ -156,7 +156,6 @@ jobs:
           cache: "pnpm"
       - run: |
           pnpm install
-          pnpm build
           pnpm publint
 
   deploy:
