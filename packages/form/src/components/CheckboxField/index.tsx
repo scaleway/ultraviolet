@@ -64,8 +64,8 @@ export const CheckboxField = <
       checked={!!field.value}
       error={getError({ label: label ?? ariaLabel ?? name }, error)}
       ref={field.ref}
-      {...(label
-        ? { children: label, 'aria-label': undefined }
+      {...(children
+        ? { children, 'aria-label': undefined }
         : { 'aria-label': ariaLabel as string })}
     />
   )
