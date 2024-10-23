@@ -18,7 +18,8 @@
     "typecheck": "tsc --noEmit",
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vite.config.ts",
-    "test:unit:coverage": "pnpm test:unit --coverage"
+    "test:unit:coverage": "pnpm test:unit --coverage",
+    "publint": "pnpm dlx publint"
   },
   "keywords": [
     "react",

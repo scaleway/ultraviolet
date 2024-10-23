@@ -141,6 +141,24 @@ jobs:
           pnpm install
           pnpm run build
 
+  publint:
+    runs-on: ubuntu-24.04
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_REMOTE_ONLY: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4.0.0
+      - name: Use Node.js
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: 20
+          cache: "pnpm"
+      - run: |
+          pnpm install
+          pnpm build
+          pnpm publint
+
   deploy:
     runs-on: ubuntu-24.04
     env:
@@ -148,7 +166,7 @@ jobs:
       DEPLOYMENT_NAME: "storybook"
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_REMOTE_ONLY: true
-    needs: [typecheck, build]
+    needs: [publint, typecheck, build]
     steps:
       - uses: actions/checkout@v4
       - name: Inject slug/short variables
