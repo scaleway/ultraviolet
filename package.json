@@ -34,7 +34,8 @@
     "release": "pnpm build && pnpm changeset publish",
     "svg": "svgo --pretty --multipass",
     "svg:all": "pnpm run svg -r -f .",
-    "illustrations:update": "BUCKET_NAME=ultraviolet BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/"
+    "illustrations:update": "BUCKET_NAME=ultraviolet BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/",
+    "publint": "turbo publint"
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [

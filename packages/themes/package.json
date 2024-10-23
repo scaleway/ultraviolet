@@ -15,7 +15,8 @@
     "watch:build": "vite build --config vite.config.ts --watch",
     "build": "vite build --config vite.config.ts && pnpm run type:generate",
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "publint": "pnpm dlx publint"
   },
   "keywords": [
     "themes",
@@ -41,12 +42,12 @@
   "types": "./dist/index.d.ts",
   "main": "./dist/index.cjs",
   "exports": {
-    "./*.css": "./dist/style/*.css",
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     },
+    "./*.css": "./dist/style/*.css",
     "./console/*": {
       "types": "./dist/themes/console/*/index.d.ts",
       "require": "./dist/themes/console/*/index.cjs",
