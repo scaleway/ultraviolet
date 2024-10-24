@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 3.4.0
+
+### Minor Changes
+
+- [#4393](https://github.com/scaleway/ultraviolet/pull/4393) [`c5c21bc`](https://github.com/scaleway/ultraviolet/commit/c5c21bcdc14dac1c3884ee63862eaeb743888bec) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - feat(ProductIllustration): environmental footprint calculator
+
 ## 3.3.5
 
 ### Patch Changes
