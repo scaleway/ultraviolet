@@ -41,9 +41,12 @@ export const ChipIcon = ({
   'data-testid': dataTestId,
 }: ChipIconType) => {
   const context = useContext(ChipContext)
+
   if (!context) {
     throw new Error('Chip.Icon can only be used inside a Chip component')
   }
+
+  const { disabled, isActive, iconRef } = context
 
   const IconUsed =
     Icon[
@@ -55,23 +58,23 @@ export const ChipIcon = ({
   return (
     <Container
       onClick={event => {
-        if (!context.disabled && onClick) {
+        if (!disabled && onClick) {
           event.stopPropagation()
           onClick()
         }
       }}
       data-testid={dataTestId}
-      data-disabled={context.disabled}
-      data-active={context.isActive}
-      data-has-onclick={!!onClick && !context.disabled}
+      data-disabled={disabled}
+      data-active={isActive}
+      data-has-onclick={!!onClick && !disabled}
       as={onClick ? 'button' : 'div'}
-      ref={context.iconRef}
+      ref={iconRef}
     >
       <IconUsed
         size="small"
-        prominence={context.isActive ? 'stronger' : 'default'}
+        prominence={isActive ? 'stronger' : 'default'}
         sentiment="neutral"
-        disabled={context.disabled}
+        disabled={disabled}
       />
     </Container>
   )

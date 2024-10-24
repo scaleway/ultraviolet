@@ -121,10 +121,7 @@ export const Chip = ({
 
   return (
     <ChipContext.Provider value={value}>
-      <Text
-        as={typeof children === 'string' ? 'text' : 'div'}
-        variant={size === 'large' ? 'bodySmall' : 'caption'}
-      >
+      <Text as="div" variant={size === 'large' ? 'bodySmall' : 'caption'}>
         <StyledContainer
           data-size={size}
           onClick={() => {
