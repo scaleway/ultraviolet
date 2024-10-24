@@ -1,0 +1,970 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Checkbox > renders correctly 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 4px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #e9eaeb;
+  text-align: center;
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2[data-disabled="false"]:hover {
+  background-color: #e9eaeb;
+  border-color: #92959d;
+  color: #222638;
+}
+
+.emotion-2[data-disabled="true"] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-2[data-active="true"] {
+  background-color: #8c40ef;
+  border-color: #8c40ef;
+  color: #ffffff;
+}
+
+.emotion-2[data-active="true"][data-disabled="false"]:hover {
+  background-color: #792dd4;
+  border-color: #792dd4;
+  color: #f9f9fa;
+}
+
+.emotion-2[data-active="true"][data-disabled="true"] {
+  background-color: #e5dbfd;
+  border: none;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 24px;
+  padding: 4px 12px;
+}
+
+.emotion-2[data-size='large'] {
+  height: 32px;
+  padding: 4px 16px;
+}
+
+.emotion-2[data-trailing-icon="true"] {
+  padding-right: 8px;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-active="false"
+        data-disabled="false"
+        data-prominence="default"
+        data-size="medium"
+        data-trailing-icon="false"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox > renders correctly active 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 4px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #e9eaeb;
+  text-align: center;
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2[data-disabled="false"]:hover {
+  background-color: #e9eaeb;
+  border-color: #92959d;
+  color: #222638;
+}
+
+.emotion-2[data-disabled="true"] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-2[data-active="true"] {
+  background-color: #8c40ef;
+  border-color: #8c40ef;
+  color: #ffffff;
+}
+
+.emotion-2[data-active="true"][data-disabled="false"]:hover {
+  background-color: #792dd4;
+  border-color: #792dd4;
+  color: #f9f9fa;
+}
+
+.emotion-2[data-active="true"][data-disabled="true"] {
+  background-color: #e5dbfd;
+  border: none;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 24px;
+  padding: 4px 12px;
+}
+
+.emotion-2[data-size='large'] {
+  height: 32px;
+  padding: 4px 16px;
+}
+
+.emotion-2[data-trailing-icon="true"] {
+  padding-right: 8px;
+}
+
+.emotion-4 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+  background-color: #8c40ef;
+}
+
+.emotion-4[data-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: #ffffff;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-6 .fillStroke {
+  stroke: #ffffff;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-active="true"
+        data-disabled="false"
+        data-prominence="stronger"
+        data-size="medium"
+        data-trailing-icon="true"
+      >
+        test 
+        <div
+          class="emotion-4 emotion-5"
+          data-active="true"
+          data-disabled="false"
+          data-has-onclick="false"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="m9.69 17.933.003.001C9.89 18.02 10 18 10 18s.11.02.308-.066l.002-.001.006-.003.018-.008a6 6 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 13.988 17 11.493 17 8A7 7 0 1 0 3 8c0 3.492 1.698 5.988 3.355 7.584a13.7 13.7 0 0 0 2.273 1.765 12 12 0 0 0 .976.544l.062.029.018.008zM10 10.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox > renders correctly active disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 4px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #e9eaeb;
+  text-align: center;
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2[data-disabled="false"]:hover {
+  background-color: #e9eaeb;
+  border-color: #92959d;
+  color: #222638;
+}
+
+.emotion-2[data-disabled="true"] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-2[data-active="true"] {
+  background-color: #8c40ef;
+  border-color: #8c40ef;
+  color: #ffffff;
+}
+
+.emotion-2[data-active="true"][data-disabled="false"]:hover {
+  background-color: #792dd4;
+  border-color: #792dd4;
+  color: #f9f9fa;
+}
+
+.emotion-2[data-active="true"][data-disabled="true"] {
+  background-color: #e5dbfd;
+  border: none;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 24px;
+  padding: 4px 12px;
+}
+
+.emotion-2[data-size='large'] {
+  height: 32px;
+  padding: 4px 16px;
+}
+
+.emotion-2[data-trailing-icon="true"] {
+  padding-right: 8px;
+}
+
+.emotion-4 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+  background-color: #8c40ef;
+}
+
+.emotion-4[data-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: #f3f3f4;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-6 .fillStroke {
+  stroke: #f3f3f4;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-active="true"
+        data-disabled="true"
+        data-prominence="stronger"
+        data-size="medium"
+        data-trailing-icon="true"
+      >
+        test 
+        <div
+          class="emotion-4 emotion-5"
+          data-active="true"
+          data-disabled="true"
+          data-has-onclick="false"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="m9.69 17.933.003.001C9.89 18.02 10 18 10 18s.11.02.308-.066l.002-.001.006-.003.018-.008a6 6 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 13.988 17 11.493 17 8A7 7 0 1 0 3 8c0 3.492 1.698 5.988 3.355 7.584a13.7 13.7 0 0 0 2.273 1.765 12 12 0 0 0 .976.544l.062.029.018.008zM10 10.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox > renders correctly disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 4px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #e9eaeb;
+  text-align: center;
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2[data-disabled="false"]:hover {
+  background-color: #e9eaeb;
+  border-color: #92959d;
+  color: #222638;
+}
+
+.emotion-2[data-disabled="true"] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-2[data-active="true"] {
+  background-color: #8c40ef;
+  border-color: #8c40ef;
+  color: #ffffff;
+}
+
+.emotion-2[data-active="true"][data-disabled="false"]:hover {
+  background-color: #792dd4;
+  border-color: #792dd4;
+  color: #f9f9fa;
+}
+
+.emotion-2[data-active="true"][data-disabled="true"] {
+  background-color: #e5dbfd;
+  border: none;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 24px;
+  padding: 4px 12px;
+}
+
+.emotion-2[data-size='large'] {
+  height: 32px;
+  padding: 4px 16px;
+}
+
+.emotion-2[data-trailing-icon="true"] {
+  padding-right: 8px;
+}
+
+.emotion-4 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+  background-color: #8c40ef;
+}
+
+.emotion-4[data-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: #b5b7bd;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-6 .fillStroke {
+  stroke: #b5b7bd;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-active="false"
+        data-disabled="true"
+        data-prominence="weak"
+        data-size="medium"
+        data-trailing-icon="true"
+      >
+        test 
+        <div
+          class="emotion-4 emotion-5"
+          data-active="false"
+          data-disabled="true"
+          data-has-onclick="false"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="m9.69 17.933.003.001C9.89 18.02 10 18 10 18s.11.02.308-.066l.002-.001.006-.003.018-.008a6 6 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 13.988 17 11.493 17 8A7 7 0 1 0 3 8c0 3.492 1.698 5.988 3.355 7.584a13.7 13.7 0 0 0 2.273 1.765 12 12 0 0 0 .976.544l.062.029.018.008zM10 10.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox > renders correctly large 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 4px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #e9eaeb;
+  text-align: center;
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2[data-disabled="false"]:hover {
+  background-color: #e9eaeb;
+  border-color: #92959d;
+  color: #222638;
+}
+
+.emotion-2[data-disabled="true"] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-2[data-active="true"] {
+  background-color: #8c40ef;
+  border-color: #8c40ef;
+  color: #ffffff;
+}
+
+.emotion-2[data-active="true"][data-disabled="false"]:hover {
+  background-color: #792dd4;
+  border-color: #792dd4;
+  color: #f9f9fa;
+}
+
+.emotion-2[data-active="true"][data-disabled="true"] {
+  background-color: #e5dbfd;
+  border: none;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 24px;
+  padding: 4px 12px;
+}
+
+.emotion-2[data-size='large'] {
+  height: 32px;
+  padding: 4px 16px;
+}
+
+.emotion-2[data-trailing-icon="true"] {
+  padding-right: 8px;
+}
+
+.emotion-4 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+  background-color: #8c40ef;
+}
+
+.emotion-4[data-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-6 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-active="false"
+        data-disabled="false"
+        data-prominence="default"
+        data-size="large"
+        data-trailing-icon="true"
+      >
+        test 
+        <div
+          class="emotion-4 emotion-5"
+          data-active="false"
+          data-disabled="false"
+          data-has-onclick="false"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="m9.69 17.933.003.001C9.89 18.02 10 18 10 18s.11.02.308-.066l.002-.001.006-.003.018-.008a6 6 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 13.988 17 11.493 17 8A7 7 0 1 0 3 8c0 3.492 1.698 5.988 3.355 7.584a13.7 13.7 0 0 0 2.273 1.765 12 12 0 0 0 .976.544l.062.029.018.008zM10 10.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox > renders correctly wiht icon 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 4px 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #e9eaeb;
+  text-align: center;
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2[data-disabled="false"]:hover {
+  background-color: #e9eaeb;
+  border-color: #92959d;
+  color: #222638;
+}
+
+.emotion-2[data-disabled="true"] {
+  background-color: #f3f3f4;
+  border-color: #d9dadd;
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-2[data-active="true"] {
+  background-color: #8c40ef;
+  border-color: #8c40ef;
+  color: #ffffff;
+}
+
+.emotion-2[data-active="true"][data-disabled="false"]:hover {
+  background-color: #792dd4;
+  border-color: #792dd4;
+  color: #f9f9fa;
+}
+
+.emotion-2[data-active="true"][data-disabled="true"] {
+  background-color: #e5dbfd;
+  border: none;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 24px;
+  padding: 4px 12px;
+}
+
+.emotion-2[data-size='large'] {
+  height: 32px;
+  padding: 4px 16px;
+}
+
+.emotion-2[data-trailing-icon="true"] {
+  padding-right: 8px;
+}
+
+.emotion-4 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="false"]:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-4[data-has-onclick="true"][data-active="true"]:hover {
+  background-color: #8c40ef;
+}
+
+.emotion-4[data-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.emotion-6 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-6 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-active="false"
+        data-disabled="false"
+        data-prominence="default"
+        data-size="medium"
+        data-trailing-icon="false"
+      >
+        <button
+          class="emotion-4 emotion-5"
+          data-active="false"
+          data-disabled="false"
+          data-has-onclick="true"
+        >
+          <svg
+            class="emotion-6 emotion-7"
+            viewBox="0 0 20 20"
+          >
+            <path
+              clip-rule="evenodd"
+              d="m9.69 17.933.003.001C9.89 18.02 10 18 10 18s.11.02.308-.066l.002-.001.006-.003.018-.008a6 6 0 0 0 .281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 13.988 17 11.493 17 8A7 7 0 1 0 3 8c0 3.492 1.698 5.988 3.355 7.584a13.7 13.7 0 0 0 2.273 1.765 12 12 0 0 0 .976.544l.062.029.018.008zM10 10.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </button>
+        test
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
