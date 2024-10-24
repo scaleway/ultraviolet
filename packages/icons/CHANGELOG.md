@@ -1,5 +1,12 @@
 # Change Log
 
+## 3.4.0
+
+### Minor Changes
+
+- [#4355](https://github.com/scaleway/ultraviolet/pull/4355) [`7376580`](https://github.com/scaleway/ultraviolet/commit/73765805d94a08b881fe8fc33edff8f54bec9101) Thanks [@matthprost](https://github.com/matthprost)! - - New product icon `<AuditTrailPorductIcon />`
+  - New system icons `<ThumbsUpIcon />`, `<ThumbsDownIcon />`, `<ThumbsUpOutlineIcon />`, `<ThumbsDownOutlineIcon />`
+
 ## 3.3.0
 
 ### Minor Changes

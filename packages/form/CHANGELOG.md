@@ -1,5 +1,25 @@
 # Change Log
 
+## 3.10.0
+
+### Minor Changes
+
+- [#4360](https://github.com/scaleway/ultraviolet/pull/4360) [`ff15811`](https://github.com/scaleway/ultraviolet/commit/ff15811578854da7ccaab45d68f4ba339fbeb669) Thanks [@matthprost](https://github.com/matthprost)! - Add `<VerificationCodeField />`
+
+### Patch Changes
+
+- [#4384](https://github.com/scaleway/ultraviolet/pull/4384) [`6b53102`](https://github.com/scaleway/ultraviolet/commit/6b53102778e03127bf3e1473e2dc0a00912d3e1e) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CheckboxField />` label
+
+- [#4361](https://github.com/scaleway/ultraviolet/pull/4361) [`c289c5d`](https://github.com/scaleway/ultraviolet/commit/c289c5d4cfaa8eb587115b73ad119a079793826e) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<TextArea />` and `<TextAreaField />`:
+
+  - To have correct focus / active styles
+  - Update prop `rows` to accept `auto` which will automatically adjust the height of the textarea based on its content
+
+- [#4368](https://github.com/scaleway/ultraviolet/pull/4368) [`6c6e24a`](https://github.com/scaleway/ultraviolet/commit/6c6e24a9cf5d07fb2bf8971f0e9a1c776da50bde) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.53.1`.
+
+- Updated dependencies [[`8e77c03`](https://github.com/scaleway/ultraviolet/commit/8e77c03fdabffedae38fd6a135af914140f3027e), [`291882b`](https://github.com/scaleway/ultraviolet/commit/291882ba824d89f57168e8924d9e063f985de1c5), [`c289c5d`](https://github.com/scaleway/ultraviolet/commit/c289c5d4cfaa8eb587115b73ad119a079793826e)]:
+  - @ultraviolet/ui@1.74.0
+
 ## 3.9.8
 
 ### Patch Changes

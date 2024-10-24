@@ -1,5 +1,21 @@
 # Change Log
 
+## 1.74.0
+
+### Minor Changes
+
+- [#4372](https://github.com/scaleway/ultraviolet/pull/4372) [`8e77c03`](https://github.com/scaleway/ultraviolet/commit/8e77c03fdabffedae38fd6a135af914140f3027e) Thanks [@matthprost](https://github.com/matthprost)! - New prop `onCopy` on components `<CopyButton />` and `<Snippet />`
+
+### Patch Changes
+
+- [#4373](https://github.com/scaleway/ultraviolet/pull/4373) [`291882b`](https://github.com/scaleway/ultraviolet/commit/291882ba824d89f57168e8924d9e063f985de1c5) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` dropdown to be at least 320px of width
+
+- [#4361](https://github.com/scaleway/ultraviolet/pull/4361) [`c289c5d`](https://github.com/scaleway/ultraviolet/commit/c289c5d4cfaa8eb587115b73ad119a079793826e) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<TextArea />` and `<TextAreaField />`:
+  - To have correct focus / active styles
+  - Update prop `rows` to accept `auto` which will automatically adjust the height of the textarea based on its content
+- Updated dependencies [[`7376580`](https://github.com/scaleway/ultraviolet/commit/73765805d94a08b881fe8fc33edff8f54bec9101)]:
+  - @ultraviolet/icons@3.4.0
+
 ## 1.73.2
 
 ### Patch Changes
