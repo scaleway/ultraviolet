@@ -32,7 +32,7 @@
     "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm run format packages/themes/src/themes/console",
     "icons:update": "tsx ./scripts/generate-icons-file.ts && biome format --write packages/icons",
     "release": "pnpm build && pnpm changeset publish",
-    "svg": "npx svgo --pretty --multipass",
+    "svg": "svgo --pretty --multipass",
     "svg:all": "pnpm run svg -r -f .",
     "illustrations:update": "BUCKET_NAME=ultraviolet BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/"
   },
@@ -166,6 +166,7 @@
     "shx": "0.3.4",
     "size-limit": "11.1.6",
     "storybook": "8.3.6",
+    "svgo": "^3.3.2",
     "timekeeper": "2.3.1",
     "tsx": "4.19.2",
     "turbo": "2.2.3",
