@@ -61,6 +61,8 @@ export const TextInputField = <
   role,
   'aria-live': ariaLive,
   'aria-atomic': ariaAtomic,
+  onKeyDown,
+  onKeyUp,
 }: TextInputFieldProps<TFieldValues, TFieldName>) => {
   const { getError } = useErrors()
 
@@ -142,6 +144,8 @@ export const TextInputField = <
       role={role}
       aria-live={ariaLive}
       aria-atomic={ariaAtomic}
+      onKeyDown={onKeyDown}
+      onKeyUp={onKeyUp}
     />
   )
 }
