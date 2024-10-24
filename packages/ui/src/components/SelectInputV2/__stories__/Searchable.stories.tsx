@@ -34,7 +34,7 @@ Searchable.parameters = {
   docs: {
     description: {
       story:
-        'Add a search bar in the dropdown to search through the different options. If there are less than 6 options, the search bar will **not** appear.',
+        'Add a search bar in the dropdown to search through the different options. If there are less than 6 options, the search bar will **not** appear, even if the prop is set to `true`.',
     },
   },
 }

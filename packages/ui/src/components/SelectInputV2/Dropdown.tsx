@@ -221,23 +221,14 @@ const handleClickOutside = (
   refSelect: RefObject<HTMLDivElement>,
   onSearch: Dispatch<SetStateAction<DataType>>,
   options: DataType,
-  isInsideModal: boolean,
 ) => {
   if (
     ref.current &&
     !ref.current.contains(event.target as Node) &&
     !refSelect.current?.contains(event.target as Node)
   ) {
-    if (isInsideModal) {
-      // Timeout when the selectInput is inside a modal to not close both the modal and the dropdown if it scrolls
-      setTimeout(() => {
-        setIsDropdownVisibile(false) // hide dropdown when clicking outside of the dropdown
-        onSearch(options) // reset displayed options to default when dropdown is hidden
-      }, 100)
-    } else {
-      setIsDropdownVisibile(false)
-      onSearch(options)
-    }
+    setIsDropdownVisibile(false)
+    onSearch(options)
   }
 }
 
@@ -748,33 +739,16 @@ export const Dropdown = ({
       setSearch('')
     }
 
-    const modalElement = document.getElementById('backdrop-modal')
-
-    if (modalElement) {
-      modalElement.addEventListener('mousedown', event =>
-        handleClickOutside(
-          event,
-          ref,
-          setIsDropdownVisible,
-          refSelect,
-          onSearch,
-          options,
-          true,
-        ),
-      )
-    } else {
-      document.addEventListener('mousedown', event =>
-        handleClickOutside(
-          event,
-          ref,
-          setIsDropdownVisible,
-          refSelect,
-          onSearch,
-          options,
-          false,
-        ),
-      )
-    }
+    document.addEventListener('mousedown', event =>
+      handleClickOutside(
+        event,
+        ref,
+        setIsDropdownVisible,
+        refSelect,
+        onSearch,
+        options,
+      ),
+    )
 
     if (!searchable) {
       document.addEventListener('keydown', event =>
@@ -791,31 +765,16 @@ export const Dropdown = ({
     }
 
     return () => {
-      if (!modalElement) {
-        document.removeEventListener('mousedown', event =>
-          handleClickOutside(
-            event,
-            ref,
-            setIsDropdownVisible,
-            refSelect,
-            onSearch,
-            options,
-            false,
-          ),
-        )
-      } else {
-        modalElement.addEventListener('mousedown', event =>
-          handleClickOutside(
-            event,
-            ref,
-            setIsDropdownVisible,
-            refSelect,
-            onSearch,
-            options,
-            true,
-          ),
-        )
-      }
+      document.removeEventListener('mousedown', event =>
+        handleClickOutside(
+          event,
+          ref,
+          setIsDropdownVisible,
+          refSelect,
+          onSearch,
+          options,
+        ),
+      )
 
       if (!searchable) {
         document.removeEventListener('keydown', event =>
