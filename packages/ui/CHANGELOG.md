@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.75.0
+
+### Minor Changes
+
+- [#4307](https://github.com/scaleway/ultraviolet/pull/4307) [`82f8ecc`](https://github.com/scaleway/ultraviolet/commit/82f8eccb176a9377a7af07c1a6057366698a7d28) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<Chip />`
+
 ## 1.74.0
 
 ### Minor Changes
