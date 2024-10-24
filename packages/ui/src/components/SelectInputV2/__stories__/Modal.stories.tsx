@@ -16,9 +16,7 @@ export const Modal: StoryFn<typeof SelectInputV2> = args => (
         Title
       </Text>
       <Text as="p" variant="body" sentiment="neutral">
-        This is an example of SelectInput inside a modal. Click outside the
-        select input to close the SelectInput and outside the modal to close
-        both the modal and the selectInput.
+        This is an example of SelectInput inside a modal.
       </Text>
       <SelectInputV2 {...args} label="Label" />
       <Text as="p" variant="body" sentiment="neutral">
