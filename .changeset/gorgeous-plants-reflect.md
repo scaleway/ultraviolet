@@ -3,4 +3,4 @@
 "@ultraviolet/ui": patch
 ---
 
-fix(textinput): onKeyUp/Down not forwarded
+Fix <TextInputV2 /> onKeyUp/Down not forwarded
