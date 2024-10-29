@@ -30,6 +30,7 @@ const StyledTagContainer = styled.div<{
   gap: string
   multiline?: boolean
   popoverTriggerWidth?: number
+  haveOnlySingleLongTag?: boolean
 }>`
   display: flex;
   align-items: center;
@@ -37,12 +38,12 @@ const StyledTagContainer = styled.div<{
   gap: ${({ gap }) => gap};
   ${({ multiline }) => multiline && `flex-wrap: wrap;`};
 
-  // to handle the case where we have one tag and we need to ellipsis it
-  ${({ popoverTriggerWidth }) =>
-    popoverTriggerWidth &&
+  // Handle the case where we have one tag and we need to ellipsis it
+  ${({ popoverTriggerWidth, haveOnlySingleLongTag }) =>
+    (popoverTriggerWidth || haveOnlySingleLongTag) &&
     `
       &:has(.ellipsed) {
-        width: calc(100% - ${popoverTriggerWidth}px); // to let space for the +X button
+        width: calc(100% - ${popoverTriggerWidth || 0}px); // to let space for the +X button
         max-width: fit-content;
       }
 
@@ -299,6 +300,9 @@ export const TagList = ({
         multiline={multiline}
         popoverTriggerWidth={popoverTriggerWidth}
         ref={containerRef}
+        haveOnlySingleLongTag={
+          visibleTags.length === 1 && hiddenTags.length === 0
+        }
       >
         {visibleTags.map((tag, index) =>
           renderTag(
