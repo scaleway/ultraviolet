@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.10.2
+
+### Patch Changes
+
+- [#4385](https://github.com/scaleway/ultraviolet/pull/4385) [`d203ee4`](https://github.com/scaleway/ultraviolet/commit/d203ee4840e6c588b476b7d2c3eb71d65669c673) Thanks [@vincentaudebert](https://github.com/vincentaudebert)! - Fix <TextInputV2 /> onKeyUp/Down not forwarded
+
+- Updated dependencies [[`d203ee4`](https://github.com/scaleway/ultraviolet/commit/d203ee4840e6c588b476b7d2c3eb71d65669c673)]:
+  - @ultraviolet/ui@1.75.1
+
 ## 3.10.1
 
 ### Patch Changes
