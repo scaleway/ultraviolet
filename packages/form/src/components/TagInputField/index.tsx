@@ -96,6 +96,7 @@ export const TagInputField = <
       data-testid={dataTestId}
       clearable={clearable}
       label={label}
+      aria-label={ariaLabel}
       labelDescription={labelDescription}
       size={size}
       success={success}
