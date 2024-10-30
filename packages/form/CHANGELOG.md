@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.10.3
+
+### Patch Changes
+
+- [#4413](https://github.com/scaleway/ultraviolet/pull/4413) [`4378a9a`](https://github.com/scaleway/ultraviolet/commit/4378a9ac698a8b4fcc135dbc196f2c8d50bdedfd) Thanks [@fabienhebert](https://github.com/fabienhebert)! - TagInputField: forward aria-label
+
+- Updated dependencies [[`1d3d064`](https://github.com/scaleway/ultraviolet/commit/1d3d0640c097788e63915f567d2a54df586a34e9)]:
+  - @ultraviolet/ui@1.75.2
+
 ## 3.10.2
 
 ### Patch Changes
