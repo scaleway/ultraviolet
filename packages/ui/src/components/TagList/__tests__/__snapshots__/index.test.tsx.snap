@@ -163,6 +163,21 @@ exports[`TagList > renders correctly and add ellipsis to the first tag as it too
   gap: 8px;
 }
 
+.emotion-2:has(.ellipsed) {
+  width: calc(100% - 0px);
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.emotion-2 span,
+.emotion-2 div {
+  width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
 .emotion-4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
