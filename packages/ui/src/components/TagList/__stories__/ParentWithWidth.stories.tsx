@@ -11,6 +11,10 @@ export const ParentWithDefinedWidth: StoryFn<typeof TagList> = args => (
     <div style={{ width: '100px', border: '1px solid gray', padding: '10px' }}>
       <TagList {...args} />
     </div>
+
+    <div style={{ width: '100px', border: '1px solid gray', padding: '10px' }}>
+      <TagList {...args} tags={['Looooooooooooong']} />
+    </div>
   </Stack>
 )
 
