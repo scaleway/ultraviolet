@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.75.2
+
+### Patch Changes
+
+- [#4409](https://github.com/scaleway/ultraviolet/pull/4409) [`1d3d064`](https://github.com/scaleway/ultraviolet/commit/1d3d0640c097788e63915f567d2a54df586a34e9) Thanks [@radhi-nasser-scaleway](https://github.com/radhi-nasser-scaleway)! - Fix <TagList/> not adding ellipsis to single long tag
+
 ## 1.75.1
 
 ### Patch Changes
