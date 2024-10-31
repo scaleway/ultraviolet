@@ -1,0 +1,6934 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DateInputV2 > render correctly with a array of dates to exclude 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":rad:"
+        aria-describedby=":rad:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":rae:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":rae:"
+                type="text"
+                value="1995/12/11"
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > render correctly with a range of date 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":ra9:"
+        aria-describedby=":ra9:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":raa:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":raa:"
+                type="text"
+                value="1995/12/11 – 1995/12/25"
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > render correctly with showMonthYearPicker 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":ra5:"
+        aria-describedby=":ra5:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":ra6:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":ra6:"
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #b5b7bd;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #b5b7bd;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":r4:"
+        aria-describedby=":r4:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":r5:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="true"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                disabled=""
+                id=":r5:"
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly error 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #b3144d;
+  fill: none;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-22 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-24 {
+  color: #b3144d;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":rc:"
+        aria-describedby=":rc:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":rd:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="true"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="true"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":rd:"
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div
+                class="emotion-20 emotion-21"
+              >
+                <svg
+                  class="emotion-22 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p
+            class="emotion-24 emotion-11"
+          >
+            error
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly error disabled 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #ffbbd3;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #ffbbd3;
+  fill: none;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  fill: #b5b7bd;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-22 .fillStroke {
+  stroke: #b5b7bd;
+  fill: none;
+}
+
+.emotion-24 {
+  color: #ffbbd3;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":rh:"
+        aria-describedby=":rh:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":ri:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="true"
+              data-error="true"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="true"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                disabled=""
+                id=":ri:"
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div
+                class="emotion-20 emotion-21"
+              >
+                <svg
+                  class="emotion-22 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p
+            class="emotion-24 emotion-11"
+          >
+            error
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly error disabled required 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 8px;
+  width: 8px;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.emotion-12 .fillStroke {
+  stroke: #b3144d;
+  fill: none;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-14>.emotion-17 {
+  color: #3f4250;
+}
+
+.emotion-14>.emotion-17::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-14>.emotion-17::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-14>.emotion-17:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-14>.emotion-17::placeholder {
+  color: #727683;
+}
+
+.emotion-14[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-14[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-14[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-14[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17 {
+  color: #b5b7bd;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-16[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-16[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+}
+
+.emotion-20 {
+  vertical-align: middle;
+  fill: #ffbbd3;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-20 .fillStroke {
+  stroke: #ffbbd3;
+  fill: none;
+}
+
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-24 {
+  vertical-align: middle;
+  fill: #b5b7bd;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-24 .fillStroke {
+  stroke: #b5b7bd;
+  fill: none;
+}
+
+.emotion-26 {
+  color: #ffbbd3;
+  font-size: 12px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":rm:"
+        aria-describedby=":rm:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":rn:"
+              >
+                Date
+              </label>
+              <svg
+                class="emotion-12 emotion-13"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-14 emotion-15"
+              data-disabled="true"
+              data-error="true"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="true"
+                autocomplete="false"
+                class="emotion-16 emotion-17"
+                data-size="large"
+                disabled=""
+                id=":rn:"
+                required=""
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-18 emotion-19"
+              >
+                <svg
+                  class="emotion-20 emotion-13"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0m-8-5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 10 5m0 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div
+                class="emotion-22 emotion-23"
+              >
+                <svg
+                  class="emotion-24 emotion-13"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p
+            class="emotion-26 emotion-11"
+          >
+            error
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly min-max 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":rr:"
+        aria-describedby=":rr:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":rs:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":rs:"
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly required 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 8px;
+  width: 8px;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.emotion-12 .fillStroke {
+  stroke: #b3144d;
+  fill: none;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-14>.emotion-17 {
+  color: #3f4250;
+}
+
+.emotion-14>.emotion-17::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-14>.emotion-17::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-14>.emotion-17:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-14>.emotion-17::placeholder {
+  color: #727683;
+}
+
+.emotion-14[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-14[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-14[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-14[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17 {
+  color: #b5b7bd;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14[data-disabled='true']>.emotion-17::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-14:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-16 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-16[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-16[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-20 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-20 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":r8:"
+        aria-describedby=":r8:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":r9:"
+              >
+                Date
+              </label>
+              <svg
+                class="emotion-12 emotion-13"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2h4l-.79 7.91 6.45-4.64 2 3.46L14.42 12l7.24 3.27-2 3.46-6.45-4.64L14 22h-4l.79-7.91-6.45 4.64-2-3.46L9.58 12 2.34 8.73l2-3.46 6.45 4.64z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-14 emotion-15"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-16 emotion-17"
+                data-size="large"
+                id=":r9:"
+                required=""
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-18 emotion-19"
+              >
+                <svg
+                  class="emotion-20 emotion-13"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly with date-fns locale es 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-21 {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 264px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transform: translate3d(0px, 4px, 0);
+  -moz-transform: translate3d(0px, 4px, 0);
+  -ms-transform: translate3d(0px, 4px, 0);
+  transform: translate3d(0px, 4px, 0);
+  width: 100%;
+  background-color: #ffffff;
+  color: #3f4250;
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.emotion-21[data-animated="true"] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.emotion-21[data-has-arrow="true"]::after {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.emotion-21[data-visible-in-dom="false"] {
+  display: none;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-27 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 24px;
+  padding: 0 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-27:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-27:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-27:hover,
+.emotion-27:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-29 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-29 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-31 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-37 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-40 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 26px;
+  width: 100%;
+}
+
+.emotion-61 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+  height: 26px;
+  width: 100%;
+  padding: 0;
+}
+
+.emotion-61:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-61:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-61:hover,
+.emotion-61:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-61.rangeButton {
+  background-color: #f1eefc;
+}
+
+.emotion-63 {
+  color: #b5b7bd;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-68 {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":r41:"
+        aria-describedby=":r41:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":r42:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":r42:"
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-20 emotion-21 emotion-22"
+          data-animated="false"
+          data-has-arrow="false"
+          id=":r41:"
+          role="dialog"
+          style="opacity: 1;"
+        >
+          <div
+            class="emotion-23 emotion-5"
+          >
+            <div
+              class="emotion-25 emotion-5"
+            >
+              <button
+                class="emotion-27 emotion-28"
+                type="button"
+              >
+                <svg
+                  class="emotion-29 emotion-30"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <p
+                class="emotion-31 emotion-11"
+              >
+                octubre 2024
+              </p>
+              <button
+                class="emotion-27 emotion-28"
+                type="button"
+              >
+                <svg
+                  class="emotion-29 emotion-30"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="emotion-37 emotion-38"
+            >
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                lu
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                ma
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                mi
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                ju
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                vi
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                sá
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                do
+              </p>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    30
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    1
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    2
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    3
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    4
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    5
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    6
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    7
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    8
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    9
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    10
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    11
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    12
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    13
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    14
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    15
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    16
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    17
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    18
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    19
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    20
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    21
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    22
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    23
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    24
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    25
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    26
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    27
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    28
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    29
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    30
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    31
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    1
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    2
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    3
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    4
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    5
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    6
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    7
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    8
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    9
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    10
+                  </p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly with date-fns locale fr 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-21 {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 264px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transform: translate3d(0px, 4px, 0);
+  -moz-transform: translate3d(0px, 4px, 0);
+  -ms-transform: translate3d(0px, 4px, 0);
+  transform: translate3d(0px, 4px, 0);
+  width: 100%;
+  background-color: #ffffff;
+  color: #3f4250;
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.emotion-21[data-animated="true"] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.emotion-21[data-has-arrow="true"]::after {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.emotion-21[data-visible-in-dom="false"] {
+  display: none;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-27 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 24px;
+  padding: 0 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-27:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-27:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-27:hover,
+.emotion-27:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-29 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-29 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-31 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-37 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-40 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 26px;
+  width: 100%;
+}
+
+.emotion-61 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+  height: 26px;
+  width: 100%;
+  padding: 0;
+}
+
+.emotion-61:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-61:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-61:hover,
+.emotion-61:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-61.rangeButton {
+  background-color: #f1eefc;
+}
+
+.emotion-63 {
+  color: #b5b7bd;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-68 {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":rv:"
+        aria-describedby=":rv:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":r10:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":r10:"
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-20 emotion-21 emotion-22"
+          data-animated="false"
+          data-has-arrow="false"
+          id=":rv:"
+          role="dialog"
+          style="opacity: 1;"
+        >
+          <div
+            class="emotion-23 emotion-5"
+          >
+            <div
+              class="emotion-25 emotion-5"
+            >
+              <button
+                class="emotion-27 emotion-28"
+                type="button"
+              >
+                <svg
+                  class="emotion-29 emotion-30"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <p
+                class="emotion-31 emotion-11"
+              >
+                octobre 2024
+              </p>
+              <button
+                class="emotion-27 emotion-28"
+                type="button"
+              >
+                <svg
+                  class="emotion-29 emotion-30"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="emotion-37 emotion-38"
+            >
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                lu
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                ma
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                me
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                je
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                ve
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                sa
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                di
+              </p>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    30
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    1
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    2
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    3
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    4
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    5
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    6
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    7
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    8
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    9
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    10
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    11
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    12
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    13
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    14
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    15
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    16
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    17
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    18
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    19
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    20
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    21
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    22
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    23
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    24
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    25
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    26
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    27
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    28
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    29
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    30
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    31
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    1
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    2
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    3
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    4
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    5
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    6
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    7
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    8
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    9
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    10
+                  </p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly with date-fns locale ru 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 4px, 0);
+    -moz-transform: translate3d(0px, 4px, 0);
+    -ms-transform: translate3d(0px, 4px, 0);
+    transform: translate3d(0px, 4px, 0);
+  }
+}
+
+.emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  border: 1px solid #8c40ef;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-21 {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 264px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transform: translate3d(0px, 4px, 0);
+  -moz-transform: translate3d(0px, 4px, 0);
+  -ms-transform: translate3d(0px, 4px, 0);
+  transform: translate3d(0px, 4px, 0);
+  width: 100%;
+  background-color: #ffffff;
+  color: #3f4250;
+  box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.emotion-21[data-animated="true"] {
+  -webkit-animation: 0ms animation-0 forwards;
+  animation: 0ms animation-0 forwards;
+}
+
+.emotion-21[data-has-arrow="true"]::after {
+  content: " ";
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.emotion-21[data-visible-in-dom="false"] {
+  display: none;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-27 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 24px;
+  padding: 0 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-27:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-27:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-27:hover,
+.emotion-27:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-29 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-29 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-31 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-37 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.emotion-40 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 26px;
+  width: 100%;
+}
+
+.emotion-61 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+  height: 26px;
+  width: 100%;
+  padding: 0;
+}
+
+.emotion-61:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-61:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-61:hover,
+.emotion-61:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-61.rangeButton {
+  background-color: #f1eefc;
+}
+
+.emotion-63 {
+  color: #b5b7bd;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-68 {
+  color: #727683;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":r73:"
+        aria-describedby=":r73:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":r74:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":r74:"
+                type="text"
+                value=""
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-20 emotion-21 emotion-22"
+          data-animated="false"
+          data-has-arrow="false"
+          id=":r73:"
+          role="dialog"
+          style="opacity: 1;"
+        >
+          <div
+            class="emotion-23 emotion-5"
+          >
+            <div
+              class="emotion-25 emotion-5"
+            >
+              <button
+                class="emotion-27 emotion-28"
+                type="button"
+              >
+                <svg
+                  class="emotion-29 emotion-30"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <p
+                class="emotion-31 emotion-11"
+              >
+                октябрь 2024
+              </p>
+              <button
+                class="emotion-27 emotion-28"
+                type="button"
+              >
+                <svg
+                  class="emotion-29 emotion-30"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="emotion-37 emotion-38"
+            >
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                по
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                вт
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                ср
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                че
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                пя
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                су
+              </p>
+              <p
+                class="emotion-39 emotion-40 emotion-11"
+              >
+                во
+              </p>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    30
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    1
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    2
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    3
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    4
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    5
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    6
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    7
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    8
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    9
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    10
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    11
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    12
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    13
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    14
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    15
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    16
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    17
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    18
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    19
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    20
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    21
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    22
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    23
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    24
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    25
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    26
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    27
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    28
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    29
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    30
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-68 emotion-11"
+                  >
+                    31
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    1
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    2
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    3
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    4
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    5
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    6
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    7
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    8
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    9
+                  </p>
+                </div>
+              </button>
+              <button
+                class="emotion-60 emotion-61 emotion-28"
+                type="button"
+              >
+                <div>
+                  <p
+                    class="emotion-63 emotion-11"
+                  >
+                    10
+                  </p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DateInputV2 > renders correctly with default props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inherit;
+}
+
+.emotion-2[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-12>.emotion-15 {
+  color: #3f4250;
+}
+
+.emotion-12>.emotion-15::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-12>.emotion-15::placeholder {
+  color: #727683;
+}
+
+.emotion-12[data-success='true'] {
+  border-color: #22674e;
+}
+
+.emotion-12[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.emotion-12[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.emotion-12[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15 {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12[data-disabled='true']>.emotion-15::placeholder {
+  color: #b5b7bd;
+}
+
+.emotion-12:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-14 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 16px;
+}
+
+.emotion-14[data-size='small'] {
+  padding-left: 8px;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  border-left: 1px solid;
+  border-color: inherit;
+}
+
+.emotion-18 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-18 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        aria-controls=":r0:"
+        aria-describedby=":r0:"
+        class="emotion-2 emotion-3"
+        tabindex="0"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <div
+            class="emotion-6 emotion-5"
+          >
+            <div
+              class="emotion-8 emotion-5"
+            >
+              <label
+                class="emotion-10 emotion-11"
+                for=":r1:"
+              >
+                Date
+              </label>
+            </div>
+          </div>
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              data-disabled="false"
+              data-error="false"
+              data-readonly="false"
+              data-success="false"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="false"
+                class="emotion-14 emotion-15"
+                data-size="large"
+                id=":r1:"
+                name="test"
+                type="text"
+                value="1995-12-17T03:24:00.000Z"
+              />
+              <div
+                class="emotion-16 emotion-17"
+              >
+                <svg
+                  class="emotion-18 emotion-19"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75zM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM7.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H8a.75.75 0 0 1-.75-.75zM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM9.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75zM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75zM12 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75zM11.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75zM13.25 10a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75zm.75 1.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75z"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2m-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
