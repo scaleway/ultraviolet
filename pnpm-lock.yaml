@@ -66,8 +66,8 @@ importers:
         specifier: 11.13.0
         version: 11.13.0(@emotion/react@11.13.3(@types/react@18.3.11)(react@18.3.1))(@types/react@18.3.11)(react@18.3.1)
       '@eslint/compat':
-        specifier: 1.2.1
-        version: 1.2.1(eslint@9.13.0(jiti@2.1.0))
+        specifier: 1.2.2
+        version: 1.2.2(eslint@9.13.0(jiti@2.1.0))
       '@eslint/eslintrc':
         specifier: 3.1.0
         version: 3.1.0
@@ -2029,8 +2029,8 @@ packages:
       eslint:
         optional: true
 
-  '@eslint/compat@1.2.1':
-    resolution: {integrity: sha512-JbHG2TWuCeNzh87fXo+/46Z1LEo9DBA9T188d0fZgGxAD+cNyS6sx9fdiyxjGPBMyQVRlCutTByZ6a5+YMkF7g==}
+  '@eslint/compat@1.2.2':
+    resolution: {integrity: sha512-jhgiIrsw+tRfcBQ4BFl2C3vCrIUw2trCY0cnDvGZpwTtKCEDmZhAtMfrEUP/KpnwM6PrO0T+Ltm+ccW74olG3Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.10.0
@@ -9700,7 +9700,7 @@ snapshots:
     optionalDependencies:
       eslint: 9.13.0(jiti@2.1.0)
 
-  '@eslint/compat@1.2.1(eslint@9.13.0(jiti@2.1.0))':
+  '@eslint/compat@1.2.2(eslint@9.13.0(jiti@2.1.0))':
     optionalDependencies:
       eslint: 9.13.0(jiti@2.1.0)
 
