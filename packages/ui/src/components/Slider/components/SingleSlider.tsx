@@ -107,7 +107,7 @@ export const SingleSlider = ({
   const [sliderWidth, setWidth] = useState(0)
 
   useEffect(() => {
-    setWidth(refSlider.current?.offsetWidth ?? 0)
+    setWidth(Number(refSlider.current?.offsetWidth))
   }, [refSlider])
 
   const ticks = useMemo(() => {
@@ -140,7 +140,7 @@ export const SingleSlider = ({
   // Get slider size
   useEffect(() => {
     const setWidthResize = () => {
-      setWidth(refSlider.current?.offsetWidth ?? 0)
+      setWidth(Number(refSlider.current?.offsetWidth))
     }
     window.addEventListener('resize', setWidthResize)
 

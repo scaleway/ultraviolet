@@ -138,7 +138,7 @@ export const DoubleSlider = ({
   const [sliderWidth, setWidth] = useState(0)
 
   useEffect(() => {
-    setWidth(refSlider.current?.offsetWidth ?? 0)
+    setWidth(Number(refSlider.current?.offsetWidth))
   }, [refSlider])
 
   const activeValue = (side: 'left' | 'right') => {
@@ -189,7 +189,7 @@ export const DoubleSlider = ({
   // Get slider size (for options)
   useEffect(() => {
     const setWidthResize = () => {
-      setWidth(refSlider.current?.offsetWidth ?? 0)
+      setWidth(Number(refSlider.current?.offsetWidth))
     }
     window.addEventListener('resize', setWidthResize)
 
