@@ -4,7 +4,7 @@ import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { SLIDER_WIDTH, THUMB_SIZE } from '../constant'
+import { THUMB_SIZE } from '../constant'
 import { StyledTooltip, thumbStyle, trackStyle } from '../styles'
 import type { SingleSliderProps } from '../types'
 import { Label } from './Label'
@@ -24,7 +24,6 @@ const SliderElement = styled('input', {
     height: ${({ theme }) => theme.space['1']};
     width: 100%;
     position: relative;
-    min-width: ${SLIDER_WIDTH.min}px;
     background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
 
     border-radius: ${({ theme }) => theme.radii.default};
@@ -105,9 +104,11 @@ export const SingleSlider = ({
   const safeValue = value ?? min
   const [selectedIndex, setSelectedIndex] = useState(safeValue)
   const refSlider = useRef<HTMLInputElement>(null)
-  const [sliderWidth, setWidth] = useState(
-    refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max,
-  )
+  const [sliderWidth, setWidth] = useState(0)
+
+  useEffect(() => {
+    setWidth(Number(refSlider.current?.offsetWidth))
+  }, [refSlider])
 
   const ticks = useMemo(() => {
     if (options) {
@@ -139,7 +140,7 @@ export const SingleSlider = ({
   // Get slider size
   useEffect(() => {
     const setWidthResize = () => {
-      setWidth(refSlider.current?.offsetWidth ?? SLIDER_WIDTH.max)
+      setWidth(Number(refSlider.current?.offsetWidth))
     }
     window.addEventListener('resize', setWidthResize)
 

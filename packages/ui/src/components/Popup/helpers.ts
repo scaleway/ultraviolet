@@ -135,8 +135,8 @@ const getPopupOverflowFromParent = (
   } = childrenRect
 
   const { width: popupWidth, height: popupHeight } = popupStructuredRef
-  const popupHalfWidthWithArrow = popupWidth / 2 - arrowWidth
-  const popupHalfHeightWithArrow = popupHeight / 2 - arrowWidth
+  const popupHalfWidthWithArrow = popupWidth / 2 - arrowWidth - 1 // -1 px to compensate border radius
+  const popupHalfHeightWithArrow = popupHeight / 2 - arrowWidth - 1 // -1 px to compensate border radius
 
   if (position === 'top' || position === 'bottom') {
     const popupOverflowRight =
