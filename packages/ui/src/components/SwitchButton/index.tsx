@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ChangeEvent, ChangeEventHandler, FocusEventHandler } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { SelectableCard } from '../SelectableCard'
 import { Tooltip } from '../Tooltip'
 import { FocusOverlay } from './FocusOverlay'
@@ -106,9 +106,17 @@ export const SwitchButton = ({
   const [rightCardWidth, setRightCardWidth] = useState<number>()
   const [hasMouseDown, setHasMouseDown] = useState(false)
 
-  const [localValue, setLocalValue] = useState(
-    value === leftButton.value ? leftButton.value : rightButton.value,
+  const getValueToUse = useCallback(
+    () => (value === leftButton.value ? leftButton.value : rightButton.value),
+    [leftButton.value, rightButton.value, value],
   )
+
+  const [localValue, setLocalValue] = useState(getValueToUse())
+
+  useEffect(() => {
+    setLocalValue(getValueToUse())
+  }, [getValueToUse, value])
+
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange?.(event)
     setLocalValue(event.target.value)
