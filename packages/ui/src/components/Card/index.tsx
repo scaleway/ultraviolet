@@ -42,6 +42,8 @@ const BorderedBox = styled.div`
   &[data-disabled='true'] {
     border: 1px solid ${({ theme }) => theme.colors.neutral.borderDisabled};
   }
+
+  flex: 1 1 auto;
 `
 
 /**
