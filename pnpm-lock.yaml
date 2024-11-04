@@ -266,6 +266,9 @@ importers:
       storybook:
         specifier: 8.3.6
         version: 8.3.6
+      svgo:
+        specifier: ^3.3.2
+        version: 3.3.2
       timekeeper:
         specifier: 2.3.1
         version: 2.3.1
@@ -7346,8 +7349,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  svgo@3.2.0:
-    resolution: {integrity: sha512-4PP6CMW/V7l/GmKRKzsLR8xxjdHTV4IMvhTnpuHwwBazSIlw5W/5SmPjN8Dwyt7lKbSJrRDgp4t9ph0HgChFBQ==}
+  svgo@3.3.2:
+    resolution: {integrity: sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -10804,7 +10807,7 @@ snapshots:
       '@svgr/core': 8.1.0(typescript@5.6.3)
       cosmiconfig: 8.3.6(typescript@5.6.3)
       deepmerge: 4.3.1
-      svgo: 3.2.0
+      svgo: 3.3.2
     transitivePeerDependencies:
       - typescript
 
@@ -16078,7 +16081,7 @@ snapshots:
       picocolors: 1.1.0
       stable: 0.1.8
 
-  svgo@3.2.0:
+  svgo@3.3.2:
     dependencies:
       '@trysound/sax': 0.2.0
       commander: 7.2.0
