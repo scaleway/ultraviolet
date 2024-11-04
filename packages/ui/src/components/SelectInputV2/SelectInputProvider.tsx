@@ -122,11 +122,9 @@ export const SelectInputProvider = <T extends boolean>({
 
   const allValues: OptionType[] = useMemo(() => {
     if (!Array.isArray(options)) {
-      return Object.keys(options)
-        .map((group: string) =>
-          options[group].filter(option => !option.disabled),
-        )
-        .flat()
+      return Object.keys(options).flatMap((group: string) =>
+        options[group].filter(option => !option.disabled),
+      )
     }
 
     return options

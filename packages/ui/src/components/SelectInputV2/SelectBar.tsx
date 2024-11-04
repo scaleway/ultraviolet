@@ -257,7 +257,6 @@ export const SelectBar = ({
   const openable = !(readOnly || disabled)
   const refTag = useRef<HTMLDivElement>(null)
   const width = innerRef.current?.offsetWidth
-  const [overflowed, setOverflowed] = useState(false)
   const [overflowAmount, setOverflowAmount] = useState(0)
   const [nonOverflowedValues, setNonOverFlowedValues] = useState<OptionType[]>(
     () => {
@@ -305,22 +304,16 @@ export const SelectBar = ({
           SIZES_TAG.tagWidth + SIZES_TAG.letterWidth * lengthValue
         if (totalTagWidth + tagsWidth > width - 100) {
           computedOverflowAmount += 1
-          setOverflowAmount(computedOverflowAmount)
         } else {
           computedNonOverflowedValues = [
             ...computedNonOverflowedValues,
             selectedOption,
           ]
-          setNonOverFlowedValues(computedNonOverflowedValues)
           tagsWidth += totalTagWidth
         }
       }
     }
-    if (computedOverflowAmount === 0) {
-      setOverflowed(false)
-    } else {
-      setOverflowed(true)
-    }
+    setNonOverFlowedValues(computedNonOverflowedValues)
     setOverflowAmount(computedOverflowAmount)
   }, [options, selectedData.selectedValues, width])
 
@@ -395,7 +388,7 @@ export const SelectBar = ({
             nonOverflowedValues={nonOverflowedValues}
             disabled={disabled}
             readOnly={readOnly}
-            overflowed={overflowed}
+            overflowed={!!overflowAmount}
             overflowAmount={overflowAmount}
             size={size}
           />
