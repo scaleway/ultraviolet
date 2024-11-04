@@ -48,7 +48,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-0 {
@@ -67,7 +67,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -75,7 +75,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -151,7 +151,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -160,9 +160,9 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -186,11 +186,11 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -199,7 +199,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2 {
@@ -207,7 +207,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -283,7 +283,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -292,9 +292,9 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -318,11 +318,11 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -331,7 +331,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -357,7 +357,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-5 {
@@ -383,7 +383,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -416,11 +416,11 @@ exports[`Stepper > handles clicks when interactive 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -434,11 +434,11 @@ exports[`Stepper > handles clicks when interactive 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -473,7 +473,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
@@ -501,18 +501,18 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -526,11 +526,11 @@ exports[`Stepper > handles clicks when interactive 1`] = `
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -565,7 +565,7 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-23 {
@@ -591,16 +591,16 @@ exports[`Stepper > handles clicks when interactive 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -614,11 +614,11 @@ exports[`Stepper > handles clicks when interactive 1`] = `
 
 .emotion-26 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -755,7 +755,7 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-0 {
@@ -774,7 +774,7 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -782,7 +782,7 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -858,7 +858,7 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -867,9 +867,9 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 40px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -893,11 +893,11 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 40px);
+            100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -914,7 +914,7 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -990,7 +990,7 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -999,9 +999,9 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 40px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -1025,11 +1025,11 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 40px);
+            100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -1061,10 +1061,10 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-5 {
@@ -1087,10 +1087,10 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-7 {
@@ -1123,11 +1123,11 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1141,11 +1141,11 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1177,10 +1177,10 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
@@ -1205,21 +1205,21 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1233,11 +1233,11 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1269,10 +1269,10 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-23 {
@@ -1295,19 +1295,19 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1321,11 +1321,11 @@ exports[`Stepper > handles clicks when interactive and small 1`] = `
 
 .emotion-26 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1462,7 +1462,7 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-0 {
@@ -1481,7 +1481,7 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -1489,7 +1489,7 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1565,7 +1565,7 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -1574,9 +1574,9 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 40px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -1600,11 +1600,11 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 40px);
+            100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -1621,7 +1621,7 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1697,7 +1697,7 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -1706,9 +1706,9 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 40px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -1732,11 +1732,11 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 40px);
+            100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -1768,10 +1768,10 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-5 {
@@ -1794,10 +1794,10 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-7 {
@@ -1830,11 +1830,11 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1848,11 +1848,11 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1884,10 +1884,10 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
@@ -1912,21 +1912,21 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1940,11 +1940,11 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1976,10 +1976,10 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-23 {
@@ -2002,19 +2002,19 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2028,11 +2028,11 @@ exports[`Stepper > handles clicks when not interactive 1`] = `
 
 .emotion-26 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2159,7 +2159,7 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -2167,7 +2167,7 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2243,7 +2243,7 @@ exports[`Stepper > renders correctly with all selected 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -2252,9 +2252,9 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -2278,11 +2278,11 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -2291,7 +2291,7 @@ exports[`Stepper > renders correctly with all selected 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -2317,7 +2317,7 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -2336,11 +2336,11 @@ exports[`Stepper > renders correctly with all selected 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2375,18 +2375,18 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2421,16 +2421,16 @@ exports[`Stepper > renders correctly with all selected 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2557,7 +2557,7 @@ exports[`Stepper > renders correctly with animation 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -2565,7 +2565,7 @@ exports[`Stepper > renders correctly with animation 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2641,7 +2641,7 @@ exports[`Stepper > renders correctly with animation 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -2650,9 +2650,9 @@ exports[`Stepper > renders correctly with animation 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -2676,11 +2676,11 @@ exports[`Stepper > renders correctly with animation 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -2689,7 +2689,7 @@ exports[`Stepper > renders correctly with animation 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -2715,7 +2715,7 @@ exports[`Stepper > renders correctly with animation 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -2734,11 +2734,11 @@ exports[`Stepper > renders correctly with animation 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2773,18 +2773,18 @@ exports[`Stepper > renders correctly with animation 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2819,16 +2819,16 @@ exports[`Stepper > renders correctly with animation 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2955,7 +2955,7 @@ exports[`Stepper > renders correctly with children 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -2963,7 +2963,7 @@ exports[`Stepper > renders correctly with children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3039,7 +3039,7 @@ exports[`Stepper > renders correctly with children 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -3048,9 +3048,9 @@ exports[`Stepper > renders correctly with children 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -3074,11 +3074,11 @@ exports[`Stepper > renders correctly with children 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -3087,7 +3087,7 @@ exports[`Stepper > renders correctly with children 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -3113,7 +3113,7 @@ exports[`Stepper > renders correctly with children 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -3132,11 +3132,11 @@ exports[`Stepper > renders correctly with children 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3171,18 +3171,18 @@ exports[`Stepper > renders correctly with children 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3217,16 +3217,16 @@ exports[`Stepper > renders correctly with children 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3354,7 +3354,7 @@ exports[`Stepper > renders correctly with default props 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -3362,7 +3362,7 @@ exports[`Stepper > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3438,7 +3438,7 @@ exports[`Stepper > renders correctly with default props 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -3447,9 +3447,9 @@ exports[`Stepper > renders correctly with default props 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -3473,11 +3473,11 @@ exports[`Stepper > renders correctly with default props 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -3486,7 +3486,7 @@ exports[`Stepper > renders correctly with default props 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -3512,7 +3512,7 @@ exports[`Stepper > renders correctly with default props 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -3531,11 +3531,11 @@ exports[`Stepper > renders correctly with default props 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3570,18 +3570,18 @@ exports[`Stepper > renders correctly with default props 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3616,16 +3616,16 @@ exports[`Stepper > renders correctly with default props 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3762,7 +3762,7 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -3770,7 +3770,7 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3846,7 +3846,7 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-7 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -3855,9 +3855,9 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -3881,11 +3881,11 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -3894,7 +3894,7 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -3920,18 +3920,18 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-8 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3966,16 +3966,16 @@ exports[`Stepper > renders correctly with disabled steps 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-16 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4092,7 +4092,7 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -4100,7 +4100,7 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4176,7 +4176,7 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -4185,9 +4185,9 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -4211,11 +4211,11 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -4224,7 +4224,7 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -4250,7 +4250,7 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -4269,11 +4269,11 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4308,18 +4308,18 @@ exports[`Stepper > renders correctly with selected prop 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-28 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4456,7 +4456,7 @@ exports[`Stepper > renders correctly with small size 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -4464,7 +4464,7 @@ exports[`Stepper > renders correctly with small size 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4540,7 +4540,7 @@ exports[`Stepper > renders correctly with small size 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -4549,9 +4549,9 @@ exports[`Stepper > renders correctly with small size 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 40px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -4575,11 +4575,11 @@ exports[`Stepper > renders correctly with small size 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 40px);
+            100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -4611,10 +4611,10 @@ exports[`Stepper > renders correctly with small size 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-7 {
@@ -4633,11 +4633,11 @@ exports[`Stepper > renders correctly with small size 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4669,21 +4669,21 @@ exports[`Stepper > renders correctly with small size 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4715,19 +4715,19 @@ exports[`Stepper > renders correctly with small size 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4864,7 +4864,7 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-2 {
@@ -4872,7 +4872,7 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4948,7 +4948,7 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -4957,9 +4957,9 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -4983,11 +4983,11 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -4996,7 +4996,7 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -5022,7 +5022,7 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -5041,11 +5041,11 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5058,17 +5058,17 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
 }
 
 .emotion-12 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #8c40ef;
   position: relative;
   height: 4px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .emotion-12[data-size='small'] {
@@ -5081,7 +5081,7 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   left: 0;
   top: 0;
   height: 100%;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #8c40ef;
   width: 100%;
 }
@@ -5109,18 +5109,18 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-20 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5133,17 +5133,17 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
 }
 
 .emotion-22 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   position: relative;
   height: 4px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .emotion-22[data-size='small'] {
@@ -5156,7 +5156,7 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   left: 0;
   top: 0;
   height: 100%;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #8c40ef;
 }
 
@@ -5183,16 +5183,16 @@ exports[`Stepper > renders correctly with step number in row 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-30 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5337,7 +5337,7 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-0 {
@@ -5356,7 +5356,7 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .emotion-2 {
@@ -5364,7 +5364,7 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5440,7 +5440,7 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.ewvv9211 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -5449,9 +5449,9 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 40px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -5475,11 +5475,11 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 40px);
+            100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -5496,7 +5496,7 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5572,7 +5572,7 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.ewvv9211 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -5581,9 +5581,9 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 40px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -5607,11 +5607,11 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 40px);
+            100% - 2.5rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -5643,10 +5643,10 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-5 {
@@ -5669,10 +5669,10 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-7 {
@@ -5723,10 +5723,10 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
@@ -5751,10 +5751,10 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
@@ -5779,10 +5779,10 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 .emotion-17 {
@@ -5805,10 +5805,10 @@ exports[`Stepper > renders correctly without Stepper.Step 1`] = `
   width: 24px;
   height: 24px;
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 24px;
+  min-width: 1.5rem;
 }
 
 <div
@@ -5924,7 +5924,7 @@ exports[`Stepper > renders correctly without separator 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 32px;
+  gap: 2rem;
 }
 
 .emotion-2 {
@@ -5932,7 +5932,7 @@ exports[`Stepper > renders correctly without separator 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6008,7 +6008,7 @@ exports[`Stepper > renders correctly without separator 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -6017,9 +6017,9 @@ exports[`Stepper > renders correctly without separator 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -6043,11 +6043,11 @@ exports[`Stepper > renders correctly without separator 1`] = `
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -6056,7 +6056,7 @@ exports[`Stepper > renders correctly without separator 1`] = `
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -6082,7 +6082,7 @@ exports[`Stepper > renders correctly without separator 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -6101,11 +6101,11 @@ exports[`Stepper > renders correctly without separator 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6140,18 +6140,18 @@ exports[`Stepper > renders correctly without separator 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6186,16 +6186,16 @@ exports[`Stepper > renders correctly without separator 1`] = `
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6332,7 +6332,7 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
-  gap: 32px;
+  gap: 2rem;
 }
 
 .emotion-2 {
@@ -6340,7 +6340,7 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6416,7 +6416,7 @@ exports[`Stepper > renders correctly without separator with label on the right 1
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"])>.emotion-9 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):not(:last-child):after {
@@ -6425,9 +6425,9 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
-  top: 16px;
-  width: calc(100% - 48px);
+  border-radius: 0.25rem;
+  top: 1rem;
+  width: calc(100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -6451,11 +6451,11 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: #e9eaeb;
   top: 20px;
   width: calc(
-            100% - 48px);
+            100% - 3rem);
   left: calc(50% + 25px);
   -webkit-order: -1;
   -ms-flex-order: -1;
@@ -6464,7 +6464,7 @@ exports[`Stepper > renders correctly without separator with label on the right 1
 }
 
 .emotion-2:not([data-hide-separator="true"]):not([data-label-position="right"]):last-child {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .emotion-5 {
@@ -6490,7 +6490,7 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-7 {
@@ -6509,11 +6509,11 @@ exports[`Stepper > renders correctly without separator with label on the right 1
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6548,18 +6548,18 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
   background-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-18 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6594,16 +6594,16 @@ exports[`Stepper > renders correctly without separator with label on the right 1
   margin-top: 0;
   -webkit-transition: box-shadow 300ms;
   transition: box-shadow 300ms;
-  min-width: 32px;
+  min-width: 2rem;
 }
 
 .emotion-26 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;

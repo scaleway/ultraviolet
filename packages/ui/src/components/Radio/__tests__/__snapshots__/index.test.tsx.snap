@@ -7,7 +7,7 @@ exports[`Radio > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -38,7 +38,7 @@ exports[`Radio > renders correctly 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-2[aria-disabled='false'],
@@ -156,11 +156,11 @@ exports[`Radio > renders correctly 1`] = `
 }
 
 .emotion-13 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -234,7 +234,7 @@ exports[`Radio > renders correctly when checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -265,7 +265,7 @@ exports[`Radio > renders correctly when checked 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-2[aria-disabled='false'],
@@ -383,11 +383,11 @@ exports[`Radio > renders correctly when checked 1`] = `
 }
 
 .emotion-13 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -462,7 +462,7 @@ exports[`Radio > renders correctly when disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -493,7 +493,7 @@ exports[`Radio > renders correctly when disabled 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-2[aria-disabled='false'],
@@ -611,11 +611,11 @@ exports[`Radio > renders correctly when disabled 1`] = `
 }
 
 .emotion-13 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -690,7 +690,7 @@ exports[`Radio > renders correctly when error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -721,7 +721,7 @@ exports[`Radio > renders correctly when error 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-2[aria-disabled='false'],
@@ -839,11 +839,11 @@ exports[`Radio > renders correctly when error 1`] = `
 }
 
 .emotion-13 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -918,7 +918,7 @@ exports[`Radio > renders correctly when helper 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -949,7 +949,7 @@ exports[`Radio > renders correctly when helper 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-2[aria-disabled='false'],
@@ -1067,11 +1067,11 @@ exports[`Radio > renders correctly when helper 1`] = `
 }
 
 .emotion-13 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1083,15 +1083,15 @@ exports[`Radio > renders correctly when helper 1`] = `
 
 .emotion-16 {
   color: #727683;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-left: 32px;
+  margin-left: 2rem;
 }
 
 <div
@@ -1171,7 +1171,7 @@ exports[`Radio > renders correctly with tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1202,7 +1202,7 @@ exports[`Radio > renders correctly with tooltip 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-4[aria-disabled='false'],
@@ -1320,11 +1320,11 @@ exports[`Radio > renders correctly with tooltip 1`] = `
 }
 
 .emotion-15 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1405,7 +1405,7 @@ exports[`Radio > renders without name 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1436,7 +1436,7 @@ exports[`Radio > renders without name 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .emotion-2[aria-disabled='false'],
@@ -1554,11 +1554,11 @@ exports[`Radio > renders without name 1`] = `
 }
 
 .emotion-13 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;

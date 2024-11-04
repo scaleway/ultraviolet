@@ -7,7 +7,7 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -26,8 +26,8 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -37,7 +37,7 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -56,12 +56,12 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -84,7 +84,7 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -115,7 +115,7 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -265,7 +265,7 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -285,7 +285,7 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
 }
 
 .emotion-15[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-15[data-has-label='false'] {
@@ -369,7 +369,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -388,8 +388,8 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -399,7 +399,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -418,12 +418,12 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -451,7 +451,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -672,7 +672,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
 }
 
 .emotion-7 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -701,7 +701,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -727,7 +727,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -753,7 +753,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -773,7 +773,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
 }
 
 .emotion-15[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-15[data-has-label='false'] {
@@ -819,7 +819,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
             <rect
               class="emotion-9 emotion-10"
               height="16"
-              rx="2px"
+              rx="0.125rem"
               stroke-width="2"
               width="16"
               x="4"
@@ -863,7 +863,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -882,8 +882,8 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -893,7 +893,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -912,12 +912,12 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -945,7 +945,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1166,7 +1166,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
 }
 
 .emotion-7 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -1195,7 +1195,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1221,7 +1221,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1247,7 +1247,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1267,7 +1267,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
 }
 
 .emotion-15[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-15[data-has-label='false'] {
@@ -1314,7 +1314,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
             <rect
               class="emotion-9 emotion-10"
               height="16"
-              rx="2px"
+              rx="0.125rem"
               stroke-width="2"
               width="16"
               x="4"
@@ -1358,7 +1358,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1377,8 +1377,8 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -1388,7 +1388,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -1407,12 +1407,12 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1440,7 +1440,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1661,7 +1661,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
 }
 
 .emotion-7 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -1690,7 +1690,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1716,7 +1716,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1742,7 +1742,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1762,7 +1762,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
 }
 
 .emotion-15[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-15[data-has-label='false'] {
@@ -1808,7 +1808,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
             <rect
               class="emotion-9 emotion-10"
               height="16"
-              rx="2px"
+              rx="0.125rem"
               stroke-width="2"
               width="16"
               x="4"
@@ -1852,7 +1852,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1871,8 +1871,8 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -1882,7 +1882,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -1901,12 +1901,12 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1934,7 +1934,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2151,7 +2151,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 }
 
 .emotion-7 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -2180,7 +2180,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2206,7 +2206,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2229,11 +2229,11 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 
 .emotion-16 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2243,15 +2243,15 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 
 .emotion-19 {
   color: #b3144d;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding-top: 4px;
+  padding-top: 0.25rem;
 }
 
 .emotion-21 {
@@ -2259,7 +2259,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2279,7 +2279,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
 }
 
 .emotion-21[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-21[data-has-label='false'] {
@@ -2326,7 +2326,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
             <rect
               class="emotion-9 emotion-10"
               height="16"
-              rx="2px"
+              rx="0.125rem"
               stroke-width="2"
               width="16"
               x="4"
@@ -2380,7 +2380,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2414,7 +2414,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2433,8 +2433,8 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -2444,7 +2444,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
 }
 
 .emotion-4[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-4[data-checked='true'] {
@@ -2463,12 +2463,12 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
 }
 
 .emotion-4[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-4[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
@@ -2496,7 +2496,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2713,7 +2713,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
 }
 
 .emotion-11 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -2742,7 +2742,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2768,7 +2768,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2791,11 +2791,11 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
 
 .emotion-20 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2808,7 +2808,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2828,7 +2828,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
 }
 
 .emotion-22[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-22[data-has-label='false'] {
@@ -2882,7 +2882,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
                 <rect
                   class="emotion-13 emotion-14"
                   height="16"
-                  rx="2px"
+                  rx="0.125rem"
                   stroke-width="2"
                   width="16"
                   x="4"
@@ -2935,7 +2935,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2954,8 +2954,8 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -2965,7 +2965,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -2984,12 +2984,12 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -3017,7 +3017,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3234,7 +3234,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
 }
 
 .emotion-7 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -3263,7 +3263,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3289,7 +3289,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3312,11 +3312,11 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
 
 .emotion-16 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3329,7 +3329,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3349,7 +3349,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
 }
 
 .emotion-18[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-18[data-has-label='false'] {
@@ -3394,7 +3394,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
             <rect
               class="emotion-9 emotion-10"
               height="16"
-              rx="2px"
+              rx="0.125rem"
               stroke-width="2"
               width="16"
               x="4"
@@ -3449,7 +3449,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3468,8 +3468,8 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -3479,7 +3479,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -3498,12 +3498,12 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -3526,7 +3526,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3557,7 +3557,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3699,11 +3699,11 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
 }
 
 .emotion-16 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3718,7 +3718,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3738,7 +3738,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
 }
 
 .emotion-18[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-18[data-has-label='false'] {
@@ -3827,7 +3827,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3846,8 +3846,8 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -3857,7 +3857,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -3876,12 +3876,12 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -3904,7 +3904,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3923,8 +3923,8 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -3934,7 +3934,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -3953,12 +3953,12 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -3981,7 +3981,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4007,7 +4007,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4023,7 +4023,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 16px;
+  padding: 1rem;
   max-width: calc(100% - 160px);
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
@@ -4035,7 +4035,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4058,7 +4058,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4089,7 +4089,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4301,11 +4301,11 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-20 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4316,11 +4316,11 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-20 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4335,7 +4335,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4355,7 +4355,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-22[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-22[data-has-label='false'] {
@@ -4367,7 +4367,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4387,7 +4387,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
 }
 
 .emotion-22[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-22[data-has-label='false'] {
@@ -4399,7 +4399,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4445,7 +4445,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   position: absolute;
   min-width: 220px;
   height: auto;
-  left: 8px;
+  left: 0.5rem;
 }
 
 <div
@@ -4550,7 +4550,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4569,8 +4569,8 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -4580,7 +4580,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -4599,12 +4599,12 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -4627,7 +4627,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4646,8 +4646,8 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -4657,7 +4657,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -4676,12 +4676,12 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -4704,7 +4704,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4730,7 +4730,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4746,7 +4746,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 16px;
+  padding: 1rem;
   max-width: calc(100% - 160px);
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
@@ -4758,7 +4758,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4781,7 +4781,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4812,7 +4812,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5024,11 +5024,11 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-20 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5039,11 +5039,11 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-20 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5058,7 +5058,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5078,7 +5078,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-22[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-22[data-has-label='false'] {
@@ -5090,7 +5090,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5110,7 +5110,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
 }
 
 .emotion-22[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-22[data-has-label='false'] {
@@ -5122,7 +5122,7 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5300,7 +5300,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5319,8 +5319,8 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -5330,7 +5330,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -5349,12 +5349,12 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -5377,7 +5377,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5408,7 +5408,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5558,7 +5558,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5578,7 +5578,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
 }
 
 .emotion-15[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-15[data-has-label='false'] {
@@ -5663,7 +5663,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5682,8 +5682,8 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -5693,7 +5693,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -5712,12 +5712,12 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -5740,7 +5740,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5771,7 +5771,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5921,7 +5921,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5941,7 +5941,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
 }
 
 .emotion-15[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-15[data-has-label='false'] {
@@ -6025,7 +6025,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6044,8 +6044,8 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -6055,7 +6055,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -6074,12 +6074,12 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -6102,7 +6102,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6133,7 +6133,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6275,11 +6275,11 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
 }
 
 .emotion-16 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6294,7 +6294,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6314,7 +6314,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
 }
 
 .emotion-18[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-18[data-has-label='false'] {
@@ -6405,7 +6405,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6439,7 +6439,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6458,8 +6458,8 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -6469,7 +6469,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
 }
 
 .emotion-4[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-4[data-checked='true'] {
@@ -6488,12 +6488,12 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
 }
 
 .emotion-4[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-4[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-4:hover:not([data-error='true']):not([data-disabled='true']),
@@ -6516,7 +6516,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6547,7 +6547,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6689,11 +6689,11 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
 }
 
 .emotion-20 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6708,7 +6708,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6728,7 +6728,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
 }
 
 .emotion-22[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-22[data-has-label='false'] {
@@ -6828,7 +6828,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6847,8 +6847,8 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -6858,7 +6858,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -6877,12 +6877,12 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -6910,7 +6910,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7123,7 +7123,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
 }
 
 .emotion-7 {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -7152,7 +7152,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7178,7 +7178,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7204,7 +7204,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7224,7 +7224,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
 }
 
 .emotion-15[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-15[data-has-label='false'] {
@@ -7270,7 +7270,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
             <rect
               class="emotion-9 emotion-10"
               height="16"
-              rx="2px"
+              rx="0.125rem"
               stroke-width="2"
               width="16"
               x="4"
@@ -7314,7 +7314,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7333,8 +7333,8 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -7344,7 +7344,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
 }
 
 .emotion-0[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-0[data-checked='true'] {
@@ -7363,12 +7363,12 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
 }
 
 .emotion-0[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-0[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-0:hover:not([data-error='true']):not([data-disabled='true']),
@@ -7391,7 +7391,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7422,7 +7422,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7564,7 +7564,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7584,7 +7584,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
 }
 
 .emotion-15[data-has-label='true'] {
-  padding-left: 32px;
+  padding-left: 2rem;
 }
 
 .emotion-15[data-has-label='false'] {

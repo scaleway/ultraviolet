@@ -31,8 +31,8 @@ exports[`Tooltip > should render correctly with component in content prop 1`] = 
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -47,7 +47,7 @@ exports[`Tooltip > should render correctly with component in content prop 1`] = 
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -89,7 +89,7 @@ exports[`Tooltip > should render correctly with component in content prop 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -113,7 +113,7 @@ exports[`Tooltip > should render correctly with component in content prop 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -132,11 +132,11 @@ exports[`Tooltip > should render correctly with component in content prop 1`] = 
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -148,12 +148,12 @@ exports[`Tooltip > should render correctly with component in content prop 1`] = 
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -169,11 +169,11 @@ exports[`Tooltip > should render correctly with component in content prop 1`] = 
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -296,8 +296,8 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -312,7 +312,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   -moz-transform: translate3d(0px, 12px, 0);
   -ms-transform: translate3d(0px, 12px, 0);
   transform: translate3d(0px, 12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -354,7 +354,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -378,7 +378,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -397,11 +397,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -413,12 +413,12 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -434,11 +434,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -477,11 +477,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -579,8 +579,8 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -595,7 +595,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   -moz-transform: translate3d(-16px, 0px, 0);
   -ms-transform: translate3d(-16px, 0px, 0);
   transform: translate3d(-16px, 0px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -637,7 +637,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -661,7 +661,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -680,11 +680,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -696,12 +696,12 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -717,11 +717,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -760,11 +760,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -862,8 +862,8 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -878,7 +878,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   -moz-transform: translate3d(16px, 0px, 0);
   -ms-transform: translate3d(16px, 0px, 0);
   transform: translate3d(16px, 0px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -920,7 +920,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -944,7 +944,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -963,11 +963,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -979,12 +979,12 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -1000,11 +1000,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1043,11 +1043,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1145,8 +1145,8 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -1161,7 +1161,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -1203,7 +1203,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1227,7 +1227,7 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1246,11 +1246,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1262,12 +1262,12 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -1283,11 +1283,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1326,11 +1326,11 @@ exports[`Tooltip > should render correctly with placement > should renders toolt
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1453,8 +1453,8 @@ exports[`Tooltip > should render correctly with required props and visible 1`] =
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -1469,7 +1469,7 @@ exports[`Tooltip > should render correctly with required props and visible 1`] =
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -1511,7 +1511,7 @@ exports[`Tooltip > should render correctly with required props and visible 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1535,7 +1535,7 @@ exports[`Tooltip > should render correctly with required props and visible 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1554,11 +1554,11 @@ exports[`Tooltip > should render correctly with required props and visible 1`] =
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1570,12 +1570,12 @@ exports[`Tooltip > should render correctly with required props and visible 1`] =
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -1591,11 +1591,11 @@ exports[`Tooltip > should render correctly with required props and visible 1`] =
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1634,11 +1634,11 @@ exports[`Tooltip > should render correctly with required props and visible 1`] =
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1732,8 +1732,8 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -1748,7 +1748,7 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -1790,7 +1790,7 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1814,7 +1814,7 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1833,11 +1833,11 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1849,12 +1849,12 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -1870,11 +1870,11 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1913,11 +1913,11 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2033,8 +2033,8 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -2049,7 +2049,7 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -2091,7 +2091,7 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2115,7 +2115,7 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2134,11 +2134,11 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
 
 .emotion-9 {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2150,12 +2150,12 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -2171,11 +2171,11 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #8c40ef;
@@ -2214,11 +2214,11 @@ exports[`Tooltip > should render correctly with sentiment > should renders toolt
 
 .emotion-15 {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2396,8 +2396,8 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -2412,7 +2412,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 520px;
   max-width: 520px;
   text-align: initial;
@@ -2454,7 +2454,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2478,7 +2478,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2502,7 +2502,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2524,7 +2524,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2543,11 +2543,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2555,11 +2555,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2571,12 +2571,12 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -2592,11 +2592,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2625,12 +2625,12 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -2646,11 +2646,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2703,11 +2703,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2715,11 +2715,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2879,8 +2879,8 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -2895,7 +2895,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -2935,8 +2935,8 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -2951,7 +2951,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 420px;
   max-width: 420px;
   text-align: initial;
@@ -2993,7 +2993,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3017,7 +3017,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3041,7 +3041,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3063,7 +3063,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3082,11 +3082,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3094,11 +3094,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3110,12 +3110,12 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -3131,11 +3131,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3164,12 +3164,12 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -3185,11 +3185,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3242,11 +3242,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3254,11 +3254,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3400,8 +3400,8 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 .emotion-3 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 232px;
@@ -3416,7 +3416,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   -moz-transform: translate3d(0px, -12px, 0);
   -ms-transform: translate3d(0px, -12px, 0);
   transform: translate3d(0px, -12px, 0);
-  padding: 16px;
+  padding: 1rem;
   width: 320px;
   max-width: 320px;
   text-align: initial;
@@ -3458,7 +3458,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3482,7 +3482,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3506,7 +3506,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3528,7 +3528,7 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3547,11 +3547,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3559,11 +3559,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-9 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3575,12 +3575,12 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -3596,11 +3596,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3629,12 +3629,12 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 32px;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 32px;
   -webkit-align-items: center;
@@ -3650,11 +3650,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3707,11 +3707,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3719,11 +3719,11 @@ exports[`Tooltip > should render correctly with sizes > should renders tooltip w
 
 .emotion-15 {
   color: #222638;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;

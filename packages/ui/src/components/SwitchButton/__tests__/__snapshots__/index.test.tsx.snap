@@ -4,8 +4,8 @@ exports[`FocusOverlay > renders correctly when left is focused 1`] = `
 <DocumentFragment>
   .emotion-0 {
   position: absolute;
-  height: calc(100% - 8px);
-  border-radius: 4px;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
   background: #8c40ef;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
@@ -32,8 +32,8 @@ exports[`FocusOverlay > renders correctly when left is focused and has mouse dow
 <DocumentFragment>
   .emotion-0 {
   position: absolute;
-  height: calc(100% - 8px);
-  border-radius: 4px;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
   background: #8c40ef;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
@@ -60,8 +60,8 @@ exports[`FocusOverlay > renders correctly when right is focused 1`] = `
 <DocumentFragment>
   .emotion-0 {
   position: absolute;
-  height: calc(100% - 8px);
-  border-radius: 4px;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
   background: #8c40ef;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
@@ -88,8 +88,8 @@ exports[`FocusOverlay > renders correctly when right is focused and has mouse do
 <DocumentFragment>
   .emotion-0 {
   position: absolute;
-  height: calc(100% - 8px);
-  border-radius: 4px;
+  height: calc(100% - 0.5rem);
+  border-radius: 0.25rem;
   background: #8c40ef;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
@@ -116,13 +116,13 @@ exports[`SwitchButton > renders correctly 1`] = `
 <DocumentFragment>
   .emotion-0 {
   border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 4px;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   position: relative;
 }
 
@@ -139,7 +139,7 @@ exports[`SwitchButton > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -158,8 +158,8 @@ exports[`SwitchButton > renders correctly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -167,7 +167,7 @@ exports[`SwitchButton > renders correctly 1`] = `
   border: 1px solid #d9dadd;
   color: #3f4250;
   border: none;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   font-weight: 500;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -183,7 +183,7 @@ exports[`SwitchButton > renders correctly 1`] = `
 }
 
 .emotion-3[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-3[data-checked='true'] {
@@ -202,12 +202,12 @@ exports[`SwitchButton > renders correctly 1`] = `
 }
 
 .emotion-3[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-3[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
@@ -253,7 +253,7 @@ exports[`SwitchButton > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -284,7 +284,7 @@ exports[`SwitchButton > renders correctly 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -426,11 +426,11 @@ exports[`SwitchButton > renders correctly 1`] = `
 }
 
 .emotion-19 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -585,13 +585,13 @@ exports[`SwitchButton > renders correctly medium 1`] = `
 <DocumentFragment>
   .emotion-0 {
   border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 4px;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   position: relative;
 }
 
@@ -608,7 +608,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -627,8 +627,8 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -636,7 +636,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   border: 1px solid #d9dadd;
   color: #3f4250;
   border: none;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   font-weight: 500;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -652,7 +652,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
 }
 
 .emotion-3[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-3[data-checked='true'] {
@@ -671,12 +671,12 @@ exports[`SwitchButton > renders correctly medium 1`] = `
 }
 
 .emotion-3[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-3[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
@@ -722,7 +722,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -753,7 +753,7 @@ exports[`SwitchButton > renders correctly medium 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -895,11 +895,11 @@ exports[`SwitchButton > renders correctly medium 1`] = `
 }
 
 .emotion-19 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1054,13 +1054,13 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
 <DocumentFragment>
   .emotion-0 {
   border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 4px;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   position: relative;
 }
 
@@ -1077,7 +1077,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1096,8 +1096,8 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -1105,7 +1105,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   border: 1px solid #d9dadd;
   color: #3f4250;
   border: none;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   font-weight: 500;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1121,7 +1121,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
 }
 
 .emotion-3[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-3[data-checked='true'] {
@@ -1140,12 +1140,12 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
 }
 
 .emotion-3[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-3[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-3:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1191,7 +1191,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1222,7 +1222,7 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1364,11 +1364,11 @@ exports[`SwitchButton > renders correctly with right value 1`] = `
 }
 
 .emotion-19 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1531,13 +1531,13 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 
 .emotion-2 {
   border: 1px solid #d9dadd;
-  border-radius: 4px;
-  padding: 4px;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   position: relative;
 }
 
@@ -1554,7 +1554,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1573,8 +1573,8 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -1582,7 +1582,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   border: 1px solid #d9dadd;
   color: #3f4250;
   border: none;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   font-weight: 500;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1598,7 +1598,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 }
 
 .emotion-5[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-5[data-checked='true'] {
@@ -1617,12 +1617,12 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 }
 
 .emotion-5[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-5[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-5:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1668,7 +1668,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1699,7 +1699,7 @@ exports[`SwitchButton > renders with tooltip 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1841,11 +1841,11 @@ exports[`SwitchButton > renders with tooltip 1`] = `
 }
 
 .emotion-21 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;

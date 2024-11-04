@@ -7,7 +7,7 @@ exports[`TextAreaField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -30,7 +30,7 @@ exports[`TextAreaField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -53,7 +53,7 @@ exports[`TextAreaField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -73,11 +73,11 @@ exports[`TextAreaField > should render correctly 1`] = `
 
 .emotion-6 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -97,9 +97,9 @@ exports[`TextAreaField > should render correctly 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   color: #3f4250;
-  border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 0px + 0px);
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.5rem 0.75rem 1rem;
+  padding-right: calc(1.5rem + 0px + 0px);
 }
 
 .emotion-10::-webkit-input-placeholder {
@@ -168,7 +168,7 @@ exports[`TextAreaField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -185,8 +185,8 @@ exports[`TextAreaField > should render correctly 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   position: absolute;
-  top: 12px;
-  right: 8px;
+  top: 0.75rem;
+  right: 0.5rem;
 }
 
 <div
@@ -242,7 +242,7 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -265,7 +265,7 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -288,7 +288,7 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -308,11 +308,11 @@ exports[`TextAreaField > should render correctly generated 1`] = `
 
 .emotion-6 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -346,9 +346,9 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   color: #3f4250;
-  border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 24px + 0px);
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.5rem 0.75rem 1rem;
+  padding-right: calc(1.5rem + 24px + 0px);
 }
 
 .emotion-12::-webkit-input-placeholder {
@@ -417,7 +417,7 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -434,8 +434,8 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   position: absolute;
-  top: 12px;
-  right: 8px;
+  top: 0.75rem;
+  right: 0.5rem;
 }
 
 .emotion-16 {
@@ -444,12 +444,12 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 24px;
-  padding: 0 4px;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: 24px;
   -webkit-align-items: center;
@@ -465,11 +465,11 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -512,12 +512,12 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 48px;
-  padding: 0 16px;
+  padding: 0 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: auto;
   -webkit-align-items: center;
@@ -533,11 +533,11 @@ exports[`TextAreaField > should render correctly generated 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #8c40ef;
@@ -645,7 +645,7 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -668,7 +668,7 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -691,7 +691,7 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -711,11 +711,11 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
 
 .emotion-6 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -735,9 +735,9 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   background: #ffffff;
   border: 1px solid #d9dadd;
   color: #3f4250;
-  border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 0px + 0px);
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.5rem 0.75rem 1rem;
+  padding-right: calc(1.5rem + 0px + 0px);
 }
 
 .emotion-10::-webkit-input-placeholder {
@@ -806,7 +806,7 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -823,8 +823,8 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   position: absolute;
-  top: 12px;
-  right: 8px;
+  top: 0.75rem;
+  right: 0.5rem;
 }
 
 .emotion-14 {
@@ -833,12 +833,12 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   height: 48px;
-  padding: 0 16px;
+  padding: 0 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: auto;
   -webkit-align-items: center;
@@ -854,11 +854,11 @@ exports[`TextAreaField > should submit with onSubmitEnter prop 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #8c40ef;

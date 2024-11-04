@@ -61,8 +61,8 @@ exports[`DateField > should render correctly 1`] = `
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
   margin: 3px;
   text-transform: capitalize;
@@ -72,7 +72,7 @@ exports[`DateField > should render correctly 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   margin-left: 3px;
   margin-right: 3px;
 }
@@ -101,7 +101,7 @@ exports[`DateField > should render correctly 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -202,7 +202,7 @@ exports[`DateField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -231,7 +231,7 @@ exports[`DateField > should render correctly 1`] = `
   height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-4>.emotion-7 {
@@ -304,17 +304,17 @@ exports[`DateField > should render correctly 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-6[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-6[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-8 {
@@ -322,7 +322,7 @@ exports[`DateField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -338,7 +338,7 @@ exports[`DateField > should render correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -481,8 +481,8 @@ exports[`DateField > should render correctly disabled 1`] = `
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
   margin: 3px;
   text-transform: capitalize;
@@ -492,7 +492,7 @@ exports[`DateField > should render correctly disabled 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   margin-left: 3px;
   margin-right: 3px;
 }
@@ -521,7 +521,7 @@ exports[`DateField > should render correctly disabled 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -622,7 +622,7 @@ exports[`DateField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -651,7 +651,7 @@ exports[`DateField > should render correctly disabled 1`] = `
   height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-4>.emotion-7 {
@@ -724,17 +724,17 @@ exports[`DateField > should render correctly disabled 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-6[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-6[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-8 {
@@ -742,7 +742,7 @@ exports[`DateField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -758,7 +758,7 @@ exports[`DateField > should render correctly disabled 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -902,8 +902,8 @@ exports[`DateField > should trigger events 1`] = `
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
   margin: 3px;
   text-transform: capitalize;
@@ -913,7 +913,7 @@ exports[`DateField > should trigger events 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   margin-left: 3px;
   margin-right: 3px;
 }
@@ -942,7 +942,7 @@ exports[`DateField > should trigger events 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -1043,7 +1043,7 @@ exports[`DateField > should trigger events 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1072,7 +1072,7 @@ exports[`DateField > should trigger events 1`] = `
   height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border: 1px solid #8c40ef;
 }
@@ -1147,17 +1147,17 @@ exports[`DateField > should trigger events 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-6[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-6[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-8 {
@@ -1165,7 +1165,7 @@ exports[`DateField > should trigger events 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1181,7 +1181,7 @@ exports[`DateField > should trigger events 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
