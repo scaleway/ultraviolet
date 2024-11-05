@@ -23,7 +23,7 @@ import { createPortal } from 'react-dom'
 import { isClientSide } from '../../helpers/isClientSide'
 import type { PositionsType } from './animations'
 import { animation, exitAnimation } from './animations'
-import type { PopupPlacement } from './helpers'
+import type { PopupAlign, PopupPlacement } from './helpers'
 import {
   DEFAULT_ARROW_WIDTH,
   DEFAULT_POSITIONS,
@@ -134,6 +134,10 @@ type PopupProps = {
    */
   placement?: PopupPlacement
   /**
+   * Align the popup to the start or center of the children.
+   */
+  align?: PopupAlign
+  /**
    * Content of the popup, preferably text inside.
    */
   text?: ReactNode
@@ -190,6 +194,7 @@ export const Popup = forwardRef(
       children,
       text = '',
       placement = 'auto',
+      align = 'center',
       id,
       className,
       containerFullWidth,
@@ -262,10 +267,11 @@ export const Popup = forwardRef(
             popupRef: innerPopupRef,
             popupPortalTarget: popupPortalTarget as HTMLElement,
             hasArrow,
+            align,
           }),
         )
       }
-    }, [hasArrow, placement, popupPortalTarget])
+    }, [hasArrow, placement, popupPortalTarget, align])
 
     /**
      * This function is called when we need to recompute positions of popup due to window scroll or resize.

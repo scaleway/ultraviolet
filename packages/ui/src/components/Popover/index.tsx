@@ -117,7 +117,10 @@ type PopoverProps = {
    * behavior by setting a portalTarget prop.
    */
   portalTarget?: HTMLElement
-} & Pick<ComponentProps<typeof Popup>, 'placement' | 'dynamicDomRendering'>
+} & Pick<
+  ComponentProps<typeof Popup>,
+  'placement' | 'dynamicDomRendering' | 'align'
+>
 
 /**
  * Popover component is used to display additional information or actions on top of the main content of the page.
@@ -140,6 +143,7 @@ export const Popover = forwardRef(
       'data-testid': dataTestId,
       portalTarget,
       dynamicDomRendering,
+      align,
     }: PopoverProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -184,6 +188,7 @@ export const Popover = forwardRef(
         maxHeight={maxHeight}
         portalTarget={portalTarget}
         dynamicDomRendering={dynamicDomRendering}
+        align={align}
       >
         {children}
       </StyledPopup>
