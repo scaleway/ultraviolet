@@ -9,9 +9,9 @@ import { Text } from '../Text'
 type SentimentType = 'neutral' | 'primary'
 
 const SIZES_WIDTH = {
-  small: 320,
-  medium: 420,
-  large: 520,
+  small: 20, // in rem
+  medium: 26.25,
+  large: 32.5,
 }
 
 const StyledPopup = styled(Popup, {
@@ -21,8 +21,8 @@ const StyledPopup = styled(Popup, {
   size: keyof typeof SIZES_WIDTH
 }>`
   padding: ${({ theme }) => theme.space['2']};
-  width: ${({ size }) => SIZES_WIDTH[size]}px;
-  max-width: ${({ size }) => SIZES_WIDTH[size]}px;
+  width: ${({ size }) => SIZES_WIDTH[size]}rem;
+  max-width: ${({ size }) => SIZES_WIDTH[size]}rem;
   text-align: initial;
 
   ${({ theme, sentiment }) => {

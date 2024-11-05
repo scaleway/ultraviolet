@@ -86,7 +86,7 @@ const DropdownGroup = styled.button<{ 'data-selectgroup': boolean }>`
   border: none;
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   position: sticky;
-  top: 0px;
+  top: 0;
   padding-right: ${({ theme }) => theme.space[2]};
   padding-left: ${({ theme }) => theme.space[2]};
   height: ${({ theme }) => theme.space[4]};
@@ -110,7 +110,7 @@ const DropdownGroup = styled.button<{ 'data-selectgroup': boolean }>`
 `
 const DropdownGroupWrapper = styled.div`
   position: sticky;
-  top: 0px;
+  top: 0;
 `
 const DropdownItem = styled.div<{
   'aria-selected': boolean

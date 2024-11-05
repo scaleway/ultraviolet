@@ -4,8 +4,8 @@ import { Line } from './Line'
 const StyledItem = styled.li`
   display: flex;
   align-items: center;
-  height: 48px;
-  padding: 4px 8px;
+  height: ${({ theme }) => theme.sizing['600']};
+  padding: ${({ theme }) => theme.space['0.5']} ${({ theme }) => theme.space['1']};
 `
 
 const StyledLine = styled.div`

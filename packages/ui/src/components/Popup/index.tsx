@@ -198,7 +198,7 @@ export const Popup = forwardRef(
       id,
       className,
       containerFullWidth,
-      maxWidth = 232,
+      maxWidth = '14.5rem',
       maxHeight,
       visible,
       innerRef,

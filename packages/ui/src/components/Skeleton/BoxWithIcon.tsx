@@ -9,7 +9,7 @@ const StyledContainer = styled.div<{ col: number }>`
 `
 
 const Block = styled.div`
-  height: 130px;
+  height: 8.125rem;
   display: flex;
   flex-direction: column;
   align-items: center;

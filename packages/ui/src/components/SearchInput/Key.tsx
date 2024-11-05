@@ -6,8 +6,8 @@ const Container = styled.div`
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: ${({ theme }) => theme.radii.default};
   border: 0.5px solid ${({ theme }) => theme.colors.neutral.border};
-  min-width: 24px;
-  min-height: 24px;
+  min-width: ${({ theme }) => theme.sizing['300']};
+  min-height: ${({ theme }) => theme.sizing['300']};
   display: flex;
   justify-content: center;
   align-items: center;

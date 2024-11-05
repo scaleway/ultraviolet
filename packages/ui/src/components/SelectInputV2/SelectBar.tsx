@@ -71,14 +71,14 @@ const StyledInputWrapper = styled(Stack)<{
   overflow: hidden;
 
   &[data-size='small'] {
-    height: ${INPUT_SIZE_HEIGHT.small}px;
+    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.small]};
     padding-left: ${({ theme }) => theme.space[1]};
   }
   &[data-size='medium'] {
-    height: ${INPUT_SIZE_HEIGHT.medium}px;
+    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.medium]};
   }
   &[data-size='large'] {
-    height: ${INPUT_SIZE_HEIGHT.large}px;
+    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.large]};
   }
   &[data-state='neutral'] {
     border: 1px solid ${({ theme }) => theme.colors.neutral.border};

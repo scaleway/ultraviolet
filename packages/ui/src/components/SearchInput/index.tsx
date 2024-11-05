@@ -25,7 +25,7 @@ import type { SearchInputProps } from './types'
 const StyledPopup = styled(Popup)`
   width: 100%;
   text-align: initial;
-  min-width: 610px;
+  min-width: 38.125rem;
   padding: ${({ theme }) => `${theme.space['2']} ${theme.space['1']}`};
   background: ${({ theme }) => theme.colors.other.elevation.background.raised};
   box-shadow: ${({ theme }) => `${theme.shadows.raised[0]}, ${theme.shadows.raised[1]}`};

@@ -9,7 +9,7 @@ const Steps = styled.ul`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.space['3']};
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.typography.body};
 `
 
 const Step = styled('li', {
@@ -17,7 +17,7 @@ const Step = styled('li', {
 })<{ disabled: boolean }>`
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: ${({ theme }) => theme.space['2']};
   justify-content: center;
   color: ${({ theme, disabled }) =>
     disabled
