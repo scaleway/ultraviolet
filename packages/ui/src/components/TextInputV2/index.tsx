@@ -27,9 +27,9 @@ import { Tooltip } from '../Tooltip'
 
 // SIZE
 export const TEXTINPUT_SIZE_HEIGHT = {
-  large: 48,
-  medium: 40,
-  small: 32,
+  small: '400', // sizing theme tokens key
+  medium: '500',
+  large: '600',
 } as const
 type TextInputSize = keyof typeof TEXTINPUT_SIZE_HEIGHT
 
@@ -89,7 +89,7 @@ const StyledInputWrapper = styled('div', {
 })<StyledInputWrapperProps>`
   display: flex;
   flex-direction: row;
-  height: ${({ size }) => TEXTINPUT_SIZE_HEIGHT[size]}px;
+  height: ${({ size, theme }) => theme.sizing[TEXTINPUT_SIZE_HEIGHT[size]]};
 
   background: ${({ theme }) => theme.colors.neutral.background};
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};

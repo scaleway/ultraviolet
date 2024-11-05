@@ -41,12 +41,12 @@ const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
   )
 }
 
-const StyledIcon = styled('svg')<{ size: number }>`
+const StyledIcon = styled('svg')<{ size: number | string }>`
   border-radius: ${({ theme }) => theme.radii.default};
-  height: ${({ size }) => size}px;
-  width: ${({ size }) => size}px;
-  min-width: ${({ size }) => size}px;
-  min-height: ${({ size }) => size}px;
+  height: ${({ size }) => (typeof size === 'string' ? size : `${size}px`)};
+  width: ${({ size }) => (typeof size === 'string' ? size : `${size}px`)};
+  min-width: ${({ size }) => (typeof size === 'string' ? size : `${size}px`)};
+  min-height: ${({ size }) => (typeof size === 'string' ? size : `${size}px`)};
 
   & path {
     fill: ${({ theme }) => theme.colors.neutral.background};
@@ -65,12 +65,12 @@ const StyledTextLabel = styled(Text)`
 `
 
 const CheckboxInput = styled('input', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})`
+  shouldForwardProp: prop => !['inputSize'].includes(prop),
+})<{ inputSize: number | string }>`
   position: absolute;
   white-space: nowrap;
-  height: ${({ size }) => size}px;
-  width: ${({ size }) => size}px;
+  height: ${({ inputSize }) => (typeof inputSize === 'string' ? inputSize : `${inputSize}px`)};
+  width: ${({ inputSize }) => (typeof inputSize === 'string' ? inputSize : `${inputSize}px`)};
   opacity: 0;
   border-width: 0;
 
@@ -320,7 +320,7 @@ export const Checkbox = forwardRef(
       name,
       helper,
       value,
-      size = 24,
+      size,
       children,
       progress = false,
       disabled = false,
@@ -335,6 +335,7 @@ export const Checkbox = forwardRef(
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
+    const theme = useTheme()
     const [state, setState] = useState<boolean | 'indeterminate'>(checked)
     const uniqId = useId()
     const localId = id ?? uniqId
@@ -365,7 +366,7 @@ export const Checkbox = forwardRef(
         >
           {progress ? (
             <StyledActivityContainer>
-              <Loader active size={size} />
+              <Loader active size={size ?? theme.sizing['300']} />
             </StyledActivityContainer>
           ) : null}
           <CheckboxInput
@@ -376,7 +377,7 @@ export const Checkbox = forwardRef(
             aria-checked={state === 'indeterminate' ? 'mixed' : state}
             aria-label={ariaLabel}
             checked={state === 'indeterminate' ? false : state}
-            size={size}
+            inputSize={size ?? theme.sizing['300']}
             onChange={onLocalChange}
             onFocus={onFocus}
             onBlur={onBlur}
@@ -390,7 +391,11 @@ export const Checkbox = forwardRef(
           />
 
           {!progress ? (
-            <StyledIcon size={size} viewBox="0 0 24 24" fill="none">
+            <StyledIcon
+              size={size ?? theme.sizing['300']}
+              viewBox="0 0 24 24"
+              fill="none"
+            >
               <CheckboxIconContainer>
                 {state !== 'indeterminate' ? (
                   <path

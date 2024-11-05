@@ -41,7 +41,7 @@ const styles = {
     }
 
     &${PREFIX}__toast-container {
-      width: 312px;
+      width: 19.5rem;
     }
 
     ${PREFIX}__toast-body {

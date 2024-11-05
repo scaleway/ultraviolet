@@ -11,18 +11,11 @@ import { Text } from '../Text'
 
 type IconName = ComponentProps<typeof Icon>['name']
 
-// TODO: remove when typography has been created
-const TEXT_SIZES = {
-  large: 14,
-  medium: 12,
-  small: 10,
-}
-
-export const SIZES = {
-  large: 32,
-  medium: 24,
-  small: 16,
-}
+export const sizes = (theme: Theme) => ({
+  large: theme.sizing['400'],
+  medium: theme.sizing['300'],
+  small: theme.sizing['200'],
+})
 
 export const PROMINENCES = {
   default: 'default',
@@ -97,7 +90,10 @@ const generateStyles = ({
 const StyledSpan = styled(Text, {
   shouldForwardProp: prop =>
     !['sentimentStyles', 'size', 'fontSize'].includes(prop),
-})<{ size: number; sentimentStyles: string; fontSize: number }>`
+})<{
+  size: keyof ReturnType<typeof sizes>
+  sentimentStyles: string
+}>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -105,18 +101,18 @@ const StyledSpan = styled(Text, {
   border-radius: ${({ theme }) => theme.radii.xlarge};
   padding: 0
     ${({ theme, size }) =>
-      size === SIZES.small ? theme.space['1'] : theme.space['2']};
+      size === 'small' ? theme.space['1'] : theme.space['2']};
   gap: ${({ theme, size }) =>
-    size === SIZES.small ? theme.space['0.5'] : theme.space['1']};
+    size === 'small' ? theme.space['0.5'] : theme.space['1']};
   width: fit-content;
-  height: ${({ size }) => size}px;
+  height: ${({ size, theme }) => sizes(theme)[size]};
   text-transform: uppercase;
   ${({ sentimentStyles }) => sentimentStyles}
 `
 
 type BadgeProps = {
   sentiment?: Color
-  size?: keyof typeof SIZES
+  size?: keyof ReturnType<typeof sizes>
   prominence?: keyof typeof PROMINENCES
   /**
    * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
@@ -159,25 +155,20 @@ export const Badge = ({
     [prominence, theme],
   )
 
-  const sizeValue = SIZES[size]
-
   return (
     <StyledSpan
       aria-label={ariaLabel}
       sentimentStyles={
         disabled ? generatedStyles['disabled'] : generatedStyles[sentiment]
       }
-      size={sizeValue}
+      size={size}
       variant={TEXT_VARIANT[size]}
       as="span"
-      fontSize={TEXT_SIZES[size]}
       prominence={disabled ? 'weak' : 'default'}
       className={className}
       data-testid={dataTestId}
     >
-      {icon && sizeValue !== SIZES.small ? (
-        <Icon name={icon} size={16} />
-      ) : null}
+      {icon && size !== 'small' ? <Icon name={icon} size={16} /> : null}
       {children}
     </StyledSpan>
   )

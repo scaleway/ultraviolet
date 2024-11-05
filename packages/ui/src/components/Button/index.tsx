@@ -16,10 +16,10 @@ import { Tooltip } from '../Tooltip'
 
 // SIZE
 export const SIZE_HEIGHT = {
-  large: 48,
-  medium: 40,
-  small: 32,
-  xsmall: 24,
+  large: '600', // sizing key value from tokens
+  medium: '500',
+  small: '400',
+  xsmall: '300',
 } as const
 type ButtonSize = keyof typeof SIZE_HEIGHT
 const SIZE_PADDING_KEY = {
@@ -78,11 +78,11 @@ const coreStyle = ({
   if (fullWidth) {
     width = '100%'
   } else if (iconOnly) {
-    width = `${SIZE_HEIGHT[size]}px`
+    width = `${theme.sizing[SIZE_HEIGHT[size]]}`
   }
 
   return `display: inline-flex;
-  height: ${SIZE_HEIGHT[size]}px;
+  height: ${theme.sizing[SIZE_HEIGHT[size]]};
   padding: 0 ${theme.space[SIZE_PADDING_KEY[size]]};
   flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
   gap: ${theme.space[SIZE_GAP_KEY[size]]};

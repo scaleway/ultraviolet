@@ -6,8 +6,6 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
-const SIZE = 24
-
 const InnerCircleRing = styled.circle``
 const RadioMark = styled.circle``
 
@@ -22,10 +20,10 @@ const RadioMarkedIcon = () => (
 )
 
 const Ring = styled.svg`
-  height: ${SIZE}px;
-  width: ${SIZE}px;
-  min-width: ${SIZE}px;
-  min-height: ${SIZE}px;
+  height: ${({ theme }) => theme.sizing['300']};
+  width: ${({ theme }) => theme.sizing['300']};
+  min-width: ${({ theme }) => theme.sizing['300']};
+  min-height: ${({ theme }) => theme.sizing['300']};
   border-radius: ${({ theme }) => theme.radii.circle};
   fill: ${({ theme }) => theme.colors.neutral.border};
   ${InnerCircleRing} {
@@ -36,8 +34,8 @@ const Ring = styled.svg`
 const RadioInput = styled.input`
   cursor: pointer;
   position: absolute;
-  height: ${SIZE}px;
-  width: ${SIZE}px;
+  height: ${({ theme }) => theme.sizing['300']};
+  width: ${({ theme }) => theme.sizing['300']};
   opacity: 0;
   white-space: nowrap;
   border-width: 0;

@@ -60,14 +60,14 @@ export const StyledDialog = styled('dialog', {
   border-radius: ${({ theme }) => theme.radii.default};
   border: 0;
   padding: ${({ theme }) => theme.space['3']};
-  width: ${MODAL_WIDTH.medium}px;
+  width: ${MODAL_WIDTH.medium}rem;
   box-shadow: ${({ theme }) => `${theme.shadows.overlay[0]}, ${theme.shadows.overlay[1]}`};
 
 
   ${Object.entries(MODAL_WIDTH).map(
     ([size, value]) => `
       &[data-size="${size}"] {
-        width: ${value}px;
+        width: ${value}rem;
       }
       `,
   )}
@@ -89,7 +89,7 @@ export const StyledDialog = styled('dialog', {
   ${({ position, size, top }) =>
     position > 0
       ? `
-    width: ${MODAL_WIDTH[size] - position * 50}px !important;
+    width: calc(${MODAL_WIDTH[size]}rem - ${position * 50}px) !important;
     transform: translate3d(0, -${top}px, 0);
   `
       : undefined}

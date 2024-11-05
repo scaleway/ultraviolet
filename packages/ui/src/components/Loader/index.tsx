@@ -50,7 +50,7 @@ const Text = styled('text', {
   fill: ${({ theme, color }) =>
     theme.colors[color as Color]?.backgroundStrong || color};
 
-  font-size: 26px;
+  font-size: ${({ theme }) => theme.typography.headingLarge.fontSize};
   dominant-baseline: middle;
   text-anchor: middle;
 `
@@ -61,7 +61,7 @@ const Text = styled('text', {
 export const Loader = ({
   percentage = 20,
   text,
-  size = 40,
+  size = '2.5rem',
   strokeWidth = 16,
   color = 'primary',
   trailColor = 'neutral',

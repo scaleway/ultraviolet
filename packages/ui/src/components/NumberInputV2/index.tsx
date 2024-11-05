@@ -16,10 +16,10 @@ import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 const SIZES = {
-  small: '30px',
-  medium: '38px',
-  large: '46px',
-}
+  small: '400', // sizing theme tokens key
+  medium: '500',
+  large: '600',
+} as const
 
 type Sizes = keyof typeof SIZES
 
@@ -27,15 +27,15 @@ const SideContainer = styled(Stack)`
   padding: ${({ theme }) => `${theme.space['0.25']} ${theme.space['1']}`};
 
   &[data-size='small'] {
-    height: ${SIZES.small};
+    height: ${({ theme }) => theme.sizing[SIZES.small]};
   }
 
   &[data-size='medium'] {
-    height: ${SIZES.medium};
+    height: ${({ theme }) => theme.sizing[SIZES.medium]};
   }
 
   &[data-size='large'] {
-    height: ${SIZES.large};
+    height: ${({ theme }) => theme.sizing[SIZES.large]};
     padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   }
 `
@@ -54,7 +54,9 @@ const Unit = styled(Text, {
   display: flex;
   align-items: center;
   padding: ${({ theme }) => theme.space['1']};
-  height: ${({ size }) => SIZES[size]};
+  height: ${({ size }) =>
+    ({ theme }) =>
+      theme.sizing[SIZES[size]]};
   font-size: ${({ theme, size }) =>
     size === 'large'
       ? theme.typography.body.fontSize
@@ -94,15 +96,15 @@ const Input = styled.input`
   }
 
   &[data-size='small'] {
-    height: ${SIZES.small};
+    height: ${({ theme }) => theme.sizing[SIZES.small]};
   }
 
   &[data-size='medium'] {
-    height: ${SIZES.medium};
+    height: ${({ theme }) => theme.sizing[SIZES.medium]};
   }
 
   &[data-size='large'] {
-    height: ${SIZES.large};
+    height: ${({ theme }) => theme.sizing[SIZES.large]};
     font-size: ${({ theme }) => theme.typography.body.fontSize};
   font-family: ${({ theme }) => theme.typography.body.fontFamily};
   font-weight: ${({ theme }) => theme.typography.body.fontWeight};
@@ -182,6 +184,18 @@ const Container = styled.div`
     & > ${InputContainer} {
           border-width: 0;
     };
+  }
+
+  &[data-size='small'] {
+    height: ${({ theme }) => theme.sizing[SIZES.small]};
+  }
+
+  &[data-size='medium'] {
+    height: ${({ theme }) => theme.sizing[SIZES.medium]};
+  }
+
+  &[data-size='large'] {
+    height: ${({ theme }) => theme.sizing[SIZES.large]};
   }
 `
 
@@ -359,6 +373,7 @@ export const NumberInputV2 = forwardRef(
               data-success={!!success}
               data-unit={!!unit}
               data-controls={controls}
+              data-size={size}
             >
               {controls ? (
                 <SideContainer

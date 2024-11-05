@@ -7,15 +7,15 @@ const LineTooltipContainer = styled.div`
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   border-radius: ${({ theme }) => theme.radii.small};
   box-shadow: ${({ theme }) => theme.shadows.tooltip};
-  padding: 5px 9px;
+  padding: ${({ theme }) => theme.theme['0.5']} ${({ theme }) => theme.theme['1']};
   align-items: center;
 `
 const LineColorSquare = styled.span`
   display: block;
-  width: 12px;
-  height: 12px;
+  width: ${({ theme }) => theme.sizing['175']};
+  height: ${({ theme }) => theme.sizing['175']};
   background: ${({ color }) => color};
-  margin-right: 12px;
+  margin-right: ${({ theme }) => theme.space['1.5']};
 `
 type LineChartTooltipProps = { point: Point }
 

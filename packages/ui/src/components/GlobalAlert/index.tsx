@@ -9,7 +9,7 @@ import { GlobalAlertLink } from './GlobalAlertLink'
 const CloseButton = styled(Button)`
   background: none;
   position: absolute;
-  right: ${SIZE_HEIGHT.large}px;
+  right: ${({ theme }) => theme.sizing[SIZE_HEIGHT.large]};
 
   &:hover,
   &:focus,
@@ -20,7 +20,7 @@ const CloseButton = styled(Button)`
 
 const Container = styled(Stack)`
   width: 100%;
-  height: 56px;
+  height: ${({ theme }) => theme.sizing['700']};
   padding: 0 ${({ theme }) => theme.space['2']};
 
   &[data-variant='info'] {

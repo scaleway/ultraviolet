@@ -1,11 +1,11 @@
 import type { ModalPlacement, ModalSize } from './types'
 
 export const MODAL_WIDTH: Record<ModalSize, number> = {
-  large: 850,
-  medium: 708,
-  small: 616,
-  xsmall: 400,
-  xxsmall: 360,
+  large: 53.125, // in rem
+  medium: 44.25,
+  small: 38.5,
+  xsmall: 25,
+  xxsmall: 22.5,
 }
 
 export const MODAL_PLACEMENT: Record<ModalPlacement, string> = {
@@ -36,7 +36,7 @@ export const MODAL_PLACEMENT: Record<ModalPlacement, string> = {
   `,
   top: `
     margin: auto;
-    margin-top: 0px;
+    margin-top: 0;
   `,
   'top-left': `
     margin: auto;

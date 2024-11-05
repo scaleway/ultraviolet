@@ -17,25 +17,25 @@ const styles = {
   `,
   head: (theme: Theme) => css`
     display: flex;
-    padding-bottom: 8px;
+    padding-bottom: ${theme.space['1']};
     border-bottom: 1px solid ${theme.colors.neutral.backgroundStrong};
 
     > :not(:last-child) {
-      margin-right: 8px;
+      margin-right: ${theme.space['1']};
     }
   `,
   legend: (index: number) => (theme: Theme) =>
     css`
-      margin-left: 16px;
-      width: 32px;
+      margin-left: ${theme.space['2']};
+      width: ${theme.sizing['400']};
       height: 2px;
       background-color: ${getLegendColor(theme)[index]};
     `,
-  row: css`
+  row: (theme: Theme) => css`
     display: flex;
-    padding: 4px 0;
+    padding: ${theme.space['0.5']} 0;
     > :not(:last-child) {
-      margin-right: 8px;
+      margin-right: ${theme.space['1']};
     }
   `,
 }

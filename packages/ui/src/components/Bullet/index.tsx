@@ -17,19 +17,20 @@ const BULLET_SENTIMENTS = [...SENTIMENTS, 'disabled']
 
 type BulletSentiment = (typeof BULLET_SENTIMENTS)[number]
 
-const sizes = {
-  medium: `
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
+const sizes = ({ theme }: { theme: Theme }) =>
+  ({
+    medium: `
+    width: ${theme.sizing['400']};
+    height: ${theme.sizing['400']};
+    font-size: ${theme.typography.body.fontSize}};
   `,
-  small: `
-    width: 24px;
-    height: 24px;
-    font-size: 14px;
+    small: `
+    width: ${theme.sizing['300']};
+    height: ${theme.sizing['300']};
+    font-size: ${theme.typography.bodySmall.fontSize};
   `,
-} as const
-type BulletSize = keyof typeof sizes
+  }) as const
+type BulletSize = 'medium' | 'small'
 export const bulletSizes = Object.keys(sizes) as BulletSize[]
 
 const sentimentStyles = ({
@@ -80,7 +81,8 @@ const sentimentStyles = ({
   }
 }
 
-const sizeStyles = ({ size }: { size: BulletSize }) => sizes[size]
+const sizeStyles = ({ size, theme }: { size: BulletSize; theme: Theme }) =>
+  sizes({ theme })[size]
 
 type StyledContainerType = {
   sentiment: BulletSentiment
