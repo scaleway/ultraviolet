@@ -135,6 +135,7 @@ const FwdMenu = forwardRef(
       size = 'small',
       triggerMethod = 'click',
       dynamicDomRendering,
+      align,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -191,7 +192,7 @@ const FwdMenu = forwardRef(
         }
         portalTarget={portalTarget}
         dynamicDomRendering={dynamicDomRendering}
-        align="start"
+        align={align}
       >
         {finalDisclosure}
       </StyledPopup>
