@@ -85,7 +85,7 @@ exports[`Table > Should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -621,7 +621,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -638,7 +638,7 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -1224,7 +1224,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -1241,7 +1241,7 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -1827,7 +1827,7 @@ exports[`Table > Should render correctly with info 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -1844,7 +1844,7 @@ exports[`Table > Should render correctly with info 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -2313,7 +2313,7 @@ exports[`Table > Should render correctly with loading 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -2339,8 +2339,7 @@ exports[`Table > Should render correctly with loading 1`] = `
 }
 
 .emotion-36 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -3032,7 +3031,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -3049,7 +3048,7 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -3439,7 +3438,7 @@ exports[`Table > Should render correctly with selectable then click on first row
 .emotion-0 [role="button row"] {
   display: grid;
   width: 100%;
-  grid-template-columns: 40px 100px 100px 100px 100px 100px;
+  grid-template-columns: 2.5rem 100px 100px 100px 100px 100px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3663,8 +3662,8 @@ exports[`Table > Should render correctly with selectable then click on first row
 .emotion-11 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -3721,10 +3720,10 @@ exports[`Table > Should render correctly with selectable then click on first row
 
 .emotion-13 {
   border-radius: 0.25rem;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-13 path {
@@ -3862,7 +3861,7 @@ exports[`Table > Should render correctly with selectable then click on first row
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -3879,7 +3878,7 @@ exports[`Table > Should render correctly with selectable then click on first row
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -3891,7 +3890,7 @@ exports[`Table > Should render correctly with selectable then click on first row
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 40px;
+  width: 2.5rem;
 }
 
 <div
@@ -3932,7 +3931,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4049,7 +4047,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4139,7 +4136,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4229,7 +4225,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4319,7 +4314,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4409,7 +4403,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4499,7 +4492,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4589,7 +4581,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4679,7 +4670,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4769,7 +4759,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -4859,7 +4848,6 @@ exports[`Table > Should render correctly with selectable then click on first row
                 <svg
                   class="emotion-13 emotion-14"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -5142,7 +5130,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -5159,7 +5147,7 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -5763,7 +5751,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;
@@ -5780,7 +5768,7 @@ exports[`Table > Should render correctly with stipped 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -webkit-justify-content: start;

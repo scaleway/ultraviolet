@@ -77,6 +77,18 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   border-width: 0;
 }
 
+.emotion-2[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -102,15 +114,15 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
 }
 
 .emotion-4[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-4[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-4[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
@@ -119,7 +131,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
+  height: 2rem;
   padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -127,7 +139,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -234,15 +246,15 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
 }
 
 .emotion-13[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-13[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-13[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
@@ -306,6 +318,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
             data-controls="true"
             data-disabled="false"
             data-error="false"
+            data-size="large"
             data-success="false"
             data-unit="false"
           >
@@ -451,6 +464,18 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   border-width: 0;
 }
 
+.emotion-2[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -476,15 +501,15 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
 }
 
 .emotion-4[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-4[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-4[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   padding: 0.25rem 0.5rem;
 }
 
@@ -493,7 +518,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
+  height: 2rem;
   padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -501,7 +526,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -599,15 +624,15 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
 }
 
 .emotion-13[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-13[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-13[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
@@ -671,6 +696,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
             data-controls="true"
             data-disabled="true"
             data-error="false"
+            data-size="large"
             data-success="false"
             data-unit="false"
           >

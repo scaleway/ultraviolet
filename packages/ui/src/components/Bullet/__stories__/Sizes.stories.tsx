@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react'
-import { Bullet, bulletSizes } from '..'
+import { Bullet } from '..'
 
 export const Sizes: StoryFn = props => (
   <>
-    {bulletSizes.map(size => (
+    {(['medium', 'small'] as const).map(size => (
       <div key={size}>
         <Bullet {...props} size={size} text="1" />
       </div>

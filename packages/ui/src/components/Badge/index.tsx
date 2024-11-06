@@ -11,11 +11,11 @@ import { Text } from '../Text'
 
 type IconName = ComponentProps<typeof Icon>['name']
 
-export const sizes = (theme: Theme) => ({
-  large: theme.sizing['400'],
-  medium: theme.sizing['300'],
-  small: theme.sizing['200'],
-})
+export const SIZES = {
+  large: '400', // sizing token from theme
+  medium: '300',
+  small: '200',
+} as const
 
 export const PROMINENCES = {
   default: 'default',
@@ -91,7 +91,7 @@ const StyledSpan = styled(Text, {
   shouldForwardProp: prop =>
     !['sentimentStyles', 'size', 'fontSize'].includes(prop),
 })<{
-  size: keyof ReturnType<typeof sizes>
+  size: keyof typeof SIZES
   sentimentStyles: string
 }>`
   display: inline-flex;
@@ -105,14 +105,14 @@ const StyledSpan = styled(Text, {
   gap: ${({ theme, size }) =>
     size === 'small' ? theme.space['0.5'] : theme.space['1']};
   width: fit-content;
-  height: ${({ size, theme }) => sizes(theme)[size]};
+  height: ${({ size, theme }) => theme.sizing[SIZES[size]]};
   text-transform: uppercase;
   ${({ sentimentStyles }) => sentimentStyles}
 `
 
 type BadgeProps = {
   sentiment?: Color
-  size?: keyof ReturnType<typeof sizes>
+  size?: keyof typeof SIZES
   prominence?: keyof typeof PROMINENCES
   /**
    * Defines icon to display on left side of badge. **Only available on medium and large sizes**.

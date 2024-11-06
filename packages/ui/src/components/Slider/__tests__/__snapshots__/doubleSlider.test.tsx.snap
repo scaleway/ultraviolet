@@ -238,7 +238,7 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -256,7 +256,7 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -269,9 +269,9 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -283,9 +283,9 @@ exports[`Double slider > handles correctly onChange custom scale double 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -1420,6 +1420,18 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   border-width: 0;
 }
 
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1472,6 +1484,18 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   border-width: 0;
 }
 
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-13 {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -1541,15 +1565,15 @@ exports[`Double slider > handles correctly onChange double 1`] = `
 }
 
 .emotion-15[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
@@ -1633,15 +1657,15 @@ exports[`Double slider > handles correctly onChange double 1`] = `
 }
 
 .emotion-15[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
@@ -1702,7 +1726,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -1720,7 +1744,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -1733,9 +1757,9 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -1747,9 +1771,9 @@ exports[`Double slider > handles correctly onChange double 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -2062,6 +2086,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
+                  data-size="small"
                   data-success="false"
                   data-unit="false"
                 >
@@ -2096,6 +2121,7 @@ exports[`Double slider > handles correctly onChange double 1`] = `
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
+                  data-size="small"
                   data-success="false"
                   data-unit="false"
                 >
@@ -2461,6 +2487,18 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   border-width: 0;
 }
 
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2513,6 +2551,18 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   border-width: 0;
 }
 
+.emotion-10[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-10[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-10[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-13 {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -2582,15 +2632,15 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
 }
 
 .emotion-15[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
@@ -2674,15 +2724,15 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
 }
 
 .emotion-15[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
@@ -2743,7 +2793,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2761,7 +2811,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2774,9 +2824,9 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -2788,9 +2838,9 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -3355,6 +3405,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
+                  data-size="small"
                   data-success="false"
                   data-unit="false"
                 >
@@ -3389,6 +3440,7 @@ exports[`Double slider > handles correctly onChange with min and max double 1`] 
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
+                  data-size="small"
                   data-success="false"
                   data-unit="false"
                 >
@@ -3625,7 +3677,7 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -3638,9 +3690,9 @@ exports[`Double slider > renders correctly direction row double 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -4208,6 +4260,18 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   border-width: 0;
 }
 
+.emotion-14[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-14[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-14[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-17 {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -4260,15 +4324,15 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
 }
 
 .emotion-19[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-19[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-19[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
@@ -4329,7 +4393,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -4342,9 +4406,9 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -4653,6 +4717,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
                 data-controls="false"
                 data-disabled="false"
                 data-error="false"
+                data-size="small"
                 data-success="false"
                 data-unit="false"
               >
@@ -4727,6 +4792,7 @@ exports[`Double slider > renders correctly direction row double with input 1`] =
                 data-controls="false"
                 data-disabled="false"
                 data-error="false"
+                data-size="small"
                 data-success="false"
                 data-unit="false"
               >
@@ -4921,7 +4987,7 @@ exports[`Double slider > renders correctly double  1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -4934,9 +5000,9 @@ exports[`Double slider > renders correctly double  1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -5609,7 +5675,7 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -5627,7 +5693,7 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -5640,9 +5706,9 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -5654,9 +5720,9 @@ exports[`Double slider > renders correctly double custom tooltip 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -6366,7 +6432,7 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -6384,7 +6450,7 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -6397,9 +6463,9 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -6411,9 +6477,9 @@ exports[`Double slider > renders correctly double default toolipt  1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -7123,7 +7189,7 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -7141,7 +7207,7 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -7154,9 +7220,9 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -7168,9 +7234,9 @@ exports[`Double slider > renders correctly double disabled 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -7836,6 +7902,18 @@ exports[`Double slider > renders correctly double input 1`] = `
   border-width: 0;
 }
 
+.emotion-16[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-16[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-16[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-19 {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -7888,15 +7966,15 @@ exports[`Double slider > renders correctly double input 1`] = `
 }
 
 .emotion-21[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-21[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-21[data-size='large'] {
-  height: 46px;
+  height: 3rem;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
@@ -7957,7 +8035,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -7975,7 +8053,7 @@ exports[`Double slider > renders correctly double input 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -7988,9 +8066,9 @@ exports[`Double slider > renders correctly double input 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -8002,9 +8080,9 @@ exports[`Double slider > renders correctly double input 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -8331,6 +8409,7 @@ exports[`Double slider > renders correctly double input 1`] = `
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
+                  data-size="small"
                   data-success="false"
                   data-unit="false"
                 >
@@ -8365,6 +8444,7 @@ exports[`Double slider > renders correctly double input 1`] = `
                   data-controls="false"
                   data-disabled="false"
                   data-error="false"
+                  data-size="small"
                   data-success="false"
                   data-unit="false"
                 >
@@ -8748,7 +8828,7 @@ exports[`Double slider > renders correctly double min max 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -8766,7 +8846,7 @@ exports[`Double slider > renders correctly double min max 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -8779,9 +8859,9 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -8793,9 +8873,9 @@ exports[`Double slider > renders correctly double min max 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -9609,7 +9689,7 @@ exports[`Double slider > renders correctly double step 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -9627,7 +9707,7 @@ exports[`Double slider > renders correctly double step 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -9640,9 +9720,9 @@ exports[`Double slider > renders correctly double step 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -9654,9 +9734,9 @@ exports[`Double slider > renders correctly double step 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -10317,7 +10397,7 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -10335,7 +10415,7 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -10348,9 +10428,9 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -10362,9 +10442,9 @@ exports[`Double slider > renders correctly double with custom scale 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -11480,7 +11560,7 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -11498,7 +11578,7 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -11511,9 +11591,9 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -11525,9 +11605,9 @@ exports[`Double slider > renders correctly double with custom ticks 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -12670,7 +12750,7 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -12688,7 +12768,7 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -12701,9 +12781,9 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -12715,9 +12795,9 @@ exports[`Double slider > renders correctly double with default ticks 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -13405,7 +13485,7 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -13423,7 +13503,7 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -13444,9 +13524,9 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -13458,9 +13538,9 @@ exports[`Double slider > renders correctly double with single tooltip 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -14155,7 +14235,7 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -14173,7 +14253,7 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -14186,9 +14266,9 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -14200,9 +14280,9 @@ exports[`Double slider > renders correctly double with value outside of min-max 
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -14994,7 +15074,7 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -15007,9 +15087,9 @@ exports[`Double slider > renders correctly with value empty 1`] = `
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -15534,7 +15614,7 @@ exports[`Double slider > renders correctly with value empty array and no min max
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -15547,9 +15627,9 @@ exports[`Double slider > renders correctly with value empty array and no min max
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }
@@ -16074,7 +16154,7 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -16087,9 +16167,9 @@ exports[`Double slider > renders correctly with value empty array with min max 1
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 8px;
+  height: 0.5rem;
   width: 100%;
-  min-width: 220px;
+  min-width: 13.75rem;
   border-radius: 0.25rem;
   background: #e9eaeb;
 }

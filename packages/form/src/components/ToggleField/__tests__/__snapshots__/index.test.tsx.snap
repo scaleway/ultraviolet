@@ -22,7 +22,7 @@ exports[`ToggleField > should render correctly 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -71,8 +71,8 @@ exports[`ToggleField > should render correctly 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -82,10 +82,10 @@ exports[`ToggleField > should render correctly 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -98,7 +98,7 @@ exports[`ToggleField > should render correctly 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -222,7 +222,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -271,8 +271,8 @@ exports[`ToggleField > should render correctly checked 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -282,10 +282,10 @@ exports[`ToggleField > should render correctly checked 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -298,7 +298,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -423,7 +423,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -472,8 +472,8 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -483,10 +483,10 @@ exports[`ToggleField > should render correctly disabled 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -499,7 +499,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -624,7 +624,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 }
 
 .emotion-0:active .emotion-9[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -699,8 +699,8 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-8:hover {
@@ -710,10 +710,10 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 .emotion-8:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -726,7 +726,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 }
 
 .emotion-8[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-8[data-checked="true"] {

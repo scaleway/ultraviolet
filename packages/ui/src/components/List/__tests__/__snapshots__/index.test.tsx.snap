@@ -244,7 +244,7 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-18 {
@@ -259,7 +259,7 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -929,7 +929,7 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-18 {
@@ -944,7 +944,7 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-28 {
@@ -1516,7 +1516,7 @@ exports[`List > Should render correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -2185,7 +2185,7 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-18 {
@@ -2200,7 +2200,7 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -2754,7 +2754,7 @@ exports[`List > Should render correctly with disabled rows 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -3318,7 +3318,7 @@ exports[`List > Should render correctly with expandable rows 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -4019,7 +4019,7 @@ exports[`List > Should render correctly with info 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-38 {
@@ -4034,7 +4034,7 @@ exports[`List > Should render correctly with info 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -4788,7 +4788,7 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-18 {
@@ -4803,7 +4803,7 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-40 {
@@ -5490,7 +5490,7 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-18 {
@@ -5505,7 +5505,7 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -6080,7 +6080,7 @@ exports[`List > Should render correctly with loading 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-21 {
@@ -6102,8 +6102,7 @@ exports[`List > Should render correctly with loading 1`] = `
 }
 
 .emotion-23 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -6858,8 +6857,8 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
 .emotion-8 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -6916,10 +6915,10 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
 
 .emotion-10 {
   border-radius: 0.25rem;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-10 path {
@@ -7057,7 +7056,7 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-35 {
@@ -7079,8 +7078,7 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
 }
 
 .emotion-37 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -7148,7 +7146,6 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
             <svg
               class="emotion-10 emotion-11"
               fill="none"
-              size="24"
               viewBox="0 0 24 24"
             >
               <g>
@@ -7927,7 +7924,7 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-18 {
@@ -7942,7 +7939,7 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -8496,7 +8493,7 @@ exports[`List > Should render correctly with row expanded 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -9126,8 +9123,8 @@ exports[`List > Should render correctly with selectable 1`] = `
 .emotion-8 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -9184,10 +9181,10 @@ exports[`List > Should render correctly with selectable 1`] = `
 
 .emotion-10 {
   border-radius: 0.25rem;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-10 path {
@@ -9324,7 +9321,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-34 {
@@ -9368,7 +9365,6 @@ exports[`List > Should render correctly with selectable 1`] = `
             <svg
               class="emotion-10 emotion-11"
               fill="none"
-              size="24"
               viewBox="0 0 24 24"
             >
               <g>
@@ -9469,7 +9465,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -9567,7 +9562,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -9665,7 +9659,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -9763,7 +9756,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -9861,7 +9853,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -9959,7 +9950,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -10057,7 +10047,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -10155,7 +10144,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -10253,7 +10241,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -10351,7 +10338,6 @@ exports[`List > Should render correctly with selectable 1`] = `
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -10828,8 +10814,8 @@ exports[`List > Should render correctly with selectable then click on first row 
 .emotion-8 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -10887,8 +10873,8 @@ exports[`List > Should render correctly with selectable then click on first row 
 .emotion-8 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -10945,10 +10931,10 @@ exports[`List > Should render correctly with selectable then click on first row 
 
 .emotion-10 {
   border-radius: 0.25rem;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-10 path {
@@ -10965,10 +10951,10 @@ exports[`List > Should render correctly with selectable then click on first row 
 
 .emotion-10 {
   border-radius: 0.25rem;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-10 path {
@@ -11215,7 +11201,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-32 {
@@ -11230,7 +11216,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-34 {
@@ -11281,7 +11267,6 @@ exports[`List > Should render correctly with selectable then click on first row 
             <svg
               class="emotion-10 emotion-11"
               fill="none"
-              size="24"
               viewBox="0 0 24 24"
             >
               <g>
@@ -11382,7 +11367,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -11480,7 +11464,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -11578,7 +11561,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -11676,7 +11658,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -11774,7 +11755,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -11872,7 +11852,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -11970,7 +11949,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -12068,7 +12046,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -12166,7 +12143,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -12264,7 +12240,6 @@ exports[`List > Should render correctly with selectable then click on first row 
                 <svg
                   class="emotion-10 emotion-11"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
@@ -12460,7 +12435,7 @@ exports[`List > Should render correctly with sentiment rows 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -13024,7 +12999,7 @@ exports[`List > Should render correctly with sort 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div
@@ -13727,7 +13702,7 @@ exports[`List > Should render correctly with sort then click 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 .emotion-29 {
@@ -13742,7 +13717,7 @@ exports[`List > Should render correctly with sort then click 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 60px;
+  min-height: 3.75rem;
 }
 
 <div

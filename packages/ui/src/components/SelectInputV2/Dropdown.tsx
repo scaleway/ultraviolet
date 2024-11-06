@@ -696,7 +696,7 @@ export const Dropdown = ({
       const position =
         refSelect.current.getBoundingClientRect().bottom +
         DROPDOWN_MAX_HEIGHT +
-        INPUT_SIZE_HEIGHT[size] +
+        Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
         parseInt(theme.space['5'], 10)
       const overflow = position - window.innerHeight
       if (overflow > 0) {

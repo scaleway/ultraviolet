@@ -29,7 +29,7 @@ exports[`Skeleton > renders correctly with type="block" 1`] = `
 }
 
 .emotion-2 {
-  min-height: 200px;
+  min-height: 12.5rem;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -64,8 +64,7 @@ exports[`Skeleton > renders correctly with type="block" 1`] = `
 }
 
 .emotion-8 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -208,8 +207,7 @@ exports[`Skeleton > renders correctly with type="blocks" 1`] = `
 }
 
 .emotion-8 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -377,7 +375,7 @@ exports[`Skeleton > renders correctly with type="box" 1`] = `
 }
 
 .emotion-4 {
-  height: 130px;
+  height: 8.125rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -408,8 +406,7 @@ exports[`Skeleton > renders correctly with type="box" 1`] = `
 }
 
 .emotion-8 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -578,8 +575,8 @@ exports[`Skeleton > renders correctly with type="donut" 1`] = `
 }
 
 .emotion-4 {
-  height: 206px;
-  width: 206px;
+  height: 12.875rem;
+  width: 12.875rem;
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -597,12 +594,11 @@ exports[`Skeleton > renders correctly with type="donut" 1`] = `
 .emotion-8 {
   display: grid;
   list-style: none;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .emotion-10 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -651,8 +647,8 @@ exports[`Skeleton > renders correctly with type="donut" 1`] = `
         >
           <circle
             class="emotion-6 emotion-7"
-            cx="103"
-            cy="103"
+            cx="6.4375"
+            cy="6.4375"
             r="90"
           />
         </svg>
@@ -718,8 +714,7 @@ exports[`Skeleton > renders correctly with type="line" 1`] = `
 }
 
 .emotion-2 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -818,8 +813,8 @@ exports[`Skeleton > renders correctly with type="list" 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 48px;
-  padding: 4px 8px;
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .emotion-6 {
@@ -829,8 +824,7 @@ exports[`Skeleton > renders correctly with type="list" 1`] = `
 }
 
 .emotion-8 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;
@@ -987,7 +981,7 @@ exports[`Skeleton > renders correctly with type="slider" 1`] = `
 }
 
 .emotion-2 {
-  height: 277px;
+  height: 17.375rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -997,8 +991,7 @@ exports[`Skeleton > renders correctly with type="slider" 1`] = `
 .emotion-4 {
   border: 1px solid #e9eaeb;
   border-radius: 0.25rem;
-  width: 239px;
-  height: 261px;
+  width:14.875rem height: 16.375ren;
   overflow: hidden;
 }
 
@@ -1225,8 +1218,7 @@ exports[`Skeleton > renders default variant 1`] = `
 }
 
 .emotion-8 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
   border-radius: 0.5rem;
   background-color: #e9eaeb;

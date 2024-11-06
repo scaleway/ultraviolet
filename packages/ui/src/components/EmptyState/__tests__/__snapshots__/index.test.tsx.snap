@@ -23,9 +23,9 @@ exports[`EmptySpace > should work with border 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 1140px;
+  max-width: 71.25rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 8.75rem;
   border: 1px solid #d9dadd;
   border-radius: 0.25rem;
 }
@@ -194,9 +194,9 @@ exports[`EmptySpace > should work with image 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 1140px;
+  max-width: 71.25rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 8.75rem;
 }
 
 .emotion-2 {
@@ -247,6 +247,12 @@ exports[`EmptySpace > should work with image 1`] = `
 }
 
 .emotion-6 {
+  width: 15rem;
+  height: 15rem;
+  object-fit: contain;
+}
+
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,7 +275,7 @@ exports[`EmptySpace > should work with image 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-9 {
+.emotion-11 {
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
@@ -281,7 +287,7 @@ exports[`EmptySpace > should work with image 1`] = `
   text-align: center;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -318,14 +324,15 @@ exports[`EmptySpace > should work with image 1`] = `
         >
           <img
             alt=""
+            class="emotion-6 emotion-7"
+            size="15"
             src="/src/components/EmptyState/__stories__/illustrations/kapsule.webp"
-            width="240"
           />
           <div
-            class="emotion-6 emotion-5"
+            class="emotion-8 emotion-5"
           >
             <p
-              class="emotion-8 emotion-9 emotion-10"
+              class="emotion-10 emotion-11 emotion-12"
             >
               test
             </p>
@@ -335,7 +342,7 @@ exports[`EmptySpace > should work with image 1`] = `
           class="emotion-4 emotion-5"
         >
           <div
-            class="emotion-13 emotion-5"
+            class="emotion-15 emotion-5"
           />
         </div>
         content
@@ -368,9 +375,9 @@ exports[`EmptySpace > should work with image as component 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 1140px;
+  max-width: 71.25rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 8.75rem;
 }
 
 .emotion-2 {
@@ -541,9 +548,9 @@ exports[`EmptySpace > should work with learn more 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 1140px;
+  max-width: 71.25rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 8.75rem;
 }
 
 .emotion-2 {
@@ -813,9 +820,9 @@ exports[`EmptySpace > should work with primary button 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 1140px;
+  max-width: 71.25rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 8.75rem;
 }
 
 .emotion-2 {
@@ -988,9 +995,9 @@ exports[`EmptySpace > should work with secondary button 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 1140px;
+  max-width: 71.25rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 8.75rem;
 }
 
 .emotion-2 {
@@ -1163,7 +1170,7 @@ exports[`EmptySpace > should work with size 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 720px;
+  max-width: 45rem;
   margin: 0 auto;
 }
 
@@ -1331,9 +1338,9 @@ exports[`EmptySpace > should work with title 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 1140px;
+  max-width: 71.25rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 8.75rem;
 }
 
 .emotion-2 {
@@ -1517,9 +1524,9 @@ exports[`EmptySpace > should work without parameters 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  max-width: 1140px;
+  max-width: 71.25rem;
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 8.75rem;
 }
 
 .emotion-2 {

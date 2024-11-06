@@ -22,7 +22,7 @@ exports[`Toggle > renders correctly 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -71,8 +71,8 @@ exports[`Toggle > renders correctly 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -82,10 +82,10 @@ exports[`Toggle > renders correctly 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -98,7 +98,7 @@ exports[`Toggle > renders correctly 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -218,7 +218,7 @@ exports[`Toggle > renders correctly label 1`] = `
 }
 
 .emotion-0:active .emotion-9[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -293,8 +293,8 @@ exports[`Toggle > renders correctly label 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-8:hover {
@@ -304,10 +304,10 @@ exports[`Toggle > renders correctly label 1`] = `
 .emotion-8:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -320,7 +320,7 @@ exports[`Toggle > renders correctly label 1`] = `
 }
 
 .emotion-8[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-8[data-checked="true"] {
@@ -450,7 +450,7 @@ exports[`Toggle > renders correctly when checked 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -499,8 +499,8 @@ exports[`Toggle > renders correctly when checked 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -510,10 +510,10 @@ exports[`Toggle > renders correctly when checked 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -526,7 +526,7 @@ exports[`Toggle > renders correctly when checked 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -647,7 +647,7 @@ exports[`Toggle > renders correctly when disabled 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -696,8 +696,8 @@ exports[`Toggle > renders correctly when disabled 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -707,10 +707,10 @@ exports[`Toggle > renders correctly when disabled 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -723,7 +723,7 @@ exports[`Toggle > renders correctly when disabled 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -844,7 +844,7 @@ exports[`Toggle > renders correctly when required with label 1`] = `
 }
 
 .emotion-0:active .emotion-11[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -933,8 +933,8 @@ exports[`Toggle > renders correctly when required with label 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-10:hover {
@@ -944,10 +944,10 @@ exports[`Toggle > renders correctly when required with label 1`] = `
 .emotion-10:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -960,7 +960,7 @@ exports[`Toggle > renders correctly when required with label 1`] = `
 }
 
 .emotion-10[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-10[data-checked="true"] {
@@ -1100,7 +1100,7 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
 }
 
 .emotion-0:active .emotion-11[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -1189,8 +1189,8 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-10:hover {
@@ -1200,10 +1200,10 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
 .emotion-10:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -1216,7 +1216,7 @@ exports[`Toggle > renders correctly when required with label left 1`] = `
 }
 
 .emotion-10[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-10[data-checked="true"] {
@@ -1356,7 +1356,7 @@ exports[`Toggle > renders correctly with complex label 1`] = `
 }
 
 .emotion-0:active .emotion-7[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -1419,8 +1419,8 @@ exports[`Toggle > renders correctly with complex label 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-6:hover {
@@ -1430,10 +1430,10 @@ exports[`Toggle > renders correctly with complex label 1`] = `
 .emotion-6:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -1446,7 +1446,7 @@ exports[`Toggle > renders correctly with complex label 1`] = `
 }
 
 .emotion-6[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-6[data-checked="true"] {
@@ -1574,7 +1574,7 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
 }
 
 .emotion-0:active .emotion-9[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -1649,8 +1649,8 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-8:hover {
@@ -1660,10 +1660,10 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
 .emotion-8:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -1676,7 +1676,7 @@ exports[`Toggle > renders correctly with custom labels on right 1`] = `
 }
 
 .emotion-8[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-8[data-checked="true"] {
@@ -1806,7 +1806,7 @@ exports[`Toggle > renders correctly with error 1`] = `
 }
 
 .emotion-0:active .emotion-11[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -1834,7 +1834,7 @@ exports[`Toggle > renders correctly with error 1`] = `
 }
 
 .emotion-0:active .emotion-11[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -1970,8 +1970,8 @@ exports[`Toggle > renders correctly with error 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-10:hover {
@@ -1981,10 +1981,10 @@ exports[`Toggle > renders correctly with error 1`] = `
 .emotion-10:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -1997,7 +1997,7 @@ exports[`Toggle > renders correctly with error 1`] = `
 }
 
 .emotion-10[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-10[data-checked="true"] {
@@ -2069,8 +2069,8 @@ exports[`Toggle > renders correctly with error 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-10:hover {
@@ -2080,10 +2080,10 @@ exports[`Toggle > renders correctly with error 1`] = `
 .emotion-10:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -2096,7 +2096,7 @@ exports[`Toggle > renders correctly with error 1`] = `
 }
 
 .emotion-10[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-10[data-checked="true"] {
@@ -2245,7 +2245,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
 }
 
 .emotion-0:active .emotion-11[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -2273,7 +2273,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
 }
 
 .emotion-0:active .emotion-11[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -2409,8 +2409,8 @@ exports[`Toggle > renders correctly with helper 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-10:hover {
@@ -2420,10 +2420,10 @@ exports[`Toggle > renders correctly with helper 1`] = `
 .emotion-10:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -2436,7 +2436,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
 }
 
 .emotion-10[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-10[data-checked="true"] {
@@ -2508,8 +2508,8 @@ exports[`Toggle > renders correctly with helper 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-10:hover {
@@ -2519,10 +2519,10 @@ exports[`Toggle > renders correctly with helper 1`] = `
 .emotion-10:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -2535,7 +2535,7 @@ exports[`Toggle > renders correctly with helper 1`] = `
 }
 
 .emotion-10[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-10[data-checked="true"] {
@@ -2684,7 +2684,7 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
 }
 
 .emotion-0:active .emotion-9[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -2759,8 +2759,8 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-8:hover {
@@ -2770,10 +2770,10 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
 .emotion-8:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -2786,7 +2786,7 @@ exports[`Toggle > renders correctly with labels on left 1`] = `
 }
 
 .emotion-8[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-8[data-checked="true"] {
@@ -2916,7 +2916,7 @@ exports[`Toggle > renders correctly with non default size 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 16.53px;
+  width: calc(0.75rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -2965,8 +2965,8 @@ exports[`Toggle > renders correctly with non default size 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 40px;
-  height: 20px;
+  width: 2.5rem;
+  height: 1.25rem;
 }
 
 .emotion-4:hover {
@@ -2976,10 +2976,10 @@ exports[`Toggle > renders correctly with non default size 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.25rem / 2 - 0.75rem / 2);
   left: 5px;
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -2992,7 +2992,7 @@ exports[`Toggle > renders correctly with non default size 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 16.53px;
+  width: calc(0.75rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -3120,7 +3120,7 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
 }
 
 .emotion-2:active .emotion-11[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-2[aria-disabled="true"] {
@@ -3195,8 +3195,8 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-10:hover {
@@ -3206,10 +3206,10 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
 .emotion-10:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -3222,7 +3222,7 @@ exports[`Toggle > renders correctly with tooltip 1`] = `
 }
 
 .emotion-10[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-10[data-checked="true"] {

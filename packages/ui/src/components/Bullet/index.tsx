@@ -31,7 +31,6 @@ const sizes = ({ theme }: { theme: Theme }) =>
   `,
   }) as const
 type BulletSize = 'medium' | 'small'
-export const bulletSizes = Object.keys(sizes) as BulletSize[]
 
 const sentimentStyles = ({
   theme,
