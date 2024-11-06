@@ -11,11 +11,11 @@ import type { OptionType } from '../SelectInputV2/types'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
-const INPUT_SIZE_HEIGHT: Record<string, number> = {
-  large: 48,
-  medium: 40,
-  small: 32,
-}
+const INPUT_SIZE_HEIGHT = {
+  small: '400', // sizing theme tokens key
+  medium: '500',
+  large: '600',
+} as const
 
 const StyledNumberInputWrapper = styled.div`
   display: flex;
@@ -100,13 +100,13 @@ const UnitInputWrapper = styled(Stack)<{
   }
 
   &[data-size='small'] {
-    height: ${INPUT_SIZE_HEIGHT['small']}px;
+    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.small]};
   }
   &[data-size='medium'] {
-    height: ${INPUT_SIZE_HEIGHT['medium']}px;
+    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.medium]};
   }
   &[data-size='large'] {
-    height: ${INPUT_SIZE_HEIGHT['large']}px;
+    height: ${({ theme }) => theme.sizing[INPUT_SIZE_HEIGHT.large]};
   }
 
   &[data-success='true'] {
@@ -160,7 +160,7 @@ const UnitInputWrapper = styled(Stack)<{
 `
 
 const CustomSelectInput = styled(SelectInputV2)<{
-  width?: number
+  width?: number | string
   'data-disabled': boolean
 }>`
   #unit {
@@ -168,7 +168,7 @@ const CustomSelectInput = styled(SelectInputV2)<{
     background: transparent;
   }
 
-  ${({ width }) => width && `width: ${width}px;`}
+  ${({ width }) => width && `width: ${typeof width === 'string' ? width : `${width}px`};`}
 
   #unit:focus,
   #unit:active {
@@ -186,7 +186,7 @@ type UnitInputProps = {
   onChange?: (value: UnitInputValue['inputValue']) => void
   onChangeUnitValue?: (values: string) => void
   options: OptionType[]
-  selectInputWidth?: number
+  selectInputWidth?: number | string
   size?: 'small' | 'medium' | 'large'
   'data-testid'?: string
   helper?: string
@@ -225,7 +225,7 @@ export const UnitInput = ({
   onChangeUnitValue,
   value,
   unitValue,
-  selectInputWidth = 200,
+  selectInputWidth = '12.6rem',
   disabled = false,
   options,
   className,

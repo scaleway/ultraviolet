@@ -23,7 +23,7 @@ const StyledContainer = styled('span', {
   padding: 0 ${({ theme }) => theme.space['1']};
   gap: ${({ theme }) => theme.space['1']};
   width: fit-content;
-  height: 24px;
+  height: ${({ theme }) => theme.sizing['300']};
   ${({ copiable, theme }) =>
     copiable &&
     `
@@ -65,7 +65,7 @@ const StyledContainer = styled('span', {
 `
 
 const StyledText = styled(Text)`
-  max-width: 232px;
+  max-width: 14.5rem;
 `
 
 type TagProps = {
@@ -93,7 +93,7 @@ type TagInnerProps = Omit<
 const StyledCloseButton = styled(Button)`
   width: fit-content;
   height: fit-content;
-  padding: 2px;
+  padding: ${({ theme }) => theme.space['0.25']};
 `
 
 const TagInner = ({

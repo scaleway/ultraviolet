@@ -6,9 +6,9 @@ import { Tooltip } from '../Tooltip'
 import { FocusOverlay } from './FocusOverlay'
 
 const SIZES = {
-  small: 40,
-  medium: 48,
-}
+  small: '500', // sizing token from theme
+  medium: '600',
+} as const
 
 const StyledSelectableCard = styled(SelectableCard)`
   border: none;
@@ -52,13 +52,13 @@ const StyledBorderedBox = styled.div<{ 'data-size': 'small' | 'medium' }>`
 
   &[data-size='small'] {
     & > ${StyledSelectableCard} {
-      height: ${SIZES.small}px;
+      height: ${({ theme }) => theme.sizing[SIZES.small]};
     }
   }
 
   &[data-size='medium'] {
     & > ${StyledSelectableCard} {
-      height: ${SIZES.medium}px;
+      height: ${({ theme }) => theme.sizing[SIZES.medium]};
     }
   }
 `

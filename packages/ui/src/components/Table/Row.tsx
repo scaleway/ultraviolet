@@ -23,7 +23,7 @@ const ExpandableWrapper = styled.div`
 
 const StyledCheckboxContainer = styled.div`
   display: flex;
-  width: ${SELECTABLE_CHECKBOX_SIZE}px;
+  width: ${({ theme }) => theme.sizing[SELECTABLE_CHECKBOX_SIZE]};
 `
 
 // We start at 5% and finish at 80% to leave the original background color

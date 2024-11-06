@@ -26,7 +26,7 @@ const MenuContainer = styled.div`
     border-bottom-width: 1.5px;
     width: 100%;
     cursor: pointer;
-    min-width: 110px;
+    min-width: 6.875rem;
     background-color: transparent;
     &[aria-disabled='true'],
     &:disabled {

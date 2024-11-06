@@ -15,14 +15,14 @@ import { Tooltip } from '../Tooltip'
 
 export const SIZES = {
   large: {
-    ball: 16,
-    height: 24,
-    width: 48,
+    ball: '200', // sizing token from theme
+    height: '300',
+    width: '600',
   },
   small: {
-    ball: 12,
-    height: 20,
-    width: 40,
+    ball: '150',
+    height: '250',
+    width: '500',
   },
 } as const
 
@@ -42,8 +42,8 @@ const StyledToggle = styled.div<{
   position: relative;
   transition: all 300ms;
   background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-  width: ${({ size }) => SIZES[size].width}px;
-  height: ${({ size }) => SIZES[size].height}px;
+  width: ${({ size, theme }) => theme.sizing[SIZES[size].width]};
+  height: ${({ size, theme }) => theme.sizing[SIZES[size].height]};
 
   &:hover {
     background-color: ${({ theme }) =>
@@ -53,10 +53,10 @@ const StyledToggle = styled.div<{
   &:after {
     content: "";
     position: absolute;
-    top: ${({ size }) => SIZES[size].height / 2 - SIZES[size].ball / 2}px;
+    top: ${({ size, theme }) => `calc(${theme.sizing[SIZES[size].height]} / 2 - ${theme.sizing[SIZES[size].ball]} / 2)`};
     left: 5px;
-    width: ${({ size }) => SIZES[size].ball}px;
-    height: ${({ size }) => SIZES[size].ball}px;
+    width: ${({ size, theme }) => theme.sizing[SIZES[size].ball]};
+    height: ${({ size, theme }) => theme.sizing[SIZES[size].ball]};
     border-radius: ${({ theme }) => theme.radii.circle};
     background-color: ${({ theme }) => theme.colors.neutral.background};
     transition: all 300ms;
@@ -68,7 +68,7 @@ const StyledToggle = styled.div<{
   }
 
   &[data-disabled="false"]:active:after {
-    width: ${({ size }) => SIZES[size].ball * 1.3775}px;
+    width: ${({ size, theme }) => `calc(${theme.sizing[SIZES[size].ball]} * 1.3775)`};
   }
 
   &[data-checked="true"] {
@@ -150,7 +150,7 @@ const StyledLabel = styled.label<{
     labelPosition === 'left' ? 'row' : 'row-reverse'};
 
   &:active ${StyledToggle}[data-disabled='false']:after {
-    width: ${({ size }) => SIZES[size].ball * 1.3775}px;
+  width: ${({ size, theme }) => `calc(${theme.sizing[SIZES[size].ball]} * 1.3775)`};
   }
 
   &[aria-disabled="true"] {

@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { forwardRef } from 'react'
@@ -95,9 +96,11 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
     },
     ref,
   ) => {
+    const theme = useTheme()
+
     const computeTemplate = `${
-      selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
-    }${expandable ? `${EXPANDABLE_COLUMN_SIZE}px ` : ''}${columns
+      selectable ? `${theme.sizing[SELECTABLE_CHECKBOX_SIZE]} ` : ''
+    }${expandable ? `${theme.sizing[EXPANDABLE_COLUMN_SIZE]} ` : ''}${columns
       .map(({ width }) => width ?? 'minmax(0, 1fr)')
       .join(' ')}`
 

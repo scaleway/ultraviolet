@@ -23,10 +23,10 @@ type SENTIMENT = (typeof SENTIMENTS)[number]
 const styles = {
   toast: (theme: Theme) => css`
     border-radius: ${theme.radii.default};
-    min-height: 52px;
+    min-height: ${theme.sizing['700']};
 
     ${PREFIX}__toast-container {
-      width: 344px;
+      width: 21.5rem;
     }
 
     ${PREFIX}__toast-body {
