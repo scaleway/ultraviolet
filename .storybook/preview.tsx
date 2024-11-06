@@ -71,6 +71,7 @@ const parameters: Preview['parameters'] = {
     },
   },
   docs: {
+    toc: true,
     container: DocsContainer,
     page: Page,
     source: { excludeDecorators: true }, // Exclude decorators from source code

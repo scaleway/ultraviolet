@@ -14,6 +14,14 @@ export const globalStyles = css`
     margin: 0;
   }
 
+  h1 {
+    margin: ${lightTheme.space['5']} 0;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin: ${lightTheme.space['2']} 0 ${lightTheme.space['1']} 0;
+  }
+
   body {
       font-family: 'Inter', sans-serif;
       font-size: 16px;
@@ -54,5 +62,13 @@ export const globalStyles = css`
     font-family: 'Space Grotesk';
     font-style: normal;
     src: url(${SpaceGrotesk}) format('woff2');
+  }
+
+  .toc-list-item::before {
+    border-color: ${lightTheme.colors.primary.border} !important;
+  }
+
+  .toc-list-item.is-active-li>a {
+    color: ${lightTheme.colors.primary.text} !important;
   }
 `
