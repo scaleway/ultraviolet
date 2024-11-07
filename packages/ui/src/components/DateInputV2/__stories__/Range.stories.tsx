@@ -1,4 +1,5 @@
 import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { DateInputV2 } from '..'
 import { Stack } from '../../Stack'
@@ -17,7 +18,7 @@ const months = [
   'November',
   'December',
 ]
-export const Range: StoryFn = args => {
+export const Range: StoryFn<ComponentProps<typeof DateInputV2>> = args => {
   const [startDate, setStartDate] = useState<Date | null>(null)
   const [endDate, setEndDate] = useState<Date | null>(null)
 
