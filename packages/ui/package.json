@@ -19,7 +19,7 @@
     "size": "size-limit",
     "test:unit": "LC_ALL=en_US.UTF-8  pnpm vitest --run --config vite.config.ts",
     "test:unit:coverage": "pnpm test:unit --coverage",
-    "publint": "pnpm publint"
+    "lintpublish": "publint"
   },
   "keywords": [
     "react",

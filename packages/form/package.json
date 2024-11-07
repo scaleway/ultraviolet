@@ -19,7 +19,7 @@
     "typecheck": "tsc --noEmit",
     "watch:build": "vite build --config vite.config.ts --watch",
     "watch": "pnpm run '/^watch:.*/'",
-    "publint": "pnpm publint"
+    "lintpublish": "publint"
   },
   "keywords": [
     "react",

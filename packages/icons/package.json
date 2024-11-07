@@ -17,7 +17,7 @@
     "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
     "typecheck": "tsc --noEmit",
     "size": "size-limit",
-    "publint": "pnpm publint"
+    "lintpublish": "publint"
   },
   "keywords": [
     "react",
