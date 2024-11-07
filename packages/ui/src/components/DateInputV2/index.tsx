@@ -4,11 +4,10 @@ import type { Locale } from 'date-fns'
 import type { FocusEvent } from 'react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { TextInputV2 } from '../TextInputV2'
-import { DateInputContext } from './Context'
+import { type ContextProps, DateInputContext } from './Context'
 import { CalendarPopup } from './Popup'
 import { CURRENT_MONTH, CURRENT_YEAR, addZero } from './helpers'
 import { getDays, getLocalizedMonths, getMonths } from './helpersLocale'
-import type { ContextProps } from './types'
 
 const Container = styled.div`
 width: 100%;`
@@ -48,9 +47,9 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   onChange?: IsRange extends true
     ? (
         date: Date[] | [Date | null, Date | null],
-        event: React.SyntheticEvent<any> | undefined,
+        event: React.SyntheticEvent | undefined,
       ) => void
-    : (date: Date | null, event: React.SyntheticEvent<any> | undefined) => void
+    : (date: Date | null, event: React.SyntheticEvent | undefined) => void
 }
 
 /**
@@ -87,18 +86,32 @@ export const DateInputV2 = <IsRange extends undefined | boolean>({
   showMonthYearPicker,
   'data-testid': dataTestId,
 }: DateInputProps<IsRange>) => {
-  const [computedValue, setValue] = useState(value ?? null)
+  const defaultMonthToShow = useMemo(() => {
+    if (value) return value.getMonth() + 1
+    if (startDate && selectsRange) return startDate.getMonth() + 1
+    if (endDate && selectsRange) return endDate.getMonth() + 1
+
+    return CURRENT_MONTH
+  }, [endDate, selectsRange, startDate, value])
+
+  const defaultYearToShow = useMemo(() => {
+    if (value) return value.getFullYear()
+    if (startDate && selectsRange) return startDate.getFullYear()
+    if (endDate && selectsRange) return endDate.getFullYear()
+
+    return CURRENT_YEAR
+  }, [endDate, selectsRange, startDate, value])
+
+  const [computedValue, setValue] = useState(
+    value && !selectsRange ? value : null,
+  )
   const [computedRange, setRange] = useState({
     start: startDate ?? null,
     end: endDate ?? null,
   })
   const [isPopupVisible, setVisible] = useState(false)
-  const [monthToShow, setMonthToShow] = useState(
-    value ? value.getMonth() + 1 : CURRENT_MONTH,
-  )
-  const [yearToShow, setYearToShow] = useState(
-    value ? value.getFullYear() : CURRENT_YEAR,
-  )
+  const [monthToShow, setMonthToShow] = useState(defaultMonthToShow)
+  const [yearToShow, setYearToShow] = useState(defaultYearToShow)
   const refInput = useRef<HTMLInputElement>(null)
   const MONTHS = getMonths(locale)
   const DAYS = getDays(locale)
@@ -165,11 +178,15 @@ export const DateInputV2 = <IsRange extends undefined | boolean>({
   )
 
   useEffect(() => {
-    setValue(value as Date)
-    setRange({
-      start: startDate ?? computedRange.start,
-      end: endDate ?? computedRange.end,
-    })
+    if (value && !selectsRange) {
+      setValue(value)
+    }
+    if (selectsRange) {
+      setRange({
+        start: startDate ?? computedRange.start,
+        end: endDate ?? computedRange.end,
+      })
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [endDate, startDate, value])
 

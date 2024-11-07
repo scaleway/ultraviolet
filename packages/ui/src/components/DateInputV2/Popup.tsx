@@ -151,7 +151,7 @@ const Monthly = ({ disabled }: { disabled: boolean }) => {
             variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
             sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
             className={isInHoveredRange ? 'rangeButton' : undefined}
-            disabled={disabled}
+            disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {
               if (!isExcluded && !isOutsideRange) {
@@ -172,6 +172,7 @@ const Monthly = ({ disabled }: { disabled: boolean }) => {
               variant="bodyStrong"
               prominence={isSelected && !isInHoveredRange ? 'strong' : 'weak'}
               sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
+              disabled={disabled || isExcluded || isOutsideRange}
             >
               {month[1]}
             </Text>
@@ -207,9 +208,9 @@ const Daily = ({ disabled }: { disabled: boolean }) => {
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
 
   const monthDays = getMonthDays(monthToShow, yearToShow) // Number of days in the month
-  const monthFirstDay = getMonthFirstDay(monthToShow, yearToShow) // First day of the month
 
-  const daysFromPreviousMonth = (monthFirstDay - 1 + 6) % 7 //  Number of days from the previous month to show. Shift to align Monday start
+  const daysFromPreviousMonth =
+    (getMonthFirstDay(monthToShow, yearToShow) - 1 + 6) % 7 //  Number of days from the previous month to show. Shift to align Monday start
   const daysFromNextMonth =
     CALENDAR_WEEKS * 7 - (daysFromPreviousMonth + monthDays) // We want to display 6 CALENDAR_WEEKS lines, so we show days from the next month
 
@@ -331,6 +332,13 @@ const Daily = ({ disabled }: { disabled: boolean }) => {
             }
           }
         }
+        const createTestId = () => {
+          if (isInHoveredRange) return 'rangeButton'
+          if (data.month === -1) return 'dayLastMonth'
+          if (data.month === 1) return 'dayNextMonth'
+
+          return undefined
+        }
 
         return (
           <ButtonSelectDayMonth
@@ -362,6 +370,7 @@ const Daily = ({ disabled }: { disabled: boolean }) => {
               disabled={
                 disabled || data.month !== 0 || isExcluded || isOutsideRange
               }
+              data-testid={createTestId()}
             >
               {data.day}
             </Text>
@@ -390,6 +399,7 @@ const PopupContent = () => {
       <Stack direction="row" width="100%" justifyContent="space-between">
         <Button
           icon="arrow-left"
+          data-testid="previous-month"
           variant="ghost"
           sentiment="neutral"
           size="xsmall"
@@ -398,12 +408,16 @@ const PopupContent = () => {
               !minDate ||
               minDate <= new Date(yearToShow, monthToShow - 1, 0)
             ) {
-              const [prevMonth, year] = getPreviousMonth(
-                monthToShow,
-                yearToShow,
-              )
-              setMonthToShow(prevMonth)
-              setYearToShow(year)
+              if (!showMonthYearPicker) {
+                const [prevMonth, year] = getPreviousMonth(
+                  monthToShow,
+                  yearToShow,
+                )
+                setMonthToShow(prevMonth)
+                setYearToShow(year)
+              } else {
+                setYearToShow(yearToShow - 1)
+              }
             }
           }}
           disabled={
@@ -411,10 +425,12 @@ const PopupContent = () => {
           }
         />
         <Text as="p" variant="bodyStrong" sentiment="neutral">
-          {MONTHS_ARR[monthToShow - 1]} {yearToShow}
+          {!showMonthYearPicker ? MONTHS_ARR[monthToShow - 1] : null}{' '}
+          {yearToShow}
         </Text>
         <Button
           icon="arrow-right"
+          data-testid="next-month"
           variant="ghost"
           sentiment="neutral"
           size="xsmall"
@@ -423,9 +439,13 @@ const PopupContent = () => {
               !maxDate ||
               maxDate >= new Date(yearToShow, monthToShow + 1, 1)
             ) {
-              const [monthNext, year] = getNextMonth(monthToShow, yearToShow)
-              setMonthToShow(monthNext)
-              setYearToShow(year)
+              if (!showMonthYearPicker) {
+                const [monthNext, year] = getNextMonth(monthToShow, yearToShow)
+                setMonthToShow(monthNext)
+                setYearToShow(year)
+              } else {
+                setYearToShow(yearToShow + 1)
+              }
             }
           }}
           disabled={

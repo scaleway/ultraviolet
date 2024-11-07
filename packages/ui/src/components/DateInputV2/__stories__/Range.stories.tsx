@@ -3,11 +3,27 @@ import { useState } from 'react'
 import { DateInputV2 } from '..'
 import { Stack } from '../../Stack'
 
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+]
 export const Range: StoryFn = args => {
   const [startDate, setStartDate] = useState<Date | null>(null)
   const [endDate, setEndDate] = useState<Date | null>(null)
 
-  const [startMonth, setStartMonth] = useState<Date | null>(null)
+  const [startMonth, setStartMonth] = useState<Date | null>(
+    new Date('March 2024'),
+  )
   const [endMonth, setEndMonth] = useState<Date | null>(null)
 
   const onChange = (dates: [Date | null, Date | null] | Date[]) => {
@@ -42,7 +58,10 @@ export const Range: StoryFn = args => {
         showMonthYearPicker
         {...args}
       />
-      Selected months : {startMonth?.toDateString()} -{endMonth?.toDateString()}
+      Selected months : {startMonth ? months[startMonth.getMonth()] : null}
+      {startMonth?.getFullYear()} -
+      {endMonth ? months[endMonth.getMonth()] : null}
+      {endMonth?.getFullYear()}
     </Stack>
   )
 }
