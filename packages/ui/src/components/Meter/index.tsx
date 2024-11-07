@@ -14,7 +14,6 @@ const StyledWrapper = styled.div`
   border-radius: ${({ theme }) => theme.radii.default};
   height: ${({ theme }) => theme.space['1']};
   margin-top: ${({ theme }) => theme.space['1']};
-  margin-bottom: ${({ theme }) => theme.space['2']};
 `
 
 const StyledMeter = styled.div`
