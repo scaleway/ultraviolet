@@ -1,23 +1,55 @@
 import type { StoryFn } from '@storybook/react'
-import type { ComponentProps } from 'react'
-import { useState } from 'react'
+import { type ComponentProps, useCallback, useState } from 'react'
 import { Breadcrumbs } from '..'
+import { Button } from '../../Button'
+import { Separator } from '../../Separator'
+import { Stack } from '../../Stack'
+
+const ITEMS = ['Home', 'Products', 'Instance', 'Overview']
 
 export const OnClick: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => {
-  const [value, setValue] = useState(1)
+  const [value, setValue] = useState(ITEMS)
+
+  const setPage = useCallback(
+    (localValue: string) => {
+      const index = value.indexOf(localValue)
+      setValue(value.slice(0, index + 1))
+    },
+    [value, setValue],
+  )
 
   return (
-    <Breadcrumbs selected={value} {...props}>
-      <Breadcrumbs.Item onClick={(_, step) => setValue(step)}>
-        Step 1
-      </Breadcrumbs.Item>
-      <Breadcrumbs.Item onClick={(_, step) => setValue(step)}>
-        Step 2
-      </Breadcrumbs.Item>
-      <Breadcrumbs.Item disabled onClick={(_, step) => setValue(step)}>
-        Step 3
-      </Breadcrumbs.Item>
-    </Breadcrumbs>
+    <Stack gap={2}>
+      <Breadcrumbs {...props}>
+        {value.map(item => (
+          <Breadcrumbs.Item
+            key={item}
+            onClick={() => {
+              setPage(item)
+            }}
+          >
+            {item}
+          </Breadcrumbs.Item>
+        ))}
+      </Breadcrumbs>
+      <Stack gap={2}>
+        <Separator />
+        <Stack gap={1}>
+          <div style={{ width: 'fit-content' }}>
+            <Button
+              icon="restore"
+              onClick={() => {
+                setValue(ITEMS)
+              }}
+              size="small"
+              sentiment="neutral"
+            >
+              Reset
+            </Button>
+          </div>
+        </Stack>
+      </Stack>
+    </Stack>
   )
 }
 
@@ -25,7 +57,7 @@ OnClick.parameters = {
   docs: {
     description: {
       story:
-        'You can make `Breadcrumbs.Item` clickable with `onClick` handler which pass `(event, stepClicked)` params. You can also disabled the onClick handler by using `disabled` prop',
+        'You can use the `onClick` prop to handle the click event on each breadcrumb item. It will change the aspect of the item to style it like a button.',
     },
   },
 }
