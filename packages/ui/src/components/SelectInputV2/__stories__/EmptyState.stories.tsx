@@ -1,4 +1,8 @@
 import type { StoryFn } from '@storybook/react'
+import {
+  DynamicIllustration,
+  // @ts-expect-error can't import ultraviolet/illustration in ui (cyclic dependencies)
+} from '@ultraviolet/illustrations'
 import { SelectInputV2 } from '..'
 import { EmptyState as EmptyStateComponent } from '../../EmptyState'
 import { Link } from '../../Link'
@@ -35,9 +39,8 @@ export const EmptyState: StoryFn<typeof SelectInputV2> = args => (
       {...args}
       emptyState={
         <EmptyStateComponent
-          bordered
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          image="static/media/packages/ui/src/components/EmptyState/__stories__/illustrations/kapsule.webp"
+          image={<DynamicIllustration name="empty" width="120px" />}
           learnMore={{
             link: 'https://scaleway.com',
             text: 'Learn more',
@@ -54,8 +57,8 @@ export const EmptyState: StoryFn<typeof SelectInputV2> = args => (
 EmptyState.args = {
   ...Template.args,
   options: {},
-  searchable: false,
 }
+
 EmptyState.decorators = [
   StoryComponent => (
     <div style={{ height: '80px' }}>
