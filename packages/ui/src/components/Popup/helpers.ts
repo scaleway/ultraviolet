@@ -1,6 +1,7 @@
 import type { RefObject } from 'react'
 
 export type PopupPlacement = 'top' | 'right' | 'bottom' | 'left' | 'auto'
+export type PopupAlign = 'start' | 'center'
 export const DEFAULT_ARROW_WIDTH = 8 // in px
 const SPACE = 4 // in px
 const TOTAL_USED_SPACE = 0 // in px
@@ -192,6 +193,7 @@ type ComputePositionsTypes = {
   popupRef: RefObject<HTMLDivElement>
   popupPortalTarget: HTMLElement
   hasArrow: boolean
+  align: PopupAlign
 }
 
 /**
@@ -203,6 +205,7 @@ export const computePositions = ({
   popupRef,
   popupPortalTarget,
   hasArrow,
+  align,
 }: ComputePositionsTypes) => {
   const arrowWidth = hasArrow ? DEFAULT_ARROW_WIDTH : 0
   const childrenRect = (
@@ -269,10 +272,13 @@ export const computePositions = ({
     arrowWidth,
   )
 
+  const isAligned = align === 'start'
+
   switch (placementBasedOnWindowSize) {
     case 'bottom': {
-      const positionX =
-        overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
+      const positionX = isAligned
+        ? overloadedChildrenLeft
+        : overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
       const positionY =
         overloadedChildrenTop +
         scrollTopValue +
@@ -281,31 +287,36 @@ export const computePositions = ({
         SPACE
 
       return {
-        arrowLeft: popupWidth / 2 + popupOverflow * -1,
+        arrowLeft: isAligned
+          ? childrenWidth / 2 - arrowWidth
+          : popupWidth / 2 + popupOverflow * -1,
         arrowTop: -arrowWidth - 5,
         arrowTransform: '',
         placement: 'bottom',
         rotate: 180,
-        popupInitialPosition: `translate3d(${positionX + popupOverflow}px, ${
+        popupInitialPosition: `translate3d(${!isAligned ? positionX + popupOverflow : positionX}px, ${
           positionY - TOTAL_USED_SPACE
         }px, 0)`,
         popupPosition: `translate3d(${
-          positionX + popupOverflow
+          !isAligned ? positionX + popupOverflow : positionX
         }px, ${positionY}px, 0)`,
       }
     }
     case 'left': {
       const positionX =
         overloadedChildrenLeft - popupWidth - arrowWidth - SPACE * 2
-      const positionY =
-        overloadedChildrenTop +
-        scrollTopValue -
-        popupHeight / 2 +
-        childrenHeight / 2
+      const positionY = isAligned
+        ? overloadedChildrenTop + scrollTopValue
+        : overloadedChildrenTop +
+          scrollTopValue -
+          popupHeight / 2 +
+          childrenHeight / 2
 
       return {
         arrowLeft: popupWidth + arrowWidth + 5,
-        arrowTop: popupHeight / 2 + popupOverflow * -1,
+        arrowTop: isAligned
+          ? childrenHeight / 2 - arrowWidth
+          : popupHeight / 2 + popupOverflow * -1,
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
         rotate: -90,
@@ -319,15 +330,18 @@ export const computePositions = ({
     }
     case 'right': {
       const positionX = overloadedChildrenRight + arrowWidth + SPACE * 2
-      const positionY =
-        overloadedChildrenTop +
-        scrollTopValue -
-        popupHeight / 2 +
-        childrenHeight / 2
+      const positionY = isAligned
+        ? overloadedChildrenTop + scrollTopValue
+        : overloadedChildrenTop +
+          scrollTopValue -
+          popupHeight / 2 +
+          childrenHeight / 2
 
       return {
         arrowLeft: -arrowWidth - 5,
-        arrowTop: popupHeight / 2 + popupOverflow * -1,
+        arrowTop: isAligned
+          ? childrenHeight / 2 - arrowWidth
+          : popupHeight / 2 + popupOverflow * -1,
         arrowTransform: 'translate(50%, -50%)',
         placement: 'right',
         rotate: 90,
@@ -341,8 +355,9 @@ export const computePositions = ({
     }
     default: {
       // top placement is default value
-      const positionX =
-        overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
+      const positionX = isAligned
+        ? overloadedChildrenLeft
+        : overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
       const positionY =
         overloadedChildrenTop +
         scrollTopValue -
@@ -351,16 +366,18 @@ export const computePositions = ({
         SPACE
 
       return {
-        arrowLeft: popupWidth / 2 + popupOverflow * -1,
+        arrowLeft: isAligned
+          ? childrenWidth / 2 - arrowWidth
+          : popupWidth / 2 + popupOverflow * -1,
         arrowTop: popupHeight - 1,
         arrowTransform: '',
         placement: 'top',
         rotate: 0,
-        popupInitialPosition: `translate3d(${positionX + popupOverflow}px, ${
+        popupInitialPosition: `translate3d(${!isAligned ? positionX + popupOverflow : positionX}px, ${
           positionY + TOTAL_USED_SPACE
         }px, 0)`,
         popupPosition: `translate3d(${
-          positionX + popupOverflow
+          !isAligned ? positionX + popupOverflow : positionX
         }px, ${positionY}px, 0)`,
       }
     }

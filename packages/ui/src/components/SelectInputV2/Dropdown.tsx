@@ -847,6 +847,7 @@ export const Dropdown = ({
       role="dialog"
       debounceDelay={0}
       containerFullWidth
+      align="start"
     >
       {children}
     </StyledPopup>

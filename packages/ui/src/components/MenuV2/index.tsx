@@ -112,7 +112,10 @@ type MenuProps = {
    * If set to `hover`, the menu will open when the user hovers over the disclosure.
    */
   triggerMethod?: 'click' | 'hover'
-} & Pick<ComponentProps<typeof Popup>, 'placement' | 'dynamicDomRendering'>
+} & Pick<
+  ComponentProps<typeof Popup>,
+  'placement' | 'dynamicDomRendering' | 'align'
+>
 
 const FwdMenu = forwardRef(
   (
@@ -132,6 +135,7 @@ const FwdMenu = forwardRef(
       size = 'small',
       triggerMethod = 'click',
       dynamicDomRendering,
+      align,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -188,6 +192,7 @@ const FwdMenu = forwardRef(
         }
         portalTarget={portalTarget}
         dynamicDomRendering={dynamicDomRendering}
+        align={align}
       >
         {finalDisclosure}
       </StyledPopup>
