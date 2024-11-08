@@ -7,7 +7,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -60,7 +60,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -80,6 +80,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -87,7 +88,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -110,7 +111,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -129,11 +130,11 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -187,7 +188,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -294,7 +295,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-42 {
@@ -304,7 +305,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-42 .fillStroke {
@@ -317,9 +318,11 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -348,7 +351,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
 }
 
 .emotion-50 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -386,15 +389,15 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -463,7 +466,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
 .emotion-58 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-62 {
@@ -720,6 +723,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
@@ -767,18 +771,20 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-102 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -789,7 +795,7 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-108 {
@@ -801,23 +807,25 @@ exports[`EstimateCost - Regular Item > render basic props 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-113 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1176,7 +1184,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1229,7 +1237,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -1249,6 +1257,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -1256,7 +1265,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1279,7 +1288,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1298,11 +1307,11 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1341,7 +1350,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1448,7 +1457,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-40 {
@@ -1458,7 +1467,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-40 .fillStroke {
@@ -1471,9 +1480,11 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -1502,7 +1513,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
 }
 
 .emotion-48 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -1540,15 +1551,15 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -1617,7 +1628,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
 .emotion-56 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-60 {
@@ -1874,6 +1885,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-85 {
@@ -1906,18 +1918,20 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-98 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1928,7 +1942,7 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-104 {
@@ -1940,23 +1954,25 @@ exports[`EstimateCost - Regular Item > render basic props with is not defined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-109 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2307,7 +2323,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2360,7 +2376,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -2380,6 +2396,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -2387,7 +2404,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2410,7 +2427,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2429,11 +2446,11 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2487,7 +2504,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2594,7 +2611,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-42 {
@@ -2604,7 +2621,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-42 .fillStroke {
@@ -2617,9 +2634,11 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -2648,7 +2667,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
 }
 
 .emotion-50 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -2686,15 +2705,15 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -2763,7 +2782,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
 .emotion-58 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-62 {
@@ -3020,6 +3039,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
@@ -3067,18 +3087,20 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-102 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3089,7 +3111,7 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-108 {
@@ -3101,23 +3123,25 @@ exports[`EstimateCost - Regular Item > render basic props with long fractions di
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-113 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3476,7 +3500,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3529,7 +3553,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -3549,6 +3573,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -3556,7 +3581,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3579,7 +3604,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3598,11 +3623,11 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3656,7 +3681,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3763,7 +3788,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-42 {
@@ -3773,7 +3798,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-42 .fillStroke {
@@ -3786,9 +3811,11 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -3817,7 +3844,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
 }
 
 .emotion-50 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -3855,15 +3882,15 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -3932,7 +3959,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
 .emotion-58 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-62 {
@@ -4189,6 +4216,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
@@ -4236,18 +4264,20 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-102 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4255,11 +4285,11 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
 }
 
 .emotion-105 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4270,7 +4300,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-111 {
@@ -4282,23 +4312,25 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-116 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4662,7 +4694,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4715,7 +4747,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -4735,6 +4767,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -4742,7 +4775,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4765,7 +4798,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4784,11 +4817,11 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4842,7 +4875,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4949,7 +4982,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-42 {
@@ -4959,7 +4992,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-42 .fillStroke {
@@ -4972,9 +5005,11 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -5003,7 +5038,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
 }
 
 .emotion-50 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -5041,15 +5076,15 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -5118,7 +5153,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
 .emotion-58 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-62 {
@@ -5375,6 +5410,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
@@ -5422,18 +5458,20 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-102 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5441,11 +5479,11 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
 }
 
 .emotion-105 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5456,7 +5494,7 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-111 {
@@ -5468,23 +5506,25 @@ exports[`EstimateCost - Regular Item > render basic props with maxPrice and long
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-116 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5848,7 +5888,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5901,7 +5941,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -5930,6 +5970,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-12 {
@@ -5937,7 +5978,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5960,7 +6001,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5979,11 +6020,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
 }
 
 .emotion-16 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6022,11 +6063,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
 }
 
 .emotion-23 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6070,7 +6111,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6177,7 +6218,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-63 {
@@ -6187,7 +6228,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-63 .fillStroke {
@@ -6200,9 +6241,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -6231,7 +6274,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
 }
 
 .emotion-71 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -6269,15 +6312,15 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -6346,7 +6389,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
 .emotion-79 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-83 {
@@ -6603,6 +6646,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-106:before {
@@ -6657,11 +6701,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
 }
 
 .emotion-121 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6676,9 +6720,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-123:before {
@@ -6694,11 +6740,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
 
 .emotion-126 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6710,6 +6756,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-144 {
@@ -6717,16 +6764,18 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-149 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-153 {
@@ -6738,23 +6787,25 @@ exports[`EstimateCost - Regular Item > render basic props with overlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-158 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7218,7 +7269,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7271,7 +7322,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -7291,6 +7342,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -7298,7 +7350,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7321,7 +7373,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7340,11 +7392,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7383,11 +7435,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
 }
 
 .emotion-21 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7413,7 +7465,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7494,11 +7546,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
 }
 
 .emotion-40 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7515,13 +7567,13 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -7574,7 +7626,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-53 {
@@ -7584,7 +7636,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-53 .fillStroke {
@@ -7597,9 +7649,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -7628,7 +7682,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
 }
 
 .emotion-61 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -7666,15 +7720,15 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -7743,7 +7797,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
 .emotion-69 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-73 {
@@ -8000,6 +8054,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-98 {
@@ -8043,11 +8098,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
 }
 
 .emotion-111 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8062,18 +8117,20 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-118 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8081,11 +8138,11 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
 }
 
 .emotion-121 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8096,7 +8153,7 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-127 {
@@ -8108,22 +8165,24 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-133 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8140,13 +8199,13 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -8158,16 +8217,16 @@ exports[`EstimateCost - Regular Item > render basic props with overlay beta 1`] 
 
 .emotion-136 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 <div
@@ -8569,7 +8628,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8622,7 +8681,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -8642,6 +8701,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -8649,7 +8709,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8672,7 +8732,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8691,11 +8751,11 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8749,7 +8809,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8856,7 +8916,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-42 {
@@ -8866,7 +8926,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-42 .fillStroke {
@@ -8879,9 +8939,11 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -8910,7 +8972,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
 }
 
 .emotion-50 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -8948,15 +9010,15 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -9025,7 +9087,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
 .emotion-58 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-62 {
@@ -9282,6 +9344,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
@@ -9307,16 +9370,16 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
 
 .emotion-96 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-style: italic;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .emotion-98 {
@@ -9343,18 +9406,20 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-105 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -9365,7 +9430,7 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-111 {
@@ -9377,23 +9442,25 @@ exports[`EstimateCost - Regular Item > render basic props with sublabel 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-116 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -9757,7 +9824,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -9810,7 +9877,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -9830,6 +9897,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -9837,7 +9905,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -9860,7 +9928,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9879,11 +9947,11 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -9937,7 +10005,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10044,7 +10112,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-42 {
@@ -10054,7 +10122,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-42 .fillStroke {
@@ -10067,9 +10135,11 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -10098,7 +10168,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
 }
 
 .emotion-50 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -10136,15 +10206,15 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -10213,7 +10283,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
 .emotion-58 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-62 {
@@ -10470,6 +10540,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
@@ -10517,18 +10588,20 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-102 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -10539,7 +10612,7 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-108 {
@@ -10551,23 +10624,25 @@ exports[`EstimateCost - Regular Item > render basic props with textNotDefined 1`
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-113 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -10926,7 +11001,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -10979,7 +11054,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -10999,6 +11074,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -11006,7 +11082,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -11029,7 +11105,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11048,11 +11124,11 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11091,11 +11167,11 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
 }
 
 .emotion-21 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11121,7 +11197,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11228,7 +11304,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-45 {
@@ -11238,7 +11314,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-45 .fillStroke {
@@ -11251,9 +11327,11 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -11282,7 +11360,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
 }
 
 .emotion-53 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -11320,15 +11398,15 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -11397,7 +11475,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
 .emotion-61 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-65 {
@@ -11654,6 +11732,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-90 {
@@ -11697,11 +11776,11 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
 }
 
 .emotion-103 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11716,18 +11795,20 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11738,7 +11819,7 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -11750,23 +11831,25 @@ exports[`EstimateCost - Regular Item > render basic with ellipsis 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-119 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -12139,7 +12222,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -12192,7 +12275,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -12212,6 +12295,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -12219,7 +12303,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -12242,7 +12326,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -12261,11 +12345,11 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -12319,7 +12403,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -12399,7 +12483,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -12415,8 +12499,8 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
-  padding: 16px;
+  border-radius: 0.25rem;
+  padding: 1rem;
   background-color: #fff6e6;
   color: #7c5400;
   border-left: 4px solid #7c5400;
@@ -12427,7 +12511,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -12454,7 +12538,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -12494,7 +12578,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -12522,11 +12606,11 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
 
 .emotion-45 {
   color: #7c5400;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -12564,7 +12648,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-56 {
@@ -12574,7 +12658,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-56 .fillStroke {
@@ -12587,9 +12671,11 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -12618,7 +12704,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
 }
 
 .emotion-64 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -12656,15 +12742,15 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -12733,7 +12819,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
 .emotion-72 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-76 {
@@ -12990,6 +13076,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-101 {
@@ -13037,18 +13124,20 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-116 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -13059,7 +13148,7 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-122 {
@@ -13071,23 +13160,25 @@ exports[`EstimateCost - Regular Item > render with alert 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-127 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -13483,7 +13574,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -13536,7 +13627,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -13556,6 +13647,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -13563,7 +13655,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -13586,7 +13678,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -13605,11 +13697,11 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -13648,7 +13740,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -13755,7 +13847,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-40 {
@@ -13765,7 +13857,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-40 .fillStroke {
@@ -13778,9 +13870,11 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -13809,7 +13903,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
 }
 
 .emotion-48 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -13847,15 +13941,15 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -13924,7 +14018,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
 .emotion-56 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-60 {
@@ -14181,6 +14275,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-85 {
@@ -14228,18 +14323,20 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-100 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -14250,7 +14347,7 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-106 {
@@ -14262,23 +14359,25 @@ exports[`EstimateCost - Regular Item > render with isDisabledOnOverlay 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-111 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;

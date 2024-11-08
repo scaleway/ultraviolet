@@ -7,7 +7,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -60,7 +60,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -80,6 +80,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -87,7 +88,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -110,7 +111,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -129,11 +130,11 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -199,7 +200,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -275,11 +276,11 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -296,13 +297,13 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -346,7 +347,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -356,7 +357,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -369,9 +370,11 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -400,7 +403,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -438,15 +441,15 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -515,7 +518,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -772,6 +775,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -831,18 +835,20 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -853,7 +859,7 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -865,22 +871,24 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -897,13 +905,13 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -915,16 +923,16 @@ exports[`EstimateCost - index > render isBeta with discount 1`] = `
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 <div
@@ -1290,7 +1298,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1343,7 +1351,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -1363,6 +1371,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -1370,7 +1379,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1393,7 +1402,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1412,11 +1421,11 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1482,7 +1491,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1558,11 +1567,11 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1579,13 +1588,13 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -1629,7 +1638,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -1639,7 +1648,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -1652,9 +1661,11 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -1683,7 +1694,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -1721,15 +1732,15 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -1798,7 +1809,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -2055,6 +2066,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -2114,18 +2126,20 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2136,7 +2150,7 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -2148,22 +2162,24 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2180,13 +2196,13 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -2198,16 +2214,16 @@ exports[`EstimateCost - index > render isBeta with discount equal to 100% 1`] = 
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .emotion-125 {
@@ -2578,7 +2594,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2631,7 +2647,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -2651,6 +2667,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -2658,7 +2675,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2681,7 +2698,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2700,11 +2717,11 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2770,7 +2787,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2846,11 +2863,11 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2867,13 +2884,13 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -2917,7 +2934,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -2927,7 +2944,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -2940,9 +2957,11 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -2971,7 +2990,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -3009,15 +3028,15 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -3086,7 +3105,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -3343,6 +3362,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -3402,18 +3422,20 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3424,7 +3446,7 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -3436,22 +3458,24 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3468,13 +3492,13 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -3486,16 +3510,16 @@ exports[`EstimateCost - index > render isBeta with discount more than 100% 1`] =
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .emotion-125 {
@@ -3866,7 +3890,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3919,7 +3943,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -3939,6 +3963,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -3946,7 +3971,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3969,7 +3994,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3988,11 +4013,11 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4058,7 +4083,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4139,11 +4164,11 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4160,13 +4185,13 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -4210,7 +4235,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -4220,7 +4245,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -4233,9 +4258,11 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -4264,7 +4291,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -4302,15 +4329,15 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -4379,7 +4406,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -4636,6 +4663,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -4695,18 +4723,20 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4717,7 +4747,7 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -4729,22 +4759,24 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4761,13 +4793,13 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -4779,16 +4811,16 @@ exports[`EstimateCost - index > render isBeta without discount 1`] = `
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 <div
@@ -5154,7 +5186,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5207,7 +5239,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -5227,6 +5259,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -5234,7 +5267,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5257,7 +5290,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5276,11 +5309,11 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5346,7 +5379,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5453,7 +5486,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -5463,7 +5496,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -5476,9 +5509,11 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -5507,7 +5542,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -5545,15 +5580,15 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -5622,7 +5657,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -5879,6 +5914,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -5938,18 +5974,20 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5960,7 +5998,7 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
@@ -5972,23 +6010,25 @@ exports[`EstimateCost - index > render with all timeUnits values 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-115 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6347,7 +6387,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6370,7 +6410,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6444,7 +6484,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-4 {
@@ -6461,7 +6501,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -6493,6 +6533,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
@@ -6500,6 +6541,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -6507,7 +6549,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6530,7 +6572,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6553,7 +6595,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6576,7 +6618,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6595,22 +6637,22 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6731,7 +6773,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6754,7 +6796,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6922,7 +6964,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-40 {
@@ -6939,7 +6981,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -6949,7 +6991,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -6964,7 +7006,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -6977,9 +7019,11 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -6988,9 +7032,11 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -7043,7 +7089,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -7068,7 +7114,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -7110,15 +7156,15 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -7185,15 +7231,15 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -7271,13 +7317,13 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -7783,6 +7829,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-86 {
@@ -7790,6 +7837,7 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -7901,9 +7949,11 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-101 {
@@ -7911,18 +7961,20 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7931,11 +7983,11 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7943,15 +7995,15 @@ exports[`EstimateCost - index > render with commitmentFees 1`] = `
 }
 
 .emotion-107 {
-  font-size: 21px;
+  font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 
 .emotion-109 {
@@ -8337,7 +8389,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8360,7 +8412,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8434,7 +8486,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-4 {
@@ -8451,7 +8503,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -8483,6 +8535,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
@@ -8490,6 +8543,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -8497,7 +8551,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8520,7 +8574,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8543,7 +8597,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8566,7 +8620,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8585,22 +8639,22 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8721,7 +8775,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8744,7 +8798,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8912,7 +8966,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-40 {
@@ -8929,7 +8983,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -8939,7 +8993,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -8954,7 +9008,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -8967,9 +9021,11 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -8978,9 +9034,11 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -9033,7 +9091,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -9058,7 +9116,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -9100,15 +9158,15 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -9175,15 +9233,15 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -9261,13 +9319,13 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -9773,6 +9831,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-86 {
@@ -9780,6 +9839,7 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -9891,9 +9951,11 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-101 {
@@ -9901,18 +9963,20 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -9921,11 +9985,11 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -9933,15 +9997,15 @@ exports[`EstimateCost - index > render with commitmentFees and iscommitmentFeesC
 }
 
 .emotion-107 {
-  font-size: 21px;
+  font-size: 1.3125rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 
 .emotion-109 {
@@ -10327,7 +10391,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -10350,7 +10414,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -10424,7 +10488,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-4 {
@@ -10441,7 +10505,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -10473,6 +10537,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
@@ -10480,6 +10545,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -10487,7 +10553,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -10510,7 +10576,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -10533,7 +10599,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10556,7 +10622,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10575,22 +10641,22 @@ exports[`EstimateCost - index > render with description as node 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -10711,7 +10777,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10734,7 +10800,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10916,7 +10982,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-38 {
@@ -10933,7 +10999,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-41 {
@@ -10943,7 +11009,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-41 .fillStroke {
@@ -10958,7 +11024,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-41 .fillStroke {
@@ -10971,9 +11037,11 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -10982,9 +11050,11 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -11037,7 +11107,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
 }
 
 .emotion-49 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -11062,7 +11132,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
 }
 
 .emotion-49 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -11104,15 +11174,15 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -11179,15 +11249,15 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -11265,13 +11335,13 @@ exports[`EstimateCost - index > render with description as node 1`] = `
 .emotion-57 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-57 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-61 {
@@ -11777,6 +11847,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-84 {
@@ -11784,6 +11855,7 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-86 {
@@ -11895,9 +11967,11 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-99 {
@@ -11905,18 +11979,20 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-102 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11925,11 +12001,11 @@ exports[`EstimateCost - index > render with description as node 1`] = `
 
 .emotion-102 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11940,14 +12016,14 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-104 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-108 {
@@ -11963,14 +12039,16 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-110 {
@@ -11978,23 +12056,25 @@ exports[`EstimateCost - index > render with description as node 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-113 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -12003,11 +12083,11 @@ exports[`EstimateCost - index > render with description as node 1`] = `
 
 .emotion-113 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -12364,7 +12444,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -12417,7 +12497,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -12437,6 +12517,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -12444,7 +12525,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -12467,7 +12548,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -12486,11 +12567,11 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -12556,7 +12637,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -12663,7 +12744,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -12673,7 +12754,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -12686,9 +12767,11 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -12717,7 +12800,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -12755,15 +12838,15 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -12832,7 +12915,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -13089,6 +13172,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -13148,18 +13232,20 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -13170,7 +13256,7 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
@@ -13182,23 +13268,25 @@ exports[`EstimateCost - index > render with discount 0 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-115 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -13557,7 +13645,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -13580,7 +13668,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -13654,7 +13742,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-4 {
@@ -13671,7 +13759,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -13703,6 +13791,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
@@ -13710,6 +13799,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -13717,7 +13807,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -13740,7 +13830,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -13763,7 +13853,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -13786,7 +13876,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -13805,22 +13895,22 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -13941,7 +14031,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -13964,7 +14054,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -14146,7 +14236,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-40 {
@@ -14163,7 +14253,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -14173,7 +14263,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -14188,7 +14278,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -14201,9 +14291,11 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -14212,9 +14304,11 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -14267,7 +14361,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -14292,7 +14386,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -14334,15 +14428,15 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -14409,15 +14503,15 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -14495,13 +14589,13 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -15007,6 +15101,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-86 {
@@ -15014,6 +15109,7 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -15125,9 +15221,11 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-101 {
@@ -15135,18 +15233,20 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -15155,11 +15255,11 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -15170,14 +15270,14 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-106 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
@@ -15193,14 +15293,16 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-112 {
@@ -15208,23 +15310,25 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-115 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -15233,11 +15337,11 @@ exports[`EstimateCost - index > render with discount 0.5 and defaultTimeUnit mon
 
 .emotion-115 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -15596,7 +15700,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -15649,7 +15753,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -15669,6 +15773,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -15676,7 +15781,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -15699,7 +15804,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -15718,11 +15823,11 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -15788,7 +15893,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -15895,7 +16000,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -15905,7 +16010,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -15918,9 +16023,11 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -15949,7 +16056,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -15987,15 +16094,15 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -16064,7 +16171,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -16321,6 +16428,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -16380,18 +16488,20 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -16402,7 +16512,7 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
@@ -16414,23 +16524,25 @@ exports[`EstimateCost - index > render with discount 1 and defaultTimeUnit month
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-115 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -16789,7 +16901,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -16842,7 +16954,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -16862,6 +16974,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -16869,7 +16982,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -16892,7 +17005,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -16911,11 +17024,11 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -16981,7 +17094,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -17057,11 +17170,11 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -17078,13 +17191,13 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -17128,7 +17241,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -17138,7 +17251,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -17151,9 +17264,11 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -17182,7 +17297,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -17220,15 +17335,15 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -17297,7 +17412,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -17554,6 +17669,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -17613,18 +17729,20 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -17635,7 +17753,7 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -17647,22 +17765,24 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -17679,13 +17799,13 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -17697,16 +17817,16 @@ exports[`EstimateCost - index > render with discount 1, isBeta and defaultTimeUn
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .emotion-125 {
@@ -18077,7 +18197,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -18130,7 +18250,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -18150,6 +18270,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -18157,7 +18278,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -18180,7 +18301,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -18199,11 +18320,11 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -18269,7 +18390,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -18376,7 +18497,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -18386,7 +18507,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -18399,9 +18520,11 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -18430,7 +18553,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -18468,15 +18591,15 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -18545,7 +18668,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -18802,6 +18925,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -18861,18 +18985,20 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -18883,7 +19009,7 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
@@ -18895,23 +19021,25 @@ exports[`EstimateCost - index > render with discount 100% but no isBeta 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-115 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -19270,7 +19398,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -19293,7 +19421,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -19367,7 +19495,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-4 {
@@ -19384,7 +19512,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -19416,6 +19544,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
@@ -19423,6 +19552,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -19430,7 +19560,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -19453,7 +19583,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -19476,7 +19606,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -19499,7 +19629,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -19518,22 +19648,22 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -19654,7 +19784,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -19677,7 +19807,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -19850,6 +19980,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-42 {
@@ -19857,6 +19988,7 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-44 {
@@ -19968,9 +20100,11 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-57 {
@@ -19978,18 +20112,20 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-60 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -19998,11 +20134,11 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
 
 .emotion-60 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -20013,14 +20149,14 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-62 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-66 {
@@ -20036,14 +20172,16 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-68 {
@@ -20051,23 +20189,25 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-71 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -20076,11 +20216,11 @@ exports[`EstimateCost - index > render with hideTimeUnit 1`] = `
 
 .emotion-71 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -20279,7 +20419,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -20302,7 +20442,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -20376,7 +20516,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-4 {
@@ -20393,7 +20533,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -20425,6 +20565,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
@@ -20432,6 +20573,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -20439,7 +20581,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -20462,7 +20604,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -20485,7 +20627,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -20508,7 +20650,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -20527,22 +20669,22 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -20663,7 +20805,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -20686,7 +20828,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -20854,7 +20996,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-40 {
@@ -20871,7 +21013,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -20881,7 +21023,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -20896,7 +21038,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -20909,9 +21051,11 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -20920,9 +21064,11 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -20975,7 +21121,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -21000,7 +21146,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -21042,15 +21188,15 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -21117,15 +21263,15 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -21203,13 +21349,13 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -21715,6 +21861,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-86 {
@@ -21722,6 +21869,7 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -21833,9 +21981,11 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-101 {
@@ -21843,18 +21993,20 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -21863,11 +22015,11 @@ exports[`EstimateCost - index > render with hideTotal 1`] = `
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -22193,7 +22345,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -22246,7 +22398,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -22266,6 +22418,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -22273,7 +22426,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -22296,7 +22449,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -22315,11 +22468,11 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -22385,7 +22538,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -22466,11 +22619,11 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -22487,13 +22640,13 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -22537,7 +22690,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -22547,7 +22700,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -22560,9 +22713,11 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -22591,7 +22746,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -22629,15 +22784,15 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -22706,7 +22861,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -22963,6 +23118,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -23022,18 +23178,20 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -23044,7 +23202,7 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -23056,22 +23214,24 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -23088,13 +23248,13 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -23106,16 +23266,16 @@ exports[`EstimateCost - index > render with isBeta but undefined discount 1`] = 
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 <div
@@ -23481,7 +23641,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -23504,7 +23664,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -23578,7 +23738,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-4 {
@@ -23595,7 +23755,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -23627,6 +23787,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
@@ -23634,6 +23795,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -23641,7 +23803,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -23664,7 +23826,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -23687,7 +23849,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -23710,7 +23872,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -23729,22 +23891,22 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -23865,7 +24027,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -23888,7 +24050,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -24031,11 +24193,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -24052,13 +24214,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -24071,11 +24233,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -24092,13 +24254,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -24160,7 +24322,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-44 {
@@ -24177,7 +24339,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -24187,7 +24349,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -24202,7 +24364,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -24215,9 +24377,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -24226,9 +24390,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -24281,7 +24447,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -24306,7 +24472,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -24348,15 +24514,15 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -24423,15 +24589,15 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -24509,13 +24675,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -25021,6 +25187,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-90 {
@@ -25028,6 +25195,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -25139,9 +25307,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-105 {
@@ -25149,18 +25319,20 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -25169,11 +25341,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -25184,14 +25356,14 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -25207,14 +25379,16 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-116 {
@@ -25222,22 +25396,24 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -25254,13 +25430,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -25271,11 +25447,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -25292,13 +25468,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -25310,30 +25486,30 @@ exports[`EstimateCost - index > render with isBeta, discount 0 and defaultTimeUn
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 <div
@@ -25699,7 +25875,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -25722,7 +25898,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -25796,7 +25972,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-4 {
@@ -25813,7 +25989,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -25845,6 +26021,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
@@ -25852,6 +26029,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -25859,7 +26037,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -25882,7 +26060,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -25905,7 +26083,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -25928,7 +26106,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -25947,22 +26125,22 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -26083,7 +26261,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -26106,7 +26284,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -26239,11 +26417,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -26260,13 +26438,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -26279,11 +26457,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -26300,13 +26478,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -26368,7 +26546,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-44 {
@@ -26385,7 +26563,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -26395,7 +26573,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -26410,7 +26588,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -26423,9 +26601,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -26434,9 +26614,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -26489,7 +26671,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -26514,7 +26696,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -26556,15 +26738,15 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -26631,15 +26813,15 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -26717,13 +26899,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -27229,6 +27411,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-90 {
@@ -27236,6 +27419,7 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -27347,9 +27531,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-105 {
@@ -27357,18 +27543,20 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -27377,11 +27565,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -27392,14 +27580,14 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -27415,14 +27603,16 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-116 {
@@ -27430,22 +27620,24 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -27462,13 +27654,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -27479,11 +27671,11 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -27500,13 +27692,13 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -27518,30 +27710,30 @@ exports[`EstimateCost - index > render with isBeta, discount 0.5 and defaultTime
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 <div
@@ -27907,7 +28099,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -27960,7 +28152,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -27980,6 +28172,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -27987,7 +28180,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -28010,7 +28203,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -28029,11 +28222,11 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -28099,7 +28292,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -28175,11 +28368,11 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
 }
 
 .emotion-36 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -28196,13 +28389,13 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -28246,7 +28439,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -28256,7 +28449,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -28269,9 +28462,11 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -28300,7 +28495,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -28338,15 +28533,15 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -28415,7 +28610,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -28672,6 +28867,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -28731,18 +28927,20 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-108 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -28753,7 +28951,7 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-114 {
@@ -28765,22 +28963,24 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-120 {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -28797,13 +28997,13 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 16px;
-  gap: 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  gap: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 24px;
+  height: 1.5rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
@@ -28815,16 +29015,16 @@ exports[`EstimateCost - index > render with isBeta, price, discount 50% 1`] = `
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: right;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 <div
@@ -29190,7 +29390,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -29243,7 +29443,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -29263,6 +29463,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -29270,7 +29471,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -29293,7 +29494,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -29312,11 +29513,11 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -29382,7 +29583,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -29489,7 +29690,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -29499,7 +29700,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -29512,9 +29713,11 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -29543,7 +29746,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -29581,15 +29784,15 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -29658,7 +29861,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -29915,6 +30118,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -29974,18 +30178,20 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -29996,7 +30202,7 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
@@ -30008,23 +30214,25 @@ exports[`EstimateCost - index > render with item discount 50% 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-115 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -30383,7 +30591,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -30436,7 +30644,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -30456,6 +30664,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -30463,7 +30672,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -30486,7 +30695,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -30505,11 +30714,11 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -30575,7 +30784,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -30682,7 +30891,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-43 {
@@ -30692,7 +30901,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-43 .fillStroke {
@@ -30705,9 +30914,11 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -30736,7 +30947,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
 }
 
 .emotion-51 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -30774,15 +30985,15 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -30851,7 +31062,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
 .emotion-59 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-63 {
@@ -31108,6 +31319,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-88 {
@@ -31167,18 +31379,20 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-104 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -31189,7 +31403,7 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-110 {
@@ -31201,23 +31415,25 @@ exports[`EstimateCost - index > render with item discount 50% and defaultTimeUni
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-115 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -31576,7 +31792,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -31629,7 +31845,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -31649,6 +31865,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -31656,7 +31873,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -31679,7 +31896,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -31698,22 +31915,22 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .emotion-18 {
-  font-size: 10px;
+  font-size: 0.625rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -31730,18 +31947,18 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: 16px;
-  padding: 0 8px;
-  gap: 4px;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+  gap: 0.25rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 16px;
+  height: 1rem;
   text-transform: uppercase;
   color: #222638;
   background: #fbc600;
   border: 1px solid #fbc600;
-  margin-left: 8px;
+  margin-left: 0.5rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -31807,7 +32024,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -31914,7 +32131,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-47 {
@@ -31924,7 +32141,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-47 .fillStroke {
@@ -31937,9 +32154,11 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -31968,7 +32187,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
 }
 
 .emotion-55 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -32006,15 +32225,15 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -32083,7 +32302,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
 .emotion-63 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-67 {
@@ -32340,6 +32559,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
 }
 
 .emotion-92 {
@@ -32399,18 +32619,20 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-112 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -32421,7 +32643,7 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   margin: 0;
   width: 100%;
   border-right: 1px solid #d9dadd;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-118 {
@@ -32433,23 +32655,25 @@ exports[`EstimateCost - index > render with item discount 50% and text 1`] = `
   padding-right: 16px;
   position: relative;
   width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-right: none;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
   width: 30%;
+  min-width: 126px;
 }
 
 .emotion-123 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;

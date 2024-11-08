@@ -43,7 +43,8 @@ export const PriceCol = styled.col`
 export const PriceCell = (theme: Theme) => css`
   border-left: 1px solid ${theme.colors.neutral.border};
   background-color: ${theme.colors.neutral.backgroundWeak};
-  width: ${PRICE_MAX_CELL_WIDTH}
+  width: ${PRICE_MAX_CELL_WIDTH};
+  min-width: 126px;
 `
 
 export const Cell = styled('td', {
@@ -75,6 +76,7 @@ export const Cell = styled('td', {
           background: ${theme.colors.primary.background};
         `
       : null}
+  min-width: 230px;
 `
 
 export const TotalPriceCell = styled(Cell)`
@@ -86,6 +88,7 @@ export const TotalPriceCell = styled(Cell)`
   height: 56px;
   background-color: ${({ theme }) => theme.colors.primary.background};
   width: ${PRICE_MAX_CELL_WIDTH};
+  min-width: 126px;
 `
 
 export const EmptyTable = styled.table`
