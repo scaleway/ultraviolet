@@ -7,7 +7,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -30,7 +30,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -53,7 +53,7 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -73,11 +73,11 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
 
 .emotion-6 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -91,10 +91,10 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-8>.emotion-11 {
@@ -167,17 +167,17 @@ exports[`TextInputFieldV2 > should render correctly 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-10[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-10[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 <div
@@ -235,7 +235,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -258,7 +258,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -281,7 +281,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -301,11 +301,11 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
 
 .emotion-6 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -333,10 +333,10 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -409,17 +409,17 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -427,7 +427,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -443,7 +443,7 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 .emotion-16 {
@@ -451,15 +451,15 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -473,11 +473,11 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -519,13 +519,13 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 48px;
-  padding: 0 16px;
+  height: 3rem;
+  padding: 0 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: auto;
   -webkit-align-items: center;
@@ -541,11 +541,11 @@ exports[`TextInputFieldV2 > should render correctly generated 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #8c40ef;

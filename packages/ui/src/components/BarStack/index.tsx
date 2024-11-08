@@ -36,16 +36,16 @@ type BarStackProps = {
 }
 
 const StyledBarWrapper = styled.div`
-  width: 0px;
+  width: 0;
   transition: width 500ms;
   background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
 `
 
 const StyledBar = styled.div`
-  height: 50px;
-  font-weight: 600;
+  height: ${({ theme }) => theme.sizing['700']};
+  font-weight: ${({ theme }) => theme.typography.bodySmallStronger.weight};
   color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.typography.bodySmallStronger.fontSize};
   display: flex;
   align-items: center;
   padding: ${({ theme }) => theme.space[1]};

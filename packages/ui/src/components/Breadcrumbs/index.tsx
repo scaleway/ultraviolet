@@ -29,7 +29,7 @@ const ItemContainer = styled.li`
 
   &:not(:last-child)::after {
     content: '›';
-    margin: 0 8px;
+    margin: 0 ${({ theme }) => theme.space['1']};
   }
 
   ${({ onClick }) =>

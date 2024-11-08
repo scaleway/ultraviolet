@@ -22,15 +22,15 @@ const itemCoreStyle = ({
   justify-content: start;
   text-align: left;
   align-items: center;
-  min-height: 32px;
-  max-height: 44px;
+  min-height: ${theme.sizing['400']};
+  max-height: ${theme.sizing['500']};
   font-size: ${theme.typography.bodySmall.fontSize};
   line-height: ${theme.typography.bodySmall.lineHeight};
   font-weight: inherit;
   padding: ${`${theme.space['0.5']} ${theme.space['1']}`};
   border: none;
   cursor: pointer;
-  min-width: 110px;
+  min-width: 6.875rem;
   width: 100%;
   border-radius: ${theme.radii.default};
   transition: background-color ${ANIMATION_DURATION}ms, color ${ANIMATION_DURATION}ms;

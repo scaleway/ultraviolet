@@ -1,6 +1,6 @@
 import type { Icon } from '@ultraviolet/icons/legacy'
 import type { ComponentProps, MouseEvent } from 'react'
-import type { SENTIMENTS, SIZES } from './constants'
+import type { SENTIMENTS, sizes } from './constants'
 
 // This type defines an array of string that should have a length of 0, 1, or 2
 export type Colors =
@@ -23,7 +23,7 @@ export type Shape = 'circle' | 'square'
 
 type CommonProps = {
   shape: Shape
-  size?: keyof typeof SIZES
+  size?: keyof ReturnType<typeof sizes>
   upload?: boolean
   onClick?: (event?: MouseEvent<HTMLDivElement>) => void
   className?: string

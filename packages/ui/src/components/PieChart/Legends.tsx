@@ -25,7 +25,7 @@ const animationFlash = (isFocused: boolean) =>
     : ''
 
 const List = styled.ul`
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   list-style-type: none;
   display: flex;
   flex: 1;
@@ -64,13 +64,13 @@ const Label = styled.div`
 `
 
 const Value = styled.div<{ isFocused: boolean }>`
-  margin-left: 6px;
+  margin-left: ${({ theme }) => theme.space['1']};
   font-weight: ${({ isFocused }) => (isFocused ? 500 : 400)};
 `
 
 const Text = styled.span<{ isFocused: boolean }>`
   flex: none;
-  margin-right: 6px;
+  margin-right: ${({ theme }) => theme.space['1']};
   font-weight: ${({ isFocused }) => (isFocused ? 500 : 400)};
 `
 

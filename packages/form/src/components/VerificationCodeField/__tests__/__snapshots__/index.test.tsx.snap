@@ -7,7 +7,7 @@ exports[`VerificationCodeField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -26,11 +26,11 @@ exports[`VerificationCodeField > should render correctly 1`] = `
 }
 
 .emotion-2 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -40,13 +40,13 @@ exports[`VerificationCodeField > should render correctly 1`] = `
   background: #ffffff;
   border: solid 1px #d9dadd;
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
-  border-radius: 4px;
-  margin-right: 8px;
-  width: 40px;
-  height: 48px;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 3rem;
   outline-style: none;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;

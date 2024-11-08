@@ -1,15 +1,10 @@
 import type { StoryFn } from '@storybook/react'
-import { Badge, SIZES } from '..'
+import { Badge } from '..'
 
 export const Sizes: StoryFn = props => (
   <>
-    {Object.keys(SIZES).map(size => (
-      <Badge
-        {...props}
-        key={size}
-        sentiment="primary"
-        size={size as keyof typeof SIZES}
-      >
+    {(['small', 'medium', 'large'] as const).map(size => (
+      <Badge {...props} key={size} sentiment="primary" size={size}>
         {size}
       </Badge>
     ))}

@@ -5,17 +5,17 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const CONTAINER_SIZES = {
-  small: 720,
-  medium: 720,
-  large: 1140,
+  small: 45, // in rem
+  medium: 45,
+  large: 71.25,
 } as const
 
 type SizesTypes = keyof typeof CONTAINER_SIZES
 
 const IMAGE_SIZES: Record<SizesTypes, number> = {
-  small: 64,
-  medium: 96,
-  large: 240,
+  small: 4, // in rem
+  medium: 6,
+  large: 15,
 }
 
 const CenteredText = styled(Text)`
@@ -28,9 +28,9 @@ const Container = styled(Stack, {
   size: SizesTypes
   bordered?: boolean
 }>`
-  max-width: ${({ size }) => CONTAINER_SIZES[size]}px;
+  max-width: ${({ size }) => CONTAINER_SIZES[size]}rem;
   margin: 0 auto;
-  ${({ size }) => (size === 'large' ? 'padding: 0 140px' : null)};
+  ${({ size }) => (size === 'large' ? 'padding: 0 8.75rem' : null)};
   ${({ theme, bordered }) =>
     bordered
       ? `
@@ -42,6 +42,12 @@ const Container = styled(Stack, {
 
 const StyledStack = styled(Stack)`
   padding: ${({ theme }) => theme.space['5']};
+`
+
+const Image = styled('img')<{ size: number }>`
+  width: ${({ size }) => size}rem;
+  height: ${({ size }) => size}rem;
+  object-fit: contain;
 `
 
 type EmptyStateProps = {
@@ -100,7 +106,7 @@ export const EmptyState = ({
     >
       <Stack gap={2} justifyContent="center" alignItems="center">
         {image && typeof image === 'string' ? (
-          <img width={IMAGE_SIZES[size]} alt="" src={image} />
+          <Image size={IMAGE_SIZES[size]} alt="" src={image} />
         ) : (
           image
         )}

@@ -69,7 +69,7 @@ const DoubleSliderWrapper = styled.div`
   align-items: center;
   width: -webkit-fill-available;
   width: -moz-available;
-  height: 8px;
+  height: ${({ theme }) => theme.sizing['100']};
   align-self: center;
   `
 
@@ -77,9 +77,9 @@ const CustomRail = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 8px;
-  width:100%;
-  min-width: 220px;
+  height: ${({ theme }) => theme.sizing['100']};
+  width: 100%;
+  min-width: 13.75rem;
   border-radius: ${({ theme }) => theme.radii.default};
   background: ${({ theme }) => theme.colors.neutral.borderWeak};
 `

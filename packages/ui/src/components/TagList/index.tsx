@@ -15,15 +15,15 @@ const TagsWrapper = styled.span`
   cursor: pointer;
   color: ${({ theme }) => theme.colors.primary.text};
   border: none;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   align-self: center;
-  max-width: 350px;
+  max-width: 21.875rem;
   overflow: hidden;
   white-space: pre;
   text-overflow: ellipsis;
   background-color: transparent;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: ${({ theme }) => theme.space['1']};
+  padding-right: ${({ theme }) => theme.space['1']};
 `
 
 const StyledTagContainer = styled.div<{

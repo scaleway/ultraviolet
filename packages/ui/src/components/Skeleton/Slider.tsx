@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 const StyledContainer = styled.div<{ length: number }>`
-  height: 277px;
+  height: 17.375rem;
   display: grid;
   grid-template-columns: repeat(${({ length }) => length}, 1fr);
   gap: ${({ theme }) => theme.space['2']};
@@ -11,8 +11,8 @@ const StyledContainer = styled.div<{ length: number }>`
 const StyledCard = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   border-radius: ${({ theme }) => theme.radii.default};
-  width: 239px;
-  height: 261px;
+  width: 14.875rem
+  height: 16.375ren;
   overflow: hidden;
 `
 

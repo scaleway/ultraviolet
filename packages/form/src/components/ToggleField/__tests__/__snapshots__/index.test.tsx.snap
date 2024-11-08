@@ -7,7 +7,7 @@ exports[`ToggleField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -22,7 +22,7 @@ exports[`ToggleField > should render correctly 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -35,7 +35,7 @@ exports[`ToggleField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 0.125rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -66,13 +66,13 @@ exports[`ToggleField > should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 16px;
+  border-radius: 1rem;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -82,10 +82,10 @@ exports[`ToggleField > should render correctly 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -98,7 +98,7 @@ exports[`ToggleField > should render correctly 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -207,7 +207,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -222,7 +222,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -235,7 +235,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 0.125rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -266,13 +266,13 @@ exports[`ToggleField > should render correctly checked 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 16px;
+  border-radius: 1rem;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -282,10 +282,10 @@ exports[`ToggleField > should render correctly checked 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -298,7 +298,7 @@ exports[`ToggleField > should render correctly checked 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -408,7 +408,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -423,7 +423,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
 }
 
 .emotion-0:active .emotion-5[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -436,7 +436,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 0.125rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -467,13 +467,13 @@ exports[`ToggleField > should render correctly disabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 16px;
+  border-radius: 1rem;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-4:hover {
@@ -483,10 +483,10 @@ exports[`ToggleField > should render correctly disabled 1`] = `
 .emotion-4:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -499,7 +499,7 @@ exports[`ToggleField > should render correctly disabled 1`] = `
 }
 
 .emotion-4[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-4[data-checked="true"] {
@@ -609,7 +609,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -624,7 +624,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 }
 
 .emotion-0:active .emotion-9[data-disabled='false']:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-0[aria-disabled="true"] {
@@ -637,7 +637,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 0.125rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -658,7 +658,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 .emotion-4 {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -671,11 +671,11 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 
 .emotion-6 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -694,13 +694,13 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 16px;
+  border-radius: 1rem;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
   background-color: #e9eaeb;
-  width: 48px;
-  height: 24px;
+  width: 3rem;
+  height: 1.5rem;
 }
 
 .emotion-8:hover {
@@ -710,10 +710,10 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 .emotion-8:after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: calc(1.5rem / 2 - 1rem / 2);
   left: 5px;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
@@ -726,7 +726,7 @@ exports[`ToggleField > should render correctly with label and checked 1`] = `
 }
 
 .emotion-8[data-disabled="false"]:active:after {
-  width: 22.04px;
+  width: calc(1rem * 1.3775);
 }
 
 .emotion-8[data-checked="true"] {

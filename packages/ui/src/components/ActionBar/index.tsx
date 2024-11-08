@@ -3,19 +3,16 @@ import type { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { fadeIn } from '../../utils'
 
-const HEIGHT = 56
-const SPACING = 20
-
 const StyledDiv = styled.div<{ rank: number }>`
   background: ${({ theme }) => theme.colors.other.elevation.background.fixed};
   border-radius: ${({ theme }) => theme.radii.default};
-  bottom: ${({ rank }) => SPACING + rank * (HEIGHT + SPACING)}px;
+  bottom: ${({ rank, theme }) => `calc(${theme.sizing['700']} * ${rank} + ${theme.space['2']})`};
   box-shadow: ${({ theme }) => `${theme.shadows.fixed[0]}, ${theme.shadows.fixed[1]}`};
-  height: ${HEIGHT}px;
+  height: ${({ theme }) => theme.sizing['700']};
   left: 50%;
   position: fixed;
   transform: translate(-50%, 0);
-  width: 600px;
+  width: 37.5rem;
   animation: ${fadeIn} 0.2s ease-in-out;
 `
 

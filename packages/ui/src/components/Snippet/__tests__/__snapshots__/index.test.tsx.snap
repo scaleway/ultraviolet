@@ -14,7 +14,7 @@ exports[`Snippet > renders correctly 1`] = `
   justify-content: start;
   max-width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -22,7 +22,7 @@ exports[`Snippet > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -42,17 +42,17 @@ exports[`Snippet > renders correctly 1`] = `
 }
 
 .emotion-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   white-space: nowrap;
   height: auto;
@@ -66,16 +66,16 @@ exports[`Snippet > renders correctly 1`] = `
 
 .emotion-7:after {
   content: "";
-  padding-right: 64px;
+  padding-right: 4rem;
 }
 
 .emotion-9 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 8px 16px 0 0;
+  padding: 0.5rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
@@ -93,15 +93,15 @@ exports[`Snippet > renders correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -115,11 +115,11 @@ exports[`Snippet > renders correctly 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -229,7 +229,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -237,7 +237,7 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -266,17 +266,17 @@ exports[`Snippet > renders correctly in multiline  1`] = `
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -289,16 +289,16 @@ exports[`Snippet > renders correctly in multiline  1`] = `
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-23 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -315,15 +315,15 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -337,11 +337,11 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -387,18 +387,18 @@ exports[`Snippet > renders correctly in multiline  1`] = `
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -568,7 +568,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -576,7 +576,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -605,17 +605,17 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -628,7 +628,7 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-9:before {
@@ -643,16 +643,16 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   justify-content: flex-end;
   counter-increment: section;
   content: '$';
-  padding-right: 8px;
+  padding-right: 0.5rem;
 }
 
 .emotion-23 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -669,15 +669,15 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -691,11 +691,11 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -741,18 +741,18 @@ exports[`Snippet > renders correctly in multiline with prefix command 1`] = `
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -922,7 +922,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -930,7 +930,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -959,17 +959,17 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -982,7 +982,7 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-9:before {
@@ -998,16 +998,16 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   justify-content: flex-end;
   counter-increment: section;
   content: counter(section);
-  padding-right: 8px;
+  padding-right: 0.5rem;
 }
 
 .emotion-23 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -1024,15 +1024,15 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1046,11 +1046,11 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1096,18 +1096,18 @@ exports[`Snippet > renders correctly in multiline with prefix lines number 1`] =
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1276,7 +1276,7 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   justify-content: start;
   max-width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -1284,7 +1284,7 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1304,17 +1304,17 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
 }
 
 .emotion-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   white-space: nowrap;
   height: auto;
@@ -1328,16 +1328,16 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
 
 .emotion-7:after {
   content: "";
-  padding-right: 64px;
+  padding-right: 4rem;
 }
 
 .emotion-9 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 8px 16px 0 0;
+  padding: 0.5rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
@@ -1355,15 +1355,15 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1377,11 +1377,11 @@ exports[`Snippet > renders correctly with copiedText 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1490,7 +1490,7 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   justify-content: start;
   max-width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -1498,7 +1498,7 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1518,17 +1518,17 @@ exports[`Snippet > renders correctly with copyText 1`] = `
 }
 
 .emotion-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   white-space: nowrap;
   height: auto;
@@ -1542,16 +1542,16 @@ exports[`Snippet > renders correctly with copyText 1`] = `
 
 .emotion-7:after {
   content: "";
-  padding-right: 64px;
+  padding-right: 4rem;
 }
 
 .emotion-9 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 8px 16px 0 0;
+  padding: 0.5rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
@@ -1569,15 +1569,15 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1591,11 +1591,11 @@ exports[`Snippet > renders correctly with copyText 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1705,7 +1705,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-0 {
@@ -1721,7 +1721,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -1729,7 +1729,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1753,7 +1753,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1773,17 +1773,17 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
 }
 
 .emotion-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -1791,17 +1791,17 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
 }
 
 .emotion-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -1814,7 +1814,7 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
 
 .emotion-7:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-7 {
@@ -1823,16 +1823,16 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
 
 .emotion-7:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -1840,9 +1840,9 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -1867,15 +1867,15 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1889,11 +1889,11 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1921,15 +1921,15 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1943,11 +1943,11 @@ exports[`Snippet > renders correctly with custom number of rows 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2099,7 +2099,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -2107,7 +2107,7 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2136,17 +2136,17 @@ exports[`Snippet > renders correctly with hideText 1`] = `
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -2159,16 +2159,16 @@ exports[`Snippet > renders correctly with hideText 1`] = `
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-23 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -2185,15 +2185,15 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2207,11 +2207,11 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2257,18 +2257,18 @@ exports[`Snippet > renders correctly with hideText 1`] = `
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2438,7 +2438,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-0 {
@@ -2454,7 +2454,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -2462,7 +2462,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2486,7 +2486,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2524,17 +2524,17 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -2542,17 +2542,17 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -2565,7 +2565,7 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-9 {
@@ -2574,16 +2574,16 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-23 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -2591,9 +2591,9 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -2618,15 +2618,15 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2640,11 +2640,11 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2672,15 +2672,15 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2694,11 +2694,11 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2758,8 +2758,8 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
@@ -2767,18 +2767,18 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2798,11 +2798,11 @@ exports[`Snippet > renders correctly with initiallyExpanded 1`] = `
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2972,7 +2972,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-0 {
@@ -2988,7 +2988,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -2996,7 +2996,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3020,7 +3020,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3040,21 +3040,21 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
 }
 
 .emotion-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
-  max-height: calc(20px * 4 + 24px);
+  max-height: calc(1.25rem * 4 + 1.5rem);
   overflow-y: scroll;
 }
 
@@ -3064,7 +3064,7 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
 
 .emotion-7:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-7 {
@@ -3073,16 +3073,16 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
 
 .emotion-7:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-21 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -3090,9 +3090,9 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -3117,15 +3117,15 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3139,11 +3139,11 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3171,15 +3171,15 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3193,11 +3193,11 @@ exports[`Snippet > renders correctly with noExpandable 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3349,7 +3349,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-0 {
@@ -3365,7 +3365,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -3373,7 +3373,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3397,7 +3397,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3435,17 +3435,17 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -3453,17 +3453,17 @@ exports[`Snippet > renders correctly with showText 1`] = `
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -3476,7 +3476,7 @@ exports[`Snippet > renders correctly with showText 1`] = `
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-9 {
@@ -3485,16 +3485,16 @@ exports[`Snippet > renders correctly with showText 1`] = `
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-23 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -3502,9 +3502,9 @@ exports[`Snippet > renders correctly with showText 1`] = `
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -3529,15 +3529,15 @@ exports[`Snippet > renders correctly with showText 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3551,11 +3551,11 @@ exports[`Snippet > renders correctly with showText 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3583,15 +3583,15 @@ exports[`Snippet > renders correctly with showText 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3605,11 +3605,11 @@ exports[`Snippet > renders correctly with showText 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3674,8 +3674,8 @@ exports[`Snippet > renders correctly with showText 1`] = `
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
@@ -3683,18 +3683,18 @@ exports[`Snippet > renders correctly with showText 1`] = `
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3714,11 +3714,11 @@ exports[`Snippet > renders correctly with showText 1`] = `
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3908,7 +3908,7 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   justify-content: start;
   max-width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -3916,7 +3916,7 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3936,17 +3936,17 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
 }
 
 .emotion-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   white-space: nowrap;
   height: auto;
@@ -3960,7 +3960,7 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
 
 .emotion-7:after {
   content: "";
-  padding-right: 64px;
+  padding-right: 4rem;
 }
 
 .emotion-7:before {
@@ -3975,16 +3975,16 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   justify-content: flex-end;
   counter-increment: section;
   content: '$';
-  padding-right: 8px;
+  padding-right: 0.5rem;
 }
 
 .emotion-9 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 8px 16px 0 0;
+  padding: 0.5rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
@@ -4002,15 +4002,15 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4024,11 +4024,11 @@ exports[`Snippet > renders correctly with single line with prefix command 1`] = 
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -4137,7 +4137,7 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   justify-content: start;
   max-width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -4145,7 +4145,7 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4165,17 +4165,17 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
 }
 
 .emotion-5 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   white-space: nowrap;
   height: auto;
@@ -4189,7 +4189,7 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
 
 .emotion-7:after {
   content: "";
-  padding-right: 64px;
+  padding-right: 4rem;
 }
 
 .emotion-7:before {
@@ -4205,16 +4205,16 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   justify-content: flex-end;
   counter-increment: section;
   content: counter(section);
-  padding-right: 8px;
+  padding-right: 0.5rem;
 }
 
 .emotion-9 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 8px 16px 0 0;
+  padding: 0.5rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
   box-shadow: -27px 0 19px -11px #f9f9fa;
 }
@@ -4232,15 +4232,15 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4254,11 +4254,11 @@ exports[`Snippet > renders correctly with single line with prefix lines number 1
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -4368,7 +4368,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-0 {
@@ -4384,7 +4384,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   max-width: 100%;
   width: 100%;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2 {
@@ -4392,7 +4392,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4416,7 +4416,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4454,17 +4454,17 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -4472,17 +4472,17 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 }
 
 .emotion-7 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: JetBrains,monospace;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   margin: 0;
-  padding: 16px;
-  padding-right: 72px;
+  padding: 1rem;
+  padding-right: 4.5rem;
   overflow-x: auto;
   height: auto;
   counter-reset: section;
@@ -4495,7 +4495,7 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-9 {
@@ -4504,16 +4504,16 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 
 .emotion-9:after {
   content: "";
-  padding: 32px;
+  padding: 2rem;
 }
 
 .emotion-23 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -4521,9 +4521,9 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   position: absolute;
   top: 0;
   right: 0;
-  padding: 16px 16px 0 0;
+  padding: 1rem 1rem 0 0;
   background: #f9f9fa;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 2px solid transparent;
 }
 
@@ -4548,15 +4548,15 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4570,11 +4570,11 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -4602,15 +4602,15 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4624,11 +4624,11 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -4688,8 +4688,8 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
@@ -4697,18 +4697,18 @@ exports[`Snippet > should click on extend button to display full content on  1`]
   width: 100%;
   background: none;
   border: none;
-  padding: 16px;
-  padding-top: 8px;
+  padding: 1rem;
+  padding-top: 0.5rem;
   cursor: pointer;
 }
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4728,11 +4728,11 @@ exports[`Snippet > should click on extend button to display full content on  1`]
 
 .emotion-36 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;

@@ -1,6 +1,6 @@
 import { shouldMatchEmotionSnapshot } from '@utils/test'
 import { describe, test } from 'vitest'
-import { Bullet, bulletSizes } from '..'
+import { Bullet } from '..'
 import { SENTIMENTS } from '../../../theme'
 
 describe('Bullet', () => {
@@ -21,7 +21,7 @@ describe('Bullet', () => {
   })
 
   describe('size', () => {
-    bulletSizes.forEach(size => {
+    ;(['medium', 'small'] as const).forEach(size => {
       test(`render ${size}`, () =>
         shouldMatchEmotionSnapshot(<Bullet size={size} text="1" />))
     })

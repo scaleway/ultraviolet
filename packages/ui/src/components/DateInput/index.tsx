@@ -27,8 +27,8 @@ const StyledWrapper = styled.div`
   }
 
   div${PREFIX}__month-container {
-    padding: 16px;
-    width: 264px;
+    padding: ${({ theme }) => theme.space['2']};
+    width: 20rem;
   }
 
   ${PREFIX}-popper {
@@ -61,7 +61,9 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day-names {
-      margin-top: 8px;
+      margin-top: ${({ theme }) => theme.space['1']};
+      display: flex;
+      justify-content: center;
     }
 
     ${PREFIX}__day-name {
@@ -71,7 +73,7 @@ const StyledWrapper = styled.div`
       font-size: ${({ theme }) => theme.typography.bodySmallStrong.fontSize};
       line-height: ${({ theme }) => theme.typography.bodySmallStrong.lineHeight};
       text-align: center;
-      margin: 3px;
+      margin: ${({ theme }) => theme.space['0.5']};
       text-transform: capitalize;
     }
 
@@ -79,17 +81,17 @@ const StyledWrapper = styled.div`
       color: ${({ theme }) => theme.colors.neutral.textWeak};
       font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
       font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
-      margin-left: 3px;
-      margin-right: 3px;
+      margin-left: ${({ theme }) => theme.space['0.5']};
+      margin-right: ${({ theme }) => theme.space['0.5']};
     }
 
     ${PREFIX}__day {
-      width: 26px;
-      height: 26px;
+      width: ${({ theme }) => theme.sizing['400']};
+      height: ${({ theme }) => theme.sizing['400']};
     }
 
     ${PREFIX}__month-text {
-      height: 26px;
+      height: ${({ theme }) => theme.sizing['400']};
       display: inline-flex;
       justify-content: center;
       align-items: center;

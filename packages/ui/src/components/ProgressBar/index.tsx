@@ -26,7 +26,7 @@ export const progressBarSentiments = [
 const StyledProgressContainer = styled.div`
   overflow: hidden;
   position: relative;
-  height: 4px;
+  height: ${({ theme }) => theme.sizing['050']};
   margin-left: 0;
   margin-right: 0;
   border-radius: ${({ theme }) => theme.radii.default};

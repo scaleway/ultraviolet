@@ -8,14 +8,14 @@ import {
   ICON_SIZES,
   RADIUS_SIZES,
   SENTIMENTS,
-  SIZES,
   TEXT_VARIANT_BY_SIZE,
+  sizes,
 } from './constants'
 import type { AvatarV2Props, Colors, SentimentColors, Shape } from './types'
 
 const UploadContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: keyof typeof SIZES }>`
+})<{ size: keyof ReturnType<typeof sizes> }>`
   position: absolute;
   opacity: 0;
   top: 0;
@@ -38,7 +38,7 @@ const UploadContainer = styled('div', {
 
 const Container = styled('div', {
   shouldForwardProp: prop => !['image', 'size'].includes(prop),
-})<{ image?: string; size: keyof typeof SIZES }>`
+})<{ image?: string; size: keyof ReturnType<typeof sizes> }>`
     position: relative;
     &[data-shape='circle'] {
       border-radius: ${({ theme }) => theme.radii.circle}
@@ -48,16 +48,17 @@ const Container = styled('div', {
       border-radius: ${({ theme, size }) => theme.radii[RADIUS_SIZES[size]]}
     }
 
-    ${Object.entries(SIZES)
-      .map(
-        ([key, size]) => `
+    ${({ theme }) =>
+      Object.entries(sizes(theme))
+        .map(
+          ([key, size]) => `
           &[data-size="${key}"] {
-            width: ${size}px;
-            height: ${size}px;
+            width: ${size};
+            height: ${size};
           }
     `,
-      )
-      .join('')}
+        )
+        .join('')}
 
     ${({ theme }) =>
       SENTIMENTS.map(
@@ -106,7 +107,7 @@ const bordersStyles = ({
   theme,
   shape,
 }: {
-  size: keyof typeof SIZES
+  size: keyof ReturnType<typeof sizes>
   colors: Colors
   theme: Theme
   shape: Shape
@@ -117,14 +118,14 @@ const bordersStyles = ({
       theme.colors[bgColor as SentimentColors]?.backgroundStrong ?? bgColor,
   )
 
-  const finalSize = SIZES[size]
+  const finalSize = sizes(theme)[size]
 
   return css`
-    border-left: ${finalSize / 2}px solid ${finalColors[0]};
-    border-top: ${finalSize / 2}px solid ${finalColors[0]};
-    border-right: ${finalSize / 2}px solid
+    border-left: calc(${finalSize} / 2) solid ${finalColors[0]};
+    border-top: calc(${finalSize} / 2) solid ${finalColors[0]};
+    border-right: calc(${finalSize} / 2) solid
       ${isHalved ? finalColors[1] : finalColors[0]};
-    border-bottom: ${finalSize / 2}px solid
+    border-bottom: calc(${finalSize} / 2) solid
       ${isHalved ? finalColors[1] : finalColors[0]};
     border-radius: ${shape === 'circle' ? theme.radii.circle : theme.radii[RADIUS_SIZES[size]]}};
   `
@@ -132,7 +133,7 @@ const bordersStyles = ({
 
 const StyledColors = styled('span', {
   shouldForwardProp: prop => !['size', 'colors', 'shape'].includes(prop),
-})<{ size: keyof typeof SIZES; colors: Colors; shape: Shape }>`
+})<{ size: keyof ReturnType<typeof sizes>; colors: Colors; shape: Shape }>`
   align-items: center;
   display: flex;
   height: 100%;
@@ -142,7 +143,7 @@ const StyledColors = styled('span', {
 
 const ProductIconContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: keyof typeof SIZES }>`
+})<{ size: keyof ReturnType<typeof sizes> }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,21 +159,22 @@ const ProductIconContainer = styled('div', {
     border-radius: ${({ theme, size }) => theme.radii[RADIUS_SIZES[size]]}
   }
 
-  ${Object.entries(SIZES)
-    .map(
-      ([key, size]) => `
+  ${({ theme }) =>
+    Object.entries(sizes(theme))
+      .map(
+        ([key, size]) => `
         &[data-size="${key}"] {
-          width: ${size}px;
-          height: ${size}px;
+          width: ${size};
+          height: ${size};
 
           & > svg {
-            width: ${size}px;
-            height: ${size}px;
+            width: ${size};
+            height: ${size};
           }
         }
   `,
-    )
-    .join('')}
+      )
+      .join('')}
 `
 
 /**

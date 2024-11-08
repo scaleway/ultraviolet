@@ -30,7 +30,7 @@ const createCSSFile = (theme, content) => {
 }
 
 function alphaOrder(obj) {
-  const orderedKeys = Object.keys(obj).sort()
+  const orderedKeys = Object.keys(obj ?? {}).sort()
 
   return orderedKeys.reduce((newObj, key) => {
     // eslint-disable-next-line no-param-reassign
@@ -71,9 +71,7 @@ function evalValue(value, variables) {
         base = base[key]
       })
 
-      return keyParts[0] === 'fontSize' || keyParts[0] === 'lineHeight'
-        ? `${base}px`
-        : base
+      return base
     })
 
     // eslint-disable-next-line no-eval
@@ -114,7 +112,7 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
   const inputPalette = figmaTokensJson[themeMatch.palette]
 
   // Variable : unit
-  const unit = inputTheme.unit.value
+  // const unit = inputTheme.unit.value
 
   // Variable : palette shades
   const paletteShades = getValues(inputPalette.shades, {
@@ -142,23 +140,35 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     },
   })
 
+  // Variable : theme space
+  const sizing = getValues(inputTheme.sizing, {
+    typeFilter: 'dimension',
+    variables: {},
+  })
+
   // Variable : theme fontSize
   const fontSize = getValues(inputTheme.fontSize, {
     typeFilter: 'fontSizes',
-    variables: {},
+    variables: { sizing },
   })
+
+  console.log('fontSize generated')
 
   // Variable : theme lineHeights
   const lineHeight = getValues(inputTheme.lineHeight, {
     typeFilter: 'lineHeights',
-    variables: { unit },
+    variables: { sizing },
   })
+
+  console.log('lineHeight generated')
 
   // Variable : theme color
   const colors = getValues(inputTheme, {
     typeFilter: 'color',
     variables: { shades: paletteShades, other: paletteOther },
   })
+
+  console.log('colors generated')
 
   // Variable : theme shadows
   const shadows = getValues(inputTheme, {
@@ -171,28 +181,40 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     },
   })
 
+  console.log('shadows generated')
+
   // Variable : theme typography
   const typography = getValues(inputTheme, {
     typeFilter: 'typography',
-    variables: { lineHeight, unit, fontSize },
+    variables: { lineHeight, sizing, fontSize },
   })
+
+  console.log('typography generated')
 
   // Variable : theme radii
   const radii = getValues(inputTheme.radii, {
     typeFilter: 'borderRadius',
-    variables: {},
+    variables: { sizing },
   })
+
+  console.log('radii generated')
 
   // Variable : theme space
   const space = getValues(inputTheme.space, {
-    typeFilter: 'spacing',
-    variables: {},
+    typeFilter: 'dimension',
+    variables: { sizing },
   })
+
+  console.log('space generated')
 
   const breakpoints = getValues(inputTheme.breakpoints, {
     typeFilter: 'dimension',
     variables: {},
   })
+
+  console.log('breakpoints generated')
+
+  console.log(sizing, space)
 
   const output = alphaOrder({
     colors: {
@@ -208,6 +230,7 @@ export const generatePalette = (figmaTokensJson, themeMatch) => {
     radii,
     shadows: formatShadows(shadows),
     space,
+    sizing,
     theme: themeMatch.outputTheme,
     typography,
     breakpoints,

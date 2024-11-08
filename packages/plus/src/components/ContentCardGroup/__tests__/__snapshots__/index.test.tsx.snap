@@ -7,7 +7,7 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -23,7 +23,7 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
@@ -34,7 +34,7 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -50,14 +50,14 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
 }
 
 .emotion-2 {
-  padding: 24px;
+  padding: 1.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
@@ -68,11 +68,11 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
 }
 
 .emotion-2:first-child {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .emotion-2:last-child {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-2 .emotion-11 {
@@ -92,7 +92,7 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -115,7 +115,7 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -136,11 +136,11 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
 
 .emotion-8 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -155,8 +155,8 @@ exports[`ContentCardGroup > renders correctly with a children 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   background: #f9f9fa;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .emotion-12 {
@@ -233,7 +233,7 @@ exports[`ContentCardGroup > renders correctly with description 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -249,14 +249,14 @@ exports[`ContentCardGroup > renders correctly with description 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
 }
 
 .emotion-2 {
-  padding: 24px;
+  padding: 1.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
@@ -267,11 +267,11 @@ exports[`ContentCardGroup > renders correctly with description 1`] = `
 }
 
 .emotion-2:first-child {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .emotion-2:last-child {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-2 .emotion-13 {
@@ -291,7 +291,7 @@ exports[`ContentCardGroup > renders correctly with description 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -314,7 +314,7 @@ exports[`ContentCardGroup > renders correctly with description 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -335,11 +335,11 @@ exports[`ContentCardGroup > renders correctly with description 1`] = `
 
 .emotion-8 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -350,11 +350,11 @@ exports[`ContentCardGroup > renders correctly with description 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -369,8 +369,8 @@ exports[`ContentCardGroup > renders correctly with description 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   background: #f9f9fa;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .emotion-14 {
@@ -451,7 +451,7 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -467,7 +467,7 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
@@ -478,7 +478,7 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -494,14 +494,14 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
 }
 
 .emotion-2 {
-  padding: 24px;
+  padding: 1.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
@@ -512,11 +512,11 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
 }
 
 .emotion-2:first-child {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .emotion-2:last-child {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-2 .emotion-13 {
@@ -536,7 +536,7 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -559,7 +559,7 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -580,11 +580,11 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
 
 .emotion-8 {
   color: #727683;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -595,11 +595,11 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -614,8 +614,8 @@ exports[`ContentCardGroup > renders correctly with different title and subtitle 
   display: -ms-inline-flexbox;
   display: inline-flex;
   background: #f9f9fa;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .emotion-14 {
@@ -699,7 +699,7 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -715,7 +715,7 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
@@ -726,7 +726,7 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -742,14 +742,14 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
 }
 
 .emotion-2 {
-  padding: 24px;
+  padding: 1.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
@@ -760,11 +760,11 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
 }
 
 .emotion-2:first-child {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .emotion-2:last-child {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-2 .emotion-11 {
@@ -784,7 +784,7 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -807,7 +807,7 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -828,11 +828,11 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
 
 .emotion-8 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -847,8 +847,8 @@ exports[`ContentCardGroup > renders correctly with link target _parent 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   background: #f9f9fa;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .emotion-12 {
@@ -934,7 +934,7 @@ exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -950,7 +950,7 @@ exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
@@ -961,7 +961,7 @@ exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -977,14 +977,14 @@ exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
 }
 
 .emotion-2 {
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .emotion-2:not(:first-child) {
@@ -996,7 +996,7 @@ exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1018,7 +1018,7 @@ exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1053,10 +1053,9 @@ exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
 }
 
 .emotion-10 {
-  height: 12px;
-  width: 120px;
+  height:0.75rem width: 120px;
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background-color: #e9eaeb;
 }
 
@@ -1103,7 +1102,7 @@ exports[`ContentCardGroup > renders correctly with loading prop 1`] = `
   height: 100%;
   height: 32px;
   width: 32px;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-29 {
@@ -1191,7 +1190,7 @@ exports[`ContentCardGroup > renders correctly with required title & hread 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1207,14 +1206,14 @@ exports[`ContentCardGroup > renders correctly with required title & hread 1`] = 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
 }
 
 .emotion-2 {
-  padding: 24px;
+  padding: 1.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
@@ -1225,11 +1224,11 @@ exports[`ContentCardGroup > renders correctly with required title & hread 1`] = 
 }
 
 .emotion-2:first-child {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .emotion-2:last-child {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-2 .emotion-11 {
@@ -1249,7 +1248,7 @@ exports[`ContentCardGroup > renders correctly with required title & hread 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1272,7 +1271,7 @@ exports[`ContentCardGroup > renders correctly with required title & hread 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1293,11 +1292,11 @@ exports[`ContentCardGroup > renders correctly with required title & hread 1`] = 
 
 .emotion-8 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1312,8 +1311,8 @@ exports[`ContentCardGroup > renders correctly with required title & hread 1`] = 
   display: -ms-inline-flexbox;
   display: inline-flex;
   background: #f9f9fa;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .emotion-12 {
@@ -1389,7 +1388,7 @@ exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1405,14 +1404,14 @@ exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: 1px solid #d9dadd;
   background: #ffffff;
   min-width: 0;
 }
 
 .emotion-2 {
-  padding: 24px;
+  padding: 1.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   height: 100%;
@@ -1423,11 +1422,11 @@ exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
 }
 
 .emotion-2:first-child {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .emotion-2:last-child {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-2 .emotion-13 {
@@ -1447,7 +1446,7 @@ exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1470,7 +1469,7 @@ exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1491,11 +1490,11 @@ exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
 
 .emotion-8 {
   color: #727683;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1506,11 +1505,11 @@ exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
 
 .emotion-10 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1525,8 +1524,8 @@ exports[`ContentCardGroup > renders correctly with subtitle 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   background: #f9f9fa;
-  padding: 8px;
-  border-radius: 4px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .emotion-14 {

@@ -7,7 +7,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -36,7 +36,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -55,11 +55,11 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 }
 
 .emotion-6 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -68,7 +68,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 .emotion-8 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 16px;
+  gap: 1rem;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -84,7 +84,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -103,8 +103,8 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -114,7 +114,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 }
 
 .emotion-10[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-10[data-checked='true'] {
@@ -133,12 +133,12 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 }
 
 .emotion-10[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-10[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
@@ -166,7 +166,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -326,8 +326,8 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 .emotion-15 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -383,11 +383,11 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 }
 
 .emotion-17 {
-  border-radius: 4px;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  border-radius: 0.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-17 path {
@@ -412,7 +412,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -438,7 +438,7 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -461,11 +461,11 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
 
 .emotion-26 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -522,14 +522,13 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
                 <svg
                   class="emotion-17 emotion-18"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-19 emotion-20"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -591,14 +590,13 @@ exports[`SelectableCardGroup > renders correctly 1`] = `
                 <svg
                   class="emotion-17 emotion-18"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-19 emotion-20"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -647,7 +645,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -676,7 +674,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -695,11 +693,11 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
 }
 
 .emotion-6 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -708,7 +706,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
 .emotion-8 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 16px;
+  gap: 1rem;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -724,7 +722,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -743,8 +741,8 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -754,7 +752,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
 }
 
 .emotion-10[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-10[data-checked='true'] {
@@ -773,12 +771,12 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
 }
 
 .emotion-10[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-10[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
@@ -801,7 +799,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -832,7 +830,7 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -902,8 +900,8 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
 .emotion-17 {
   cursor: pointer;
   position: absolute;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   white-space: nowrap;
   border-width: 0;
@@ -961,10 +959,10 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
 }
 
 .emotion-19 {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
   border-radius: 100%;
   fill: #d9dadd;
 }
@@ -974,11 +972,11 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
 }
 
 .emotion-26 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -990,11 +988,11 @@ exports[`SelectableCardGroup > renders correctly as a radio 1`] = `
 
 .emotion-46 {
   color: #b3144d;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1165,7 +1163,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1194,7 +1192,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1213,11 +1211,11 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 }
 
 .emotion-6 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1241,7 +1239,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 .emotion-11 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 16px;
+  gap: 1rem;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1257,7 +1255,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1276,8 +1274,8 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -1287,7 +1285,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 }
 
 .emotion-13[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-13[data-checked='true'] {
@@ -1306,12 +1304,12 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 }
 
 .emotion-13[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-13[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-13:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1339,7 +1337,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1495,8 +1493,8 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 .emotion-18 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -1552,11 +1550,11 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 }
 
 .emotion-20 {
-  border-radius: 4px;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  border-radius: 0.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-20 path {
@@ -1581,7 +1579,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1607,7 +1605,7 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1630,11 +1628,11 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
 
 .emotion-29 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1699,14 +1697,13 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                 <svg
                   class="emotion-20 emotion-21"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-22 emotion-23"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -1768,14 +1765,13 @@ exports[`SelectableCardGroup > renders correctly required and showTick 1`] = `
                 <svg
                   class="emotion-20 emotion-21"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-22 emotion-23"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -1824,7 +1820,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1853,7 +1849,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1872,11 +1868,11 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
 }
 
 .emotion-6 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1885,7 +1881,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
 .emotion-8 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 1rem;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -1901,7 +1897,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1920,8 +1916,8 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -1931,7 +1927,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
 }
 
 .emotion-10[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-10[data-checked='true'] {
@@ -1950,12 +1946,12 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
 }
 
 .emotion-10[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-10[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
@@ -1983,7 +1979,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2143,8 +2139,8 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
 .emotion-15 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -2200,11 +2196,11 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
 }
 
 .emotion-17 {
-  border-radius: 4px;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  border-radius: 0.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-17 path {
@@ -2229,7 +2225,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2255,7 +2251,7 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2278,11 +2274,11 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
 
 .emotion-26 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2339,14 +2335,13 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
                 <svg
                   class="emotion-17 emotion-18"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-19 emotion-20"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -2408,14 +2403,13 @@ exports[`SelectableCardGroup > renders correctly with direction multiple columns
                 <svg
                   class="emotion-17 emotion-18"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-19 emotion-20"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -2464,7 +2458,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2493,7 +2487,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2512,11 +2506,11 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 }
 
 .emotion-6 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2525,7 +2519,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 .emotion-8 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 16px;
+  gap: 1rem;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -2541,7 +2535,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2560,8 +2554,8 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -2571,7 +2565,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 }
 
 .emotion-10[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-10[data-checked='true'] {
@@ -2590,12 +2584,12 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 }
 
 .emotion-10[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-10[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
@@ -2623,7 +2617,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2783,8 +2777,8 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 .emotion-15 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -2840,11 +2834,11 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 }
 
 .emotion-17 {
-  border-radius: 4px;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  border-radius: 0.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-17 path {
@@ -2869,7 +2863,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2895,7 +2889,7 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2918,11 +2912,11 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 
 .emotion-26 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2932,11 +2926,11 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
 
 .emotion-46 {
   color: #b3144d;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2991,14 +2985,13 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                 <svg
                   class="emotion-17 emotion-18"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-19 emotion-20"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -3060,14 +3053,13 @@ exports[`SelectableCardGroup > renders correctly with error content 1`] = `
                 <svg
                   class="emotion-17 emotion-18"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-19 emotion-20"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -3121,7 +3113,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3150,7 +3142,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3169,11 +3161,11 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 }
 
 .emotion-6 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3182,7 +3174,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 .emotion-8 {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 16px;
+  gap: 1rem;
   -webkit-align-items: normal;
   -webkit-box-align: normal;
   -ms-flex-align: normal;
@@ -3198,7 +3190,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3217,8 +3209,8 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 16px;
-  border-radius: 4px;
+  padding: 1rem;
+  border-radius: 0.25rem;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
@@ -3228,7 +3220,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 }
 
 .emotion-10[data-has-label='false']>:first-child {
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 
 .emotion-10[data-checked='true'] {
@@ -3247,12 +3239,12 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 }
 
 .emotion-10[data-image="illustration"] {
-  padding: 0;
+  padding: 0rem;
 }
 
 .emotion-10[data-image="icon"] {
-  padding: 0;
-  padding-right: 16px;
+  padding: 0rem;
+  padding-right: 1rem;
 }
 
 .emotion-10:hover:not([data-error='true']):not([data-disabled='true']),
@@ -3280,7 +3272,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 8px;
+  gap: 0.5rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3440,8 +3432,8 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 .emotion-15 {
   position: absolute;
   white-space: nowrap;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
   opacity: 0;
   border-width: 0;
 }
@@ -3497,11 +3489,11 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 }
 
 .emotion-17 {
-  border-radius: 4px;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  border-radius: 0.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .emotion-17 path {
@@ -3526,7 +3518,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3552,7 +3544,7 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3575,11 +3567,11 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 
 .emotion-26 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3589,11 +3581,11 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
 
 .emotion-46 {
   color: #727683;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3648,14 +3640,13 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
                 <svg
                   class="emotion-17 emotion-18"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-19 emotion-20"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"
@@ -3717,14 +3708,13 @@ exports[`SelectableCardGroup > renders correctly with helper content 1`] = `
                 <svg
                   class="emotion-17 emotion-18"
                   fill="none"
-                  size="24"
                   viewBox="0 0 24 24"
                 >
                   <g>
                     <rect
                       class="emotion-19 emotion-20"
                       height="16"
-                      rx="2px"
+                      rx="0.125rem"
                       stroke-width="2"
                       width="16"
                       x="4"

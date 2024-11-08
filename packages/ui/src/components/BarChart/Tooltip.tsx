@@ -6,7 +6,7 @@ const BarToolTipContainer = styled.div`
   background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
   border-radius: ${({ theme }) => theme.radii.small};
   box-shadow: ${({ theme }) => theme.shadows.tooltip};
-  padding: 5px 9px;
+  padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
   align-items: center;
 `
 
@@ -14,10 +14,10 @@ const BarColorSquare = styled('span', {
   shouldForwardProp: prop => !['color'].includes(prop),
 })<{ color: string }>`
   display: block;
-  width: 12px;
-  height: 12px;
+  width: ${({ theme }) => theme.sizing['150']};
+  height: ${({ theme }) => theme.sizing['150']};
   background: ${({ color }) => color};
-  margin-right: 12px;
+  margin-right: ${({ theme }) => theme.space['1.5']};
 `
 
 type BarChartToolTipProps = {

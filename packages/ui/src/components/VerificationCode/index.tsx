@@ -10,17 +10,17 @@ import { createRef, useId, useState } from 'react'
 type Size = 'small' | 'medium' | 'large' | 'xlarge'
 
 const SIZE_HEIGHT = {
-  xlarge: 64,
-  large: 48,
-  medium: 40,
-  small: 32,
+  xlarge: '800',
+  large: '600',
+  medium: '500',
+  small: '400',
 } as const
 
 const SIZE_WIDTH = {
-  xlarge: 56,
-  large: 40,
-  medium: 32,
-  small: 24,
+  xlarge: '700',
+  large: '500',
+  medium: '400',
+  small: '300',
 } as const
 
 export const verificationCodeSizes = Object.keys(SIZE_HEIGHT) as Size[]
@@ -52,8 +52,8 @@ const StyledInput = styled('input', {
   text-align: center;
   border-radius: ${({ theme }) => theme.radii.default};
   margin-right: ${({ theme }) => theme.space['1']};
-  width: ${({ inputSize }) => SIZE_WIDTH[inputSize]}px;
-  height: ${({ inputSize }) => SIZE_HEIGHT[inputSize]}px;
+  width: ${({ inputSize, theme }) => theme.sizing[SIZE_WIDTH[inputSize]]};
+  height: ${({ inputSize, theme }) => theme.sizing[SIZE_HEIGHT[inputSize]]};
   outline-style: none;
   transition:
     border-color 0.2s ease,

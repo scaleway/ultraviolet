@@ -19,8 +19,8 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -54,17 +54,25 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -72,18 +80,18 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -101,7 +109,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -202,7 +210,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -225,7 +233,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -248,7 +256,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -268,11 +276,11 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -286,10 +294,10 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -362,17 +370,17 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -380,7 +388,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -396,7 +404,7 @@ exports[`DateInput > render correctly with a array of dates to exclude 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -506,8 +514,8 @@ exports[`DateInput > render correctly with a range of date 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -541,17 +549,25 @@ exports[`DateInput > render correctly with a range of date 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -559,18 +575,18 @@ exports[`DateInput > render correctly with a range of date 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -588,7 +604,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -689,7 +705,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -712,7 +728,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -735,7 +751,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -755,11 +771,11 @@ exports[`DateInput > render correctly with a range of date 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -773,10 +789,10 @@ exports[`DateInput > render correctly with a range of date 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -849,17 +865,17 @@ exports[`DateInput > render correctly with a range of date 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -867,7 +883,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -883,7 +899,7 @@ exports[`DateInput > render correctly with a range of date 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -993,8 +1009,8 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -1028,17 +1044,25 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -1046,18 +1070,18 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1075,7 +1099,7 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -1176,7 +1200,7 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1199,7 +1223,7 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1222,7 +1246,7 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1242,11 +1266,11 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1260,10 +1284,10 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -1336,17 +1360,17 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -1354,7 +1378,7 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1370,7 +1394,7 @@ exports[`DateInput > render correctly with showMonthYearPicker 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -1480,8 +1504,8 @@ exports[`DateInput > renders correctly disabled 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -1515,17 +1539,25 @@ exports[`DateInput > renders correctly disabled 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -1533,18 +1565,18 @@ exports[`DateInput > renders correctly disabled 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1562,7 +1594,7 @@ exports[`DateInput > renders correctly disabled 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -1663,7 +1695,7 @@ exports[`DateInput > renders correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1686,7 +1718,7 @@ exports[`DateInput > renders correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1709,7 +1741,7 @@ exports[`DateInput > renders correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1729,11 +1761,11 @@ exports[`DateInput > renders correctly disabled 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1747,10 +1779,10 @@ exports[`DateInput > renders correctly disabled 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -1823,17 +1855,17 @@ exports[`DateInput > renders correctly disabled 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -1841,7 +1873,7 @@ exports[`DateInput > renders correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1857,7 +1889,7 @@ exports[`DateInput > renders correctly disabled 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -1968,8 +2000,8 @@ exports[`DateInput > renders correctly error 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -2003,17 +2035,25 @@ exports[`DateInput > renders correctly error 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -2021,18 +2061,18 @@ exports[`DateInput > renders correctly error 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2050,7 +2090,7 @@ exports[`DateInput > renders correctly error 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -2151,7 +2191,7 @@ exports[`DateInput > renders correctly error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2174,7 +2214,7 @@ exports[`DateInput > renders correctly error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2197,7 +2237,7 @@ exports[`DateInput > renders correctly error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2217,11 +2257,11 @@ exports[`DateInput > renders correctly error 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2235,10 +2275,10 @@ exports[`DateInput > renders correctly error 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -2311,17 +2351,17 @@ exports[`DateInput > renders correctly error 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -2329,7 +2369,7 @@ exports[`DateInput > renders correctly error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2345,7 +2385,7 @@ exports[`DateInput > renders correctly error 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 .emotion-16 {
@@ -2367,7 +2407,7 @@ exports[`DateInput > renders correctly error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2383,7 +2423,7 @@ exports[`DateInput > renders correctly error 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -2404,11 +2444,11 @@ exports[`DateInput > renders correctly error 1`] = `
 
 .emotion-22 {
   color: #b3144d;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2524,8 +2564,8 @@ exports[`DateInput > renders correctly error disabled 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -2559,17 +2599,25 @@ exports[`DateInput > renders correctly error disabled 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -2577,18 +2625,18 @@ exports[`DateInput > renders correctly error disabled 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2606,7 +2654,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -2707,7 +2755,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2730,7 +2778,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2753,7 +2801,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2773,11 +2821,11 @@ exports[`DateInput > renders correctly error disabled 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2791,10 +2839,10 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -2867,17 +2915,17 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -2885,7 +2933,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2901,7 +2949,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 .emotion-16 {
@@ -2923,7 +2971,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2939,7 +2987,7 @@ exports[`DateInput > renders correctly error disabled 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -2960,11 +3008,11 @@ exports[`DateInput > renders correctly error disabled 1`] = `
 
 .emotion-22 {
   color: #ffbbd3;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3081,8 +3129,8 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -3116,17 +3164,25 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -3134,18 +3190,18 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3163,7 +3219,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -3264,7 +3320,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3287,7 +3343,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3310,7 +3366,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3330,11 +3386,11 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3362,10 +3418,10 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-12>.emotion-15 {
@@ -3438,17 +3494,17 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-14[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-14[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-16 {
@@ -3456,7 +3512,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3472,7 +3528,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 .emotion-18 {
@@ -3494,7 +3550,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3510,7 +3566,7 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -3531,11 +3587,11 @@ exports[`DateInput > renders correctly error disabled required 1`] = `
 
 .emotion-24 {
   color: #ffbbd3;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3661,8 +3717,8 @@ exports[`DateInput > renders correctly min-max 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -3696,17 +3752,25 @@ exports[`DateInput > renders correctly min-max 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -3714,18 +3778,18 @@ exports[`DateInput > renders correctly min-max 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3743,7 +3807,7 @@ exports[`DateInput > renders correctly min-max 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -3844,7 +3908,7 @@ exports[`DateInput > renders correctly min-max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3867,7 +3931,7 @@ exports[`DateInput > renders correctly min-max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3890,7 +3954,7 @@ exports[`DateInput > renders correctly min-max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3910,11 +3974,11 @@ exports[`DateInput > renders correctly min-max 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3928,10 +3992,10 @@ exports[`DateInput > renders correctly min-max 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -4004,17 +4068,17 @@ exports[`DateInput > renders correctly min-max 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -4022,7 +4086,7 @@ exports[`DateInput > renders correctly min-max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4038,7 +4102,7 @@ exports[`DateInput > renders correctly min-max 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -4148,8 +4212,8 @@ exports[`DateInput > renders correctly required 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -4183,17 +4247,25 @@ exports[`DateInput > renders correctly required 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -4201,18 +4273,18 @@ exports[`DateInput > renders correctly required 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4230,7 +4302,7 @@ exports[`DateInput > renders correctly required 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -4331,7 +4403,7 @@ exports[`DateInput > renders correctly required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4354,7 +4426,7 @@ exports[`DateInput > renders correctly required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4377,7 +4449,7 @@ exports[`DateInput > renders correctly required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4397,11 +4469,11 @@ exports[`DateInput > renders correctly required 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4429,10 +4501,10 @@ exports[`DateInput > renders correctly required 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-12>.emotion-15 {
@@ -4505,17 +4577,17 @@ exports[`DateInput > renders correctly required 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-14[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-14[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-16 {
@@ -4523,7 +4595,7 @@ exports[`DateInput > renders correctly required 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4539,7 +4611,7 @@ exports[`DateInput > renders correctly required 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -4658,8 +4730,8 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -4693,17 +4765,25 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -4711,18 +4791,18 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4740,7 +4820,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -4841,7 +4921,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4864,7 +4944,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4887,7 +4967,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4907,11 +4987,11 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4925,10 +5005,10 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border: 1px solid #8c40ef;
 }
@@ -5003,17 +5083,17 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -5021,7 +5101,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5037,7 +5117,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -5061,7 +5141,7 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5083,15 +5163,15 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5105,11 +5185,11 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -5147,11 +5227,11 @@ exports[`DateInput > renders correctly with date-fns locale es 1`] = `
 }
 
 .emotion-25 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5871,8 +5951,8 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -5906,17 +5986,25 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -5924,18 +6012,18 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5953,7 +6041,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -6054,7 +6142,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6077,7 +6165,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6100,7 +6188,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6120,11 +6208,11 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6138,10 +6226,10 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border: 1px solid #8c40ef;
 }
@@ -6216,17 +6304,17 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -6234,7 +6322,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6250,7 +6338,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -6274,7 +6362,7 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6296,15 +6384,15 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6318,11 +6406,11 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -6360,11 +6448,11 @@ exports[`DateInput > renders correctly with date-fns locale fr 1`] = `
 }
 
 .emotion-25 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7084,8 +7172,8 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -7119,17 +7207,25 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -7137,18 +7233,18 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7166,7 +7262,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -7267,7 +7363,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7290,7 +7386,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7313,7 +7409,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7333,11 +7429,11 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7351,10 +7447,10 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
   border: 1px solid #8c40ef;
 }
@@ -7429,17 +7525,17 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -7447,7 +7543,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7463,7 +7559,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }
@@ -7487,7 +7583,7 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7509,15 +7605,15 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7531,11 +7627,11 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -7573,11 +7669,11 @@ exports[`DateInput > renders correctly with date-fns locale ru 1`] = `
 }
 
 .emotion-25 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8297,8 +8393,8 @@ exports[`DateInput > renders correctly with default props 1`] = `
 }
 
 .emotion-0 div.react-datepicker__month-container {
-  padding: 16px;
-  width: 264px;
+  padding: 1rem;
+  width: 20rem;
 }
 
 .emotion-0 .react-datepicker-popper {
@@ -8332,17 +8428,25 @@ exports[`DateInput > renders correctly with default props 1`] = `
 }
 
 .emotion-0 .calendar .react-datepicker__day-names {
-  margin-top: 8px;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-0 .calendar .react-datepicker__day-name {
   font-family: Inter,Asap,sans-serif;
   color: #3f4250;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
-  margin: 3px;
+  margin: 0.25rem;
   text-transform: capitalize;
 }
 
@@ -8350,18 +8454,18 @@ exports[`DateInput > renders correctly with default props 1`] = `
 .emotion-0 .calendar .react-datepicker__month {
   color: #727683;
   font-weight: 500;
-  font-size: 16px;
-  margin-left: 3px;
-  margin-right: 3px;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day {
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .emotion-0 .calendar .react-datepicker__month-text {
-  height: 26px;
+  height: 2rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8379,7 +8483,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
 .emotion-0 .calendar .react-datepicker__day--outside-month {
   color: #b5b7bd;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-0 .calendar .react-datepicker__day--selected,
@@ -8480,7 +8584,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8503,7 +8607,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8526,7 +8630,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8546,11 +8650,11 @@ exports[`DateInput > renders correctly with default props 1`] = `
 
 .emotion-8 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8564,10 +8668,10 @@ exports[`DateInput > renders correctly with default props 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  height: 48px;
+  height: 3rem;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-10>.emotion-13 {
@@ -8640,17 +8744,17 @@ exports[`DateInput > renders correctly with default props 1`] = `
   outline: none;
   height: 100%;
   width: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .emotion-12[data-size='large'] {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-12[data-size='small'] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-14 {
@@ -8658,7 +8762,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8674,7 +8778,7 @@ exports[`DateInput > renders correctly with default props 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 0 16px;
+  padding: 0 1rem;
   border-left: 1px solid;
   border-color: inherit;
 }

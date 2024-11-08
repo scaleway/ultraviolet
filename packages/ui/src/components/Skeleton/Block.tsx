@@ -10,7 +10,7 @@ const StyledLine = styled.li`
 `
 
 const StyledList = styled.ul`
-  min-height: 200px;
+  min-height: 12.5rem;
   width: 100%;
   height: 100%;
   padding: ${({ theme }) => theme.space['2']};

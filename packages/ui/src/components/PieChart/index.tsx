@@ -18,7 +18,7 @@ const Container = styled.div<{ height: number }>`
 const EmptyLegend = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 20px;
+  margin-left: ${({ theme }) => theme.space['5']};
 `
 
 const StyledContent = styled.div`
@@ -29,7 +29,7 @@ const StyledContent = styled.div`
   right: 0;
   top: 0;
 
-  font-size: 25px;
+  font-size: ${({ theme }) => theme.typography.headingStrong};
   line-height: 100px;
   height: 100px;
   width: 100px;

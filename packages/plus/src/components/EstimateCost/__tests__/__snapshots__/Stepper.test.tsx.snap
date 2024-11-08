@@ -7,7 +7,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -60,7 +60,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -87,7 +87,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -110,7 +110,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -129,11 +129,11 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -203,7 +203,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -294,7 +294,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-44 {
@@ -304,7 +304,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-44 .fillStroke {
@@ -347,7 +347,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 }
 
 .emotion-52 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -385,15 +385,15 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -462,7 +462,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 .emotion-60 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-64 {
@@ -751,7 +751,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -785,7 +785,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-101:focus-within {
@@ -821,12 +821,24 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   border-width: 0;
 }
 
+.emotion-101[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-101[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-101[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-103 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -842,20 +854,20 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem;
 }
 
 .emotion-103[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-103[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-103[data-size='large'] {
-  height: 46px;
-  padding: 4px 8px;
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .emotion-105 {
@@ -863,15 +875,15 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 24px;
+  width: 1.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -885,11 +897,11 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -935,18 +947,18 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: center;
-  padding: 8px;
+  padding: 0.5rem;
   background: none;
 }
 
 .emotion-112[data-has-unit='true'] {
   text-align: left;
-  padding: 8px 0 8px 8px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .emotion-112::-webkit-outer-spin-button,
@@ -964,19 +976,19 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 }
 
 .emotion-112[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-112[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-112[data-size='large'] {
-  height: 46px;
-  font-size: 16px;
+  height: 3rem;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .emotion-112:-moz-read-only {
@@ -1014,7 +1026,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 
 .emotion-112:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-112[data-controls='false'] {
@@ -1032,11 +1044,11 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 
 .emotion-123 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1068,11 +1080,11 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
 
 .emotion-134 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1378,6 +1390,7 @@ exports[`EstimateCost - NumberInput Item > render basic props 1`] = `
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
+                          data-size="small"
                           data-success="false"
                           data-unit="false"
                         >
@@ -1501,7 +1514,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1554,7 +1567,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -1581,7 +1594,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1604,7 +1617,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1623,11 +1636,11 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1697,7 +1710,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1788,7 +1801,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-44 {
@@ -1798,7 +1811,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-44 .fillStroke {
@@ -1841,7 +1854,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 }
 
 .emotion-52 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -1879,15 +1892,15 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -1956,7 +1969,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 .emotion-60 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-64 {
@@ -2245,7 +2258,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2279,7 +2292,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-101:focus-within {
@@ -2315,12 +2328,24 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   border-width: 0;
 }
 
+.emotion-101[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-101[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-101[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-103 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2336,20 +2361,20 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem;
 }
 
 .emotion-103[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-103[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-103[data-size='large'] {
-  height: 46px;
-  padding: 4px 8px;
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .emotion-105 {
@@ -2357,15 +2382,15 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 24px;
+  width: 1.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2379,11 +2404,11 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2429,18 +2454,18 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: center;
-  padding: 8px;
+  padding: 0.5rem;
   background: none;
 }
 
 .emotion-112[data-has-unit='true'] {
   text-align: left;
-  padding: 8px 0 8px 8px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .emotion-112::-webkit-outer-spin-button,
@@ -2458,19 +2483,19 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 }
 
 .emotion-112[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-112[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-112[data-size='large'] {
-  height: 46px;
-  font-size: 16px;
+  height: 3rem;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .emotion-112:-moz-read-only {
@@ -2508,7 +2533,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 
 .emotion-112:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-112[data-controls='false'] {
@@ -2526,11 +2551,11 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 
 .emotion-123 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2562,11 +2587,11 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
 
 .emotion-134 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2872,6 +2897,7 @@ exports[`EstimateCost - NumberInput Item > render basic with overlay 1`] = `
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
+                          data-size="small"
                           data-success="false"
                           data-unit="false"
                         >
@@ -2995,7 +3021,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3048,7 +3074,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -3075,7 +3101,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3098,7 +3124,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3117,11 +3143,11 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3191,7 +3217,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3282,7 +3308,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-44 {
@@ -3292,7 +3318,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-44 .fillStroke {
@@ -3335,7 +3361,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 }
 
 .emotion-52 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -3373,15 +3399,15 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -3450,7 +3476,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 .emotion-60 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-64 {
@@ -3739,7 +3765,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3773,7 +3799,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-101:focus-within {
@@ -3809,12 +3835,24 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   border-width: 0;
 }
 
+.emotion-101[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-101[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-101[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-103 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3830,20 +3868,20 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem;
 }
 
 .emotion-103[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-103[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-103[data-size='large'] {
-  height: 46px;
-  padding: 4px 8px;
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .emotion-105 {
@@ -3851,15 +3889,15 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 24px;
+  width: 1.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3873,11 +3911,11 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3923,18 +3961,18 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: center;
-  padding: 8px;
+  padding: 0.5rem;
   background: none;
 }
 
 .emotion-112[data-has-unit='true'] {
   text-align: left;
-  padding: 8px 0 8px 8px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .emotion-112::-webkit-outer-spin-button,
@@ -3952,19 +3990,19 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 }
 
 .emotion-112[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-112[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-112[data-size='large'] {
-  height: 46px;
-  font-size: 16px;
+  height: 3rem;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .emotion-112:-moz-read-only {
@@ -4002,7 +4040,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 
 .emotion-112:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-112[data-controls='false'] {
@@ -4020,11 +4058,11 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 
 .emotion-123 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4056,11 +4094,11 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
 
 .emotion-134 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4366,6 +4404,7 @@ exports[`EstimateCost - NumberInput Item > render with getAmountValue 1`] = `
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
+                          data-size="small"
                           data-success="false"
                           data-unit="false"
                         >
@@ -4489,7 +4528,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4542,7 +4581,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: 1.5rem 0;
 }
 
 .emotion-6 {
@@ -4569,7 +4608,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4592,7 +4631,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4611,11 +4650,11 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 }
 
 .emotion-14 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4685,7 +4724,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4776,7 +4815,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   font-size: 18px;
   color: #3f4250;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-44 {
@@ -4786,7 +4825,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .emotion-44 .fillStroke {
@@ -4829,7 +4868,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 }
 
 .emotion-52 input {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0.25rem 0 0 0.25rem;
   min-width: 60px;
   border-right: 0;
 }
@@ -4867,15 +4906,15 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   background-color: #ffffff;
   background-image: none;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #3f4250;
   display: block;
   max-width: 100%;
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -4944,7 +4983,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 .emotion-60 {
   font-size: 12px;
   color: #b3144d;
-  padding-top: 2px;
+  padding-top: 0.125rem;
 }
 
 .emotion-64 {
@@ -5226,16 +5265,16 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 
 .emotion-98 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-style: italic;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .emotion-100 {
@@ -5247,7 +5286,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5281,7 +5320,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-104:focus-within {
@@ -5317,12 +5356,24 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   border-width: 0;
 }
 
+.emotion-104[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-104[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-104[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-106 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5338,20 +5389,20 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem;
 }
 
 .emotion-106[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-106[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-106[data-size='large'] {
-  height: 46px;
-  padding: 4px 8px;
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .emotion-108 {
@@ -5359,15 +5410,15 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 24px;
+  width: 1.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5381,11 +5432,11 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -5431,18 +5482,18 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: center;
-  padding: 8px;
+  padding: 0.5rem;
   background: none;
 }
 
 .emotion-115[data-has-unit='true'] {
   text-align: left;
-  padding: 8px 0 8px 8px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .emotion-115::-webkit-outer-spin-button,
@@ -5460,19 +5511,19 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 }
 
 .emotion-115[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-115[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-115[data-size='large'] {
-  height: 46px;
-  font-size: 16px;
+  height: 3rem;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .emotion-115:-moz-read-only {
@@ -5510,7 +5561,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 
 .emotion-115:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-115[data-controls='false'] {
@@ -5528,11 +5579,11 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 
 .emotion-126 {
   color: #641cb3;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5540,11 +5591,11 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 }
 
 .emotion-129 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5576,11 +5627,11 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
 
 .emotion-140 {
   color: #641cb3;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: Space Grotesk,Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 2rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5891,6 +5942,7 @@ exports[`EstimateCost - NumberInput Item > render with values 1`] = `
                           data-controls="true"
                           data-disabled="false"
                           data-error="false"
+                          data-size="small"
                           data-success="false"
                           data-unit="false"
                         >

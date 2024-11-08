@@ -25,7 +25,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -48,7 +48,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -71,7 +71,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -88,7 +88,7 @@ exports[`UnitInput > renders click 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -141,15 +141,15 @@ exports[`UnitInput > renders click 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -209,7 +209,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -226,7 +226,7 @@ exports[`UnitInput > renders click 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -279,15 +279,15 @@ exports[`UnitInput > renders click 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -354,7 +354,7 @@ exports[`UnitInput > renders click 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -372,7 +372,7 @@ exports[`UnitInput > renders click 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -385,13 +385,13 @@ exports[`UnitInput > renders click 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -437,13 +437,13 @@ exports[`UnitInput > renders click 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -484,7 +484,7 @@ exports[`UnitInput > renders click 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -499,7 +499,7 @@ exports[`UnitInput > renders click 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -533,7 +533,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -552,28 +552,28 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -642,7 +642,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -661,28 +661,28 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -748,11 +748,11 @@ exports[`UnitInput > renders click 1`] = `
 
 .emotion-18 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -764,11 +764,11 @@ exports[`UnitInput > renders click 1`] = `
 
 .emotion-18 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -783,7 +783,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -799,7 +799,7 @@ exports[`UnitInput > renders click 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -811,7 +811,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -827,7 +827,7 @@ exports[`UnitInput > renders click 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -865,8 +865,8 @@ exports[`UnitInput > renders click 1`] = `
 .emotion-25 {
   background: #151a2d;
   color: #ffffff;
-  border-radius: 4px;
-  padding: 4px 8px;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
   text-align: center;
   position: absolute;
   max-width: 0px;
@@ -886,8 +886,8 @@ exports[`UnitInput > renders click 1`] = `
   background-color: #ffffff;
   color: #3f4250;
   box-shadow: 0px 4px 8px 0px #22263829,0px 8px 24px 0px #2226383d;
-  padding: 0;
-  margin-bottom: 80px;
+  padding: 0rem;
+  margin-bottom: 5rem;
 }
 
 .emotion-25[data-animated="true"] {
@@ -920,7 +920,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -943,7 +943,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 0.125rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -961,13 +961,13 @@ exports[`UnitInput > renders click 1`] = `
   flex-wrap: nowrap;
   max-height: 256px;
   overflow-y: scroll;
-  padding: 0;
-  padding-bottom: 4px;
-  padding-top: 4px;
+  padding: 0rem;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
 }
 
 .emotion-29[data-grouped="true"] {
-  padding-top: 0;
+  padding-top: 0rem;
 }
 
 .emotion-31 {
@@ -975,7 +975,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 2px;
+  gap: 0.125rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -997,11 +997,11 @@ exports[`UnitInput > renders click 1`] = `
   text-align: left;
   border: none;
   background-color: #ffffff;
-  padding: 12px 16px 12px 16px;
-  margin-left: 4px;
-  margin-right: 4px;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   color: #3f4250;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-33:hover,
@@ -1034,7 +1034,7 @@ exports[`UnitInput > renders click 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1053,11 +1053,11 @@ exports[`UnitInput > renders click 1`] = `
 }
 
 .emotion-40 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1272,7 +1272,7 @@ exports[`UnitInput > renders with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1295,7 +1295,7 @@ exports[`UnitInput > renders with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1312,7 +1312,7 @@ exports[`UnitInput > renders with default props 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -1365,15 +1365,15 @@ exports[`UnitInput > renders with default props 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -1440,7 +1440,7 @@ exports[`UnitInput > renders with default props 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -1453,13 +1453,13 @@ exports[`UnitInput > renders with default props 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -1500,7 +1500,7 @@ exports[`UnitInput > renders with default props 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -1526,7 +1526,7 @@ exports[`UnitInput > renders with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1545,28 +1545,28 @@ exports[`UnitInput > renders with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -1632,11 +1632,11 @@ exports[`UnitInput > renders with default props 1`] = `
 
 .emotion-18 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1651,7 +1651,7 @@ exports[`UnitInput > renders with default props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1667,7 +1667,7 @@ exports[`UnitInput > renders with default props 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1785,7 +1785,7 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1808,7 +1808,7 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1831,7 +1831,7 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1848,7 +1848,7 @@ exports[`UnitInput > renders with default value 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -1901,15 +1901,15 @@ exports[`UnitInput > renders with default value 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -1969,7 +1969,7 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1986,7 +1986,7 @@ exports[`UnitInput > renders with default value 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -2039,15 +2039,15 @@ exports[`UnitInput > renders with default value 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -2114,7 +2114,7 @@ exports[`UnitInput > renders with default value 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -2132,7 +2132,7 @@ exports[`UnitInput > renders with default value 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -2145,13 +2145,13 @@ exports[`UnitInput > renders with default value 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -2197,13 +2197,13 @@ exports[`UnitInput > renders with default value 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -2244,7 +2244,7 @@ exports[`UnitInput > renders with default value 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -2259,7 +2259,7 @@ exports[`UnitInput > renders with default value 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -2293,7 +2293,7 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2312,28 +2312,28 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -2402,7 +2402,7 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2421,28 +2421,28 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -2508,11 +2508,11 @@ exports[`UnitInput > renders with default value 1`] = `
 
 .emotion-18 {
   color: #b5b7bd;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2525,7 +2525,7 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2541,7 +2541,7 @@ exports[`UnitInput > renders with default value 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2553,7 +2553,7 @@ exports[`UnitInput > renders with default value 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2569,7 +2569,7 @@ exports[`UnitInput > renders with default value 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2688,7 +2688,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2711,7 +2711,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2734,7 +2734,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2751,7 +2751,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -2804,15 +2804,15 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -2872,7 +2872,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2889,7 +2889,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -2942,15 +2942,15 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -3017,7 +3017,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -3035,7 +3035,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -3048,13 +3048,13 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -3100,13 +3100,13 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -3147,7 +3147,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -3162,7 +3162,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -3196,7 +3196,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3215,28 +3215,28 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -3305,7 +3305,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3324,28 +3324,28 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -3411,11 +3411,11 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
 
 .emotion-18 {
   color: #b5b7bd;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3430,7 +3430,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3446,7 +3446,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3458,7 +3458,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3474,7 +3474,7 @@ exports[`UnitInput > renders with disabled and placeHolder 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3593,7 +3593,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3616,7 +3616,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3639,7 +3639,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3656,7 +3656,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -3709,15 +3709,15 @@ exports[`UnitInput > renders with error  and success 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -3777,7 +3777,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3794,7 +3794,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -3847,15 +3847,15 @@ exports[`UnitInput > renders with error  and success 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -3922,7 +3922,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -3940,7 +3940,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -3953,13 +3953,13 @@ exports[`UnitInput > renders with error  and success 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -4005,13 +4005,13 @@ exports[`UnitInput > renders with error  and success 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -4066,7 +4066,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
 
 .emotion-11 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -4081,7 +4081,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
 
 .emotion-11 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -4115,7 +4115,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4134,28 +4134,28 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-17[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-17[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-17[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-17[data-state='neutral'] {
@@ -4224,7 +4224,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4243,28 +4243,28 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-17[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-17[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-17[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-17[data-state='neutral'] {
@@ -4330,11 +4330,11 @@ exports[`UnitInput > renders with error  and success 1`] = `
 
 .emotion-20 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4349,7 +4349,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4365,7 +4365,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4377,7 +4377,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4393,7 +4393,7 @@ exports[`UnitInput > renders with error  and success 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4430,11 +4430,11 @@ exports[`UnitInput > renders with error  and success 1`] = `
 
 .emotion-26 {
   color: #b3144d;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4552,7 +4552,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4575,7 +4575,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4598,7 +4598,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4615,7 +4615,7 @@ exports[`UnitInput > renders with error 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -4668,15 +4668,15 @@ exports[`UnitInput > renders with error 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -4736,7 +4736,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4753,7 +4753,7 @@ exports[`UnitInput > renders with error 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -4806,15 +4806,15 @@ exports[`UnitInput > renders with error 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -4881,7 +4881,7 @@ exports[`UnitInput > renders with error 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -4899,7 +4899,7 @@ exports[`UnitInput > renders with error 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -4912,13 +4912,13 @@ exports[`UnitInput > renders with error 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -4964,13 +4964,13 @@ exports[`UnitInput > renders with error 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -5025,7 +5025,7 @@ exports[`UnitInput > renders with error 1`] = `
 
 .emotion-11 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -5040,7 +5040,7 @@ exports[`UnitInput > renders with error 1`] = `
 
 .emotion-11 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -5074,7 +5074,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5093,28 +5093,28 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-17[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-17[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-17[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-17[data-state='neutral'] {
@@ -5183,7 +5183,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5202,28 +5202,28 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-17[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-17[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-17[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-17[data-state='neutral'] {
@@ -5289,11 +5289,11 @@ exports[`UnitInput > renders with error 1`] = `
 
 .emotion-20 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5308,7 +5308,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5324,7 +5324,7 @@ exports[`UnitInput > renders with error 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5336,7 +5336,7 @@ exports[`UnitInput > renders with error 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5352,7 +5352,7 @@ exports[`UnitInput > renders with error 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5389,11 +5389,11 @@ exports[`UnitInput > renders with error 1`] = `
 
 .emotion-26 {
   color: #b3144d;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5512,7 +5512,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5535,7 +5535,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5558,7 +5558,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5578,11 +5578,11 @@ exports[`UnitInput > renders with label and label information 1`] = `
 
 .emotion-4 {
   color: #b5b7bd;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5593,7 +5593,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5610,7 +5610,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-6:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -5663,15 +5663,15 @@ exports[`UnitInput > renders with label and label information 1`] = `
 }
 
 .emotion-6[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-6[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-6[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-6[data-success='true'] {
@@ -5731,7 +5731,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5748,7 +5748,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-6:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -5801,15 +5801,15 @@ exports[`UnitInput > renders with label and label information 1`] = `
 }
 
 .emotion-6[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-6[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-6[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-6[data-success='true'] {
@@ -5876,7 +5876,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -5894,7 +5894,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -5907,13 +5907,13 @@ exports[`UnitInput > renders with label and label information 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-10[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-10::-webkit-input-placeholder {
@@ -5959,13 +5959,13 @@ exports[`UnitInput > renders with label and label information 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-10[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-10::-webkit-input-placeholder {
@@ -6006,7 +6006,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
 
 .emotion-13 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-13 #unit {
@@ -6021,7 +6021,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
 
 .emotion-13 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-13 #unit {
@@ -6055,7 +6055,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6074,28 +6074,28 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-19[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-19[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-19[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-19[data-state='neutral'] {
@@ -6164,7 +6164,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6183,28 +6183,28 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-19[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-19[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-19[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-19[data-state='neutral'] {
@@ -6270,11 +6270,11 @@ exports[`UnitInput > renders with label and label information 1`] = `
 
 .emotion-22 {
   color: #b5b7bd;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6289,7 +6289,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6305,7 +6305,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6317,7 +6317,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6333,7 +6333,7 @@ exports[`UnitInput > renders with label and label information 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6463,7 +6463,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6486,7 +6486,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6509,7 +6509,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6529,11 +6529,11 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 
 .emotion-4 {
   color: #b5b7bd;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6544,7 +6544,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6561,7 +6561,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-6:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -6614,15 +6614,15 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 }
 
 .emotion-6[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-6[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-6[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-6[data-success='true'] {
@@ -6682,7 +6682,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6699,7 +6699,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-6:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -6752,15 +6752,15 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 }
 
 .emotion-6[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-6[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-6[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-6[data-success='true'] {
@@ -6827,7 +6827,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -6845,7 +6845,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -6858,13 +6858,13 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-10[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-10::-webkit-input-placeholder {
@@ -6910,13 +6910,13 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-10[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-10::-webkit-input-placeholder {
@@ -6957,7 +6957,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 
 .emotion-13 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-13 #unit {
@@ -6972,7 +6972,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 
 .emotion-13 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-13 #unit {
@@ -7006,7 +7006,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7025,28 +7025,28 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-19[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-19[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-19[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-19[data-state='neutral'] {
@@ -7115,7 +7115,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7134,28 +7134,28 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-19[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-19[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-19[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-19[data-state='neutral'] {
@@ -7221,11 +7221,11 @@ exports[`UnitInput > renders with label and no label information 1`] = `
 
 .emotion-22 {
   color: #b5b7bd;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7240,7 +7240,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7256,7 +7256,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7268,7 +7268,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7284,7 +7284,7 @@ exports[`UnitInput > renders with label and no label information 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7413,7 +7413,7 @@ exports[`UnitInput > renders with min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7436,7 +7436,7 @@ exports[`UnitInput > renders with min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7453,7 +7453,7 @@ exports[`UnitInput > renders with min max 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -7506,15 +7506,15 @@ exports[`UnitInput > renders with min max 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -7581,7 +7581,7 @@ exports[`UnitInput > renders with min max 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -7594,13 +7594,13 @@ exports[`UnitInput > renders with min max 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -7641,7 +7641,7 @@ exports[`UnitInput > renders with min max 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -7667,7 +7667,7 @@ exports[`UnitInput > renders with min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7686,28 +7686,28 @@ exports[`UnitInput > renders with min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -7773,11 +7773,11 @@ exports[`UnitInput > renders with min max 1`] = `
 
 .emotion-18 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7792,7 +7792,7 @@ exports[`UnitInput > renders with min max 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7808,7 +7808,7 @@ exports[`UnitInput > renders with min max 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7926,7 +7926,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7949,7 +7949,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7972,7 +7972,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -7989,7 +7989,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -8042,15 +8042,15 @@ exports[`UnitInput > renders with no label and label information 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -8110,7 +8110,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8127,7 +8127,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -8180,15 +8180,15 @@ exports[`UnitInput > renders with no label and label information 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -8255,7 +8255,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -8273,7 +8273,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -8286,13 +8286,13 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -8338,13 +8338,13 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -8385,7 +8385,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -8400,7 +8400,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -8434,7 +8434,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8453,28 +8453,28 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -8543,7 +8543,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8562,28 +8562,28 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -8649,11 +8649,11 @@ exports[`UnitInput > renders with no label and label information 1`] = `
 
 .emotion-18 {
   color: #b5b7bd;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8668,7 +8668,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8684,7 +8684,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8696,7 +8696,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8712,7 +8712,7 @@ exports[`UnitInput > renders with no label and label information 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8831,7 +8831,7 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8854,7 +8854,7 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -8877,7 +8877,7 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -8894,7 +8894,7 @@ exports[`UnitInput > renders with size large 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -8947,15 +8947,15 @@ exports[`UnitInput > renders with size large 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -9015,7 +9015,7 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9032,7 +9032,7 @@ exports[`UnitInput > renders with size large 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -9085,15 +9085,15 @@ exports[`UnitInput > renders with size large 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -9160,7 +9160,7 @@ exports[`UnitInput > renders with size large 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -9178,7 +9178,7 @@ exports[`UnitInput > renders with size large 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -9191,13 +9191,13 @@ exports[`UnitInput > renders with size large 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -9243,13 +9243,13 @@ exports[`UnitInput > renders with size large 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -9290,7 +9290,7 @@ exports[`UnitInput > renders with size large 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -9305,7 +9305,7 @@ exports[`UnitInput > renders with size large 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -9339,7 +9339,7 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9358,28 +9358,28 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -9448,7 +9448,7 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9467,28 +9467,28 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -9554,11 +9554,11 @@ exports[`UnitInput > renders with size large 1`] = `
 
 .emotion-18 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -9573,7 +9573,7 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9589,7 +9589,7 @@ exports[`UnitInput > renders with size large 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9601,7 +9601,7 @@ exports[`UnitInput > renders with size large 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9617,7 +9617,7 @@ exports[`UnitInput > renders with size large 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9749,7 +9749,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -9772,7 +9772,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -9789,7 +9789,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -9842,15 +9842,15 @@ exports[`UnitInput > renders with size medioum 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -9917,7 +9917,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -9930,13 +9930,13 @@ exports[`UnitInput > renders with size medioum 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -9977,7 +9977,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -10003,7 +10003,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10022,28 +10022,28 @@ exports[`UnitInput > renders with size medioum 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -10109,11 +10109,11 @@ exports[`UnitInput > renders with size medioum 1`] = `
 
 .emotion-18 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -10128,7 +10128,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10144,7 +10144,7 @@ exports[`UnitInput > renders with size medioum 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10262,7 +10262,7 @@ exports[`UnitInput > renders with size small 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -10285,7 +10285,7 @@ exports[`UnitInput > renders with size small 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10302,7 +10302,7 @@ exports[`UnitInput > renders with size small 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -10355,15 +10355,15 @@ exports[`UnitInput > renders with size small 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -10430,7 +10430,7 @@ exports[`UnitInput > renders with size small 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -10443,13 +10443,13 @@ exports[`UnitInput > renders with size small 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -10490,7 +10490,7 @@ exports[`UnitInput > renders with size small 1`] = `
 
 .emotion-9 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-9 #unit {
@@ -10516,7 +10516,7 @@ exports[`UnitInput > renders with size small 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10535,28 +10535,28 @@ exports[`UnitInput > renders with size small 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-15[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-15[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-15[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-15[data-state='neutral'] {
@@ -10622,11 +10622,11 @@ exports[`UnitInput > renders with size small 1`] = `
 
 .emotion-18 {
   color: #727683;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -10641,7 +10641,7 @@ exports[`UnitInput > renders with size small 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10657,7 +10657,7 @@ exports[`UnitInput > renders with size small 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10775,7 +10775,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -10798,7 +10798,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -10821,7 +10821,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10838,7 +10838,7 @@ exports[`UnitInput > renders with success 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -10891,15 +10891,15 @@ exports[`UnitInput > renders with success 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -10959,7 +10959,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -10976,7 +10976,7 @@ exports[`UnitInput > renders with success 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -11029,15 +11029,15 @@ exports[`UnitInput > renders with success 1`] = `
 }
 
 .emotion-2[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-2[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-2[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-2[data-success='true'] {
@@ -11104,7 +11104,7 @@ exports[`UnitInput > renders with success 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -11122,7 +11122,7 @@ exports[`UnitInput > renders with success 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -11135,13 +11135,13 @@ exports[`UnitInput > renders with success 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -11187,13 +11187,13 @@ exports[`UnitInput > renders with success 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-6[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -11248,7 +11248,7 @@ exports[`UnitInput > renders with success 1`] = `
 
 .emotion-11 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -11263,7 +11263,7 @@ exports[`UnitInput > renders with success 1`] = `
 
 .emotion-11 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-11 #unit {
@@ -11297,7 +11297,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11316,28 +11316,28 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-17[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-17[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-17[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-17[data-state='neutral'] {
@@ -11406,7 +11406,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11425,28 +11425,28 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-17[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-17[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-17[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-17[data-state='neutral'] {
@@ -11512,11 +11512,11 @@ exports[`UnitInput > renders with success 1`] = `
 
 .emotion-20 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -11531,7 +11531,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11547,7 +11547,7 @@ exports[`UnitInput > renders with success 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11559,7 +11559,7 @@ exports[`UnitInput > renders with success 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -11575,7 +11575,7 @@ exports[`UnitInput > renders with success 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11612,11 +11612,11 @@ exports[`UnitInput > renders with success 1`] = `
 
 .emotion-26 {
   color: #22674e;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 16px;
+  line-height: 1rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;

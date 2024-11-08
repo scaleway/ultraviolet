@@ -12,7 +12,7 @@ const StyledCell = styled('td', {
   display: flex;
   align-items: center;
   padding: ${({ theme }) => theme.space['1']};
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   background-color: ${({ sentiment, theme }) => (sentiment ? theme.colors[sentiment].background : null)};
   justify-content: ${({ align }) => AlignementFlex[align]};
 `

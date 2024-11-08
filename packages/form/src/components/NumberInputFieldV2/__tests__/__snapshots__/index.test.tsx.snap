@@ -7,7 +7,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -41,7 +41,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:focus-within {
@@ -77,12 +77,24 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   border-width: 0;
 }
 
+.emotion-2[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -98,20 +110,20 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem;
 }
 
 .emotion-4[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-4[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-4[data-size='large'] {
-  height: 46px;
-  padding: 4px 8px;
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .emotion-6 {
@@ -119,15 +131,15 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -141,11 +153,11 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -205,18 +217,18 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: center;
-  padding: 8px;
+  padding: 0.5rem;
   background: none;
 }
 
 .emotion-13[data-has-unit='true'] {
   text-align: left;
-  padding: 8px 0 8px 8px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .emotion-13::-webkit-outer-spin-button,
@@ -234,19 +246,19 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
 }
 
 .emotion-13[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-13[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-13[data-size='large'] {
-  height: 46px;
-  font-size: 16px;
+  height: 3rem;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .emotion-13:-moz-read-only {
@@ -284,7 +296,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
 
 .emotion-13:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-13[data-controls='false'] {
@@ -306,6 +318,7 @@ exports[`NumberInputFieldV2 > should render correctly 1`] = `
             data-controls="true"
             data-disabled="false"
             data-error="false"
+            data-size="large"
             data-success="false"
             data-unit="false"
           >
@@ -381,7 +394,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -415,7 +428,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-2:focus-within {
@@ -451,12 +464,24 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   border-width: 0;
 }
 
+.emotion-2[data-size='small'] {
+  height: 2rem;
+}
+
+.emotion-2[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-2[data-size='large'] {
+  height: 3rem;
+}
+
 .emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -472,20 +497,20 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding: 2px 8px;
+  padding: 0.125rem 0.5rem;
 }
 
 .emotion-4[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-4[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-4[data-size='large'] {
-  height: 46px;
-  padding: 4px 8px;
+  height: 3rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .emotion-6 {
@@ -493,15 +518,15 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 32px;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -515,11 +540,11 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -570,18 +595,18 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
   padding: 0;
   width: 100%;
   color: #3f4250;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: center;
-  padding: 8px;
+  padding: 0.5rem;
   background: none;
 }
 
 .emotion-13[data-has-unit='true'] {
   text-align: left;
-  padding: 8px 0 8px 8px;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .emotion-13::-webkit-outer-spin-button,
@@ -599,19 +624,19 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
 }
 
 .emotion-13[data-size='small'] {
-  height: 30px;
+  height: 2rem;
 }
 
 .emotion-13[data-size='medium'] {
-  height: 38px;
+  height: 2.5rem;
 }
 
 .emotion-13[data-size='large'] {
-  height: 46px;
-  font-size: 16px;
+  height: 3rem;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: Regular;
-  line-height: 24px;
+  line-height: 1.5rem;
 }
 
 .emotion-13:-moz-read-only {
@@ -649,7 +674,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
 
 .emotion-13:placeholder-shown~.e1b9qdjy2 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .emotion-13[data-controls='false'] {
@@ -671,6 +696,7 @@ exports[`NumberInputFieldV2 > should render correctly disabled 1`] = `
             data-controls="true"
             data-disabled="true"
             data-error="false"
+            data-size="large"
             data-success="false"
             data-unit="false"
           >

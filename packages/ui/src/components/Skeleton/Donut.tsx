@@ -1,15 +1,15 @@
 import styled from '@emotion/styled'
 import { Line } from './Line'
 
-const CIRCLE_SIZE = 206
+const CIRCLE_SIZE = 12.875 // in rem
 
 const StyledContainer = styled.div`
   display: flex;
 `
 
 const StyledSVG = styled.svg`
-  height: ${CIRCLE_SIZE}px;
-  width: ${CIRCLE_SIZE}px;
+  height: ${CIRCLE_SIZE}rem;
+  width: ${CIRCLE_SIZE}rem;
   transform: rotate(-90deg);
 `
 
@@ -24,7 +24,7 @@ const StyledCircle = styled.circle`
 const LineList = styled.ul`
   display: grid;
   list-style: none;
-  gap: 16px;
+  gap: ${({ theme }) => theme.space['2']};
 `
 
 export const Donut = () => (

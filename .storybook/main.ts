@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite'
+import remarkGfm from 'remark-gfm'
 
 export default {
   stories: [
@@ -11,6 +12,16 @@ export default {
     '@storybook/addon-links',
     '@storybook/addon-a11y',
     '@storybook/addon-themes',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        mdxPluginOptions: {
+          mdxCompileOptions: {
+            remarkPlugins: [remarkGfm],
+          },
+        },
+      },
+    },
   ],
   framework: {
     name: '@storybook/react-vite',

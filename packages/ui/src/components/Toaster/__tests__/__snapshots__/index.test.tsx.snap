@@ -7,13 +7,13 @@ exports[`Toaster > components > renders correctly Toast.Button 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: auto;
   -webkit-align-items: center;
@@ -29,11 +29,11 @@ exports[`Toaster > components > renders correctly Toast.Button 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #8c40ef;
@@ -76,13 +76,13 @@ exports[`Toaster > components > renders correctly Toast.Button and variant ghost
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: auto;
   -webkit-align-items: center;
@@ -98,11 +98,11 @@ exports[`Toaster > components > renders correctly Toast.Button and variant ghost
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -153,17 +153,17 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
   text-decoration-color: transparent;
   -webkit-transition: text-decoration-color 250ms ease-out;
   transition: text-decoration-color 250ms ease-out;
-  gap: 8px;
+  gap: 0.5rem;
   position: relative;
   cursor: pointer;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
 }
@@ -189,10 +189,10 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
 
 .emotion-0:hover .e1afnb7a2,
 .emotion-0:focus .e1afnb7a2 {
-  -webkit-transform: translate(-4px, 0);
-  -moz-transform: translate(-4px, 0);
-  -ms-transform: translate(-4px, 0);
-  transform: translate(-4px, 0);
+  -webkit-transform: translate(-0.25rem, 0);
+  -moz-transform: translate(-0.25rem, 0);
+  -ms-transform: translate(-0.25rem, 0);
+  transform: translate(-0.25rem, 0);
 }
 
 .emotion-0[data-variant='inline'] {
@@ -228,11 +228,11 @@ exports[`Toaster > components > renders correctly Toast.Link 1`] = `
 
 exports[`Toaster > renders correctly with all kind of toast 1`] = `
 .emotion-0 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -247,11 +247,11 @@ exports[`Toaster > renders correctly with all kind of toast 1`] = `
 
 exports[`Toaster > renders correctly with all kind of toast 2`] = `
 .emotion-0 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -266,11 +266,11 @@ exports[`Toaster > renders correctly with all kind of toast 2`] = `
 
 exports[`Toaster > renders correctly with all kind of toast 3`] = `
 .emotion-0 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -285,11 +285,11 @@ exports[`Toaster > renders correctly with all kind of toast 3`] = `
 
 exports[`Toaster > renders correctly with all kind of toast 4`] = `
 .emotion-0 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -305,12 +305,12 @@ exports[`Toaster > renders correctly with all kind of toast 4`] = `
 exports[`Toaster > renders correctly with all kind of toast 5`] = `
 <DocumentFragment>
   .emotion-0 {
-  border-radius: 4px;
-  min-height: 52px;
+  border-radius: 0.25rem;
+  min-height: 3.5rem;
 }
 
 .emotion-0 .Toastify__toast-container {
-  width: 344px;
+  width: 21.5rem;
 }
 
 .emotion-0 .Toastify__toast-body {
@@ -321,25 +321,25 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 .emotion-0.Toastify__toast--success {
   background-color: #151a2d;
   color: #ffffff;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-0.Toastify__toast--info {
   background-color: #0078d2;
   color: #ffffff;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-0.Toastify__toast--error {
   background-color: #e51963;
   color: #ffffff;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-0.Toastify__toast--warning {
   background-color: #fbc600;
   color: #222638;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .emotion-1 {
@@ -347,7 +347,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -367,11 +367,11 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
 }
 
 .emotion-3 {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -382,15 +382,15 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 24px;
+  width: 1.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -404,11 +404,11 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #0078d2;
@@ -416,7 +416,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   color: #ffffff;
   background: none;
   margin: auto;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .emotion-6:hover {
@@ -460,15 +460,15 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 24px;
+  width: 1.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -482,11 +482,11 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #2c8564;
@@ -494,7 +494,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   color: #ffffff;
   background: none;
   margin: auto;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .emotion-16:hover {
@@ -524,15 +524,15 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 24px;
+  width: 1.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -546,11 +546,11 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #e51963;
@@ -558,7 +558,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   color: #ffffff;
   background: none;
   margin: auto;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .emotion-26:hover {
@@ -588,15 +588,15 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 24px;
-  padding: 0 4px;
+  height: 1.5rem;
+  padding: 0 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 4px;
-  border-radius: 4px;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 24px;
+  width: 1.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -610,11 +610,11 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #fbc600;
@@ -622,7 +622,7 @@ exports[`Toaster > renders correctly with all kind of toast 5`] = `
   color: #222638;
   background: none;
   margin: auto;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .emotion-36:hover {

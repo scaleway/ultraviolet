@@ -11,7 +11,7 @@ const StyledCell = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 60px;
+  min-height: ${({ theme }) => theme.sizing['750']};
 `
 
 type CellProps = {

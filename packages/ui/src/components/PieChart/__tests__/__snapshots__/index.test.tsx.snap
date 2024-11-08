@@ -29,7 +29,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
 }
 
 .emotion-2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,7 +62,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   width: 100%;
   color: #641cb3;
 }
@@ -78,7 +78,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #5e47be;
   -webkit-animation: animation-0 linear 1500ms infinite;
   animation: animation-0 linear 1500ms infinite;
@@ -102,7 +102,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  margin-right: 6px;
+  margin-right: 0.5rem;
   font-weight: 500;
 }
 
@@ -124,7 +124,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
 }
 
 .emotion-20 {
-  margin-left: 6px;
+  margin-left: 0.5rem;
   font-weight: 500;
 }
 
@@ -137,7 +137,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   width: 100%;
   color: #3f4250;
 }
@@ -147,7 +147,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #0083e6;
 }
 
@@ -155,7 +155,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  margin-right: 6px;
+  margin-right: 0.5rem;
   font-weight: 400;
 }
 
@@ -171,7 +171,7 @@ exports[`PieChart > renders correctly when legend is focused 1`] = `
 }
 
 .emotion-38 {
-  margin-left: 6px;
+  margin-left: 0.5rem;
   font-weight: 400;
 }
 
@@ -371,7 +371,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
 }
 
 .emotion-2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -404,7 +404,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   width: 100%;
   color: #641cb3;
 }
@@ -420,7 +420,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #5e47be;
   -webkit-animation: animation-0 linear 1500ms infinite;
   animation: animation-0 linear 1500ms infinite;
@@ -444,7 +444,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  margin-right: 6px;
+  margin-right: 0.5rem;
   font-weight: 500;
 }
 
@@ -466,7 +466,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
 }
 
 .emotion-20 {
-  margin-left: 6px;
+  margin-left: 0.5rem;
   font-weight: 500;
 }
 
@@ -479,7 +479,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   width: 100%;
   color: #3f4250;
 }
@@ -489,7 +489,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #0083e6;
 }
 
@@ -497,7 +497,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  margin-right: 6px;
+  margin-right: 0.5rem;
   font-weight: 400;
 }
 
@@ -513,7 +513,7 @@ exports[`PieChart > renders correctly when legend is hovered 1`] = `
 }
 
 .emotion-38 {
-  margin-left: 6px;
+  margin-left: 0.5rem;
   font-weight: 400;
 }
 
@@ -800,7 +800,16 @@ exports[`PieChart > renders correctly with data and content 1`] = `
   left: 0;
   right: 0;
   top: 0;
-  font-size: 25px;
+  font-size:font-family: Space Grotesk,sans-serif;
+  font-size: 1.5625rem;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 2rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  weight: 500;
   line-height: 100px;
   height: 100px;
   width: 100px;
@@ -910,7 +919,7 @@ exports[`PieChart > renders correctly with detailed legend 1`] = `
 }
 
 .emotion-2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -943,7 +952,7 @@ exports[`PieChart > renders correctly with detailed legend 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   width: 100%;
   color: #3f4250;
 }
@@ -959,7 +968,7 @@ exports[`PieChart > renders correctly with detailed legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #5e47be;
 }
 
@@ -981,7 +990,7 @@ exports[`PieChart > renders correctly with detailed legend 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  margin-right: 6px;
+  margin-right: 0.5rem;
   font-weight: 400;
 }
 
@@ -1003,7 +1012,7 @@ exports[`PieChart > renders correctly with detailed legend 1`] = `
 }
 
 .emotion-20 {
-  margin-left: 6px;
+  margin-left: 0.5rem;
   font-weight: 400;
 }
 
@@ -1012,7 +1021,7 @@ exports[`PieChart > renders correctly with detailed legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #0083e6;
 }
 
@@ -1198,7 +1207,7 @@ exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
 }
 
 .emotion-2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1231,7 +1240,7 @@ exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   width: 100%;
   color: #3f4250;
 }
@@ -1247,7 +1256,7 @@ exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #5e47be;
 }
 
@@ -1269,7 +1278,7 @@ exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  margin-right: 6px;
+  margin-right: 0.5rem;
   font-weight: 400;
 }
 
@@ -1291,7 +1300,7 @@ exports[`PieChart > renders correctly with detailed legend and discount 1`] = `
 }
 
 .emotion-20 {
-  margin-left: 6px;
+  margin-left: 0.5rem;
   font-weight: 400;
 }
 
@@ -1437,15 +1446,15 @@ exports[`PieChart > renders correctly with empty legend placeholder 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 2.5rem;
 }
 
 .emotion-4 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1549,7 +1558,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
 }
 
 .emotion-2 {
-  font-size: 14px;
+  font-size: 0.875rem;
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1582,7 +1591,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 0.5rem;
   width: 100%;
   color: #3f4250;
 }
@@ -1598,7 +1607,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #5e47be;
 }
 
@@ -1620,7 +1629,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
-  margin-right: 6px;
+  margin-right: 0.5rem;
   font-weight: 400;
 }
 
@@ -1642,7 +1651,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
 }
 
 .emotion-20 {
-  margin-left: 6px;
+  margin-left: 0.5rem;
   font-weight: 400;
 }
 
@@ -1651,7 +1660,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #0083e6;
 }
 
@@ -1660,7 +1669,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #3ebd8f;
 }
 
@@ -1669,7 +1678,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #ac2740;
 }
 
@@ -1678,7 +1687,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #9a85ec;
 }
 
@@ -1687,7 +1696,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #ff602e;
 }
 
@@ -1696,7 +1705,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #483800;
 }
 
@@ -1705,7 +1714,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #02a5ad;
 }
 
@@ -1714,7 +1723,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #ffa488;
 }
 
@@ -1723,7 +1732,7 @@ exports[`PieChart > renders correctly with legend 1`] = `
   border-radius: 100%;
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   background: #96edf2;
 }
 

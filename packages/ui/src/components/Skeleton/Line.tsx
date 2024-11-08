@@ -5,7 +5,7 @@ const sizes = [80, 120, 160, 200]
 const randomSize = () => sizes[Math.floor(Math.random() * sizes.length)]
 
 export const Line = styled.div`
-  height: 12px;
+  height: ${({ theme }) => theme.sizing['150']}
   width: ${() => randomSize()}px;
   max-width: 100%;
   border-radius: ${({ theme }) => theme.radii.large};

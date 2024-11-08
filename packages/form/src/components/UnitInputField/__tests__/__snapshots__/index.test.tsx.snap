@@ -7,7 +7,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -30,7 +30,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -50,11 +50,11 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
 
 .emotion-4 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -79,7 +79,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -96,7 +96,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-8:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -149,15 +149,15 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
 }
 
 .emotion-8[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-8[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-8[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-8[data-success='true'] {
@@ -224,7 +224,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -237,13 +237,13 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-12[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-12::-webkit-input-placeholder {
@@ -284,7 +284,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
 
 .emotion-15 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-15 #unit {
@@ -310,7 +310,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -329,28 +329,28 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-21[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-21[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-21[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-21[data-state='neutral'] {
@@ -416,11 +416,11 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
 
 .emotion-24 {
   color: #3f4250;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -433,7 +433,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -449,7 +449,7 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -475,13 +475,13 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 48px;
-  padding: 0 16px;
+  height: 3rem;
+  padding: 0 1rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
   box-sizing: border-box;
   width: auto;
   -webkit-align-items: center;
@@ -497,11 +497,11 @@ exports[`UnitInputField > should handles onChange and selection 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
   background: #8c40ef;
@@ -650,7 +650,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -673,7 +673,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 0.25rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -693,11 +693,11 @@ exports[`UnitInputField > should render correctly 1`] = `
 
 .emotion-4 {
   color: #222638;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -708,7 +708,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -725,7 +725,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   border: 1px solid #d9dadd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .emotion-6:not([data-disabled='true']):not([data-readonly='true']):not(
@@ -778,15 +778,15 @@ exports[`UnitInputField > should render correctly 1`] = `
 }
 
 .emotion-6[data-size='small'] {
-  height: 32px;
+  height: 2rem;
 }
 
 .emotion-6[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-6[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-6[data-success='true'] {
@@ -853,7 +853,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding-right: 16px;
+  padding-right: 1rem;
   border-right: 1px solid #d9dadd;
   width: 100%;
   height: 100%;
@@ -866,13 +866,13 @@ exports[`UnitInputField > should render correctly 1`] = `
   border: none;
   outline: none;
   height: 100%;
-  padding-left: 16px;
+  padding-left: 1rem;
   background: transparent;
   color: #3f4250;
 }
 
 .emotion-10[data-size="small"] {
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 .emotion-10::-webkit-input-placeholder {
@@ -913,7 +913,7 @@ exports[`UnitInputField > should render correctly 1`] = `
 
 .emotion-13 {
   width: 100%;
-  width: 200px;
+  width: 12.6rem;
 }
 
 .emotion-13 #unit {
@@ -939,7 +939,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -958,28 +958,28 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
+  padding: 0.5rem;
   padding-right: 0;
-  padding-left: 16px;
+  padding-left: 1rem;
   cursor: pointer;
   box-shadow: none;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   width: 100%;
   overflow: hidden;
 }
 
 .emotion-19[data-size='small'] {
-  height: 32px;
-  padding-left: 8px;
+  height: 2rem;
+  padding-left: 0.5rem;
 }
 
 .emotion-19[data-size='medium'] {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .emotion-19[data-size='large'] {
-  height: 48px;
+  height: 3rem;
 }
 
 .emotion-19[data-state='neutral'] {
@@ -1045,11 +1045,11 @@ exports[`UnitInputField > should render correctly 1`] = `
 
 .emotion-22 {
   color: #727683;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1064,7 +1064,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1080,7 +1080,7 @@ exports[`UnitInputField > should render correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-right: 16px;
+  padding-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

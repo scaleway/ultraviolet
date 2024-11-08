@@ -81,11 +81,11 @@ const Container = styled(Stack)`
 `
 const StyledDiv = styled.div`
   display: flex;
-  gap: 0px;
+  gap: 0;
   flex-flow: column;
   align-items: normal;
   justify-content: center;
-  min-width: 180px;
+  min-width: 11.25rem;
   position: relative;
   overflow: hidden;
 `
@@ -93,7 +93,7 @@ const StyledDiv = styled.div`
 const StyledImg = styled.img`
   object-fit: cover;
   position: absolute;
-  min-width: 220px;
+  min-width: 13.75rem;
   height: auto;
   left: ${({ theme }) => theme.space[1]};
 `
@@ -101,14 +101,14 @@ const StyledImg = styled.img`
 const StyledSVG = styled.div`
   object-fit: cover;
   position: absolute;
-  min-width:220px;
+  min-width: 13.75rem;
   height: auto;
   left: ${({ theme }) => theme.space[1]};
 `
 
 const IllustrationStack = styled(Stack)`
   padding: ${({ theme }) => theme.space[2]};
-  max-width:  calc(100% - 160px);
+  max-width:  calc(100% - 10rem);
   flex: 0 1 auto;
 `
 

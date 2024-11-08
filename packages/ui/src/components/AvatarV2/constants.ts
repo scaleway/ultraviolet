@@ -1,3 +1,5 @@
+import type { Theme } from '@emotion/react'
+
 // Match the text variant with component size
 export const TEXT_VARIANT_BY_SIZE = {
   xsmall: 'captionSmall',
@@ -7,12 +9,13 @@ export const TEXT_VARIANT_BY_SIZE = {
 } as const
 
 // Match the container size with actual px size
-export const SIZES = {
-  xsmall: 20,
-  small: 32,
-  medium: 64,
-  large: 112,
-} as const
+export const sizes = (theme: Theme) =>
+  ({
+    xsmall: theme.sizing['250'],
+    small: theme.sizing['400'],
+    medium: theme.sizing['800'],
+    large: '7rem', // TODO: add this value to tokens
+  }) as const
 
 // Match the avatar sizes with the icon sizes
 export const ICON_SIZES = {

@@ -39,9 +39,9 @@ export type ReducerAction =
     }
 
 export const INPUT_SIZE_HEIGHT = {
-  large: 48,
-  medium: 40,
-  small: 32,
+  small: '400', // sizing theme tokens key
+  medium: '500',
+  large: '600',
 } as const
 
 export const SIZES_TAG = {
