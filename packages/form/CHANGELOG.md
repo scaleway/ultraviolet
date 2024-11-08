@@ -1,5 +1,23 @@
 # Change Log
 
+## 3.10.5
+
+### Patch Changes
+
+- [#4388](https://github.com/scaleway/ultraviolet/pull/4388) [`db86e50`](https://github.com/scaleway/ultraviolet/commit/db86e504e5e63fa5a498a6d8eff7c855bedee9f9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.12`.
+
+- [#4400](https://github.com/scaleway/ultraviolet/pull/4400) [`0aff4e5`](https://github.com/scaleway/ultraviolet/commit/0aff4e5ee074caa39cb799eeb8b5ccd9a970f962) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.8.2`.
+
+- [#4398](https://github.com/scaleway/ultraviolet/pull/4398) [`6fc92ce`](https://github.com/scaleway/ultraviolet/commit/6fc92cebfe1720df0e5e9e6c6205aba9cbfdc107) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.9`.
+  Updated dependency `@babel/runtime` to `7.25.9`.
+  Updated dependency `@babel/eslint-parser` to `7.25.9`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.25.9`.
+  Updated dependency `@babel/preset-env` to `7.25.9`.
+  Updated dependency `@babel/preset-react` to `7.25.9`.
+  Updated dependency `@babel/preset-typescript` to `7.25.9`.
+- Updated dependencies [[`3c545cc`](https://github.com/scaleway/ultraviolet/commit/3c545cce96071ab905fca83b5cd8862aafe8c56f), [`0bcfa7e`](https://github.com/scaleway/ultraviolet/commit/0bcfa7edf242717d9f2eee24b96c260bef334e91), [`db86e50`](https://github.com/scaleway/ultraviolet/commit/db86e504e5e63fa5a498a6d8eff7c855bedee9f9), [`0aff4e5`](https://github.com/scaleway/ultraviolet/commit/0aff4e5ee074caa39cb799eeb8b5ccd9a970f962), [`6fc92ce`](https://github.com/scaleway/ultraviolet/commit/6fc92cebfe1720df0e5e9e6c6205aba9cbfdc107), [`9248ce4`](https://github.com/scaleway/ultraviolet/commit/9248ce40410df52711b8f1721faeb234d1daa760), [`02450b5`](https://github.com/scaleway/ultraviolet/commit/02450b59897e5c99ea4db08ba21fd08ec4f4f03f), [`8b92813`](https://github.com/scaleway/ultraviolet/commit/8b928139ec5c99ae9e65ea1129705dbb1413268c), [`04c120e`](https://github.com/scaleway/ultraviolet/commit/04c120ed8cce111e7085642eb327fa87d7d1dc6d)]:
+  - @ultraviolet/ui@1.75.4
+
 ## 3.10.4
 
 ### Patch Changes

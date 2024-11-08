@@ -1,5 +1,21 @@
 # Change Log
 
+## 3.4.1
+
+### Patch Changes
+
+- [#4388](https://github.com/scaleway/ultraviolet/pull/4388) [`db86e50`](https://github.com/scaleway/ultraviolet/commit/db86e504e5e63fa5a498a6d8eff7c855bedee9f9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.12`.
+
+- [#4398](https://github.com/scaleway/ultraviolet/pull/4398) [`6fc92ce`](https://github.com/scaleway/ultraviolet/commit/6fc92cebfe1720df0e5e9e6c6205aba9cbfdc107) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.9`.
+  Updated dependency `@babel/runtime` to `7.25.9`.
+  Updated dependency `@babel/eslint-parser` to `7.25.9`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.25.9`.
+  Updated dependency `@babel/preset-env` to `7.25.9`.
+  Updated dependency `@babel/preset-react` to `7.25.9`.
+  Updated dependency `@babel/preset-typescript` to `7.25.9`.
+
+- [#4394](https://github.com/scaleway/ultraviolet/pull/4394) [`9248ce4`](https://github.com/scaleway/ultraviolet/commit/9248ce40410df52711b8f1721faeb234d1daa760) Thanks [@matthprost](https://github.com/matthprost)! - Optimise svg files
+
 ## 3.4.0
 
 ### Minor Changes
