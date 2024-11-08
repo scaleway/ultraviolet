@@ -1,5 +1,40 @@
 # Change Log
 
+## 1.75.4
+
+### Patch Changes
+
+- [#4420](https://github.com/scaleway/ultraviolet/pull/4420) [`3c545cc`](https://github.com/scaleway/ultraviolet/commit/3c545cce96071ab905fca83b5cd8862aafe8c56f) Thanks [@fabienhebert](https://github.com/fabienhebert)! - `<SelectInputV2 />` fix selectValues calculation when multiselecting values
+
+- [#4429](https://github.com/scaleway/ultraviolet/pull/4429) [`0bcfa7e`](https://github.com/scaleway/ultraviolet/commit/0bcfa7edf242717d9f2eee24b96c260bef334e91) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Meter />` to remove extra margin bottom
+
+- [#4388](https://github.com/scaleway/ultraviolet/pull/4388) [`db86e50`](https://github.com/scaleway/ultraviolet/commit/db86e504e5e63fa5a498a6d8eff7c855bedee9f9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.12`.
+
+- [#4400](https://github.com/scaleway/ultraviolet/pull/4400) [`0aff4e5`](https://github.com/scaleway/ultraviolet/commit/0aff4e5ee074caa39cb799eeb8b5ccd9a970f962) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.8.2`.
+
+- [#4398](https://github.com/scaleway/ultraviolet/pull/4398) [`6fc92ce`](https://github.com/scaleway/ultraviolet/commit/6fc92cebfe1720df0e5e9e6c6205aba9cbfdc107) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.25.9`.
+  Updated dependency `@babel/runtime` to `7.25.9`.
+  Updated dependency `@babel/eslint-parser` to `7.25.9`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.25.9`.
+  Updated dependency `@babel/preset-env` to `7.25.9`.
+  Updated dependency `@babel/preset-react` to `7.25.9`.
+  Updated dependency `@babel/preset-typescript` to `7.25.9`.
+
+- [#4394](https://github.com/scaleway/ultraviolet/pull/4394) [`9248ce4`](https://github.com/scaleway/ultraviolet/commit/9248ce40410df52711b8f1721faeb234d1daa760) Thanks [@matthprost](https://github.com/matthprost)! - Optimise svg files
+
+- [#4423](https://github.com/scaleway/ultraviolet/pull/4423) [`02450b5`](https://github.com/scaleway/ultraviolet/commit/02450b59897e5c99ea4db08ba21fd08ec4f4f03f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectInputV2 />` to align on the left when dropdown is bigger than the actual input
+
+- [#4339](https://github.com/scaleway/ultraviolet/pull/4339) [`8b92813`](https://github.com/scaleway/ultraviolet/commit/8b928139ec5c99ae9e65ea1129705dbb1413268c) Thanks [@lisalupi](https://github.com/lisalupi)! - `<SelectInputV2 />`:
+
+  - Hide search when less than 6 items (even when `searchable = true`)
+  - Clickable `footer` to close the dropdown
+  - `clearable = false` by default now
+
+- [#4392](https://github.com/scaleway/ultraviolet/pull/4392) [`04c120e`](https://github.com/scaleway/ultraviolet/commit/04c120ed8cce111e7085642eb327fa87d7d1dc6d) Thanks [@matthprost](https://github.com/matthprost)! - Auto increase the height of `<Card />` in a row context
+
+- Updated dependencies [[`db86e50`](https://github.com/scaleway/ultraviolet/commit/db86e504e5e63fa5a498a6d8eff7c855bedee9f9), [`6fc92ce`](https://github.com/scaleway/ultraviolet/commit/6fc92cebfe1720df0e5e9e6c6205aba9cbfdc107), [`9248ce4`](https://github.com/scaleway/ultraviolet/commit/9248ce40410df52711b8f1721faeb234d1daa760)]:
+  - @ultraviolet/icons@3.4.1
+
 ## 1.75.3
 
 ### Patch Changes
