@@ -18,7 +18,8 @@
     "type:generate": "tsc --declaration -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "watch:build": "vite build --config vite.config.ts --watch",
-    "watch": "pnpm run '/^watch:.*/'"
+    "watch": "pnpm run '/^watch:.*/'",
+    "lintpublish": "publint"
   },
   "keywords": [
     "react",

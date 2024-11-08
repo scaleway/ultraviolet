@@ -29,6 +29,9 @@
         "storybook-static/**"
       ]
     },
+    "lintpublish": {
+      "dependsOn": ["build"]
+    },
     "size": {
       "dependsOn": ["build"]
     },
