@@ -79,7 +79,8 @@ exports[`EstimateCost - Unit Item > render basic props 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -316,9 +317,12 @@ exports[`EstimateCost - Unit Item > render basic props 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -718,7 +722,8 @@ exports[`EstimateCost - Unit Item > render basic props 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-89 {
@@ -914,9 +919,12 @@ exports[`EstimateCost - Unit Item > render basic props 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-122 {
@@ -935,24 +943,29 @@ exports[`EstimateCost - Unit Item > render basic props 1`] = `
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-133 {
@@ -1237,7 +1250,7 @@ exports[`EstimateCost - Unit Item > render basic props 1`] = `
             >
               <td
                 class="emotion-87 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-89 emotion-90"
@@ -1510,14 +1523,16 @@ exports[`EstimateCost - Unit Item > render basic props with monthly price 1`] = 
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -1984,9 +1999,12 @@ exports[`EstimateCost - Unit Item > render basic props with monthly price 1`] = 
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -1994,9 +2012,12 @@ exports[`EstimateCost - Unit Item > render basic props with monthly price 1`] = 
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -2788,14 +2809,16 @@ exports[`EstimateCost - Unit Item > render basic props with monthly price 1`] = 
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-89 {
@@ -3180,18 +3203,24 @@ exports[`EstimateCost - Unit Item > render basic props with monthly price 1`] = 
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-119 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-122 {
@@ -3210,47 +3239,57 @@ exports[`EstimateCost - Unit Item > render basic props with monthly price 1`] = 
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-133 {
@@ -3548,7 +3587,7 @@ exports[`EstimateCost - Unit Item > render basic props with monthly price 1`] = 
             >
               <td
                 class="emotion-87 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-89 emotion-90"
@@ -3821,14 +3860,16 @@ exports[`EstimateCost - Unit Item > render basic props with overlay 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -4295,9 +4336,12 @@ exports[`EstimateCost - Unit Item > render basic props with overlay 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -4305,9 +4349,12 @@ exports[`EstimateCost - Unit Item > render basic props with overlay 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -5099,14 +5146,16 @@ exports[`EstimateCost - Unit Item > render basic props with overlay 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-89 {
@@ -5491,18 +5540,24 @@ exports[`EstimateCost - Unit Item > render basic props with overlay 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-119 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-122 {
@@ -5521,47 +5576,57 @@ exports[`EstimateCost - Unit Item > render basic props with overlay 1`] = `
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-133 {
@@ -5859,7 +5924,7 @@ exports[`EstimateCost - Unit Item > render basic props with overlay 1`] = `
             >
               <td
                 class="emotion-87 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-89 emotion-90"
@@ -6132,14 +6197,16 @@ exports[`EstimateCost - Unit Item > render basic props with values 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -6606,9 +6673,12 @@ exports[`EstimateCost - Unit Item > render basic props with values 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -6616,9 +6686,12 @@ exports[`EstimateCost - Unit Item > render basic props with values 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -7410,14 +7483,16 @@ exports[`EstimateCost - Unit Item > render basic props with values 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-89 {
@@ -7816,18 +7891,24 @@ exports[`EstimateCost - Unit Item > render basic props with values 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-122 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-125 {
@@ -7858,47 +7939,57 @@ exports[`EstimateCost - Unit Item > render basic props with values 1`] = `
 .emotion-130 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-130 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-134 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-134 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-136 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-136 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-139 {
@@ -8196,7 +8287,7 @@ exports[`EstimateCost - Unit Item > render basic props with values 1`] = `
             >
               <td
                 class="emotion-87 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-89 emotion-90"
@@ -8479,14 +8570,16 @@ exports[`EstimateCost - Unit Item > render basic props with values and no iterat
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -8953,9 +9046,12 @@ exports[`EstimateCost - Unit Item > render basic props with values and no iterat
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -8963,9 +9059,12 @@ exports[`EstimateCost - Unit Item > render basic props with values and no iterat
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -9757,14 +9856,16 @@ exports[`EstimateCost - Unit Item > render basic props with values and no iterat
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-89 {
@@ -10163,18 +10264,24 @@ exports[`EstimateCost - Unit Item > render basic props with values and no iterat
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-122 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-125 {
@@ -10205,47 +10312,57 @@ exports[`EstimateCost - Unit Item > render basic props with values and no iterat
 .emotion-130 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-130 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-134 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-134 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-136 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-136 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-139 {
@@ -10543,7 +10660,7 @@ exports[`EstimateCost - Unit Item > render basic props with values and no iterat
             >
               <td
                 class="emotion-87 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-89 emotion-90"
@@ -10815,14 +10932,16 @@ exports[`EstimateCost - Unit Item > render test 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -11301,9 +11420,12 @@ exports[`EstimateCost - Unit Item > render test 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -11311,9 +11433,12 @@ exports[`EstimateCost - Unit Item > render test 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -12105,7 +12230,8 @@ exports[`EstimateCost - Unit Item > render test 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-103:before {
@@ -12438,9 +12564,12 @@ exports[`EstimateCost - Unit Item > render test 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-138:before {
@@ -12483,78 +12612,96 @@ exports[`EstimateCost - Unit Item > render test 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-148 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-183 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-183 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-191 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-191 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-195 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-195 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-197 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-197 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-200 {
@@ -12889,7 +13036,7 @@ exports[`EstimateCost - Unit Item > render test 1`] = `
             >
               <td
                 class="emotion-103 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-105 emotion-106"
@@ -12984,7 +13131,7 @@ exports[`EstimateCost - Unit Item > render test 1`] = `
             >
               <td
                 class="emotion-148 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-105 emotion-106"
@@ -13267,14 +13414,16 @@ exports[`EstimateCost - Unit Item > render with 0 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -13741,9 +13890,12 @@ exports[`EstimateCost - Unit Item > render with 0 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -13751,9 +13903,12 @@ exports[`EstimateCost - Unit Item > render with 0 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -14545,14 +14700,16 @@ exports[`EstimateCost - Unit Item > render with 0 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-89 {
@@ -14937,18 +15094,24 @@ exports[`EstimateCost - Unit Item > render with 0 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-119 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-122 {
@@ -14980,47 +15143,57 @@ exports[`EstimateCost - Unit Item > render with 0 amount 1`] = `
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-133 {
@@ -15316,7 +15489,7 @@ exports[`EstimateCost - Unit Item > render with 0 amount 1`] = `
             >
               <td
                 class="emotion-87 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-89 emotion-90"
@@ -15589,14 +15762,16 @@ exports[`EstimateCost - Unit Item > render with 10 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -16063,9 +16238,12 @@ exports[`EstimateCost - Unit Item > render with 10 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -16073,9 +16251,12 @@ exports[`EstimateCost - Unit Item > render with 10 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -16867,14 +17048,16 @@ exports[`EstimateCost - Unit Item > render with 10 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-89 {
@@ -17259,18 +17442,24 @@ exports[`EstimateCost - Unit Item > render with 10 amount 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-119 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-122 {
@@ -17301,47 +17490,57 @@ exports[`EstimateCost - Unit Item > render with 10 amount 1`] = `
 .emotion-127 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-127 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-131 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-131 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-133 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-133 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-136 {
@@ -17639,7 +17838,7 @@ exports[`EstimateCost - Unit Item > render with 10 amount 1`] = `
             >
               <td
                 class="emotion-87 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-89 emotion-90"
@@ -17917,14 +18116,16 @@ exports[`EstimateCost - Unit Item > render with getAmountValue 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-8 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-10 {
@@ -18391,9 +18592,12 @@ exports[`EstimateCost - Unit Item > render with getAmountValue 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -18401,9 +18605,12 @@ exports[`EstimateCost - Unit Item > render with getAmountValue 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
   padding: 0;
 }
 
@@ -19195,14 +19402,16 @@ exports[`EstimateCost - Unit Item > render with getAmountValue 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-87 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
 }
 
 .emotion-89 {
@@ -19587,18 +19796,24 @@ exports[`EstimateCost - Unit Item > render with getAmountValue 1`] = `
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-119 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-left: 1px solid #d9dadd;
   background-color: #f9f9fa;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-122 {
@@ -19617,47 +19832,57 @@ exports[`EstimateCost - Unit Item > render with getAmountValue 1`] = `
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-124 {
   margin: 0;
   width: 100%;
+  border-right: 1px solid #d9dadd;
+  border-radius: 0 0 0.25rem 0.25rem;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-128 {
-  width: 538px;
+  width: 70%;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-130 {
   padding-left: 16px;
   padding-right: 16px;
   position: relative;
-  max-width: 530px;
+  width: 70%;
+  min-width: 230px;
   border-color: #d9dadd;
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 0.25rem 0.25rem;
   height: 56px;
   background-color: #f1eefc;
+  width: 30%;
+  min-width: 126px;
 }
 
 .emotion-133 {
@@ -19955,7 +20180,7 @@ exports[`EstimateCost - Unit Item > render with getAmountValue 1`] = `
             >
               <td
                 class="emotion-87 emotion-191"
-                width="530px"
+                width="70%"
               >
                 <div
                   class="emotion-89 emotion-90"

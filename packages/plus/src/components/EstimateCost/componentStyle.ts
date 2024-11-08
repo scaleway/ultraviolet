@@ -2,7 +2,7 @@ import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Badge, zoomIn } from '@ultraviolet/ui'
-import { MAX_CELL_WIDTH } from './constants'
+import { MAX_CELL_WIDTH, PRICE_MAX_CELL_WIDTH } from './constants'
 
 const spacedChildren = css`
   > * {
@@ -43,6 +43,8 @@ export const PriceCol = styled.col`
 export const PriceCell = (theme: Theme) => css`
   border-left: 1px solid ${theme.colors.neutral.border};
   background-color: ${theme.colors.neutral.backgroundWeak};
+  width: ${PRICE_MAX_CELL_WIDTH};
+  min-width: 126px;
 `
 
 export const Cell = styled('td', {
@@ -52,7 +54,7 @@ export const Cell = styled('td', {
   padding-left: ${({ tabulation }) => (tabulation ?? 0) * 8 + 16}px;
   padding-right: 16px;
   position: relative;
-  max-width: ${MAX_CELL_WIDTH};
+  width: ${MAX_CELL_WIDTH};
 
   ${({ theme, hasBorder }) =>
     hasBorder &&
@@ -74,21 +76,26 @@ export const Cell = styled('td', {
           background: ${theme.colors.primary.background};
         `
       : null}
+  min-width: 230px;
 `
 
 export const TotalPriceCell = styled(Cell)`
   border-color: ${({ theme }) => theme.colors.neutral.border};
   border-style: solid;
   border-width: 0 1px 1px 1px;
-  border-radius: 0 0 4px 4px;
-  min-width: 202px;
+  border-right: none;
+  border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
   height: 56px;
   background-color: ${({ theme }) => theme.colors.primary.background};
+  width: ${PRICE_MAX_CELL_WIDTH};
+  min-width: 126px;
 `
 
 export const EmptyTable = styled.table`
   margin: 0;
   width: 100%;
+  border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
 `
 
 export const Title = styled.h3`
@@ -103,7 +110,7 @@ export const Title = styled.h3`
 `
 
 export const EmptyCell = styled.td`
-  width: 538px;
+  width: ${MAX_CELL_WIDTH};
 `
 
 export const TimeCell = styled.div`
