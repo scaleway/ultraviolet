@@ -12,15 +12,19 @@ const contractString = (str: ReactNode): ReactNode => {
   return str
 }
 
+const StyledLink = styled(Link)`
+  padding-right: ${({ theme }) => theme.space['1']};
+`
+
+const StyledButton = styled(Button)`
+
+`
+
 const ItemContainer = styled.li`
   display: inline;
   height: ${HEIGHT};
   display: flex;
   align-items: center;
-
-  &:first-of-type {
-    padding-left: ${({ theme }) => theme.space['0.5']};
-  }
 
   ${({ onClick }) =>
     onClick
@@ -29,12 +33,25 @@ const ItemContainer = styled.li`
     &[aria-disabled="true"] {
       pointer-events: none;
     }
-`
+    `
       : ``}
-`
 
-const StyledLink = styled(Link)`
-  padding: 0 ${({ theme }) => theme.space['1']};
+  &:not(:first-child) {
+    ${StyledLink} {
+      padding: 0 ${({ theme }) => theme.space['1']};
+    }
+  }
+
+  &:last-child {
+    ${StyledLink} {
+      pointer-events: none;
+    }
+
+    ${StyledButton} {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
 `
 
 type ItemProps = {
@@ -73,14 +90,14 @@ export const Item = ({
         {contractString(children)}
       </StyledLink>
     ) : (
-      <Button
+      <StyledButton
         variant="ghost"
         sentiment="neutral"
         disabled={disabled}
         size="small"
       >
         {contractString(children)}
-      </Button>
+      </StyledButton>
     )}
   </ItemContainer>
 )
