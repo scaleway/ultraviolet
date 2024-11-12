@@ -1,13 +1,13 @@
 import type { StoryFn } from '@storybook/react'
 import { AdvancedSettingsProductIcon } from '@ultraviolet/icons/product'
-import { Button, Link, Stack } from '@ultraviolet/ui'
+import { Button, Link, Row, Stack } from '@ultraviolet/ui'
 import illustration2 from '../assets/illustration2.svg'
 import { ContentCard } from '../index'
 import { Template } from './Template.stories'
 
 export const Examples: StoryFn<typeof ContentCard> = args => (
   <Stack gap={2}>
-    <div style={{ width: '315px' }}>
+    <Row templateColumns="repeat(3, 1fr)" gap={1}>
       <ContentCard
         {...args}
         direction="column"
@@ -18,9 +18,41 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
       >
         <Button icon="book-open-outline">Function Tutorial</Button>
       </ContentCard>
-    </div>
+    </Row>
+    <Row templateColumns="repeat(3, 1fr)" gap={1}>
+      <ContentCard
+        {...args}
+        direction="column"
+        image={undefined}
+        subtitle="Tutorial"
+        title="Create your first function"
+        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
+      >
+        <Button icon="book-open-outline">Function Tutorial</Button>
+      </ContentCard>
+      <ContentCard
+        {...args}
+        direction="column"
+        image={undefined}
+        subtitle="Tutorial"
+        title="Create your first function"
+        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you. This one is a bit longer than the others."
+      >
+        <Button icon="book-open-outline">Function Tutorial</Button>
+      </ContentCard>
+      <ContentCard
+        {...args}
+        direction="column"
+        image={undefined}
+        subtitle="Tutorial"
+        title="Create your first function"
+        description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
+      >
+        <Button icon="book-open-outline">Function Tutorial</Button>
+      </ContentCard>
+    </Row>
 
-    <div style={{ width: '500px' }}>
+    <Row templateColumns="repeat(2, 1fr)" gap={1}>
       <ContentCard
         {...args}
         direction="row"
@@ -30,9 +62,9 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         description="Check all our documentation to discover tips"
         href="https://scaleway.com"
       />
-    </div>
+    </Row>
 
-    <div style={{ width: '500px' }}>
+    <Row templateColumns="repeat(2, 1fr)" gap={1}>
       <ContentCard
         {...args}
         direction="row"
@@ -42,9 +74,9 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         title="How cPanel is working?"
         description="Check all our documentation to discover tips"
       />
-    </div>
+    </Row>
 
-    <div style={{ width: '500px' }}>
+    <Row templateColumns="repeat(2, 1fr)" gap={1}>
       <ContentCard
         {...args}
         direction="row"
@@ -62,9 +94,9 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
           </Link>
         </Stack>
       </ContentCard>
-    </div>
+    </Row>
 
-    <div style={{ width: '500px' }}>
+    <Row templateColumns="repeat(2, 1fr)" gap={1}>
       <ContentCard
         {...args}
         direction="row"
@@ -83,9 +115,9 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
           </Link>
         </Stack>
       </ContentCard>
-    </div>
+    </Row>
 
-    <div style={{ width: '500px' }}>
+    <Row templateColumns="repeat(2, 1fr)" gap={1}>
       <ContentCard
         {...args}
         direction="row"
@@ -95,9 +127,9 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         description="Grafana users can visualise all their resources logs and metrics in their Grafana dashboards."
         href="https://scaleway.com"
       />
-    </div>
+    </Row>
 
-    <div style={{ width: '500px' }}>
+    <Row templateColumns="repeat(2, 1fr)" gap={1}>
       <ContentCard
         {...args}
         direction="row"
@@ -108,7 +140,7 @@ export const Examples: StoryFn<typeof ContentCard> = args => (
         description="Grafana users can visualise all their resources logs and metrics in their Grafana dashboards."
         href="https://scaleway.com"
       />
-    </div>
+    </Row>
   </Stack>
 )
 
