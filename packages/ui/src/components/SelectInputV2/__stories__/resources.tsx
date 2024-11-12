@@ -72,8 +72,33 @@ export const dataUnGrouped = [
 ]
 
 export const dataGrouped = {
-  'terrestrial planets': [],
-
+  'terrestrial planets': [
+    {
+      value: 'mercury',
+      label: 'Mercury',
+    },
+    {
+      value: 'venus',
+      label: 'Venus',
+    },
+    {
+      value: 'earth',
+      label: 'Earth',
+      description: 'Our home planet',
+      searchText: 'earth',
+    },
+    {
+      value: 'mars',
+      label: 'Mars',
+      disabled: true,
+    },
+    {
+      value: 'pluto',
+      label: 'Pluto',
+      description:
+        'Pluto does not fit the usual classification of either terrestrial or Jovian planets, but is rocky',
+    },
+  ],
   'jovian planets': [
     {
       value: 'jupiter',
