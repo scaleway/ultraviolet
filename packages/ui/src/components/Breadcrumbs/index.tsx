@@ -1,15 +1,7 @@
 import styled from '@emotion/styled'
-import type { JSX, MouseEvent as ReactMouseEvent, ReactNode } from 'react'
-import { Children, cloneElement, isValidElement } from 'react'
-import { Link } from '../Link'
-
-const contractString = (str: ReactNode): ReactNode => {
-  if (typeof str === 'string' && str.length > 30) {
-    return `${str.slice(0, 15)}...${str.slice(-15)}`
-  }
-
-  return str
-}
+import type { JSX, ReactNode } from 'react'
+import { Item } from './components/Item'
+import { HEIGHT } from './constants'
 
 const StyledOl = styled.ol`
   list-style: none;
@@ -18,79 +10,23 @@ const StyledOl = styled.ol`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-`
+  min-height: ${HEIGHT};
 
-const ItemContainer = styled.li`
-  display: inline;
+  > *:not(:last-child) {
+  display: flex;
+  align-items: center;
 
-  &[aria-current='page'] {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-  }
-
-  &:not(:last-child)::after {
-    content: '›';
-    margin: 0 ${({ theme }) => theme.space['1']};
-  }
-
-  ${({ onClick }) =>
-    onClick
-      ? `
-    cursor: pointer;
-    &[aria-disabled="true"] {
-      pointer-events: none;
+    &::after {
+      content: '/';
+      color: ${({ theme }) => theme.colors.neutral.textWeak};
+      padding: 0 ${({ theme }) => theme.space['0.5']};
+      font-size: ${({ theme }) => theme.typography.bodySmallStrong.fontSize};
+      font-weight: ${({ theme }) => theme.typography.bodySmallStrong.weight};
     }
+  }
 `
-      : ``}
-`
-
-type ItemProps = {
-  children: ReactNode
-  'aria-current'?:
-    | boolean
-    | 'false'
-    | 'true'
-    | 'page'
-    | 'step'
-    | 'location'
-    | 'date'
-    | 'time'
-  /**
-   * Make the component act a `Link` tag
-   */
-  to?: string
-  disabled?: boolean
-  /**
-   * ID of the step, automatically injected by Breadcrumbs parent tag
-   */
-  step?: number
-  onClick?: (event: ReactMouseEvent<HTMLLIElement>, step: number) => void
-}
-
-export const Item = ({
-  to,
-  children,
-  disabled = false,
-  'aria-current': ariaCurrent,
-  onClick,
-  step,
-}: ItemProps) => (
-  <ItemContainer
-    aria-disabled={disabled}
-    onClick={onClick ? event => onClick(event, step ?? -1) : undefined}
-    aria-current={ariaCurrent}
-  >
-    {to ? (
-      <Link sentiment="primary" href={to}>
-        {contractString(children)}
-      </Link>
-    ) : (
-      contractString(children)
-    )}
-  </ItemContainer>
-)
 
 type BreadcrumbsProps = {
-  selected?: number
   children: ReactNode
   className?: string
   'data-testid'?: string
@@ -105,31 +41,12 @@ type BreadcrumbsType = ((props: BreadcrumbsProps) => JSX.Element) & {
  */
 export const Breadcrumbs: BreadcrumbsType = ({
   children,
-  selected: selectedProp,
   className,
   'data-testid': dataTestId,
-}) => {
-  const selected =
-    selectedProp !== undefined ? selectedProp : Children.count(children) - 1
-
-  return (
-    <nav aria-label="breadcrumb" className={className} data-testid={dataTestId}>
-      <StyledOl>
-        {Children.map(children, (child, index: number) => {
-          if (!isValidElement<ItemProps>(child)) {
-            return child
-          }
-
-          const active = selected === index
-
-          return cloneElement(child, {
-            'aria-current': active ? 'page' : undefined,
-            step: index,
-          })
-        })}
-      </StyledOl>
-    </nav>
-  )
-}
+}) => (
+  <nav aria-label="breadcrumb" className={className} data-testid={dataTestId}>
+    <StyledOl>{children}</StyledOl>
+  </nav>
+)
 
 Breadcrumbs.Item = Item
