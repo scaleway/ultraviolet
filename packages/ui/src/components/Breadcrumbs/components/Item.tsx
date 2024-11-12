@@ -1,13 +1,7 @@
 import styled from '@emotion/styled'
-import {
-  type MouseEvent as ReactMouseEvent,
-  type ReactNode,
-  useEffect,
-  useRef,
-} from 'react'
+import { type MouseEvent as ReactMouseEvent, type ReactNode } from 'react'
 import { Button } from '../../Button'
 import { Link } from '../../Link'
-import { useBreadcrumbs } from '../BreadcrumbsProvider'
 import { HEIGHT } from '../constants'
 
 const contractString = (str: ReactNode): ReactNode => {
@@ -68,40 +62,25 @@ export const Item = ({
   disabled = false,
   'aria-current': ariaCurrent,
   onClick,
-}: ItemProps) => {
-  const ref = useRef<HTMLLIElement>(null)
-  const { breadcrumbs, registerBreadcrumb, unregisterBreadcrumb } =
-    useBreadcrumbs()
-
-  useEffect(() => {
-    const id = registerBreadcrumb(ref)
-
-    return () => {
-      unregisterBreadcrumb(id)
-    }
-  }, [ref, registerBreadcrumb, unregisterBreadcrumb])
-
-  return (
-    <ItemContainer
-      aria-disabled={disabled}
-      onClick={onClick}
-      aria-current={ariaCurrent}
-      ref={ref}
-    >
-      {to ? (
-        <StyledLink sentiment="neutral" href={to} size="small">
-          {contractString(children)}
-        </StyledLink>
-      ) : (
-        <Button
-          variant="ghost"
-          sentiment="neutral"
-          disabled={disabled}
-          size="small"
-        >
-          {contractString(children)}
-        </Button>
-      )}
-    </ItemContainer>
-  )
-}
+}: ItemProps) => (
+  <ItemContainer
+    aria-disabled={disabled}
+    onClick={onClick}
+    aria-current={ariaCurrent}
+  >
+    {to ? (
+      <StyledLink sentiment="neutral" href={to} size="small">
+        {contractString(children)}
+      </StyledLink>
+    ) : (
+      <Button
+        variant="ghost"
+        sentiment="neutral"
+        disabled={disabled}
+        size="small"
+      >
+        {contractString(children)}
+      </Button>
+    )}
+  </ItemContainer>
+)

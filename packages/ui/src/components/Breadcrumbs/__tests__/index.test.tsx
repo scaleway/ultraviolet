@@ -17,18 +17,6 @@ describe('Breadcrumbs', () => {
       </Breadcrumbs>,
     ))
 
-  test('renders correctly with selected item', () =>
-    shouldMatchEmotionSnapshot(
-      <Breadcrumbs selected={1}>
-        <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
-        <Breadcrumbs.Item to="/step1/step2">
-          I&apos;m a very long long long long long long long long long long long
-          long step
-        </Breadcrumbs.Item>
-        <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
-      </Breadcrumbs>,
-    ))
-
   test('renders correctly with onClick', async () => {
     const onClick = vi.fn()
     const { asFragment } = renderWithTheme(
@@ -49,7 +37,7 @@ describe('Breadcrumbs', () => {
 
   test('renders correctly with invalid child', () => {
     const { asFragment } = renderWithTheme(
-      <Breadcrumbs selected={1}>Invalid child</Breadcrumbs>,
+      <Breadcrumbs>Invalid child</Breadcrumbs>,
     )
     expect(asFragment()).toMatchSnapshot()
   })

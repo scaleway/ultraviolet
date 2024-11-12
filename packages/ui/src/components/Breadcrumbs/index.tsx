@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import type { JSX, ReactNode } from 'react'
-import { BreadcrumbsProvider } from './BreadcrumbsProvider'
 import { Item } from './components/Item'
 import { HEIGHT } from './constants'
 
@@ -11,8 +10,7 @@ const StyledOl = styled.ol`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  height: ${HEIGHT};
-  overflow: hidden;
+  min-height: ${HEIGHT};
 
   > *:not(:last-child) {
   display: flex;
@@ -46,11 +44,9 @@ export const Breadcrumbs: BreadcrumbsType = ({
   className,
   'data-testid': dataTestId,
 }) => (
-  <BreadcrumbsProvider>
-    <nav aria-label="breadcrumb" className={className} data-testid={dataTestId}>
-      <StyledOl>{children}</StyledOl>
-    </nav>
-  </BreadcrumbsProvider>
+  <nav aria-label="breadcrumb" className={className} data-testid={dataTestId}>
+    <StyledOl>{children}</StyledOl>
+  </nav>
 )
 
 Breadcrumbs.Item = Item
