@@ -1,15 +1,24 @@
 import styled from '@emotion/styled'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { useContext, useEffect, useRef } from 'react'
-import { Button } from '../Button'
-import { Popup } from '../Popup'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
+import { Button } from '../../Button'
+import { Popup } from '../../Popup'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+import { DateInputContext } from '../Context'
+import { POPUP_WIDTH } from '../constants'
+import { getNextMonth, getPreviousMonth } from '../helpers'
 import { Daily } from './CalendarDaily'
 import { Monthly } from './CalendarMonthly'
-import { DateInputContext } from './Context'
-import { POPUP_WIDTH, getNextMonth, getPreviousMonth } from './helpers'
 
+const CapitalizedText = styled(Text)`
+display: inline-block;
+text-transform: lowercase;
+
+&::first-letter {
+  text-transform: uppercase;
+}
+`
 type PopupProps = {
   children: ReactNode
   visible: boolean
@@ -84,10 +93,10 @@ const PopupContent = () => {
             !!(minDate && minDate > new Date(yearToShow, monthToShow - 1, 0))
           }
         />
-        <Text as="p" variant="bodyStrong" sentiment="neutral">
+        <CapitalizedText as="span" variant="bodyStrong" sentiment="neutral">
           {!showMonthYearPicker ? MONTHS_ARR[monthToShow - 1] : null}{' '}
           {yearToShow}
-        </Text>
+        </CapitalizedText>
         <Button
           icon="arrow-right"
           data-testid="next-month"

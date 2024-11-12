@@ -1,19 +1,31 @@
 import styled from '@emotion/styled'
 import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'
-import { Button } from '../Button'
-import { Row } from '../Row'
-import { Text } from '../Text'
-import { DateInputContext } from './Context'
-import { isSameMonth } from './helpers'
+import { Button } from '../../Button'
+import { Row } from '../../Row'
+import { Text } from '../../Text'
+import { DateInputContext } from '../Context'
+import { formatValue, isSameMonth } from '../helpers'
 
-const Month = styled(Button)`
-height: 26px;
+const ButtonDate = styled(Button)`
+height: ${({ theme }) => theme.sizing['312']};
 width: 100%;
 padding: 0;
+`
 
-&.rangeButton {
-  background-color:${({ theme }) => theme.colors.primary.background};
+const RangeButton = styled(Button)`
+background-color: ${({ theme }) => theme.colors.primary.background};
+height: ${({ theme }) => theme.sizing['312']};
+width: 100%;
+padding: 0;
+`
+
+const CapitalizedText = styled(Text)`
+display: inline-block;
+text-transform: lowercase;
+
+&::first-letter {
+  text-transform: uppercase;
 }
 `
 
@@ -31,6 +43,8 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
     maxDate,
     excludeDates,
     value,
+    setInputValue,
+    format,
   } = useContext(DateInputContext)
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
     range?.start ? 'start' : 'none',
@@ -78,6 +92,15 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
             if (rangeState === 'none') {
               setRange?.({ start: newDate, end: null })
               onChange?.([newDate, null], event)
+              setInputValue(
+                formatValue(
+                  null,
+                  { start: newDate, end: null },
+                  true,
+                  true,
+                  format,
+                ),
+              )
               setRangeState('start')
             }
 
@@ -85,20 +108,38 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
             else if (isAfterStartDate) {
               setRange?.({ start: range.start, end: newDate })
               onChange?.([range.start, newDate], event)
+              setInputValue(
+                formatValue(
+                  null,
+                  { start: range.start, end: newDate },
+                  true,
+                  true,
+                  format,
+                ),
+              )
               setRangeState('done')
             } else {
               // End date before start
               setRange?.({ start: newDate, end: null })
+              setInputValue(
+                formatValue(
+                  null,
+                  { start: newDate, end: null },
+                  true,
+                  true,
+                  format,
+                ),
+              )
               onChange?.([newDate, null], event)
             }
           }
         }
+        const Month = isInHoveredRange ? RangeButton : ButtonDate
 
         return (
           <Month
             variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
             sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
-            className={isInHoveredRange ? 'rangeButton' : undefined}
             disabled={disabled || isExcluded || isOutsideRange}
             key={month[0]}
             onClick={event => {
@@ -109,21 +150,24 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
                   setMonthToShow(index + 1)
                   setValue(constructedDate)
                   onChange?.(constructedDate, event)
+                  setInputValue(
+                    formatValue(constructedDate, null, true, false, format),
+                  )
                 }
               }
             }}
             onMouseEnter={() => setHoveredDate(constructedDate)}
             onMouseLeave={() => setHoveredDate(null)}
           >
-            <Text
-              as="p"
+            <CapitalizedText
+              as="span"
               variant="bodyStrong"
               prominence={isSelected && !isInHoveredRange ? 'strong' : 'weak'}
               sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
               disabled={disabled || isExcluded || isOutsideRange}
             >
               {month[1]}
-            </Text>
+            </CapitalizedText>
           </Month>
         )
       })}

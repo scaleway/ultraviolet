@@ -9,3 +9,7 @@ export const Size: StoryFn<typeof DateInput> = args => (
     ))}
   </Stack>
 )
+
+Size.args = {
+  value: 'Sat 24 Dec 2024',
+}

@@ -1,11 +1,4 @@
-export const POPUP_WIDTH = '264px'
-
-export const CURRENT_YEAR = new Date().getFullYear()
-export const CURRENT_MONTH = new Date().getMonth() + 1
-
-// Weeks displayed on calendar
-export const CALENDAR_WEEKS = 6
-
+import { CURRENT_MONTH, CURRENT_YEAR } from './constants'
 // Number days in a month for a given year
 export const getMonthDays = (month = CURRENT_MONTH, year = CURRENT_YEAR) => {
   const months30 = [4, 6, 9, 11]
@@ -50,3 +43,46 @@ export const isSameDay = (date: Date, basedate = new Date()) =>
   basedate.getDate() === date.getDate() &&
   basedate.getMonth() + 1 === date.getMonth() + 1 &&
   basedate.getFullYear() === date.getFullYear()
+
+// Default format if none is provided
+const getDateISO = (showMonthYearPicker: boolean, date?: Date) => {
+  if (date) {
+    if (showMonthYearPicker) {
+      return [date.getFullYear(), addZero(date.getMonth() + 1)].join('/')
+    }
+
+    return [
+      date.getFullYear(),
+      addZero(date.getMonth() + 1),
+      addZero(date.getDate()),
+    ].join('/')
+  }
+
+  return ''
+}
+
+export const formatValue = (
+  computedValue: Date | null,
+  computedRange: {
+    start: Date | null
+    end: Date | null
+  } | null,
+  showMonthYearPicker: boolean,
+  selectsRange: boolean,
+  format?: (value?: Date) => string | undefined,
+) => {
+  if (selectsRange && computedRange) {
+    return format
+      ? `${format(computedRange.start ?? undefined)} – ${format(computedRange.end ?? undefined)}`
+      : `${getDateISO(showMonthYearPicker, computedRange.start ?? undefined)} – ${getDateISO(showMonthYearPicker, computedRange.end ?? undefined)}`
+  }
+
+  if (computedValue && format) {
+    return format(computedValue)
+  }
+  if (computedValue) {
+    return getDateISO(showMonthYearPicker, computedValue)
+  }
+
+  return undefined
+}

@@ -62,6 +62,7 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
           setValue(v as Date)
         }}
         label={currentLocale}
+        selectsRange={false}
       />
     </div>
   )

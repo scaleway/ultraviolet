@@ -1,5 +1,6 @@
 import { createContext } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
+import { DAYS_DEFAULT, MONTHS_ARR_DEFAULT, MONTHS_DEFAULT } from './constants'
 
 export type ContextProps = {
   showMonthYearPicker?: boolean
@@ -23,6 +24,7 @@ export type ContextProps = {
   DAYS: Record<string, string>
   MONTHS_ARR: string[]
   setValue: Dispatch<SetStateAction<Date | null>>
+  setInputValue: Dispatch<SetStateAction<string | undefined>>
   value?: Date | null
   range?: {
     start: Date | null
@@ -36,6 +38,7 @@ export type ContextProps = {
   >
   startDate?: Date | null
   endDate?: Date | null
+  format?: (value?: Date) => string | undefined
 } & (
   | {
       selectsRange: true
@@ -52,51 +55,11 @@ export type ContextProps = {
       ) => void
     }
 )
-const DAYS_DEFAULT = {
-  Sunday: 'Su',
-  Monday: 'Mo',
-  Tuesday: 'Tu',
-  Wednesday: 'We',
-  Thursday: 'Th',
-  Friday: 'Fr',
-  Saturday: 'Sa',
-}
-
-// Calendar months names and short names
-const MONTHS_DEFAULT = {
-  January: 'Jan',
-  February: 'Feb',
-  March: 'Mar',
-  April: 'Apr',
-  May: 'May',
-  June: 'Jun',
-  July: 'Jul',
-  August: 'Aug',
-  September: 'Sep',
-  October: 'Oct',
-  November: 'Nov',
-  December: 'Dec',
-}
-
-export const MONTHS_ARR_DEFAULT = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-]
-
 export const DateInputContext = createContext<ContextProps>({
   showMonthYearPicker: false,
   disabled: false,
   setValue: () => null,
+  setInputValue: () => null,
   monthToShow: 1,
   yearToShow: 2000,
   setMonthToShow: () => null,

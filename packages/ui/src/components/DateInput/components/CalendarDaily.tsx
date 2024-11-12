@@ -1,31 +1,40 @@
 import styled from '@emotion/styled'
 import type { MouseEvent as MouseEventReact } from 'react'
 import { useContext, useState } from 'react'
-import { Button } from '../Button'
-import { Row } from '../Row'
-import { Text } from '../Text'
-import { DateInputContext } from './Context'
+import { Button } from '../../Button'
+import { Row } from '../../Row'
+import { Text } from '../../Text'
+import { DateInputContext } from '../Context'
+import { CALENDAR_WEEKS } from '../constants'
 import {
-  CALENDAR_WEEKS,
+  formatValue,
   getMonthDays,
   getMonthFirstDay,
   getNextMonth,
   getPreviousMonth,
   isSameDay,
-} from './helpers'
+} from '../helpers'
 
-const Day = styled(Button)`
-height: 26px;
+const ButtonDate = styled(Button)`
+height: ${({ theme }) => theme.sizing['312']};
 width: 100%;
 padding: 0;
-
-&.rangeButton {
-  background-color:${({ theme }) => theme.colors.primary.background};
-}
 `
-const DayName = styled(Text)`
-height: 26px;
+
+const RangeButton = styled(Button)`
+background-color: ${({ theme }) => theme.colors.primary.background};
+height: ${({ theme }) => theme.sizing['312']};
 width: 100%;
+padding: 0;
+`
+
+const CapitalizedText = styled(Text)`
+display: inline-block;
+text-transform: lowercase;
+
+&::first-letter {
+  text-transform: uppercase;
+}
 `
 
 export const Daily = ({ disabled }: { disabled: boolean }) => {
@@ -44,6 +53,8 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
     selectsRange,
     range,
     setRange,
+    setInputValue,
+    format,
   } = useContext(DateInputContext)
 
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
@@ -68,22 +79,25 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
   const previousMonthDays = getMonthDays(previousMonth, prevMonthYear)
 
   // Get the dates to be displayed from the previous month
-  const prevMonthDates = Array(daysFromPreviousMonth)
-    .keys()
-    .map((_, index) => ({
+  const prevMonthDates = Array.from(
+    { length: daysFromPreviousMonth },
+    (_, index) => ({
       day: index + 1 + (previousMonthDays - daysFromPreviousMonth),
       month: -1,
-    }))
+    }),
+  )
 
   // Get the dates to be displayed from the current month
-  const currentMonthDates = Array(monthDays)
-    .keys()
-    .map((_, index) => ({ day: index + 1, month: 0 }))
+  const currentMonthDates = Array.from({ length: monthDays }, (_, index) => ({
+    day: index + 1,
+    month: 0,
+  }))
 
   // Get the dates to be displayed from the next month
-  const nextMonthDates = Array(daysFromNextMonth)
-    .keys()
-    .map((_, index) => ({ day: index + 1, month: 1 }))
+  const nextMonthDates = Array.from(
+    { length: daysFromNextMonth },
+    (_, index) => ({ day: index + 1, month: 1 }),
+  )
 
   const allDaysToShow = [
     ...prevMonthDates,
@@ -94,9 +108,14 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
   return (
     <Row templateColumns="repeat(7, 1fr)" gap={1}>
       {Object.entries(DAYS).map(day => (
-        <DayName as="p" variant="bodyStrong" sentiment="neutral" key={day[0]}>
+        <CapitalizedText
+          as="p"
+          variant="bodyStrong"
+          sentiment="neutral"
+          key={day[0]}
+        >
           {day[1]}
-        </DayName>
+        </CapitalizedText>
       ))}
       {allDaysToShow.map(data => {
         const constructedDate = new Date(
@@ -162,6 +181,15 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
             if (rangeState === 'none') {
               setRange?.({ start: newDate, end: null })
               onChange?.([newDate, null], event)
+              setInputValue(
+                formatValue(
+                  null,
+                  { start: newDate, end: null },
+                  false,
+                  true,
+                  format,
+                ),
+              )
               setRangeState('start')
             }
 
@@ -169,10 +197,28 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
             else if (isAfterStartDate) {
               setRange?.({ start: range.start, end: newDate })
               onChange?.([range.start, newDate], event)
+              setInputValue(
+                formatValue(
+                  null,
+                  { start: range.start, end: newDate },
+                  false,
+                  true,
+                  format,
+                ),
+              )
               setRangeState('done')
             } else {
               // End date before start
               setRange?.({ start: newDate, end: null })
+              setInputValue(
+                formatValue(
+                  null,
+                  { start: newDate, end: null },
+                  false,
+                  true,
+                  format,
+                ),
+              )
               onChange?.([newDate, null], event)
             }
           }
@@ -185,12 +231,13 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
           return undefined
         }
 
+        const Day = isInHoveredRange ? RangeButton : ButtonDate
+
         return (
           <Day
             variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
             sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
             disabled={disabled || isExcluded || isOutsideRange}
-            className={isInHoveredRange ? 'rangeButton' : undefined}
             key={data.month === 0 ? data.day : data.day + 100}
             onClick={event => {
               if (!isExcluded && !isOutsideRange) {
@@ -201,6 +248,9 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
                 } else {
                   setValue(newDate)
                   onChange?.(newDate, event)
+                  setInputValue(
+                    formatValue(newDate, null, false, false, format),
+                  )
                 }
               }
             }}
@@ -208,7 +258,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
             onMouseLeave={() => setHoveredDate(null)}
           >
             <Text
-              as="p"
+              as="span"
               variant="bodyStrong"
               prominence={isSelected && !isInHoveredRange ? 'strong' : 'weak'}
               sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}

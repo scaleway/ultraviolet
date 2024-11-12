@@ -1,7 +1,23 @@
-import { Template } from './Template'
+import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
+import { DateInput } from '..'
+import { Stack } from '../../Stack'
 
-export const Exclude = Template.bind({})
-
+export const Exclude: StoryFn<ComponentProps<typeof DateInput>> = args => (
+  <Stack gap={3}>
+    <DateInput {...args} />
+    <DateInput
+      {...args}
+      showMonthYearPicker
+      label="With months"
+      excludeDates={[
+        new Date('November 1, 1995 03:24:00'),
+        new Date('January 14, 1995 03:24:00'),
+        new Date('March 22, 1995 03:24:00'),
+      ]}
+    />
+  </Stack>
+)
 Exclude.parameters = {
   docs: {
     description: {
