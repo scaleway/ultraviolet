@@ -22,6 +22,10 @@ export const globalStyles = css`
     margin: ${lightTheme.space['2']} 0 ${lightTheme.space['1']} 0;
   }
 
+  .sb-anchor h1, .sb-anchor h2, .sb-anchor h3, .sb-anchor h4, .sb-anchor h5, .sb-anchor h6 {
+    margin: inherit;
+  }
+
   body {
       font-family: 'Inter', sans-serif;
       font-size: 16px;
