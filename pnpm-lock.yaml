@@ -164,6 +164,9 @@ importers:
       '@types/zxcvbn':
         specifier: 4.4.5
         version: 4.4.5
+      '@ultraviolet/fonts':
+        specifier: workspace:*
+        version: link:packages/fonts
       '@ultraviolet/themes':
         specifier: workspace:*
         version: link:packages/themes
@@ -458,6 +461,8 @@ importers:
       next-transpile-modules:
         specifier: 10.0.1
         version: 10.0.1
+
+  packages/fonts: {}
 
   packages/form:
     dependencies:
