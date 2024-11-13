@@ -206,12 +206,13 @@ export const ContentCard = forwardRef<
             <Stack gap={2} direction={direction} flex={1}>
               <SubContainer
                 gap={2}
+                flex="1 1 auto"
                 direction={direction}
                 href={href}
                 ref={subContainerRef}
               >
                 {icon ?? null}
-                <Stack gap={2} justifyContent="center">
+                <Stack gap={2} justifyContent="space-between" flex="1 1 auto">
                   <Stack gap={0.5}>
                     <Stack>
                       {subtitle ? (
