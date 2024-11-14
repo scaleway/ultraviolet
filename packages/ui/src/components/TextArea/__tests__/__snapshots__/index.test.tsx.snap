@@ -374,8 +374,7 @@ exports[`TextArea > should render correctly when input  has a error sentiment 1`
           data-readonly="false"
           data-success="false"
           id=":rr:"
-          rows="1"
-          style="height: 2px; resize: none;"
+          rows="3"
         >
           test
         </textarea>
@@ -784,8 +783,7 @@ exports[`TextArea > should render correctly when input has a success sentiment 1
           data-readonly="false"
           data-success="true"
           id=":rn:"
-          rows="1"
-          style="height: 2px; resize: none;"
+          rows="3"
         >
           test
         </textarea>
@@ -1227,8 +1225,7 @@ exports[`TextArea > should render correctly when input is disabled 1`] = `
           data-success="false"
           disabled=""
           id=":ra:"
-          rows="1"
-          style="height: 2px; resize: none;"
+          rows="3"
         >
           test
         </textarea>
@@ -1647,8 +1644,7 @@ exports[`TextArea > should render correctly when input is readOnly 1`] = `
           data-readonly="true"
           data-success="false"
           id=":rd:"
-          rows="1"
-          style="height: 2px; resize: none;"
+          rows="3"
         >
           test
         </textarea>
@@ -2089,8 +2085,7 @@ exports[`TextArea > should render correctly when it is required 1`] = `
           data-readonly="false"
           data-success="false"
           id=":rg:"
-          rows="1"
-          style="height: 2px; resize: none;"
+          rows="3"
         >
           test
         </textarea>
@@ -2322,8 +2317,7 @@ exports[`TextArea > should render correctly with basic props 1`] = `
           data-readonly="false"
           data-success="false"
           id=":r0:"
-          rows="1"
-          style="height: 2px; resize: none;"
+          rows="3"
         >
           test
         </textarea>
@@ -2769,8 +2763,7 @@ exports[`TextArea > should render correctly with maxlength 1`] = `
           data-success="false"
           id=":rj:"
           maxlength="3"
-          rows="1"
-          style="height: 2px; resize: none;"
+          rows="3"
         >
           test
         </textarea>
@@ -3167,8 +3160,8 @@ exports[`TextArea > should render with AutoExpandMax 1`] = `
           data-readonly="false"
           data-success="false"
           id=":r13:"
-          rows="1"
-          style="height: 2px; resize: none; max-height: calc(NaNpx + 0.75rem + 0.75rem;"
+          rows="3"
+          style="height: 2px; max-height: calc(NaNpx + 0.75rem + 0.75rem; min-height: calc(NaNpx + 0.75rem + 0.75rem;"
         >
           test
         </textarea>
@@ -3578,7 +3571,7 @@ exports[`TextArea > should render with AutoExpandMax and rows 1`] = `
           data-success="false"
           id=":r17:"
           rows="2"
-          style="height: 2px; resize: none; max-height: calc(NaNpx + 0.75rem + 0.75rem; min-height: calc(NaNpx + 0.75rem + 0.75rem;"
+          style="height: 2px; max-height: calc(NaNpx + 0.75rem + 0.75rem; min-height: calc(NaNpx + 0.75rem + 0.75rem;"
         >
           test
         </textarea>

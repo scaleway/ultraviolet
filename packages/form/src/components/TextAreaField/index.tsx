@@ -42,7 +42,7 @@ export const TextAreaField = <
   onFocus,
   onBlur,
   onKeyDown,
-  autoExpandMax,
+  maxRows,
   placeholder,
   readOnly,
   required,
@@ -130,7 +130,7 @@ export const TextAreaField = <
       readOnly={readOnly}
       required={required}
       rows={rows}
-      autoExpandMax={autoExpandMax}
+      maxRows={maxRows}
       success={success}
       tabIndex={tabIndex}
       tooltip={tooltip}

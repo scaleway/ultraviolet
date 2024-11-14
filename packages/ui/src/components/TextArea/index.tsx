@@ -136,13 +136,13 @@ type TextAreaProps = {
    */
   helper?: ReactNode
   /**
-   * Number of rows to display. If 'auto', the textarea will grow with the content and won't be resizable **WARNING**: `auto` is deprecated - use prop `autoExpandMax` instead
+   * Number of rows to display. If 'auto', the textarea will grow with the content and won't be resizable
    */
   rows?: number | 'auto'
   /**
-   * Text area will grow with the content and won't be resizable with a maximum number of rows.
+   * Text area will grow with the content with a maximum number of rows.
    */
-  autoExpandMax?: number
+  maxRows?: number
   minLength?: number
   maxLength?: number
   tooltip?: string
@@ -168,8 +168,8 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       value,
       onChange,
       placeholder,
-      rows = 'auto',
-      autoExpandMax,
+      rows = 3,
+      maxRows,
       disabled = false,
       readOnly = false,
       success,
@@ -201,16 +201,15 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       const textArea = textAreaRef.current
       const padding = theme.space['1.5']
 
-      if (textArea && rows === 'auto' && !autoExpandMax) {
+      if (textArea && rows === 'auto' && !maxRows) {
         textArea.style.height = 'auto'
         textArea.style.resize = 'none'
         textArea.style.height = `${textArea.scrollHeight + 2}px`
-      } else if (textArea && autoExpandMax) {
+      } else if (textArea && maxRows) {
         const lineHeight = parseFloat(getComputedStyle(textArea).lineHeight)
 
         textArea.style.height = 'auto'
-        textArea.style.resize = 'none'
-        const maxHeight = autoExpandMax * lineHeight
+        const maxHeight = maxRows * lineHeight
 
         textArea.style.height = `${textArea.scrollHeight + 2}px`
         textArea.style.maxHeight = `calc(${maxHeight}px + ${padding} + ${padding}`
@@ -220,7 +219,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           textArea.style.minHeight = `calc(${minHeight}px + ${padding} + ${padding}`
         }
       }
-    }, [value, rows, theme, autoExpandMax])
+    }, [value, rows, theme, maxRows])
 
     const sentiment = useMemo(() => {
       if (error) {

@@ -94,7 +94,7 @@ describe('TextArea', () => {
         value="test"
         onChange={() => {}}
         error="success"
-        autoExpandMax={3}
+        maxRows={3}
       />,
     ))
   test('should render with AutoExpandMax and rows', () =>
@@ -105,7 +105,7 @@ describe('TextArea', () => {
         onChange={() => {}}
         error="success"
         rows={2}
-        autoExpandMax={3}
+        maxRows={3}
       />,
     ))
 

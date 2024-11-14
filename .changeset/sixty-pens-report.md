@@ -3,4 +3,4 @@
 "@ultraviolet/ui": minor
 ---
 
-`<TextArea />` and `<TextAreaField />` : new prop `autoExpandMax` and deprecated value 'auto' for prop `rows`.
+`<TextArea />` and `<TextAreaField />` : new prop `autoExpandMax`.
