@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.15.0
+
+### Minor Changes
+
+- [#4397](https://github.com/scaleway/ultraviolet/pull/4397) [`5326acf`](https://github.com/scaleway/ultraviolet/commit/5326acf8fafba39bca49ad8faf56c6d75869d557) Thanks [@matthprost](https://github.com/matthprost)! - - Moving from `px` to `rem`
+  - Introduction of `sizing` tokens for height and width
+
 ## 1.14.2
 
 ### Patch Changes

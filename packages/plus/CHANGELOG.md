@@ -1,5 +1,25 @@
 # @ultraviolet/plus
 
+## 0.21.27
+
+### Patch Changes
+
+- [#4452](https://github.com/scaleway/ultraviolet/pull/4452) [`f0c4302`](https://github.com/scaleway/ultraviolet/commit/f0c4302c892caf68f0505677b53b442f82f9ba07) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ContentCard />` to add space between body text and button
+
+- [#4433](https://github.com/scaleway/ultraviolet/pull/4433) [`ca7e4a6`](https://github.com/scaleway/ultraviolet/commit/ca7e4a64b50d5e950bf01ce37e5062b4d6ebed1a) Thanks [@matthprost](https://github.com/matthprost)! - `<EstimateCost />` make it more responsive
+
+- [#4444](https://github.com/scaleway/ultraviolet/pull/4444) [`9e8f93d`](https://github.com/scaleway/ultraviolet/commit/9e8f93dbcc117923a3cb4d48f5fb6c5aa6d9f8b6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.26.0`.
+  Updated dependency `@babel/runtime` to `7.26.0`.
+  Updated dependency `@babel/preset-env` to `7.26.0`.
+  Updated dependency `@babel/preset-typescript` to `7.26.0`.
+
+- [#4458](https://github.com/scaleway/ultraviolet/pull/4458) [`8ddfbc1`](https://github.com/scaleway/ultraviolet/commit/8ddfbc14cd43770e68f35b9b77c0be2ef3c1cf3f) Thanks [@matthprost](https://github.com/matthprost)! - Revert @uiw/react-codemirror update
+
+- Updated dependencies [[`990a7de`](https://github.com/scaleway/ultraviolet/commit/990a7deebf4fc56c2bd1c04e89854ddccce1896f), [`5326acf`](https://github.com/scaleway/ultraviolet/commit/5326acf8fafba39bca49ad8faf56c6d75869d557), [`9e8f93d`](https://github.com/scaleway/ultraviolet/commit/9e8f93dbcc117923a3cb4d48f5fb6c5aa6d9f8b6), [`898728d`](https://github.com/scaleway/ultraviolet/commit/898728d2b99a1ad5e895c2bac2cd1dfac487181f)]:
+  - @ultraviolet/ui@1.76.0
+  - @ultraviolet/themes@1.15.0
+  - @ultraviolet/icons@3.4.2
+
 ## 0.21.26
 
 ### Patch Changes

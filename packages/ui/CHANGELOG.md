@@ -1,5 +1,24 @@
 # Change Log
 
+## 1.76.0
+
+### Minor Changes
+
+- [#4436](https://github.com/scaleway/ultraviolet/pull/4436) [`990a7de`](https://github.com/scaleway/ultraviolet/commit/990a7deebf4fc56c2bd1c04e89854ddccce1896f) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring of `Breadcrumbs`
+
+### Patch Changes
+
+- [#4444](https://github.com/scaleway/ultraviolet/pull/4444) [`9e8f93d`](https://github.com/scaleway/ultraviolet/commit/9e8f93dbcc117923a3cb4d48f5fb6c5aa6d9f8b6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.26.0`.
+  Updated dependency `@babel/runtime` to `7.26.0`.
+  Updated dependency `@babel/preset-env` to `7.26.0`.
+  Updated dependency `@babel/preset-typescript` to `7.26.0`.
+
+- [#4447](https://github.com/scaleway/ultraviolet/pull/4447) [`898728d`](https://github.com/scaleway/ultraviolet/commit/898728d2b99a1ad5e895c2bac2cd1dfac487181f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.8.3`.
+
+- Updated dependencies [[`5326acf`](https://github.com/scaleway/ultraviolet/commit/5326acf8fafba39bca49ad8faf56c6d75869d557), [`9e8f93d`](https://github.com/scaleway/ultraviolet/commit/9e8f93dbcc117923a3cb4d48f5fb6c5aa6d9f8b6)]:
+  - @ultraviolet/themes@1.15.0
+  - @ultraviolet/icons@3.4.2
+
 ## 1.75.4
 
 ### Patch Changes

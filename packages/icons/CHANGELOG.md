@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.4.2
+
+### Patch Changes
+
+- [#4444](https://github.com/scaleway/ultraviolet/pull/4444) [`9e8f93d`](https://github.com/scaleway/ultraviolet/commit/9e8f93dbcc117923a3cb4d48f5fb6c5aa6d9f8b6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.26.0`.
+  Updated dependency `@babel/runtime` to `7.26.0`.
+  Updated dependency `@babel/preset-env` to `7.26.0`.
+  Updated dependency `@babel/preset-typescript` to `7.26.0`.
+- Updated dependencies [[`5326acf`](https://github.com/scaleway/ultraviolet/commit/5326acf8fafba39bca49ad8faf56c6d75869d557)]:
+  - @ultraviolet/themes@1.15.0
+
 ## 3.4.1
 
 ### Patch Changes
