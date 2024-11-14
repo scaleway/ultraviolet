@@ -136,9 +136,13 @@ type TextAreaProps = {
    */
   helper?: ReactNode
   /**
-   * Number of rows to display. If 'auto', the textarea will grow with the content and won't be resizable.
+   * Number of rows to display. If 'auto', the textarea will grow with the content and won't be resizable **WARNING**: `auto` is deprecated - use prop `autoExpandMax` instead
    */
   rows?: number | 'auto'
+  /**
+   * Text area will grow with the content and won't be resizable with a maximum number of rows.
+   */
+  autoExpandMax?: number
   minLength?: number
   maxLength?: number
   tooltip?: string
@@ -164,7 +168,8 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       value,
       onChange,
       placeholder,
-      rows = 3,
+      rows = 'auto',
+      autoExpandMax,
       disabled = false,
       readOnly = false,
       success,
@@ -194,12 +199,28 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     useEffect(() => {
       const textArea = textAreaRef.current
-      if (textArea && rows === 'auto') {
+      const padding = theme.space['1.5']
+
+      if (textArea && rows === 'auto' && !autoExpandMax) {
         textArea.style.height = 'auto'
         textArea.style.resize = 'none'
-        textArea.style.height = `${textArea.scrollHeight === 61 ? 46 : textArea.scrollHeight + 2}px`
+        textArea.style.height = `${textArea.scrollHeight + 2}px`
+      } else if (textArea && autoExpandMax) {
+        const lineHeight = parseFloat(getComputedStyle(textArea).lineHeight)
+
+        textArea.style.height = 'auto'
+        textArea.style.resize = 'none'
+        const maxHeight = autoExpandMax * lineHeight
+
+        textArea.style.height = `${textArea.scrollHeight + 2}px`
+        textArea.style.maxHeight = `calc(${maxHeight}px + ${padding} + ${padding}`
+
+        if (typeof rows === 'number') {
+          const minHeight = rows * lineHeight
+          textArea.style.minHeight = `calc(${minHeight}px + ${padding} + ${padding}`
+        }
       }
-    }, [value, rows, theme])
+    }, [value, rows, theme, autoExpandMax])
 
     const sentiment = useMemo(() => {
       if (error) {
@@ -245,7 +266,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               tabIndex={tabIndex}
               autoFocus={autoFocus}
               disabled={disabled}
-              rows={rows !== 'auto' ? rows : undefined}
+              rows={rows !== 'auto' ? rows : 1}
               ref={textAreaRef}
               value={value}
               onChange={event => {

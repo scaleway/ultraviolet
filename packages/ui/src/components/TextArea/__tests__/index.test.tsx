@@ -46,6 +46,16 @@ describe('TextArea', () => {
       <TextArea label="Test" value="test" onChange={() => {}} readOnly />,
     ))
 
+  test('should render correctly when it is required', () =>
+    shouldMatchEmotionSnapshot(
+      <TextArea label="Test" value="test" onChange={() => {}} required />,
+    ))
+
+  test('should render correctly with maxlength', () =>
+    shouldMatchEmotionSnapshot(
+      <TextArea label="Test" value="test" onChange={() => {}} maxLength={3} />,
+    ))
+
   test('should render correctly when input has a success sentiment', () =>
     shouldMatchEmotionSnapshot(
       <TextArea
@@ -74,6 +84,28 @@ describe('TextArea', () => {
         onChange={() => {}}
         error="success"
         rows="auto"
+      />,
+    ))
+
+  test('should render with AutoExpandMax', () =>
+    shouldMatchEmotionSnapshot(
+      <TextArea
+        label="Test"
+        value="test"
+        onChange={() => {}}
+        error="success"
+        autoExpandMax={3}
+      />,
+    ))
+  test('should render with AutoExpandMax and rows', () =>
+    shouldMatchEmotionSnapshot(
+      <TextArea
+        label="Test"
+        value="test"
+        onChange={() => {}}
+        error="success"
+        rows={2}
+        autoExpandMax={3}
       />,
     ))
 
