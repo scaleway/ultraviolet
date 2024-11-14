@@ -32,11 +32,8 @@
     "darwin",
     "linux"
   ],
+  "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist/fonts.css",
-      "require": "./dist/fonts.css",
-      "default": "./dist/fonts.css"
-    }
+    "./fonts.css": "./dist/fonts.css"
   }
 }
