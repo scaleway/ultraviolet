@@ -222,8 +222,8 @@ importers:
         specifier: 15.12.0
         version: 15.12.0
       happy-dom:
-        specifier: 15.11.2
-        version: 15.11.2
+        specifier: 15.11.4
+        version: 15.11.4
       http-server:
         specifier: 14.1.1
         version: 14.1.1
@@ -295,7 +295,7 @@ importers:
         version: 5.4.11(@types/node@22.9.0)(terser@5.31.0)
       vitest:
         specifier: 2.1.4
-        version: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.2)(jsdom@25.0.1)(terser@5.31.0)
+        version: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.4)(jsdom@25.0.1)(terser@5.31.0)
       vitest-canvas-mock:
         specifier: 0.3.3
         version: 0.3.3(vitest@2.1.4)
@@ -735,7 +735,7 @@ importers:
         version: 9.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       vitest:
         specifier: 2.1.4
-        version: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.2)(jsdom@25.0.1)(terser@5.31.0)
+        version: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.4)(jsdom@25.0.1)(terser@5.31.0)
 
 packages:
 
@@ -4991,8 +4991,8 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  happy-dom@15.11.2:
-    resolution: {integrity: sha512-MZ8kazOz+8i9G+olnJS836mNaF96UhOTzuECmxdE56+1+juiubqaJHTJUf+1WZ6Vs09lKLdmfX2AxGslfj1XFg==}
+  happy-dom@15.11.4:
+    resolution: {integrity: sha512-AU6tzh3ADd28vSmXahgLsGyGGihXPGeKH0owDn9lhHolB6vIwEhag//T+TBzDoAcHhmVEwlxwSgtW1KZep+1MA==}
     engines: {node: '>=18.0.0'}
 
   harmony-reflect@1.6.2:
@@ -11126,7 +11126,7 @@ snapshots:
       magicast: 0.3.5
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.2)(jsdom@25.0.1)(terser@5.31.0)
+      vitest: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.4)(jsdom@25.0.1)(terser@5.31.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11188,7 +11188,7 @@ snapshots:
       sirv: 3.0.0
       tinyglobby: 0.2.9
       tinyrainbow: 1.2.0
-      vitest: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.2)(jsdom@25.0.1)(terser@5.31.0)
+      vitest: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.4)(jsdom@25.0.1)(terser@5.31.0)
 
   '@vitest/utils@2.0.5':
     dependencies:
@@ -13131,7 +13131,7 @@ snapshots:
 
   graphemer@1.4.0: {}
 
-  happy-dom@15.11.2:
+  happy-dom@15.11.4:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -16064,13 +16064,13 @@ snapshots:
   vitest-canvas-mock@0.3.3(vitest@2.1.4):
     dependencies:
       jest-canvas-mock: 2.5.2
-      vitest: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.2)(jsdom@25.0.1)(terser@5.31.0)
+      vitest: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.4)(jsdom@25.0.1)(terser@5.31.0)
 
   vitest-localstorage-mock@0.1.2(vitest@2.1.4):
     dependencies:
-      vitest: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.2)(jsdom@25.0.1)(terser@5.31.0)
+      vitest: 2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.4)(jsdom@25.0.1)(terser@5.31.0)
 
-  vitest@2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.2)(jsdom@25.0.1)(terser@5.31.0):
+  vitest@2.1.4(@types/node@22.9.0)(@vitest/ui@2.1.4)(happy-dom@15.11.4)(jsdom@25.0.1)(terser@5.31.0):
     dependencies:
       '@vitest/expect': 2.1.4
       '@vitest/mocker': 2.1.4(vite@5.4.11(@types/node@22.9.0)(terser@5.31.0))
@@ -16095,7 +16095,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.9.0
       '@vitest/ui': 2.1.4(vitest@2.1.4)
-      happy-dom: 15.11.2
+      happy-dom: 15.11.4
       jsdom: 25.0.1
     transitivePeerDependencies:
       - less
