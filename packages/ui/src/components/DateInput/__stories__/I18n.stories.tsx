@@ -76,3 +76,11 @@ I18n.parameters = {
     },
   },
 }
+
+I18n.decorators = [
+  StoryComponent => (
+    <div style={{ height: '500px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]

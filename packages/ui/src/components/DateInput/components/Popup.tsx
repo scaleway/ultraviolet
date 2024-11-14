@@ -12,12 +12,12 @@ import { Daily } from './CalendarDaily'
 import { Monthly } from './CalendarMonthly'
 
 const CapitalizedText = styled(Text)`
-display: inline-block;
-text-transform: lowercase;
+  display: inline-block;
+  text-transform: lowercase;
 
-&::first-letter {
-  text-transform: uppercase;
-}
+  &::first-letter {
+    text-transform: uppercase;
+  }
 `
 type PopupProps = {
   children: ReactNode

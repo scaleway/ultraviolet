@@ -247,7 +247,7 @@ describe('DateInput', () => {
     expect(calendar).toBeVisible()
 
     await userEvent.click(screen.getByText('15'))
-    expect(input.value).toBe('1995/12/15')
+    expect(input.value).toBe('12/15/1995')
 
     const dayFromLastMonth = screen.getAllByText('30')[0] // the first element in this array is necessarily from previous month
     await userEvent.click(dayFromLastMonth)
@@ -275,17 +275,17 @@ describe('DateInput', () => {
     expect(calendar).toBeVisible()
 
     await userEvent.click(screen.getByText('15'))
-    expect(input.value).toBe('1995/02/15 – ')
+    expect(input.value).toBe('02/15/1995 - ')
     const day = screen.getByText('27')
 
     await userEvent.hover(day)
     await userEvent.unhover(day)
 
     await userEvent.click(day)
-    expect(input.value).toBe('1995/02/15 – 1995/02/27')
+    expect(input.value).toBe('02/15/1995 - 02/27/1995')
 
     await userEvent.click(screen.getByText('31'))
-    expect(input.value).toBe('1995/01/31 – ')
+    expect(input.value).toBe('01/31/1995 - ')
   })
 
   test('render correctly with showMonthYearPicker with excluded months', async () => {
@@ -321,7 +321,7 @@ describe('DateInput', () => {
     expect(calendar).toBeVisible()
 
     await userEvent.click(screen.getByText('Jan'))
-    expect(input.value).toBe('1995/01')
+    expect(input.value).toBe('01/1995')
   })
 
   test('handle correctly click on date range with showMonthYearPicker', async () => {
@@ -342,17 +342,17 @@ describe('DateInput', () => {
     expect(calendar).toBeVisible()
 
     await userEvent.click(screen.getByText('Aug'))
-    expect(input.value).toBe('1995/08 – ')
+    expect(input.value).toBe('08/1995 - ')
     const month = screen.getByText('Feb')
 
     await userEvent.hover(month)
     await userEvent.unhover(month)
 
     await userEvent.click(month)
-    expect(input.value).toBe('1995/02 – ')
+    expect(input.value).toBe('02/1995 - ')
 
     await userEvent.click(screen.getByText('Sep'))
-    expect(input.value).toBe('1995/02 – 1995/09')
+    expect(input.value).toBe('02/1995 - 09/1995')
   })
 
   test('renders correctly custom format with range', () => {

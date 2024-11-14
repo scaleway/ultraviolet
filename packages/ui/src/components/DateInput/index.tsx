@@ -197,9 +197,16 @@ export const DateInput = <IsRange extends undefined | boolean>({
     const newValue = event.currentTarget.value
 
     if (selectsRange) {
-      const [startDateInput, endDateInput] = newValue
-        .split('–')
-        .map(val => new Date(val))
+      const [startDateInput, endDateInput] = newValue.split(' - ').map(val => {
+        if (showMonthYearPicker) {
+          // Force YYYY/MM (since MM/YYYY not recognised as a date in typescript)
+          const res = val.split(/\D+/).map(aa => parseInt(aa, 10))
+
+          return new Date(Math.max(...res), Math.min(...res) - 1)
+        }
+
+        return new Date(val)
+      })
 
       const computedNewRange: [Date | null, Date | null] = [
         Number.isNaN(startDateInput.getTime())

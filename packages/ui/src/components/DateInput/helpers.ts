@@ -48,13 +48,13 @@ export const isSameDay = (date: Date, basedate = new Date()) =>
 const getDateISO = (showMonthYearPicker: boolean, date?: Date) => {
   if (date) {
     if (showMonthYearPicker) {
-      return [date.getFullYear(), addZero(date.getMonth() + 1)].join('/')
+      return [addZero(date.getMonth() + 1), date.getFullYear()].join('/')
     }
 
     return [
-      date.getFullYear(),
       addZero(date.getMonth() + 1),
       addZero(date.getDate()),
+      date.getFullYear(),
     ].join('/')
   }
 
@@ -73,8 +73,8 @@ export const formatValue = (
 ) => {
   if (selectsRange && computedRange) {
     return format
-      ? `${format(computedRange.start ?? undefined)} – ${format(computedRange.end ?? undefined)}`
-      : `${getDateISO(showMonthYearPicker, computedRange.start ?? undefined)} – ${getDateISO(showMonthYearPicker, computedRange.end ?? undefined)}`
+      ? `${format(computedRange.start ?? undefined)} - ${format(computedRange.end ?? undefined)}`
+      : `${getDateISO(showMonthYearPicker, computedRange.start ?? undefined)}${computedRange.start ? ' - ' : null}${getDateISO(showMonthYearPicker, computedRange.end ?? undefined)}`
   }
 
   if (computedValue && format) {

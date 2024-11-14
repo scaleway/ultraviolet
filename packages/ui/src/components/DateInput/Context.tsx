@@ -1,6 +1,5 @@
 import { createContext } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
-import { DAYS_DEFAULT, MONTHS_ARR_DEFAULT, MONTHS_DEFAULT } from './constants'
 
 export type ContextProps = {
   showMonthYearPicker?: boolean
@@ -65,8 +64,8 @@ export const DateInputContext = createContext<ContextProps>({
   setMonthToShow: () => null,
   setYearToShow: () => null,
   excludeDates: [],
-  MONTHS: MONTHS_DEFAULT,
-  DAYS: DAYS_DEFAULT,
-  MONTHS_ARR: MONTHS_ARR_DEFAULT,
+  MONTHS: {},
+  DAYS: {},
+  MONTHS_ARR: [],
   selectsRange: false,
 })

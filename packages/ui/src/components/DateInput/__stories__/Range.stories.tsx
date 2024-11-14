@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { DateInput } from '..'
 import { Stack } from '../../Stack'
 
-const months = [
+const MONTHS = [
   'January',
   'February',
   'March',
@@ -59,9 +59,9 @@ export const Range: StoryFn<ComponentProps<typeof DateInput>> = args => {
         showMonthYearPicker
         {...args}
       />
-      Selected months : {startMonth ? months[startMonth.getMonth()] : null}
+      Selected months : {startMonth ? MONTHS[startMonth.getMonth()] : null}
       {startMonth?.getFullYear()} -
-      {endMonth ? months[endMonth.getMonth()] : null}
+      {endMonth ? MONTHS[endMonth.getMonth()] : null}
       {endMonth?.getFullYear()}
     </Stack>
   )
@@ -74,3 +74,11 @@ Range.parameters = {
     },
   },
 }
+
+Range.decorators = [
+  StoryComponent => (
+    <div style={{ height: '400px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]

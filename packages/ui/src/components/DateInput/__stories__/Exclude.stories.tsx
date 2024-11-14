@@ -36,3 +36,11 @@ Exclude.args = {
     new Date('December 28, 1995 03:24:00'),
   ],
 }
+
+Exclude.decorators = [
+  StoryComponent => (
+    <div style={{ height: '400px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]

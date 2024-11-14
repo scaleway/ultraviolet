@@ -34,7 +34,7 @@ Localized.parameters = {
 
 Localized.decorators = [
   StoryComponent => (
-    <div style={{ display: 'flex', gap: 16 }}>
+    <div style={{ display: 'flex', gap: 16, height: '400px' }}>
       <StoryComponent />
     </div>
   ),

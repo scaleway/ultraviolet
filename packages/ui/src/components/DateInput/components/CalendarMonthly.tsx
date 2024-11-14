@@ -8,16 +8,16 @@ import { DateInputContext } from '../Context'
 import { formatValue, isSameMonth } from '../helpers'
 
 const ButtonDate = styled(Button)`
-height: ${({ theme }) => theme.sizing['312']};
-width: 100%;
-padding: 0;
+  height: ${({ theme }) => theme.sizing['312']};
+  width: 100%;
+  padding: 0;
 `
 
 const RangeButton = styled(Button)`
-background-color: ${({ theme }) => theme.colors.primary.background};
-height: ${({ theme }) => theme.sizing['312']};
-width: 100%;
-padding: 0;
+  background-color: ${({ theme }) => theme.colors.primary.background};
+  height: ${({ theme }) => theme.sizing['312']};
+  width: 100%;
+  padding: 0;
 `
 
 const CapitalizedText = styled(Text)`

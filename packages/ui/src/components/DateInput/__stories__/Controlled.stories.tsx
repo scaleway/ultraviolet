@@ -34,3 +34,11 @@ Controlled.parameters = {
     },
   },
 }
+
+Controlled.decorators = [
+  StoryComponent => (
+    <div style={{ height: '400px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]

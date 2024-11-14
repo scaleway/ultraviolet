@@ -16,25 +16,25 @@ import {
 } from '../helpers'
 
 const ButtonDate = styled(Button)`
-height: ${({ theme }) => theme.sizing['312']};
-width: 100%;
-padding: 0;
+  height: ${({ theme }) => theme.sizing['312']};
+  width: 100%;
+  padding: 0;
 `
 
 const RangeButton = styled(Button)`
-background-color: ${({ theme }) => theme.colors.primary.background};
-height: ${({ theme }) => theme.sizing['312']};
-width: 100%;
-padding: 0;
+  background-color: ${({ theme }) => theme.colors.primary.background};
+  height: ${({ theme }) => theme.sizing['312']};
+  width: 100%;
+  padding: 0;
 `
 
 const CapitalizedText = styled(Text)`
-display: inline-block;
-text-transform: lowercase;
+  display: inline-block;
+  text-transform: lowercase;
 
-&::first-letter {
-  text-transform: uppercase;
-}
+  &::first-letter {
+    text-transform: uppercase;
+  }
 `
 
 export const Daily = ({ disabled }: { disabled: boolean }) => {
