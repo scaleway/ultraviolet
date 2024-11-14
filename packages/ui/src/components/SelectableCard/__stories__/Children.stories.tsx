@@ -36,7 +36,7 @@ export const Children: StoryFn = args => {
         label="Left Radio"
       >
         {({ checked }) => (
-          <>
+          <Stack gap={1}>
             I am a children with a badge &nbsp;
             <Badge
               sentiment={checked ? 'info' : 'neutral'}
@@ -44,7 +44,7 @@ export const Children: StoryFn = args => {
             >
               info
             </Badge>
-          </>
+          </Stack>
         )}
       </SelectableCard>
       <SelectableCard
@@ -58,12 +58,11 @@ export const Children: StoryFn = args => {
         }
         label="Middle Radio"
       >
-        I am a children with clickable rich select
-        <>
+        <Stack gap={1}>
+          I am a children with clickable rich select
           <Checkbox name="test" value="test" onChange={() => {}}>
             First element
           </Checkbox>
-
           <SelectInput
             value={selectInputValue}
             onChange={onSelectInputSelectChange}
@@ -72,7 +71,7 @@ export const Children: StoryFn = args => {
               { label: 'Option 2', value: 'option-2' },
             ]}
           />
-        </>
+        </Stack>
       </SelectableCard>
       <SelectableCard
         {...args}
@@ -87,10 +86,10 @@ export const Children: StoryFn = args => {
         label="Right Radio"
       >
         {({ disabled }) => (
-          <>
+          <Stack gap={1}>
             I am a children with a badge &nbsp;
             <Badge disabled={disabled}>disabled info</Badge>
-          </>
+          </Stack>
         )}
       </SelectableCard>
     </>
@@ -106,8 +105,10 @@ Children.parameters = {
 }
 Children.decorators = [
   StoryComponent => (
-    <Stack direction="row" gap={2}>
-      <StoryComponent />
-    </Stack>
+    <div style={{ height: '300px' }}>
+      <Stack direction="row" gap={2}>
+        <StoryComponent />
+      </Stack>
+    </div>
   ),
 ]

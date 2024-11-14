@@ -94,6 +94,7 @@ type RadioGroupProps = {
   error?: ReactNode
   direction?: 'row' | 'column'
   children: ReactNode
+  description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -110,6 +111,7 @@ export const RadioGroup = ({
   children,
   onChange,
   name,
+  description,
   required = false,
 }: RadioGroupProps) => {
   const contextValue = useMemo(
@@ -127,17 +129,29 @@ export const RadioGroup = ({
       <Stack gap={1}>
         <FieldSet className={className}>
           <Stack gap={1.5}>
-            <Text
-              as="legend"
-              variant="bodyStrong"
-              sentiment="neutral"
-              prominence="strong"
-            >
-              {legend}&nbsp;
-              {required ? (
-                <StyledRequiredIcon sentiment="danger" size={8} />
+            <Stack gap={0.5}>
+              <Text
+                as="legend"
+                variant="bodyStrong"
+                sentiment="neutral"
+                prominence="strong"
+              >
+                {legend}&nbsp;
+                {required ? (
+                  <StyledRequiredIcon sentiment="danger" size={8} />
+                ) : null}
+              </Text>
+              {description ? (
+                <Text
+                  variant="bodySmall"
+                  as={typeof description === 'string' ? 'p' : 'div'}
+                  prominence="weak"
+                  sentiment="neutral"
+                >
+                  {description}
+                </Text>
               ) : null}
-            </Text>
+            </Stack>
             <Stack
               gap={direction === 'column' ? 1 : 2}
               direction={direction}

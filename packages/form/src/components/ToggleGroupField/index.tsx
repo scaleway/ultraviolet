@@ -12,7 +12,13 @@ type ToggleGroupFieldProps<
   Partial<
     Pick<
       ComponentProps<typeof ToggleGroup>,
-      'className' | 'helper' | 'direction' | 'children' | 'error' | 'legend'
+      | 'className'
+      | 'helper'
+      | 'direction'
+      | 'children'
+      | 'error'
+      | 'legend'
+      | 'description'
     >
   > &
   Required<Pick<ComponentProps<typeof ToggleGroup>, 'legend'>>
@@ -25,6 +31,7 @@ export const ToggleGroupField = <
   control,
   className,
   helper,
+  description,
   direction,
   children,
   onChange,
@@ -74,6 +81,7 @@ export const ToggleGroupField = <
       error={customError ?? getError({ label: label ?? '' }, error)}
       className={className}
       direction={direction}
+      description={description}
       helper={helper}
       required={required}
     >

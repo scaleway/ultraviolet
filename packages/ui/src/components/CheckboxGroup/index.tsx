@@ -102,6 +102,7 @@ type CheckboxGroupProps = {
   direction?: 'row' | 'column'
   children: ReactNode
   required?: boolean
+  description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -118,6 +119,7 @@ export const CheckboxGroup = ({
   children,
   onChange,
   name,
+  description,
   required = false,
 }: CheckboxGroupProps) => {
   const contextValue = useMemo(
@@ -135,17 +137,29 @@ export const CheckboxGroup = ({
       <Stack gap={1}>
         <FieldSet className={className}>
           <Stack gap={1.5}>
-            <Text
-              as="legend"
-              variant="bodyStrong"
-              sentiment="neutral"
-              prominence="strong"
-            >
-              {legend}&nbsp;
-              {required ? (
-                <StyledRequiredIcon sentiment="danger" size={8} />
+            <Stack gap={0.5}>
+              <Text
+                as="legend"
+                variant="bodyStrong"
+                sentiment="neutral"
+                prominence="strong"
+              >
+                {legend}&nbsp;
+                {required ? (
+                  <StyledRequiredIcon sentiment="danger" size={8} />
+                ) : null}
+              </Text>
+              {description ? (
+                <Text
+                  variant="bodySmall"
+                  as={typeof description === 'string' ? 'p' : 'div'}
+                  prominence="weak"
+                  sentiment="neutral"
+                >
+                  {description}
+                </Text>
               ) : null}
-            </Text>
+            </Stack>
             <Stack gap={direction === 'column' ? 1 : 2} direction={direction}>
               {children}
             </Stack>

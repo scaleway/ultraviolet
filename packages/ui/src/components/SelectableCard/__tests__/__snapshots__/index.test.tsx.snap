@@ -260,12 +260,20 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -277,18 +285,8 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-15[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-15[data-has-label='false'] {
   display: contents;
 }
 
@@ -352,8 +350,7 @@ exports[`SelectableCard > renders correctly with aria label 1`] = `
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
-        data-has-label="false"
+        class="emotion-15 emotion-16 emotion-17"
       >
         Radio card
       </div>
@@ -748,12 +745,20 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   flex: 1;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -765,18 +770,8 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-15[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-15[data-has-label='false'] {
   display: contents;
 }
 
@@ -804,7 +799,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
           aria-invalid="false"
           aria-label="test"
           class="emotion-5 emotion-6"
-          id=":r8:"
+          id=":ra:"
           name="checkbox"
           type="checkbox"
           value="choice"
@@ -845,8 +840,7 @@ exports[`SelectableCard > renders correctly with checkbox type 1`] = `
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
-        data-has-label="false"
+        class="emotion-15 emotion-16 emotion-17"
       >
         Checkbox card
       </div>
@@ -1241,12 +1235,20 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   flex: 1;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1258,18 +1260,8 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-15[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-15[data-has-label='false'] {
   display: contents;
 }
 
@@ -1298,7 +1290,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
           aria-label="test"
           checked=""
           class="emotion-5 emotion-6"
-          id=":rk:"
+          id=":rq:"
           name="radio"
           type="checkbox"
           value="choice"
@@ -1339,8 +1331,7 @@ exports[`SelectableCard > renders correctly with checkbox type and checked prop 
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
-        data-has-label="false"
+        class="emotion-15 emotion-16 emotion-17"
       >
         Radio card
       </div>
@@ -1735,12 +1726,20 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   flex: 1;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1752,18 +1751,8 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-15[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-15[data-has-label='false'] {
   display: contents;
 }
 
@@ -1791,7 +1780,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
           aria-label="test"
           class="emotion-5 emotion-6"
           disabled=""
-          id=":rq:"
+          id=":r12:"
           name="radio"
           type="checkbox"
           value="choice"
@@ -1832,8 +1821,7 @@ exports[`SelectableCard > renders correctly with checkbox type and disabled prop
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
-        data-has-label="false"
+        class="emotion-15 emotion-16 emotion-17"
       >
         Radio card
       </div>
@@ -2251,12 +2239,20 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   padding-top: 0.25rem;
 }
 
-.emotion-21 {
+.emotion-22 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2268,18 +2264,8 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-21[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-21[data-has-label='false'] {
   display: contents;
 }
 
@@ -2305,10 +2291,10 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
       >
         <input
           aria-checked="false"
-          aria-describedby=":rt:-hint"
+          aria-describedby=":r16:-hint"
           aria-invalid="true"
           class="emotion-5 emotion-6"
-          id=":rt:"
+          id=":r16:"
           name="radio"
           type="checkbox"
           value="choice"
@@ -2348,7 +2334,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
           >
             <label
               class="emotion-15 emotion-16 emotion-17"
-              for=":rt:"
+              for=":r16:"
             >
               test
             </label>
@@ -2359,8 +2345,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
         </div>
       </div>
       <div
-        class="emotion-21 emotion-22"
-        data-has-label="false"
+        class="emotion-21 emotion-22 emotion-17"
       >
         Radio card
       </div>
@@ -2799,12 +2784,20 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-23 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -2816,18 +2809,8 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-22[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-22[data-has-label='false'] {
   display: contents;
 }
 
@@ -2838,8 +2821,8 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r19:"
-        aria-describedby=":r19:"
+        aria-controls=":r1l:"
+        aria-describedby=":r1l:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -2863,7 +2846,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id=":r1a:"
+              id=":r1m:"
               name="checkbox"
               type="checkbox"
               value="choice"
@@ -2903,7 +2886,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
               >
                 <label
                   class="emotion-19 emotion-20 emotion-21"
-                  for=":r1a:"
+                  for=":r1m:"
                 >
                   test
                 </label>
@@ -2911,8 +2894,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
-            data-has-label="false"
+            class="emotion-22 emotion-23 emotion-21"
           >
             Checkbox card
           </div>
@@ -3319,12 +3301,20 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-19 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3336,18 +3326,8 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-18[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -3374,7 +3354,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
           aria-invalid="false"
           class="emotion-5 emotion-6"
           disabled=""
-          id=":r1e:"
+          id=":r1r:"
           name="radio"
           type="checkbox"
           value="choice"
@@ -3414,7 +3394,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
           >
             <label
               class="emotion-15 emotion-16 emotion-17"
-              for=":r1e:"
+              for=":r1r:"
             >
               test
             </label>
@@ -3422,8 +3402,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
-        data-has-label="false"
+        class="emotion-18 emotion-19 emotion-17"
       >
         <div
           style="background: gray; color: gray;"
@@ -3707,12 +3686,20 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-19 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -3724,18 +3711,8 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-18[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -3804,8 +3781,7 @@ exports[`SelectableCard > renders correctly with default props 1`] = `
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
-        data-has-label="false"
+        class="emotion-18 emotion-19 emotion-17"
       >
         Radio card
       </div>
@@ -4324,12 +4300,20 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-23 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -4341,54 +4325,12 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-22[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
-  display: contents;
-}
-
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.emotion-22[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-22[data-has-label='false'] {
-  display: contents;
-}
-
-.emotion-24 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4411,7 +4353,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-26 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4434,7 +4376,7 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
   overflow: hidden;
 }
 
-.emotion-28 {
+.emotion-29 {
   object-fit: cover;
   position: absolute;
   min-width: 13.75rem;
@@ -4512,21 +4454,20 @@ exports[`SelectableCard > renders correctly with illustration 1`] = `
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
-            data-has-label="true"
+            class="emotion-22 emotion-23 emotion-21"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
         </div>
         <div
-          class="emotion-24 emotion-3"
+          class="emotion-25 emotion-3"
         />
         <div
-          class="emotion-26 emotion-27"
+          class="emotion-27 emotion-28"
         >
           <img
             alt="illustration"
-            class="emotion-28 emotion-29"
+            class="emotion-29 emotion-30"
             src="/src/components/SelectableCard/__tests__/illustrationTest.svg"
             width="220"
           />
@@ -5047,12 +4988,20 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-23 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5064,54 +5013,12 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-22[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-22[data-has-label='false'] {
-  display: contents;
-}
-
-.emotion-22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 100%;
-}
-
-.emotion-22[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-22[data-has-label='false'] {
-  display: contents;
-}
-
-.emotion-24 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5134,27 +5041,27 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-26 {
+.emotion-27 {
   width: 48px;
   min-width: 48px;
   height: 48px;
 }
 
-.emotion-26 path[fill].fill,
-.emotion-26 g[fill].fill>*,
-.emotion-26 g.fill>* {
+.emotion-27 path[fill].fill,
+.emotion-27 g[fill].fill>*,
+.emotion-27 g.fill>* {
   fill: #521094;
 }
 
-.emotion-26 path[fill].fillStrong,
-.emotion-26 g[fill].fillStrong>*,
-.emotion-26 g.fillStrong>* {
+.emotion-27 path[fill].fillStrong,
+.emotion-27 g[fill].fillStrong>*,
+.emotion-27 g.fillStrong>* {
   fill: #a060f6;
 }
 
-.emotion-26 path[fill].fillWeak,
-.emotion-26 g[fill].fillWeak>*,
-.emotion-26 g.fillWeak>* {
+.emotion-27 path[fill].fillWeak,
+.emotion-27 g[fill].fillWeak>*,
+.emotion-27 g.fillWeak>* {
   fill: #f1eefc;
 }
 
@@ -5228,17 +5135,16 @@ exports[`SelectableCard > renders correctly with productIcon 1`] = `
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
-            data-has-label="true"
+            class="emotion-22 emotion-23 emotion-21"
           >
             Offer the best experience to your Mac, iPhone and iPad users with VNC, the remote desktop-sharing protocol. Learn more
           </div>
         </div>
         <div
-          class="emotion-24 emotion-3"
+          class="emotion-25 emotion-3"
         >
           <svg
-            class="emotion-26 emotion-27"
+            class="emotion-27 emotion-28"
             viewBox="0 0 64 64"
           >
             <g
@@ -5547,12 +5453,20 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5564,18 +5478,8 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-15[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-15[data-has-label='false'] {
   display: contents;
 }
 
@@ -5640,8 +5544,7 @@ exports[`SelectableCard > renders correctly with radio type and checked prop 1`]
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
-        data-has-label="false"
+        class="emotion-15 emotion-16 emotion-17"
       >
         Radio card
       </div>
@@ -5910,12 +5813,20 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -5927,18 +5838,8 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-15[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-15[data-has-label='false'] {
   display: contents;
 }
 
@@ -6002,8 +5903,7 @@ exports[`SelectableCard > renders correctly with radio type and disabled prop 1`
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
-        data-has-label="false"
+        class="emotion-15 emotion-16 emotion-17"
       >
         Radio card
       </div>
@@ -6283,12 +6183,20 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-19 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6300,18 +6208,8 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-18[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -6382,8 +6280,7 @@ exports[`SelectableCard > renders correctly with radio type and isError prop 1`]
         </div>
       </div>
       <div
-        class="emotion-18 emotion-19"
-        data-has-label="false"
+        class="emotion-18 emotion-19 emotion-17"
       >
         Radio card
       </div>
@@ -6697,12 +6594,20 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-23 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -6714,18 +6619,8 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-22[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-22[data-has-label='false'] {
   display: contents;
 }
 
@@ -6736,8 +6631,8 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r15:"
-        aria-describedby=":r15:"
+        aria-controls=":r1g:"
+        aria-describedby=":r1g:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -6803,8 +6698,7 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
             </div>
           </div>
           <div
-            class="emotion-22 emotion-23"
-            data-has-label="false"
+            class="emotion-22 emotion-23 emotion-21"
           >
             Radio card
           </div>
@@ -7193,12 +7087,20 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   flex: 1;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7210,18 +7112,8 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-15[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-15[data-has-label='false'] {
   display: contents;
 }
 
@@ -7249,7 +7141,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
           aria-invalid="false"
           aria-label="test"
           class="emotion-5 emotion-6"
-          id=":re:"
+          id=":ri:"
           name="checkbox"
           type="checkbox"
           value="choice"
@@ -7290,8 +7182,7 @@ exports[`SelectableCard > renders correctly with showTick and type checkbox 1`] 
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
-        data-has-label="false"
+        class="emotion-15 emotion-16 emotion-17"
       >
         Checkbox card
       </div>
@@ -7552,12 +7443,20 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
   fill: #ffffff;
 }
 
-.emotion-15 {
+.emotion-16 {
+  color: #727683;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0rem;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -7569,18 +7468,8 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  wrap: nowrap;
   width: 100%;
-}
-
-.emotion-15[data-has-label='true'] {
-  padding-left: 2rem;
-}
-
-.emotion-15[data-has-label='false'] {
   display: contents;
 }
 
@@ -7643,8 +7532,7 @@ exports[`SelectableCard > renders correctly with showTick and type radio 1`] = `
         </div>
       </div>
       <div
-        class="emotion-15 emotion-16"
-        data-has-label="false"
+        class="emotion-15 emotion-16 emotion-17"
       >
         Checkbox card
       </div>

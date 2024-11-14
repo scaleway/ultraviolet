@@ -88,6 +88,7 @@ type ToggleGroupProps = {
   direction?: 'row' | 'column'
   children: ReactNode
   required?: boolean
+  description?: ReactNode
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -101,6 +102,7 @@ export const ToggleGroup = ({
   children,
   onChange,
   name,
+  description,
   required = false,
 }: ToggleGroupProps) => {
   const contextValue = useMemo(
@@ -117,22 +119,36 @@ export const ToggleGroup = ({
       <Stack gap={1}>
         <FieldSet className={className}>
           <Stack gap={1.5}>
-            <Text
-              as="legend"
-              variant="bodyStrong"
-              sentiment="neutral"
-              prominence="strong"
-            >
-              {legend}&nbsp;
-              {required ? <StyledRequiredIcon color="danger" size={8} /> : null}
-            </Text>
+            <Stack gap={0.5}>
+              <Text
+                as="legend"
+                variant="bodyStrong"
+                sentiment="neutral"
+                prominence="strong"
+              >
+                {legend}&nbsp;
+                {required ? (
+                  <StyledRequiredIcon color="danger" size={8} />
+                ) : null}
+              </Text>
+              {description ? (
+                <Text
+                  variant="bodySmall"
+                  as={typeof description === 'string' ? 'p' : 'div'}
+                  prominence="weak"
+                  sentiment="neutral"
+                >
+                  {description}
+                </Text>
+              ) : null}
+            </Stack>
             <Stack gap={2} direction={direction}>
               {children}
             </Stack>
           </Stack>
         </FieldSet>
         {helper ? (
-          <Text as="p" variant="bodySmall" prominence="weak">
+          <Text as="p" sentiment="neutral" variant="caption" prominence="weak">
             {helper}
           </Text>
         ) : null}
