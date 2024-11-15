@@ -209,10 +209,13 @@ export const DateInput = <IsRange extends undefined | boolean>({
       })
 
       const computedNewRange: [Date | null, Date | null] = [
-        Number.isNaN(startDateInput.getTime())
-          ? computedRange.start
-          : startDateInput,
-        Number.isNaN(endDateInput.getTime()) ? computedRange.end : endDateInput,
+        startDateInput instanceof Date &&
+        !Number.isNaN(startDateInput.getTime())
+          ? startDateInput
+          : null,
+        endDateInput instanceof Date && !Number.isNaN(endDateInput.getTime())
+          ? endDateInput
+          : null,
       ]
 
       setRange({ start: computedNewRange[0], end: computedNewRange[1] })

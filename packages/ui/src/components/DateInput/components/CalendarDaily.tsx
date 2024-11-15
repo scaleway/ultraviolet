@@ -65,8 +65,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
 
   const monthDays = getMonthDays(monthToShow, yearToShow) // Number of days in the month
 
-  const daysFromPreviousMonth =
-    (getMonthFirstDay(monthToShow, yearToShow) - 1 + 6) % 7 //  Number of days from the previous month to show. Shift to align Monday start
+  const daysFromPreviousMonth = getMonthFirstDay(monthToShow, yearToShow) //  Number of days from the previous month to show.
   const daysFromNextMonth =
     CALENDAR_WEEKS * 7 - (daysFromPreviousMonth + monthDays) // We want to display 6 CALENDAR_WEEKS lines, so we show days from the next month
 
@@ -238,7 +237,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
             variant={isSelected || isInHoveredRange ? 'filled' : 'ghost'}
             sentiment={isSelected || isInHoveredRange ? 'primary' : 'neutral'}
             disabled={disabled || isExcluded || isOutsideRange}
-            key={data.month === 0 ? data.day : data.day + 100}
+            key={`${data.month}-${data.day}`}
             onClick={event => {
               if (!isExcluded && !isOutsideRange) {
                 const newDate = getNewDate()
@@ -254,8 +253,12 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
                 }
               }
             }}
-            onMouseEnter={() => setHoveredDate(constructedDate)}
-            onMouseLeave={() => setHoveredDate(null)}
+            onMouseEnter={() => {
+              if (selectsRange && range?.start) setHoveredDate(constructedDate)
+            }}
+            onMouseLeave={() => {
+              if (selectsRange && range?.start) setHoveredDate(null)
+            }}
           >
             <Text
               as="span"

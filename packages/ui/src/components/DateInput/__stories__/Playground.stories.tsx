@@ -3,7 +3,7 @@ import { Template } from './Template'
 export const Playground = Template.bind({})
 
 Playground.args = {
-  placeholder: 'YYYY-MM-DD',
+  placeholder: 'MM-DD-YYYY',
 }
 
 Playground.decorators = [

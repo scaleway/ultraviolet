@@ -13,7 +13,7 @@ export const getMonthDays = (month = CURRENT_MONTH, year = CURRENT_YEAR) => {
 
 // First day of the month for a given year
 export const getMonthFirstDay = (month = CURRENT_MONTH, year = CURRENT_YEAR) =>
-  new Date(`${year}-${month}-01`).getDay() + 1
+  new Date(`${year}-${month}-01`).getDay() - 1
 
 export const addZero = (value: number) => `${value}`.padStart(2, '0')
 
@@ -35,7 +35,7 @@ export const getNextMonth = (month: number, year: number) => {
 
 // Checks if two date values are of the same month and year
 export const isSameMonth = (date: Date, basedate = new Date()) =>
-  basedate.getMonth() + 1 === date.getMonth() + 1 &&
+  basedate.getMonth() === date.getMonth() &&
   basedate.getFullYear() === date.getFullYear()
 
 // (bool) Checks if two date values are the same day
