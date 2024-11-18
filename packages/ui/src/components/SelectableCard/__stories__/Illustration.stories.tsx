@@ -41,7 +41,7 @@ export const Illustration: StoryFn = args => {
         >
           Offer the best experience to your Mac, iPhone and iPad users with VNC,
           the remote desktop-sharing protocol.
-          <Link target="_blank" href="scaleway.com">
+          <Link target="_blank" href="scaleway.com" size="small">
             Learn more
           </Link>
         </SelectableCard>
@@ -66,7 +66,7 @@ export const Illustration: StoryFn = args => {
           showTick
         >
           Offer the best experience to your Mac
-          <Link target="_blank" href="scaleway.com">
+          <Link target="_blank" href="scaleway.com" size="small">
             Learn more
           </Link>
         </SelectableCard>
@@ -95,7 +95,7 @@ export const Illustration: StoryFn = args => {
         >
           Offer the best experience to your Mac, iPhone and iPad users with VNC,
           the remote desktop-sharing protocol.
-          <Link target="_blank" href="scaleway.com">
+          <Link target="_blank" href="scaleway.com" size="small">
             Learn more
           </Link>
         </SelectableCard>
@@ -120,7 +120,7 @@ export const Illustration: StoryFn = args => {
           showTick
         >
           Offer the best experience to your Mac
-          <Link target="_blank" href="scaleway.com">
+          <Link target="_blank" href="scaleway.com" size="small">
             Learn more
           </Link>
         </SelectableCard>

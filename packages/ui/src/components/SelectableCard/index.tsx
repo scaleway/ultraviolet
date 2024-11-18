@@ -20,6 +20,7 @@ import type { LabelProp, PascalToCamelCaseWithoutSuffix } from '../../types'
 import { Checkbox, CheckboxContainer } from '../Checkbox'
 import { Radio, RadioStack } from '../Radio'
 import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 const Container = styled(Stack)`
@@ -112,14 +113,16 @@ const IllustrationStack = styled(Stack)`
   flex: 0 1 auto;
 `
 
-const StyledStack = styled(Stack)`
-  &[data-has-label='true'] {
-    padding-left: ${({ theme }) => theme.space['4']};
-  }
-
-  &[data-has-label='false'] {
-    display: contents;
-  }
+const StyledText = styled(Text, {
+  shouldForwardProp: prop => !['hasLabel'].includes(prop),
+})<{ hasLabel: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  wrap: nowrap;
+  width: 100%;
+  ${({ hasLabel, theme }) => (hasLabel ? `padding-left: ${theme.space['4']};` : 'display: contents;')}
 `
 
 const StyledElement = styled('div', {
@@ -394,11 +397,17 @@ export const SelectableCard = forwardRef(
               />
             )}
             {children ? (
-              <StyledStack data-has-label={!!label && showTick} width="100%">
+              <StyledText
+                as="div"
+                sentiment="neutral"
+                variant="bodySmall"
+                prominence="weak"
+                hasLabel={!!label && showTick}
+              >
                 {typeof children === 'function'
                   ? children({ checked, disabled })
                   : children}
-              </StyledStack>
+              </StyledText>
             ) : null}
           </IllustrationContainer>
         </Container>
