@@ -12,8 +12,15 @@ export const getMonthDays = (month = CURRENT_MONTH, year = CURRENT_YEAR) => {
 }
 
 // First day of the month for a given year
-export const getMonthFirstDay = (month = CURRENT_MONTH, year = CURRENT_YEAR) =>
-  new Date(`${year}-${month}-01`).getDay() - 1
+export const getMonthFirstDay = (
+  month = CURRENT_MONTH,
+  year = CURRENT_YEAR,
+) => {
+  const firstDay = new Date(year, month - 1, 1).getDay()
+
+  // Change so that a week starts on monday
+  return firstDay === 0 ? 6 : firstDay - 1
+}
 
 export const addZero = (value: number) => `${value}`.padStart(2, '0')
 

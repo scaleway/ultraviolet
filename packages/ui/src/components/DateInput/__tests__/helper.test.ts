@@ -2,7 +2,6 @@ import { describe, expect, test } from 'vitest'
 import {
   addZero,
   formatValue,
-  getMonthDays,
   getMonthFirstDay,
   getNextMonth,
   getPreviousMonth,
@@ -18,13 +17,6 @@ const rangeDate = {
 const date = new Date('20 November 2000')
 
 describe('Helper functions dateInput', () => {
-  test('getMonthDay should work', () => {
-    expect(getMonthDays(2, 1900)).toBe(29)
-    expect(getMonthDays(2, 1901)).toBe(28)
-    expect(getMonthDays(11)).toBe(30)
-    expect(getMonthDays(12)).toBe(31)
-  })
-
   test('getMonthFirstDay should work', () => {
     expect(getMonthFirstDay(1, 2000)).toBe(5)
   })

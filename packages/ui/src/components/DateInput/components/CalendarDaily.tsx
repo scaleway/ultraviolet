@@ -8,7 +8,6 @@ import { DateInputContext } from '../Context'
 import { CALENDAR_WEEKS } from '../constants'
 import {
   formatValue,
-  getMonthDays,
   getMonthFirstDay,
   getNextMonth,
   getPreviousMonth,
@@ -63,9 +62,10 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
 
   const [hoveredDate, setHoveredDate] = useState<Date | null>(null)
 
-  const monthDays = getMonthDays(monthToShow, yearToShow) // Number of days in the month
+  const monthDays = new Date(yearToShow, monthToShow, 0).getDate() // Number of days in the month
 
   const daysFromPreviousMonth = getMonthFirstDay(monthToShow, yearToShow) //  Number of days from the previous month to show.
+
   const daysFromNextMonth =
     CALENDAR_WEEKS * 7 - (daysFromPreviousMonth + monthDays) // We want to display 6 CALENDAR_WEEKS lines, so we show days from the next month
 
@@ -75,7 +75,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
   )
 
   const [nextMonth, nextMonthYear] = getNextMonth(monthToShow, yearToShow)
-  const previousMonthDays = getMonthDays(previousMonth, prevMonthYear)
+  const previousMonthDays = new Date(prevMonthYear, previousMonth, 0).getDate() // Number of days in the previous month
 
   // Get the dates to be displayed from the previous month
   const prevMonthDates = Array.from(
