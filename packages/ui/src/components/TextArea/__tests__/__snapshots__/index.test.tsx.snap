@@ -3161,7 +3161,7 @@ exports[`TextArea > should render with AutoExpandMax 1`] = `
           data-success="false"
           id=":r13:"
           rows="3"
-          style="height: 2px; max-height: calc(NaNpx + 0.75rem + 0.75rem; min-height: calc(NaNpx + 0.75rem + 0.75rem;"
+          style="height: 2px; max-height: calc(NaNpx + 2*0.75rem); min-height: calc(NaNpx + 2*0.75rem);"
         >
           test
         </textarea>
@@ -3571,7 +3571,7 @@ exports[`TextArea > should render with AutoExpandMax and rows 1`] = `
           data-success="false"
           id=":r17:"
           rows="2"
-          style="height: 2px; max-height: calc(NaNpx + 0.75rem + 0.75rem; min-height: calc(NaNpx + 0.75rem + 0.75rem;"
+          style="height: 2px; max-height: calc(NaNpx + 2*0.75rem); min-height: calc(NaNpx + 2*0.75rem);"
         >
           test
         </textarea>

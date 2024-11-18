@@ -212,11 +212,11 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         const maxHeight = maxRows * lineHeight
 
         textArea.style.height = `${textArea.scrollHeight + 2}px`
-        textArea.style.maxHeight = `calc(${maxHeight}px + ${padding} + ${padding}`
+        textArea.style.maxHeight = `calc(${maxHeight}px + 2*${padding})`
 
         if (typeof rows === 'number') {
           const minHeight = rows * lineHeight
-          textArea.style.minHeight = `calc(${minHeight}px + ${padding} + ${padding}`
+          textArea.style.minHeight = `calc(${minHeight}px + 2*${padding})`
         }
       }
     }, [value, rows, theme, maxRows])
