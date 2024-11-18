@@ -17,19 +17,6 @@ const BULLET_SENTIMENTS = [...SENTIMENTS, 'disabled']
 
 type BulletSentiment = (typeof BULLET_SENTIMENTS)[number]
 
-const sizes = ({ theme }: { theme: Theme }) =>
-  ({
-    medium: `
-    width: ${theme.sizing['400']};
-    height: ${theme.sizing['400']};
-    font-size: ${theme.typography.body.fontSize}};
-  `,
-    small: `
-    width: ${theme.sizing['300']};
-    height: ${theme.sizing['300']};
-    font-size: ${theme.typography.bodySmall.fontSize};
-  `,
-  }) as const
 type BulletSize = 'medium' | 'small'
 
 const sentimentStyles = ({
@@ -80,24 +67,24 @@ const sentimentStyles = ({
   }
 }
 
-const sizeStyles = ({ size, theme }: { size: BulletSize; theme: Theme }) =>
-  sizes({ theme })[size]
-
 type StyledContainerType = {
   sentiment: BulletSentiment
   size: BulletSize
   prominence: ProminenceType
 }
+
 const StyledContainer = styled('div')<StyledContainerType>`
   display: inline-flex;
   border-radius: ${({ theme }) => theme.radii.circle};
   justify-content: center;
   align-items: center;
+  width: ${({ size, theme }) => (size === 'medium' ? theme.sizing['400'] : theme.sizing['300'])};
+  height: ${({ size, theme }) => (size === 'medium' ? theme.sizing['400'] : theme.sizing['300'])};
+  font-size: ${({ size, theme }) => (size === 'medium' ? theme.typography.body.fontSize : theme.typography.bodySmall.fontSize)};
   ${({ theme, prominence, sentiment }) =>
     (sentimentStyles({ theme, prominence }) as Record<BulletSentiment, string>)[
       sentiment
-    ]}
-  ${sizeStyles}
+    ]};
 `
 
 type ContentProps = XOR<
