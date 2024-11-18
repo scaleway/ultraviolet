@@ -136,9 +136,13 @@ type TextAreaProps = {
    */
   helper?: ReactNode
   /**
-   * Number of rows to display. If 'auto', the textarea will grow with the content and won't be resizable.
+   * Number of rows to display. If 'auto', the textarea will grow with the content and won't be resizable
    */
   rows?: number | 'auto'
+  /**
+   * Text area will grow with the content with a maximum number of rows.
+   */
+  maxRows?: number
   minLength?: number
   maxLength?: number
   tooltip?: string
@@ -165,6 +169,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       onChange,
       placeholder,
       rows = 3,
+      maxRows,
       disabled = false,
       readOnly = false,
       success,
@@ -194,12 +199,27 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     useEffect(() => {
       const textArea = textAreaRef.current
-      if (textArea && rows === 'auto') {
+      const padding = theme.space['1.5']
+
+      if (textArea && rows === 'auto' && !maxRows) {
         textArea.style.height = 'auto'
         textArea.style.resize = 'none'
-        textArea.style.height = `${textArea.scrollHeight === 61 ? 46 : textArea.scrollHeight + 2}px`
+        textArea.style.height = `${textArea.scrollHeight + 2}px`
+      } else if (textArea && maxRows) {
+        const lineHeight = parseFloat(getComputedStyle(textArea).lineHeight)
+
+        textArea.style.height = 'auto'
+        const maxHeight = maxRows * lineHeight
+
+        textArea.style.height = `${textArea.scrollHeight + 2}px`
+        textArea.style.maxHeight = `calc(${maxHeight}px + 2*${padding})`
+
+        if (typeof rows === 'number') {
+          const minHeight = rows * lineHeight
+          textArea.style.minHeight = `calc(${minHeight}px + 2*${padding})`
+        }
       }
-    }, [value, rows, theme])
+    }, [value, rows, theme, maxRows])
 
     const sentiment = useMemo(() => {
       if (error) {
@@ -245,7 +265,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               tabIndex={tabIndex}
               autoFocus={autoFocus}
               disabled={disabled}
-              rows={rows !== 'auto' ? rows : undefined}
+              rows={rows !== 'auto' ? rows : 1}
               ref={textAreaRef}
               value={value}
               onChange={event => {
