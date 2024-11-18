@@ -87,9 +87,9 @@ export const SliderField = <
       onChange={(newValue: number | number[]) => {
         if (options) {
           const processedValue = !Array.isArray(newValue)
-            ? options[newValue].value
+            ? options[newValue]?.value
             : newValue.map((val: number) =>
-                val ? options[val].value : options[0].value,
+                val ? options[val]?.value : options[0]?.value,
               )
 
           field.onChange(processedValue)
