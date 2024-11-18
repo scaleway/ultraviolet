@@ -7,7 +7,7 @@ import {
 import { Global, ThemeProvider } from '@emotion/react'
 import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
 import { globalStyles } from './globalStyle'
-import fonts from '@ultraviolet/fonts/fonts.css'
+import '@ultraviolet/fonts/fonts.css'
 
 type ExtraProps = {
   /**
@@ -47,7 +47,7 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
   return (
     <Unstyled>
       <ThemeProvider theme={lightTheme}>
-        <Global styles={[globalStyles, fonts]} />
+        <Global styles={[globalStyles]} />
         <BaseContainer context={context}>
           {isValidElement<ExtraProps>(children)
             ? cloneElement(children, {

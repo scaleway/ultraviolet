@@ -11,7 +11,7 @@ import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 import { globalStyles } from './components/globalStyle'
-import fonts from '@ultraviolet/fonts/dist/fonts.css'
+import '@ultraviolet/fonts/fonts.css'
 
 const parameters: Preview['parameters'] = {
   darkMode: {
@@ -117,7 +117,7 @@ const decorators = [
     },
     defaultTheme: 'light',
     Provider: ThemeProvider,
-    GlobalStyles: () => <Global styles={[globalStyles, fonts]} />,
+    GlobalStyles: () => <Global styles={[globalStyles]} />,
   }),
   withThemeProvider,
 ]
