@@ -3,6 +3,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
 } from 'react'
@@ -152,6 +153,56 @@ export const TableProvider = ({
       [rowId]: false,
     }))
   }, [])
+
+  const [lastCheckedIndex, setLastCheckedIndex] = useState<null | number>(null)
+
+  // Multiselect with shift key
+  useEffect(() => {
+    const checkboxes = document.querySelectorAll<HTMLInputElement>(
+      '[name="table-select-checkbox"]',
+    )
+    const handlers: (() => void)[] = []
+
+    const handleClick = (
+      index: number,
+      isShiftPressed: boolean,
+      checked: boolean,
+    ) => {
+      setLastCheckedIndex(index)
+      if (isShiftPressed && lastCheckedIndex !== null) {
+        const start = Math.min(lastCheckedIndex, index)
+        const end = Math.max(lastCheckedIndex, index)
+
+        for (let i = start; i <= end; i += 1) {
+          const checkboxId = checkboxes[i].value
+          if (!checkboxes[i].disabled) {
+            if (checked) {
+              unselectRow(checkboxId)
+            } else {
+              selectRow(checkboxId)
+            }
+          }
+        }
+      }
+    }
+
+    checkboxes.forEach((checkbox, index) => {
+      const clickHandler = (event: MouseEvent) =>
+        handleClick(
+          index,
+          event.shiftKey,
+          selectedRowIds[(event.target as HTMLInputElement).value],
+        )
+      checkbox.addEventListener('click', clickHandler)
+
+      handlers.push(() => checkbox.removeEventListener('click', clickHandler))
+    })
+
+    return () => {
+      handlers.forEach(cleanup => cleanup())
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lastCheckedIndex, selectedRowIds])
 
   const value = useMemo<TableContextValue>(
     () => ({

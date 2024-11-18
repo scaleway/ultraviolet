@@ -183,7 +183,7 @@ export const Row = forwardRef(
         sentiment={sentiment}
         aria-disabled={disabled}
         aria-expanded={expandable ? expandedRowIds[id] : undefined}
-        data-highlight={!!selectedRowIds[id]}
+        data-highlight={selectable && !!selectedRowIds[id]}
         data-testid={dataTestid}
       >
         {selectable ? (

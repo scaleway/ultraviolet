@@ -3,6 +3,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
 } from 'react'
@@ -208,6 +209,68 @@ export const ListProvider = ({
       expandButton,
     ],
   )
+
+  const [lastCheckedIndex, setLastCheckedIndex] = useState<null | number>(null)
+
+  useEffect(() => {
+    const checkboxes = document.querySelectorAll<HTMLInputElement>(
+      '[name="list-select-checkbox"]',
+    )
+    const handlers: (() => void)[] = []
+
+    const handleClick = (
+      index: number,
+      isShiftPressed: boolean,
+      checked: boolean,
+    ) => {
+      if (index !== 0) {
+        setLastCheckedIndex(index)
+        if (isShiftPressed && lastCheckedIndex !== null) {
+          const start = Math.min(lastCheckedIndex, index)
+          const end = Math.max(lastCheckedIndex, index)
+
+          const newSelectedRowIds = {
+            ...selectedRowIds,
+          }
+
+          for (let i = start; i <= end; i += 1) {
+            const checkboxId = checkboxes[i].value
+            if (!checkboxes[i].disabled) {
+              if (checked) {
+                newSelectedRowIds[checkboxId] = false
+              } else {
+                newSelectedRowIds[checkboxId] = true
+              }
+            }
+          }
+          setSelectedRowIds(newSelectedRowIds)
+          if (onSelectedChange) {
+            onSelectedChange(
+              Object.keys(newSelectedRowIds).filter(
+                row => newSelectedRowIds[row],
+              ),
+            )
+          }
+        }
+      } else setLastCheckedIndex(null)
+    }
+
+    checkboxes.forEach((checkbox, index) => {
+      const clickHandler = (event: MouseEvent) =>
+        handleClick(
+          index,
+          event.shiftKey,
+          selectedRowIds[(event.target as HTMLInputElement).value],
+        )
+      checkbox.addEventListener('click', clickHandler)
+
+      handlers.push(() => checkbox.removeEventListener('click', clickHandler))
+    })
+
+    return () => {
+      handlers.forEach(cleanup => cleanup())
+    }
+  }, [lastCheckedIndex, onSelectedChange, selectedRowIds, unselectRow])
 
   return <ListContext.Provider value={value}>{children}</ListContext.Provider>
 }
