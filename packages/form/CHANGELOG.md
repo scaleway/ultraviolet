@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.11.0
+
+### Minor Changes
+
+- [#4461](https://github.com/scaleway/ultraviolet/pull/4461) [`66a6680`](https://github.com/scaleway/ultraviolet/commit/66a6680101f5fad1b2fb67b40b9ed4e0f6c86b66) Thanks [@matthprost](https://github.com/matthprost)! - Add new prop `description` to group components: `<RadioGroup />`, `<CheckboxGroup />` and `<ToggleGroup />`.
+
+- [#4459](https://github.com/scaleway/ultraviolet/pull/4459) [`4495f5c`](https://github.com/scaleway/ultraviolet/commit/4495f5c967ca277f2b7b05455ec083625e577a69) Thanks [@lisalupi](https://github.com/lisalupi)! - `<TextArea />` and `<TextAreaField />` : new prop `autoExpandMax`.
+
+### Patch Changes
+
+- Updated dependencies [[`66a6680`](https://github.com/scaleway/ultraviolet/commit/66a6680101f5fad1b2fb67b40b9ed4e0f6c86b66), [`4495f5c`](https://github.com/scaleway/ultraviolet/commit/4495f5c967ca277f2b7b05455ec083625e577a69), [`20ee243`](https://github.com/scaleway/ultraviolet/commit/20ee2435d3897000717338dcfbb4e38c922bcf0d)]:
+  - @ultraviolet/ui@1.77.0
+
 ## 3.10.6
 
 ### Patch Changes
