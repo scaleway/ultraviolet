@@ -1,18 +1,18 @@
-name: Upload Illustrations
+name: Upload Fonts
 
 on:
   push:
     branches:
-      - main
-    paths:
-      - packages/illustrations/**
+      - '**' # TODO: change it once the package is ready
+    # paths:
+    #   - packages/fonts/** TODO: change it once the package is ready
 env:
-  BUCKET_NAME: ultraviolet
+  BUCKET_NAME: ultraviolet-test-fonts # TODO: change it once the package is ready
   BUCKET_REGION: fr-par
 
 jobs:
   ## Synchronize assets on bucket
-  upload-illustrations:
+  upload-fonts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,10 +42,10 @@ jobs:
           cp ./.aws/* ~/.aws/
           sed -i -e 's/${BUCKET_REGION}/${{env.BUCKET_REGION}}/g' ~/.aws/config
 
-      - name: Upload illustrations on bucket
+      - name: Upload fonts on bucket
         run: |
-          aws s3 sync packages/illustrations/src/assets s3://${{ env.BUCKET_NAME }}/illustrations/ --exclude "*" --include "*.webp" --include "*.svg" --acl public-read --cache-control max-age=2592000,public
+          aws s3 sync packages/fonts/src/assets s3://${{ env.BUCKET_NAME }}/fonts/ --include "*" --acl public-read --cache-control max-age=2592000,public
           aws s3api put-bucket-cors --bucket ${{ env.BUCKET_NAME }} --cors-configuration file://.aws/cors.json
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.TEST_S3_ACCESS_KEY_ID }} # TODO: change it once the package is ready
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.TEST_S3_SECRET_KEY }} # TODO: change it once the package is ready
