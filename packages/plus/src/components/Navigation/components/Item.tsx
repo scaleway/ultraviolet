@@ -635,20 +635,22 @@ export const Item = ({
                         variant="ghost"
                         sentiment={active ? 'primary' : 'neutral'}
                         onClick={(event: MouseEvent<HTMLDivElement>) => {
-                          event.preventDefault()
-                          event.stopPropagation() // This is to avoid click spread to the parent and change the routing
-                          let newValue: string[] | undefined
-                          if (isItemPinned) {
-                            newValue = unpinItem(id)
-                          } else {
-                            newValue = pinItem(id)
-                          }
+                          if (pinnedItems.length < pinLimit || isItemPinned) {
+                            event.preventDefault()
+                            event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+                            let newValue: string[] | undefined
+                            if (isItemPinned) {
+                              newValue = unpinItem(id)
+                            } else {
+                              newValue = pinItem(id)
+                            }
 
-                          onClickPinUnpin?.({
-                            state: isItemPinned ? 'unpin' : 'pin',
-                            id,
-                            totalPinned: newValue,
-                          })
+                            onClickPinUnpin?.({
+                              state: isItemPinned ? 'unpin' : 'pin',
+                              id,
+                              totalPinned: newValue,
+                            })
+                          }
                         }}
                         disabled={isItemPinned ? false : isPinDisabled}
                       >
@@ -833,20 +835,22 @@ export const Item = ({
                     variant="ghost"
                     sentiment={active ? 'primary' : 'neutral'}
                     onClick={(event: MouseEvent<HTMLDivElement>) => {
-                      event.preventDefault()
-                      event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+                      if (pinnedItems.length < pinLimit || isItemPinned) {
+                        event.preventDefault()
+                        event.stopPropagation() // This is to avoid click spread to the parent and change the routing
 
-                      let newValue: string[] | undefined
-                      if (isItemPinned) {
-                        newValue = unpinItem(id)
-                      } else {
-                        newValue = pinItem(id)
+                        let newValue: string[] | undefined
+                        if (isItemPinned) {
+                          newValue = unpinItem(id)
+                        } else {
+                          newValue = pinItem(id)
+                        }
+                        onClickPinUnpin?.({
+                          state: isItemPinned ? 'unpin' : 'pin',
+                          id,
+                          totalPinned: newValue,
+                        })
                       }
-                      onClickPinUnpin?.({
-                        state: isItemPinned ? 'unpin' : 'pin',
-                        id,
-                        totalPinned: newValue,
-                      })
                     }}
                     disabled={isItemPinned ? false : isPinDisabled}
                   >
