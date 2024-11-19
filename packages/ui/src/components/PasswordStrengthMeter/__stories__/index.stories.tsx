@@ -3,6 +3,7 @@ import { PasswordStrengthMeter } from '..'
 
 export default {
   component: PasswordStrengthMeter,
+  tags: ['deprecated'],
   parameters: {
     deprecated: true,
     deprecatedReason: 'This component is deprecated, please use Meter instead.',

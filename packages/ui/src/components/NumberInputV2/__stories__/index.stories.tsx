@@ -17,6 +17,7 @@ export default {
   parameters: {
     experimental: true,
   },
+  tags: ['experimental'],
   title: 'Components/Data Entry/NumberInputV2',
 } as Meta<typeof NumberInputV2>
 

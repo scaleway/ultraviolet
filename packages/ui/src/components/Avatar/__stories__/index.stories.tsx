@@ -4,6 +4,7 @@ import { Avatar } from '..'
 export default {
   component: Avatar,
   title: 'Components/Other/Avatar',
+  tags: ['deprecated'],
   parameters: {
     deprecated: true,
     deprecatedReason: 'This component is deprecated, use AvatarV2 instead.',

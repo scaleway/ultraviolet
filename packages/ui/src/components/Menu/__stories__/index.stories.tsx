@@ -10,6 +10,7 @@ export default {
       </div>
     ),
   ],
+  tags: ['deprecated'],
   parameters: {
     deprecated: true,
     deprecatedReason:

@@ -4,6 +4,7 @@ import { TextInput } from '..'
 export default {
   component: TextInput,
   title: 'Components/Data Entry/TextInput',
+  tags: ['deprecated'],
   parameters: {
     deprecated: true,
     deprecatedReason:

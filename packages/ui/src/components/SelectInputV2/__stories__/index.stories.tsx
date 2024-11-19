@@ -6,6 +6,7 @@ export default {
   parameters: {
     experimental: true,
   },
+  tags: ['experimental'],
   decorators: [
     StoryComponent => (
       <div style={{ marginBottom: 400 }}>

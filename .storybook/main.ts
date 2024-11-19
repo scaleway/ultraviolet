@@ -12,6 +12,7 @@ export default {
     '@storybook/addon-links',
     '@storybook/addon-a11y',
     '@storybook/addon-themes',
+    'storybook-addon-tag-badges',
     {
       name: '@storybook/addon-docs',
       options: {

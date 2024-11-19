@@ -3,9 +3,6 @@ import { Row } from '..'
 
 export default {
   component: Row,
-  parameters: {
-    experimental: true,
-  },
   title: 'Components/Layout/Row',
 } as Meta<typeof Row>
 

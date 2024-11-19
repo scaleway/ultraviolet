@@ -7,6 +7,7 @@ export default {
   parameters: {
     experimental: true,
   },
+  tags: ['experimental'],
 } as Meta<typeof Dialog>
 
 export { Playground } from './Playground.stories'
