@@ -6,7 +6,6 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { TextInputV2 } from '../TextInputV2'
 import { type ContextProps, DateInputContext } from './Context'
 import { CalendarPopup } from './components/Popup'
-import { CURRENT_MONTH, CURRENT_YEAR } from './constants'
 import { formatValue } from './helpers'
 import { getDays, getLocalizedMonths, getMonths } from './helpersLocale'
 
@@ -48,9 +47,9 @@ type DateInputProps<IsRange extends undefined | boolean = false> = {
   onChange?: IsRange extends true
     ? (
         date: Date[] | [Date | null, Date | null],
-        event: React.SyntheticEvent | undefined,
+        event?: React.SyntheticEvent,
       ) => void
-    : (date: Date | null, event: React.SyntheticEvent | undefined) => void
+    : (date: Date | null, event?: React.SyntheticEvent) => void
 }
 
 /**
@@ -92,7 +91,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
     if (startDate && selectsRange) return startDate.getMonth() + 1
     if (endDate && selectsRange) return endDate.getMonth() + 1
 
-    return CURRENT_MONTH
+    return new Date().getMonth() + 1
   }, [endDate, selectsRange, startDate, value])
 
   const defaultYearToShow = useMemo(() => {
@@ -100,7 +99,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
     if (startDate && selectsRange) return startDate.getFullYear()
     if (endDate && selectsRange) return endDate.getFullYear()
 
-    return CURRENT_YEAR
+    return new Date().getFullYear()
   }, [endDate, selectsRange, startDate, value])
 
   const [computedValue, setValue] = useState(

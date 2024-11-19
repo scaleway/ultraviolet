@@ -1,15 +1,4 @@
 import { CURRENT_MONTH, CURRENT_YEAR } from './constants'
-// Number days in a month for a given year
-export const getMonthDays = (month = CURRENT_MONTH, year = CURRENT_YEAR) => {
-  const months30 = [4, 6, 9, 11]
-  const leapYear = year % 4 === 0
-
-  if (month === 2) {
-    return leapYear ? 29 : 28
-  }
-
-  return months30.includes(month) ? 30 : 31
-}
 
 // First day of the month for a given year
 export const getMonthFirstDay = (
@@ -80,8 +69,8 @@ export const formatValue = (
 ) => {
   if (selectsRange && computedRange) {
     return format
-      ? `${format(computedRange.start ?? undefined)} - ${format(computedRange.end ?? undefined)}`
-      : `${getDateISO(showMonthYearPicker, computedRange.start ?? undefined)}${computedRange.start ? ' - ' : null}${getDateISO(showMonthYearPicker, computedRange.end ?? undefined)}`
+      ? `${format(computedRange.start ?? undefined) ? `${format(computedRange.start ?? undefined)} - ` : ''}${format(computedRange.end ?? undefined) ?? ''}`
+      : `${getDateISO(showMonthYearPicker, computedRange.start ?? undefined)}${computedRange.start ? ' - ' : ''}${getDateISO(showMonthYearPicker, computedRange.end ?? undefined)}`
   }
 
   if (computedValue && format) {

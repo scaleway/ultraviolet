@@ -97,7 +97,17 @@ export const DateField = <
       value={field.value}
       format={
         format ||
-        (value => (value ? parseDate(value).toLocaleDateString() : ''))
+        (value => {
+          if (!value) return ''
+          const date = parseDate(value)
+
+          return showMonthYearPicker
+            ? date.toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'numeric',
+              })
+            : date.toLocaleDateString()
+        })
       }
       locale={locale}
       required={required}
