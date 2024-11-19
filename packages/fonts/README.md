@@ -13,7 +13,7 @@ $ pnpm add @ultraviolet/fonts
 ### Usage
 
 ```js
-TBD
+import '@ultraviolet/fonts/fonts.css'
 ```
 
 ## How to add a new font
