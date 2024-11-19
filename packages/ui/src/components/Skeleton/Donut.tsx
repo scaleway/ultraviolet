@@ -30,7 +30,11 @@ const LineList = styled.ul`
 export const Donut = () => (
   <StyledContainer>
     <StyledSVG>
-      <StyledCircle cx={CIRCLE_SIZE / 2} cy={CIRCLE_SIZE / 2} r="90" />
+      <StyledCircle
+        cx={`${CIRCLE_SIZE / 2}rem`}
+        cy={`${CIRCLE_SIZE / 2}rem`}
+        r="90"
+      />
     </StyledSVG>
     <LineList>
       <li>
