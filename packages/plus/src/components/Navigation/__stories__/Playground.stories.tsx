@@ -339,6 +339,7 @@ export const Playground: StoryFn<ComponentProps<typeof Navigation>> = props => {
         initialWidth={navigationWidth}
         initialPinned={pinnedItems}
         animationType="complex"
+        pinLimit={2}
         pinnedFeature
       >
         <PlaygroundContent {...props} />
