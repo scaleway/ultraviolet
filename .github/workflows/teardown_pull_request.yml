@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4 # v4.1.4
       - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@v4
+        uses: rlespinasse/github-slug-action@v5
 
       - name: Export custom variables
         run: |
