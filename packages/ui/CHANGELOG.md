@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.77.1
+
+### Patch Changes
+
+- [#4465](https://github.com/scaleway/ultraviolet/pull/4465) [`d4ccb3b`](https://github.com/scaleway/ultraviolet/commit/d4ccb3b802b4b93a412b65990c462e3ca92f364d) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Badge />` : change padding to 12px for medium badges
+
+- [#4472](https://github.com/scaleway/ultraviolet/pull/4472) [`f4d106a`](https://github.com/scaleway/ultraviolet/commit/f4d106a4dd46e779a2570e70fdd77d8e04a12039) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Skeleton />` having wrong width and heigh due to px to rem migration
+
 ## 1.77.0
 
 ### Minor Changes

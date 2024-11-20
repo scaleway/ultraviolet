@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.11.1
+
+### Patch Changes
+
+- [#4468](https://github.com/scaleway/ultraviolet/pull/4468) [`775ec26`](https://github.com/scaleway/ultraviolet/commit/775ec26313c721d2b83c11c5a3e5b94aea0551d8) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SliderField />` to check if value exists avoiding errors
+
+- [#4479](https://github.com/scaleway/ultraviolet/pull/4479) [`b132145`](https://github.com/scaleway/ultraviolet/commit/b13214531f750b76a75cce8b11d0cb7ef9d1ad4b) Thanks [@fabienhebert](https://github.com/fabienhebert)! - `DateField`: fix minDate and maxDate validators
+
+- Updated dependencies [[`d4ccb3b`](https://github.com/scaleway/ultraviolet/commit/d4ccb3b802b4b93a412b65990c462e3ca92f364d), [`f4d106a`](https://github.com/scaleway/ultraviolet/commit/f4d106a4dd46e779a2570e70fdd77d8e04a12039)]:
+  - @ultraviolet/ui@1.77.1
+
 ## 3.11.0
 
 ### Minor Changes

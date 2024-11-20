@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.21.29
+
+### Patch Changes
+
+- [#4471](https://github.com/scaleway/ultraviolet/pull/4471) [`f3a3028`](https://github.com/scaleway/ultraviolet/commit/f3a3028827b1b7bb810621f236e3b19f1b98fe87) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Navigation />` disabled pin button still working when clicking on it
+
+- Updated dependencies [[`d4ccb3b`](https://github.com/scaleway/ultraviolet/commit/d4ccb3b802b4b93a412b65990c462e3ca92f364d), [`f4d106a`](https://github.com/scaleway/ultraviolet/commit/f4d106a4dd46e779a2570e70fdd77d8e04a12039)]:
+  - @ultraviolet/ui@1.77.1
+
 ## 0.21.28
 
 ### Patch Changes
