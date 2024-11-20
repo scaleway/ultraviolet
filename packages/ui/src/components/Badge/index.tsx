@@ -100,8 +100,12 @@ const StyledSpan = styled(Text, {
   white-space: nowrap;
   border-radius: ${({ theme }) => theme.radii.xlarge};
   padding: 0
-    ${({ theme, size }) =>
-      size === 'small' ? theme.space['1'] : theme.space['2']};
+    ${({ theme, size }) => {
+      if (size === 'small') return theme.space['1']
+      if (size === 'large') return theme.space['2']
+
+      return theme.space['1.5']
+    }};
   gap: ${({ theme, size }) =>
     size === 'small' ? theme.space['0.5'] : theme.space['1']};
   width: fit-content;
