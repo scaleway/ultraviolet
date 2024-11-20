@@ -1,10 +1,11 @@
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode, RefObject } from 'react'
 import {
   createContext,
   useCallback,
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react'
 import type { Checkbox } from '../Checkbox'
@@ -14,6 +15,7 @@ type RowState = Record<string, boolean>
 type TableContextValue = {
   bordered: boolean
   stripped: boolean
+  ref: RefObject<HTMLInputElement[]>
   // ============ Selectable logic ============
   selectedRowIds: RowState
   selectRow: (rowId: string) => void
@@ -55,6 +57,7 @@ export const TableProvider = ({
 }: TableProviderProps) => {
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
+  const ref = useRef<HTMLInputElement[]>([])
 
   const registerExpandableRow = useCallback(
     (rowId: string, expanded = false) => {
@@ -158,45 +161,41 @@ export const TableProvider = ({
 
   // Multiselect with shift key
   useEffect(() => {
-    const checkboxes = document.querySelectorAll<HTMLInputElement>(
-      '[name="table-select-checkbox"]',
-    )
     const handlers: (() => void)[] = []
 
-    const handleClick = (
-      index: number,
-      isShiftPressed: boolean,
-      checked: boolean,
-    ) => {
-      setLastCheckedIndex(index)
-      if (isShiftPressed && lastCheckedIndex !== null) {
-        const start = Math.min(lastCheckedIndex, index)
-        const end = Math.max(lastCheckedIndex, index)
+    if (ref.current) {
+      const handleClick = (
+        index: number,
+        isShiftPressed: boolean,
+        checked: boolean,
+      ) => {
+        setLastCheckedIndex(index)
+        if (isShiftPressed && lastCheckedIndex !== null) {
+          const start = Math.min(lastCheckedIndex, index)
+          const end = Math.max(lastCheckedIndex, index)
 
-        for (let i = start; i <= end; i += 1) {
-          const checkboxId = checkboxes[i].value
-          if (!checkboxes[i].disabled) {
-            if (checked) {
-              unselectRow(checkboxId)
-            } else {
-              selectRow(checkboxId)
+          for (let i = start; i <= end; i += 1) {
+            const checkbox = ref.current[i]
+            const checkboxValue = checkbox.value
+            if (!checkbox.disabled) {
+              if (checked) unselectRow(checkboxValue)
+              else selectRow(checkboxValue)
             }
           }
         }
       }
+
+      ref.current.forEach((checkbox, index) => {
+        const clickHandler = (event: MouseEvent) =>
+          handleClick(
+            index,
+            event.shiftKey,
+            selectedRowIds[(event.target as HTMLInputElement).value],
+          )
+        checkbox.addEventListener('click', clickHandler)
+        handlers.push(() => checkbox.removeEventListener('click', clickHandler))
+      })
     }
-
-    checkboxes.forEach((checkbox, index) => {
-      const clickHandler = (event: MouseEvent) =>
-        handleClick(
-          index,
-          event.shiftKey,
-          selectedRowIds[(event.target as HTMLInputElement).value],
-        )
-      checkbox.addEventListener('click', clickHandler)
-
-      handlers.push(() => checkbox.removeEventListener('click', clickHandler))
-    })
 
     return () => {
       handlers.forEach(cleanup => cleanup())
@@ -221,6 +220,7 @@ export const TableProvider = ({
       expandedRowIds,
       collapseRow,
       registerExpandableRow,
+      ref,
     }),
     [
       registerSelectableRow,
@@ -238,6 +238,7 @@ export const TableProvider = ({
       expandButton,
       collapseRow,
       registerExpandableRow,
+      ref,
     ],
   )
 

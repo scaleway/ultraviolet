@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ForwardedRef, ReactNode } from 'react'
-import { forwardRef, useCallback, useEffect } from 'react'
+import { forwardRef, useCallback, useEffect, useRef } from 'react'
 import type { SENTIMENTS, space } from '../../theme'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -127,7 +127,10 @@ export const Row = forwardRef(
       selectRow,
       unselectRow,
       expandButton,
+      refList,
     } = useListContext()
+
+    const checkboxRef = useRef<HTMLInputElement>(null)
 
     const isSelectDisabled =
       disabled || (selectDisabled !== undefined && selectDisabled !== false)
@@ -162,6 +165,15 @@ export const Row = forwardRef(
     }, [collapseRow, expandRow, expandedRowIds, id])
 
     const canClickRowToExpand = !disabled && !!expandable && !expandButton
+
+    useEffect(() => {
+      const refAtEffectStart = refList.current
+      const { current } = checkboxRef
+
+      if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
+        refList.current.push(current)
+      }
+    }, [refList])
 
     return (
       <StyledRow
@@ -201,6 +213,7 @@ export const Row = forwardRef(
                   aria-label="select"
                   checked={selectedRowIds[id]}
                   value={id}
+                  ref={checkboxRef}
                   onChange={() => {
                     if (selectedRowIds[id]) {
                       unselectRow(id)
