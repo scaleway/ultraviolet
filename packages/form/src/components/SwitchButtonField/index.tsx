@@ -8,10 +8,7 @@ type SwitchButtonFieldProps<
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TFieldName> &
-  Pick<
-    ComponentProps<typeof SwitchButton>,
-    'leftButton' | 'rightButton' | 'tooltip' | 'onBlur' | 'onFocus'
-  > & {
+  Omit<ComponentProps<typeof SwitchButton>, 'value' | 'onChange' | 'name'> & {
     name: FieldPath<TFieldValues>
   }
 
@@ -22,20 +19,32 @@ export const SwitchButtonField = <
   name,
   leftButton,
   rightButton,
+  size,
+  control,
+  shouldUnregister,
   onBlur,
   onFocus,
   tooltip,
+  className,
+  ...props
 }: SwitchButtonFieldProps<TFieldValues, TFieldName>) => {
-  const { field } = useController<TFieldValues>({ name })
+  const { field } = useController<TFieldValues>({
+    name,
+    shouldUnregister,
+    control,
+  })
 
   return (
     <SwitchButton
+      {...props}
       name={name}
       leftButton={leftButton}
       rightButton={rightButton}
       onChange={field.onChange}
       value={field.value}
       tooltip={tooltip}
+      size={size}
+      className={className}
       onFocus={onFocus}
       onBlur={event => {
         field.onBlur()
