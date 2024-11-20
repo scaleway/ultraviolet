@@ -8,7 +8,9 @@ export default {
   component: DateField,
   decorators: [
     ChildStory => {
-      const methods = useForm()
+      const methods = useForm({
+        mode: 'onChange',
+      })
       const {
         errors,
         isDirty,
@@ -79,3 +81,4 @@ export { Playground } from './Playground.stories'
 export { Required } from './Required.stories'
 export { MinMaxDate } from './MinMaxDate.stories'
 export { MinMaxDateWithTimeField } from './MinMaxWithTimeField.stories'
+export { MinMaxDateRange } from './MinMaxDateRange.stories'

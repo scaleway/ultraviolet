@@ -1,2 +1,5 @@
-export const maxDateValidator = (maxDate?: Date) => (value: Date) =>
-  value === undefined || maxDate === undefined || value <= maxDate
+export const maxDateValidator =
+  (maxDate?: Date) => (value: Date | [Date, Date]) =>
+    value === undefined ||
+    maxDate === undefined ||
+    (Array.isArray(value) ? value[1] <= maxDate : value <= maxDate)
