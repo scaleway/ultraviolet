@@ -1,0 +1,898 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Drawer > function footer 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders custom size=large 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls=":rc:"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      button
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders custom size=medium 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls=":r9:"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      button
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders custom size=small 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls=":rf:"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      button
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders with custom classNames 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders with default Props 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls=":r0:"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Test
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders with default Props and function children 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders with default Props and function children open 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders with disclosure 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="drawer-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Test
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders with disclosure and onClose 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open modal
+    </button>
+  </div>
+  @keyframes animation-0 {
+  0% {
+    -webkit-transform: translateY(+100%);
+    -moz-transform: translateY(+100%);
+    -ms-transform: translateY(+100%);
+    transform: translateY(+100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    -webkit-transform: translateY(+100%);
+    -moz-transform: translateY(+100%);
+    -ms-transform: translateY(+100%);
+    transform: translateY(+100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    transform: translateX(300px);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    transform: translateX(300px);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: translateX(500px);
+    -moz-transform: translateX(500px);
+    -ms-transform: translateX(500px);
+    transform: translateX(500px);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: translateX(500px);
+    -moz-transform: translateX(500px);
+    -ms-transform: translateX(500px);
+    transform: translateX(500px);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-3 {
+  from {
+    -webkit-transform: translateX(1000px);
+    -moz-transform: translateX(1000px);
+    -ms-transform: translateX(1000px);
+    transform: translateX(1000px);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-3 {
+  from {
+    -webkit-transform: translateX(1000px);
+    -moz-transform: translateX(1000px);
+    -ms-transform: translateX(1000px);
+    transform: translateX(1000px);
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  background-color: #464959a6;
+  z-index: 1;
+  opacity: 0;
+}
+
+.emotion-0[data-open='true'] {
+  padding: 1rem;
+  overflow: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.emotion-0[data-visible='true'] {
+  opacity: 1;
+}
+
+.emotion-0[data-animation='true'] {
+  overflow: hidden;
+}
+
+.emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  background-color: #464959a6;
+  z-index: 1;
+  opacity: 0;
+}
+
+.emotion-0[data-open='true'] {
+  padding: 1rem;
+  overflow: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.emotion-0[data-visible='true'] {
+  opacity: 1;
+}
+
+.emotion-0[data-animation='true'] {
+  overflow: hidden;
+}
+
+.emotion-3 {
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 1.5rem;
+  width: 44.25rem;
+  box-shadow: 0px 12px 24px 0px #2226383d,0px 8px 60px 0px #22263852;
+  -webkit-transition: width 0.3s ease-in-out,-webkit-transform 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out,transform 0.3s ease-in-out;
+  margin-right: 0;
+  height: 100%;
+  border-radius: 0;
+  padding: 1rem!important;
+  -webkit-animation: slideIn 0.3s ease forwards;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.emotion-3[data-size="large"] {
+  width: 53.125rem;
+}
+
+.emotion-3[data-size="medium"] {
+  width: 44.25rem;
+}
+
+.emotion-3[data-size="small"] {
+  width: 38.5rem;
+}
+
+.emotion-3[data-size="xsmall"] {
+  width: 25rem;
+}
+
+.emotion-3[data-size="xxsmall"] {
+  width: 22.5rem;
+}
+
+.emotion-3[data-placement="bottom"] {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.emotion-3[data-placement="bottom-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.emotion-3[data-placement="bottom-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.emotion-3[data-placement="center"] {
+  margin: auto;
+}
+
+.emotion-3[data-placement="left"] {
+  margin: auto;
+  margin-left: 0;
+}
+
+.emotion-3[data-placement="right"] {
+  margin: auto;
+  margin-right: 0;
+}
+
+.emotion-3[data-placement="top"] {
+  margin: auto;
+  margin-top: 0;
+}
+
+.emotion-3[data-placement="top-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.emotion-3[data-placement="top-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.emotion-3[data-animation='true'] {
+  -webkit-animation: animation-0 0.3s ease-in-out forwards;
+  animation: animation-0 0.3s ease-in-out forwards;
+}
+
+.emotion-3[data-size="small"] {
+  width: 356px;
+  -webkit-animation: animation-1 linear 150ms;
+  animation: animation-1 linear 150ms;
+}
+
+.emotion-3[data-size="medium"] {
+  width: 783px;
+  -webkit-animation: animation-2 linear 250ms;
+  animation: animation-2 linear 250ms;
+}
+
+.emotion-3[data-size="large"] {
+  width: 1209px;
+  -webkit-animation: animation-3 linear 400ms;
+  animation: animation-3 linear 400ms;
+}
+
+.emotion-3 {
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 0.25rem;
+  border: 0;
+  padding: 1.5rem;
+  width: 44.25rem;
+  box-shadow: 0px 12px 24px 0px #2226383d,0px 8px 60px 0px #22263852;
+  -webkit-transition: width 0.3s ease-in-out,-webkit-transform 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out,transform 0.3s ease-in-out;
+  margin-right: 0;
+  height: 100%;
+  border-radius: 0;
+  padding: 1rem!important;
+  -webkit-animation: slideIn 0.3s ease forwards;
+  animation: slideIn 0.3s ease forwards;
+}
+
+.emotion-3[data-size="large"] {
+  width: 53.125rem;
+}
+
+.emotion-3[data-size="medium"] {
+  width: 44.25rem;
+}
+
+.emotion-3[data-size="small"] {
+  width: 38.5rem;
+}
+
+.emotion-3[data-size="xsmall"] {
+  width: 25rem;
+}
+
+.emotion-3[data-size="xxsmall"] {
+  width: 22.5rem;
+}
+
+.emotion-3[data-placement="bottom"] {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.emotion-3[data-placement="bottom-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.emotion-3[data-placement="bottom-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.emotion-3[data-placement="center"] {
+  margin: auto;
+}
+
+.emotion-3[data-placement="left"] {
+  margin: auto;
+  margin-left: 0;
+}
+
+.emotion-3[data-placement="right"] {
+  margin: auto;
+  margin-right: 0;
+}
+
+.emotion-3[data-placement="top"] {
+  margin: auto;
+  margin-top: 0;
+}
+
+.emotion-3[data-placement="top-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.emotion-3[data-placement="top-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.emotion-3[data-animation='true'] {
+  -webkit-animation: animation-0 0.3s ease-in-out forwards;
+  animation: animation-0 0.3s ease-in-out forwards;
+}
+
+.emotion-3[data-size="small"] {
+  width: 356px;
+  -webkit-animation: animation-1 linear 150ms;
+  animation: animation-1 linear 150ms;
+}
+
+.emotion-3[data-size="medium"] {
+  width: 783px;
+  -webkit-animation: animation-2 linear 250ms;
+  animation: animation-2 linear 250ms;
+}
+
+.emotion-3[data-size="large"] {
+  width: 1209px;
+  -webkit-animation: animation-3 linear 400ms;
+  animation: animation-3 linear 400ms;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.emotion-7 {
+  color: #3f4250;
+  font-size: 1.3125rem;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 2rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7 {
+  color: #3f4250;
+  font-size: 1.3125rem;
+  font-family: Space Grotesk,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 2rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #e9eaeb;
+}
+
+.emotion-9 {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #e9eaeb;
+}
+
+.emotion-11 {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.emotion-11 {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.emotion-13 {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.emotion-13 {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.emotion-15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 2rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-15:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-15:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-15:hover,
+.emotion-15:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 2rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-15:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-15:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-15:hover,
+.emotion-15:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-17 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-17 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-17 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-17 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+<div>
+    <div
+      class="backdrop-drawer emotion-0 emotion-1"
+      data-animation="false"
+      data-open="true"
+      data-testid="test-backdrop"
+      data-visible="true"
+      id="backdrop-modal"
+    >
+      <dialog
+        aria-label="modal-test"
+        aria-modal="true"
+        class="emotion-2 emotion-3 emotion-4"
+        data-animation="false"
+        data-placement="top-right"
+        data-size="medium"
+        data-testid="test"
+        id="modal-test"
+        open=""
+        tabindex="0"
+      >
+        <div
+          class="emotion-5 emotion-6"
+        >
+          <h2
+            class="emotion-7 emotion-8"
+          >
+            title
+          </h2>
+          <hr
+            aria-orientation="horizontal"
+            class="emotion-9 emotion-10"
+            role="separator"
+          />
+          <div
+            class="emotion-11 emotion-12"
+          >
+            <div>
+              modal
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-13 emotion-14"
+        >
+          <button
+            aria-label="close"
+            class="emotion-15 emotion-16"
+            data-testid="test-close-button"
+            type="button"
+          >
+            <svg
+              class="emotion-17 emotion-18"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+              />
+            </svg>
+          </button>
+        </div>
+      </dialog>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders with open={true} 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`Drawer > renders without disclosure 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  />
+</DocumentFragment>
+`;
+
+exports[`Drawer > with footer 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
