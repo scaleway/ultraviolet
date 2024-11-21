@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 0.21.30
+
+### Patch Changes
+
+- [#4483](https://github.com/scaleway/ultraviolet/pull/4483) [`2c4f9af`](https://github.com/scaleway/ultraviolet/commit/2c4f9afc66e6cd9df2a1bceab51212eac62692ef) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.13.5`.
+  Updated dependency `@emotion/styled` to `11.13.5`.
+  Updated dependency `@emotion/serialize` to `1.3.3`.
+  Updated dependency `@emotion/cache` to `11.13.5`.
+- Updated dependencies [[`2c4f9af`](https://github.com/scaleway/ultraviolet/commit/2c4f9afc66e6cd9df2a1bceab51212eac62692ef)]:
+  - @ultraviolet/icons@3.4.3
+  - @ultraviolet/ui@1.77.2
+
 ## 0.21.29
 
 ### Patch Changes
