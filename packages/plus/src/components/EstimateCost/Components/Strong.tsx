@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import { type ReactNode, memo } from 'react'
 import { Regular } from './Regular'
 
 type StrongProps = {
@@ -21,12 +21,14 @@ export const StyledStrong = styled(Regular, {
   margin-right: 4px;
 `
 
-export const Strong = ({
-  variant = 'normal',
-  children = null,
-  isDisabledOnOverlay = false,
-}: StrongProps) => (
-  <StyledStrong variant={variant} isDisabledOnOverlay={isDisabledOnOverlay}>
-    {children}
-  </StyledStrong>
+export const Strong = memo(
+  ({
+    variant = 'normal',
+    children = null,
+    isDisabledOnOverlay = false,
+  }: StrongProps) => (
+    <StyledStrong variant={variant} isDisabledOnOverlay={isDisabledOnOverlay}>
+      {children}
+    </StyledStrong>
+  ),
 )
