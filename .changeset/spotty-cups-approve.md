@@ -1,5 +1,5 @@
 ---
-"@ultraviolet/form": patch
+"@ultraviolet/form": minor
 ---
 
 New component `<SwitchButtonField />`
