@@ -23,6 +23,7 @@ describe('SwitchButtonField', () => {
         name="test"
         leftButton={leftButton}
         rightButton={rightButton}
+        onChange={() => vi.fn()}
       />,
     )
     expect(asFragment()).toMatchSnapshot()
