@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
 import { Alert, Icon, Stack, Text } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import {
   Children,
   cloneElement,
   isValidElement,
+  memo,
   useEffect,
   useMemo,
   useState,
@@ -77,20 +78,35 @@ type ExtraProps = {
   discount?: number
 }
 
-const DescriptionComponent = ({
-  description,
-  locales,
-}: {
-  description: ReactNode
-  locales: Record<keyof typeof EstimateCostLocales, string>
-}) =>
-  description === undefined || typeof description === 'string' ? (
-    <Text as="span" variant="body">
-      {description || locales['estimate.cost.description']}
-    </Text>
-  ) : (
-    description
-  )
+const DescriptionComponent = memo(
+  ({
+    description,
+    locales,
+  }: {
+    description: ReactNode
+    locales: Record<keyof typeof EstimateCostLocales, string>
+  }) =>
+    description === undefined || typeof description === 'string' ? (
+      <Text as="span" variant="body">
+        {description || locales['estimate.cost.description']}
+      </Text>
+    ) : (
+      description
+    ),
+)
+
+const TitleComponent = memo(
+  ({
+    locales,
+  }: {
+    locales: Required<ComponentProps<typeof EstimateCostContent>['locales']>
+  }) => (
+    <Title>
+      <StyledIcon name="calculator" color="primary" size={20} />
+      {locales?.['estimate.cost.label']}
+    </Title>
+  ),
+)
 
 export const EstimateCostContent = ({
   description,
@@ -328,14 +344,7 @@ export const EstimateCostContent = ({
                 <thead>
                   <tr>
                     <th>
-                      <Title>
-                        <StyledIcon
-                          name="calculator"
-                          color="primary"
-                          size={20}
-                        />
-                        {locales['estimate.cost.label']}
-                      </Title>
+                      <TitleComponent locales={locales} />
                     </th>
                     <StyledPriceCell>
                       <TimeCell>

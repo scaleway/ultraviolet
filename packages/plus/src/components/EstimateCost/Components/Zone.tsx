@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { memo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
 import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
@@ -27,40 +28,42 @@ type RegionProps = {
   noPrice?: boolean
 }
 
-export const Zone = ({
-  label,
-  image,
-  shouldBeHidden = false,
-  priceText,
-  animated = false,
-  isFirstElement,
-  isLastElement,
-  productsCallback,
-  iteration,
-  discount,
-  noBorder,
-  noPrice,
-}: RegionProps) => {
-  const { locales } = useEstimateCost()
+export const Zone = memo(
+  ({
+    label,
+    image,
+    shouldBeHidden = false,
+    priceText,
+    animated = false,
+    isFirstElement,
+    isLastElement,
+    productsCallback,
+    iteration,
+    discount,
+    noBorder,
+    noPrice,
+  }: RegionProps) => {
+    const { locales } = useEstimateCost()
 
-  return (
-    <Item
-      label={locales['estimate.cost.az.label']}
-      shouldBeHidden={shouldBeHidden}
-      priceText={priceText}
-      animated={animated}
-      isFirstElement={isFirstElement}
-      isLastElement={isLastElement}
-      productsCallback={productsCallback}
-      iteration={iteration}
-      discount={discount}
-      noBorder={noBorder}
-      noPrice={noPrice}
-    >
-      <Strong>
-        <StyledImage alt={label} src={image} />
-        {label}
-      </Strong>
-    </Item>
-  )
-}
+    return (
+      <Item
+        label={locales['estimate.cost.az.label']}
+        shouldBeHidden={shouldBeHidden}
+        priceText={priceText}
+        animated={animated}
+        isFirstElement={isFirstElement}
+        isLastElement={isLastElement}
+        productsCallback={productsCallback}
+        iteration={iteration}
+        discount={discount}
+        noBorder={noBorder}
+        noPrice={noPrice}
+      >
+        <Strong>
+          <StyledImage alt={label} src={image} />
+          {label}
+        </Strong>
+      </Item>
+    )
+  },
+)

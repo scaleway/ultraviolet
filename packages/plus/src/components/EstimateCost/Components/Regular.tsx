@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import { type ReactNode, memo } from 'react'
 import { useOverlay } from '../OverlayContext'
 
 type RegularProps = {
@@ -33,21 +33,23 @@ const StyledRegular = styled('div', {
     `};
 `
 
-export const Regular = ({
-  variant = 'normal',
-  isDisabledOnOverlay = false,
-  children = null,
-  className,
-}: RegularProps) => {
-  const { isOverlay } = useOverlay()
+export const Regular = memo(
+  ({
+    variant = 'normal',
+    isDisabledOnOverlay = false,
+    children = null,
+    className,
+  }: RegularProps) => {
+    const { isOverlay } = useOverlay()
 
-  return !isDisabledOnOverlay || !isOverlay ? (
-    <StyledRegular
-      className={className}
-      variant={variant}
-      isOverlay={isOverlay}
-    >
-      {children}
-    </StyledRegular>
-  ) : null
-}
+    return !isDisabledOnOverlay || !isOverlay ? (
+      <StyledRegular
+        className={className}
+        variant={variant}
+        isOverlay={isOverlay}
+      >
+        {children}
+      </StyledRegular>
+    ) : null
+  },
+)

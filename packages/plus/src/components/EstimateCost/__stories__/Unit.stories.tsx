@@ -18,6 +18,9 @@ Unit.args = {
     <EstimateCost.Item label="Screen pixels" price={1} unit="Px" amount={100}>
       <EstimateCost.Unit />
     </EstimateCost.Item>,
+    <EstimateCost.Item label="Screen pixels" price={1} unit="Px" amount={100}>
+      <EstimateCost.Regular>Test</EstimateCost.Regular>
+    </EstimateCost.Item>,
   ],
 }
 

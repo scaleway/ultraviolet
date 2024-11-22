@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ComponentProps, ReactNode } from 'react'
+import { type ComponentProps, type ReactNode, memo } from 'react'
 import { useEstimateCost } from '../EstimateCostProvider'
 import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
@@ -28,42 +28,44 @@ type RegionProps = {
   noPrice?: boolean
 } & Pick<ComponentProps<typeof Item>, 'hideFromOverlay'>
 
-export const Region = ({
-  label,
-  image,
-  shouldBeHidden = false,
-  priceText,
-  animated = false,
-  isFirstElement,
-  isLastElement,
-  productsCallback,
-  iteration,
-  discount,
-  noBorder,
-  noPrice,
-  hideFromOverlay,
-}: RegionProps) => {
-  const { locales } = useEstimateCost()
+export const Region = memo(
+  ({
+    label,
+    image,
+    shouldBeHidden = false,
+    priceText,
+    animated = false,
+    isFirstElement,
+    isLastElement,
+    productsCallback,
+    iteration,
+    discount,
+    noBorder,
+    noPrice,
+    hideFromOverlay,
+  }: RegionProps) => {
+    const { locales } = useEstimateCost()
 
-  return (
-    <Item
-      label={locales['estimate.cost.region.label']}
-      shouldBeHidden={shouldBeHidden}
-      priceText={priceText}
-      animated={animated}
-      isFirstElement={isFirstElement}
-      isLastElement={isLastElement}
-      productsCallback={productsCallback}
-      iteration={iteration}
-      discount={discount}
-      noBorder={noBorder}
-      noPrice={noPrice}
-      hideFromOverlay={hideFromOverlay}
-    >
-      <Strong>
-        <StyledImage alt={label} src={image} />
-        {label}
-      </Strong>
-    </Item>
-  )
-}
+    return (
+      <Item
+        label={locales['estimate.cost.region.label']}
+        shouldBeHidden={shouldBeHidden}
+        priceText={priceText}
+        animated={animated}
+        isFirstElement={isFirstElement}
+        isLastElement={isLastElement}
+        productsCallback={productsCallback}
+        iteration={iteration}
+        discount={discount}
+        noBorder={noBorder}
+        noPrice={noPrice}
+        hideFromOverlay={hideFromOverlay}
+      >
+        <Strong>
+          <StyledImage alt={label} src={image} />
+          {label}
+        </Strong>
+      </Item>
+    )
+  },
+)
