@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.12.0
+
+### Minor Changes
+
+- [#4473](https://github.com/scaleway/ultraviolet/pull/4473) [`d5f3601`](https://github.com/scaleway/ultraviolet/commit/d5f360122b76e328713c09379f960762cdf767b1) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<SwitchButtonField />`
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @ultraviolet/ui@1.77.3
+
 ## 3.11.2
 
 ### Patch Changes
