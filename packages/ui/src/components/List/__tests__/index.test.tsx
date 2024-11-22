@@ -674,4 +674,49 @@ describe('List', () => {
       </List>,
     )
   })
+
+  test('Should render correctly with selectable with shift click for multiselect', () => {
+    const { asFragment } = renderWithTheme(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+            <List.SelectBar data={data} idKey="id">
+              {({ selectedItems }) => <div>{selectedItems.length} items</div>}
+            </List.SelectBar>
+          </List.Row>
+        ))}
+      </List>,
+    )
+    const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
+
+    const firstRowCheckbox = checkboxes.find(({ value }) => value === '2')
+    const secondRowCheckbox = checkboxes.find(({ value }) => value === '3')
+    const thirdRowCheckbox = checkboxes.find(({ value }) => value === '4')
+
+    expect(firstRowCheckbox).toBeInTheDocument()
+
+    if (!firstRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+
+    if (!secondRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+    if (!thirdRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+
+    fireEvent.click(firstRowCheckbox, { shiftKey: true })
+    fireEvent.click(thirdRowCheckbox, { shiftKey: true })
+
+    expect(firstRowCheckbox).toBeChecked()
+    expect(thirdRowCheckbox).toBeChecked()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })
