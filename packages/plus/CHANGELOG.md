@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 0.21.31
+
+### Patch Changes
+
+- [#4489](https://github.com/scaleway/ultraviolet/pull/4489) [`70a3515`](https://github.com/scaleway/ultraviolet/commit/70a351548fc2dd5d38822b0fcc83740bc72acfe5) Thanks [@matthprost](https://github.com/matthprost)! - Improve render performances on `<EstimateCost />`
+
+- Updated dependencies [[`84d8445`](https://github.com/scaleway/ultraviolet/commit/84d8445f79b109030ffeed92338e975ad51cbdd5)]:
+  - @ultraviolet/icons@3.5.0
+  - @ultraviolet/ui@1.77.3
+
 ## 0.21.30
 
 ### Patch Changes

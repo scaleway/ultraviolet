@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.5.0
+
+### Minor Changes
+
+- [#4487](https://github.com/scaleway/ultraviolet/pull/4487) [`84d8445`](https://github.com/scaleway/ultraviolet/commit/84d8445f79b109030ffeed92338e975ad51cbdd5) Thanks [@matthprost](https://github.com/matthprost)! - New icon `adjustments-horizontal`
+
 ## 3.4.3
 
 ### Patch Changes
