@@ -2,11 +2,9 @@ import type { Decorator } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { Snippet } from '../index'
 
-const VALUE = `
-pnpm add @ultraviolet/ui
+const VALUE = `pnpm add @ultraviolet/ui
 pnpm install
-pnpm start
-`
+pnpm start`
 
 export const Prefixes = (props: ComponentProps<typeof Snippet>) =>
   (['command', 'lines'] as const).map(suffix => (
