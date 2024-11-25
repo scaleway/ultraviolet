@@ -233,6 +233,10 @@ export const Snippet = ({
   const numberOfLines = lines.length
   const multiline = numberOfLines > 1
   const hasShowMoreButton = numberOfLines > rows && multiline && !noExpandable
+  // Height of the expandable (when needed) = number of rows * height of a line (from rem to px) + padding (from rem to px)
+  const minHeight =
+    rows * parseFloat(theme.typography.code.lineHeight) * 16 +
+    parseFloat(theme.space[4]) * 16
 
   return (
     <Container
@@ -242,14 +246,7 @@ export const Snippet = ({
     >
       <StyledStack>
         {hasShowMoreButton ? (
-          // Height = number of rows * height of a line + padding
-          <Expandable
-            minHeight={
-              rows * parseInt(theme.typography.code.lineHeight, 10) +
-              parseInt(theme.space[4], 10)
-            }
-            opened={showMore}
-          >
+          <Expandable minHeight={minHeight} opened={showMore}>
             <CodeContent
               prefix={prefix}
               multiline={multiline}
