@@ -28,6 +28,7 @@ type TableContextValue = {
    * @returns an unregister function
    * */
   registerSelectableRow: (rowId: string) => () => void
+  inRange: string[]
   // ============ Expandable logic ============
   expandedRowIds: RowState
   expandRow: (rowId: string) => void
@@ -158,6 +159,7 @@ export const TableProvider = ({
   }, [])
 
   const [lastCheckedIndex, setLastCheckedIndex] = useState<null | number>(null)
+  const [inRange, setInRange] = useState<string[]>([])
 
   // Multiselect with shift key
   useEffect(() => {
@@ -185,6 +187,27 @@ export const TableProvider = ({
         }
       }
 
+      const handleHover = (
+        index: number,
+        isShiftPressed: boolean,
+        leaving: boolean,
+      ) => {
+        const newRange: string[] = []
+
+        if (isShiftPressed && lastCheckedIndex !== null) {
+          const start = Math.min(lastCheckedIndex, index)
+          const end = Math.max(lastCheckedIndex, index)
+
+          for (let i = start; i < end; i += 1) {
+            const checkbox = ref.current[i]
+            if (!checkbox.disabled && !leaving) {
+              newRange.push(checkbox.value)
+            }
+          }
+        }
+        setInRange(newRange)
+      }
+
       ref.current.forEach((checkbox, index) => {
         const clickHandler = (event: MouseEvent) =>
           handleClick(
@@ -192,8 +215,22 @@ export const TableProvider = ({
             event.shiftKey,
             selectedRowIds[(event.target as HTMLInputElement).value],
           )
+
+        const hoverEnteringHandler = (event: MouseEvent) =>
+          handleHover(index, event.shiftKey, false)
+
+        const hoverLeavingHandler = (event: MouseEvent) =>
+          handleHover(index, event.shiftKey, true)
+
         checkbox.addEventListener('click', clickHandler)
-        handlers.push(() => checkbox.removeEventListener('click', clickHandler))
+        checkbox.addEventListener('mousemove', hoverEnteringHandler)
+        checkbox.addEventListener('mouseleave', hoverLeavingHandler)
+
+        handlers.push(() => {
+          checkbox.removeEventListener('click', clickHandler)
+          checkbox.removeEventListener('mousemove', hoverLeavingHandler)
+          checkbox.removeEventListener('mouseenter', hoverEnteringHandler)
+        })
       })
     }
 
@@ -221,6 +258,7 @@ export const TableProvider = ({
       collapseRow,
       registerExpandableRow,
       ref,
+      inRange,
     }),
     [
       registerSelectableRow,
@@ -239,6 +277,7 @@ export const TableProvider = ({
       collapseRow,
       registerExpandableRow,
       ref,
+      inRange,
     ],
   )
 

@@ -21,6 +21,15 @@ const ExpandableWrapper = styled('div', {
   border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
 `
 
+const StyledCheckbox = styled(Checkbox, {
+  shouldForwardProp: prop => !['inRange'].includes(prop),
+})<{ inRange: boolean }>`
+
+    rect {
+      ${({ theme, inRange }) => (inRange ? `fill: ${theme.colors.neutral.backgroundHover};stroke: ${theme.colors.neutral.borderHover};` : '')}
+    }
+`
+
 export const StyledRow = styled('div', {
   shouldForwardProp: prop => !['sentiment'].includes(prop),
 })<{
@@ -128,6 +137,7 @@ export const Row = forwardRef(
       unselectRow,
       expandButton,
       refList,
+      inRange,
     } = useListContext()
 
     const checkboxRef = useRef<HTMLInputElement>(null)
@@ -208,7 +218,7 @@ export const Row = forwardRef(
                     : undefined
                 }
               >
-                <Checkbox
+                <StyledCheckbox
                   name="list-select-checkbox"
                   aria-label="select"
                   checked={selectedRowIds[id]}
@@ -222,6 +232,7 @@ export const Row = forwardRef(
                     }
                   }}
                   disabled={isSelectDisabled}
+                  inRange={inRange.includes(id)}
                 />
               </Tooltip>
             </StyledCheckboxContainer>

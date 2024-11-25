@@ -25,6 +25,15 @@ const StyledCheckboxContainer = styled.div`
   width: ${({ theme }) => theme.sizing[SELECTABLE_CHECKBOX_SIZE]};
 `
 
+const StyledCheckbox = styled(Checkbox, {
+  shouldForwardProp: prop => !['inRange'].includes(prop),
+})<{ inRange: boolean }>`
+
+    rect {
+      ${({ theme, inRange }) => (inRange ? `fill: ${theme.colors.neutral.backgroundHover};stroke: ${theme.colors.neutral.borderHover};` : '')}
+    }
+`
+
 // We start at 5% and finish at 80% to leave the original background color
 // as we can't know if the table will be stripped or not
 const colorChange = (theme: Theme) => keyframes`
@@ -80,6 +89,7 @@ export const Row = ({
     unselectRow,
     expandButton,
     ref,
+    inRange,
   } = useTableContext()
   const rowRef = useRef<HTMLInputElement>(null)
 
@@ -138,7 +148,7 @@ export const Row = ({
                 typeof selectDisabled === 'string' ? selectDisabled : undefined
               }
             >
-              <Checkbox
+              <StyledCheckbox
                 name="table-select-checkbox"
                 aria-label="select"
                 checked={selectedRowIds[id]}
@@ -152,6 +162,7 @@ export const Row = ({
                 }}
                 disabled={selectDisabled !== undefined}
                 ref={rowRef}
+                inRange={inRange.includes(id)}
               />
             </Tooltip>
           </StyledCheckboxContainer>

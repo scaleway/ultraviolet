@@ -41,6 +41,7 @@ type ListContextValue = {
   selectAll: () => void
   unselectAll: () => void
   refList: RefObject<HTMLInputElement[]>
+  inRange: string[]
 }
 
 const ListContext = createContext<ListContextValue | undefined>(undefined)
@@ -186,42 +187,8 @@ export const ListProvider = ({
     [onSelectedChange, selectedRowIds],
   )
 
-  const value = useMemo<ListContextValue>(
-    () => ({
-      registerExpandableRow,
-      expandedRowIds,
-      expandRow,
-      collapseRow,
-      registerSelectableRow,
-      selectedRowIds,
-      selectRow,
-      unselectRow,
-      selectable,
-      selectAll,
-      unselectAll,
-      allRowSelectValue,
-      expandButton,
-      refList,
-    }),
-    [
-      registerExpandableRow,
-      expandedRowIds,
-      expandRow,
-      collapseRow,
-      registerSelectableRow,
-      selectedRowIds,
-      selectRow,
-      unselectRow,
-      selectable,
-      selectAll,
-      unselectAll,
-      allRowSelectValue,
-      expandButton,
-      refList,
-    ],
-  )
-
   const [lastCheckedIndex, setLastCheckedIndex] = useState<null | number>(null)
+  const [inRange, setInRange] = useState<string[]>([])
 
   useEffect(() => {
     const handlers: (() => void)[] = []
@@ -265,6 +232,27 @@ export const ListProvider = ({
         } else setLastCheckedIndex(null)
       }
 
+      const handleHover = (
+        index: number,
+        isShiftPressed: boolean,
+        leaving: boolean,
+      ) => {
+        const newRange: string[] = []
+
+        if (isShiftPressed && lastCheckedIndex !== null) {
+          const start = Math.min(lastCheckedIndex, index)
+          const end = Math.max(lastCheckedIndex, index)
+
+          for (let i = start; i < end; i += 1) {
+            const checkbox = refList.current[i]
+            if (!checkbox.disabled && !leaving) {
+              newRange.push(checkbox.value)
+            }
+          }
+        }
+        setInRange(newRange)
+      }
+
       refList.current.forEach((checkbox, index) => {
         const clickHandler = (event: MouseEvent) =>
           handleClick(
@@ -272,9 +260,22 @@ export const ListProvider = ({
             event.shiftKey,
             selectedRowIds[(event.target as HTMLInputElement).value],
           )
-        checkbox.addEventListener('click', clickHandler)
 
-        handlers.push(() => checkbox.removeEventListener('click', clickHandler))
+        const hoverEnteringHandler = (event: MouseEvent) =>
+          handleHover(index, event.shiftKey, false)
+
+        const hoverLeavingHandler = (event: MouseEvent) =>
+          handleHover(index, event.shiftKey, true)
+
+        checkbox.addEventListener('click', clickHandler)
+        checkbox.addEventListener('mousemove', hoverEnteringHandler)
+        checkbox.addEventListener('mouseout', hoverLeavingHandler)
+
+        handlers.push(() => {
+          checkbox.removeEventListener('click', clickHandler)
+          checkbox.removeEventListener('mouseout', hoverEnteringHandler)
+          checkbox.removeEventListener('mousemove', hoverLeavingHandler)
+        })
       })
     }
 
@@ -282,6 +283,43 @@ export const ListProvider = ({
       handlers.forEach(cleanup => cleanup())
     }
   }, [lastCheckedIndex, onSelectedChange, selectedRowIds, unselectRow])
+
+  const value = useMemo<ListContextValue>(
+    () => ({
+      registerExpandableRow,
+      expandedRowIds,
+      expandRow,
+      collapseRow,
+      registerSelectableRow,
+      selectedRowIds,
+      selectRow,
+      unselectRow,
+      selectable,
+      selectAll,
+      unselectAll,
+      allRowSelectValue,
+      expandButton,
+      refList,
+      inRange,
+    }),
+    [
+      registerExpandableRow,
+      expandedRowIds,
+      expandRow,
+      collapseRow,
+      registerSelectableRow,
+      selectedRowIds,
+      selectRow,
+      unselectRow,
+      selectable,
+      selectAll,
+      unselectAll,
+      allRowSelectValue,
+      expandButton,
+      refList,
+      inRange,
+    ],
+  )
 
   return <ListContext.Provider value={value}>{children}</ListContext.Provider>
 }
