@@ -728,6 +728,7 @@ export const Item = memo(
                   variant={hasActiveChildren ? 'filled' : 'ghost'}
                   size="small"
                   icon={!categoryIcon ? 'dots-horizontal' : undefined}
+                  aria-label={label}
                 >
                   {CategoryIconUsed ? (
                     <Stack
@@ -759,6 +760,7 @@ export const Item = memo(
                 sentiment="neutral"
                 variant={active ? 'filled' : 'ghost'}
                 size="small"
+                aria-label={label}
               >
                 <Stack
                   direction="row"
