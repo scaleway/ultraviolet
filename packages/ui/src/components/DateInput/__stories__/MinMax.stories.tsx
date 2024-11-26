@@ -16,3 +16,11 @@ MinMax.args = {
   minDate: new Date('December 12, 1995 03:24:00'),
   maxDate: new Date('December 25, 1995 03:24:00'),
 }
+
+MinMax.decorators = [
+  StoryComponent => (
+    <div style={{ height: '400px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]

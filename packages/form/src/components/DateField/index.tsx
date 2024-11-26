@@ -36,6 +36,7 @@ type DateFieldProps<
     onBlur?: (event: FocusEvent<HTMLElement>) => void
     onFocus?: (value: FocusEvent<HTMLElement>) => void
     autoFocus?: boolean
+    placeholder?: string
   }
 
 const parseDate = (value: string | Date): Date =>
@@ -65,6 +66,7 @@ export const DateField = <
   excludeDates,
   selectsRange,
   size,
+  placeholder,
   'data-testid': dataTestId,
   shouldUnregister = false,
   showMonthYearPicker,
@@ -91,10 +93,21 @@ export const DateField = <
     <DateInput
       name={field.name}
       label={label}
+      placeholder={placeholder}
       value={field.value}
       format={
         format ||
-        (value => (value ? parseDate(value).toLocaleDateString() : ''))
+        (value => {
+          if (!value) return ''
+          const date = parseDate(value)
+
+          return showMonthYearPicker
+            ? date.toLocaleDateString(undefined, {
+                year: 'numeric',
+                month: 'numeric',
+              })
+            : date.toLocaleDateString()
+        })
       }
       locale={locale}
       required={required}

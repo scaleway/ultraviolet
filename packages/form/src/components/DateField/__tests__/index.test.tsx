@@ -19,24 +19,23 @@ describe('DateField', () => {
     const onBlur = vi.fn()
     const onChange = vi.fn()
     const { asFragment } = renderWithForm(
-      <DateField name="test" onBlur={onBlur} onChange={onChange} />,
+      <DateField
+        name="test"
+        onBlur={onBlur}
+        onChange={onChange}
+        placeholder="YYYY-MM-DD"
+      />,
       {
         defaultValues: {
           test: new Date('2022-09-01'),
         },
       },
     )
-    const select = screen.getByRole('textbox')
-    await userEvent.type(select, '{ArrowDown}')
-    const option = screen.getAllByRole('option')[0]
-    await userEvent.click(option)
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+    await userEvent.click(screen.getByText('15'))
     expect(onChange).toBeCalledTimes(1)
-    // Blur not working on react-datepicker:
-    // https://github.com/Hacker0x01/react-datepicker/issues/2028
-    // act(() => {
-    //   select.blur()
-    // })
-    // expect(onBlur).toBeCalledTimes(1)
+
     expect(asFragment()).toMatchSnapshot()
   }, 10000)
 })

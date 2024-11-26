@@ -14,3 +14,11 @@ Error.args = {
   label: 'Error',
   error: 'This is an error',
 }
+
+Error.decorators = [
+  StoryComponent => (
+    <div style={{ height: '350px' }}>
+      <StoryComponent />
+    </div>
+  ),
+]

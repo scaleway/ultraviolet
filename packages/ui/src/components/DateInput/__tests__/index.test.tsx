@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import { DateInput } from '..'
 
 tk.freeze(new Date(1609503120000))
@@ -17,12 +17,10 @@ describe('DateInput', () => {
         onBlur={() => {}}
         onFocus={() => {}}
         locale={fr}
-        value={new Date('1995-12-17T03:24:00.000+00:00').toISOString()}
+        value={new Date('1995-12-17T03:24:00.000+00:00')}
         name="test"
         autoFocus={false}
-        format={value =>
-          value instanceof Date ? value.toISOString() : value?.toString()
-        }
+        format={value => (value instanceof Date ? value.toISOString() : value)}
       />,
     )
     expect(asFragment()).toMatchSnapshot()
@@ -113,6 +111,21 @@ describe('DateInput', () => {
     )
     expect(asFragment()).toMatchSnapshot()
   })
+  test('render correctly with showMonthYearPicker with default date', async () => {
+    const { asFragment } = renderWithTheme(
+      <DateInput
+        label="Date"
+        showMonthYearPicker
+        onChange={() => {}}
+        value={new Date('1995-02-11T03:24:00.000+00:00')}
+        placeholder="YYYY-MM-DD"
+      />,
+    )
+
+    const input = screen.getByPlaceholderText('YYYY-MM-DD')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test('render correctly with a range of date', () => {
     const { asFragment } = renderWithTheme(
@@ -127,7 +140,7 @@ describe('DateInput', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('render correctly with a array of dates to exclude', () => {
+  test('render correctly with a array of dates to exclude', async () => {
     const { asFragment } = renderWithTheme(
       <DateInput
         label="Date"
@@ -137,9 +150,310 @@ describe('DateInput', () => {
           new Date('1995-12-13T03:24:00.000+00:00'),
           new Date('1995-12-14T03:24:00.000+00:00'),
         ]}
+        placeholder="YYYY-MM-DD"
         onChange={() => {}}
       />,
     )
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('handle correctly click outside', async () => {
+    renderWithTheme(
+      <>
+        Outside
+        <DateInput label="Date" onChange={() => {}} placeholder="YYYY-MM-DD" />
+      </>,
+    )
+
+    const input = screen.getByPlaceholderText('YYYY-MM-DD')
+    await userEvent.click(input)
+    const calendar = screen.getByRole('dialog')
+    expect(calendar).toBeVisible()
+    await userEvent.click(screen.getByText('Outside'))
+    await userEvent.click(screen.getByText('Outside'))
+    expect(calendar).not.toBeVisible()
+  })
+
+  test('handle correctly click to change month', async () => {
+    renderWithTheme(
+      <>
+        Outside
+        <DateInput
+          label="Date"
+          onChange={() => {}}
+          placeholder="YYYY-MM-DD"
+          value={new Date('1995-12-11T03:24:00.000+00:00')}
+        />
+      </>,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+    const calendar = screen.getByRole('dialog')
+    expect(calendar).toBeVisible()
+
+    const visibleMonth = screen.getByText(/December/i)
+    await userEvent.click(screen.getByTestId('previous-month'))
+    expect(visibleMonth.textContent).toContain('November')
+
+    await userEvent.click(screen.getByTestId('next-month'))
+    expect(visibleMonth.textContent).toContain('December')
+  })
+
+  test('handle correctly click to change year', async () => {
+    renderWithTheme(
+      <>
+        Outside
+        <DateInput
+          label="Date"
+          onChange={() => {}}
+          placeholder="YYYY-MM-DD"
+          value={new Date('1995-12-11T03:24:00.000+00:00')}
+          showMonthYearPicker
+        />
+      </>,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+    const calendar = screen.getByRole('dialog')
+    expect(calendar).toBeVisible()
+
+    const visibleMonth = screen.getByText(/1995/i)
+    await userEvent.click(screen.getByTestId('previous-month'))
+    expect(visibleMonth.textContent).toContain('1994')
+
+    await userEvent.click(screen.getByTestId('next-month'))
+    expect(visibleMonth.textContent).toContain('1995')
+  })
+
+  test('handle correctly click on date', async () => {
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        onChange={() => {}}
+        placeholder="YYYY-MM-DD"
+        value={new Date('1995-12-11T03:24:00.000+00:00')}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    const calendar = screen.getByRole('dialog')
+    expect(calendar).toBeVisible()
+
+    await userEvent.click(input)
+
+    await userEvent.click(screen.getByText('15'))
+    expect(input.value).toBe('12/15/1995')
+
+    await userEvent.click(input)
+
+    const dayFromLastMonth = screen.getAllByText('30')[0] // the first element in this array is from previous month
+    await userEvent.click(dayFromLastMonth)
+
+    await userEvent.click(input)
+    expect(input.value).toBe('11/30/1995')
+
+    await userEvent.click(input)
+    const dayFromNextMonth = screen.getAllByText('1')[1]
+    await userEvent.click(dayFromNextMonth)
+    expect(input.value).toBe('12/01/1995')
+  })
+
+  test('handle correctly click on date range', async () => {
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        onChange={() => {}}
+        placeholder="YYYY-MM-DD"
+        selectsRange
+        value={new Date('1995-02-11T03:24:00.000+00:00')}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+    const calendar = screen.getByRole('dialog')
+    expect(calendar).toBeVisible()
+
+    await userEvent.click(screen.getByText('15'))
+    expect(input.value).toBe('02/15/1995 - ')
+    const day = screen.getByText('27')
+
+    await userEvent.hover(day)
+    await userEvent.unhover(day)
+
+    await userEvent.click(day)
+    expect(input.value).toBe('02/15/1995 - 02/27/1995')
+
+    await userEvent.click(input)
+    await userEvent.click(screen.getByText('31'))
+    expect(input.value).toBe('01/31/1995 - ')
+  })
+
+  test('render correctly with showMonthYearPicker with excluded months', async () => {
+    const { asFragment } = renderWithTheme(
+      <DateInput
+        label="Date"
+        showMonthYearPicker
+        onChange={() => {}}
+        value={new Date('1995-02-11T03:24:00.000+00:00')}
+        placeholder="YYYY-MM-DD"
+        excludeDates={[new Date('1995-10-01'), new Date('1995-02-01')]}
+      />,
+    )
+    const input = screen.getByPlaceholderText('YYYY-MM-DD')
+    await userEvent.click(input)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('handle correctly click on date with showmonthYearPicker', async () => {
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        onChange={() => {}}
+        placeholder="YYYY-MM-DD"
+        value={new Date('1995-12-11T03:24:00.000+00:00')}
+        showMonthYearPicker
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+    const calendar = screen.getByRole('dialog')
+    expect(calendar).toBeVisible()
+
+    await userEvent.click(screen.getByText('Jan'))
+    expect(input.value).toBe('01/1995')
+  })
+
+  test('handle correctly click on date range with showMonthYearPicker', async () => {
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        onChange={() => {}}
+        placeholder="YYYY-MM-DD"
+        selectsRange
+        showMonthYearPicker
+        value={new Date('1995-12-11T03:24:00.000+00:00')}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+    const calendar = screen.getByRole('dialog')
+    expect(calendar).toBeVisible()
+
+    await userEvent.click(screen.getByText('Aug'))
+    expect(input.value).toBe('08/1995 - ')
+    const month = screen.getByText('Feb')
+
+    await userEvent.hover(month)
+    await userEvent.unhover(month)
+
+    await userEvent.click(month)
+    expect(input.value).toBe('02/1995 - ')
+
+    await userEvent.click(screen.getByText('Sep'))
+    expect(input.value).toBe('02/1995 - 09/1995')
+  })
+
+  test('renders correctly custom format with range', () => {
+    const { asFragment } = renderWithTheme(
+      <DateInput
+        label="Date"
+        onChange={() => {}}
+        onBlur={() => {}}
+        onFocus={() => {}}
+        selectsRange
+        startDate={new Date('1995-12-11T03:24:00.000+00:00')}
+        endDate={new Date('1995-12-11T03:24:00.000+00:00')}
+        name="test"
+        autoFocus={false}
+        format={value => (value instanceof Date ? value.toISOString() : value)}
+      />,
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('handle correctly type in input', async () => {
+    const mockOnChange = vi.fn()
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        onChange={mockOnChange}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    await userEvent.type(input, '08/21/1995')
+    expect(mockOnChange).toBeCalled()
+    expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
+  })
+
+  test('handle correctly type in input with select range', async () => {
+    const mockOnChange = vi.fn()
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        selectsRange
+        onChange={mockOnChange}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    await userEvent.type(input, '08/21/1995')
+    expect(mockOnChange).toBeCalled()
+    expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
+  })
+
+  test('handle correctly type in input with showMonthYearPicker', async () => {
+    const mockOnChange = vi.fn()
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        onChange={mockOnChange}
+        showMonthYearPicker
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    await userEvent.type(input, '2000/08')
+    expect(mockOnChange).toBeCalled()
+    expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
+  })
+
+  test('handle correctly type in input with select range and showMonthYearPicker', async () => {
+    const mockOnChange = vi.fn()
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        selectsRange
+        showMonthYearPicker
+        onChange={mockOnChange}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    await userEvent.type(input, '2000/08')
+    expect(mockOnChange).toBeCalled()
+    expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
 })

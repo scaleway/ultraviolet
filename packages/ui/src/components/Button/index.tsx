@@ -279,6 +279,8 @@ type CommonProps = {
   onMouseDown?: MouseEventHandler<HTMLElement>
   onMouseUp?: MouseEventHandler<HTMLElement>
   onMouseOut?: MouseEventHandler<HTMLElement>
+  onMouseEnter?: MouseEventHandler<HTMLElement>
+  onMouseLeave?: MouseEventHandler<HTMLElement>
 }
 
 // @note: using XOR utility was generating some lint erros
@@ -346,6 +348,8 @@ export const Button = forwardRef<Element, FinalProps>(
       onMouseDown,
       onMouseUp,
       onMouseOut,
+      onMouseEnter,
+      onMouseLeave,
       name,
       'aria-label': ariaLabel,
       'aria-current': ariaCurrent,
@@ -416,6 +420,8 @@ export const Button = forwardRef<Element, FinalProps>(
             onMouseDown={onMouseDown}
             onMouseUp={onMouseUp}
             onMouseOut={onMouseOut}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
           >
             {content}
           </Component>
@@ -451,6 +457,8 @@ export const Button = forwardRef<Element, FinalProps>(
           onMouseDown={onMouseDown}
           onMouseUp={onMouseUp}
           onMouseOut={onMouseOut}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
         >
           {content}
         </Component>
