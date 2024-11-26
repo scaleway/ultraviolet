@@ -415,10 +415,19 @@ describe('Table', () => {
     }
 
     await userEvent.click(firstRowCheckbox)
-    fireEvent.click(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.keyDown(document, { key: 'Shift', code: 'ShiftLeft' })
 
+    // Test hovering
+    fireEvent.mouseMove(secondRowCheckbox, { shiftKey: true })
+    fireEvent.mouseMove(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.mouseLeave(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
+
+    fireEvent.click(thirdRowCheckbox, { shiftKey: true })
     expect(secondRowCheckbox).toBeChecked()
     expect(thirdRowCheckbox).toBeChecked()
+
+    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
 
     expect(asFragment()).toMatchSnapshot()
   })
