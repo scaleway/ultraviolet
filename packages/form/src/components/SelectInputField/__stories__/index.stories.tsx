@@ -72,6 +72,7 @@ export default {
     },
   },
   title: 'Form/Components/Fields/SelectInputField',
+  tags: ['deprecated'],
 } as Meta
 
 export { Playground } from './Playground.stories'

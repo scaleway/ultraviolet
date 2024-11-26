@@ -80,6 +80,7 @@ export default {
     migrationLink: 'Migrations/NumberInput to NumberInputV2',
   },
   title: 'Form/Components/Fields/NumberInputField',
+  tags: ['deprecated'],
 } as Meta
 
 export { Playground } from './Playground.stories'

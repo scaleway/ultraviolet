@@ -76,6 +76,7 @@ export default {
     migrationLink: 'Migrations/TextInput to TextInputV2',
   },
   title: 'Form/Components/Fields/TextInputField',
+  tags: ['deprecated'],
 } as Meta
 
 export { Playground } from './Playground.stories'
