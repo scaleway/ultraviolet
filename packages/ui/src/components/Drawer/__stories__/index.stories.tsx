@@ -9,4 +9,4 @@ export default {
 export { Playground } from './Playground.stories'
 export { Size } from './Size.stories'
 export { Footer } from './Footer.stories'
-export { FunctionChildren } from './FunctionChildren.stories'
+export { FunctionProps } from './FunctionProps.stories'

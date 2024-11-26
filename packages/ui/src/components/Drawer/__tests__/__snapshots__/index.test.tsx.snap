@@ -1,6 +1,38 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Drawer > custom header 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Drawer > function footer 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="testing"
+  >
+    <button
+      aria-controls="modal-test"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Open
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Drawer > function header 1`] = `
 <DocumentFragment>
   <div
     data-testid="testing"
@@ -167,10 +199,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 
 @keyframes animation-1 {
   from {
-    -webkit-transform: translateX(300px);
-    -moz-transform: translateX(300px);
-    -ms-transform: translateX(300px);
-    transform: translateX(300px);
+    -webkit-transform: translateX(22rem);
+    -moz-transform: translateX(22rem);
+    -ms-transform: translateX(22rem);
+    transform: translateX(22rem);
   }
 
   to {
@@ -183,10 +215,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 
 @keyframes animation-1 {
   from {
-    -webkit-transform: translateX(300px);
-    -moz-transform: translateX(300px);
-    -ms-transform: translateX(300px);
-    transform: translateX(300px);
+    -webkit-transform: translateX(22rem);
+    -moz-transform: translateX(22rem);
+    -ms-transform: translateX(22rem);
+    transform: translateX(22rem);
   }
 
   to {
@@ -199,10 +231,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 
 @keyframes animation-2 {
   from {
-    -webkit-transform: translateX(500px);
-    -moz-transform: translateX(500px);
-    -ms-transform: translateX(500px);
-    transform: translateX(500px);
+    -webkit-transform: translateX(48rem);
+    -moz-transform: translateX(48rem);
+    -ms-transform: translateX(48rem);
+    transform: translateX(48rem);
   }
 
   to {
@@ -215,10 +247,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 
 @keyframes animation-2 {
   from {
-    -webkit-transform: translateX(500px);
-    -moz-transform: translateX(500px);
-    -ms-transform: translateX(500px);
-    transform: translateX(500px);
+    -webkit-transform: translateX(48rem);
+    -moz-transform: translateX(48rem);
+    -ms-transform: translateX(48rem);
+    transform: translateX(48rem);
   }
 
   to {
@@ -231,10 +263,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 
 @keyframes animation-3 {
   from {
-    -webkit-transform: translateX(1000px);
-    -moz-transform: translateX(1000px);
-    -ms-transform: translateX(1000px);
-    transform: translateX(1000px);
+    -webkit-transform: translateX(70rem);
+    -moz-transform: translateX(70rem);
+    -ms-transform: translateX(70rem);
+    transform: translateX(70rem);
   }
 
   to {
@@ -247,10 +279,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 
 @keyframes animation-3 {
   from {
-    -webkit-transform: translateX(1000px);
-    -moz-transform: translateX(1000px);
-    -ms-transform: translateX(1000px);
-    transform: translateX(1000px);
+    -webkit-transform: translateX(70rem);
+    -moz-transform: translateX(70rem);
+    -ms-transform: translateX(70rem);
+    transform: translateX(70rem);
   }
 
   to {
@@ -340,7 +372,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   margin-right: 0;
   height: 100%;
   border-radius: 0;
-  padding: 1rem;
+  padding: 0;
 }
 
 .emotion-3[data-size="large"] {
@@ -417,21 +449,21 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 }
 
 .emotion-3[data-size="small"] {
-  width: 356px;
+  width: 22.25rem;
   -webkit-animation: animation-1 linear 150ms;
   animation: animation-1 linear 150ms;
 }
 
 .emotion-3[data-size="medium"] {
-  width: 783px;
+  width: 49rem;
   -webkit-animation: animation-2 linear 250ms;
   animation: animation-2 linear 250ms;
 }
 
 .emotion-3[data-size="large"] {
-  width: 1209px;
-  -webkit-animation: animation-3 linear 400ms;
-  animation: animation-3 linear 400ms;
+  width: 75.5rem;
+  -webkit-animation: animation-3 linear 300ms;
+  animation: animation-3 linear 300ms;
 }
 
 .emotion-3 {
@@ -447,7 +479,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   margin-right: 0;
   height: 100%;
   border-radius: 0;
-  padding: 1rem;
+  padding: 0;
 }
 
 .emotion-3[data-size="large"] {
@@ -524,21 +556,21 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
 }
 
 .emotion-3[data-size="small"] {
-  width: 356px;
+  width: 22.25rem;
   -webkit-animation: animation-1 linear 150ms;
   animation: animation-1 linear 150ms;
 }
 
 .emotion-3[data-size="medium"] {
-  width: 783px;
+  width: 49rem;
   -webkit-animation: animation-2 linear 250ms;
   animation: animation-2 linear 250ms;
 }
 
 .emotion-3[data-size="large"] {
-  width: 1209px;
-  -webkit-animation: animation-3 linear 400ms;
-  animation: animation-3 linear 400ms;
+  width: 75.5rem;
+  -webkit-animation: animation-3 linear 300ms;
+  animation: animation-3 linear 300ms;
 }
 
 .emotion-5 {
@@ -563,6 +595,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   height: 100%;
+  position: relative;
 }
 
 .emotion-5 {
@@ -587,9 +620,10 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   height: 100%;
+  position: relative;
 }
 
-.emotion-7 {
+.emotion-8 {
   color: #3f4250;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
@@ -599,9 +633,11 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding-inline: 1rem;
+  padding-top: 2rem;
 }
 
-.emotion-7 {
+.emotion-8 {
   color: #3f4250;
   font-size: 1.3125rem;
   font-family: Space Grotesk,sans-serif;
@@ -611,9 +647,11 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  padding-inline: 1rem;
+  padding-top: 2rem;
 }
 
-.emotion-9 {
+.emotion-10 {
   margin: 0;
   border: 0;
   width: auto;
@@ -624,7 +662,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-9 {
+.emotion-10 {
   margin: 0;
   border: 0;
   width: auto;
@@ -635,29 +673,81 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   background-color: #e9eaeb;
 }
 
-.emotion-11 {
-  overflow-y: scroll;
+.emotion-12 {
+  overflow-y: auto;
   height: 100%;
+  padding-inline: 1rem;
 }
 
-.emotion-11 {
-  overflow-y: scroll;
+.emotion-12 {
+  overflow-y: auto;
   height: 100%;
+  padding-inline: 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.emotion-16 {
   position: absolute;
   top: 1rem;
   right: 1rem;
 }
 
-.emotion-13 {
+.emotion-16 {
   position: absolute;
   top: 1rem;
   right: 1rem;
 }
 
-.emotion-15 {
+.emotion-18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -696,22 +786,22 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   color: #3f4250;
 }
 
-.emotion-15:hover {
+.emotion-18:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-15:active {
+.emotion-18:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-15:hover,
-.emotion-15:active {
+.emotion-18:hover,
+.emotion-18:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-15 {
+.emotion-18 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -750,22 +840,22 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   color: #3f4250;
 }
 
-.emotion-15:hover {
+.emotion-18:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-15:active {
+.emotion-18:active {
   box-shadow: 0px 0px 0px 3px #151a2d5c;
 }
 
-.emotion-15:hover,
-.emotion-15:active {
+.emotion-18:hover,
+.emotion-18:active {
   background: #e9eaeb;
   color: #222638;
 }
 
-.emotion-17 {
+.emotion-20 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -774,12 +864,12 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   min-height: 16px;
 }
 
-.emotion-17 .fillStroke {
+.emotion-20 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
 
-.emotion-17 {
+.emotion-20 {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -788,7 +878,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
   min-height: 16px;
 }
 
-.emotion-17 .fillStroke {
+.emotion-20 .fillStroke {
   stroke: currentColor;
   fill: none;
 }
@@ -818,34 +908,37 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
           class="emotion-5 emotion-6"
         >
           <h2
-            class="emotion-7 emotion-8"
+            class="emotion-7 emotion-8 emotion-9"
           >
-            title
+            header
           </h2>
           <hr
             aria-orientation="horizontal"
-            class="emotion-9 emotion-10"
+            class="emotion-10 emotion-11"
             role="separator"
           />
           <div
-            class="emotion-11 emotion-12"
+            class="emotion-12 emotion-13"
           >
             <div>
               modal
             </div>
           </div>
+          <div
+            class="emotion-14 emotion-15"
+          />
         </div>
         <div
-          class="emotion-13 emotion-14"
+          class="emotion-16 emotion-17"
         >
           <button
             aria-label="close"
-            class="emotion-15 emotion-16"
+            class="emotion-18 emotion-19"
             data-testid="test-close-button"
             type="button"
           >
             <svg
-              class="emotion-17 emotion-18"
+              class="emotion-20 emotion-21"
               viewBox="0 0 16 16"
               xmlns="http://www.w3.org/2000/svg"
             >

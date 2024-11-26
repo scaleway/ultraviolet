@@ -3,12 +3,12 @@ import { Drawer } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
-export const FunctionChildren: StoryFn = props => (
+export const FunctionProps: StoryFn = props => (
   <Stack direction="row" gap={2}>
     <Drawer
       {...props}
       disclosure={<Button>Function children</Button>}
-      title="Function children"
+      header="Function children"
       footer="Footer"
     >
       {({ close }) => (
@@ -21,7 +21,7 @@ export const FunctionChildren: StoryFn = props => (
     <Drawer
       {...props}
       disclosure={<Button>Function footer</Button>}
-      title="Function footer"
+      header="Function footer"
       footer={({ close }) => (
         <Button onClick={close}>
           A custom button that can close the drawer
@@ -30,14 +30,28 @@ export const FunctionChildren: StoryFn = props => (
     >
       Children
     </Drawer>
+
+    <Drawer
+      {...props}
+      isClosable={false}
+      disclosure={<Button>Function header</Button>}
+      header={({ close }) => (
+        <Button onClick={close}>
+          A custom button that can close the drawer
+        </Button>
+      )}
+      footer="footer"
+    >
+      children
+    </Drawer>
   </Stack>
 )
 
-FunctionChildren.parameters = {
+FunctionProps.parameters = {
   docs: {
     description: {
       story:
-        '`disclosure`, `footer` and `children` can all be functions that can get the Drawer state',
+        '`disclosure`, `footer`, `header` and `children` can all be functions that can get the Drawer state',
     },
   },
 }

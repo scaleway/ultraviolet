@@ -21,33 +21,33 @@ describe('Drawer', () => {
 
   test(`renders with default Props`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer disclosure={<button type="button">Test</button>} title="title">
+      <Drawer disclosure={<button type="button">Test</button>} header="header">
         <div>test</div>
       </Drawer>,
     ))
 
   test(`renders without disclosure`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer disclosure={undefined} title="title">
+      <Drawer disclosure={undefined} header="header">
         <div>test</div>
       </Drawer>,
     ))
 
   test(`renders with default Props and function children`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer title="title">{() => <div>test</div>}</Drawer>,
+      <Drawer header="header">{() => <div>test</div>}</Drawer>,
     ))
 
   test(`renders with default Props and function children open`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer title="title" open>
+      <Drawer header="header" open>
         {() => <div>test</div>}
       </Drawer>,
     ))
 
   test(`renders with open={true}`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer open title="title">
+      <Drawer open header="header">
         <div>test</div>
       </Drawer>,
     ))
@@ -55,7 +55,7 @@ describe('Drawer', () => {
   test(`renders custom size=medium`, async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
-        title="title"
+        header="header"
         size="medium"
         disclosure={<button type="button">button</button>}
       >
@@ -70,7 +70,7 @@ describe('Drawer', () => {
   test(`renders custom size=large`, async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
-        title="title"
+        header="header"
         size="large"
         disclosure={<button type="button">button</button>}
       >
@@ -86,7 +86,7 @@ describe('Drawer', () => {
   test(`renders custom size=small`, async () => {
     const { asFragment } = renderWithTheme(
       <Drawer
-        title="title"
+        header="header"
         size="small"
         disclosure={<button type="button">button</button>}
       >
@@ -101,7 +101,7 @@ describe('Drawer', () => {
 
   test(`renders with custom classNames`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer open title="title" className="test">
+      <Drawer open header="header" className="test">
         <div>test</div>
       </Drawer>,
     ))
@@ -111,7 +111,7 @@ describe('Drawer', () => {
       <Drawer
         ariaLabel="drawer-test"
         id="drawer-test"
-        title="title"
+        header="header"
         disclosure={<button type="button">Test</button>}
       >
         <div>modal</div>
@@ -124,7 +124,7 @@ describe('Drawer', () => {
       <Drawer
         ariaLabel="modal-test"
         id="modal-test"
-        title="title"
+        header="header"
         disclosure={<button type="button">Open modal</button>}
         data-testid="test"
         onClose={() => {
@@ -151,7 +151,7 @@ describe('Drawer', () => {
       <Drawer
         ariaLabel="modal-test"
         id="modal-test"
-        title="title"
+        header="header"
         disclosure={() => (
           <button type="button" onClick={mockOnClick}>
             Open
@@ -169,7 +169,7 @@ describe('Drawer', () => {
   test(`disclosure function render onClick props is call with toggle`, async () => {
     renderWithTheme(
       <Drawer
-        title="title"
+        header="header"
         ariaLabel="modal-test"
         id="modal-test"
         disclosure={({ toggle }) => (
@@ -194,7 +194,7 @@ describe('Drawer', () => {
 
   test(`should call 'close' prop from render props`, async () => {
     renderWithTheme(
-      <Drawer ariaLabel="modal-test" id="modal-test" open title="title">
+      <Drawer ariaLabel="modal-test" id="modal-test" open header="header">
         {({ close }) => (
           <button
             type="button"
@@ -216,7 +216,7 @@ describe('Drawer', () => {
   test(`disclosure Component render onClick props is call`, async () => {
     renderWithTheme(
       <Drawer
-        title="title"
+        header="header"
         ariaLabel="modal-test"
         id="modal-test"
         disclosure={
@@ -238,7 +238,7 @@ describe('Drawer', () => {
     const mockOnClose = vi.fn(() => {})
     renderWithTheme(
       <Drawer
-        title="title"
+        header="header"
         ariaLabel="modal-test"
         id="modal-test"
         hideOnEsc
@@ -259,7 +259,7 @@ describe('Drawer', () => {
       <Drawer
         ariaLabel="modal-test"
         id="modal-test"
-        title="title"
+        header="header"
         disclosure={<button type="button">Open</button>}
         footer={({ close }) => (
           <button
@@ -284,13 +284,53 @@ describe('Drawer', () => {
       <Drawer
         ariaLabel="modal-test"
         id="modal-test"
-        title="title"
+        header="header"
         disclosure={<button type="button">Open</button>}
         footer={
           <button type="button">
             A custom button that can close the modal
           </button>
         }
+      >
+        <div> test</div>
+      </Drawer>,
+    )
+  })
+
+  test(`custom header`, () => {
+    shouldMatchEmotionSnapshotWithPortal(
+      <Drawer
+        ariaLabel="modal-test"
+        id="modal-test"
+        footer="footer"
+        disclosure={<button type="button">Open</button>}
+        header={<h1>Custom header</h1>}
+      >
+        <div> test</div>
+      </Drawer>,
+    )
+  })
+
+  test(`function header`, () => {
+    shouldMatchEmotionSnapshotWithPortal(
+      <Drawer
+        ariaLabel="modal-test"
+        id="modal-test"
+        isClosable={false}
+        footer="footer"
+        disclosure={<button type="button">Open</button>}
+        header={({ close }) => (
+          <button
+            onClick={() => {
+              close()
+              mockOnClick()
+            }}
+            type="button"
+            data-testid="buttonClose"
+          >
+            A custom button that can close the modal
+          </button>
+        )}
       >
         <div> test</div>
       </Drawer>,

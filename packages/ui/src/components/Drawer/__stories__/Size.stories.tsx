@@ -10,9 +10,9 @@ export const Size: StoryFn = props => (
           {...props}
           size={width as keyof typeof SIZES}
           disclosure={<Button>{width}</Button>}
-          title={width}
+          header={width}
         >
-          <div style={{ padding: 32 }}>Content of the {width} drawer</div>
+          <div>Content of the {width} drawer</div>
         </Drawer>
       </div>
     ))}

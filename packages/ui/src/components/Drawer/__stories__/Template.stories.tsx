@@ -7,5 +7,5 @@ export const DefaultDisclosure = <Button>Open Modal</Button>
 export const Template: StoryFn<typeof Drawer> = args => <Drawer {...args} />
 
 Template.args = {
-  title: 'Drawer',
+  header: 'Drawer',
 }
