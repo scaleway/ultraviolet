@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://scaleway-assets.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://assets.scaleway.com/illustrations'
 
 const accountBilling = `${BASE_URL}/various/documentation/account-billing.svg`
 const generic = `${BASE_URL}/various/documentation/generic.svg`

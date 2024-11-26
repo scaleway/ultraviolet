@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://scaleway-assets.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://assets.scaleway.com/illustrations'
 
 const webPlatformContent = `${BASE_URL}/products/webPlatform/web-platform-content.webp`
 const webPlatformKeyvisual = `${BASE_URL}/products/webPlatform/web-platform-keyvisual.webp`
