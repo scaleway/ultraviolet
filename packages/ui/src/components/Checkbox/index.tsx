@@ -452,7 +452,7 @@ export const Checkbox = forwardRef(
               </Text>
             ) : null}
 
-            {error ? (
+            {error && typeof error !== 'boolean' ? (
               <ErrorText variant="caption" as="span" sentiment="danger">
                 {error}
               </ErrorText>

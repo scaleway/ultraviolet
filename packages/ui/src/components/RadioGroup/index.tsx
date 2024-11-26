@@ -15,6 +15,7 @@ import { Text } from '../Text'
 type RadioGroupContextType = {
   groupName: string
   groupValue: string | number
+  error: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -53,7 +54,7 @@ const RadioGroupRadio = ({
     throw new Error('RadioGroup.Radio can only be used inside a RadioGroup')
   }
 
-  const { groupName, onChange, groupValue } = context
+  const { groupName, onChange, groupValue, error: errorContext } = context
 
   return (
     <Radio
@@ -62,7 +63,7 @@ const RadioGroupRadio = ({
       onFocus={onFocus}
       onBlur={onBlur}
       disabled={disabled}
-      error={error}
+      error={error || errorContext}
       name={groupName ?? name}
       value={value}
       label={label}
@@ -120,8 +121,9 @@ export const RadioGroup = ({
       groupValue: value,
       onChange,
       required,
+      error: !!error,
     }),
-    [name, value, onChange, required],
+    [name, value, onChange, required, error],
   )
 
   return (

@@ -2238,20 +2238,7 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   cursor: pointer;
 }
 
-.emotion-19 {
-  color: #b3144d;
-  font-size: 0.75rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding-top: 0.25rem;
-}
-
-.emotion-21 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2275,11 +2262,11 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
   width: 100%;
 }
 
-.emotion-21[data-has-label='true'] {
+.emotion-18[data-has-label='true'] {
   padding-left: 2rem;
 }
 
-.emotion-21[data-has-label='false'] {
+.emotion-18[data-has-label='false'] {
   display: contents;
 }
 
@@ -2353,13 +2340,10 @@ exports[`SelectableCard > renders correctly with checkbox type and isError prop 
               test
             </label>
           </div>
-          <span
-            class="emotion-18 emotion-19 emotion-17"
-          />
         </div>
       </div>
       <div
-        class="emotion-21 emotion-22"
+        class="emotion-18 emotion-19"
         data-has-label="false"
       >
         Radio card
@@ -2838,8 +2822,8 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r19:"
-        aria-describedby=":r19:"
+        aria-controls=":r18:"
+        aria-describedby=":r18:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
@@ -2863,7 +2847,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
               aria-checked="false"
               aria-invalid="false"
               class="emotion-9 emotion-10"
-              id=":r1a:"
+              id=":r19:"
               name="checkbox"
               type="checkbox"
               value="choice"
@@ -2903,7 +2887,7 @@ exports[`SelectableCard > renders correctly with checkbox type and tooltip prop 
               >
                 <label
                   class="emotion-19 emotion-20 emotion-21"
-                  for=":r1a:"
+                  for=":r19:"
                 >
                   test
                 </label>
@@ -3374,7 +3358,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
           aria-invalid="false"
           class="emotion-5 emotion-6"
           disabled=""
-          id=":r1e:"
+          id=":r1d:"
           name="radio"
           type="checkbox"
           value="choice"
@@ -3414,7 +3398,7 @@ exports[`SelectableCard > renders correctly with complex children 1`] = `
           >
             <label
               class="emotion-15 emotion-16 emotion-17"
-              for=":r1e:"
+              for=":r1d:"
             >
               test
             </label>
@@ -6736,8 +6720,8 @@ exports[`SelectableCard > renders correctly with radio type and tooltip prop 1`]
       class="emotion-0 emotion-1"
     >
       <div
-        aria-controls=":r15:"
-        aria-describedby=":r15:"
+        aria-controls=":r14:"
+        aria-describedby=":r14:"
         class="emotion-2 emotion-3"
         tabindex="0"
       >
