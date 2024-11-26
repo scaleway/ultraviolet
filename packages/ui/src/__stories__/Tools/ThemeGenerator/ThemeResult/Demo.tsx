@@ -3,7 +3,7 @@ import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import {
   Alert,
-  Avatar,
+  AvatarV2,
   Badge,
   Button,
   Card,
@@ -170,7 +170,7 @@ export const Demo = () => {
                 gap={1}
               >
                 <Stack direction="row" alignItems="center" gap={2}>
-                  <Avatar text="MA" />
+                  <AvatarV2 variant="text" text="MA" shape="circle" />
                   <StyledStack>
                     <Text variant="bodySmall" as="span" sentiment="primary">
                       Review from Marc - 2 days ago

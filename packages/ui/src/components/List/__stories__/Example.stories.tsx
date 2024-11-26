@@ -6,7 +6,7 @@ import { MenuV2 } from '../../MenuV2'
 import { Modal } from '../../Modal'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { TextInput } from '../../TextInput'
+import { TextInputV2 } from '../../TextInputV2'
 import { data as sourceData } from './resources'
 
 export const Example: StoryFn = args => {
@@ -79,7 +79,7 @@ export const Example: StoryFn = args => {
                   <Text as="h6" variant="headingSmall">
                     Edit description
                   </Text>
-                  <TextInput
+                  <TextInputV2
                     name="description"
                     label="Type planet description"
                   />

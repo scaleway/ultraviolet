@@ -1,6 +1,6 @@
 import type { Decorator, StoryFn } from '@storybook/react'
 import { NotificationContainer, notification } from '..'
-import { Avatar, Button, Stack, Text } from '../../index'
+import { AvatarV2, Button, Stack, Text } from '../../index'
 
 export const Children: StoryFn<typeof NotificationContainer> = args => (
   <div style={{ height: '150px' }}>
@@ -37,7 +37,7 @@ export const Children: StoryFn<typeof NotificationContainer> = args => (
             ),
 
             'Invitation',
-            <Avatar text="AB" size={32} />,
+            <AvatarV2 text="AB" variant="text" shape="circle" />,
             false,
           )
         }

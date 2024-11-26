@@ -1,15 +1,27 @@
 import styled from '@emotion/styled'
 import type { StoryFn } from '@storybook/react'
+import type { ComponentProps } from 'react'
 import { useCallback, useState } from 'react'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
-import { SelectInput } from '../../SelectInput'
-import { TextInput } from '../../TextInput'
+import { SelectInputV2 } from '../../SelectInputV2'
+import { TextInputV2 } from '../../TextInputV2'
 import { Popover } from '../index'
 
 const StyledPopover = styled(Popover)`
   height: 400px;
 `
+
+const options: ComponentProps<typeof SelectInputV2>['options'] = [
+  {
+    value: 'option 1',
+    label: 'Option 1',
+  },
+  {
+    value: 'option 2',
+    label: 'Option 2',
+  },
+]
 
 export const AdvancedUsage: StoryFn<typeof Popover> = () => {
   const [opened, setOpened] = useState(false)
@@ -30,18 +42,20 @@ export const AdvancedUsage: StoryFn<typeof Popover> = () => {
           >
             <div>
               <div>Modal</div>
-              <SelectInput>
-                <SelectInput.Option>test 1</SelectInput.Option>
-                <SelectInput.Option>test 2</SelectInput.Option>
-              </SelectInput>
-              <TextInput />
+              <SelectInputV2
+                name="options"
+                label="Choose an option"
+                options={options}
+              />
+              <TextInputV2 label="Type something here" />
             </div>
           </Modal>
-          <SelectInput>
-            <SelectInput.Option>test 1</SelectInput.Option>
-            <SelectInput.Option>test 2</SelectInput.Option>
-          </SelectInput>
-          <TextInput />
+          <SelectInputV2
+            name="options"
+            label="Choose an option"
+            options={options}
+          />
+          <TextInputV2 label="Type something here" />
         </>
       }
     >

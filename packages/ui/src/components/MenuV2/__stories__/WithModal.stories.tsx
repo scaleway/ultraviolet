@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { MenuV2 } from '..'
 import { Modal } from '../../Modal'
-import { TextInput } from '../../TextInput'
+import { TextInputV2 } from '../../TextInputV2'
 import { DefaultDisclosure } from './Template.stories'
 
 export const WithModal: StoryFn<typeof MenuV2> = () => {
@@ -13,7 +13,7 @@ export const WithModal: StoryFn<typeof MenuV2> = () => {
       <div style={{ padding: 32 }}>
         Content should be present in center of the modal
       </div>
-      <TextInput name="test" label="Test input events" />
+      <TextInputV2 name="test" label="Test input events" />
     </Modal>
   )
 
