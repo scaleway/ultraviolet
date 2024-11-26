@@ -1,9 +1,11 @@
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode, RefObject } from 'react'
 import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react'
 import type { Checkbox } from '../Checkbox'
@@ -13,6 +15,7 @@ type RowState = Record<string, boolean>
 type TableContextValue = {
   bordered: boolean
   stripped: boolean
+  ref: RefObject<HTMLInputElement[]>
   // ============ Selectable logic ============
   selectedRowIds: RowState
   selectRow: (rowId: string) => void
@@ -25,6 +28,7 @@ type TableContextValue = {
    * @returns an unregister function
    * */
   registerSelectableRow: (rowId: string) => () => void
+  inRange: string[]
   // ============ Expandable logic ============
   expandedRowIds: RowState
   expandRow: (rowId: string) => void
@@ -54,6 +58,7 @@ export const TableProvider = ({
 }: TableProviderProps) => {
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
+  const ref = useRef<HTMLInputElement[]>([])
 
   const registerExpandableRow = useCallback(
     (rowId: string, expanded = false) => {
@@ -153,6 +158,88 @@ export const TableProvider = ({
     }))
   }, [])
 
+  const [lastCheckedIndex, setLastCheckedIndex] = useState<null | number>(null)
+  const [inRange, setInRange] = useState<string[]>([])
+
+  // Multiselect with shift key
+  useEffect(() => {
+    const handlers: (() => void)[] = []
+
+    if (ref.current) {
+      const handleClick = (
+        index: number,
+        isShiftPressed: boolean,
+        checked: boolean,
+      ) => {
+        setLastCheckedIndex(index)
+        if (isShiftPressed && lastCheckedIndex !== null) {
+          const start = Math.min(lastCheckedIndex, index)
+          const end = Math.max(lastCheckedIndex, index)
+
+          for (let i = start; i <= end; i += 1) {
+            const checkbox = ref.current[i]
+            const checkboxValue = checkbox.value
+            if (!checkbox.disabled) {
+              if (checked) unselectRow(checkboxValue)
+              else selectRow(checkboxValue)
+            }
+          }
+        }
+      }
+
+      const handleHover = (
+        index: number,
+        isShiftPressed: boolean,
+        leaving: boolean,
+      ) => {
+        const newRange: string[] = []
+
+        if (isShiftPressed && lastCheckedIndex !== null) {
+          const start = Math.min(lastCheckedIndex, index)
+          const end = Math.max(lastCheckedIndex, index)
+
+          for (let i = start; i < end; i += 1) {
+            const checkbox = ref.current[i]
+            if (!checkbox.disabled && !leaving) {
+              newRange.push(checkbox.value)
+            }
+          }
+        }
+        setInRange(newRange)
+      }
+
+      ref.current.forEach((checkbox, index) => {
+        const clickHandler = (event: MouseEvent) =>
+          handleClick(
+            index,
+            event.shiftKey,
+            selectedRowIds[(event.target as HTMLInputElement).value],
+          )
+
+        const hoverEnteringHandler = (event: MouseEvent) =>
+          handleHover(index, event.shiftKey, false)
+
+        const hoverLeavingHandler = (event: MouseEvent) =>
+          handleHover(index, event.shiftKey, true)
+
+        checkbox.addEventListener('click', clickHandler)
+        checkbox.addEventListener('mousemove', hoverEnteringHandler)
+        checkbox.addEventListener('mouseleave', hoverLeavingHandler)
+
+        handlers.push(() => {
+          checkbox.removeEventListener('click', clickHandler)
+          checkbox.removeEventListener('mousemove', hoverLeavingHandler)
+          checkbox.removeEventListener('mouseenter', hoverEnteringHandler)
+        })
+      })
+    }
+
+    return () => {
+      handlers.forEach(cleanup => cleanup())
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lastCheckedIndex, selectedRowIds])
+
   const value = useMemo<TableContextValue>(
     () => ({
       registerSelectableRow,
@@ -170,6 +257,8 @@ export const TableProvider = ({
       expandedRowIds,
       collapseRow,
       registerExpandableRow,
+      ref,
+      inRange,
     }),
     [
       registerSelectableRow,
@@ -187,6 +276,8 @@ export const TableProvider = ({
       expandButton,
       collapseRow,
       registerExpandableRow,
+      ref,
+      inRange,
     ],
   )
 

@@ -674,4 +674,65 @@ describe('List', () => {
       </List>,
     )
   })
+
+  test('Should render correctly with selectable with shift click for multiselect', async () => {
+    const { asFragment } = renderWithTheme(
+      <List columns={columns} selectable onSelectedChange={vi.fn()}>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+            <List.SelectBar data={data} idKey="id">
+              {({ selectedItems }) => <div>{selectedItems.length} items</div>}
+            </List.SelectBar>
+          </List.Row>
+        ))}
+      </List>,
+    )
+    const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
+
+    const firstRowCheckbox = checkboxes.find(({ value }) => value === '2')
+    const secondRowCheckbox = checkboxes.find(({ value }) => value === '3')
+    const thirdRowCheckbox = checkboxes.find(({ value }) => value === '4')
+    const fifthRowCheckbox = checkboxes.find(({ value }) => value === '5')
+
+    expect(firstRowCheckbox).toBeInTheDocument()
+
+    if (!firstRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+
+    if (!secondRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+    if (!thirdRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+
+    if (!fifthRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+
+    await userEvent.click(firstRowCheckbox)
+    fireEvent.keyDown(document, { key: 'Shift', code: 'ShiftLeft' })
+
+    // Test hovering
+    fireEvent.mouseMove(secondRowCheckbox, { shiftKey: true })
+    fireEvent.mouseMove(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.mouseLeave(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
+
+    fireEvent.click(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.click(fifthRowCheckbox, { shiftKey: true })
+    fireEvent.click(fifthRowCheckbox, { shiftKey: true })
+
+    expect(thirdRowCheckbox).toBeChecked()
+
+    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })

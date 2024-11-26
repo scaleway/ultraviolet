@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ForwardedRef, ReactNode } from 'react'
-import { forwardRef, useCallback, useEffect } from 'react'
+import { forwardRef, useCallback, useEffect, useRef } from 'react'
 import type { SENTIMENTS, space } from '../../theme'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -19,6 +19,15 @@ const ExpandableWrapper = styled('div', {
   cursor: auto;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
+`
+
+const StyledCheckbox = styled(Checkbox, {
+  shouldForwardProp: prop => !['inRange'].includes(prop),
+})<{ inRange: boolean }>`
+
+    rect {
+      ${({ theme, inRange }) => (inRange ? `fill: ${theme.colors.neutral.backgroundHover};stroke: ${theme.colors.neutral.borderHover};` : '')}
+    }
 `
 
 export const StyledRow = styled('div', {
@@ -127,7 +136,11 @@ export const Row = forwardRef(
       selectRow,
       unselectRow,
       expandButton,
+      refList,
+      inRange,
     } = useListContext()
+
+    const checkboxRef = useRef<HTMLInputElement>(null)
 
     const isSelectDisabled =
       disabled || (selectDisabled !== undefined && selectDisabled !== false)
@@ -163,6 +176,15 @@ export const Row = forwardRef(
 
     const canClickRowToExpand = !disabled && !!expandable && !expandButton
 
+    useEffect(() => {
+      const refAtEffectStart = refList.current
+      const { current } = checkboxRef
+
+      if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
+        refList.current.push(current)
+      }
+    }, [refList])
+
     return (
       <StyledRow
         className={className}
@@ -183,7 +205,7 @@ export const Row = forwardRef(
         sentiment={sentiment}
         aria-disabled={disabled}
         aria-expanded={expandable ? expandedRowIds[id] : undefined}
-        data-highlight={!!selectedRowIds[id]}
+        data-highlight={selectable && !!selectedRowIds[id]}
         data-testid={dataTestid}
       >
         {selectable ? (
@@ -196,11 +218,12 @@ export const Row = forwardRef(
                     : undefined
                 }
               >
-                <Checkbox
+                <StyledCheckbox
                   name="list-select-checkbox"
                   aria-label="select"
                   checked={selectedRowIds[id]}
                   value={id}
+                  ref={checkboxRef}
                   onChange={() => {
                     if (selectedRowIds[id]) {
                       unselectRow(id)
@@ -209,6 +232,7 @@ export const Row = forwardRef(
                     }
                   }}
                   disabled={isSelectDisabled}
+                  inRange={inRange.includes(id)}
                 />
               </Tooltip>
             </StyledCheckboxContainer>

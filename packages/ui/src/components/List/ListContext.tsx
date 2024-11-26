@@ -1,9 +1,17 @@
-import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
+import type {
+  ComponentProps,
+  Dispatch,
+  ReactNode,
+  RefObject,
+  SetStateAction,
+} from 'react'
 import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react'
 import type { Checkbox } from '../Checkbox'
@@ -32,6 +40,8 @@ type ListContextValue = {
   allRowSelectValue: ComponentProps<typeof Checkbox>['checked']
   selectAll: () => void
   unselectAll: () => void
+  refList: RefObject<HTMLInputElement[]>
+  inRange: string[]
 }
 
 const ListContext = createContext<ListContextValue | undefined>(undefined)
@@ -53,6 +63,7 @@ export const ListProvider = ({
 }: ListProviderProps) => {
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
+  const refList = useRef<HTMLInputElement[]>([])
 
   const registerExpandableRow = useCallback(
     (rowId: string, expanded = false) => {
@@ -176,6 +187,103 @@ export const ListProvider = ({
     [onSelectedChange, selectedRowIds],
   )
 
+  const [lastCheckedIndex, setLastCheckedIndex] = useState<null | number>(null)
+  const [inRange, setInRange] = useState<string[]>([])
+
+  useEffect(() => {
+    const handlers: (() => void)[] = []
+    if (refList.current) {
+      const handleClick = (
+        index: number,
+        isShiftPressed: boolean,
+        checked: boolean,
+      ) => {
+        if (index !== 0) {
+          setLastCheckedIndex(index)
+          if (isShiftPressed && lastCheckedIndex !== null) {
+            const start = Math.min(lastCheckedIndex, index)
+            const end = Math.max(lastCheckedIndex, index)
+
+            const newSelectedRowIds = {
+              ...selectedRowIds,
+            }
+
+            for (let i = start; i <= end; i += 1) {
+              const checkbox = refList.current[i]
+              const checkboxValue = checkbox.value
+
+              if (!checkbox.disabled) {
+                if (checked) {
+                  newSelectedRowIds[checkboxValue] = false
+                } else {
+                  newSelectedRowIds[checkboxValue] = true
+                }
+              }
+            }
+            setSelectedRowIds(newSelectedRowIds)
+            if (onSelectedChange) {
+              onSelectedChange(
+                Object.keys(newSelectedRowIds).filter(
+                  row => newSelectedRowIds[row],
+                ),
+              )
+            }
+          }
+        } else setLastCheckedIndex(null)
+      }
+
+      const handleHover = (
+        index: number,
+        isShiftPressed: boolean,
+        leaving: boolean,
+      ) => {
+        const newRange: string[] = []
+
+        if (isShiftPressed && lastCheckedIndex !== null) {
+          const start = Math.min(lastCheckedIndex, index)
+          const end = Math.max(lastCheckedIndex, index)
+
+          for (let i = start; i < end; i += 1) {
+            const checkbox = refList.current[i]
+            if (!checkbox.disabled && !leaving) {
+              newRange.push(checkbox.value)
+            }
+          }
+        }
+        setInRange(newRange)
+      }
+
+      refList.current.forEach((checkbox, index) => {
+        const clickHandler = (event: MouseEvent) =>
+          handleClick(
+            index,
+            event.shiftKey,
+            selectedRowIds[(event.target as HTMLInputElement).value],
+          )
+
+        const hoverEnteringHandler = (event: MouseEvent) =>
+          handleHover(index, event.shiftKey, false)
+
+        const hoverLeavingHandler = (event: MouseEvent) =>
+          handleHover(index, event.shiftKey, true)
+
+        checkbox.addEventListener('click', clickHandler)
+        checkbox.addEventListener('mousemove', hoverEnteringHandler)
+        checkbox.addEventListener('mouseout', hoverLeavingHandler)
+
+        handlers.push(() => {
+          checkbox.removeEventListener('click', clickHandler)
+          checkbox.removeEventListener('mouseout', hoverEnteringHandler)
+          checkbox.removeEventListener('mousemove', hoverLeavingHandler)
+        })
+      })
+    }
+
+    return () => {
+      handlers.forEach(cleanup => cleanup())
+    }
+  }, [lastCheckedIndex, onSelectedChange, selectedRowIds, unselectRow])
+
   const value = useMemo<ListContextValue>(
     () => ({
       registerExpandableRow,
@@ -191,6 +299,8 @@ export const ListProvider = ({
       unselectAll,
       allRowSelectValue,
       expandButton,
+      refList,
+      inRange,
     }),
     [
       registerExpandableRow,
@@ -206,6 +316,8 @@ export const ListProvider = ({
       unselectAll,
       allRowSelectValue,
       expandButton,
+      refList,
+      inRange,
     ],
   )
 

@@ -2,7 +2,7 @@ import type { Theme } from '@emotion/react'
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
@@ -17,13 +17,21 @@ const ExpandableWrapper = styled.div`
   padding: ${({ theme }) => theme.space['1']};
   cursor: auto;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: 0 0 ${({ theme }) => theme.radii.default}
-    ${({ theme }) => theme.radii.default};
+  border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
 `
 
 const StyledCheckboxContainer = styled.div`
   display: flex;
   width: ${({ theme }) => theme.sizing[SELECTABLE_CHECKBOX_SIZE]};
+`
+
+const StyledCheckbox = styled(Checkbox, {
+  shouldForwardProp: prop => !['inRange'].includes(prop),
+})<{ inRange: boolean }>`
+
+    rect {
+      ${({ theme, inRange }) => (inRange ? `fill: ${theme.colors.neutral.backgroundHover};stroke: ${theme.colors.neutral.borderHover};` : '')}
+    }
 `
 
 // We start at 5% and finish at 80% to leave the original background color
@@ -80,7 +88,10 @@ export const Row = ({
     selectRow,
     unselectRow,
     expandButton,
+    ref,
+    inRange,
   } = useTableContext()
+  const rowRef = useRef<HTMLInputElement>(null)
 
   const hasExpandable = !!expandable
   useEffect(() => {
@@ -113,6 +124,15 @@ export const Row = ({
 
   const canClickRowToExpand = hasExpandable && !expandButton
 
+  useEffect(() => {
+    const refAtEffectStart = ref.current
+    const { current } = rowRef
+
+    if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
+      ref.current.push(current)
+    }
+  }, [ref])
+
   return (
     <StyledTr
       className={className}
@@ -128,7 +148,7 @@ export const Row = ({
                 typeof selectDisabled === 'string' ? selectDisabled : undefined
               }
             >
-              <Checkbox
+              <StyledCheckbox
                 name="table-select-checkbox"
                 aria-label="select"
                 checked={selectedRowIds[id]}
@@ -141,6 +161,8 @@ export const Row = ({
                   }
                 }}
                 disabled={selectDisabled !== undefined}
+                ref={rowRef}
+                inRange={inRange.includes(id)}
               />
             </Tooltip>
           </StyledCheckboxContainer>

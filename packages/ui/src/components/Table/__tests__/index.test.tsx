@@ -376,4 +376,59 @@ describe('Table', () => {
         </Table.Body>
       </Table>,
     ))
+
+  test('Should render correctly with selectable and shift click', async () => {
+    const { asFragment } = renderWithTheme(
+      <Table columns={columns} selectable>
+        <Table.Body>
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <Table.Row key={id} id={id}>
+              <Table.Cell>{columnA}</Table.Cell>
+              <Table.Cell>{columnB}</Table.Cell>
+              <Table.Cell>{columnC}</Table.Cell>
+              <Table.Cell>{columnD}</Table.Cell>
+              <Table.Cell>{columnE}</Table.Cell>
+              <Table.SelectBar data={data} idKey="id">
+                {({ selectedItems }) => <div>{selectedItems.length} items</div>}
+              </Table.SelectBar>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>,
+    )
+    const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
+
+    const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
+    const secondRowCheckbox = checkboxes.find(({ value }) => value === '2')
+    const thirdRowCheckbox = checkboxes.find(({ value }) => value === '3')
+
+    expect(firstRowCheckbox).toBeInTheDocument()
+    if (!firstRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+    if (!secondRowCheckbox) {
+      throw new Error('Second checkbox is not defined')
+    }
+
+    if (!thirdRowCheckbox) {
+      throw new Error('Third checkbox is not defined')
+    }
+
+    await userEvent.click(firstRowCheckbox)
+    fireEvent.keyDown(document, { key: 'Shift', code: 'ShiftLeft' })
+
+    // Test hovering
+    fireEvent.mouseMove(secondRowCheckbox, { shiftKey: true })
+    fireEvent.mouseMove(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.mouseLeave(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
+
+    fireEvent.click(thirdRowCheckbox, { shiftKey: true })
+    expect(secondRowCheckbox).toBeChecked()
+    expect(thirdRowCheckbox).toBeChecked()
+
+    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 })
