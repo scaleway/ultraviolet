@@ -24,6 +24,7 @@ import {
   Children,
   cloneElement,
   isValidElement,
+  memo,
   useCallback,
   useEffect,
   useMemo,
@@ -339,561 +340,570 @@ type ItemProps = {
   'data-testid'?: string
 }
 
-export const Item = ({
-  children,
-  categoryIcon,
-  categoryIconVariant,
-  label,
-  subLabel,
-  badgeText,
-  badgeSentiment,
-  href,
-  onToggle,
-  onClickPinUnpin,
-  toggle,
-  active,
-  noPinButton,
-  type = 'default',
-  hasParents,
-  as,
-  disabled,
-  noExpand = false,
-  index,
-  id,
-  'data-testid': dataTestId,
-}: ItemProps) => {
-  const context = useNavigation()
-  if (!context) {
-    throw new Error(
-      'Navigation.Item can only be used inside a NavigationProvider.',
+export const Item = memo(
+  ({
+    children,
+    categoryIcon,
+    categoryIconVariant,
+    label,
+    subLabel,
+    badgeText,
+    badgeSentiment,
+    href,
+    onToggle,
+    onClickPinUnpin,
+    toggle,
+    active,
+    noPinButton,
+    type = 'default',
+    hasParents,
+    as,
+    disabled,
+    noExpand = false,
+    index,
+    id,
+    'data-testid': dataTestId,
+  }: ItemProps) => {
+    const context = useNavigation()
+    if (!context) {
+      throw new Error(
+        'Navigation.Item can only be used inside a NavigationProvider.',
+      )
+    }
+
+    const {
+      expanded,
+      locales,
+      pinnedFeature,
+      pinItem,
+      unpinItem,
+      pinnedItems,
+      pinLimit,
+      animation,
+      registerItem,
+      shouldAnimate,
+      animationType,
+    } = context
+
+    useEffect(
+      () => {
+        if (type !== 'pinnedGroup') {
+          registerItem({ [id]: { label, active, onToggle, onClickPinUnpin } })
+        }
+      },
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      [active, id, label, registerItem],
     )
-  }
 
-  const {
-    expanded,
-    locales,
-    pinnedFeature,
-    pinItem,
-    unpinItem,
-    pinnedItems,
-    pinLimit,
-    animation,
-    registerItem,
-    shouldAnimate,
-    animationType,
-  } = context
+    const [internalExpanded, onToggleExpand] = useReducer(
+      prevState => !prevState,
+      Boolean(toggle),
+    )
 
-  useEffect(
-    () => {
-      if (type !== 'pinnedGroup') {
-        registerItem({ [id]: { label, active, onToggle, onClickPinUnpin } })
+    const triggerToggle = useCallback(() => {
+      onToggleExpand()
+      onToggle?.(internalExpanded)
+    }, [internalExpanded, onToggle])
+
+    const PaddedStack =
+      noExpand || type === 'pinnedGroup' ? Stack : PaddingStack
+
+    const hasHrefAndNoChildren = href && !children
+    const hasPinnedFeatureAndNoChildren =
+      pinnedFeature && !children && !noPinButton
+    const isItemPinned = pinnedItems.includes(id)
+    const shouldShowPinnedButton = useMemo(() => {
+      if (href || disabled) return false
+
+      if (hasPinnedFeatureAndNoChildren && type !== 'default') {
+        return true
       }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [active, id, label, registerItem],
-  )
 
-  const [internalExpanded, onToggleExpand] = useReducer(
-    prevState => !prevState,
-    Boolean(toggle),
-  )
+      if (hasPinnedFeatureAndNoChildren) {
+        return true
+      }
 
-  const triggerToggle = useCallback(() => {
-    onToggleExpand()
-    onToggle?.(internalExpanded)
-  }, [internalExpanded, onToggle])
-
-  const PaddedStack = noExpand || type === 'pinnedGroup' ? Stack : PaddingStack
-
-  const hasHrefAndNoChildren = href && !children
-  const hasPinnedFeatureAndNoChildren =
-    pinnedFeature && !children && !noPinButton
-  const isItemPinned = pinnedItems.includes(id)
-  const shouldShowPinnedButton = useMemo(() => {
-    if (href || disabled) return false
-
-    if (hasPinnedFeatureAndNoChildren && type !== 'default') {
-      return true
-    }
-
-    if (hasPinnedFeatureAndNoChildren) {
-      return true
-    }
-
-    return false
-  }, [disabled, hasPinnedFeatureAndNoChildren, href, type])
-
-  const hasActiveChildren = useMemo(() => {
-    if (!children) return false
-
-    return (
-      Children.map(children, child =>
-        isValidElement<ItemProps>(child) ? child.props?.active : false,
-      ) as boolean[]
-    ).includes(true)
-  }, [children])
-
-  const containerTag = useMemo(() => {
-    if (as) {
-      return as
-    }
-
-    if (hasHrefAndNoChildren) {
-      return 'a'
-    }
-
-    if (noExpand) {
-      return 'div'
-    }
-
-    return 'button'
-  }, [as, hasHrefAndNoChildren, noExpand])
-
-  const Container = useMemo(
-    () => StyledContainer.withComponent(containerTag),
-    [containerTag],
-  )
-
-  const CategoryIconUsed = categoryIcon
-    ? CategoryIcon[
-        `${
-          categoryIcon.charAt(0).toUpperCase() + categoryIcon.slice(1)
-        }CategoryIcon` as keyof typeof CategoryIcon
-      ]
-    : null
-
-  const ariaExpanded = useMemo(() => {
-    if (hasHrefAndNoChildren && internalExpanded) {
-      return true
-    }
-
-    if (hasHrefAndNoChildren && !internalExpanded) {
       return false
-    }
+    }, [disabled, hasPinnedFeatureAndNoChildren, href, type])
 
-    return undefined
-  }, [hasHrefAndNoChildren, internalExpanded])
+    const hasActiveChildren = useMemo(() => {
+      if (!children) return false
 
-  const isPinDisabled = pinnedItems.length >= pinLimit
-  const pinTooltipLocale = useMemo(() => {
-    if (isPinDisabled) {
-      return locales['navigation.pin.limit']
-    }
+      return (
+        Children.map(children, child =>
+          isValidElement<ItemProps>(child) ? child.props?.active : false,
+        ) as boolean[]
+      ).includes(true)
+    }, [children])
 
-    if (isItemPinned) {
-      return locales['navigation.unpin.tooltip']
-    }
+    const containerTag = useMemo(() => {
+      if (as) {
+        return as
+      }
 
-    return locales['navigation.pin.tooltip']
-  }, [isItemPinned, isPinDisabled, locales])
+      if (hasHrefAndNoChildren) {
+        return 'a'
+      }
 
-  const onDragStartTrigger = (event: DragEvent<HTMLDivElement>) => {
-    event.dataTransfer.setData('text/plain', JSON.stringify({ label, index }))
-    // eslint-disable-next-line no-param-reassign
-    event.currentTarget.style.opacity = '0.5'
-  }
+      if (noExpand) {
+        return 'div'
+      }
 
-  const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
-    // eslint-disable-next-line no-param-reassign
-    event.currentTarget.style.opacity = '1'
-  }
+      return 'button'
+    }, [as, hasHrefAndNoChildren, noExpand])
 
-  const expandableAnimationDuration = useMemo(() => {
-    if (!shouldAnimate || animationType === 'simple') return 0
-
-    // Avoid animation of all expendable Item during collapse, expend of the Navigation
-    if (shouldAnimate && typeof animation !== 'string') {
-      return ANIMATION_DURATION
-    }
-
-    return 0
-  }, [animation, shouldAnimate, animationType])
-
-  // This content is when the navigation is expanded
-  if (expanded || (!expanded && animation === 'expand')) {
-    const renderChildren = Children.map(children, child =>
-      isValidElement<ItemProps>(child)
-        ? cloneElement(child, {
-            hasParents: true,
-          })
-        : child,
+    const Container = useMemo(
+      () => StyledContainer.withComponent(containerTag),
+      [containerTag],
     )
 
-    return (
-      <>
-        <Container
-          gap={1}
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          data-has-sub-label={!!subLabel}
-          onClick={triggerToggle}
-          aria-expanded={ariaExpanded}
-          href={href}
-          target={href ? '_blank' : undefined}
-          data-is-pinnable={shouldShowPinnedButton}
-          data-is-active={active}
-          data-animation={shouldAnimate ? animation : undefined}
-          data-animation-type={animationType}
-          data-has-children={!!children}
-          data-has-active-children={hasActiveChildren}
-          data-has-no-expand={noExpand}
-          disabled={disabled}
-          draggable={type === 'pinned' && expanded}
-          onDragStart={(event: DragEvent<HTMLDivElement>) =>
-            expanded ? onDragStartTrigger(event) : undefined
-          }
-          onDragEnd={(event: DragEvent<HTMLDivElement>) =>
-            expanded ? onDragStopTrigger(event) : undefined
-          }
-          id={id}
-          data-testId={dataTestId}
-        >
-          <Stack
-            direction="row"
+    const CategoryIconUsed = categoryIcon
+      ? CategoryIcon[
+          `${
+            categoryIcon.charAt(0).toUpperCase() + categoryIcon.slice(1)
+          }CategoryIcon` as keyof typeof CategoryIcon
+        ]
+      : null
+
+    const ariaExpanded = useMemo(() => {
+      if (hasHrefAndNoChildren && internalExpanded) {
+        return true
+      }
+
+      if (hasHrefAndNoChildren && !internalExpanded) {
+        return false
+      }
+
+      return undefined
+    }, [hasHrefAndNoChildren, internalExpanded])
+
+    const isPinDisabled = pinnedItems.length >= pinLimit
+    const pinTooltipLocale = useMemo(() => {
+      if (isPinDisabled) {
+        return locales['navigation.pin.limit']
+      }
+
+      if (isItemPinned) {
+        return locales['navigation.unpin.tooltip']
+      }
+
+      return locales['navigation.pin.tooltip']
+    }, [isItemPinned, isPinDisabled, locales])
+
+    const onDragStartTrigger = (event: DragEvent<HTMLDivElement>) => {
+      event.dataTransfer.setData('text/plain', JSON.stringify({ label, index }))
+      // eslint-disable-next-line no-param-reassign
+      event.currentTarget.style.opacity = '0.5'
+    }
+
+    const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
+      // eslint-disable-next-line no-param-reassign
+      event.currentTarget.style.opacity = '1'
+    }
+
+    const expandableAnimationDuration = useMemo(() => {
+      if (!shouldAnimate || animationType === 'simple') return 0
+
+      // Avoid animation of all expendable Item during collapse, expend of the Navigation
+      if (shouldAnimate && typeof animation !== 'string') {
+        return ANIMATION_DURATION
+      }
+
+      return 0
+    }, [animation, shouldAnimate, animationType])
+
+    // This content is when the navigation is expanded
+    if (expanded || (!expanded && animation === 'expand')) {
+      const renderChildren = Children.map(children, child =>
+        isValidElement<ItemProps>(child)
+          ? cloneElement(child, {
+              hasParents: true,
+            })
+          : child,
+      )
+
+      return (
+        <>
+          <Container
             gap={1}
+            direction="row"
             alignItems="center"
-            justifyContent="center"
+            justifyContent="space-between"
+            data-has-sub-label={!!subLabel}
+            onClick={triggerToggle}
+            aria-expanded={ariaExpanded}
+            href={href}
+            target={href ? '_blank' : undefined}
+            data-is-pinnable={shouldShowPinnedButton}
+            data-is-active={active}
+            data-animation={shouldAnimate ? animation : undefined}
+            data-animation-type={animationType}
+            data-has-children={!!children}
+            data-has-active-children={hasActiveChildren}
+            data-has-no-expand={noExpand}
+            disabled={disabled}
+            draggable={type === 'pinned' && expanded}
+            onDragStart={(event: DragEvent<HTMLDivElement>) =>
+              expanded ? onDragStartTrigger(event) : undefined
+            }
+            onDragEnd={(event: DragEvent<HTMLDivElement>) =>
+              expanded ? onDragStopTrigger(event) : undefined
+            }
+            id={id}
+            data-testId={dataTestId}
           >
-            {CategoryIconUsed ? (
-              <ContainerCategoryIcon
-                alignItems="center"
-                justifyContent="center"
-              >
-                <CategoryIconUsed
-                  variant={active ? 'primary' : categoryIconVariant}
-                  disabled={disabled}
-                />
-              </ContainerCategoryIcon>
-            ) : null}
-            {type === 'pinned' && expanded ? (
-              <GrabIcon
-                name="drag-vertical"
-                sentiment="neutral"
-                prominence="weak"
-                size="small"
-                disabled={disabled}
-              />
-            ) : null}
-            <Stack>
-              <WrapText
-                as="span"
-                variant="bodySmallStrong"
-                sentiment={active ? 'primary' : 'neutral'}
-                prominence={
-                  (categoryIcon || !hasParents) && !active
-                    ? 'strong'
-                    : 'default'
-                }
-                animation={animation}
-                disabled={disabled}
-              >
-                {label}
-              </WrapText>
-              {subLabel ? (
-                <WrapText
-                  as="span"
-                  variant="caption"
+            <Stack
+              direction="row"
+              gap={1}
+              alignItems="center"
+              justifyContent="center"
+            >
+              {CategoryIconUsed ? (
+                <ContainerCategoryIcon
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <CategoryIconUsed
+                    variant={active ? 'primary' : categoryIconVariant}
+                    disabled={disabled}
+                  />
+                </ContainerCategoryIcon>
+              ) : null}
+              {type === 'pinned' && expanded ? (
+                <GrabIcon
+                  name="drag-vertical"
                   sentiment="neutral"
                   prominence="weak"
+                  size="small"
+                  disabled={disabled}
+                />
+              ) : null}
+              <Stack>
+                <WrapText
+                  as="span"
+                  variant="bodySmallStrong"
+                  sentiment={active ? 'primary' : 'neutral'}
+                  prominence={
+                    (categoryIcon || !hasParents) && !active
+                      ? 'strong'
+                      : 'default'
+                  }
                   animation={animation}
                   disabled={disabled}
-                  subLabel
                 >
-                  {subLabel}
+                  {label}
                 </WrapText>
-              ) : null}
-            </Stack>
-          </Stack>
-          <Stack direction="row" alignItems="center" gap={href ? 1 : undefined}>
-            {badgeText || hasPinnedFeatureAndNoChildren ? (
-              <>
-                {badgeText ? (
-                  <StyledBadge
-                    sentiment={badgeSentiment}
-                    size="small"
-                    prominence="strong"
-                    disabled={disabled}
-                  >
-                    {badgeText}
-                  </StyledBadge>
-                ) : null}
-                {shouldShowPinnedButton ? (
-                  <Tooltip
-                    text={
-                      isItemPinned
-                        ? locales['navigation.unpin.tooltip']
-                        : pinTooltipLocale
-                    }
-                    placement="right"
-                  >
-                    <RelativeDiv>
-                      <PinnedButton
-                        role="button"
-                        aria-label={isItemPinned ? 'unpin' : 'pin'}
-                        size="xsmall"
-                        variant="ghost"
-                        sentiment={active ? 'primary' : 'neutral'}
-                        onClick={(event: MouseEvent<HTMLDivElement>) => {
-                          if (pinnedItems.length < pinLimit || isItemPinned) {
-                            event.preventDefault()
-                            event.stopPropagation() // This is to avoid click spread to the parent and change the routing
-                            let newValue: string[] | undefined
-                            if (isItemPinned) {
-                              newValue = unpinItem(id)
-                            } else {
-                              newValue = pinItem(id)
-                            }
-
-                            onClickPinUnpin?.({
-                              state: isItemPinned ? 'unpin' : 'pin',
-                              id,
-                              totalPinned: newValue,
-                            })
-                          }
-                        }}
-                        disabled={isItemPinned ? false : isPinDisabled}
-                      >
-                        <StyledIcon
-                          size="large"
-                          name={isItemPinned ? 'unpin' : 'pin'}
-                          variant={isItemPinned ? 'filled' : 'outlined'}
-                          disabled={isItemPinned ? false : isPinDisabled}
-                          sentiment={active ? 'primary' : 'neutral'}
-                          active={active}
-                        />
-                      </PinnedButton>
-                    </RelativeDiv>
-                  </Tooltip>
-                ) : null}
-              </>
-            ) : null}
-            {hasHrefAndNoChildren ? (
-              <AnimatedIcon
-                name="open-in-new"
-                sentiment="neutral"
-                prominence="default"
-                disabled={disabled}
-              />
-            ) : null}
-            {children ? (
-              <Stack gap={1} direction="row" alignItems="center">
-                {!animation && !noExpand ? (
-                  <AnimatedIcon
-                    name={internalExpanded ? 'arrow-down' : 'arrow-right'}
+                {subLabel ? (
+                  <WrapText
+                    as="span"
+                    variant="caption"
                     sentiment="neutral"
                     prominence="weak"
-                  />
+                    animation={animation}
+                    disabled={disabled}
+                    subLabel
+                  >
+                    {subLabel}
+                  </WrapText>
                 ) : null}
               </Stack>
-            ) : null}
-          </Stack>
-        </Container>
-        {children ? (
-          <>
-            {!noExpand ? (
-              <Expandable
-                opened={internalExpanded}
-                animationDuration={expandableAnimationDuration}
-              >
-                <PaddedStack>{renderChildren}</PaddedStack>
-              </Expandable>
-            ) : (
-              <PaddedStack>{renderChildren}</PaddedStack>
-            )}
-          </>
-        ) : null}
-      </>
-    )
-  }
+            </Stack>
+            <Stack
+              direction="row"
+              alignItems="center"
+              gap={href ? 1 : undefined}
+            >
+              {badgeText || hasPinnedFeatureAndNoChildren ? (
+                <>
+                  {badgeText ? (
+                    <StyledBadge
+                      sentiment={badgeSentiment}
+                      size="small"
+                      prominence="strong"
+                      disabled={disabled}
+                    >
+                      {badgeText}
+                    </StyledBadge>
+                  ) : null}
+                  {shouldShowPinnedButton ? (
+                    <Tooltip
+                      text={
+                        isItemPinned
+                          ? locales['navigation.unpin.tooltip']
+                          : pinTooltipLocale
+                      }
+                      placement="right"
+                    >
+                      <RelativeDiv>
+                        <PinnedButton
+                          role="button"
+                          aria-label={isItemPinned ? 'unpin' : 'pin'}
+                          size="xsmall"
+                          variant="ghost"
+                          sentiment={active ? 'primary' : 'neutral'}
+                          onClick={(event: MouseEvent<HTMLDivElement>) => {
+                            if (pinnedItems.length < pinLimit || isItemPinned) {
+                              event.preventDefault()
+                              event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+                              let newValue: string[] | undefined
+                              if (isItemPinned) {
+                                newValue = unpinItem(id)
+                              } else {
+                                newValue = pinItem(id)
+                              }
 
-  // This content is the menu of the navigation when collapsed
-  if (categoryIcon || (Children.count(children) > 0 && !hasParents)) {
-    return (
-      <MenuStack gap={1} alignItems="start" justifyContent="start">
-        {Children.count(children) > 0 ? (
-          <StyledMenu
-            triggerMethod="hover"
-            dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
-            disclosure={
+                              onClickPinUnpin?.({
+                                state: isItemPinned ? 'unpin' : 'pin',
+                                id,
+                                totalPinned: newValue,
+                              })
+                            }
+                          }}
+                          disabled={isItemPinned ? false : isPinDisabled}
+                        >
+                          <StyledIcon
+                            size="large"
+                            name={isItemPinned ? 'unpin' : 'pin'}
+                            variant={isItemPinned ? 'filled' : 'outlined'}
+                            disabled={isItemPinned ? false : isPinDisabled}
+                            sentiment={active ? 'primary' : 'neutral'}
+                            active={active}
+                          />
+                        </PinnedButton>
+                      </RelativeDiv>
+                    </Tooltip>
+                  ) : null}
+                </>
+              ) : null}
+              {hasHrefAndNoChildren ? (
+                <AnimatedIcon
+                  name="open-in-new"
+                  sentiment="neutral"
+                  prominence="default"
+                  disabled={disabled}
+                />
+              ) : null}
+              {children ? (
+                <Stack gap={1} direction="row" alignItems="center">
+                  {!animation && !noExpand ? (
+                    <AnimatedIcon
+                      name={internalExpanded ? 'arrow-down' : 'arrow-right'}
+                      sentiment="neutral"
+                      prominence="weak"
+                    />
+                  ) : null}
+                </Stack>
+              ) : null}
+            </Stack>
+          </Container>
+          {children ? (
+            <>
+              {!noExpand ? (
+                <Expandable
+                  opened={internalExpanded}
+                  animationDuration={expandableAnimationDuration}
+                >
+                  <PaddedStack>{renderChildren}</PaddedStack>
+                </Expandable>
+              ) : (
+                <PaddedStack>{renderChildren}</PaddedStack>
+              )}
+            </>
+          ) : null}
+        </>
+      )
+    }
+
+    // This content is the menu of the navigation when collapsed
+    if (categoryIcon || (Children.count(children) > 0 && !hasParents)) {
+      return (
+        <MenuStack gap={1} alignItems="start" justifyContent="start">
+          {Children.count(children) > 0 ? (
+            <StyledMenu
+              triggerMethod="hover"
+              dynamicDomRendering={false} // As we parse the children we don't need dynamic rendering
+              disclosure={
+                <Button
+                  sentiment="neutral"
+                  variant={hasActiveChildren ? 'filled' : 'ghost'}
+                  size="small"
+                  icon={!categoryIcon ? 'dots-horizontal' : undefined}
+                  aria-label={label}
+                >
+                  {CategoryIconUsed ? (
+                    <Stack
+                      direction="row"
+                      gap={1}
+                      alignItems="center"
+                      justifyContent="center"
+                    >
+                      <CategoryIconUsed
+                        variant={active ? 'primary' : categoryIconVariant}
+                      />
+                    </Stack>
+                  ) : null}
+                </Button>
+              }
+              placement="right"
+            >
+              {Children.map(children, child =>
+                isValidElement<ItemProps>(child)
+                  ? cloneElement(child, {
+                      hasParents: true,
+                    })
+                  : child,
+              )}
+            </StyledMenu>
+          ) : (
+            <Tooltip text={label} placement="right" tabIndex={-1}>
               <Button
                 sentiment="neutral"
-                variant={hasActiveChildren ? 'filled' : 'ghost'}
+                variant={active ? 'filled' : 'ghost'}
                 size="small"
-                icon={!categoryIcon ? 'dots-horizontal' : undefined}
+                aria-label={label}
               >
-                {CategoryIconUsed ? (
-                  <Stack
-                    direction="row"
-                    gap={1}
-                    alignItems="center"
-                    justifyContent="center"
-                  >
+                <Stack
+                  direction="row"
+                  gap={1}
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  {CategoryIconUsed ? (
                     <CategoryIconUsed
                       variant={active ? 'primary' : categoryIconVariant}
                     />
-                  </Stack>
-                ) : null}
+                  ) : (
+                    <ConsoleCategoryIcon
+                      variant={active ? 'primary' : categoryIconVariant}
+                    />
+                  )}
+                </Stack>
               </Button>
-            }
-            placement="right"
-          >
-            {Children.map(children, child =>
-              isValidElement<ItemProps>(child)
-                ? cloneElement(child, {
-                    hasParents: true,
-                  })
-                : child,
-            )}
-          </StyledMenu>
-        ) : (
-          <Tooltip text={label} placement="right" tabIndex={-1}>
-            <Button
-              sentiment="neutral"
-              variant={active ? 'filled' : 'ghost'}
-              size="small"
-            >
-              <Stack
-                direction="row"
-                gap={1}
-                alignItems="center"
-                justifyContent="center"
-              >
-                {CategoryIconUsed ? (
-                  <CategoryIconUsed
-                    variant={active ? 'primary' : categoryIconVariant}
-                  />
-                ) : (
-                  <ConsoleCategoryIcon
-                    variant={active ? 'primary' : categoryIconVariant}
-                  />
-                )}
-              </Stack>
-            </Button>
-          </Tooltip>
-        )}
-      </MenuStack>
-    )
-  }
+            </Tooltip>
+          )}
+        </MenuStack>
+      )
+    }
 
-  // This content is what is inside a menu item the navigation is collapsed
-  if (hasParents) {
-    return (
-      <StyledMenuItem
-        href={href}
-        borderless
-        active={active}
-        disabled={disabled}
-        sentiment={active ? 'primary' : 'neutral'}
-        isPinnable={shouldShowPinnedButton}
-        onClick={() => onToggle?.(!!active)}
-      >
-        <Stack
-          gap={1}
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          flex={1}
-          width="100%"
+    // This content is what is inside a menu item the navigation is collapsed
+    if (hasParents) {
+      return (
+        <StyledMenuItem
+          href={href}
+          borderless
+          active={active}
+          disabled={disabled}
+          sentiment={active ? 'primary' : 'neutral'}
+          isPinnable={shouldShowPinnedButton}
+          onClick={() => onToggle?.(!!active)}
         >
-          <WrapText as="span" variant="bodySmall">
-            {label}
-          </WrapText>
-          <Stack direction="row">
-            {badgeText ? (
-              <StyledBadge
-                sentiment={badgeSentiment}
-                size="small"
-                prominence="strong"
-                disabled={disabled}
-              >
-                {badgeText}
-              </StyledBadge>
-            ) : null}
-            {hasHrefAndNoChildren ? (
+          <Stack
+            gap={1}
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+            flex={1}
+            width="100%"
+          >
+            <WrapText as="span" variant="bodySmall">
+              {label}
+            </WrapText>
+            <Stack direction="row">
+              {badgeText ? (
+                <StyledBadge
+                  sentiment={badgeSentiment}
+                  size="small"
+                  prominence="strong"
+                  disabled={disabled}
+                >
+                  {badgeText}
+                </StyledBadge>
+              ) : null}
+              {hasHrefAndNoChildren ? (
+                <AnimatedIcon
+                  name="open-in-new"
+                  sentiment="neutral"
+                  prominence="weak"
+                  disabled={disabled}
+                />
+              ) : null}
+              {shouldShowPinnedButton ? (
+                <Tooltip
+                  text={
+                    isItemPinned
+                      ? locales['navigation.unpin.tooltip']
+                      : pinTooltipLocale
+                  }
+                  placement="right"
+                >
+                  <RelativeDiv>
+                    <PinnedButton
+                      role="button"
+                      size="xsmall"
+                      aria-label={isItemPinned ? 'unpin' : 'pin'}
+                      variant="ghost"
+                      sentiment={active ? 'primary' : 'neutral'}
+                      onClick={(event: MouseEvent<HTMLDivElement>) => {
+                        if (pinnedItems.length < pinLimit || isItemPinned) {
+                          event.preventDefault()
+                          event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+
+                          let newValue: string[] | undefined
+                          if (isItemPinned) {
+                            newValue = unpinItem(id)
+                          } else {
+                            newValue = pinItem(id)
+                          }
+                          onClickPinUnpin?.({
+                            state: isItemPinned ? 'unpin' : 'pin',
+                            id,
+                            totalPinned: newValue,
+                          })
+                        }
+                      }}
+                      disabled={isItemPinned ? false : isPinDisabled}
+                    >
+                      <StyledIcon
+                        size="large"
+                        name={isItemPinned ? 'unpin' : 'pin'}
+                        variant={isItemPinned ? 'filled' : 'outlined'}
+                        disabled={isItemPinned ? false : isPinDisabled}
+                        sentiment={active ? 'primary' : 'neutral'}
+                        active={active}
+                      />
+                    </PinnedButton>
+                  </RelativeDiv>
+                </Tooltip>
+              ) : null}
+            </Stack>
+          </Stack>
+        </StyledMenuItem>
+      )
+    }
+
+    // This content is for when navigation is collapsed and we show an icon of link
+    if (!hasParents && href) {
+      return (
+        <Tooltip text={label} placement="right">
+          <MenuStack gap={1} alignItems="start" justifyContent="start">
+            <Container
+              gap={1}
+              alignItems="center"
+              justifyContent="center"
+              href={href}
+              target="_blank"
+            >
               <AnimatedIcon
                 name="open-in-new"
                 sentiment="neutral"
                 prominence="weak"
-                disabled={disabled}
               />
-            ) : null}
-            {shouldShowPinnedButton ? (
-              <Tooltip
-                text={
-                  isItemPinned
-                    ? locales['navigation.unpin.tooltip']
-                    : pinTooltipLocale
-                }
-                placement="right"
-              >
-                <RelativeDiv>
-                  <PinnedButton
-                    role="button"
-                    size="xsmall"
-                    aria-label={isItemPinned ? 'unpin' : 'pin'}
-                    variant="ghost"
-                    sentiment={active ? 'primary' : 'neutral'}
-                    onClick={(event: MouseEvent<HTMLDivElement>) => {
-                      if (pinnedItems.length < pinLimit || isItemPinned) {
-                        event.preventDefault()
-                        event.stopPropagation() // This is to avoid click spread to the parent and change the routing
+            </Container>
+          </MenuStack>
+        </Tooltip>
+      )
+    }
 
-                        let newValue: string[] | undefined
-                        if (isItemPinned) {
-                          newValue = unpinItem(id)
-                        } else {
-                          newValue = pinItem(id)
-                        }
-                        onClickPinUnpin?.({
-                          state: isItemPinned ? 'unpin' : 'pin',
-                          id,
-                          totalPinned: newValue,
-                        })
-                      }
-                    }}
-                    disabled={isItemPinned ? false : isPinDisabled}
-                  >
-                    <StyledIcon
-                      size="large"
-                      name={isItemPinned ? 'unpin' : 'pin'}
-                      variant={isItemPinned ? 'filled' : 'outlined'}
-                      disabled={isItemPinned ? false : isPinDisabled}
-                      sentiment={active ? 'primary' : 'neutral'}
-                      active={active}
-                    />
-                  </PinnedButton>
-                </RelativeDiv>
-              </Tooltip>
-            ) : null}
-          </Stack>
-        </Stack>
-      </StyledMenuItem>
-    )
-  }
-
-  // This content is for when navigation is collapsed and we show an icon of link
-  if (!hasParents && href) {
-    return (
-      <Tooltip text={label} placement="right">
-        <MenuStack gap={1} alignItems="start" justifyContent="start">
-          <Container
-            gap={1}
-            alignItems="center"
-            justifyContent="center"
-            href={href}
-            target="_blank"
-          >
-            <AnimatedIcon
-              name="open-in-new"
-              sentiment="neutral"
-              prominence="weak"
-            />
-          </Container>
-        </MenuStack>
-      </Tooltip>
-    )
-  }
-
-  return null
-}
+    return null
+  },
+)

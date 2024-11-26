@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
-import { Button, Stack, Tooltip } from '@ultraviolet/ui'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { Stack } from '@ultraviolet/ui'
+import { useEffect, useRef } from 'react'
+import { Footer } from './Footer'
+import { Header } from './Header'
 import { useNavigation } from './NavigationProvider'
 import {
   ANIMATION_DURATION,
@@ -46,35 +48,6 @@ const Container = styled('div', {
     transition: width ${ANIMATION_DURATION}ms ease-in-out;
     width: ${NAVIGATION_COLLASPED_WIDTH}px;
   }
-`
-
-const StickyFooter = styled.div`
-  display: flex;
-  width: 100%;
-  background: ${({ theme }) => theme.colors.neutral.background};
-  border-top: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
-  transition: justify-content ${ANIMATION_DURATION}ms ease-in-out;
-  box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
-  transition: box-shadow 230ms ease-in-out;
-  justify-content: flex-end;
-
-  &[data-has-overflow-style="false"] {
-    box-shadow: none;
-    border: none;
-  }
-`
-
-const Header = styled.div`
-  background: ${({ theme }) => theme.colors.neutral.background};
-`
-
-const LogoContainer = styled(Stack)`
-  margin: ${({ theme }) =>
-    `${theme.space['3']} ${theme.space['3']} ${theme.space['2']} ${theme.space['3']}`};
-  max-width: 220px;
-  height: 22px;
-  overflow: hidden;
 `
 
 const ContentContainer = styled.div`
@@ -138,7 +111,6 @@ export const NavigationContent = ({
     expanded,
     toggleExpand,
     animation,
-    locales,
     navigationRef,
     allowNavigationResize,
     shouldAnimate,
@@ -146,49 +118,6 @@ export const NavigationContent = ({
 
   const sliderRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-
-  const isScrollAtBottom = useCallback(() => {
-    if (contentRef.current) {
-      if (
-        contentRef.current.scrollTop + contentRef.current.offsetHeight >=
-        contentRef.current.scrollHeight
-      ) {
-        return false
-      }
-    }
-
-    return true
-  }, [])
-
-  const [footerHasOverflowStyle, setFooterHasOverflowStyle] = useState(
-    isScrollAtBottom(),
-  )
-
-  // This is for detecting if there is scroll on the content and set the shadow on the footer
-  useEffect(() => {
-    const currentContentRef = contentRef.current
-
-    const scroll = () => {
-      const hasOverflow = isScrollAtBottom()
-
-      if (footerHasOverflowStyle !== hasOverflow) {
-        setFooterHasOverflowStyle(hasOverflow)
-      }
-    }
-
-    if (currentContentRef) {
-      currentContentRef.addEventListener('scroll', scroll)
-    }
-
-    return () => {
-      currentContentRef?.removeEventListener('scroll', scroll)
-    }
-  }, [footerHasOverflowStyle, isScrollAtBottom])
-
-  // This will set the shadow on the footer when the component is mounted
-  useEffect(() => {
-    setFooterHasOverflowStyle(isScrollAtBottom())
-  }, [isScrollAtBottom])
 
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {
@@ -278,18 +207,7 @@ export const NavigationContent = ({
         data-expanded={expanded}
         width={width}
       >
-        {logo ? (
-          <Header>
-            <LogoContainer
-              justifyContent={!expanded ? 'center' : undefined}
-              alignItems="start"
-            >
-              {typeof logo === 'function'
-                ? logo(animation ? false : expanded)
-                : logo}
-            </LogoContainer>
-          </Header>
-        ) : null}
+        {logo ? <Header logo={logo} /> : null}
         <ContentContainer>
           <Content
             ref={contentRef}
@@ -300,32 +218,7 @@ export const NavigationContent = ({
             {children}
           </Content>
           {allowNavigationResize ? (
-            <StickyFooter data-has-overflow-style={footerHasOverflowStyle}>
-              <Tooltip
-                text={
-                  expanded
-                    ? locales['navigation.collapse.button']
-                    : locales['navigation.expand.button']
-                }
-                placement="right"
-              >
-                <Button
-                  variant="ghost"
-                  sentiment="neutral"
-                  size="small"
-                  icon={expanded ? 'arrow-left-double' : 'arrow-right-double'}
-                  aria-label={
-                    expanded
-                      ? locales['navigation.collapse.button']
-                      : locales['navigation.expand.button']
-                  }
-                  onClick={() => {
-                    toggleExpand()
-                    onToggleExpand?.(!expanded)
-                  }}
-                />
-              </Tooltip>
-            </StickyFooter>
+            <Footer contentRef={contentRef} onToggleExpand={onToggleExpand} />
           ) : null}
         </ContentContainer>
       </Container>
