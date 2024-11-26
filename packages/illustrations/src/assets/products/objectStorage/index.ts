@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://scaleway-assets.s3.fr-par.scw.cloud/illustrations'
 
 const objectStorageContent = `${BASE_URL}/products/objectStorage/object-storage-content.webp`
 const objectStorageGlacierContent = `${BASE_URL}/products/objectStorage/object-storage-glacier-content.webp`

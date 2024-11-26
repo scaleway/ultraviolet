@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://scaleway-assets.s3.fr-par.scw.cloud/illustrations'
 
 const natsContent = `${BASE_URL}/products/nats/nats-content.webp`
 const natsKeyvisual = `${BASE_URL}/products/nats/nats-keyvisual.webp`

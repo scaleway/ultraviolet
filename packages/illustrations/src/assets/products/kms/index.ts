@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://scaleway-assets.s3.fr-par.scw.cloud/illustrations'
 
 const kmsContent = `${BASE_URL}/products/kms/kms-content.webp`
 const kmsKeyvisual = `${BASE_URL}/products/kms/kms-keyvisual.webp`

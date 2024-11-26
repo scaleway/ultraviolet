@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://scaleway-assets.s3.fr-par.scw.cloud/illustrations'
 
 const distributedDataLabContent = `${BASE_URL}/products/distributedDataLab/distributed-data-lab-content.webp`
 const distributedDataLabKeyvisual = `${BASE_URL}/products/distributedDataLab/distributed-data-lab-keyvisual.webp`

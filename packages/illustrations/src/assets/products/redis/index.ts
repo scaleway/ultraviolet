@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://scaleway-assets.s3.fr-par.scw.cloud/illustrations'
 
 const redisContent = `${BASE_URL}/products/redis/redis-content.webp`
 const redisKeyvisual = `${BASE_URL}/products/redis/redis-keyvisual.webp`
