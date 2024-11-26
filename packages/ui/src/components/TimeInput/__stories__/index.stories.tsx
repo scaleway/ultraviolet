@@ -6,6 +6,7 @@ export default {
   parameters: {
     experimental: true,
   },
+  tags: ['experimental'],
   title: 'Components/Data Entry/TimeInput',
   decorators: [
     Story => (

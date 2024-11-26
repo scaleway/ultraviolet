@@ -10,6 +10,7 @@ export default {
   parameters: {
     experimental: true,
   },
+  tags: ['experimental'],
   title: 'Components/Data Display/StepList',
 } as Meta
 

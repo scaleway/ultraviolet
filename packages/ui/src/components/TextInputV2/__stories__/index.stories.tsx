@@ -7,6 +7,7 @@ export default {
   parameters: {
     experimental: true,
   },
+  tags: ['experimental'],
 } as Meta<typeof TextInputV2>
 
 export { Playground } from './Playground.stories'
