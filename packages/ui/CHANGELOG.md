@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.77.4
+
+### Patch Changes
+
+- [#4488](https://github.com/scaleway/ultraviolet/pull/4488) [`d876181`](https://github.com/scaleway/ultraviolet/commit/d8761814f5d54a6fe85c92d7089fa37aec14106f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` children color
+
+- [#4499](https://github.com/scaleway/ultraviolet/pull/4499) [`72d5285`](https://github.com/scaleway/ultraviolet/commit/72d5285303755d0861a6b3dd8b2ed6c15ca8c102) Thanks [@lisalupi](https://github.com/lisalupi)! - Fix `<Snippet />` height
+
 ## 1.77.3
 
 ### Patch Changes
