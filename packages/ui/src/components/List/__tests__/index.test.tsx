@@ -677,7 +677,7 @@ describe('List', () => {
 
   test('Should render correctly with selectable with shift click for multiselect', async () => {
     const { asFragment } = renderWithTheme(
-      <List columns={columns} selectable>
+      <List columns={columns} selectable onSelectedChange={vi.fn()}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -694,9 +694,10 @@ describe('List', () => {
     )
     const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
-    const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
-    const secondRowCheckbox = checkboxes.find(({ value }) => value === '2')
-    const thirdRowCheckbox = checkboxes.find(({ value }) => value === '3')
+    const firstRowCheckbox = checkboxes.find(({ value }) => value === '2')
+    const secondRowCheckbox = checkboxes.find(({ value }) => value === '3')
+    const thirdRowCheckbox = checkboxes.find(({ value }) => value === '4')
+    const fifthRowCheckbox = checkboxes.find(({ value }) => value === '5')
 
     expect(firstRowCheckbox).toBeInTheDocument()
 
@@ -711,6 +712,10 @@ describe('List', () => {
       throw new Error('First checkbox is not defined')
     }
 
+    if (!fifthRowCheckbox) {
+      throw new Error('First checkbox is not defined')
+    }
+
     await userEvent.click(firstRowCheckbox)
     fireEvent.keyDown(document, { key: 'Shift', code: 'ShiftLeft' })
 
@@ -721,7 +726,9 @@ describe('List', () => {
     fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
 
     fireEvent.click(thirdRowCheckbox, { shiftKey: true })
-    expect(firstRowCheckbox).toBeChecked()
+    fireEvent.click(fifthRowCheckbox, { shiftKey: true })
+    fireEvent.click(fifthRowCheckbox, { shiftKey: true })
+
     expect(thirdRowCheckbox).toBeChecked()
 
     fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
