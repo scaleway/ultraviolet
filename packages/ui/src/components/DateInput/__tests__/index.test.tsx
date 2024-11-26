@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { renderWithTheme } from '@utils/test'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
-import { describe, expect, test } from 'vitest'
+import { describe, expect, test, vi } from 'vitest'
 import { DateInput } from '..'
 
 tk.freeze(new Date(1609503120000))
@@ -242,20 +242,27 @@ describe('DateInput', () => {
 
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
-    const visibleMonth = screen.getByText(/December/i)
+
     const calendar = screen.getByRole('dialog')
     expect(calendar).toBeVisible()
+
+    await userEvent.click(input)
 
     await userEvent.click(screen.getByText('15'))
     expect(input.value).toBe('12/15/1995')
 
-    const dayFromLastMonth = screen.getAllByText('30')[0] // the first element in this array is necessarily from previous month
-    await userEvent.click(dayFromLastMonth)
-    expect(visibleMonth.textContent).toContain('November')
+    await userEvent.click(input)
 
+    const dayFromLastMonth = screen.getAllByText('30')[0] // the first element in this array is from previous month
+    await userEvent.click(dayFromLastMonth)
+
+    await userEvent.click(input)
+    expect(input.value).toBe('11/30/1995')
+
+    await userEvent.click(input)
     const dayFromNextMonth = screen.getAllByText('1')[1]
     await userEvent.click(dayFromNextMonth)
-    expect(visibleMonth.textContent).toContain('December')
+    expect(input.value).toBe('12/01/1995')
   })
 
   test('handle correctly click on date range', async () => {
@@ -284,6 +291,7 @@ describe('DateInput', () => {
     await userEvent.click(day)
     expect(input.value).toBe('02/15/1995 - 02/27/1995')
 
+    await userEvent.click(input)
     await userEvent.click(screen.getByText('31'))
     expect(input.value).toBe('01/31/1995 - ')
   })
@@ -371,5 +379,81 @@ describe('DateInput', () => {
       />,
     )
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('handle correctly type in input', async () => {
+    const mockOnChange = vi.fn()
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        onChange={mockOnChange}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    await userEvent.type(input, '08/21/1995')
+    expect(mockOnChange).toBeCalled()
+    expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
+  })
+
+  test('handle correctly type in input with select range', async () => {
+    const mockOnChange = vi.fn()
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        selectsRange
+        onChange={mockOnChange}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    await userEvent.type(input, '08/21/1995')
+    expect(mockOnChange).toBeCalled()
+    expect(screen.getByText('August', { exact: false })).toBeInTheDocument()
+  })
+
+  test('handle correctly type in input with showMonthYearPicker', async () => {
+    const mockOnChange = vi.fn()
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        onChange={mockOnChange}
+        showMonthYearPicker
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    await userEvent.type(input, '2000/08')
+    expect(mockOnChange).toBeCalled()
+    expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
+  })
+
+  test('handle correctly type in input with select range and showMonthYearPicker', async () => {
+    const mockOnChange = vi.fn()
+    renderWithTheme(
+      <DateInput
+        label="Date"
+        placeholder="YYYY-MM-DD"
+        selectsRange
+        showMonthYearPicker
+        onChange={mockOnChange}
+      />,
+    )
+
+    const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
+    await userEvent.click(input)
+
+    await userEvent.type(input, '2000/08')
+    expect(mockOnChange).toBeCalled()
+    expect(screen.getByText('2000', { exact: false })).toBeInTheDocument()
   })
 })

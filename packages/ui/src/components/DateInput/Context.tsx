@@ -14,6 +14,7 @@ export type ContextProps = {
   yearToShow: number
   excludeDates?: Date[]
   setMonthToShow: Dispatch<SetStateAction<number>>
+  setVisible: Dispatch<SetStateAction<boolean>>
   setYearToShow: Dispatch<SetStateAction<number>>
   minDate?: Date | null
   maxDate?: Date | null
@@ -68,4 +69,5 @@ export const DateInputContext = createContext<ContextProps>({
   DAYS: {},
   MONTHS_ARR: [],
   selectsRange: false,
+  setVisible: () => null,
 })

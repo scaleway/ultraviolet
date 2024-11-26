@@ -54,6 +54,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
     setRange,
     setInputValue,
     format,
+    setVisible,
   } = useContext(DateInputContext)
 
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
@@ -205,6 +206,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
                   format,
                 ),
               )
+              setVisible(false)
               setRangeState('done')
             } else {
               // End date before start
@@ -250,6 +252,7 @@ export const Daily = ({ disabled }: { disabled: boolean }) => {
                   setInputValue(
                     formatValue(newDate, null, false, false, format),
                   )
+                  setVisible(false)
                 }
               }
             }}

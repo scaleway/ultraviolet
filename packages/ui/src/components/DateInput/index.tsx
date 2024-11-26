@@ -149,6 +149,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
         selectsRange,
         format,
         setInputValue,
+        setVisible,
       }) as ContextProps,
     [
       showMonthYearPicker,
@@ -167,6 +168,7 @@ export const DateInput = <IsRange extends undefined | boolean>({
       onChange,
       format,
       setInputValue,
+      setVisible,
     ],
   )
 

@@ -45,6 +45,7 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
     value,
     setInputValue,
     format,
+    setVisible,
   } = useContext(DateInputContext)
   const [rangeState, setRangeState] = useState<'start' | 'none' | 'done'>(
     range?.start ? 'start' : 'none',
@@ -117,6 +118,7 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
                   format,
                 ),
               )
+              setVisible(false)
               setRangeState('done')
             } else {
               // End date before start
@@ -153,6 +155,7 @@ export const Monthly = ({ disabled }: { disabled: boolean }) => {
                   setInputValue(
                     formatValue(constructedDate, null, true, false, format),
                   )
+                  setVisible(false)
                 }
               }
             }}
