@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { colors } from '../../../theme'
-import { TextInput } from '../../TextInput'
+import { TextInputV2 } from '../../TextInputV2'
 import { PasswordStrengthMeter } from '../index'
 
 type PasswordStrengthScore =
@@ -61,11 +61,11 @@ export const Estimate = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <TextInput
+      <TextInputV2
         name="basic"
         label="Password"
         value={value}
-        onChange={setValue}
+        onChangeValue={setValue}
       />
 
       <PasswordStrengthMeter

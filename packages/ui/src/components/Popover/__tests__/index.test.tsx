@@ -8,12 +8,23 @@ import { describe, expect, test, vi } from 'vitest'
 import { Popover } from '..'
 import { Button } from '../../Button'
 import { Modal } from '../../Modal'
-import { SelectInput } from '../../SelectInput'
-import { TextInput } from '../../TextInput'
+import { SelectInputV2 } from '../../SelectInputV2'
+import { TextInputV2 } from '../../TextInputV2'
 
 const StyledPopover = styled(Popover)`
   height: 600px;
 `
+
+const options: ComponentProps<typeof SelectInputV2>['options'] = [
+  {
+    value: 'option 1',
+    label: 'Option 1',
+  },
+  {
+    value: 'option 2',
+    label: 'Option 2',
+  },
+]
 
 const AdvancedPopover = () => {
   const [opened, setOpened] = useState(false)
@@ -39,18 +50,26 @@ const AdvancedPopover = () => {
           >
             <div>
               <div>Modal</div>
-              <SelectInput name="select">
-                <SelectInput.Option value="1">test 1</SelectInput.Option>
-                <SelectInput.Option value="2">test 2</SelectInput.Option>
-              </SelectInput>
-              <TextInput data-testid="modal-text-input" />
+              <SelectInputV2
+                name="options"
+                label="Choose an option"
+                options={options}
+              />
+              <TextInputV2
+                label="Type something here"
+                data-testid="modal-text-input"
+              />
             </div>
           </Modal>
-          <SelectInput name="select" data-testid="popover-select">
-            <SelectInput.Option value="1">test 1</SelectInput.Option>
-            <SelectInput.Option value="2">test 2</SelectInput.Option>
-          </SelectInput>
-          <TextInput data-testid="popover-text-input" />
+          <SelectInputV2
+            name="options"
+            label="Choose an option"
+            options={options}
+          />
+          <TextInputV2
+            label="Type something here"
+            data-testid="popover-text-input"
+          />
         </>
       }
     >
@@ -214,7 +233,7 @@ describe('Tooltip', () => {
       const popoverTextInput = screen.getByTestId('popover-text-input')
 
       await userEvent.click(popoverSelect)
-      const popoverSelectOption = screen.getByTestId('option-select-test 1')
+      const popoverSelectOption = screen.getByTestId('option-option 1')
       await userEvent.click(popoverSelectOption)
       expect(popover).toBeVisible()
 
@@ -250,7 +269,7 @@ describe('Tooltip', () => {
       expect(modal).toBeVisible()
       expect(popover).toBeVisible()
 
-      const modalSelectOption = screen.getByTestId('option-select-test 1')
+      const modalSelectOption = screen.getByTestId('option-option 1')
       await userEvent.click(modalSelectOption)
       expect(modal).toBeVisible()
       expect(popover).toBeVisible()

@@ -1,26 +1,14 @@
 import type { StoryFn } from '@storybook/react'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
-import type { MultiValue, SingleValue } from 'react-select'
 import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Checkbox } from '../../Checkbox'
-import type { SelectOption } from '../../SelectInput'
-import { SelectInput } from '../../SelectInput'
+import { SelectInputV2 } from '../../SelectInputV2'
 import { Stack } from '../../Stack'
 
 export const Children: StoryFn = args => {
   const [value, onChange] = useState('label-9')
-  const [selectInputValue, selectInputOnChange] = useState<SelectOption>({
-    label: 'Option 1',
-    value: 'option-1',
-  })
-
-  const onSelectInputSelectChange = (
-    newValue: SingleValue<SelectOption> | MultiValue<SelectOption>,
-  ) => {
-    selectInputOnChange(newValue as SelectOption)
-  }
 
   return (
     <>
@@ -58,14 +46,19 @@ export const Children: StoryFn = args => {
         }
         label="Middle Radio"
       >
-        <Stack gap={1}>
-          I am a children with clickable rich select
-          <Checkbox name="test" value="test" onChange={() => {}}>
-            First element
-          </Checkbox>
-          <SelectInput
-            value={selectInputValue}
-            onChange={onSelectInputSelectChange}
+        <Stack gap={2}>
+          I am a children with clickable select input
+          <Stack gap={1}>
+            <Checkbox name="test" value="test" onChange={() => {}}>
+              First element
+            </Checkbox>
+            <Checkbox name="test" value="test" onChange={() => {}}>
+              Second element
+            </Checkbox>
+          </Stack>
+          <SelectInputV2
+            name="options"
+            label="Select an option"
             options={[
               { label: 'Option 1', value: 'option-1' },
               { label: 'Option 2', value: 'option-2' },
@@ -105,7 +98,7 @@ Children.parameters = {
 }
 Children.decorators = [
   StoryComponent => (
-    <div style={{ height: '300px' }}>
+    <div style={{ height: '400px' }}>
       <Stack direction="row" gap={2}>
         <StoryComponent />
       </Stack>
