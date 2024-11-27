@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://assets.scaleway.com/illustrations'
 
 const managedSearchDatabaseContent = `${BASE_URL}/products/managedSearchDatabase/managed-search-database-content.webp`
 const managedSearchDatabaseKeyvisual = `${BASE_URL}/products/managedSearchDatabase/managed-search-database-keyvisual.webp`

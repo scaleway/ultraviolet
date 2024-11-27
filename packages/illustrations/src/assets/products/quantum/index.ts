@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://assets.scaleway.com/illustrations'
 
 const quantumContent = `${BASE_URL}/products/quantum/quantum-content.webp`
 const quantumKeyvisual = `${BASE_URL}/products/quantum/quantum-keyvisual.webp`

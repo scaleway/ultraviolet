@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://assets.scaleway.com/illustrations'
 
 const iotHubContent = `${BASE_URL}/products/iotHub/iot-hub-content.webp`
 const iotHubKeyvisual = `${BASE_URL}/products/iotHub/iot-hub-keyvisual.webp`

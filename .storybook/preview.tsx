@@ -11,6 +11,7 @@ import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 import { globalStyles } from './components/globalStyle'
+import '@ultraviolet/fonts/fonts.css'
 
 const parameters: Preview['parameters'] = {
   darkMode: {

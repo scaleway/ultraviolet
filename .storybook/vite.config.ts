@@ -6,7 +6,7 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
-    extensions: ['.mjs', '.js', '.ts', '.tsx', '.json'],
+    extensions: ['.mjs', '.js', '.ts', '.tsx', '.json', '.css'],
     // alias is needed or Vite will not resolve the packages correctly with storybook
     alias: {
       '@ultraviolet/ui': resolve('packages/ui/src'),
@@ -22,6 +22,7 @@ export default defineConfig({
         'packages/illustrations/src/components',
       ),
       '@ultraviolet/form': resolve('packages/form/src'),
+      '@ultraviolet/fonts': resolve('packages/fonts/src'),
     },
   },
   assetsInclude: ['**/*.md'],

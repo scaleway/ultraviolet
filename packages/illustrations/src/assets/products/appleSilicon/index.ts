@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://assets.scaleway.com/illustrations'
 
 const appleSiliconContent = `${BASE_URL}/products/appleSilicon/apple-silicon-content.webp`
 const appleSiliconKeyvisual = `${BASE_URL}/products/appleSilicon/apple-silicon-keyvisual.webp`

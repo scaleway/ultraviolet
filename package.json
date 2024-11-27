@@ -34,7 +34,7 @@
     "release": "pnpm build && pnpm changeset publish",
     "svg": "svgo --pretty --multipass",
     "svg:all": "pnpm run svg -r -f .",
-    "illustrations:update": "BUCKET_NAME=ultraviolet BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/",
+    "illustrations:update": "BUCKET_NAME=scaleway-assets BUCKET_REGION=fr-par node utils/illustrations/uploadIllustrations.js && pnpm format packages/illustrations/src/",
     "lintpublish": "turbo run lintpublish"
   },
   "lint-staged": {
@@ -133,6 +133,7 @@
     "@types/react-datepicker": "6.2.0",
     "@types/react-dom": "18.3.1",
     "@types/zxcvbn": "4.4.5",
+    "@ultraviolet/fonts": "workspace:*",
     "@ultraviolet/themes": "workspace:*",
     "@ultraviolet/ui": "workspace:*",
     "@vitejs/plugin-react": "4.3.3",

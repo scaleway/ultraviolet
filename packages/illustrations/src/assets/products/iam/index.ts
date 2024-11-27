@@ -3,7 +3,7 @@
  * PLEASE DO NOT EDIT HERE
  */
 
-const BASE_URL = 'https://ultraviolet.s3.fr-par.scw.cloud/illustrations'
+const BASE_URL = 'https://assets.scaleway.com/illustrations'
 
 const iamContent = `${BASE_URL}/products/iam/iam-content.webp`
 const iamKeyvisual = `${BASE_URL}/products/iam/iam-keyvisual.webp`

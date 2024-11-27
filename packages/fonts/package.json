@@ -1,0 +1,39 @@
+{
+  "name": "@ultraviolet/fonts",
+  "version": "1.0.0",
+  "description": "Ultraviolet Fonts",
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaleway/ultraviolet.git",
+    "directory": "packages/fonts"
+  },
+  "scripts": {
+    "prebuild": "shx rm -rf dist",
+    "watch": "pnpm run '/^watch:.*/'",
+    "watch:build": "vite build --config vite.config.ts --watch",
+    "build": "vite build --config vite.config.ts",
+    "build:profile": "npx vite-bundle-visualizer -c vite.config.ts",
+    "lintpublish": "pnpm publint"
+  },
+  "keywords": [
+    "fonts",
+    "ui"
+  ],
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=9.x"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "type": "module",
+  "exports": {
+    "./fonts.css": "./dist/fonts.css"
+  }
+}

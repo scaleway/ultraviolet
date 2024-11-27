@@ -7,6 +7,7 @@ import {
 import { Global, ThemeProvider } from '@emotion/react'
 import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
 import { globalStyles } from './globalStyle'
+import '@ultraviolet/fonts/fonts.css'
 
 type ExtraProps = {
   /**

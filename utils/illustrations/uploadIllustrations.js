@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const ILLUSTRATIONS_DIR = 'packages/illustrations/src/assets'
-const BASE_URL = `https://${process.env.BUCKET_NAME}.s3.${process.env.BUCKET_REGION}.scw.cloud/illustrations`
+const BASE_URL = `https://assets.scaleway.com/illustrations`
 
 // Add .webp and .svg files to index.ts
 const importIllustration = (directory, file, output, illustrations) => {
