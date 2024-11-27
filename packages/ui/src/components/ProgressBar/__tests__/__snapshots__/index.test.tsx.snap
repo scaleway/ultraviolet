@@ -361,9 +361,12 @@ exports[`ProgressBar > renders correctly with label, labelDescription and showPr
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.emotion-4 {
+.emotion-5 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -373,12 +376,181 @@ exports[`ProgressBar > renders correctly with label, labelDescription and showPr
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-9 {
+  overflow: hidden;
+  position: relative;
+  height: 0.25rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.25rem;
+  background-color: #e9eaeb;
+  width: 100%;
+}
+
+.emotion-11 {
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #8c40ef;
+  -webkit-transition: 0.3s width;
+  transition: 0.3s width;
+  width: 40%;
+}
+
+.emotion-16 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          Label
+        </label>
+        <label
+          class="emotion-7 emotion-6"
+        >
+          Label
+        </label>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="emotion-9 emotion-10"
+        role="progressbar"
+      >
+        <div
+          class="emotion-11 emotion-12"
+        />
+      </div>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <label
+          class="emotion-4 emotion-16 emotion-6"
+        >
+          40%
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProgressBar > renders correctly with label, labelDescription as ReactNode, direction column 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 1.25rem;
   text-transform: none;
@@ -409,18 +581,6 @@ exports[`ProgressBar > renders correctly with label, labelDescription and showPr
   width: 40%;
 }
 
-.emotion-12 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 <div
     data-testid="testing"
   >
@@ -430,16 +590,18 @@ exports[`ProgressBar > renders correctly with label, labelDescription and showPr
       <div
         class="emotion-2 emotion-1"
       >
-        <label
-          class="emotion-4 emotion-5"
+        <div
+          class="emotion-4 emotion-1"
         >
-          Label
-        </label>
-        <label
-          class="emotion-6 emotion-5"
-        >
-          Label
-        </label>
+          <label
+            class="emotion-6 emotion-7"
+          >
+            Label
+          </label>
+          <div>
+            Label
+          </div>
+        </div>
       </div>
       <div
         aria-valuemax="100"
@@ -452,11 +614,249 @@ exports[`ProgressBar > renders correctly with label, labelDescription and showPr
           class="emotion-10 emotion-11"
         />
       </div>
-      <label
-        class="emotion-12 emotion-5"
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProgressBar > renders correctly with label, labelDescription as ReactNode, direction row 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.emotion-7 {
+  overflow: hidden;
+  position: relative;
+  height: 0.25rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.25rem;
+  background-color: #e9eaeb;
+  width: 100%;
+}
+
+.emotion-9 {
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #8c40ef;
+  -webkit-transition: 0.3s width;
+  transition: 0.3s width;
+  width: 40%;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
       >
-        40%
-      </label>
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          Label
+        </label>
+        <div>
+          Label
+        </div>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="emotion-7 emotion-8"
+        role="progressbar"
+      >
+        <div
+          class="emotion-9 emotion-10"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProgressBar > renders correctly with max 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.emotion-7 {
+  overflow: hidden;
+  position: relative;
+  height: 0.25rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.25rem;
+  background-color: #e9eaeb;
+  width: 100%;
+}
+
+.emotion-9 {
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #8c40ef;
+  -webkit-transition: 0.3s width;
+  transition: 0.3s width;
+  width: 40%;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          label
+        </label>
+      </div>
+      <div
+        aria-valuemax="10"
+        aria-valuemin="0"
+        aria-valuenow="4"
+        class="emotion-7 emotion-8"
+        role="progressbar"
+      >
+        <div
+          class="emotion-9 emotion-10"
+        />
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -794,6 +1194,32 @@ exports[`ProgressBar > renders correctly with only showProgress, direction row 1
 }
 
 .emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-9 {
   color: #3f4250;
   font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
@@ -803,6 +1229,9 @@ exports[`ProgressBar > renders correctly with only showProgress, direction row 1
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 <div
@@ -822,11 +1251,318 @@ exports[`ProgressBar > renders correctly with only showProgress, direction row 1
           class="emotion-4 emotion-5"
         />
       </div>
-      <label
+      <div
         class="emotion-6 emotion-7"
       >
-        40%
-      </label>
+        <label
+          class="emotion-8 emotion-9 emotion-10"
+        >
+          40%
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProgressBar > renders correctly with suffix and prefix, direction column 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-6 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.emotion-10 {
+  overflow: hidden;
+  position: relative;
+  height: 0.25rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.25rem;
+  background-color: #e9eaeb;
+  width: 100%;
+}
+
+.emotion-12 {
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #8c40ef;
+  -webkit-transition: 0.3s width;
+  transition: 0.3s width;
+  width: 40%;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <div
+          class="emotion-4 emotion-1"
+        >
+          <label
+            class="emotion-6 emotion-7"
+          >
+            label
+          </label>
+        </div>
+        <label
+          class="emotion-8 emotion-7"
+        >
+          prefix40suffix
+        </label>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="emotion-10 emotion-11"
+        role="progressbar"
+      >
+        <div
+          class="emotion-12 emotion-13"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProgressBar > renders correctly with suffix and prefix, direction row 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-5 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.emotion-7 {
+  overflow: hidden;
+  position: relative;
+  height: 0.25rem;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.25rem;
+  background-color: #e9eaeb;
+  width: 100%;
+}
+
+.emotion-9 {
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #8c40ef;
+  -webkit-transition: 0.3s width;
+  transition: 0.3s width;
+  width: 40%;
+}
+
+.emotion-14 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <label
+          class="emotion-4 emotion-5 emotion-6"
+        >
+          label
+        </label>
+      </div>
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="40"
+        class="emotion-7 emotion-8"
+        role="progressbar"
+      >
+        <div
+          class="emotion-9 emotion-10"
+        />
+      </div>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <label
+          class="emotion-4 emotion-14 emotion-6"
+        >
+          prefix40suffix
+        </label>
+      </div>
     </div>
   </div>
 </DocumentFragment>
