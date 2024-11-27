@@ -84,7 +84,6 @@ type DrawerProps = Pick<
   | 'id'
   | 'onClose'
   | 'open'
-  | 'placement'
   | 'isClosable'
 > & {
   header?: ModalProps['children']

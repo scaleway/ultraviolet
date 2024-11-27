@@ -6,7 +6,7 @@ exports[`Drawer > custom header 1`] = `
     data-testid="testing"
   >
     <button
-      aria-controls="modal-test"
+      aria-controls="drawer-test"
       aria-haspopup="dialog"
       type="button"
     >
@@ -22,7 +22,7 @@ exports[`Drawer > function footer 1`] = `
     data-testid="testing"
   >
     <button
-      aria-controls="modal-test"
+      aria-controls="drawer-test"
       aria-haspopup="dialog"
       type="button"
     >
@@ -38,7 +38,7 @@ exports[`Drawer > function header 1`] = `
     data-testid="testing"
   >
     <button
-      aria-controls="modal-test"
+      aria-controls="drawer-test"
       aria-haspopup="dialog"
       type="button"
     >
@@ -158,11 +158,11 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
     data-testid="testing"
   >
     <button
-      aria-controls="modal-test"
+      aria-controls="drawer-test"
       aria-haspopup="dialog"
       type="button"
     >
-      Open modal
+      Open drawer
     </button>
   </div>
   @keyframes animation-0 {
@@ -893,14 +893,14 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
       id="backdrop-modal"
     >
       <dialog
-        aria-label="modal-test"
+        aria-label="drawer-test"
         aria-modal="true"
         class="emotion-2 emotion-3 emotion-4"
         data-animation="false"
         data-placement="top-right"
         data-size="medium"
         data-testid="test"
-        id="modal-test"
+        id="drawer-test"
         open=""
         tabindex="0"
       >
@@ -921,7 +921,7 @@ exports[`Drawer > renders with disclosure and onClose 1`] = `
             class="emotion-12 emotion-13"
           >
             <div>
-              modal
+              drawer
             </div>
           </div>
           <div
@@ -976,7 +976,7 @@ exports[`Drawer > with footer 1`] = `
     data-testid="testing"
   >
     <button
-      aria-controls="modal-test"
+      aria-controls="drawer-test"
       aria-haspopup="dialog"
       type="button"
     >

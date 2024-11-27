@@ -4,4 +4,6 @@ export const Playground = Template.bind({})
 
 Playground.args = {
   disclosure: DefaultDisclosure,
+  header: 'header',
+  children: 'children',
 }

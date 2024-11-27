@@ -114,7 +114,7 @@ describe('Drawer', () => {
         header="header"
         disclosure={<button type="button">Test</button>}
       >
-        <div>modal</div>
+        <div>drawer</div>
       </Drawer>,
     ))
 
@@ -122,16 +122,16 @@ describe('Drawer', () => {
     let count = 0
     const { asFragment } = renderWithTheme(
       <Drawer
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         header="header"
-        disclosure={<button type="button">Open modal</button>}
+        disclosure={<button type="button">Open drawer</button>}
         data-testid="test"
         onClose={() => {
           count += 1
         }}
       >
-        <div>modal</div>
+        <div>drawer</div>
       </Drawer>,
       consoleLightTheme,
       {
@@ -139,7 +139,7 @@ describe('Drawer', () => {
       },
     )
 
-    await userEvent.click(screen.getByText('Open modal'))
+    await userEvent.click(screen.getByText('Open drawer'))
     const closeButton = screen.getByTestId('test-close-button')
     await userEvent.click(closeButton)
     expect(count).toBe(1)
@@ -149,8 +149,8 @@ describe('Drawer', () => {
   test(`disclosure function render onClick props is called`, async () => {
     renderWithTheme(
       <Drawer
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         header="header"
         disclosure={() => (
           <button type="button" onClick={mockOnClick}>
@@ -170,8 +170,8 @@ describe('Drawer', () => {
     renderWithTheme(
       <Drawer
         header="header"
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         disclosure={({ toggle }) => (
           <button
             type="button"
@@ -194,7 +194,7 @@ describe('Drawer', () => {
 
   test(`should call 'close' prop from render props`, async () => {
     renderWithTheme(
-      <Drawer ariaLabel="modal-test" id="modal-test" open header="header">
+      <Drawer ariaLabel="drawer-test" id="drawer-test" open header="header">
         {({ close }) => (
           <button
             type="button"
@@ -217,8 +217,8 @@ describe('Drawer', () => {
     renderWithTheme(
       <Drawer
         header="header"
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         disclosure={
           <button type="button" onClick={mockOnClick}>
             Open
@@ -239,8 +239,8 @@ describe('Drawer', () => {
     renderWithTheme(
       <Drawer
         header="header"
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         hideOnEsc
         open
         onClose={mockOnClose}
@@ -257,8 +257,8 @@ describe('Drawer', () => {
   test(`function footer`, () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Drawer
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         header="header"
         disclosure={<button type="button">Open</button>}
         footer={({ close }) => (
@@ -270,7 +270,7 @@ describe('Drawer', () => {
             type="button"
             data-testid="buttonClose"
           >
-            A custom button that can close the modal
+            A custom button that can close the drawer
           </button>
         )}
       >
@@ -282,13 +282,13 @@ describe('Drawer', () => {
   test(`with footer`, () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Drawer
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         header="header"
         disclosure={<button type="button">Open</button>}
         footer={
           <button type="button">
-            A custom button that can close the modal
+            A custom button that can close the drawer
           </button>
         }
       >
@@ -300,8 +300,8 @@ describe('Drawer', () => {
   test(`custom header`, () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Drawer
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         footer="footer"
         disclosure={<button type="button">Open</button>}
         header={<h1>Custom header</h1>}
@@ -314,8 +314,8 @@ describe('Drawer', () => {
   test(`function header`, () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Drawer
-        ariaLabel="modal-test"
-        id="modal-test"
+        ariaLabel="drawer-test"
+        id="drawer-test"
         isClosable={false}
         footer="footer"
         disclosure={<button type="button">Open</button>}
@@ -328,7 +328,7 @@ describe('Drawer', () => {
             type="button"
             data-testid="buttonClose"
           >
-            A custom button that can close the modal
+            A custom button that can close the drawer
           </button>
         )}
       >
