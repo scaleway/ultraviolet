@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 3.5.0
+
+### Minor Changes
+
+- [#4513](https://github.com/scaleway/ultraviolet/pull/4513) [`46c4d60`](https://github.com/scaleway/ultraviolet/commit/46c4d60afdbb33304cf2ab94b330f5cdea3db795) Thanks [@matthprost](https://github.com/matthprost)! - Update illustration path
+
 ## 3.4.2
 
 ### Patch Changes
