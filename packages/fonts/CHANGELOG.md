@@ -1,5 +1,11 @@
 # @ultraviolet/fonts
 
+## 1.0.1
+
+### Patch Changes
+
+- [#4516](https://github.com/scaleway/ultraviolet/pull/4516) [`6a0403a`](https://github.com/scaleway/ultraviolet/commit/6a0403addfda94cb04feffdba438a059c82a9435) Thanks [@matthprost](https://github.com/matthprost)! - Wrongly formatted SemiBold font
+
 ## 1.0.0
 
 ### Major Changes
