@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.78.0
+
+### Minor Changes
+
+- [#4434](https://github.com/scaleway/ultraviolet/pull/4434) [`6ab8373`](https://github.com/scaleway/ultraviolet/commit/6ab837360da3fe85cac22b7780b3e771dd28ca34) Thanks [@lisalupi](https://github.com/lisalupi)! - - Refactoring of `<DateInput />` to remove dependency react-datepicker
+  - `<Button />` : New props `onMouseEnter` and `onMouseLeave`
+
+### Patch Changes
+
+- [#4467](https://github.com/scaleway/ultraviolet/pull/4467) [`bbdad4a`](https://github.com/scaleway/ultraviolet/commit/bbdad4aeda1a790fdfeee4657c177e270335200e) Thanks [@lisalupi](https://github.com/lisalupi)! - `<List />` and `<Table />` : hold shift to multiselect
+
 ## 1.77.4
 
 ### Patch Changes
