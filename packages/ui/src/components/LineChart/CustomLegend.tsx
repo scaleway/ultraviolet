@@ -94,21 +94,31 @@ export const CustomLegend = ({
   'data-testid': dataTestId,
 }: CustomLegendProps) => (
   <StyledContainer className={className} data-testid={dataTestId}>
-    <div css={styles.head}>
+    <div
+      // oxlint-disable-next-line no-unknown-property
+      css={styles.head}
+    >
       <LongContainer>Legend</LongContainer>
       <Cell variant="body" value="Minimum" />
       <Cell variant="body" value="Maximum" />
       <Cell variant="body" value="Average" />
       <Cell variant="body" value="Current" />
     </div>
-    <div css={styles.body}>
+    <div
+      // oxlint-disable-next-line no-unknown-property
+      css={styles.body}
+    >
       {data?.map((row, index) => {
         const values = row.data.map(val => val.y as number)
         const labelIndexed = `${row.id}${index}`
         const id = row.id.toString()
 
         return (
-          <div key={labelIndexed} css={styles.row}>
+          <div
+            key={labelIndexed}
+            // oxlint-disable-next-line no-unknown-property
+            css={styles.row}
+          >
             <LongContainer>
               <Checkbox
                 checked={selected.includes(labelIndexed)}
@@ -121,7 +131,11 @@ export const CustomLegend = ({
                   <Text as="span" variant="bodySmall" sentiment="neutral">
                     {row?.['label']}
                   </Text>
-                  <div data-testid={`label-${id}`} css={styles.legend(index)} />
+                  <div
+                    data-testid={`label-${id}`}
+                    // oxlint-disable-next-line no-unknown-property
+                    css={styles.legend(index)}
+                  />
                 </CellValueContainer>
               </Checkbox>
             </LongContainer>

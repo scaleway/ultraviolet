@@ -21,6 +21,7 @@ const StyledInput = styled(TextInputV2)`
 const matchRegex = (data: OptionType[], regex: RegExp) =>
   data.filter(
     option =>
+      // oxlint-disable-next-line eslint-plugin-unicorn(prefer-regexp-test)
       (option.searchText && !!option.searchText.match(regex)) ||
       (typeof option.label === 'string' && option.label.match(regex)) ||
       (typeof option.description === 'string' &&
@@ -82,7 +83,7 @@ export const SearchBarDropdown = ({
   const handleChange = (search: string) => {
     if (search.length > 0) {
       // case insensitive search
-      const regex = RegExp(search, 'i')
+      const regex = new RegExp(search.toString(), 'i')
       if (!Array.isArray(options)) {
         const filteredOptions = { ...options }
         Object.keys(filteredOptions).map((group: string) => {

@@ -11,7 +11,7 @@ const sizes: ComponentProps<typeof Link>['size'][] = [
 
 export const Size = (props: ComponentProps<typeof Link>) =>
   sizes.map(size => (
-    <Link {...props} key={size} size={size}>
+    <Link key={size} {...props} size={size}>
       {size}
     </Link>
   ))

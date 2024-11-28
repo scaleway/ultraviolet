@@ -18,7 +18,7 @@ export const Playground: StoryFn<typeof Meter> = args => {
   const [password, setPassword] = useState<string>('')
 
   useEffect(() => {
-    if (password.length >= 1) {
+    if (password.length > 0) {
       setValue(zxcvbn(password).score)
     }
   }, [password, setValue])

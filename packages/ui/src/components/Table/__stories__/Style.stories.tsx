@@ -13,7 +13,6 @@ const combos = [
 export const Style: StoryFn = args => (
   <Stack gap={2}>
     {combos.map((combo, index) => (
-      // eslint-disable-next-line react/no-array-index-key
       <Stack gap={1} key={index}>
         <Text as="h6" variant="headingSmall">
           {combo.stripped ? '✅' : '❌'} Stripped |{' '}

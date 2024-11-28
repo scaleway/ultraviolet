@@ -81,6 +81,8 @@ export const FormContent = () => {
         const countRequiredSentiments = fields.filter(
           ({ required }) => required,
         ).length
+
+        // oxlint-disable-next-line eslint/no-console
         console.log({ errors })
 
         return (

@@ -128,6 +128,9 @@ type VerificationCodeProps = {
 
 const DEFAULT_ON_FUNCTION = () => {}
 
+const inputOnFocus: FocusEventHandler<HTMLInputElement> = event =>
+  event.target.select()
+
 /**
  * Verification code allows you to enter a code in multiple fields (4 by default).
  */
@@ -149,10 +152,9 @@ export const VerificationCode = ({
   'aria-label': ariaLabel = 'Verification code',
 }: VerificationCodeProps) => {
   const uniqueId = useId()
-  const valuesArray = Object.assign(
-    new Array(fields).fill(''),
-    initialValue.substring(0, fields).split(''),
-  )
+  const valuesArray = Object.assign(new Array(fields).fill(''), [
+    ...initialValue.substring(0, fields),
+  ])
   const [values, setValues] = useState<string[]>(valuesArray)
 
   const inputRefs = Array.from({ length: fields }, () =>
@@ -210,8 +212,9 @@ export const VerificationCode = ({
       const vals = [...values]
 
       switch (event.key) {
-        case 'Backspace':
+        case 'Backspace': {
           event.preventDefault()
+
           if (values[index]) {
             vals[index] = ''
             setValues(vals)
@@ -223,39 +226,44 @@ export const VerificationCode = ({
             triggerChange(vals)
           }
           break
-        case 'ArrowLeft':
+        }
+
+        case 'ArrowLeft': {
           event.preventDefault()
           prev?.current?.focus()
           break
-        case 'ArrowRight':
+        }
+        case 'ArrowRight': {
           event.preventDefault()
           next?.current?.focus()
           break
-        case 'ArrowUp':
+        }
+        case 'ArrowUp': {
           event.preventDefault()
           first?.current?.focus()
           break
-        case 'ArrowDown':
+        }
+        case 'ArrowDown': {
           event.preventDefault()
           last?.current?.focus()
+
           break
-        default:
+        }
+
+        default: {
           break
+        }
       }
     }
-
-  const inputOnFocus: FocusEventHandler<HTMLInputElement> = event =>
-    event.target.select()
 
   const inputOnPaste =
     (currentIndex: number): ClipboardEventHandler<HTMLInputElement> =>
     event => {
       event.preventDefault()
-      const pastedValue = [
-        ...event.clipboardData.getData('Text').split(''),
-      ].map((copiedValue: string) =>
-        // Replace non number char with empty char when type is number
-        type === 'number' ? copiedValue.replace(/[^\d]/gi, '') : copiedValue,
+      const pastedValue = [...event.clipboardData.getData('Text')].map(
+        (copiedValue: string) =>
+          // Replace non number char with empty char when type is number
+          type === 'number' ? copiedValue.replace(/[^\d]/gi, '') : copiedValue,
       )
 
       // Trim array to avoid array overflow
@@ -266,7 +274,8 @@ export const VerificationCode = ({
       )
 
       setValues((vals: string[]) => {
-        const newArray = vals.slice()
+        const newArray = structuredClone(vals)
+
         newArray.splice(currentIndex, pastedValue.length, ...pastedValue)
 
         return newArray
@@ -291,7 +300,6 @@ export const VerificationCode = ({
           inputSize={size}
           type={type === 'number' ? 'tel' : type}
           pattern={type === 'number' ? '[0-9]*' : undefined}
-          // eslint-disable-next-line react/no-array-index-key
           key={index}
           data-testid={index}
           value={value}

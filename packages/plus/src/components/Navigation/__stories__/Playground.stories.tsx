@@ -13,6 +13,12 @@ const Image = styled.img`
     animation: ${fadeOut} 250ms linear forwards;
   }
 `
+const onClickPinUnpin: ComponentProps<
+  typeof Navigation.Item
+>['onClickPinUnpin'] = ({ totalPinned }) => {
+  // oxlint-disable-next-line eslint/no-console
+  console.log('total pinned items:', totalPinned)
+}
 
 const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   const [active, setActive] = useState('Instance')
@@ -24,6 +30,7 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
 
   const saveExpandedInLocalStorage = useCallback((localExpanded: boolean) => {
     setExpanded(localExpanded)
+    // oxlint-disable-next-line eslint/no-console
     console.log(
       `expanded state with value ${localExpanded} saved in local storage`,
     )
@@ -31,20 +38,16 @@ const PlaygroundContent = ({ ...props }: ComponentProps<typeof Navigation>) => {
   }, [])
 
   useEffect(() => {
+    // oxlint-disable-next-line eslint/no-console
     console.log('pinned items:', pinnedItems)
     localStorage.setItem('pinnedItems', pinnedItems.toString())
   }, [pinnedItems])
 
   const saveWidthInLocalStorage = useCallback((width: number) => {
+    // oxlint-disable-next-line eslint/no-console
     console.log(`width of ${width} saved in local storage`)
     localStorage.setItem('width', width.toString())
   }, [])
-
-  const onClickPinUnpin: ComponentProps<
-    typeof Navigation.Item
-  >['onClickPinUnpin'] = ({ totalPinned }) => {
-    console.log('total pinned items:', totalPinned)
-  }
 
   return (
     <Navigation

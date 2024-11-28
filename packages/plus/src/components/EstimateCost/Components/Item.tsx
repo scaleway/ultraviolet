@@ -217,7 +217,7 @@ type ItemProps = {
     | 'months'
     | 'years'
     // Allow a string for unit but keep autocomplete for the above values
-    // eslint-disable-next-line @typescript-eslint/ban-types
+    // oxlint-disable-next-line typescript-eslint(ban-types)
     | (string & {})
 }
 

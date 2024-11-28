@@ -4,6 +4,7 @@ import { FlatCompat } from '@eslint/eslintrc'
 import scwEmotion from '@scaleway/eslint-config-react/emotion'
 import scwJavascript from '@scaleway/eslint-config-react/javascript'
 import scwTypescript from '@scaleway/eslint-config-react/typescript'
+import oxlint from 'eslint-plugin-oxlint'
 import globals from 'globals'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -148,4 +149,5 @@ export default [
       'react/jsx-props-no-spreading': 'off',
     },
   },
+  oxlint.configs['flat/all'],
 ]

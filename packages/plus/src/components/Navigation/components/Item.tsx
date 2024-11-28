@@ -340,6 +340,11 @@ type ItemProps = {
   'data-testid'?: string
 }
 
+const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
+  // eslint-disable-next-line no-param-reassign
+  event.currentTarget.style.opacity = '1'
+}
+
 export const Item = memo(
   ({
     children,
@@ -494,11 +499,6 @@ export const Item = memo(
       event.dataTransfer.setData('text/plain', JSON.stringify({ label, index }))
       // eslint-disable-next-line no-param-reassign
       event.currentTarget.style.opacity = '0.5'
-    }
-
-    const onDragStopTrigger = (event: DragEvent<HTMLDivElement>) => {
-      // eslint-disable-next-line no-param-reassign
-      event.currentTarget.style.opacity = '1'
     }
 
     const expandableAnimationDuration = useMemo(() => {

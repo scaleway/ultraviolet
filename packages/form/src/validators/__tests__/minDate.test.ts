@@ -10,15 +10,15 @@ const tomorrow = new Date(today.getTime() + 24 * hourInMs)
 describe('minDate validator', () => {
   test('should invalidate the input', () => {
     const validator = minDateValidator(tomorrow)
-    expect(validator(today)).toBe(false)
-    expect(validator(twoHoursLater)).toBe(false)
-    expect(validator(yesterday)).toBe(false)
+    expect(validator(today)).toBeFalsy()
+    expect(validator(twoHoursLater)).toBeFalsy()
+    expect(validator(yesterday)).toBeFalsy()
   })
 
   test('should validate the input', () => {
     const validator = minDateValidator(yesterday)
-    expect(validator(today)).toBe(true)
-    expect(validator(tomorrow)).toBe(true)
-    expect(validator(twoHoursLater)).toBe(true)
+    expect(validator(today)).toBeTruthy()
+    expect(validator(tomorrow)).toBeTruthy()
+    expect(validator(twoHoursLater)).toBeTruthy()
   })
 })

@@ -6,6 +6,7 @@ export const NumberInput = Template.bind({})
 NumberInput.args = {
   children: [
     <EstimateCost.Item
+      key="Number of million queries"
       label="Number of million queries"
       subLabel="2 million queries free"
       amountFree={2}
@@ -15,6 +16,7 @@ NumberInput.args = {
       <EstimateCost.NumberInput amount={1} />
     </EstimateCost.Item>,
     <EstimateCost.Item
+      key="Chocolates"
       label="Chocolates"
       subLabel="Chocolate is never free :("
       price={1}

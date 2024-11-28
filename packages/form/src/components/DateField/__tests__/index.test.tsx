@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
@@ -31,10 +31,13 @@ describe('DateField', () => {
         },
       },
     )
+
     const input = screen.getByPlaceholderText<HTMLInputElement>('YYYY-MM-DD')
     await userEvent.click(input)
     await userEvent.click(screen.getByText('15'))
-    expect(onChange).toBeCalledTimes(1)
+    await waitFor(() => {
+      expect(onChange).toBeCalledTimes(1)
+    })
 
     expect(asFragment()).toMatchSnapshot()
   }, 10000)

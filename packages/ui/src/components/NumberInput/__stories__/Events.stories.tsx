@@ -1,3 +1,4 @@
+// oxlint-disable eslint/no-console
 import { Template } from './Template.stories'
 
 export const Events = Template.bind({})
@@ -6,6 +7,7 @@ Events.args = {
   minValue: 50,
   maxValue: 100,
   defaultValue: 50,
+
   onChange: () => console.log('onChange'),
   onFocus: () => console.log('onFocus'),
   onBlur: () => console.log('onBlur'),

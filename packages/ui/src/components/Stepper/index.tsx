@@ -139,7 +139,6 @@ export const Stepper = ({
           const temporal = getTemporal()
 
           return (
-            // eslint-disable-next-line react/no-array-index-key
             <Fragment key={`creation-progress-${index}`}>
               <Step index={index} {...(child.props as object)} />
 

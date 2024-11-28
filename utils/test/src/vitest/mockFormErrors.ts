@@ -1,4 +1,4 @@
-import { type FormErrors } from '../../../../packages/form/src'
+import type { FormErrors } from '../../../../packages/form/src'
 
 export const mockFormErrors: FormErrors = {
   maxLength: ({ maxLength }) =>

@@ -3,28 +3,26 @@ import { Menu } from '..'
 import { Modal } from '../../Modal'
 import { DefaultDisclosure } from './Template.stories'
 
-export const WithModal: StoryFn<typeof Menu> = () => {
-  const NestedModal = () => (
-    <Modal disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}>
-      <div style={{ padding: 32 }}>
-        Content should be present in center of the modal
-      </div>
-      <div style={{ padding: 32 }}>
-        Content should be present in center of the modal
-      </div>
-    </Modal>
-  )
+const NestedModal = () => (
+  <Modal disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}>
+    <div style={{ padding: 32 }}>
+      Content should be present in center of the modal
+    </div>
+    <div style={{ padding: 32 }}>
+      Content should be present in center of the modal
+    </div>
+  </Modal>
+)
 
-  return (
-    <Menu disclosure={DefaultDisclosure}>
-      <Menu.Item>Menu Item</Menu.Item>
-      <Menu.Item href="/?path=/docs/components-navigation-menu--modal">
-        Menu Item Link
-      </Menu.Item>
-      <NestedModal />
-    </Menu>
-  )
-}
+export const WithModal: StoryFn<typeof Menu> = () => (
+  <Menu disclosure={DefaultDisclosure}>
+    <Menu.Item>Menu Item</Menu.Item>
+    <Menu.Item href="/?path=/docs/components-navigation-menu--modal">
+      Menu Item Link
+    </Menu.Item>
+    <NestedModal />
+  </Menu>
+)
 
 WithModal.parameters = {
   docs: {

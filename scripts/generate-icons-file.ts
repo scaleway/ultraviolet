@@ -1,3 +1,5 @@
+// oxlint-disable eslint/no-console
+
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
 
@@ -70,7 +72,7 @@ const readDirectoryRecursive = async (dir: string) => {
 
     if (file.isDirectory()) {
       const subDirResults = await readDirectoryRecursive(filePath)
-      results = results.concat(subDirResults)
+      results = [...results, ...subDirResults]
     } else if (path.extname(file.name).toLowerCase() === '.svg') {
       results.push(filePath)
     }
@@ -80,7 +82,7 @@ const readDirectoryRecursive = async (dir: string) => {
 }
 
 const readSvg = async (filePath: string) => {
-  const svgContent = await fs.readFile(filePath, 'utf-8')
+  const svgContent = await fs.readFile(filePath, 'utf8')
   const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/g, '') // Remove <svg ...> and </svg> tags
 
   // Replace class with className

@@ -9,7 +9,7 @@ export const List: StoryFn<typeof CategoryIcon> = props => (
         CategoryIcon[IconName as keyof typeof CategoryIcon]
 
       return (
-        <Stack direction="row" alignItems="center" gap={2}>
+        <Stack key={IconName} direction="row" alignItems="center" gap={2}>
           <Row templateColumns="repeat(3, 3fr)" gap={1} alignItems="center">
             <FoundCategoryIcon />
             <FoundCategoryIcon {...props} variant="neutral" />

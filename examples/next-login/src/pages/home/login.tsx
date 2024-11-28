@@ -1,10 +1,10 @@
-import { Text, Link, Stack } from '@ultraviolet/ui'
+import { Link, Stack, Text } from '@ultraviolet/ui'
 import { IdIcon } from '@ultraviolet/icons'
 import {
-  Form,
-  TextInputField,
-  Submit,
   CheckboxField,
+  Form,
+  Submit,
+  TextInputField,
   useForm,
   useWatch,
 } from '@ultraviolet/form'
@@ -49,6 +49,8 @@ const LogIn = () => {
       `,
     )
     setTimeout(() => setLoginText(''), 3000)
+
+    // oxlint-disable-next-line eslint/no-console
     console.log('Values :', values)
   }
 

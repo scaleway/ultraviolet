@@ -1,13 +1,14 @@
 import type { StoryFn } from '@storybook/react'
 import { VerificationCode } from '..'
 
-export const OnComplete: StoryFn<typeof VerificationCode> = args => {
-  const onCompleteHandler = (value: unknown) => {
-    console.log('Code is fully typed', value)
-  }
-
-  return <VerificationCode {...args} onComplete={onCompleteHandler} />
+const onCompleteHandler = (value: unknown) => {
+  // oxlint-disable-next-line no-console
+  console.log('Code is fully typed', value)
 }
+
+export const OnComplete: StoryFn<typeof VerificationCode> = args => (
+  <VerificationCode {...args} onComplete={onCompleteHandler} />
+)
 
 OnComplete.parameters = {
   docs: {

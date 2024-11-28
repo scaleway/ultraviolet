@@ -39,6 +39,8 @@ export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {
       ) {
         return false
       }
+
+      return true
     }
 
     return true

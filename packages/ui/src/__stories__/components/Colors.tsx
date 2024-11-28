@@ -63,7 +63,7 @@ const Colors = () => {
         ) as AvailableContexts[]
 
         return (
-          <Stack gap={1}>
+          <Stack key={sentiment} gap={1}>
             <CapitalizedText variant="headingSmallStrong" as="h3">
               {sentiment}
             </CapitalizedText>
@@ -72,7 +72,7 @@ const Colors = () => {
                 {colorContextKeys
                   .filter(context => context.includes('background'))
                   .map(context => (
-                    <Stack>
+                    <Stack key={context}>
                       <Stack
                         direction="row"
                         alignItems="center"
@@ -199,7 +199,7 @@ const Colors = () => {
                 ].includes(background),
             )
             .map(type => (
-              <Stack>
+              <Stack key={type}>
                 <Text as="h4" variant="bodyStrong">
                   {type}
                 </Text>
@@ -249,7 +249,7 @@ const Colors = () => {
                 <Stack gap={3}>
                   {Object.keys(iconColors[type as keyof typeof iconColors]).map(
                     sentiment => (
-                      <Stack direction="column">
+                      <Stack key={sentiment} direction="column">
                         <NoMarginText variant="bodyStrong" as="h4">
                           {sentiment}
                         </NoMarginText>

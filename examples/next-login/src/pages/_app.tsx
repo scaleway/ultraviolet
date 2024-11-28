@@ -1,6 +1,6 @@
-import { ThemeProvider, Global, css } from '@emotion/react'
+import { Global, ThemeProvider, css } from '@emotion/react'
 import { Button } from '@ultraviolet/ui'
-import { darkTheme, theme, normalize } from '@ultraviolet/ui'
+import { darkTheme, normalize, theme } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
 import { useState } from 'react'
 

@@ -1,3 +1,5 @@
+// oxlint-disable eslint/no-console
+
 import fs from 'node:fs'
 import { generateThemeCss } from './create-css-variables.mjs'
 
@@ -26,7 +28,7 @@ const header = `
 const createCSSFile = (theme, content) => {
   const cssContent = generateThemeCss(content)
   const filePath = `packages/themes/public/style/${theme}.css`
-  fs.writeFileSync(filePath, cssContent, 'utf-8')
+  fs.writeFileSync(filePath, cssContent, 'utf8')
 }
 
 function alphaOrder(obj) {
@@ -74,7 +76,7 @@ function evalValue(value, variables) {
       return base
     })
 
-    // eslint-disable-next-line no-eval
+    // oxlint-disable-next-line no-eval
     returnedValue = temp.includes('*') ? eval(temp) : temp
   }
 
@@ -101,7 +103,7 @@ function getValues(data, { typeFilter, variables }) {
       return values
     }, {})
 
-    return Object.keys(res).length ? res : null
+    return Object.keys(res).length > 0 ? res : null
   }
 
   return null

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import LogIn from './login'
 import SignUp from './signup'
-import { SwitchButton, Stack } from '@ultraviolet/ui'
+import { Stack, SwitchButton } from '@ultraviolet/ui'
 import styled from '@emotion/styled'
 
 const StyledSwitchButton = styled(SwitchButton)`
@@ -14,11 +14,13 @@ const StyledPage = styled(Stack)`
 const Content = (props: { tab: string }) => {
   let tabLoaded = undefined
   switch (props.tab) {
-    case 'login':
+    case 'login': {
       tabLoaded = <LogIn />
       break
-    default:
+    }
+    default: {
       tabLoaded = <SignUp />
+    }
   }
   return tabLoaded
 }

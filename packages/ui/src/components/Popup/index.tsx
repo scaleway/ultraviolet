@@ -44,6 +44,13 @@ type StyledPopupProps = {
   isDialog: boolean
 }
 
+/**
+ * This event handle allow us to not bubble the event to document.body like this react-select works fine
+ */
+const stopClickPropagation: MouseEventHandler = event => {
+  event.nativeEvent.stopImmediatePropagation()
+}
+
 const StyledPopup = styled('div', {
   shouldForwardProp: prop =>
     ![
@@ -561,16 +568,11 @@ export const Popup = forwardRef(
     }, [dynamicDomRendering, visibleInDom])
 
     if (!text) {
-      if (typeof children === 'function') return null
+      if (typeof children === 'function') {
+        return null
+      }
 
-      return <>{children}</>
-    }
-
-    /**
-     * This event handle allow us to not bubble the event to document.body like this react-select works fine
-     */
-    const stopClickPropagation: MouseEventHandler = event => {
-      event.nativeEvent.stopImmediatePropagation()
+      return children
     }
 
     return (

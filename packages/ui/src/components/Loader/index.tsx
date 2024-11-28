@@ -98,6 +98,7 @@ export const Loader = ({
         stroke={theme.colors[trailColor as Color]?.border || trailColor}
       />
       <circle
+        // oxlint-disable-next-line no-unknown-property
         css={css`
           transition: stroke-dashoffset 0.5s ease 0s;
         `}

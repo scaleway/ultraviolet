@@ -21,6 +21,7 @@ Click.decorators = [
 Click.args = {
   ...Template.args,
   onClick: () => {
+    // oxlint-disable-next-line eslint/no-alert
     alert('Clicked!')
   },
 }

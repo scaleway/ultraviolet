@@ -160,7 +160,7 @@ const getSelectStyles = ({
           : theme.colors.primary.borderHover,
       },
     }),
-    ...(customStyle(state)?.['control'] || {}),
+    ...customStyle(state)?.['control'],
     animation: animation
       ? `${animationDuration}ms ${
           (animations as Record<string, ReturnType<typeof keyframes>>)[
@@ -177,7 +177,7 @@ const getSelectStyles = ({
     ...provided,
     backgroundColor: theme.colors.neutral.border,
     display: 'none',
-    ...(customStyle(state)?.['indicatorSeparator'] || {}),
+    ...customStyle(state)?.['indicatorSeparator'],
   }),
   input: provided => ({
     ...provided,
@@ -187,19 +187,19 @@ const getSelectStyles = ({
   }),
   menu: (provided, state) => ({
     ...provided,
-    ...(customStyle(state)?.['menu'] || {}),
+    ...customStyle(state)?.['menu'],
     boxShadow: theme.shadows.menu,
   }),
   menuList: (provided, state) => ({
     ...provided,
     backgroundColor: theme.colors.neutral.backgroundWeak,
     maxHeight: '225px',
-    ...(customStyle(state)?.['menuList'] || {}),
+    ...customStyle(state)?.['menuList'],
   }),
   menuPortal: (provided, state) => ({
     ...provided,
     zIndex: 10000,
-    ...(customStyle(state)?.['menuPortal'] || {}),
+    ...customStyle(state)?.['menuPortal'],
   }),
   multiValue: (provided, state) => ({
     ...provided,
@@ -213,7 +213,7 @@ const getSelectStyles = ({
     justifyContent: 'center',
     marginTop: theme.space[noTopLabel ? '0.5' : '2'],
     textOverflow: 'ellipsis',
-    ...(customStyle(state)?.['multiValue'] || {}),
+    ...customStyle(state)?.['multiValue'],
   }),
   multiValueLabel: (provided, state) => ({
     ...provided,
@@ -223,7 +223,7 @@ const getSelectStyles = ({
     fontSize: '14px',
     fontWeight: 'normal',
     lineHeight: '20px',
-    ...(customStyle(state)?.['multiValueLabel'] || {}),
+    ...customStyle(state)?.['multiValueLabel'],
   }),
   multiValueRemove: (provided, state) => ({
     ...provided,
@@ -243,7 +243,7 @@ const getSelectStyles = ({
       cursor: state.isDisabled ? 'none' : 'pointer',
       pointerEvents: state.isDisabled ? 'none' : 'fill',
     },
-    ...(customStyle(state)?.['multiValueRemove'] || {}),
+    ...customStyle(state)?.['multiValueRemove'],
   }),
   option: (provided, state) => ({
     ...provided,
@@ -265,12 +265,12 @@ const getSelectStyles = ({
         ? theme.colors.neutral.textDisabled
         : theme.colors.neutral.text,
     },
-    ...(customStyle(state)?.['option'] || {}),
+    ...customStyle(state)?.['option'],
   }),
   placeholder: (provided, state) => ({
     ...provided,
     color: getPlaceholderColor({ error, state, theme }),
-    ...(customStyle(state)?.['placeholder'] || {}),
+    ...customStyle(state)?.['placeholder'],
   }),
   singleValue: (provided, state) => ({
     ...provided,
@@ -281,11 +281,11 @@ const getSelectStyles = ({
     marginRight: state.hasValue ? 0 : undefined,
     marginTop: !state.hasValue || noTopLabel ? 0 : '5px',
     paddingLeft: state.hasValue ? 0 : undefined,
-    ...(customStyle(state)?.['singleValue'] || {}),
+    ...customStyle(state)?.['singleValue'],
   }),
   valueContainer: (provided, state) => ({
     ...provided,
-    ...(customStyle(state)?.['valueContainer'] || {}),
+    ...customStyle(state)?.['valueContainer'],
     cursor: state.isDisabled ? 'not-allowed' : undefined,
     height: '100%',
     label: {
@@ -755,11 +755,10 @@ const FwdSelectInput = ({
       value={value as SelectOption}
       maxMenuHeight={250}
       inputId={inputId}
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      ref={innerRef as any}
+      // @ts-expect-error innerRef type issue
+      ref={innerRef}
       name={name}
       id={idProp}
-      // @ts-expect-error time prop doesn't exist in react-select but is used
       time={time}
       isLoading={isLoading}
       required={required}

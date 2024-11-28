@@ -31,36 +31,36 @@ export const SteppedListContent = ({
 }: SteppedListContentProps) => {
   const containerData = useContext(Data)
 
-  return (
-    <>
-      {stepNumber === containerData.currentStep ? (
-        <StyledContent>
-          <StyledSubHeader>
-            {typeof subHeader === 'string' ? (
-              <Text as="h3" variant="headingSmallStrong">
-                {subHeader}
-              </Text>
-            ) : (
-              subHeader
-            )}
-          </StyledSubHeader>
-          {typeof children === 'function'
-            ? children((completed: boolean) =>
-                nextStep({
-                  completed,
-                  setCompleted: containerData.setDone,
-                  done: containerData.done,
-                  stepNumber,
-                  setCurrentStep: containerData.setCurrentStep,
-                  numberOfSteps: containerData.numberOfSteps,
-                  setHidden: containerData.setHidden,
-                  onClickHide: containerData.onClickHide,
-                }),
-              )
-            : children}
-          <StyledImage>{image}</StyledImage>
-        </StyledContent>
-      ) : null}
-    </>
-  )
+  if (stepNumber === containerData.currentStep) {
+    return (
+      <StyledContent>
+        <StyledSubHeader>
+          {typeof subHeader === 'string' ? (
+            <Text as="h3" variant="headingSmallStrong">
+              {subHeader}
+            </Text>
+          ) : (
+            subHeader
+          )}
+        </StyledSubHeader>
+        {typeof children === 'function'
+          ? children((completed: boolean) =>
+              nextStep({
+                completed,
+                setCompleted: containerData.setDone,
+                done: containerData.done,
+                stepNumber,
+                setCurrentStep: containerData.setCurrentStep,
+                numberOfSteps: containerData.numberOfSteps,
+                setHidden: containerData.setHidden,
+                onClickHide: containerData.onClickHide,
+              }),
+            )
+          : children}
+        <StyledImage>{image}</StyledImage>
+      </StyledContent>
+    )
+  }
+
+  return null
 }

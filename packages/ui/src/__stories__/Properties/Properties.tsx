@@ -66,9 +66,9 @@ const Properties = () => {
   }, {})
   /* eslint-enable no-underscore-dangle */
 
-  const propertiesList = Object.keys(componentNameAndProperties)
-    .map(key => Object.keys(componentNameAndProperties[key]))
-    .flat()
+  const propertiesList = Object.keys(componentNameAndProperties).flatMap(key =>
+    Object.keys(componentNameAndProperties[key]),
+  )
 
   const countPropertiesUsages = propertiesList.reduce<Record<string, number>>(
     (acc, property) => {
@@ -172,12 +172,10 @@ const Properties = () => {
                         }
                       }
 
-                      const reversedLocalProperty = lowerCaseLocalProperty
-                        .split('')
+                      const reversedLocalProperty = [...lowerCaseLocalProperty]
                         .reverse()
                         .join('')
-                      const reversedLowerCaseProperty = lowerCaseProperty
-                        .split('')
+                      const reversedLowerCaseProperty = [...lowerCaseProperty]
                         .reverse()
                         .join('')
 
@@ -209,35 +207,33 @@ const Properties = () => {
                 ...new Set(
                   sortedPropertiesUsagesCountAndComponentsName[
                     property
-                  ]?.components
-                    ?.map(component => {
-                      const { name, value } =
-                        (
-                          componentNameAndProperties as Record<
-                            string,
-                            Record<string, PropertyType>
-                          >
-                        )[component]?.[property]?.type ?? {}
+                  ]?.components?.flatMap(component => {
+                    const { name, value } =
+                      (
+                        componentNameAndProperties as Record<
+                          string,
+                          Record<string, PropertyType>
+                        >
+                      )[component]?.[property]?.type ?? {}
 
-                      if (name === 'boolean') {
-                        return ['true', 'false']
-                      }
+                    if (name === 'boolean') {
+                      return ['true', 'false']
+                    }
 
-                      if (name === 'string') {
-                        return ['string']
-                      }
+                    if (name === 'string') {
+                      return ['string']
+                    }
 
-                      if (name === 'enum') {
-                        return (
-                          value?.map(localValue =>
-                            localValue.value.replaceAll('"', ''),
-                          ) ?? []
-                        )
-                      }
+                    if (name === 'enum') {
+                      return (
+                        value?.map(localValue =>
+                          localValue.value.replaceAll('"', ''),
+                        ) ?? []
+                      )
+                    }
 
-                      return []
-                    })
-                    .flat(),
+                    return []
+                  }),
                 ),
               ]
 

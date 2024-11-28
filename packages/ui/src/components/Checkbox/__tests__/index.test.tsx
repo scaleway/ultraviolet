@@ -140,7 +140,7 @@ describe('Checkbox', () => {
       hidden: true,
     })
     await userEvent.click(input)
-    expect(input.checked).toBe(true)
+    expect(input.checked).toBeTruthy()
   })
 
   test('renders with click event with progress', async () => {
@@ -154,6 +154,6 @@ describe('Checkbox', () => {
       hidden: true,
     })
     await userEvent.click(input)
-    expect(input.checked).toBe(true)
+    expect(input.checked).toBeTruthy()
   })
 })

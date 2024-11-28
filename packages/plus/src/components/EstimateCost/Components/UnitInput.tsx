@@ -130,11 +130,11 @@ export const UnitInput = ({
       value={value}
       placeholder={placeholder}
       onChange={input => {
-        const numericValue = parseInt(input, 10)
+        const numericValue = Number.parseInt(input, 10)
         onChange(numericValue)
       }}
       onBlur={(event: FocusEvent<HTMLInputElement>) => {
-        const numericValue = parseInt(event.target.value, 10)
+        const numericValue = Number.parseInt(event.target.value, 10)
         if (Number.isNaN(numericValue) || numericValue < minValue) {
           onChange(minValue)
         }

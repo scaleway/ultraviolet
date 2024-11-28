@@ -16,6 +16,8 @@ const rangeDate = {
 
 const date = new Date('20 November 2000')
 
+const format = (value?: Date) => (value ? String(value.getFullYear()) : '1999')
+
 describe('Helper functions dateInput', () => {
   test('getMonthFirstDay should work', () => {
     expect(getMonthFirstDay(1, 2000)).toBe(5)
@@ -46,19 +48,19 @@ describe('Helper functions dateInput', () => {
   })
 
   test('isSameMonth should work', () => {
-    expect(isSameMonth(new Date('23 Dec 2023'), new Date('22 Dec 2023'))).toBe(
-      true,
-    )
-    expect(isSameMonth(new Date('23 Dec 2023'), new Date('23 Oct 2023'))).toBe(
-      false,
-    )
+    expect(
+      isSameMonth(new Date('23 Dec 2023'), new Date('22 Dec 2023')),
+    ).toBeTruthy()
+    expect(
+      isSameMonth(new Date('23 Dec 2023'), new Date('23 Oct 2023')),
+    ).toBeFalsy()
   })
 
   test('isSameDay should work', () => {
-    expect(isSameDay(new Date(), new Date('22 Dec 1999'))).toBe(false)
-    expect(isSameDay(new Date('23 Dec 2023'), new Date('23 Dec 2023'))).toBe(
-      true,
-    )
+    expect(isSameDay(new Date(), new Date('22 Dec 1999'))).toBeFalsy()
+    expect(
+      isSameDay(new Date('23 Dec 2023'), new Date('23 Dec 2023')),
+    ).toBeTruthy()
   })
 
   test('formatValue should work with default formatting', () => {
@@ -74,9 +76,6 @@ describe('Helper functions dateInput', () => {
   })
 
   test('formatValue should work with custom formatting', () => {
-    const format = (value?: Date) =>
-      value ? String(value.getFullYear()) : '1999'
-
     expect(formatValue(date, null, false, false, format)).toBe('2000')
     expect(formatValue(date, null, true, false, format)).toBe('2000')
     expect(formatValue(date, null, false, true, format)).toBe('2000')
