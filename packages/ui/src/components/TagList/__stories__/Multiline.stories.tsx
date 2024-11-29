@@ -14,7 +14,7 @@ Multiline.args = {
   multiline: true,
   tags: [
     'very',
-    ...Array<string>(50).fill('item'),
+    ...new Array<string>(50).fill('item'),
     'tooltip',
     'scaleway',
     'paris',

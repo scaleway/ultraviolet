@@ -39,8 +39,9 @@
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
-      "eslint --fix",
-      "biome format --write ."
+      "biome format --write .",
+      "oxlint -c .oxlintrc.json --quiet --fix",
+      "eslint --cache --cache-strategy content --fix"
     ],
     "*.svg": [
       "pnpm run svg"
@@ -149,6 +150,7 @@
     "emoji-toolkit": "9.0.1",
     "esbuild-plugin-browserslist": "0.15.0",
     "eslint": "9.15.0",
+    "eslint-plugin-oxlint": "0.13.2",
     "eslint-plugin-testing-library": "6.5.0",
     "expect": "29.7.0",
     "file-loader": "6.2.0",
@@ -159,6 +161,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest-axe": "9.0.0",
     "lint-staged": "15.2.10",
+    "oxlint": "0.13.2",
     "postcss": "8.4.49",
     "publint": "0.2.12",
     "react": "18.3.1",

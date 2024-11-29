@@ -43,6 +43,7 @@ Selectable.args = {
               sentiment="danger"
               size="small"
               onClick={() => {
+                // oxlint-disable-next-line eslint/no-alert
                 alert('elements could be deleted')
                 unselectAll()
               }}

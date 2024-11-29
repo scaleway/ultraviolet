@@ -27,7 +27,6 @@ const BaseContentCardGroup = forwardRef<
     ) : (
       <>
         {Children.map(children, (_child, index) => (
-          // eslint-disable-next-line react/no-array-index-key
           <SkeletonCard key={index} />
         ))}
       </>

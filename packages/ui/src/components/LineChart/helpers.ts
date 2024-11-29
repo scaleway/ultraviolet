@@ -2,20 +2,20 @@ import type { DatumValue, Serie } from '@nivo/line'
 
 const parse = (data?: DatumValue | null): number => {
   if (typeof data === 'number') return data || 0
-  if (typeof data === 'string') return parseFloat(data) || 0
+  if (typeof data === 'string') return Number.parseFloat(data) || 0
   if (data instanceof Date) return data.getTime()
 
   return 0
 }
 
 export const getMin = (values: DatumValue[] = []): number =>
-  values.length ? Math.min(...values.map(parse)) : 0
+  values.length > 0 ? Math.min(...values.map(parse)) : 0
 
 export const getMax = (values: DatumValue[] = []): number =>
-  values.length ? Math.max(...values.map(parse)) : 0
+  values.length > 0 ? Math.max(...values.map(parse)) : 0
 
 export const getAverage = (values: DatumValue[] = []): number =>
-  values.length
+  values.length > 0
     ? Math.round(
         (values.reduce<number>((sum, curr) => sum + parse(curr), 0) /
           values.length) *
@@ -44,7 +44,7 @@ export const getMinChartValue = (preppedData?: Serie[]): number => {
 }
 
 export const getCurrent = (values: number[] = []): number =>
-  values.length ? values[values.length - 1] : 0
+  values.length > 0 ? values[values.length - 1] : 0
 
 export const getSelected = (
   label: string,
@@ -54,7 +54,7 @@ export const getSelected = (
   const labelIndexed = label + index.toString()
   const found = selected.indexOf(labelIndexed)
 
-  if (found > -1) {
+  if (found !== -1) {
     selected.splice(found, 1)
   } else {
     selected.push(labelIndexed)

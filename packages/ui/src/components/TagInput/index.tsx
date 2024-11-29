@@ -244,7 +244,7 @@ export const TagInput = ({
       if (newTagInput) {
         setStatus({ [newTagInput[newTagInput.length - 1].index]: STATUS.IDLE })
       }
-    } catch (e) {
+    } catch {
       setTagInput(tagInputState)
     }
   }
@@ -258,7 +258,7 @@ export const TagInput = ({
       dispatchOnChange(newTagInput)
       setTagInput(newTagInput)
       setStatus({ [tagIndex]: STATUS.IDLE })
-    } catch (e) {
+    } catch {
       setTagInput(tagInputState)
     }
   }
@@ -271,7 +271,7 @@ export const TagInput = ({
     if (
       event.key === 'Backspace' &&
       inputRef?.current?.selectionStart === 0 &&
-      tagInputState.length
+      tagInputState.length > 0
     ) {
       event.preventDefault()
       if (tagInputState) {
@@ -291,7 +291,7 @@ export const TagInput = ({
     try {
       dispatchOnChange(newTagInput)
       setStatus({ [newTagInput.length - 1]: STATUS.IDLE })
-    } catch (err) {
+    } catch {
       setTagInput(tagInputState)
     }
   }
@@ -314,7 +314,7 @@ export const TagInput = ({
     return 'neutral'
   }, [error, success])
 
-  const computedClearable = clearable && !!tagInputState.length
+  const computedClearable = clearable && tagInputState.length > 0
 
   return (
     <Stack gap="0.5" className={className}>
@@ -374,7 +374,7 @@ export const TagInput = ({
                   name={name}
                   aria-label={ariaLabel}
                   type="text"
-                  placeholder={!tagInputState.length ? placeholder : ''}
+                  placeholder={tagInputState.length === 0 ? placeholder : ''}
                   value={input}
                   onBlur={addTag}
                   onChange={onInputChange}

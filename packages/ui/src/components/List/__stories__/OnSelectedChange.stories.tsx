@@ -9,6 +9,7 @@ import { columns, data } from './resources'
 
 export const OnSelectedChange: StoryFn = args => {
   const [selectedRows, onSelectedChange] = useState<string[]>([])
+  // oxlint-disable-next-line eslint/no-console
   console.log('selected', selectedRows)
 
   return (
@@ -18,7 +19,7 @@ export const OnSelectedChange: StoryFn = args => {
         {selectedRows.length > 0 ? (
           <ul>
             {selectedRows.map(item => (
-              <li>
+              <li key={item}>
                 <Text as="span" variant="bodyStrong">
                   {item}
                 </Text>
@@ -60,6 +61,7 @@ export const OnSelectedChange: StoryFn = args => {
               <Button
                 size="small"
                 onClick={() => {
+                  // oxlint-disable-next-line eslint/no-alert
                   alert('elements could be deleted')
                   unselectAll()
                 }}
@@ -117,6 +119,7 @@ OnSelectedChange.args = {
             <Button
               size="small"
               onClick={() => {
+                // oxlint-disable-next-line eslint/no-alert
                 alert('elements could be deleted')
                 unselectAll()
               }}

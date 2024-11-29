@@ -14,7 +14,7 @@ Threshold.parameters = {
 Threshold.args = {
   tags: [
     'very',
-    ...Array<string>(50).fill('large'),
+    ...new Array<string>(50).fill('large'),
     'tooltip',
     'scaleway',
     'paris',

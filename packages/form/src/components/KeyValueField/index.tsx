@@ -63,7 +63,7 @@ export const KeyValueField = <
 
   return (
     <Stack gap={3}>
-      {fields.length ? (
+      {fields.length > 0 ? (
         <Stack gap={3}>
           {fields.map((field, index) => (
             <Row

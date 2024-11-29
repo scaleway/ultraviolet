@@ -49,7 +49,10 @@ export const Disabled: StoryFn<typeof ContentCard> = args => (
           title="Create your first function"
           description="The Scaleway Serverless Functions platform makes your functions available, executes them on demand and manages resource allocation for you."
           disabled
-          onClick={() => console.log('ok')}
+          onClick={
+            // oxlint-disable-next-line eslint/no-console
+            () => console.log('ok')
+          }
         />
       </Stack>
     </Row>

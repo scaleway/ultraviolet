@@ -6,8 +6,8 @@ import { Stack } from '../../Stack'
 export const Sentiments = (props: ComponentProps<typeof Alert>) =>
   ALERT_SENTIMENTS.map(sentiment => (
     <Alert
-      {...props}
       key={sentiment}
+      {...props}
       title={`${sentiment.charAt(0).toUpperCase() + sentiment.slice(1)} title`}
       sentiment={sentiment}
       buttonText="More info"

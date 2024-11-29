@@ -6,7 +6,7 @@ jobs:
   size:
     strategy:
       matrix:
-        node: ["20"]
+        node: ["22"]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4

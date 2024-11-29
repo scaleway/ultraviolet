@@ -1,3 +1,4 @@
+// oxlint-disable plugin-import/no-commonjs
 module.exports = {
   plugins: [
     {

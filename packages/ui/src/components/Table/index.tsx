@@ -122,7 +122,6 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
             <HeaderRow hasSelectAllColumn={selectable}>
               {columns.map((column, index) => (
                 <HeaderCell
-                  // eslint-disable-next-line react/no-array-index-key
                   key={`header-column-${index}`}
                   isOrdered={column.isOrdered}
                   orderDirection={column.orderDirection}

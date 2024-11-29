@@ -43,7 +43,7 @@ describe('EstimateCost - helper', () => {
         amount: 5,
         amountFree: 2,
         timeUnit: 'months',
-        timeAmount: NaN,
+        timeAmount: Number.NaN,
       }),
     ).toEqual(0)
   })

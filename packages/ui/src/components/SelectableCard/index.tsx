@@ -296,6 +296,7 @@ export const SelectableCard = forwardRef(
                 <StyledDiv>
                   {illustration.endsWith('.svg') && svgContent ? (
                     <StyledSVG
+                      // oxlint-disable-next-line  react/no-danger
                       dangerouslySetInnerHTML={{ __html: svgContent }}
                     />
                   ) : (

@@ -166,7 +166,7 @@ export const SingleSlider = ({
       <NumberInputV2
         value={
           typeof valueNumber === 'string'
-            ? parseFloat(valueNumber)
+            ? Number.parseFloat(valueNumber)
             : valueNumber
         }
         size="small"
@@ -246,7 +246,7 @@ export const SingleSlider = ({
             type="range"
             value={selectedIndex}
             onChange={event => {
-              internalOnChangeRef.current(parseFloat(event.target.value))
+              internalOnChangeRef.current(Number.parseFloat(event.target.value))
             }}
             min={min}
             max={max}

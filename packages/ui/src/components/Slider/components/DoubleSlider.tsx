@@ -234,7 +234,7 @@ export const DoubleSlider = ({
       <NumberInputV2
         value={
           typeof valueNumber === 'string'
-            ? parseFloat(valueNumber)
+            ? Number.parseFloat(valueNumber)
             : valueNumber
         }
         size="small"
@@ -392,7 +392,7 @@ export const DoubleSlider = ({
                 data-testid={dataTestId ? `${dataTestId}-left` : 'handle-left'}
                 onChange={event => {
                   event.preventDefault()
-                  handleMinChange(parseFloat(event.target.value))
+                  handleMinChange(Number.parseFloat(event.target.value))
                 }}
                 themeSlider={theme}
                 ref={refSlider}
@@ -425,7 +425,7 @@ export const DoubleSlider = ({
                 step={step}
                 onChange={event => {
                   event.preventDefault()
-                  handleMaxChange(parseFloat(event.target.value))
+                  handleMaxChange(Number.parseFloat(event.target.value))
                 }}
                 themeSlider={theme}
                 left={((selectedIndexes[1] - min) * 100) / (max - min)}

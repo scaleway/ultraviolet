@@ -7,6 +7,27 @@ import { Stack } from '../../Stack'
 
 const CHANNELS = ['email', 'app', 'sms']
 
+const selectableCell = (
+  channel: string,
+  subject: string,
+  items: string[],
+  setter: Dispatch<SetStateAction<string[]>>,
+) => (
+  <Checkbox
+    aria-label={`select ${subject} notifications for this row`}
+    checked={items.includes(channel)}
+    onChange={() => {
+      setter(current => {
+        const index = current.indexOf(channel)
+
+        return index === -1
+          ? [...current, channel]
+          : [...current.slice(0, index), ...current.slice(index + 1)]
+      })
+    }}
+  />
+)
+
 export const SelectableColumn: StoryFn = () => {
   const [incidentNotifications, setIndicentNotifications] = useState<string[]>(
     [],
@@ -30,27 +51,6 @@ export const SelectableColumn: StoryFn = () => {
   const selectAll = (setState: Dispatch<SetStateAction<string[]>>) => {
     setState(current => (current.length === 0 ? [...CHANNELS] : []))
   }
-
-  const selectableCell = (
-    channel: string,
-    subject: string,
-    items: string[],
-    setter: Dispatch<SetStateAction<string[]>>,
-  ) => (
-    <Checkbox
-      aria-label={`select ${subject} notifications for this row`}
-      checked={items.includes(channel)}
-      onChange={() => {
-        setter(current => {
-          const index = current.indexOf(channel)
-
-          return index === -1
-            ? [...current, channel]
-            : [...current.slice(0, index), ...current.slice(index + 1)]
-        })
-      }}
-    />
-  )
 
   return (
     <Stack gap={1}>
@@ -124,19 +124,21 @@ export const SelectableColumn: StoryFn = () => {
       </Table>
       <div>
         Incident notifications channels :{' '}
-        {incidentNotifications.length
+        {incidentNotifications.length > 0
           ? incidentNotifications.join(',')
           : 'none'}
       </div>
       <div>
         Technical notifications channels :{' '}
-        {technicalNotifications.length
+        {technicalNotifications.length > 0
           ? technicalNotifications.join(',')
           : 'none'}
       </div>
       <div>
         Billing notifications channels :{' '}
-        {billingNotifications.length ? billingNotifications.join(',') : 'none'}
+        {billingNotifications.length > 0
+          ? billingNotifications.join(',')
+          : 'none'}
       </div>
     </Stack>
   )

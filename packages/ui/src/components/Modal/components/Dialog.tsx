@@ -95,6 +95,12 @@ export const StyledDialog = styled('dialog', {
       : undefined}
 `
 
+// Prevent default behaviour on Escape
+const stopCancel: ReactEventHandler = event => {
+  event.preventDefault()
+  event.stopPropagation()
+}
+
 export const Dialog = ({
   children,
   placement,
@@ -250,12 +256,6 @@ export const Dialog = ({
     }
   }, [])
 
-  // Prevent default behaviour on Escape
-  const stopCancel: ReactEventHandler = event => {
-    event.preventDefault()
-    event.stopPropagation()
-  }
-
   // We need to reverse the array as the last opened modal should be the first to be with normal size
   // while the first opened modal should shrink
   const realPosition = [...openedModals].findIndex(object => object.id === id)
@@ -314,7 +314,7 @@ export const Dialog = ({
         ref={dialogRef}
         tabIndex={0}
         position={position}
-        top={top > 0 ? top : 0}
+        top={Math.max(top, 0)}
         data-animation={animation}
         size={size}
       >

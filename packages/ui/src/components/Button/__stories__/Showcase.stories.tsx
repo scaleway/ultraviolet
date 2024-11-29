@@ -23,47 +23,45 @@ const COLUMNS = [
   })),
 ]
 
-export const Showcase: StoryFn<typeof Button> = args => {
-  const onClick = () => {}
+const onClick = () => {}
 
-  return (
-    <Table columns={COLUMNS}>
-      <Table.Body>
-        {([...SENTIMENTS, 'white', 'black'] as const).map(sentiment => (
-          <StyledRow key={sentiment} id={sentiment} sentiment={sentiment}>
-            <Table.Cell>
-              <Text
-                as="span"
-                variant="bodyStrong"
-                sentiment={
-                  sentiment === 'white' || sentiment === 'black'
-                    ? sentiment
-                    : undefined
-                }
-              >
-                {sentiment.toUpperCase()}
-              </Text>
+export const Showcase: StoryFn<typeof Button> = args => (
+  <Table columns={COLUMNS}>
+    <Table.Body>
+      {([...SENTIMENTS, 'white', 'black'] as const).map(sentiment => (
+        <StyledRow key={sentiment} id={sentiment} sentiment={sentiment}>
+          <Table.Cell>
+            <Text
+              as="span"
+              variant="bodyStrong"
+              sentiment={
+                sentiment === 'white' || sentiment === 'black'
+                  ? sentiment
+                  : undefined
+              }
+            >
+              {sentiment.toUpperCase()}
+            </Text>
+          </Table.Cell>
+          {buttonVariants.map(variant => (
+            <Table.Cell key={variant}>
+              <Stack direction="row" gap={2}>
+                <Button
+                  {...args}
+                  onClick={onClick}
+                  variant={variant}
+                  sentiment={sentiment}
+                >
+                  Button
+                </Button>
+              </Stack>
             </Table.Cell>
-            {buttonVariants.map(variant => (
-              <Table.Cell key={variant}>
-                <Stack direction="row" gap={2}>
-                  <Button
-                    {...args}
-                    onClick={onClick}
-                    variant={variant}
-                    sentiment={sentiment}
-                  >
-                    Button
-                  </Button>
-                </Stack>
-              </Table.Cell>
-            ))}
-          </StyledRow>
-        ))}
-      </Table.Body>
-    </Table>
-  )
-}
+          ))}
+        </StyledRow>
+      ))}
+    </Table.Body>
+  </Table>
+)
 
 Showcase.parameters = {
   docs: {

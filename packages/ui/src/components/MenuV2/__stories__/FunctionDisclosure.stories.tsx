@@ -3,17 +3,15 @@ import type { DisclosureProps } from '..'
 import { MenuV2 } from '..'
 import { Button } from '../../Button'
 
-export const FunctionDisclosure: StoryFn<typeof MenuV2> = () => {
-  const CustomDisclosure = ({ visible }: DisclosureProps) => (
-    <Button>{visible ? 'MenuV2 (is opened)' : 'MenuV2 (is closed)'}</Button>
-  )
+const CustomDisclosure = ({ visible }: DisclosureProps) => (
+  <Button>{visible ? 'MenuV2 (is opened)' : 'MenuV2 (is closed)'}</Button>
+)
 
-  return (
-    <MenuV2 disclosure={CustomDisclosure}>
-      <MenuV2.Item>MenuV2 1</MenuV2.Item>
-    </MenuV2>
-  )
-}
+export const FunctionDisclosure: StoryFn<typeof MenuV2> = () => (
+  <MenuV2 disclosure={CustomDisclosure}>
+    <MenuV2.Item>MenuV2 1</MenuV2.Item>
+  </MenuV2>
+)
 
 FunctionDisclosure.parameters = {
   docs: {

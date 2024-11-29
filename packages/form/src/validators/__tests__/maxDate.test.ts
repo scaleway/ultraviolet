@@ -10,15 +10,15 @@ const tomorrow = new Date(today.getTime() + 24 * hourInMs)
 describe('maxDate validator', () => {
   test('should success', () => {
     const validator = maxDateValidator(yesterday)
-    expect(validator(today)).toBe(false)
-    expect(validator(twoHoursLater)).toBe(false)
-    expect(validator(tomorrow)).toBe(false)
+    expect(validator(today)).toBeFalsy()
+    expect(validator(twoHoursLater)).toBeFalsy()
+    expect(validator(tomorrow)).toBeFalsy()
   })
 
   test('should failed', () => {
     const validator = maxDateValidator(tomorrow)
-    expect(validator(yesterday)).toBe(true)
-    expect(validator(today)).toBe(true)
-    expect(validator(twoHoursLater)).toBe(true)
+    expect(validator(yesterday)).toBeTruthy()
+    expect(validator(today)).toBeTruthy()
+    expect(validator(twoHoursLater)).toBeTruthy()
   })
 })

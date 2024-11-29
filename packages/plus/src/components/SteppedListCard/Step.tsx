@@ -44,33 +44,29 @@ export const SteppedList = ({
   const containerData = useContext(Data)
   const active = containerData.currentStep === stepNumber
 
-  return (
-    <>
-      {completed ? (
-        <StepList.Item
-          bulletIcon="check"
-          prominence={active ? 'strong' : 'default'}
-          sentiment="primary"
-          onClick={() => containerData.setCurrentStep(stepNumber)}
-          data-testid={dataTestId}
-        >
-          <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
-            {stepTitle}
-          </CustomText>
-        </StepList.Item>
-      ) : (
-        <StepList.Item
-          bulletText={String(stepNumber)}
-          prominence={active ? 'strong' : undefined}
-          sentiment={active ? 'primary' : undefined}
-          onClick={() => containerData.setCurrentStep(stepNumber)}
-          data-testid={dataTestId}
-        >
-          <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
-            {stepTitle}
-          </CustomText>
-        </StepList.Item>
-      )}
-    </>
+  return completed ? (
+    <StepList.Item
+      bulletIcon="check"
+      prominence={active ? 'strong' : 'default'}
+      sentiment="primary"
+      onClick={() => containerData.setCurrentStep(stepNumber)}
+      data-testid={dataTestId}
+    >
+      <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
+        {stepTitle}
+      </CustomText>
+    </StepList.Item>
+  ) : (
+    <StepList.Item
+      bulletText={String(stepNumber)}
+      prominence={active ? 'strong' : undefined}
+      sentiment={active ? 'primary' : undefined}
+      onClick={() => containerData.setCurrentStep(stepNumber)}
+      data-testid={dataTestId}
+    >
+      <CustomText as="h3" variant={active ? 'bodyStrong' : 'body'}>
+        {stepTitle}
+      </CustomText>
+    </StepList.Item>
   )
 }

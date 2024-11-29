@@ -697,7 +697,7 @@ export const Dropdown = ({
         refSelect.current.getBoundingClientRect().bottom +
         DROPDOWN_MAX_HEIGHT +
         Number(theme.sizing[INPUT_SIZE_HEIGHT[size]].replace('rem', '')) * 16 +
-        parseInt(theme.space['5'], 10)
+        Number.parseInt(theme.space['5'], 10)
       const overflow = position - window.innerHeight
       if (overflow > 0) {
         const modalElement = document.getElementById('backdrop-modal')
@@ -807,11 +807,11 @@ export const Dropdown = ({
   const isEmpty = useMemo(() => {
     if (numberOfOptions === 0) return true
     if (Array.isArray(displayedOptions)) {
-      return !(displayedOptions.length > 0)
+      return displayedOptions.length === 0
     }
     const groups = Object.keys(displayedOptions)
     for (const group of groups) {
-      if (displayedOptions[group].length !== 0) {
+      if (displayedOptions[group].length > 0) {
         return false
       }
     }

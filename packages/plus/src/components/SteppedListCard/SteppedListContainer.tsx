@@ -65,7 +65,7 @@ const SteppedListContainer = ({
   const numberOfSteps = Children.count(children)
   const [currentStep, setCurrentStep] = useState(1)
   const [hidden, setHidden] = useState(false)
-  const [done, setDone] = useState(Array<boolean>(steps.length).fill(false))
+  const [done, setDone] = useState(new Array<boolean>(steps.length).fill(false))
 
   const values = useMemo(
     () => ({

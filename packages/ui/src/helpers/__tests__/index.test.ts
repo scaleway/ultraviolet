@@ -49,7 +49,7 @@ describe('recursivelyGetChildrenString', () => {
 
 describe('onKeyOnlyNumbers', () => {
   test('should only prevent numbers keyCodes', () => {
-    ;[...Array(100).keys()].forEach(keyCode => {
+    ;[...new Array(100).keys()].forEach(keyCode => {
       const preventDefault = vi.fn()
 
       onKeyOnlyNumbers({

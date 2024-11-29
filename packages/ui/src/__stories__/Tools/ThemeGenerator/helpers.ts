@@ -1,15 +1,17 @@
 // Function imported from https://github.com/PimpTrizkit/PJs/wiki/12.-Shade,-Blend-and-Convert-a-Web-Color-(pSBC.js)#stackoverflow-archive-begin to shade hexa colors
+// oxlint-disable no-bitwise
+
 type ShadeHexColorType = (color: string, percent: number) => string
 
 export const shadeHexColor: ShadeHexColorType = (color, percent) => {
-  const f = parseInt(color.slice(1), 16)
+  const f = Number.parseInt(color.slice(1), 16)
   const t = percent < 0 ? 0 : 255
   const p = percent < 0 ? percent * -1 : percent
-  // eslint-disable-next-line no-bitwise
+
   const R = f >> 16
-  // eslint-disable-next-line no-bitwise
+
   const G = (f >> 8) & 0x00ff
-  // eslint-disable-next-line no-bitwise
+
   const B = f & 0x0000ff
 
   return `#${(

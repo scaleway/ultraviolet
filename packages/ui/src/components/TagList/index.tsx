@@ -153,7 +153,7 @@ export const TagList = ({
   // Compute visible tags and hidden ones based on the container width and
   // what can fit into it from the potentially visible tags
   useEffect(() => {
-    if (!tags.length || !containerRef.current || !measureRef.current) {
+    if (tags.length === 0 || !containerRef.current || !measureRef.current) {
       return
     }
 
@@ -190,7 +190,7 @@ export const TagList = ({
           const newAccumulatedWidth =
             accumulator.accumulatedWidth +
             (currentValue as HTMLDivElement).offsetWidth +
-            parseInt(TAGS_GAP, 10)
+            Number.parseInt(TAGS_GAP, 10)
 
           return {
             measuredVisibleTags: [
@@ -208,16 +208,17 @@ export const TagList = ({
           measuredVisibleTags: [tags[0]], // we need to always show one tag
           measuredHiddenTags: [],
           accumulatedWidth:
-            (firstTag as HTMLDivElement).offsetWidth + parseInt(TAGS_GAP, 10),
+            (firstTag as HTMLDivElement).offsetWidth +
+            Number.parseInt(TAGS_GAP, 10),
         },
       )
 
-    const finalHiddenTags = measuredHiddenTags.concat(surelyHiddenTags)
+    const finalHiddenTags = [...measuredHiddenTags, ...surelyHiddenTags]
 
     setVisibleTags(measuredVisibleTags)
     setHiddenTags(finalHiddenTags)
 
-    if (!finalHiddenTags.length) {
+    if (finalHiddenTags.length === 0) {
       setIsReady(true)
     }
   }, [
@@ -269,7 +270,7 @@ export const TagList = ({
     }
   }, [isReady])
 
-  if (!tags.length) {
+  if (tags.length === 0) {
     return null
   }
 

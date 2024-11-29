@@ -76,6 +76,7 @@ export const Examples: StoryFn = args => {
               data.push(event.currentTarget.value)
             }
             onChange3(data)
+            // oxlint-disable-next-line eslint/no-console
             console.log(data)
           }}
         >

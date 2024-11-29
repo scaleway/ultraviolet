@@ -2,9 +2,7 @@ import type { StoryFn } from '@storybook/react'
 import { Button, buttonVariants } from '..'
 import { Stack } from '../..'
 
-// @ts-expect-error we can't use args as it leads to a type error
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const AsLink: StoryFn<typeof Button> = args => (
+export const AsLink: StoryFn<typeof Button> = () => (
   <Stack alignItems="center" gap={2} direction="row">
     {buttonVariants.map(variant => (
       <Button

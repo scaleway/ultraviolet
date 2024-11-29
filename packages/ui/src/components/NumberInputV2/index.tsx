@@ -288,7 +288,7 @@ export const NumberInputV2 = forwardRef(
         } else if (direction === 'down') {
           localRef.current?.stepDown()
         }
-        onChange?.(parseFloat(localRef.current?.value ?? '') ?? min)
+        onChange?.(Number.parseFloat(localRef.current?.value ?? '') ?? min)
       },
       [localRef, min, onChange],
     )
@@ -407,7 +407,9 @@ export const NumberInputV2 = forwardRef(
                   onChange={
                     onChange
                       ? event => {
-                          const newNumber = parseFloat(event.target.value)
+                          const newNumber = Number.parseFloat(
+                            event.target.value,
+                          )
                           onChange(Number.isNaN(newNumber) ? null : newNumber)
                         }
                       : undefined

@@ -206,7 +206,9 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         textArea.style.resize = 'none'
         textArea.style.height = `${textArea.scrollHeight + 2}px`
       } else if (textArea && maxRows) {
-        const lineHeight = parseFloat(getComputedStyle(textArea).lineHeight)
+        const lineHeight = Number.parseFloat(
+          getComputedStyle(textArea).lineHeight,
+        )
 
         textArea.style.height = 'auto'
         const maxHeight = maxRows * lineHeight

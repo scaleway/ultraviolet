@@ -177,7 +177,7 @@ const CodeContent = ({
   >
     {multiline ? (
       Children.map(lines, child => (
-        <StyledSpan multiline prefix={prefix}>
+        <StyledSpan key={child} multiline prefix={prefix}>
           {child}
         </StyledSpan>
       ))
@@ -235,8 +235,8 @@ export const Snippet = ({
   const hasShowMoreButton = numberOfLines > rows && multiline && !noExpandable
   // Height of the expandable (when needed) = number of rows * height of a line (from rem to px) + padding (from rem to px)
   const minHeight =
-    rows * parseFloat(theme.typography.code.lineHeight) * 16 +
-    parseFloat(theme.space[4]) * 16
+    rows * Number.parseFloat(theme.typography.code.lineHeight) * 16 +
+    Number.parseFloat(theme.space[4]) * 16
 
   return (
     <Container

@@ -20,7 +20,9 @@ type ToggleFieldProps<
     | 'data-testid'
     | 'aria-label'
   > & {
+    // oxlint-disable-next-line no-explicit-any
     parse?: (value: boolean) => any
+    // oxlint-disable-next-line no-explicit-any
     format?: (value: any) => boolean
   }
 
