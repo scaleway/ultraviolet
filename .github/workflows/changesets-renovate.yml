@@ -9,7 +9,7 @@ on:
 
 jobs:
   generate-changeset:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: github.actor == 'renovate[bot]' && github.repository == 'scaleway/ultraviolet'
     steps:
       - name: Checkout
@@ -22,5 +22,10 @@ jobs:
           git config --global user.name 'Scaleway Bot'
           git config --global user.email 'github@scaleway.com'
       - uses: pnpm/action-setup@v4.0.0
+      - name: Use Node.js
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version: 22
+          cache: "pnpm"
       - name: Run changesets-renovate
         run: pnpm dlx @scaleway/changesets-renovate
