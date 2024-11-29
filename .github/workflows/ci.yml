@@ -99,7 +99,7 @@ jobs:
       - run: |
           pnpm install
           pnpm run test:unit:coverage
-      - uses: codecov/codecov-action@v4.6.0
+      - uses: codecov/codecov-action@v5.0.0
         with:
           # files: packages/**/coverage/cobertura-coverage.xmls
           token: ${{ secrets.CODECOV_TOKEN }}
