@@ -15,12 +15,13 @@ import { generateShadeContrast } from './helpers'
 
 type JsonTokenType = {
   paletteLight: {
-    shades: {
-      [key: string]: {
+    shades: Record<
+      string,
+      {
         value: string
         type: 'color'
       }
-    }
+    >
   }
 }
 

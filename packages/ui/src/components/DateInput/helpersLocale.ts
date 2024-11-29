@@ -46,6 +46,7 @@ export const getDays = (locale: Locale | string) => {
   })
 
   const dayKeys = Object.keys(days)
+  // oxlint-disable-next-line no-non-null-assertion
   dayKeys.push(dayKeys.shift()!)
 
   const orderedDaysMap: Record<string, string> = {}
