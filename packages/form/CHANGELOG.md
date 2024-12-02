@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.12.3
+
+### Patch Changes
+
+- [#4502](https://github.com/scaleway/ultraviolet/pull/4502) [`36f3b03`](https://github.com/scaleway/ultraviolet/commit/36f3b0359da76156cb69179b7b892aaace159b9c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<RadioGroup />`, `<ToggleGroup />`, `<CheckboxGroup />` and `<SelectableCardGroup />` to have children in error state when parent is in error
+
+- Updated dependencies [[`36f3b03`](https://github.com/scaleway/ultraviolet/commit/36f3b0359da76156cb69179b7b892aaace159b9c)]:
+  - @ultraviolet/ui@1.78.1
+
 ## 3.12.2
 
 ### Patch Changes

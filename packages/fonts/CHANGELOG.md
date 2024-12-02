@@ -1,5 +1,11 @@
 # @ultraviolet/fonts
 
+## 1.0.2
+
+### Patch Changes
+
+- [#4525](https://github.com/scaleway/ultraviolet/pull/4525) [`22c643a`](https://github.com/scaleway/ultraviolet/commit/22c643adbd6c5c47e1442591eaeb2f16f60bd7fb) Thanks [@matthprost](https://github.com/matthprost)! - Fix package.json exports
+
 ## 1.0.1
 
 ### Patch Changes
