@@ -35,10 +35,6 @@ class MyDocument extends Document {
             content="https://ultraviolet.scaleway.com/social.png"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap"
-            rel="stylesheet"
-          />
-          <link
             rel="icon"
             type="image/svg+xml"
             href="/favicon/favicon-lightdark.svg"

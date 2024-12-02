@@ -34,7 +34,16 @@
   ],
   "type": "module",
   "exports": {
-    ".": { "style": "./dist/fonts.css" },
-    "./fonts.css": "./dist/fonts.css"
+    ".": {
+      "require": "./dist/fonts.css",
+      "import": "./dist/fonts.css",
+      "default": "./dist/fonts.css",
+      "style": "./dist/fonts.css"
+    },
+    "./fonts.css": {
+      "require": "./dist/fonts.css",
+      "import": "./dist/fonts.css",
+      "default": "./dist/fonts.css"
+    }
   }
 }

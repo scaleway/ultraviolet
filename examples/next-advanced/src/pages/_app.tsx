@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import GlobalStyle from '../components/GlobalStyle'
 import Head from '../components/Head'
 import Header from '../components/Header'
+import '@ultraviolet/fonts/fonts.css'
 
 type Themes = 'light' | 'dark'
 
