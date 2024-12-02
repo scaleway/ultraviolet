@@ -15,6 +15,7 @@ import { Text } from '../Text'
 type CheckboxGroupContextType = {
   groupName: string
   groupValues: string[]
+  error: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -57,7 +58,7 @@ export const CheckboxGroupCheckbox = ({
     )
   }
 
-  const { groupName, onChange, groupValues } = context
+  const { groupName, onChange, groupValues, error: errorContext } = context
 
   const checkboxName = `${groupName}.${name ?? ''}`
   const checkboxValue = `${value}`
@@ -69,7 +70,7 @@ export const CheckboxGroupCheckbox = ({
       onFocus={onFocus}
       onBlur={onBlur}
       disabled={disabled}
-      error={error}
+      error={error || errorContext}
       name={checkboxName}
       value={checkboxValue}
       helper={helper}
@@ -128,8 +129,9 @@ export const CheckboxGroup = ({
       groupValues: value ?? [],
       onChange,
       required,
+      error: !!error,
     }),
-    [name, value, onChange, required],
+    [name, value, onChange, required, error],
   )
 
   return (

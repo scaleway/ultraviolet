@@ -15,6 +15,7 @@ import { Toggle } from '../Toggle'
 type ToggleGroupContextType = {
   groupName: string
   groupValues: string[]
+  error: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -48,7 +49,7 @@ export const ToggleGroupToggle = ({
     throw new Error('ToggleGroup.Toggle can only be used inside a ToggleGroup')
   }
 
-  const { groupName, onChange, groupValues } = context
+  const { groupName, onChange, groupValues, error: contextError } = context
 
   const ToggleName = `${groupName}.${name}`
   const ToggleValue = `${value}`
@@ -64,7 +65,7 @@ export const ToggleGroupToggle = ({
       className={className}
       data-testid={dataTestId}
       label={label}
-      error={error}
+      error={error || contextError}
     />
   )
 }
@@ -110,8 +111,9 @@ export const ToggleGroup = ({
       groupName: name,
       groupValues: value ?? [],
       onChange,
+      error: !!error,
     }),
-    [name, value, onChange],
+    [name, value, onChange, error],
   )
 
   return (

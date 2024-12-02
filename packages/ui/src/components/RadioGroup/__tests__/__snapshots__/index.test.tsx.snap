@@ -311,6 +311,7 @@ exports[`RadioGroup > renders correctly 1`] = `
                 aria-disabled="false"
                 class="emotion-14 emotion-15"
                 data-checked="true"
+                data-error="false"
               >
                 <input
                   aria-disabled="false"
@@ -362,6 +363,7 @@ exports[`RadioGroup > renders correctly 1`] = `
                 aria-disabled="false"
                 class="emotion-14 emotion-15"
                 data-checked="false"
+                data-error="false"
               >
                 <input
                   aria-disabled="false"
@@ -724,6 +726,7 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
                 aria-disabled="false"
                 class="emotion-14 emotion-15"
                 data-checked="true"
+                data-error="false"
               >
                 <input
                   aria-disabled="false"
@@ -775,6 +778,7 @@ exports[`RadioGroup > renders correctly with direction row 1`] = `
                 aria-disabled="false"
                 class="emotion-14 emotion-15"
                 data-checked="false"
+                data-error="false"
               >
                 <input
                   aria-disabled="false"
@@ -1149,10 +1153,11 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
                 aria-disabled="false"
                 class="emotion-14 emotion-15"
                 data-checked="true"
+                data-error="true"
               >
                 <input
                   aria-disabled="false"
-                  aria-invalid="false"
+                  aria-invalid="true"
                   checked=""
                   class="emotion-16 emotion-17"
                   id="radio-value-1"
@@ -1200,10 +1205,11 @@ exports[`RadioGroup > renders correctly with error content 1`] = `
                 aria-disabled="false"
                 class="emotion-14 emotion-15"
                 data-checked="false"
+                data-error="true"
               >
                 <input
                   aria-disabled="false"
-                  aria-invalid="false"
+                  aria-invalid="true"
                   class="emotion-16 emotion-17"
                   id="radio-value-2"
                   name="radio"
@@ -1579,6 +1585,7 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
                 aria-disabled="false"
                 class="emotion-14 emotion-15"
                 data-checked="true"
+                data-error="false"
               >
                 <input
                   aria-disabled="false"
@@ -1630,6 +1637,7 @@ exports[`RadioGroup > renders correctly with helper content 1`] = `
                 aria-disabled="false"
                 class="emotion-14 emotion-15"
                 data-checked="false"
+                data-error="false"
               >
                 <input
                   aria-disabled="false"

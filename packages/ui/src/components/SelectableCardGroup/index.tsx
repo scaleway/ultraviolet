@@ -18,6 +18,7 @@ type SelectableCardGroupContextType = {
   groupValue: string | number | (string | number)[]
   type: 'radio' | 'checkbox'
   showTick: boolean
+  error: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -51,7 +52,7 @@ const CardSelectableCard = ({
     )
   }
 
-  const { groupName, onChange, groupValue, type, showTick } = context
+  const { groupName, onChange, groupValue, type, showTick, error } = context
 
   return (
     <SelectableCard
@@ -61,7 +62,7 @@ const CardSelectableCard = ({
       type={type}
       disabled={disabled}
       className={className}
-      isError={isError}
+      isError={isError || error}
       onFocus={onFocus}
       onBlur={onBlur}
       tooltip={tooltip}
@@ -128,8 +129,9 @@ export const SelectableCardGroup = ({
       required,
       type,
       showTick,
+      error: !!error,
     }),
-    [name, value, onChange, required, type, showTick],
+    [name, value, onChange, required, type, showTick, error],
   )
 
   return (
