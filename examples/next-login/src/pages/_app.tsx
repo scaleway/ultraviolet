@@ -3,6 +3,7 @@ import { Button } from '@ultraviolet/ui'
 import { darkTheme, normalize, theme } from '@ultraviolet/ui'
 import type { AppProps } from 'next/app'
 import { useState } from 'react'
+import '@ultraviolet/fonts/fonts.css'
 
 const globalStyles = (mode: 'light' | 'dark') => () =>
   css`
