@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.12.4
+
+### Patch Changes
+
+- [#4533](https://github.com/scaleway/ultraviolet/pull/4533) [`af519f1`](https://github.com/scaleway/ultraviolet/commit/af519f1587ec0e5761270b127577b31d59eb1fba) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<DateField />` when having ranged value and nothing is displayed in the popover
+
 ## 3.12.3
 
 ### Patch Changes
