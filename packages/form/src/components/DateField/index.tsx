@@ -94,7 +94,7 @@ export const DateField = <
       name={field.name}
       label={label}
       placeholder={placeholder}
-      value={field.value}
+      value={Array.isArray(field.value) ? undefined : field.value}
       format={
         format ||
         (value => {
