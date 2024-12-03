@@ -7,7 +7,6 @@ import {
 import type { ReactNode } from 'react'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-import { AlignementFlex } from './constants'
 
 const StyledSortIcon = styled(SouthShortIcon, {
   shouldForwardProp: prop => !['order'].includes(prop),
@@ -39,9 +38,9 @@ ${({ width, maxWidth, minWidth }) => `
     ${maxWidth ? `max-width: ${maxWidth};` : ''}
     ${minWidth ? `min-width: ${minWidth};` : ''}
   `}
-  display: flex;
-  align-items: center;
-  justify-content: ${({ align }) => (align ? AlignementFlex[align] : null)};
+  display: table-cell;
+  vertical-align: middle;
+  text-align: ${({ align }) => align};
   padding: ${({ theme }) => theme.space['1']};
 
   &[role*='button'] {

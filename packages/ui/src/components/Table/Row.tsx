@@ -10,9 +10,10 @@ import { Cell } from './Cell'
 import { useTableContext } from './TableContext'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 
-const ExpandableWrapper = styled.div`
-  grid-column: 1 / -1;
-  grid-column-start: 1;
+const ExpandableWrapper = styled.tr`
+  width: 100%;
+  display: table-row;
+  vertical-align: middle;
   border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
   padding: ${({ theme }) => theme.space['1']};
   cursor: auto;
@@ -134,55 +135,59 @@ export const Row = ({
   }, [ref])
 
   return (
-    <StyledTr
-      className={className}
-      data-testid={dataTestid}
-      highlightAnimation={highlightAnimation}
-      role={canClickRowToExpand ? 'button row' : 'row'}
-    >
-      {selectable ? (
-        <Cell>
-          <StyledCheckboxContainer>
-            <Tooltip
-              text={
-                typeof selectDisabled === 'string' ? selectDisabled : undefined
-              }
-            >
-              <StyledCheckbox
-                name="table-select-checkbox"
-                aria-label="select"
-                checked={selectedRowIds[id]}
-                value={id}
-                onChange={() => {
-                  if (selectedRowIds[id]) {
-                    unselectRow(id)
-                  } else {
-                    selectRow(id)
-                  }
-                }}
-                disabled={selectDisabled !== undefined}
-                ref={rowRef}
-                inRange={inRange.includes(id)}
-              />
-            </Tooltip>
-          </StyledCheckboxContainer>
-        </Cell>
-      ) : null}
-      {expandButton ? (
-        <Cell>
-          <Button
-            disabled={!expandable}
-            icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
-            onClick={toggleRowExpand}
-            size="xsmall"
-            sentiment="neutral"
-            variant="ghost"
-            aria-label="expand"
-            data-testid="list-expand-button"
-          />
-        </Cell>
-      ) : null}
-      {children}
+    <>
+      <StyledTr
+        className={className}
+        data-testid={dataTestid}
+        highlightAnimation={highlightAnimation}
+        role={canClickRowToExpand ? 'button row' : 'row'}
+      >
+        {selectable ? (
+          <Cell>
+            <StyledCheckboxContainer>
+              <Tooltip
+                text={
+                  typeof selectDisabled === 'string'
+                    ? selectDisabled
+                    : undefined
+                }
+              >
+                <StyledCheckbox
+                  name="table-select-checkbox"
+                  aria-label="select"
+                  checked={selectedRowIds[id]}
+                  value={id}
+                  onChange={() => {
+                    if (selectedRowIds[id]) {
+                      unselectRow(id)
+                    } else {
+                      selectRow(id)
+                    }
+                  }}
+                  disabled={selectDisabled !== undefined}
+                  ref={rowRef}
+                  inRange={inRange.includes(id)}
+                />
+              </Tooltip>
+            </StyledCheckboxContainer>
+          </Cell>
+        ) : null}
+        {expandButton ? (
+          <Cell>
+            <Button
+              disabled={!expandable}
+              icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
+              onClick={toggleRowExpand}
+              size="xsmall"
+              sentiment="neutral"
+              variant="ghost"
+              aria-label="expand"
+              data-testid="list-expand-button"
+            />
+          </Cell>
+        ) : null}
+        {children}
+      </StyledTr>
       {expandable && expandedRowIds[id] ? (
         <ExpandableWrapper
           data-expandable-content
@@ -201,9 +206,9 @@ export const Row = ({
               : undefined
           }
         >
-          {expandable}
+          <Cell colSpan={6}>{expandable}</Cell>
         </ExpandableWrapper>
       ) : null}
-    </StyledTr>
+    </>
   )
 }

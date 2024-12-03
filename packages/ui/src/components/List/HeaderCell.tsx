@@ -21,11 +21,10 @@ const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
     <SortIconUV sentiment="neutral" />
   )
 
-const StyledHeaderCell = styled.div`
-  display: flex;
+const StyledHeaderCell = styled.th`
+  display: table-cell;
   text-align: left;
-  flex-direction: row;
-  align-items: center;
+  vertical-align: middle;
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   font-weight: ${({ theme }) => theme.typography.bodySmall.weight};
   font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};

@@ -4,9 +4,10 @@ import { Checkbox } from '../Checkbox'
 import { HeaderCell } from './HeaderCell'
 import { useListContext } from './ListContext'
 
-const StyledHeaderRow = styled.div`
+const StyledHeaderRow = styled.tr`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
-  column-gap: ${({ theme }) => theme.space['2']};
+  display: table-row;
+  vertical-align: middle;
   padding: 0 ${({ theme }) => theme.space['2']};
 `
 
@@ -27,21 +28,23 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
   const selectableRowCount = Object.keys(selectedRowIds).length
 
   return (
-    <StyledHeaderRow role="row">
-      {hasSelectAllColumn ? (
-        <HeaderCell>
-          <Checkbox
-            name="list-select-checkbox"
-            value="all"
-            aria-label="select all"
-            checked={allRowSelectValue}
-            onChange={allRowSelectValue === false ? selectAll : unselectAll}
-            disabled={selectableRowCount === 0}
-          />
-        </HeaderCell>
-      ) : null}
-      {expandButton ? <HeaderCell>{null}</HeaderCell> : null}
-      {children}
-    </StyledHeaderRow>
+    <thead>
+      <StyledHeaderRow>
+        {hasSelectAllColumn ? (
+          <HeaderCell>
+            <Checkbox
+              name="list-select-checkbox"
+              value="all"
+              aria-label="select all"
+              checked={allRowSelectValue}
+              onChange={allRowSelectValue === false ? selectAll : unselectAll}
+              disabled={selectableRowCount === 0}
+            />
+          </HeaderCell>
+        ) : null}
+        {expandButton ? <HeaderCell>{null}</HeaderCell> : null}
+        {children}
+      </StyledHeaderRow>
+    </thead>
   )
 }

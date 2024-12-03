@@ -30,24 +30,21 @@ const StyledCheckbox = styled(Checkbox, {
     }
 `
 
-export const StyledRow = styled('div', {
+export const StyledRow = styled('tr', {
   shouldForwardProp: prop => !['sentiment'].includes(prop),
 })<{
   sentiment: (typeof SENTIMENTS)[number]
 }>`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
 
+  display: table-row;
+  vertical-align: middle;
   position: relative;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: ${({ theme }) => theme.radii.default};
-  transition:
-    box-shadow 200ms ease,
-    border-color 200ms ease;
   box-shadow: none;
   background-color: ${({ theme }) => theme.colors.neutral.background};
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   column-gap: ${({ theme }) => theme.space['2']};
-  padding: 0 ${({ theme }) => theme.space['2']};
+
 
   &[role='button row'] {
     cursor: pointer;
@@ -123,7 +120,7 @@ export const Row = forwardRef(
       expandablePadding,
       'data-testid': dataTestid,
     }: RowProps,
-    ref: ForwardedRef<HTMLDivElement>,
+    ref: ForwardedRef<HTMLTableRowElement>,
   ) => {
     const {
       selectable,
@@ -189,7 +186,7 @@ export const Row = forwardRef(
       <StyledRow
         className={className}
         ref={ref}
-        role={canClickRowToExpand ? 'button row' : 'row'}
+        role={canClickRowToExpand ? 'button row' : undefined}
         onClick={canClickRowToExpand ? toggleRowExpand : undefined}
         onKeyDown={
           canClickRowToExpand
