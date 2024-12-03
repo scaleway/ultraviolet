@@ -22,7 +22,9 @@ const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
     <SortIconUV sentiment="neutral" />
   )
 
-const StyledHeaderCell = styled.th`
+const StyledHeaderCell = styled('th', {
+  shouldForwardProp: prop => !['width'].includes(prop),
+})<{ width?: string }>`
   display: table-cell;
   text-align: left;
   vertical-align: middle;
@@ -41,6 +43,8 @@ const StyledHeaderCell = styled.th`
   &[aria-sort] {
     color: ${({ theme }) => theme.colors.primary.text};
   }
+
+  width: ${({ width }) => width};
 `
 
 type HeaderCellProps = {
@@ -50,6 +54,7 @@ type HeaderCellProps = {
   orderDirection?: 'asc' | 'desc' | 'none'
   onOrder?: (newOrder: 'asc' | 'desc') => void
   info?: string
+  width?: string
 }
 
 export const HeaderCell = ({
@@ -59,6 +64,7 @@ export const HeaderCell = ({
   onOrder,
   className,
   info,
+  width,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -91,6 +97,7 @@ export const HeaderCell = ({
       }
       role={onOrder ? 'button columnheader' : undefined}
       tabIndex={handleOrder ? 0 : -1}
+      width={width}
     >
       <Stack direction="row" gap={1} alignItems="center">
         {children}

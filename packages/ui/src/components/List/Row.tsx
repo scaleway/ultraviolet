@@ -135,6 +135,14 @@ const StyledCheckboxContainer = styled.div`
   display: flex;
 `
 
+const NoPaddingCell = styled(Cell)`
+  padding: 0;
+
+  &:first-of-type {
+    padding-left: ${({ theme }) => theme.space['2']};
+  }
+`
+
 type RowProps = {
   children: ReactNode
   id: string
@@ -255,7 +263,7 @@ export const Row = forwardRef(
           data-testid={dataTestid}
         >
           {selectable ? (
-            <Cell preventClick={canClickRowToExpand}>
+            <NoPaddingCell preventClick={canClickRowToExpand}>
               <StyledCheckboxContainer>
                 <Tooltip
                   text={
@@ -282,10 +290,10 @@ export const Row = forwardRef(
                   />
                 </Tooltip>
               </StyledCheckboxContainer>
-            </Cell>
+            </NoPaddingCell>
           ) : null}
           {expandButton ? (
-            <Cell>
+            <NoPaddingCell>
               <Button
                 disabled={disabled || !expandable}
                 icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
@@ -296,7 +304,7 @@ export const Row = forwardRef(
                 aria-label="expand"
                 data-testid="list-expand-button"
               />
-            </Cell>
+            </NoPaddingCell>
           ) : null}
           {children}
         </StyledRow>
