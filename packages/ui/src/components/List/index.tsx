@@ -16,38 +16,15 @@ import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { EXPANDABLE_COLUMN_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
 
-const StyledList = styled('table', {
+const StyledTable = styled('table', {
   shouldForwardProp: prop => !['template'].includes(prop),
 })<{ template: string }>`
   width: 100%;
   box-sizing: content-box;
   gap: ${({ theme }) => theme.space['1']};
-  border-collapse: separate;
+  border-collapse: collapsed;
   border-spacing: 0 ${({ theme }) => theme.space['2']};
   position: relative;
-
-  tr {
-      position: relative;
-
-      &:before {
-          content: "";
-          position: absolute;
-          top: 0; /* Adjust based on border width and spacing */
-          left: 0;
-          right: 0;
-          bottom: 0; /* Adjust based on border width and spacing */
-          border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-          border-radius: ${({ theme }) => theme.radii.default};
-          pointer-events: none;
-          transition:
-            box-shadow 200ms ease,
-            border-color 200ms ease;
-      }
-
-      &:hover::before {
-        border: 1px solid ${({ theme }) => theme.colors.primary.border};
-      }
-  }
 `
 
 type ColumnProps = Pick<
@@ -104,7 +81,7 @@ const BaseList = forwardRef(
         autoCollapse={autoCollapse}
         onSelectedChange={onSelectedChange}
       >
-        <StyledList ref={ref} template={computeTemplate}>
+        <StyledTable ref={ref} template={computeTemplate}>
           <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell
@@ -118,16 +95,18 @@ const BaseList = forwardRef(
               </HeaderCell>
             ))}
           </HeaderRow>
-          {loading ? (
-            <SkeletonRows
-              selectable={selectable}
-              rows={5}
-              cols={columns.length}
-            />
-          ) : (
-            children
-          )}
-        </StyledList>
+          <tbody>
+            {loading ? (
+              <SkeletonRows
+                selectable={selectable}
+                rows={5}
+                cols={columns.length}
+              />
+            ) : (
+              children
+            )}
+          </tbody>
+        </StyledTable>
       </ListProvider>
     )
   },

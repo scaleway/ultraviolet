@@ -8,17 +8,35 @@ import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
 import { useListContext } from './ListContext'
 
-const ExpandableWrapper = styled('div', {
+const ExpandableWrapper = styled('tr', {
   shouldForwardProp: prop => !['padding'].includes(prop),
 })<{ padding?: keyof typeof space }>`
-  grid-column: 1 / -1;
-  grid-column-start: 1;
-  border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  width: 100%;
+  display: table-row;
+  vertical-align: middle;
   margin: 0 -${({ theme }) => theme.space['2']};
   padding: ${({ theme, padding }) => (padding ? theme.space[padding] : theme.space['2'])};
   cursor: auto;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
+  transform: translate3d(0, -${({ theme }) => theme.space['2']}, 0);
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0; /* Adjust based on border width and spacing */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Adjust based on border width and spacing */
+    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+    border-top: none;
+    border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
+    pointer-events: none;
+    transition:
+      box-shadow 200ms ease,
+      border-color 200ms ease;
+  }
 `
 
 const StyledCheckbox = styled(Checkbox, {
@@ -48,6 +66,36 @@ export const StyledRow = styled('tr', {
 
   &[role='button row'] {
     cursor: pointer;
+  }
+
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0; /* Adjust based on border width and spacing */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Adjust based on border width and spacing */
+    border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+    border-radius: ${({ theme }) => theme.radii.default};
+    pointer-events: none;
+    transition:
+      box-shadow 200ms ease,
+      border-color 200ms ease;
+  }
+
+  &:hover::before {
+    border-color: ${({ theme }) => theme.colors.primary.border};
+  }
+
+  &:hover + ${ExpandableWrapper}:before {
+    border-color: ${({ theme }) => theme.colors.primary.border};
+  }
+
+  &[aria-expanded='true']:before {
+    border-radius: ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default} 0 0;
+    border-bottom-color: ${({ theme }) => theme.colors.neutral.border};
   }
 
   ${({ theme, sentiment }) =>
@@ -183,73 +231,75 @@ export const Row = forwardRef(
     }, [refList])
 
     return (
-      <StyledRow
-        className={className}
-        ref={ref}
-        role={canClickRowToExpand ? 'button row' : undefined}
-        onClick={canClickRowToExpand ? toggleRowExpand : undefined}
-        onKeyDown={
-          canClickRowToExpand
-            ? event => {
-                if (event.key === ' ') {
-                  toggleRowExpand()
-                  event.preventDefault()
+      <>
+        <StyledRow
+          className={className}
+          ref={ref}
+          role={canClickRowToExpand ? 'button row' : undefined}
+          onClick={canClickRowToExpand ? toggleRowExpand : undefined}
+          onKeyDown={
+            canClickRowToExpand
+              ? event => {
+                  if (event.key === ' ') {
+                    toggleRowExpand()
+                    event.preventDefault()
+                  }
                 }
-              }
-            : undefined
-        }
-        tabIndex={canClickRowToExpand ? 0 : -1}
-        sentiment={sentiment}
-        aria-disabled={disabled}
-        aria-expanded={expandable ? expandedRowIds[id] : undefined}
-        data-highlight={selectable && !!selectedRowIds[id]}
-        data-testid={dataTestid}
-      >
-        {selectable ? (
-          <Cell preventClick={canClickRowToExpand}>
-            <StyledCheckboxContainer>
-              <Tooltip
-                text={
-                  typeof selectDisabled === 'string'
-                    ? selectDisabled
-                    : undefined
-                }
-              >
-                <StyledCheckbox
-                  name="list-select-checkbox"
-                  aria-label="select"
-                  checked={selectedRowIds[id]}
-                  value={id}
-                  ref={checkboxRef}
-                  onChange={() => {
-                    if (selectedRowIds[id]) {
-                      unselectRow(id)
-                    } else {
-                      selectRow(id)
-                    }
-                  }}
-                  disabled={isSelectDisabled}
-                  inRange={inRange.includes(id)}
-                />
-              </Tooltip>
-            </StyledCheckboxContainer>
-          </Cell>
-        ) : null}
-        {expandButton ? (
-          <Cell>
-            <Button
-              disabled={disabled || !expandable}
-              icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
-              onClick={toggleRowExpand}
-              size="small"
-              sentiment={sentiment}
-              variant="ghost"
-              aria-label="expand"
-              data-testid="list-expand-button"
-            />
-          </Cell>
-        ) : null}
-        {children}
+              : undefined
+          }
+          tabIndex={canClickRowToExpand ? 0 : -1}
+          sentiment={sentiment}
+          aria-disabled={disabled}
+          aria-expanded={expandable ? expandedRowIds[id] : undefined}
+          data-highlight={selectable && !!selectedRowIds[id]}
+          data-testid={dataTestid}
+        >
+          {selectable ? (
+            <Cell preventClick={canClickRowToExpand}>
+              <StyledCheckboxContainer>
+                <Tooltip
+                  text={
+                    typeof selectDisabled === 'string'
+                      ? selectDisabled
+                      : undefined
+                  }
+                >
+                  <StyledCheckbox
+                    name="list-select-checkbox"
+                    aria-label="select"
+                    checked={selectedRowIds[id]}
+                    value={id}
+                    ref={checkboxRef}
+                    onChange={() => {
+                      if (selectedRowIds[id]) {
+                        unselectRow(id)
+                      } else {
+                        selectRow(id)
+                      }
+                    }}
+                    disabled={isSelectDisabled}
+                    inRange={inRange.includes(id)}
+                  />
+                </Tooltip>
+              </StyledCheckboxContainer>
+            </Cell>
+          ) : null}
+          {expandButton ? (
+            <Cell>
+              <Button
+                disabled={disabled || !expandable}
+                icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
+                onClick={toggleRowExpand}
+                size="small"
+                sentiment={sentiment}
+                variant="ghost"
+                aria-label="expand"
+                data-testid="list-expand-button"
+              />
+            </Cell>
+          ) : null}
+          {children}
+        </StyledRow>
         {expandable && expandedRowIds[id] ? (
           <ExpandableWrapper
             data-expandable-content
@@ -269,10 +319,10 @@ export const Row = forwardRef(
             }
             padding={expandablePadding}
           >
-            {expandable}
+            <Cell colSpan={6}>{expandable}</Cell>
           </ExpandableWrapper>
         ) : null}
-      </StyledRow>
+      </>
     )
   },
 )

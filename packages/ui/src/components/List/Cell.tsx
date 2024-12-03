@@ -24,11 +24,18 @@ type CellProps = {
    * */
   preventClick?: boolean
   'data-testid'?: string
+  colSpan?: number
 }
 
 export const Cell = forwardRef(
   (
-    { children, className, preventClick, 'data-testid': dataTestid }: CellProps,
+    {
+      children,
+      className,
+      preventClick,
+      'data-testid': dataTestid,
+      colSpan,
+    }: CellProps,
     ref: ForwardedRef<HTMLTableCellElement>,
   ) => {
     const handleClick: MouseEventHandler<HTMLDivElement> = event => {
@@ -50,6 +57,7 @@ export const Cell = forwardRef(
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         data-testid={dataTestid}
+        colSpan={colSpan}
       >
         {children}
       </StyledCell>

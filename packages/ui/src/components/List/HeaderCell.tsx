@@ -5,6 +5,7 @@ import {
   SouthShortIcon,
 } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
+import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
 const StyledSortIcon = styled(SouthShortIcon, {
@@ -30,6 +31,7 @@ const StyledHeaderCell = styled.th`
   font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
   color: ${({ theme }) => theme.colors.neutral.text};
   gap: ${({ theme }) => theme.space['1']};
+  padding: 0 ${({ theme }) => theme.space['2']};
 
   &[role*='button'] {
     cursor: pointer;
@@ -90,15 +92,21 @@ export const HeaderCell = ({
       role={onOrder ? 'button columnheader' : undefined}
       tabIndex={handleOrder ? 0 : -1}
     >
-      {children}
-      {info ? (
-        <Tooltip text={info}>
-          <InformationIcon size="large" prominence="weak" sentiment="neutral" />
-        </Tooltip>
-      ) : null}
-      {orderDirection !== undefined && isOrdered !== undefined ? (
-        <SortIcon order={order} />
-      ) : null}
+      <Stack direction="row" gap={1} alignItems="center">
+        {children}
+        {info ? (
+          <Tooltip text={info}>
+            <InformationIcon
+              size="large"
+              prominence="weak"
+              sentiment="neutral"
+            />
+          </Tooltip>
+        ) : null}
+        {orderDirection !== undefined && isOrdered !== undefined ? (
+          <SortIcon order={order} />
+        ) : null}
+      </Stack>
     </StyledHeaderCell>
   )
 }

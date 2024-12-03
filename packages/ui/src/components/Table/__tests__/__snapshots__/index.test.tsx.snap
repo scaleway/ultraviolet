@@ -10,13 +10,9 @@ exports[`Table > Should render correctly 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -27,14 +23,8 @@ exports[`Table > Should render correctly 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -76,20 +66,11 @@ exports[`Table > Should render correctly 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -473,13 +454,9 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 {
@@ -490,13 +467,9 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -511,14 +484,8 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -534,14 +501,8 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -612,37 +573,19 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -1036,13 +979,22 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 1fr) 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  width: 100%;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -1054,14 +1006,8 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1074,14 +1020,8 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1167,14 +1107,8 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1190,14 +1124,8 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1215,37 +1143,19 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -1626,13 +1536,9 @@ exports[`Table > Should render correctly with info 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 1fr) 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 tbody tr:nth-of-type(even) {
@@ -1652,14 +1558,8 @@ exports[`Table > Should render correctly with info 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1672,14 +1572,8 @@ exports[`Table > Should render correctly with info 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1765,14 +1659,8 @@ exports[`Table > Should render correctly with info 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1788,14 +1676,8 @@ exports[`Table > Should render correctly with info 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1818,37 +1700,19 @@ exports[`Table > Should render correctly with info 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -2239,13 +2103,9 @@ exports[`Table > Should render correctly with loading 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -2256,14 +2116,8 @@ exports[`Table > Should render correctly with loading 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -2304,20 +2158,11 @@ exports[`Table > Should render correctly with loading 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-34 {
@@ -2884,13 +2729,9 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 {
@@ -2901,13 +2742,9 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -2922,14 +2759,8 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -2945,14 +2776,8 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -3023,37 +2848,19 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -3437,13 +3244,22 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 2.5rem 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  width: 100%;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -3455,14 +3271,8 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -3475,14 +3285,8 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -3820,14 +3624,8 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -3843,14 +3641,8 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -3873,37 +3665,19 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
 }
 
 .emotion-50 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-50 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-52 {
@@ -5081,13 +4855,22 @@ exports[`Table > Should render correctly with selectable then click on first row
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 2.5rem 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  width: 100%;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -5099,14 +4882,8 @@ exports[`Table > Should render correctly with selectable then click on first row
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -5444,14 +5221,8 @@ exports[`Table > Should render correctly with selectable then click on first row
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -5467,14 +5238,8 @@ exports[`Table > Should render correctly with selectable then click on first row
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -5497,37 +5262,19 @@ exports[`Table > Should render correctly with selectable then click on first row
 }
 
 .emotion-48 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-48 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-50 {
@@ -6707,13 +6454,9 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 {
@@ -6724,13 +6467,9 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -6745,14 +6484,8 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -6768,14 +6501,8 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -6904,37 +6631,19 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -7395,13 +7104,9 @@ exports[`Table > Should render correctly with stipped 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 tbody tr:nth-of-type(even) {
@@ -7424,14 +7129,8 @@ exports[`Table > Should render correctly with stipped 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -7447,14 +7146,8 @@ exports[`Table > Should render correctly with stipped 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -7525,37 +7218,19 @@ exports[`Table > Should render correctly with stipped 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div

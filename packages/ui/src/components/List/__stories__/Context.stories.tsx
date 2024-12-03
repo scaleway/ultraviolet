@@ -1,40 +1,43 @@
 import type { StoryFn } from '@storybook/react'
-import { useMemo } from 'react'
+import { useEffect, useState } from 'react'
 import { List } from '..'
 import { columns, data } from './resources'
 
 export const Context: StoryFn = args => {
-  const SubComponent = ({ srcData }: { srcData: typeof data }) => {
+  const [selectedPlanets, setSelectedPlanets] = useState<string[]>([])
+
+  const SubComponent = () => {
     const { selectedRowIds } = List.useListContext()
 
-    const selectedItems = useMemo(
-      () => srcData.filter(item => selectedRowIds[item.id]),
-      [srcData, selectedRowIds],
-    )
+    useEffect(() => {
+      setSelectedPlanets(
+        Object.keys(selectedRowIds).filter(id => selectedRowIds[id]),
+      )
+    }, [selectedRowIds])
 
-    return (
-      <div>
-        Selected planet(s):{' '}
-        {selectedItems.map(planet => planet.name).join(', ')}
-      </div>
-    )
+    return null
   }
 
   return (
-    <List {...args} columns={columns} selectable>
-      {data.map(planet => (
-        <List.Row
-          key={planet.id}
-          id={planet.id}
-          expandable="Planet description"
-        >
-          <List.Cell>{planet.name}</List.Cell>
-          <List.Cell>{planet.perihelion}AU</List.Cell>
-          <List.Cell>{planet.aphelion}AU</List.Cell>
-        </List.Row>
-      ))}
-      <SubComponent srcData={data} />
-    </List>
+    <>
+      <List {...args} columns={columns} selectable>
+        {data.map(planet => (
+          <List.Row
+            key={planet.id}
+            id={planet.id}
+            expandable="Planet description"
+          >
+            <List.Cell>{planet.name}</List.Cell>
+            <List.Cell>{planet.perihelion}AU</List.Cell>
+            <List.Cell>{planet.aphelion}AU</List.Cell>
+          </List.Row>
+        ))}
+        <SubComponent />
+      </List>
+      <div>
+        Selected planet(s): {selectedPlanets.map(planet => planet).join(', ')}
+      </div>
+    </>
   )
 }
 
