@@ -305,6 +305,7 @@ describe('Drawer', () => {
         footer="footer"
         disclosure={<button type="button">Open</button>}
         header={<h1>Custom header</h1>}
+        open
       >
         <div> test</div>
       </Drawer>,
@@ -331,6 +332,7 @@ describe('Drawer', () => {
             A custom button that can close the drawer
           </button>
         )}
+        open
       >
         <div> test</div>
       </Drawer>,
