@@ -15,8 +15,9 @@ export const getPageNumbers = (
     currentPage <= pageCount - range || currentPage < range
 
   // No truncation when there are less than "range" pages
-  if (pageCount <= range)
+  if (pageCount <= range) {
     return Array.from({ length: pageCount }, (_, index) => index + 1)
+  }
 
   const pagesToShowBeforeTruncation = truncationBefore
     ? [1]
