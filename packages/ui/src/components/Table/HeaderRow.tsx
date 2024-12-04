@@ -1,7 +1,9 @@
+import { useTheme } from '@emotion/react'
 import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
 import { HeaderCell } from './HeaderCell'
 import { useTableContext } from './TableContext'
+import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 
 type HeaderRowProps = {
   children: ReactNode
@@ -16,13 +18,14 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
     selectedRowIds,
     expandButton,
   } = useTableContext()
+  const theme = useTheme()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
 
   return (
     <tr role="row">
       {hasSelectAllColumn ? (
-        <HeaderCell>
+        <HeaderCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
           <Checkbox
             name="table-select-all-checkbox"
             value="all"

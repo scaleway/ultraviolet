@@ -23,8 +23,8 @@ const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
   )
 
 const StyledHeaderCell = styled('th', {
-  shouldForwardProp: prop => !['width'].includes(prop),
-})<{ width?: string }>`
+  shouldForwardProp: prop => !['width', 'minWidth', 'maxWidth'].includes(prop),
+})<{ width?: string; minWidth?: string; maxWidth?: string }>`
   display: table-cell;
   text-align: left;
   vertical-align: middle;
@@ -45,6 +45,8 @@ const StyledHeaderCell = styled('th', {
   }
 
   width: ${({ width }) => width};
+  min-width: ${({ minWidth }) => minWidth};
+  max-width: ${({ maxWidth }) => maxWidth};
 `
 
 type HeaderCellProps = {
@@ -55,6 +57,8 @@ type HeaderCellProps = {
   onOrder?: (newOrder: 'asc' | 'desc') => void
   info?: string
   width?: string
+  minWith?: string
+  maxWidth?: string
 }
 
 export const HeaderCell = ({
@@ -65,6 +69,8 @@ export const HeaderCell = ({
   className,
   info,
   width,
+  minWith,
+  maxWidth,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -98,6 +104,8 @@ export const HeaderCell = ({
       role={onOrder ? 'button columnheader' : undefined}
       tabIndex={handleOrder ? 0 : -1}
       width={width}
+      maxWidth={maxWidth}
+      minWidth={minWith}
     >
       <Stack direction="row" gap={1} alignItems="center">
         {children}

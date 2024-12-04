@@ -47,6 +47,10 @@ ${({ width, maxWidth, minWidth }) => `
     cursor: pointer;
     user-select: none;
   }
+
+  &:first-of-type {
+    padding-left: ${({ theme }) => theme.space['2']};
+  }
 `
 
 const StyledText = styled(Text)`

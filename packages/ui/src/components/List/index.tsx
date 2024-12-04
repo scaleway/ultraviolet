@@ -30,6 +30,8 @@ type ColumnProps = Pick<
 > & {
   label?: string
   width?: string
+  minWidth?: string
+  maxWidth?: string
   info?: string
 }
 
@@ -81,6 +83,8 @@ const BaseList = forwardRef(
               onOrder={column.onOrder}
               info={column.info}
               width={column.width}
+              minWith={column.minWidth}
+              maxWidth={column.maxWidth}
             >
               {column.label}
             </HeaderCell>

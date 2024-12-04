@@ -1,6 +1,13 @@
 import styled from '@emotion/styled'
 import type { ForwardedRef, ReactNode } from 'react'
-import { forwardRef, useCallback, useEffect, useId, useRef } from 'react'
+import {
+  Children,
+  forwardRef,
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+} from 'react'
 import type { SENTIMENTS, space } from '../../theme'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -63,7 +70,6 @@ export const StyledRow = styled('tr', {
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   column-gap: ${({ theme }) => theme.space['2']};
 
-
   &[role='button row'] {
     cursor: pointer;
   }
@@ -124,7 +130,6 @@ export const StyledRow = styled('tr', {
   }
 
   &[aria-disabled='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.neutral.borderDisabled};
     background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
     cursor: not-allowed;
@@ -240,6 +245,9 @@ export const Row = forwardRef(
       }
     }, [refList])
 
+    const childrenLength =
+      Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
+
     return (
       <>
         <StyledRow
@@ -333,7 +341,7 @@ export const Row = forwardRef(
             }
             padding={expandablePadding}
           >
-            <Cell colSpan={6}>{expandable}</Cell>
+            <Cell colSpan={childrenLength}>{expandable}</Cell>
           </ExpandableWrapper>
         ) : null}
       </>

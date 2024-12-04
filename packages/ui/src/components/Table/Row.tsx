@@ -1,8 +1,8 @@
 import type { Theme } from '@emotion/react'
-import { keyframes } from '@emotion/react'
+import { keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import { useCallback, useEffect, useRef } from 'react'
+import { Children, useCallback, useEffect, useRef } from 'react'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
@@ -52,6 +52,18 @@ const StyledTr = styled('tr', {
   animation: ${({ highlightAnimation, theme }) =>
     highlightAnimation ? colorChange(theme) : undefined}
     3s linear;
+`
+
+const NoPaddingCell = styled(Cell, {
+  shouldForwardProp: prop => !['maxWidth'].includes(prop),
+})<{ maxWidth?: string }>`
+  padding: 0;
+
+  &:first-of-type {
+    padding-left: ${({ theme }) => theme.space['2']};
+  }
+
+  max-width: ${({ maxWidth }) => maxWidth};
 `
 
 type RowProps = {
@@ -134,6 +146,11 @@ export const Row = ({
     }
   }, [ref])
 
+  const theme = useTheme()
+
+  const childrenLength =
+    Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
+
   return (
     <>
       <StyledTr
@@ -143,7 +160,7 @@ export const Row = ({
         role={canClickRowToExpand ? 'button row' : 'row'}
       >
         {selectable ? (
-          <Cell>
+          <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
             <StyledCheckboxContainer>
               <Tooltip
                 text={
@@ -170,10 +187,10 @@ export const Row = ({
                 />
               </Tooltip>
             </StyledCheckboxContainer>
-          </Cell>
+          </NoPaddingCell>
         ) : null}
         {expandButton ? (
-          <Cell>
+          <NoPaddingCell>
             <Button
               disabled={!expandable}
               icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
@@ -184,7 +201,7 @@ export const Row = ({
               aria-label="expand"
               data-testid="list-expand-button"
             />
-          </Cell>
+          </NoPaddingCell>
         ) : null}
         {children}
       </StyledTr>
@@ -206,7 +223,7 @@ export const Row = ({
               : undefined
           }
         >
-          <Cell colSpan={6}>{expandable}</Cell>
+          <Cell colSpan={childrenLength}>{expandable}</Cell>
         </ExpandableWrapper>
       ) : null}
     </>
