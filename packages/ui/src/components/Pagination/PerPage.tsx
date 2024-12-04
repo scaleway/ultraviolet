@@ -48,7 +48,7 @@ export const PerPage = ({
   numberOfItems,
 }: PerPageProps) => {
   const handleChange = (value: string) => {
-    const intValue = parseInt(value, 10)
+    const intValue = Number.parseInt(value, 10)
     onChangePerPage?.(intValue)
     setPerPage(intValue)
   }

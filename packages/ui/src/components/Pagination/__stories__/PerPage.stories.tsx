@@ -22,8 +22,9 @@ export const PerPage: StoryFn = props => {
       <StyledList>
         {Array.from({ length: perPage }).map((_, index) => {
           const itemNumber = perPage * (page - 1) + index + 1
-          if (itemNumber <= NUMBER_OF_ITEMS)
+          if (itemNumber <= NUMBER_OF_ITEMS) {
             return <li key={itemNumber}>Item #{itemNumber}</li>
+          }
 
           return null
         })}
