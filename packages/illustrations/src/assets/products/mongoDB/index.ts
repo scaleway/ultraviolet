@@ -5,14 +5,9 @@
 
 const BASE_URL = 'https://assets.scaleway.com/illustrations'
 
-const documentDBContent = `${BASE_URL}/products/documentDB/documentDB-content.webp`
-const documentDBKeyvisual = `${BASE_URL}/products/documentDB/documentDB-keyvisual.webp`
-const documentDBOriginal = `${BASE_URL}/products/documentDB/documentDB-original.webp`
-const documentDBWire = `${BASE_URL}/products/documentDB/documentDB-wire.svg`
+const mongoDBContent = `${BASE_URL}/products/mongoDB/mongoDB-content.webp`
+const mongoDBKeyvisual = `${BASE_URL}/products/mongoDB/mongoDB-keyvisual.webp`
+const mongoDBOriginal = `${BASE_URL}/products/mongoDB/mongoDB-original.webp`
+const mongoDBWire = `${BASE_URL}/products/mongoDB/mongoDB-wire.svg`
 
-export {
-  documentDBContent,
-  documentDBKeyvisual,
-  documentDBOriginal,
-  documentDBWire,
-}
+export { mongoDBContent, mongoDBKeyvisual, mongoDBOriginal, mongoDBWire }
