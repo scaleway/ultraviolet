@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ForwardedRef, ReactNode } from 'react'
-import { forwardRef, useCallback, useEffect, useRef } from 'react'
+import { forwardRef, useCallback, useEffect, useId, useRef } from 'react'
 import type { SENTIMENTS, space } from '../../theme'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -193,6 +193,8 @@ export const Row = forwardRef(
       inRange,
     } = useListContext()
 
+    const expandedRowId = useId()
+
     const checkboxRef = useRef<HTMLInputElement>(null)
 
     const isSelectDisabled =
@@ -259,6 +261,9 @@ export const Row = forwardRef(
           sentiment={sentiment}
           aria-disabled={disabled}
           aria-expanded={expandable ? expandedRowIds[id] : undefined}
+          aria-controls={
+            expandable && expandedRowIds[id] ? expandedRowId : undefined
+          }
           data-highlight={selectable && !!selectedRowIds[id]}
           data-testid={dataTestid}
         >
@@ -310,6 +315,7 @@ export const Row = forwardRef(
         </StyledRow>
         {expandable && expandedRowIds[id] ? (
           <ExpandableWrapper
+            id={expandedRowId}
             data-expandable-content
             onClick={
               canClickRowToExpand
