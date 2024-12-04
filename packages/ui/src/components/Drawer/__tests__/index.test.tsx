@@ -8,8 +8,6 @@ import {
 import { afterAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { Drawer } from '..'
 
-const mockOnClick = vi.fn()
-
 describe('Drawer', () => {
   beforeEach(() => {
     vi.clearAllMocks()
@@ -33,10 +31,29 @@ describe('Drawer', () => {
       </Drawer>,
     ))
 
-  test(`renders with default Props and function children`, () =>
+  test(`renders without separator`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Drawer header="header">{() => <div>test</div>}</Drawer>,
+      <Drawer disclosure={undefined} header="header" separator={false}>
+        <div>test</div>
+      </Drawer>,
     ))
+
+  test(`renders with default Props and function children`, async () => {
+    const { asFragment } = renderWithTheme(
+      <Drawer header="header" disclosure={<button type="button">Open</button>}>
+        {({ close }) => (
+          <button onClick={close} type="button">
+            Close
+          </button>
+        )}
+      </Drawer>,
+    )
+
+    await userEvent.click(screen.getByText('Open'))
+    await userEvent.click(screen.getByText('Close'))
+
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   test(`renders with default Props and function children open`, () =>
     shouldMatchEmotionSnapshotWithPortal(
@@ -147,6 +164,8 @@ describe('Drawer', () => {
   })
 
   test(`disclosure function render onClick props is called`, async () => {
+    const mockOnClick = vi.fn()
+
     renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
@@ -167,6 +186,8 @@ describe('Drawer', () => {
   })
 
   test(`disclosure function render onClick props is call with toggle`, async () => {
+    const mockOnClick = vi.fn()
+
     renderWithTheme(
       <Drawer
         header="header"
@@ -193,6 +214,8 @@ describe('Drawer', () => {
   })
 
   test(`should call 'close' prop from render props`, async () => {
+    const mockOnClick = vi.fn()
+
     renderWithTheme(
       <Drawer ariaLabel="drawer-test" id="drawer-test" open header="header">
         {({ close }) => (
@@ -214,6 +237,8 @@ describe('Drawer', () => {
   })
 
   test(`disclosure Component render onClick props is call`, async () => {
+    const mockOnClick = vi.fn()
+
     renderWithTheme(
       <Drawer
         header="header"
@@ -254,8 +279,10 @@ describe('Drawer', () => {
     expect(mockOnClose).toBeCalledTimes(1)
   })
 
-  test(`function footer`, () => {
-    shouldMatchEmotionSnapshotWithPortal(
+  test(`function footer`, async () => {
+    const mockOnClick = vi.fn()
+
+    const { asFragment } = renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
         id="drawer-test"
@@ -270,13 +297,18 @@ describe('Drawer', () => {
             type="button"
             data-testid="buttonClose"
           >
-            A custom button that can close the drawer
+            Close
           </button>
         )}
       >
         <div> test</div>
       </Drawer>,
     )
+
+    await userEvent.click(screen.getByText('Open'))
+    await userEvent.click(screen.getByText('Close'))
+
+    expect(asFragment()).toMatchSnapshot()
   })
 
   test(`with footer`, () => {
@@ -312,8 +344,10 @@ describe('Drawer', () => {
     )
   })
 
-  test(`function header`, () => {
-    shouldMatchEmotionSnapshotWithPortal(
+  test(`function header`, async () => {
+    const mockOnClick = vi.fn()
+
+    const { asFragment } = renderWithTheme(
       <Drawer
         ariaLabel="drawer-test"
         id="drawer-test"
@@ -329,13 +363,16 @@ describe('Drawer', () => {
             type="button"
             data-testid="buttonClose"
           >
-            A custom button that can close the drawer
+            Close
           </button>
         )}
-        open
       >
         <div> test</div>
       </Drawer>,
     )
+    await userEvent.click(screen.getByText('Open'))
+    await userEvent.click(screen.getByText('Close'))
+
+    expect(asFragment()).toMatchSnapshot()
   })
 })
