@@ -1,22 +1,7 @@
-import styled from '@emotion/styled'
-import { useCallback, useEffect, useMemo } from 'react'
-import { Button } from '../Button'
-import { getPageNumbers } from './getPageNumbers'
-
-const PageNumbersContainer = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.space['2']};
-  margin: 0 ${({ theme }) => theme.space['2']};
-`
-
-const PageSwitchContainer = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.space['1']};
-`
-
-const StyledContainer = styled.div`
-  display: flex;
-`
+import { useEffect, useState } from 'react'
+import { Stack } from '../Stack'
+import { PaginationButtons } from './PaginationButtons'
+import { PerPage } from './PerPage'
 
 type PaginationProps = {
   /**
@@ -41,7 +26,37 @@ type PaginationProps = {
   disabled?: boolean
   className?: string
   'data-testid'?: string
-}
+} & (
+  | {
+      /**
+       * Number of elements to show per page
+       */
+      perPage: number
+      /**
+       * A function that is triggered when perPage changes
+       */
+      onChangePerPage?: (perPage: number) => void
+      /**
+       * defines the localized text to display when "perPage" is defined"
+       */
+      perPageText?: string
+      /**
+       * Defines the localized text to display the number of items in the list
+       */
+      numberOfItemsText?: string
+      /**
+       * Number of items in the list
+       */
+      numberOfItems: number
+    }
+  | {
+      perPage?: never
+      onChangePerPage?: never
+      perPageText?: never
+      numberOfItemsText?: never
+      numberOfItems?: never
+    }
+)
 
 /**
  * Pagination is a component to navigate between pages, it is composed of 2 buttons to go to the previous and next page,
@@ -54,35 +69,14 @@ export const Pagination = ({
   onChange,
   pageTabCount = 5,
   className,
+  perPage,
+  onChangePerPage,
+  perPageText,
+  numberOfItemsText,
+  numberOfItems,
   'data-testid': dataTestId,
 }: PaginationProps) => {
-  const goToFirstPage = useCallback(() => {
-    onChange(1)
-  }, [onChange])
-
-  const goToLastPage = useCallback(() => {
-    onChange(pageCount)
-  }, [onChange, pageCount])
-
-  const goToNextPage = useCallback(() => {
-    onChange(page + 1)
-  }, [onChange, page])
-
-  const goToPreviousPage = useCallback(() => {
-    onChange(page - 1)
-  }, [onChange, page])
-
-  const pageNumbersToDisplay = useMemo(
-    () => (pageCount > 1 ? getPageNumbers(page, pageCount, pageTabCount) : [1]),
-    [page, pageCount, pageTabCount],
-  )
-
-  const handlePageClick = useCallback(
-    (pageNumber: number) => () => {
-      onChange(pageNumber)
-    },
-    [onChange],
-  )
+  const [perPageComputed, setPerPage] = useState(perPage ?? 10)
 
   useEffect(() => {
     if (page < 1) {
@@ -93,60 +87,32 @@ export const Pagination = ({
     }
   }, [page, pageCount, onChange])
 
+  useEffect(() => {
+    if (perPage) setPerPage(perPage)
+  }, [perPage])
+
   return (
-    <StyledContainer className={className} data-testid={dataTestId}>
-      <PageSwitchContainer>
-        <Button
-          aria-label="First"
-          disabled={page <= 1 || disabled}
-          variant="outlined"
-          sentiment="primary"
-          onClick={goToFirstPage}
-          icon="arrow-left-double"
+    <Stack direction="row" justifyContent="space-between">
+      {perPage ? (
+        <PerPage
+          onChangePerPage={onChangePerPage}
+          perPageText={perPageText}
+          perPage={perPageComputed}
+          setPerPage={setPerPage}
+          numberOfItemsText={numberOfItemsText}
+          page={page}
+          numberOfItems={numberOfItems}
         />
-        <Button
-          aria-label="Back"
-          disabled={page <= 1 || disabled}
-          variant="outlined"
-          sentiment="primary"
-          onClick={goToPreviousPage}
-          icon="arrow-left"
-        />
-      </PageSwitchContainer>
-      <PageNumbersContainer>
-        {pageNumbersToDisplay.map(pageNumber => (
-          <Button
-            aria-label={`Page ${pageNumber}`}
-            aria-current={pageNumber === page}
-            key={`pagination-page-${pageNumber}`}
-            disabled={disabled}
-            variant="outlined"
-            sentiment={pageNumber === page ? 'primary' : 'neutral'}
-            onClick={handlePageClick(pageNumber)}
-            type="button"
-          >
-            {pageNumber}
-          </Button>
-        ))}
-      </PageNumbersContainer>
-      <PageSwitchContainer>
-        <Button
-          aria-label="Next"
-          disabled={page >= pageCount || disabled}
-          variant="outlined"
-          sentiment="primary"
-          onClick={goToNextPage}
-          icon="arrow-right"
-        />
-        <Button
-          aria-label="Last"
-          disabled={page >= pageCount || disabled}
-          variant="outlined"
-          sentiment="primary"
-          onClick={goToLastPage}
-          icon="arrow-right-double"
-        />
-      </PageSwitchContainer>
-    </StyledContainer>
+      ) : null}
+      <PaginationButtons
+        disabled={disabled}
+        pageCount={pageCount}
+        pageTabCount={pageTabCount}
+        className={className}
+        data-testid={dataTestId}
+        onChange={onChange}
+        page={page}
+      />
+    </Stack>
   )
 }
