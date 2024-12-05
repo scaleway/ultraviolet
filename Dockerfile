@@ -9,7 +9,7 @@ COPY . .
 
 RUN corepack enable
 RUN pnpm install --frozen-lockfile
-RUN pnpm turbo run build:storybook --output-logs=hash-only
+RUN pnpm turbo run build:storybook
 
 EXPOSE 80/tcp
 
