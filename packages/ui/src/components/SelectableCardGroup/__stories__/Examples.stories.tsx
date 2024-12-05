@@ -2,13 +2,16 @@ import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { SelectableCardGroup } from '..'
 import { Badge } from '../../Badge'
-import { Row } from '../../Row'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import fr from './assets/fr.svg'
+import nl from './assets/nl.svg'
+import pl from './assets/pl.svg'
 
 export const Examples: StoryFn = args => {
   const [value, onChange] = useState('label-14')
   const [value3, onChange3] = useState([''])
+  const [value4, onChange4] = useState([''])
 
   return (
     <Stack gap={8} flex={1}>
@@ -59,99 +62,157 @@ export const Examples: StoryFn = args => {
         </SelectableCardGroup.Card>
       </SelectableCardGroup>
 
-      <Row templateColumns="repeat(2, auto)" gap={1}>
-        <SelectableCardGroup
-          {...args}
-          name="label-22"
-          legend="Second group"
-          value={value3}
-          type="checkbox"
-          columns={2}
-          showTick
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-            const data = [...value3]
-            if (data.includes(event.currentTarget.value)) {
-              data.splice(data.indexOf(event.currentTarget?.value), 1)
-            } else {
-              data.push(event.currentTarget.value)
-            }
-            onChange3(data)
-            // oxlint-disable-next-line eslint/no-console
-            console.log(data)
-          }}
+      <SelectableCardGroup
+        {...args}
+        name="label-22"
+        legend="Second group"
+        value={value3}
+        type="checkbox"
+        columns={2}
+        showTick
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+          const data = [...value3]
+          if (data.includes(event.currentTarget.value)) {
+            data.splice(data.indexOf(event.currentTarget?.value), 1)
+          } else {
+            data.push(event.currentTarget.value)
+          }
+          onChange3(data)
+          // oxlint-disable-next-line eslint/no-console
+          console.log(data)
+        }}
+      >
+        <SelectableCardGroup.Card
+          value="label-22"
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <Text variant="bodyStrong" as="span">
+                Backup
+              </Text>
+              <Badge sentiment="primary" size="small">
+                Recommended
+              </Badge>
+            </Stack>
+          }
         >
-          <SelectableCardGroup.Card
-            value="label-22"
-            label={
-              <Stack direction="row" gap={1} flex={1} alignItems="center">
-                <Text variant="bodyStrong" as="span">
-                  Backup
-                </Text>
-                <Badge sentiment="primary" size="small">
-                  Recommended
-                </Badge>
-              </Stack>
-            }
-          >
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
-          </SelectableCardGroup.Card>
-          <SelectableCardGroup.Card
-            {...args}
-            name="label-23"
-            value="label-23"
-            label={
-              <Stack direction="row" gap={1} flex={1} alignItems="center">
-                <Text variant="bodyStrong" as="span">
-                  Redundancy
-                </Text>
-                <Badge sentiment="primary" size="small">
-                  Recommended
-                </Badge>
-              </Stack>
-            }
-          >
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
-          </SelectableCardGroup.Card>
+          This option will cost you 2.99€ and provide you with a lot more of
+          happiness
+        </SelectableCardGroup.Card>
+        <SelectableCardGroup.Card
+          {...args}
+          name="label-23"
+          value="label-23"
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <Text variant="bodyStrong" as="span">
+                Redundancy
+              </Text>
+              <Badge sentiment="primary" size="small">
+                Recommended
+              </Badge>
+            </Stack>
+          }
+        >
+          This option will cost you 2.99€ and provide you with a lot more of
+          happiness
+        </SelectableCardGroup.Card>
 
-          <SelectableCardGroup.Card
-            name="label-24"
-            value="label-24"
-            label={
-              <Stack direction="row" gap={1} flex={1} alignItems="center">
-                <Text variant="bodyStrong" as="span">
-                  Morning Reboot 9am
-                </Text>
-                <Badge sentiment="neutral" size="small">
-                  Optional
-                </Badge>
-              </Stack>
-            }
-          >
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
-          </SelectableCardGroup.Card>
+        <SelectableCardGroup.Card
+          name="label-24"
+          value="label-24"
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <Text variant="bodyStrong" as="span">
+                Morning Reboot 9am
+              </Text>
+              <Badge sentiment="neutral" size="small">
+                Optional
+              </Badge>
+            </Stack>
+          }
+        >
+          This option will cost you 2.99€ and provide you with a lot more of
+          happiness
+        </SelectableCardGroup.Card>
 
-          <SelectableCardGroup.Card
-            name="label-25"
-            value="label-25"
-            label={
-              <Stack direction="row" gap={1} flex={1} alignItems="center">
-                <Text variant="bodyStrong" as="span">
-                  Monitoring
-                </Text>
-                <Badge sentiment="neutral" size="small">
-                  Optional
-                </Badge>
-              </Stack>
-            }
-          >
-            This option will cost you 2.99€ and provide you with a lot more of
-            happiness
-          </SelectableCardGroup.Card>
-        </SelectableCardGroup>
-      </Row>
+        <SelectableCardGroup.Card
+          name="label-25"
+          value="label-25"
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <Text variant="bodyStrong" as="span">
+                Monitoring
+              </Text>
+              <Badge sentiment="neutral" size="small">
+                Optional
+              </Badge>
+            </Stack>
+          }
+        >
+          This option will cost you 2.99€ and provide you with a lot more of
+          happiness
+        </SelectableCardGroup.Card>
+      </SelectableCardGroup>
+
+      <SelectableCardGroup
+        {...args}
+        name="label-23"
+        legend="Choose country"
+        helper="Select one or more countries"
+        value={value4}
+        type="checkbox"
+        columns={3}
+        showTick
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+          const data = [...value4]
+          if (data.includes(event.currentTarget.value)) {
+            data.splice(data.indexOf(event.currentTarget?.value), 1)
+          } else {
+            data.push(event.currentTarget.value)
+          }
+          onChange4(data)
+          // oxlint-disable-next-line eslint/no-console
+          console.log(data)
+        }}
+      >
+        <SelectableCardGroup.Card
+          value="label-23"
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <img src={fr} alt="fr" width={24} />
+              <Text variant="bodyStrong" as="span">
+                France
+              </Text>
+            </Stack>
+          }
+        />
+        <SelectableCardGroup.Card
+          {...args}
+          name="label-24"
+          value="label-24"
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <img src={nl} alt="nl" width={24} />
+              <Text variant="bodyStrong" as="span">
+                Netherlands
+              </Text>
+            </Stack>
+          }
+        />
+
+        <SelectableCardGroup.Card
+          name="label-25"
+          value="label-25"
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <img src={pl} alt="pl" width={24} />
+              <Text variant="bodyStrong" as="span">
+                Poland
+              </Text>
+            </Stack>
+          }
+        />
+      </SelectableCardGroup>
     </Stack>
   )
 }

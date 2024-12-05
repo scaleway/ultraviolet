@@ -5,6 +5,9 @@ import { Badge } from '../../Badge'
 import { Row } from '../../Row'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
+import fr from './assets/fr.svg'
+import nl from './assets/nl.svg'
+import pl from './assets/pl.svg'
 
 export const Examples: StoryFn = args => {
   const [value, onChange] = useState('label-14')
@@ -14,6 +17,11 @@ export const Examples: StoryFn = args => {
     'label-23': false,
     'label-24': false,
     'label-25': false,
+  })
+  const [value4, onChange4] = useState({
+    'label-26': true,
+    'label-27': false,
+    'label-28': false,
   })
 
   return (
@@ -214,6 +222,67 @@ export const Examples: StoryFn = args => {
           This option will cost you 2.99€ and provide you with a lot more of
           happiness
         </SelectableCard>
+      </Row>
+
+      <Row templateColumns="repeat(3, auto)" gap={1}>
+        <SelectableCard
+          {...args}
+          name="label-26"
+          checked={value4['label-26']}
+          value="label-26"
+          type="checkbox"
+          onChange={event =>
+            onChange4({ ...value4, 'label-26': event.currentTarget.checked })
+          }
+          showTick
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <img src={fr} alt="fr" width={24} />
+              <Text variant="bodyStrong" as="span">
+                France
+              </Text>
+            </Stack>
+          }
+        />
+        <SelectableCard
+          {...args}
+          name="label-27"
+          checked={value4['label-27']}
+          value="label-27"
+          type="checkbox"
+          onChange={event =>
+            onChange4({ ...value4, 'label-27': event.currentTarget.checked })
+          }
+          showTick
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <img src={nl} alt="nl" width={24} />
+              <Text variant="bodyStrong" as="span">
+                Netherlands
+              </Text>
+            </Stack>
+          }
+        />
+
+        <SelectableCard
+          {...args}
+          name="label-28"
+          checked={value4['label-28']}
+          value="label-28"
+          type="checkbox"
+          onChange={event =>
+            onChange4({ ...value4, 'label-28': event.currentTarget.checked })
+          }
+          showTick
+          label={
+            <Stack direction="row" gap={1} flex={1} alignItems="center">
+              <img src={pl} alt="pl" width={24} />
+              <Text variant="bodyStrong" as="span">
+                Poland
+              </Text>
+            </Stack>
+          }
+        />
       </Row>
     </Stack>
   )
