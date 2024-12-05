@@ -12,7 +12,7 @@ export const getPageNumbers = (
 ): number[] => {
   const truncationBefore = currentPage >= range
   const truncationAfter =
-    currentPage <= pageCount - range || currentPage < range
+    currentPage <= pageCount - range + 1 || currentPage < range
 
   // No truncation when there are less than "range" pages
   if (pageCount <= range) {

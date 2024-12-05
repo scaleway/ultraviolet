@@ -6,7 +6,12 @@ import { Badge } from '../../Badge'
 export const Controlled: StoryFn = props => {
   const [page, setPage] = useState(1)
 
-  return <Pagination {...props} onChange={setPage} page={page} pageCount={10} />
+  return (
+    <>
+      Current page : {page}{' '}
+      <Pagination {...props} onChange={setPage} page={page} pageCount={10} />
+    </>
+  )
 }
 
 Controlled.args = {

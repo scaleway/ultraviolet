@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
-import React, { useCallback, useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'
+import { Text } from '../Text'
 import { getPageNumbers } from './getPageNumbers'
 
 const PageNumbersContainer = styled.div`
@@ -18,23 +19,16 @@ const StyledContainer = styled.div`
   display: flex;
 `
 const PageButton = styled(Button)`
-  width: ${({ theme }) => theme.space[6]};
+  width: ${({ theme }) => theme.sizing[600]};
 `
 
-const Ellipsis = styled(PageButton)`
-
-  &:hover {
-    background: none;
-    cursor: default;
-  }
-
-  &:active, &:focus {
-    box-shadow: none;
-    cursor: default;
-    background: none;
-  }
-
+const Ellipsis = styled(Text)`
+  align-content: center;
+  padding: ${({ theme }) => theme.space[1]};
+  height: ${({ theme }) => theme.sizing[600]};
+  width: ${({ theme }) => theme.sizing[600]};
 `
+
 type PaginationButtonsProps = {
   page: number
   disabled: boolean
@@ -44,6 +38,47 @@ type PaginationButtonsProps = {
   className?: string
   'data-testid'?: string
 }
+
+type MakeButtonProps = {
+  hasEllipsisBefore: boolean
+  pageNumber: number
+  disabled?: boolean
+  page: number
+  handlePageClick: (pageNumber: number) => () => void
+}
+const MakeButton = ({
+  hasEllipsisBefore,
+  pageNumber,
+  disabled,
+  page,
+  handlePageClick,
+}: MakeButtonProps) => (
+  <>
+    {hasEllipsisBefore ? (
+      <Ellipsis
+        aria-label="ellipsis"
+        disabled={disabled}
+        variant="body"
+        sentiment="neutral"
+        prominence="default"
+        as="span"
+        placement="center"
+      >
+        ...
+      </Ellipsis>
+    ) : null}
+    <PageButton
+      aria-current={pageNumber === page}
+      disabled={disabled}
+      variant="outlined"
+      sentiment={pageNumber === page ? 'primary' : 'neutral'}
+      onClick={handlePageClick(pageNumber)}
+      type="button"
+    >
+      {pageNumber}
+    </PageButton>
+  </>
+)
 
 export const PaginationButtons = ({
   page,
@@ -87,55 +122,21 @@ export const PaginationButtons = ({
         />
       </PageSwitchContainer>
       <PageNumbersContainer>
-        {pageNumbersToDisplay.map((pageNumber, index) => {
-          if (
-            index === 0 ||
-            pageNumbersToDisplay[index - 1] === pageNumber - 1
-          ) {
-            return (
-              <PageButton
-                aria-label={`Page ${pageNumber}`}
-                aria-current={pageNumber === page}
-                key={`pagination-page-${pageNumber}`}
-                disabled={disabled}
-                variant="outlined"
-                sentiment={pageNumber === page ? 'primary' : 'neutral'}
-                onClick={handlePageClick(pageNumber)}
-                type="button"
-              >
-                {pageNumber}
-              </PageButton>
-            )
-          }
-
-          return (
-            <React.Fragment key={pageNumber}>
-              <Ellipsis
-                aria-label="ellipsis"
-                key={`ellipsis-page-${pageNumber}`}
-                disabled={disabled}
-                variant="ghost"
-                sentiment="neutral"
-                type="button"
-                tabIndex={-1}
-              >
-                ...
-              </Ellipsis>
-              <PageButton
-                aria-label={`Page ${pageNumber}`}
-                aria-current={pageNumber === page}
-                key={`pagination-page-${pageNumber}`}
-                disabled={disabled}
-                variant="outlined"
-                sentiment={pageNumber === page ? 'primary' : 'neutral'}
-                onClick={handlePageClick(pageNumber)}
-                type="button"
-              >
-                {pageNumber}
-              </PageButton>
-            </React.Fragment>
-          )
-        })}
+        {pageNumbersToDisplay.map((pageNumber, index) => (
+          <MakeButton
+            hasEllipsisBefore={
+              !(
+                index === 0 ||
+                pageNumbersToDisplay[index - 1] === pageNumber - 1
+              )
+            }
+            page={page}
+            pageNumber={pageNumber}
+            handlePageClick={handlePageClick}
+            disabled={disabled}
+            key={pageNumber}
+          />
+        ))}
       </PageNumbersContainer>
       <PageSwitchContainer>
         <Button

@@ -311,7 +311,6 @@ exports[`Pagination > should render correctly 1`] = `
         >
           <button
             aria-current="true"
-            aria-label="Page 1"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -321,7 +320,6 @@ exports[`Pagination > should render correctly 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 2"
             class="emotion-12 emotion-16 emotion-7"
             type="button"
           >
@@ -331,7 +329,6 @@ exports[`Pagination > should render correctly 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 3"
             class="emotion-12 emotion-16 emotion-7"
             type="button"
           >
@@ -341,7 +338,6 @@ exports[`Pagination > should render correctly 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 4"
             class="emotion-12 emotion-16 emotion-7"
             type="button"
           >
@@ -351,7 +347,6 @@ exports[`Pagination > should render correctly 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 5"
             class="emotion-12 emotion-16 emotion-7"
             type="button"
           >
@@ -543,61 +538,22 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
 }
 
 .emotion-16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  color: #b5b7bd;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  color: #b5b7bd;
-  width: 3rem;
-}
-
-.emotion-16:hover {
+  text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.emotion-16:hover {
-  background: none;
-  cursor: default;
-}
-
-.emotion-16:active,
-.emotion-16:focus {
-  box-shadow: none;
-  cursor: default;
-  background: none;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 0.5rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .emotion-22 {
@@ -683,7 +639,6 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
         >
           <button
             aria-current="false"
-            aria-label="Page 1"
             class="emotion-12 emotion-13 emotion-7"
             disabled=""
             type="button"
@@ -692,18 +647,13 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
               1
             </div>
           </button>
-          <button
-            aria-label="ellipsis"
+          <span
             class="emotion-15 emotion-16 emotion-17"
-            disabled=""
-            tabindex="-1"
-            type="button"
           >
             ...
-          </button>
+          </span>
           <button
             aria-current="false"
-            aria-label="Page 4"
             class="emotion-12 emotion-13 emotion-7"
             disabled=""
             type="button"
@@ -714,7 +664,6 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
           </button>
           <button
             aria-current="true"
-            aria-label="Page 5"
             class="emotion-12 emotion-22 emotion-7"
             disabled=""
             type="button"
@@ -725,7 +674,6 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 6"
             class="emotion-12 emotion-13 emotion-7"
             disabled=""
             type="button"
@@ -734,810 +682,13 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
               6
             </div>
           </button>
-          <button
-            aria-label="ellipsis"
+          <span
             class="emotion-15 emotion-16 emotion-17"
-            disabled=""
-            tabindex="-1"
-            type="button"
           >
             ...
-          </button>
+          </span>
           <button
             aria-current="false"
-            aria-label="Page 10"
-            class="emotion-12 emotion-13 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              10
-            </div>
-          </button>
-        </div>
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <button
-            aria-label="Next"
-            class="emotion-6 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <svg
-              class="emotion-8 emotion-9"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Pagination > should render correctly component with disabled 2`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 3rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #8c40ef;
-  color: #641cb3;
-  color: #d8c5fc;
-  border: 1px solid #d8c5fc;
-}
-
-.emotion-6:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-8 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-8 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  margin: 0 0.5rem;
-}
-
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #b5b7bd;
-  color: #3f4250;
-  color: #b5b7bd;
-  border: 1px solid #d9dadd;
-  width: 3rem;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  color: #b5b7bd;
-  width: 3rem;
-}
-
-.emotion-16:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16:hover {
-  background: none;
-  cursor: default;
-}
-
-.emotion-16:active,
-.emotion-16:focus {
-  box-shadow: none;
-  cursor: default;
-  background: none;
-}
-
-.emotion-22 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #8c40ef;
-  color: #641cb3;
-  color: #d8c5fc;
-  border: 1px solid #d8c5fc;
-  width: 3rem;
-}
-
-.emotion-22:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <button
-            aria-label="Back"
-            class="emotion-6 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <svg
-              class="emotion-8 emotion-9"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="emotion-10 emotion-11"
-        >
-          <button
-            aria-current="false"
-            aria-label="Page 1"
-            class="emotion-12 emotion-13 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              1
-            </div>
-          </button>
-          <button
-            aria-label="ellipsis"
-            class="emotion-15 emotion-16 emotion-17"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            ...
-          </button>
-          <button
-            aria-current="false"
-            aria-label="Page 4"
-            class="emotion-12 emotion-13 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              4
-            </div>
-          </button>
-          <button
-            aria-current="true"
-            aria-label="Page 5"
-            class="emotion-12 emotion-22 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              5
-            </div>
-          </button>
-          <button
-            aria-current="false"
-            aria-label="Page 6"
-            class="emotion-12 emotion-13 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              6
-            </div>
-          </button>
-          <button
-            aria-label="ellipsis"
-            class="emotion-15 emotion-16 emotion-17"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            ...
-          </button>
-          <button
-            aria-current="false"
-            aria-label="Page 10"
-            class="emotion-12 emotion-13 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              10
-            </div>
-          </button>
-        </div>
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <button
-            aria-label="Next"
-            class="emotion-6 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <svg
-              class="emotion-8 emotion-9"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Pagination > should render correctly component with disabled 3`] = `
-<DocumentFragment>
-  .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.emotion-6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: 3rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #8c40ef;
-  color: #641cb3;
-  color: #d8c5fc;
-  border: 1px solid #d8c5fc;
-}
-
-.emotion-6:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-8 {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.emotion-8 .fillStroke {
-  stroke: currentColor;
-  fill: none;
-}
-
-.emotion-10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0.5rem;
-  margin: 0 0.5rem;
-}
-
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #b5b7bd;
-  color: #3f4250;
-  color: #b5b7bd;
-  border: 1px solid #d9dadd;
-  width: 3rem;
-}
-
-.emotion-13:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  color: #b5b7bd;
-  width: 3rem;
-}
-
-.emotion-16:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16:hover {
-  background: none;
-  cursor: default;
-}
-
-.emotion-16:active,
-.emotion-16:focus {
-  box-shadow: none;
-  cursor: default;
-  background: none;
-}
-
-.emotion-22 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: not-allowed;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: 1px solid #8c40ef;
-  color: #641cb3;
-  color: #d8c5fc;
-  border: 1px solid #d8c5fc;
-  width: 3rem;
-}
-
-.emotion-22:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-<div
-    data-testid="testing"
-  >
-    <div
-      class="emotion-0 emotion-1"
-    >
-      <div
-        class="emotion-2 emotion-3"
-      >
-        <div
-          class="emotion-4 emotion-5"
-        >
-          <button
-            aria-label="Back"
-            class="emotion-6 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <svg
-              class="emotion-8 emotion-9"
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          class="emotion-10 emotion-11"
-        >
-          <button
-            aria-current="false"
-            aria-label="Page 1"
-            class="emotion-12 emotion-13 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              1
-            </div>
-          </button>
-          <button
-            aria-label="ellipsis"
-            class="emotion-15 emotion-16 emotion-17"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            ...
-          </button>
-          <button
-            aria-current="false"
-            aria-label="Page 4"
-            class="emotion-12 emotion-13 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              4
-            </div>
-          </button>
-          <button
-            aria-current="true"
-            aria-label="Page 5"
-            class="emotion-12 emotion-22 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              5
-            </div>
-          </button>
-          <button
-            aria-current="false"
-            aria-label="Page 6"
-            class="emotion-12 emotion-13 emotion-7"
-            disabled=""
-            type="button"
-          >
-            <div>
-              6
-            </div>
-          </button>
-          <button
-            aria-label="ellipsis"
-            class="emotion-15 emotion-16 emotion-17"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            ...
-          </button>
-          <button
-            aria-current="false"
-            aria-label="Page 10"
             class="emotion-12 emotion-13 emotion-7"
             disabled=""
             type="button"
@@ -1749,73 +900,25 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
 }
 
 .emotion-16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 0.5rem;
+  height: 3rem;
   width: 3rem;
 }
 
-.emotion-16:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-16:hover,
-.emotion-16:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-16:hover {
-  background: none;
-  cursor: default;
-}
-
-.emotion-16:active,
-.emotion-16:focus {
-  box-shadow: none;
-  cursor: default;
-  background: none;
-}
-
-.emotion-19 {
+.emotion-22 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1855,17 +958,17 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   width: 3rem;
 }
 
-.emotion-19:hover {
+.emotion-22:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-19:active {
+.emotion-22:active {
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.emotion-19:hover,
-.emotion-19:active {
+.emotion-22:hover,
+.emotion-22:active {
   background: #e5dbfd;
   color: #521094;
   border: 1px solid #792dd4;
@@ -1906,7 +1009,6 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
         >
           <button
             aria-current="false"
-            aria-label="Page 1"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -1914,18 +1016,23 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
               1
             </div>
           </button>
-          <button
-            aria-label="ellipsis"
+          <span
             class="emotion-15 emotion-16 emotion-17"
-            tabindex="-1"
-            type="button"
           >
             ...
+          </span>
+          <button
+            aria-current="false"
+            class="emotion-12 emotion-13 emotion-7"
+            type="button"
+          >
+            <div>
+              11
+            </div>
           </button>
           <button
             aria-current="true"
-            aria-label="Page 12"
-            class="emotion-12 emotion-19 emotion-7"
+            class="emotion-12 emotion-22 emotion-7"
             type="button"
           >
             <div>
@@ -1934,7 +1041,6 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
           </button>
           <button
             aria-current="false"
-            aria-label="Page 13"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -1942,29 +1048,13 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
               13
             </div>
           </button>
-          <button
-            aria-current="false"
-            aria-label="Page 14"
-            class="emotion-12 emotion-13 emotion-7"
-            type="button"
+          <span
+            class="emotion-15 emotion-16 emotion-17"
           >
-            <div>
-              14
-            </div>
-          </button>
+            ...
+          </span>
           <button
             aria-current="false"
-            aria-label="Page 15"
-            class="emotion-12 emotion-13 emotion-7"
-            type="button"
-          >
-            <div>
-              15
-            </div>
-          </button>
-          <button
-            aria-current="false"
-            aria-label="Page 16"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -1979,6 +1069,604 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
           <button
             aria-label="Next"
             class="emotion-6 emotion-7"
+            type="button"
+          >
+            <svg
+              class="emotion-8 emotion-9"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Pagination > should render correctly with page < 1 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 3rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+  color: #d8c5fc;
+  border: 1px solid #d8c5fc;
+}
+
+.emotion-6:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-8 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0.5rem;
+}
+
+.emotion-13 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #b5b7bd;
+  color: #3f4250;
+  width: 3rem;
+}
+
+.emotion-13:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-13:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-13:hover,
+.emotion-13:active {
+  background: #e9eaeb;
+  color: #222638;
+  border: 1px solid #92959d;
+}
+
+.emotion-20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 3rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+}
+
+.emotion-20:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-20:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-20:hover,
+.emotion-20:active {
+  background: #e5dbfd;
+  color: #521094;
+  border: 1px solid #792dd4;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <button
+            aria-label="Back"
+            class="emotion-6 emotion-7"
+            disabled=""
+            type="button"
+          >
+            <svg
+              class="emotion-8 emotion-9"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="emotion-10 emotion-11"
+        >
+          <button
+            aria-current="false"
+            class="emotion-12 emotion-13 emotion-7"
+            type="button"
+          >
+            <div>
+              1
+            </div>
+          </button>
+          <button
+            aria-current="false"
+            class="emotion-12 emotion-13 emotion-7"
+            type="button"
+          >
+            <div>
+              2
+            </div>
+          </button>
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <button
+            aria-label="Next"
+            class="emotion-20 emotion-7"
+            type="button"
+          >
+            <svg
+              class="emotion-8 emotion-9"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Pagination > should render correctly with page > pageCount 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 3rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+}
+
+.emotion-6:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-6:hover,
+.emotion-6:active {
+  background: #e5dbfd;
+  color: #521094;
+  border: 1px solid #792dd4;
+}
+
+.emotion-8 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-8 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0.5rem;
+}
+
+.emotion-13 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #b5b7bd;
+  color: #3f4250;
+  width: 3rem;
+}
+
+.emotion-13:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-13:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-13:hover,
+.emotion-13:active {
+  background: #e9eaeb;
+  color: #222638;
+  border: 1px solid #92959d;
+}
+
+.emotion-20 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 3rem;
+  padding: 0 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 3rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+  color: #d8c5fc;
+  border: 1px solid #d8c5fc;
+}
+
+.emotion-20:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <button
+            aria-label="Back"
+            class="emotion-6 emotion-7"
+            type="button"
+          >
+            <svg
+              class="emotion-8 emotion-9"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="emotion-10 emotion-11"
+        >
+          <button
+            aria-current="false"
+            class="emotion-12 emotion-13 emotion-7"
+            type="button"
+          >
+            <div>
+              1
+            </div>
+          </button>
+          <button
+            aria-current="false"
+            class="emotion-12 emotion-13 emotion-7"
+            type="button"
+          >
+            <div>
+              2
+            </div>
+          </button>
+        </div>
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <button
+            aria-label="Next"
+            class="emotion-20 emotion-7"
+            disabled=""
             type="button"
           >
             <svg
@@ -2230,70 +1918,22 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
 }
 
 .emotion-28 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: 3rem;
-}
-
-.emotion-28:hover {
+  text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.emotion-28:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-28:hover,
-.emotion-28:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-28:hover {
-  background: none;
-  cursor: default;
-}
-
-.emotion-28:active,
-.emotion-28:focus {
-  box-shadow: none;
-  cursor: default;
-  background: none;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 0.5rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 <div
@@ -2331,7 +1971,6 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
         >
           <button
             aria-current="false"
-            aria-label="Page 1"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -2341,7 +1980,6 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
           </button>
           <button
             aria-current="true"
-            aria-label="Page 2"
             class="emotion-12 emotion-16 emotion-7"
             type="button"
           >
@@ -2351,7 +1989,6 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 3"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -2361,7 +1998,6 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 4"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -2371,7 +2007,6 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 5"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -2379,17 +2014,13 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
               5
             </div>
           </button>
-          <button
-            aria-label="ellipsis"
+          <span
             class="emotion-27 emotion-28 emotion-29"
-            tabindex="-1"
-            type="button"
           >
             ...
-          </button>
+          </span>
           <button
             aria-current="false"
-            aria-label="Page 10"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -2625,7 +2256,6 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
         >
           <button
             aria-current="true"
-            aria-label="Page 1"
             class="emotion-12 emotion-13 emotion-7"
             type="button"
           >
@@ -3131,70 +2761,22 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
 }
 
 .emotion-50 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: 3rem;
-}
-
-.emotion-50:hover {
+  text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.emotion-50:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-50:hover,
-.emotion-50:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-50:hover {
-  background: none;
-  cursor: default;
-}
-
-.emotion-50:active,
-.emotion-50:focus {
-  box-shadow: none;
-  cursor: default;
-  background: none;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 0.5rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 <div
@@ -3216,8 +2798,8 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
           class="emotion-6 emotion-7 emotion-8"
         >
           <div
-            aria-controls=":r1p:"
-            aria-describedby=":r1p:"
+            aria-controls=":r1f:"
+            aria-describedby=":r1f:"
             class="emotion-9 emotion-10"
             data-container-full-width="true"
             tabindex="0"
@@ -3235,7 +2817,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
                 data-size="large"
                 data-state="neutral"
                 data-testid="select-input-select-items-per-page"
-                id=":r1o:"
+                id=":r1e:"
                 role="combobox"
                 tabindex="0"
               >
@@ -3298,7 +2880,6 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
         >
           <button
             aria-current="false"
-            aria-label="Page 1"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -3308,7 +2889,6 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
           </button>
           <button
             aria-current="true"
-            aria-label="Page 2"
             class="emotion-34 emotion-38 emotion-29"
             type="button"
           >
@@ -3318,7 +2898,6 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
           </button>
           <button
             aria-current="false"
-            aria-label="Page 3"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -3328,7 +2907,6 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
           </button>
           <button
             aria-current="false"
-            aria-label="Page 4"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -3338,7 +2916,6 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
           </button>
           <button
             aria-current="false"
-            aria-label="Page 5"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -3346,17 +2923,13 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
               5
             </div>
           </button>
-          <button
-            aria-label="ellipsis"
-            class="emotion-49 emotion-50 emotion-51"
-            tabindex="-1"
-            type="button"
+          <span
+            class="emotion-49 emotion-50 emotion-5"
           >
             ...
-          </button>
+          </span>
           <button
             aria-current="false"
-            aria-label="Page 10"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -3861,70 +3434,22 @@ exports[`Pagination > should render correctly with perPage 1`] = `
 }
 
 .emotion-50 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 0.5rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  width: auto;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  color: #3f4250;
   font-size: 1rem;
   font-family: Inter,Asap,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.5rem;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: 3rem;
-}
-
-.emotion-50:hover {
+  text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.emotion-50:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.emotion-50:hover,
-.emotion-50:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.emotion-50:hover {
-  background: none;
-  cursor: default;
-}
-
-.emotion-50:active,
-.emotion-50:focus {
-  box-shadow: none;
-  cursor: default;
-  background: none;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 0.5rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 <div
@@ -3946,8 +3471,8 @@ exports[`Pagination > should render correctly with perPage 1`] = `
           class="emotion-6 emotion-7 emotion-8"
         >
           <div
-            aria-controls=":r28:"
-            aria-describedby=":r28:"
+            aria-controls=":r1u:"
+            aria-describedby=":r1u:"
             class="emotion-9 emotion-10"
             data-container-full-width="true"
             tabindex="0"
@@ -3965,7 +3490,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
                 data-size="large"
                 data-state="neutral"
                 data-testid="select-input-select-items-per-page"
-                id=":r27:"
+                id=":r1t:"
                 role="combobox"
                 tabindex="0"
               >
@@ -4028,7 +3553,6 @@ exports[`Pagination > should render correctly with perPage 1`] = `
         >
           <button
             aria-current="false"
-            aria-label="Page 1"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -4038,7 +3562,6 @@ exports[`Pagination > should render correctly with perPage 1`] = `
           </button>
           <button
             aria-current="true"
-            aria-label="Page 2"
             class="emotion-34 emotion-38 emotion-29"
             type="button"
           >
@@ -4048,7 +3571,6 @@ exports[`Pagination > should render correctly with perPage 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 3"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -4058,7 +3580,6 @@ exports[`Pagination > should render correctly with perPage 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 4"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -4068,7 +3589,6 @@ exports[`Pagination > should render correctly with perPage 1`] = `
           </button>
           <button
             aria-current="false"
-            aria-label="Page 5"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
@@ -4076,17 +3596,13 @@ exports[`Pagination > should render correctly with perPage 1`] = `
               5
             </div>
           </button>
-          <button
-            aria-label="ellipsis"
-            class="emotion-49 emotion-50 emotion-51"
-            tabindex="-1"
-            type="button"
+          <span
+            class="emotion-49 emotion-50 emotion-5"
           >
             ...
-          </button>
+          </span>
           <button
             aria-current="false"
-            aria-label="Page 10"
             class="emotion-34 emotion-35 emotion-29"
             type="button"
           >
