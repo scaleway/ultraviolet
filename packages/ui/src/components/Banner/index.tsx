@@ -108,6 +108,10 @@ type BannerProps = {
   onClickButton?: ComponentProps<typeof Button>['onClick']
   linkText?: string
   linkHref?: string
+  /**
+   * Set the image to be displayed on the left side of the banner. If not provided, a default image will be displayed.
+   * You can provide the url of the image it will be displayed as an img tag or a ReactNode to be displayed as is.
+   */
   image?: ReactNode
   closable?: boolean
   className?: string
@@ -148,9 +152,13 @@ export const Banner = ({
       className={className}
       data-testid={dataTestId}
     >
-      <ImageStack size={size} justifyContent="center">
-        {image ?? <img src={defaultImage} alt="" />}
-      </ImageStack>
+      {image ? (
+        <ImageStack size={size} justifyContent="center">
+          {typeof image === 'string' ? <img src={image} alt="" /> : image}
+        </ImageStack>
+      ) : (
+        <img src={defaultImage} alt="" />
+      )}
       <Stack
         direction={direction}
         gap={2}
