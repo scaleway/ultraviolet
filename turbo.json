@@ -9,6 +9,7 @@
       "cache": false
     },
     "//#build:storybook": {
+      "dependsOn": ["^build"],
       "passThroughEnv": ["STORYBOOK_ENVIRONMENT"],
       "outputs": ["build/**", "dist/**", "storybook-static/**"]
     },
