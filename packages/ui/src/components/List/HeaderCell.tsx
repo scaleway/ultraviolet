@@ -5,6 +5,7 @@ import {
   SouthShortIcon,
 } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
+import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
 const StyledSortIcon = styled(SouthShortIcon, {
@@ -21,16 +22,18 @@ const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) =>
     <SortIconUV sentiment="neutral" />
   )
 
-const StyledHeaderCell = styled.div`
-  display: flex;
+const StyledHeaderCell = styled('th', {
+  shouldForwardProp: prop => !['width', 'minWidth', 'maxWidth'].includes(prop),
+})<{ width?: string; minWidth?: string; maxWidth?: string }>`
+  display: table-cell;
   text-align: left;
-  flex-direction: row;
-  align-items: center;
+  vertical-align: middle;
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   font-weight: ${({ theme }) => theme.typography.bodySmall.weight};
   font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
   color: ${({ theme }) => theme.colors.neutral.text};
   gap: ${({ theme }) => theme.space['1']};
+  padding: 0 ${({ theme }) => theme.space['2']};
 
   &[role*='button'] {
     cursor: pointer;
@@ -40,6 +43,10 @@ const StyledHeaderCell = styled.div`
   &[aria-sort] {
     color: ${({ theme }) => theme.colors.primary.text};
   }
+
+  width: ${({ width }) => width};
+  min-width: ${({ minWidth }) => minWidth};
+  max-width: ${({ maxWidth }) => maxWidth};
 `
 
 type HeaderCellProps = {
@@ -49,6 +56,9 @@ type HeaderCellProps = {
   orderDirection?: 'asc' | 'desc' | 'none'
   onOrder?: (newOrder: 'asc' | 'desc') => void
   info?: string
+  width?: string
+  minWith?: string
+  maxWidth?: string
 }
 
 export const HeaderCell = ({
@@ -58,6 +68,9 @@ export const HeaderCell = ({
   onOrder,
   className,
   info,
+  width,
+  minWith,
+  maxWidth,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -90,16 +103,25 @@ export const HeaderCell = ({
       }
       role={onOrder ? 'button columnheader' : undefined}
       tabIndex={handleOrder ? 0 : -1}
+      width={width}
+      maxWidth={maxWidth}
+      minWidth={minWith}
     >
-      {children}
-      {info ? (
-        <Tooltip text={info}>
-          <InformationIcon size="large" prominence="weak" sentiment="neutral" />
-        </Tooltip>
-      ) : null}
-      {orderDirection !== undefined && isOrdered !== undefined ? (
-        <SortIcon order={order} />
-      ) : null}
+      <Stack direction="row" gap={1} alignItems="center">
+        {children}
+        {info ? (
+          <Tooltip text={info}>
+            <InformationIcon
+              size="large"
+              prominence="weak"
+              sentiment="neutral"
+            />
+          </Tooltip>
+        ) : null}
+        {orderDirection !== undefined && isOrdered !== undefined ? (
+          <SortIcon order={order} />
+        ) : null}
+      </Stack>
     </StyledHeaderCell>
   )
 }

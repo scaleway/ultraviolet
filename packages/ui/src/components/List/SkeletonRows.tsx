@@ -10,6 +10,8 @@ const StyledLoadingRow = styled(StyledRow)`
 const StyledSkeleton = styled(Skeleton)`
   width: 80%;
   max-width: 100%;
+  align-items: start;
+  justify-content: center;
 `
 
 type ListLoadingSkeletonProps = {

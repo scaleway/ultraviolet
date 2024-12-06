@@ -57,3 +57,12 @@ export const columns: NonNullable<ComponentProps<typeof List>['columns']> = [
   { label: 'Perihelion', width: '200px' },
   { label: 'Aphelion', width: '200px' },
 ]
+
+export const overflowColumns: NonNullable<
+  ComponentProps<typeof List>['columns']
+> = [
+  { label: 'id', minWidth: '500px' },
+  { label: 'Solar system Planet', minWidth: '500px' },
+  { label: 'Perihelion', minWidth: '500px' },
+  { label: 'Aphelion', minWidth: '500px' },
+]
