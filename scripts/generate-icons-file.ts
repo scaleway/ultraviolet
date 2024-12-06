@@ -86,7 +86,11 @@ const readSvg = async (filePath: string) => {
   const innerSvgContent = svgContent.replace(/<svg[^>]*>|<\/svg>/g, '') // Remove <svg ...> and </svg> tags
 
   // Replace class with className
-  const updatedSvgContent = innerSvgContent.replace(/class=/g, 'className=')
+  const updatedSvgContent = innerSvgContent
+    .replace(/class=/g, 'className=')
+    .replace(/fill-rule=/g, 'fillRule=')
+    .replace(/fill-opacity=/g, 'fillOpacity=')
+    .replace(/clip-rule=/g, 'clipRule=')
 
   return updatedSvgContent.replace(/`/g, '\\`') // Escape backticks
 }
