@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.5.1
+
+### Patch Changes
+
+- [#4544](https://github.com/scaleway/ultraviolet/pull/4544) [`ab0d6ea`](https://github.com/scaleway/ultraviolet/commit/ab0d6ea3de0566b9b5aaba130c92830d122c2e0f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.13`.
+
 ## 3.5.0
 
 ### Minor Changes
