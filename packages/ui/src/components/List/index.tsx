@@ -7,7 +7,6 @@ import type {
   SetStateAction,
 } from 'react'
 import { forwardRef } from 'react'
-import { Body } from './Body'
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
 import { HeaderRow } from './HeaderRow'
@@ -15,23 +14,14 @@ import { ListProvider, useListContext } from './ListContext'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
-import { EXPANDABLE_COLUMN_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
 
-const StyledList = styled('div', {
-  shouldForwardProp: prop => !['template'].includes(prop),
-})<{ template: string }>`
-  display: flex;
-  flex-flow: column nowrap;
+const StyledTable = styled.table`
   width: 100%;
+  box-sizing: content-box;
   gap: ${({ theme }) => theme.space['1']};
-
-  [role="row"],
-  [role="button row"] {
-    display: grid;
-    width: 100%;
-    grid-template-columns: ${({ template }) => template};
-    align-items: center;
-  }
+  border-collapse: collapsed;
+  border-spacing: 0 ${({ theme }) => theme.space['2']};
+  position: relative;
 `
 
 type ColumnProps = Pick<
@@ -40,6 +30,8 @@ type ColumnProps = Pick<
 > & {
   label?: string
   width?: string
+  minWidth?: string
+  maxWidth?: string
   info?: string
 }
 
@@ -73,50 +65,45 @@ const BaseList = forwardRef(
       autoCollapse = false,
       onSelectedChange,
     }: ListProps,
-    ref: ForwardedRef<HTMLDivElement>,
-  ) => {
-    const computeTemplate = `${
-      selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
-    }${expandable ? `${EXPANDABLE_COLUMN_SIZE}px ` : ''}${columns
-      .map(({ width }) => width ?? 'minmax(0, 1fr)')
-      .join(' ')}`
-
-    return (
-      <ListProvider
-        selectable={selectable}
-        expandButton={expandable}
-        autoCollapse={autoCollapse}
-        onSelectedChange={onSelectedChange}
-      >
-        <StyledList ref={ref} role="grid" template={computeTemplate}>
-          <HeaderRow hasSelectAllColumn={selectable}>
-            {columns.map((column, index) => (
-              <HeaderCell
-                key={`header-column-${index}`}
-                isOrdered={column.isOrdered}
-                orderDirection={column.orderDirection}
-                onOrder={column.onOrder}
-                info={column.info}
-              >
-                {column.label}
-              </HeaderCell>
-            ))}
-          </HeaderRow>
-          <Body>
-            {loading ? (
-              <SkeletonRows
-                selectable={selectable}
-                rows={5}
-                cols={columns.length}
-              />
-            ) : (
-              children
-            )}
-          </Body>
-        </StyledList>
-      </ListProvider>
-    )
-  },
+    ref: ForwardedRef<HTMLTableElement>,
+  ) => (
+    <ListProvider
+      selectable={selectable}
+      expandButton={expandable}
+      autoCollapse={autoCollapse}
+      onSelectedChange={onSelectedChange}
+    >
+      <StyledTable ref={ref}>
+        <HeaderRow hasSelectAllColumn={selectable}>
+          {columns.map((column, index) => (
+            <HeaderCell
+              key={`header-column-${index}`}
+              isOrdered={column.isOrdered}
+              orderDirection={column.orderDirection}
+              onOrder={column.onOrder}
+              info={column.info}
+              width={column.width}
+              minWith={column.minWidth}
+              maxWidth={column.maxWidth}
+            >
+              {column.label}
+            </HeaderCell>
+          ))}
+        </HeaderRow>
+        <tbody>
+          {loading ? (
+            <SkeletonRows
+              selectable={selectable}
+              rows={5}
+              cols={columns.length}
+            />
+          ) : (
+            children
+          )}
+        </tbody>
+      </StyledTable>
+    </ListProvider>
+  ),
 )
 
 /**

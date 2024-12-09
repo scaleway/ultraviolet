@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import { AlignementFlex } from './constants'
 
 type Sentiment = 'success' | 'info' | 'warning' | 'danger' | 'neutral'
 
@@ -9,12 +8,12 @@ type Align = 'left' | 'center' | 'right'
 const StyledCell = styled('td', {
   shouldForwardProp: prop => !['sentiment', 'align'].includes(prop),
 })<{ sentiment?: Sentiment; align: Align }>`
-  display: flex;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: ${({ theme }) => theme.space['1']};
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   background-color: ${({ sentiment, theme }) => (sentiment ? theme.colors[sentiment].background : null)};
-  justify-content: ${({ align }) => AlignementFlex[align]};
+  text-align: ${({ align }) => align};
 `
 
 type CellProps = {
