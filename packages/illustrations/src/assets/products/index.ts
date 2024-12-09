@@ -15,7 +15,6 @@ import * as costManager from './costManager'
 import * as dedibox from './dedibox'
 import * as dediboxVps from './dediboxVps'
 import * as distributedDataLab from './distributedDataLab'
-import * as documentDB from './documentDB'
 import * as domainsAndDns from './domainsAndDns'
 import * as edgeServices from './edgeServices'
 import * as elasticMetal from './elasticMetal'
@@ -37,6 +36,7 @@ import * as kms from './kms'
 import * as loadBalancers from './loadBalancers'
 import * as managedDatabase from './managedDatabase'
 import * as managedSearchDatabase from './managedSearchDatabase'
+import * as mongoDB from './mongoDB'
 import * as nabu from './nabu'
 import * as nats from './nats'
 import * as objectStorage from './objectStorage'
@@ -69,7 +69,6 @@ export {
   dedibox,
   dediboxVps,
   distributedDataLab,
-  documentDB,
   domainsAndDns,
   edgeServices,
   elasticMetal,
@@ -91,6 +90,7 @@ export {
   loadBalancers,
   managedDatabase,
   managedSearchDatabase,
+  mongoDB,
   nabu,
   nats,
   objectStorage,
