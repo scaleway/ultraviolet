@@ -72,8 +72,8 @@ importers:
         specifier: 3.2.0
         version: 3.2.0
       '@manypkg/cli':
-        specifier: 0.22.0
-        version: 0.22.0
+        specifier: 0.23.0
+        version: 0.23.0
       '@scaleway/eslint-config-react':
         specifier: 4.0.9
         version: 4.0.9(eslint@9.16.0(jiti@2.1.0))(typescript@5.7.2)
@@ -2325,8 +2325,8 @@ packages:
   '@lezer/yaml@1.0.3':
     resolution: {integrity: sha512-GuBLekbw9jDBDhGur82nuwkxKQ+a3W5H0GfaAthDXcAu+XdpS43VlnxA9E9hllkpSP5ellRDKjLLj7Lu9Wr6xA==}
 
-  '@manypkg/cli@0.22.0':
-    resolution: {integrity: sha512-HwONx0Pr9ucehlrMvFMSuztLiKfwPYkjRDc0ymL5RiGYBk1slX8k3RWy+F01f1T+JLbImthSGMwY04Ojt20nTA==}
+  '@manypkg/cli@0.23.0':
+    resolution: {integrity: sha512-9N0GuhUZhrDbOS2rer1/ZWaO8RvPOUI+kKTwlq74iQXomL+725E9Vfvl9U64FYwnLkQCxCmPZ9nBs/u8JwFnSw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -9862,7 +9862,7 @@ snapshots:
       '@lezer/highlight': 1.2.0
       '@lezer/lr': 1.4.0
 
-  '@manypkg/cli@0.22.0':
+  '@manypkg/cli@0.23.0':
     dependencies:
       '@manypkg/get-packages': 2.2.2
       detect-indent: 6.1.0
@@ -9870,7 +9870,7 @@ snapshots:
       p-limit: 2.3.0
       package-json: 10.0.1
       parse-github-url: 1.0.3
-      picocolors: 1.1.0
+      picocolors: 1.1.1
       sembear: 0.7.0
       semver: 7.6.3
       tinyexec: 0.3.1
