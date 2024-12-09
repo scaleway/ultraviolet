@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 4.0.0
+
+### Major Changes
+
+- [#4532](https://github.com/scaleway/ultraviolet/pull/4532) [`19c1d19`](https://github.com/scaleway/ultraviolet/commit/19c1d194141c8f4b0714de17d8daf3e050533322) Thanks [@matthprost](https://github.com/matthprost)! - Rename illustration `documentDB` into `mongoDB`
+
 ## 3.5.0
 
 ### Minor Changes

@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.79.0
+
+### Minor Changes
+
+- [#4492](https://github.com/scaleway/ultraviolet/pull/4492) [`007019c`](https://github.com/scaleway/ultraviolet/commit/007019c37d6207953b12a0d10fcc1b4e61fc9710) Thanks [@lisalupi](https://github.com/lisalupi)! - New component `<Drawer />`
+
+### Patch Changes
+
+- [#4504](https://github.com/scaleway/ultraviolet/pull/4504) [`5e39094`](https://github.com/scaleway/ultraviolet/commit/5e39094932462147c4302c12a8414333c73879e9) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `image` prop in `<Banner />` component. If the prop is a string, it will be displayed inside img tag so you can set a url to simply set the image.
+
+- [#4544](https://github.com/scaleway/ultraviolet/pull/4544) [`ab0d6ea`](https://github.com/scaleway/ultraviolet/commit/ab0d6ea3de0566b9b5aaba130c92830d122c2e0f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.13`.
+
+- Updated dependencies [[`19c1d19`](https://github.com/scaleway/ultraviolet/commit/19c1d194141c8f4b0714de17d8daf3e050533322), [`ab0d6ea`](https://github.com/scaleway/ultraviolet/commit/ab0d6ea3de0566b9b5aaba130c92830d122c2e0f)]:
+  - @ultraviolet/icons@3.6.0
+
 ## 1.78.1
 
 ### Patch Changes
