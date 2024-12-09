@@ -28,6 +28,7 @@ export default [
       '**/.vitest/',
       '**/coverage/',
       '.storybook',
+      'eslint.config.mjs',
     ],
   },
   {
