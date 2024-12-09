@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.79.1
+
+### Patch Changes
+
+- [#4553](https://github.com/scaleway/ultraviolet/pull/4553) [`2241ec1`](https://github.com/scaleway/ultraviolet/commit/2241ec1fb89d3e2f6c679b9b4a9af6733344e643) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.14`.
+  Updated dependency `@types/react-dom` to `18.3.2`.
+- Updated dependencies [[`2241ec1`](https://github.com/scaleway/ultraviolet/commit/2241ec1fb89d3e2f6c679b9b4a9af6733344e643)]:
+  - @ultraviolet/icons@3.6.1
+
 ## 1.79.0
 
 ### Minor Changes
