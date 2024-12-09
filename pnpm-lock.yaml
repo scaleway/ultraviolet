@@ -285,8 +285,8 @@ importers:
         specifier: 8.4.7
         version: 8.4.7(prettier@2.8.8)
       storybook-addon-tag-badges:
-        specifier: 1.3.1
-        version: 1.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8))
+        specifier: 1.3.2
+        version: 1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8))
       svgo:
         specifier: 3.3.2
         version: 3.3.2
@@ -7093,11 +7093,11 @@ packages:
   std-env@3.8.0:
     resolution: {integrity: sha512-Bc3YwwCB+OzldMxOXJIIvC6cPRWr/LxOp48CdQTOkPyk/t4JWWJbrilwBd7RJzKV8QW7tJkcgAmeuLLJugl5/w==}
 
-  storybook-addon-tag-badges@1.3.1:
-    resolution: {integrity: sha512-P+kUX8qPbySAN1SLBgcfhD/vCbFuUXsAvXGw+UeV7wv9SD461qyvL3KK3lZJ5pZplpz4n2qvZ6vu58Yf6V+VXQ==}
+  storybook-addon-tag-badges@1.3.2:
+    resolution: {integrity: sha512-8xtIWJNfedc2iwOcLC7QSMLgbGz6VQRlx/LeXg/TRV5mlENu+XJdbJ0hEqH+spwwDwOD4ZxPj15X5Mgg6YMjDA==}
     engines: {node: '>=20'}
     peerDependencies:
-      storybook: ^8.4.4
+      storybook: ^8.4.0
 
   storybook@8.4.7:
     resolution: {integrity: sha512-RP/nMJxiWyFc8EVMH5gp20ID032Wvk+Yr3lmKidoegto5Iy+2dVQnUoElZb2zpbVXNHWakGuAkfI0dY1Hfp/vw==}
@@ -15513,7 +15513,7 @@ snapshots:
 
   std-env@3.8.0: {}
 
-  storybook-addon-tag-badges@1.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8)):
+  storybook-addon-tag-badges@1.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7(prettier@2.8.8)):
     dependencies:
       '@storybook/icons': 1.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       storybook: 8.4.7(prettier@2.8.8)
