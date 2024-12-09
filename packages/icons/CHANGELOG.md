@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.6.0
+
+### Minor Changes
+
+- [#4532](https://github.com/scaleway/ultraviolet/pull/4532) [`19c1d19`](https://github.com/scaleway/ultraviolet/commit/19c1d194141c8f4b0714de17d8daf3e050533322) Thanks [@matthprost](https://github.com/matthprost)! - - New product icons `macMiniM4`, `InstanceScalingGroups`, `GpuServers`
+  - New logo `github`
+
+### Patch Changes
+
+- [#4544](https://github.com/scaleway/ultraviolet/pull/4544) [`ab0d6ea`](https://github.com/scaleway/ultraviolet/commit/ab0d6ea3de0566b9b5aaba130c92830d122c2e0f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.13`.
+
 ## 3.5.0
 
 ### Minor Changes
