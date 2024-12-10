@@ -1,5 +1,5 @@
 import * as nivo from '@nivo/core'
-import userEvent from '@testing-library/user-event'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { beforeAll, describe, test, vi } from 'vitest'

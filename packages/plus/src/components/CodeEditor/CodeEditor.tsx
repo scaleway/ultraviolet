@@ -8,7 +8,7 @@ import type { ComponentProps } from 'react'
 const StyledText = styled(Text)`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
-  border-radius: ${({ theme }) => theme.radii.default};
+  border-radius: ${({ theme }) => `${theme.radii.default}`};
   width: 100%;
 `
 

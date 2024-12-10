@@ -3,21 +3,15 @@ import { List } from '..'
 import { columns, data } from './resources'
 
 export const Context: StoryFn = args => (
-  <>
-    <List {...args} columns={columns} selectable>
-      {data.map(planet => (
-        <List.Row
-          key={planet.id}
-          id={planet.id}
-          expandable="Planet description"
-        >
-          <List.Cell>{planet.name}</List.Cell>
-          <List.Cell>{planet.perihelion}AU</List.Cell>
-          <List.Cell>{planet.aphelion}AU</List.Cell>
-        </List.Row>
-      ))}
-    </List>
-  </>
+  <List {...args} columns={columns} selectable>
+    {data.map(planet => (
+      <List.Row key={planet.id} id={planet.id} expandable="Planet description">
+        <List.Cell>{planet.name}</List.Cell>
+        <List.Cell>{planet.perihelion}AU</List.Cell>
+        <List.Cell>{planet.aphelion}AU</List.Cell>
+      </List.Row>
+    ))}
+  </List>
 )
 
 Context.parameters = {

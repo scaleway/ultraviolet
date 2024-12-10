@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import { renderHook, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { userEvent } from '@testing-library/user-event'
 import { consoleLightTheme } from '@ultraviolet/themes'
 import {
   renderWithTheme,

@@ -4,16 +4,16 @@ import { Stack, Text } from '../..'
 import { columns, data } from './resources'
 
 const combos = [
-  { stripped: false, bordered: false },
-  { stripped: true, bordered: false },
-  { stripped: false, bordered: true },
-  { stripped: true, bordered: true },
-]
+  { stripped: false, bordered: false, id: 1 },
+  { stripped: true, bordered: false, id: 2 },
+  { stripped: false, bordered: true, id: 3 },
+  { stripped: true, bordered: true, id: 4 },
+] as const
 
 export const Style: StoryFn = args => (
   <Stack gap={2}>
-    {combos.map((combo, index) => (
-      <Stack gap={1} key={index}>
+    {combos.map(combo => (
+      <Stack gap={1} key={combo.id}>
         <Text as="h6" variant="headingSmall">
           {combo.stripped ? '✅' : '❌'} Stripped |{' '}
           {combo.bordered ? '✅' : '❌'} Bordered

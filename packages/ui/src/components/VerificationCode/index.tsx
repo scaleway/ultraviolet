@@ -300,7 +300,7 @@ export const VerificationCode = ({
           inputSize={size}
           type={type === 'number' ? 'tel' : type}
           pattern={type === 'number' ? '[0-9]*' : undefined}
-          key={index}
+          key={`field-${index}`}
           data-testid={index}
           value={value}
           id={`${inputId || uniqueId}-${index}`}

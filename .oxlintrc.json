@@ -2,42 +2,46 @@
   "$schema": "./node_modules/oxlint/configuration_schema.json",
   "categories": {
     "correctness": "error",
-    "style": "error",
-    "suspicious": "error",
-    "perf": "error",
+    "nursery": "off",
     "pedantic": "error",
+    "perf": "error",
     "restriction": "error",
-    "nursery": "off"
+    "style": "error",
+    "suspicious": "error"
   },
   "plugins": [
     "import",
-    "node",
-    "react",
-    "react-perf",
-    "security",
     "n",
+    "node",
+    "react-perf",
+    "react",
+    "security",
     "tree_shaking",
     "typescript",
-    "unicorn",
-    "vitest"
+    "unicorn"
   ],
   "overrides": [
     {
-      "files": ["**/__stories__/**/*.{ts,tsx}"],
+      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
       "rules": {
         "react/jsx-key": "off",
         "no-console": "off",
         "no-alert": "off"
       }
+    },
+    {
+      "files": ["**/__tests__/**/*.{ts,tsx}", "setup.ts"],
+      "plugins": ["vitest"]
     }
   ],
   "rules": {
-    "@typescript-eslint/ban-tslint-comment": "off",
+    "@typescript/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-expressions": "warn",
+    "@typescript-eslint/ban-tslint-comment": "warn",
     "@typescript-eslint/consistent-indexed-object-style": "error",
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript/no-explicit-any": "warn",
     "@typescript-eslint/prefer-enum-initializers": "off",
     "@typescript-eslint/prefer-function-type": "off",
     "@typescript-eslint/prefer-literal-enum-member": "off",
@@ -49,10 +53,8 @@
     "eslint/no-empty-function": "off",
     "eslint/no-magic-numbers": "off",
     "eslint/no-ternary": "off",
-    "eslint/no-undef": "off",
     "eslint/no-undefined": "off",
     "eslint/sort-keys": "off",
-    "eslint/react-in-jsx-scope": "off",
     "eslint/no-unused-vars": [
       "error",
       {
@@ -67,26 +69,18 @@
         "memberSyntaxSortOrder": ["single", "multiple", "all", "none"]
       }
     ],
-    "import/export": "off",
-    "import/import-no-namespace": "off",
+    "eslint/yoda": "error",
+    "import/no-namespace": "off",
     "import/max-dependencies": "off",
     "import/namespace": "off",
     "import/no-default-export": "off",
-    "import/no-deprecated": "warn",
     "import/no-duplicates": "off",
-    "import/no-unused-modules": "off",
     "import/unambiguous": "warn",
-    "oxc/no-accumulating-spread": "off",
-    "oxc/no-async-await": "off",
-    "oxc/no-barrel-file": "off",
-    "oxc/no-optional-chaining": "off",
-    "oxc/no-rest-spread-properties": "off",
     "react-perf/jsx-no-jsx-as-prop": "off",
     "react-perf/jsx-no-new-array-as-prop": "off",
     "react-perf/jsx-no-new-function-as-prop": "off",
     "react-perf/jsx-no-new-object-as-prop": "off",
     "react/jsx-no-useless-fragment": "off",
-    "react/exhaustive-deps": "warn",
     "react/iframe-missing-sandbox": "warn",
     "react/jsx-no-target-blank": "off",
     "react/react-in-jsx-scope": "off",

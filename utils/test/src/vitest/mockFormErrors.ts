@@ -20,4 +20,15 @@ export const mockFormErrors: FormErrors = {
     `This field should be before ${maxDate?.toString() ?? ''}`,
   minDate: ({ minDate }) =>
     `This field should be after ${minDate?.toString() ?? ''}`,
+  isInteger: ({ isInteger }) => {
+    if (typeof isInteger === 'number') {
+      if (Number.isInteger(isInteger)) {
+        return 'This field should be a decimal number'
+      }
+
+      return 'This field should be a whole number'
+    }
+
+    return 'This field should be a number'
+  },
 }

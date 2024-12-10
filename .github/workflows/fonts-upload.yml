@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
 
       - name: Install aws CLI
         run: |
