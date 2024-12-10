@@ -24,8 +24,9 @@
     "commit": "npx git-cz -a --disable-emoji",
     "start": "STORYBOOK_ENVIRONMENT=development storybook dev -p 6006",
     "start:production": "STORYBOOK_ENVIRONMENT=production storybook dev -p 6006",
-    "format": "biome format --write .",
-    "format:ci": "biome ci .",
+    "format": "biome check --linter-enabled=false --write .",
+    "format:check": "biome check --linter-enabled=false --verbose .",
+    "format:ci": "biome ci --linter-enabled=false .",
     "lint:fix": "pnpm run lint --fix",
     "lint": "eslint --report-unused-disable-directives --cache .",
     "prepare": "husky",
@@ -39,7 +40,7 @@
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
-      "biome format --write .",
+      "pnpm run format",
       "oxlint -c .oxlintrc.json --quiet --fix",
       "eslint --cache --cache-strategy content --fix"
     ],
@@ -48,6 +49,9 @@
     ],
     "*.y?(a)ml": [
       "pnpm dlx prettier --write '**/*.{yml,yaml}'"
+    ],
+    "*.json": [
+      "pnpm run format"
     ],
     ".md?(x)": [
       "pnpm dlx prettier --write '**/*.{md,mdx}'"
@@ -151,7 +155,7 @@
     "esbuild-plugin-browserslist": "0.15.0",
     "eslint": "9.16.0",
     "eslint-plugin-oxlint": "0.14.1",
-    "eslint-plugin-testing-library": "7.0.0",
+    "eslint-plugin-testing-library": "7.1.1",
     "expect": "29.7.0",
     "file-loader": "6.2.0",
     "globals": "15.13.0",
@@ -160,7 +164,7 @@
     "husky": "9.1.7",
     "identity-obj-proxy": "3.0.0",
     "jest-axe": "9.0.0",
-    "lint-staged": "15.2.10",
+    "lint-staged": "15.2.11",
     "oxlint": "0.13.2",
     "postcss": "8.4.49",
     "publint": "0.2.12",

@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "organizeImports": {
-    "enabled": false
+    "enabled": true
   },
   "linter": {
     "enabled": false
@@ -21,7 +21,8 @@
       "**/package.json",
       "**/CHANGELOG.md",
       "*.snap",
-      "**/__snapshots__/"
+      "**/__snapshots__/",
+      ".storybook/**"
     ]
   },
   "formatter": {

@@ -1,6 +1,6 @@
-import { normalize } from '@ultraviolet/ui'
 import { css } from '@emotion/react'
-import lightTheme from '../../packages/ui/src/theme'
+import { normalize } from '@ultraviolet/ui'
+import {space, colors} from '../../packages/ui/src/theme'
 
 export const globalStyles = css`
   ${normalize()}
@@ -10,11 +10,11 @@ export const globalStyles = css`
   }
 
   h1 {
-    margin: ${lightTheme.space['5']} 0;
+    margin: ${space['5']} 0;
   }
 
   h2, h3, h4, h5, h6 {
-    margin: ${lightTheme.space['2']} 0 ${lightTheme.space['1']} 0;
+    margin: ${space['2']} 0 ${space['1']} 0;
   }
 
   .sb-anchor h1, .sb-anchor h2, .sb-anchor h3, .sb-anchor h4, .sb-anchor h5, .sb-anchor h6 {
@@ -26,14 +26,14 @@ export const globalStyles = css`
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
-      color: ${lightTheme.colors.neutral.text};
+      color: ${colors.neutral.text};
   }
 
   .toc-list-item::before {
-    border-color: ${lightTheme.colors.primary.border} !important;
+    border-color: ${colors.primary.border} !important;
   }
 
   .toc-list-item.is-active-li>a {
-    color: ${lightTheme.colors.primary.text} !important;
+    color: ${colors.primary.text} !important;
   }
 `

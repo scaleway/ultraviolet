@@ -1,16 +1,16 @@
+import { Global, ThemeProvider } from '@emotion/react'
+import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 import type { Preview, StoryFn } from '@storybook/react'
-import { ThemeProvider, Global } from '@emotion/react'
 import { themes } from '@storybook/theming'
-import { light, dark } from './storybookThemes'
 import {
   consoleDarkTheme as darkTheme,
-  consoleLightTheme as lightTheme,
   consoleDarkerTheme as darkerTheme,
+  consoleLightTheme as lightTheme,
 } from '@ultraviolet/themes'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
-import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 import { globalStyles } from './components/globalStyle'
+import { dark, light } from './storybookThemes'
 import '@ultraviolet/fonts/fonts.css'
 
 const parameters: Preview['parameters'] = {

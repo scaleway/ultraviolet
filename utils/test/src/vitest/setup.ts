@@ -1,5 +1,6 @@
 import { createSerializer } from '@emotion/jest'
 import * as matchers from '@testing-library/jest-dom/matchers'
+// eslint-disable-next-line testing-library/no-manual-cleanup
 import { cleanup } from '@testing-library/react'
 import {
   resetIntersectionMocking,

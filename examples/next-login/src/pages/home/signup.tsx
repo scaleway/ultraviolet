@@ -1,5 +1,4 @@
-import { Alert, Stack, Text } from '@ultraviolet/ui'
-import { ProfileIcon } from '@ultraviolet/icons'
+import styled from '@emotion/styled'
 import {
   DateField,
   Form,
@@ -9,8 +8,9 @@ import {
   useForm,
   useWatch,
 } from '@ultraviolet/form'
+import { ProfileIcon } from '@ultraviolet/icons'
+import { Alert, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
-import styled from '@emotion/styled'
 import { EMAIL_REGEX, mockErrors } from '../../constants'
 
 type FormValues = {
