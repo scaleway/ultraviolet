@@ -15,14 +15,10 @@ import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
 import { useListContext } from './ListContext'
 
-const ExpandableWrapper = styled('tr', {
-  shouldForwardProp: prop => !['padding'].includes(prop),
-})<{ padding?: keyof typeof space }>`
+const ExpandableWrapper = styled.tr`
   width: 100%;
   display: table-row;
   vertical-align: middle;
-  margin: 0 -${({ theme }) => theme.space['2']};
-  padding: ${({ theme, padding }) => (padding ? theme.space[padding] : theme.space['2'])};
   cursor: auto;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: 0 0 ${({ theme }) => theme.radii.default} ${({ theme }) => theme.radii.default};
@@ -146,6 +142,12 @@ const NoPaddingCell = styled(Cell)`
   &:first-of-type {
     padding-left: ${({ theme }) => theme.space['2']};
   }
+`
+
+const ExpandableCell = styled(Cell, {
+  shouldForwardProp: prop => !['padding'].includes(prop),
+})<{ padding?: keyof typeof space }>`
+  padding: ${({ theme, padding }) => (padding ? theme.space[padding] : theme.space['2'])};
 `
 
 type RowProps = {
@@ -339,9 +341,13 @@ export const Row = forwardRef(
                   }
                 : undefined
             }
-            padding={expandablePadding}
           >
-            <Cell colSpan={childrenLength}>{expandable}</Cell>
+            <ExpandableCell
+              colSpan={childrenLength}
+              padding={expandablePadding}
+            >
+              {expandable}
+            </ExpandableCell>
           </ExpandableWrapper>
         ) : null}
       </>
