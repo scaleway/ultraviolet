@@ -1,26 +1,9 @@
 import type { StoryFn } from '@storybook/react'
-import { useMemo } from 'react'
 import { List } from '..'
 import { columns, data } from './resources'
 
-export const Context: StoryFn = args => {
-  const SubComponent = ({ srcData }: { srcData: typeof data }) => {
-    const { selectedRowIds } = List.useListContext()
-
-    const selectedItems = useMemo(
-      () => srcData.filter(item => selectedRowIds[item.id]),
-      [srcData, selectedRowIds],
-    )
-
-    return (
-      <div>
-        Selected planet(s):{' '}
-        {selectedItems.map(planet => planet.name).join(', ')}
-      </div>
-    )
-  }
-
-  return (
+export const Context: StoryFn = args => (
+  <>
     <List {...args} columns={columns} selectable>
       {data.map(planet => (
         <List.Row
@@ -33,10 +16,9 @@ export const Context: StoryFn = args => {
           <List.Cell>{planet.aphelion}AU</List.Cell>
         </List.Row>
       ))}
-      <SubComponent srcData={data} />
     </List>
-  )
-}
+  </>
+)
 
 Context.parameters = {
   docs: {

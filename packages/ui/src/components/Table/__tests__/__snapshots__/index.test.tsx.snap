@@ -10,13 +10,9 @@ exports[`Table > Should render correctly 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -27,14 +23,8 @@ exports[`Table > Should render correctly 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -44,6 +34,10 @@ exports[`Table > Should render correctly 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -76,20 +70,11 @@ exports[`Table > Should render correctly 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -473,13 +458,9 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 {
@@ -490,13 +471,9 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -511,14 +488,8 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -528,20 +499,18 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-4 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -551,6 +520,10 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -612,37 +585,19 @@ exports[`Table > Should render correctly with bad sort value 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -1036,13 +991,22 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 1fr) 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  width: 100%;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -1054,14 +1018,8 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1073,24 +1031,8 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   user-select: none;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem;
-}
-
-.emotion-4[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -1167,14 +1109,8 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1184,20 +1120,18 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-13:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-13 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1207,6 +1141,10 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-13:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-23 {
@@ -1215,37 +1153,19 @@ exports[`Table > Should render correctly with highlight animation on Table.Row 1
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -1626,13 +1546,9 @@ exports[`Table > Should render correctly with info 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 1fr) 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 tbody tr:nth-of-type(even) {
@@ -1652,14 +1568,8 @@ exports[`Table > Should render correctly with info 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1671,24 +1581,8 @@ exports[`Table > Should render correctly with info 1`] = `
   user-select: none;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem;
-}
-
-.emotion-4[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -1765,14 +1659,8 @@ exports[`Table > Should render correctly with info 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1782,20 +1670,18 @@ exports[`Table > Should render correctly with info 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-13:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-13 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -1807,6 +1693,10 @@ exports[`Table > Should render correctly with info 1`] = `
   user-select: none;
 }
 
+.emotion-13:first-of-type {
+  padding-left: 1rem;
+}
+
 .emotion-23 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
@@ -1818,37 +1708,19 @@ exports[`Table > Should render correctly with info 1`] = `
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -2239,13 +2111,9 @@ exports[`Table > Should render correctly with loading 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -2256,14 +2124,8 @@ exports[`Table > Should render correctly with loading 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -2273,6 +2135,10 @@ exports[`Table > Should render correctly with loading 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -2304,20 +2170,11 @@ exports[`Table > Should render correctly with loading 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-34 {
@@ -2884,13 +2741,9 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 {
@@ -2901,13 +2754,9 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -2922,14 +2771,8 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -2939,20 +2782,18 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-4 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -2962,6 +2803,10 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -3023,37 +2868,19 @@ exports[`Table > Should render correctly with selectDisabled as a string 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -3437,13 +3264,22 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 2.5rem 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  width: 100%;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -3455,14 +3291,9 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  max-width: 2.5rem;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -3474,24 +3305,8 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   user-select: none;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem;
-}
-
-.emotion-4[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -3820,14 +3635,8 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -3837,20 +3646,18 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-23:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-23 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -3862,9 +3669,8 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   user-select: none;
 }
 
-.emotion-48 {
-  -webkit-animation: 3s linear;
-  animation: 3s linear;
+.emotion-23:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-48 {
@@ -3872,41 +3678,26 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   animation: 3s linear;
 }
 
-.emotion-50 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+.emotion-48 {
+  -webkit-animation: 3s linear;
+  animation: 3s linear;
 }
 
-.emotion-50 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-51 {
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
+  padding: 0;
+  max-width: 2.5rem;
 }
 
-.emotion-52 {
+.emotion-51:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-53 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3914,7 +3705,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   width: 2.5rem;
 }
 
-.emotion-55 {
+.emotion-56 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3927,65 +3718,65 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-55 .eqr7bqq4 {
+.emotion-56 .eqr7bqq4 {
   cursor: pointer;
 }
 
-.emotion-55[aria-disabled='true'] {
+.emotion-56[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-55[aria-disabled='true'] .eqr7bqq4 {
+.emotion-56[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-14 {
+.emotion-56[aria-disabled='true'] .emotion-14 {
   fill: #e9eaeb;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-14 .emotion-16 {
+.emotion-56[aria-disabled='true'] .emotion-14 .emotion-16 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-12[aria-invalid="true"]:checked+.emotion-14 {
+.emotion-56[aria-disabled='true'] .emotion-12[aria-invalid="true"]:checked+.emotion-14 {
   fill: #ffd3e3;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-12[aria-invalid="true"]:checked+.emotion-14 .emotion-16 {
+.emotion-56[aria-disabled='true'] .emotion-12[aria-invalid="true"]:checked+.emotion-14 .emotion-16 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-12[aria-invalid="true"]+.emotion-14 {
+.emotion-56[aria-disabled='true'] .emotion-12[aria-invalid="true"]+.emotion-14 {
   fill: #ffebf2;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-12[aria-invalid="true"]+.emotion-14 .emotion-16 {
+.emotion-56[aria-disabled='true'] .emotion-12[aria-invalid="true"]+.emotion-14 .emotion-16 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-12:checked+.emotion-14 {
+.emotion-56[aria-disabled='true'] .emotion-12:checked+.emotion-14 {
   fill: #e5dbfd;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-12:checked+.emotion-14 .emotion-16 {
+.emotion-56[aria-disabled='true'] .emotion-12:checked+.emotion-14 .emotion-16 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-12[aria-checked="mixed"]+.emotion-14 {
+.emotion-56[aria-disabled='true'] .emotion-12[aria-checked="mixed"]+.emotion-14 {
   fill: #e5dbfd;
 }
 
-.emotion-55[aria-disabled='true'] .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-16 {
+.emotion-56[aria-disabled='true'] .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-16 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-55 .emotion-12:checked+.emotion-14 path {
+.emotion-56 .emotion-12:checked+.emotion-14 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3999,57 +3790,73 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   transform: translate(2px, 2px);
 }
 
-.emotion-55 .emotion-12:checked+.emotion-14 .emotion-16 {
+.emotion-56 .emotion-12:checked+.emotion-14 .emotion-16 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-55 .emotion-12[aria-invalid="true"]:checked+.emotion-14 .emotion-16 {
+.emotion-56 .emotion-12[aria-invalid="true"]:checked+.emotion-14 .emotion-16 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-55 .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-18 {
+.emotion-56 .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-18 {
   fill: #ffffff;
 }
 
-.emotion-55 .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-16 {
+.emotion-56 .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-16 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-55:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='false']+.emotion-14 .emotion-16 {
+.emotion-56:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='false']+.emotion-14 .emotion-16 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-55:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='true']+.emotion-14 .emotion-16 {
+.emotion-56:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='true']+.emotion-14 .emotion-16 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-55:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='mixed']+.emotion-14 .emotion-16 {
+.emotion-56:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='mixed']+.emotion-14 .emotion-16 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-55:hover[aria-disabled='false'] .emotion-12[aria-invalid='true'][aria-checked='false']+.emotion-14 .emotion-16 {
+.emotion-56:hover[aria-disabled='false'] .emotion-12[aria-invalid='true'][aria-checked='false']+.emotion-14 .emotion-16 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-55:hover[aria-disabled='false'] .emotion-12[aria-invalid='true'][aria-checked='true']+.emotion-14 .emotion-16 {
+.emotion-56:hover[aria-disabled='false'] .emotion-12[aria-invalid='true'][aria-checked='true']+.emotion-14 .emotion-16 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-55 .emotion-12[aria-invalid="true"]+.emotion-14 {
+.emotion-56 .emotion-12[aria-invalid="true"]+.emotion-14 {
   fill: #e51963;
 }
 
-.emotion-55 .emotion-12[aria-invalid="true"]+.emotion-14 .emotion-16 {
+.emotion-56 .emotion-12[aria-invalid="true"]+.emotion-14 .emotion-16 {
   stroke: #e51963;
   fill: #ffebf2;
+}
+
+.emotion-68 {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.emotion-68 {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  text-align: left;
 }
 
 <div
@@ -4180,14 +3987,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -4239,27 +4046,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 1 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 1 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 1 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 1 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 1 Column 5
           </td>
@@ -4269,14 +4076,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -4328,27 +4135,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 2 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 2 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 2 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 2 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 2 Column 5
           </td>
@@ -4358,14 +4165,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -4417,27 +4224,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 3 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 3 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 3 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 3 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 3 Column 5
           </td>
@@ -4447,14 +4254,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="false"
                 data-error="false"
               >
@@ -4506,27 +4313,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 4 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 4 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 4 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 4 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 4 Column 5
           </td>
@@ -4536,14 +4343,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="false"
                 data-error="false"
               >
@@ -4595,27 +4402,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 5 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 5 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 5 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 5 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 5 Column 5
           </td>
@@ -4625,14 +4432,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="false"
                 data-error="false"
               >
@@ -4684,27 +4491,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 6 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 6 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 6 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 6 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 6 Column 5
           </td>
@@ -4714,14 +4521,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="false"
                 data-error="false"
               >
@@ -4773,27 +4580,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 7 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 7 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 7 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 7 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 7 Column 5
           </td>
@@ -4803,14 +4610,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="false"
                 data-error="false"
               >
@@ -4862,27 +4669,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 8 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 8 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 8 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 8 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 8 Column 5
           </td>
@@ -4892,14 +4699,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="false"
                 data-error="false"
               >
@@ -4951,27 +4758,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 9 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 9 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 9 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 9 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 9 Column 5
           </td>
@@ -4981,14 +4788,14 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
           role="row"
         >
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-50 emotion-51 emotion-52"
           >
             <div
-              class="emotion-52 emotion-53"
+              class="emotion-53 emotion-54"
             >
               <div
                 aria-disabled="false"
-                class="emotion-54 emotion-55 emotion-10"
+                class="emotion-55 emotion-56 emotion-10"
                 data-checked="false"
                 data-error="false"
               >
@@ -5040,27 +4847,27 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
             </div>
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 10 Column 1
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 10 Column 2
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 10 Column 3
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 10 Column 4
           </td>
           <td
-            class="emotion-50 emotion-51"
+            class="emotion-68 emotion-52"
           >
             Row 10 Column 5
           </td>
@@ -5081,13 +4888,22 @@ exports[`Table > Should render correctly with selectable then click on first row
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 2.5rem 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
+}
+
+.emotion-0 {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.emotion-0 [role="row"],
+.emotion-0 [role="button row"] {
+  width: 100%;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -5099,14 +4915,9 @@ exports[`Table > Should render correctly with selectable then click on first row
 }
 
 .emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  max-width: 2.5rem;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -5116,6 +4927,10 @@ exports[`Table > Should render correctly with selectable then click on first row
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -5444,14 +5259,8 @@ exports[`Table > Should render correctly with selectable then click on first row
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -5461,20 +5270,18 @@ exports[`Table > Should render correctly with selectable then click on first row
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-21:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-21 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -5486,9 +5293,8 @@ exports[`Table > Should render correctly with selectable then click on first row
   user-select: none;
 }
 
-.emotion-46 {
-  -webkit-animation: 3s linear;
-  animation: 3s linear;
+.emotion-21:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-46 {
@@ -5496,41 +5302,26 @@ exports[`Table > Should render correctly with selectable then click on first row
   animation: 3s linear;
 }
 
-.emotion-48 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+.emotion-46 {
+  -webkit-animation: 3s linear;
+  animation: 3s linear;
 }
 
-.emotion-48 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-49 {
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
+  padding: 0;
+  max-width: 2.5rem;
 }
 
-.emotion-50 {
+.emotion-49:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-51 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5538,7 +5329,7 @@ exports[`Table > Should render correctly with selectable then click on first row
   width: 2.5rem;
 }
 
-.emotion-53 {
+.emotion-54 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5551,65 +5342,65 @@ exports[`Table > Should render correctly with selectable then click on first row
   gap: 0.5rem;
 }
 
-.emotion-53 .eqr7bqq4 {
+.emotion-54 .eqr7bqq4 {
   cursor: pointer;
 }
 
-.emotion-53[aria-disabled='true'] {
+.emotion-54[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.emotion-53[aria-disabled='true'] .eqr7bqq4 {
+.emotion-54[aria-disabled='true'] .eqr7bqq4 {
   cursor: not-allowed;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-14 {
+.emotion-54[aria-disabled='true'] .emotion-14 {
   fill: #e9eaeb;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-14 .emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-14 .emotion-16 {
   stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-12[aria-invalid="true"]:checked+.emotion-14 {
+.emotion-54[aria-disabled='true'] .emotion-12[aria-invalid="true"]:checked+.emotion-14 {
   fill: #ffd3e3;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-12[aria-invalid="true"]:checked+.emotion-14 .emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-12[aria-invalid="true"]:checked+.emotion-14 .emotion-16 {
   stroke: #ffd3e3;
   fill: #ffd3e3;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-12[aria-invalid="true"]+.emotion-14 {
+.emotion-54[aria-disabled='true'] .emotion-12[aria-invalid="true"]+.emotion-14 {
   fill: #ffebf2;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-12[aria-invalid="true"]+.emotion-14 .emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-12[aria-invalid="true"]+.emotion-14 .emotion-16 {
   stroke: #ffbbd3;
   fill: #ffebf2;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-12:checked+.emotion-14 {
+.emotion-54[aria-disabled='true'] .emotion-12:checked+.emotion-14 {
   fill: #e5dbfd;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-12:checked+.emotion-14 .emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-12:checked+.emotion-14 .emotion-16 {
   stroke: #d8c5fc;
   fill: #d8c5fc;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-12[aria-checked="mixed"]+.emotion-14 {
+.emotion-54[aria-disabled='true'] .emotion-12[aria-checked="mixed"]+.emotion-14 {
   fill: #e5dbfd;
 }
 
-.emotion-53[aria-disabled='true'] .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-16 {
+.emotion-54[aria-disabled='true'] .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-16 {
   stroke: #e5dbfd;
   fill: #e5dbfd;
 }
 
-.emotion-53 .emotion-12:checked+.emotion-14 path {
+.emotion-54 .emotion-12:checked+.emotion-14 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -5623,57 +5414,73 @@ exports[`Table > Should render correctly with selectable then click on first row
   transform: translate(2px, 2px);
 }
 
-.emotion-53 .emotion-12:checked+.emotion-14 .emotion-16 {
+.emotion-54 .emotion-12:checked+.emotion-14 .emotion-16 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-53 .emotion-12[aria-invalid="true"]:checked+.emotion-14 .emotion-16 {
+.emotion-54 .emotion-12[aria-invalid="true"]:checked+.emotion-14 .emotion-16 {
   fill: #e51963;
   stroke: #e51963;
 }
 
-.emotion-53 .emotion-12[aria-checked="mixed"]+.emotion-14 .eqr7bqq6 {
+.emotion-54 .emotion-12[aria-checked="mixed"]+.emotion-14 .eqr7bqq6 {
   fill: #ffffff;
 }
 
-.emotion-53 .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-16 {
+.emotion-54 .emotion-12[aria-checked="mixed"]+.emotion-14 .emotion-16 {
   fill: #8c40ef;
   stroke: #8c40ef;
 }
 
-.emotion-53:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='false']+.emotion-14 .emotion-16 {
+.emotion-54:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='false']+.emotion-14 .emotion-16 {
   stroke: #792dd4;
   fill: #e5dbfd;
 }
 
-.emotion-53:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='true']+.emotion-14 .emotion-16 {
+.emotion-54:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='true']+.emotion-14 .emotion-16 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-53:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='mixed']+.emotion-14 .emotion-16 {
+.emotion-54:hover[aria-disabled='false'] .emotion-12[aria-invalid='false'][aria-checked='mixed']+.emotion-14 .emotion-16 {
   stroke: #792dd4;
   fill: #792dd4;
 }
 
-.emotion-53:hover[aria-disabled='false'] .emotion-12[aria-invalid='true'][aria-checked='false']+.emotion-14 .emotion-16 {
+.emotion-54:hover[aria-disabled='false'] .emotion-12[aria-invalid='true'][aria-checked='false']+.emotion-14 .emotion-16 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
 
-.emotion-53:hover[aria-disabled='false'] .emotion-12[aria-invalid='true'][aria-checked='true']+.emotion-14 .emotion-16 {
+.emotion-54:hover[aria-disabled='false'] .emotion-12[aria-invalid='true'][aria-checked='true']+.emotion-14 .emotion-16 {
   stroke: #d6175c;
   fill: #d6175c;
 }
 
-.emotion-53 .emotion-12[aria-invalid="true"]+.emotion-14 {
+.emotion-54 .emotion-12[aria-invalid="true"]+.emotion-14 {
   fill: #e51963;
 }
 
-.emotion-53 .emotion-12[aria-invalid="true"]+.emotion-14 .emotion-16 {
+.emotion-54 .emotion-12[aria-invalid="true"]+.emotion-14 .emotion-16 {
   stroke: #e51963;
   fill: #ffebf2;
+}
+
+.emotion-66 {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.emotion-66 {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  text-align: left;
 }
 
 <div
@@ -5806,14 +5613,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -5865,27 +5672,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 1 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 1 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 1 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 1 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 1 Column 5
           </td>
@@ -5895,14 +5702,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -5954,27 +5761,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 2 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 2 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 2 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 2 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 2 Column 5
           </td>
@@ -5984,14 +5791,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -6043,27 +5850,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 3 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 3 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 3 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 3 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 3 Column 5
           </td>
@@ -6073,14 +5880,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -6132,27 +5939,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 4 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 4 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 4 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 4 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 4 Column 5
           </td>
@@ -6162,14 +5969,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -6221,27 +6028,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 5 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 5 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 5 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 5 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 5 Column 5
           </td>
@@ -6251,14 +6058,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -6310,27 +6117,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 6 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 6 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 6 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 6 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 6 Column 5
           </td>
@@ -6340,14 +6147,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -6399,27 +6206,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 7 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 7 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 7 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 7 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 7 Column 5
           </td>
@@ -6429,14 +6236,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -6488,27 +6295,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 8 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 8 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 8 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 8 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 8 Column 5
           </td>
@@ -6518,14 +6325,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -6577,27 +6384,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 9 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 9 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 9 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 9 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 9 Column 5
           </td>
@@ -6607,14 +6414,14 @@ exports[`Table > Should render correctly with selectable then click on first row
           role="row"
         >
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-48 emotion-49 emotion-50"
           >
             <div
-              class="emotion-50 emotion-51"
+              class="emotion-51 emotion-52"
             >
               <div
                 aria-disabled="false"
-                class="emotion-52 emotion-53 emotion-10"
+                class="emotion-53 emotion-54 emotion-10"
                 data-checked="true"
                 data-error="false"
               >
@@ -6666,27 +6473,27 @@ exports[`Table > Should render correctly with selectable then click on first row
             </div>
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 10 Column 1
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 10 Column 2
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 10 Column 3
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 10 Column 4
           </td>
           <td
-            class="emotion-48 emotion-49"
+            class="emotion-66 emotion-50"
           >
             Row 10 Column 5
           </td>
@@ -6707,13 +6514,9 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 {
@@ -6724,13 +6527,9 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -6745,14 +6544,8 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -6762,20 +6555,18 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-4 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -6785,6 +6576,10 @@ exports[`Table > Should render correctly with sort then click 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-7 {
@@ -6904,37 +6699,19 @@ exports[`Table > Should render correctly with sort then click 1`] = `
 }
 
 .emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-42 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div
@@ -7395,13 +7172,9 @@ exports[`Table > Should render correctly with stipped 1`] = `
 
 .emotion-0 [role="row"],
 .emotion-0 [role="button row"] {
-  display: grid;
   width: 100%;
-  grid-template-columns: 100px 100px 100px 100px 100px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-row;
+  vertical-align: middle;
 }
 
 .emotion-0 tbody tr:nth-of-type(even) {
@@ -7424,14 +7197,8 @@ exports[`Table > Should render correctly with stipped 1`] = `
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -7441,20 +7208,18 @@ exports[`Table > Should render correctly with stipped 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.emotion-4:first-of-type {
+  padding-left: 1rem;
 }
 
 .emotion-4 {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
 }
 
@@ -7466,6 +7231,10 @@ exports[`Table > Should render correctly with stipped 1`] = `
   user-select: none;
 }
 
+.emotion-4:first-of-type {
+  padding-left: 1rem;
+}
+
 .emotion-7 {
   color: #3f4250;
   font-size: 0.875rem;
@@ -7525,37 +7294,19 @@ exports[`Table > Should render correctly with stipped 1`] = `
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 .emotion-31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: table-cell;
+  vertical-align: middle;
   padding: 0.5rem;
   font-size: 0.875rem;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
+  text-align: left;
 }
 
 <div

@@ -7,11 +7,11 @@ import type {
 } from 'react'
 import { forwardRef } from 'react'
 
-const StyledCell = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: ${({ theme }) => theme.sizing['750']};
+const StyledCell = styled.td`
+  display: table-cell;
+  vertical-align: middle;
+  height: ${({ theme }) => theme.sizing['750']};
+  padding: 0 ${({ theme }) => theme.space['2']};
 `
 
 type CellProps = {
@@ -24,12 +24,19 @@ type CellProps = {
    * */
   preventClick?: boolean
   'data-testid'?: string
+  colSpan?: number
 }
 
 export const Cell = forwardRef(
   (
-    { children, className, preventClick, 'data-testid': dataTestid }: CellProps,
-    ref: ForwardedRef<HTMLDivElement>,
+    {
+      children,
+      className,
+      preventClick,
+      'data-testid': dataTestid,
+      colSpan,
+    }: CellProps,
+    ref: ForwardedRef<HTMLTableCellElement>,
   ) => {
     const handleClick: MouseEventHandler<HTMLDivElement> = event => {
       if (preventClick) {
@@ -46,11 +53,11 @@ export const Cell = forwardRef(
     return (
       <StyledCell
         ref={ref}
-        role="cell"
         className={className}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         data-testid={dataTestid}
+        colSpan={colSpan}
       >
         {children}
       </StyledCell>
