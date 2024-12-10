@@ -1,11 +1,11 @@
-import { isValidElement, cloneElement, ReactNode } from 'react'
+import { Global, ThemeProvider } from '@emotion/react'
 import {
   DocsContainer as BaseContainer,
   DocsContainerProps as BaseContainerProps,
   Unstyled,
 } from '@storybook/blocks'
-import { Global, ThemeProvider } from '@emotion/react'
 import { consoleLightTheme as lightTheme } from '@ultraviolet/themes'
+import { ReactNode, cloneElement, isValidElement } from 'react'
 import { globalStyles } from './globalStyle'
 import '@ultraviolet/fonts/fonts.css'
 
@@ -34,6 +34,7 @@ type ExtraProps = {
 
 type DocsContainerProps = BaseContainerProps & {
   context?: {
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     attachedCSFFiles: Set<any>
   }
 } & { children: ReactNode }

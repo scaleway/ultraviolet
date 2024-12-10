@@ -1,8 +1,8 @@
+import styled from '@emotion/styled'
+import { Stack, SwitchButton } from '@ultraviolet/ui'
 import { useState } from 'react'
 import LogIn from './login'
 import SignUp from './signup'
-import { Stack, SwitchButton } from '@ultraviolet/ui'
-import styled from '@emotion/styled'
 
 const StyledSwitchButton = styled(SwitchButton)`
   margin: auto;

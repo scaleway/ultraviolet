@@ -1,8 +1,8 @@
 import { create } from '@storybook/theming'
-import lightBrandImage from './assets/scaleway-text-light.png'
-import logoLight from './assets/logo-light.png'
-import logoDark from './assets/logo-dark.png'
 import lightTheme, { darkTheme } from '../packages/ui/src/theme'
+import logoDark from './assets/logo-dark.png'
+import logoLight from './assets/logo-light.png'
+import lightBrandImage from './assets/scaleway-text-light.png'
 
 enum Base {
   LIGHT = 'light',

@@ -1,5 +1,4 @@
-import { Link, Stack, Text } from '@ultraviolet/ui'
-import { IdIcon } from '@ultraviolet/icons'
+import styled from '@emotion/styled'
 import {
   CheckboxField,
   Form,
@@ -8,8 +7,9 @@ import {
   useForm,
   useWatch,
 } from '@ultraviolet/form'
+import { IdIcon } from '@ultraviolet/icons'
+import { Link, Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
-import styled from '@emotion/styled'
 import { EMAIL_REGEX, mockErrors } from '../../constants'
 
 type FormValues = {

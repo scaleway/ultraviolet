@@ -1,19 +1,26 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import babelParser from '@babel/eslint-parser'
-import { fixupConfigRules } from '@eslint/compat'
-import { FlatCompat } from '@eslint/eslintrc'
 import scwEmotion from '@scaleway/eslint-config-react/emotion'
 import scwJavascript from '@scaleway/eslint-config-react/javascript'
 import scwTypescript from '@scaleway/eslint-config-react/typescript'
 import oxlint from 'eslint-plugin-oxlint'
+import testingLibrary from 'eslint-plugin-testing-library'
 import globals from 'globals'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-const compat = new FlatCompat({
-  baseDirectory: dirname,
-})
+
+const disableRules = {
+  // ---- biome rules ----
+  'import/order': 'off',
+  'import/no-unresolved': 'off',
+
+  // to check
+  'react/no-unused-prop-types': 'off',
+  'react/jsx-props-no-spreading': 'warn',
+  '@typescript-eslint/no-unnecessary-condition': 'off',
+}
 
 export default [
   {
@@ -36,26 +43,42 @@ export default [
       globals: {
         ...globals.browser,
       },
+
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+
+      parserOptions: {
+        tsconfigRootDir: dirname,
+        project: [
+          'tsconfig.json',
+          'packages/*/tsconfig.json',
+          'tools/*/tsconfig.json',
+        ],
+      },
+    },
+
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions: ['.json', '.ts', '.tsx', '.d.ts'],
+          moduleDirectory: ['node_modules', 'src'],
+        },
+      },
     },
   },
   ...[...scwJavascript, ...scwEmotion].map(config => ({
     ...config,
-    files: ['**/*.js', '**/*.mjs'],
-    rules: {
-      ...config.rules,
-      'import/no-unresolved': 'off',
-    },
-  })),
-  {
-    files: ['**/*.js', '**/*.mjs'],
-
     languageOptions: {
       parser: babelParser,
     },
-  },
+    files: ['**/*.js', '**/*.mjs'],
+    rules: {
+      ...config.rules,
+      ...disableRules,
+    },
+  })),
   {
-    files: ['**/*.ts', '**/*.tsx'],
-
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 5,
       sourceType: 'script',
@@ -68,9 +91,10 @@ export default [
 
   ...[...scwTypescript, ...scwEmotion].map(config => ({
     ...config,
-    files: ['**/*.ts', '**/*.tsx'],
+    files: ['**/*.{ts,tsx}'],
     rules: {
       ...config.rules,
+      ...disableRules,
       'react/jsx-props-no-spreading': 'warn',
       '@typescript-eslint/no-unnecessary-condition': 'off',
     },
@@ -112,30 +136,28 @@ export default [
       '**/vite.config.*',
       'utils/test/**/*.{ts,tsx}',
       '**/vitest.setup.ts',
+      '.storybook/**',
     ],
 
     rules: {
       ...config.rules,
+      ...disableRules,
       'no-console': 'off',
       'no-alert': 'off',
       'react/jsx-props-no-spreading': 'off',
       'react/no-unstable-nested-components': 'off',
-      '@typescript-eslint/no-unnecessary-condition': 'off',
       'react/jsx-key': 'off',
       'import/no-extraneous-dependencies': 'off',
       'import/no-relative-packages': 'off',
-      'eslint-plugin-import/no-relative-packages': 'off',
+
+      '@typescript-eslint/no-unnecessary-condition': 'off',
+      'typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
     },
   })),
-  ...fixupConfigRules(
-    compat.extends('plugin:testing-library/react').map(config => ({
-      ...config,
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-    })),
-  ),
+
   {
     files: ['**/*.d.ts', '**/vite.config.ts'],
 
@@ -149,6 +171,14 @@ export default [
     rules: {
       'react/jsx-props-no-spreading': 'off',
     },
+  },
+  {
+    files: [
+      '!**/e2e/**',
+      '**/__tests__/**/*.ts?(x)',
+      '**/(*.)+(spec|test).ts?(x)',
+    ],
+    ...testingLibrary.configs['flat/react'],
   },
   oxlint.configs['flat/all'],
 ]

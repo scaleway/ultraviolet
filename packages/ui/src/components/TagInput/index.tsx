@@ -131,14 +131,12 @@ type TagInputProps = {
   /**
    * @deprecated this prop has no more effect
    */
-  // eslint-disable-next-line react/no-unused-prop-types
   manualInput?: boolean
   name?: string
   onChange?: (tags: string[]) => void
   /**
    * @deprecated this prop has no more effect
    */
-  // eslint-disable-next-line react/no-unused-prop-types
   onChangeError?: (error: Error | string) => void
   placeholder?: string
   /**
@@ -149,7 +147,6 @@ type TagInputProps = {
   /**
    * @deprecated there is only one variant now, this prop has no more effect
    */
-  // eslint-disable-next-line react/no-unused-prop-types
   variant?: string
   className?: string
   'data-testid'?: string

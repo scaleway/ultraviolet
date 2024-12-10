@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
+import type { Modal } from '.'
 import { Button } from '../Button'
 import { Dialog } from './components/Dialog'
 import type { ModalPlacement, ModalSize } from './types'
-import type { Modal } from '.'
 
 const StyledContainer = styled.div`
   position: absolute;
