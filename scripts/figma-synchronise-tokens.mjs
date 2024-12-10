@@ -35,8 +35,11 @@ function alphaOrder(obj) {
   const orderedKeys = Object.keys(obj ?? {}).sort()
 
   return orderedKeys.reduce((newObj, key) => {
+    const result =
+      typeof obj[key] === 'object' ? alphaOrder(obj[key]) : obj[key]
+
     // eslint-disable-next-line no-param-reassign
-    newObj[key] = typeof obj[key] === 'object' ? alphaOrder(obj[key]) : obj[key]
+    newObj[key] = result
 
     return newObj
   }, {})

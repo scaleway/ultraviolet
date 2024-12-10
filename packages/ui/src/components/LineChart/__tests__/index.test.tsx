@@ -2,7 +2,7 @@
 
 import * as nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'

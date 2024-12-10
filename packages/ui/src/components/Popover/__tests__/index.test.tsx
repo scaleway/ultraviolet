@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { screen, waitFor } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
 import type { ComponentProps } from 'react'
 import { useCallback, useState } from 'react'

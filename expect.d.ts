@@ -1,8 +1,7 @@
 import 'expect'
 
 declare module 'expect' {
-  interface Matchers<R extends void | Promise<void>, T = unknown>
-    extends jest.Matchers<R, T> {
+  type Matchers<R extends void | Promise<void>, T = unknown> = {
     toHaveNoViolations(): R
-  }
+  } & jest.Matchers<R, T>
 }

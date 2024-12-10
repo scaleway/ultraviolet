@@ -1,5 +1,5 @@
 import { screen, waitFor } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { userEvent } from '@testing-library/user-event'
 import { mockFormErrors, renderWithForm } from '@utils/test'
 import { describe, expect, test } from 'vitest'
 import { TextInputField } from '..'

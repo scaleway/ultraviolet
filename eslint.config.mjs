@@ -180,5 +180,5 @@ export default [
     ],
     ...testingLibrary.configs['flat/react'],
   },
-  oxlint.configs['flat/all'],
+  ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
 ]

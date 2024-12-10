@@ -217,8 +217,7 @@ type ItemProps = {
     | 'months'
     | 'years'
     // Allow a string for unit but keep autocomplete for the above values
-    // oxlint-disable-next-line typescript-eslint(ban-types)
-    | (string & {})
+    | (string & NonNullable<unknown>)
 }
 
 const StyleNoPriceItem = styled(Text)`

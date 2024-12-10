@@ -1,6 +1,6 @@
 import type { CSSObject } from '@emotion/react'
 import { screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { userEvent } from '@testing-library/user-event'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
