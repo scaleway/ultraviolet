@@ -2,7 +2,7 @@
 // because `jest-axe` depends on `@types/jest`, which we don't want
 // because we use `@jest/globals`
 
-declare module 'jest-axe' {
+export declare module 'jest-axe' {
   import type {
     AxeResults,
     ImpactValue,

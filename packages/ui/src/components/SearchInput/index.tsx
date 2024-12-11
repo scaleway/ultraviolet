@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { SearchIcon } from '@ultraviolet/icons'
 import type { Ref } from 'react'
 import {
   forwardRef,
@@ -276,9 +276,7 @@ export const SearchInput = forwardRef(
         >
           <StyledTextInputV2
             ref={innerSearchInputRef}
-            prefix={
-              <Icon name="search" disabled={disabled} sentiment="neutral" />
-            }
+            prefix={<SearchIcon disabled={disabled} sentiment="neutral" />}
             suffix={
               shortcut && searchTerms.length === 0 ? (
                 <KeyGroup disabled={disabled} keys={keys} />
