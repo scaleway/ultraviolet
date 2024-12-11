@@ -93,7 +93,7 @@ describe('Text', () => {
       </Text>,
     ))
 
-  test(`with monochrome `, () =>
+  test(`with monochrome`, () =>
     shouldMatchEmotionSnapshot(
       <Text as="div" variant="body" sentiment="black">
         Lorem Ipsum
