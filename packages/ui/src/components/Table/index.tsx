@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
@@ -12,12 +12,19 @@ import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { TableProvider, useTableContext } from './TableContext'
 import { EXPANDABLE_COLUMN_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
+import type { ColumnProps } from './types'
+
+const TableContainer = styled.div`
+  min-width: 100%;
+  overflow-x: scroll;
+`
 
 type StyledTableProps = {
   stripped: boolean
   bordered: boolean
   template: string
 }
+
 const StyledTable = styled('table', {
   shouldForwardProp: prop =>
     !['bordered', 'stripped', 'template'].includes(prop),
@@ -51,18 +58,6 @@ const StyledTable = styled('table', {
   }
   `}
 `
-
-type ColumnProps = Pick<
-  ComponentProps<typeof HeaderCell>,
-  'isOrdered' | 'onOrder' | 'orderDirection'
-> & {
-  label?: ReactNode
-  width?: string
-  minWidth?: string
-  maxWidth?: string
-  info?: string
-  align?: 'left' | 'center' | 'right'
-}
 
 type TableProps = {
   selectable?: boolean
@@ -110,44 +105,47 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
         stripped={stripped}
         bordered={bordered}
         autoCollapse={autoCollapse}
+        columns={columns}
       >
-        <StyledTable
-          ref={ref}
-          stripped={stripped}
-          bordered={bordered}
-          template={computeTemplate}
-        >
-          <Header>
-            <HeaderRow hasSelectAllColumn={selectable}>
-              {columns.map((column, index) => (
-                <HeaderCell
-                  key={`header-column-${index}`}
-                  isOrdered={column.isOrdered}
-                  orderDirection={column.orderDirection}
-                  onOrder={column.onOrder}
-                  width={column.width}
-                  minWidth={column.minWidth}
-                  maxWidth={column.maxWidth}
-                  info={column.info}
-                  align={column.align}
-                >
-                  {column.label}
-                </HeaderCell>
-              ))}
-            </HeaderRow>
-          </Header>
-          {loading ? (
-            <Body>
-              <SkeletonRows
-                selectable={selectable}
-                rows={5}
-                cols={columns.length}
-              />
-            </Body>
-          ) : (
-            children
-          )}
-        </StyledTable>
+        <TableContainer>
+          <StyledTable
+            ref={ref}
+            stripped={stripped}
+            bordered={bordered}
+            template={computeTemplate}
+          >
+            <Header>
+              <HeaderRow hasSelectAllColumn={selectable}>
+                {columns.map((column, index) => (
+                  <HeaderCell
+                    key={`header-column-${index}`}
+                    isOrdered={column.isOrdered}
+                    orderDirection={column.orderDirection}
+                    onOrder={column.onOrder}
+                    width={column.width}
+                    minWidth={column.minWidth}
+                    maxWidth={column.maxWidth}
+                    info={column.info}
+                    align={column.align}
+                  >
+                    {column.label}
+                  </HeaderCell>
+                ))}
+              </HeaderRow>
+            </Header>
+            {loading ? (
+              <Body>
+                <SkeletonRows
+                  selectable={selectable}
+                  rows={5}
+                  cols={columns.length}
+                />
+              </Body>
+            ) : (
+              children
+            )}
+          </StyledTable>
+        </TableContainer>
       </TableProvider>
     )
   },

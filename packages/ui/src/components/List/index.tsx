@@ -1,11 +1,5 @@
 import styled from '@emotion/styled'
-import type {
-  ComponentProps,
-  Dispatch,
-  ForwardedRef,
-  ReactNode,
-  SetStateAction,
-} from 'react'
+import type { Dispatch, ForwardedRef, ReactNode, SetStateAction } from 'react'
 import { forwardRef } from 'react'
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
@@ -14,6 +8,12 @@ import { ListProvider, useListContext } from './ListContext'
 import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
+import type { ColumnProps } from './types'
+
+const TableContainer = styled.div`
+  min-width: 100%;
+  overflow-x: scroll;
+`
 
 const StyledTable = styled.table`
   width: 100%;
@@ -23,17 +23,6 @@ const StyledTable = styled.table`
   border-spacing: 0 ${({ theme }) => theme.space['2']};
   position: relative;
 `
-
-type ColumnProps = Pick<
-  ComponentProps<typeof HeaderCell>,
-  'isOrdered' | 'onOrder' | 'orderDirection'
-> & {
-  label?: string
-  width?: string
-  minWidth?: string
-  maxWidth?: string
-  info?: string
-}
 
 type ListProps = {
   expandable?: boolean
@@ -72,36 +61,39 @@ const BaseList = forwardRef(
       expandButton={expandable}
       autoCollapse={autoCollapse}
       onSelectedChange={onSelectedChange}
+      columns={columns}
     >
-      <StyledTable ref={ref}>
-        <HeaderRow hasSelectAllColumn={selectable}>
-          {columns.map((column, index) => (
-            <HeaderCell
-              key={`header-column-${index}`}
-              isOrdered={column.isOrdered}
-              orderDirection={column.orderDirection}
-              onOrder={column.onOrder}
-              info={column.info}
-              width={column.width}
-              minWith={column.minWidth}
-              maxWidth={column.maxWidth}
-            >
-              {column.label}
-            </HeaderCell>
-          ))}
-        </HeaderRow>
-        <tbody>
-          {loading ? (
-            <SkeletonRows
-              selectable={selectable}
-              rows={5}
-              cols={columns.length}
-            />
-          ) : (
-            children
-          )}
-        </tbody>
-      </StyledTable>
+      <TableContainer>
+        <StyledTable ref={ref}>
+          <HeaderRow hasSelectAllColumn={selectable}>
+            {columns.map((column, index) => (
+              <HeaderCell
+                key={`header-column-${index}`}
+                isOrdered={column.isOrdered}
+                orderDirection={column.orderDirection}
+                onOrder={column.onOrder}
+                info={column.info}
+                width={column.width}
+                minWith={column.minWidth}
+                maxWidth={column.maxWidth}
+              >
+                {column.label}
+              </HeaderCell>
+            ))}
+          </HeaderRow>
+          <tbody>
+            {loading ? (
+              <SkeletonRows
+                selectable={selectable}
+                rows={5}
+                cols={columns.length}
+              />
+            ) : (
+              children
+            )}
+          </tbody>
+        </StyledTable>
+      </TableContainer>
     </ListProvider>
   ),
 )

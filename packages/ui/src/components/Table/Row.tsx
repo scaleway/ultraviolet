@@ -9,6 +9,7 @@ import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
 import { useTableContext } from './TableContext'
 import { SELECTABLE_CHECKBOX_SIZE } from './constants'
+import type { ColumnProps } from './types'
 
 const ExpandableWrapper = styled.tr`
   width: 100%;
@@ -47,11 +48,27 @@ const colorChange = (theme: Theme) => keyframes`
 `
 
 const StyledTr = styled('tr', {
-  shouldForwardProp: prop => !['highlightAnimation'].includes(prop),
-})<{ highlightAnimation?: boolean }>`
+  shouldForwardProp: prop =>
+    !['highlightAnimation', 'columns', 'columnsStartAt'].includes(prop),
+})<{
+  highlightAnimation?: boolean
+  columns: ColumnProps[]
+  columnsStartAt?: number
+}>`
   animation: ${({ highlightAnimation, theme }) =>
     highlightAnimation ? colorChange(theme) : undefined}
     3s linear;
+
+  ${({ columns, columnsStartAt }) =>
+    columns.map(
+      (column, index) => `
+    td:nth-of-type(${index + 1 + (columnsStartAt ?? 0)}) {
+      ${column.width ? `width: ${column.width};` : ''}
+      ${column.minWidth ? `min-width: ${column.minWidth};` : ''}
+      ${column.maxWidth ? `max-width: ${column.maxWidth};` : ''}
+    }
+  `,
+    )}
 `
 
 const NoPaddingCell = styled(Cell, {
@@ -103,6 +120,7 @@ export const Row = ({
     expandButton,
     ref,
     inRange,
+    columns,
   } = useTableContext()
   const rowRef = useRef<HTMLInputElement>(null)
 
@@ -158,6 +176,8 @@ export const Row = ({
         data-testid={dataTestid}
         highlightAnimation={highlightAnimation}
         role={canClickRowToExpand ? 'button row' : 'row'}
+        columns={columns}
+        columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
       >
         {selectable ? (
           <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>

@@ -14,6 +14,7 @@ import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
 import { useListContext } from './ListContext'
+import type { ColumnProps } from './types'
 
 const ExpandableWrapper = styled.tr`
   width: 100%;
@@ -52,9 +53,12 @@ const StyledCheckbox = styled(Checkbox, {
 `
 
 export const StyledRow = styled('tr', {
-  shouldForwardProp: prop => !['sentiment'].includes(prop),
+  shouldForwardProp: prop =>
+    !['sentiment', 'columns', 'columnsStartAt'].includes(prop),
 })<{
   sentiment: (typeof SENTIMENTS)[number]
+  columns: ColumnProps[]
+  columnsStartAt?: number
 }>`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
 
@@ -130,6 +134,17 @@ export const StyledRow = styled('tr', {
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
     cursor: not-allowed;
   }
+
+  ${({ columns, columnsStartAt }) =>
+    columns.map(
+      (column, index) => `
+    td:nth-of-type(${index + 1 + (columnsStartAt ?? 0)}) {
+      ${column.width ? `width: ${column.width};` : ''}
+      ${column.minWidth ? `min-width: ${column.minWidth};` : ''}
+      ${column.maxWidth ? `max-width: ${column.maxWidth};` : ''}
+    }
+  `,
+    )}
 `
 
 const StyledCheckboxContainer = styled.div`
@@ -198,6 +213,7 @@ export const Row = forwardRef(
       expandButton,
       refList,
       inRange,
+      columns,
     } = useListContext()
 
     const expandedRowId = useId()
@@ -276,6 +292,8 @@ export const Row = forwardRef(
           }
           data-highlight={selectable && !!selectedRowIds[id]}
           data-testid={dataTestid}
+          columns={columns}
+          columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
         >
           {selectable ? (
             <NoPaddingCell preventClick={canClickRowToExpand}>
