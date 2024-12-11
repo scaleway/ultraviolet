@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
@@ -12,6 +12,7 @@ import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { TableProvider, useTableContext } from './TableContext'
 import { EXPANDABLE_COLUMN_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
+import type { ColumnProps } from './types'
 
 const TableContainer = styled.div`
   min-width: 100%;
@@ -57,18 +58,6 @@ const StyledTable = styled('table', {
   }
   `}
 `
-
-type ColumnProps = Pick<
-  ComponentProps<typeof HeaderCell>,
-  'isOrdered' | 'onOrder' | 'orderDirection'
-> & {
-  label?: ReactNode
-  width?: string
-  minWidth?: string
-  maxWidth?: string
-  info?: string
-  align?: 'left' | 'center' | 'right'
-}
 
 type TableProps = {
   selectable?: boolean
@@ -116,6 +105,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
         stripped={stripped}
         bordered={bordered}
         autoCollapse={autoCollapse}
+        columns={columns}
       >
         <TableContainer>
           <StyledTable
