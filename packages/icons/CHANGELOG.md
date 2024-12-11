@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.6.2
+
+### Patch Changes
+
+- [#4562](https://github.com/scaleway/ultraviolet/pull/4562) [`e08da2d`](https://github.com/scaleway/ultraviolet/commit/e08da2d06812061f8fff3e6b51cc95fa86383668) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `18.3.3`.
+
+- [#4568](https://github.com/scaleway/ultraviolet/pull/4568) [`3e42097`](https://github.com/scaleway/ultraviolet/commit/3e4209795e1915cc2069401115009128365a320b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.14.0`.
+  Updated dependency `@emotion/styled` to `11.14.0`.
+  Updated dependency `@emotion/cache` to `11.14.0`.
+
 ## 3.6.1
 
 ### Patch Changes
