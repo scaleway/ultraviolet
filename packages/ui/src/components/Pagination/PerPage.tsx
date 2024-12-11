@@ -63,6 +63,7 @@ export const PerPage = ({
         options={optionsItemsPerPage}
         onChange={handleChange}
         name="select-items-per-page"
+        size="small"
       />
       <Text as="span" variant="body" sentiment="neutral" prominence="weak">
         {(page - 1) * perPage + 1}-{Math.min(page * perPage, numberOfItems)}{' '}

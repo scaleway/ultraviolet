@@ -125,6 +125,27 @@ describe('Pagination', () => {
 
   test('should render correctly with perPage', async () => {
     const mockOnClick = vi.fn()
+
+    const { asFragment } = renderWithTheme(
+      <Pagination
+        page={2}
+        pageCount={10}
+        onChange={mockOnClick}
+        perPage={10}
+        perPageText="test"
+        numberOfItems={30}
+        numberOfItemsText="items"
+      />,
+    )
+    const nextButton = screen.getByRole('button', { name: 'Next' })
+    await userEvent.click(nextButton)
+    expect(mockOnClick).toHaveBeenCalledOnce()
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('should work correctly with perPage', async () => {
+    const mockOnClick = vi.fn()
     const mockOnClickPerPage = vi.fn()
 
     const { asFragment } = renderWithTheme(

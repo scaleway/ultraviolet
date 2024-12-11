@@ -7,7 +7,7 @@ import { Stack } from '../../Stack'
 
 const NUMBER_OF_ITEMS = 134
 const StyledList = styled.ul`
-  height: 210px;
+  height: 13.5rem;
   overflow-y: auto;
   border: ${({ theme }) => theme.colors.neutral.border} 1px solid;
   padding: ${({ theme }) => theme.space[1]};

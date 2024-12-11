@@ -1,32 +1,27 @@
 import styled from '@emotion/styled'
 import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'
+import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { getPageNumbers } from './getPageNumbers'
 
-const PageNumbersContainer = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.space['1']};
+const PageNumbersContainer = styled(Stack)`
   margin: 0 ${({ theme }) => theme.space['1']};
 `
 
-const PageSwitchContainer = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.space['1']};
+const PageButton = styled(Button, {
+  shouldForwardProp: prop => !['width'].includes(prop),
+})<{ width: string }>`
+  width: ${({ theme, width }) => (width === 'small' ? theme.sizing[400] : theme.sizing[500])};
 `
 
-const StyledContainer = styled.div`
-  display: flex;
-`
-const PageButton = styled(Button)`
-  width: ${({ theme }) => theme.sizing[600]};
-`
-
-const Ellipsis = styled(Text)`
+const Ellipsis = styled(Text, {
+  shouldForwardProp: prop => !['width'].includes(prop),
+})<{ size: string }>`
   align-content: center;
   padding: ${({ theme }) => theme.space[1]};
-  height: ${({ theme }) => theme.sizing[600]};
-  width: ${({ theme }) => theme.sizing[600]};
+  height: ${({ theme, size }) => (size === 'small' ? theme.sizing[400] : theme.sizing[500])};
+  width: ${({ theme, size }) => (size === 'small' ? theme.sizing[400] : theme.sizing[500])};
 `
 
 type PaginationButtonsProps = {
@@ -37,6 +32,7 @@ type PaginationButtonsProps = {
   pageTabCount?: number
   className?: string
   'data-testid'?: string
+  perPage: boolean
 }
 
 type MakeButtonProps = {
@@ -45,6 +41,7 @@ type MakeButtonProps = {
   disabled?: boolean
   page: number
   handlePageClick: (pageNumber: number) => () => void
+  perPage: boolean
 }
 const MakeButton = ({
   hasEllipsisBefore,
@@ -52,6 +49,7 @@ const MakeButton = ({
   disabled,
   page,
   handlePageClick,
+  perPage,
 }: MakeButtonProps) => (
   <>
     {hasEllipsisBefore ? (
@@ -63,6 +61,7 @@ const MakeButton = ({
         prominence="default"
         as="span"
         placement="center"
+        size={perPage ? 'small' : 'medium'}
       >
         ...
       </Ellipsis>
@@ -74,6 +73,8 @@ const MakeButton = ({
       sentiment={pageNumber === page ? 'primary' : 'neutral'}
       onClick={handlePageClick(pageNumber)}
       type="button"
+      size={perPage ? 'small' : 'medium'}
+      width={perPage ? 'small' : 'medium'}
     >
       {pageNumber}
     </PageButton>
@@ -88,6 +89,7 @@ export const PaginationButtons = ({
   pageTabCount,
   'data-testid': dataTestId,
   className,
+  perPage,
 }: PaginationButtonsProps) => {
   const goToNextPage = useCallback(() => {
     onChange(page + 1)
@@ -110,8 +112,8 @@ export const PaginationButtons = ({
   )
 
   return (
-    <StyledContainer className={className} data-testid={dataTestId}>
-      <PageSwitchContainer>
+    <Stack className={className} data-testid={dataTestId} direction="row">
+      <Stack gap={1}>
         <Button
           aria-label="Back"
           disabled={page <= 1 || disabled}
@@ -119,9 +121,10 @@ export const PaginationButtons = ({
           sentiment="primary"
           onClick={goToPreviousPage}
           icon="arrow-left"
+          size={perPage ? 'small' : 'medium'}
         />
-      </PageSwitchContainer>
-      <PageNumbersContainer>
+      </Stack>
+      <PageNumbersContainer direction="row" gap={1}>
         {pageNumbersToDisplay.map((pageNumber, index) => (
           <MakeButton
             hasEllipsisBefore={
@@ -135,10 +138,11 @@ export const PaginationButtons = ({
             handlePageClick={handlePageClick}
             disabled={disabled}
             key={pageNumber}
+            perPage={perPage}
           />
         ))}
       </PageNumbersContainer>
-      <PageSwitchContainer>
+      <Stack gap={1}>
         <Button
           aria-label="Next"
           disabled={page >= pageCount || disabled}
@@ -146,8 +150,9 @@ export const PaginationButtons = ({
           sentiment="primary"
           onClick={goToNextPage}
           icon="arrow-right"
+          size={perPage ? 'small' : 'medium'}
         />
-      </PageSwitchContainer>
-    </StyledContainer>
+      </Stack>
+    </Stack>
   )
 }
