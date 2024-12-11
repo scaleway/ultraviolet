@@ -1,3 +1,4 @@
+const NUMBER_OF_BUTTONS_IN_BETWEEN = 3
 /**
  *  * Return a list of page numbers around the currentPage
  * @param currentPage The current page
@@ -27,7 +28,10 @@ export const getPageNumbers = (
     : Array.from({ length: range }, (_, index) => index + pageCount - range + 1)
   const pagesToShowBetweenTruncation =
     truncationBefore && truncationAfter
-      ? Array.from({ length: 3 }, (_, index) => currentPage + index - 1)
+      ? Array.from(
+          { length: NUMBER_OF_BUTTONS_IN_BETWEEN },
+          (_, index) => currentPage + index - 1,
+        )
       : []
 
   return [

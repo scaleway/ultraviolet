@@ -112,6 +112,7 @@ export const Pagination = ({
         data-testid={dataTestId}
         onChange={onChange}
         page={page}
+        perPage={!!perPage}
       />
     </Stack>
   )

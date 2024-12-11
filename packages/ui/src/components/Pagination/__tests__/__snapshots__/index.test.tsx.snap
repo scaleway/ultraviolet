@@ -29,6 +29,22 @@ exports[`Pagination > should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-4 {
@@ -37,6 +53,21 @@ exports[`Pagination > should render correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-6 {
@@ -44,15 +75,15 @@ exports[`Pagination > should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -66,11 +97,11 @@ exports[`Pagination > should render correctly 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -105,6 +136,21 @@ exports[`Pagination > should render correctly 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -113,8 +159,8 @@ exports[`Pagination > should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -135,17 +181,17 @@ exports[`Pagination > should render correctly 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #8c40ef;
   color: #641cb3;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-13:hover {
@@ -169,8 +215,8 @@ exports[`Pagination > should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -191,17 +237,17 @@ exports[`Pagination > should render correctly 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #b5b7bd;
   color: #3f4250;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-16:hover {
@@ -225,15 +271,15 @@ exports[`Pagination > should render correctly 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -247,11 +293,11 @@ exports[`Pagination > should render correctly 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -282,10 +328,10 @@ exports[`Pagination > should render correctly 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Back"
@@ -356,7 +402,7 @@ exports[`Pagination > should render correctly 1`] = `
           </button>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Next"
@@ -411,6 +457,22 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-4 {
@@ -419,6 +481,21 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-6 {
@@ -426,15 +503,15 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -448,11 +525,11 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -487,6 +564,21 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -495,8 +587,8 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -517,11 +609,11 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -529,7 +621,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   color: #3f4250;
   color: #b5b7bd;
   border: 1px solid #d9dadd;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-13:hover {
@@ -552,8 +644,8 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   -ms-flex-line-pack: center;
   align-content: center;
   padding: 0.5rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .emotion-22 {
@@ -561,8 +653,8 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -583,11 +675,11 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -595,7 +687,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
   color: #641cb3;
   color: #d8c5fc;
   border: 1px solid #d8c5fc;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-22:hover {
@@ -610,10 +702,10 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Back"
@@ -699,7 +791,7 @@ exports[`Pagination > should render correctly component with disabled 1`] = `
           </button>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Next"
@@ -755,6 +847,22 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-4 {
@@ -763,6 +871,21 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-6 {
@@ -770,15 +893,15 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -792,11 +915,11 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -840,6 +963,21 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -848,8 +986,8 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -870,17 +1008,17 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #b5b7bd;
   color: #3f4250;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-13:hover {
@@ -914,8 +1052,8 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   -ms-flex-line-pack: center;
   align-content: center;
   padding: 0.5rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .emotion-22 {
@@ -923,8 +1061,8 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -945,17 +1083,17 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #8c40ef;
   color: #641cb3;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-22:hover {
@@ -981,10 +1119,10 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Back"
@@ -1064,7 +1202,7 @@ exports[`Pagination > should render correctly component with pageTabCount 1`] = 
           </button>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Next"
@@ -1119,6 +1257,22 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-4 {
@@ -1127,6 +1281,21 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-6 {
@@ -1134,15 +1303,15 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1156,11 +1325,11 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1195,6 +1364,21 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -1203,8 +1387,8 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1225,17 +1409,17 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #b5b7bd;
   color: #3f4250;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-13:hover {
@@ -1259,15 +1443,15 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1281,11 +1465,11 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1316,10 +1500,10 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Back"
@@ -1363,7 +1547,7 @@ exports[`Pagination > should render correctly with page < 1 1`] = `
           </button>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Next"
@@ -1418,6 +1602,22 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-4 {
@@ -1426,6 +1626,21 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-6 {
@@ -1433,15 +1648,15 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1455,11 +1670,11 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1503,6 +1718,21 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -1511,8 +1741,8 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1533,17 +1763,17 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #b5b7bd;
   color: #3f4250;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-13:hover {
@@ -1567,15 +1797,15 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1589,11 +1819,11 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1615,10 +1845,10 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Back"
@@ -1661,7 +1891,7 @@ exports[`Pagination > should render correctly with page > pageCount 1`] = `
           </button>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Next"
@@ -1717,6 +1947,22 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-4 {
@@ -1725,6 +1971,21 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-6 {
@@ -1732,15 +1993,15 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1754,11 +2015,11 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -1802,6 +2063,21 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -1810,8 +2086,8 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1832,17 +2108,17 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #b5b7bd;
   color: #3f4250;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-13:hover {
@@ -1866,8 +2142,8 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1888,17 +2164,17 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #8c40ef;
   color: #641cb3;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-16:hover {
@@ -1932,8 +2208,8 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
   -ms-flex-line-pack: center;
   align-content: center;
   padding: 0.5rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 <div
@@ -1943,10 +2219,10 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Back"
@@ -2030,7 +2306,7 @@ exports[`Pagination > should render correctly with pageClick 1`] = `
           </button>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Next"
@@ -2085,6 +2361,22 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-4 {
@@ -2093,6 +2385,21 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-6 {
@@ -2100,15 +2407,15 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2.5rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2122,11 +2429,11 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2161,6 +2468,21 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -2169,8 +2491,8 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2191,17 +2513,17 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #8c40ef;
   color: #641cb3;
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .emotion-13:hover {
@@ -2227,10 +2549,10 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
       class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-2 emotion-1"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Back"
@@ -2265,7 +2587,7 @@ exports[`Pagination > should render correctly with pageCount is 1 1`] = `
           </button>
         </div>
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-4 emotion-1"
         >
           <button
             aria-label="Next"
@@ -2501,11 +2823,11 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
 
 .emotion-16 {
   color: #3f4250;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2560,6 +2882,22 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-26 {
@@ -2568,6 +2906,21 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-28 {
@@ -2575,15 +2928,15 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2597,11 +2950,11 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -2645,6 +2998,21 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -2653,8 +3021,8 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2675,17 +3043,17 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #b5b7bd;
   color: #3f4250;
-  width: 3rem;
+  width: 2rem;
 }
 
 .emotion-35:hover {
@@ -2709,8 +3077,8 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2731,17 +3099,17 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #8c40ef;
   color: #641cb3;
-  width: 3rem;
+  width: 2rem;
 }
 
 .emotion-38:hover {
@@ -2775,8 +3143,8 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
   -ms-flex-line-pack: center;
   align-content: center;
   padding: 0.5rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 <div
@@ -2814,7 +3182,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
                 data-disabled="false"
                 data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
+                data-size="small"
                 data-state="neutral"
                 data-testid="select-input-select-items-per-page"
                 id=":r1e:"
@@ -2852,10 +3220,10 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
         </span>
       </div>
       <div
-        class="emotion-24 emotion-25"
+        class="emotion-24 emotion-1"
       >
         <div
-          class="emotion-26 emotion-27"
+          class="emotion-26 emotion-1"
         >
           <button
             aria-label="Back"
@@ -2939,7 +3307,7 @@ exports[`Pagination > should render correctly with perPage - default values 1`] 
           </button>
         </div>
         <div
-          class="emotion-26 emotion-27"
+          class="emotion-26 emotion-1"
         >
           <button
             aria-label="Next"
@@ -3174,11 +3542,11 @@ exports[`Pagination > should render correctly with perPage 1`] = `
 
 .emotion-16 {
   color: #3f4250;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3233,6 +3601,22 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-26 {
@@ -3241,6 +3625,21 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .emotion-28 {
@@ -3248,15 +3647,15 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 0.5rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
-  width: 3rem;
+  width: 2rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3270,11 +3669,11 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
@@ -3318,6 +3717,21 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin: 0 0.5rem;
 }
 
@@ -3326,8 +3740,8 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3348,17 +3762,17 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #b5b7bd;
   color: #3f4250;
-  width: 3rem;
+  width: 2rem;
 }
 
 .emotion-35:hover {
@@ -3382,8 +3796,8 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 3rem;
-  padding: 0 1rem;
+  height: 2rem;
+  padding: 0 0.5rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3404,17 +3818,17 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   white-space: nowrap;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: Inter,Asap,sans-serif;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   paragraph-spacing: 0;
   text-case: none;
   background: none;
   border: 1px solid #8c40ef;
   color: #641cb3;
-  width: 3rem;
+  width: 2rem;
 }
 
 .emotion-38:hover {
@@ -3448,8 +3862,8 @@ exports[`Pagination > should render correctly with perPage 1`] = `
   -ms-flex-line-pack: center;
   align-content: center;
   padding: 0.5rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 <div
@@ -3487,7 +3901,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
                 data-disabled="false"
                 data-dropdownvisible="false"
                 data-readonly="false"
-                data-size="large"
+                data-size="small"
                 data-state="neutral"
                 data-testid="select-input-select-items-per-page"
                 id=":r1t:"
@@ -3497,7 +3911,7 @@ exports[`Pagination > should render correctly with perPage 1`] = `
                 <div
                   class="emotion-15 emotion-16 emotion-5"
                 >
-                  25
+                  10
                 </div>
                 <div
                   class="emotion-18 emotion-19"
@@ -3521,14 +3935,14 @@ exports[`Pagination > should render correctly with perPage 1`] = `
         <span
           class="emotion-4 emotion-5"
         >
-          26-50 items
+          11-20 items
         </span>
       </div>
       <div
-        class="emotion-24 emotion-25"
+        class="emotion-24 emotion-1"
       >
         <div
-          class="emotion-26 emotion-27"
+          class="emotion-26 emotion-1"
         >
           <button
             aria-label="Back"
@@ -3612,7 +4026,726 @@ exports[`Pagination > should render correctly with perPage 1`] = `
           </button>
         </div>
         <div
-          class="emotion-26 emotion-27"
+          class="emotion-26 emotion-1"
+        >
+          <button
+            aria-label="Next"
+            class="emotion-28 emotion-29"
+            type="button"
+          >
+            <svg
+              class="emotion-30 emotion-31"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Pagination > should work correctly with perPage 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  color: #727683;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7 {
+  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: none;
+}
+
+.emotion-9 {
+  display: inherit;
+}
+
+.emotion-9[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem;
+  padding-right: 0;
+  padding-left: 1rem;
+  cursor: pointer;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.emotion-13[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-13[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-13[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-13[data-state='neutral'] {
+  border: 1px solid #d9dadd;
+}
+
+.emotion-13[data-state='neutral']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-13[data-state='neutral']:not([data-disabled='true']):hover,
+.emotion-13[data-state='neutral']:not([data-disabled='true']):focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-13[data-state='neutral'][data-dropdownvisible='true'] {
+  border-color: #792dd4;
+}
+
+.emotion-13[data-state='success'] {
+  border: 1px solid #22674e;
+}
+
+.emotion-13[data-state='success']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #1b533f;
+  box-shadow: 0px 0px 0px 3px #45d19f40;
+}
+
+.emotion-13[data-state='success'][data-dropdownvisible='true'] {
+  border-color: #1b533f;
+}
+
+.emotion-13[data-state='danger'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-13[data-state='danger']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-13[data-state='danger'][data-dropdownvisible='true'] {
+  border-color: #92103f;
+}
+
+.emotion-13:not([data-disabled='true']):not([data-readonly]):hover {
+  border-color: #8c40ef;
+}
+
+.emotion-13[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-13[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.emotion-16 {
+  color: #3f4250;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-20 {
+  vertical-align: middle;
+  fill: #3f4250;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-20 .fillStroke {
+  stroke: #3f4250;
+  fill: none;
+}
+
+.emotion-24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-28 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 2rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+}
+
+.emotion-28:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-28:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-28:hover,
+.emotion-28:active {
+  background: #e5dbfd;
+  color: #521094;
+  border: 1px solid #792dd4;
+}
+
+.emotion-30 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-30 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-32 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin: 0 0.5rem;
+}
+
+.emotion-35 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #b5b7bd;
+  color: #3f4250;
+  width: 2rem;
+}
+
+.emotion-35:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-35:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-35:hover,
+.emotion-35:active {
+  background: #e9eaeb;
+  color: #222638;
+  border: 1px solid #92959d;
+}
+
+.emotion-38 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+  width: 2rem;
+}
+
+.emotion-38:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-38:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-38:hover,
+.emotion-38:active {
+  background: #e5dbfd;
+  color: #521094;
+  border: 1px solid #792dd4;
+}
+
+.emotion-50 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <span
+          class="emotion-4 emotion-5"
+        >
+          test
+        </span>
+        <div
+          aria-label="select-items-per-page"
+          class="emotion-6 emotion-7 emotion-8"
+        >
+          <div
+            aria-controls=":r2d:"
+            aria-describedby=":r2d:"
+            class="emotion-9 emotion-10"
+            data-container-full-width="true"
+            tabindex="0"
+          >
+            <div
+              class="emotion-11 emotion-1"
+            >
+              <div
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                class="emotion-13 emotion-14"
+                data-disabled="false"
+                data-dropdownvisible="false"
+                data-readonly="false"
+                data-size="small"
+                data-state="neutral"
+                data-testid="select-input-select-items-per-page"
+                id=":r2c:"
+                role="combobox"
+                tabindex="0"
+              >
+                <div
+                  class="emotion-15 emotion-16 emotion-5"
+                >
+                  25
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
+                >
+                  <svg
+                    aria-label="show dropdown"
+                    class="emotion-20 emotion-21"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M5.47 7.47a.75.75 0 0 1 1.06 0l3.72 3.72 3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.47 8.53a.75.75 0 0 1 0-1.06"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          class="emotion-4 emotion-5"
+        >
+          26-50 items
+        </span>
+      </div>
+      <div
+        class="emotion-24 emotion-1"
+      >
+        <div
+          class="emotion-26 emotion-1"
+        >
+          <button
+            aria-label="Back"
+            class="emotion-28 emotion-29"
+            type="button"
+          >
+            <svg
+              class="emotion-30 emotion-31"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M10.53 4.22a.75.75 0 0 1 0 1.06L7.81 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L6.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="emotion-32 emotion-33"
+        >
+          <button
+            aria-current="false"
+            class="emotion-34 emotion-35 emotion-29"
+            type="button"
+          >
+            <div>
+              1
+            </div>
+          </button>
+          <button
+            aria-current="true"
+            class="emotion-34 emotion-38 emotion-29"
+            type="button"
+          >
+            <div>
+              2
+            </div>
+          </button>
+          <button
+            aria-current="false"
+            class="emotion-34 emotion-35 emotion-29"
+            type="button"
+          >
+            <div>
+              3
+            </div>
+          </button>
+          <button
+            aria-current="false"
+            class="emotion-34 emotion-35 emotion-29"
+            type="button"
+          >
+            <div>
+              4
+            </div>
+          </button>
+          <button
+            aria-current="false"
+            class="emotion-34 emotion-35 emotion-29"
+            type="button"
+          >
+            <div>
+              5
+            </div>
+          </button>
+          <span
+            class="emotion-49 emotion-50 emotion-5"
+          >
+            ...
+          </span>
+          <button
+            aria-current="false"
+            class="emotion-34 emotion-35 emotion-29"
+            type="button"
+          >
+            <div>
+              10
+            </div>
+          </button>
+        </div>
+        <div
+          class="emotion-26 emotion-1"
         >
           <button
             aria-label="Next"
