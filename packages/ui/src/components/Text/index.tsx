@@ -19,6 +19,7 @@ const PROMINENCES = {
 
 type ProminenceProps = keyof typeof PROMINENCES
 type PlacementProps = React.CSSProperties['textAlign']
+type WhiteSpaceProps = React.CSSProperties['whiteSpace']
 type TextVariant = keyof typeof typography
 export const textVariants = Object.keys(typography) as TextVariant[]
 
@@ -35,6 +36,7 @@ const generateStyles = ({
   disabled,
   italic,
   underline,
+  whiteSpace,
 }: {
   placement?: PlacementProps
   prominence: ProminenceProps
@@ -45,6 +47,7 @@ const generateStyles = ({
   disabled: boolean
   italic: boolean
   underline: boolean
+  whiteSpace?: WhiteSpaceProps
 }): string => {
   // stronger is available only for neutral sentiment
   const definedProminence =
@@ -77,6 +80,7 @@ const generateStyles = ({
     text-transform: ${theme.typography[variant].textCase};
     text-decoration: ${theme.typography[variant].textDecoration};
     ${placement ? ` text-align: ${placement};` : ''}
+    ${whiteSpace ? `white-space: ${whiteSpace};` : ''}
 
     ${
       oneLine
@@ -87,6 +91,7 @@ const generateStyles = ({
     }
     ${italic ? `font-style: italic;` : ''}
     ${underline ? `text-decoration: underline;` : ''}
+
   `
 }
 
@@ -110,6 +115,7 @@ type TextProps = {
   dir?: 'ltr' | 'rtl' | 'auto'
   htmlFor?: string
   'data-testid'?: string
+  whiteSpace?: WhiteSpaceProps
 }
 
 const StyledText = styled('div', {
@@ -124,6 +130,7 @@ const StyledText = styled('div', {
       'disabled',
       'italic',
       'underline',
+      'whiteSpace',
     ].includes(prop),
 })<{
   placement?: PlacementProps
@@ -135,6 +142,7 @@ const StyledText = styled('div', {
   italic: boolean
   underline: boolean
   htmlFor?: string
+  whiteSpace?: WhiteSpaceProps
 }>(generateStyles)
 
 /**
@@ -155,6 +163,7 @@ export const Text = ({
   underline = false,
   id,
   dir,
+  whiteSpace,
   htmlFor,
   'data-testid': dataTestId,
 }: TextProps) => {
@@ -182,6 +191,7 @@ export const Text = ({
         dir={dir}
         htmlFor={htmlFor}
         data-testid={dataTestId}
+        whiteSpace={whiteSpace}
       >
         {children}
       </StyledText>

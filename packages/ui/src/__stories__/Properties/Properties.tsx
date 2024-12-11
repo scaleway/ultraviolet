@@ -5,10 +5,6 @@ import { Stack } from '../../components/Stack'
 import { Table } from '../../components/Table'
 import { Text } from '../../components/Text'
 
-const StyledText = styled(Text)`
-  white-space: break-spaces;
-`
-
 const StyledTableRow = styled(Table.Row)`
   vertical-align: top;
 `
@@ -253,21 +249,21 @@ const Properties = () => {
                     </Text>
                   </Table.Cell>
                   <Table.Cell>
-                    <StyledText as="span" variant="body">
+                    <Text as="span" variant="body" whiteSpace="break-spaces">
                       {propertyValues.join(', ')}
-                    </StyledText>
+                    </Text>
                   </Table.Cell>
                   <Table.Cell>
-                    <StyledText as="span" variant="body">
+                    <Text as="span" variant="body" whiteSpace="break-spaces">
                       {findSimilarProperty.join(', ')}
-                    </StyledText>
+                    </Text>
                   </Table.Cell>
                   <Table.Cell>
-                    <StyledText as="span" variant="body">
+                    <Text as="span" variant="body" whiteSpace="break-spaces">
                       {sortedPropertiesUsagesCountAndComponentsName[
                         property
                       ].components.join(', ')}
-                    </StyledText>
+                    </Text>
                   </Table.Cell>
                 </StyledTableRow>
               )

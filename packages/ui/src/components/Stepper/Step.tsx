@@ -67,7 +67,6 @@ const StyledText = styled(Text)`
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
   text-decoration-color: transparent;
-  white-space: normal;
 `
 
 const StyledStepContainer = styled(Stack)<{
@@ -259,6 +258,7 @@ export const Step = ({
           variant={textVariant}
           prominence={isDone || isActive ? 'default' : 'weak'}
           sentiment={isActive ? 'primary' : 'neutral'}
+          whiteSpace="normal"
         >
           {title}
         </StyledText>
