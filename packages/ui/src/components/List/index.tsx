@@ -15,6 +15,11 @@ import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 
+const TableContainer = styled.div`
+  min-width: 100%;
+  overflow-x: scroll;
+`
+
 const StyledTable = styled.table`
   width: 100%;
   box-sizing: content-box;
@@ -73,35 +78,37 @@ const BaseList = forwardRef(
       autoCollapse={autoCollapse}
       onSelectedChange={onSelectedChange}
     >
-      <StyledTable ref={ref}>
-        <HeaderRow hasSelectAllColumn={selectable}>
-          {columns.map((column, index) => (
-            <HeaderCell
-              key={`header-column-${index}`}
-              isOrdered={column.isOrdered}
-              orderDirection={column.orderDirection}
-              onOrder={column.onOrder}
-              info={column.info}
-              width={column.width}
-              minWith={column.minWidth}
-              maxWidth={column.maxWidth}
-            >
-              {column.label}
-            </HeaderCell>
-          ))}
-        </HeaderRow>
-        <tbody>
-          {loading ? (
-            <SkeletonRows
-              selectable={selectable}
-              rows={5}
-              cols={columns.length}
-            />
-          ) : (
-            children
-          )}
-        </tbody>
-      </StyledTable>
+      <TableContainer>
+        <StyledTable ref={ref}>
+          <HeaderRow hasSelectAllColumn={selectable}>
+            {columns.map((column, index) => (
+              <HeaderCell
+                key={`header-column-${index}`}
+                isOrdered={column.isOrdered}
+                orderDirection={column.orderDirection}
+                onOrder={column.onOrder}
+                info={column.info}
+                width={column.width}
+                minWith={column.minWidth}
+                maxWidth={column.maxWidth}
+              >
+                {column.label}
+              </HeaderCell>
+            ))}
+          </HeaderRow>
+          <tbody>
+            {loading ? (
+              <SkeletonRows
+                selectable={selectable}
+                rows={5}
+                cols={columns.length}
+              />
+            ) : (
+              children
+            )}
+          </tbody>
+        </StyledTable>
+      </TableContainer>
     </ListProvider>
   ),
 )
