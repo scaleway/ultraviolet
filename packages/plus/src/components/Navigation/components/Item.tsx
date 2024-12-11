@@ -128,7 +128,6 @@ const WrapText = styled(Text, {
   subLabel?: boolean
 }>`
   overflow-wrap: ${({ animation }) => (animation ? 'normal' : 'anywhere')};
-  white-space: ${({ animation }) => (animation ? 'nowrap' : 'normal')};
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -549,7 +548,7 @@ export const Item = memo(
               expanded ? onDragStopTrigger(event) : undefined
             }
             id={id}
-            data-testId={dataTestId}
+            data-testid={dataTestId}
           >
             <Stack
               direction="row"
@@ -589,6 +588,7 @@ export const Item = memo(
                   }
                   animation={animation}
                   disabled={disabled}
+                  whiteSpace="pre-wrap"
                 >
                   {label}
                 </WrapText>
@@ -805,7 +805,7 @@ export const Item = memo(
             flex={1}
             width="100%"
           >
-            <WrapText as="span" variant="bodySmall">
+            <WrapText as="span" variant="bodySmall" whiteSpace="pre-wrap">
               {label}
             </WrapText>
             <Stack direction="row">
