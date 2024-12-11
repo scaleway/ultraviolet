@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Skeleton } from '../Skeleton'
 import { Cell } from './Cell'
+import { useListContext } from './ListContext'
 import { StyledRow } from './Row'
 
 const StyledLoadingRow = styled(StyledRow)`
@@ -27,6 +28,7 @@ export const SkeletonRows = ({
 }: ListLoadingSkeletonProps) => {
   const rowArray = Array.from({ length: rows }, (_, index) => index)
   const colArray = Array.from({ length: cols }, (_, index) => index)
+  const { columns } = useListContext()
 
   return (
     <>
@@ -35,6 +37,7 @@ export const SkeletonRows = ({
           sentiment="neutral"
           role="row"
           id={`skeleton-${index}`}
+          columns={columns}
           key={index}
         >
           {selectable ? <div /> : null}
