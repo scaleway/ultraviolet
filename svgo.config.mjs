@@ -1,5 +1,4 @@
-// oxlint-disable plugin-import/no-commonjs
-module.exports = {
+export default {
   plugins: [
     {
       name: 'preset-default',

@@ -1,5 +1,8 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import {
+  CheckCircleOutlineIcon,
+  CloseCircleOutlineIcon,
+} from '@ultraviolet/icons'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -37,12 +40,20 @@ export const PasswordCheck = ({
   <PasswordCheckContainer className={className} data-testid={dataTestId}>
     {rules.map(rule => (
       <Stack direction="row" gap={1} alignItems="center" key={rule.name}>
-        <Icon
-          name={rule.valid ? 'checkbox-circle-outline' : 'close-circle-outline'}
-          color={rule.valid ? 'success' : 'neutral'}
-          prominence="weak"
-          size={20}
-        />
+        {rule.valid ? (
+          <CheckCircleOutlineIcon
+            sentiment="success"
+            prominence="weak"
+            size={20}
+          />
+        ) : (
+          <CloseCircleOutlineIcon
+            sentiment="neutral"
+            prominence="weak"
+            size={20}
+          />
+        )}
+
         <Text as="p" variant="bodySmall">
           {rule.text}
         </Text>

@@ -76,12 +76,11 @@ describe('LineChart', () => {
     ))
 
   test.skip('renders correctly when chart is hovered', async () => {
-    const { asFragment, debug } = renderWithTheme(
+    const { asFragment } = renderWithTheme(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
     )
     // eslint-disable-next-line testing-library/no-node-access
     const line = document.querySelector('svg[role="img"] g path')
-    debug()
     if (!line) throw new Error('LineChart line path not found')
     await userEvent.unhover(line)
     await userEvent.hover(line)

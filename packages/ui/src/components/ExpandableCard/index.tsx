@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { ArrowDownIcon } from '@ultraviolet/icons'
 import type { ForwardedRef, ReactNode } from 'react'
 import { forwardRef, useRef } from 'react'
 import type { XOR } from '../../types'
 import { ExpandableCardTitle } from './components/Title'
 
-const ArrowIcon = styled(Icon)``
+const StyledArrowIcon = styled(ArrowDownIcon)``
 
 const StyledSummary = styled.summary`
   display: flex;
@@ -39,7 +39,7 @@ const StyledDetails = styled.details`
       border-color: ${({ theme }) => theme.colors.primary.border};
     }
 
-   ${ArrowIcon} {
+   ${StyledArrowIcon} {
       transform: rotate(180deg);
     }
   }
@@ -107,11 +107,7 @@ const BaseExpandableCard = forwardRef(
               : undefined
           }
         >
-          <ArrowIcon
-            sentiment="neutral"
-            disabled={disabled}
-            name="arrow-down"
-          />
+          <StyledArrowIcon sentiment="neutral" disabled={disabled} />
           {typeof header === 'string' ? (
             <ExpandableCardTitle size={size} disabled={disabled}>
               {header}

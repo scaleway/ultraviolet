@@ -1,6 +1,7 @@
 {
   "extends": "@scaleway/tsconfig",
   "compilerOptions": {
+    "types": ["next", "next/image-types/global"],
     "target": "es5",
     "module": "esnext",
     "jsx": "preserve",
