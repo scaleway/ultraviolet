@@ -133,7 +133,6 @@ const WrapText = styled(Text, {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  white-space: pre-wrap;
 `
 
 const StyledStack = styled(Stack)`
@@ -602,6 +601,7 @@ export const Item = memo(
                     animation={animation}
                     disabled={disabled}
                     subLabel
+                    whiteSpace="pre-wrap"
                   >
                     {subLabel}
                   </WrapText>

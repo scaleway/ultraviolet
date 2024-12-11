@@ -14,15 +14,8 @@ type Prefixes = 'lines' | 'command'
 
 const PreText = styled(Text, {
   shouldForwardProp: prop =>
-    ![
-      'multiline',
-      'hasShowMoreButton',
-      'showMore',
-      'rows',
-      'noExpandable',
-    ].includes(prop),
+    !['hasShowMoreButton', 'showMore', 'rows', 'noExpandable'].includes(prop),
 })<{
-  multiline?: boolean
   hasShowMoreButton?: boolean
   showMore?: boolean
   rows: number
@@ -33,7 +26,6 @@ const PreText = styled(Text, {
   padding-right: ${({ theme }) => theme.space['9']};
   overflow-x: ${({ hasShowMoreButton, showMore }) =>
     hasShowMoreButton && !showMore ? 'hidden' : 'auto'};
-  ${({ multiline }) => (!multiline ? 'white-space: nowrap;' : '')}
   height: auto;
   counter-reset: section;
 
@@ -169,11 +161,11 @@ const CodeContent = ({
   <PreText
     as="pre"
     variant="code"
-    multiline={multiline}
     hasShowMoreButton={hasShowMoreButton}
     showMore={showMore}
     noExpandable={noExpandable}
     rows={rows}
+    whiteSpace={!multiline ? 'nowrap' : undefined}
   >
     {multiline ? (
       Children.map(lines, child => (

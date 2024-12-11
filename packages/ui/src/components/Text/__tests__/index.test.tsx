@@ -92,4 +92,20 @@ describe('Text', () => {
         Lorem Ipsum
       </Text>,
     ))
+
+  test(`with monochrome `, () =>
+    shouldMatchEmotionSnapshot(
+      <Text as="div" variant="body" sentiment="black">
+        Lorem Ipsum
+      </Text>,
+    ))
+
+  test(`renders correctly with whiteSpace`, () =>
+    shouldMatchEmotionSnapshot(
+      <Text as="div" variant="body" whiteSpace="nowrap">
+        This text is quite long. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </Text>,
+    ))
 })

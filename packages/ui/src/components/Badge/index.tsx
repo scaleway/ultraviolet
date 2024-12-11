@@ -97,7 +97,6 @@ const StyledSpan = styled(Text, {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
   border-radius: ${({ theme }) => theme.radii.xlarge};
   padding: 0
     ${({ theme, size }) => {
@@ -171,6 +170,7 @@ export const Badge = ({
       prominence={disabled ? 'weak' : 'default'}
       className={className}
       data-testid={dataTestId}
+      whiteSpace="nowrap"
     >
       {icon && size !== 'small' ? <Icon name={icon} size={16} /> : null}
       {children}
