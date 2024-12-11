@@ -133,7 +133,7 @@ type PopupProps = {
         onFocus: () => void
         onPointerEnter: () => void
         onPointerLeave: () => void
-        ref: RefObject<HTMLDivElement>
+        ref: RefObject<HTMLDivElement | null>
       }) => ReactNode)
   maxWidth?: number | string
   /**
@@ -225,12 +225,12 @@ export const Popup = forwardRef(
     ref: Ref<HTMLDivElement>,
   ) => {
     const childrenRef = useRef<HTMLDivElement>(null)
-    useImperativeHandle(innerRef, () => childrenRef.current)
+    useImperativeHandle(innerRef, () => childrenRef.current as HTMLDivElement)
 
     const innerPopupRef = useRef<HTMLDivElement>(null)
     useImperativeHandle(ref, () => innerPopupRef.current as HTMLDivElement)
 
-    const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
+    const timer = useRef<ReturnType<typeof setTimeout>>(undefined)
     const popupPortalTarget = useMemo(() => {
       if (portalTarget) return portalTarget
 
@@ -255,7 +255,7 @@ export const Popup = forwardRef(
       disableAnimation || maxHeight ? 0 : DEFAULT_ANIMATION_DURATION
 
     // Debounce timer will be used to prevent the popup from flickering when the user moves the mouse out and in the children element.
-    const debounceTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
+    const debounceTimer = useRef<ReturnType<typeof setTimeout>>(undefined)
     const [visibleInDom, setVisibleInDom] = useState(false)
     const [reverseAnimation, setReverseAnimation] = useState(false)
     const [positions, setPositions] = useState<PositionsType>({

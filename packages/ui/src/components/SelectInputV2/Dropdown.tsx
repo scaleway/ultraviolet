@@ -216,7 +216,7 @@ const handleKeyDownSelect = (event: KeyboardEvent<HTMLDivElement>) => {
 }
 const handleClickOutside = (
   event: MouseEvent,
-  ref: RefObject<HTMLDivElement>,
+  ref: RefObject<HTMLDivElement | null>,
   setIsDropdownVisibile: Dispatch<SetStateAction<boolean>>,
   refSelect: RefObject<HTMLDivElement>,
   onSearch: Dispatch<SetStateAction<DataType>>,

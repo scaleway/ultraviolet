@@ -5,7 +5,6 @@ import type {
   FocusEventHandler,
   InputHTMLAttributes,
   KeyboardEventHandler,
-  MutableRefObject,
 } from 'react'
 import { useId, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
@@ -191,8 +190,7 @@ export const NumberInput = ({
   'aria-describedby': ariaDescribedBy,
   'data-testid': dataTestId,
 }: NumberInputProps) => {
-  const inputRef =
-    useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const uniqueId = useId()
 
