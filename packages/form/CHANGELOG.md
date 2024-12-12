@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.12.9
+
+### Patch Changes
+
+- [#4578](https://github.com/scaleway/ultraviolet/pull/4578) [`f7c21ee`](https://github.com/scaleway/ultraviolet/commit/f7c21ee8784fea208191d202aa1284482b91078d) Thanks [@matthprost](https://github.com/matthprost)! - Revert react hook form creating infinite loop
+
 ## 3.12.8
 
 ### Patch Changes
