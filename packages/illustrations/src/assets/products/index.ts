@@ -6,6 +6,7 @@
 import * as accountExperience from './accountExperience'
 import * as apiGateway from './apiGateway'
 import * as appleSilicon from './appleSilicon'
+import * as auditTrail from './auditTrail'
 import * as blockStorage from './blockStorage'
 import * as cli from './cli'
 import * as cockpit from './cockpit'
@@ -60,6 +61,7 @@ export {
   accountExperience,
   apiGateway,
   appleSilicon,
+  auditTrail,
   blockStorage,
   cli,
   cockpit,
