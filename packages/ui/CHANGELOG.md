@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.81.1
+
+### Patch Changes
+
+- [#4577](https://github.com/scaleway/ultraviolet/pull/4577) [`456d104`](https://github.com/scaleway/ultraviolet/commit/456d104c77e5a261f191ee797b2e38e0a4bcad7a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Slider />` having issue when options are changing
+
 ## 1.81.0
 
 ### Minor Changes
