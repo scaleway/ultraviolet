@@ -51,7 +51,7 @@ export const Options: StoryFn<typeof Slider> = args => {
         <Slider
           name="slider"
           data-testid="slider"
-          value={[1, 3]}
+          value={doubleValue}
           double
           unit="Mb"
           options={options}
