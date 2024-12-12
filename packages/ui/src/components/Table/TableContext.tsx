@@ -9,6 +9,7 @@ import {
   useState,
 } from 'react'
 import type { Checkbox } from '../Checkbox'
+import type { ColumnProps } from './types'
 
 type RowState = Record<string, boolean>
 
@@ -35,6 +36,7 @@ type TableContextValue = {
   collapseRow: (rowId: string) => void
   expandButton: boolean
   registerExpandableRow: (rowId: string, expanded?: boolean) => () => void
+  columns: ColumnProps[]
 }
 
 const TableContext = createContext<TableContextValue | undefined>(undefined)
@@ -46,6 +48,7 @@ type TableProviderProps = {
   stripped: boolean
   expandButton: boolean
   autoCollapse: boolean
+  columns: ColumnProps[]
 }
 
 export const TableProvider = ({
@@ -55,6 +58,7 @@ export const TableProvider = ({
   stripped,
   expandButton,
   autoCollapse,
+  columns,
 }: TableProviderProps) => {
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
@@ -259,6 +263,7 @@ export const TableProvider = ({
       registerExpandableRow,
       ref,
       inRange,
+      columns,
     }),
     [
       registerSelectableRow,
@@ -278,6 +283,7 @@ export const TableProvider = ({
       registerExpandableRow,
       ref,
       inRange,
+      columns,
     ],
   )
 

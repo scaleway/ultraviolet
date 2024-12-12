@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { useEffect, useId, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
@@ -121,21 +121,24 @@ export const SingleSlider = ({
     return []
   }, [options])
 
-  const internalOnChangeRef = useRef((newValue: number) => {
-    setSelectedIndex(newValue ?? min)
-    onChange?.(newValue ?? min)
-  })
+  const internalOnChange = useCallback(
+    (newValue: number) => {
+      setSelectedIndex(newValue ?? min)
+      onChange?.(newValue ?? min)
+    },
+    [min, onChange],
+  )
 
   // Make sure that min <= value <= max
   useEffect(() => {
     if (value < min) {
-      internalOnChangeRef.current(min)
+      internalOnChange(min)
     } else if (value > max) {
-      internalOnChangeRef.current(max)
+      internalOnChange(max)
     } else {
       setSelectedIndex(() => value ?? min)
     }
-  }, [value, max, min])
+  }, [value, max, min, internalOnChange])
 
   // Get slider size
   useEffect(() => {
@@ -179,11 +182,11 @@ export const SingleSlider = ({
         unit={typeof suffix === 'string' ? suffix : unit}
         onChange={newVal => {
           if (newVal) {
-            internalOnChangeRef.current(newVal)
-          } else internalOnChangeRef.current(0)
+            internalOnChange(newVal)
+          } else internalOnChange(0)
         }}
         onBlur={event => {
-          if (!event.target.value) internalOnChangeRef.current(min)
+          if (!event.target.value) internalOnChange(min)
         }}
       />
     ) : (
@@ -246,7 +249,7 @@ export const SingleSlider = ({
             type="range"
             value={selectedIndex}
             onChange={event => {
-              internalOnChangeRef.current(Number.parseFloat(event.target.value))
+              internalOnChange(Number.parseFloat(event.target.value))
             }}
             min={min}
             max={max}

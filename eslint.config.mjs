@@ -15,6 +15,8 @@ const disableRules = {
   // ---- biome rules ----
   'import/order': 'off',
   'import/no-unresolved': 'off',
+  '@stylistic/no-extra-semi': 'off',
+  '@stylistic/brace-style': 'off',
 
   // to check
   'react/no-unused-prop-types': 'off',
@@ -36,6 +38,7 @@ export default [
       '**/coverage/',
       '.storybook',
       'eslint.config.mjs',
+      'next-env.d.ts',
     ],
   },
   {

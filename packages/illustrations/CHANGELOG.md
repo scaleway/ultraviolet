@@ -1,5 +1,19 @@
 # @ultraviolet/illustrations
 
+## 4.1.0
+
+### Minor Changes
+
+- [#4573](https://github.com/scaleway/ultraviolet/pull/4573) [`0266269`](https://github.com/scaleway/ultraviolet/commit/0266269dc8c0f3169c0e9c5c0736d8a970826042) Thanks [@lisalupi](https://github.com/lisalupi)! - New prodcut illustration `auditTrail`, `M4`,
+
+## 4.0.1
+
+### Patch Changes
+
+- [#4568](https://github.com/scaleway/ultraviolet/pull/4568) [`3e42097`](https://github.com/scaleway/ultraviolet/commit/3e4209795e1915cc2069401115009128365a320b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.14.0`.
+  Updated dependency `@emotion/styled` to `11.14.0`.
+  Updated dependency `@emotion/cache` to `11.14.0`.
+
 ## 4.0.0
 
 ### Major Changes

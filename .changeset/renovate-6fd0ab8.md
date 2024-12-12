@@ -5,4 +5,4 @@
 '@ultraviolet/ui': patch
 ---
 
-Updated dependency `@types/react-dom` to `18.3.3`.
+Updated dependency `@types/react` to `18.3.15`.

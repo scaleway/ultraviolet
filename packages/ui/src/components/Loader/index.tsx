@@ -29,7 +29,7 @@ const StyledSvg = styled('svg', {
 
 type LoaderProps = {
   active?: boolean
-  color?: Color | string
+  color?: Color | (string & NonNullable<unknown>)
   percentage?: number
   size?: number | string
   strokeWidth?: number
@@ -37,7 +37,7 @@ type LoaderProps = {
    * Text is placed in center of ProgressCircle.
    */
   text?: string
-  trailColor?: Color | string
+  trailColor?: Color | (string & NonNullable<unknown>)
   /**
    * Label should be defined for accessibility, to indicate what is loading
    */
@@ -46,7 +46,7 @@ type LoaderProps = {
 
 const Text = styled('text', {
   shouldForwardProp: prop => !['color'].includes(prop),
-})<{ color: Color | string }>`
+})<{ color: Color | (string & NonNullable<unknown>) }>`
   fill: ${({ theme, color }) =>
     theme.colors[color as Color]?.backgroundStrong || color};
 

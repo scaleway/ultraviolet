@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { useEffect, useId, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { NumberInputV2 } from '../../NumberInputV2'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
@@ -177,14 +177,17 @@ export const DoubleSlider = ({
     return []
   }, [options])
 
-  const internalOnChangeRef = useRef((localValue: (number | null)[]) => {
-    const leftSliderValue = localValue[0] === null ? min : localValue[0]
-    const rightSliderValue = localValue[1] === null ? max : localValue[1]
-    const newValues = [leftSliderValue, rightSliderValue]
+  const internalOnChangeRef = useCallback(
+    (localValue: (number | null)[]) => {
+      const leftSliderValue = localValue[0] === null ? min : localValue[0]
+      const rightSliderValue = localValue[1] === null ? max : localValue[1]
+      const newValues = [leftSliderValue, rightSliderValue]
 
-    setSelectedIndexes(newValues)
-    onChange?.([Math.min(...newValues), Math.max(...newValues)])
-  })
+      setSelectedIndexes(newValues)
+      onChange?.([Math.min(...newValues), Math.max(...newValues)])
+    },
+    [max, min, onChange],
+  )
 
   // Get slider size (for options)
   useEffect(() => {
@@ -199,30 +202,30 @@ export const DoubleSlider = ({
   }, [])
 
   const handleMinChange = (newValue: number) => {
-    internalOnChangeRef.current([newValue, selectedIndexes[1]])
+    internalOnChangeRef([newValue, selectedIndexes[1]])
   }
 
   const handleMaxChange = (newValue: number) => {
-    internalOnChangeRef.current([selectedIndexes[0], newValue])
+    internalOnChangeRef([selectedIndexes[0], newValue])
   }
 
   const handleChangeInput = (val: number, side?: 'left' | 'right') => {
     if (side === 'left') {
       const newValue = Math.max(val, min)
       if (selectedIndexes[1]) {
-        internalOnChangeRef.current([
+        internalOnChangeRef([
           Math.min(newValue, selectedIndexes[1]),
           Math.max(newValue, selectedIndexes[1]),
         ])
-      } else internalOnChangeRef.current([newValue, selectedIndexes[1]])
+      } else internalOnChangeRef([newValue, selectedIndexes[1]])
     } else if (side === 'right') {
       const newValue = Math.min(val, max)
       if (selectedIndexes[0]) {
-        internalOnChangeRef.current([
+        internalOnChangeRef([
           Math.min(newValue, selectedIndexes[0]),
           Math.max(newValue, selectedIndexes[0]),
         ])
-      } else internalOnChangeRef.current([selectedIndexes[0], newValue])
+      } else internalOnChangeRef([selectedIndexes[0], newValue])
     }
   }
 
@@ -249,9 +252,9 @@ export const DoubleSlider = ({
           if (newVal !== null) {
             handleChangeInput(newVal, side)
           } else if (side === 'left') {
-            internalOnChangeRef.current([null, selectedIndexes[1]])
+            internalOnChangeRef([null, selectedIndexes[1]])
           } else if (side === 'right') {
-            internalOnChangeRef.current([selectedIndexes[0], null])
+            internalOnChangeRef([selectedIndexes[0], null])
           }
         }}
         onBlur={event => {
@@ -260,15 +263,15 @@ export const DoubleSlider = ({
             if (side === 'left') {
               const index = activeValue('left')
               if (index === 0) {
-                internalOnChangeRef.current([min, selectedIndexes[1]])
-              } else internalOnChangeRef.current([selectedIndexes[0], max])
+                internalOnChangeRef([min, selectedIndexes[1]])
+              } else internalOnChangeRef([selectedIndexes[0], max])
             }
 
             if (side === 'right') {
               const index = activeValue('right')
               if (index === 0) {
-                internalOnChangeRef.current([min, selectedIndexes[1]])
-              } else internalOnChangeRef.current([selectedIndexes[0], max])
+                internalOnChangeRef([min, selectedIndexes[1]])
+              } else internalOnChangeRef([selectedIndexes[0], max])
             }
           }
         }}

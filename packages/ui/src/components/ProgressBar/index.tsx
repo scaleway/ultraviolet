@@ -33,7 +33,12 @@ const StyledProgressContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   width: 100%;
 `
-
+const StyledStack = styled(Stack)`
+  width: fit-content;
+`
+const StyledText = styled(Text)`
+  width: max-content;
+`
 const StyledProgress = styled.div`
   position: absolute;
   top: 0;
@@ -53,8 +58,8 @@ const StyledProgress = styled.div`
 `
 
 const StyledFilled = styled('div', {
-  shouldForwardProp: prop => !['sentiment', 'value'].includes(prop),
-})<{ sentiment: string; value: number }>`
+  shouldForwardProp: prop => !['sentiment', 'percentageValue'].includes(prop),
+})<{ sentiment: string; percentageValue: number }>`
   border-radius: ${({ theme }) => theme.radii.default};
   position: absolute;
   top: 0;
@@ -63,13 +68,16 @@ const StyledFilled = styled('div', {
   background-color: ${({ theme, sentiment }) =>
     theme.colors[sentiment as Color].backgroundStrong ?? 'inherit'};
   transition: 0.3s width;
-  width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
+  width: ${({ percentageValue }) => percentageValue}%;
 `
 
 type ProgressBarProps = {
   sentiment?: (typeof progressBarSentiments)[number]
   value?: number
   showProgress?: boolean
+  prefix?: ReactNode
+  suffix?: ReactNode
+  max?: number
   label?: string
   labelDescription?: ReactNode
   direction?: 'column' | 'row'
@@ -91,6 +99,9 @@ export const ProgressBar = ({
   className,
   'data-testid': dataTestId,
   showProgress = false,
+  prefix,
+  suffix = '%',
+  max = 100,
   label,
   labelDescription,
   direction = 'column',
@@ -130,16 +141,20 @@ export const ProgressBar = ({
             sentiment="neutral"
             placement="right"
           >
-            {`${Math.max(0, Math.min(100, value))}%`}
+            {prefix}
+            {suffix === '%'
+              ? (100 * Math.max(0, Math.min(max, value))) / max
+              : Math.max(0, Math.min(max, value))}
+            {suffix}
           </Text>
         ) : null}
       </Stack>
     ) : null}
     {label && direction === 'row' && labelDescription ? (
-      <Stack direction="row" gap={1}>
-        <Text as="label" variant="bodySmallStrong" sentiment="neutral">
+      <StyledStack direction="row" gap={1}>
+        <StyledText as="label" variant="bodySmallStrong" sentiment="neutral">
           {label}
-        </Text>
+        </StyledText>
         {typeof labelDescription === 'string' ? (
           <Text as="label" variant="bodySmall">
             {labelDescription}
@@ -147,18 +162,20 @@ export const ProgressBar = ({
         ) : (
           labelDescription
         )}
-      </Stack>
+      </StyledStack>
     ) : null}
     {label && direction === 'row' && !labelDescription ? (
-      <Text as="label" variant="bodySmallStrong" sentiment="neutral">
-        {label}
-      </Text>
+      <StyledStack direction="row" gap={1}>
+        <StyledText as="label" variant="bodySmallStrong" sentiment="neutral">
+          {label}
+        </StyledText>
+      </StyledStack>
     ) : null}
     <StyledProgressContainer
       role="progressbar"
       aria-valuenow={value}
       aria-valuemin={0}
-      aria-valuemax={100}
+      aria-valuemax={max}
       className={className}
       data-testid={dataTestId}
       aria-labelledby={ariaLabelledBy}
@@ -167,13 +184,22 @@ export const ProgressBar = ({
       {progress ? (
         <StyledProgress />
       ) : (
-        <StyledFilled sentiment={sentiment} value={value} />
+        <StyledFilled
+          sentiment={sentiment}
+          percentageValue={(100 * Math.max(0, Math.min(max, value))) / max}
+        />
       )}
     </StyledProgressContainer>
     {showProgress && direction === 'row' ? (
-      <Text as="label" variant="bodySmall" sentiment="neutral">
-        {`${Math.max(0, Math.min(100, value))}%`}
-      </Text>
+      <StyledStack direction="row" gap={1}>
+        <StyledText as="label" variant="bodySmall" sentiment="neutral">
+          {prefix}
+          {suffix === '%'
+            ? (100 * Math.max(0, Math.min(max, value))) / max
+            : Math.max(0, Math.min(max, value))}
+          {suffix}
+        </StyledText>
+      </StyledStack>
     ) : null}
   </Stack>
 )

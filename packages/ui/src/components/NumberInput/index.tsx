@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { MinusIcon, PlusIcon } from '@ultraviolet/icons'
 import type {
   ChangeEventHandler,
   FocusEventHandler,
@@ -362,10 +362,9 @@ export const NumberInput = ({
               sentiment="primary"
               size="small"
             >
-              <Icon
-                name="minus"
+              <MinusIcon
                 size={iconSizes[size]}
-                color="primary"
+                sentiment="primary"
                 disabled={isMinusDisabled}
               />
             </StyledSelectButton>
@@ -414,10 +413,9 @@ export const NumberInput = ({
               sentiment="primary"
               size="small"
             >
-              <Icon
-                name="plus"
+              <PlusIcon
                 size={iconSizes[size]}
-                color="primary"
+                sentiment="primary"
                 disabled={isPlusDisabled}
               />
             </StyledSelectButton>

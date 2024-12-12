@@ -11,6 +11,10 @@ const appleSiliconM2Content = `${BASE_URL}/products/appleSilicon/apple-silicon-m
 const appleSiliconM2Keyvisual = `${BASE_URL}/products/appleSilicon/apple-silicon-m2-keyvisual.webp`
 const appleSiliconM2Original = `${BASE_URL}/products/appleSilicon/apple-silicon-m2-original.webp`
 const appleSiliconM2Wire = `${BASE_URL}/products/appleSilicon/apple-silicon-m2-wire.svg`
+const appleSiliconM4Content = `${BASE_URL}/products/appleSilicon/apple-silicon-m4-content.webp`
+const appleSiliconM4Keyvisual = `${BASE_URL}/products/appleSilicon/apple-silicon-m4-keyvisual.webp`
+const appleSiliconM4Original = `${BASE_URL}/products/appleSilicon/apple-silicon-m4-original.webp`
+const appleSiliconM4Wire = `${BASE_URL}/products/appleSilicon/apple-silicon-m4-wire.svg`
 const appleSiliconOriginal = `${BASE_URL}/products/appleSilicon/apple-silicon-original.webp`
 const appleSiliconWire = `${BASE_URL}/products/appleSilicon/apple-silicon-wire.svg`
 
@@ -21,6 +25,10 @@ export {
   appleSiliconM2Keyvisual,
   appleSiliconM2Original,
   appleSiliconM2Wire,
+  appleSiliconM4Content,
+  appleSiliconM4Keyvisual,
+  appleSiliconM4Original,
+  appleSiliconM4Wire,
   appleSiliconOriginal,
   appleSiliconWire,
 }

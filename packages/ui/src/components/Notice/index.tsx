@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '@ultraviolet/icons/legacy'
+import { InformationOutlineIcon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import { Text } from '../Text'
 
@@ -31,12 +31,7 @@ export const Notice = ({
     data-testid={dataTestId}
     className={className}
   >
-    <Icon
-      name="information-outline"
-      size={16}
-      color="neutral"
-      prominence="weak"
-    />
+    <InformationOutlineIcon size={16} sentiment="neutral" prominence="weak" />
     {children}
   </StyledSpan>
 )

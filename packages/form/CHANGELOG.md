@@ -1,5 +1,32 @@
 # Change Log
 
+## 3.12.9
+
+### Patch Changes
+
+- [#4578](https://github.com/scaleway/ultraviolet/pull/4578) [`f7c21ee`](https://github.com/scaleway/ultraviolet/commit/f7c21ee8784fea208191d202aa1284482b91078d) Thanks [@matthprost](https://github.com/matthprost)! - Revert react hook form creating infinite loop
+
+## 3.12.8
+
+### Patch Changes
+
+- Updated dependencies [[`456d104`](https://github.com/scaleway/ultraviolet/commit/456d104c77e5a261f191ee797b2e38e0a4bcad7a)]:
+  - @ultraviolet/ui@1.81.1
+
+## 3.12.7
+
+### Patch Changes
+
+- [#4562](https://github.com/scaleway/ultraviolet/pull/4562) [`e08da2d`](https://github.com/scaleway/ultraviolet/commit/e08da2d06812061f8fff3e6b51cc95fa86383668) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-dom` to `18.3.3`.
+
+- [#4567](https://github.com/scaleway/ultraviolet/pull/4567) [`5a9bc84`](https://github.com/scaleway/ultraviolet/commit/5a9bc84498d06b6bfd28fd8589872f3b7e7b77b8) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.54.0`.
+
+- [#4568](https://github.com/scaleway/ultraviolet/pull/4568) [`3e42097`](https://github.com/scaleway/ultraviolet/commit/3e4209795e1915cc2069401115009128365a320b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.14.0`.
+  Updated dependency `@emotion/styled` to `11.14.0`.
+  Updated dependency `@emotion/cache` to `11.14.0`.
+- Updated dependencies [[`e08da2d`](https://github.com/scaleway/ultraviolet/commit/e08da2d06812061f8fff3e6b51cc95fa86383668), [`3e42097`](https://github.com/scaleway/ultraviolet/commit/3e4209795e1915cc2069401115009128365a320b), [`ffb2c06`](https://github.com/scaleway/ultraviolet/commit/ffb2c06779d938abc7dde959adcd610ed5af65d7), [`7633f1f`](https://github.com/scaleway/ultraviolet/commit/7633f1f9c8302b01b7be66116bdea62afe09fa07)]:
+  - @ultraviolet/ui@1.81.0
+
 ## 3.12.6
 
 ### Patch Changes

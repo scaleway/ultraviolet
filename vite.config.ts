@@ -3,7 +3,7 @@ import browserslist from 'browserslist'
 import { resolveToEsbuildTarget } from 'esbuild-plugin-browserslist'
 import { readPackage } from 'read-pkg'
 import { defineConfig } from 'vite'
-import type { UserConfig } from 'vitest/config'
+import type { ViteUserConfig } from 'vitest/config'
 
 const pkg = await readPackage()
 
@@ -21,7 +21,8 @@ const external = (id: string) => {
 
   const match = (dependency: string) => new RegExp(`^${dependency}`).test(id)
   const isExternal = externalPkgs.some(match)
-  const isBundled = pkg.bundleDependencies?.some(match) // alias of bundledDependencies package.json field array
+  // alias of bundledDependencies package.json field array
+  const isBundled = pkg.bundleDependencies?.some(match)
 
   return isExternal && !isBundled
 }
@@ -35,7 +36,7 @@ const targets = resolveToEsbuildTarget(
   },
 )
 
-export const defaultConfig: UserConfig = {
+export const defaultConfig: ViteUserConfig = {
   build: {
     outDir: 'dist',
     target: [...targets],

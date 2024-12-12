@@ -15,6 +15,7 @@ import {
   useState,
 } from 'react'
 import type { Checkbox } from '../Checkbox'
+import type { ColumnProps } from './types'
 
 type RowState = Record<string, boolean>
 
@@ -42,6 +43,7 @@ type ListContextValue = {
   unselectAll: () => void
   refList: RefObject<HTMLInputElement[]>
   inRange: string[]
+  columns: ColumnProps[]
 }
 
 const ListContext = createContext<ListContextValue | undefined>(undefined)
@@ -52,6 +54,7 @@ type ListProviderProps = {
   selectable: boolean
   expandButton: boolean
   onSelectedChange?: Dispatch<SetStateAction<string[]>>
+  columns: ColumnProps[]
 }
 
 export const ListProvider = ({
@@ -60,6 +63,7 @@ export const ListProvider = ({
   selectable,
   expandButton,
   onSelectedChange,
+  columns,
 }: ListProviderProps) => {
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
@@ -301,6 +305,7 @@ export const ListProvider = ({
       expandButton,
       refList,
       inRange,
+      columns,
     }),
     [
       registerExpandableRow,
@@ -318,6 +323,7 @@ export const ListProvider = ({
       expandButton,
       refList,
       inRange,
+      columns,
     ],
   )
 
