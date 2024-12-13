@@ -131,7 +131,7 @@ const FwdMenu = forwardRef(
       'data-testid': dataTestId,
       maxHeight,
       maxWidth,
-      portalTarget,
+      portalTarget = document.body,
       size = 'small',
       triggerMethod = 'click',
       dynamicDomRendering,
