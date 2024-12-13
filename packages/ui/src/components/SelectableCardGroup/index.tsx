@@ -92,7 +92,7 @@ const StyledRequiredIcon = styled(AsteriskIcon)`
 `
 
 type SelectableCardGroupProps = {
-  legend?: string
+  legend?: ReactNode
   value: string | number | (string | number)[]
   className?: string
   helper?: ReactNode

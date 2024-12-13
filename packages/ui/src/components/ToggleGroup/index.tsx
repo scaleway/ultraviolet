@@ -81,7 +81,7 @@ const StyledRequiredIcon = styled(AsteriskIcon)`
 `
 
 type ToggleGroupProps = {
-  legend: string
+  legend: ReactNode
   value?: string[]
   className?: string
   helper?: ReactNode
