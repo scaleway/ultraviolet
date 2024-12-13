@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 0.21.39
+
+### Patch Changes
+
+- [#4574](https://github.com/scaleway/ultraviolet/pull/4574) [`de622a2`](https://github.com/scaleway/ultraviolet/commit/de622a277da244ce265841f819d476cad9565ca9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.15`.
+
+- [#4583](https://github.com/scaleway/ultraviolet/pull/4583) [`54b5d89`](https://github.com/scaleway/ultraviolet/commit/54b5d897596dce5eaa2ad5357b3fda9879c53b80) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.16`.
+  Updated dependency `@types/react-dom` to `18.3.5`.
+- Updated dependencies [[`2f660df`](https://github.com/scaleway/ultraviolet/commit/2f660df8cc7313fc13a6bcef3a66dfbb7d56a650), [`de622a2`](https://github.com/scaleway/ultraviolet/commit/de622a277da244ce265841f819d476cad9565ca9), [`54b5d89`](https://github.com/scaleway/ultraviolet/commit/54b5d897596dce5eaa2ad5357b3fda9879c53b80)]:
+  - @ultraviolet/ui@1.81.2
+  - @ultraviolet/icons@3.6.3
+
 ## 0.21.38
 
 ### Patch Changes
