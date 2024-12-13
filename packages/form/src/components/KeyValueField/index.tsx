@@ -107,8 +107,8 @@ export const KeyValueField = <
         <Button
           data-testid="add-button"
           icon="plus"
-          variant="filled"
-          sentiment="neutral"
+          variant="outlined"
+          sentiment="primary"
           fullWidth={addButton.fullWidth}
           disabled={!canAdd || readOnly}
           tooltip={!canAdd ? maxSizeReachedTooltip : addButton.tooltip}

@@ -90,9 +90,9 @@ exports[`KeyValueField > should render with default props & max size 1`] = `
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #e9eaeb;
-  border: none;
-  color: #222638;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
 }
 
 .emotion-6:hover {
@@ -101,13 +101,14 @@ exports[`KeyValueField > should render with default props & max size 1`] = `
 }
 
 .emotion-6:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-6:hover,
 .emotion-6:active {
-  background: #d9dadd;
-  color: #151a2d;
+  background: #e5dbfd;
+  color: #521094;
+  border: 1px solid #792dd4;
 }
 
 .emotion-8 {
@@ -257,9 +258,9 @@ exports[`KeyValueField > should render with default props 1`] = `
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #e9eaeb;
-  border: none;
-  color: #222638;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
 }
 
 .emotion-6:hover {
@@ -268,13 +269,14 @@ exports[`KeyValueField > should render with default props 1`] = `
 }
 
 .emotion-6:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .emotion-6:hover,
 .emotion-6:active {
-  background: #d9dadd;
-  color: #151a2d;
+  background: #e5dbfd;
+  color: #521094;
+  border: 1px solid #792dd4;
 }
 
 .emotion-8 {
@@ -424,11 +426,11 @@ exports[`KeyValueField > should render with default props in readonly mode 1`] =
   line-height: 1.5rem;
   paragraph-spacing: 0;
   text-case: none;
-  background: #e9eaeb;
-  border: none;
-  color: #222638;
-  background: #f3f3f4;
-  color: #b5b7bd;
+  background: none;
+  border: 1px solid #8c40ef;
+  color: #641cb3;
+  color: #d8c5fc;
+  border: 1px solid #d8c5fc;
 }
 
 .emotion-6:hover {
