@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.12.10
+
+### Patch Changes
+
+- [#4581](https://github.com/scaleway/ultraviolet/pull/4581) [`f783531`](https://github.com/scaleway/ultraviolet/commit/f7835313e9bf7b5853b3a0f9ea1b09709017bfe7) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - Fix change add button style
+
+- [#4574](https://github.com/scaleway/ultraviolet/pull/4574) [`de622a2`](https://github.com/scaleway/ultraviolet/commit/de622a277da244ce265841f819d476cad9565ca9) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.15`.
+
+- [#4583](https://github.com/scaleway/ultraviolet/pull/4583) [`54b5d89`](https://github.com/scaleway/ultraviolet/commit/54b5d897596dce5eaa2ad5357b3fda9879c53b80) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.16`.
+  Updated dependency `@types/react-dom` to `18.3.5`.
+- Updated dependencies [[`2f660df`](https://github.com/scaleway/ultraviolet/commit/2f660df8cc7313fc13a6bcef3a66dfbb7d56a650), [`de622a2`](https://github.com/scaleway/ultraviolet/commit/de622a277da244ce265841f819d476cad9565ca9), [`54b5d89`](https://github.com/scaleway/ultraviolet/commit/54b5d897596dce5eaa2ad5357b3fda9879c53b80)]:
+  - @ultraviolet/ui@1.81.2
+
 ## 3.12.9
 
 ### Patch Changes
