@@ -1,10 +1,9 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
 import { HeaderCell } from './HeaderCell'
 import { useListContext } from './ListContext'
-import { EXPANDABLE_COLUMN_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
+import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 
 const StyledHeaderRow = styled.tr`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
@@ -34,6 +33,8 @@ const NoPaddingHeaderCell = styled(HeaderCell)`
   &:first-of-type {
     padding-left: ${({ theme }) => theme.space['2']};
   }
+
+  max-width: ${({ theme }) => theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
 `
 
 type RowProps = {
@@ -50,17 +51,13 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
     expandButton,
   } = useListContext()
 
-  const theme = useTheme()
-
   const selectableRowCount = Object.keys(selectedRowIds).length
 
   return (
     <thead>
       <StyledHeaderRow>
         {hasSelectAllColumn ? (
-          <NoPaddingHeaderCell
-            maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
-          >
+          <NoPaddingHeaderCell>
             <Checkbox
               name="list-select-checkbox"
               value="all"
@@ -72,9 +69,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
           </NoPaddingHeaderCell>
         ) : null}
         {expandButton ? (
-          <NoPaddingHeaderCell maxWidth={theme.sizing[EXPANDABLE_COLUMN_SIZE]}>
-            {null}
-          </NoPaddingHeaderCell>
+          <NoPaddingHeaderCell>{null}</NoPaddingHeaderCell>
         ) : null}
         {children}
       </StyledHeaderRow>
