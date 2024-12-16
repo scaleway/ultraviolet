@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.81.3
+
+### Patch Changes
+
+- [#4587](https://github.com/scaleway/ultraviolet/pull/4587) [`907b477`](https://github.com/scaleway/ultraviolet/commit/907b477b96459a1f59cf0bed929aefa3ce4d04d4) Thanks [@matthprost](https://github.com/matthprost)! - Hide scroll bar on `Table` and `List` if there is no overflow on x
+
+- [#4594](https://github.com/scaleway/ultraviolet/pull/4594) [`bd99975`](https://github.com/scaleway/ultraviolet/commit/bd9997595a47919f7bbbaa52d7ac64f3072ddb19) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<List />` and `<Table />` to never take more than 100% of the container
+
 ## 1.81.2
 
 ### Patch Changes
