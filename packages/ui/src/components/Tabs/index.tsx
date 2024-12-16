@@ -146,7 +146,7 @@ export const Tabs = ({
     if (isValidElement<typeof Tab>(child)) {
       return cloneElement(child as ReactElement, {
         ...child.props,
-        subtitle: null,
+        // subtitle: null,
       })
     }
 

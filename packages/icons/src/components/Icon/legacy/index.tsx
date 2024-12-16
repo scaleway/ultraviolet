@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
-import type { FunctionComponent, SVGProps } from 'react'
+import type { FunctionComponent, PropsWithChildren, SVGProps } from 'react'
 import { forwardRef, useMemo } from 'react'
 import capitalize from '../../../utils/capitalize'
 import { ICONS } from './Icons'
@@ -62,7 +62,7 @@ const PROMINENCES = {
 type ProminenceProps = keyof typeof PROMINENCES
 
 const StyledIcon = (
-  component: FunctionComponent<SVGProps<SVGSVGElement>>,
+  component: FunctionComponent<PropsWithChildren<SVGProps<SVGSVGElement>>>,
 ) => styled(component, {
   shouldForwardProp: prop =>
     !['size', 'sentiment', 'prominence', 'disabled'].includes(prop),
@@ -160,13 +160,14 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
   ) => {
     const computedSentiment = sentiment ?? color
     const SystemIcon = useMemo(() => {
+      const smallIcon = SMALL_ICONS[variant][name]
+      const defaultIcon = SMALL_ICONS.filled.alert
+
       if (size === 'small' || size === 16) {
-        return StyledIcon(
-          SMALL_ICONS[variant][name] || SMALL_ICONS.filled.alert,
-        )
+        return StyledIcon(smallIcon || defaultIcon)
       }
 
-      return StyledIcon(ICONS[variant][name] || ICONS.filled.alert)
+      return StyledIcon(smallIcon || defaultIcon)
     }, [name, size, variant])
 
     /**

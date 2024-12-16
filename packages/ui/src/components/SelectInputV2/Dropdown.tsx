@@ -27,7 +27,7 @@ export type DropdownProps = {
   searchable: boolean
   placeholder: string
   footer?: ((closeDropdown: () => void) => ReactNode) | ReactNode
-  refSelect: RefObject<HTMLDivElement>
+  refSelect: RefObject<HTMLDivElement | null>
   loadMore?: ReactNode
   optionalInfoPlacement: 'left' | 'right'
   isLoading?: boolean
@@ -218,7 +218,7 @@ const handleClickOutside = (
   event: MouseEvent,
   ref: RefObject<HTMLDivElement | null>,
   setIsDropdownVisibile: Dispatch<SetStateAction<boolean>>,
-  refSelect: RefObject<HTMLDivElement>,
+  refSelect: RefObject<HTMLDivElement | null>,
   onSearch: Dispatch<SetStateAction<DataType>>,
   options: DataType,
 ) => {
@@ -234,7 +234,7 @@ const handleClickOutside = (
 
 const handleKeyDown = (
   event: globalThis.KeyboardEvent,
-  ref: RefObject<HTMLDivElement>,
+  ref: RefObject<HTMLDivElement | null>,
   options: DataType,
   searchBarActive: boolean,
   setSearch: Dispatch<SetStateAction<string>>,

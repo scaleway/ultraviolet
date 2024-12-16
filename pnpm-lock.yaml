@@ -629,6 +629,7 @@ importers:
       '@emotion/react':
         specifier: 11.14.0
 <<<<<<< HEAD
+<<<<<<< HEAD
         version: 11.14.0(@types/react@18.3.17)(react@18.3.1)
       '@emotion/styled':
         specifier: 11.14.0
@@ -645,6 +646,18 @@ importers:
       '@types/react-dom':
         specifier: 18.3.5
         version: 18.3.5(@types/react@18.3.17)
+=======
+        version: 11.14.0(@types/react@19.0.0)(react@19.0.0)
+      '@emotion/styled':
+        specifier: 11.14.0
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.0)(react@19.0.0))(@types/react@19.0.0)(react@19.0.0)
+      '@types/react':
+        specifier: 19.0.0
+        version: 19.0.0
+      '@types/react-dom':
+        specifier: 19.0.0
+        version: 19.0.0
+>>>>>>> 6e17823ee (fix: type error)
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -722,6 +735,7 @@ importers:
       '@emotion/react':
         specifier: 11.14.0
 <<<<<<< HEAD
+<<<<<<< HEAD
         version: 11.14.0(@types/react@18.3.17)(react@18.3.1)
       '@emotion/styled':
         specifier: 11.14.0
@@ -738,6 +752,18 @@ importers:
       '@types/react-dom':
         specifier: 18.3.5
         version: 18.3.5(@types/react@18.3.17)
+=======
+        version: 11.14.0(@types/react@19.0.0)(react@19.0.0)
+      '@emotion/styled':
+        specifier: 11.14.0
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.0)(react@19.0.0))(@types/react@19.0.0)(react@19.0.0)
+      '@types/react':
+        specifier: 19.0.0
+        version: 19.0.0
+      '@types/react-dom':
+        specifier: 18.3.5
+        version: 18.3.5(@types/react@19.0.0)
+>>>>>>> 6e17823ee (fix: type error)
       '@ultraviolet/illustrations':
         specifier: workspace:*
         version: link:../illustrations
@@ -798,10 +824,14 @@ importers:
       react-select:
         specifier: 5.8.3
 <<<<<<< HEAD
+<<<<<<< HEAD
         version: 5.8.3(@types/react@18.3.17)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 =======
         version: 5.8.3(@types/react@18.3.16)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
 >>>>>>> 9f9668398 (chore: react v19)
+=======
+        version: 5.8.3(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+>>>>>>> 6e17823ee (fix: type error)
       react-toastify:
         specifier: 10.0.6
         version: 10.0.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -818,6 +848,7 @@ importers:
       '@emotion/react':
         specifier: 11.14.0
 <<<<<<< HEAD
+<<<<<<< HEAD
         version: 11.14.0(@types/react@18.3.17)(react@18.3.1)
       '@emotion/styled':
         specifier: 11.14.0
@@ -831,12 +862,26 @@ importers:
       '@types/react':
         specifier: 18.3.17
         version: 18.3.17
+=======
+        version: 11.14.0(@types/react@19.0.0)(react@19.0.0)
+      '@emotion/styled':
+        specifier: 11.14.0
+        version: 11.14.0(@emotion/react@11.14.0(@types/react@19.0.0)(react@19.0.0))(@types/react@19.0.0)(react@19.0.0)
+      '@types/react':
+        specifier: 19.0.0
+        version: 19.0.0
+>>>>>>> 6e17823ee (fix: type error)
       '@types/react-datepicker':
         specifier: 6.2.0
         version: 6.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@types/react-dom':
+<<<<<<< HEAD
         specifier: 18.3.5
         version: 18.3.5(@types/react@18.3.17)
+=======
+        specifier: 19.0.0
+        version: 19.0.0
+>>>>>>> 6e17823ee (fix: type error)
       '@utils/test':
         specifier: workspace:*
         version: link:../../utils/test
@@ -3339,9 +3384,6 @@ packages:
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
 
-  '@types/prop-types@15.7.12':
-    resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
-
   '@types/react-datepicker@6.2.0':
     resolution: {integrity: sha512-+JtO4Fm97WLkJTH8j8/v3Ldh7JCNRwjMYjRaKh4KHH0M3jJoXtwiD3JBCsdlg3tsFIw9eQSqyAPeVDN2H2oM9Q==}
 
@@ -3359,9 +3401,12 @@ packages:
   '@types/react-transition-group@4.4.10':
     resolution: {integrity: sha512-hT/+s0VQs2ojCX823m60m5f0sL5idt9SO6Tj6Dg+rdphGPIeJbJ6CxvBYkgkGKrYeDjvIpKTR38UzmtHJOGW3Q==}
 
+<<<<<<< HEAD
   '@types/react@18.3.17':
     resolution: {integrity: sha512-opAQ5no6LqJNo9TqnxBKsgnkIYHozW9KSTlFVoSUJYh1Fl/sswkEoqIugRSm7tbh6pABtYjGAjW+GOS23j8qbw==}
 
+=======
+>>>>>>> 6e17823ee (fix: type error)
   '@types/react@19.0.0':
     resolution: {integrity: sha512-MY3oPudxvMYyesqs/kW1Bh8y9VqSmf+tzqw3ae8a9DZW68pUe3zAdHeI1jc6iAysuRdACnVknHP8AhwD4/dxtg==}
 
@@ -9537,6 +9582,7 @@ snapshots:
   '@emotion/memoize@0.9.0': {}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   '@emotion/react@11.14.0(@types/react@18.3.17)(react@18.3.1)':
 =======
   '@emotion/react@11.14.0(@types/react@18.3.16)(react@19.0.0)':
@@ -9556,6 +9602,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+=======
+>>>>>>> 6e17823ee (fix: type error)
   '@emotion/react@11.14.0(@types/react@19.0.0)(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
@@ -9583,6 +9631,7 @@ snapshots:
   '@emotion/sheet@1.4.0': {}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   '@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@18.3.17)(react@18.3.1))(@types/react@18.3.17)(react@18.3.1)':
 =======
   '@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@18.3.16)(react@19.0.0))(@types/react@18.3.16)(react@19.0.0)':
@@ -9605,6 +9654,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+=======
+>>>>>>> 6e17823ee (fix: type error)
   '@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.0)(react@19.0.0))(@types/react@19.0.0)(react@19.0.0)':
     dependencies:
       '@babel/runtime': 7.26.0
@@ -11172,8 +11223,6 @@ snapshots:
 
   '@types/parse-json@4.0.2': {}
 
-  '@types/prop-types@15.7.12': {}
-
   '@types/react-datepicker@6.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
 <<<<<<< HEAD
@@ -11188,9 +11237,15 @@ snapshots:
       - react
       - react-dom
 
+<<<<<<< HEAD
   '@types/react-dom@18.3.5(@types/react@18.3.17)':
     dependencies:
       '@types/react': 18.3.17
+=======
+  '@types/react-dom@18.3.5(@types/react@19.0.0)':
+    dependencies:
+      '@types/react': 19.0.0
+>>>>>>> 6e17823ee (fix: type error)
 
   '@types/react-dom@19.0.0':
     dependencies:
@@ -11212,11 +11267,14 @@ snapshots:
       '@types/react': 19.0.0
 >>>>>>> 9f9668398 (chore: react v19)
 
+<<<<<<< HEAD
   '@types/react@18.3.17':
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
 
+=======
+>>>>>>> 6e17823ee (fix: type error)
   '@types/react@19.0.0':
     dependencies:
       csstype: 3.1.3
@@ -15328,6 +15386,7 @@ snapshots:
       typescript: 5.7.2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   react-select@5.8.3(@types/react@18.3.17)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.26.0
@@ -15359,6 +15418,8 @@ snapshots:
       - '@types/react'
       - supports-color
 
+=======
+>>>>>>> 6e17823ee (fix: type error)
   react-select@5.8.3(@types/react@19.0.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@babel/runtime': 7.26.0
@@ -16411,6 +16472,7 @@ snapshots:
   urlpattern-polyfill@10.0.0: {}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   use-isomorphic-layout-effect@1.1.2(@types/react@18.3.17)(react@18.3.1):
 =======
   use-isomorphic-layout-effect@1.1.2(@types/react@18.3.16)(react@19.0.0):
@@ -16420,6 +16482,8 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.17
 
+=======
+>>>>>>> 6e17823ee (fix: type error)
   use-isomorphic-layout-effect@1.1.2(@types/react@19.0.0)(react@19.0.0):
     dependencies:
       react: 19.0.0
