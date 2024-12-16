@@ -2,12 +2,9 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Checkbox } from '../Checkbox'
-import {
-  EXPANDABLE_COLUMN_SIZE,
-  SELECTABLE_CHECKBOX_SIZE,
-} from '../Table/constants'
 import { HeaderCell } from './HeaderCell'
 import { useListContext } from './ListContext'
+import { EXPANDABLE_COLUMN_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
 
 const StyledHeaderRow = styled.tr`
   /* List itself also apply style about common templating between HeaderRow and other Rows */
@@ -61,7 +58,9 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
     <thead>
       <StyledHeaderRow>
         {hasSelectAllColumn ? (
-          <NoPaddingHeaderCell width={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
+          <NoPaddingHeaderCell
+            maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
+          >
             <Checkbox
               name="list-select-checkbox"
               value="all"
@@ -73,7 +72,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
           </NoPaddingHeaderCell>
         ) : null}
         {expandButton ? (
-          <NoPaddingHeaderCell width={theme.sizing[EXPANDABLE_COLUMN_SIZE]}>
+          <NoPaddingHeaderCell maxWidth={theme.sizing[EXPANDABLE_COLUMN_SIZE]}>
             {null}
           </NoPaddingHeaderCell>
         ) : null}
