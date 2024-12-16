@@ -12,6 +12,7 @@ import type { ColumnProps } from './types'
 
 const TableContainer = styled.div`
   min-width: 100%;
+  width: 100%;
   overflow-x: auto;
 `
 
