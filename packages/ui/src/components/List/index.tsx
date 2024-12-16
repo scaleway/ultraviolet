@@ -12,7 +12,7 @@ import type { ColumnProps } from './types'
 
 const TableContainer = styled.div`
   min-width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
 `
 
 const StyledTable = styled.table`
