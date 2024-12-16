@@ -25,7 +25,7 @@ const StickyFooter = styled.div`
 
 type FooterProps = {
   onToggleExpand: NavigationProps['onToggleExpand']
-  contentRef: RefObject<HTMLDivElement>
+  contentRef: RefObject<HTMLDivElement | null>
 }
 
 export const Footer = ({ onToggleExpand, contentRef }: FooterProps) => {

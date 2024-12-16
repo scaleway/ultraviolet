@@ -1,5 +1,5 @@
 import type { Alert } from '@ultraviolet/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, JSX, ReactNode } from 'react'
 import type EstimateCostLocales from './locales/en'
 
 export type EstimateCostProps = {

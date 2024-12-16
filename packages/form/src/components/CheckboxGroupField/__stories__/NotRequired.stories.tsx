@@ -1,9 +1,12 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
+import type { ComponentProps } from 'react'
 import { CheckboxGroupField } from '..'
 import { Submit } from '../..'
 
-export const NotRequiredStory: StoryFn<typeof CheckboxGroupField> = args => (
+export const NotRequiredTemplate = (
+  args: ComponentProps<typeof CheckboxGroupField>,
+) => (
   <Stack gap={1}>
     <CheckboxGroupField {...args}>
       <CheckboxGroupField.Checkbox
@@ -24,7 +27,7 @@ export const NotRequiredStory: StoryFn<typeof CheckboxGroupField> = args => (
 )
 
 export const NotRequired: StoryFn<typeof CheckboxGroupField> = args => (
-  <NotRequiredStory {...args} />
+  <NotRequiredTemplate {...args} />
 )
 
 NotRequired.parameters = {

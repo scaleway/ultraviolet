@@ -1,9 +1,10 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
+import type { ComponentProps } from 'react'
 import { CheckboxGroupField } from '..'
 import { useFormContext } from '../../..'
 
-export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
+const DirectionTemplate = (args: ComponentProps<typeof CheckboxGroupField>) => {
   const { watch } = useFormContext()
 
   return (
@@ -27,7 +28,7 @@ export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
 }
 
 export const Direction: StoryFn<typeof CheckboxGroupField> = args => (
-  <DirectionStory {...args} />
+  <DirectionTemplate {...args} />
 )
 
 Direction.parameters = {

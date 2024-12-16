@@ -124,6 +124,7 @@ export type IconProps = {
 /**
  * IconV2 component is our set of system icons in the design system. All of them are SVGs.
  */
+
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {

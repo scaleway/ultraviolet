@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon, Stack } from '@ultraviolet/ui'
-import type { ReactNode } from 'react'
+import type { JSX, ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, useMemo } from 'react'
 import { LineThrough } from './Components/LineThrough'
 import { Strong } from './Components/Strong'

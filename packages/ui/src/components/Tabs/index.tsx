@@ -8,7 +8,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import type { HTMLAttributes, ReactElement, ReactNode } from 'react'
+import type { ComponentProps, HTMLAttributes, ReactNode } from 'react'
 import { StyledTabButton, Tab } from './Tab'
 import { TabMenu } from './TabMenu'
 import { TabMenuItem } from './TabMenuItem'
@@ -143,10 +143,10 @@ export const Tabs = ({
 
   // mapping of tab children to avoid using subtitle props
   const menuItemChildren = Children.map(children, child => {
-    if (isValidElement<typeof Tab>(child)) {
-      return cloneElement(child as ReactElement, {
+    if (isValidElement<ComponentProps<typeof Tab>>(child)) {
+      return cloneElement(child, {
         ...child.props,
-        // subtitle: null,
+        subtitle: null,
       })
     }
 

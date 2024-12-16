@@ -12,7 +12,11 @@ export const AutoFocus: StoryFn = props => (
       <TextInputV2 placeholder="placeholder" />
       <TextInputV2
         placeholder="placeholder"
-        ref={ref => setTimeout(() => ref?.focus(), 1)}
+        ref={ref => {
+          if (ref) {
+            setTimeout(() => ref?.focus(), 1)
+          }
+        }}
       />
     </div>
   </Modal>

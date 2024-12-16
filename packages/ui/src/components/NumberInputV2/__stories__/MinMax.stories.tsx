@@ -1,13 +1,14 @@
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
-import type { NumberInputV2 } from '../index'
-import { Template } from './Template.stories'
+import { NumberInputV2 } from '..'
 
-export const MinMax: StoryFn<typeof NumberInputV2> = args => {
+export const Template: StoryFn<typeof NumberInputV2> = props => {
   const [value, setValue] = useState<number | null>(10)
 
-  return <Template {...args} value={value} onChange={setValue} />
+  return <NumberInputV2 {...props} value={value} onChange={setValue} />
 }
+
+export const MinMax = Template.bind({})
 
 MinMax.args = {
   id: 'number-input',

@@ -116,8 +116,8 @@ export const NavigationContent = ({
     shouldAnimate,
   } = context
 
-  const sliderRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
+  const sliderRef = useRef<HTMLDivElement | null>(null)
+  const contentRef = useRef<HTMLDivElement | null>(null)
 
   // It will handle the resize of the navigation when the user drag the vertical bar
   useEffect(() => {
