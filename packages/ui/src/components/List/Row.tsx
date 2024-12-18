@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ForwardedRef, ReactNode } from 'react'
 import {
@@ -14,6 +15,7 @@ import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
 import { useListContext } from './ListContext'
+import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 import type { ColumnProps } from './types'
 
 const ExpandableWrapper = styled.tr`
@@ -151,12 +153,18 @@ const StyledCheckboxContainer = styled.div`
   display: flex;
 `
 
-const NoPaddingCell = styled(Cell)`
+const NoPaddingCell = styled(Cell, {
+  shouldForwardProp: prop => !['maxWidth'].includes(prop),
+})<{
+  maxWidth: string
+}>`
   padding: 0;
 
   &:first-of-type {
     padding-left: ${({ theme }) => theme.space['2']};
   }
+
+  max-width: ${({ maxWidth }) => maxWidth};
 `
 
 const ExpandableCell = styled(Cell, {
@@ -215,6 +223,8 @@ export const Row = forwardRef(
       inRange,
       columns,
     } = useListContext()
+
+    const theme = useTheme()
 
     const expandedRowId = useId()
 
@@ -296,7 +306,10 @@ export const Row = forwardRef(
           columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
         >
           {selectable ? (
-            <NoPaddingCell preventClick={canClickRowToExpand}>
+            <NoPaddingCell
+              preventClick={canClickRowToExpand}
+              maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
+            >
               <StyledCheckboxContainer>
                 <Tooltip
                   text={
@@ -326,7 +339,7 @@ export const Row = forwardRef(
             </NoPaddingCell>
           ) : null}
           {expandButton ? (
-            <NoPaddingCell>
+            <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
               <Button
                 disabled={disabled || !expandable}
                 icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}

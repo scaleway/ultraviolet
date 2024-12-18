@@ -16,7 +16,8 @@ import type { ColumnProps } from './types'
 
 const TableContainer = styled.div`
   min-width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
+  width: 100%;
 `
 
 type StyledTableProps = {
