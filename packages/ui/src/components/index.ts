@@ -73,6 +73,7 @@ export { ToggleGroup } from './ToggleGroup'
 export { Tooltip } from './Tooltip'
 export { UnitInput } from './UnitInput'
 export { VerificationCode } from './VerificationCode'
+export { Drawer } from './Drawer'
 export {
   /**
    * @deprecated This component is deprecated. Please use `Icon` from `@ultraviolet/icons` instead.
