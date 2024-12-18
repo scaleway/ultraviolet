@@ -88,7 +88,7 @@ const StyledRequiredIcon = styled(AsteriskIcon)`
 `
 
 type RadioGroupProps = {
-  legend: string
+  legend: ReactNode
   value: string | number
   className?: string
   helper?: ReactNode

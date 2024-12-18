@@ -95,7 +95,7 @@ const StyledRequiredIcon = styled(AsteriskIcon)`
 `
 
 type CheckboxGroupProps = {
-  legend: string
+  legend: ReactNode
   value?: string[]
   className?: string
   helper?: ReactNode
