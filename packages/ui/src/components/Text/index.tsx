@@ -35,6 +35,7 @@ const generateStyles = ({
   disabled,
   italic,
   underline,
+  strikeThrough,
 }: {
   placement?: PlacementProps
   prominence: ProminenceProps
@@ -45,6 +46,7 @@ const generateStyles = ({
   disabled: boolean
   italic: boolean
   underline: boolean
+  strikeThrough?: boolean
 }): string => {
   // stronger is available only for neutral sentiment
   const definedProminence =
@@ -87,6 +89,7 @@ const generateStyles = ({
     }
     ${italic ? `font-style: italic;` : ''}
     ${underline ? `text-decoration: underline;` : ''}
+    ${strikeThrough ? `text-decoration: line-through;` : ''}
   `
 }
 
@@ -110,6 +113,7 @@ type TextProps = {
   dir?: 'ltr' | 'rtl' | 'auto'
   htmlFor?: string
   'data-testid'?: string
+  strikeThrough?: boolean
 }
 
 const StyledText = styled('div', {
@@ -124,6 +128,7 @@ const StyledText = styled('div', {
       'disabled',
       'italic',
       'underline',
+      'strikeThrough',
     ].includes(prop),
 })<{
   placement?: PlacementProps
@@ -135,6 +140,7 @@ const StyledText = styled('div', {
   italic: boolean
   underline: boolean
   htmlFor?: string
+  strikeThrough?: boolean
 }>(generateStyles)
 
 /**
@@ -153,6 +159,7 @@ export const Text = ({
   disabled = false,
   italic = false,
   underline = false,
+  strikeThrough = false,
   id,
   dir,
   htmlFor,
@@ -178,6 +185,7 @@ export const Text = ({
         disabled={disabled}
         italic={italic}
         underline={underline}
+        strikeThrough={strikeThrough}
         id={id}
         dir={dir}
         htmlFor={htmlFor}

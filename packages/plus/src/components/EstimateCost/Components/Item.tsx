@@ -218,6 +218,10 @@ type ItemProps = {
     | 'years'
     // Allow a string for unit but keep autocomplete for the above values
     | (string & NonNullable<unknown>)
+  /*
+   * To strike through the price
+   */
+  strikeThrough?: boolean
 }
 
 const StyleNoPriceItem = styled(Text)`
@@ -259,6 +263,7 @@ export const Item = memo(
     labelTextVariant, // To change left cell typography variant
     labelTextProminence, // To change left cell typography prominence
     notice, // To display a gray text below the label
+    strikeThrough, // To strike through the price
   }: ItemProps) => {
     const { locales, formatNumber } = useEstimateCost()
 
@@ -458,6 +463,7 @@ export const Item = memo(
               <>
                 <StyleNoPriceItem
                   as="p"
+                  strikeThrough={strikeThrough}
                   variant={noIterationText ? 'headingSmall' : 'bodyStrong'}
                   prominence={
                     computedItemPrice === 0 && computedMaxItemPrice === 0
