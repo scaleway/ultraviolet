@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import { Text } from '../Text'
+import { Text } from '../../Text'
 
 const Container = styled.span`
   padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1.5']}`};

@@ -101,6 +101,103 @@ describe('Menu', () => {
     })
   })
 
+  test('should hideOnClickItem', async () => {
+    renderWithTheme(
+      <MenuV2
+        id="menu"
+        hideOnClickItem
+        disclosure={() => <button type="button">Menu</button>}
+      >
+        <MenuV2.Item>Test</MenuV2.Item>
+      </MenuV2>,
+    )
+    const menuButton = screen.getByRole<HTMLButtonElement>('button')
+    // Open Menu
+    await userEvent.click(menuButton)
+    const dialog = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dialog).toBeVisible()
+    })
+
+    const item = screen.getByRole<HTMLButtonElement>('menuitem')
+    await userEvent.click(item)
+
+    await waitFor(() => {
+      expect(dialog).not.toBeVisible()
+    })
+  })
+
+  test('should search on simple childs', async () => {
+    const { asFragment } = renderWithTheme(
+      <MenuV2
+        id="menu"
+        searchable
+        disclosure={() => <button type="button">Menu</button>}
+      >
+        <MenuV2.Item>Disk</MenuV2.Item>
+        <MenuV2.Item>Ram</MenuV2.Item>
+      </MenuV2>,
+    )
+    const menuButton = screen.getByRole<HTMLButtonElement>('button')
+    // Open Menu
+    await userEvent.click(menuButton)
+    const dialog = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dialog).toBeVisible()
+    })
+
+    expect(asFragment()).toMatchSnapshot()
+
+    const searchInput = screen.getByRole<HTMLInputElement>('textbox')
+    await userEvent.type(searchInput, 'Disk')
+
+    const items = screen.getAllByRole<HTMLButtonElement>('menuitem')
+    expect(items.length).toBe(1)
+    expect(items[0]).toHaveTextContent('Disk')
+  })
+
+  test('should search on simple complex childs', async () => {
+    const { asFragment } = renderWithTheme(
+      <MenuV2
+        id="menu"
+        searchable
+        disclosure={() => <button type="button">Menu</button>}
+      >
+        <MenuV2.Item>
+          <div>
+            <div>Volume type:</div>
+            <div>Disk</div>
+          </div>
+        </MenuV2.Item>
+        <MenuV2.Item>
+          <div>
+            <div>Memory type:</div>
+            <div>Ram</div>
+          </div>
+        </MenuV2.Item>
+      </MenuV2>,
+    )
+    const menuButton = screen.getByRole<HTMLButtonElement>('button')
+    // Open Menu
+    await userEvent.click(menuButton)
+    const dialog = screen.getByRole('dialog')
+
+    await waitFor(() => {
+      expect(dialog).toBeVisible()
+    })
+
+    expect(asFragment()).toMatchSnapshot()
+
+    const searchInput = screen.getByRole<HTMLInputElement>('textbox')
+    await userEvent.type(searchInput, 'Disk')
+
+    const items = screen.getAllByRole<HTMLButtonElement>('menuitem')
+    expect(items.length).toBe(1)
+    expect(items[0]).toHaveTextContent('Disk')
+  })
+
   describe('placement', () => {
     test('renders top', () =>
       shouldMatchEmotionSnapshot(
