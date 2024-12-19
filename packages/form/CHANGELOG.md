@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.13.0
+
+### Minor Changes
+
+- [#4558](https://github.com/scaleway/ultraviolet/pull/4558) [`293aa2c`](https://github.com/scaleway/ultraviolet/commit/293aa2c041a5753394f2b4ae9e6e2f74b9bd10f5) Thanks [@matthprost](https://github.com/matthprost)! - Upgrade from react 18 to react 19
+
+### Patch Changes
+
+- [#4588](https://github.com/scaleway/ultraviolet/pull/4588) [`3b3aaaa`](https://github.com/scaleway/ultraviolet/commit/3b3aaaa7c42af3c8df46ba4db57160007870484d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.17`.
+
+- Updated dependencies [[`293aa2c`](https://github.com/scaleway/ultraviolet/commit/293aa2c041a5753394f2b4ae9e6e2f74b9bd10f5), [`5b14b1a`](https://github.com/scaleway/ultraviolet/commit/5b14b1ab7ce9907f6fd1710233d7b2d38ced3101), [`3b3aaaa`](https://github.com/scaleway/ultraviolet/commit/3b3aaaa7c42af3c8df46ba4db57160007870484d), [`4d8a5b5`](https://github.com/scaleway/ultraviolet/commit/4d8a5b51b80d669ae6d3753bf339d54e4444ec70)]:
+  - @ultraviolet/ui@1.82.0
+
 ## 3.12.11
 
 ### Patch Changes

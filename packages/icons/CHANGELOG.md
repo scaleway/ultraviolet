@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.7.0
+
+### Minor Changes
+
+- [#4558](https://github.com/scaleway/ultraviolet/pull/4558) [`293aa2c`](https://github.com/scaleway/ultraviolet/commit/293aa2c041a5753394f2b4ae9e6e2f74b9bd10f5) Thanks [@matthprost](https://github.com/matthprost)! - Upgrade from react 18 to react 19
+
+- [#4576](https://github.com/scaleway/ultraviolet/pull/4576) [`535010a`](https://github.com/scaleway/ultraviolet/commit/535010a74c527cf69a08b0e4267290a61aae97f5) Thanks [@lisalupi](https://github.com/lisalupi)! - - New logos `Meta`, `Baai`, `HuggingFace`, `Kyutai` and fixed `Github`
+  - New product icon `NetworkAcls`
+
+### Patch Changes
+
+- [#4588](https://github.com/scaleway/ultraviolet/pull/4588) [`3b3aaaa`](https://github.com/scaleway/ultraviolet/commit/3b3aaaa7c42af3c8df46ba4db57160007870484d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.3.17`.
+
 ## 3.6.3
 
 ### Patch Changes
