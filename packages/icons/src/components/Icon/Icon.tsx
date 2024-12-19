@@ -1,3 +1,4 @@
+import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { consoleLightTheme as theme } from '@ultraviolet/themes'
@@ -6,10 +7,10 @@ import { forwardRef } from 'react'
 import capitalize from '../../utils/capitalize'
 
 const SIZES = {
-  small: 16,
-  large: 20,
-  xlarge: 32,
-  xxlarge: 56,
+  small: '200',
+  large: '250',
+  xlarge: '400',
+  xxlarge: '700',
 } as const
 
 type Color = Extract<
@@ -25,15 +26,17 @@ type Color = Extract<
 
 const sizeStyles = ({
   size,
+  theme,
 }: {
   size: keyof typeof SIZES | number | string
+  theme: Theme
 }) => {
   if (typeof size === 'string' && size in SIZES) {
     return css`
-        height: ${SIZES[size as keyof typeof SIZES]}px;
-        width: ${SIZES[size as keyof typeof SIZES]}px;
-        min-width: ${SIZES[size as keyof typeof SIZES]}px;
-        min-height: ${SIZES[size as keyof typeof SIZES]}px;
+        height: ${theme.sizing[SIZES[size as keyof typeof SIZES]]};
+        width: ${theme.sizing[SIZES[size as keyof typeof SIZES]]};
+        min-width: ${theme.sizing[SIZES[size as keyof typeof SIZES]]};
+        min-height: ${theme.sizing[SIZES[size as keyof typeof SIZES]]};
     `
   }
 
