@@ -1,8 +1,9 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { MouseEventHandler, ReactNode, Ref } from 'react'
-import { forwardRef } from 'react'
-import { Tooltip } from '../Tooltip'
+import type { MouseEvent, MouseEventHandler, ReactNode, Ref } from 'react'
+import { forwardRef, useCallback } from 'react'
+import { Tooltip } from '../../Tooltip'
+import { useMenu } from '../MenuProvider'
 
 type MenuItemSentiment = 'neutral' | 'primary' | 'danger'
 
@@ -130,6 +131,21 @@ const Item = forwardRef<HTMLElement, ItemProps>(
     },
     ref,
   ) => {
+    const { hideOnClickItem, setIsVisible } = useMenu()
+
+    const onClickHandle = useCallback(
+      (event: MouseEvent<HTMLAnchorElement>) => {
+        if (disabled) return undefined
+        onClick?.(event)
+        if (hideOnClickItem) {
+          setIsVisible(false)
+        }
+
+        return undefined
+      },
+      [disabled, hideOnClickItem, onClick, setIsVisible],
+    )
+
     if (href && !disabled) {
       return (
         <Container borderless={borderless}>
@@ -139,11 +155,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
               borderless
               href={href}
               ref={ref as Ref<HTMLAnchorElement>}
-              onClick={
-                disabled
-                  ? undefined
-                  : (onClick as MouseEventHandler<HTMLAnchorElement>)
-              }
+              onClick={onClickHandle}
               role="menuitem"
               disabled={disabled}
               sentiment={sentiment}
@@ -165,7 +177,12 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             ref={ref as Ref<HTMLButtonElement>}
             role="menuitem"
             disabled={disabled}
-            onClick={onClick}
+            onClick={event => {
+              onClick?.(event)
+              if (hideOnClickItem) {
+                setIsVisible(false)
+              }
+            }}
             borderless={borderless}
             sentiment={sentiment}
             className={className}

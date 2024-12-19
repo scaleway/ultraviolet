@@ -38,6 +38,8 @@ export const AdvancedUsage: StoryFn<
       </MenuV2>
       <MenuV2
         align="start"
+        searchable
+        hideOnClickItem
         disclosure={
           <Breadcrumbs.Item>
             <Stack direction="row" gap={1} alignItems="center">

@@ -800,8 +800,8 @@ exports[`Menu > placement > renders bottom 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-:rr:"
-      aria-describedby="menu-:rr:"
+      aria-controls="menu-:r1e:"
+      aria-describedby="menu-:r1e:"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -847,8 +847,8 @@ exports[`Menu > placement > renders left 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-:ru:"
-      aria-describedby="menu-:ru:"
+      aria-controls="menu-:r1h:"
+      aria-describedby="menu-:r1h:"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -894,8 +894,8 @@ exports[`Menu > placement > renders right 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-:r11:"
-      aria-describedby="menu-:r11:"
+      aria-controls="menu-:r1k:"
+      aria-describedby="menu-:r1k:"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -941,8 +941,8 @@ exports[`Menu > placement > renders top 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-:ro:"
-      aria-describedby="menu-:ro:"
+      aria-controls="menu-:r1b:"
+      aria-describedby="menu-:r1b:"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1144,6 +1144,84 @@ exports[`Menu > renders with visible=false 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Menu > should search on simple childs 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="menu-menu"
+      aria-describedby="menu-menu"
+      class="emotion-0 emotion-1"
+      tabindex="-1"
+    >
+      <button
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        type="button"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu > should search on simple complex childs 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+.emotion-0 {
+  display: inherit;
+}
+
+.emotion-0[data-container-full-width="true"] {
+  width: 100%;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      aria-controls="menu-menu"
+      aria-describedby="menu-menu"
+      class="emotion-0 emotion-1"
+      tabindex="-1"
+    >
+      <button
+        aria-expanded="true"
+        aria-haspopup="dialog"
+        type="button"
+      >
+        Menu
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Menu > sizes > renders large 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -1174,8 +1252,8 @@ exports[`Menu > sizes > renders large 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-:r1a:"
-      aria-describedby="menu-:r1a:"
+      aria-controls="menu-:r1t:"
+      aria-describedby="menu-:r1t:"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1221,8 +1299,8 @@ exports[`Menu > sizes > renders medium 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-:r17:"
-      aria-describedby="menu-:r17:"
+      aria-controls="menu-:r1q:"
+      aria-describedby="menu-:r1q:"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
@@ -1268,8 +1346,8 @@ exports[`Menu > sizes > renders small 1`] = `
     data-testid="testing"
   >
     <div
-      aria-controls="menu-:r14:"
-      aria-describedby="menu-:r14:"
+      aria-controls="menu-:r1n:"
+      aria-describedby="menu-:r1n:"
       class="emotion-0 emotion-1"
       tabindex="-1"
     >
