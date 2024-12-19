@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
-import type { DisclosureProps } from '..'
 import { MenuV2 } from '..'
 import { Button } from '../../Button'
+import type { DisclosureProps } from '../types'
 
 const CustomDisclosure = ({ visible }: DisclosureProps) => (
   <Button>{visible ? 'MenuV2 (is opened)' : 'MenuV2 (is closed)'}</Button>
