@@ -1,8 +1,11 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
+import type { ComponentProps } from 'react'
 import { CheckboxGroupField } from '..'
 
-const CheckboxGroupFieldStory: StoryFn<typeof CheckboxGroupField> = args => (
+const CheckboxGroupTemplate = (
+  args: ComponentProps<typeof CheckboxGroupField>,
+) => (
   <Stack gap={2}>
     <CheckboxGroupField {...args}>
       <CheckboxGroupField.Checkbox
@@ -19,7 +22,7 @@ const CheckboxGroupFieldStory: StoryFn<typeof CheckboxGroupField> = args => (
 )
 
 export const Template: StoryFn<typeof CheckboxGroupField> = args => (
-  <CheckboxGroupFieldStory {...args} />
+  <CheckboxGroupTemplate {...args} />
 )
 
 Template.args = {

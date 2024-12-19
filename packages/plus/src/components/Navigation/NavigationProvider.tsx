@@ -1,4 +1,4 @@
-import type { Dispatch, ReactNode, Reducer, RefObject } from 'react'
+import type { Dispatch, ReactNode, RefObject } from 'react'
 import {
   createContext,
   useCallback,
@@ -33,7 +33,7 @@ type ContextProps = {
   unpinItem: (item: string) => string[]
   pinnedItems: string[]
   pinLimit: number
-  navigationRef: RefObject<HTMLDivElement>
+  navigationRef: RefObject<HTMLDivElement | null>
   locales: Record<keyof typeof NavigationLocales, string>
   width: number
   setWidth: (width: number) => void
@@ -156,14 +156,14 @@ export const NavigationProvider = ({
 
   // This is used to store the items that are registered in the navigation
   // This way we can retrieve items with their active state in pinned feature
-  const [items, registerItem] = useReducer<Reducer<Items, Items>>(
+  const [items, registerItem] = useReducer(
     (oldState: Items, newState: Items) => ({
       ...oldState,
       ...newState,
     }),
     {},
   )
-  const navigationRef = useRef<HTMLDivElement>(null)
+  const navigationRef = useRef<HTMLDivElement | null>(null)
 
   // This function will be triggered when expand/collapse button is clicked
   const toggleExpand = useCallback(

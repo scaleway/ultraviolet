@@ -1,10 +1,13 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
+import type { ComponentProps } from 'react'
 import { ToggleGroupField } from '..'
 import { Submit } from '../..'
 import { useWatch } from '../../..'
 
-export const RequiredStory: StoryFn<typeof ToggleGroupField> = args => {
+export const RequiredStory = (
+  args: ComponentProps<typeof ToggleGroupField>,
+) => {
   const values = useWatch()
 
   return (

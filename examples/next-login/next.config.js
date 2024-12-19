@@ -9,21 +9,12 @@ const nextConfig = () => {
     },
     poweredByHeader: false,
     reactStrictMode: true,
-    swcMinify: true,
     compiler: {
       emotion: true,
     },
     eslint: {
       ignoreDuringBuilds: true,
     },
-    experimental: {
-      esmExternals: 'loose', // See https://github.com/Hacker0x01/react-datepicker/issues/3834
-    },
-    transpilePackages: [
-      '@ultraviolet/ui',
-      '@ultraviolet/form',
-      '@ultraviolet/icons',
-    ],
   }
   return config
 }

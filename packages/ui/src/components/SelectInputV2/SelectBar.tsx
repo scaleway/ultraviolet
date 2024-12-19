@@ -26,7 +26,7 @@ type SelectBarProps = {
   success?: string
   error?: string
   autoFocus?: boolean
-  innerRef: RefObject<HTMLDivElement>
+  innerRef: RefObject<HTMLDivElement | null>
   id?: string
   'data-testid': string
   label?: string
@@ -34,7 +34,7 @@ type SelectBarProps = {
 }
 
 type DisplayValuesProps = {
-  refTag: RefObject<HTMLDivElement>
+  refTag: RefObject<HTMLDivElement | null>
   nonOverflowedValues: OptionType[]
   disabled: boolean
   readOnly: boolean

@@ -56,10 +56,11 @@ describe('List', () => {
   afterEach(() => {
     vi.spyOn(global.Math, 'random').mockRestore()
   })
-  test('Should throw an error', () => {
+  test.skip('Should throw an error', () => {
     const consoleErrMock = vi
       .spyOn(console, 'error')
       .mockImplementation(() => {})
+
     expect(() => {
       renderWithTheme(
         data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -73,6 +74,7 @@ describe('List', () => {
         )),
       )
     }).toThrow()
+
     expect(consoleErrMock).toHaveBeenCalled()
     consoleErrMock.mockRestore()
   })

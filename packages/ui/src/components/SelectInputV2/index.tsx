@@ -172,7 +172,7 @@ export const SelectInputV2 = <IsMulti extends undefined | boolean>({
 }: SelectInputV2Props<IsMulti>) => {
   const localId = useId()
   const finalId = id ?? localId
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement | null>(null)
   const numberOfOptions = Array.isArray(options)
     ? options.length
     : Object.values(options).reduce(

@@ -61,7 +61,7 @@ type SelectInputProviderProps<IsMulti extends boolean> = {
   selectAllGroup: boolean
   numberOfOptions: number
   multiselect: IsMulti
-  refSelect?: RefObject<HTMLDivElement>
+  refSelect?: RefObject<HTMLDivElement | null>
   onChange?: IsMulti extends true
     ? (value: string[]) => void
     : (value: string) => void

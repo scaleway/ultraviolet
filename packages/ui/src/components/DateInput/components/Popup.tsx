@@ -23,7 +23,7 @@ type PopupProps = {
   children: ReactNode
   visible: boolean
   setVisible: Dispatch<SetStateAction<boolean>>
-  refInput: RefObject<HTMLInputElement>
+  refInput: RefObject<HTMLInputElement | null>
 }
 
 const StyledPopup = styled(Popup)`
@@ -37,9 +37,9 @@ const StyledPopup = styled(Popup)`
 
 const handleClickOutside = (
   event: MouseEvent,
-  ref: RefObject<HTMLDivElement>,
+  ref: RefObject<HTMLDivElement | null>,
   setVisible: Dispatch<SetStateAction<boolean>>,
-  refInput: RefObject<HTMLInputElement>,
+  refInput: RefObject<HTMLInputElement | null>,
 ) => {
   if (
     ref.current &&

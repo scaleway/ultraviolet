@@ -50,7 +50,9 @@ export const Expandable = ({
   animationDuration = ANIMATION_DURATION,
 }: ExpandableProps) => {
   const [height, setHeight] = useState<number | null>(null)
-  const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
+  const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
+    null,
+  )
   const ref = useRef<HTMLDivElement>(null)
   const shouldBeAnimated = animationDuration > 0
 
@@ -87,7 +89,9 @@ export const Expandable = ({
         ref.current.style.visibility = ''
       }
     } else {
-      clearTimeout(transitionTimer.current)
+      if (transitionTimer?.current) {
+        clearTimeout(transitionTimer.current)
+      }
 
       if (ref.current && height) {
         ref.current.style.maxHeight = `${height}px`
@@ -114,7 +118,9 @@ export const Expandable = ({
     }
 
     return () => {
-      clearTimeout(transitionTimer.current)
+      if (transitionTimer?.current) {
+        clearTimeout(transitionTimer.current)
+      }
     }
   }, [animationDuration, height, minHeight, opened, shouldBeAnimated])
 

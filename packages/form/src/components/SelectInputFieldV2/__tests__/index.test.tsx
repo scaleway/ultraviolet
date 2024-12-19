@@ -1,4 +1,4 @@
-import { act, fireEvent, screen } from '@testing-library/react'
+import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithForm } from '@utils/test'
 import { describe, expect, test, vi } from 'vitest'
@@ -34,7 +34,7 @@ describe('SelectInputField', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  test('should display right value on grouped options', () => {
+  test('should display right value on grouped options', async () => {
     const { asFragment } = renderWithForm(
       <SelectInputFieldV2 name="test" options={planets} searchable={false} />,
     )
@@ -45,8 +45,9 @@ describe('SelectInputField', () => {
 
     act(() => mercury.click())
     act(() => select.click())
-
-    expect(mercury).toBeVisible()
+    await waitFor(() => {
+      expect(mercury).toBeVisible()
+    })
     expect(asFragment()).toMatchSnapshot()
   })
 
@@ -66,8 +67,11 @@ describe('SelectInputField', () => {
     const option = screen.getByTestId('option-stack-mercury')
 
     await userEvent.click(option)
-    expect(onChange).toBeCalledTimes(1)
+    await waitFor(() => {
+      expect(onChange).toBeCalledTimes(1)
+    })
     act(() => select.blur())
+
     expect(asFragment()).toMatchSnapshot()
   })
 })

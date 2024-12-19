@@ -1,9 +1,10 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
+import type { ComponentProps } from 'react'
 import { RadioGroupField } from '..'
 import { Submit } from '../..'
 
-export const RequiredStory: StoryFn<typeof RadioGroupField> = args => (
+const RequiredTemplate = (args: ComponentProps<typeof RadioGroupField>) => (
   <Stack gap={1}>
     <RadioGroupField {...args}>
       <RadioGroupField.Radio value="radio-1" label="Radio 1" />
@@ -14,7 +15,7 @@ export const RequiredStory: StoryFn<typeof RadioGroupField> = args => (
 )
 
 export const Required: StoryFn<typeof RadioGroupField> = args => (
-  <RequiredStory {...args} />
+  <RequiredTemplate {...args} />
 )
 
 Required.args = {

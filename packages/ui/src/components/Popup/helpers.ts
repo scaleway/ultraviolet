@@ -189,8 +189,8 @@ const getPopupOverflowFromParent = (
 
 type ComputePositionsTypes = {
   placement: PopupPlacement
-  childrenRef: RefObject<HTMLDivElement>
-  popupRef: RefObject<HTMLDivElement>
+  childrenRef: RefObject<HTMLDivElement | null>
+  popupRef: RefObject<HTMLDivElement | null>
   popupPortalTarget: HTMLElement
   hasArrow: boolean
   align: PopupAlign
@@ -211,7 +211,9 @@ export const computePositions = ({
   const childrenRect = (
     childrenRef.current as HTMLDivElement
   ).getBoundingClientRect()
-  const offsetParent = findOffsetParent(childrenRef)
+  const offsetParent = findOffsetParent(
+    childrenRef as RefObject<HTMLDivElement>,
+  )
   const offsetParentRect = offsetParent?.getBoundingClientRect() ?? {
     top: 0,
     left: 0,
