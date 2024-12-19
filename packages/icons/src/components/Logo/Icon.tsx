@@ -2,19 +2,19 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 
 const SIZES = {
-  small: 16,
-  medium: 20,
-  large: 32,
-  xlarge: 56,
-}
+  small: '200',
+  medium: '250',
+  large: '400',
+  xlarge: '700',
+} as const
 
 const StyledIcon = styled('svg', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })<{ size: keyof typeof SIZES }>`
   & {
-    width: ${({ size }) => `${SIZES[size]}px`};
-    min-width: ${({ size }) => `${SIZES[size]}px`}; // This is to avoid the icon to shrink when the text is too long
-    height: ${({ size }) => `${SIZES[size]}px`};
+    width: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`};
+    min-width: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`}; // This is to avoid the icon to shrink when the text is too long
+    height: ${({ size, theme }) => `${theme.sizing[SIZES[size]]}`};
   }
 `
 
