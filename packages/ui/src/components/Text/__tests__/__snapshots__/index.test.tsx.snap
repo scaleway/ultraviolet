@@ -725,6 +725,32 @@ exports[`Text > renders correctly with type="headingStronger" 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Text > renders correctly with whiteSpace 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Text > with disabled 1`] = `
 <DocumentFragment>
   .emotion-0 {
@@ -762,6 +788,32 @@ exports[`Text > with italic 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-style: italic;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      Lorem Ipsum
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text > with monochrome 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  color: #151a2d;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
