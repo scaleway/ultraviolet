@@ -199,11 +199,11 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -216,7 +216,7 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -265,11 +265,11 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -282,7 +282,7 @@ exports[`List > Should expand a row by pressing Space 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -905,11 +905,11 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.emotion-39:before {
+.emotion-26:not([aria-disabled='true']):hover+.emotion-39:before {
   border-color: #8c40ef;
 }
 
@@ -922,7 +922,7 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -971,11 +971,11 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.emotion-39:before {
+.emotion-26:not([aria-disabled='true']):hover+.emotion-39:before {
   border-color: #8c40ef;
 }
 
@@ -988,7 +988,7 @@ exports[`List > Should not collapse a row by clicking on expandable content 1`] 
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -1579,11 +1579,11 @@ exports[`List > Should render correctly 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -1596,7 +1596,7 @@ exports[`List > Should render correctly 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -2201,11 +2201,11 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -2218,7 +2218,7 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -2267,11 +2267,11 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -2284,7 +2284,7 @@ exports[`List > Should render correctly with bad sort value 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -2814,11 +2814,11 @@ exports[`List > Should render correctly with disabled rows 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -2831,7 +2831,7 @@ exports[`List > Should render correctly with disabled rows 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -3364,11 +3364,11 @@ exports[`List > Should render correctly with expandable rows 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -3381,7 +3381,7 @@ exports[`List > Should render correctly with expandable rows 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -4028,11 +4028,11 @@ exports[`List > Should render correctly with info 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-46:hover::before {
+.emotion-46:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-46:hover+.ei4uyz15:before {
+.emotion-46:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -4045,7 +4045,7 @@ exports[`List > Should render correctly with info 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-46:hover {
+.emotion-46:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -4094,11 +4094,11 @@ exports[`List > Should render correctly with info 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-46:hover::before {
+.emotion-46:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-46:hover+.ei4uyz15:before {
+.emotion-46:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -4111,7 +4111,7 @@ exports[`List > Should render correctly with info 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-46:hover {
+.emotion-46:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -4808,11 +4808,11 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.emotion-51:before {
+.emotion-26:not([aria-disabled='true']):hover+.emotion-51:before {
   border-color: #8c40ef;
 }
 
@@ -4825,7 +4825,7 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -4874,11 +4874,11 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.emotion-51:before {
+.emotion-26:not([aria-disabled='true']):hover+.emotion-51:before {
   border-color: #8c40ef;
 }
 
@@ -4891,7 +4891,7 @@ exports[`List > Should render correctly with isExpandable and autoClose rows the
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -5564,11 +5564,11 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -5581,7 +5581,7 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -5630,11 +5630,11 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -5647,7 +5647,7 @@ exports[`List > Should render correctly with isExpandable rows then click 1`] = 
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -6208,11 +6208,11 @@ exports[`List > Should render correctly with loading 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -6225,7 +6225,7 @@ exports[`List > Should render correctly with loading 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -7244,11 +7244,11 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-43:hover::before {
+.emotion-43:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-43:hover+.ei4uyz15:before {
+.emotion-43:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -7261,7 +7261,7 @@ exports[`List > Should render correctly with loading with selectable 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-43:hover {
+.emotion-43:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -8113,11 +8113,11 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -8130,7 +8130,7 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -8179,11 +8179,11 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -8196,7 +8196,7 @@ exports[`List > Should render correctly with preventClick cell then click but ev
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -8726,11 +8726,11 @@ exports[`List > Should render correctly with row expanded 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -8743,7 +8743,7 @@ exports[`List > Should render correctly with row expanded 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -9570,11 +9570,11 @@ exports[`List > Should render correctly with selectable 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-43:hover::before {
+.emotion-43:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-43:hover+.ei4uyz15:before {
+.emotion-43:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -9587,7 +9587,7 @@ exports[`List > Should render correctly with selectable 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-43:hover {
+.emotion-43:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -11608,11 +11608,11 @@ exports[`List > Should render correctly with selectable then click on first row 
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-43:hover::before {
+.emotion-43:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-43:hover+.ei4uyz15:before {
+.emotion-43:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -11625,7 +11625,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   border-color: #d9dadd;
 }
 
-.emotion-43:hover {
+.emotion-43:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -11674,11 +11674,11 @@ exports[`List > Should render correctly with selectable then click on first row 
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-43:hover::before {
+.emotion-43:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-43:hover+.ei4uyz15:before {
+.emotion-43:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -11691,7 +11691,7 @@ exports[`List > Should render correctly with selectable then click on first row 
   border-color: #d9dadd;
 }
 
-.emotion-43:hover {
+.emotion-43:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -13877,11 +13877,11 @@ exports[`List > Should render correctly with selectable with shift click for mul
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-45:hover::before {
+.emotion-45:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-45:hover+.ei4uyz15:before {
+.emotion-45:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -13894,7 +13894,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   border-color: #d9dadd;
 }
 
-.emotion-45:hover {
+.emotion-45:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -13943,11 +13943,11 @@ exports[`List > Should render correctly with selectable with shift click for mul
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-45:hover::before {
+.emotion-45:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-45:hover+.ei4uyz15:before {
+.emotion-45:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -13960,7 +13960,7 @@ exports[`List > Should render correctly with selectable with shift click for mul
   border-color: #d9dadd;
 }
 
-.emotion-45:hover {
+.emotion-45:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -15454,11 +15454,11 @@ exports[`List > Should render correctly with sentiment rows 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -16009,11 +16009,11 @@ exports[`List > Should render correctly with sort 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-26:hover::before {
+.emotion-26:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-26:hover+.ei4uyz15:before {
+.emotion-26:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -16026,7 +16026,7 @@ exports[`List > Should render correctly with sort 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-26:hover {
+.emotion-26:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -16665,11 +16665,11 @@ exports[`List > Should render correctly with sort then click 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-37:hover::before {
+.emotion-37:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-37:hover+.ei4uyz15:before {
+.emotion-37:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -16682,7 +16682,7 @@ exports[`List > Should render correctly with sort then click 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-37:hover {
+.emotion-37:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
@@ -16731,11 +16731,11 @@ exports[`List > Should render correctly with sort then click 1`] = `
   transition: box-shadow 200ms ease,border-color 200ms ease;
 }
 
-.emotion-37:hover::before {
+.emotion-37:not([aria-disabled='true']):hover::before {
   border-color: #8c40ef;
 }
 
-.emotion-37:hover+.ei4uyz15:before {
+.emotion-37:not([aria-disabled='true']):hover+.ei4uyz15:before {
   border-color: #8c40ef;
 }
 
@@ -16748,7 +16748,7 @@ exports[`List > Should render correctly with sort then click 1`] = `
   border-color: #d9dadd;
 }
 
-.emotion-37:hover {
+.emotion-37:not([aria-disabled='true']):hover {
   border-color: #8c40ef;
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
