@@ -128,6 +128,7 @@ describe('Table', () => {
     const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
     const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
+    const secondRowCheckbox = checkboxes.find(({ value }) => value === '2')
     const allCheckbox = checkboxes.find(({ value }) => value === 'all')
     expect(firstRowCheckbox).toBeInTheDocument()
     expect(allCheckbox).toBeInTheDocument()
@@ -142,10 +143,14 @@ describe('Table', () => {
     await userEvent.click(firstRowCheckbox)
     expect(firstRowCheckbox).not.toBeChecked()
     await userEvent.click(firstRowCheckbox)
+    //  mixed | indeterminated state
     await userEvent.click(allCheckbox)
     expect(firstRowCheckbox).not.toBeChecked()
+    expect(allCheckbox).not.toBeChecked()
     await userEvent.click(allCheckbox)
     expect(firstRowCheckbox).toBeChecked()
+    expect(secondRowCheckbox).toBeChecked()
+    expect(allCheckbox).toBeChecked()
     expect(asFragment()).toMatchSnapshot()
   })
 

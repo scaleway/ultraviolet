@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
 import { forwardRef } from 'react'
 import { Body } from './Body'
 import { Cell } from './Cell'
@@ -11,6 +10,7 @@ import { Row } from './Row'
 import { SelectBar } from './SelectBar'
 import { SkeletonRows } from './SkeletonRows'
 import { TableProvider, useTableContext } from './TableContext'
+import type { TableProviderProps } from './TableContext'
 import { EXPANDABLE_COLUMN_SIZE, SELECTABLE_CHECKBOX_SIZE } from './constants'
 import type { ColumnProps } from './types'
 
@@ -60,10 +60,8 @@ const StyledTable = styled('table', {
   `}
 `
 
-type TableProps = {
+type TableProps = TableProviderProps & {
   selectable?: boolean
-  columns: ColumnProps[]
-  children: ReactNode
   /**
    * Set it to true if you want to display a placeholder during loading
    * */
@@ -75,6 +73,7 @@ type TableProps = {
    * Auto collapse is collapsing expandable row when another is expanding
    * */
   autoCollapse?: boolean
+  columns: ColumnProps[]
 }
 
 export const BaseTable = forwardRef<HTMLTableElement, TableProps>(

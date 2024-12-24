@@ -4,7 +4,7 @@ import { Radio } from '..'
 export const Template: StoryFn<typeof Radio> = args => <Radio {...args} />
 
 Template.args = {
-  checked: false,
+  // checked: false,
   label: 'Label 1',
   disabled: false,
   name: 'basic',

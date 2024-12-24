@@ -1,7 +1,14 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode, Ref } from 'react'
-import { Children, useCallback, useEffect, useId, useRef } from 'react'
+import type { ReactNode } from 'react'
+import {
+  Children,
+  forwardRef,
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+} from 'react'
 import type { SENTIMENTS, space } from '../../theme'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
@@ -183,199 +190,200 @@ type RowProps = {
    */
   expandablePadding?: keyof typeof space
   'data-testid'?: string
-  ref?: Ref<HTMLTableRowElement>
 }
 
-export const Row = ({
-  children,
-  id,
-  expandable,
-  disabled,
-  selectDisabled,
-  sentiment = 'neutral',
-  expanded,
-  className,
-  expandablePadding,
-  'data-testid': dataTestid,
-  ref,
-}: RowProps) => {
-  const {
-    selectable,
-    registerExpandableRow,
-    expandedRowIds,
-    expandRow,
-    collapseRow,
-    registerSelectableRow,
-    selectedRowIds,
-    selectRow,
-    unselectRow,
-    expandButton,
-    refList,
-    inRange,
-    columns,
-  } = useListContext()
+export const Row = forwardRef<HTMLTableRowElement, RowProps>(
+  (
+    {
+      children,
+      id,
+      expandable,
+      disabled,
+      selectDisabled,
+      sentiment = 'neutral',
+      expanded,
+      className,
+      expandablePadding,
+      'data-testid': dataTestid,
+    },
+    forwardedRef,
+  ) => {
+    const {
+      selectable,
+      registerExpandableRow,
+      expandedRowIds,
+      expandRow,
+      collapseRow,
+      registerSelectableRow,
+      selectedRowIds,
+      selectRow,
+      unselectRow,
+      expandButton,
+      refList,
+      inRange,
+      columns,
+    } = useListContext()
 
-  const theme = useTheme()
+    const theme = useTheme()
 
-  const expandedRowId = useId()
+    const expandedRowId = useId()
 
-  const checkboxRef = useRef<HTMLInputElement>(null)
+    const checkboxRef = useRef<HTMLInputElement>(null)
 
-  const isSelectDisabled =
-    disabled || (selectDisabled !== undefined && selectDisabled !== false)
-
-  const hasExpandable = !!expandable
-  useEffect(() => {
-    if (hasExpandable) {
-      const unregisterCallback = registerExpandableRow(id, expanded)
-
-      return unregisterCallback
+    const onCheckboxHandler = () => {
+      if (selectedRowIds[id]) {
+        unselectRow(id)
+      } else {
+        selectRow(id)
+      }
     }
 
-    return undefined
-  }, [id, hasExpandable, registerExpandableRow, expanded, expandRow])
+    const isSelectDisabled =
+      disabled || (selectDisabled !== undefined && selectDisabled !== false)
 
-  useEffect(() => {
-    if (!isSelectDisabled) {
-      const unregisterCallback = registerSelectableRow(id)
+    const hasExpandable = !!expandable
+    useEffect(() => {
+      if (hasExpandable) {
+        const unregisterCallback = registerExpandableRow(id, expanded)
 
-      return unregisterCallback
-    }
+        return unregisterCallback
+      }
 
-    return undefined
-  }, [id, registerSelectableRow, isSelectDisabled])
+      return undefined
+    }, [id, hasExpandable, registerExpandableRow, expanded, expandRow])
 
-  const toggleRowExpand = useCallback(() => {
-    if (expandedRowIds[id]) {
-      collapseRow(id)
-    } else {
-      expandRow(id)
-    }
-  }, [collapseRow, expandRow, expandedRowIds, id])
+    useEffect(() => {
+      if (!isSelectDisabled) {
+        const unregisterCallback = registerSelectableRow(id)
 
-  const canClickRowToExpand = !disabled && !!expandable && !expandButton
+        return unregisterCallback
+      }
 
-  useEffect(() => {
-    const refAtEffectStart = refList.current
-    const { current } = checkboxRef
+      return undefined
+    }, [id, registerSelectableRow, isSelectDisabled])
 
-    if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
-      refList.current.push(current)
-    }
-  }, [refList])
+    const toggleRowExpand = useCallback(() => {
+      if (expandedRowIds[id]) {
+        collapseRow(id)
+      } else {
+        expandRow(id)
+      }
+    }, [collapseRow, expandRow, expandedRowIds, id])
 
-  const childrenLength =
-    Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
+    const canClickRowToExpand = !disabled && !!expandable && !expandButton
 
-  return (
-    <>
-      <StyledRow
-        className={className}
-        ref={ref}
-        role={canClickRowToExpand ? 'button row' : undefined}
-        // onClick={canClickRowToExpand ? toggleRowExpand : undefined}
-        // onKeyDown={
-        //   canClickRowToExpand
-        //     ? event => {
-        //         if (event.key === ' ') {
-        //           toggleRowExpand()
-        //           event.preventDefault()
-        //         }
-        //       }
-        //     : undefined
-        // }
-        // tabIndex={canClickRowToExpand ? 0 : -1}
-        sentiment={sentiment}
-        aria-disabled={disabled}
-        aria-expanded={expandable ? expandedRowIds[id] : undefined}
-        aria-controls={
-          expandable && expandedRowIds[id] ? expandedRowId : undefined
-        }
-        data-highlight={selectable && !!selectedRowIds[id]}
-        data-testid={dataTestid}
-        columns={columns}
-        columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
-      >
-        {selectable ? (
-          <NoPaddingCell
-            // preventClick={canClickRowToExpand}
-            maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
-          >
-            <StyledCheckboxContainer>
-              <Tooltip
-                text={
-                  typeof selectDisabled === 'string'
-                    ? selectDisabled
-                    : undefined
-                }
-              >
-                <StyledCheckbox
-                  name="list-select-checkbox"
-                  aria-label="select"
-                  checked={selectedRowIds[id]}
-                  value={id}
-                  ref={checkboxRef}
-                  onChange={() => {
-                    if (selectedRowIds[id]) {
-                      unselectRow(id)
-                    } else {
-                      selectRow(id)
-                    }
-                  }}
-                  onClick={() => {
-                    if (selectedRowIds[id]) {
-                      unselectRow(id)
-                    } else {
-                      selectRow(id)
-                    }
-                  }}
-                  disabled={isSelectDisabled}
-                  inRange={inRange.includes(id)}
-                />
-              </Tooltip>
-            </StyledCheckboxContainer>
-          </NoPaddingCell>
-        ) : null}
-        {expandButton ? (
-          <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
-            <Button
-              disabled={disabled || !expandable}
-              icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
-              onClick={toggleRowExpand}
-              size="small"
-              sentiment={sentiment}
-              variant="ghost"
-              aria-label="expand"
-              data-testid="list-expand-button"
-            />
-          </NoPaddingCell>
-        ) : null}
-        {children}
-      </StyledRow>
-      {expandable && expandedRowIds[id] ? (
-        <ExpandableWrapper
-          id={expandedRowId}
-          data-expandable-content
-          onClick={
-            canClickRowToExpand
-              ? e => {
-                  e.stopPropagation()
-                }
-              : undefined
-          }
+    useEffect(() => {
+      const refAtEffectStart = refList.current
+      const { current } = checkboxRef
+
+      if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
+        refList.current.push(current)
+      }
+    }, [refList])
+
+    const childrenLength =
+      Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
+
+    return (
+      <>
+        <StyledRow
+          className={className}
+          ref={forwardedRef}
+          role={canClickRowToExpand ? 'button row' : undefined}
+          onClick={canClickRowToExpand ? toggleRowExpand : undefined}
           onKeyDown={
             canClickRowToExpand
-              ? e => {
-                  e.stopPropagation()
+              ? event => {
+                  if (event.key === ' ') {
+                    toggleRowExpand()
+                    event.preventDefault()
+                  }
                 }
               : undefined
           }
+          tabIndex={canClickRowToExpand ? 0 : -1}
+          sentiment={sentiment}
+          aria-disabled={disabled}
+          aria-expanded={expandable ? expandedRowIds[id] : undefined}
+          aria-controls={
+            expandable && expandedRowIds[id] ? expandedRowId : undefined
+          }
+          data-highlight={selectable && !!selectedRowIds[id]}
+          data-testid={dataTestid}
+          columns={columns}
+          columnsStartAt={(selectable ? 1 : 0) + (expandButton ? 1 : 0)}
         >
-          <ExpandableCell colSpan={childrenLength} padding={expandablePadding}>
-            {expandable}
-          </ExpandableCell>
-        </ExpandableWrapper>
-      ) : null}
-    </>
-  )
-}
+          {selectable ? (
+            <NoPaddingCell
+              preventClick={canClickRowToExpand}
+              maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}
+            >
+              <StyledCheckboxContainer>
+                <Tooltip
+                  text={
+                    typeof selectDisabled === 'string'
+                      ? selectDisabled
+                      : undefined
+                  }
+                >
+                  <StyledCheckbox
+                    name="list-select-checkbox"
+                    aria-label="select"
+                    checked={selectedRowIds[id]}
+                    value={id}
+                    ref={checkboxRef}
+                    onChange={onCheckboxHandler}
+                    disabled={isSelectDisabled}
+                    inRange={inRange.includes(id)}
+                  />
+                </Tooltip>
+              </StyledCheckboxContainer>
+            </NoPaddingCell>
+          ) : null}
+          {expandButton ? (
+            <NoPaddingCell maxWidth={theme.sizing[SELECTABLE_CHECKBOX_SIZE]}>
+              <Button
+                disabled={disabled || !expandable}
+                icon={expandedRowIds[id] ? 'arrow-up' : 'arrow-down'}
+                onClick={toggleRowExpand}
+                size="small"
+                sentiment={sentiment}
+                variant="ghost"
+                aria-label="expand"
+                data-testid="list-expand-button"
+              />
+            </NoPaddingCell>
+          ) : null}
+          {children}
+        </StyledRow>
+        {expandable && expandedRowIds[id] ? (
+          <ExpandableWrapper
+            id={expandedRowId}
+            data-expandable-content
+            onClick={
+              canClickRowToExpand
+                ? e => {
+                    e.stopPropagation()
+                  }
+                : undefined
+            }
+            onKeyDown={
+              canClickRowToExpand
+                ? e => {
+                    e.stopPropagation()
+                  }
+                : undefined
+            }
+          >
+            <ExpandableCell
+              colSpan={childrenLength}
+              padding={expandablePadding}
+            >
+              {expandable}
+            </ExpandableCell>
+          </ExpandableWrapper>
+        ) : null}
+      </>
+    )
+  },
+)

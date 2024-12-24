@@ -52,7 +52,7 @@ const StyledTextInputV2 = styled(TextInputV2)`
  * - `isOpen`: a boolean indicating if the popup is open
  * - `toggleIsOpen`: a function to toggle the popup
  */
-export const SearchInput = forwardRef(
+export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
   (
     {
       placeholder,

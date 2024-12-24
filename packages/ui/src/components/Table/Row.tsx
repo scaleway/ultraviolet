@@ -115,14 +115,12 @@ export const Row = ({
     collapseRow,
     registerSelectableRow,
     selectedRowIds,
-    selectRow,
-    unselectRow,
     expandButton,
-    ref,
+    refList,
     inRange,
     columns,
   } = useTableContext()
-  const rowRef = useRef<HTMLInputElement>(null)
+  const checkboxRowRef = useRef<HTMLInputElement>(null)
 
   const hasExpandable = !!expandable
   useEffect(() => {
@@ -156,13 +154,13 @@ export const Row = ({
   const canClickRowToExpand = hasExpandable && !expandButton
 
   useEffect(() => {
-    const refAtEffectStart = ref.current
-    const { current } = rowRef
+    const refAtEffectStart = refList.current
+    const { current } = checkboxRowRef
 
     if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
-      ref.current.push(current)
+      refList.current.push(current)
     }
-  }, [ref])
+  }, [refList])
 
   const theme = useTheme()
 
@@ -194,15 +192,8 @@ export const Row = ({
                   aria-label="select"
                   checked={selectedRowIds[id]}
                   value={id}
-                  onChange={() => {
-                    if (selectedRowIds[id]) {
-                      unselectRow(id)
-                    } else {
-                      selectRow(id)
-                    }
-                  }}
                   disabled={selectDisabled !== undefined}
-                  ref={rowRef}
+                  ref={checkboxRowRef}
                   inRange={inRange.includes(id)}
                 />
               </Tooltip>
