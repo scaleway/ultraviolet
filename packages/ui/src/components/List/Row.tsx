@@ -93,11 +93,11 @@ export const StyledRow = styled('tr', {
       border-color 200ms ease;
   }
 
-  &:hover::before {
+  &:not([aria-disabled='true']):hover::before {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
-  &:hover + ${ExpandableWrapper}:before {
+  &:not([aria-disabled='true']):hover + ${ExpandableWrapper}:before {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
@@ -117,7 +117,7 @@ export const StyledRow = styled('tr', {
 
     ${
       sentiment === 'neutral'
-        ? `&:hover {
+        ? `&:not([aria-disabled='true']):hover {
           border-color: ${theme.colors.primary.border};
           box-shadow: ${theme.shadows.hoverPrimary};
         }
