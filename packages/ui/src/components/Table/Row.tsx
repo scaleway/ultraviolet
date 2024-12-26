@@ -120,6 +120,7 @@ export const Row = ({
     inRange,
     columns,
   } = useTableContext()
+
   const checkboxRowRef = useRef<HTMLInputElement>(null)
 
   const hasExpandable = !!expandable
@@ -160,6 +161,10 @@ export const Row = ({
     if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
       refList.current.push(current)
     }
+
+    return () => {
+      //  TODO should add a clean up function to remove the ref of the currentList maybe find an other way of getting the checkbox refList
+    }
   }, [refList])
 
   const theme = useTheme()
@@ -194,7 +199,7 @@ export const Row = ({
                   value={id}
                   disabled={selectDisabled !== undefined}
                   ref={checkboxRowRef}
-                  inRange={inRange.includes(id)}
+                  inRange={inRange?.includes(id)}
                 />
               </Tooltip>
             </StyledCheckboxContainer>

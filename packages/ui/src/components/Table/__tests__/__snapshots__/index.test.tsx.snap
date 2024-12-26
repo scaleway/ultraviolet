@@ -3515,12 +3515,6 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   width: 100%;
 }
 
-.emotion-0 {
-  min-width: 100%;
-  overflow-x: auto;
-  width: 100%;
-}
-
 .emotion-2 {
   width: 100%;
   box-sizing: content-box;
@@ -3532,23 +3526,6 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   width: 100%;
   display: table-row;
   vertical-align: middle;
-}
-
-.emotion-2 {
-  width: 100%;
-  box-sizing: content-box;
-  border-collapse: collapse;
-}
-
-.emotion-2 [role="row"],
-.emotion-2 [role="button row"] {
-  width: 100%;
-  display: table-row;
-  vertical-align: middle;
-}
-
-.emotion-4 {
-  border-bottom: 1px solid #d9dadd;
 }
 
 .emotion-4 {
@@ -3572,30 +3549,6 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
 
 .emotion-6:first-of-type {
   padding-left: 1rem;
-}
-
-.emotion-9 {
-  color: #3f4250;
-  font-size: 0.875rem;
-  font-family: Inter,Asap,sans-serif;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.25rem;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .emotion-9 {
@@ -3917,27 +3870,6 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   padding-left: 1rem;
 }
 
-.emotion-25 {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0.5rem;
-}
-
-.emotion-25[role*='button'] {
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.emotion-25:first-of-type {
-  padding-left: 1rem;
-}
-
 .emotion-50 {
   -webkit-animation: 3s linear;
   animation: 3s linear;
@@ -4141,14 +4073,6 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
   text-align: left;
 }
 
-.emotion-70 {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  text-align: left;
-}
-
 <div
     data-testid="testing"
   >
@@ -4182,7 +4106,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select all"
                     class="emotion-13 emotion-14"
-                    id=":r3j:"
+                    id=":r1:"
                     name="table-select-all-checkbox"
                     type="checkbox"
                     value="all"
@@ -4296,7 +4220,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r3r:"
+                    id=":r9:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="1"
@@ -4385,7 +4309,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r3u:"
+                    id=":rc:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="2"
@@ -4474,7 +4398,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r41:"
+                    id=":rf:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="3"
@@ -4555,15 +4479,15 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                 <div
                   aria-disabled="false"
                   class="emotion-57 emotion-58 emotion-12"
-                  data-checked="true"
+                  data-checked="false"
                   data-error="false"
                 >
                   <input
-                    aria-checked="true"
+                    aria-checked="false"
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r44:"
+                    id=":ri:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="4"
@@ -4652,7 +4576,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r47:"
+                    id=":rl:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="5"
@@ -4741,7 +4665,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r4a:"
+                    id=":ro:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="6"
@@ -4830,7 +4754,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r4d:"
+                    id=":rr:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="7"
@@ -4919,7 +4843,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r4g:"
+                    id=":ru:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="8"
@@ -5008,7 +4932,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r4j:"
+                    id=":r11:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="9"
@@ -5097,7 +5021,7 @@ exports[`Table > Should render correctly with selectable and shift click 1`] = `
                     aria-invalid="false"
                     aria-label="select"
                     class="emotion-13 emotion-14"
-                    id=":r4m:"
+                    id=":r14:"
                     name="table-select-checkbox"
                     type="checkbox"
                     value="10"

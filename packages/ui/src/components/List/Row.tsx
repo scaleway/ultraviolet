@@ -216,8 +216,6 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       collapseRow,
       registerSelectableRow,
       selectedRowIds,
-      selectRow,
-      unselectRow,
       expandButton,
       refList,
       inRange,
@@ -229,14 +227,6 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
     const expandedRowId = useId()
 
     const checkboxRef = useRef<HTMLInputElement>(null)
-
-    const onCheckboxHandler = () => {
-      if (selectedRowIds[id]) {
-        unselectRow(id)
-      } else {
-        selectRow(id)
-      }
-    }
 
     const isSelectDisabled =
       disabled || (selectDisabled !== undefined && selectDisabled !== false)
@@ -332,9 +322,8 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                     checked={selectedRowIds[id]}
                     value={id}
                     ref={checkboxRef}
-                    onChange={onCheckboxHandler}
                     disabled={isSelectDisabled}
-                    inRange={inRange.includes(id)}
+                    inRange={inRange?.includes(id)}
                   />
                 </Tooltip>
               </StyledCheckboxContainer>

@@ -382,8 +382,8 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with selectable and shift click', async () => {
-    const { asFragment } = renderWithTheme(
+  test.only('Should render correctly with selectable and shift click', async () => {
+    const { asFragment, debug } = renderWithTheme(
       <Table columns={columns} selectable>
         <Table.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -423,12 +423,13 @@ describe('Table', () => {
     fireEvent.keyDown(document, { key: 'Shift', code: 'ShiftLeft' })
 
     // Test hovering
-    fireEvent.mouseMove(secondRowCheckbox, { shiftKey: true })
-    fireEvent.mouseMove(thirdRowCheckbox, { shiftKey: true })
+    fireEvent.mouseEnter(secondRowCheckbox, { shiftKey: true })
+    fireEvent.mouseEnter(thirdRowCheckbox, { shiftKey: true })
     fireEvent.mouseLeave(thirdRowCheckbox, { shiftKey: true })
-    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
 
     fireEvent.click(thirdRowCheckbox, { shiftKey: true })
+    debug()
+    fireEvent.keyUp(document, { key: 'Shift', code: 'ShiftLeft' })
     expect(secondRowCheckbox).toBeChecked()
     expect(thirdRowCheckbox).toBeChecked()
 

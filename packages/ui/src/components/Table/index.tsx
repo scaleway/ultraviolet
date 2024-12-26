@@ -59,8 +59,23 @@ const StyledTable = styled('table', {
   }
   `}
 `
+// type OptionalKeys<T> = {
+//   [K in keyof T]: {} extends Pick<T, K> ? K : never
+// }[keyof T]
 
-type TableProps = TableProviderProps & {
+// type OptionalOnly<T> = Pick<T, OptionalKeys<T>>
+
+// TODO: Get type optional from omit values
+type TableProps = Omit<
+  TableProviderProps,
+  | 'selectable'
+  | 'loading'
+  | 'bordered'
+  | 'stripped'
+  | 'autoCollapse'
+  | 'columns'
+  | 'expandButton'
+> & {
   selectable?: boolean
   /**
    * Set it to true if you want to display a placeholder during loading
@@ -73,6 +88,7 @@ type TableProps = TableProviderProps & {
    * Auto collapse is collapsing expandable row when another is expanding
    * */
   autoCollapse?: boolean
+  expandButton?: boolean
   columns: ColumnProps[]
 }
 

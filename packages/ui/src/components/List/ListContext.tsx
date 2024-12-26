@@ -37,6 +37,7 @@ export type ListContextValue = {
   registerSelectableRow: (rowId: string) => () => void
   allRowSelectValue: ComponentProps<typeof Checkbox>['checked']
   checkboxAllHandler: (event: ChangeEvent<HTMLInputElement>) => void
+  subscribeHandler: () => void
   columns: ColumnProps[]
   inRange: string[]
   refList: RefObject<HTMLInputElement[]>
@@ -194,6 +195,7 @@ export const ListProvider = ({
   )
 
   const [lastCheckedIndex, setLastCheckedIndex] = useState<null | number>(null)
+  const [isShiftEvent, setIsShiftEvent] = useState(false)
   const [inRange, setInRange] = useState<string[]>([])
 
   const checkboxAllHandler: ListContextValue['checkboxAllHandler'] =
@@ -210,20 +212,18 @@ export const ListProvider = ({
       }
     }, [allRowSelectValue, unselectAll, selectAll])
 
-  useEffect(() => {
+  const subscribeHandler = useCallback(() => {
     const handlers: (() => void)[] = []
     if (refList.current) {
       const handleClick = (index: number, isShiftPressed: boolean) => {
         if (index !== 0) {
-          setLastCheckedIndex(index)
-          // Only handle shift click event
+          // Only handle shift click event, onChangeHandler will controle naturals events
           if (isShiftPressed && lastCheckedIndex !== null) {
+            setIsShiftEvent(true)
             const start = Math.min(lastCheckedIndex, index)
             const end = Math.max(lastCheckedIndex, index)
 
-            const newSelectedRowIds = {
-              ...selectedRowIds,
-            }
+            const newSelectedRowIds = structuredClone(selectedRowIds)
 
             for (let i = start; i <= end; i += 1) {
               const checkbox = refList.current[i]
@@ -236,7 +236,10 @@ export const ListProvider = ({
                 }
               }
             }
+
             setSelectedRowIds(newSelectedRowIds)
+            setInRange([])
+
             if (onSelectedChange) {
               onSelectedChange(
                 Object.keys(newSelectedRowIds).filter(
@@ -246,6 +249,9 @@ export const ListProvider = ({
             }
           }
         } else setLastCheckedIndex(null)
+
+        // clean up
+        setIsShiftEvent(false)
       }
 
       const handleHover = (
@@ -253,11 +259,11 @@ export const ListProvider = ({
         isShiftPressed: boolean,
         leaving: boolean,
       ) => {
-        const newRange: string[] = []
-
         if (isShiftPressed && lastCheckedIndex !== null) {
           const start = Math.min(lastCheckedIndex, index)
-          const end = Math.max(lastCheckedIndex, index)
+          const end = Math.max(lastCheckedIndex, index + 1)
+
+          const newRange: string[] = []
 
           for (let i = start; i < end; i += 1) {
             const checkbox = refList.current[i]
@@ -265,41 +271,55 @@ export const ListProvider = ({
               newRange.push(checkbox.value)
             }
           }
+          setInRange([...new Set(newRange)])
         }
-        setInRange(newRange)
+
+        if (!lastCheckedIndex) {
+          if (index < refList.current.length && index > 0) {
+            setLastCheckedIndex(index)
+          }
+        }
       }
 
-      const handleOnChange = (index: number, checked: boolean) => {
-        const checkbox = refList.current[index]
-        const checkboxValue = checkbox.value
-        if (checked) selectRow(checkboxValue)
-        else unselectRow(checkboxValue)
+      const handleOnChange = (index: number) => {
+        // if it's shiftEvent it's control by clickEvent
+        if (!isShiftEvent) {
+          const checkbox = refList.current[index]
+          if (checkbox.checked) {
+            unselectRow(checkbox.value)
+          } else {
+            selectRow(checkbox.value)
+          }
+          setLastCheckedIndex(index)
+          setInRange([])
+        }
       }
 
       refList.current.forEach((checkbox, index) => {
-        const clickHandler = (event: MouseEvent) =>
+        const clickHandler = (event: MouseEvent) => {
           handleClick(index, event.shiftKey)
+        }
 
-        const hoverEnteringHandler = (event: MouseEvent) =>
+        const mouseEnterHandler = (event: MouseEvent) =>
           handleHover(index, event.shiftKey, false)
 
-        const hoverLeavingHandler = (event: MouseEvent) =>
+        const mouseOutHandler = (event: MouseEvent) =>
           handleHover(index, event.shiftKey, true)
 
-        const changeHandler = (event: Event) => {
-          handleOnChange(index, (event.target as HTMLInputElement).checked)
+        const changeHandler = () => {
+          handleOnChange(index)
         }
 
         checkbox.addEventListener('click', clickHandler)
         checkbox.addEventListener('change', changeHandler)
-        checkbox.addEventListener('mousemove', hoverEnteringHandler)
-        checkbox.addEventListener('mouseout', hoverLeavingHandler)
+        checkbox.addEventListener('mouseenter', mouseEnterHandler)
+        checkbox.addEventListener('mouseout', mouseOutHandler)
 
         handlers.push(() => {
           checkbox.removeEventListener('click', clickHandler)
           checkbox.removeEventListener('change', changeHandler)
-          checkbox.removeEventListener('mousemove', hoverEnteringHandler)
-          checkbox.removeEventListener('mouseout', hoverLeavingHandler)
+          checkbox.removeEventListener('mouseenter', mouseEnterHandler)
+          checkbox.removeEventListener('mouseout', mouseOutHandler)
         })
       })
     }
@@ -313,12 +333,16 @@ export const ListProvider = ({
     selectedRowIds,
     unselectRow,
     selectRow,
+    isShiftEvent,
   ])
+
+  useEffect(subscribeHandler, [subscribeHandler])
 
   const value = useMemo<ListContextValue>(
     () => ({
       allRowSelectValue,
       checkboxAllHandler,
+      subscribeHandler,
       collapseRow,
       columns,
       expandButton,
@@ -338,6 +362,7 @@ export const ListProvider = ({
     [
       allRowSelectValue,
       checkboxAllHandler,
+      subscribeHandler,
       collapseRow,
       columns,
       expandButton,
