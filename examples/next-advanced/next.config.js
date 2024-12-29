@@ -16,6 +16,10 @@ const nextConfig = () => {
       ignoreDuringBuilds: true,
     },
     transpilePackages: ['react-syntax-highlighter'],
+    experimental: {
+      // still usefull for @nivo/* issue package
+      esmExternals: 'loose',
+    },
   }
 
   return config

@@ -15,6 +15,10 @@ const nextConfig = () => {
     eslint: {
       ignoreDuringBuilds: true,
     },
+    experimental: {
+      // still usefull for @nivo/* issue package
+      esmExternals: 'loose',
+    },
   }
   return config
 }
