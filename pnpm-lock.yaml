@@ -78,8 +78,8 @@ importers:
         specifier: 1.49.1
         version: 1.49.1
       '@scaleway/eslint-config-react':
-        specifier: 5.2.1
-        version: 5.2.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
+        specifier: 5.2.2
+        version: 5.2.2(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
       '@scaleway/tsconfig':
         specifier: 1.1.1
         version: 1.1.1
@@ -2719,8 +2719,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@scaleway/eslint-config-react@5.2.1':
-    resolution: {integrity: sha512-p9HuDYXrcNCNnoNDIuHVdTb/QQMiKDTV9+BqN+jp8ZEA9No/6GZp6XusqtYy2H6GT7uUVzRrwRpHUbIUkUg59g==}
+  '@scaleway/eslint-config-react@5.2.2':
+    resolution: {integrity: sha512-vP9Esp4TuTnpcqlMrcL/+AkvS6NQo/cCPB8uV84jbS7gT00qOItQAbrnOIEHgZrsttZBhcKqDFGyUb7DDsmEEA==}
     peerDependencies:
       eslint: '>= 9.x'
 
@@ -2959,8 +2959,8 @@ packages:
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
-  '@stylistic/eslint-plugin@2.11.0':
-    resolution: {integrity: sha512-PNRHbydNG5EH8NK4c+izdJlxajIR6GxcUhzsYNRsn6Myep4dsZt0qFCz3rCPnkvgO5FYibDcMqgNHUT+zvjYZw==}
+  '@stylistic/eslint-plugin@2.12.0':
+    resolution: {integrity: sha512-IvD2WXbOoSp0zNpyYbjdSyEjZtut78RYfj2WIlbChE7HFuposTK5X1hc5+4AyqYcjLXYdD5oo/sJtqMGFNRb1w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -10407,12 +10407,12 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@scaleway/eslint-config-react@5.2.1(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)':
+  '@scaleway/eslint-config-react@5.2.2(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)':
     dependencies:
       '@emotion/eslint-plugin': 11.12.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
       '@eslint/compat': 1.2.4(eslint@9.17.0(jiti@2.4.2))
       '@eslint/eslintrc': 3.2.0
-      '@stylistic/eslint-plugin': 2.11.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
+      '@stylistic/eslint-plugin': 2.12.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
       '@typescript-eslint/eslint-plugin': 8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
       '@typescript-eslint/parser': 8.18.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
       eslint: 9.17.0(jiti@2.4.2)
@@ -10757,9 +10757,9 @@ snapshots:
     dependencies:
       storybook: 8.4.7(prettier@2.8.8)
 
-  '@stylistic/eslint-plugin@2.11.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)':
+  '@stylistic/eslint-plugin@2.12.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)':
     dependencies:
-      '@typescript-eslint/utils': 8.17.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
+      '@typescript-eslint/utils': 8.18.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2)
       eslint: 9.17.0(jiti@2.4.2)
       eslint-visitor-keys: 4.2.0
       espree: 10.3.0
