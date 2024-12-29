@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import type { LabelProp } from '../../types'
 import { Stack } from '../Stack'
@@ -150,7 +150,6 @@ const MargedText = styled(Text)`
 
 type RadioProps = {
   error?: ReactNode
-  checked?: boolean
   value: string | number
   helper?: ReactNode
   className?: string
@@ -168,13 +167,14 @@ type RadioProps = {
     | 'name'
     | 'required'
     | 'tabIndex'
+    | 'checked'
   > &
   LabelProp
 
 /**
  * Radio component is used to select a single option from a list of options. It is a type of input component.
  */
-export const Radio = forwardRef(
+export const Radio = forwardRef<HTMLInputElement, RadioProps>(
   (
     {
       checked = false,
@@ -194,8 +194,8 @@ export const Radio = forwardRef(
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
       tabIndex,
-    }: RadioProps,
-    ref: ForwardedRef<HTMLInputElement>,
+    },
+    forwadedRef,
   ) => {
     const id = useId()
     const computedName = name ?? id
@@ -225,7 +225,7 @@ export const Radio = forwardRef(
               disabled={disabled}
               name={computedName}
               autoFocus={autoFocus}
-              ref={ref}
+              ref={forwadedRef}
               tabIndex={tabIndex}
             />
             <Ring viewBox="0 0 24 24">

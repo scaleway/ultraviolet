@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ForwardedRef, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import {
   Children,
   forwardRef,
@@ -48,10 +48,24 @@ const ExpandableWrapper = styled.tr`
 const StyledCheckbox = styled(Checkbox, {
   shouldForwardProp: prop => !['inRange'].includes(prop),
 })<{ inRange: boolean }>`
+  ${({ theme, inRange }) =>
+    inRange
+      ? `svg {
+          padding: ${theme.space[0.25]};
+          outline: 1px inset ${theme.colors.primary.backgroundStrong};
+          box-shadow: ${theme.shadows.focusPrimary};
+          transition:
+            box-shadow 250ms ease,
+            outline 250ms ease,
+            padding 250ms ease;
+          rect {
+            fill: ${theme.colors.primary.backgroundHover};
+            stroke: ${theme.colors.primary.borderHover};
+          }
+      }
+  `
+      : ''}
 
-    rect {
-      ${({ theme, inRange }) => (inRange ? `fill: ${theme.colors.neutral.backgroundHover};stroke: ${theme.colors.neutral.borderHover};` : '')}
-    }
 `
 
 export const StyledRow = styled('tr', {
@@ -93,11 +107,11 @@ export const StyledRow = styled('tr', {
       border-color 200ms ease;
   }
 
-  &:hover::before {
+  &:not([aria-disabled='true']):hover::before {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
-  &:hover + ${ExpandableWrapper}:before {
+  &:not([aria-disabled='true']):hover + ${ExpandableWrapper}:before {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
@@ -117,7 +131,7 @@ export const StyledRow = styled('tr', {
 
     ${
       sentiment === 'neutral'
-        ? `&:hover {
+        ? `&:not([aria-disabled='true']):hover {
           border-color: ${theme.colors.primary.border};
           box-shadow: ${theme.shadows.hoverPrimary};
         }
@@ -192,7 +206,7 @@ type RowProps = {
   'data-testid'?: string
 }
 
-export const Row = forwardRef(
+export const Row = forwardRef<HTMLTableRowElement, RowProps>(
   (
     {
       children,
@@ -205,8 +219,8 @@ export const Row = forwardRef(
       className,
       expandablePadding,
       'data-testid': dataTestid,
-    }: RowProps,
-    ref: ForwardedRef<HTMLTableRowElement>,
+    },
+    forwardedRef,
   ) => {
     const {
       selectable,
@@ -216,10 +230,8 @@ export const Row = forwardRef(
       collapseRow,
       registerSelectableRow,
       selectedRowIds,
-      selectRow,
-      unselectRow,
       expandButton,
-      refList,
+      mapCheckbox,
       inRange,
       columns,
     } = useListContext()
@@ -265,13 +277,16 @@ export const Row = forwardRef(
     const canClickRowToExpand = !disabled && !!expandable && !expandButton
 
     useEffect(() => {
-      const refAtEffectStart = refList.current
       const { current } = checkboxRef
 
-      if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
-        refList.current.push(current)
+      if (current) {
+        mapCheckbox.set(id, current)
       }
-    }, [refList])
+
+      return () => {
+        mapCheckbox.delete(id)
+      }
+    }, [mapCheckbox, id])
 
     const childrenLength =
       Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
@@ -280,7 +295,7 @@ export const Row = forwardRef(
       <>
         <StyledRow
           className={className}
-          ref={ref}
+          ref={forwardedRef}
           role={canClickRowToExpand ? 'button row' : undefined}
           onClick={canClickRowToExpand ? toggleRowExpand : undefined}
           onKeyDown={
@@ -324,15 +339,8 @@ export const Row = forwardRef(
                     checked={selectedRowIds[id]}
                     value={id}
                     ref={checkboxRef}
-                    onChange={() => {
-                      if (selectedRowIds[id]) {
-                        unselectRow(id)
-                      } else {
-                        selectRow(id)
-                      }
-                    }}
                     disabled={isSelectDisabled}
-                    inRange={inRange.includes(id)}
+                    inRange={inRange?.has(id)}
                   />
                 </Tooltip>
               </StyledCheckboxContainer>

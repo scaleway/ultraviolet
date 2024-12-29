@@ -43,13 +43,8 @@ type RowProps = {
 }
 
 export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
-  const {
-    allRowSelectValue,
-    selectAll,
-    unselectAll,
-    selectedRowIds,
-    expandButton,
-  } = useListContext()
+  const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } =
+    useListContext()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
 
@@ -63,7 +58,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
               value="all"
               aria-label="select all"
               checked={allRowSelectValue}
-              onChange={allRowSelectValue === false ? selectAll : unselectAll}
+              onChange={selectAllHandler}
               disabled={selectableRowCount === 0}
             />
           </NoPaddingHeaderCell>

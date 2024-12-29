@@ -4906,7 +4906,7 @@ exports[`Checkbox > renders correctly with progress 1`] = `
     data-testid="testing"
   >
     <div
-      aria-disabled="false"
+      aria-disabled="true"
       class="emotion-0 emotion-1"
       data-checked="false"
       data-error="false"
@@ -4951,6 +4951,7 @@ exports[`Checkbox > renders correctly with progress 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-7 emotion-8"
+        disabled=""
         id=":r15:"
         type="checkbox"
       />
@@ -5245,7 +5246,7 @@ exports[`Checkbox > renders correctly with progress and no child 1`] = `
     data-testid="testing"
   >
     <div
-      aria-disabled="false"
+      aria-disabled="true"
       class="emotion-0 emotion-1"
       data-checked="false"
       data-error="false"
@@ -5291,6 +5292,7 @@ exports[`Checkbox > renders correctly with progress and no child 1`] = `
         aria-invalid="false"
         aria-label="check"
         class="emotion-7 emotion-8"
+        disabled=""
         id=":r18:"
         type="checkbox"
       />
@@ -5674,7 +5676,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
       </div>
     </div>
     <div
-      aria-disabled="false"
+      aria-disabled="true"
       class="emotion-0 emotion-1"
       data-checked="false"
       data-error="false"
@@ -5719,6 +5721,7 @@ exports[`Checkbox > renders correctly with sizes 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="emotion-2 emotion-3"
+        disabled=""
         id=":r1g:"
         type="checkbox"
         value="test"

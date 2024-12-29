@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { Dispatch, ForwardedRef, ReactNode, SetStateAction } from 'react'
+import type { Dispatch, ReactNode, SetStateAction } from 'react'
 import { forwardRef } from 'react'
 import { Cell } from './Cell'
 import { HeaderCell } from './HeaderCell'
@@ -25,6 +25,7 @@ const StyledTable = styled.table`
   position: relative;
 `
 
+// TODO: Get type optional type from omit values of ListContext
 type ListProps = {
   expandable?: boolean
   selectable?: boolean
@@ -44,7 +45,7 @@ type ListProps = {
   onSelectedChange?: Dispatch<SetStateAction<string[]>>
 }
 
-const BaseList = forwardRef(
+const BaseList = forwardRef<HTMLTableElement, ListProps>(
   (
     {
       expandable = false,
@@ -54,8 +55,8 @@ const BaseList = forwardRef(
       loading,
       autoCollapse = false,
       onSelectedChange,
-    }: ListProps,
-    ref: ForwardedRef<HTMLTableElement>,
+    },
+    ref,
   ) => (
     <ListProvider
       selectable={selectable}

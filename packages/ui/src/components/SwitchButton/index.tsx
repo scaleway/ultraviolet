@@ -111,7 +111,7 @@ export const SwitchButton = ({
     [leftButton.value, rightButton.value, value],
   )
 
-  const [localValue, setLocalValue] = useState(getValueToUse())
+  const [localValue, setLocalValue] = useState(getValueToUse)
 
   useEffect(() => {
     setLocalValue(getValueToUse())
