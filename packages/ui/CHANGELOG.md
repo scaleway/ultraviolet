@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.82.2
+
+### Patch Changes
+
+- [#4623](https://github.com/scaleway/ultraviolet/pull/4623) [`64fdd0c`](https://github.com/scaleway/ultraviolet/commit/64fdd0c62b20bb07a4d8c1baf65b434e87c4dbef) Thanks [@philibea](https://github.com/philibea)! - Table component was not React 18 compatible during react 19 upgrade
+
 ## 1.82.1
 
 ### Patch Changes
