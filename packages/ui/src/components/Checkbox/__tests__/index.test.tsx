@@ -1,10 +1,24 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@testing-library/user-event'
 import { renderWithTheme, shouldMatchEmotionSnapshot } from '@utils/test'
+import { useReducer } from 'react'
+import type { ActionDispatch } from 'react'
 import { describe, expect, test } from 'vitest'
 import { Checkbox } from '..'
 
+type ChildrenProps = { checked: boolean; onChange: ActionDispatch<[]> }
+type Props = {
+  defaultChecked?: boolean
+  children: (options: ChildrenProps) => React.ReactNode
+}
+
 describe('Checkbox', () => {
+  const LocalControlValue = ({ defaultChecked = false, children }: Props) => {
+    const [checked, setCheked] = useReducer(check => !check, defaultChecked)
+
+    return children({ checked, onChange: setCheked })
+  }
+
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox
@@ -131,9 +145,18 @@ describe('Checkbox', () => {
 
   test('renders with click event', async () => {
     renderWithTheme(
-      <Checkbox onChange={() => {}} size={37} value="test">
-        Checkbox Label
-      </Checkbox>,
+      <LocalControlValue>
+        {({ checked, onChange }) => (
+          <Checkbox
+            onChange={onChange}
+            checked={checked}
+            size={37}
+            value="test"
+          >
+            Checkbox Label
+          </Checkbox>
+        )}
+      </LocalControlValue>,
     )
 
     const input = screen.getByRole<HTMLInputElement>('checkbox', {
@@ -145,14 +168,27 @@ describe('Checkbox', () => {
 
   test('renders with click event with progress', async () => {
     renderWithTheme(
-      <Checkbox onChange={() => {}} size={37} value="test" progress>
-        Checkbox Label
-      </Checkbox>,
+      <LocalControlValue defaultChecked={false}>
+        {({ checked, onChange }) => (
+          <Checkbox
+            checked={checked}
+            onChange={onChange}
+            size={37}
+            value="test"
+            progress={checked}
+          >
+            Checkbox Label
+          </Checkbox>
+        )}
+      </LocalControlValue>,
     )
 
     const input = screen.getByRole<HTMLInputElement>('checkbox', {
       hidden: true,
     })
+    await userEvent.click(input)
+    expect(input.checked).toBeTruthy()
+    // checked value cannot change during progress/loading
     await userEvent.click(input)
     expect(input.checked).toBeTruthy()
   })
