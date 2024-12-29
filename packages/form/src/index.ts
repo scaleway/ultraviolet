@@ -1,6 +1,5 @@
 /* eslint-disable eslint-comments/disable-enable-pair */
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable import/export */
 
 export * from './components'
 export type { BaseFieldProps, FormErrors } from './types'
