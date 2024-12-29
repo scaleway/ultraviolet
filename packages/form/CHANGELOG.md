@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.13.2
+
+### Patch Changes
+
+- [#4580](https://github.com/scaleway/ultraviolet/pull/4580) [`7eb09e8`](https://github.com/scaleway/ultraviolet/commit/7eb09e8c23a9ed846ede8866fa45605277d214ab) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.54.1`.
+
+- [#4621](https://github.com/scaleway/ultraviolet/pull/4621) [`2f53d61`](https://github.com/scaleway/ultraviolet/commit/2f53d61087b7fd81a5385ad7dcca145f07c2efc1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.54.2`.
+
+- Updated dependencies [[`64fdd0c`](https://github.com/scaleway/ultraviolet/commit/64fdd0c62b20bb07a4d8c1baf65b434e87c4dbef)]:
+  - @ultraviolet/ui@1.82.2
+
 ## 3.13.1
 
 ### Patch Changes
