@@ -336,13 +336,6 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const localId = id ?? uniqId
 
     const isDisabled = disabled || progress
-    /**
-     * note: checked should be true | undefined as it's seems to break e2e playwright test actually
-     * as the checked attribue is added to html, maybe related to playwright toCheck code || emotion should not add this attributes when it's false or react 19 related ?
-     * const isCheck = checked === true ? checked : undefined
-     */
-
-    //  Controlled
     const isCheck = checked === true ? checked : false
 
     return (

@@ -31,9 +31,25 @@ const StyledCheckbox = styled(Checkbox, {
   shouldForwardProp: prop => !['inRange'].includes(prop),
 })<{ inRange: boolean }>`
 
-    rect {
-      ${({ theme, inRange }) => (inRange ? `fill: ${theme.colors.neutral.backgroundHover};stroke: ${theme.colors.neutral.borderHover};` : '')}
-    }
+
+  ${({ theme, inRange }) =>
+    inRange
+      ? `svg {
+          padding: ${theme.space[0.25]};
+          outline: 1px inset ${theme.colors.primary.backgroundStrong};
+          box-shadow: ${theme.shadows.focusPrimary};
+          transition:
+            box-shadow 250ms ease,
+            outline 250ms ease,
+            padding 250ms ease;
+          rect {
+            fill: ${theme.colors.primary.backgroundHover};
+            stroke: ${theme.colors.primary.borderHover};
+          }
+      }
+  `
+      : ''}
+
 `
 
 // We start at 5% and finish at 80% to leave the original background color
@@ -116,7 +132,7 @@ export const Row = ({
     registerSelectableRow,
     selectedRowIds,
     expandButton,
-    refList,
+    mapCheckbox,
     inRange,
     columns,
   } = useTableContext()
@@ -155,17 +171,16 @@ export const Row = ({
   const canClickRowToExpand = hasExpandable && !expandButton
 
   useEffect(() => {
-    const refAtEffectStart = refList.current
     const { current } = checkboxRowRef
 
-    if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
-      refList.current.push(current)
+    if (current) {
+      mapCheckbox.set(id, current)
     }
 
     return () => {
-      //  TODO should add a clean up function to remove the ref of the currentList maybe find an other way of getting the checkbox refList
+      mapCheckbox.delete(id)
     }
-  }, [refList])
+  }, [mapCheckbox, id])
 
   const theme = useTheme()
 
@@ -197,9 +212,9 @@ export const Row = ({
                   aria-label="select"
                   checked={selectedRowIds[id]}
                   value={id}
+                  inRange={inRange?.has(id)}
                   disabled={selectDisabled !== undefined}
                   ref={checkboxRowRef}
-                  inRange={inRange?.includes(id)}
                 />
               </Tooltip>
             </StyledCheckboxContainer>

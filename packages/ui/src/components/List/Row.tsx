@@ -48,10 +48,24 @@ const ExpandableWrapper = styled.tr`
 const StyledCheckbox = styled(Checkbox, {
   shouldForwardProp: prop => !['inRange'].includes(prop),
 })<{ inRange: boolean }>`
+  ${({ theme, inRange }) =>
+    inRange
+      ? `svg {
+          padding: ${theme.space[0.25]};
+          outline: 1px inset ${theme.colors.primary.backgroundStrong};
+          box-shadow: ${theme.shadows.focusPrimary};
+          transition:
+            box-shadow 250ms ease,
+            outline 250ms ease,
+            padding 250ms ease;
+          rect {
+            fill: ${theme.colors.primary.backgroundHover};
+            stroke: ${theme.colors.primary.borderHover};
+          }
+      }
+  `
+      : ''}
 
-    rect {
-      ${({ theme, inRange }) => (inRange ? `fill: ${theme.colors.neutral.backgroundHover};stroke: ${theme.colors.neutral.borderHover};` : '')}
-    }
 `
 
 export const StyledRow = styled('tr', {
@@ -217,7 +231,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
       registerSelectableRow,
       selectedRowIds,
       expandButton,
-      refList,
+      mapCheckbox,
       inRange,
       columns,
     } = useListContext()
@@ -263,13 +277,16 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
     const canClickRowToExpand = !disabled && !!expandable && !expandButton
 
     useEffect(() => {
-      const refAtEffectStart = refList.current
       const { current } = checkboxRef
 
-      if (refAtEffectStart && current && !refAtEffectStart.includes(current)) {
-        refList.current.push(current)
+      if (current) {
+        mapCheckbox.set(id, current)
       }
-    }, [refList])
+
+      return () => {
+        mapCheckbox.delete(id)
+      }
+    }, [mapCheckbox, id])
 
     const childrenLength =
       Children.count(children) + (selectable ? 1 : 0) + (expandButton ? 1 : 0)
@@ -323,7 +340,7 @@ export const Row = forwardRef<HTMLTableRowElement, RowProps>(
                     value={id}
                     ref={checkboxRef}
                     disabled={isSelectDisabled}
-                    inRange={inRange?.includes(id)}
+                    inRange={inRange?.has(id)}
                   />
                 </Tooltip>
               </StyledCheckboxContainer>

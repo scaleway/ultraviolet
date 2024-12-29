@@ -11,12 +11,8 @@ type HeaderRowProps = {
 }
 
 export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
-  const {
-    allRowSelectValue,
-    checkboxAllHandler,
-    selectedRowIds,
-    expandButton,
-  } = useTableContext()
+  const { allRowSelectValue, selectAllHandler, selectedRowIds, expandButton } =
+    useTableContext()
   const theme = useTheme()
 
   const selectableRowCount = Object.keys(selectedRowIds).length
@@ -30,7 +26,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: HeaderRowProps) => {
             value="all"
             aria-label="select all"
             checked={allRowSelectValue}
-            onChange={checkboxAllHandler}
+            onChange={selectAllHandler}
             disabled={selectableRowCount === 0}
           />
         </HeaderCell>
