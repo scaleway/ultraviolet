@@ -693,19 +693,23 @@ const FwdSelectInput = ({
   const selectOptions = useMemo(
     () =>
       options ||
-      Children.toArray(children).reduce<SelectOption[]>((acc, child) => {
-        if (React.isValidElement<{ children: string; value: string }>(child)) {
-          return [
-            ...acc,
-            {
-              ...child.props,
-              label: child.props.children,
-            },
-          ]
-        }
+      Children.toArray(children)
+        .flat()
+        .reduce<SelectOption[]>((acc, child) => {
+          if (
+            React.isValidElement<{ children: string; value: string }>(child)
+          ) {
+            return [
+              ...acc,
+              {
+                ...child.props,
+                label: child.props.children,
+              },
+            ]
+          }
 
-        return acc
-      }, []),
+          return acc
+        }, []),
     [options, children],
   )
 
