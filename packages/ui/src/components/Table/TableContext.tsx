@@ -37,7 +37,7 @@ const Provider = ({
     [bordered, columns, stripped, subscribeHandler, listContext],
   )
 
-  return <TableContext value={value}>{children}</TableContext>
+  return <TableContext.Provider value={value}>{children}</TableContext.Provider>
 }
 
 export const TableProvider = ({
