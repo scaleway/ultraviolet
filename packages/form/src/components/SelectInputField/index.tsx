@@ -144,6 +144,9 @@ export type SelectInputFieldProps<
 const identity = (x: unknown) => x
 // const identity = <T,>(x: T) => x
 
+/**
+ * @deprecated use SelectInputFieldV2 component instead
+ */
 export const SelectInputField = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,

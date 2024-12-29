@@ -105,19 +105,19 @@ export const BaseDialog = ({
       placement={placement}
       size={DIALOG_SIZE}
     >
-      {typeof children === 'function' ? (
-        modalProps => (
+      {modalProps =>
+        typeof children === 'function' ? (
           <DialogContext.Provider value={contextValue}>
             {headerContent}
             {children(modalProps)}
           </DialogContext.Provider>
+        ) : (
+          <DialogContext.Provider value={contextValue}>
+            {headerContent}
+            {children}
+          </DialogContext.Provider>
         )
-      ) : (
-        <DialogContext.Provider value={contextValue}>
-          {headerContent}
-          {children}
-        </DialogContext.Provider>
-      )}
+      }
     </StyledModal>
   )
 }

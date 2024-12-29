@@ -117,6 +117,7 @@ const Ellipsis = ({
   'data-testid'?: string
 }) => {
   const { isOverlay } = useOverlay()
+  // eslint-disable-next-line @typescript-eslint/no-base-to-string
   const text = Children.toArray(children).join('').toString()
 
   return (
