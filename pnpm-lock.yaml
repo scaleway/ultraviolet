@@ -663,8 +663,8 @@ importers:
         specifier: 5.1.1
         version: 5.1.1
       '@scaleway/use-media':
-        specifier: 3.0.1
-        version: 3.0.1(react@19.0.0)
+        specifier: 3.0.3
+        version: 3.0.3(react@19.0.0)
       '@ultraviolet/icons':
         specifier: workspace:*
         version: link:../icons
@@ -2731,11 +2731,11 @@ packages:
   '@scaleway/tsconfig@1.1.1':
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
 
-  '@scaleway/use-media@3.0.1':
-    resolution: {integrity: sha512-Za4C/CK6bdom8ob66DcB5gsRSpdpJaCcPdAbiNiy4j5+2iycab0m5ZBGKmbmmqsEnJLQb35/TN8C6eJWrU1jpA==}
+  '@scaleway/use-media@3.0.3':
+    resolution: {integrity: sha512-HO2nHqQpijRF1w7xEj3hdwR2WsF5rzq2sz5QkZPEe0ItBxixvQLbAbYXa1hReRrWoPyVHxKs455z8UCzhzJ5MQ==}
     engines: {node: '>=20.x'}
     peerDependencies:
-      react: 18.x
+      react: 18.x || 19.x
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -10434,7 +10434,7 @@ snapshots:
 
   '@scaleway/tsconfig@1.1.1': {}
 
-  '@scaleway/use-media@3.0.1(react@19.0.0)':
+  '@scaleway/use-media@3.0.3(react@19.0.0)':
     dependencies:
       react: 19.0.0
 
