@@ -1,7 +1,6 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type React from 'react'
-import type { ElementType, ReactNode } from 'react'
+import type { CSSProperties, ElementType, ReactNode } from 'react'
 import { useRef } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import { useIsOverflowing } from '../../hooks/useIsOverflowing'
@@ -18,8 +17,8 @@ const PROMINENCES = {
 }
 
 type ProminenceProps = keyof typeof PROMINENCES
-type PlacementProps = React.CSSProperties['textAlign']
-type WhiteSpaceProps = React.CSSProperties['whiteSpace']
+type PlacementProps = CSSProperties['textAlign']
+type WhiteSpaceProps = CSSProperties['whiteSpace']
 type TextVariant = keyof typeof typography
 export const textVariants = Object.keys(typography) as TextVariant[]
 
