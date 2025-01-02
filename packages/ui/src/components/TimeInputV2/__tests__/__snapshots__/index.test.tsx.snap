@@ -1,5 +1,1386 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`TimeInput > renders can move with arrow keys - 12-hour format 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-8[data-disabled="false"]:hover,
+.emotion-8 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-8[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-8[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-8[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-8[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-8[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-8[data-disabled="false"]:hover,
+.emotion-8 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-8[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-8[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-8[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-8[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-8[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-14 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-14[data-readonly='true'] {
+  cursor: default;
+}
+
+.emotion-14[data-disabled='true'] {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-14[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-14::-moz-selection {
+  background: none;
+}
+
+.emotion-14::selection {
+  background: none;
+}
+
+.emotion-14 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-14[data-readonly='true'] {
+  cursor: default;
+}
+
+.emotion-14[data-disabled='true'] {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-14[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-14::-moz-selection {
+  background: none;
+}
+
+.emotion-14::selection {
+  background: none;
+}
+
+.emotion-17 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-17 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-34 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-34 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5"
+        >
+          label
+        </label>
+        <label
+          class="emotion-6 emotion-5"
+        >
+          labeldescription
+        </label>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="medium"
+      >
+        <div
+          class="emotion-10 emotion-1"
+        >
+          <div
+            class="emotion-10 emotion-1"
+          >
+            <input
+              aria-label="hours-input"
+              class="emotion-14 emotion-15"
+              data-disabled="false"
+              data-readonly="false"
+              data-size="medium"
+              data-testid="hours-input"
+              placeholder="00"
+              readonly=""
+              value="12"
+            />
+            <span
+              class="emotion-16 emotion-17 emotion-5"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-10 emotion-1"
+          >
+            <input
+              aria-label="minutes-input"
+              class="emotion-14 emotion-15"
+              data-disabled="false"
+              data-readonly="false"
+              data-size="medium"
+              data-testid="minutes-input"
+              placeholder="00"
+              readonly=""
+              value="23"
+            />
+            <span
+              class="emotion-16 emotion-17 emotion-5"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-10 emotion-1"
+          >
+            <input
+              aria-label="seconds-input"
+              class="emotion-14 emotion-15"
+              data-disabled="false"
+              data-readonly="false"
+              data-size="medium"
+              data-testid="seconds-input"
+              placeholder="00"
+              readonly=""
+              value="14"
+            />
+          </div>
+          <input
+            aria-label="am-pm-input"
+            class="emotion-14 emotion-15"
+            data-disabled="false"
+            data-period="true"
+            data-readonly="false"
+            data-size="medium"
+            data-testid="am-pm-input"
+            placeholder="-M"
+            readonly=""
+            value="PM"
+          />
+        </div>
+        <div
+          class="emotion-2 emotion-1"
+        />
+      </div>
+      <p
+        class="emotion-34 emotion-5"
+      >
+        helper
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TimeInput > renders can move with arrow keys - 24-hour format 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-4 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-4 {
+  color: #222638;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6 {
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-8[data-disabled="false"]:hover,
+.emotion-8 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-8[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-8[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-8[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-8[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-8[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+  padding: 0.5rem;
+  box-shadow: none;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  border: 1px solid #d9dadd;
+}
+
+.emotion-8:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.emotion-8[data-disabled="false"]:hover,
+.emotion-8 [data-disabled="false"]:focus {
+  border-color: #792dd4;
+  outline: none;
+}
+
+.emotion-8[data-size='small'] {
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.emotion-8[data-size='medium'] {
+  height: 2.5rem;
+}
+
+.emotion-8[data-size='large'] {
+  height: 3rem;
+}
+
+.emotion-8[data-readonly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+  cursor: default;
+}
+
+.emotion-8[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-8[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):active {
+  border-color: #92103f;
+  box-shadow: 0px 0px 0px 3px #f91b6c40;
+}
+
+.emotion-8[data-error='true']:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  border-color: #92103f;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-14 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-14[data-readonly='true'] {
+  cursor: default;
+}
+
+.emotion-14[data-disabled='true'] {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-14[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-14::-moz-selection {
+  background: none;
+}
+
+.emotion-14::selection {
+  background: none;
+}
+
+.emotion-14 {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.875rem;
+  width: 1.5625rem;
+  height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #3f4250;
+}
+
+.emotion-14[data-size='large'] {
+  font-size: 1rem;
+}
+
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):hover {
+  background-color: #e9eaeb;
+  color: #727683;
+}
+
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):active,
+.emotion-14:not([data-disabled="true"]):not([data-readonly="true"]):focus {
+  background-color: #e9eaeb;
+  color: #3f4250;
+}
+
+.emotion-14[data-readonly='true'] {
+  cursor: default;
+}
+
+.emotion-14[data-disabled='true'] {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-14[data-period="true"] {
+  color: #727683;
+}
+
+.emotion-14::-moz-selection {
+  background: none;
+}
+
+.emotion-14::selection {
+  background: none;
+}
+
+.emotion-17 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-17 {
+  color: #3f4250;
+  font-size: 1rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding-inline: 0.125rem;
+}
+
+.emotion-32 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 2rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-32:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-32:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-32:hover,
+.emotion-32:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-32 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 2rem;
+  padding: 0 0.5rem;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 2rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.emotion-32:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-32:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.emotion-32:hover,
+.emotion-32:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.emotion-34 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-34 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-34 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-34 .fillStroke {
+  stroke: currentColor;
+  fill: none;
+}
+
+.emotion-36 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-36 {
+  color: #727683;
+  font-size: 0.75rem;
+  font-family: Inter,Asap,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-1"
+      >
+        <label
+          class="emotion-4 emotion-5"
+        >
+          label
+        </label>
+        <label
+          class="emotion-6 emotion-5"
+        >
+          labeldescription
+        </label>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-size="medium"
+      >
+        <div
+          class="emotion-10 emotion-1"
+        >
+          <div
+            class="emotion-10 emotion-1"
+          >
+            <input
+              aria-label="hours-input"
+              class="emotion-14 emotion-15"
+              data-disabled="false"
+              data-readonly="false"
+              data-size="medium"
+              data-testid="hours-input"
+              placeholder="00"
+              readonly=""
+              value="23"
+            />
+            <span
+              class="emotion-16 emotion-17 emotion-5"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-10 emotion-1"
+          >
+            <input
+              aria-label="minutes-input"
+              class="emotion-14 emotion-15"
+              data-disabled="false"
+              data-readonly="false"
+              data-size="medium"
+              data-testid="minutes-input"
+              placeholder="00"
+              readonly=""
+              value="23"
+            />
+            <span
+              class="emotion-16 emotion-17 emotion-5"
+            >
+              :
+            </span>
+          </div>
+          <div
+            class="emotion-10 emotion-1"
+          >
+            <input
+              aria-label="seconds-input"
+              class="emotion-14 emotion-15"
+              data-disabled="false"
+              data-readonly="false"
+              data-size="medium"
+              data-testid="seconds-input"
+              placeholder="00"
+              readonly=""
+              value="14"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-2 emotion-1"
+        >
+          <button
+            aria-label="clear value"
+            class="emotion-32 emotion-33"
+            data-testid="clear"
+            type="button"
+          >
+            <svg
+              class="emotion-34 emotion-35"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <p
+        class="emotion-36 emotion-5"
+      >
+        helper
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`TimeInput > renders correctly clearable 1`] = `
 <DocumentFragment>
   .emotion-0 {

@@ -165,19 +165,20 @@ describe('TimeInput', () => {
     const period = screen.getByTestId('am-pm-input')
 
     await userEvent.click(hours)
-    await userEvent.keyboard('[ArrowUp]')
+    await userEvent.keyboard('[ArrowUp][ArrowUp]')
     expect(hours).toHaveValue('01')
-    expect(mockOnChange).toHaveBeenCalledOnce()
+    expect(mockOnChange).toHaveBeenCalledTimes(2)
     await userEvent.keyboard('[ArrowDown]')
     expect(hours).toHaveValue('12')
 
+    await userEvent.click(period)
     await userEvent.keyboard('[ArrowDown]')
     expect(period).toHaveValue('PM')
 
-    await userEvent.keyboard('[ArrowLeft')
+    await userEvent.keyboard('[ArrowLeft]')
     expect(seconds).toHaveFocus()
 
-    await userEvent.keyboard('[ArrowRight')
+    await userEvent.keyboard('[ArrowRight]')
     expect(period).toHaveFocus()
 
     expect(asFragment()).toMatchSnapshot()
@@ -192,7 +193,7 @@ describe('TimeInput', () => {
         helper="helper"
         onChange={mockOnChange}
         value={DEFAULT_VALUE}
-        timeFormat={12}
+        timeFormat={24}
         clearable
       />,
     )
@@ -220,10 +221,10 @@ describe('TimeInput', () => {
     await userEvent.keyboard('[ArrowDown]')
     expect(hours).toHaveValue('23')
 
-    await userEvent.keyboard('[ArrowRight')
+    await userEvent.keyboard('[ArrowRight]')
     expect(minutes).toHaveFocus()
 
-    await userEvent.keyboard('[ArrowLeft')
+    await userEvent.keyboard('[ArrowLeft]')
     expect(hours).toHaveFocus()
 
     expect(asFragment()).toMatchSnapshot()
