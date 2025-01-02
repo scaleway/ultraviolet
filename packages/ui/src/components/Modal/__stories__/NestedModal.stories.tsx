@@ -1,7 +1,23 @@
 import type { StoryFn } from '@storybook/react'
 import { Button } from '../../Button'
+import { SelectInputV2 } from '../../SelectInputV2'
 import { Stack } from '../../Stack'
 import { Modal } from '../index'
+
+const OPTIONS = [
+  {
+    label: 'Option 1',
+    value: 'option-1',
+  },
+  {
+    label: 'Option 2',
+    value: 'option-2',
+  },
+  {
+    label: 'Option 3',
+    value: 'option-3',
+  },
+]
 
 export const NestedModal: StoryFn = props => (
   <Modal {...props} disclosure={<Button>Open Parent Modal</Button>}>
@@ -32,6 +48,11 @@ export const NestedModal: StoryFn = props => (
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
+            <SelectInputV2
+              label="Choose an option"
+              name="example"
+              options={OPTIONS}
+            />
           </Modal>
         </Stack>
       </Modal>

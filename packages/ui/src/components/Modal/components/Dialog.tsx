@@ -182,11 +182,6 @@ export const Dialog = ({
     event.stopPropagation()
   }, [])
 
-  // Stop click to prevent unexpected dialog close
-  const stopClick: MouseEventHandler = useCallback(event => {
-    event.stopPropagation()
-  }, [])
-
   // handle key up : used when having inputs in modals - useful for hideOnEsc
   const handleKeyUp: KeyboardEventHandler = useCallback(
     event => {
@@ -202,7 +197,13 @@ export const Dialog = ({
   const handleClose: MouseEventHandler = useCallback(
     event => {
       event.stopPropagation()
-      if (hideOnClickOutside) {
+
+      // if the user actually click outside of modal
+      if (
+        hideOnClickOutside &&
+        dialogRef.current &&
+        !dialogRef.current.contains(event.target as Node)
+      ) {
         onCloseRef.current()
       } else {
         // Because overlay is not focusable we can't handle hideOnEsc properly
@@ -306,10 +307,8 @@ export const Dialog = ({
         data-placement={placement}
         data-size={size}
         open
-        onClick={stopClick}
         onCancel={stopCancel}
         onClose={stopCancel}
-        onMouseDown={stopClick}
         aria-modal
         ref={dialogRef}
         tabIndex={0}
