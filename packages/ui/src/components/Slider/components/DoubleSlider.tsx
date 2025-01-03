@@ -18,8 +18,15 @@ const StyledTextValue = styled(Text, {
 `
 
 const SliderElement = styled('input', {
-  shouldForwardProp: prop => !['themeSlider', 'suffix', 'left'].includes(prop),
-})<{ themeSlider: string; disabled: boolean; suffix: boolean; left: number }>`
+  shouldForwardProp: prop =>
+    !['themeSlider', 'suffix', 'left', 'hasTooltip'].includes(prop),
+})<{
+  themeSlider: string
+  disabled: boolean
+  suffix: boolean
+  left: number
+  hasTooltip: boolean
+}>`
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -35,11 +42,11 @@ const SliderElement = styled('input', {
       box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
       }
 
-      &::-webkit-slider-thumb {
-        border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
+    &::-webkit-slider-thumb {
+      border: ${({ theme, disabled }) => (disabled ? null : `1.5px solid ${theme.colors.primary.border}`)};
       box-shadow: ${({ theme, disabled }) => (disabled ? null : theme.shadows.focusPrimary)};
 
-      }
+    }
   }
 
   /* Mozilla */
@@ -48,6 +55,10 @@ const SliderElement = styled('input', {
   }
   &::-moz-range-thumb {
     ${({ theme, themeSlider, disabled, left }) => thumbStyle(theme, themeSlider, disabled, left, true)}
+    ${({ hasTooltip }) =>
+      hasTooltip &&
+      `transform: translate(0, -10px); 
+`}
     }
 
   /* Other browsers */
@@ -400,6 +411,7 @@ export const DoubleSlider = ({
                 themeSlider={theme}
                 ref={refSlider}
                 left={((selectedIndexes[0] - min) * 100) / (max - min)}
+                hasTooltip={!!tooltip}
               />
             </StyledTooltip>
             <StyledTooltip
@@ -432,6 +444,7 @@ export const DoubleSlider = ({
                 }}
                 themeSlider={theme}
                 left={((selectedIndexes[1] - min) * 100) / (max - min)}
+                hasTooltip={!!tooltip}
               />
             </StyledTooltip>
           </StyledTooltip>
