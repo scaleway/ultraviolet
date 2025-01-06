@@ -1,5 +1,27 @@
 # Change Log
 
+## 1.82.3
+
+### Patch Changes
+
+- [#4637](https://github.com/scaleway/ultraviolet/pull/4637) [`9972cc5`](https://github.com/scaleway/ultraviolet/commit/9972cc56f910fbd2ed6a81fd172337604e0585e0) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Slider />`: fix thumb position (firefox)
+
+- [#4595](https://github.com/scaleway/ultraviolet/pull/4595) [`a492cbe`](https://github.com/scaleway/ultraviolet/commit/a492cbe263f5b43f36fa84e7c36ba9dfdece1f33) Thanks [@matthprost](https://github.com/matthprost)! - Add `strikethrough` prop on `<Text />` component
+
+- [#4572](https://github.com/scaleway/ultraviolet/pull/4572) [`d8c3416`](https://github.com/scaleway/ultraviolet/commit/d8c3416895fedd524d2a3eefc76dbf7074b9dd3b) Thanks [@lisalupi](https://github.com/lisalupi)! - `<Text />`: new prop `whiteSpace`
+
+- [#4614](https://github.com/scaleway/ultraviolet/pull/4614) [`bab3b75`](https://github.com/scaleway/ultraviolet/commit/bab3b756dd168954be6be86f0cef078a822df934) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Modal />` stop propagation so you can close `<SelectInputV2 />` within it
+
+- [#4630](https://github.com/scaleway/ultraviolet/pull/4630) [`2205ef6`](https://github.com/scaleway/ultraviolet/commit/2205ef68e0841ce0ab985cc3896fe5b68ef35b89) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-media` to `3.0.3`.
+
+- [#4570](https://github.com/scaleway/ultraviolet/pull/4570) [`c0f8849`](https://github.com/scaleway/ultraviolet/commit/c0f8849a0e14d337e6feca67dff8169e23ceaecf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@nivo/bar` to `0.88.0`.
+  Updated dependency `@nivo/core` to `0.88.0`.
+  Updated dependency `@nivo/line` to `0.88.0`.
+  Updated dependency `@nivo/pie` to `0.88.0`.
+  Updated dependency `@nivo/scales` to `0.88.0`.
+- Updated dependencies [[`9fd969e`](https://github.com/scaleway/ultraviolet/commit/9fd969e4ed3580d52d16d853c4b11dbb39312477)]:
+  - @ultraviolet/icons@3.8.0
+
 ## 1.82.2
 
 ### Patch Changes
