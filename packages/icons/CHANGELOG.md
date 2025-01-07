@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.8.0
+
+### Minor Changes
+
+- [#4602](https://github.com/scaleway/ultraviolet/pull/4602) [`9fd969e`](https://github.com/scaleway/ultraviolet/commit/9fd969e4ed3580d52d16d853c4b11dbb39312477) Thanks [@matthprost](https://github.com/matthprost)! - Migrate icons sizes from px to remu using new theme `sizing` prop
+
 ## 3.7.1
 
 ### Patch Changes
