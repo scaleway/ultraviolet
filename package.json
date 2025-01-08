@@ -14,8 +14,8 @@
   "scripts": {
     "size": "turbo run size",
     "typecheck": "turbo run typecheck",
-    "build": "turbo run build",
-    "build:examples": "turbo run build --filter '@examples/*' ",
+    "build": "turbo run build --filter='./packages/*' ",
+    "build:examples": "turbo run build --filter './examples/*' ",
     "build:storybook": "STORYBOOK_ENVIRONMENT=production storybook build",
     "build:storybook:stats": "pnpm turbo build:storybook -- --webpack-stats-json",
     "test:unit": "turbo run test:unit",
