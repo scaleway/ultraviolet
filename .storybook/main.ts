@@ -40,6 +40,6 @@ export default {
     disableTelemetry: true,
   },
   typescript: {
-    reactDocgen: 'react-docgen',
+    reactDocgen: 'react-docgen-typescript',
   },
 } satisfies StorybookConfig
