@@ -82,7 +82,8 @@
   },
   "pnpm": {
     "overrides": {
-      "vite": "$vite"
+      "vite": "$vite",
+      "@joshwooding/vite-plugin-react-docgen-typescript": "0.3.0"
     },
     "peerDependencyRules": {
       "allowedVersions": {
