@@ -1,7 +1,16 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode, Ref } from 'react'
-import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
+import {
+  forwardRef,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
 import { Button } from '../Button'
+import { ModalContext } from '../Modal/ModalProvider'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -148,6 +157,7 @@ export const Popover = forwardRef(
     ref: Ref<HTMLDivElement>,
   ) => {
     const innerRef = useRef<HTMLDivElement>(null)
+    const isInsideModal = useContext(ModalContext)
     const [localVisible, setLocalVisible] = useState(visible)
 
     // We change local value if visible prop changes
@@ -159,6 +169,18 @@ export const Popover = forwardRef(
       setLocalVisible(false)
       onClose?.()
     }, [onClose])
+
+    const smartPortalTarget = useMemo(() => {
+      if (!portalTarget && isInsideModal) {
+        return undefined
+      }
+
+      if (!portalTarget && !isInsideModal) {
+        return document.body
+      }
+
+      return portalTarget
+    }, [isInsideModal, portalTarget])
 
     return (
       <StyledPopup
@@ -186,7 +208,7 @@ export const Popover = forwardRef(
         onClose={localOnClose}
         maxWidth={maxWidth}
         maxHeight={maxHeight}
-        portalTarget={portalTarget}
+        portalTarget={smartPortalTarget}
         dynamicDomRendering={dynamicDomRendering}
         align={align}
       >
