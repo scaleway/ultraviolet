@@ -69,7 +69,7 @@ const MakeButton = ({
     <PageButton
       aria-current={pageNumber === page}
       disabled={disabled}
-      variant="outlined"
+      variant={pageNumber === page ? 'filled' : 'outlined'}
       sentiment={pageNumber === page ? 'primary' : 'neutral'}
       onClick={handlePageClick(pageNumber)}
       type="button"
